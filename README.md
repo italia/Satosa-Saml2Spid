@@ -15,11 +15,32 @@ python3 ./setup.py install
 cd ..
 ```
 
-## Configure the proxy
+## Copy required files
 ````
-mkdir -p saml2-saml2/plugins
+export DESTDIR="saml2-saml2"
+mkdir -p $DESTDIR/plugins
 
-cp SATOSA/example/{proxy_conf.yaml.example,internal_attributes.yaml.example} saml2-saml2/
-cp SATOSA/example/plugins/frontends/saml2_frontend.yaml.example saml2-saml2/plugins/
-cp SATOSA/example/plugins/backends/saml2_backend.yaml.example saml2-saml2/plugins/
+cp SATOSA/example/{proxy_conf.yaml.example,internal_attributes.yaml.example} $DESTDIR/
+cp SATOSA/example/plugins/frontends/saml2_frontend.yaml.example $DESTDIR/plugins/
+cp SATOSA/example/plugins/backends/saml2_backend.yaml.example $DESTDIR/plugins/
 ````
+
+## Configure the proxy
+Edit alle the *.yaml.example files according to [official Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#configuration), renaming them without .example suffix.
+
+#### proxy_conf.yaml
+Variables that must be edited:
+````
+BASE: https://a fully qualified domain name
+INTERNAL_ATTRIBUTES: file with mapping, see next paragraph.
+COOKIE_STATE_NAME: custom or default name, change it for disabling server fingerpint!
+STATE_ENCRYPTION_KEY: alphadecimal secret, change it for security!
+````
+
+#### internal_attributes.yaml
+A list of external attributes names which should be mapped to the internal attributes.
+
+## References
+
+- https://github.com/IdentityPython/SATOSA
+- [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
