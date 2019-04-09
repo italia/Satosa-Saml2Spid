@@ -20,6 +20,11 @@ export DESTDIR="saml2-saml2"
 mkdir -p $DESTDIR/plugins
 
 cp SATOSA/example/{proxy_conf.yaml.example,internal_attributes.yaml.example} $DESTDIR/
+````
+
+#### Plugins
+The authentication protocol specific communication is handled by different plugins, divided into frontends (receiving requests from clients) and backends (sending requests to target providers).
+````
 cp SATOSA/example/plugins/frontends/saml2_frontend.yaml.example $DESTDIR/plugins/
 cp SATOSA/example/plugins/backends/saml2_backend.yaml.example $DESTDIR/plugins/
 ````
