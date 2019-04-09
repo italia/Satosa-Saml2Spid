@@ -59,6 +59,9 @@ STATE_ENCRYPTION_KEY: alphadecimal secret, change it for security!
 #### internal_attributes.yaml
 A list of external attributes names which should be mapped to the internal attributes.
 
+## Use case
+https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
+
 ## References
 
 - https://github.com/IdentityPython/SATOSA
