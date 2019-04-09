@@ -1,12 +1,11 @@
 # Satosa-saml2saml
 An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy.
 
-Work in progress (not yet usable!)
-
+## Work in progress (not yet usable!)
 
 ## Prepare environment
 ```
-apt-get install -y libffi-dev libssl-dev xmlsec1
+apt install -y libffi-dev libssl-dev xmlsec1
 virtualenv -ppython3 satosa.env
 source satosa.env/bin/activate
 git clone https://github.com/IdentityPython/SATOSA.git
@@ -43,4 +42,4 @@ A list of external attributes names which should be mapped to the internal attri
 ## References
 
 - https://github.com/IdentityPython/SATOSA
-- [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
+- [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0) 
