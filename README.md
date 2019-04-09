@@ -29,6 +29,13 @@ cp SATOSA/example/plugins/frontends/saml2_frontend.yaml.example $DESTDIR/plugins
 cp SATOSA/example/plugins/backends/saml2_backend.yaml.example $DESTDIR/plugins/
 ````
 
+## Create Frontend and Backend certificates
+````
+export FQDN="satosa.testunical.it"
+openssl req -nodes -new -x509 -days 3650 -keyout frontend.key -out frontend.cert -subj '/CN=$FQDN'
+openssl req -nodes -new -x509 -days 3650 -keyout backend.key -out backend.cert -subj '/CN=$FQDN'
+````
+
 ## Configure the proxy
 Edit alle the *.yaml.example files according to [official Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#configuration), renaming them without .example suffix.
 
