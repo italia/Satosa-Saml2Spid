@@ -59,6 +59,23 @@ STATE_ENCRYPTION_KEY: alphadecimal secret, change it for security!
 #### internal_attributes.yaml
 A list of external attributes names which should be mapped to the internal attributes.
 
+## Run
+
+Produce metadata
+````
+satosa-saml-metadata proxy_conf.yaml ./pki/backend.key ./pki/backend.cert
+
+Writing metadata to './frontend.xml'
+Writing metadata to './backend.xml'
+````
+
+Run
+````
+gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile=./pki/frontend.cert
+````
+
+Give Metadata to your endpoints, SP and IDP.
+
 ## Use case
 https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 
