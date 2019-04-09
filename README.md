@@ -40,7 +40,7 @@ openssl req -nodes -new -x509 -days 3650 -keyout backend.key -out backend.cert -
 for example
 ````
 wget http://sp1.testunical.it:8000/saml2/metadata -O metadata/sp1.xml
-wget http://idp1.testunical.it:8000/idp/metadata -O metadata/idp1.xml
+wget http://idp1.testunical.it:9000/idp/metadata -O metadata/idp1.xml
 ````
 
 ## Configure the proxy
