@@ -76,6 +76,10 @@ gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile
 
 Give Metadata to your endpoints, SP and IDP.
 backend.xml to target IDP, frontend.xml to SP.
+````
+cat frontend.xml > ../djangosaml2_sp/saml2_sp/saml2_config/satosa_frontend.xml 
+cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml 
+````
 
 Todo:
 - custom sign and enc alg, different from SHA1;
