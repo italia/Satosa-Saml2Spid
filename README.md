@@ -36,10 +36,18 @@ openssl req -nodes -new -x509 -days 3650 -keyout frontend.key -out frontend.cert
 openssl req -nodes -new -x509 -days 3650 -keyout backend.key -out backend.cert -subj '/CN=$FQDN'
 ````
 
+## Get SPs and IDPs metadata
+for example
+````
+wget http://sp1.testunical.it:8000/saml2/metadata -O metadata/sp1.xml
+wget http://idp1.testunical.it:8000/idp/metadata -O metadata/idp1.xml
+````
+
 ## Configure the proxy
 Edit alle the *.yaml.example files according to [official Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#configuration), renaming them without .example suffix.
 
 #### proxy_conf.yaml
+[Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#satosa-proxy-configuration-proxy_confyamlexample)
 Variables that must be edited:
 ````
 BASE: https://a fully qualified domain name
