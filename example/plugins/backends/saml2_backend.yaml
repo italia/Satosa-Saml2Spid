@@ -3,17 +3,17 @@ name: Saml2
 config:
   idp_blacklist_file: /path/to/blacklist.json
   sp_config:
-    key_file: backend.key
-    cert_file: backend.crt
-    organization: {display_name: Example Identities, name: Example Identities Org., url: 'http://www.example.com'}
+    key_file: ./pki/backend.key
+    cert_file: ./pki/backend.cert
+    organization: {display_name: testUnical, name: testUnical, url: 'http://www.testunical.it'}
     contact_person:
     - {contact_type: technical, email_address: technical@example.com, given_name: Technical}
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
-      local: [idp.xml]
+      local: [./metadata/idp1.xml]
 
-    entityid: <base_url>/<name>/proxy_saml2_backend.xml
+    entityid: 'https://satosa.testunical.it:1000/saml2/sp/proxy_saml2_backend.xml'
     accepted_time_diff: 60
     service:
       sp:
@@ -44,10 +44,11 @@ config:
         allow_unsolicited: true
         endpoints:
           assertion_consumer_service:
-          - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
-          - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
+          - [satosa.testunical.it/frontend/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
+          - [satosa.testunical.it/frontend/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
           discovery_response:
-          - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
+          - [satosa.testunical.it/frontend/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
+        name_id_format_allow_create: true
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
   disco_srv: http://disco.example.com

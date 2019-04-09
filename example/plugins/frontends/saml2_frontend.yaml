@@ -2,16 +2,19 @@ module: satosa.frontends.saml2.SAMLFrontend
 name: Saml2IDP
 config:
   idp_config:
-    organization: {display_name: Example Identities, name: Example Identities Org., url: 'http://www.example.com'}
+    organization: {display_name: testUnical, name: testUnical, url: 'http://www.testunical.it'}
     contact_person:
     - {contact_type: technical, email_address: technical@example.com, given_name: Technical}
     - {contact_type: support, email_address: support@example.com, given_name: Support}
-    key_file: frontend.key
-    cert_file: frontend.crt
+    key_file: ./pki/frontend.key
+    cert_file: ./pki/frontend.cert
     metadata:
-      local: [sp.xml]
+      local: [./metadata/sp1.xml]
+      # remote:
+        # - url:https://kalmar2.org/simplesaml/module.php/aggregator/?id=kalmarcentral2&set=saml2
+          # cert:null
 
-    entityid: <base_url>/<name>/proxy.xml
+    entityid: 'https://satosa.testunical.it:1000/saml2/idp/proxy.xml'
     accepted_time_diff: 60
     service:
       idp:
@@ -32,12 +35,12 @@ config:
             - lang: en
               text: "http://idp.privacy.url/"
           keywords:
-            - lang: se
-              text: ["Satosa", "IdP-SE"]
+            - lang: it
+              text: ["Satosa", "IdP-IT"]
             - lang: en
               text: ["Satosa", "IdP-EN"]
           logo:
-            text: "http://idp.logo.url/"
+            text: "http://idp1.testunical.it/"
             width: "100"
             height: "100"
         name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:persistent', 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
@@ -61,5 +64,5 @@ config:
   # cookie. If the value is a dictionary with key 'domain' then the domain for the cookie
   # will be set to the value for the 'domain' key. If no 'domain' is set then the domain
   # from the BASE defined for the proxy will be used.
-  common_domain_cookie:
-    domain: .example.com
+  #common_domain_cookie:
+  #  domain: .example.com
