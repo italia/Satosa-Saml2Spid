@@ -1,7 +1,7 @@
 module: satosa.backends.saml2.SAMLBackend
 name: Saml2
 config:
-  idp_blacklist_file: /path/to/blacklist.json
+  #idp_blacklist_file: /path/to/blacklist.json
   sp_config:
     key_file: ./pki/backend.key
     cert_file: ./pki/backend.cert
@@ -13,7 +13,7 @@ config:
     metadata:
       local: [./metadata/idp1.xml]
 
-    entityid: 'https://satosa.testunical.it:10000/saml2/sp/proxy'
+    entityid: <base_url>/<name>/proxy_saml2_backend
     accepted_time_diff: 60
     service:
       sp:
@@ -44,11 +44,11 @@ config:
         allow_unsolicited: true
         endpoints:
           assertion_consumer_service:
-          - [satosa.testunical.it/frontend/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
-          - [satosa.testunical.it/frontend/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
+          - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
+          - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
           discovery_response:
-          - [satosa.testunical.it/frontend/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
+          - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
         name_id_format_allow_create: true
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: http://disco.example.com
+  disco_srv: "<base_url>/<name>/disco"
