@@ -68,5 +68,8 @@ Italian isn't so difficult to be read, isn't it?
 ## Fancy screenshot (what you will get)
 WebPAge during metadata download and validation, this will be also the only thing you will see if metadata could not be imported (404 on their page).
 
-![Home](gallery/service_request.png)
-_**Frontend**: Default pyFF landing page
+![Loading](gallery/service_request.png)
+**Frontend**: Default pyFF landing page
+
+![Home](gallery/Selezione_537.png)
+**Home page**: All the entitities are now classified by category, they could be also selected with the html5 search engine. All the metadata information are now available. pyFF also exposes the pipelines used, the command used to start the server, in other words _everything_.
