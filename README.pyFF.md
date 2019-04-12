@@ -17,6 +17,10 @@ pyffd -p pyff.pid -f -a --loglevel=DEBUG --dir=`pwd` -H 0.0.0.0 -P 8001 examples
 ````
 When it finishes to download all the metadata it will expose a web catalog of them, and also a DiscoveryService.
 
+Useful things that we need to know
+1. pyFF uses by default a local sqllite db, automatically created in the working directory
+
+
 ## Advanced Topics
 I think that pyFF would a be a real stop application for the following goals:
 
