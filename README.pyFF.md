@@ -1,7 +1,10 @@
 pyFF
 ----
-[python Federation Feeder](https://github.com/IdentityPython/pyFF)
+[python Federation Feeder](http://pyff.io/)
+[github](https://github.com/IdentityPython/pyFF)
 
+pyFF is a omnicomprensive advanced Metadata appliance. 
+It download, validate, aggregate, export one or many entities in xml format, in json format, as querable [MDX service](https://datatracker.ietf.org/doc/draft-young-md-query-saml/), it will also give us a [DiscoveryService](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-idp-discovery.pdf) and a user friendly web catalog with statistics and all the usefull informations as well, with an agile search engine... The first time I used it I wondered what I had done until then.
 
 ## Installation
 ````
@@ -10,24 +13,25 @@ pip install git+https://github.com/IdentityPython/pyFF.git
 
 ## First run
 
-`examples/` folder taken from git repository.
-This command will print in stdout all the log, if you want to put it in a file just add `--log=pyff.log` after `--loglevel`.
+The following command will print in stdout all the pyFF's execution log, if you want to put it in a file just add `--log=pyff.log` after `--loglevel`.
 It seems that pyff is sensible to arguments order, unfortunately it doesn't use arparse...
+The `examples/` folder was taken from git repository.
 
 ````
 pyffd -p pyff.pid -f -a --loglevel=DEBUG --dir=`pwd` -H 0.0.0.0 -P 8001 examples/big.fd
 ````
-When it finishes to download all the metadata it will expose a web catalog of them, and also a DiscoveryService.
+
+When it complete the downloads of all the metadata then exposes all the SAML entities in a _human navigable_ web catalog, this will permit us to test the DiscoveryService and see common stats.
 
 Useful things that we need to know
-1. pyFF uses by default a local sqllite db, automatically created in the working directory
+1. pyFF uses by default a local sqllite db, it's automatically created in the working directory on run.
 
 ## how does it works
 You need also to read:
 - https://pythonhosted.org/pyFF/
 - https://github.com/IdentityPython/pyFF
 
-pyFF works with configuration files called _pipelines_, it exposes services and all its features depending of what we configure in these _pipelines_ files. The following example is used to download to `./garr` folder all the metadata.
+pyFF works with configuration files called _pipelines_, it exposes services and all its features depending of what we configure in those _pipelines_ files. The following example is used to validate and download to `./garr` folder all the configured metadata, then aggregate them in a sqllite database as a cache for better I/O performance.
 
 `custom_examples/` contains some of the following examples.
 
@@ -46,15 +50,16 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 
 *garr.fd*
 ````
-# load) downloads SAML Metadata and store it - or them - in the metadata repository.
+# load) download SAML Metadatas configured in these files
 - load xrd ./garr-loaded.xrd:
   - custom_examples/garr.xrd
   
-# select) creates an active document of all EntityDescriptors in the metadata repository.
-# it could be also XPATH selection to get for example only the IDP as: "http://mds.edugain.org!//md:EntityDescriptor[md:IDPSSODescriptor]"
+# select) this could, or not, specify a selection filter for EntityDescriptors in the metadata repository.
+# it could be a XPATH selection to get for example only the IDP as: "http://mds.edugain.org!//md:EntityDescriptor[md:IDPSSODescriptor]"
+# in this case it will take all of them
 - select
 
-
+# the folder where single entities will be stored
 - store:
      directory: ./garr
 
@@ -89,7 +94,7 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 ````
 
 ## Advanced Topics
-I think that pyFF would a be a real stop application for the following goals:
+I think that pyFF would a be a real _stop-application_ for the followings:
 
 1. Downloader, validatore avanzato per federare entità saml2
 2. Store su RDBMS interrogabile da remoto
@@ -100,10 +105,13 @@ Italian isn't so difficult to be read, isn't it?
 
 
 ## Fancy screenshot (what you will get)
-WebPAge during metadata download and validation, this will be also the only thing you will see if metadata could not be imported (404 on their page).
+
+When it start the only content available on its embedded webserver is a loading WebPage, this will persist until the metadata download and validation finishes, this will be also the only thing you will see if metadata could not be imported (404 on their page).
+
 
 ![Loading](gallery/service_request.png)
-**Frontend**: Default pyFF landing page
+**Frontend**: Loading page during metadata importing procedure. 
+
 
 ![Home](gallery/Selezione_537.png)
-**Home page**: All the entitities are now classified by category, they could be also selected with the html5 search engine. All the metadata information are now available. pyFF also exposes the pipelines used, the command used to start the server, in other words _everything_.
+**Home page**: All the entitities are now classified by categories, they could be also selected with an agile search engine. All the metadata information are now available. pyFF also exposes the pipelines used, the command used to start the server, in other words _everything_.
