@@ -2,6 +2,7 @@ module: satosa.backends.saml2.SAMLBackend
 name: Saml2
 config:
   #idp_blacklist_file: /path/to/blacklist.json
+  entityid_endpoint: '<base_url>/<name>/metadata'
   sp_config:
 
     key_file: ./pki/backend.key
@@ -17,17 +18,17 @@ config:
     metadata:
       local: [./metadata/idp1.xml]
 
-    entityid: <base_url>/<name>/proxy_saml2_backend
+    entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
     service:
       sp:
         ui_info:
           display_name:
             - lang: en
-              text: "SP Display Name"
+              text: "SaToSa SP"
           description:
             - lang: en
-              text: "SP Description"
+              text: "Saml2 Proxy"
           information_url:
             - lang: en
               text: "http://sp.information.url/"
@@ -35,8 +36,8 @@ config:
             - lang: en
               text: "http://sp.privacy.url/"
           keywords:
-            - lang: se
-              text: ["Satosa", "SP-SE"]
+            - lang: it
+              text: ["Satosa", "SP-IT"]
             - lang: en
               text: ["Satosa", "SP-EN"]
           logo:
@@ -49,6 +50,9 @@ config:
         want_response_signed: true
         allow_unsolicited: true
 
+        sign_alg: 'SIG_RSA_SHA256'
+        digest_alg: 'DIGEST_SHA256'
+
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
@@ -58,4 +62,5 @@ config:
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
         name_id_format_allow_create: true
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: "<base_url>/<name>/disco"
+  # it uses pyFF
+  disco_srv: "http://sp1.testunical.it:8001/role/idp.ds"

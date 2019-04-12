@@ -1,8 +1,11 @@
 module: satosa.frontends.saml2.SAMLFrontend
 name: Saml2IDP
 config:
+  # metadata download endpoint
+  entityid_endpoint: '<base_url>/<name>/metadata'
+
   idp_config:
-    organization: {display_name: testUnical, name: testUnical, url: 'http://www.testunical.it'}
+    organization: {display_name: 'SaToSa Unical Proxy', name: 'uniSaToSa', url: 'http://www.testunical.it'}
     contact_person:
     - {contact_type: technical, email_address: technical@example.com, given_name: Technical}
     - {contact_type: support, email_address: support@example.com, given_name: Support}
@@ -18,7 +21,7 @@ config:
         # - url:https://kalmar2.org/simplesaml/module.php/aggregator/?id=kalmarcentral2&set=saml2
           # cert:null
 
-    entityid: '<base_url>/<name>/proxy'
+    entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
     service:
       idp:
@@ -56,6 +59,8 @@ config:
             name_form: urn:oasis:names:tc:SAML:2.0:attrname-format:uri
             sign_response: true,
             sign_assertion: true,
+            sign_alg: 'SIG_RSA_SHA384'
+            digest_alg: 'DIGEST_SHA384'
   acr_mapping:
     "": default-LoA
     "https://accounts.google.com": LoA1
