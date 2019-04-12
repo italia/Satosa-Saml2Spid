@@ -1,0 +1,13 @@
+- load: 
+   - http://mds.edugain.org examples/edugain.crt
+   - https://mds.swamid.se/md/swamid-2.0.xml A6:78:5A:37:C9:C9:0C:25:AD:5F:1F:69:22:EF:76:7B:C9:78:67:67:3A:AF:4F:8B:EA:A1:A7:6D:A3:A8:E5:85
+- select: "http://mds.edugain.org!md:EntityDescriptor[md:IDPSSODescriptor]"
+- xslt:
+    stylesheet: tidy.xsl
+- sign: 
+    key: sign.key
+    cert: sign.crt
+- publish:
+    output: /tmp/idp.xml
+- certreport
+- stats
