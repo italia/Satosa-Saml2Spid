@@ -1,8 +1,6 @@
 # Satosa-saml2saml
 An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy.
 
-## Work in progress (not yet usable!)
-
 ## Prepare environment
 ```
 apt install -y libffi-dev libssl-dev xmlsec1
