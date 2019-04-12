@@ -56,5 +56,5 @@ Italian isn't so difficult to be read, isn't it?
 ## Fancy screenshot (what you will get)
 WebPAge during metadata download and validation, this will be also the only thing you will see if you do not have enabled some web features in the _pipelines_
 
-![Home](gallery/service_restarting.png)
+![Home](gallery/service_request.png)
 _**Frontend**: Default pyFF landing page
