@@ -27,3 +27,6 @@ I think that pyFF would a be a real stop application for the following goals:
 
 Italian isn't so difficult to be read, isn't it?
 
+
+## Fancy screenshot (what you will get)
+WebPAge during metadata download and validation
