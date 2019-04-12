@@ -6,6 +6,8 @@ pyFF
 pyFF is a omnicomprensive advanced Metadata appliance. 
 It download, validate, aggregate, export one or many entities in xml format, in json format, as a querable [MDX service](https://datatracker.ietf.org/doc/draft-young-md-query-saml/), it will also give us a [DiscoveryService](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-idp-discovery.pdf) and a user friendly web catalog with statistics and all the usefull informations as well, with an agile search engine... The first time I used it I wondered what I had done until then.
 
+Please also rememeber that "MDX" is an acronym for MetaData eXchange and refers to a more general concept of which the "MDQ", acronym for Metadata Query Protocol, is just one component.
+
 ## Installation
 ````
 pip install git+https://github.com/IdentityPython/pyFF.git
@@ -115,3 +117,14 @@ When it start the only content available on its embedded webserver is a loading 
 
 ![Home](gallery/Selezione_537.png)
 **Home page**: All the entitities are now classified by categories, they could be also selected with an agile search engine. All the metadata information are now available. pyFF also exposes the pipelines used, the command used to start the server, in other words _everything_.
+
+Additional resources
+--------------------
+
+- Using MDX with pySAML2, [read source](https://github.com/IdentityPython/pysaml2/blob/master/src/saml2/mdstore.py#L781)
+- [Metadata Query Protocol](https://github.com/iay/md-query)
+- pySAML2 MDQ usage, see:
+  - https://github.com/IdentityPython/pysaml2/blob/master/docs/howto/config.rst#metadata
+  - https://github.com/IdentityPython/pysaml2/issues/410
+  - https://github.com/IdentityPython/pysaml2/issues/586
+  - 
