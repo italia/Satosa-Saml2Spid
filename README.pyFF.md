@@ -46,16 +46,26 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 
 *garr.fd*
 ````
+# load) downloads SAML Metadata and store it - or them - in the metadata repository.
 - load xrd ./garr-loaded.xrd:
   - custom_examples/garr.xrd
+  
+# select) creates an active document of all EntityDescriptors in the metadata repository.
+# it could be also XPATH selection to get for example only the IDP as: "http://mds.edugain.org!//md:EntityDescriptor[md:IDPSSODescriptor]"
 - select
+
+
 - store:
      directory: ./garr
+
+# publish) causes the active document to be stored in an XML file.
 - publish:
      output: ./garr-loaded.xml
+
+# stats) prints out some information about the metadata repository.
 - stats
 
-# MDX server
+# MDX server, see: https://pythonhosted.org/pyFF/examples.html#example-5-mdx
 - when request:
     - select
     - pipe:
