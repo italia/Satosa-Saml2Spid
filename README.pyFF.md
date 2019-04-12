@@ -28,6 +28,21 @@ You need also to read:
 pyFF works with configuration files called _pipelines_, it exposes services and all its features depending of what we configure in these _pipelines_ files. The following example is used to download to `./garr` folder all the metadata.
 
 `custom_examples/` contains some of the following examples.
+
+*garr.xrd*
+````
+<?xml version="1.0"?>
+<XRDS xmlns="http://docs.oasis-open.org/ns/xri/xrd-1.0">
+  <XRD>
+    <Link rel="urn:oasis:names:tc:SAML:2.0:metadata" href="http://md.idem.garr.it/metadata/idem-test-metadata-sha256.xml"/>
+  </XRD>
+  <XRD>
+    <Link rel="urn:oasis:names:tc:SAML:2.0:metadata" href="http://md.idem.garr.it/metadata/idem-metadata-sha256.xml"/>
+  </XRD>
+</XRDS>
+````
+
+*garr.fd*
 ````
 - load xrd ./garr-loaded.xrd:
   - custom_examples/garr.xrd
@@ -38,9 +53,6 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
      output: ./garr-loaded.xml
 - stats
 ````
-
-
-
 
 ## Advanced Topics
 I think that pyFF would a be a real stop application for the following goals:
@@ -54,7 +66,7 @@ Italian isn't so difficult to be read, isn't it?
 
 
 ## Fancy screenshot (what you will get)
-WebPAge during metadata download and validation, this will be also the only thing you will see if you do not have enabled some web features in the _pipelines_
+WebPAge during metadata download and validation, this will be also the only thing you will see if metadata could not be imported (404 on their page).
 
 ![Home](gallery/service_request.png)
 _**Frontend**: Default pyFF landing page
