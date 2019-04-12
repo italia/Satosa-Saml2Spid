@@ -20,6 +20,27 @@ When it finishes to download all the metadata it will expose a web catalog of th
 Useful things that we need to know
 1. pyFF uses by default a local sqllite db, automatically created in the working directory
 
+## how does it works
+You need also to read:
+- https://pythonhosted.org/pyFF/
+- https://github.com/IdentityPython/pyFF
+
+pyFF works with configuration files called _pipelines_, it exposes services and all its features depending of what we configure in these _pipelines_ files. The following example is used to download to `./garr` folder all the metadata.
+
+`custom_examples/` contains some of the following examples.
+````
+- load xrd ./garr-loaded.xrd:
+  - custom_examples/garr.xrd
+- select
+- store:
+     directory: ./garr
+- publish:
+     output: ./garr-loaded.xml
+- stats
+````
+
+
+
 
 ## Advanced Topics
 I think that pyFF would a be a real stop application for the following goals:
@@ -33,4 +54,7 @@ Italian isn't so difficult to be read, isn't it?
 
 
 ## Fancy screenshot (what you will get)
-WebPAge during metadata download and validation
+WebPAge during metadata download and validation, this will be also the only thing you will see if you do not have enabled some web features in the _pipelines_
+
+![Home](gallery/service_restarting.png)
+_**Frontend**: Default pyFF landing page
