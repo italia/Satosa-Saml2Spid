@@ -54,6 +54,28 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 - publish:
      output: ./garr-loaded.xml
 - stats
+
+# MDX server
+- when request:
+    - select
+    - pipe:
+        - when accept application/xml:
+             - xslt:
+                 stylesheet: tidy.xsl
+             - first
+             - finalize:
+                cacheDuration: PT5H
+                validUntil: P10D
+             - sign:
+                 key: sign.key
+                 cert: sign.crt
+             - emit application/xml
+             - break
+        - when accept application/json:
+             - xslt:
+                 stylesheet: discojson.xsl
+             - emit application/json:
+             - break
 ````
 
 ## Advanced Topics
