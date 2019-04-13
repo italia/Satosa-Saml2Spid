@@ -72,10 +72,12 @@ Writing metadata to './frontend.xml'
 Writing metadata to './backend.xml'
 ````
 
-Run in debug mode, `--reload` will restart process if source code changes, `--graful-timeout` will give you some more time to debug with pdb!
+Run in debug mode, `--reload` will restart process if source code changes
 ````
-gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile=./pki/frontend.cert  --graceful-timeout 600 --reload
+gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile=./pki/frontend.cert  --reload
 
+# run with uwsgi if you prefer, --honour-stdin needs for debugging with pdb
+uwsgi --wsgi-file ../apps/SATOSA/src/satosa/wsgi.py  --https 0.0.0.0:10000,./pki/frontend.cert,./pki/frontend.key --callable app --honour-stdin
 ````
 
 Give Metadata to your endpoints, SP and IDP.
