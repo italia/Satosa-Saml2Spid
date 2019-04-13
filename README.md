@@ -1,6 +1,11 @@
 # Satosa-saml2saml
 An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy.
 
+Official docs:
+- [SaToSa Saml2Saml Documentation](https://github.com/peppelinux/SATOSA/blob/master/doc/one-to-many.md)
+- [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
+
+
 ## Prepare environment
 ```
 apt install -y libffi-dev libssl-dev xmlsec1
@@ -67,20 +72,23 @@ Writing metadata to './frontend.xml'
 Writing metadata to './backend.xml'
 ````
 
-Run
+Run in debug mode, `--reload` will restart process if source code changes, `--graful-timeout` will give you some more time to debug with pdb!
 ````
-gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile=./pki/frontend.cert
+gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile=./pki/frontend.cert  --graceful-timeout 600 --reload
+
 ````
 
 Give Metadata to your endpoints, SP and IDP.
 backend.xml to target IDP, frontend.xml to SP.
 ````
-cat frontend.xml > ../djangosaml2_sp/saml2_sp/saml2_config/satosa_frontend.xml 
-cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml 
+cat frontend.xml > ../djangosaml2_sp/saml2_sp/saml2_config/satosa_frontend.xml
+cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml
 ````
 
-Todo:
-- custom sign and enc alg, different from SHA1;
+## Todo:
+
+a list of things to be done
+
 
 ## Use case
 https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
@@ -88,4 +96,4 @@ https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 ## References
 
 - https://github.com/IdentityPython/SATOSA
-- [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0) 
+- [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)

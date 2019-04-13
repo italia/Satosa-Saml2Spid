@@ -1,0 +1,49 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://idpspid.testunical.it:8088">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="true">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIC+zCCAeOgAwIBAgIUckBhy4eX+ZqyLC2iVVtU8qU3GawwDQYJKoZIhvcNAQEL
+BQAwDTELMAkGA1UEBhMCSVQwHhcNMTkwNDAxMTIzMzQ0WhcNMTkwNTAxMTIzMzQ0
+WjANMQswCQYDVQQGEwJJVDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AK1NWr8KeTb1armDGqXdZ+QETsLlaGv/HrI4Bdj0aXZySzpqOaDxJvY7UdNHkHN4
+6YkLejQVbzOej1M1QDSt0pEMeNrjqYxle9QjotF/jpCWOSWWqkiRX3euaeKlH8A0
+LEzLuBgrfEBU+vRHlkCMA1P+OU6xXo4i+p5mrb0nlbj9g1dPKHDBD1kwWXpWW2Wv
+3+uji06cU9sgzRVkferDaJcO9Il8ISC+VwSok8t4y3XUJ4zpTrGdUhO905tvC0+n
+E4pZvVPuqN+GtXUyetF6nC2a6g8mDWMofhOgEtwlW1iVvtd9OmSN6yl1Cg/JwxV4
+/Yq1uqYqb2s35BN2tSMwj18CAwEAAaNTMFEwHQYDVR0OBBYEFDU7QHXkyjU0B0LZ
+pExPGD1/4y8DMB8GA1UdIwQYMBaAFDU7QHXkyjU0B0LZpExPGD1/4y8DMA8GA1Ud
+EwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAPjg1N1X8MtmDt+0R+B9maK
+iVtrgHspmnXvvKePu6WGOJCvqGSGAuHmjQIOJdjspS2NjcP4quOeJSb44UzJZCfm
+bHjrsxoeDIVTYAuIwHQ7LC/kx38FEDSAM/bLo1/fhDf6S6BTbxirqXzfeV8IFJ2J
+y3IsSVljs+S286ulc/FQxsOCyxn4Iq2JJtBjzGtdONVvc7VWwQKPNDYx8lywCRmw
+fY9qwKA96ApqbbzoPV7vd6yEd3fUlXO8eVakJbQuXFVleuHgP7VShP+4pocm8y5s
+xAp/9QdSgf2G3QlE/B1rsiiS819353Imue7Qt3FUmLSNTIpFqZhf+jlu8F5LP8A=
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://idpspid.testunical.it:8088/slo"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://idpspid.testunical.it:8088/slo"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://idpspid.testunical.it:8088/sso"/>
+    <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://idpspid.testunical.it:8088/sso"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="spidCode"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="name"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="familyName"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="placeOfBirth"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="countyOfBirth"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="dateOfBirth"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="gender"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="companyName"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="registeredOffice"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fiscalNumber"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="ivaCode"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="idCard"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="mobilePhone"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="email"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="address"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="expirationDate"/>
+    <saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="digitalAddress"/>
+  </md:IDPSSODescriptor>
+</md:EntityDescriptor>

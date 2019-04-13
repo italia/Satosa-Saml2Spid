@@ -2,7 +2,10 @@ module: satosa.backends.saml2.SAMLBackend
 name: Saml2
 config:
   #idp_blacklist_file: /path/to/blacklist.json
-  entityid_endpoint: '<base_url>/<name>/metadata'
+
+  # make metadata downloadable from entityid url
+  entityid_endpoint: true
+
   sp_config:
 
     key_file: ./pki/backend.key
@@ -16,7 +19,11 @@ config:
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
-      local: [./metadata/idp1.xml]
+      local: [./metadata/idp1.xml, ./metadata/idpspid1.xml]
+      # using pyFF or other MDX server
+      # mdq:
+        # - url: "http://mdq.ukfederation.org.uk/"
+          # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
@@ -50,13 +57,16 @@ config:
         want_response_signed: true
         allow_unsolicited: true
 
-        sign_alg: 'SIG_RSA_SHA256'
-        digest_alg: 'DIGEST_SHA256'
+        # they works both with ppln-dev branch
+        # sign_alg: 'SIG_RSA_SHA384'
+        # digest_alg: 'DIGEST_SHA384'
+        sign_alg: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+        digest_alg: "http://www.w3.org/2001/04/xmlenc#sha256"
 
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
-          - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
+          # - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
           discovery_response:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
