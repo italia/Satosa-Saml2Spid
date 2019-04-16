@@ -3,6 +3,7 @@ import saml2
 
 from satosa.backends.saml2 import SAMLBackend
 from satosa.logging_util import satosa_logging
+from satosa.response import SeeOther, Response
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.authn_context import requested_authn_context
 from saml2.metadata import entity_descriptor
@@ -28,10 +29,8 @@ class SpidSAMLBackend(SAMLBackend):
         :return: response with metadata
         """
         satosa_logging(logger, logging.DEBUG, "Sending metadata response", context.state)
-
         conf = self.sp.config
         metadata = entity_descriptor(conf)
-        import pdb; pdb.set_trace()
 
         # creare gli attribute_consuming_service
         cnt = 0
@@ -50,25 +49,17 @@ class SpidSAMLBackend(SAMLBackend):
             reqattr.name_format = None
             reqattr.friendly_name = None
 
-        # remove unecessary encryption and digest algs
-        supported_algs = ['http://www.w3.org/2009/xmldsig11#dsa-sha256',
-                          'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256']
-        new_list = []
-        for alg in metadata.extensions.extension_elements:
-            # if alg.namespace != 'urn:oasis:names:tc:SAML:metadata:algsupport': continue
-            if alg.attributes.get('Algorithm') in supported_algs:
-                new_list.append(alg)
-        metadata.extensions.extension_elements = new_list
-        # ... Piuttosto non devo specificare gli algoritmi di firma/criptazione...
-        metadata.extensions = None
-
         # attribute consuming service service name patch
         service_name = metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0]
         service_name.lang = 'it'
-        service_name.text = conf._sp_name
+        service_name.text = metadata.entity_id
+
+        # import pdb; pdb.set_trace()
+        # remove extension disco and uuinfo (spid-testenv2)
+        metadata.spsso_descriptor.extensions = []
 
         return Response(text_type(metadata).encode('utf-8'),
-                        content_type="text/xml; charset=utf8")
+                        content="text/xml; charset=utf8")
 
 
     def get_kwargs_sign_dig_algs(self):
