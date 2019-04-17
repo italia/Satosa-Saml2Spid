@@ -19,10 +19,10 @@ config:
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
-      local: [./metadata/idp1.xml, ./metadata/idpspid1.xml]
+      # local: [./metadata/idp1.xml, ./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      # mdq:
-        # - url: "http://mdq.ukfederation.org.uk/"
+      mdq:
+        - url: "http://sp1.testunical.it:8001"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
@@ -32,10 +32,10 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: "SaToSa SP"
+              text: "Unical authentication proxy"
           description:
             - lang: en
-              text: "Saml2 Proxy"
+              text: "Unical  authentication proxy"
           information_url:
             - lang: en
               text: "http://sp.information.url/"
@@ -44,9 +44,9 @@ config:
               text: "http://sp.privacy.url/"
           keywords:
             - lang: it
-              text: ["Satosa", "SP-IT"]
+              text: ["Unical authentication proxy", "SP-IT"]
             - lang: en
-              text: ["Satosa", "SP-EN"]
+              text: ["Unical authentication proxy", "SP-EN"]
           logo:
             text: "http://sp.logo.url/"
             width: "100"
@@ -66,11 +66,12 @@ config:
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
-          # - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
           discovery_response:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
+
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
-        name_id_format_allow_create: true
+        name_id_format_allow_create: false
+
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
   # it uses pyFF
   disco_srv: "http://sp1.testunical.it:8001/role/idp.ds"

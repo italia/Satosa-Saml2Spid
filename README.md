@@ -92,10 +92,27 @@ A list of external attributes names which should be mapped to the internal attri
 
 Produce metadata
 ````
-satosa-saml-metadata proxy_conf.yaml ./pki/backend.key ./pki/backend.cert
+satosa-saml-metadata proxy_conf.yaml ./pki/backend.key ./pki/backend.cert --split-backend --dir metadata/
 
-Writing metadata to './frontend.xml'
-Writing metadata to './backend.xml'
+Writing metadata to 'metadata/frontend.xml'
+Writing metadata to 'metadata/Saml2_0.xml'
+Writing metadata to 'metadata/spidSaml2_0.xml'
+
+````
+
+Copy metadata, this is only for test, the use pyFF or other MDX server is suggested.
+````
+# in test sp
+wget https://satosa.testunical.it:10000/Saml2IDP/metadata -O saml2_sp/saml2_config/satosa_frontend.xml --no-check-certificate
+
+# in test idp
+wget https://satosa.testunical.it:10000/Saml2/metadata -O idp/saml2_config/metadata/satosa_backend.xml --no-check-certificate
+
+# in test spid-testenv2
+wget https://satosa.testunical.it:10000/spidSaml2/metadata  -O conf/satosa_metadata.xml --no-check-certificate
+
+# in satosa
+# ...It would be better to use a mdq server like pyff, see examples.
 ````
 
 Run in debug mode, `--reload` will restart process if source code changes

@@ -4,7 +4,6 @@ module: backends.spidsaml2.SpidSAMLBackend
 name: spidSaml2
 config:
   #idp_blacklist_file: /path/to/blacklist.json
-
   # make metadata downloadable from entityid url
   entityid_endpoint: true
 
@@ -23,6 +22,8 @@ config:
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
+      # if mdq I get in djangosaml2 "SignatureError at /saml2/acs/: Signature missing for response"
+      # probably some data is lost in metadata catalogue
       local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
       # mdq:
@@ -38,10 +39,10 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: "SaToSa SP"
+              text: "Unical SPID authentication proxy"
           description:
             - lang: en
-              text: "Saml2 Proxy"
+              text: "Unical SPID authentication proxy"
           information_url:
             - lang: en
               text: "http://sp.information.url/"
@@ -50,9 +51,9 @@ config:
               text: "http://sp.privacy.url/"
           keywords:
             - lang: it
-              text: ["Satosa", "SP-IT"]
+              text: ["Unical SPID authentication proxy", "SP-IT"]
             - lang: en
-              text: ["Satosa", "SP-EN"]
+              text: ["Unical SPID authentication proxy", "SP-EN"]
           logo:
             text: "http://sp.logo.url/"
             width: "100"
@@ -70,10 +71,9 @@ config:
         # security
         only_use_keys_in_metadata: true
 
-
-        # to be verified
         force_authn: false
         name_id_format_allow_create: false
+        name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
         allow_unknown_attributes: true
         allow_unsolicited: false
 
@@ -104,8 +104,7 @@ config:
           - [<base_url>/<name>ls/post/, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
           discovery_response:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
-        name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
-        name_id_format_allow_create: false
+
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
   # it uses pyFF
   disco_srv: "http://sp1.testunical.it:8001/role/idp.ds"

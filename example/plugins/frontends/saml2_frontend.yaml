@@ -13,19 +13,21 @@ config:
     - {contact_type: technical, email_address: technical@example.com, given_name: Technical}
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
+    attribute_map_dir: 'attributes-map'
+
     key_file: ./pki/frontend.key
     cert_file: ./pki/frontend.cert
     encryption_keypairs:
     - {'key_file': ./pki/frontend.key, 'cert_file': ./pki/frontend.cert}
 
     metadata:
-      local: [./metadata/sp1.xml]
+      # local: [./metadata/sp1.xml]
       # remote:
         # - url:https://kalmar2.org/simplesaml/module.php/aggregator/?id=kalmarcentral2&set=saml2
           # cert:null
       # using pyFF or other MDX server
-      # mdq:
-        # - url: "http://mdq.ukfederation.org.uk/"
+      mdq:
+        - url: "http://sp1.testunical.it:8001"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
