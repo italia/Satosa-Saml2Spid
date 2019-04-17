@@ -34,7 +34,10 @@ These patches/feature will be always available [here](https://github.com/peppeli
 apt install -y libffi-dev libssl-dev xmlsec1
 virtualenv -ppython3 satosa.env
 source satosa.env/bin/activate
-git clone https://github.com/IdentityPython/SATOSA.git
+
+pip install git+https://github.com/peppelinux/pysaml2/tree/pplnx-dev
+pip install git+https://github.com/peppelinux/SATOSA/tree/pplnx-dev
+
 cd SATOSA
 python3 ./setup.py install
 cd ..
@@ -112,7 +115,7 @@ cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml
 
 ## Todo:
 
-a list of things to be done
+- [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211)
 
 
 ## Use case
