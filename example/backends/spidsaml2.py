@@ -1,12 +1,17 @@
 import logging
 import saml2
 
-from satosa.backends.saml2 import SAMLBackend
-from satosa.logging_util import satosa_logging
-from satosa.response import SeeOther, Response
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.authn_context import requested_authn_context
 from saml2.metadata import entity_descriptor
+from saml2.saml import NAMEID_FORMAT_TRANSIENT
+from satosa.backends.saml2 import SAMLBackend
+from satosa.context import Context
+from satosa.exception import SATOSAAuthenticationError
+from satosa.logging_util import satosa_logging
+from satosa.response import SeeOther, Response
+from satosa.saml_util import make_saml_response
+import satosa.util as util
 from six import text_type
 
 
@@ -54,7 +59,6 @@ class SpidSAMLBackend(SAMLBackend):
         service_name.lang = 'it'
         service_name.text = metadata.entity_id
 
-        # import pdb; pdb.set_trace()
         # remove extension disco and uuinfo (spid-testenv2)
         metadata.spsso_descriptor.extensions = []
 
@@ -108,32 +112,145 @@ class SpidSAMLBackend(SAMLBackend):
             kwargs['requested_authn_context'] = authn_context
 
         try:
-            binding, destination = self.sp.pick_binding(
-                "single_sign_on_service", None, "idpsso", entity_id=entity_id)
+            binding = saml2.BINDING_HTTP_POST
+            destination = context.request['entityID']
+            # SPID CUSTOMIZATION
+            #client = saml2.client.Saml2Client(conf)
+            client = self.sp
 
             satosa_logging(logger, logging.DEBUG, "binding: %s, destination: %s" % (binding, destination),
                            context.state)
 
-            acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
+            # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
+            # req_id, req = self.sp.create_authn_request(
+                # destination, binding=response_binding, **kwargs)
 
-            req_id, req = self.sp.create_authn_request(
-                destination, binding=response_binding, **kwargs)
+            logger.debug('Redirecting user to the IdP via %s binding.', binding)
+            # use the html provided by pysaml2 if no template was specified or it didn't exist
+
+
+            # SPID want the fqdn of the IDP as entityID, not the SSO endpoint
+            # 'http://idpspid.testunical.it:8088'
+            # dovrebbe essere destination ma nel caso di spid-testenv2 è entityid...
+            # binding, destination = self.sp.pick_binding("single_sign_on_service", None, "idpsso", entity_id=entity_id)
+            # location = client.sso_location(destination, binding)
+            location = client.sso_location(entity_id, binding)
+            location_fixed = entity_id
+            # ...hope to see the SSO endpoint soon in spid-testenv2
+            # returns 'http://idpspid.testunical.it:8088/sso'
+
+            # verificare qui
+            # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
+
+            authn_req = saml2.samlp.AuthnRequest()
+            authn_req.destination = location_fixed
+            # spid-testenv2 preleva l'attribute consumer service dalla authnRequest (anche se questo sta già nei metadati...)
+            authn_req.attribute_consuming_service_index = "0"
+
+            # import pdb; pdb.set_trace()
+            issuer = saml2.saml.Issuer()
+            issuer.name_qualifier = client.config.entityid
+            issuer.text = client.config.entityid
+            issuer.format = "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
+            authn_req.issuer = issuer
+
+            # message id
+            authn_req.id = saml2.s_utils.sid()
+            authn_req.version = saml2.VERSION # "2.0"
+            authn_req.issue_instant = saml2.time_util.instant()
+
+            name_id_policy = saml2.samlp.NameIDPolicy()
+            # del(name_id_policy.allow_create)
+            name_id_policy.format = NAMEID_FORMAT_TRANSIENT
+            authn_req.name_id_policy  = name_id_policy
+
+            # TODO: use a parameter instead
+            authn_context = requested_authn_context(class_ref='https://www.spid.gov.it/SpidL1')
+
+            authn_req.requested_authn_context = authn_context
+
+            authn_req.protocol_binding = binding
+
+            assertion_consumer_service_url = client.config._sp_endpoints['assertion_consumer_service'][0][0]
+            authn_req.assertion_consumer_service_url = assertion_consumer_service_url #'http://sp-fqdn/saml2/acs/'
+
+            authn_req_signed = client.sign(authn_req, sign_prepare=False,
+                                           sign_alg=kwargs['sign_alg'],
+                                           digest_alg=kwargs['digest_alg'])
+            session_id = authn_req.id
+
+            _req_str = authn_req_signed
+            logger.debug('AuthRequest to {}: {}'.format(destination, (_req_str)))
 
             relay_state = util.rndstr()
-            ht_args = self.sp.apply_binding(binding, "%s" % req, destination, relay_state=relay_state)
+            ht_args = client.apply_binding(binding,
+                                           _req_str, location,
+                                           sign=True,
+                                           sigalg=kwargs['sign_alg'],
+                                           relay_state=relay_state)
+
+
+            if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
+                if authn_req.id in self.outstanding_queries:
+                    errmsg = "Request with duplicate id {}".format(req_id)
+                    satosa_logging(logger, logging.DEBUG, errmsg, context.state)
+                    raise SATOSAAuthenticationError(context.state, errmsg)
+                self.outstanding_queries[authn_req.id] = authn_req_signed
+
+            context.state[self.name] = {"relay_state": relay_state}
+
             satosa_logging(logger, logging.DEBUG, "ht_args: %s" % ht_args, context.state)
+            return make_saml_response(binding, ht_args)
 
         except Exception as exc:
             satosa_logging(logger, logging.DEBUG, "Failed to construct the AuthnRequest for state", context.state,
                            exc_info=True)
             raise SATOSAAuthenticationError(context.state, "Failed to construct the AuthnRequest") from exc
 
+
+    def authn_response(self, context, binding):
+        """
+        Endpoint for the idp response
+        :type context: satosa.context,Context
+        :type binding: str
+        :rtype: satosa.response.Response
+
+        :param context: The current context
+        :param binding: The saml binding type
+        :return: response
+        """
+        # import pdb; pdb.set_trace()
+
+        if not context.request["SAMLResponse"]:
+            satosa_logging(logger, logging.DEBUG, "Missing Response for state", context.state)
+            raise SATOSAAuthenticationError(context.state, "Missing Response")
+
+        logger.debug(" {}".format(util.repr_saml(context.request["SAMLResponse"], b64=True)))
+
+        try:
+            authn_response = self.sp.parse_authn_request_response(
+                context.request["SAMLResponse"],
+                binding, outstanding=self.outstanding_queries)
+        except Exception as err:
+            satosa_logging(logger, logging.DEBUG, "Failed to parse authn request for state", context.state,
+                           exc_info=True)
+            raise SATOSAAuthenticationError(context.state, "Failed to parse authn request") from err
+
         if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
-            if req_id in self.outstanding_queries:
-                errmsg = "Request with duplicate id {}".format(req_id)
+            req_id = authn_response.in_response_to
+            if req_id not in self.outstanding_queries:
+                errmsg = "No request with id: {}".format(req_id),
                 satosa_logging(logger, logging.DEBUG, errmsg, context.state)
                 raise SATOSAAuthenticationError(context.state, errmsg)
-            self.outstanding_queries[req_id] = req
+            del self.outstanding_queries[req_id]
 
-        context.state[self.name] = {"relay_state": relay_state}
-        return make_saml_response(binding, ht_args)
+        # check if the relay_state matches the cookie state
+        if context.state[self.name]["relay_state"] != context.request["RelayState"]:
+            satosa_logging(logger, logging.DEBUG,
+                           "State did not match relay state for state", context.state)
+            raise SATOSAAuthenticationError(context.state, "State did not match relay state")
+
+        context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
+
+        del context.state[self.name]
+        return self.auth_callback_func(context, self._translate_response(authn_response, context.state))

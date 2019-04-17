@@ -23,10 +23,10 @@ config:
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
-      # local: [./metadata/idpspid1.xml]
+      local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      mdq:
-        - url: "http://sp1.testunical:8001/"
+      # mdq:
+        # - url: "http://sp1.testunical:8001/"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
@@ -61,22 +61,21 @@ config:
         # sign dig and enc
         authn_requests_signed: true
         want_response_signed: true
-        allow_unsolicited: true
-
-        # security
-        only_use_keys_in_metadata: true
-        allow_unsolicited: false
-
         # they works both with ppln-dev branch
         # sign_alg: 'SIG_RSA_SHA384'
         # digest_alg: 'DIGEST_SHA384'
         sign_alg: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
         digest_alg: "http://www.w3.org/2001/04/xmlenc#sha256"
 
+        # security
+        only_use_keys_in_metadata: true
+
+
         # to be verified
         force_authn: false
         name_id_format_allow_create: false
         allow_unknown_attributes: true
+        allow_unsolicited: false
 
         # this instantiate the attribute_consuming_service
         required_attributes: ['spidCode',
@@ -101,7 +100,8 @@ config:
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
-          # - [<base_url>/<name>/acs/redirect, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect']
+          single_logout_service:
+          - [<base_url>/<name>ls/post/, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
           discovery_response:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
