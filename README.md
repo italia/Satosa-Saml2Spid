@@ -6,6 +6,29 @@ Official docs:
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
 
+## Requirements
+
+The SaToSa example contained in this project works if the following patchs/version will be used:
+
+
+#### Regarding SaToSa
+
+- [Selectable SIGN and DIGEST algs in saml2_backend](https://github.com/IdentityPython/SATOSA/pull/214)
+- [sign_alg/digest_alg policy config patched](https://github.com/IdentityPython/SATOSA/pull/216)
+- [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
+- [Optional multiple user_id_from_attrs](https://github.com/IdentityPython/SATOSA/pull/222)
+
+We can also get all those patches and features merged in this single and quite tested [repository here](https://github.com/peppelinux/SATOSA/tree/pplnx-dev)
+
+
+#### Regarding pySAML2
+
+- [Added configurable signing and digest algorithm to SP and IDP](https://github.com/IdentityPython/pysaml2/pull/597), not mandatory.
+- [[xsd type] Added date](https://github.com/IdentityPython/pysaml2/pull/602)
+
+These patches/feature will be always available [here](https://github.com/peppelinux/pysaml2/tree/pplnx-dev) as merged.
+
+
 ## Prepare environment
 ```
 apt install -y libffi-dev libssl-dev xmlsec1
