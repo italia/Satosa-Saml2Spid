@@ -17,6 +17,7 @@ The SaToSa example contained in this project works if the following patchs/versi
 - [sign_alg/digest_alg policy config patched](https://github.com/IdentityPython/SATOSA/pull/216)
 - [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
 - [Optional multiple user_id_from_attrs](https://github.com/IdentityPython/SATOSA/pull/222)
+- [Load plugins from PWD](https://github.com/IdentityPython/SATOSA/pull/223)
 
 We can also get all those patches and features merged in this single and quite tested [repository here](https://github.com/peppelinux/SATOSA/tree/pplnx-dev)
 
@@ -25,6 +26,7 @@ We can also get all those patches and features merged in this single and quite t
 
 - [Added configurable signing and digest algorithm to SP and IDP](https://github.com/IdentityPython/pysaml2/pull/597), not mandatory.
 - [[xsd type] Added date](https://github.com/IdentityPython/pysaml2/pull/602)
+
 
 These patches/feature will be always available [here](https://github.com/peppelinux/pysaml2/tree/pplnx-dev) as merged.
 
@@ -135,10 +137,7 @@ cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml
 - [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211)
 
 
-## Use case
-https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
-
 ## References
-
 - https://github.com/IdentityPython/SATOSA
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
+- https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
