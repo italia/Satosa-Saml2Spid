@@ -31,6 +31,13 @@ We can also get all those patches and features merged in this single and quite t
 These patches/feature will be always available [here](https://github.com/peppelinux/pysaml2/tree/pplnx-dev) as merged.
 
 
+#### Installing requirements
+````
+pip install git+https://github.com/peppelinux/pysaml2/tree/pplnx-dev
+pip install git+https://github.com/peppelinux/SATOSA/tree/pplnx-dev
+````
+
+
 ## Prepare environment
 ```
 apt install -y libffi-dev libssl-dev xmlsec1
