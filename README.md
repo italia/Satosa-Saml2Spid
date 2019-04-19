@@ -133,7 +133,7 @@ uwsgi --wsgi-file ../apps/SATOSA/src/satosa/wsgi.py  --https 0.0.0.0:10000,./pki
 ````
 
 Give Metadata to your endpoints, SP and IDP.
-backend.xml to target IDP, frontend.xml to SP.
+backend.xml to target IDP, frontend.xml to SP... It would be better if they use a MDQ server.
 ````
 cat frontend.xml > ../djangosaml2_sp/saml2_sp/saml2_config/satosa_frontend.xml
 cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml
