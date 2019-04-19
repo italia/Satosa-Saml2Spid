@@ -18,6 +18,7 @@ The SaToSa example contained in this project works if the following patchs/versi
 - [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
 - [Optional multiple user_id_from_attrs](https://github.com/IdentityPython/SATOSA/pull/222)
 - [Load plugins from PWD](https://github.com/IdentityPython/SATOSA/pull/223)
+- [Encrypted assertion in frontend's authnresponse](https://github.com/IdentityPython/SATOSA/pull/226)
 
 We can also get all those patches and features merged in this single and quite tested [repository here](https://github.com/peppelinux/SATOSA/tree/pplnx-dev)
 
@@ -26,7 +27,6 @@ We can also get all those patches and features merged in this single and quite t
 
 - [Added configurable signing and digest algorithm to SP and IDP](https://github.com/IdentityPython/pysaml2/pull/597), not mandatory.
 - [[xsd type] Added date](https://github.com/IdentityPython/pysaml2/pull/602)
-
 
 These patches/feature will be always available [here](https://github.com/peppelinux/pysaml2/tree/pplnx-dev) as merged.
 
