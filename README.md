@@ -33,8 +33,8 @@ These patches/feature will be always available [here](https://github.com/peppeli
 
 #### Installing requirements
 ````
-pip install git+https://github.com/peppelinux/pysaml2/tree/pplnx-dev
-pip install git+https://github.com/peppelinux/SATOSA/tree/pplnx-dev
+pip install git+https://github.com/peppelinux/pysaml2.git@pplnx-dev
+pip install git+https://github.com/peppelinux/SATOSA.git@pplnx-dev
 ````
 
 
