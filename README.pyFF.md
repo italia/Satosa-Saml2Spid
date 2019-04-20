@@ -20,7 +20,7 @@ It seems that pyff is sensible to arguments order, unfortunately it doesn't use 
 The `examples/` folder was taken from git repository.
 
 ````
-pyffd -p pyff.pid -f -a --loglevel=DEBUG --dir=`pwd` -H 0.0.0.0 -P 8001 examples/big.fd
+pyffd -p pyff.pid -f -a --loglevel=DEBUG --error-log=error.log --access-log=access.log --dir=`pwd` -H 0.0.0.0 -P 8001 --frequency=180 pipelines/md.fd
 ````
 
 When it complete the downloads of all the metadata then exposes all the SAML entities in a _human navigable_ web catalog, this will permit us to test the DiscoveryService and see common stats.
@@ -99,6 +99,7 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 
 ````
 /entities : get all the entitities in a single aggregated metadata
+/entities/{sha1}baf9ddc66fa9d6a6077e72cd04e0e292ccbc7676 : get a single metadata, related to the hashed entityID in the request URL
 ````
 
 ## Advanced Topics
