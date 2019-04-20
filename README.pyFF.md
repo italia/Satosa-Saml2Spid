@@ -106,6 +106,21 @@ I think that pyFF would a be a real _stop-application_ for the followings:
 Italian isn't so difficult to be read, isn't it?
 
 
+## Playing MDX service
+
+````
+from saml2.mdstore import MetaDataMDX
+mdx = MetaDataMDX("http://mdx.testunical.it:8001")
+sso_loc = mdx.service("http://sp1.testunical.it:8000/saml2/metadata/", "spsso_descriptor", 'assertion_consumer_service')
+
+mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="signing")
+mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="encryption")
+
+# get certs from idp
+mdx.certs("http://idp1.testunical.it:9000/idp/metadata", "idpsso", use="encryption") 
+````
+
+
 ## Fancy screenshot (what you will get)
 
 When it start the only content available on its embedded webserver is a loading WebPage, this will persist until the metadata download and validation finishes, this will be also the only thing you will see if metadata could not be imported (404 on their page).
