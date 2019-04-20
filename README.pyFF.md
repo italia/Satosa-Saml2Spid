@@ -95,6 +95,12 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
              - break
 ````
 
+## Usefulls web resources
+
+````
+/entities : get all the entitities in a single aggregated metadata
+````
+
 ## Advanced Topics
 I think that pyFF would a be a real _stop-application_ for the followings:
 
