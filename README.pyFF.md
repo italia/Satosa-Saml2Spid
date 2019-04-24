@@ -142,7 +142,7 @@ When it start the only content available on its embedded webserver is a loading 
 
 Additional resources
 --------------------
-
+- [pyFF Roadmap](https://github.com/IdentityPython/pyFF/wiki/Roadmap)
 - Using MDX with pySAML2, [read source](https://github.com/IdentityPython/pysaml2/blob/master/src/saml2/mdstore.py#L781)
 - [Metadata Query Protocol](https://github.com/iay/md-query)
 - pySAML2 MDQ usage, see:
