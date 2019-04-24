@@ -17,8 +17,8 @@ pip install git+https://github.com/IdentityPython/pyFF.git
 
 The following command will print in stdout all the pyFF's execution log, if you want to put it in a file just add `--log=pyff.log` after `--loglevel`.
 It seems that pyff is sensible to arguments order, unfortunately it doesn't use arparse...
-The `examples/` folder was taken from git repository.
 
+This command will run a MDX server instance, see `main()` in `pyff.mdx`
 ````
 pyffd -p pyff.pid -f -a --loglevel=DEBUG --error-log=error.log --access-log=access.log --dir=`pwd` -H 0.0.0.0 -P 8001 --frequency=180 pipelines/md.fd
 ````
