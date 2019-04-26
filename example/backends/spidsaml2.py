@@ -22,7 +22,7 @@ class SpidSAMLBackend(SAMLBackend):
     """
     A saml2 backend module (acting as a SPID SP).
     """
-
+    _authn_context = 'https://www.spid.gov.it/SpidL1'
 
     def _metadata_endpoint(self, context):
         """
@@ -108,8 +108,7 @@ class SpidSAMLBackend(SAMLBackend):
         kwargs.update(self.get_kwargs_sign_dig_algs())
 
         authn_context = self.construct_requested_authn_context(entity_id)
-        if authn_context:
-            kwargs['requested_authn_context'] = authn_context
+        requested_authn_context = authn_context or requested_authn_context(class_ref=self._authn_context)
 
         try:
             binding = saml2.BINDING_HTTP_POST
@@ -165,10 +164,7 @@ class SpidSAMLBackend(SAMLBackend):
             authn_req.name_id_policy  = name_id_policy
 
             # TODO: use a parameter instead
-            authn_context = requested_authn_context(class_ref='https://www.spid.gov.it/SpidL1')
-
-            authn_req.requested_authn_context = authn_context
-
+            authn_req.requested_authn_context = requested_authn_context
             authn_req.protocol_binding = binding
 
             assertion_consumer_service_url = client.config._sp_endpoints['assertion_consumer_service'][0][0]

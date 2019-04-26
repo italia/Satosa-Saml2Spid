@@ -7,6 +7,10 @@ config:
   # make metadata downloadable from entityid url
   entityid_endpoint: true
 
+  acr_mapping:
+    "": default-LoA
+    "http://idpspid.testunical.it:8088": 'https://www.spid.gov.it/SpidL1'
+
   sp_config:
 
     key_file: ./pki/backend.key
@@ -24,16 +28,15 @@ config:
     metadata:
       # if mdq I get in djangosaml2 "SignatureError at /saml2/acs/: Signature missing for response"
       # probably some data is lost in metadata catalogue
-      local: [./metadata/idpspid1.xml]
+      # local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      # mdq:
-        # - url: "http://sp1.testunical:8001/"
+      mdq:
+        - url: "http://sp1.testunical.it:8001/"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
-    # metadata validity
-    valid_for: 240
+    valid_for: 1200 #10 days
 
     service:
       sp:
