@@ -3,7 +3,7 @@ pyFF
 [python Federation Feeder](http://pyff.io/)
 [github](https://github.com/IdentityPython/pyFF)
 
-pyFF is a omnicomprensive advanced Metadata appliance. 
+pyFF is a omnicomprensive advanced Metadata appliance.
 It download, validate, aggregate, export one or many entities in xml format, in json format, as a querable [MDX service](https://datatracker.ietf.org/doc/draft-young-md-query-saml/), it will also give us a [DiscoveryService](http://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-idp-discovery.pdf) and a user friendly web catalog with statistics and all the usefull informations as well, with an agile search engine... The first time I used it I wondered what I had done until then.
 
 Please also rememeber that "MDX" is an acronym for MetaData eXchange and refers to a more general concept of which the "MDQ", acronym for Metadata Query Protocol, is just one component.
@@ -20,7 +20,7 @@ It seems that pyff is sensible to arguments order, unfortunately it doesn't use 
 
 This command will run a MDX server instance, see `main()` in `pyff.mdx`
 ````
-pyffd -p pyff.pid -f -a --loglevel=DEBUG --error-log=error.log --access-log=access.log --dir=`pwd` -H 0.0.0.0 -P 8001 --frequency=180 pipelines/md.fd
+pyffd -p pyff.pid -f -a --loglevel=DEBUG --error-log=error.log --access-log=access.log --dir=`pwd` -H 0.0.0.0 -P 8001 --frequency=180 --no-caching pipelines/md.fd
 ````
 
 When it complete the downloads of all the metadata then exposes all the SAML entities in a _human navigable_ web catalog, this will permit us to test the DiscoveryService and see common stats.
@@ -55,7 +55,7 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
 # load) download SAML Metadatas configured in these files
 - load xrd ./garr-loaded.xrd:
   - custom_examples/garr.xrd
-  
+
 # select) this could, or not, specify a selection filter for EntityDescriptors in the metadata repository.
 # it could be a XPATH selection to get for example only the IDP as: "http://mds.edugain.org!//md:EntityDescriptor[md:IDPSSODescriptor]"
 # in this case it will take all of them
@@ -124,7 +124,7 @@ mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="signing
 mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="encryption")
 
 # get certs from idp
-mdx.certs("http://idp1.testunical.it:9000/idp/metadata", "idpsso", use="encryption") 
+mdx.certs("http://idp1.testunical.it:9000/idp/metadata", "idpsso", use="encryption")
 ````
 
 
@@ -134,7 +134,7 @@ When it start the only content available on its embedded webserver is a loading 
 
 
 ![Loading](gallery/service_request.png)
-**Frontend**: Loading page during metadata importing procedure. 
+**Frontend**: Loading page during metadata importing procedure.
 
 
 ![Home](gallery/Selezione_537.png)
@@ -149,4 +149,4 @@ Additional resources
   - https://github.com/IdentityPython/pysaml2/blob/master/docs/howto/config.rst#metadata
   - https://github.com/IdentityPython/pysaml2/issues/410
   - https://github.com/IdentityPython/pysaml2/issues/586
-  - 
+  -
