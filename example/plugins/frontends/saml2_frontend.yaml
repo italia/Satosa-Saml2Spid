@@ -27,7 +27,7 @@ config:
           # cert:null
       # using pyFF or other MDX server
       mdq:
-        - url: "http://sp1.testunical.it:8001"
+        - url: "http://ds.testunical.it:8001"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
@@ -65,10 +65,14 @@ config:
             - lang: en
               text: ["Satosa", "IdP-EN"]
           logo:
-            text: "http://idp1.testunical.it:9000/static/img/logo_header_tracciato.svg"
+            text: "http://idp1.testunical.it/static/img/logo_header_tracciato.svg"
             width: "100"
             height: "100"
         name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:persistent', 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
+
+        want_authn_requests_signed: true
+        want_authn_requests_only_with_valid_cert: true
+
         policy:
           default:
             attribute_restrictions: null
