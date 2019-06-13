@@ -28,19 +28,19 @@ LOGGING:
       level: INFO
       formatter: simple
       stream: ext://sys.stdout
-    info_file_handler:
-      class: logging.handlers.RotatingFileHandler
-      level: INFO
-      formatter: simple
-      filename: info.log
-      maxBytes: 10485760 # 10MB
-      backupCount: 20
-      encoding: utf8
+    # info_file_handler:
+      # class: logging.handlers.RotatingFileHandler
+      # level: INFO
+      # formatter: simple
+      # filename: info.log
+      # maxBytes: 10485760 # 10MB
+      # backupCount: 20
+      # encoding: utf8
   loggers:
     satosa:
       level: INFO
       handlers: [console]
       propagate: no
-  root:
-    level: INFO
-    handlers: [info_file_handler]
+  # root:
+    # level: INFO
+    # handlers: [info_file_handler]

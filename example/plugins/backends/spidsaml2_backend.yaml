@@ -35,7 +35,9 @@ config:
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
-    valid_for: 1200 #10 days
+
+    #10 days
+    valid_for: 1200
 
     service:
       sp:
@@ -58,7 +60,7 @@ config:
             - lang: en
               text: ["Unical SPID authentication proxy", "SP-EN"]
           logo:
-            text: "http://sp.logo.url/"
+            text: "https://www.spid.gov.it/assets/img/spid-ico-circle-bb.svg"
             width: "100"
             height: "100"
 
@@ -78,7 +80,9 @@ config:
         name_id_format_allow_create: false
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
         allow_unknown_attributes: true
-        allow_unsolicited: false
+
+        # in production different workers do not share the same storage!
+        allow_unsolicited: true
 
         # this instantiate the attribute_consuming_service
         required_attributes: ['spidCode',

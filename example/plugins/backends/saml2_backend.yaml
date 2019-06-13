@@ -27,7 +27,8 @@ config:
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
-    accepted_time_diff: 60
+    accepted_time_diff: 300
+
     service:
       sp:
         ui_info:
@@ -53,10 +54,15 @@ config:
             width: "100"
             height: "100"
 
+        only_use_keys_in_metadata: true
+        force_authn: false
+
         # sign dig and enc
         authn_requests_signed: true
         want_response_signed: true
-        allow_unsolicited: false
+
+        # this must be unsolicited because in production different workers do not share the same storage!
+        allow_unsolicited: true
 
         # they works both with ppln-dev branch
         # sign_alg: 'SIG_RSA_SHA384'
@@ -75,4 +81,4 @@ config:
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
   # it uses pyFF
-  disco_srv: "http://ds.testunical.it:8001/role/idp.ds"
+  disco_srv: "https://ds.testunical.it/role/idp.ds"

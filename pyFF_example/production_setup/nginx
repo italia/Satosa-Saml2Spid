@@ -1,4 +1,14 @@
 # configuration of the server
+
+upstream pyff {
+    # load balancing
+    least_conn;
+    server localhost:8001;
+    server localhost:8002;
+    server localhost:8003;
+    server localhost:8004;
+}
+
 server {
     # the port your site will be served on
     listen      80;
@@ -69,6 +79,10 @@ server {
     add_header X-Robots-Tag none;
     # FINE SSL HARDENING
 
+    #proxy_buffer_size   128k;
+    #proxy_buffers   4 256k;
+    #proxy_busy_buffers_size   256k;
+
     # Django static
     location /about  {
         alias /opt/pyff/static;  # your Django project's media files - amend as required
@@ -78,9 +92,17 @@ server {
     # Finally, send all non-media requests to the Django server.
     location / {
        #add_header X-Frame-Options "";
+
        add_header Content-Security-Policy "frame-ancestors ds.testunical.it";
        add_header X-Frame-Options "ALLOW-FROM ds.testunical.it";
-       proxy_pass http://127.0.0.1:8001;
+
+       proxy_set_header   Host                 ds.testunical.it;
+       proxy_set_header   X-Real-IP            $remote_addr;
+       proxy_set_header   X-Forwarded-For      $proxy_add_x_forwarded_for;
+       proxy_set_header   X-Forwarded-Proto    $scheme;
+       proxy_redirect     off;
+
+       proxy_pass http://pyff;
     }
 
 }
