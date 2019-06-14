@@ -4,6 +4,11 @@ BASE: "https://satosa.testunical.it"
 INTERNAL_ATTRIBUTES: "internal_attributes.yaml"
 COOKIE_STATE_NAME: "SAML2_PROXY_STATE"
 STATE_ENCRYPTION_KEY: "876dfsdkhf9de7sd"
+
+# The proxy can hash any attribute value (e.g., for obfuscation) before passing it on to the client
+# DEPRECATED, use hasher microservice instead
+USER_ID_HASH_SALT: "!£$£$HIhsjfhsASDFU$%TGSDF"
+
 CUSTOM_PLUGIN_MODULE_PATHS:
   - "plugins/ping"
   - "plugins/backends"
@@ -16,6 +21,8 @@ FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
 MICRO_SERVICES:
   - "plugins/microservices/static_attributes.yaml"
+  # - "plugins/microservices/hasher.yaml"
+  - "plugins/microservices/ldap_attribute_store.yaml"
   - "plugins/microservices/target_based_routing.yaml"
 LOGGING:
   version: 1
@@ -25,7 +32,7 @@ LOGGING:
   handlers:
     console:
       class: logging.StreamHandler
-      level: INFO
+      level: DEBUG
       formatter: simple
       stream: ext://sys.stdout
     # info_file_handler:
@@ -38,7 +45,7 @@ LOGGING:
       # encoding: utf8
   loggers:
     satosa:
-      level: INFO
+      level: DEBUG
       handlers: [console]
       propagate: no
   # root:

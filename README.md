@@ -130,6 +130,9 @@ gunicorn -b0.0.0.0:10000 satosa.wsgi:app --keyfile=./pki/frontend.key --certfile
 
 # run with uwsgi if you prefer, --honour-stdin needs for debugging with pdb
 uwsgi --wsgi-file ../apps/SATOSA/src/satosa/wsgi.py  --https 0.0.0.0:10000,./pki/frontend.cert,./pki/frontend.key --callable app --honour-stdin
+
+# in uwsgi_setup there a some production examples, the following is to debug with pdb a satosa running whit that configuration
+uwsgi --ini uwsgi_setup/uwsgi.ini --honour-stdin
 ````
 
 Give Metadata to your endpoints, SP and IDP.
