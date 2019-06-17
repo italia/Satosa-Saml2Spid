@@ -1,11 +1,20 @@
-module: satosa.micro_services.ldap_attribute_store_no_pool.LdapAttributeStoreNoPool
-name: LdapAttributeStoreNoPool
+module: satosa.micro_services.ldap_attribute_store.LdapAttributeStore
+name: LdapAttributeStore
 config:
   "":
       ldap_url: ldaps://ldap1.testunical.it
       bind_dn: cn=admin,dc=testunical,dc=it
       bind_password: slapdsecret
       search_base: ou=people,dc=testunical,dc=it
+      read_only : true
+      version : 3
+
+      # see ldap3 client_strategies
+      client_strategy : RESTARTABLE
+      auto_bind : true
+      pool_size : 10
+      pool_keepalive : 10
+
       search_return_attributes:
         # Format is LDAP attribute name : internal attribute name
         uid: uid
