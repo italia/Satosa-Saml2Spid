@@ -22,6 +22,8 @@ config:
         givenName: givenname
         mail: mail
         eduPersonPrincipalName: edupersonprincipalname
+        schacPersonalUniqueID: schacpersonaluniqueid
+        schacPersonalUniqueCode: schacpersonaluniquecode
         #isMemberOf: ismemberof
       ordered_identifier_candidates:
         # Ordered list of identifiers to use when constructing the
@@ -41,7 +43,9 @@ config:
           # add_scope: issuer_entityid
         # - attribute_names: [edupersontargetedid]
           # add_scope: issuer_entityid
-      ldap_identifier_attribute: eduPersonPrincipalName
+      ldap_identifier_attribute: schacPersonalUniqueID
+      #ldap_identifier_attribute: eduPersonPrincipalName
+
       # Whether to clear values for attributes incoming
       # to this microservice. Default is no or false.
       clear_input_attributes: no

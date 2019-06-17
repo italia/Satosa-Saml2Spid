@@ -20,11 +20,14 @@ BACKEND_MODULES:
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
 MICRO_SERVICES:
-  - "plugins/microservices/static_attributes.yaml"
+  #- "plugins/microservices/static_attributes.yaml"
   # - "plugins/microservices/hasher.yaml"
-  - "plugins/microservices/ldap_attribute_store.yaml"
-  - "plugins/microservices/target_based_routing.yaml"
   - "plugins/microservices/spid_unical_account_linking.yaml"
+  - "plugins/microservices/ldap_attribute_store.yaml"
+
+  # ripopolo legacy_field
+  # - "plugins/microservices/Qui spostare rewrite e generazione dei campi ad-hoc matricola studente e dipendente e codice_fiscale
+  - "plugins/microservices/target_based_routing.yaml"
 LOGGING:
   version: 1
   formatters:
