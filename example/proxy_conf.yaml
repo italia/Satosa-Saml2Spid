@@ -24,9 +24,8 @@ MICRO_SERVICES:
   # - "plugins/microservices/hasher.yaml"
   - "plugins/microservices/spid_unical_account_linking.yaml"
   - "plugins/microservices/ldap_attribute_store.yaml"
-
-  # ripopolo legacy_field
-  # - "plugins/microservices/Qui spostare rewrite e generazione dei campi ad-hoc matricola studente e dipendente e codice_fiscale
+  # re-process again after new attributes beign pushed (or not) from ldap store
+  - "plugins/microservices/spid_unical_account_linking.yaml"
   - "plugins/microservices/target_based_routing.yaml"
 LOGGING:
   version: 1
@@ -36,7 +35,7 @@ LOGGING:
   handlers:
     console:
       class: logging.StreamHandler
-      level: DEBUG
+      level: INFO
       formatter: simple
       stream: ext://sys.stdout
     # info_file_handler:
@@ -49,7 +48,7 @@ LOGGING:
       # encoding: utf8
   loggers:
     satosa:
-      level: DEBUG
+      level: INFO
       handlers: [console]
       propagate: no
   # root:
