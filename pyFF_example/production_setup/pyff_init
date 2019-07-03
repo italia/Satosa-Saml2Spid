@@ -48,6 +48,7 @@ case "$1" in
         echo "$COMMAND"
         su -l $USER -c "$LOAD_ENV && $COMMAND"
     done
+    service nginx reload
     ;;
   stop)
     #STOP_CMD="kill -TERM `cat $PID_PATH/$APPNAME.pid`"
