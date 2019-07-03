@@ -69,7 +69,7 @@ cp SATOSA/example/plugins/backends/saml2_backend.yaml.example $DESTDIR/plugins/
 
 ## Create Frontend and Backend certificates
 ````
-export FQDN="satosa.testunical.it"
+FQDN="satosa.testunical.it"
 openssl req -nodes -new -x509 -days 3650 -keyout frontend.key -out frontend.cert -subj '/CN=$FQDN'
 openssl req -nodes -new -x509 -days 3650 -keyout backend.key -out backend.cert -subj '/CN=$FQDN'
 ````

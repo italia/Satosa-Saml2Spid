@@ -118,12 +118,13 @@ Italian isn't so difficult to be read, isn't it?
 ````
 from saml2.mdstore import MetaDataMDX
 mdx = MetaDataMDX("http://mdx.testunical.it:8001")
-sso_loc = mdx.service("http://sp1.testunical.it:8000/saml2/metadata/", "spsso_descriptor", 'assertion_consumer_service')
+sso_loc = mdx.service("http://sp1.testunical.it:8000/saml2/metadata", "spsso_descriptor", 'assertion_consumer_service')
 
 mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="signing")
 mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="encryption")
 
 # get certs from idp
+mdx.service("https://idp1.testunical.it/idp/metadata", 'idpsso_descriptor', 'SingleSignOnService')
 mdx.certs("http://idp1.testunical.it:9000/idp/metadata", "idpsso", use="encryption")
 ````
 
