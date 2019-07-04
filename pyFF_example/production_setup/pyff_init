@@ -39,8 +39,8 @@ RELOAD_CMD="$STOP_CMD; $COMMAND"
 mkdir -p $PID_PATH
 chown -R $USER $PID_PATH
 
-case "$1" in
-  start)
+start() {
+    echo "starting pyffd"
     for i in $(seq $SOCKET_START_PORT $(expr $SOCKET_START_PORT + $(expr $WORKERS_NUMBER - 1)));
     do
         PORT=$i
@@ -48,18 +48,42 @@ case "$1" in
         echo "$COMMAND"
         su -l $USER -c "$LOAD_ENV && $COMMAND"
     done
-    service nginx reload
+
+    # this avoids faulty nginx load_balancer status
+    sudo service nginx reload
+}
+
+forcestop() {
+    echo "stopping pyffd"
+    #STOP_CMD="kill -TERM `cat $PID_PATH/$APPNAME.pid`"
+    kill -TERM  $(ps ax | grep pyffd | awk -F' ' {'print $1'} | xargs echo)
+    # su -l $USER -c "$LOAD_ENV && $STOP_CMD"
+}
+
+stop() {
+    echo "stopping pyffd"
+    if test -f /var/log/uwsgi/pyff_8001.pid ;
+        then kill -TERM  $(cat $PID_PATH/pyff_$SOCKET_START_PORT.pid | xargs echo);
+    fi
+
+}
+
+case "$1" in
+  start)
+    start
     ;;
   stop)
-    #STOP_CMD="kill -TERM `cat $PID_PATH/$APPNAME.pid`"
-    kill -TERM  $(ps ax | grep $APPNAME | awk -F' ' {'print $1'} | xargs echo)
-    # su -l $USER -c "$LOAD_ENV && $STOP_CMD"
+    stop
+    ;;
+  forcestop)
+    forcestop
     ;;
   restart)
-    su -l $USER -c "$LOAD_ENV && $RELOAD_CMD"
+    stop
+    start
     ;;
   *)
-    echo "Usage: motd [start|stop|restart]" >&2
+    echo "Usage: motd [start|stop|forcestop|restart]" >&2
     exit 1
     ;;
 esac
