@@ -95,11 +95,25 @@ pyFF works with configuration files called _pipelines_, it exposes services and 
              - break
 ````
 
-## Usefulls web resources
+## DS and MDQ Web resources
 
+These for example will let us understand how the things works, easily.
 ````
-/entities : get all the entitities in a single aggregated metadata
-/entities/{sha1}baf9ddc66fa9d6a6077e72cd04e0e292ccbc7676 : get a single metadata, related to the hashed entityID in the request URL
+# get all the entitities in a single aggregated metadata
+/entities
+
+# get a single metadata, related to the hashed entityID in the request URL
+# the encoded value is a hashed entity_id
+/entities/{sha1}baf9ddc66fa9d6a6077e72cd04e0e292ccbc7676
+
+# access to the DiscoveryService web resource, we have two arguments
+# entityID, is the identifier of the calling SP, the SP that requests to use the DS
+# return, if the SP resource where to return the selected entityID of the user
+/role/idp.ds?entityID=https%3A%2F%2Fsatosa.testunical.it%2FSaml2%2Fmetadata&return=https%3A%2F%2Fsatosa.testunical.it%2FSaml2%2Fdisco
+
+# when the user selects an IDP to authenticate to, JS will forge a call using the previous "return" url
+# more the entityID argument, containing the selected IDP
+/Saml2/disco?entityID=https://idp1.testunical.it/idp/metadata
 ````
 
 ## Advanced Topics
