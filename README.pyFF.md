@@ -108,7 +108,7 @@ These for example will let us understand how the things works, easily.
 
 # access to the DiscoveryService web resource, we have two arguments
 # entityID, is the identifier of the calling SP, the SP that requests to use the DS
-# return, if the SP resource where to return the selected entityID of the user
+# return, is the SP resource where to return the selected entityID of the user
 /role/idp.ds?entityID=https%3A%2F%2Fsatosa.testunical.it%2FSaml2%2Fmetadata&return=https%3A%2F%2Fsatosa.testunical.it%2FSaml2%2Fdisco
 
 # when the user selects an IDP to authenticate to, JS will forge a call using the previous "return" url
