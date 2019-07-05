@@ -114,6 +114,15 @@ These for example will let us understand how the things works, easily.
 # when the user selects an IDP to authenticate to, JS will forge a call using the previous "return" url
 # more the entityID argument, containing the selected IDP
 /Saml2/disco?entityID=https://idp1.testunical.it/idp/metadata
+
+# these will fetch all the IDP or the SP in json format, like
+# [{"entityID": "https://idp1.testunical.it/idp/metadata","type": "idp","title": "IDP testunical","icon": "https://idp1.testunical.it/static/img/logo.svg","descr": "IDP testunical","auth": "saml"}, ... ]
+/role/idp.json
+/role/sp.json
+
+# same as the previous but as unified metadata (XML format naturally)
+/role/sp.xml
+/role/idp.xml
 ````
 
 ## Advanced Topics
