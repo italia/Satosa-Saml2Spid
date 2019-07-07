@@ -120,7 +120,7 @@ These for example will let us understand how the things works, easily.
 /role/idp.json
 /role/sp.json
 
-# same as the previous but as unified metadata (XML format naturally)
+# same as the previous but in XML format
 /role/sp.xml
 /role/idp.xml
 ````
