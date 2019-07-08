@@ -25,7 +25,7 @@ APPDIR="$BASEDIR/$APPNAME"
 LOG_LEVEL="INFO"
 
 SOCKET_START_PORT=8001
-WORKERS_NUMBER=4
+WORKERS_NUMBER=1
 # every hour
 #METADATA_UPDATE_FREQ=3600
 METADATA_UPDATE_FREQ=180
@@ -48,8 +48,6 @@ start() {
         echo "$COMMAND"
         su -l $USER -c "$LOAD_ENV && $COMMAND"
     done
-
-    # this avoids faulty nginx load_balancer status
     sudo service nginx reload
 }
 
