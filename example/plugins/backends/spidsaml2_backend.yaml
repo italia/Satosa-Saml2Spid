@@ -25,12 +25,13 @@ config:
     - {contact_type: support, email_address: support@example.com, given_name: Support}
 
     metadata:
+      local: [/opt/pyff/md/]
       # if mdq I get in djangosaml2 "SignatureError at /saml2/acs/: Signature missing for response"
       # probably some data is lost in metadata catalogue
       # local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      mdq:
-        - url: "http://sp1.testunical.it:8001/"
+      # mdq:
+        # - url: "http://sp1.testunical.it:8001/"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'

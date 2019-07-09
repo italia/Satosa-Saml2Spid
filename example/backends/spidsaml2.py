@@ -137,12 +137,13 @@ class SpidSAMLBackend(SAMLBackend):
             location_fixed = entity_id
             # ...hope to see the SSO endpoint soon in spid-testenv2
             # returns 'http://idpspid.testunical.it:8088/sso'
+            # fixed: https://github.com/italia/spid-testenv2/commit/6041b986ec87ab8515dd0d43fed3619ab4eebbe9
 
             # verificare qui
             # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
 
             authn_req = saml2.samlp.AuthnRequest()
-            authn_req.destination = location_fixed
+            authn_req.destination = location
             # spid-testenv2 preleva l'attribute consumer service dalla authnRequest (anche se questo sta già nei metadati...)
             authn_req.attribute_consuming_service_index = "0"
 

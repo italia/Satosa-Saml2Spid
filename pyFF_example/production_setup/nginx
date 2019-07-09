@@ -24,10 +24,21 @@ server {
     #     return 301 https://$host$request_uri;
     # }
 
+   location ~ /entities/\{sha1\}(.*) {
+      default_type "application/xml; charset=utf-8";
+      alias /opt/pyff/md/$1.xml;
+   }
+
+
+    location ~ /entities$ {
+       default_type "application/xml; charset=utf-8";
+       alias /opt/pyff/md/md-loaded.xml;
+    }
+
     #if ($scheme != "https") {
     #    rewrite ^ https://$host$uri permanent;
     #}
-    return 301 https://$host$request_uri;
+    #return 301 https://$host$request_uri;
 }
 
 server {
