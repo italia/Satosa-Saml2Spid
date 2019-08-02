@@ -37,9 +37,6 @@ config:
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 60
 
-    #10 days
-    valid_for: 1200
-
     service:
       sp:
         ui_info:
@@ -92,18 +89,18 @@ config:
                               'fiscalNumber',
                               'email']
 
-        optional_attributes: ['gender',
-                              'companyName',
-                              'registeredOffice',
-                              'ivaCode',
-                              'idCard',
-                              'digitalAddress',
-                              'placeOfBirth',
-                              'countryOfBirth',
-                              'dateOfBirth',
-                              'address',
-                              'mobilePhone',
-                              'expirationDate']
+        #optional_attributes: ['gender',
+        #                      'companyName',
+        #                      'registeredOffice',
+        #                      'ivaCode',
+        #                      'idCard',
+        #                      'digitalAddress',
+        #                      'placeOfBirth',
+        #                      'countryOfBirth',
+        #                      'dateOfBirth',
+        #                      'address',
+        #                      'mobilePhone',
+        #                      'expirationDate']
 
         endpoints:
           assertion_consumer_service:
@@ -115,4 +112,4 @@ config:
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
   # it uses pyFF
-  #disco_srv: "http://ds.testunical.it:8001/role/idp.ds"
+  disco_srv: "http://ds.testunical.it:8001/role/idp.ds"
