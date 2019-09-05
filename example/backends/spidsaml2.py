@@ -3,8 +3,10 @@ import saml2
 
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.authn_context import requested_authn_context
-from saml2.metadata import entity_descriptor
+from saml2.metadata import entity_descriptor, sign_entity_descriptor
 from saml2.saml import NAMEID_FORMAT_TRANSIENT
+from saml2.sigver import security_context
+from saml2.validate import valid_instance
 from satosa.backends.saml2 import SAMLBackend
 from satosa.context import Context
 from satosa.exception import SATOSAAuthenticationError
@@ -62,7 +64,14 @@ class SpidSAMLBackend(SAMLBackend):
         # remove extension disco and uuinfo (spid-testenv2)
         metadata.spsso_descriptor.extensions = []
 
-        return Response(text_type(metadata).encode('utf-8'),
+        # metadata signature
+        secc = security_context(conf)
+        #
+        sign_dig_algs = self.get_kwargs_sign_dig_algs()
+        eid, xmldoc = sign_entity_descriptor(metadata, None, secc, **sign_dig_algs)
+
+        valid_instance(eid)        
+        return Response(text_type(xmldoc).encode('utf-8'),
                         content="text/xml; charset=utf8")
 
 
