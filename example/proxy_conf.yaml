@@ -32,11 +32,11 @@ LOGGING:
   version: 1
   formatters:
     simple:
-      format: "[%(asctime)-19.19s] [%(levelname)-5.5s]: %(message)s"
+      format: "[%(asctime)-19.19s] [%(levelname)-5.5s]: %(message)s [%(name)s.%(funcName)s:%(lineno)s]"
   handlers:
     console:
       class: logging.StreamHandler
-      level: INFO
+      level: DEBUG
       formatter: simple
       stream: ext://sys.stdout
     # info_file_handler:
@@ -49,7 +49,7 @@ LOGGING:
       # encoding: utf8
   loggers:
     satosa:
-      level: INFO
+      level: DEBUG
       handlers: [console]
       propagate: no
   # root:
