@@ -14,7 +14,7 @@ attributes:
     orcid: [orcid]
     github: [id]
     openid: [sub]
-    saml: [eduPersonTargetedID]
+    saml: [eduPersonTargetedID, eduPersonTargetedId, edupersontargetedid, spidCode]
   edupersonprincipalname:
     saml: [eduPersonPrincipalName]
   edupersonscopedaffiliation:
@@ -47,7 +47,7 @@ attributes:
     orcid: [name.credit-name]
     github: [name]
     openid: [name]
-    saml: [cn, name]
+    saml: [name]
   surname:
     facebook: [last_name]
     linkedin: [lastName]
@@ -56,10 +56,19 @@ attributes:
     saml: [sn, surname, familyName]
   # spid related
   spidCode:
-    openid: [spidCode]
-    saml: [spidCode]
+    openid: [spidCode, spidcode]
+    saml: [spidCode, spidcode]
+  spidcode:
+    openid: [spidCode, spidcode]
+    saml: [spidCode, spidcode]
+  familyName:
+    saml: [familyName, familyname]
+  familyname:
+    saml: [familyName, familyname]
   fiscalNumber:
-    saml: [fiscalNumber]
+    saml: [fiscalNumber, fiscalnumber]
+  fiscalnumber:
+    saml: [fiscalNumber, fiscalnumber]
   gender:
     saml: [gender]
   companyName:
@@ -74,8 +83,8 @@ attributes:
     saml: [digitalAddress]
   placeOfBirth:
     saml: [placeOfBirth]
-  countryOfBirth:
-    saml: [countryOfBirth]
+  countyOfBirth:
+    saml: [countyOfBirth]
   dateOfBirth:
     saml: [dateOfBirth]
   address:
@@ -92,5 +101,5 @@ attributes:
   matricola_studente:
     saml: [matricola_studente]
 # user identification mapping
-user_id_from_attrs: ["edupersontargetedid", "spidCode"]
+user_id_from_attrs: [edupersontargetedid]
 user_id_to_attr: edupersontargetedid

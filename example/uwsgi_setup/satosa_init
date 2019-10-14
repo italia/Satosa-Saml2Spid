@@ -44,6 +44,9 @@ case "$1" in
   restart)
     su -l $USER -c "$RELOAD_CMD"
     ;;
+  force-stop)
+    sudo ps ax | grep satosa-saml2 | awk -F' ' {'print $1'} | xargs echo | xargs kill -KILL
+    ;;
   *)
     echo "Usage: motd [start|stop|restart]" >&2
     exit 1

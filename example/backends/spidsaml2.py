@@ -62,7 +62,7 @@ class SpidSAMLBackend(SAMLBackend):
         service_name.text = metadata.entity_id
 
         # remove extension disco and uuinfo (spid-testenv2)
-        metadata.spsso_descriptor.extensions = []
+        #metadata.spsso_descriptor.extensions = []
 
         # metadata signature
         secc = security_context(conf)
@@ -70,7 +70,7 @@ class SpidSAMLBackend(SAMLBackend):
         sign_dig_algs = self.get_kwargs_sign_dig_algs()
         eid, xmldoc = sign_entity_descriptor(metadata, None, secc, **sign_dig_algs)
 
-        valid_instance(eid)        
+        valid_instance(eid)
         return Response(text_type(xmldoc).encode('utf-8'),
                         content="text/xml; charset=utf8")
 

@@ -8,7 +8,10 @@ config:
   entityid_endpoint: true
 
   acr_mapping:
-    "": 'https://www.spid.gov.it/SpidL1'
+    "": 'https://www.spid.gov.it/SpidL2'
+    "https://identity.sieltecloud.it": 'https://www.spid.gov.it/SpidL1'
+    "https://idp.namirialtsp.com/idp": 'https://www.spid.gov.it/SpidL1'
+    "https://identity.infocert.it": 'https://www.spid.gov.it/SpidL1'
 
   sp_config:
 
@@ -41,16 +44,16 @@ config:
       sp:
         ui_info:
           display_name:
-            - lang: en
+            - lang: it
               text: "Unical SPID authentication proxy"
           description:
-            - lang: en
+            - lang: it
               text: "Unical SPID authentication proxy"
           information_url:
-            - lang: en
+            - lang: it
               text: "http://sp.information.url/"
           privacy_statement_url:
-            - lang: en
+            - lang: it
               text: "http://sp.privacy.url/"
           keywords:
             - lang: it
@@ -74,7 +77,7 @@ config:
         # security
         only_use_keys_in_metadata: true
 
-        force_authn: false
+        force_authn: true
         name_id_format_allow_create: false
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
         allow_unknown_attributes: true
