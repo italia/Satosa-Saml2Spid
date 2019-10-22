@@ -38,7 +38,6 @@ class SpidSAMLBackend(SAMLBackend):
         satosa_logging(logger, logging.DEBUG, "Sending metadata response", context.state)
         conf = self.sp.config
         metadata = entity_descriptor(conf)
-
         # creare gli attribute_consuming_service
         cnt = 0
         for attribute_consuming_service in metadata.spsso_descriptor.attribute_consuming_service:
@@ -119,6 +118,12 @@ class SpidSAMLBackend(SAMLBackend):
         authn_context = self.construct_requested_authn_context(entity_id)
         requested_authn_context = authn_context or requested_authn_context(class_ref=self._authn_context)
 
+        # force_auth = true only if SpidL >= 2
+        if 'SpidL1' in authn_context.authn_context_class_ref[0].text:
+            force_authn = 'false'
+        else:
+            force_authn = 'true'
+
         try:
             binding = saml2.BINDING_HTTP_POST
             destination = context.request['entityID']
@@ -152,6 +157,7 @@ class SpidSAMLBackend(SAMLBackend):
             # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
 
             authn_req = saml2.samlp.AuthnRequest()
+            authn_req.force_authn = force_authn
             authn_req.destination = location
             # spid-testenv2 preleva l'attribute consumer service dalla authnRequest (anche se questo sta già nei metadati...)
             authn_req.attribute_consuming_service_index = "0"

@@ -5,32 +5,19 @@ upstream satosa-saml2 {
 
 # configuration of the server
 server {
-    # the port your site will be served on
     listen      80;
-    # the domain name it will serve for
-
-    server_name satosa.testunical.it;
-    # substitute your machine's IP address or FQDN
-
+    server_name proxy.auth.unical.it;
     access_log /var/log/nginx/satosa-saml2.access.log;
     error_log  /var/log/nginx/satosa-saml2.error.log error;
-
-    # if ($host = satosa.testunical.it) {
-    #     return 301 https://$host$request_uri;
-    # }
-
-    #if ($scheme != "https") {
-    #    rewrite ^ https://$host$uri permanent;
-    #}
     return 301 https://$host$request_uri;
 }
 
 server {
-    server_name satosa.testunical.it;
+    server_name proxy.auth.unical.it;
     listen 443 ssl;
 
-    ssl_certificate /opt/satosa-saml2/pki/http_certificates/public_key.pem;
-    ssl_certificate_key /opt/satosa-saml2/pki/http_certificates/private_key.pem;
+    ssl_certificate /etc/ssl/certs/proxy.auth.unical.it/auth_unical_it.crt;
+    ssl_certificate_key /etc/ssl/certs/proxy.auth.unical.it/server.key;
 
     access_log /var/log/nginx/satosa-saml2.log;
     error_log  /var/log/nginx/satosa-saml2.log error;
@@ -65,7 +52,7 @@ server {
     ssl_stapling on; # Requires nginx >= 1.3.7
     ssl_stapling_verify on; # Requires nginx => 1.3.7
     # add tyour trusted dns service here
-    #resolver 160.97.7.13 160.97.7.14 valid=300s;
+    resolver 160.97.7.13 160.97.7.14 valid=300s;
     #resolver_timeout 5s;
     add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload";
     add_header X-Frame-Options DENY;
