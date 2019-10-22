@@ -1,5 +1,6 @@
 import logging
 import saml2
+import satosa.util as util
 
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.authn_context import requested_authn_context
@@ -13,9 +14,9 @@ from satosa.exception import SATOSAAuthenticationError
 from satosa.logging_util import satosa_logging
 from satosa.response import SeeOther, Response
 from satosa.saml_util import make_saml_response
-import satosa.util as util
 from six import text_type
 
+from . spidsaml2_validator import Saml2ResponseValidator
 
 logger = logging.getLogger(__name__)
 
@@ -218,3 +219,54 @@ class SpidSAMLBackend(SAMLBackend):
             satosa_logging(logger, logging.DEBUG, "Failed to construct the AuthnRequest for state", context.state,
                            exc_info=True)
             raise SATOSAAuthenticationError(context.state, "Failed to construct the AuthnRequest") from exc
+
+    def authn_response(self, context, binding):
+        """
+        Endpoint for the idp response
+        :type context: satosa.context,Context
+        :type binding: str
+        :rtype: satosa.response.Response
+
+        :param context: The current context
+        :param binding: The saml binding type
+        :return: response
+        """
+        if not context.request["SAMLResponse"]:
+            satosa_logging(logger, logging.DEBUG, "Missing Response for state", context.state)
+            raise SATOSAAuthenticationError(context.state, "Missing Response")
+
+        try:
+            authn_response = self.sp.parse_authn_request_response(
+                context.request["SAMLResponse"],
+                binding, outstanding=self.outstanding_queries)
+        except Exception as err:
+            satosa_logging(logger, logging.DEBUG, "Failed to parse authn request for state", context.state,
+                           exc_info=True)
+            raise SATOSAAuthenticationError(context.state, "Failed to parse authn request") from err
+
+        if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
+            req_id = authn_response.in_response_to
+            if req_id not in self.outstanding_queries:
+                errmsg = "No request with id: {}".format(req_id),
+                satosa_logging(logger, logging.DEBUG, errmsg, context.state)
+                raise SATOSAAuthenticationError(context.state, errmsg)
+            del self.outstanding_queries[req_id]
+
+        # check if the relay_state matches the cookie state
+        if context.state[self.name]["relay_state"] != context.request["RelayState"]:
+            satosa_logging(logger, logging.DEBUG,
+                           "State did not match relay state for state", context.state)
+            raise SATOSAAuthenticationError(context.state, "State did not match relay state")
+
+        # Spid and SAML2 additional tests
+        issuer = context.state['Saml2IDP']['resp_args']['sp_entity_id']
+        validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr)
+        validator.run()
+
+        context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
+        if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
+            issuer = authn_response.response.issuer.text.strip()
+            context.state[Context.KEY_MEMORIZED_IDP] = issuer
+        context.state.pop(self.name, None)
+        context.state.pop(Context.KEY_FORCE_AUTHN, None)
+        return self.auth_callback_func(context, self._translate_response(authn_response, context.state))
