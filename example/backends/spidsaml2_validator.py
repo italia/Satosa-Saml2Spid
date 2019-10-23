@@ -74,8 +74,14 @@ class Saml2ResponseValidator(object):
         """
         # Spid dt standard format
         for i in self.response.assertion:
-            issueinstant_naive = datetime.datetime.strptime(i.issue_instant,
-                                                            '%Y-%m-%dT%H:%M:%SZ')
+
+            try:
+                issueinstant_naive = datetime.datetime.strptime(i.issue_instant,
+                                                                '%Y-%m-%dT%H:%M:%SZ')
+            except:
+                issueinstant_naive = datetime.datetime.strptime(i.issue_instant,
+                                                                '%Y-%m-%dT%H:%M:%S.%fZ')
+
             issuerinstant_aware = pytz.utc.localize(issueinstant_naive)
             now = pytz.utc.localize(datetime.datetime.utcnow())
 
@@ -213,6 +219,9 @@ class Saml2ResponseValidator(object):
         if not tests:
             tests = [i[0] for i in inspect.getmembers(self, predicate=inspect.ismethod) if not i[0].startswith('_')]
             tests.remove('run')
+
+            # poste italiane risponde con issuer format -> None
+            tests.remove('validate_issuer')
 
         for element in tests:
             getattr(self, element)()
