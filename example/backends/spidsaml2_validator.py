@@ -5,7 +5,7 @@ import os
 import time
 
 from saml2 import samlp
-from saml2.time_util import str_to_time
+#from saml2.time_util import str_to_time
 
 # to load state from a cookie
 # from satosa.base import SATOSABase
@@ -18,10 +18,26 @@ class Saml2ResponseValidator(object):
 
     def __init__(self, authn_response='', issuer='',
                  nameid_formats=['urn:oasis:names:tc:SAML:2.0:nameid-format:transient'],
-                 recipient='spidSaml2/acs/post'):
+                 recipient='spidSaml2/acs/post',
+                 accepted_time_diff=1,
+                 in_response_to='',
+                 requester='',
+                 authn_context_class_ref='https://www.spid.gov.it/SpidL2'):
+
         self.response = samlp.response_from_string(authn_response)
         self.nameid_formats = nameid_formats
         self.recipient = recipient
+        self.accepted_time_diff = accepted_time_diff
+        self.authn_context_class_ref = authn_context_class_ref
+        self.in_response_to = in_response_to
+        self.requester = requester
+
+    # def validate_in_response_to(self):
+        # """ spid test 18
+            # inutile se disabiliti gli unsolicited
+        # """
+        # if self.in_response_to != self.response.in_response_to:
+            # raise Exception('In response To not valid: {}'.format(self.response.in_response_to))
 
     def validate_issuer(self):
         """spid saml check 30, 70, 71, 72
@@ -29,13 +45,20 @@ class Saml2ResponseValidator(object):
         """
         # 30
         # check that this issuer is in the metadata...
-        #assert self.response.issuer.text
+        # oppure passare context.state['Saml2IDP']['resp_args']['sp_entity_id']
+        # if self.requester != self.response.issuer.text:
+            # raise Exception('Issuer different {}'.format(self.response.issuer.text))
 
-        # 70
-        assert hasattr(self.response.issuer, 'format')
-        # 71
-        assert getattr(self.response.issuer, 'format', None)
+        msg = 'Issuer format is not valid: {}'
+        # 70, 71
+        if not hasattr(self.response.issuer, 'format') or \
+           not getattr(self.response.issuer, 'format', None):
+            raise Exception(msg.format(self.response.issuer.format))
+
         # 72
+        for i in self.response.assertion:
+            if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+               raise Exception(msg.format(self.response.issuer.format))
 
 
     def validate_assertion_version(self):
@@ -49,12 +72,21 @@ class Saml2ResponseValidator(object):
     def validate_issueinstant(self):
         """ spid saml check 39, 40
         """
-        issueinstant_time_struct = str_to_time(self.response.issue_instant)
-        issueinstant_naive = datetime.datetime.fromtimestamp(time.mktime(issueinstant_time_struct))
+        # Spid dt standard format
+        for i in self.response.assertion:
+            issueinstant_naive = datetime.datetime.strptime(i.issue_instant,
+                                                            '%Y-%m-%dT%H:%M:%SZ')
+            issuerinstant_aware = pytz.utc.localize(issueinstant_naive)
+            now = pytz.utc.localize(datetime.datetime.utcnow())
 
-        issuerinstant_aware = pytz.utc.localize(issueinstant_naive)
-        # TODO validare basandoci sul time slack
-        #assert ''
+            if now < issuerinstant_aware:
+                seconds = (issuerinstant_aware - now).seconds
+            else:
+                seconds = (now - issuerinstant_aware).seconds
+
+            if seconds > self.accepted_time_diff:
+                msg = "Not a valid issue_instant: {}"
+                raise Exception(msg.format(self.response.issue_instant))
 
     def validate_name_qualifier(self):
         """ spid saml check 43, 45, 46, 47, 48, 49
@@ -82,8 +114,16 @@ class Saml2ResponseValidator(object):
                     msg = 'subject_confirmation_data not present'
                     raise Exception(msg)
 
+                # 60
+                if not subject_confirmation.subject_confirmation_data.in_response_to:
+                    raise Exception('subject.subject_confirmation_data in response -> null data')
+
+                # 62 avoided with allow_unsolicited set to false (XML parse error: Unsolicited response: id-OsoMQGYzX4HGLsfL7)
+                # if subject.subject_confirmation_data.in_response_to != self.in_response_to:
+                    # raise Exception('subject.subject_confirmation_data in response to not valid')
+
                 # 50
-                if self.recipient not in subject_confirmation.subject_confirmation_data.recipient:
+                if self.recipient != subject_confirmation.subject_confirmation_data.recipient:
                     msg = 'subject_confirmation_data.recipient not valid: {}'
                     raise Exception(msg.format(subject_confirmation_data.recipient))
 
@@ -94,10 +134,7 @@ class Saml2ResponseValidator(object):
 
                 if not hasattr(subject_confirmation.subject_confirmation_data, 'in_response_to') or \
                      not getattr(subject_confirmation.subject_confirmation_data, 'in_response_to', None):
-                    raise Exception('subject.subject_confirmation_data in response to no valid')
-
-                # 62 TODO
-                # elif subject.subject_confirmation_data.in_response_to
+                    raise Exception('subject.subject_confirmation_data in response to not valid')
 
 
     def validate_assertion_conditions(self):
@@ -106,34 +143,69 @@ class Saml2ResponseValidator(object):
             saml_response.assertion[0].conditions
         """
         for i in self.response.assertion:
-            if i.conditions:
-                pass
+            # 73, 74
+            if not hasattr(i, 'conditions') or \
+               not getattr(i, 'conditions', None):
+               # or not i.conditions.text.strip(' ').strip('\n'):
+                raise Exception('Assertion conditions not present')
+
+            # 75, 76
+            if not hasattr(i.conditions, 'not_before') or \
+               not getattr(i.conditions, 'not_before', None):
+               # or not i.conditions.text.strip(' ').strip('\n'):
+                raise Exception('Assertion conditions not_before not valid')
+
+
+            # 79, 80
+            if not hasattr(i.conditions, 'not_on_or_after') or \
+               not getattr(i.conditions, 'not_on_or_after', None):
+               # or not i.conditions.text.strip(' ').strip('\n'):
+                raise Exception('Assertion conditions not_on_or_after not valid')
 
             # 84
-            if not hasattr(i.conditions, 'audience_restriction'):
-                raise ('Assertion conditions without audience_restriction')
+            if not hasattr(i.conditions, 'audience_restriction') or \
+               not getattr(i.conditions, 'audience_restriction', None):
+                raise Exception('Assertion conditions without audience_restriction')
 
             # 85
+            # already filtered by pysaml2: AttributeError: 'NoneType' object has no attribute 'strip'
             for aud in i.conditions.audience_restriction:
                 if not getattr(aud, 'audience', None):
-                    raise (('Assertion conditions audience_restriction '
-                            'without audience'))
+                    raise Exception(('Assertion conditions audience_restriction '
+                                     'without audience'))
+                if not aud.audience[0].text:
+                    raise Exception(('Assertion conditions audience_restriction '
+                                     'without audience'))
 
     def validate_assertion_authn_statement(self):
         """ spid saml check 90, 92, 97, 98
         """
         for i in self.response.assertion:
-            # 92, 93
             if not hasattr(i, 'authn_statement') or \
                not getattr(i, 'authn_statement', None):
                 raise ('Assertion authn_statement is missing/invalid')
 
-            # 97, 98
-            for authn_statement in i.authn_statement:
-                if not hasattr(authn_statement, 'authn_context') or \
-                   not getattr(authn_statement, 'authn_context', None):
-                    raise Exception(('Assertion authn_statement.authn_context is '
+            # 90, 92, 93
+            for authns in i.authn_statement:
+                if not hasattr(authns, 'authn_context') or \
+                   not getattr(authns, 'authn_context', None) or \
+                   not hasattr(authns.authn_context, 'authn_context_class_ref') or \
+                   not getattr(authns.authn_context, 'authn_context_class_ref', None):
+                    raise Exception('Assertion authn_statement.authn_context_class_ref is missing/invalid')
+
+                # 97
+                if authns.authn_context.authn_context_class_ref.text != self.authn_context_class_ref:
+                    raise Exception(('Assertion '
+                                     'authn_statement.authn_context.authn_context_class_ref is '
                                      'missing/invalid'))
+                # 98
+                if not hasattr(i, 'attribute_statement') or \
+                   not getattr(i, 'attribute_statement', None):
+                    raise Exception('Assertion attribute_statement is missing/invalid')
+
+                for attri in i.attribute_statement:
+                    if not attri.attribute:
+                        raise Exception('Assertion attribute_statement.attribute is missing/invalid')
 
     def run(self, tests=[]):
         """ run all tests/methods

@@ -260,7 +260,16 @@ class SpidSAMLBackend(SAMLBackend):
 
         # Spid and SAML2 additional tests
         issuer = context.state['Saml2IDP']['resp_args']['sp_entity_id']
-        validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr)
+        accepted_time_diff = self.config['sp_config']['accepted_time_diff']
+        recipient = self.config['sp_config']['service']['sp']['endpoints']['assertion_consumer_service'][0][0]
+        authn_context_classref = self.config['acr_mapping']['']
+        in_response_to = context.state['Saml2IDP']['resp_args']['in_response_to']
+
+        validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr,
+                                           recipient = recipient,
+                                           in_response_to=in_response_to,
+                                           accepted_time_diff = accepted_time_diff,
+                                           authn_context_class_ref=authn_context_classref)
         validator.run()
 
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)

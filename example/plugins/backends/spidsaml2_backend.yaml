@@ -27,20 +27,20 @@ config:
     - {contact_type: support, email_address: "mailto:spid-support@unical.it", given_name: Support}
 
     metadata:
-      local: [/opt/satosa-saml2/metadata/spid-saml-check.xml]
+      local: [/opt/satosa-saml2/metadata/]
       #local: [/opt/pyff/md/]
       # if mdq I get in djangosaml2 "SignatureError at /saml2/acs/: Signature missing for response"
       # probably some data is lost in metadata catalogue
       # local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      mdq:
-        - url: "http://mdq.auth.unical.it"
+      # mdq:
+        # - url: "http://mdq.auth.unical.it"
       # mdq:
         # - url: "http://sp1.testunical.it:8001/"
           # cert: ukfederation-mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
-    accepted_time_diff: 60
+    accepted_time_diff: 10
 
     #10 days
     #valid_for: 1200
@@ -89,7 +89,8 @@ config:
 
         name_id_format_allow_create: false
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
-        allow_unknown_attributes: true
+        requested_attribute_name_format: 'urn:oasis:names:tc:SAML:2.0:attrname-format:basic'
+        allow_unknown_attributes: false
 
         # in production different workers do not share the same storage!
         allow_unsolicited: true
