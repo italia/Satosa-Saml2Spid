@@ -139,16 +139,46 @@ Italian isn't so difficult to be read, isn't it?
 ## Playing MDX service
 
 ````
-from saml2.mdstore import MetaDataMDX
-mdx = MetaDataMDX("http://mdx.testunical.it:8001")
-sso_loc = mdx.service("http://sp1.testunical.it:8000/saml2/metadata", "spsso_descriptor", 'assertion_consumer_service')
+import io
+import json
+import urllib.request
 
-mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="signing")
-mdx.certs("http://sp1.testunical.it:8000/saml2/metadata/", "spsso", use="encryption")
+from saml2.mdstore import MetaDataMDX
+
+# when available
+# mdq_url = "http://demo2.aai-test.garr.it:8080"
+# mdq_cert = "http://demo2.aai-test.garr.it/idem-mdq-pilot-cert.pem"
+
+mdq_url = "http://mdx.eduid.hu/"
+mdq_cert = "http://metadata.eduid.hu/current/mdx-test-signer-2015.crt"
+entity2check = 'https://idp.unical.it/idp/shibboleth'
+
+cert = io.BytesIO()
+cert.write(urllib.request.urlopen(mdq_cert).read())
+cert.seek(0)
+
+mdx = MetaDataMDX(mdq_url, cert=cert)
+
+# a preview, from this we get all the services to query
+print(mdx.dumps())
+
+eid_tree = json.loads(mdx.dumps())
+#
+eid_tree[0][1].keys()
+
+# EC
+# mdx.entity_categories(entity2check)
+
+# certificati
+mdx.certs(entity2check, "idpsso", use="encryption")
 
 # get certs from idp
-mdx.service("https://idp1.testunical.it/idp/metadata", 'idpsso_descriptor', 'SingleSignOnService')
-mdx.certs("http://idp1.testunical.it:9000/idp/metadata", "idpsso", use="encryption")
+mdx.service(entity2check, 'idpsso_descriptor', 'single_sign_on_service')
+mdx.certs(entity2check, "idpsso", use="signing")
+
+# servizi di un sp
+mdx.service("https://that.sp.entity.id", "idpsso_descriptor", "services")
+mdx.certs(entity2check, "spsso", use="signing")
 ````
 
 
