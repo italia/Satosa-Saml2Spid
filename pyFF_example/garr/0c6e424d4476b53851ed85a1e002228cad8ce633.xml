@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://kfbz.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-05-24T12:26:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kfbz.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Regional Library Zlín</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Krajská knihovna Františka Bartoše ve Zlíně</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for employees and readers of the Regional Library Zlín</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance a čtenáře Krajské knihovny Františka Bartoše ve Zlíně</mdui:Description>
+		<mdui:InformationURL xml:lang="cs">https://www.kfbz.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.kfbz.cz/</mdui:InformationURL>
+		<mdui:Logo height="135" width="135">https://kfbz.knihovny.cz/logo.png</mdui:Logo>
+		<mdui:Logo height="243" width="1304">https://kfbz.knihovny.cz/logo_c.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6TCCAtGgAwIBAgIJANvqyr+aV+vfMA0GCSqGSIb3DQEBCwUAMIGKMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGTAXBgNVBAMMEGtmYnoua25paG92
+bnkuY3oxHTAbBgkqhkiG9w0BCQEWDmNway1pZHBAbXprLmN6MB4XDTE2MDkwMjE2
+MjUyM1oXDTI2MDkwMzE2MjUyM1owgYoxCzAJBgNVBAYTAkNaMRcwFQYDVQQIDA5D
+emVjaCBSZXB1YmxpYzENMAsGA1UEBwwEQnJubzEZMBcGA1UECgwQTW9yYXZpYW4g
+TGlicmFyeTEZMBcGA1UEAwwQa2Ziei5rbmlob3ZueS5jejEdMBsGCSqGSIb3DQEJ
+ARYOY3BrLWlkcEBtemsuY3owggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCrtz8+UHVJNKTYzXKNwI3uA3nMqvMu9oqvs7FVsxf+pHeR53FyLIKdMxnJNslb
+/JxE1p74etosmpx5m+DJdS6kw+9TEBkSFh8clvhIUDHhRtfwiDjiLTibzh+Ly+gP
+9UOGkbNFob97u6yRPWaOU8mioAJILvtCYQeCe8wxaB1XJwyYdIZ7TNwszkDSnQF9
+Kb9eHPfLTPac+V+oP1NCwyydJv1QCFkIU91c3s0lpChHzuL71VsBwEU0CUfHBsI7
+YpYC8uTnppOpAyNTRCuYw/CjWifabEzjLYTigFbPpsY3kM1TU0hSCFohVTVPTaLy
+7y3yxal9Cl7yNy9O3xxqKL91AgMBAAGjUDBOMB0GA1UdDgQWBBTKdb5qt2MefLY8
+b9OKEv5r/BNR6TAfBgNVHSMEGDAWgBTKdb5qt2MefLY8b9OKEv5r/BNR6TAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBUgRvv2P0Ajjqr3cqvi0nIYmvB
+Z4RMXJxyjV1nTcFp4ZCZ/lsvt2SE/E+lFl5VD2x+G4xuPfSApm8hXcW30UI0Lvrz
+QPcFIIeXw7ikYyzTzcgcL46NX3FJVGoyE+BYeTMmhkSBTyXmHhR+/2tUMrCKQ+b/
+Gt1FHk/Q8oEJjkR6woa0/qOysKsqdmMF4QMPiPi9FhMIe9CfR1kHmi6Igf8VAw8u
+gOeFfXOyVnwsDxAFhZ3HwBTpINlW2ZN2AU5ku7mjGwe2RNpOgYyhBEqXU1v/+uUL
+2EPTJq+dz0QXo0rgMIdaE8TeX1gvyPupB5gcEijtovvVAV1hvKj2Ev1Y3pUV
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6TCCAtGgAwIBAgIJANvqyr+aV+vfMA0GCSqGSIb3DQEBCwUAMIGKMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGTAXBgNVBAMMEGtmYnoua25paG92
+bnkuY3oxHTAbBgkqhkiG9w0BCQEWDmNway1pZHBAbXprLmN6MB4XDTE2MDkwMjE2
+MjUyM1oXDTI2MDkwMzE2MjUyM1owgYoxCzAJBgNVBAYTAkNaMRcwFQYDVQQIDA5D
+emVjaCBSZXB1YmxpYzENMAsGA1UEBwwEQnJubzEZMBcGA1UECgwQTW9yYXZpYW4g
+TGlicmFyeTEZMBcGA1UEAwwQa2Ziei5rbmlob3ZueS5jejEdMBsGCSqGSIb3DQEJ
+ARYOY3BrLWlkcEBtemsuY3owggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCrtz8+UHVJNKTYzXKNwI3uA3nMqvMu9oqvs7FVsxf+pHeR53FyLIKdMxnJNslb
+/JxE1p74etosmpx5m+DJdS6kw+9TEBkSFh8clvhIUDHhRtfwiDjiLTibzh+Ly+gP
+9UOGkbNFob97u6yRPWaOU8mioAJILvtCYQeCe8wxaB1XJwyYdIZ7TNwszkDSnQF9
+Kb9eHPfLTPac+V+oP1NCwyydJv1QCFkIU91c3s0lpChHzuL71VsBwEU0CUfHBsI7
+YpYC8uTnppOpAyNTRCuYw/CjWifabEzjLYTigFbPpsY3kM1TU0hSCFohVTVPTaLy
+7y3yxal9Cl7yNy9O3xxqKL91AgMBAAGjUDBOMB0GA1UdDgQWBBTKdb5qt2MefLY8
+b9OKEv5r/BNR6TAfBgNVHSMEGDAWgBTKdb5qt2MefLY8b9OKEv5r/BNR6TAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBUgRvv2P0Ajjqr3cqvi0nIYmvB
+Z4RMXJxyjV1nTcFp4ZCZ/lsvt2SE/E+lFl5VD2x+G4xuPfSApm8hXcW30UI0Lvrz
+QPcFIIeXw7ikYyzTzcgcL46NX3FJVGoyE+BYeTMmhkSBTyXmHhR+/2tUMrCKQ+b/
+Gt1FHk/Q8oEJjkR6woa0/qOysKsqdmMF4QMPiPi9FhMIe9CfR1kHmi6Igf8VAw8u
+gOeFfXOyVnwsDxAFhZ3HwBTpINlW2ZN2AU5ku7mjGwe2RNpOgYyhBEqXU1v/+uUL
+2EPTJq+dz0QXo0rgMIdaE8TeX1gvyPupB5gcEijtovvVAV1hvKj2Ev1Y3pUV
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kfbz.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kfbz.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kfbz.knihovny.cz/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kfbz.knihovny.cz/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Regional Library Zlín</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Krajská knihovna Františka Bartoše ve Zlíně</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Regional Library Zlín</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Krajská knihovna Františka Bartoše ve Zlíně</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="cs">https://www.kfbz.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.kfbz.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Žabička</md:SurName>
+	<md:EmailAddress>mailto:zabak@mzk.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

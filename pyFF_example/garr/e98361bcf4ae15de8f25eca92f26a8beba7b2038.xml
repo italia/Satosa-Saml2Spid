@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://vsu-pbslive-01v.vsu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://library.vsu.edu/shiberror.htm" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vsu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Virginia State University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.vsu.edu/files/docs/policies/6000/6140.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="93" width="176" xml:lang="en">https://vsu-pbslive-01v.vsu.edu/assets/images/vsu-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAIcZqh5/AQ5ogKy4ZUjxI8jD0RUFMA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3ZzdS1wYnNsaXZlLTAxdi52c3UuZWR1MB4XDTExMDgx
+NjE1MzMwMVoXDTMxMDgxNjE1MzMwMVowIjEgMB4GA1UEAxMXdnN1LXBic2xpdmUt
+MDF2LnZzdS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC90GSC
+Rz/AsfNbA0YuDlQN3nhh3V8LKLH80F2z5Hbxge8z1fWUSGwZhTne1T0LBEIGa3Yi
+EZAZWtKU2xTBtpy+8z985i5ahFdu3woSnmy2K3Tvn+sM9JleD4pgGQqD3hUf1AQL
+bLJxsGsRGI4CL43eMfVOx3ejct4zmu/ptOl5UDyHgJfWYke1UfEk21asR4YTlXu4
+KD+zWiRkfihF2r5PeEYpmwNnqP/maoJtCf5AbYUuiHzrBpEC/48CE6bTzgt3PYVK
+5glbjtkEmGSMB0d4JKHphTbFuV8Q+JN+pfVs2q8Gcv0q3P+M6gxLi4MSTj0felHU
+fzykbrgPLQ2tdA2FAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3ZzdS1wYnNsaXZlLTAx
+di52c3UuZWR1hi5odHRwczovL3ZzdS1wYnNsaXZlLTAxdi52c3UuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBSTz44AhB5qH5KiJgO1yML7oBLCtTANBgkqhkiG
+9w0BAQUFAAOCAQEAZnX7e45+EKLCa8zmZcjt637cTH6UgDIS+ObQWVEby/OuxPra
+bQtN16SrBYV/awb/VU3E98Z4jxF8lvB6XP9V8cnXM3X/DC0OPGzyF8hbb+PoFo15
+pb3rgVbUHj3mo9x6H0FbwAlNOvMy2kgcIKJ7X1a8aIZFxfUG5erAE2B8RUJeFbGB
+p8h8HgbrqjICbbP8B0uOwkM0smyzys0EKEGkW3mRjSIEt08uo9zZTQ3V05pqys2Q
+oXaut0JB32Q85fICOS/qkRYjCQQwtvU5Rwfl3bK0nFhaYAQyWLcoqfV/kGrIDmmr
+WMq+i0naoDk/DX9b/TYx/Yg95/dtcnC86iSZsA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://vsu-pbslive-01v.vsu.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vsu-pbslive-01v.vsu.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://vsu-pbslive-01v.vsu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsu-pbslive-01v.vsu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://vsu-pbslive-01v.vsu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vsu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAIcZqh5/AQ5ogKy4ZUjxI8jD0RUFMA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3ZzdS1wYnNsaXZlLTAxdi52c3UuZWR1MB4XDTExMDgx
+NjE1MzMwMVoXDTMxMDgxNjE1MzMwMVowIjEgMB4GA1UEAxMXdnN1LXBic2xpdmUt
+MDF2LnZzdS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC90GSC
+Rz/AsfNbA0YuDlQN3nhh3V8LKLH80F2z5Hbxge8z1fWUSGwZhTne1T0LBEIGa3Yi
+EZAZWtKU2xTBtpy+8z985i5ahFdu3woSnmy2K3Tvn+sM9JleD4pgGQqD3hUf1AQL
+bLJxsGsRGI4CL43eMfVOx3ejct4zmu/ptOl5UDyHgJfWYke1UfEk21asR4YTlXu4
+KD+zWiRkfihF2r5PeEYpmwNnqP/maoJtCf5AbYUuiHzrBpEC/48CE6bTzgt3PYVK
+5glbjtkEmGSMB0d4JKHphTbFuV8Q+JN+pfVs2q8Gcv0q3P+M6gxLi4MSTj0felHU
+fzykbrgPLQ2tdA2FAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3ZzdS1wYnNsaXZlLTAx
+di52c3UuZWR1hi5odHRwczovL3ZzdS1wYnNsaXZlLTAxdi52c3UuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBSTz44AhB5qH5KiJgO1yML7oBLCtTANBgkqhkiG
+9w0BAQUFAAOCAQEAZnX7e45+EKLCa8zmZcjt637cTH6UgDIS+ObQWVEby/OuxPra
+bQtN16SrBYV/awb/VU3E98Z4jxF8lvB6XP9V8cnXM3X/DC0OPGzyF8hbb+PoFo15
+pb3rgVbUHj3mo9x6H0FbwAlNOvMy2kgcIKJ7X1a8aIZFxfUG5erAE2B8RUJeFbGB
+p8h8HgbrqjICbbP8B0uOwkM0smyzys0EKEGkW3mRjSIEt08uo9zZTQ3V05pqys2Q
+oXaut0JB32Q85fICOS/qkRYjCQQwtvU5Rwfl3bK0nFhaYAQyWLcoqfV/kGrIDmmr
+WMq+i0naoDk/DX9b/TYx/Yg95/dtcnC86iSZsA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://vsu-pbslive-01v.vsu.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Virginia State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Virginia State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.vsu.edu/pages/1.asp</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Tessa Perry</md:GivenName>
+	<md:EmailAddress>tperry@vsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Robert Schnettler</md:GivenName>
+	<md:EmailAddress>rschnettler@vsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sherod Moses</md:GivenName>
+	<md:EmailAddress>smoses@vsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Travis Edmonds</md:GivenName>
+	<md:EmailAddress>tedmonds@vsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

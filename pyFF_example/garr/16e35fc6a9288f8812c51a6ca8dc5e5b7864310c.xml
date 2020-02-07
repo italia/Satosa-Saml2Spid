@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.iic.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-04-23T10:29:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iic.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Inorganic chemistry of the Czech Academy of Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav anorganické chemie AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IIC AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance UACH AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.iic.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.iic.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="64">https://gedeon.cas.cz/loga/logo-iic-44.png</mdui:Logo>
+		<mdui:Logo height="700" width="1024">https://gedeon.cas.cz/loga/logo-iic-700.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIURTndhRG1dpHDKtjhJ2TOJBgRH/QwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owHhcNMTgwNDA5MTE1OTI0WhcN
+MzgwNDA5MTE1OTI0WjAZMRcwFQYDVQQDDA5pZHAuaWljLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKBAWTQr6aP1R/nkkmSDB1PayQs3LCms
+VMG+oAHaScuD9DA611HUJkG12VDM06z9xQnVGSbEQGNdnhIFZjCw4ExYzfbtRArP
+tXsiAO4BlCkB5qpx3+zhSQuvP2OnBIxSe9CZ1aD5+WEkVM90hd4z6bz3Eoc2xcEw
+rui/HbBT0V69G/tk+1PPueQH4wGsyTSJ4FNseZDmYj7u5NSJvE3q1S6XNep74kek
+TfJrGq1Q4i+L1iM0nhFquyUlEP35Hz4oMxY+stwQf7tlkae7ML6UKGNN6F5+qRP5
+nSFrpac7q3y7tLp/3SV+2Jc2WxJFEl/10Np0zPDGMfhQIcYPLcOvIZsCAwEAAaNj
+MGEwHQYDVR0OBBYEFLGxM4oV0KOcxaXk4yeGVc6p6LWxMEAGA1UdEQQ5MDeCDmlk
+cC5paWMuY2FzLmN6hiVodHRwczovL2lkcC5paWMuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBgjczwtTTGpIK8byGC+emb2ypfK2LGbvvJ
+FICHYoxW4ch2fhr+JmvcdKNulDB6HmoGKhaeMf5OEbjeSlvsUlPzoHzpkJGarQoA
+zZznmWM2Qy21bJU1JmbmNMUy8EcFh3ScJPtmGoTZ+vXil597xY/oe1Fwo60dtnrT
+UXlzh301smjCduFVlO9/jGRb6zIk0ykPP4PfuZCY9aGjnUXV6J+GomvJ9wVFSjtq
+CmefQDPHq198tu21BmiZg5sfonFI8TBfUbps+LSToTzNCP3mVF3TVEGAMamLj/zK
+cDYbLXu/hm4wVbezliytxqxxSUit+An4iaePiGeWdt41zYDr3fPt
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUCVmtfMDSW5ByfL6HV/37wYfvU7wwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owHhcNMTgwNDA5MTE1OTIzWhcN
+MzgwNDA5MTE1OTIzWjAZMRcwFQYDVQQDDA5pZHAuaWljLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK7C6lu3mZGrX8x5ZrTWOA8Qnrm16JOh
+RBzazwqbS0xavlaYTu/tIVhTSjHO5dkQqKHwBvlk847ACUBHb9YzmDLIZlH56ZEg
+0pSXmoZUl4j1mAk84ZBc+34LjEqWtuKORn+nGo/RfOBAquue6l4T1Ltil6UkIKgG
++2VxKuomrWaa16V+2aJ62FeJnoqQ7j/SoCELrxowlIlzkCu8VpSrZMPRizCKSi7c
+M3tjAnDPzqP9KuyQpfWIzCf1xXuW/7O9z5C6LrUXYZYwaLvXlm2PpkA+DlUvoo9M
+Uilcfe7x/LRvI7OwzSeTjkxFD6gXlAvaYqMjSkEcM1bNuXDXVE4mdiUCAwEAAaNj
+MGEwHQYDVR0OBBYEFBMVJkBmo24Zs17rJFx+XRyTgreMMEAGA1UdEQQ5MDeCDmlk
+cC5paWMuY2FzLmN6hiVodHRwczovL2lkcC5paWMuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQB1utANcPM4VRR8qzU8cgoA5QhwN7XP8Iaf
+o8qUPtxshg12DH30uQF740Uk24qkn5eIzsZc74fFMGLyQdxZ3ptVrJbflooGAtL3
+9WJNpvkYHdVcYbmPI4xnF9nSLTEW0abHkIDaGpfkjpDpu2Yt2Vq7pFcT0St0NQB8
+qcEE1JnAskN9ebBaW55HLzIW5uSLdpOh3S/wv1Zc78Z6VT0bNdeXDgfcGii+l2c7
+yxMIfvJASzgj7yD4fWKCDcNEVu+qSNnpBhBK0GX9D9OWaav8dBJC+8QvjeGrEphZ
+nzMKbb/IGXZ0M3rPuiGfpGWkg+wfc/91hTSkMNuT+XduWBwTrWi+
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIHQSZavvhDj6U8aT7dcU1Ede3tJMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5paWMuY2FzLmN6MB4XDTE4MDQwOTExNTkyM1oX
+DTM4MDQwOTExNTkyM1owGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCDFZ/rNQAQ3UKesMnzNv39QAiH37Wn
+p6DEtT/flTZBJVhhqp/Je3+3lnG2m08Z7B5s9MlsbvJUx+FkmmeC7uvoUCg8DDFi
+BjaHf56pbGsduy8F81uPI5+Ru5mK1LY898x0mtdleV+E+AjmnyjnA9Ad16djDLl6
+qu5945iMly7t6u3pU72HMu9D7XcNx04hz/ga0ktO17keS4+7j+9HKOc4yJAzbmOw
+KNMjs0Y2b19vNPHPDca0U/s2S0yH5vVhGnPYrlnXQoSnOCovUR5IQDJA1FEKKCZj
+4IjdPUf38t45Lb4P7FxhFr8R0oeFJVzF7B92lkMsZDyZUZShroMD2URHAgMBAAGj
+YzBhMB0GA1UdDgQWBBQw8EDo+wLLq3Nl58DpjjhmZ9rCxDBABgNVHREEOTA3gg5p
+ZHAuaWljLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWljLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAfsOPj/L3fwbZJFX3MRKWYL5fbcsrTcay
+NwzyV/79Bi8gmn3wqbJPppM/xa+dvOTQxQKlTYPtfy0tXEzShhlC4ajUB2OaSFwv
+gKoNNjwYtd2gllPl3DGAQPcazQp6WIkKP+ssfw6ueh0jYBBIiShPyP/KKBvwTgL9
+yeUTVzpypJhHHPgtxeZYv4eT8CWzu5SZJ45d71PN15x3g3HWBK6lKxbHNsZ7bMWb
+kSMVqnogofhxgfzTRGer0DWRzjDOd1LHxi010D/suKC00BV4o+GXobq/jM7YtqOp
+N7vEbmwQg5L95rRgP1Sdygm8FQOhrI7F+NH6EM6NWsCCIU5LAgow5g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.iic.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.iic.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.iic.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iic.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.iic.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iic.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iic.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIURTndhRG1dpHDKtjhJ2TOJBgRH/QwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owHhcNMTgwNDA5MTE1OTI0WhcN
+MzgwNDA5MTE1OTI0WjAZMRcwFQYDVQQDDA5pZHAuaWljLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKBAWTQr6aP1R/nkkmSDB1PayQs3LCms
+VMG+oAHaScuD9DA611HUJkG12VDM06z9xQnVGSbEQGNdnhIFZjCw4ExYzfbtRArP
+tXsiAO4BlCkB5qpx3+zhSQuvP2OnBIxSe9CZ1aD5+WEkVM90hd4z6bz3Eoc2xcEw
+rui/HbBT0V69G/tk+1PPueQH4wGsyTSJ4FNseZDmYj7u5NSJvE3q1S6XNep74kek
+TfJrGq1Q4i+L1iM0nhFquyUlEP35Hz4oMxY+stwQf7tlkae7ML6UKGNN6F5+qRP5
+nSFrpac7q3y7tLp/3SV+2Jc2WxJFEl/10Np0zPDGMfhQIcYPLcOvIZsCAwEAAaNj
+MGEwHQYDVR0OBBYEFLGxM4oV0KOcxaXk4yeGVc6p6LWxMEAGA1UdEQQ5MDeCDmlk
+cC5paWMuY2FzLmN6hiVodHRwczovL2lkcC5paWMuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBgjczwtTTGpIK8byGC+emb2ypfK2LGbvvJ
+FICHYoxW4ch2fhr+JmvcdKNulDB6HmoGKhaeMf5OEbjeSlvsUlPzoHzpkJGarQoA
+zZznmWM2Qy21bJU1JmbmNMUy8EcFh3ScJPtmGoTZ+vXil597xY/oe1Fwo60dtnrT
+UXlzh301smjCduFVlO9/jGRb6zIk0ykPP4PfuZCY9aGjnUXV6J+GomvJ9wVFSjtq
+CmefQDPHq198tu21BmiZg5sfonFI8TBfUbps+LSToTzNCP3mVF3TVEGAMamLj/zK
+cDYbLXu/hm4wVbezliytxqxxSUit+An4iaePiGeWdt41zYDr3fPt
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUCVmtfMDSW5ByfL6HV/37wYfvU7wwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owHhcNMTgwNDA5MTE1OTIzWhcN
+MzgwNDA5MTE1OTIzWjAZMRcwFQYDVQQDDA5pZHAuaWljLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK7C6lu3mZGrX8x5ZrTWOA8Qnrm16JOh
+RBzazwqbS0xavlaYTu/tIVhTSjHO5dkQqKHwBvlk847ACUBHb9YzmDLIZlH56ZEg
+0pSXmoZUl4j1mAk84ZBc+34LjEqWtuKORn+nGo/RfOBAquue6l4T1Ltil6UkIKgG
++2VxKuomrWaa16V+2aJ62FeJnoqQ7j/SoCELrxowlIlzkCu8VpSrZMPRizCKSi7c
+M3tjAnDPzqP9KuyQpfWIzCf1xXuW/7O9z5C6LrUXYZYwaLvXlm2PpkA+DlUvoo9M
+Uilcfe7x/LRvI7OwzSeTjkxFD6gXlAvaYqMjSkEcM1bNuXDXVE4mdiUCAwEAAaNj
+MGEwHQYDVR0OBBYEFBMVJkBmo24Zs17rJFx+XRyTgreMMEAGA1UdEQQ5MDeCDmlk
+cC5paWMuY2FzLmN6hiVodHRwczovL2lkcC5paWMuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQB1utANcPM4VRR8qzU8cgoA5QhwN7XP8Iaf
+o8qUPtxshg12DH30uQF740Uk24qkn5eIzsZc74fFMGLyQdxZ3ptVrJbflooGAtL3
+9WJNpvkYHdVcYbmPI4xnF9nSLTEW0abHkIDaGpfkjpDpu2Yt2Vq7pFcT0St0NQB8
+qcEE1JnAskN9ebBaW55HLzIW5uSLdpOh3S/wv1Zc78Z6VT0bNdeXDgfcGii+l2c7
+yxMIfvJASzgj7yD4fWKCDcNEVu+qSNnpBhBK0GX9D9OWaav8dBJC+8QvjeGrEphZ
+nzMKbb/IGXZ0M3rPuiGfpGWkg+wfc/91hTSkMNuT+XduWBwTrWi+
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIHQSZavvhDj6U8aT7dcU1Ede3tJMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5paWMuY2FzLmN6MB4XDTE4MDQwOTExNTkyM1oX
+DTM4MDQwOTExNTkyM1owGTEXMBUGA1UEAwwOaWRwLmlpYy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCDFZ/rNQAQ3UKesMnzNv39QAiH37Wn
+p6DEtT/flTZBJVhhqp/Je3+3lnG2m08Z7B5s9MlsbvJUx+FkmmeC7uvoUCg8DDFi
+BjaHf56pbGsduy8F81uPI5+Ru5mK1LY898x0mtdleV+E+AjmnyjnA9Ad16djDLl6
+qu5945iMly7t6u3pU72HMu9D7XcNx04hz/ga0ktO17keS4+7j+9HKOc4yJAzbmOw
+KNMjs0Y2b19vNPHPDca0U/s2S0yH5vVhGnPYrlnXQoSnOCovUR5IQDJA1FEKKCZj
+4IjdPUf38t45Lb4P7FxhFr8R0oeFJVzF7B92lkMsZDyZUZShroMD2URHAgMBAAGj
+YzBhMB0GA1UdDgQWBBQw8EDo+wLLq3Nl58DpjjhmZ9rCxDBABgNVHREEOTA3gg5p
+ZHAuaWljLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWljLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAfsOPj/L3fwbZJFX3MRKWYL5fbcsrTcay
+NwzyV/79Bi8gmn3wqbJPppM/xa+dvOTQxQKlTYPtfy0tXEzShhlC4ajUB2OaSFwv
+gKoNNjwYtd2gllPl3DGAQPcazQp6WIkKP+ssfw6ueh0jYBBIiShPyP/KKBvwTgL9
+yeUTVzpypJhHHPgtxeZYv4eT8CWzu5SZJ45d71PN15x3g3HWBK6lKxbHNsZ7bMWb
+kSMVqnogofhxgfzTRGer0DWRzjDOd1LHxi010D/suKC00BV4o+GXobq/jM7YtqOp
+N7vEbmwQg5L95rRgP1Sdygm8FQOhrI7F+NH6EM6NWsCCIU5LAgow5g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.iic.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IIC AV CR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">UACH AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Inorganic chemistry of the Czech Academy of Sciences</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav anorganické chemie AV ČR</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.iic.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.iic.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

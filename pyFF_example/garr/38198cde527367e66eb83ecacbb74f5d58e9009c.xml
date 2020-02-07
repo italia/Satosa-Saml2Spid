@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://rcm.ac.uk/oala/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Royal College of Music</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Royal College of Music</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">rcm.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDXjCCAkagAwIBAgIIPDy/aki2TD8wDQYJKoZIhvcNAQEFBQAwRjEjMCEGA1UE
+CgwaVGhlIFJveWFsIENvbGxlZ2UgT2YgTXVzaWMxHzAdBgNVBAMMFm9wZW5hdGhl
+bnNsYS5yY20uYWMudWswHhcNMTMxMDE1MTMzNDAwWhcNMjMxMDE1MTMzNDAwWjBG
+MSMwIQYDVQQKDBpUaGUgUm95YWwgQ29sbGVnZSBPZiBNdXNpYzEfMB0GA1UEAwwW
+b3BlbmF0aGVuc2xhLnJjbS5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBANtJudIyT/BQLf6P2zHPfjH4YZIqzeMjC9WgCSjtRx/asbh+78VXuUwy
+pii28+E34wn1N0QtNx/03Bp3ngCAdm5l4WG0oB8l/prCKS3Y+Y/otrlBq9nF2NmX
+aVh0f3PEGCFs5mCIoCMQlwZZrXBoRB+aqaCDo3jRwxoUDqWI76KMsXdPepMWwGD2
+qnXP22WWpvrvAJBBrlxJDa9RH48vYh6hiydfjx43wRbz6zlCCsRphZpZ6UQneUw+
+tKYrSMmKnaFFLEOzWov4slEqxwcGkq+KbF7pNRv+GHAZFmuoOR5y3+9OB1mpyU70
+jdVwT8X4fKAycVV1m0HwGrXniqL7RfkCAwEAAaNQME4wHQYDVR0OBBYEFB6LU7jQ
+5XlDoou/R5C0Amhjp0rXMB8GA1UdIwQYMBaAFB6LU7jQ5XlDoou/R5C0Amhjp0rX
+MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAGiCXJS6KYYdPOa16ONp
+YO9RxyV1UAJ4SWolE2othZv8HQHhH6lxlI9rOISOoBo8XkeSscrVAYMLA6fPM1aR
+8+X/Et65VWSZN52sI2oEFlXub3DmwFI77vd67QYt13jdrJQW9rLG4Jqf7XKjvtLf
+SwPhDfohab9O3yTxGcfxRLwgU1ZyNHOQMIz72ti085RavSLCsFOqy7hGE2DvZFrD
+01UxhUq4UgJxcsbvAMRjOJVsxJ1TowhnDxLNv67GSMTj83+5zZaCU0ZWvU9nTggB
+UztrSjOIxJq/HOK/cJv4DONOpL6wbJHZdA2trTfmm+YBc3cuBtPmhPcHEMfqSGS0
+Utc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://openathensla.rcm.ac.uk/oala/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://openathensla.rcm.ac.uk/oala/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Royal College of Music</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Royal College of Music</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.rcm.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mike</md:GivenName>
+	<md:SurName>Knapp</md:SurName>
+	<md:EmailAddress>mailto:mknapp@rcm.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mike</md:GivenName>
+	<md:SurName>Knapp</md:SurName>
+	<md:EmailAddress>mailto:mknapp@rcm.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

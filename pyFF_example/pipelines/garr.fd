@@ -1,0 +1,30 @@
+- load xrd garr-loaded.xrd:
+  - pipelines/garr.xrd
+- select
+- store:
+     directory: ./garr
+- publish:
+     output: ./garr/garr-loaded.xml
+- stats
+
+# MDX server
+- when request:
+    - select
+    - pipe:
+        - when accept application/xml:
+             - xslt:
+                 stylesheet: tidy.xsl
+             - first
+             - finalize:
+                cacheDuration: PT5H
+                validUntil: P10D
+             - sign:
+                 key: certificates/private.key
+                 cert: certificates/public.cert
+             - emit application/xml
+             - break
+        - when accept application/json:
+             - xslt:
+                 stylesheet: discojson.xsl
+             - emit application/json:
+             - break

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.gmit.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2010-11-03T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gmit.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="ga">Institúid Teicneolaíochta na Gaillimhe-Maigh Eo</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Galway-Mayo Institute of Technology</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.gmit.ie</mdui:InformationURL>
+		<mdui:Logo height="69" width="220">https://edugate.heanet.ie/rr3/logos/gmit.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.2777683,-9.014748</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAK1VqQ01fdIHdnIs7Fwl1MsmJPtwMA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC2lkcC5nbWl0LmllMB4XDTEwMTExNjE2NTAwM1oXDTMw
+MTExNjE2NTAwM1owFjEUMBIGA1UEAxMLaWRwLmdtaXQuaWUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCgPVXvHQh3F+3gO0sfFAVRwENQ75ZDdvLraifP
+KX7cmP700PPyVl/lab3aoei080w4iZ++yDrgHVg0O6+CSqLylPKX4Pdv7Ps/UAPd
+AA/yteXGUe0sRxzmgOGmDA2uDt6FYORt2NHcIIuBtKFSi7HMkLe8pVs1NMGMx59X
+TaArq/vfQnPaSEW4N2CcVAArku1wohHOlC1TMf+6jRU/N456Zjq+ZRylefluTVdx
+3tBn2GZiiYJD3q4nbNJeDjnOS5dn4nvTjLTd7Y+5E8t8yCJyCyTE6U9d3m4+Mfh9
+jrtk7HO5HDO8WCoBA4OmsOTLquqQWZhnqMQY6wuWTLU9lf+lAgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC2lkcC5nbWl0LmllhiJodHRwczovL2lkcC5nbWl0LmllL2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQAy0oW5uPZ0SagPA9AU5m0PWSQEjANBgkqhkiG
+9w0BAQUFAAOCAQEAVZhK+rTfpxznv4ihlhBYvuibLTvWJWD6zqrc3CRVElaKpC2N
+HKCPxF5Yw783trr/DWgkHVpva6yGDrDVRd45qCqJmNGKRniR9+kgjsbvfBPEoDeQ
+we2aIVIPuAArSitpWyiZ+betcnUQSV6vq6SEZrlb9SG1hMd3ckBd9t5xj0cd61Cx
+2CR9ovcj7c97IVlWb4AN93uWsVV8hGpF0d/hJfkT0Wfr5oEfOn8P/1O18M3z000s
+VRvGY2BZumdJim91SBMiwBI51Xv44nkEUtrIwVRipdAshJAynpRHPVEyJQmxn4sR
+Sg5aRgRfZLgvyxogDq0OlqHMA3nOustdeietHQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.gmit.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.gmit.ie/idp/profile/SAML2/POST/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.gmit.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.gmit.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.gmit.ie/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Galway-Mayo Institute of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Galway-Mayo Institute of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.gmit.ie</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Donal</md:GivenName>
+	<md:SurName>McGinty</md:SurName>
+	<md:EmailAddress>mailto:dmcginty@gmit.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>HEAnet</md:GivenName>
+	<md:SurName>Middleware Team</md:SurName>
+	<md:EmailAddress>mailto:noc@heanet.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>HEAnet</md:GivenName>
+	<md:SurName>Middleware Team</md:SurName>
+	<md:EmailAddress>mailto:noc@heanet.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

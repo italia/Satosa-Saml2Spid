@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.nwkcollege.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-01-29T10:40:03Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">North Kent College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">North Kent College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">nwkcollege.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNjCCAh4CCQCyyXWzJHWtUDANBgkqhkiG9w0BAQUFADBdMQswCQYDVQQGEwJH
+QjENMAsGA1UECBMES2VudDEgMB4GA1UEChMXTm9ydGggV2VzdCBLZW50IENvbGxl
+Z2UxHTAbBgNVBAMTFGlkcC5ud2tjb2xsZWdlLmFjLnVrMB4XDTEyMTIxMTExNDgx
+NVoXDTIyMTIwOTExNDgxNVowXTELMAkGA1UEBhMCR0IxDTALBgNVBAgTBEtlbnQx
+IDAeBgNVBAoTF05vcnRoIFdlc3QgS2VudCBDb2xsZWdlMR0wGwYDVQQDExRpZHAu
+bndrY29sbGVnZS5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+APSswRYhQiGvi0f6QdjpgZq89Y68roiF8SxRL+MQWCTfoyuKff7cgy35BeXi6NrK
+zVAEWd96DACayN85bzMnby4Si1ntiCpyrRGDFxAoCLQFle2kiAn+n3RLnn/kiuw8
+MDIplFabdcJf83IQy+TKZgTScqKwfwEaZgsOyMkp006BztmkzYKs0XdLZZW6FAWb
++9MWMMNVNwtDZkqJoUTgOlItJYzeukXA5TSNJG/oX3vGpldI+/2GwJEPZQS36qXn
+t6C+G9TRMHbqO6F2jHdG7xPNeqU5sjlpcd0NJ3TRRYPdMd5iiSBvBdQ4TZxybekE
+iALOike2BHXM21D85pWkr9UCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAYMRQDoWE
+B/h1NI6oa1FOoY3051eaULcGqPGNm846pdxEU17z6N3YqRWpjh8kEcYxZwPu78Vg
+DkUKBmV9CZMxNtpjyOKWm7aXUlpcaqyuc+2QpDZYff/y0r2wMnmCQz/GEzUpCehT
+7DJBgdVLO1d7d2Yl90VoOPxKnhIUY/ZdkHue1NYczwzBoei2id8k3id97mist8yU
+T8+gGlFBbA9YRd4tbmmyTxQZkm2dFECh4/PdSy9Yd9mmgGUt1f7fUlJdz+mNGPJu
+W/0kRLt8mAFvSYVo5hAsObBzrtFNrRCDSGSRycRuLHLsSPIaL8FuuIGlpjfFpYzt
+G9+M5fDBQwR/lA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nwkcollege.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nwkcollege.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.nwkcollege.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nwkcollege.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.nwkcollege.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nwkcollege.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nwkcollege.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNjCCAh4CCQCyyXWzJHWtUDANBgkqhkiG9w0BAQUFADBdMQswCQYDVQQGEwJH
+QjENMAsGA1UECBMES2VudDEgMB4GA1UEChMXTm9ydGggV2VzdCBLZW50IENvbGxl
+Z2UxHTAbBgNVBAMTFGlkcC5ud2tjb2xsZWdlLmFjLnVrMB4XDTEyMTIxMTExNDgx
+NVoXDTIyMTIwOTExNDgxNVowXTELMAkGA1UEBhMCR0IxDTALBgNVBAgTBEtlbnQx
+IDAeBgNVBAoTF05vcnRoIFdlc3QgS2VudCBDb2xsZWdlMR0wGwYDVQQDExRpZHAu
+bndrY29sbGVnZS5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+APSswRYhQiGvi0f6QdjpgZq89Y68roiF8SxRL+MQWCTfoyuKff7cgy35BeXi6NrK
+zVAEWd96DACayN85bzMnby4Si1ntiCpyrRGDFxAoCLQFle2kiAn+n3RLnn/kiuw8
+MDIplFabdcJf83IQy+TKZgTScqKwfwEaZgsOyMkp006BztmkzYKs0XdLZZW6FAWb
++9MWMMNVNwtDZkqJoUTgOlItJYzeukXA5TSNJG/oX3vGpldI+/2GwJEPZQS36qXn
+t6C+G9TRMHbqO6F2jHdG7xPNeqU5sjlpcd0NJ3TRRYPdMd5iiSBvBdQ4TZxybekE
+iALOike2BHXM21D85pWkr9UCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAYMRQDoWE
+B/h1NI6oa1FOoY3051eaULcGqPGNm846pdxEU17z6N3YqRWpjh8kEcYxZwPu78Vg
+DkUKBmV9CZMxNtpjyOKWm7aXUlpcaqyuc+2QpDZYff/y0r2wMnmCQz/GEzUpCehT
+7DJBgdVLO1d7d2Yl90VoOPxKnhIUY/ZdkHue1NYczwzBoei2id8k3id97mist8yU
+T8+gGlFBbA9YRd4tbmmyTxQZkm2dFECh4/PdSy9Yd9mmgGUt1f7fUlJdz+mNGPJu
+W/0kRLt8mAFvSYVo5hAsObBzrtFNrRCDSGSRycRuLHLsSPIaL8FuuIGlpjfFpYzt
+G9+M5fDBQwR/lA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nwkcollege.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nwkcollege.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">North Kent College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">North Kent College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nwkcollege.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Darren</md:GivenName>
+	<md:SurName>Parker</md:SurName>
+	<md:EmailAddress>mailto:darrenparker@northkent.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sam</md:GivenName>
+	<md:SurName>Dissanayaka</md:SurName>
+	<md:EmailAddress>mailto:samdissanayaka@northkent.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://access-dev.torrossa.com/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2020-01-13T08:35:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://access-dev.torrossa.com/Shibboleth.sso/Login"/><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://duke-dev.torrossa.com/Shibboleth.sso/Login"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://access-dev.torrossa.com/Shibboleth.sso/Login" index="1"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://duke-dev.torrossa.com/Shibboleth.sso/Login" index="2"/><mdui:UIInfo><mdui:Description xml:lang="en">Casalini Libri's full text platform</mdui:Description><mdui:Description xml:lang="it">La piattaforma full text di Casalini Libri</mdui:Description><mdui:Description xml:lang="de">Casalini Libris Volltext-Plattform</mdui:Description><mdui:Description xml:lang="fr">La plateforme fulltext de Casalini Libri</mdui:Description><mdui:Description xml:lang="es">La plataforma full text de Casalini Libri</mdui:Description><mdui:InformationURL xml:lang="en">http://www.casalini.it/torrossa/privacy_shibboleth.asp?LINGUA=ING</mdui:InformationURL><mdui:InformationURL xml:lang="it">http://www.casalini.it/torrossa/privacy_shibboleth.asp?LINGUA=ITA</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">http://www.casalini.it/torrossa/privacy_shibboleth.asp?LINGUA=ING</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">http://www.casalini.it/torrossa/privacy_shibboleth.asp?LINGUA=ITA</mdui:PrivacyStatementURL></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEDDCCAnSgAwIBAgIJALqveKeREHGyMA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNV
+BAMTF2FjY2Vzcy1kZXYudG9ycm9zc2EuY29tMB4XDTIwMDExMDExNDQ1NVoXDTMw
+MDEwNzExNDQ1NVowIjEgMB4GA1UEAxMXYWNjZXNzLWRldi50b3Jyb3NzYS5jb20w
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDErSZ86YtKBrg7NtPcrODc
+bwB6fm63cbB2av9TP/VYcMrzYk1BOUAluTxik/ydCV+fHLX7ccqCFgn2QVIQG5hD
+whZPGxRu3VQcsvJnf55LeeGUYDMqpDNihgnz7poLbqiSEeRHGRcd4Rf/utZcVUkk
+SiuJWPk7AV9+MjHUzkHEQdqwuRfjA4SMZ/KSMMnsZ7x4lnRdVkBdm3XdWQJYO8Hm
+DhntOKl/KxOX7deBB1F/ArdM0ULbpruQgiEC3dCJ7rNQ9dTq2M7Vy+N4/kPcyijN
+eL7CWMd57w4TZEqo3RfhnVLk9vDl3w6Hpe6F2QqMy9XMILsT6INDFn/om6SEJ4ws
+oCCCGZkwEZxuBL2OAPNHY+1gaCNbtl4NWI4dm7JvVS+bIQviUX94ITHbQ18qICXu
+Fus7yg3vWcQR2zYezgBRhiHPkd8QEbZJEVUUroZ+2T4M76kNJrO/zNOYQ+DPcqio
+y+pphlOvqRam4L7Fr+94n+3GCBA18eNUQEGRMnyn08cCAwEAAaNFMEMwIgYDVR0R
+BBswGYIXYWNjZXNzLWRldi50b3Jyb3NzYS5jb20wHQYDVR0OBBYEFE9HtqjV4ea9
+xPKZYrVRE1npnv+dMA0GCSqGSIb3DQEBCwUAA4IBgQA+CcWYo4Q8Edb6xeDxvIwy
+s7Fd0N+O7GCORNTAs1PiPG2ZO4hm097slWT9VOinO4REOwn35e80JUEv1nK79fvd
+/PKfbb0ZhSod4oLThklt/KTvgXUN6AF3JeBKng2CWlr9hGvmIvtVyskkUY3zDjkZ
+0Aub3wC7nSmcE176get9soinNfuMcR0ei4G7Lg+8bW4LH3fE5i3njbvks3Z0v0nM
+izUkxxXIqurzZIW9dWGjnq6sk6kTcSUT1Ks+657tmWTRuqUXn2zQyB5JWjf+HFeM
+avAtsThx4XZEGt5zMr5XjGA2KnGzLC1ph3Tm9LQmZrgJeqe6fIHXPWot4dsYV/jM
+BR9obS99FjD/Cb8aemNC4R3/L0XVjHK812ciRb56ea71jwuecefokEBSr2gD9xLU
+1GpGOXqLfPMpW0WDtRzcxKV+rS+KMZUKpCT4y144EkN63ORfdorhAoiIedc4tnYR
+YHuAoouVLuOIa5b8QSdXFQ9ad0vxPhnX74m8OAxGSwo=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://access-dev.torrossa.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://access-dev.torrossa.com/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://access-dev.torrossa.com/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://access-dev.torrossa.com/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://access-dev.torrossa.com/Shibboleth.sso/SLO/Artifact"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML/POST" index="5"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://access-dev.torrossa.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stanford-dev.torrossa.com/Shibboleth.sso/SAML2/POST" index="7"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://duke-dev.torrossa.com/Shibboleth.sso/SAML2/POST" index="8"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unc-dev.torrossa.com/Shibboleth.sso/SAML2/POST" index="9"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://berkeley-dev.torrossa.com/Shibboleth.sso/SAML2/POST" index="10"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="it">Torrossa full text platform erogato da Casalini Libri</md:ServiceName>
+	<md:ServiceName xml:lang="en">Torrossa full text platform provided by Casalini Libri</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">Casalini Libri's full text platform</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">La piattaforma full text di Casalini Libri</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="de">Casalini Libris Volltext-Plattform</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="fr">La plateforme fulltext de Casalini Libri</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="es">La plataforma full text de Casalini Libri</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Casalini Libri</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Casalini Libri</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Torrossa full text platform erogato da Casalini Libri</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Torrossa full text platform provided by Casalini Libri</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.casalini.it?lingua=ITA</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.casalini.it?lingua=ENG</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>CED</md:GivenName>
+<md:SurName>Casalini</md:SurName>
+<md:EmailAddress>mailto:ced@casalini.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

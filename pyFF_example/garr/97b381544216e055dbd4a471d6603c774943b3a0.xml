@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://media.chicagobooth.edu/Mediasite6">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Production MediaSite</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://its.uchicago.edu/acceptable-use-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="83" width="350" xml:lang="en">https://shibboleth2.uchicago.edu/idp/shib_img/idplogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC8DCCAdigAwIBAgIQcr+tmTk1/5RG6x6Ptd5ePDANBgkqhkiG9w0BAQUFADA0
+MTIwMAYDVQQDEylodHRwczovL21lZGlhLmNoaWNhZ29ib290aC5lZHUvTWVkaWFz
+aXRlNjAeFw0xNjA5MTIxNDUyNDhaFw00NjA5MTIxNDUyNDhaMDQxMjAwBgNVBAMT
+KWh0dHBzOi8vbWVkaWEuY2hpY2Fnb2Jvb3RoLmVkdS9NZWRpYXNpdGU2MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs/hQbOe2RQxxDbxoAWM9zcE8/h0E
+rsMSnU0I7rARM8kL0mp/ljwomsaIRW5qoIXy82LlWsBW+5+H5P+iBmRXy0rFrSe1
+AqdKkWBk/WV7QHRiuPtdW4s9yK7yuCgcPtREtst0xNxIi1yVGdqXs6x+yAXwOhcq
+IyB5SK7GtIQJrFyhD4+BVyTHxZn1IxnBjcrrqM76/wqy09RZ1winWT1gD0HPo4pc
+Sv1X7pHuLKjYySPqe6M7FqQTaIo4oUVGOcW3t0IsLV35uLVe/UprCBZYqtTJJgpx
+GpKv3OMkVcGrwRHWQy4xIe/OIbAUQjWS/LvIVvfZv5nrUHJUJz5dl774vwIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQBHlF17hX9cEkaJofQTg9kgak9J2rmtac9fKrTU
+0uigVNTsOwV1VavYBvnZ7lDbSa8nZicVgmxfBznweW+Va1nqgcvOCqadf0qqFe9H
+4WEKYazmiuTVBzeFyR2gY4cNZKGbsQL95iTgL7kpG18iViwD0K9ZpP2/44X7AjBX
+7sXZiNnchoNQe/cLxB60+A0cXeyyEY9qjwmVidJlztZm1uZ2mpRtLuv5IL6MdP4U
+dgmWCpaObiuhtcaWAiVwJtSLMV1+ZRMWqIvX8EfB+H2rphEgbAJsYxAlQ2jI5lqs
+BIqYxkUedwX54sEeKE2k5O9GPkshBRzIIKuAG/mZ3AeW9yio
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://media.chicagobooth.edu/Mediasite6/Login/SAML/POST" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Chicago</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Chicago</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uchicago.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Booth Systems</md:GivenName>
+	<md:EmailAddress>systems@chicagobooth.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Booth Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@chicagobooth.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>University of Chicago IT Security</md:GivenName>
+	<md:EmailAddress>security@uchicago.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

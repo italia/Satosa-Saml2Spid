@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.tamucc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tamucc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Texas A&amp;M University-Corpus Christi</mdui:DisplayName>
+		<mdui:Description xml:lang="en">TAMU-CC Federated Identification Services</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.tamucc.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://it.tamucc.edu/informationsecurity/securitypolicies/index.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="446" width="254" xml:lang="en">https://falcon.tamucc.edu/maint/idp/tamucc-logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAOYKntKjtqsjK3XCDvOROln3UFB7MA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC50YW11Y2MuZWR1MB4XDTA5MDIyNjE1MjcwNVoX
+DTI5MDIyNjE1MjcwNVowGTEXMBUGA1UEAxMOaWRwLnRhbXVjYy5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwST7lWouvG/O9UvsbOVn7RgXRuyil
+C6YNqNIwmSrVzt3nR7pu8K8A4aSCHzyM6nsIIvq27ga4zatdMm+B/dNcrJSVDk5z
+Bp6CCVG0POW6MI8fhsPTfXmy97RdALIpjrLVpiJVL27ydRFnQ453yQSiWGG4fj7g
+mhbMuKaY6D1dY/IwDIbgyr/HXZETehIpo+1GduKy4FqD+uHObqN4bGs7rZF1EX/U
+EiQkk1nYsZ+D2xwt/H3F2YAjBh4ja8BtN5VQMA61+8A2rl90teMcqUOTQ83KNlIF
+YRE2791RmIt8nWo4cjPnsrJbwQkcWKtAZ2DUIrYMqd+7stvskuhL2PxrAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC50YW11Y2MuZWR1hiVodHRwczovL2lkcC50YW11
+Y2MuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBShMYoUS4SWFsMeAdQRWjTl
+nciIDjANBgkqhkiG9w0BAQUFAAOCAQEABDsRUn3L/8U6B8HBhwQPmOcvcvMHHihq
+Ly3oTnJs3Z4q+nbv6EYozRIWxvZRlBtvzl6uAY4SqOlUgsvyo2ZmZMVwTwxphjqs
+s+rfqQwLmW5SFJDgLuw37Ad0QGDaIDPtkdZD23Va92uriNKAeCCCUFN1bt+cz36Y
+LMyX/IpxQDw5neIfiBge51m49GRFDQvvRdSurNf4uGF9ubBHwk+rqmwle/ypQWNg
+7LtWxJUTw7xMC8A+g7TQNRYxQVQetW8BeuiTLAD3wVEDTag2Jt4Wb2jEXHYkbnTo
+9pLuQGFhtWiswggmYR7TqvrVdoMuskIxwZmVPFx5EplQOQSW+fHYSw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.tamucc.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.tamucc.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.tamucc.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.tamucc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.tamucc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tamucc.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAOYKntKjtqsjK3XCDvOROln3UFB7MA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC50YW11Y2MuZWR1MB4XDTA5MDIyNjE1MjcwNVoX
+DTI5MDIyNjE1MjcwNVowGTEXMBUGA1UEAxMOaWRwLnRhbXVjYy5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwST7lWouvG/O9UvsbOVn7RgXRuyil
+C6YNqNIwmSrVzt3nR7pu8K8A4aSCHzyM6nsIIvq27ga4zatdMm+B/dNcrJSVDk5z
+Bp6CCVG0POW6MI8fhsPTfXmy97RdALIpjrLVpiJVL27ydRFnQ453yQSiWGG4fj7g
+mhbMuKaY6D1dY/IwDIbgyr/HXZETehIpo+1GduKy4FqD+uHObqN4bGs7rZF1EX/U
+EiQkk1nYsZ+D2xwt/H3F2YAjBh4ja8BtN5VQMA61+8A2rl90teMcqUOTQ83KNlIF
+YRE2791RmIt8nWo4cjPnsrJbwQkcWKtAZ2DUIrYMqd+7stvskuhL2PxrAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC50YW11Y2MuZWR1hiVodHRwczovL2lkcC50YW11
+Y2MuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBShMYoUS4SWFsMeAdQRWjTl
+nciIDjANBgkqhkiG9w0BAQUFAAOCAQEABDsRUn3L/8U6B8HBhwQPmOcvcvMHHihq
+Ly3oTnJs3Z4q+nbv6EYozRIWxvZRlBtvzl6uAY4SqOlUgsvyo2ZmZMVwTwxphjqs
+s+rfqQwLmW5SFJDgLuw37Ad0QGDaIDPtkdZD23Va92uriNKAeCCCUFN1bt+cz36Y
+LMyX/IpxQDw5neIfiBge51m49GRFDQvvRdSurNf4uGF9ubBHwk+rqmwle/ypQWNg
+7LtWxJUTw7xMC8A+g7TQNRYxQVQetW8BeuiTLAD3wVEDTag2Jt4Wb2jEXHYkbnTo
+9pLuQGFhtWiswggmYR7TqvrVdoMuskIxwZmVPFx5EplQOQSW+fHYSw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.tamucc.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Texas A&amp;M University-Corpus Christi</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Texas A&amp;M University-Corpus Christi</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.tamucc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Phil Hale</md:GivenName>
+	<md:EmailAddress>Phil.Hale@tamucc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Edward Evans</md:GivenName>
+	<md:EmailAddress>Edward.Evans@tamucc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Office of Information Security</md:GivenName>
+	<md:EmailAddress>OIS@tamucc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Help Desk</md:GivenName>
+	<md:EmailAddress>ithelp@tamucc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

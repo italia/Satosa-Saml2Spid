@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://webauth.cgu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://mycampus.cgu.edu/web/it/ehelp" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cgu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Claremont Graduate University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Identity Provider for Claremont Graduate University.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.cgu.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.cgu.edu/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="300" width="300" xml:lang="en">https://www.cgu.edu/wp-content/themes/cgu/assets/images/emblem.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAIPi7vRdLPZ5FW9ZELTl7ExcTnpQMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD3dlYmF1dGguY2d1LmVkdTAeFw0xNzA1MTUxNjExMDJa
+Fw0zNzA1MTUxNjExMDJaMBoxGDAWBgNVBAMTD3dlYmF1dGguY2d1LmVkdTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKbsutHTycE7dZrgvk1eIToUwlQk
+IXJqNHgsjjeTB9Ww4nYRxuMikS8A8Yj+KuuquS24CyZn9dXEhxOS7Ntgdcu/bTq9
+S3qny7APy3JAwHOX/T+AsLNizuxJpnymcFgJ/B9c/KcMSAJs8k9+VEPmmrQyXRkp
+qq9V5LvLvIf/hvXhaanHqeiRP9AN3fcHm+loTTRfQodxtHErmTKobsKrQ9s6vIX2
+Dzxl5Q2xmOhNcfC2UnQoIYBhWat1vP/PNsufDrA36bNWwwa8qcDF9T4wenAzUj7q
+Mwz7tr97cCI2LcgJ9ZhrmwWY+oy1Exq1odJ7eEFAKk8toVkdxu7ppNxzHHMCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPd2ViYXV0aC5jZ3UuZWR1hiZodHRwczovL3dlYmF1
+dGguY2d1LmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUngBaz/ffCJp1CCbk
+sqUDkkiHm6YwDQYJKoZIhvcNAQEFBQADggEBABBOf7VirPoH4USiwvvE2HTDLUzZ
+vLO76zVyHzXFzyWWF+0C0GqB84ZgvevOEeXI2BkmIVBz1bMXifkSOZY88k+CTkMN
+1+2EOsBFFzvVHpexCID+Pha3b5hSqfcmWUS3SOHmMNdIFP6R4h7LsjsSR8U8qcye
+6E4pMw9dGr003apOpuBe4zBKrVhwpfN3jaQwc7++m8WmNOoKOCuNckJrOYvETFld
+Bxx53HOyTwPcBXYnfvTtnxgB14lGxhBiqL5IiC0nUprpaOJZdE4zpIP29mITsb42
+9afS9/o74j9p5k0C3OlhMVznK+deODlF1VIQbmVLn4Gkjy8EdIo/yKuHhIk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.cgu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.cgu.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Claremont Graduate University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Claremont Graduate University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.cgu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Bob Ford</md:GivenName>
+	<md:EmailAddress>Bob.Ford@cgu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nasir Hakeem</md:GivenName>
+	<md:EmailAddress>Nasir.Hakeem@cgu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>CGU Helpdesk</md:GivenName>
+	<md:EmailAddress>Help.Desk@cgu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jason Jones</md:GivenName>
+	<md:EmailAddress>Jason.Jones@cgu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

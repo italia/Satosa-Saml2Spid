@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ph-ludwigsburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-01-31T13:33:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lb.ph-ludwigsburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PH Ludwigsburg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">PH Ludwigsburg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Pädagogischen Hochschule Ludwigsburg - Campus und Bibliothek Ludwigsburg</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of Ludwigsburg University of Education - Ludwigsburg Campus and Library</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.ph-ludwigsburg.de/fileadmin/gfx/shibboleth/lb/phlb-logo_einfach-gruen_16x16.png</mdui:Logo>
+		<mdui:Logo height="162" width="162">https://www.ph-ludwigsburg.de/fileadmin/gfx/shibboleth/lb/phlb-logo_einfach-gruen_162x162.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.ph-ludwigsburg.de/10593.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.ph-ludwigsburg.de/10593.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHAzCCBeugAwIBAgIMHL5fs+msOXf85aPFMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MDIxMTEwMDYyOFoXDTIwMDUxMDEwMDYyOFowgYkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMS0w
+KwYDVQQKDCRQYWVkYWdvZ2lzY2hlIEhvY2hzY2h1bGUgTHVkd2lnc2J1cmcxGDAW
+BgNVBAMMD2xiLWlkcC5waC1idy5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAO1EoDEjkvQjZrBpERrb+o3qq0haNS2glyleEK181/MX3fhK7fRZwydY
+i4Rlu+6ba+UMtMOwfjX87yRrldqwy8L9yVyRsVGiZLEO0LB5NfwOJKw+7XysgfiE
+pImMdBBgss+Y03Axr6nb0dAdUjNEi7fzbF2ryMft+uGDz3jVGxXhRsS9XPM4TlVS
+uZ4C9VE6TDR009pXRfWznJP4jW3L7TT5WRFbSWHQDNMv7LxEEwvzR8Dx96vbnPIY
+olkUPZXe8J+5sRR57mh4SW1hjyG9/oI8Qd6qONaRQOBp0KtBk8+6pYkiLzejegLA
+AvlBhtClp8Uj+p2d/4ppjWR4AsZHsPVKk3hBFtIulUG4hO7nprIaHpDeR1YVFRiL
+RUCGh8ri+LK+6YQT46AjnqIl8hS9nd3stYEgJ95env5YrsuK/SW3rngDVwVfx90W
+TltG04ZfxX13qsJCzgtGculgOsEplOtjevZpRdLOQXROrtx5TCvrWlJli6zzRfO8
+PwiYNhifqeLORW2Nx60oeNDrNyv9j48XV8nnF4PpQiBw+qSukym8bsrsxEJqIY/U
+5bc+9pCGWMTy14Fl24wY9cVGO0sqULk4dwPv5ETv98e+bNg4azS/P6dj8tXpRP4s
+W50gXpjJQ9s2iBtQ7jhY1gJ/a2QZm2ThGuNFO8096PGg2P73kdyzAgMBAAGjggJj
+MIICXzBZBgNVHSAEUjBQMBEGDysGAQQBga0hgiwBAQQDBTARBg8rBgEEAYGtIYIs
+AgEEAwEwDwYNKwYBBAGBrSGCLAEBBDANBgsrBgEEAYGtIYIsHjAIBgZngQwBAgIw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRgrS39Ra6Boxy3LkPMDoZkJUcyhTAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAaBgNVHREEEzARgg9sYi1pZHAucGgt
+YncuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRw
+Oi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNy
+bC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2Nz
+cC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6
+Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2Nh
+Y2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQEL
+BQADggEBAJEFNtOYFqLAfGUaa/4Ep92RmkcpFHXcc54j0Jdr3BcZemYGruziJ1KN
+nscMQvlteAywAhiJCb7EVaNJ9pMfDQhmGwkOnN/TfeVCLBZ/vFcZEi7h/NTax080
+WlXm8ph79mKxQs5M0j855xKxD8clp741NYF8086Q5TGZ3MRqRr8KZrqRXLPgtyR7
+H5+ds+Um+uKghmA5zF6oygmXc4o6kaIGCkEir5RcUqVmH0pIwpYSSXapWNowk2Az
+A9Ryg/0n2HuowH5L0ROOLzSjq/5tyOFGOPzdA/9AA/0FvzDYhVgatcn0z6aBNTQn
+515CJXwyngCxmie1Di4U/plVTA02VBY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHAzCCBeugAwIBAgIMHL5fs+msOXf85aPFMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MDIxMTEwMDYyOFoXDTIwMDUxMDEwMDYyOFowgYkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMS0w
+KwYDVQQKDCRQYWVkYWdvZ2lzY2hlIEhvY2hzY2h1bGUgTHVkd2lnc2J1cmcxGDAW
+BgNVBAMMD2xiLWlkcC5waC1idy5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAO1EoDEjkvQjZrBpERrb+o3qq0haNS2glyleEK181/MX3fhK7fRZwydY
+i4Rlu+6ba+UMtMOwfjX87yRrldqwy8L9yVyRsVGiZLEO0LB5NfwOJKw+7XysgfiE
+pImMdBBgss+Y03Axr6nb0dAdUjNEi7fzbF2ryMft+uGDz3jVGxXhRsS9XPM4TlVS
+uZ4C9VE6TDR009pXRfWznJP4jW3L7TT5WRFbSWHQDNMv7LxEEwvzR8Dx96vbnPIY
+olkUPZXe8J+5sRR57mh4SW1hjyG9/oI8Qd6qONaRQOBp0KtBk8+6pYkiLzejegLA
+AvlBhtClp8Uj+p2d/4ppjWR4AsZHsPVKk3hBFtIulUG4hO7nprIaHpDeR1YVFRiL
+RUCGh8ri+LK+6YQT46AjnqIl8hS9nd3stYEgJ95env5YrsuK/SW3rngDVwVfx90W
+TltG04ZfxX13qsJCzgtGculgOsEplOtjevZpRdLOQXROrtx5TCvrWlJli6zzRfO8
+PwiYNhifqeLORW2Nx60oeNDrNyv9j48XV8nnF4PpQiBw+qSukym8bsrsxEJqIY/U
+5bc+9pCGWMTy14Fl24wY9cVGO0sqULk4dwPv5ETv98e+bNg4azS/P6dj8tXpRP4s
+W50gXpjJQ9s2iBtQ7jhY1gJ/a2QZm2ThGuNFO8096PGg2P73kdyzAgMBAAGjggJj
+MIICXzBZBgNVHSAEUjBQMBEGDysGAQQBga0hgiwBAQQDBTARBg8rBgEEAYGtIYIs
+AgEEAwEwDwYNKwYBBAGBrSGCLAEBBDANBgsrBgEEAYGtIYIsHjAIBgZngQwBAgIw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRgrS39Ra6Boxy3LkPMDoZkJUcyhTAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAaBgNVHREEEzARgg9sYi1pZHAucGgt
+YncuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRw
+Oi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNy
+bC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2Nz
+cC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6
+Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2Nh
+Y2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQEL
+BQADggEBAJEFNtOYFqLAfGUaa/4Ep92RmkcpFHXcc54j0Jdr3BcZemYGruziJ1KN
+nscMQvlteAywAhiJCb7EVaNJ9pMfDQhmGwkOnN/TfeVCLBZ/vFcZEi7h/NTax080
+WlXm8ph79mKxQs5M0j855xKxD8clp741NYF8086Q5TGZ3MRqRr8KZrqRXLPgtyR7
+H5+ds+Um+uKghmA5zF6oygmXc4o6kaIGCkEir5RcUqVmH0pIwpYSSXapWNowk2Az
+A9Ryg/0n2HuowH5L0ROOLzSjq/5tyOFGOPzdA/9AA/0FvzDYhVgatcn0z6aBNTQn
+515CJXwyngCxmie1Di4U/plVTA02VBY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://lb-idp.ph-bw.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lb-idp.ph-bw.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lb-idp.ph-bw.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://lb-idp.ph-bw.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lb-idp.ph-bw.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lb.ph-ludwigsburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHAzCCBeugAwIBAgIMHL5fs+msOXf85aPFMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MDIxMTEwMDYyOFoXDTIwMDUxMDEwMDYyOFowgYkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMS0w
+KwYDVQQKDCRQYWVkYWdvZ2lzY2hlIEhvY2hzY2h1bGUgTHVkd2lnc2J1cmcxGDAW
+BgNVBAMMD2xiLWlkcC5waC1idy5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAO1EoDEjkvQjZrBpERrb+o3qq0haNS2glyleEK181/MX3fhK7fRZwydY
+i4Rlu+6ba+UMtMOwfjX87yRrldqwy8L9yVyRsVGiZLEO0LB5NfwOJKw+7XysgfiE
+pImMdBBgss+Y03Axr6nb0dAdUjNEi7fzbF2ryMft+uGDz3jVGxXhRsS9XPM4TlVS
+uZ4C9VE6TDR009pXRfWznJP4jW3L7TT5WRFbSWHQDNMv7LxEEwvzR8Dx96vbnPIY
+olkUPZXe8J+5sRR57mh4SW1hjyG9/oI8Qd6qONaRQOBp0KtBk8+6pYkiLzejegLA
+AvlBhtClp8Uj+p2d/4ppjWR4AsZHsPVKk3hBFtIulUG4hO7nprIaHpDeR1YVFRiL
+RUCGh8ri+LK+6YQT46AjnqIl8hS9nd3stYEgJ95env5YrsuK/SW3rngDVwVfx90W
+TltG04ZfxX13qsJCzgtGculgOsEplOtjevZpRdLOQXROrtx5TCvrWlJli6zzRfO8
+PwiYNhifqeLORW2Nx60oeNDrNyv9j48XV8nnF4PpQiBw+qSukym8bsrsxEJqIY/U
+5bc+9pCGWMTy14Fl24wY9cVGO0sqULk4dwPv5ETv98e+bNg4azS/P6dj8tXpRP4s
+W50gXpjJQ9s2iBtQ7jhY1gJ/a2QZm2ThGuNFO8096PGg2P73kdyzAgMBAAGjggJj
+MIICXzBZBgNVHSAEUjBQMBEGDysGAQQBga0hgiwBAQQDBTARBg8rBgEEAYGtIYIs
+AgEEAwEwDwYNKwYBBAGBrSGCLAEBBDANBgsrBgEEAYGtIYIsHjAIBgZngQwBAgIw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRgrS39Ra6Boxy3LkPMDoZkJUcyhTAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAaBgNVHREEEzARgg9sYi1pZHAucGgt
+YncuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRw
+Oi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNy
+bC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2Nz
+cC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6
+Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2Nh
+Y2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQEL
+BQADggEBAJEFNtOYFqLAfGUaa/4Ep92RmkcpFHXcc54j0Jdr3BcZemYGruziJ1KN
+nscMQvlteAywAhiJCb7EVaNJ9pMfDQhmGwkOnN/TfeVCLBZ/vFcZEi7h/NTax080
+WlXm8ph79mKxQs5M0j855xKxD8clp741NYF8086Q5TGZ3MRqRr8KZrqRXLPgtyR7
+H5+ds+Um+uKghmA5zF6oygmXc4o6kaIGCkEir5RcUqVmH0pIwpYSSXapWNowk2Az
+A9Ryg/0n2HuowH5L0ROOLzSjq/5tyOFGOPzdA/9AA/0FvzDYhVgatcn0z6aBNTQn
+515CJXwyngCxmie1Di4U/plVTA02VBY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHAzCCBeugAwIBAgIMHL5fs+msOXf85aPFMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MDIxMTEwMDYyOFoXDTIwMDUxMDEwMDYyOFowgYkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMS0w
+KwYDVQQKDCRQYWVkYWdvZ2lzY2hlIEhvY2hzY2h1bGUgTHVkd2lnc2J1cmcxGDAW
+BgNVBAMMD2xiLWlkcC5waC1idy5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAO1EoDEjkvQjZrBpERrb+o3qq0haNS2glyleEK181/MX3fhK7fRZwydY
+i4Rlu+6ba+UMtMOwfjX87yRrldqwy8L9yVyRsVGiZLEO0LB5NfwOJKw+7XysgfiE
+pImMdBBgss+Y03Axr6nb0dAdUjNEi7fzbF2ryMft+uGDz3jVGxXhRsS9XPM4TlVS
+uZ4C9VE6TDR009pXRfWznJP4jW3L7TT5WRFbSWHQDNMv7LxEEwvzR8Dx96vbnPIY
+olkUPZXe8J+5sRR57mh4SW1hjyG9/oI8Qd6qONaRQOBp0KtBk8+6pYkiLzejegLA
+AvlBhtClp8Uj+p2d/4ppjWR4AsZHsPVKk3hBFtIulUG4hO7nprIaHpDeR1YVFRiL
+RUCGh8ri+LK+6YQT46AjnqIl8hS9nd3stYEgJ95env5YrsuK/SW3rngDVwVfx90W
+TltG04ZfxX13qsJCzgtGculgOsEplOtjevZpRdLOQXROrtx5TCvrWlJli6zzRfO8
+PwiYNhifqeLORW2Nx60oeNDrNyv9j48XV8nnF4PpQiBw+qSukym8bsrsxEJqIY/U
+5bc+9pCGWMTy14Fl24wY9cVGO0sqULk4dwPv5ETv98e+bNg4azS/P6dj8tXpRP4s
+W50gXpjJQ9s2iBtQ7jhY1gJ/a2QZm2ThGuNFO8096PGg2P73kdyzAgMBAAGjggJj
+MIICXzBZBgNVHSAEUjBQMBEGDysGAQQBga0hgiwBAQQDBTARBg8rBgEEAYGtIYIs
+AgEEAwEwDwYNKwYBBAGBrSGCLAEBBDANBgsrBgEEAYGtIYIsHjAIBgZngQwBAgIw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRgrS39Ra6Boxy3LkPMDoZkJUcyhTAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAaBgNVHREEEzARgg9sYi1pZHAucGgt
+YncuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRw
+Oi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNy
+bC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2Nz
+cC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6
+Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2Nh
+Y2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQEL
+BQADggEBAJEFNtOYFqLAfGUaa/4Ep92RmkcpFHXcc54j0Jdr3BcZemYGruziJ1KN
+nscMQvlteAywAhiJCb7EVaNJ9pMfDQhmGwkOnN/TfeVCLBZ/vFcZEi7h/NTax080
+WlXm8ph79mKxQs5M0j855xKxD8clp741NYF8086Q5TGZ3MRqRr8KZrqRXLPgtyR7
+H5+ds+Um+uKghmA5zF6oygmXc4o6kaIGCkEir5RcUqVmH0pIwpYSSXapWNowk2Az
+A9Ryg/0n2HuowH5L0ROOLzSjq/5tyOFGOPzdA/9AA/0FvzDYhVgatcn0z6aBNTQn
+515CJXwyngCxmie1Di4U/plVTA02VBY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://lb-idp.ph-bw.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lb-idp.ph-bw.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e194</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e194</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PH Ludwigsburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">PH Ludwigsburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.ph-ludwigsburg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ph-ludwigsburg.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Oliver</md:GivenName>
+	<md:SurName>Kuka</md:SurName>
+	<md:EmailAddress>mailto:shib-admin@ph-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Oliver</md:GivenName>
+	<md:SurName>Kuka</md:SurName>
+	<md:EmailAddress>mailto:shib-admin@ph-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Oliver</md:GivenName>
+	<md:SurName>Kuka</md:SurName>
+	<md:EmailAddress>mailto:shib-admin@ph-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Tobias</md:GivenName>
+	<md:SurName>Czempik</md:SurName>
+	<md:EmailAddress>mailto:czempik@ph-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

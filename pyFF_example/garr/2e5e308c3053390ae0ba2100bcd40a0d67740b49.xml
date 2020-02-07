@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://hope.primo.exlibrisgroup.com/mng/login">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2018-10-04T13:38:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Liverpool Hope University - Primo </mdui:DisplayName>
+		<mdui:Logo height="72" width="158">https://www.exlibrisgroup.com/wp-content/uploads/2017/11/exlibris-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTjCCAjagAwIBAgIEVmV/TjANBgkqhkiG9w0BAQUFADBoMQswCQYDVQQGEwJJ
+TDEPMA0GA1UECBMGSXNyYWVsMRIwEAYDVQQHEwlKZXJ1c2FsZW0xEjAQBgNVBAoT
+CUV4IExpYnJpczENMAsGA1UECxMEQWxtYTERMA8GA1UEAxMIU0FNTCBKS1MwIBcN
+MTUxMjA3MTI0NTAyWhgPMjExNDA3MDExMjQ1MDJaMGgxCzAJBgNVBAYTAklMMQ8w
+DQYDVQQIEwZJc3JhZWwxEjAQBgNVBAcTCUplcnVzYWxlbTESMBAGA1UEChMJRXgg
+TGlicmlzMQ0wCwYDVQQLEwRBbG1hMREwDwYDVQQDEwhTQU1MIEpLUzCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIi/Rir9iQd9uIVs8v/XqACZ23gFVxiZ
+1E7Hc9KISzYeWyfp8mqYt7pUfrJ9DXWaiod4DBcT2UcBaFiQ/KKZ5KFnUE8gnwon
+rKnhGIJZTiIMpeCI48rnTb9ExtAz6UAgbgjFsnvEovOwepEB2ON+UxSVJeNm13iw
+qgG7IbOkGKzZfJfa0QIDDErt7nPzi5YpUt9Ss3ocO+Cc9WEa/dw0KjEj6koMJljX
+5Q5hJ3U7i4a/7l5K1Vq5HZDEQy25/p4zTCya+IQ8Svk7HsGQZrGQRL3qF9ZbcXoa
+W3AerPJUJAi2/icPferT42MnEPmBTYtq+u170l8jus+75R0rYbAFjD8CAwEAATAN
+BgkqhkiG9w0BAQUFAAOCAQEAhRPwL6zLnE95/jgRe/KxFoSyQydPzQJO1bjYroVG
+9emXf/exQ5NYAmallizlywg8WqtrvwWxaVPru11TyTYb5gYm9eseT1nGxuwG4cmc
+ZPvEi450Yme52oFoKQVBlp5wvL1D3EdKZKeysAipZ5GcOxSm/SQvQbJ1jNH1hWZ4
+6w5RKn435J3ETivgDM/esX7tgRYBYYDEPvbTL0AGcvC77O8KC+3nxvJW90OSBAyR
+o5jFNmDMCeuYBAjj4+KltF8O3GDKi3cNNwI12wjcMv4+pgaaI7h1amVm6Y2Jj0Ee
+snYlWywcXjAx6rl97jtsVzbbn2o2FGrVFSpBGwbGtrFZgw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://hope.primo.exlibrisgroup.com/mng/samlSingleLogout"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://hope.primo.exlibrisgroup.com/mng/pdsHandleLogin" index="0" isDefault="true"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">Liverpool Hope University - Primo</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ex Libris (UK) Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Liverpool Hope University - Primo</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.exlibrisgroup.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Daniel</md:GivenName>
+	<md:SurName>Manoim</md:SurName>
+	<md:EmailAddress>mailto:Daniel.manoim@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Daniel</md:GivenName>
+	<md:SurName>Manoim</md:SurName>
+	<md:EmailAddress>mailto:Daniel.manoim@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

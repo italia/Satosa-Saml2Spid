@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uni-tuebingen.de/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2009-05-26T08:35:29Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-tuebingen.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität Tübingen</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Universität Tübingen</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Shibboleth IdP Universität Tübingen</mdui:Description>
+		<mdui:Description xml:lang="en">Shibboleth IdP Universität Tübingen</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.uni-tuebingen.de/idp/ut_small.png</mdui:Logo>
+		<mdui:Logo height="100" width="260">https://idp.uni-tuebingen.de/idp/ut_big.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.uni-tuebingen.de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.uni-tuebingen.de/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://idp.uni-tuebingen.de/terms.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJwTCCCKmgAwIBAgIMICXTbwqXotaii5JwMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTIwNDEwMjQzNVoXDTIxMDMwNzEwMjQzNVowgakxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVR1ZWJpbmdlbjEuMCwG
+A1UECgwlRWJlcmhhcmQgS2FybHMgVW5pdmVyc2l0YWV0IFR1ZWJpbmdlbjEMMAoG
+A1UECwwDWkRWMQwwCgYDVQQLDANTU0wxHTAbBgNVBAMMFGlkcC51bmktdHVlYmlu
+Z2VuLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3kqdUhxButZp
+hlCq4/E9ub5A/IrzceqGcnTakcfzxxaqV5ZLqvXoKKOEJDrPEK+lWLNxnMiFZGEK
+S1bARd1bhMsoD7qGpmMOWBzT0Q6yiRC3LTVMvn1sYb+P7uZBQojfatkW4i99UkkA
+gz0TiP+B1TCjY9jUFItPDHGckO/W5ki4uSt9vnKIigW6kBs4fdxgt6x7OWqxMOm6
+WsON5J0lcDMyPhkB9sefta84gwq7YX754nuxsgufGXRMhQpGdcomdGOQhT4RUc6+
+Nvdmd2v1554csMAKxubJ/JWq18Wk2hh6BMEmTE8BjdyVxKF7mKsu6PB0qOUUNjBJ
+oRzdaH1s9QIDAQABo4IGATCCBf0wWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYB
+BAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgwEQYP
+KwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUfHiMn1cEtwCPt9qm
+/g4508YktX4wHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwVwYDVR0R
+BFAwToIUaWRwLnVuaS10dWViaW5nZW4uZGWCGnBibS1pZHAxMS51bmktdHVlYmlu
+Z2VuLmRlghpwYm0taWRwMTIudW5pLXR1ZWJpbmdlbi5kZTCBjQYDVR0fBIGFMIGC
+MD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUv
+ZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEE
+gc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1T
+ZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcw
+AoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+YWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIEggNNBIIDSQNHAHUAb1N2
+rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFneL+ngQAABAMARjBEAiAw
+H13v4jUeVd9XQuAZ4G7tK3sfouPrNY+fQaO/6BkMUgIgR/AEJxzxzvrHj4Zv0R/v
+4UcEtK/o8Uc52U/QeceNNd8AdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWd4v6eOAAAEAwBGMEQCIENKXK5+EO1xoaSE8wgQ/PMelhgSrR4ah2zv
+UDytjOLuAiApuqArof3jrWloTG/FZ31+eULo8zkJFRe4npRYMXlXlAB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZ3i/qIgAAAQDAEgwRgIhAPV3
+Cs7tmM0wXUzGnnXByTigB4PMf6KrvJHH0NutA7mRAiEA0KTJbNOvzDrR3cv4jjOc
+6iDuNk4A7KUKxLBUEZE5bloAdgC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2
+jh7RhQAAAWd4v6gBAAAEAwBHMEUCIAS+8/w4CjP0MDfSlq23NlvGYpJakLLpTzv0
+iA2/YrMAAiEAyReemPiSKEXJZv7/kAyIu/vk93OnX9BJMfZ4/e45LcUAdQBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWd4v6tCAAAEAwBGMEQCIFrW
+RubYnj2yDAC2gK4w+HPqQoqt6aRPNlYVibBsJFIKAiAahDZE+hWAFhCKwFNzYu6q
+3INiCoan8eYgh/C9HrnaDQB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6
+qP3LAAABZ3i/qAYAAAQDAEcwRQIgKsVDqjENkSkdAWbdTxUJbU1DngM5jnb0gMPZ
+8l8MUHoCIQDup01oiuDY7VCVXGXNgZEeyQdM918nmwJcxN9cIR5rlwB3AKS5CZC0
+GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZ3i/p9QAAAQDAEgwRgIhAPR3
+3PdNJ7Kblt9uJVeMDkM/qZ/EbDlG8WClSiyNzujPAiEAjL1pUvgLAVwSS1z/ILzF
+uvQPzmpYdrkO2aPJpEPfBjMwDQYJKoZIhvcNAQELBQADggEBADsV7b6CkseTHPzu
+zLPwj8fKO+efJ2O3BI6iBNf+Bn1xZKJv7JTTijOKHBMOBbQmajnEMW8+qTNAktHx
+M4/4wXNjMytQY3IQCBsqfoAALNAGJWcsMm1gr0ShpeZNORwg3i9V+JPZ5/I4/eGA
+yoJKm7jodnP22zbhf6hda33NSpMgvBs5f863258Siw0N0yT13ptqXHTxmd321TrL
+Yx4r3okylTGfIuj3bSi1NOWNx5aAY8MoWEQ+QbRtwmG/p5F4KQK5N/DzcZgx//b3
+XAI6zZFrQR7cjl9wnC/tmXhqWAPly5nGYxuA/wwiUpaoMuLSOVqAZ+SHWZewLRvO
+BDmxVUs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uni-tuebingen.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uni-tuebingen.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uni-tuebingen.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uni-tuebingen.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-tuebingen.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJwTCCCKmgAwIBAgIMICXTbwqXotaii5JwMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTIwNDEwMjQzNVoXDTIxMDMwNzEwMjQzNVowgakxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVR1ZWJpbmdlbjEuMCwG
+A1UECgwlRWJlcmhhcmQgS2FybHMgVW5pdmVyc2l0YWV0IFR1ZWJpbmdlbjEMMAoG
+A1UECwwDWkRWMQwwCgYDVQQLDANTU0wxHTAbBgNVBAMMFGlkcC51bmktdHVlYmlu
+Z2VuLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3kqdUhxButZp
+hlCq4/E9ub5A/IrzceqGcnTakcfzxxaqV5ZLqvXoKKOEJDrPEK+lWLNxnMiFZGEK
+S1bARd1bhMsoD7qGpmMOWBzT0Q6yiRC3LTVMvn1sYb+P7uZBQojfatkW4i99UkkA
+gz0TiP+B1TCjY9jUFItPDHGckO/W5ki4uSt9vnKIigW6kBs4fdxgt6x7OWqxMOm6
+WsON5J0lcDMyPhkB9sefta84gwq7YX754nuxsgufGXRMhQpGdcomdGOQhT4RUc6+
+Nvdmd2v1554csMAKxubJ/JWq18Wk2hh6BMEmTE8BjdyVxKF7mKsu6PB0qOUUNjBJ
+oRzdaH1s9QIDAQABo4IGATCCBf0wWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYB
+BAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgwEQYP
+KwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUfHiMn1cEtwCPt9qm
+/g4508YktX4wHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwVwYDVR0R
+BFAwToIUaWRwLnVuaS10dWViaW5nZW4uZGWCGnBibS1pZHAxMS51bmktdHVlYmlu
+Z2VuLmRlghpwYm0taWRwMTIudW5pLXR1ZWJpbmdlbi5kZTCBjQYDVR0fBIGFMIGC
+MD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUv
+ZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEE
+gc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1T
+ZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcw
+AoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+YWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIEggNNBIIDSQNHAHUAb1N2
+rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFneL+ngQAABAMARjBEAiAw
+H13v4jUeVd9XQuAZ4G7tK3sfouPrNY+fQaO/6BkMUgIgR/AEJxzxzvrHj4Zv0R/v
+4UcEtK/o8Uc52U/QeceNNd8AdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWd4v6eOAAAEAwBGMEQCIENKXK5+EO1xoaSE8wgQ/PMelhgSrR4ah2zv
+UDytjOLuAiApuqArof3jrWloTG/FZ31+eULo8zkJFRe4npRYMXlXlAB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZ3i/qIgAAAQDAEgwRgIhAPV3
+Cs7tmM0wXUzGnnXByTigB4PMf6KrvJHH0NutA7mRAiEA0KTJbNOvzDrR3cv4jjOc
+6iDuNk4A7KUKxLBUEZE5bloAdgC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2
+jh7RhQAAAWd4v6gBAAAEAwBHMEUCIAS+8/w4CjP0MDfSlq23NlvGYpJakLLpTzv0
+iA2/YrMAAiEAyReemPiSKEXJZv7/kAyIu/vk93OnX9BJMfZ4/e45LcUAdQBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWd4v6tCAAAEAwBGMEQCIFrW
+RubYnj2yDAC2gK4w+HPqQoqt6aRPNlYVibBsJFIKAiAahDZE+hWAFhCKwFNzYu6q
+3INiCoan8eYgh/C9HrnaDQB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6
+qP3LAAABZ3i/qAYAAAQDAEcwRQIgKsVDqjENkSkdAWbdTxUJbU1DngM5jnb0gMPZ
+8l8MUHoCIQDup01oiuDY7VCVXGXNgZEeyQdM918nmwJcxN9cIR5rlwB3AKS5CZC0
+GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZ3i/p9QAAAQDAEgwRgIhAPR3
+3PdNJ7Kblt9uJVeMDkM/qZ/EbDlG8WClSiyNzujPAiEAjL1pUvgLAVwSS1z/ILzF
+uvQPzmpYdrkO2aPJpEPfBjMwDQYJKoZIhvcNAQELBQADggEBADsV7b6CkseTHPzu
+zLPwj8fKO+efJ2O3BI6iBNf+Bn1xZKJv7JTTijOKHBMOBbQmajnEMW8+qTNAktHx
+M4/4wXNjMytQY3IQCBsqfoAALNAGJWcsMm1gr0ShpeZNORwg3i9V+JPZ5/I4/eGA
+yoJKm7jodnP22zbhf6hda33NSpMgvBs5f863258Siw0N0yT13ptqXHTxmd321TrL
+Yx4r3okylTGfIuj3bSi1NOWNx5aAY8MoWEQ+QbRtwmG/p5F4KQK5N/DzcZgx//b3
+XAI6zZFrQR7cjl9wnC/tmXhqWAPly5nGYxuA/wwiUpaoMuLSOVqAZ+SHWZewLRvO
+BDmxVUs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uni-tuebingen.de/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e60</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e60</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Tübingen</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Tuebingen</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni-tuebingen.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni-tuebingen.de/en/landingpage.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Kurt</md:GivenName>
+	<md:SurName>Spanier</md:SurName>
+	<md:EmailAddress>mailto:kurt.spanier@uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth</md:GivenName>
+	<md:SurName>Technical Support</md:SurName>
+	<md:EmailAddress>mailto:idp-technical@uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shibboleth</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:idp-support@uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security Officer</md:GivenName>
+	<md:SurName>IT Security Officer</md:SurName>
+	<md:EmailAddress>mailto:itsec@uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

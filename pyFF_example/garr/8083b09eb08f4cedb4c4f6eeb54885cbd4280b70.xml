@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://identity.colgate.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">colgate.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Colgate University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Colgate University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.colgate.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.colgate.edu/home/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="47" width="300" xml:lang="en">https://identity.colgate.edu/idp/images/colgate_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUOaVXfrGMzwEK+ilEi//52I72lKgwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRlbnRpdHkuY29sZ2F0ZS5lZHUwHhcNMTYwNjI3MTcy
+OTU5WhcNMzYwNjI3MTcyOTU5WjAfMR0wGwYDVQQDDBRpZGVudGl0eS5jb2xnYXRl
+LmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIGvUJEmM4+jlArK
+AfFpRX7qNU/JIf9wLPo2gB5khmz0KlRb38OkQARFSMfVXcrw2LqsyeNBC2rR8u7Q
+5ciyHcdJjyfPMilUxEDh8vauphL/h6j89Ou56yNUdP4qyoSlEuZzztMro2SwzC6x
+te4P8heM+PmhiRmL8A8quZmId3QiGWS8kZM4lCymDuqgf/LptUKVDcu37GGuD/C1
+bkWwdlKoeA1h4ObPwRTq6WGkO04melVBIUOK5bVtu0t3eCLFGfYHx2323MZcGKWa
+oSDida2CAUzyqGnJb5Jr3hOXypq4ECOLZjDMfWa4+zg1mVOUS/owG3jffMAreQj4
+0AL7iwMCAwEAAaNvMG0wHQYDVR0OBBYEFNb9cMnK1IdNpce13V3BL5idC7OpMEwG
+A1UdEQRFMEOCFGlkZW50aXR5LmNvbGdhdGUuZWR1hitodHRwczovL2lkZW50aXR5
+LmNvbGdhdGUuZWR1L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBc
+gdTx+y2WQfyNj9etlIweemWwOkFl8oBzxqd235Qsnu/KSL2HjYhu+B23YW22oPnG
+ud37/tnbAz/oZs+3/sXwo/Pp+qTMKw8MmTN1BXXJVqNcQfshrJfwbEWXusYNxbOK
+y3J8RaCsODUvQUmXXNHRx7Sbl6464Da6mLamG/y7DtHW3LNm9CpmnFih9bc5CqiL
+Wjt1B/BOSCRRnbjTVGbiSRdTDtgp4x4k4p0Wlz8KsYQXOzoiWXbEaFSlLl8pbAVs
+bkO74/D6oJHOvesRCBm0Td5HNz0j7RimXy2fdoM7Zpw/IdtbEIgMgR1NikCT864E
+wYl+tiixxtPX7Z5yGyeC
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://identity.colgate.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identity.colgate.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://identity.colgate.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identity.colgate.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Colgate University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Colgate University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://colgate.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Identity Management</md:GivenName>
+	<md:EmailAddress>itss-identity-management@colgate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Identity Managament</md:GivenName>
+	<md:EmailAddress>itss-identity-management@colgate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Identity Management</md:GivenName>
+	<md:EmailAddress>itss-identity-management@colgate.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

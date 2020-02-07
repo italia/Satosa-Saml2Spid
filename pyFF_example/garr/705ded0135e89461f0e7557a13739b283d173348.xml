@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://jhu.stellic.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Stellic</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.stellic.com</mdui:PrivacyStatementURL>
+		<mdui:Logo height="138" width="325" xml:lang="en">https://s3-us-west-2.amazonaws.com/metis-edu/images/stellic-logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9DCCAdygAwIBAgIJALej/JUPVzPKMA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNV
+BAMTD2podS5zdGVsbGljLmNvbTAeFw0xOTAxMDIxMjIxMjJaFw0yODEyMzAxMjIx
+MjJaMBoxGDAWBgNVBAMTD2podS5zdGVsbGljLmNvbTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAM/iWF6MqEB8C4TN667prhzVSaVwmABxW1rRcnAz8CMW
+KvAF52RZEUr4LHIPtltW9auWFBTUJU6Y2D/uzuepT7S4+4iqDt8k5T1PvfkFe8Ey
+lE/+OM6kRtksIKX5E+3yKax7v6n+Y5hhnP9tGHmLzYnGEGd9JlacW1KjmElTdK5g
+YwqA51MOa7EtC28NELzpT9ofzYxqdsSgY86YYfUmeGY5u4mWVV7rbTVNGja1d5X6
+p/O6DHQWCVpccUd+e2TIiYwJQlTqIr3INg/PhcZMcGYDnmNwQIaRWsI+E9dWQbfw
+s4z5eHy7WPG4gyMDT7re0cDsjPehzRmr4qWEh2+TbIcCAwEAAaM9MDswGgYDVR0R
+BBMwEYIPamh1LnN0ZWxsaWMuY29tMB0GA1UdDgQWBBTriw/FiLU7q0+p6oJe7Hp1
+/rzW5DANBgkqhkiG9w0BAQUFAAOCAQEAaNftXswM8u6e3tMvWIiU68MZOPzJtjAK
+m6RvvoWpfu5ejE3w2ahIXj40ovkzepHP1eOr4PwKSPvdQRPezbMRCeEqpgdrQGFK
+UN95REygi1LSteG8YZtp4GObfo1KrYpOy4uld7xNaPp1DIwv0jusMr2XuMJN9w59
+TpYXnCe1GPac0avKH2rtkgQLA3UbxgBcf3Y1PJb0NfH8Hh7BBEpB0os628nJxf7q
++LXUAkQz90cwTYx9V75hzNvEru//VD3+j1eFBG3jSOHfLBPbsX2oB1FIF3mheXXJ
+VqRk+wo9fd/byIK9oFAQF3Zr2O9XnXcxtjZ9y/t5bYCUlMEIY0VHiA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stellic.jhu.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://stellic.jhu.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://stellic.jhu.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://stellic.jhu.edu/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Stellic</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Stellic Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stellic Inc</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.stellic.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jiyda Moussa</md:GivenName>
+	<md:EmailAddress>jiyda@stellic.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jiyda Moussa</md:GivenName>
+	<md:EmailAddress>jiyda@stellic.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jiyda Moussa</md:GivenName>
+	<md:EmailAddress>jiyda@stellic.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

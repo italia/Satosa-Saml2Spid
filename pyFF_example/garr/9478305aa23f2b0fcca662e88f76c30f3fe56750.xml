@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:stanford.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stanford.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Stanford University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Stanford University's identity provider for Web single sign-on</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://saml.stanford.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.stanford.edu/site/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://login.stanford.edu/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDtTCCAp2gAwIBAgIJAPmWpLuXBmD6MA0GCSqGSIb3DQEBCwUAMHExCzAJBgNV
+BAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMREwDwYDVQQHDAhTdGFuZm9yZDEf
+MB0GA1UECgwWQWRtaW5pc3RyYXRpdmUgU3lzdGVtczEZMBcGA1UEAwwQaWRwLnN0
+YW5mb3JkLmVkdTAeFw0xNDEyMDEyMDUxMzZaFw0yNDExMzAyMDUxMzZaMHExCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMREwDwYDVQQHDAhTdGFuZm9y
+ZDEfMB0GA1UECgwWQWRtaW5pc3RyYXRpdmUgU3lzdGVtczEZMBcGA1UEAwwQaWRw
+LnN0YW5mb3JkLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL+R
+POrLUT4Pv/pJ4coD3lwOVhSJ5wqIVPo3D94SBaTH/zFOVJM5uIzq9bWwXqbQeuyT
+ryuZc1Obv7aK4/vnOuEh6bQfW15ZEtqRfI0fl873aXqWYItxM69xhgw33BavFat+
+LLUbalvqfjLZvW0Qp7wQMO88RikcFbrS9qvILsJZhcemyH+UZ1oyQKg0OwLd2fpf
+Iqs9Lksh9UiwvxH2/S8gYIZ/+p/Tyc2NluTQVRO53wmoPVv9edeH7ucaGi1OqH8q
+EDwTzd6lVKLjQHxBI3105Wmj5YZuiv8mWj4r50huCGfuw1+XgQVw2gwvDmzTupOA
+JfFRry8bDZp/lGUVZP0CAwEAAaNQME4wHQYDVR0OBBYEFDl+vvpPHz2jozJ83nTa
+XOBUWi7TMB8GA1UdIwQYMBaAFDl+vvpPHz2jozJ83nTaXOBUWi7TMAwGA1UdEwQF
+MAMBAf8wDQYJKoZIhvcNAQELBQADggEBAHVPjloOPKFxhzFH6BE55zRcxz/AKlHG
+f4SXLOEJ5QijZ10qdaB1jVgo5Dva8cxZSk+Y9iMCqgYgWLUJP8WqFsH0mqfrJ7Es
+dW+BdpecKCTOUmHlImjPp81W/hVDJSZXIe+wwzp77Rt+Bdhuhec5ZVYoE/3ug2PA
+pFlfFNxtxYugIhRIcDyUdLUTMoWXmhKgVHbjNtUL9BGfJHkIIAtWSZZ4bsheOGUY
+IbtwXER+ihBU48YYjdAVC9bxdbR0GAJY5uLqG6k0FgEV/7vVHqFMqp31qJme3/ps
+SFqKGJNZvMvXzp89VM70lI2VewL/GVdm6c31p7PVmCfPJXdHmCOVVsY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDnzCCAoegAwIBAgIJAJl9YtyaxKsZMA0GCSqGSIb3DQEBBQUAMGYxCzAJBgNV
+BAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMREwDwYDVQQHDAhTdGFuZm9yZDEU
+MBIGA1UECgwLSVQgU2VydmljZXMxGTAXBgNVBAMMEGlkcC5zdGFuZm9yZC5lZHUw
+HhcNMTMwNDEwMTYzMTAwWhcNMzMwNDEwMTYzMTAwWjBmMQswCQYDVQQGEwJVUzET
+MBEGA1UECAwKQ2FsaWZvcm5pYTERMA8GA1UEBwwIU3RhbmZvcmQxFDASBgNVBAoM
+C0lUIFNlcnZpY2VzMRkwFwYDVQQDDBBpZHAuc3RhbmZvcmQuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm6466Bd6mDwNOR2qZZy1WRZdjyrG2/xW
+amGEMekg38fyuoSCIiMcgeA9UIUbiRCpAN87yI9HPcgDEdrmCK3Ena3J2MdFZbRE
+b6fdRt76K+0FSl/CnyW9xaIlAhldXKbsgUDei3Xf/9P8H9Dxkk+PWd9Ha1RZ9Viz
+dOLe2S2iDKc1CJg2kdGQTuQu6mUEGrB9WJmrLHJS7GkGDqy96owFjRL/p0i9KBdR
+kgWG+GFHWkxzeNQ99yrQra3+C9FQXa/xLCdOY+BGOsAG7ej4094NZXRNTyXui4jR
+WCm2GVdIVl7YB9++XSntS7zQEJ9QBnC1D4bS0tljMfdOGAvdUuJY7QIDAQABo1Aw
+TjAdBgNVHQ4EFgQUJk4zcQ4JupEcAp0gEkob4YRDkckwHwYDVR0jBBgwFoAUJk4z
+cQ4JupEcAp0gEkob4YRDkckwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEAKvf9AO4+osJZOmkv6AVhNPm6JKoBSm9dr9NhwpSS5fpro6PrIjDZDLh/L5d/
++CQTDzuVsw3xwDtlm89lrzbqw5rSa2+ghJk79ijysSC0zOcD6ka9c17zauCNmFx9
+lj9iddUw3aYHQcQRktWL8pvI2WCY6lTU+ouNM+owStya7umZ9rBdjg/fQerzaQxF
+T0yV3tYEonL3hXMzSqZxWirwsyZ0TnhWJsgEnqqG9tCFAcFu2p+glwXn1WL2GCRv
+BfuJMPzg7ZB419AEoeYnLktqAWiU+ISnVfbwFOJ+OM/O7VQOeHDm2AeYcwo12CAc
+4GC9KWTs3QtS3GREPKYDlHRNxQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.stanford.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.stanford.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.stanford.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.stanford.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Stanford University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stanford University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.stanford.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SAML Support</md:GivenName>
+	<md:EmailAddress>shibboleth-team@lists.stanford.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security Office</md:GivenName>
+	<md:EmailAddress>securityofficer@stanford.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>SAML Support</md:GivenName>
+	<md:EmailAddress>shibboleth-team@lists.stanford.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

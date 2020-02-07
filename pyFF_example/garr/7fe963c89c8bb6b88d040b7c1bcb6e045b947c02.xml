@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://vim.virgo-gw.eu/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2019-01-03T16:01:57Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://vim.virgo-gw.eu/Shibboleth.sso/Login"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://vim.virgo-gw.eu/Shibboleth.sso/Login" index="1"/><mdui:UIInfo><mdui:DisplayName xml:lang="en">Virgo Interferometer Monitor</mdui:DisplayName><mdui:DisplayName xml:lang="it">Virgo Interferometer Monitor</mdui:DisplayName><mdui:Description xml:lang="en">The VIM (Virgo Interferometer Monitor) visualizes the current and historic graphs showing the status of the Advanced Virgo interferometer instrument and the on-line analysis applications dedicated to the detection of gravitational waves (https://www.virgo-gw.eu)</mdui:Description><mdui:Description xml:lang="it">L'applicazione VIM (Virgo Interferometer Monitor) visualizza i grafici storici e attuali con lo stato dell'Advanced Virgo Detector e dei processi di on-line data analysis dedicati alla rilevazione delle onde gravitazionali (https://www.virgo-gw.eu)</mdui:Description><mdui:InformationURL xml:lang="en">https://wiki.virgo-gw.eu/Main/AAI/VIMspInfoEn</mdui:InformationURL><mdui:InformationURL xml:lang="it">https://wiki.virgo-gw.eu/Main/AAI/VIMspInfoIt</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">https://wiki.virgo-gw.eu/Main/AAI/vimPrivacyPolicy</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">https://wiki.virgo-gw.eu/Main/AAI/vimPrivacyPolicy</mdui:PrivacyStatementURL><mdui:Logo height="60" width="80" xml:lang="en">https://idp.ego-gw.it/en/logo.png</mdui:Logo><mdui:Logo height="60" width="80" xml:lang="it">https://idp.ego-gw.it/en/logo.png</mdui:Logo></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGDCCAoCgAwIBAgIJAKwuPDjJS1ehMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMTD3ZpbS52aXJnby1ndy5ldTAeFw0xODEyMjgxMzU4MTNaFw00ODEyMjAxMzU4
+MTNaMBoxGDAWBgNVBAMTD3ZpbS52aXJnby1ndy5ldTCCAaIwDQYJKoZIhvcNAQEB
+BQADggGPADCCAYoCggGBALAE1k0nkxbAYsbWX/lAmNL22QtMgM6j/SR2bQxDvup+
+HMLVnz57ltusm5G0P5s0jUC2wuTBOna0c84WOdpQ4mm/FfHFXFhSb0aPwpIJCIHG
+voAegDt2EFXF4jZn0gUV6Ig904EEuAzC4870EdYI2ekgXDfLAccYirTs+bEyH7sA
+zoMBuzeqvdd9CRuv4Ue7+rWYru6p3pRfcqkPZXFl65zU7P8JWpvU8qGpuI15Verd
+TGjzWjh7BMEr3uBNnNXcsoHI4G+dbivswGfgJ74hchnjz0Qpl7L91o5UABf0lAyt
+/Qvw9HV0d7Zk/eoJ2tyyA/BfVkqfX/GuB7nehsjXXCHrO8QFDynIdq1q9kC82r/N
+VJJRUyK4iEqSAjwR7c0QEiNcVr3DY4CvojDmyNHBL3y+WnzpTifR9yFM0OiAcz5E
+nxCxUg/lY/LAMgl+yYcBPE6eQV3Ni4nvUrc6XiH1Sk1drnueSXneEJhqQDsG2/U0
+e7pgicAAK4HAdcViBFysvwIDAQABo2EwXzA+BgNVHREENzA1gg92aW0udmlyZ28t
+Z3cuZXWGImh0dHBzOi8vdmltLnZpcmdvLWd3LmV1L3NoaWJib2xldGgwHQYDVR0O
+BBYEFO0qEBlwN3EFY0Bki8+BVtdaIWdHMA0GCSqGSIb3DQEBCwUAA4IBgQBxtT6x
+rxtddHh//sWBreNJecCqW9y6hHvFB09I2Xkjs+vJgF7ebTXUMrq7mgssgmKnbOLs
+aayV93ZvFwNUaOmvYTwwMH0p9FFTjrgXop0htOcz4SAmaOXfgtrQ5dy03cyj87eA
+agduBGZ2MHvMjy6NknUtK9o0SfgEPaCIKPHlY/KYplTtZOTSFLEF2hkHXt0HcwMn
+PwZ5coqt46E23cafyLRNLy+0plPjKaqiyEMup7k2u1TqUya71BqMKcs7XXsqB+gG
+zRXMMRyrEMJPp/IrxakyHEl5LVQEGfiF/3kdlOEM5GA1ExZnmexFWgzwF0Nn3jCr
+sJoJprgh8dcdIwyHbxqqM+5LmvYbkaGI0fwIXfsqjZIOyqDCwlrz519+k3/JdHKu
+pEK62uz8N+UHK5T4G0Etvta8qzSMwyeKyujVTqrsUBn1+a9gYIbsR1pxhZTYcKiT
+8j5RlXSz5biWMdRJ74L30jKiIJqWmSOiAGEQcRaRN4/sODm7XsWOYm2hX40=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGDCCAoCgAwIBAgIJAOXobs5vtfccMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMTD3ZpbS52aXJnby1ndy5ldTAeFw0xODEyMjgxMzU4MzdaFw00ODEyMjAxMzU4
+MzdaMBoxGDAWBgNVBAMTD3ZpbS52aXJnby1ndy5ldTCCAaIwDQYJKoZIhvcNAQEB
+BQADggGPADCCAYoCggGBANBkwF2i5645/gc3y+jYJU5EMQzJ47wF6tkkjI4lGROC
+EegKtI6CAcI284C2cOAEUUB9D+QQbfsSkw27Z0W0agXo5RR4synylxAp7eorlQsZ
+59gxFx8kWPn2+N/KPF02QWsOojOAnMldRvm0FM0MOBkOZgWcTBI4nSZX+EUZ4efq
+/6HkcCUPb7TTZFMtmb4aZBXRvSEZSjY6AdLkhISOzsXvAESslbJnpS6GvmeHiEDx
+sPRuqksHt3MRQpLX+mG1KDscLPLQHkmVrPy/B/WVvABLcYRszThrAYPuw8Pc4+l+
+0GB2ohG4aZ1sZWtHin3WWDngI0pJ1fKYJv/aoLbENA1HuRDPLftr9J2570a9IhEn
+EFBwX4AEGc6nfTdK95AW81yBJc7ak/hf0/u1yyJ7NSEHRQGJWA8VZALkHqLp4gXt
++UVqOW325SdoFdWlNbiK5EnVIMxcluKNQQANIBRDfXxFCQ7eVNsCPptW30RM/RHF
+wCtl7IfZSN92QhRzaEl4MwIDAQABo2EwXzA+BgNVHREENzA1gg92aW0udmlyZ28t
+Z3cuZXWGImh0dHBzOi8vdmltLnZpcmdvLWd3LmV1L3NoaWJib2xldGgwHQYDVR0O
+BBYEFJkNMXvMLtjw0xLr48Qe6ygCUT8lMA0GCSqGSIb3DQEBCwUAA4IBgQBLwcwX
+6+2Zc8mnUj76GEWR7A3sS5IMsbi4Gte4wV8nyj6dGf/8BiNA4Cfr/z/aRh3DYt8j
+bax+O4gZIuHUPTKKtWW1GaI9LY+rNr+MJb9zHUE2RLuKve37Mr+hvLUteUFio83v
+RjQbf8s3JZQ94ABXiWsAYA2Ord1IOzCQwp1H7h6V4uugEoOSOaUgUQlEyL3ki6eK
+ru8y1XMcpOc8jbyHhVhDA/efy7lnMRi+CQKo91nnHPzuvhtRdnqXPxXQChYlmmYB
+LrkRuwSpEOtIiKbTXQ++YqIvOMjHfU2JfyKDxHaMrwEz4/hviTzEwRKzgntyNZAJ
+hkVU1OZ47r/1TSO6+mFgnSJbpcctLqk9htMsssdyEh7Gu9w5SB/iElVdzJofmVb8
+dAe6VVf8YZSeWY6749IEp9honeE8dQsarsUULUhMwO/nJbb//T1dwg5LoeWbayZ8
+vwhrOw+4tVeglAL7/N8RtYacb0uuRtH8SHY8e3mnMJB4ddZDfHUcZStsCS4=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vim.virgo-gw.eu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SLO/Artifact"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://vim.virgo-gw.eu/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">Virgo Interferometer Monitor</md:ServiceName>
+	<md:ServiceName xml:lang="it">Virgo Interferometer Monitor</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">The VIM (Virgo Interferometer Monitor) visualizes the current and historic graphs showing the status of the Advanced Virgo interferometer instrument and the on-line analysis applications dedicated to the detection of gravitational waves (https://www.virgo-gw.eu)</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">L'applicazione VIM (Virgo Interferometer Monitor) visualizza i grafici storici e attuali con lo stato dell'Advanced Virgo Detector e dei processi di on-line data analysis dedicati alla rilevazione delle onde gravitazionali (https://www.virgo-gw.eu)</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="schacHomeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">European Gravitational Observatory</md:OrganizationName>
+<md:OrganizationName xml:lang="en">European Gravitational Observatory</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Virgo Interferometer Monitor erogato da EGO - European Gravitational Observatory</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Virgo Interferometer Monitor provided by EGO - European Gravitational Observatory</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.ego-gw.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.ego-gw.it</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:computing-staff@ego-gw.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

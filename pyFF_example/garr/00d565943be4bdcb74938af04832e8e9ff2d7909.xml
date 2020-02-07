@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai.heal-link.gr/proxy/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">athenarc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">athena-innovation.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">imis.athena-innovation.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ilsp.athena-innovation.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ceti.athena-innovation.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">isi.athena-innovation.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">asfa.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">auth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">certh.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">aspete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ntua.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">aueb.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">aegean.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">aua.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ionio.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">panteion.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ihu.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teilam.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teiion.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teipel.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teikal.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teiemt.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teikoz.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teiwm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teilar.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">duth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">hua.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uniwa.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">tuc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uoa.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uoi.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uom.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">balkan.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">eetf.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">eled.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">icte.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">mech.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">nured.uowm.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ucnet.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">rector.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">admin.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">cc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">csd.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">math.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">tem.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">physics.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.physics.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">chemistry.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.chemistry.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">biology.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.biology.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">med.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.med.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">materials.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.materials.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">fks.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">philology.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ia.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">pol.soc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">econ.soc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">social.soc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">psy.soc.uoc.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uop.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">uth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">upatras.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">eap.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teiwest.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teiser.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teithe.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">unipi.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">chania.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">staff.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">nmc.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">epp.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">cs.teicrete.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ekt.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">hmu.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">edu.hmu.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">nmc.hmu.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">cs.hmu.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">staff.hmu.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="el">HEAL-Link</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">HEAL-Link</mdui:DisplayName>
+		<mdui:Description xml:lang="el">Ο HEAL-Link παρέχει πρόσβαση σε πλήρες κείμενο ηλεκτρονικών πηγών (ηλεκτρονικά περιοδικά, ηλεκτρονικά βιβλία και βιβλιογραφικές βάσεις δεδομένων) στα ελληνικά πανεπιστήμια, ερευνητικά ιδρύματα και στους χρήστες τους.</mdui:Description>
+		<mdui:Description xml:lang="en">HEAL-Link provides full-text access to electronic resources (electronic journals, e-books and bibliographic databases) for Greek universities, Research Institutions and their users.</mdui:Description>
+		<mdui:InformationURL xml:lang="el">http://www.heal-link.gr/aai.php?lang=gr</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.heal-link.gr/aai.php?lang=en</mdui:InformationURL>
+		<mdui:Logo height="60" width="80">data:image/png;base64,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</mdui:Logo>
+		<mdui:Logo height="50" width="50">data:image/png;base64,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</mdui:Logo>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYFAAhYruGwAAAAQZJREFUOMvtkr0uAwAUhb97q1pNJCQaiUGikZj8VDTF0AHxM2JrojF4BoPF5hEsHTxANyJ+FgkvYOlA4glEaCRE9d5rEwZTFxFnPScn55wciQjagdIm/oCBUKyM0XQhnb3FHxZ5aV2S6Sh9KlZyR5zcZCE5jb6e051WGrJAV+44LnZbinmZBBW00Yt5lQw5zKuYFTDPU68LpluY7dNMLXFvfZhX6bxLfakQ67w1z75nkxmEYWo1R1gFDkjE2k8bnOK++Y0x36YVe0yVC4QMEpQImSOpPQA8xaQUN8YTDIyOgD6CXyEyi8chIhOIzKMso/oOcY3ZDipDCM8E/QQl0Lz8P/EXGHwAZXta6rfkDzYAAAAASUVORK5CYII=</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:38.0365046,23.802512</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.988397,23.730940</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.6308255004333, 22.959268014038116</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.0434378,23.7862765</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.977413,23.782694</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.593870,23.435599</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.085161,26.568544</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.983328,23.703679</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.620953,19.923851</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.9588,23.7183</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.537253,23.0091015</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.875331,22.437969</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.7654,20.9047</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.1685,20.4964</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.9656,23.7278</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.0616,22.0624</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.121,22.4311</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.9286958,24.3794714,137</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.321919,21.791083</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.504930,21.247377</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.119082,21.458659</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.779486,21.386128</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.521617,21.672108</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.62663,22.38042</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:41.136504, 25.372488</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.96118327,23.70823603</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.003213,23.675962</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.978971,23.674666</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.528840,24.068557</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.0165,23.6661</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.9731,23.7612</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.6185,20.8445</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.6253,22.9601</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.30285563,21.79324174</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.3076,25.0828</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.3068,25.1532</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.3076,25.0828 </mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.3537,24.4506</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.512646, 22.368098</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.357718,22.950722</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.360568,22.931205</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.388834,22.940703</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.614609,22.387859</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.637292,22.418366</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.525625,21.775881</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.372241,21.916267</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.912572,22.428045</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.2887,21.7905</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.2444,21.7344</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.21881204609377,21.74838092916616</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.3667619032143,21.4740183590402</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:41.075076, 23.554184</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:40.6569545,22.8042203</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.941660,23.652910</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.318317,25.102108</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.973263,23.745396</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:geo:35.318815,25.1029371</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNTCCAh2gAwIBAgIJAIQ8AyqFVrAQMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMTEGFhaS5oZWFsLWxpbmsuZ3IwHhcNMTcwNTI4MDIwMzExWhcNMjcwNTI4MDIw
+MzExWjAbMRkwFwYDVQQDExBhYWkuaGVhbC1saW5rLmdyMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAwBVz1jParjpAS6SJ2/MhwfrteCLfeLKWTHr8jidb
+lsvbhoOTdaf6lHHJnF29LLqVd3IaqUFerUdvDNfv2PqBaY+aZXIPxiFEdXavqoMO
+qbq+VT0JL0yUU2dc8unokJlCyyrwqGSSZdxsrZHWQqGwJJxGrQyvBd+r2dfylLeG
+IgdGjU6WJp1A+lhndt3akONjcNh1zJsswv4RsS2uSwkPxRAhg9/CJnIVEaisQmZf
+uFSdsnyt3u22DfG6RsNIf9izL5MB9SgDXnLw6IcuaD38fM1V55vuB00rcEEtkQMF
+0lr1kyY2vMHibuyCnsNJ8nQANkyEJRs6UbJ9bYqUr63UyQIDAQABo3wwejAdBgNV
+HQ4EFgQUrhr+P2v29z/o8o/VhvDR2mHj02UwSwYDVR0jBEQwQoAUrhr+P2v29z/o
+8o/VhvDR2mHj02WhH6QdMBsxGTAXBgNVBAMTEGFhaS5oZWFsLWxpbmsuZ3KCCQCE
+PAMqhVawEDAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAlJWqxgMXa
+PH6k08oW6AQTrObu1GGONLZ/jip+yduZEv1glrsbP+tzkN3kvk7/PhD1kOfqtPVH
+uIp1tSRl5PW95EHAQ9CSO4KcA9nBLFksiWUGkspVAsmqE33s8qdamcmi67UJyoC1
+Rq6mW9gulgNsCe3ubav0h2xkl46re/YLn24joVfA49nAj+9bR+9VIxXZDJ9BlFy7
+VUp6uOPsUt7Ul1Q4i95+GnGpq6UeuKh9eLlOQmZGcA9wTtwsqkhtk1iL15JPaBk9
+Uc22XqVBO4+cr5/+z9qn2s8YykqqnHL9gxeCEE/c0uXTELJnZRjX8cCmo0ezY3Mp
+jQqZrm0cxSjo
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNTCCAh2gAwIBAgIJAIQ8AyqFVrAQMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMTEGFhaS5oZWFsLWxpbmsuZ3IwHhcNMTcwNTI4MDIwMzExWhcNMjcwNTI4MDIw
+MzExWjAbMRkwFwYDVQQDExBhYWkuaGVhbC1saW5rLmdyMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAwBVz1jParjpAS6SJ2/MhwfrteCLfeLKWTHr8jidb
+lsvbhoOTdaf6lHHJnF29LLqVd3IaqUFerUdvDNfv2PqBaY+aZXIPxiFEdXavqoMO
+qbq+VT0JL0yUU2dc8unokJlCyyrwqGSSZdxsrZHWQqGwJJxGrQyvBd+r2dfylLeG
+IgdGjU6WJp1A+lhndt3akONjcNh1zJsswv4RsS2uSwkPxRAhg9/CJnIVEaisQmZf
+uFSdsnyt3u22DfG6RsNIf9izL5MB9SgDXnLw6IcuaD38fM1V55vuB00rcEEtkQMF
+0lr1kyY2vMHibuyCnsNJ8nQANkyEJRs6UbJ9bYqUr63UyQIDAQABo3wwejAdBgNV
+HQ4EFgQUrhr+P2v29z/o8o/VhvDR2mHj02UwSwYDVR0jBEQwQoAUrhr+P2v29z/o
+8o/VhvDR2mHj02WhH6QdMBsxGTAXBgNVBAMTEGFhaS5oZWFsLWxpbmsuZ3KCCQCE
+PAMqhVawEDAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAlJWqxgMXa
+PH6k08oW6AQTrObu1GGONLZ/jip+yduZEv1glrsbP+tzkN3kvk7/PhD1kOfqtPVH
+uIp1tSRl5PW95EHAQ9CSO4KcA9nBLFksiWUGkspVAsmqE33s8qdamcmi67UJyoC1
+Rq6mW9gulgNsCe3ubav0h2xkl46re/YLn24joVfA49nAj+9bR+9VIxXZDJ9BlFy7
+VUp6uOPsUt7Ul1Q4i95+GnGpq6UeuKh9eLlOQmZGcA9wTtwsqkhtk1iL15JPaBk9
+Uc22XqVBO4+cr5/+z9qn2s8YykqqnHL9gxeCEE/c0uXTELJnZRjX8cCmo0ezY3Mp
+jQqZrm0cxSjo
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai.heal-link.gr/proxy/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai.heal-link.gr/proxy/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">HEAL-Link</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">ΣΕΑΒ</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">HEAL-Link</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Σύνδεσμος Ελληνικών Ακαδημαϊκών Βιβλιοθηκών - ΣΕΑΒ</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.heal-link.gr/?lang=en</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="el">http://www.heal-link.gr/?lang=el</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Hellenic Academic Libraries Link</md:Company>
+	<md:GivenName>Leonidas</md:GivenName>
+	<md:SurName>Pispiringas</md:SurName>
+	<md:EmailAddress>mailto:lpisp@heal-link.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Greek Research and Technology Network</md:Company>
+	<md:EmailAddress>mailto:support@grnet.gr</md:EmailAddress>
+	<md:TelephoneNumber>800-11-47638</md:TelephoneNumber>
+	<md:TelephoneNumber>+30-2152157854</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nicolas</md:GivenName>
+	<md:SurName>Liampotis</md:SurName>
+	<md:EmailAddress>mailto:nliam@grnet.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>HEAL-Link</md:GivenName>
+	<md:EmailAddress>mailto:aai@heal-link.gr</md:EmailAddress>
+	<md:TelephoneNumber>+30-2310997926</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

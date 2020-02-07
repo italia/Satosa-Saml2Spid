@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://testbed.tier.internet2.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://testbed.tier.internet2.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TIER Testbed</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Admin UI for the legacy TIER testbed</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.internet2.edu/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="91" width="122" xml:lang="en">https://www.internet2.edu/media/medialibrary/2013/10/15/internet2_logo_200pxtrans.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVjCCAj4CCQCxK8dYunQUsjANBgkqhkiG9w0BAQUFADBtMQswCQYDVQQGEwJV
+UzERMA8GA1UECAwITWljaGlnYW4xEjAQBgNVBAcMCUFubiBBcmJvcjESMBAGA1UE
+CgwJSW50ZXJuZXQyMSMwIQYDVQQDDBp0ZXN0YmVkLnRpZXIuaW50ZXJuZXQyLmVk
+dTAeFw0xNjAzMjExODM4NTlaFw0yNjAzMTkxODM4NTlaMG0xCzAJBgNVBAYTAlVT
+MREwDwYDVQQIDAhNaWNoaWdhbjESMBAGA1UEBwwJQW5uIEFyYm9yMRIwEAYDVQQK
+DAlJbnRlcm5ldDIxIzAhBgNVBAMMGnRlc3RiZWQudGllci5pbnRlcm5ldDIuZWR1
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvu2gbbW1ieYyKqdk5Twp
+uQIxTJ9UpZ2OQaZRaPUv0C63UcOYi8TuHmf5RN9wmJZ8oUimWaX1uzHGOvg2xU/a
+coWk05VUwcCXhC1GnQmAy4AmHgXmRprRkojzwrGAIsQFfKqctuHnIEr8Q9+fxS/Y
+BRO8/KwyZDu52K2BZX6gBZGv9NsF1khGjLvXqrXq+XuJI1uoAvOsZ94C1l0zPPnS
+Yg8YBOIJjf4dROzqxTr67prdFayixLAdPPLOgdNIcT22hHdsvqCAC+vOa5X08cLF
+akj7kjV1Hk1WTz2SCpzworCI8Rt04zmRZnOMqN/Ip1Y0qrptMkul/V7E9aX+y/g0
+oQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQAPJ7+ryXzAcG3iXZUESHk6cSYDddw8
+L0/j3v8QB/8O2x8NGMpB+kzn3zWaE+wrDBSvenyewFGWt+zyWz0OGI73oGSUDzu3
+x+7qi9L8TPsPefm5sCYu5K4LvaXSARP157S2iYN+1aaFwFmITkenaINiKUkw8Ggm
+TMirq1O+wkTTt16SND5W54/qCDu3nsk6EL++D5QLyDFHzcksXG84vUHajnhsjVph
+iDF+FXy/yDzafEk3UNjrsFZucB2b+2E6jw4zykVDDWDFD1f5scTM/7AVG5j8iSdQ
+5sCWp8xNzxsYu/ZpKMHIIvF0t84XclaWe2BPIm9RvbZfHYrrjTqrB+kE
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://testbed.tier.internet2.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://testbed.tier.internet2.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Internet2</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Internet2</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.internet2.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>James Jokl</md:GivenName>
+	<md:EmailAddress>jaj@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>James Jokl</md:GivenName>
+	<md:EmailAddress>jaj@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>James Jokl</md:GivenName>
+	<md:EmailAddress>jaj@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>James Jokl</md:GivenName>
+	<md:EmailAddress>jaj@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

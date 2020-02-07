@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.hochschule-rhein-waal.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-06-06T15:20:29Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hochschule-rhein-waal.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hsrw.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Rhein-Waal</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Rhine-Waal University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider für Angehörige der Hochschule Rhein-Waal</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for members of the Rhine-Waal University of Applied Sciences</mdui:Description>
+		<mdui:Logo height="16" width="16">https://sso.hochschule-rhein-waal.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="90" width="185">https://sso.hochschule-rhein-waal.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hochschule-rhein-waal.de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hochschule-rhein-waal.de/index.php?id=1</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKbTCCCVWgAwIBAgIMIFaiLnSc8AR4ti4zMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDExMDEwNTUzMVoXDTIxMDQxMzEwNTUzMVowgYIxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ4wDAYDVQQHDAVLbGV2ZTEeMBwGA1UE
+CgwVSG9jaHNjaHVsZSBSaGVpbi1XYWFsMSUwIwYDVQQDDBxzc28uaG9jaHNjaHVs
+ZS1yaGVpbi13YWFsLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA
+nlsYHI0f1cRIqfjDZRAOgtjCSPxRa+8TdPSe1PBsldeSLhsecT3d3Ks4cDQUF4DX
+aW4iWIu+OKv/koMQmyQ/oGiiJw2VsWF2uFsPDP+0WHOQ9akAGYVv00kz5nzdD2k8
+QQfgqq01WTDsdJFJmXpblNMvuf/a8yAwbhysEi7qMBzSH39e2omL+DOS3GzNn3UC
+MyirFoDVNMgBz0DLuypJb+SHZGeUcYISgWF8p3+07zrCLSyq64AXEqJZ4Wuh7Ox4
+JhZ88yfSVNc0jiaOhPVWMJD+dWTmUnJQD6XbJHsCGrSViYK/ZzJvBon5M37Hdnb/
+Oa5/U/aJupp0wrv4i0H0wMNKccP+cTR14z5b33/3vjTQaRDEcdHZYFnyCcTd1w1o
+BUQ7X3XXD9MLnZkuxJB04K/xOL5+dwDx3Pdjg4UaYeDsr0dza3kqn/1L98sYbm9a
+BGIKQBJ8GrAur90mdd/OPvB1LcJyIADRHV3zEm3Qldv2gNbxnJOO2nROXRMGiA9t
+02r5qc//9u8hSsY8C0gpoAboQCk9nnCwD/p6qKKICvd9OQ1ZPMcUyMBp60bYTRuX
+KC5dpXFEsx7yMol92+TqA5Dc+dLQ0XMAFkrfIOsOX5nPFKaZkDpeArjGfH4Pysyt
+HDK/s0UbPm+VGXK44z5R0VAvEjC/LP+NKXJrsW/utlMCAwEAAaOCBdQwggXQMFkG
+A1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwB
+AQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFKzur2EZwQJVEyDOHVR2mPyhORHRMB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MCcGA1UdEQQgMB6CHHNzby5ob2Noc2NodWxlLXJo
+ZWluLXdhYWwuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7
+hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2Ny
+bC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRw
+Oi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKG
+PWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2Fj
+ZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNgBgor
+BgEEAdZ5AgQCBIIDUASCA0wDSgB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaN
+sgiaN9kTAAABaDdnKygAAAQDAEgwRgIhAJQaPrl7bn9RR6Q3j4iwUMArrQUxlum8
+CyFvql5945D4AiEA5jr10aYF5vzXJ29p2givBnxMCJGRsqmk0i+ha6xHZM4AdwCq
+5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWg3ZysJAAAEAwBIMEYC
+IQDh4+amH0P1Ki4VKANR8L5qKvNkZr43mwMsVauBSMKsdQIhAIIvlOn1vfjpAh0y
+5LV0iGJcxVGIDCS7qo7M9OL1V22cAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgX
+L6OqHQcT0wwAAAFoN2csCAAABAMARzBFAiApRwyo32cSFP1Pa5ltIFHIZfjUs+6/
+L/ToU5fUgtb22AIhANi7wjIr/22HN3gPPQSLGNRcgBp7udgReVvdP8RS4NYEAHYA
+7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFoN2cq3QAABAMARzBF
+AiA5KFwK+QtiS022q0PykEGWPEbsvNn18Jz1QcjIy+k72AIhAJGfLgWGUpoBrjBA
+bOgmumVVyZcLPzDXAps7+vb9hPfFAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUuga
+kJZkNo4e0YUAAAFoN2cq9gAABAMASDBGAiEA7SVZdrtSZf8pg7o5rjd0tYYQGJmq
+lNe5coBnyXkR7AUCIQCknfif0Ke8dwxZj+LFFivXbDnx1/EUtCawIBdxj1hfbAB2
+AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaDdnKtwAAAQDAEcw
+RQIhAOq5WoHFw3E4tNEDj7UbcDRA8H1kpePLNv/o3pyossqFAiAPKffNiV+baDd4
+lA3ly5WMoW/CwP9M3hsjhzsFDwOX1AB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+2Msx
+tT/TM5a1toGoAAABaDdnMOEAAAQDAEYwRAIgUQ8LJ2mKL+5Po+UtuFHD6LoOVZHW
+uUPdenR9/Sj8AfECIGWrSv4pQg+dezC3U3JZKNIg82TadiiAl3GkDbYwiXCmMA0G
+CSqGSIb3DQEBCwUAA4IBAQCWynEg6gX8ndkrHDyO7C9sc05pVg4J7WLALRLBypbd
+06bxvCyfw4uyX8Qlj2nm5Ptn6sSCV0321c/aGgU1uwITW79XQwGFQy4R8jqio8Ie
+Pl5/He4oybuiFxvOqyzSlAufEUTyzYaHf/dmwpeAmwF6Swz4I8f0zu8eQufRxlGI
+CQtXmuR0WiMiUV6oABrnJlrjR5lEoFr86wIxfXQTsDp05Yn+/zdI5HRqu30SgHCH
+Bs57Y2EO7JpYCjfxL/kwd40DHo8rZTu68WegqWfmHeHc2XKUQDAhQ2TLX1TJz/Mk
+9LBevWvBQtvZgkM5RHzMUF1q2nKQBOui3TbJ+65lGG6R
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.hochschule-rhein-waal.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.hochschule-rhein-waal.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso-dev.hochschule-rhein-waal.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.hochschule-rhein-waal.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.hochschule-rhein-waal.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hochschule-rhein-waal.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hsrw.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKbTCCCVWgAwIBAgIMIFaiLnSc8AR4ti4zMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDExMDEwNTUzMVoXDTIxMDQxMzEwNTUzMVowgYIxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ4wDAYDVQQHDAVLbGV2ZTEeMBwGA1UE
+CgwVSG9jaHNjaHVsZSBSaGVpbi1XYWFsMSUwIwYDVQQDDBxzc28uaG9jaHNjaHVs
+ZS1yaGVpbi13YWFsLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA
+nlsYHI0f1cRIqfjDZRAOgtjCSPxRa+8TdPSe1PBsldeSLhsecT3d3Ks4cDQUF4DX
+aW4iWIu+OKv/koMQmyQ/oGiiJw2VsWF2uFsPDP+0WHOQ9akAGYVv00kz5nzdD2k8
+QQfgqq01WTDsdJFJmXpblNMvuf/a8yAwbhysEi7qMBzSH39e2omL+DOS3GzNn3UC
+MyirFoDVNMgBz0DLuypJb+SHZGeUcYISgWF8p3+07zrCLSyq64AXEqJZ4Wuh7Ox4
+JhZ88yfSVNc0jiaOhPVWMJD+dWTmUnJQD6XbJHsCGrSViYK/ZzJvBon5M37Hdnb/
+Oa5/U/aJupp0wrv4i0H0wMNKccP+cTR14z5b33/3vjTQaRDEcdHZYFnyCcTd1w1o
+BUQ7X3XXD9MLnZkuxJB04K/xOL5+dwDx3Pdjg4UaYeDsr0dza3kqn/1L98sYbm9a
+BGIKQBJ8GrAur90mdd/OPvB1LcJyIADRHV3zEm3Qldv2gNbxnJOO2nROXRMGiA9t
+02r5qc//9u8hSsY8C0gpoAboQCk9nnCwD/p6qKKICvd9OQ1ZPMcUyMBp60bYTRuX
+KC5dpXFEsx7yMol92+TqA5Dc+dLQ0XMAFkrfIOsOX5nPFKaZkDpeArjGfH4Pysyt
+HDK/s0UbPm+VGXK44z5R0VAvEjC/LP+NKXJrsW/utlMCAwEAAaOCBdQwggXQMFkG
+A1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwB
+AQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFKzur2EZwQJVEyDOHVR2mPyhORHRMB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MCcGA1UdEQQgMB6CHHNzby5ob2Noc2NodWxlLXJo
+ZWluLXdhYWwuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7
+hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2Ny
+bC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRw
+Oi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKG
+PWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2Fj
+ZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNgBgor
+BgEEAdZ5AgQCBIIDUASCA0wDSgB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaN
+sgiaN9kTAAABaDdnKygAAAQDAEgwRgIhAJQaPrl7bn9RR6Q3j4iwUMArrQUxlum8
+CyFvql5945D4AiEA5jr10aYF5vzXJ29p2givBnxMCJGRsqmk0i+ha6xHZM4AdwCq
+5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWg3ZysJAAAEAwBIMEYC
+IQDh4+amH0P1Ki4VKANR8L5qKvNkZr43mwMsVauBSMKsdQIhAIIvlOn1vfjpAh0y
+5LV0iGJcxVGIDCS7qo7M9OL1V22cAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgX
+L6OqHQcT0wwAAAFoN2csCAAABAMARzBFAiApRwyo32cSFP1Pa5ltIFHIZfjUs+6/
+L/ToU5fUgtb22AIhANi7wjIr/22HN3gPPQSLGNRcgBp7udgReVvdP8RS4NYEAHYA
+7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFoN2cq3QAABAMARzBF
+AiA5KFwK+QtiS022q0PykEGWPEbsvNn18Jz1QcjIy+k72AIhAJGfLgWGUpoBrjBA
+bOgmumVVyZcLPzDXAps7+vb9hPfFAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUuga
+kJZkNo4e0YUAAAFoN2cq9gAABAMASDBGAiEA7SVZdrtSZf8pg7o5rjd0tYYQGJmq
+lNe5coBnyXkR7AUCIQCknfif0Ke8dwxZj+LFFivXbDnx1/EUtCawIBdxj1hfbAB2
+AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaDdnKtwAAAQDAEcw
+RQIhAOq5WoHFw3E4tNEDj7UbcDRA8H1kpePLNv/o3pyossqFAiAPKffNiV+baDd4
+lA3ly5WMoW/CwP9M3hsjhzsFDwOX1AB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+2Msx
+tT/TM5a1toGoAAABaDdnMOEAAAQDAEYwRAIgUQ8LJ2mKL+5Po+UtuFHD6LoOVZHW
+uUPdenR9/Sj8AfECIGWrSv4pQg+dezC3U3JZKNIg82TadiiAl3GkDbYwiXCmMA0G
+CSqGSIb3DQEBCwUAA4IBAQCWynEg6gX8ndkrHDyO7C9sc05pVg4J7WLALRLBypbd
+06bxvCyfw4uyX8Qlj2nm5Ptn6sSCV0321c/aGgU1uwITW79XQwGFQy4R8jqio8Ie
+Pl5/He4oybuiFxvOqyzSlAufEUTyzYaHf/dmwpeAmwF6Swz4I8f0zu8eQufRxlGI
+CQtXmuR0WiMiUV6oABrnJlrjR5lEoFr86wIxfXQTsDp05Yn+/zdI5HRqu30SgHCH
+Bs57Y2EO7JpYCjfxL/kwd40DHo8rZTu68WegqWfmHeHc2XKUQDAhQ2TLX1TJz/Mk
+9LBevWvBQtvZgkM5RHzMUF1q2nKQBOui3TbJ+65lGG6R
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.hochschule-rhein-waal.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.hochschule-rhein-waal.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e365</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e365</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Rhein-Waal</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Rhine-Waal University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hochschule-rhein-waal.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hochschule-rhein-waal.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:itsupport@hochschule-rhein-waal.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:itsupport@hochschule-rhein-waal.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

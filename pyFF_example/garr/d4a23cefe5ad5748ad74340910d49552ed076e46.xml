@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://gracedb.ligo.org/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://gracedb.ligo.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Gravitational-wave Candidate Event Database</mdui:DisplayName>
+		<mdui:Description xml:lang="en">GraceDB organizes candidate events from gravitational-wave searches and provides an environment to record information about follow-ups. </mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://gracedb.ligo.org/SPInfo</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://gracedb.ligo.org/SPPrivacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://login.ligo.org/SAML2/metadata/ui/ligologo80x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIJAPkWkyNL3l8nMA0GCSqGSIb3DQEBBQUAMBsxGTAXBgNV
+BAMTEGdyYWNlZGIubGlnby5vcmcwHhcNMTQxMDIwMTUyODQ2WhcNMjQxMDE3MTUy
+ODQ2WjAbMRkwFwYDVQQDExBncmFjZWRiLmxpZ28ub3JnMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA/o9eGY4UWkqL2GhIryXEpNAqqXTEJnEVv7zaV62o
+DDiDbYEZdYkd9r9wuKtDO7t1OqHE98BrvcOZI+2Yu4REUm6I0MSsdtQTDr5SUfAe
+aS6C1XS1hg1b+IMeRBOVunmdGYGPqOjBkQ32MhPFPyJ57DFTfEYiSAI16kMJH2xe
+cw/sbnJt0+0x6zL9O4sGUM3BKHeFh2n6Z7lV8rrDR/5pJAAD7Ida4bSNCe7ovuWJ
+XIgWdxskeqOuZT45biPEjT+UGTfZG7jEzMc2IXBBg55sIFSihv6utwGpD43jX3ex
+Hl9opHgB1djMdK3rOsBQbI2um+ssrMqtL3RArd7u3YF6SwIDAQABo2YwZDBDBgNV
+HREEPDA6ghBncmFjZWRiLmxpZ28ub3JnhiZodHRwczovL2dyYWNlZGIubGlnby5v
+cmcvc2hpYmJvbGV0aC1zcDAdBgNVHQ4EFgQU/oULXvyKrAjzat8Uex0YHjAZCWow
+DQYJKoZIhvcNAQEFBQADggEBAPgDTXaELegbLw3Zf7/BE/NCjjGNrX6Cj6wqkp98
+1KT886B7bDlCdmiPDLXgok3oI67+Flk1PFw9r8KFYkZOgB2EPKYLsUTUg+yH8NSe
+b6H/iq+ziJOQmnSZWvx/d88xTkOF4aEP1f0hQOXt3ElmZldgQfCCteVLLbhSF5D0
+RmuXgPAZEv19nTEdQKEFyx9iFmdOFc7/IKQdPQWVriSBzJRdc7dl1+RnUzZ2hsY3
+1BLiz9m09Au4/VVc1Sc4h8k5rs2+SWmAOk1Zob2yKKzdLwxuiCExg6XHgWSR/xgs
+2K9d1rqY3G7AQFM+zmhbRzIA18x4oVi4gTckD5Uxq1e0pdw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://gracedb.ligo.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://gracedb.ligo.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://gracedb.ligo.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://gracedb.ligo.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://gracedb.ligo.org/lvem_view/Shibboleth.sso/SAML2/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://gracedb.ligo.org/lvem_view/Shibboleth.sso/SAML2/POST-SimpleSign" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://gracedb.ligo.org/lvem_view/Shibboleth.sso/SAML2/Artifact" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://gracedb.ligo.org/lvem_view/Shibboleth.sso/SAML2/ECP" index="8"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Gravitational-wave Candidate Event Database</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">GraceDB organizes candidate events from gravitational-wave searches and provides an environment to record information about follow-ups. </md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ligo.caltech.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Warren Anderson</md:GivenName>
+	<md:EmailAddress>warren.anderson@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LIGO Identity Management Help Desk</md:GivenName>
+	<md:EmailAddress>rt-auth@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LIGO Security Committee</md:GivenName>
+	<md:EmailAddress>lsc-seccomm@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tanner Prestegard</md:GivenName>
+	<md:EmailAddress>tanner.prestegard@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

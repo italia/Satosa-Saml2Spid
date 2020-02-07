@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://apsjournals.apsnet.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-03-10T09:43:56Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">APS Journals</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Journals of the American Phytopathological Society: peer-reviewed plant pathology research.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://apsjournals.apsnet.org</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIJANcge+SxtGFHMA0GCSqGSIb3DQEBBQUAMCExHzAdBgNV
+BAMMFmFwc2pvdXJuYWxzLmFwc25ldC5vcmcwHhcNMTcwMjE0MDk0MjA1WhcNMjAw
+MjE0MDk0MjA1WjAhMR8wHQYDVQQDDBZhcHNqb3VybmFscy5hcHNuZXQub3JnMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyMjaWJjyL66pUinXj+abwXCr
++aYX4Sizbz1FRiNEERqmjlLxnrChTe+hMlfoJKrEJu3flvn6Yys1W9jPBGUtHcVZ
+02Tixfo1HY3AdmL+ylh1dEZ/pVZfgqOlhU1l0BmDx+HpvGeloF28PWq4h8AidXsq
+HBaFKp9SzFTpJezaVhcHu+E5s96vSn7nJaZ0Bko/bYwIusNcobst47GlPfShM0d2
+o3gj5V4pacYd9mfZrUtUSRwV7iIFRvZ244V5cd9Rmp9vtc54os8aq/i8v/SRhQid
+hViywsc8jeQrd7V74DrzPONqIFVpmJsLFYwyrWFlvIzr89tT7DBdqvcgmNmZuQID
+AQABo28wbTBMBgNVHREERTBDghZhcHNqb3VybmFscy5hcHNuZXQub3JnhilodHRw
+czovL2Fwc2pvdXJuYWxzLmFwc25ldC5vcmcvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+XzNNCkqPErjrW6aRxSFjUmvrtc4wDQYJKoZIhvcNAQEFBQADggEBAFM3PyhuynfL
+xNVNGudsFpxz9ACU7cl4Z6x2uwJonbQBm+FVcw0OPkqhOiFG2kwLVq1XmSgHRcEu
+nnXpXIHy57ogTEnO6kKhI45yoq4cPUPKdsY1OnqKBGmQFiGRDys4Y9RFUoPcS3v/
+BE2V6JX0LVoLvFE06bmmq1eKo2S62rdVJBqpqqPO9Ws48FxOdt+8WBD/wrItLmtX
+MdCnCt+51xjhpC3e0XkR9eHiPaMnem8R7UuQwL4UOPno1M7eaWQltKLvuI1TyEQW
+BLKobNxMQ74vNtIbjYlBqi2ROxme7Fcw0lo95zQewGhR/D4UZzef/KvrMBq06ua/
+60B2Vq1pdIg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://apsjournals.apsnet.org/action/samlACS" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://apsjournals.apsnet.org/action/saml2post" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://apsjournals.apsnet.org/action/saml2artifact" index="3"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Atypon Systems, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">APS Journals</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.apsnet.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SSO-Support</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Support@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SSO-Tech</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Tech@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

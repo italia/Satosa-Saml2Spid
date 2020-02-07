@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://jobbuilder.ucop.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Job Builder</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://policy.ucop.edu/doc/7000470/ElectronicCommunications</mdui:PrivacyStatementURL>
+		<mdui:Logo height="66" width="231" xml:lang="en">https://publicrelations.ucmerced.edu/sites/communications.ucmerced.edu/files/images/branding-guidelines/170824_merced_logo_originalfont.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAO5A+UoED+uLMA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTF2JmYXMwMTMtdjgudWNtZXJjZWQuZWR1MB4XDTEzMDcyNDIzMTAxMVoXDTIz
+MDcyMjIzMTAxMVowIjEgMB4GA1UEAxMXYmZhczAxMy12OC51Y21lcmNlZC5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDFaNP0byEaXU3JugHC2pd0
+NZKFHRpKHd56Mn7Wmc2NEgFcr8b++J4EYhhBNP5x51hZLhMpMdX689z9lkblhs+S
+5D18Wqb1muVx6Ntd4GF0iWIKrt3Ai1pSuER89rZWj9nQ+iRXsePTeVoGMxiMo8eF
+TF48TKu5HeFJTJ40Wf3NaJBqA81BizIBvP9DD+r70uldEmY5J6E5RbqJdZ+sBqEw
+W7klqV6SvUaLsL4IHeL+OzFeVJDpzOnvQoQzWQvLfOfydAm2D6i5mLhDDcdtH8ac
+/+Zbw2OwBip0p4GFzBCOGU/OA/DenjfFva/XDAMO73OoOv6qktMT2ApaQHBf7nFv
+AgMBAAGjRTBDMCIGA1UdEQQbMBmCF2JmYXMwMTMtdjgudWNtZXJjZWQuZWR1MB0G
+A1UdDgQWBBSIU/4jDtsf4BEs5jRYTppHPxBHzTANBgkqhkiG9w0BAQUFAAOCAQEA
+dqwfIDqsqS2D6Uye7ptlIQUmAIQfJWLM5rTOZFdPuXGROGepJpgATZYAfdUqdzOD
++6aT58jY/RYHPboA8txYa/jS+pqwlf3rrMzqWHEomTp1JAoTqcuOUINoXPeKAk/g
+qFHTWWDCtsso+3SwI5lZTiWXs8yyTSdY2EQQt7eFuktVaRuPgpI0zkE9qmAV0ZWz
+dzTVqletaEem9qavMO7lRgQPuwzVnBq0x82DpYWjJSZarj7grcnmsYozAnJZDz7Y
+KqVxpcLp0VcwEdEK7yCIhfGp/95pqOZWoFkfHKQ0lBkLV0cD4Tefj8Lo3rHX5Xa0
+PUelC5iNY73b+A9/56draA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SLO/POST"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://jobbuilder.ucop.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Job Builder</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California - Office of the President</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California - Office of the President</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucop.edu/welcome.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ACS Support</md:GivenName>
+	<md:EmailAddress>bfssupport@ucmerced.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Brad Chilcoat</md:GivenName>
+	<md:EmailAddress>Brad.Chilcoat@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Yer Yang</md:GivenName>
+	<md:EmailAddress>yyang22@ucmerced.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Operations</md:GivenName>
+	<md:EmailAddress>soc@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

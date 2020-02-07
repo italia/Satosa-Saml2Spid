@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://adfs.regents.ac.uk/adfs/services/trust">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2017-11-02T13:27:40Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">regents.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Regent's University London ADFS Do Not Use</mdui:DisplayName>
+		<mdui:Logo height="94" width="340">https://adfs.regents.ac.uk/adfs/portal/logo/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC5jCCAc6gAwIBAgIQLB7G7oNyl65E+X4ArcWrEDANBgkqhkiG9w0BAQsFADAv
+MS0wKwYDVQQDEyRBREZTIEVuY3J5cHRpb24gLSBhZGZzLnJlZ2VudHMuYWMudWsw
+HhcNMTcwNDEyMDExODI3WhcNMjAwNDExMDExODI3WjAvMS0wKwYDVQQDEyRBREZT
+IEVuY3J5cHRpb24gLSBhZGZzLnJlZ2VudHMuYWMudWswggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCv34MbqSoszZhOywwlwtGchBog1iRCJ3KFUSFbuXFm
+AxJEtT3C4qCUz2CHJCOmJWG5CqsQ5QH5n37xJgUjl0eth8ac1jFRM0KSC/Jk9aBn
+ZZn8ox/reZzjgxbYuy1Bv7kLs5VCorBaU4Oyn25nSI8OgAoHmFza/jXvdhKR2mZw
+s0GbTLbrQ4Ew/kcEUv6LUBov5SD1dT1nUHVxNP3J1KGhjvIKio1M+D1Vn3pbQECQ
+26zd6LU8BM7aeOof5lAhaN4nhiFqSfjW8O3qvJmSHTXDEB2dlzqrLHZ8DhmcRmMJ
+OpsyJ4Jl+oF0Vh9zdiK9GcyxEMq6CvEeP75wC8nZUlGFAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBAKMCs+dmKBZPpXhSS7rZJzjqLbCaHCfRprH8w02cHVd05kCfiAU3
+HuecydZgJfAHNq+LGWu1/zAj9FyLmINVQ2WoSgyvif+o1XPUfcZZrmfu6IPfCXuY
+xJ1FoBfpvjCImkj05aKRQYiJtkZqG0YoWna56AB+mvMiQG7r6mnVgYrI41FgHiMA
+98Ja9MKW/LnDpupZF6HnAPwdaEY1R1SARKWelCJYEgEGDXDhYBiXgBnTjhizniE1
+vQ5N7sUdNiXuFOlJnb+wBeDBCrvm+CiTwWE0qNksX+oVIF34IubWRE8H3DMqoLaa
+vJuTXwTzIt9GZYOrsuVONVuMwgxrPWRnjUw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC4DCCAcigAwIBAgIQaG8yayUchqJJTCDN8H/4LDANBgkqhkiG9w0BAQsFADAs
+MSowKAYDVQQDEyFBREZTIFNpZ25pbmcgLSBhZGZzLnJlZ2VudHMuYWMudWswHhcN
+MTcwNDEyMDExODI4WhcNMjAwNDExMDExODI4WjAsMSowKAYDVQQDEyFBREZTIFNp
+Z25pbmcgLSBhZGZzLnJlZ2VudHMuYWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQCvOC+PrRtYVaDOtOBvLZAAwiCMcOpvKJemTiUQEoK+1Y+DuFXj
+h4pCxBE7+D/AAkxkNM1+g8qRce++PdOPYjEFiqOZGw7QD3sautzaIdRQEkBtDCc9
+oAISAe0iV1oEOzbtVuOi1gRZQXw8vHXVgBbfsLxtzHb+MX/o/dSQP7qel6kXOU5b
+28dMCSPPpq3RUPx477qvsGdULE28++urURJdwnbJY+5nnJFaGF/5UuKnq7nGu9su
++Kmii6fMmdrMAxURb8CODxaW1PQWyZI7+/PqlWHrFcaDG1Qoz7LfiGRE42phxJfX
+SISyUlF0zaQXUzGjya4DizK6rfwMurngi3GfAgMBAAEwDQYJKoZIhvcNAQELBQAD
+ggEBAFn8LHusHxDhb5Nu0Hmwf1ejeWmaeZyycEwut3maRtkYzkHLFIZfoqLy4miZ
+eyzLzQgvHlr5orTEUWb9juHY55MG3WAGZ6z0HuGXZ84BHMT8ceHQv4D2GifFm7eI
+hK0UphNKN4OuR9hn5XGbzhGxHXwSYpMoNCqf6933qApfta1uVeNO7RYDDVmepSQT
+GaYRpXbYWdoKuhxeVZUe4de4LzqtbjCM193Harv4FnJvAwGKmSvvUWJ+kSyoXwGf
+MQztK8yAZQ9+ittM7+agXh7WKNgVI0Y+IJHmRpkMlrBHEsg5dOTwnXruHKA7AaYD
+LWbKzfa6Yr18bH7gVL+NgLKfbss=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.regents.ac.uk/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.regents.ac.uk/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.regents.ac.uk/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.regents.ac.uk/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Regent's University London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Regent's University London ADFS Do Not Use</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://regents.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service Desk</md:GivenName>
+	<md:EmailAddress>mailto:servicedesk@regents.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Adrian</md:GivenName>
+	<md:SurName>Evangelista</md:SurName>
+	<md:EmailAddress>mailto:evangela@regents.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Diane</md:GivenName>
+	<md:SurName>Pineda</md:SurName>
+	<md:EmailAddress>mailto:pinedad@regents.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

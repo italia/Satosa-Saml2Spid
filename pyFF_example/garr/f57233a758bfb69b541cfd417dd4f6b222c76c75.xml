@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.dfn-cert.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2009-05-26T08:35:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">dfn-cert.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">DFN-CERT Services GmbH</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">DFN-CERT Services GmbH</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity-Provider der DFN-CERT Services GmbH</mdui:Description>
+		<mdui:Description xml:lang="en">Identity-Provider der DFN-CERT Services GmbH</mdui:Description>
+		<mdui:InformationURL xml:lang="de">http://www.dfn-cert.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.dfn-cert.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJRjCCCC6gAwIBAgIMIHzInkUt6JF99DDvMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwODA5MjU0MFoXDTIxMDUxMjA5MjU0MFowbDELMAkGA1UEBhMCREUxEDAOBgNV
+BAgMB0hhbWJ1cmcxEDAOBgNVBAcMB0hhbWJ1cmcxHzAdBgNVBAoMFkRGTi1DRVJU
+IFNlcnZpY2VzIEdtYkgxGDAWBgNVBAMMD2lkcC5kZm4tY2VydC5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOr84YTMi7F+gbKrEoq8+17gbWoMWaT
+cBUvsu/XBkVRJaKj1AmPUSrlLJB3RWfVoMOwDBryf6dPUfWIv90wBz/Kyq3NpLSi
+gfbfkcoQ4Oe/o1HawokgDDcZgX6BXJz+nsKkqfBGRKY92wFnh9lfhF4lMqWTf+dK
+2F4rsU16yJHn83dZDIhKErWqiP7PYtzflCfbP1QC50MMBJBM2WrD1oF238pN4SEZ
+D9u8A+XRc7+ca7OBxihvHjEcpitI6kanDa9SDTlqdnA/3S8e2vysm01d2+PmK184
+dSsk569JV0CJgjkAEBsv1b7K5U2aAE5xGFjt5mCKmqht0BCXtl9uoG8CAwEAAaOC
+BcQwggXAMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQD
+CDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwEwHQYDVR0OBBYEFEgt7oiqgl/yn/vu4j21AiLgZeRaMB8GA1Ud
+IwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBoGA1UdEQQTMBGCD2lkcC5kZm4t
+Y2VydC5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2Nh
+Y3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9v
+Y3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0
+cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQv
+Y2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB
+1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo3
+2RMAAAFozG1daAAABAMARzBFAiEAujYxHI/dZLmMQuPfex4Y9rUIpg9Nzcy82f38
+UgJPuhUCIBBfs9d4Wjl6lhbJvBcOX4cynWNWRedo53RIHvha8kvDAHUAqucLfzy4
+1WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFozG1dZQAABAMARjBEAiBrswVq
+pa9wms1zhJqvNbom1P9MOEfMi74AAsPQPpfTsAIgTphL12pPZOgAZVp/tzbH0Es/
+RlKTmzgeIlAfFQJ1lOwAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWjMbV5rAAAEAwBHMEUCICsiXIXNf2zgwJxQwD0rMnMiAch9tNW3kLRE2qTr
+NEMwAiEApD+8aMtAoDkknE/h0/J+MJnRRN9IBcIVPkFkq+ZsPscAdgDuS723dc5g
+uuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWjMbV2RAAAEAwBHMEUCIQDbO70g
+LFcbuTykgqgqHJurq/BTe5hqfJjuHMoJUFllSgIgA1K2clhPq+hMZUgvBBPS79h7
+9075qmXIpBUt8mEinn8AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7R
+hQAAAWjMbV13AAAEAwBGMEQCIFm1cQyqSxzEANXCR0XJjtdS+NgL7chAc4t/0url
+YCU0AiAhwGPARURyFLTSeFdDV7wF1b4nly456tOmKTDi0IvGTgB3AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaMxtXYgAAAQDAEgwRgIhAO1ZCkYe
+qryJRu0kRRE0S6WbTG4i+EQsWZIHd0S4Cnf5AiEAiFwarPHHAFWhOWoIIKg6z21N
+0kMlq2taCRz/DtuploYAdgBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaB
+qAAAAWjMbWNwAAAEAwBHMEUCIQC/y+dXixroXbSkIBL3AcjD+Y+AaLpbeOwUIdvz
+ApjcWwIgNiP+BOITArcWavsKt0FJzN0PYM4zJ8y2ywZ3PtMfEocwDQYJKoZIhvcN
+AQELBQADggEBAAS5+kCSQiRD/mFz2Anymu2++/4qpLp69G2pCEmnvG0zTa/2R5gS
+HrcT9GbF7kwW7OZtHSnMAyUCZIlaAD90hURk9zjtj82CFE2UHPc9m9VzYmnsvHfo
+p8UTj7DI4qSgvCl600CgN2O9K5YVw0FyuAmQJUs998rqnq9b/5pb/ejLJt6eXyvG
+z3ogSU80sdyBQOPzYhMSlU/WSg7vQBME7DpmJie6gwJhdi4CENdAvCaaoPOGo+5D
+LH2DFf5VPrIgBWryeQ2DxPi5oFk20jRhhjU+02ulTRhLDQCXh07z848Qr3sv1U/e
+bc1ZszhTLCRTkLYKpKtjyPEoVWpUjO4SdCs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJRjCCCC6gAwIBAgIMIHzInkUt6JF99DDvMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwODA5MjU0MFoXDTIxMDUxMjA5MjU0MFowbDELMAkGA1UEBhMCREUxEDAOBgNV
+BAgMB0hhbWJ1cmcxEDAOBgNVBAcMB0hhbWJ1cmcxHzAdBgNVBAoMFkRGTi1DRVJU
+IFNlcnZpY2VzIEdtYkgxGDAWBgNVBAMMD2lkcC5kZm4tY2VydC5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOr84YTMi7F+gbKrEoq8+17gbWoMWaT
+cBUvsu/XBkVRJaKj1AmPUSrlLJB3RWfVoMOwDBryf6dPUfWIv90wBz/Kyq3NpLSi
+gfbfkcoQ4Oe/o1HawokgDDcZgX6BXJz+nsKkqfBGRKY92wFnh9lfhF4lMqWTf+dK
+2F4rsU16yJHn83dZDIhKErWqiP7PYtzflCfbP1QC50MMBJBM2WrD1oF238pN4SEZ
+D9u8A+XRc7+ca7OBxihvHjEcpitI6kanDa9SDTlqdnA/3S8e2vysm01d2+PmK184
+dSsk569JV0CJgjkAEBsv1b7K5U2aAE5xGFjt5mCKmqht0BCXtl9uoG8CAwEAAaOC
+BcQwggXAMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQD
+CDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwEwHQYDVR0OBBYEFEgt7oiqgl/yn/vu4j21AiLgZeRaMB8GA1Ud
+IwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBoGA1UdEQQTMBGCD2lkcC5kZm4t
+Y2VydC5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2Nh
+Y3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9v
+Y3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0
+cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQv
+Y2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB
+1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo3
+2RMAAAFozG1daAAABAMARzBFAiEAujYxHI/dZLmMQuPfex4Y9rUIpg9Nzcy82f38
+UgJPuhUCIBBfs9d4Wjl6lhbJvBcOX4cynWNWRedo53RIHvha8kvDAHUAqucLfzy4
+1WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFozG1dZQAABAMARjBEAiBrswVq
+pa9wms1zhJqvNbom1P9MOEfMi74AAsPQPpfTsAIgTphL12pPZOgAZVp/tzbH0Es/
+RlKTmzgeIlAfFQJ1lOwAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWjMbV5rAAAEAwBHMEUCICsiXIXNf2zgwJxQwD0rMnMiAch9tNW3kLRE2qTr
+NEMwAiEApD+8aMtAoDkknE/h0/J+MJnRRN9IBcIVPkFkq+ZsPscAdgDuS723dc5g
+uuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWjMbV2RAAAEAwBHMEUCIQDbO70g
+LFcbuTykgqgqHJurq/BTe5hqfJjuHMoJUFllSgIgA1K2clhPq+hMZUgvBBPS79h7
+9075qmXIpBUt8mEinn8AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7R
+hQAAAWjMbV13AAAEAwBGMEQCIFm1cQyqSxzEANXCR0XJjtdS+NgL7chAc4t/0url
+YCU0AiAhwGPARURyFLTSeFdDV7wF1b4nly456tOmKTDi0IvGTgB3AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaMxtXYgAAAQDAEgwRgIhAO1ZCkYe
+qryJRu0kRRE0S6WbTG4i+EQsWZIHd0S4Cnf5AiEAiFwarPHHAFWhOWoIIKg6z21N
+0kMlq2taCRz/DtuploYAdgBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaB
+qAAAAWjMbWNwAAAEAwBHMEUCIQC/y+dXixroXbSkIBL3AcjD+Y+AaLpbeOwUIdvz
+ApjcWwIgNiP+BOITArcWavsKt0FJzN0PYM4zJ8y2ywZ3PtMfEocwDQYJKoZIhvcN
+AQELBQADggEBAAS5+kCSQiRD/mFz2Anymu2++/4qpLp69G2pCEmnvG0zTa/2R5gS
+HrcT9GbF7kwW7OZtHSnMAyUCZIlaAD90hURk9zjtj82CFE2UHPc9m9VzYmnsvHfo
+p8UTj7DI4qSgvCl600CgN2O9K5YVw0FyuAmQJUs998rqnq9b/5pb/ejLJt6eXyvG
+z3ogSU80sdyBQOPzYhMSlU/WSg7vQBME7DpmJie6gwJhdi4CENdAvCaaoPOGo+5D
+LH2DFf5VPrIgBWryeQ2DxPi5oFk20jRhhjU+02ulTRhLDQCXh07z848Qr3sv1U/e
+bc1ZszhTLCRTkLYKpKtjyPEoVWpUjO4SdCs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.dfn-cert.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.dfn-cert.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.dfn-cert.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.dfn-cert.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.dfn-cert.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.dfn-cert.de/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">dfn-cert.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJRjCCCC6gAwIBAgIMIHzInkUt6JF99DDvMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwODA5MjU0MFoXDTIxMDUxMjA5MjU0MFowbDELMAkGA1UEBhMCREUxEDAOBgNV
+BAgMB0hhbWJ1cmcxEDAOBgNVBAcMB0hhbWJ1cmcxHzAdBgNVBAoMFkRGTi1DRVJU
+IFNlcnZpY2VzIEdtYkgxGDAWBgNVBAMMD2lkcC5kZm4tY2VydC5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOr84YTMi7F+gbKrEoq8+17gbWoMWaT
+cBUvsu/XBkVRJaKj1AmPUSrlLJB3RWfVoMOwDBryf6dPUfWIv90wBz/Kyq3NpLSi
+gfbfkcoQ4Oe/o1HawokgDDcZgX6BXJz+nsKkqfBGRKY92wFnh9lfhF4lMqWTf+dK
+2F4rsU16yJHn83dZDIhKErWqiP7PYtzflCfbP1QC50MMBJBM2WrD1oF238pN4SEZ
+D9u8A+XRc7+ca7OBxihvHjEcpitI6kanDa9SDTlqdnA/3S8e2vysm01d2+PmK184
+dSsk569JV0CJgjkAEBsv1b7K5U2aAE5xGFjt5mCKmqht0BCXtl9uoG8CAwEAAaOC
+BcQwggXAMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQD
+CDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwEwHQYDVR0OBBYEFEgt7oiqgl/yn/vu4j21AiLgZeRaMB8GA1Ud
+IwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBoGA1UdEQQTMBGCD2lkcC5kZm4t
+Y2VydC5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2Nh
+Y3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9v
+Y3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0
+cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQv
+Y2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB
+1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo3
+2RMAAAFozG1daAAABAMARzBFAiEAujYxHI/dZLmMQuPfex4Y9rUIpg9Nzcy82f38
+UgJPuhUCIBBfs9d4Wjl6lhbJvBcOX4cynWNWRedo53RIHvha8kvDAHUAqucLfzy4
+1WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFozG1dZQAABAMARjBEAiBrswVq
+pa9wms1zhJqvNbom1P9MOEfMi74AAsPQPpfTsAIgTphL12pPZOgAZVp/tzbH0Es/
+RlKTmzgeIlAfFQJ1lOwAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWjMbV5rAAAEAwBHMEUCICsiXIXNf2zgwJxQwD0rMnMiAch9tNW3kLRE2qTr
+NEMwAiEApD+8aMtAoDkknE/h0/J+MJnRRN9IBcIVPkFkq+ZsPscAdgDuS723dc5g
+uuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWjMbV2RAAAEAwBHMEUCIQDbO70g
+LFcbuTykgqgqHJurq/BTe5hqfJjuHMoJUFllSgIgA1K2clhPq+hMZUgvBBPS79h7
+9075qmXIpBUt8mEinn8AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7R
+hQAAAWjMbV13AAAEAwBGMEQCIFm1cQyqSxzEANXCR0XJjtdS+NgL7chAc4t/0url
+YCU0AiAhwGPARURyFLTSeFdDV7wF1b4nly456tOmKTDi0IvGTgB3AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaMxtXYgAAAQDAEgwRgIhAO1ZCkYe
+qryJRu0kRRE0S6WbTG4i+EQsWZIHd0S4Cnf5AiEAiFwarPHHAFWhOWoIIKg6z21N
+0kMlq2taCRz/DtuploYAdgBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaB
+qAAAAWjMbWNwAAAEAwBHMEUCIQC/y+dXixroXbSkIBL3AcjD+Y+AaLpbeOwUIdvz
+ApjcWwIgNiP+BOITArcWavsKt0FJzN0PYM4zJ8y2ywZ3PtMfEocwDQYJKoZIhvcN
+AQELBQADggEBAAS5+kCSQiRD/mFz2Anymu2++/4qpLp69G2pCEmnvG0zTa/2R5gS
+HrcT9GbF7kwW7OZtHSnMAyUCZIlaAD90hURk9zjtj82CFE2UHPc9m9VzYmnsvHfo
+p8UTj7DI4qSgvCl600CgN2O9K5YVw0FyuAmQJUs998rqnq9b/5pb/ejLJt6eXyvG
+z3ogSU80sdyBQOPzYhMSlU/WSg7vQBME7DpmJie6gwJhdi4CENdAvCaaoPOGo+5D
+LH2DFf5VPrIgBWryeQ2DxPi5oFk20jRhhjU+02ulTRhLDQCXh07z848Qr3sv1U/e
+bc1ZszhTLCRTkLYKpKtjyPEoVWpUjO4SdCs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJRjCCCC6gAwIBAgIMIHzInkUt6JF99DDvMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwODA5MjU0MFoXDTIxMDUxMjA5MjU0MFowbDELMAkGA1UEBhMCREUxEDAOBgNV
+BAgMB0hhbWJ1cmcxEDAOBgNVBAcMB0hhbWJ1cmcxHzAdBgNVBAoMFkRGTi1DRVJU
+IFNlcnZpY2VzIEdtYkgxGDAWBgNVBAMMD2lkcC5kZm4tY2VydC5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMOr84YTMi7F+gbKrEoq8+17gbWoMWaT
+cBUvsu/XBkVRJaKj1AmPUSrlLJB3RWfVoMOwDBryf6dPUfWIv90wBz/Kyq3NpLSi
+gfbfkcoQ4Oe/o1HawokgDDcZgX6BXJz+nsKkqfBGRKY92wFnh9lfhF4lMqWTf+dK
+2F4rsU16yJHn83dZDIhKErWqiP7PYtzflCfbP1QC50MMBJBM2WrD1oF238pN4SEZ
+D9u8A+XRc7+ca7OBxihvHjEcpitI6kanDa9SDTlqdnA/3S8e2vysm01d2+PmK184
+dSsk569JV0CJgjkAEBsv1b7K5U2aAE5xGFjt5mCKmqht0BCXtl9uoG8CAwEAAaOC
+BcQwggXAMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQD
+CDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcD
+AgYIKwYBBQUHAwEwHQYDVR0OBBYEFEgt7oiqgl/yn/vu4j21AiLgZeRaMB8GA1Ud
+IwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBoGA1UdEQQTMBGCD2lkcC5kZm4t
+Y2VydC5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2Nh
+Y3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9v
+Y3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0
+cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQv
+Y2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9k
+Zm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB
+1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo3
+2RMAAAFozG1daAAABAMARzBFAiEAujYxHI/dZLmMQuPfex4Y9rUIpg9Nzcy82f38
+UgJPuhUCIBBfs9d4Wjl6lhbJvBcOX4cynWNWRedo53RIHvha8kvDAHUAqucLfzy4
+1WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFozG1dZQAABAMARjBEAiBrswVq
+pa9wms1zhJqvNbom1P9MOEfMi74AAsPQPpfTsAIgTphL12pPZOgAZVp/tzbH0Es/
+RlKTmzgeIlAfFQJ1lOwAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWjMbV5rAAAEAwBHMEUCICsiXIXNf2zgwJxQwD0rMnMiAch9tNW3kLRE2qTr
+NEMwAiEApD+8aMtAoDkknE/h0/J+MJnRRN9IBcIVPkFkq+ZsPscAdgDuS723dc5g
+uuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWjMbV2RAAAEAwBHMEUCIQDbO70g
+LFcbuTykgqgqHJurq/BTe5hqfJjuHMoJUFllSgIgA1K2clhPq+hMZUgvBBPS79h7
+9075qmXIpBUt8mEinn8AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7R
+hQAAAWjMbV13AAAEAwBGMEQCIFm1cQyqSxzEANXCR0XJjtdS+NgL7chAc4t/0url
+YCU0AiAhwGPARURyFLTSeFdDV7wF1b4nly456tOmKTDi0IvGTgB3AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaMxtXYgAAAQDAEgwRgIhAO1ZCkYe
+qryJRu0kRRE0S6WbTG4i+EQsWZIHd0S4Cnf5AiEAiFwarPHHAFWhOWoIIKg6z21N
+0kMlq2taCRz/DtuploYAdgBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaB
+qAAAAWjMbWNwAAAEAwBHMEUCIQC/y+dXixroXbSkIBL3AcjD+Y+AaLpbeOwUIdvz
+ApjcWwIgNiP+BOITArcWavsKt0FJzN0PYM4zJ8y2ywZ3PtMfEocwDQYJKoZIhvcN
+AQELBQADggEBAAS5+kCSQiRD/mFz2Anymu2++/4qpLp69G2pCEmnvG0zTa/2R5gS
+HrcT9GbF7kwW7OZtHSnMAyUCZIlaAD90hURk9zjtj82CFE2UHPc9m9VzYmnsvHfo
+p8UTj7DI4qSgvCl600CgN2O9K5YVw0FyuAmQJUs998rqnq9b/5pb/ejLJt6eXyvG
+z3ogSU80sdyBQOPzYhMSlU/WSg7vQBME7DpmJie6gwJhdi4CENdAvCaaoPOGo+5D
+LH2DFf5VPrIgBWryeQ2DxPi5oFk20jRhhjU+02ulTRhLDQCXh07z848Qr3sv1U/e
+bc1ZszhTLCRTkLYKpKtjyPEoVWpUjO4SdCs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.dfn-cert.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.dfn-cert.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e16</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e16</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">DFN-CERT Services GmbH</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">DFN-CERT Services GmbH</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.dfn-cert.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.dfn-cert.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Marc</md:GivenName>
+	<md:SurName>Thomas</md:SurName>
+	<md:EmailAddress>mailto:ta-extern@dfn-cert.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Lars</md:GivenName>
+	<md:SurName>Weber</md:SurName>
+	<md:EmailAddress>mailto:ta-extern@dfn-cert.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Marc</md:GivenName>
+	<md:SurName>Thomas</md:SurName>
+	<md:EmailAddress>mailto:ta-extern@dfn-cert.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-CERT</md:GivenName>
+	<md:EmailAddress>mailto:cert@dfn-cert.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

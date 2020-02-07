@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibb-ctles.u-pem.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-10-03T16:20:07Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">u-pem.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CTLES - Centre Technique du Livre de l'Enseignement Supérieur</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://www.ctles.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users of Centre Technique du Livre de l'Enseignement Supérieur</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CTLES - Centre Technique du Livre de l'Enseignement Supérieur</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Usagers du Centre Technique du Livre de l'Enseignement Supérieur</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEOzCCAqOgAwIBAgIUQxz3F1tz6Eum+wwuAxG4iqEbovgwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUc2hpYmItY3RsZXMudS1wZW0uZnIwHhcNMTkxMDExMTMx
+ODUzWhcNMzkxMDExMTMxODUzWjAfMR0wGwYDVQQDDBRzaGliYi1jdGxlcy51LXBl
+bS5mcjCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAKmu5mUeYYD9qY8W
+iodevXFUoqJUW9Kzcm0UJuJN8PgxxynZzkcuzuXLbzPFV9W1RrtT9KA0Yx9Iaagc
+5YlomL8v4+53r/cKhkIxFvXe/JUEDi5SC6MTsjwdAyXg/gvrySbgblIF0b+M6K/p
+TjTjUnjtCqGTPlX6kVnraUEsbBnGhvrZoIrl8aE+9HzjN15dfDvySIr1ZQMvfju2
++mJa4NTaO+Yv7PMIZHw5xkPrceY6GDx92OILGaWopuZ4SSlHz/PJBYQRLwRmOwx0
+rFJrnLGwftLM+y+ckFufV7EQecuhxGJjbxaUE6qS4RXXU4YW4jNZyo8qNckic9DA
+7uPo+ejU3GDdUdJGXVn5QjH5B0V/CvGQCzogd4GA21NQVkxOIuHDD9Y/lL+95R5Z
+e6NIOgrxYCCTk4t33f82XwOU+ulE16hN5wLQawVhPQHa08QObFIm/9Ymw6Wk37g8
+FjTYpvzCXP/zhglVnJKlH1sMlIuOpmtQava4nU0MMbrY5P1vEQIDAQABo28wbTAd
+BgNVHQ4EFgQUv4xd/sfmurFi3W6v/XESon/Q1XswTAYDVR0RBEUwQ4IUc2hpYmIt
+Y3RsZXMudS1wZW0uZnKGK2h0dHBzOi8vc2hpYmItY3RsZXMudS1wZW0uZnIvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBACDpHslcCIyoNncfh+ieoZ7p
+WgUYUKhBYQXAvFdubXoVNbz45oWav7S4DEw0q8jVWi2wfd97ELoAiFIIMhj8x8H/
+13Th1zx+aG3e+YtkIb/b/Iwccn51KnMlbiAnHpWBTPK9UNB1Lynrrn/ZoqcjlGy8
+/v7kipBckRIZnQb0vTnyNYVAOvvCltPY3keniYLtBsnMFckcP1j28prWJ1RXJhb5
+PqF4ZaR/YJDBalLdKvdzhajmdEjyPtVmUFYCI0C4SrEa1Z3ZlqZuXECwSIymtS/a
+4VGmaja/SZWS2Smh7K2+ZSUJ6IVCYL/Y+kVs4Mid4Z4hqfSSH8lcZgCu1ahr0Zii
+RveNg0VyPB/zB7jcFU63tQgvGGmZ4r9QkmQl+MH0+eBXL8vtIvzbT6AcZRI7WBng
+YMUYx3Rwz1SaLDUIz0NeqbqXd0TFMGm16gD2lXGNPlhIyVCoRzDJjdsFPIzi9Rs+
+NcJ9x5hBfSkI98uDzHOeqznXEk7vm0JlbTUsptHYWg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb-ctles.u-pem.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb-ctles.u-pem.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb-ctles.u-pem.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb-ctles.u-pem.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb-ctles.u-pem.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibb-ctles.u-pem.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Centre Technique du Livre de l&amp;#039;Enseignement Supérieur</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Centre Technique du Livre de l&amp;#039;Enseignement Supérieur</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.ctles.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Dragan CVIJETIC</md:SurName>
+	<md:EmailAddress>mailto:Dragan.Cvijetic@u-pem.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

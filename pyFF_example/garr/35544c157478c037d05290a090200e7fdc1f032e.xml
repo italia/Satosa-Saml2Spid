@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.udu.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-10-22T10:08:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">udu.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Art History of the Academy of Sciences of the Czech Republic</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav dějin umění Akademie věd ČR, v.v.i</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IAH AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance ÚDU AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.udu.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.udu.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="121">https://gedeon.cas.cz/loga/logo-udu-44.png</mdui:Logo>
+		<mdui:Logo height="476" width="1309">https://gedeon.cas.cz/loga/logo-udu-476.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUUjImT4C+qAY4l/Abco1orjgqwqUwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owHhcNMTYxMTE0MTA1OTAxWhcN
+MzYxMTE0MTA1OTAxWjAZMRcwFQYDVQQDDA5pZHAudWR1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIQ6HMs12miwCQyIgKZqJVTyqd0supfv
+zJzHn4WDZY9XntjxNIvpKGq6fboetkkk2U77Sv2MzggUjHiOJ6vHBeZVqR5+bzrA
+0yI4jglxsvCqXmdN1xvkVgMqMmVV9yXv0yxpIrlb6W/Qrt1aIGtKdYIn9JqIWIuV
+6Z/z480Ht54lB3uHQ7tbjov0WP+wFkS9gmfgEmxYDiAY99I5vgDJTJu4k8w8z+bq
+R9SRWKE819VAA5JrbFwmp/74MjzKu/IQ9dV7ln4kEFzeXfCTyGjaR8KdLW5DFytO
+D1mZzKCBL43POo5+PVAqpb639KWuPea9wbBgA7PbqhY1epWTK0Q/o2kCAwEAAaNj
+MGEwHQYDVR0OBBYEFAR47daDh8wnQ0MLlUFqv05HtnnpMEAGA1UdEQQ5MDeCDmlk
+cC51ZHUuY2FzLmN6hiVodHRwczovL2lkcC51ZHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBSaCbvyD/jeN2pfD+n+5NyyvGvD4kl9f4l
+rfKo3QkMFtMLu/dBpgATVvLPKNuCS+xXC22M66L8dG2dY0JPQ6PFlceLhxlZ4kHL
+0ezMmuXq2+HjqC7pRUMEdzStwBogL6exdTXnB3Xt6qsFo5bsfJ2sER4ZpJABMqHM
+y8yp9RTWj/WG/903Gnj3k+OfYZLYwkEy4EMRv+SxnfMIJWH3uyde7n9nTqlJxvDn
+DPVsPupVfXfLgnMlqiAmJ47LAB2fufNIkVCor/Poh6HCpzCzUqO/jUsLSZhQP700
+wePQLhfK9FKh7vUvNhGNzfCUMSkb6hwpcVsvtkeIgDVvZCgSOog/
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAILhp7E7l7r7e4egz18eWYpfQPP4MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51ZHUuY2FzLmN6MB4XDTE2MTExNDEwNTg1OVoX
+DTM2MTExNDEwNTg1OVowGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFkzEWFDGU8WvAL2iI2dGIgA0T8zLS
+Qa1QXUpOftBj/IPCj6qMLIujgWeKLTxb7oyGoEPoS855sI112MQrN51mSZWoNJGb
+vEpcyuQqEUhS0fV1qP8jA/1/e6hdOVcZOqwdG+fDXIlySloqfmG8zzE+j93fNWRn
+xv4ZZFBllqrIvLcDDsegeq8UT7AgoK0eO5KbNneNx+9HpdtiCLfvefMOrOU1BM0Q
+9zfNu0sqeT5y2tgSr4Gplqm+s8/I33XBQ+qOJxWJCjKK8Ij5uJjXYxClXrUKkT1p
+7PM2PRXJJFkNmRS7hMsIw34IqnvkPorb3zxPm1R0sdL9/zt3zzdHpBptAgMBAAGj
+YzBhMB0GA1UdDgQWBBSR/Qsxh3ey4Rby/13+Cl5JBNbmAzBABgNVHREEOTA3gg5p
+ZHAudWR1LmNhcy5jeoYlaHR0cHM6Ly9pZHAudWR1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAaDeO3Z66R4SWUFHIydI/t/4P3Ryea0iY
+C/pCrxPLLbAIKF5xZChHyXnX9s5O33fs8YRLYuP1VQNxIRDw+fWrOaeW47vdppTC
+Sb/I6e7amKicF1AseRLI9rkQlYTKJ/ZqxtLgjcc1HSgjFlpF6m/m5oKyD0gyvXD4
+s9GNz5eUD0nMf1oJUOVGHty6H7xeMDVI4w4K+OdDFwAHeGfKXjjNaXgIxcg0juqK
+lN+JdVANNR6N1+3G90Zkbe2Ik8TH7nbutPJlHqE2ro0oFWuhpVb9YYS7/BuDWMmt
+ya7tBbW28rS0Lg537obTHK9P4ivvyHmxh7Cw1gA8NnzrJmG4gqbpQw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUauJOK6Fsp42Ibk+tzjvlWdjt2QAwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owHhcNMTYxMTE0MTA1OTAwWhcN
+MzYxMTE0MTA1OTAwWjAZMRcwFQYDVQQDDA5pZHAudWR1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJf4IuVMAzy7twYmbzK5VoxcV8QmplW5
+n1d8Gfun4vubyA7oLHFcKM3W2yDQ4h4rWAB5fbhjUxT0Iw4J5L2LWTY8edL8nznh
+pzsZNOSEEUlUoAvvVVOSdpaGOQqvjP8j6OujoOYb4rrt3C2nEHykqwFLJWMShVc1
+i6x8dEVnOcPDPXuuv85h1vOU7cAeFUdP/+VdYK95t2hAfmQUY4tmXOYjtj6Soq4d
+4nwlGQTMdGwl+EyuFX+VZcGuDts04luqZSILUPjYs2C73m8nuPnCXBx1Ctq6puVy
+Uax3q+9dE/9a9tqP/X/yd2gdUOeBIpk72l8CEtkAy+idf6iRTQgzigUCAwEAAaNj
+MGEwHQYDVR0OBBYEFDjxPwrCF+XcMh+xOp9o05qhxN1DMEAGA1UdEQQ5MDeCDmlk
+cC51ZHUuY2FzLmN6hiVodHRwczovL2lkcC51ZHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBrtnqYFMwSckfOit/fU5zQUAuKhd68E1n0
+DryOiVbQClSyHRoKbsYEDBzoyWeu3V29d8Iuw8WMVDgdyvK9fkq6F0L5o0DSlwK+
+bjs3vS4nIQY6nP0wSejjbhhPDmoLZ/aITuAHPZQZoYhi6TMYFSSvSyvz2iPBRhff
+FjNjJH2W+ewNxFAU858oMBhr6kBKfYVPXIzdTS5r+hMV+BbWrTIQ+XekWfUFl4RH
+OM7Dn1uZ8diNl+FLLG5KSHrX6SLkUI5ZILHCii1fLKvTqN/6mw7LEfxsO8tKFzaY
+OtI50JbZSbIDA56RsdDxzQv/3WGdMd9eN7xKt3FN7oFQyCejzyOR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.udu.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.udu.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.udu.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.udu.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.udu.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.udu.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">udu.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUUjImT4C+qAY4l/Abco1orjgqwqUwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owHhcNMTYxMTE0MTA1OTAxWhcN
+MzYxMTE0MTA1OTAxWjAZMRcwFQYDVQQDDA5pZHAudWR1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIQ6HMs12miwCQyIgKZqJVTyqd0supfv
+zJzHn4WDZY9XntjxNIvpKGq6fboetkkk2U77Sv2MzggUjHiOJ6vHBeZVqR5+bzrA
+0yI4jglxsvCqXmdN1xvkVgMqMmVV9yXv0yxpIrlb6W/Qrt1aIGtKdYIn9JqIWIuV
+6Z/z480Ht54lB3uHQ7tbjov0WP+wFkS9gmfgEmxYDiAY99I5vgDJTJu4k8w8z+bq
+R9SRWKE819VAA5JrbFwmp/74MjzKu/IQ9dV7ln4kEFzeXfCTyGjaR8KdLW5DFytO
+D1mZzKCBL43POo5+PVAqpb639KWuPea9wbBgA7PbqhY1epWTK0Q/o2kCAwEAAaNj
+MGEwHQYDVR0OBBYEFAR47daDh8wnQ0MLlUFqv05HtnnpMEAGA1UdEQQ5MDeCDmlk
+cC51ZHUuY2FzLmN6hiVodHRwczovL2lkcC51ZHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBSaCbvyD/jeN2pfD+n+5NyyvGvD4kl9f4l
+rfKo3QkMFtMLu/dBpgATVvLPKNuCS+xXC22M66L8dG2dY0JPQ6PFlceLhxlZ4kHL
+0ezMmuXq2+HjqC7pRUMEdzStwBogL6exdTXnB3Xt6qsFo5bsfJ2sER4ZpJABMqHM
+y8yp9RTWj/WG/903Gnj3k+OfYZLYwkEy4EMRv+SxnfMIJWH3uyde7n9nTqlJxvDn
+DPVsPupVfXfLgnMlqiAmJ47LAB2fufNIkVCor/Poh6HCpzCzUqO/jUsLSZhQP700
+wePQLhfK9FKh7vUvNhGNzfCUMSkb6hwpcVsvtkeIgDVvZCgSOog/
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAILhp7E7l7r7e4egz18eWYpfQPP4MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51ZHUuY2FzLmN6MB4XDTE2MTExNDEwNTg1OVoX
+DTM2MTExNDEwNTg1OVowGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFkzEWFDGU8WvAL2iI2dGIgA0T8zLS
+Qa1QXUpOftBj/IPCj6qMLIujgWeKLTxb7oyGoEPoS855sI112MQrN51mSZWoNJGb
+vEpcyuQqEUhS0fV1qP8jA/1/e6hdOVcZOqwdG+fDXIlySloqfmG8zzE+j93fNWRn
+xv4ZZFBllqrIvLcDDsegeq8UT7AgoK0eO5KbNneNx+9HpdtiCLfvefMOrOU1BM0Q
+9zfNu0sqeT5y2tgSr4Gplqm+s8/I33XBQ+qOJxWJCjKK8Ij5uJjXYxClXrUKkT1p
+7PM2PRXJJFkNmRS7hMsIw34IqnvkPorb3zxPm1R0sdL9/zt3zzdHpBptAgMBAAGj
+YzBhMB0GA1UdDgQWBBSR/Qsxh3ey4Rby/13+Cl5JBNbmAzBABgNVHREEOTA3gg5p
+ZHAudWR1LmNhcy5jeoYlaHR0cHM6Ly9pZHAudWR1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAaDeO3Z66R4SWUFHIydI/t/4P3Ryea0iY
+C/pCrxPLLbAIKF5xZChHyXnX9s5O33fs8YRLYuP1VQNxIRDw+fWrOaeW47vdppTC
+Sb/I6e7amKicF1AseRLI9rkQlYTKJ/ZqxtLgjcc1HSgjFlpF6m/m5oKyD0gyvXD4
+s9GNz5eUD0nMf1oJUOVGHty6H7xeMDVI4w4K+OdDFwAHeGfKXjjNaXgIxcg0juqK
+lN+JdVANNR6N1+3G90Zkbe2Ik8TH7nbutPJlHqE2ro0oFWuhpVb9YYS7/BuDWMmt
+ya7tBbW28rS0Lg537obTHK9P4ivvyHmxh7Cw1gA8NnzrJmG4gqbpQw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUauJOK6Fsp42Ibk+tzjvlWdjt2QAwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVkdS5jYXMuY3owHhcNMTYxMTE0MTA1OTAwWhcN
+MzYxMTE0MTA1OTAwWjAZMRcwFQYDVQQDDA5pZHAudWR1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJf4IuVMAzy7twYmbzK5VoxcV8QmplW5
+n1d8Gfun4vubyA7oLHFcKM3W2yDQ4h4rWAB5fbhjUxT0Iw4J5L2LWTY8edL8nznh
+pzsZNOSEEUlUoAvvVVOSdpaGOQqvjP8j6OujoOYb4rrt3C2nEHykqwFLJWMShVc1
+i6x8dEVnOcPDPXuuv85h1vOU7cAeFUdP/+VdYK95t2hAfmQUY4tmXOYjtj6Soq4d
+4nwlGQTMdGwl+EyuFX+VZcGuDts04luqZSILUPjYs2C73m8nuPnCXBx1Ctq6puVy
+Uax3q+9dE/9a9tqP/X/yd2gdUOeBIpk72l8CEtkAy+idf6iRTQgzigUCAwEAAaNj
+MGEwHQYDVR0OBBYEFDjxPwrCF+XcMh+xOp9o05qhxN1DMEAGA1UdEQQ5MDeCDmlk
+cC51ZHUuY2FzLmN6hiVodHRwczovL2lkcC51ZHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBrtnqYFMwSckfOit/fU5zQUAuKhd68E1n0
+DryOiVbQClSyHRoKbsYEDBzoyWeu3V29d8Iuw8WMVDgdyvK9fkq6F0L5o0DSlwK+
+bjs3vS4nIQY6nP0wSejjbhhPDmoLZ/aITuAHPZQZoYhi6TMYFSSvSyvz2iPBRhff
+FjNjJH2W+ewNxFAU858oMBhr6kBKfYVPXIzdTS5r+hMV+BbWrTIQ+XekWfUFl4RH
+OM7Dn1uZ8diNl+FLLG5KSHrX6SLkUI5ZILHCii1fLKvTqN/6mw7LEfxsO8tKFzaY
+OtI50JbZSbIDA56RsdDxzQv/3WGdMd9eN7xKt3FN7oFQyCejzyOR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.udu.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Art History of the Academy of Sciences of the Czech Republic</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Ústav dějin umění Akademie věd ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Art History of the Academy of Sciences of the Czech Republic</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav dějin umění Akademie věd ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.udu.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.udu.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

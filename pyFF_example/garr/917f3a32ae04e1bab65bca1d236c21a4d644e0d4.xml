@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.es.net/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.es.net/about/contact-us/" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">es.net</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ESnet</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Energy Sciences Network </mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.lbl.gov/disclaimers/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="22" width="72" xml:lang="en">https://www.es.net/assets/Logos/ESnetFinalRGB.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAO4b4WF67Uq3LsXyIhUEBd7dB/JoMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5lcy5uZXQwHhcNMTExMjEzMjMwNTM4WhcNMzEx
+MjEzMjMwNTM4WjAVMRMwEQYDVQQDEwppZHAuZXMubmV0MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAi2esIvvexX85muTD8yzJF9InJ8NwysxfxyWDDLco
+1G4ypEPN6121TbKotdF83keigjRsK/+jsq1VyMJeUW6kXlZ9N6Xzet8Zt/uxBamB
+Q2iipdNwDJtLty3zEtGbsQywYkZSfBm7Dse2cB8+GZTBeJUXN3BGetKFUX/IM7RE
+3y5j0c/Oem+Gd7HvZLVSNsy4CvBnPhs3w2mhJkh4FFbOdPMnQSP2/hQt0hAVfhzr
+bA8IKI2dv/f5nlOJd/6X1uM2IfgSG3M1dp+AIcD4Frdl65T9eyTKHBIxh8Sng1Lf
+lf6C4yiFq4KvKOYB0byGGEo4SGQKsXnxWPzw9te02K5xuwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuZXMubmV0hiFodHRwczovL2lkcC5lcy5uZXQvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFKWAyXCw7X2OjsdUocqtpHTLbasKMA0GCSqGSIb3DQEB
+BQUAA4IBAQBPsEx37NAmxr6zUpMCu7SKdVaf8r9ppieqQxbHBVVxVsQ5IX7IY1AB
+qcUzMVY0m5Hnp4GbU0xkuiRqUNrlsp+n52MosJwPiWkO0m9ljN0Dn8kkRExJq/bS
+d6W45OX283biF1VpolxwQKvNNJdIliLexfiFnwxTGMT5OzQzQ8qX/Jr31DmT5y91
+lVH5KPTu0rxTbbtx75SaPJ9FXmiHFe25kZd+hyZs/XB8ExN58jukXygMUOUgIuRP
+sb1TR90+G0WLUJlIxr1SeRpeHFUWcHkEmss3FIwgJrRVwfSQxwQgTRFRELJInRQI
+nciX8msJNoIgdL+nElSBTZ1kUT569c8d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.es.net/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.es.net/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.es.net/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.es.net/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.es.net/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">es.net</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAO4b4WF67Uq3LsXyIhUEBd7dB/JoMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5lcy5uZXQwHhcNMTExMjEzMjMwNTM4WhcNMzEx
+MjEzMjMwNTM4WjAVMRMwEQYDVQQDEwppZHAuZXMubmV0MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAi2esIvvexX85muTD8yzJF9InJ8NwysxfxyWDDLco
+1G4ypEPN6121TbKotdF83keigjRsK/+jsq1VyMJeUW6kXlZ9N6Xzet8Zt/uxBamB
+Q2iipdNwDJtLty3zEtGbsQywYkZSfBm7Dse2cB8+GZTBeJUXN3BGetKFUX/IM7RE
+3y5j0c/Oem+Gd7HvZLVSNsy4CvBnPhs3w2mhJkh4FFbOdPMnQSP2/hQt0hAVfhzr
+bA8IKI2dv/f5nlOJd/6X1uM2IfgSG3M1dp+AIcD4Frdl65T9eyTKHBIxh8Sng1Lf
+lf6C4yiFq4KvKOYB0byGGEo4SGQKsXnxWPzw9te02K5xuwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuZXMubmV0hiFodHRwczovL2lkcC5lcy5uZXQvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFKWAyXCw7X2OjsdUocqtpHTLbasKMA0GCSqGSIb3DQEB
+BQUAA4IBAQBPsEx37NAmxr6zUpMCu7SKdVaf8r9ppieqQxbHBVVxVsQ5IX7IY1AB
+qcUzMVY0m5Hnp4GbU0xkuiRqUNrlsp+n52MosJwPiWkO0m9ljN0Dn8kkRExJq/bS
+d6W45OX283biF1VpolxwQKvNNJdIliLexfiFnwxTGMT5OzQzQ8qX/Jr31DmT5y91
+lVH5KPTu0rxTbbtx75SaPJ9FXmiHFe25kZd+hyZs/XB8ExN58jukXygMUOUgIuRP
+sb1TR90+G0WLUJlIxr1SeRpeHFUWcHkEmss3FIwgJrRVwfSQxwQgTRFRELJInRQI
+nciX8msJNoIgdL+nElSBTZ1kUT569c8d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.es.net/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">ESnet</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">ESnet</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.es.net/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dhiva Muruganantham</md:GivenName>
+	<md:EmailAddress>dhiva@es.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ESnet Operations</md:GivenName>
+	<md:EmailAddress>trouble@es.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Brooklin Gore</md:GivenName>
+	<md:EmailAddress>bjgore@es.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ESnet Security Team</md:GivenName>
+	<md:EmailAddress>security@es.net</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

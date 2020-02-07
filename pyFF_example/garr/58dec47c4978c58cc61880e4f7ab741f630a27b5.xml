@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://secure.stevenson.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stevenson.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Stevenson University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.stevenson.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.stevenson.edu/about/consumer-information/documents/acceptable-use-policy.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="65" width="226" xml:lang="en">https://secure.stevenson.edu/idp/images/logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAKgovFDN1fBUWFA+v7d4R+4C2FLWMA0GCSqGSIb3DQEB
+BQUAMB8xHTAbBgNVBAMTFHNlY3VyZS5zdGV2ZW5zb24uZWR1MB4XDTEyMDcxODE4
+NDUyNFoXDTMyMDcxODE4NDUyNFowHzEdMBsGA1UEAxMUc2VjdXJlLnN0ZXZlbnNv
+bi5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCSvX4t9W3UxKym
+Qv9OKQzPSE2f/a6e5AjIa+a8A7V/Zt7u5AzFMyRsfARKGI24GrWTer9fJHvI4wTD
+OhqufNOjV3fNu570+HL1W9d/1ueM4ztmoh5jiWF4JxhxVTjJwBPkx2bkv7R10nI5
+l2HaRNyPSUSOSH3U9L0jN/a/KY97rOuM66fQ4V79L+g09C6XVxyqJrKBvryjk0f0
+5E/Ua8JcAZlgf0y200x5YdcZADjF8DwUtfEItUJ1FdxOnwXjbVDIcK02+J4Os3vT
+veZ0gmeRxsj9jAvZh44qjJlW2aFElFiE+PvE5QPhheSAx7LahyRM8Y9JWAhUD4JU
+gzsimD8xAgMBAAGjbzBtMEwGA1UdEQRFMEOCFHNlY3VyZS5zdGV2ZW5zb24uZWR1
+hitodHRwczovL3NlY3VyZS5zdGV2ZW5zb24uZWR1L2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBR5zC5WIV6lZzMAYwPbhfWgZN2omTANBgkqhkiG9w0BAQUFAAOCAQEA
+EpMtRKoKGLYWI+5ltPGqL7nhMzsqnlwLXP5cMLFN+FCxwa7kBi1fk//NCleLoaf7
+BiYxMqq3cDh1vhaklyr+NC3iwXGAbi6/D74rFksOhePX05xdAIi83s+6ImJXC+Gk
+jPgB9Pyd+NV6S1CkehB2fCDRE8bMBOInspa1eszMqUUmJcfOg3jqYfnUMsk6rgKG
+QUqhM9TAwowIJzUEfJcwkNrCkBAzuUIG/R9zgi/wWARXSBdpvRwTeh2feHIoRrlL
+BVngyd850gsxHeIyUveI6rZDsRI6MozOP7ApzA482aHh8YHlekMh+mDafbuYDtMV
+vcW4oD4N2OIPcMam+7V1yw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://secure.stevenson.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://secure.stevenson.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://secure.stevenson.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://secure.stevenson.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://secure.stevenson.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://secure.stevenson.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Stevenson University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stevenson University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://stevenson.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>shibadmin@stevenson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>shibadmin@stevenson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>shibadmin@stevenson.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

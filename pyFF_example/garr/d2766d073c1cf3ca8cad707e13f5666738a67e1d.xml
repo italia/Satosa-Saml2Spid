@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp1.dife.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2019-02-19T09:38:51Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">dife.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">DIfE - Deutsches Institut für Ernährungsforschung</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">DIfE - German Institute of Human Nutrition</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider des Deutschen Instituts für Ernährungsforschung</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of DIfE at idp1.dife.de</mdui:Description>
+		<mdui:Logo height="32" width="32">https://idp1.dife.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="127" width="320">https://idp1.dife.de/idp/images/Logo_DIfE_DE.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.dife.de/kontakt/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.dife.de/kontakt/?lang=en</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://idp1.dife.de/dife_idp_datenschutz.html</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://idp1.dife.de/dife_idp_datenschutz.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJcDCCCFigAwIBAgIMIAt1nifKhfdwJgAjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTExNDEwMjUyMloXDTIxMDIxNTEwMjUyMlowgZgxCzAJBgNVBAYTAkRFMRQwEgYD
+VQQIDAtCcmFuZGVuYnVyZzERMA8GA1UEBwwITnV0aGV0YWwxPDA6BgNVBAoMM0Rl
+dXRzY2hlcyBJbnN0aXR1dCBmdWVyIEVybmFlaHJ1bmdzZm9yc2NodW5nIChESWZF
+KTELMAkGA1UECwwCSVQxFTATBgNVBAMMDGlkcDEuZGlmZS5kZTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKGzzZQ/sX4O9OjkGKDc8TV8LDeNBgS+vDGq
+uiFLbM9Ki28P9pEtUsNXLcQwEGrUo/SMjCPPJFKmlWWfGRWCY8ffWRJUaNgbwmEd
+b+sUypQVBvSL0QJNjTxixCZmtq8KchOgCQxE3J/x3nDDx/6pvP+NppJG0LqEemS9
+BAaKylYDvgZKgBq707qiptiQyqFIDr43P8dXkuuMlt01qaHtJbufngRx/GtCctvt
+orXZYk5gJNIOs5hbnHFLWxdQy9/3oIOyLYtPbBuiN783fKFkBTbM9sCqoqzok6vf
+7Yvvj+fCJQMvdZUy/byFFOMqfWWX5QyEkhJoBNHKCJIcPqz9xzkCAwEAAaOCBcEw
+ggW9MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQB
+ga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJ
+BgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+KwYBBQUHAwEwHQYDVR0OBBYEFA7Ofxe4Viz3pL7dvtPuE6eiuWwbMB8GA1UdIwQY
+MBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBcGA1UdEQQQMA6CDGlkcDEuZGlmZS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIE
+ggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFn
+EcEeKgAABAMARzBFAiBARO8KZQp0WcC+rDyYw5HXs+ENKATHfoOyDl/1s4Q9ggIh
+AMnuhlspHJDnyHgsfA2r9ofyZK7ZfqjHoGKCV6w/JjV/AHYA7ku9t3XOYLrhQmkf
+q+GeZqMPfl+wctiDAMR7iXqo/csAAAFnEcEetgAABAMARzBFAiB2aX2OnUg2Zpn+
+OwewP8UYONvhbJB5ProYMQIvBTwWIAIhAKgba2mYgk4BHcqPnavBuTsjowScYF/N
+7I9hMcz+DHbsAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFn
+EcEd2AAABAMASDBGAiEA8C2xeYSpdkmHKDaMq5PyBbIp0VRubCyM+qdwa8tgJmIC
+IQDbl+66nf8A2b49t430kgBqFvlJrDZJU6Hph82HEC888QB1AFWB1MIWkDYBSuoL
+m1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZxHBHyYAAAQDAEYwRAIgHFVS+8o9uEYd
+eJihjgQS7PM6lUPXeLbZjRtT52/y8WkCIFniKbD4G7aKxhlzmJvWn0od25Ur539Z
+i/GJkRTfkgQ7AHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFn
+EcEhPgAABAMARzBFAiBBcpZzeP2YdGXPwZiR7bewFI+TrW64KCV2qAl2dWJqigIh
+AJoqiuXsD/crwCdtkRdfY/6+iFV//lQIBVxEB3nkMBA0AHYARJRlLrDuzq/EQAfY
+qP4owNrmgr7YyzG1P9MzlrW2gagAAAFnEcEjUQAABAMARzBFAiEAwQTMc/uTnOn0
+Mx07ctG8R7W0+C7+X2UyltbUwuObplQCIBkiIQtHBKuZfaC5fCYpHiYO+tZw0MrV
+Zl2glvsRrS+fAHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFn
+EcEg0wAABAMARjBEAiB0xqrZDCvt1i2fsxKoaRf6tEttKMUTe8P1NRzpmws1FgIg
+NvmJT0ZQN6M06E0ZrRkRTod0IqbuDzgRWDkWNoxWBpswDQYJKoZIhvcNAQELBQAD
+ggEBAEk0/F9bHu/iAXdhXGPb8pxXSlg6xaa9COttdqk7mgF7CxEhNrj5Kk9lFshj
+XV4YWNc7cHaMDd1dfp5kIKizrBOhyaLmutYIGPv2/Se28bK9/06YnPZzVCmU3wXe
+GlbRoFIht8qlIOzEGH706VfGdNWPt3oZR/Lydvzo/AEMOahMRFB5LZt6FVLb5M/O
+KJ0c4Mk3gYi9MRU+2djGtmmqBqZY48wPOK1VthspbAv03vB0MvYWd/Uw89VJDsyE
+RHnvm/rEcqzxpgztmOHdoTVAn8hr0EY/Uvo0t7BHmdC5xPuZAj7J8Hi4ra91/UeD
+Yz56RHI3StKf+cttp+Gmg+Y5jCU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJcDCCCFigAwIBAgIMIAt1nifKhfdwJgAjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTExNDEwMjUyMloXDTIxMDIxNTEwMjUyMlowgZgxCzAJBgNVBAYTAkRFMRQwEgYD
+VQQIDAtCcmFuZGVuYnVyZzERMA8GA1UEBwwITnV0aGV0YWwxPDA6BgNVBAoMM0Rl
+dXRzY2hlcyBJbnN0aXR1dCBmdWVyIEVybmFlaHJ1bmdzZm9yc2NodW5nIChESWZF
+KTELMAkGA1UECwwCSVQxFTATBgNVBAMMDGlkcDEuZGlmZS5kZTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKGzzZQ/sX4O9OjkGKDc8TV8LDeNBgS+vDGq
+uiFLbM9Ki28P9pEtUsNXLcQwEGrUo/SMjCPPJFKmlWWfGRWCY8ffWRJUaNgbwmEd
+b+sUypQVBvSL0QJNjTxixCZmtq8KchOgCQxE3J/x3nDDx/6pvP+NppJG0LqEemS9
+BAaKylYDvgZKgBq707qiptiQyqFIDr43P8dXkuuMlt01qaHtJbufngRx/GtCctvt
+orXZYk5gJNIOs5hbnHFLWxdQy9/3oIOyLYtPbBuiN783fKFkBTbM9sCqoqzok6vf
+7Yvvj+fCJQMvdZUy/byFFOMqfWWX5QyEkhJoBNHKCJIcPqz9xzkCAwEAAaOCBcEw
+ggW9MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQB
+ga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJ
+BgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+KwYBBQUHAwEwHQYDVR0OBBYEFA7Ofxe4Viz3pL7dvtPuE6eiuWwbMB8GA1UdIwQY
+MBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBcGA1UdEQQQMA6CDGlkcDEuZGlmZS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIE
+ggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFn
+EcEeKgAABAMARzBFAiBARO8KZQp0WcC+rDyYw5HXs+ENKATHfoOyDl/1s4Q9ggIh
+AMnuhlspHJDnyHgsfA2r9ofyZK7ZfqjHoGKCV6w/JjV/AHYA7ku9t3XOYLrhQmkf
+q+GeZqMPfl+wctiDAMR7iXqo/csAAAFnEcEetgAABAMARzBFAiB2aX2OnUg2Zpn+
+OwewP8UYONvhbJB5ProYMQIvBTwWIAIhAKgba2mYgk4BHcqPnavBuTsjowScYF/N
+7I9hMcz+DHbsAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFn
+EcEd2AAABAMASDBGAiEA8C2xeYSpdkmHKDaMq5PyBbIp0VRubCyM+qdwa8tgJmIC
+IQDbl+66nf8A2b49t430kgBqFvlJrDZJU6Hph82HEC888QB1AFWB1MIWkDYBSuoL
+m1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZxHBHyYAAAQDAEYwRAIgHFVS+8o9uEYd
+eJihjgQS7PM6lUPXeLbZjRtT52/y8WkCIFniKbD4G7aKxhlzmJvWn0od25Ur539Z
+i/GJkRTfkgQ7AHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFn
+EcEhPgAABAMARzBFAiBBcpZzeP2YdGXPwZiR7bewFI+TrW64KCV2qAl2dWJqigIh
+AJoqiuXsD/crwCdtkRdfY/6+iFV//lQIBVxEB3nkMBA0AHYARJRlLrDuzq/EQAfY
+qP4owNrmgr7YyzG1P9MzlrW2gagAAAFnEcEjUQAABAMARzBFAiEAwQTMc/uTnOn0
+Mx07ctG8R7W0+C7+X2UyltbUwuObplQCIBkiIQtHBKuZfaC5fCYpHiYO+tZw0MrV
+Zl2glvsRrS+fAHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFn
+EcEg0wAABAMARjBEAiB0xqrZDCvt1i2fsxKoaRf6tEttKMUTe8P1NRzpmws1FgIg
+NvmJT0ZQN6M06E0ZrRkRTod0IqbuDzgRWDkWNoxWBpswDQYJKoZIhvcNAQELBQAD
+ggEBAEk0/F9bHu/iAXdhXGPb8pxXSlg6xaa9COttdqk7mgF7CxEhNrj5Kk9lFshj
+XV4YWNc7cHaMDd1dfp5kIKizrBOhyaLmutYIGPv2/Se28bK9/06YnPZzVCmU3wXe
+GlbRoFIht8qlIOzEGH706VfGdNWPt3oZR/Lydvzo/AEMOahMRFB5LZt6FVLb5M/O
+KJ0c4Mk3gYi9MRU+2djGtmmqBqZY48wPOK1VthspbAv03vB0MvYWd/Uw89VJDsyE
+RHnvm/rEcqzxpgztmOHdoTVAn8hr0EY/Uvo0t7BHmdC5xPuZAj7J8Hi4ra91/UeD
+Yz56RHI3StKf+cttp+Gmg+Y5jCU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp1.dife.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.dife.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp1.dife.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp1.dife.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp1.dife.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.dife.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp1.dife.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp1.dife.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp1.dife.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp1.dife.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.dife.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">dife.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJcDCCCFigAwIBAgIMIAt1nifKhfdwJgAjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTExNDEwMjUyMloXDTIxMDIxNTEwMjUyMlowgZgxCzAJBgNVBAYTAkRFMRQwEgYD
+VQQIDAtCcmFuZGVuYnVyZzERMA8GA1UEBwwITnV0aGV0YWwxPDA6BgNVBAoMM0Rl
+dXRzY2hlcyBJbnN0aXR1dCBmdWVyIEVybmFlaHJ1bmdzZm9yc2NodW5nIChESWZF
+KTELMAkGA1UECwwCSVQxFTATBgNVBAMMDGlkcDEuZGlmZS5kZTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKGzzZQ/sX4O9OjkGKDc8TV8LDeNBgS+vDGq
+uiFLbM9Ki28P9pEtUsNXLcQwEGrUo/SMjCPPJFKmlWWfGRWCY8ffWRJUaNgbwmEd
+b+sUypQVBvSL0QJNjTxixCZmtq8KchOgCQxE3J/x3nDDx/6pvP+NppJG0LqEemS9
+BAaKylYDvgZKgBq707qiptiQyqFIDr43P8dXkuuMlt01qaHtJbufngRx/GtCctvt
+orXZYk5gJNIOs5hbnHFLWxdQy9/3oIOyLYtPbBuiN783fKFkBTbM9sCqoqzok6vf
+7Yvvj+fCJQMvdZUy/byFFOMqfWWX5QyEkhJoBNHKCJIcPqz9xzkCAwEAAaOCBcEw
+ggW9MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQB
+ga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJ
+BgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+KwYBBQUHAwEwHQYDVR0OBBYEFA7Ofxe4Viz3pL7dvtPuE6eiuWwbMB8GA1UdIwQY
+MBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBcGA1UdEQQQMA6CDGlkcDEuZGlmZS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIE
+ggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFn
+EcEeKgAABAMARzBFAiBARO8KZQp0WcC+rDyYw5HXs+ENKATHfoOyDl/1s4Q9ggIh
+AMnuhlspHJDnyHgsfA2r9ofyZK7ZfqjHoGKCV6w/JjV/AHYA7ku9t3XOYLrhQmkf
+q+GeZqMPfl+wctiDAMR7iXqo/csAAAFnEcEetgAABAMARzBFAiB2aX2OnUg2Zpn+
+OwewP8UYONvhbJB5ProYMQIvBTwWIAIhAKgba2mYgk4BHcqPnavBuTsjowScYF/N
+7I9hMcz+DHbsAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFn
+EcEd2AAABAMASDBGAiEA8C2xeYSpdkmHKDaMq5PyBbIp0VRubCyM+qdwa8tgJmIC
+IQDbl+66nf8A2b49t430kgBqFvlJrDZJU6Hph82HEC888QB1AFWB1MIWkDYBSuoL
+m1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZxHBHyYAAAQDAEYwRAIgHFVS+8o9uEYd
+eJihjgQS7PM6lUPXeLbZjRtT52/y8WkCIFniKbD4G7aKxhlzmJvWn0od25Ur539Z
+i/GJkRTfkgQ7AHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFn
+EcEhPgAABAMARzBFAiBBcpZzeP2YdGXPwZiR7bewFI+TrW64KCV2qAl2dWJqigIh
+AJoqiuXsD/crwCdtkRdfY/6+iFV//lQIBVxEB3nkMBA0AHYARJRlLrDuzq/EQAfY
+qP4owNrmgr7YyzG1P9MzlrW2gagAAAFnEcEjUQAABAMARzBFAiEAwQTMc/uTnOn0
+Mx07ctG8R7W0+C7+X2UyltbUwuObplQCIBkiIQtHBKuZfaC5fCYpHiYO+tZw0MrV
+Zl2glvsRrS+fAHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFn
+EcEg0wAABAMARjBEAiB0xqrZDCvt1i2fsxKoaRf6tEttKMUTe8P1NRzpmws1FgIg
+NvmJT0ZQN6M06E0ZrRkRTod0IqbuDzgRWDkWNoxWBpswDQYJKoZIhvcNAQELBQAD
+ggEBAEk0/F9bHu/iAXdhXGPb8pxXSlg6xaa9COttdqk7mgF7CxEhNrj5Kk9lFshj
+XV4YWNc7cHaMDd1dfp5kIKizrBOhyaLmutYIGPv2/Se28bK9/06YnPZzVCmU3wXe
+GlbRoFIht8qlIOzEGH706VfGdNWPt3oZR/Lydvzo/AEMOahMRFB5LZt6FVLb5M/O
+KJ0c4Mk3gYi9MRU+2djGtmmqBqZY48wPOK1VthspbAv03vB0MvYWd/Uw89VJDsyE
+RHnvm/rEcqzxpgztmOHdoTVAn8hr0EY/Uvo0t7BHmdC5xPuZAj7J8Hi4ra91/UeD
+Yz56RHI3StKf+cttp+Gmg+Y5jCU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJcDCCCFigAwIBAgIMIAt1nifKhfdwJgAjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTExNDEwMjUyMloXDTIxMDIxNTEwMjUyMlowgZgxCzAJBgNVBAYTAkRFMRQwEgYD
+VQQIDAtCcmFuZGVuYnVyZzERMA8GA1UEBwwITnV0aGV0YWwxPDA6BgNVBAoMM0Rl
+dXRzY2hlcyBJbnN0aXR1dCBmdWVyIEVybmFlaHJ1bmdzZm9yc2NodW5nIChESWZF
+KTELMAkGA1UECwwCSVQxFTATBgNVBAMMDGlkcDEuZGlmZS5kZTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKGzzZQ/sX4O9OjkGKDc8TV8LDeNBgS+vDGq
+uiFLbM9Ki28P9pEtUsNXLcQwEGrUo/SMjCPPJFKmlWWfGRWCY8ffWRJUaNgbwmEd
+b+sUypQVBvSL0QJNjTxixCZmtq8KchOgCQxE3J/x3nDDx/6pvP+NppJG0LqEemS9
+BAaKylYDvgZKgBq707qiptiQyqFIDr43P8dXkuuMlt01qaHtJbufngRx/GtCctvt
+orXZYk5gJNIOs5hbnHFLWxdQy9/3oIOyLYtPbBuiN783fKFkBTbM9sCqoqzok6vf
+7Yvvj+fCJQMvdZUy/byFFOMqfWWX5QyEkhJoBNHKCJIcPqz9xzkCAwEAAaOCBcEw
+ggW9MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQB
+ga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJ
+BgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+KwYBBQUHAwEwHQYDVR0OBBYEFA7Ofxe4Viz3pL7dvtPuE6eiuWwbMB8GA1UdIwQY
+MBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MBcGA1UdEQQQMA6CDGlkcDEuZGlmZS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisGAQQB1nkCBAIE
+ggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFn
+EcEeKgAABAMARzBFAiBARO8KZQp0WcC+rDyYw5HXs+ENKATHfoOyDl/1s4Q9ggIh
+AMnuhlspHJDnyHgsfA2r9ofyZK7ZfqjHoGKCV6w/JjV/AHYA7ku9t3XOYLrhQmkf
+q+GeZqMPfl+wctiDAMR7iXqo/csAAAFnEcEetgAABAMARzBFAiB2aX2OnUg2Zpn+
+OwewP8UYONvhbJB5ProYMQIvBTwWIAIhAKgba2mYgk4BHcqPnavBuTsjowScYF/N
+7I9hMcz+DHbsAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFn
+EcEd2AAABAMASDBGAiEA8C2xeYSpdkmHKDaMq5PyBbIp0VRubCyM+qdwa8tgJmIC
+IQDbl+66nf8A2b49t430kgBqFvlJrDZJU6Hph82HEC888QB1AFWB1MIWkDYBSuoL
+m1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZxHBHyYAAAQDAEYwRAIgHFVS+8o9uEYd
+eJihjgQS7PM6lUPXeLbZjRtT52/y8WkCIFniKbD4G7aKxhlzmJvWn0od25Ur539Z
+i/GJkRTfkgQ7AHYApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFn
+EcEhPgAABAMARzBFAiBBcpZzeP2YdGXPwZiR7bewFI+TrW64KCV2qAl2dWJqigIh
+AJoqiuXsD/crwCdtkRdfY/6+iFV//lQIBVxEB3nkMBA0AHYARJRlLrDuzq/EQAfY
+qP4owNrmgr7YyzG1P9MzlrW2gagAAAFnEcEjUQAABAMARzBFAiEAwQTMc/uTnOn0
+Mx07ctG8R7W0+C7+X2UyltbUwuObplQCIBkiIQtHBKuZfaC5fCYpHiYO+tZw0MrV
+Zl2glvsRrS+fAHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFn
+EcEg0wAABAMARjBEAiB0xqrZDCvt1i2fsxKoaRf6tEttKMUTe8P1NRzpmws1FgIg
+NvmJT0ZQN6M06E0ZrRkRTod0IqbuDzgRWDkWNoxWBpswDQYJKoZIhvcNAQELBQAD
+ggEBAEk0/F9bHu/iAXdhXGPb8pxXSlg6xaa9COttdqk7mgF7CxEhNrj5Kk9lFshj
+XV4YWNc7cHaMDd1dfp5kIKizrBOhyaLmutYIGPv2/Se28bK9/06YnPZzVCmU3wXe
+GlbRoFIht8qlIOzEGH706VfGdNWPt3oZR/Lydvzo/AEMOahMRFB5LZt6FVLb5M/O
+KJ0c4Mk3gYi9MRU+2djGtmmqBqZY48wPOK1VthspbAv03vB0MvYWd/Uw89VJDsyE
+RHnvm/rEcqzxpgztmOHdoTVAn8hr0EY/Uvo0t7BHmdC5xPuZAj7J8Hi4ra91/UeD
+Yz56RHI3StKf+cttp+Gmg+Y5jCU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp1.dife.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.dife.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e161</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e161</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Deutsches Institut für Ernährungsforschung Potsdam-Rehbrücke (DIfE)</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">German Institute of Human Nutrition Potsdam-Rehbruecke (DIfE)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.dife.de/?lang=de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.dife.de/?lang=en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Andreas</md:GivenName>
+	<md:SurName>Senst</md:SurName>
+	<md:EmailAddress>mailto:andreas.senst@dife.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andreas</md:GivenName>
+	<md:SurName>Senst</md:SurName>
+	<md:EmailAddress>mailto:andreas.senst@dife.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Andreas</md:GivenName>
+	<md:SurName>Senst</md:SurName>
+	<md:EmailAddress>mailto:andreas.senst@dife.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Andreas</md:GivenName>
+	<md:SurName>Senst</md:SurName>
+	<md:EmailAddress>mailto:andreas.senst@dife.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.biochem.mpg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2019-01-15T13:16:36Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>basic</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">biochem.mpg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">MPI fuer Biochemie</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">MPI of Biochemistry</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Max-Planck-Institut fuer Biochemistry</mdui:Description>
+		<mdui:Description xml:lang="en">Max Planck Institute of Biochemistry</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp01a.biochem.mpg.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="67">https://idp01a.biochem.mpg.de/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJqzCCCJOgAwIBAgIMHsHcRoXDTzg8fosUMA0GCSqGSIb3DQEBCwUAMGoxCzAJ
+BgNVBAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xETAPBgNVBAcMCE11ZW5jaGVuMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDEVMBMGA1UEAwwMTVBHIENB
+IC0gRzAyMB4XDTE4MDMwOTEwMTUyMVoXDTIwMDYxMTEwMTUyMVowgaMxCzAJBgNV
+BAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xFDASBgNVBAcMC01hcnRpbnNyaWVkMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDErMCkGA1UECwwiTWF4LVBs
+YW5jay1JbnN0aXR1dCBmdWVyIEJpb2NoZW1pZTEeMBwGA1UEAwwVaWRwMDFhLmJp
+b2NoZW0ubXBnLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1o/n
+5G27ABSntllWerm7g7wKsBKfHlgrPN5eF4e5V86o0Tk8m3T44oharB5Lth0rxnqr
+dcujIaGIzboW53tyiuuolWWTrFSI/SCAnnb9IZi6FHBTzys4XQ432SLwIp3j0hE2
+DHPMIAquVqvacbkAqh+AyGhDiX0LH3FDcZ0mxjEyBte7bQg87TO59TlYVyNuqhFW
+6hHoX8iQXJ3pj2kMgps4B7tP9HkQu0X0upYK43/Je3Njv9RGfHEZ2TvT3ZYo2UKo
+oIWUnIYE9esxWqikhiTPlogZLhzhVv89qGYA28zex8ce30/OOkreL8dMWAGHi8vY
+L9ho7LtHA/O1IKebwMM0VyEoe1StcddehL9PRnOUf35Zn0lLYhJcPVhCh6RtdKvP
+CzMbaiSlObm/W6ATyMf02O7wAT5c7teke4J7K6gAfoz1rAROQMgNFPpdxYQPeGSm
+7bcS+Y4ke1PSp0i1d+edGDFji2d5G3X0KhwkveycKA0hAo6UDMPgzId8QZfeYsD9
+fMKohfmUa9hi2BT+C7cRUGdeQ5LyWnB/5FpWiRKTf/ZcH+TRUY4z0aqdUpU4MSul
+ADP1Ez4l3sJ3LbuJFbOt5U8grfKco4rSHyr/wkWwHi5Q8/h85Yy/JTbMnkgPJJ+K
+nJn3qlzLbpwfG1N4USoSCno6XXmYMF48y2cNilcCAwEAAaOCBRUwggURMAkGA1Ud
+EwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+BQcDATAdBgNVHQ4EFgQUz/i5XWYbr8tP8CxL5dkXshrerogwHwYDVR0jBBgwFoAU
+xIilB+64e6oME7/aKXRjUhtJcBYwdwYDVR0RBHAwboISaWRwLmJpb2NoZW0ubXBn
+LmRlghRpZHAwMS5iaW9jaGVtLm1wZy5kZYIUaWRwMDIuYmlvY2hlbS5tcGcuZGWC
+FWlkcDAxYS5iaW9jaGVtLm1wZy5kZYIVaWRwMDFiLmJpb2NoZW0ubXBnLmRlMH0G
+A1UdHwR2MHQwOKA2oDSGMmh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvbXBnLWcyLWNh
+L3B1Yi9jcmwvY2FjcmwuY3JsMDigNqA0hjJodHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L21wZy1nMi1jYS9wdWIvY3JsL2NhY3JsLmNybDCBzQYIKwYBBQUHAQEEgcAwgb0w
+MwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIv
+T0NTUDBCBggrBgEFBQcwAoY2aHR0cDovL2NkcDEucGNhLmRmbi5kZS9tcGctZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MEIGCCsGAQUFBzAChjZodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL21wZy1nMi1jYS9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwWQYD
+VR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEB
+BDARBg8rBgEEAYGtIYIsAQEEAwcwEQYPKwYBBAGBrSGCLAIBBAMHMIICcAYKKwYB
+BAHWeQIEAgSCAmAEggJcAloAdwBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWIKQgr5AAAEAwBIMEYCIQDVZII52NV/t9kf1ysQ+07sebx83cbM3OHT
+a7QWFHfLTwIhAOEqkHkWJaquOtmQSCnexh4W++GIpbDeak7hciJLkBGBAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFiCkILGQAABAMARzBFAiEA
+hQ4qRfvrSVxpMY5wuYupmGkGRYfLlA+ZWCV3tqBKanQCIAPFv81xdKxYj9y278Q8
+WpBGy1CoSlzRziLBs69dX56mAHcAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6Oq
+HQcT0wwAAAFiCkIL8QAABAMASDBGAiEAkWDiYN2ny29SfO41XAjy7G9ADocDcvGL
+9oPRSFeaJSUCIQCsP/2m9C9cA30GFAKmj1jEAi/I7LTLdLNGqpx99tElkQB2AKrn
+C388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABYgpCCt8AAAQDAEcwRQIh
+AJCtIyeiHuVT/dcAkJm1BsfBYIZq/xiaMsWAP83VnD7EAiA6kwI02q6O5eHCQDd3
+KnJrvKNKYVlPjGoHLSPM1+Fy5QB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3
+zQ7IDdwQAAABYgpCDSIAAAQDAEcwRQIgPquCEKOBudoR21kH5sf/KegUvCi3gVpA
+gIuUnSxO2XwCIQDfnjmcoDvJotj5mk0dmhCGa+1qMTpJWX1D5hiH6WqCkjANBgkq
+hkiG9w0BAQsFAAOCAQEAMl1sEE3HmHAE8/py7NKTEJu4PBw4jVmNWUKVQWqwN1TE
+k+21CNgKfQpVQ4Gn2uPgAVJMIXyE4kbFot3tSATHKExrwh3qEQrPYKxuZqEJS12e
+BfGZLQScq4z9ic8lswSPOYKyPZiE5S0uwG5SkLp/ujnXYxBHpflz79Z1smAQOzua
+FAUZwBVMFBWawOeNV/DCBkAn1AWus//zuruo9zPTBwRT6sLIdHKTBn82xBrFd5ek
+tmCjph5/A4dZbvdXMR9jDTzhG1GlgS1MF9PSSV7NC2KQpmEF26jwaWEvenltxyBL
+nj50vEdo935TrZRGrpbfOlBoDyMYtSRpVB7y9/HObw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJqzCCCJOgAwIBAgIMHsHcRoXDTzg8fosUMA0GCSqGSIb3DQEBCwUAMGoxCzAJ
+BgNVBAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xETAPBgNVBAcMCE11ZW5jaGVuMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDEVMBMGA1UEAwwMTVBHIENB
+IC0gRzAyMB4XDTE4MDMwOTEwMTUyMVoXDTIwMDYxMTEwMTUyMVowgaMxCzAJBgNV
+BAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xFDASBgNVBAcMC01hcnRpbnNyaWVkMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDErMCkGA1UECwwiTWF4LVBs
+YW5jay1JbnN0aXR1dCBmdWVyIEJpb2NoZW1pZTEeMBwGA1UEAwwVaWRwMDFhLmJp
+b2NoZW0ubXBnLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1o/n
+5G27ABSntllWerm7g7wKsBKfHlgrPN5eF4e5V86o0Tk8m3T44oharB5Lth0rxnqr
+dcujIaGIzboW53tyiuuolWWTrFSI/SCAnnb9IZi6FHBTzys4XQ432SLwIp3j0hE2
+DHPMIAquVqvacbkAqh+AyGhDiX0LH3FDcZ0mxjEyBte7bQg87TO59TlYVyNuqhFW
+6hHoX8iQXJ3pj2kMgps4B7tP9HkQu0X0upYK43/Je3Njv9RGfHEZ2TvT3ZYo2UKo
+oIWUnIYE9esxWqikhiTPlogZLhzhVv89qGYA28zex8ce30/OOkreL8dMWAGHi8vY
+L9ho7LtHA/O1IKebwMM0VyEoe1StcddehL9PRnOUf35Zn0lLYhJcPVhCh6RtdKvP
+CzMbaiSlObm/W6ATyMf02O7wAT5c7teke4J7K6gAfoz1rAROQMgNFPpdxYQPeGSm
+7bcS+Y4ke1PSp0i1d+edGDFji2d5G3X0KhwkveycKA0hAo6UDMPgzId8QZfeYsD9
+fMKohfmUa9hi2BT+C7cRUGdeQ5LyWnB/5FpWiRKTf/ZcH+TRUY4z0aqdUpU4MSul
+ADP1Ez4l3sJ3LbuJFbOt5U8grfKco4rSHyr/wkWwHi5Q8/h85Yy/JTbMnkgPJJ+K
+nJn3qlzLbpwfG1N4USoSCno6XXmYMF48y2cNilcCAwEAAaOCBRUwggURMAkGA1Ud
+EwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+BQcDATAdBgNVHQ4EFgQUz/i5XWYbr8tP8CxL5dkXshrerogwHwYDVR0jBBgwFoAU
+xIilB+64e6oME7/aKXRjUhtJcBYwdwYDVR0RBHAwboISaWRwLmJpb2NoZW0ubXBn
+LmRlghRpZHAwMS5iaW9jaGVtLm1wZy5kZYIUaWRwMDIuYmlvY2hlbS5tcGcuZGWC
+FWlkcDAxYS5iaW9jaGVtLm1wZy5kZYIVaWRwMDFiLmJpb2NoZW0ubXBnLmRlMH0G
+A1UdHwR2MHQwOKA2oDSGMmh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvbXBnLWcyLWNh
+L3B1Yi9jcmwvY2FjcmwuY3JsMDigNqA0hjJodHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L21wZy1nMi1jYS9wdWIvY3JsL2NhY3JsLmNybDCBzQYIKwYBBQUHAQEEgcAwgb0w
+MwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIv
+T0NTUDBCBggrBgEFBQcwAoY2aHR0cDovL2NkcDEucGNhLmRmbi5kZS9tcGctZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MEIGCCsGAQUFBzAChjZodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL21wZy1nMi1jYS9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwWQYD
+VR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEB
+BDARBg8rBgEEAYGtIYIsAQEEAwcwEQYPKwYBBAGBrSGCLAIBBAMHMIICcAYKKwYB
+BAHWeQIEAgSCAmAEggJcAloAdwBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWIKQgr5AAAEAwBIMEYCIQDVZII52NV/t9kf1ysQ+07sebx83cbM3OHT
+a7QWFHfLTwIhAOEqkHkWJaquOtmQSCnexh4W++GIpbDeak7hciJLkBGBAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFiCkILGQAABAMARzBFAiEA
+hQ4qRfvrSVxpMY5wuYupmGkGRYfLlA+ZWCV3tqBKanQCIAPFv81xdKxYj9y278Q8
+WpBGy1CoSlzRziLBs69dX56mAHcAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6Oq
+HQcT0wwAAAFiCkIL8QAABAMASDBGAiEAkWDiYN2ny29SfO41XAjy7G9ADocDcvGL
+9oPRSFeaJSUCIQCsP/2m9C9cA30GFAKmj1jEAi/I7LTLdLNGqpx99tElkQB2AKrn
+C388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABYgpCCt8AAAQDAEcwRQIh
+AJCtIyeiHuVT/dcAkJm1BsfBYIZq/xiaMsWAP83VnD7EAiA6kwI02q6O5eHCQDd3
+KnJrvKNKYVlPjGoHLSPM1+Fy5QB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3
+zQ7IDdwQAAABYgpCDSIAAAQDAEcwRQIgPquCEKOBudoR21kH5sf/KegUvCi3gVpA
+gIuUnSxO2XwCIQDfnjmcoDvJotj5mk0dmhCGa+1qMTpJWX1D5hiH6WqCkjANBgkq
+hkiG9w0BAQsFAAOCAQEAMl1sEE3HmHAE8/py7NKTEJu4PBw4jVmNWUKVQWqwN1TE
+k+21CNgKfQpVQ4Gn2uPgAVJMIXyE4kbFot3tSATHKExrwh3qEQrPYKxuZqEJS12e
+BfGZLQScq4z9ic8lswSPOYKyPZiE5S0uwG5SkLp/ujnXYxBHpflz79Z1smAQOzua
+FAUZwBVMFBWawOeNV/DCBkAn1AWus//zuruo9zPTBwRT6sLIdHKTBn82xBrFd5ek
+tmCjph5/A4dZbvdXMR9jDTzhG1GlgS1MF9PSSV7NC2KQpmEF26jwaWEvenltxyBL
+nj50vEdo935TrZRGrpbfOlBoDyMYtSRpVB7y9/HObw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp01a.biochem.mpg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp01a.biochem.mpg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp01a.biochem.mpg.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp01a.biochem.mpg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp01a.biochem.mpg.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">biochem.mpg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJqzCCCJOgAwIBAgIMHsHcRoXDTzg8fosUMA0GCSqGSIb3DQEBCwUAMGoxCzAJ
+BgNVBAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xETAPBgNVBAcMCE11ZW5jaGVuMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDEVMBMGA1UEAwwMTVBHIENB
+IC0gRzAyMB4XDTE4MDMwOTEwMTUyMVoXDTIwMDYxMTEwMTUyMVowgaMxCzAJBgNV
+BAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xFDASBgNVBAcMC01hcnRpbnNyaWVkMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDErMCkGA1UECwwiTWF4LVBs
+YW5jay1JbnN0aXR1dCBmdWVyIEJpb2NoZW1pZTEeMBwGA1UEAwwVaWRwMDFhLmJp
+b2NoZW0ubXBnLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1o/n
+5G27ABSntllWerm7g7wKsBKfHlgrPN5eF4e5V86o0Tk8m3T44oharB5Lth0rxnqr
+dcujIaGIzboW53tyiuuolWWTrFSI/SCAnnb9IZi6FHBTzys4XQ432SLwIp3j0hE2
+DHPMIAquVqvacbkAqh+AyGhDiX0LH3FDcZ0mxjEyBte7bQg87TO59TlYVyNuqhFW
+6hHoX8iQXJ3pj2kMgps4B7tP9HkQu0X0upYK43/Je3Njv9RGfHEZ2TvT3ZYo2UKo
+oIWUnIYE9esxWqikhiTPlogZLhzhVv89qGYA28zex8ce30/OOkreL8dMWAGHi8vY
+L9ho7LtHA/O1IKebwMM0VyEoe1StcddehL9PRnOUf35Zn0lLYhJcPVhCh6RtdKvP
+CzMbaiSlObm/W6ATyMf02O7wAT5c7teke4J7K6gAfoz1rAROQMgNFPpdxYQPeGSm
+7bcS+Y4ke1PSp0i1d+edGDFji2d5G3X0KhwkveycKA0hAo6UDMPgzId8QZfeYsD9
+fMKohfmUa9hi2BT+C7cRUGdeQ5LyWnB/5FpWiRKTf/ZcH+TRUY4z0aqdUpU4MSul
+ADP1Ez4l3sJ3LbuJFbOt5U8grfKco4rSHyr/wkWwHi5Q8/h85Yy/JTbMnkgPJJ+K
+nJn3qlzLbpwfG1N4USoSCno6XXmYMF48y2cNilcCAwEAAaOCBRUwggURMAkGA1Ud
+EwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+BQcDATAdBgNVHQ4EFgQUz/i5XWYbr8tP8CxL5dkXshrerogwHwYDVR0jBBgwFoAU
+xIilB+64e6oME7/aKXRjUhtJcBYwdwYDVR0RBHAwboISaWRwLmJpb2NoZW0ubXBn
+LmRlghRpZHAwMS5iaW9jaGVtLm1wZy5kZYIUaWRwMDIuYmlvY2hlbS5tcGcuZGWC
+FWlkcDAxYS5iaW9jaGVtLm1wZy5kZYIVaWRwMDFiLmJpb2NoZW0ubXBnLmRlMH0G
+A1UdHwR2MHQwOKA2oDSGMmh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvbXBnLWcyLWNh
+L3B1Yi9jcmwvY2FjcmwuY3JsMDigNqA0hjJodHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L21wZy1nMi1jYS9wdWIvY3JsL2NhY3JsLmNybDCBzQYIKwYBBQUHAQEEgcAwgb0w
+MwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIv
+T0NTUDBCBggrBgEFBQcwAoY2aHR0cDovL2NkcDEucGNhLmRmbi5kZS9tcGctZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MEIGCCsGAQUFBzAChjZodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL21wZy1nMi1jYS9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwWQYD
+VR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEB
+BDARBg8rBgEEAYGtIYIsAQEEAwcwEQYPKwYBBAGBrSGCLAIBBAMHMIICcAYKKwYB
+BAHWeQIEAgSCAmAEggJcAloAdwBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWIKQgr5AAAEAwBIMEYCIQDVZII52NV/t9kf1ysQ+07sebx83cbM3OHT
+a7QWFHfLTwIhAOEqkHkWJaquOtmQSCnexh4W++GIpbDeak7hciJLkBGBAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFiCkILGQAABAMARzBFAiEA
+hQ4qRfvrSVxpMY5wuYupmGkGRYfLlA+ZWCV3tqBKanQCIAPFv81xdKxYj9y278Q8
+WpBGy1CoSlzRziLBs69dX56mAHcAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6Oq
+HQcT0wwAAAFiCkIL8QAABAMASDBGAiEAkWDiYN2ny29SfO41XAjy7G9ADocDcvGL
+9oPRSFeaJSUCIQCsP/2m9C9cA30GFAKmj1jEAi/I7LTLdLNGqpx99tElkQB2AKrn
+C388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABYgpCCt8AAAQDAEcwRQIh
+AJCtIyeiHuVT/dcAkJm1BsfBYIZq/xiaMsWAP83VnD7EAiA6kwI02q6O5eHCQDd3
+KnJrvKNKYVlPjGoHLSPM1+Fy5QB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3
+zQ7IDdwQAAABYgpCDSIAAAQDAEcwRQIgPquCEKOBudoR21kH5sf/KegUvCi3gVpA
+gIuUnSxO2XwCIQDfnjmcoDvJotj5mk0dmhCGa+1qMTpJWX1D5hiH6WqCkjANBgkq
+hkiG9w0BAQsFAAOCAQEAMl1sEE3HmHAE8/py7NKTEJu4PBw4jVmNWUKVQWqwN1TE
+k+21CNgKfQpVQ4Gn2uPgAVJMIXyE4kbFot3tSATHKExrwh3qEQrPYKxuZqEJS12e
+BfGZLQScq4z9ic8lswSPOYKyPZiE5S0uwG5SkLp/ujnXYxBHpflz79Z1smAQOzua
+FAUZwBVMFBWawOeNV/DCBkAn1AWus//zuruo9zPTBwRT6sLIdHKTBn82xBrFd5ek
+tmCjph5/A4dZbvdXMR9jDTzhG1GlgS1MF9PSSV7NC2KQpmEF26jwaWEvenltxyBL
+nj50vEdo935TrZRGrpbfOlBoDyMYtSRpVB7y9/HObw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJqzCCCJOgAwIBAgIMHsHcRoXDTzg8fosUMA0GCSqGSIb3DQEBCwUAMGoxCzAJ
+BgNVBAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xETAPBgNVBAcMCE11ZW5jaGVuMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDEVMBMGA1UEAwwMTVBHIENB
+IC0gRzAyMB4XDTE4MDMwOTEwMTUyMVoXDTIwMDYxMTEwMTUyMVowgaMxCzAJBgNV
+BAYTAkRFMQ8wDQYDVQQIDAZCYXllcm4xFDASBgNVBAcMC01hcnRpbnNyaWVkMSAw
+HgYDVQQKDBdNYXgtUGxhbmNrLUdlc2VsbHNjaGFmdDErMCkGA1UECwwiTWF4LVBs
+YW5jay1JbnN0aXR1dCBmdWVyIEJpb2NoZW1pZTEeMBwGA1UEAwwVaWRwMDFhLmJp
+b2NoZW0ubXBnLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1o/n
+5G27ABSntllWerm7g7wKsBKfHlgrPN5eF4e5V86o0Tk8m3T44oharB5Lth0rxnqr
+dcujIaGIzboW53tyiuuolWWTrFSI/SCAnnb9IZi6FHBTzys4XQ432SLwIp3j0hE2
+DHPMIAquVqvacbkAqh+AyGhDiX0LH3FDcZ0mxjEyBte7bQg87TO59TlYVyNuqhFW
+6hHoX8iQXJ3pj2kMgps4B7tP9HkQu0X0upYK43/Je3Njv9RGfHEZ2TvT3ZYo2UKo
+oIWUnIYE9esxWqikhiTPlogZLhzhVv89qGYA28zex8ce30/OOkreL8dMWAGHi8vY
+L9ho7LtHA/O1IKebwMM0VyEoe1StcddehL9PRnOUf35Zn0lLYhJcPVhCh6RtdKvP
+CzMbaiSlObm/W6ATyMf02O7wAT5c7teke4J7K6gAfoz1rAROQMgNFPpdxYQPeGSm
+7bcS+Y4ke1PSp0i1d+edGDFji2d5G3X0KhwkveycKA0hAo6UDMPgzId8QZfeYsD9
+fMKohfmUa9hi2BT+C7cRUGdeQ5LyWnB/5FpWiRKTf/ZcH+TRUY4z0aqdUpU4MSul
+ADP1Ez4l3sJ3LbuJFbOt5U8grfKco4rSHyr/wkWwHi5Q8/h85Yy/JTbMnkgPJJ+K
+nJn3qlzLbpwfG1N4USoSCno6XXmYMF48y2cNilcCAwEAAaOCBRUwggURMAkGA1Ud
+EwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+BQcDATAdBgNVHQ4EFgQUz/i5XWYbr8tP8CxL5dkXshrerogwHwYDVR0jBBgwFoAU
+xIilB+64e6oME7/aKXRjUhtJcBYwdwYDVR0RBHAwboISaWRwLmJpb2NoZW0ubXBn
+LmRlghRpZHAwMS5iaW9jaGVtLm1wZy5kZYIUaWRwMDIuYmlvY2hlbS5tcGcuZGWC
+FWlkcDAxYS5iaW9jaGVtLm1wZy5kZYIVaWRwMDFiLmJpb2NoZW0ubXBnLmRlMH0G
+A1UdHwR2MHQwOKA2oDSGMmh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvbXBnLWcyLWNh
+L3B1Yi9jcmwvY2FjcmwuY3JsMDigNqA0hjJodHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L21wZy1nMi1jYS9wdWIvY3JsL2NhY3JsLmNybDCBzQYIKwYBBQUHAQEEgcAwgb0w
+MwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIv
+T0NTUDBCBggrBgEFBQcwAoY2aHR0cDovL2NkcDEucGNhLmRmbi5kZS9tcGctZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MEIGCCsGAQUFBzAChjZodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL21wZy1nMi1jYS9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwWQYD
+VR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEB
+BDARBg8rBgEEAYGtIYIsAQEEAwcwEQYPKwYBBAGBrSGCLAIBBAMHMIICcAYKKwYB
+BAHWeQIEAgSCAmAEggJcAloAdwBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWIKQgr5AAAEAwBIMEYCIQDVZII52NV/t9kf1ysQ+07sebx83cbM3OHT
+a7QWFHfLTwIhAOEqkHkWJaquOtmQSCnexh4W++GIpbDeak7hciJLkBGBAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFiCkILGQAABAMARzBFAiEA
+hQ4qRfvrSVxpMY5wuYupmGkGRYfLlA+ZWCV3tqBKanQCIAPFv81xdKxYj9y278Q8
+WpBGy1CoSlzRziLBs69dX56mAHcAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6Oq
+HQcT0wwAAAFiCkIL8QAABAMASDBGAiEAkWDiYN2ny29SfO41XAjy7G9ADocDcvGL
+9oPRSFeaJSUCIQCsP/2m9C9cA30GFAKmj1jEAi/I7LTLdLNGqpx99tElkQB2AKrn
+C388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABYgpCCt8AAAQDAEcwRQIh
+AJCtIyeiHuVT/dcAkJm1BsfBYIZq/xiaMsWAP83VnD7EAiA6kwI02q6O5eHCQDd3
+KnJrvKNKYVlPjGoHLSPM1+Fy5QB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3
+zQ7IDdwQAAABYgpCDSIAAAQDAEcwRQIgPquCEKOBudoR21kH5sf/KegUvCi3gVpA
+gIuUnSxO2XwCIQDfnjmcoDvJotj5mk0dmhCGa+1qMTpJWX1D5hiH6WqCkjANBgkq
+hkiG9w0BAQsFAAOCAQEAMl1sEE3HmHAE8/py7NKTEJu4PBw4jVmNWUKVQWqwN1TE
+k+21CNgKfQpVQ4Gn2uPgAVJMIXyE4kbFot3tSATHKExrwh3qEQrPYKxuZqEJS12e
+BfGZLQScq4z9ic8lswSPOYKyPZiE5S0uwG5SkLp/ujnXYxBHpflz79Z1smAQOzua
+FAUZwBVMFBWawOeNV/DCBkAn1AWus//zuruo9zPTBwRT6sLIdHKTBn82xBrFd5ek
+tmCjph5/A4dZbvdXMR9jDTzhG1GlgS1MF9PSSV7NC2KQpmEF26jwaWEvenltxyBL
+nj50vEdo935TrZRGrpbfOlBoDyMYtSRpVB7y9/HObw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp01a.biochem.mpg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp01a.biochem.mpg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e577</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e577</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Max-Planck-Institut für Biochemie</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Max Planck Institute of Biochemistry</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.biochem.mpg.de/de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.biochem.mpg.de/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Markus</md:GivenName>
+	<md:SurName>Krause</md:SurName>
+	<md:EmailAddress>mailto:rz-helpdesk@biochem.mpg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Markus</md:GivenName>
+	<md:SurName>Krause</md:SurName>
+	<md:EmailAddress>mailto:rz-helpdesk@biochem.mpg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Markus</md:GivenName>
+	<md:SurName>Krause</md:SurName>
+	<md:EmailAddress>mailto:rz-helpdesk@biochem.mpg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Markus</md:GivenName>
+	<md:SurName>Krause</md:SurName>
+	<md:EmailAddress>mailto:rz-security@biochem.mpg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

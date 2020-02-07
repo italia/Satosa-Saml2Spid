@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.test.up2university.eu/ssp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-02-28T14:54:23Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Single Sign On up2u (Staging)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Single Sign On up2u (Staging)</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Single sign on for up2u platform (Staging)</mdui:Description>
+		<mdui:Description xml:lang="en">Single sign on fuer die up2u Platform (Staging)</mdui:Description>
+		<mdui:InformationURL xml:lang="de">https://up2university.eu/overview</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://up2university.eu/overview</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://cdn.test.up2university.eu/docs/privacy-notice.pdf</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHMjCCBhqgAwIBAgIQCnuEAXrTtjc/hdhYRihtbzANBgkqhkiG9w0BAQsFADBz
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExJzAlBgNVBAMTHlRFUkVOQSBTU0wg
+SGlnaCBBc3N1cmFuY2UgQ0EgMzAeFw0xODAyMjMwMDAwMDBaFw0yMDAyMjgxMjAw
+MDBaMIG4MR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjETMBEGCysGAQQB
+gjc8AgEDEwJOTDERMA8GA1UEBRMINDA1MzUxNTUxCzAJBgNVBAYTAk5MMRIwEAYD
+VQQHEwlBbXN0ZXJkYW0xGzAZBgNVBAoMEkfDiUFOVCBBc3NvY2lhdGlvbjENMAsG
+A1UECxMEVXAyVTEiMCAGA1UEAxMZc3NvLnRlc3QudXAydW5pdmVyc2l0eS5ldTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMU6Ew1RhXeMQiMfmQ/o5JSm
+PMo4QmlA9PBhV36MUKki6QwdumVZTVXKvApTifJ2NQ9zbktzTjgpI7xiR/Ze4ZFS
+50c7anspHvzOv4mBYdrFKHZMjvB6eReAXgQXhDNaTxV3RnrbNqKp7zAp4V7/DPyU
+RKH7eJMp96geSMN7sEu3Fkb6NRLe841qTs24+eiDt6j+wuySQf4ezLqwmmqzfVHJ
+EJWkWqWM+1e0QkUyyyjloOp5BxcAycyzWtWV+JP9uJlKQ32uwoGQVV0rnObZzNqY
+4X8XxEh382SMz4zB906dPzyOPG4z1t4cQoRY6uQ9LzJ3BMUv25fPH1xlJHkcYgUC
+AwEAAaOCA3owggN2MB8GA1UdIwQYMBaAFMK4hdfhuRO90Ui8/V7cfZBCeoqpMB0G
+A1UdDgQWBBSvr+T2E7w/z7wHEvUTv6dgNj892jAkBgNVHREEHTAbghlzc28udGVz
+dC51cDJ1bml2ZXJzaXR5LmV1MA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwgYUGA1UdHwR+MHwwPKA6oDiGNmh0dHA6Ly9jcmwz
+LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xIaWdoQXNzdXJhbmNlQ0EzLmNybDA8oDqg
+OIY2aHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTEhpZ2hBc3N1cmFu
+Y2VDQTMuY3JsMEsGA1UdIAREMEIwNwYJYIZIAYb9bAIBMCowKAYIKwYBBQUHAgEW
+HGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwBwYFZ4EMAQEwewYIKwYBBQUH
+AQEEbzBtMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRQYI
+KwYBBQUHMAKGOWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xI
+aWdoQXNzdXJhbmNlQ0EzLmNydDAMBgNVHRMBAf8EAjAAMIIBfQYKKwYBBAHWeQIE
+AgSCAW0EggFpAWcAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAA
+AWHC/Kh7AAAEAwBHMEUCICn5JPyL4ZBJ6/iYY8SbDtb59kHCyCHhA+xmXn6+DadN
+AiEAy9Hmpm+/SYDCdJ2xW49T9tDdoDH0pCGo/luwCj7btE4AdgBWFAaaL9fC7NP1
+4b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAWHC/Kk4AAAEAwBHMEUCIEcfh+UF4+7D
+uLjjSXu2WlXQzo7Fh2SqTZsuO5K7pW0KAiEAn/qWsWlZNUHQMChEXFREmRqh5uke
++RIlaP/yxbGH040AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAA
+AWHC/Ki/AAAEAwBGMEQCIC786hfBrh9fXptYcCn+/m5FLUIODLWNKyopsLQTcrxL
+AiACSusvxV9m1kVhq3gWhHbpDelFbRSCdJOSyMwU8TRiKzANBgkqhkiG9w0BAQsF
+AAOCAQEATFtncpfNoHxK9c96or3obNUNEz/CZiLU4RRZ8yF5vJFh3KLWmkp3h+ja
+fIOn3G+w6b2VBvbHwl8U89zQD9fMm5mSHGfudLypsX5eBadmQpp9KukktG41yt8a
+Z4wEy4fnhiMMlTiIUnBF/7+4oHdROOZx9gpM2zHMcJrEsT0jKr5dNZ9FbcDlMOiU
+sU8yUjZIomPT73kFwnpAFHOhzWZTg7j+F5xSkEr+69S86o/+RrXYa4VbEXuycsmM
+Tu66XKbW/I+ya7L+7N5IOFBmmnHON7yfnUQ3oKT49KL4xpbXuhnSFOBHNzF3MgwS
+rN7W4XMz+aT+jK+u0vKd22hmjDhf7w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHMjCCBhqgAwIBAgIQCnuEAXrTtjc/hdhYRihtbzANBgkqhkiG9w0BAQsFADBz
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExJzAlBgNVBAMTHlRFUkVOQSBTU0wg
+SGlnaCBBc3N1cmFuY2UgQ0EgMzAeFw0xODAyMjMwMDAwMDBaFw0yMDAyMjgxMjAw
+MDBaMIG4MR0wGwYDVQQPDBRQcml2YXRlIE9yZ2FuaXphdGlvbjETMBEGCysGAQQB
+gjc8AgEDEwJOTDERMA8GA1UEBRMINDA1MzUxNTUxCzAJBgNVBAYTAk5MMRIwEAYD
+VQQHEwlBbXN0ZXJkYW0xGzAZBgNVBAoMEkfDiUFOVCBBc3NvY2lhdGlvbjENMAsG
+A1UECxMEVXAyVTEiMCAGA1UEAxMZc3NvLnRlc3QudXAydW5pdmVyc2l0eS5ldTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMU6Ew1RhXeMQiMfmQ/o5JSm
+PMo4QmlA9PBhV36MUKki6QwdumVZTVXKvApTifJ2NQ9zbktzTjgpI7xiR/Ze4ZFS
+50c7anspHvzOv4mBYdrFKHZMjvB6eReAXgQXhDNaTxV3RnrbNqKp7zAp4V7/DPyU
+RKH7eJMp96geSMN7sEu3Fkb6NRLe841qTs24+eiDt6j+wuySQf4ezLqwmmqzfVHJ
+EJWkWqWM+1e0QkUyyyjloOp5BxcAycyzWtWV+JP9uJlKQ32uwoGQVV0rnObZzNqY
+4X8XxEh382SMz4zB906dPzyOPG4z1t4cQoRY6uQ9LzJ3BMUv25fPH1xlJHkcYgUC
+AwEAAaOCA3owggN2MB8GA1UdIwQYMBaAFMK4hdfhuRO90Ui8/V7cfZBCeoqpMB0G
+A1UdDgQWBBSvr+T2E7w/z7wHEvUTv6dgNj892jAkBgNVHREEHTAbghlzc28udGVz
+dC51cDJ1bml2ZXJzaXR5LmV1MA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+BgEFBQcDAQYIKwYBBQUHAwIwgYUGA1UdHwR+MHwwPKA6oDiGNmh0dHA6Ly9jcmwz
+LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xIaWdoQXNzdXJhbmNlQ0EzLmNybDA8oDqg
+OIY2aHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTEhpZ2hBc3N1cmFu
+Y2VDQTMuY3JsMEsGA1UdIAREMEIwNwYJYIZIAYb9bAIBMCowKAYIKwYBBQUHAgEW
+HGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwBwYFZ4EMAQEwewYIKwYBBQUH
+AQEEbzBtMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRQYI
+KwYBBQUHMAKGOWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xI
+aWdoQXNzdXJhbmNlQ0EzLmNydDAMBgNVHRMBAf8EAjAAMIIBfQYKKwYBBAHWeQIE
+AgSCAW0EggFpAWcAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAA
+AWHC/Kh7AAAEAwBHMEUCICn5JPyL4ZBJ6/iYY8SbDtb59kHCyCHhA+xmXn6+DadN
+AiEAy9Hmpm+/SYDCdJ2xW49T9tDdoDH0pCGo/luwCj7btE4AdgBWFAaaL9fC7NP1
+4b1Esj7HRna5vJkRXMDvlJhV1onQ3QAAAWHC/Kk4AAAEAwBHMEUCIEcfh+UF4+7D
+uLjjSXu2WlXQzo7Fh2SqTZsuO5K7pW0KAiEAn/qWsWlZNUHQMChEXFREmRqh5uke
++RIlaP/yxbGH040AdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAA
+AWHC/Ki/AAAEAwBGMEQCIC786hfBrh9fXptYcCn+/m5FLUIODLWNKyopsLQTcrxL
+AiACSusvxV9m1kVhq3gWhHbpDelFbRSCdJOSyMwU8TRiKzANBgkqhkiG9w0BAQsF
+AAOCAQEATFtncpfNoHxK9c96or3obNUNEz/CZiLU4RRZ8yF5vJFh3KLWmkp3h+ja
+fIOn3G+w6b2VBvbHwl8U89zQD9fMm5mSHGfudLypsX5eBadmQpp9KukktG41yt8a
+Z4wEy4fnhiMMlTiIUnBF/7+4oHdROOZx9gpM2zHMcJrEsT0jKr5dNZ9FbcDlMOiU
+sU8yUjZIomPT73kFwnpAFHOhzWZTg7j+F5xSkEr+69S86o/+RrXYa4VbEXuycsmM
+Tu66XKbW/I+ya7L+7N5IOFBmmnHON7yfnUQ3oKT49KL4xpbXuhnSFOBHNzF3MgwS
+rN7W4XMz+aT+jK+u0vKd22hmjDhf7w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.test.up2university.eu/simplesaml/module.php/saml/sp/saml2-logout.php/sso"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.test.up2university.eu/simplesaml/module.php/saml/sp/saml2-acs.php/sso" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sso.test.up2university.eu/simplesaml/module.php/saml/sp/saml1-acs.php/sso" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso.test.up2university.eu/simplesaml/module.php/saml/sp/saml2-acs.php/sso" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sso.test.up2university.eu/simplesaml/module.php/saml/sp/saml1-acs.php/sso/artifact" index="3"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">Single Sign On up2u (Staging)</md:ServiceName>
+		<md:ServiceName xml:lang="en">Single Sign On up2u (Staging)</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">Single sign on for up2u platform (Staging)</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Single sign on fuer die up2u Platform (Staging)</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonUniqueId" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.13" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e112</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e112</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Gesellschaft für wissenschaftliche Datenverarbeitung mbH</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Gesellschaft für wissenschaftliche Datenverarbeitung mbH</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.gwdg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.gwdg.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>GWDG Shibboleth Admins</md:GivenName>
+	<md:EmailAddress>mailto:shib@gwdg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>GWDG Shibboleth Admins</md:GivenName>
+	<md:EmailAddress>mailto:shib@gwdg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://identity.ugent.be/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://federation.belnet.be/" registrationInstant="2012-03-27T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://federation.belnet.be/files/Belnet-metadata-registration-practice-statement.txt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">UGent.be</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ghent University</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="nl">Universiteit Gent</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Ghent University is a top 100 university founded in 1817. As one of the major universities in Belgium, our 11 faculties offer a wide range of courses and conduct in-depth research in both exact and social sciences.</mdui:Description>
+		<mdui:Description xml:lang="nl">De Universiteit Gent (UGent) werd opgericht in 1817 door koning Willem I van Oranje. Vandaag is de UGent een top 100 universiteit een van de grootste universiteiten in het Nederlandse taalgebied. Meer dan 100 vakgroepen bieden ruim 230 opleidingen aan. Disciplines als biotechnologie, aquacultuur, micro-elektronica en geschiedenis genieten wereldfaam. De UGent is een creatieve gemeenschap van medewerkers, studenten en alumni, verbonden door engagement, openheid en pluralisme.</mdui:Description>
+		<mdui:Logo height="68" width="95" xml:lang="en">https://identity.ugent.be/images/universiteit_gent.gif</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>157.193.0.0/16</mdui:IPHint>
+		<mdui:DomainHint>ugent.be</mdui:DomainHint>
+		<mdui:DomainHint>www.ugent.be</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:51.0473100,3.7281500</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGpTCCBY2gAwIBAgIQDyc0T7lRELLguH+jcrHBBDANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xODA4MDIwMDAwMDBaFw0yMDA4MDYxMjAwMDBaMGsxCzAJBgNVBAYT
+AkJFMQ0wCwYDVQQHEwRHZW50MRowGAYDVQQKExFVbml2ZXJzaXRlaXQgR2VudDEV
+MBMGA1UECxMMRGlyZWN0aWUgSUNUMRowGAYDVQQDExFpZGVudGl0eS51Z2VudC5i
+ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkIIBPrfC+bJdACG9LC
+raoxf9OaHJdkMRFmNoF6kZagLlrL0mQA5WQKo3rRaN/NDPXThwC5Xn2sjxFPwaYw
+Fj+S9MxWhc0FrsmXBPSyTLixOxAJ2WaRVJK9dh2dvawz9bOhOhc86np1ussiM9S0
+mWN/txZHlTh7BmmQkHxRcdjIpMRDTCA5Sg4XKwKPPuA+l7hPB6vfIhVi2e/rTMFj
+GXU/4bt00GjW44kfvnNc6UqXX9WeQdQ+Bq6jaBN5q8R+Q0K2CgQYBG4ERDfNcoc8
+Te61vk0mlhuFXVyctpESqQ0n0YEg9T7dYj+SGJiGQQJ1EKUBxuMjvO2JKprpT1TH
+ZfsCAwEAAaOCA0owggNGMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBi
+MB0GA1UdDgQWBBS5ySEy32qxhCWj+uA2++OpxXiDjjAcBgNVHREEFTATghFpZGVu
+dGl0eS51Z2VudC5iZTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2lj
+ZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdp
+Y2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwB
+ATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgG
+BmeBDAECAjBuBggrBgEFBQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
+LmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNl
+cnQuY29tL1RFUkVOQVNTTENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAXwGCisGAQQB
+1nkCBAIEggFsBIIBaAFmAHUApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN
+3BAAAAFk+xVeQAAABAMARjBEAiBzO+4mQbatvwq+QWFbFNaXS1z3LvhYfsxGXrFF
+fZgBFQIgVPmCYMUu2jFfKCqJyEevX4ExU86Q25BpIhIC/FCLNxYAdQCHdb/nWXz4
+jEOZX73zbv9WjUdWNv9KtWDBtOr/XqCDDwAAAWT7FV8hAAAEAwBGMEQCIC/MbTeX
+VqdhKJhjs/5jQaYAwCfMp/0F1Wd9TLS/lzs0AiB7iZs2OdDuDKvp/hNawy8Qvl60
+1vIVSQ+rxDI//h+NLwB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGF
+AAABZPsVX1sAAAQDAEcwRQIgLB8zCoqnQ0JiG9vzzSEZM0VMEamXbcBU3jbfMfqB
+JfoCIQCZg5e8Jpi9aNxWSi3pJafwq22ap4LMbNM+t7vLSdDy1zANBgkqhkiG9w0B
+AQsFAAOCAQEAjlwlnDPfkPADsiFYiHAthgC0CsPydjsKvxHoHoLadaN2URE6T/Y4
+7CGg854zLc7lS8eVUNGwizxvYz7G/eAIShG5gcEtpdBRE0WigrGPDSgYJ0Q2aPeL
+KjPjjQ+ocxwLQLNuDV65oKkryz9SfHcFNZvA1fkIFUfGMX/GS4q2FhHgfR+G2qXO
+ACi4ovjdNNtU8c6BYgSgIILb8dpMlHxSo3bsZCN/ugE9iai6k/xrnNDUarA3CNA4
+mRwK691muSnwoPDBHHiIXStZRHjt1Bc1E6/bD3pZy/b8GgSBCilUti+PSbU5olEr
+1SnHkRkATJgFU4N6dw+0ywCtdL1JF++LMQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGpTCCBY2gAwIBAgIQDyc0T7lRELLguH+jcrHBBDANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xODA4MDIwMDAwMDBaFw0yMDA4MDYxMjAwMDBaMGsxCzAJBgNVBAYT
+AkJFMQ0wCwYDVQQHEwRHZW50MRowGAYDVQQKExFVbml2ZXJzaXRlaXQgR2VudDEV
+MBMGA1UECxMMRGlyZWN0aWUgSUNUMRowGAYDVQQDExFpZGVudGl0eS51Z2VudC5i
+ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkIIBPrfC+bJdACG9LC
+raoxf9OaHJdkMRFmNoF6kZagLlrL0mQA5WQKo3rRaN/NDPXThwC5Xn2sjxFPwaYw
+Fj+S9MxWhc0FrsmXBPSyTLixOxAJ2WaRVJK9dh2dvawz9bOhOhc86np1ussiM9S0
+mWN/txZHlTh7BmmQkHxRcdjIpMRDTCA5Sg4XKwKPPuA+l7hPB6vfIhVi2e/rTMFj
+GXU/4bt00GjW44kfvnNc6UqXX9WeQdQ+Bq6jaBN5q8R+Q0K2CgQYBG4ERDfNcoc8
+Te61vk0mlhuFXVyctpESqQ0n0YEg9T7dYj+SGJiGQQJ1EKUBxuMjvO2JKprpT1TH
+ZfsCAwEAAaOCA0owggNGMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBi
+MB0GA1UdDgQWBBS5ySEy32qxhCWj+uA2++OpxXiDjjAcBgNVHREEFTATghFpZGVu
+dGl0eS51Z2VudC5iZTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2lj
+ZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdp
+Y2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwB
+ATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgG
+BmeBDAECAjBuBggrBgEFBQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
+LmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNl
+cnQuY29tL1RFUkVOQVNTTENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAXwGCisGAQQB
+1nkCBAIEggFsBIIBaAFmAHUApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN
+3BAAAAFk+xVeQAAABAMARjBEAiBzO+4mQbatvwq+QWFbFNaXS1z3LvhYfsxGXrFF
+fZgBFQIgVPmCYMUu2jFfKCqJyEevX4ExU86Q25BpIhIC/FCLNxYAdQCHdb/nWXz4
+jEOZX73zbv9WjUdWNv9KtWDBtOr/XqCDDwAAAWT7FV8hAAAEAwBGMEQCIC/MbTeX
+VqdhKJhjs/5jQaYAwCfMp/0F1Wd9TLS/lzs0AiB7iZs2OdDuDKvp/hNawy8Qvl60
+1vIVSQ+rxDI//h+NLwB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGF
+AAABZPsVX1sAAAQDAEcwRQIgLB8zCoqnQ0JiG9vzzSEZM0VMEamXbcBU3jbfMfqB
+JfoCIQCZg5e8Jpi9aNxWSi3pJafwq22ap4LMbNM+t7vLSdDy1zANBgkqhkiG9w0B
+AQsFAAOCAQEAjlwlnDPfkPADsiFYiHAthgC0CsPydjsKvxHoHoLadaN2URE6T/Y4
+7CGg854zLc7lS8eVUNGwizxvYz7G/eAIShG5gcEtpdBRE0WigrGPDSgYJ0Q2aPeL
+KjPjjQ+ocxwLQLNuDV65oKkryz9SfHcFNZvA1fkIFUfGMX/GS4q2FhHgfR+G2qXO
+ACi4ovjdNNtU8c6BYgSgIILb8dpMlHxSo3bsZCN/ugE9iai6k/xrnNDUarA3CNA4
+mRwK691muSnwoPDBHHiIXStZRHjt1Bc1E6/bD3pZy/b8GgSBCilUti+PSbU5olEr
+1SnHkRkATJgFU4N6dw+0ywCtdL1JF++LMQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGpTCCBY2gAwIBAgIQDyc0T7lRELLguH+jcrHBBDANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xODA4MDIwMDAwMDBaFw0yMDA4MDYxMjAwMDBaMGsxCzAJBgNVBAYT
+AkJFMQ0wCwYDVQQHEwRHZW50MRowGAYDVQQKExFVbml2ZXJzaXRlaXQgR2VudDEV
+MBMGA1UECxMMRGlyZWN0aWUgSUNUMRowGAYDVQQDExFpZGVudGl0eS51Z2VudC5i
+ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMkIIBPrfC+bJdACG9LC
+raoxf9OaHJdkMRFmNoF6kZagLlrL0mQA5WQKo3rRaN/NDPXThwC5Xn2sjxFPwaYw
+Fj+S9MxWhc0FrsmXBPSyTLixOxAJ2WaRVJK9dh2dvawz9bOhOhc86np1ussiM9S0
+mWN/txZHlTh7BmmQkHxRcdjIpMRDTCA5Sg4XKwKPPuA+l7hPB6vfIhVi2e/rTMFj
+GXU/4bt00GjW44kfvnNc6UqXX9WeQdQ+Bq6jaBN5q8R+Q0K2CgQYBG4ERDfNcoc8
+Te61vk0mlhuFXVyctpESqQ0n0YEg9T7dYj+SGJiGQQJ1EKUBxuMjvO2JKprpT1TH
+ZfsCAwEAAaOCA0owggNGMB8GA1UdIwQYMBaAFGf9iCAUJ5jHCdIlGbvpURFjdVBi
+MB0GA1UdDgQWBBS5ySEy32qxhCWj+uA2++OpxXiDjjAcBgNVHREEFTATghFpZGVu
+dGl0eS51Z2VudC5iZTAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuGKWh0dHA6Ly9jcmwzLmRpZ2lj
+ZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMC+gLaArhilodHRwOi8vY3JsNC5kaWdp
+Y2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDBMBgNVHSAERTBDMDcGCWCGSAGG/WwB
+ATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAgG
+BmeBDAECAjBuBggrBgEFBQcBAQRiMGAwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3Nw
+LmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0cDovL2NhY2VydHMuZGlnaWNl
+cnQuY29tL1RFUkVOQVNTTENBMy5jcnQwDAYDVR0TAQH/BAIwADCCAXwGCisGAQQB
+1nkCBAIEggFsBIIBaAFmAHUApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN
+3BAAAAFk+xVeQAAABAMARjBEAiBzO+4mQbatvwq+QWFbFNaXS1z3LvhYfsxGXrFF
+fZgBFQIgVPmCYMUu2jFfKCqJyEevX4ExU86Q25BpIhIC/FCLNxYAdQCHdb/nWXz4
+jEOZX73zbv9WjUdWNv9KtWDBtOr/XqCDDwAAAWT7FV8hAAAEAwBGMEQCIC/MbTeX
+VqdhKJhjs/5jQaYAwCfMp/0F1Wd9TLS/lzs0AiB7iZs2OdDuDKvp/hNawy8Qvl60
+1vIVSQ+rxDI//h+NLwB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGF
+AAABZPsVX1sAAAQDAEcwRQIgLB8zCoqnQ0JiG9vzzSEZM0VMEamXbcBU3jbfMfqB
+JfoCIQCZg5e8Jpi9aNxWSi3pJafwq22ap4LMbNM+t7vLSdDy1zANBgkqhkiG9w0B
+AQsFAAOCAQEAjlwlnDPfkPADsiFYiHAthgC0CsPydjsKvxHoHoLadaN2URE6T/Y4
+7CGg854zLc7lS8eVUNGwizxvYz7G/eAIShG5gcEtpdBRE0WigrGPDSgYJ0Q2aPeL
+KjPjjQ+ocxwLQLNuDV65oKkryz9SfHcFNZvA1fkIFUfGMX/GS4q2FhHgfR+G2qXO
+ACi4ovjdNNtU8c6BYgSgIILb8dpMlHxSo3bsZCN/ugE9iai6k/xrnNDUarA3CNA4
+mRwK691muSnwoPDBHHiIXStZRHjt1Bc1E6/bD3pZy/b8GgSBCilUti+PSbU5olEr
+1SnHkRkATJgFU4N6dw+0ywCtdL1JF++LMQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://identity.ugent.be/simplesaml/saml2/idp/ArtifactResolutionService.php" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://identity.ugent.be/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://identity.ugent.be/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">UGent</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">UGent</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ugent.be</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Danny</md:GivenName>
+	<md:SurName>Bollaert</md:SurName>
+	<md:EmailAddress>mailto:systemen@ugent.be</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Helpdesk UGent</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@UGent.be</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@UGent.be</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.www.kielipankki.fi">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://clarin.eu/category/clarin-member</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.kielipankki.fi/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kielipankki (The Language Bank of Finland)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Kielipankki</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Web portal of the Language Bank of Finland</mdui:Description>
+		<mdui:Description xml:lang="fi">Kielipankin portaali</mdui:Description>
+		<mdui:Logo height="58" width="300">https://www.kielipankki.fi/wp-content/uploads/KIELIPANKKI_logotxt_SU_EN.png</mdui:Logo>
+		<mdui:Keywords xml:lang="fi">Kielipankki, portaali</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">Language Bank, Portal</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">https://www.kielipankki.fi/language-bank/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="fi">https://www.kielipankki.fi/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="sv">https://www.kielipankki.fi/sprakbanken/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.kielipankki.fi/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="fi">https://www.kielipankki.fi/tietosuojaseloste/</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIF1zCCA7+gAwIBAgIJANTT5jZd8O1oMA0GCSqGSIb3DQEBCwUAMIGAMQswCQYD
+VQQGEwJGSTEQMA4GA1UECAwHVXVzaW1hYTEOMAwGA1UEBwwFRXNwb28xDDAKBgNV
+BAoMA0NTQzEeMBwGA1UEAwwVc3Aud3d3LmtpZWxpcGFua2tpLmZpMSEwHwYJKoZI
+hvcNAQkBFhJraWVsaXBhbmtraUBjc2MuZmkwIBcNMTgwODE3MTM1MDIxWhgPOTk5
+OTEyMzExMzUwMjFaMIGAMQswCQYDVQQGEwJGSTEQMA4GA1UECAwHVXVzaW1hYTEO
+MAwGA1UEBwwFRXNwb28xDDAKBgNVBAoMA0NTQzEeMBwGA1UEAwwVc3Aud3d3Lmtp
+ZWxpcGFua2tpLmZpMSEwHwYJKoZIhvcNAQkBFhJraWVsaXBhbmtraUBjc2MuZmkw
+ggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCkfDQwkylGknxmX9P1oBAa
+0t5heQo3dpC+1UPUEP3xq5AuUhSkgvsHjidz6x+NtC6rw9Ger8eawe7gFcKIP59P
+96VtC/cgllYb90h8sNmMuudDfEvS/5iWELFNso622lEgILddzYX5v2CG5w0Q9g9t
+lxUdlDqGisl037Cloe2x4WFhN5IyQa54PQQbVZCy9PswWZ4y5GbbjEDW/vQ/VTPY
+X1GG3elFNAERPsLctCUK0hesERtvKwiBaHqSc82OGq1J2ZKoZ83uGQNd5Ny/ZqAs
+k9zr3mx3UpJBVPHZSgE6tCAVRkxN3k9PXwj+de3ns1xeBi4ZcsS8/I+70zON0kEz
+PLQ/SqOoCSqjSZSoBD4bdq9K+As83uJ1dZf8ePJA3cs6Yukl1J4jdjlOkerBT7Vb
+gUx2alIse8S9qZqeC7g0LdHymzP/E1w2kLU7Zdi4nJyB28vlZChIj941naMLSjUc
+MJZKZvXk8GkM4Dej0SohTY/HRc08gGSrSvahQ5jf+zF53c18XIPeqEa/BPu33j5V
+uJZ0vdaPBcwZRX0aBA7g8kEL2ecUhN/Fbrl8GPkRpb0TrSEDfNJJ3TC5pFcglHWR
+WUhyq0s4WfVMCyiOEXeI2hEK6n3RefmGTidlOPwkoH0PPD56uvQfQqlK59J1+Ov3
+Fm8TnhBNp+DhdT99qw5CxQIDAQABo1AwTjAdBgNVHQ4EFgQUWxNsVz6EzAb3usof
+psRIKDozkscwHwYDVR0jBBgwFoAUWxNsVz6EzAb3usofpsRIKDozkscwDAYDVR0T
+BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAgEACkNlV3KAwIhJWPnOz9Fx/4SUKxPw
+Lx3Fg4HNRM73Ij5PEtXNxfAf3LiO3om8//L1iwwjl2r2UoGSgQXunLSMUy1bDT0a
+SHCpadq+JbaE2bDK1jUGTEaETrGtlm0PEc6ZKE2QpoQPhiWHB0Yxi/8EYJlKH2PP
+cTO+kfZjGUqhDm9hNL6zC+k3dPQhNq4rUkRCwmsXhHHHwj3xU3qopZsFG2DkA/rP
+lotRiqAH/UFVGrK3eD6m9J/N4qHa4qjmtvqi7i48zopZqneeeshdYkYhq6kKJrZP
+lvsYK16PvWT9qAuetCJqtExRDu2LgwKmprQMRmsdqze0S1bBaz2mFOK0ufXah7aB
+y3baZwohK1+KoTqOZQziXM4UiMqefQZoA+JcSfJ7I6NrmvO9BKh/oKbHKw+IWULm
+N7iUQp3Weil8RtlEiDPH1aSzvZbCELDDkTWECf96s6bczpA1UwgWb5/J6ZTthVd4
+BrxUzix+gsJObUcTG2Dd3JXXfDMNvM4yRNWE67Qw0HkSGPkxjwOuglI+exorWOy0
+sFYRL/6CK6bushrJWykVgFNvxOsapqdHU3pez3CjjHh/7eUmUxh/Ooayl+k23NlH
+2j8fYJjYVFtSQH9PcXFdYC0NZzudbCnllTfjF0cZDEhuISZt///HxCbGM+Q+2V9x
+EJz+MNHOsjE66B4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.kielipankki.fi/Shibboleth.sso/SLO/Redirect"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.kielipankki.fi/Shibboleth.sso/SAML2/POST" index="1" isDefault="true"/>
+	<md:AttributeConsumingService index="1" isDefault="true">
+		<md:ServiceName xml:lang="fi">Kielipankki</md:ServiceName>
+		<md:ServiceName xml:lang="en">Kielipankki (The Language Bank of Finland)</md:ServiceName>
+		<md:ServiceDescription xml:lang="fi">Kielipankin portaali</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Web portal of the Language Bank of Finland</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">CSC - IT Center for Science Ltd.</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CSC - IT Center for Science Ltd.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.csc.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.csc.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.csc.fi</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Krister</md:GivenName>
+	<md:SurName>Lindén</md:SurName>
+	<md:EmailAddress>mailto:fin-clarin@helsinki.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Martin</md:GivenName>
+	<md:SurName>Matthiesen</md:SurName>
+	<md:EmailAddress>mailto:ling-admin@listat.csc.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Tero</md:GivenName>
+	<md:SurName>Aalto</md:SurName>
+	<md:EmailAddress>mailto:ling-admin@listat.csc.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

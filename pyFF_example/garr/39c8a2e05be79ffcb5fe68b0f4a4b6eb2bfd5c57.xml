@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://sts.statsbiblioteket.dk/adfs/services/trust">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.wayf.dk" registrationInstant="2015-06-03T11:53:23Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wayf.dk/sites/default/files/uploads/PDF/MDRPS.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">statsbiblioteket.dk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="da">Statsbiblioteket – ansatte</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">State and University Library – employees</mdui:DisplayName>
+		<mdui:Logo height="23" width="250" xml:lang="da">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAXCAYAAAAiNlJhAAACNWlDQ1BJQ0MgUHJvZmlsZQAAeAGtk89rE0EUx79JDjUS4m/B2ypWBKOkLYUGL2nSpk0b0iVJ0fS22R/ZaLJZdjdRiwdPnvQ/qBfpQfDgVYtIQA9e/AGKFLx5McfgoQpa1jc7TuKhxYtveTuffft9b97OzAKRvmLbzTCAluU5pYWMdLW6Jo1tI4pDdEVxQVFde1aWCyTZx3Y+IcRefbjIauUGqZ3e842tTO/h14PV98V9kkQ47tCEQChBgeN1zmnGNc4Vxjc82yONyVg1FY34NnHCqZSyxI+I43XOTxnXOL9m3FXrLHebOGlpDQsIHyCe0XRXJU4Tq5qrtog3iX+0Wm2qH9kgPq/aDuVGXhGfZetCI1n3HnD5I8Xvj2Jr1M+TGHDy7ig2/hY4UQWexUaxwbtgrUKnjrjG1GRQLhR/DIyd9v1vbSBK/mvB93/Kvr9LPURonhd9teN0Ay19SOgNNfyPZ/7NvDrQ46nBHu3NfF0CWRLYJFGZfIkCD8jHvwPHPgMraaCSRtgwhPM1JAk1vihLhYnUNOX/X2s1O7RPgR2le8yqFVdoPEzetz25ItjtlucFG41cXrCmzC0LXjez7DwGuYaTKwm+pizJgnVrtSzYbgbn/s9cmaFed+eHmnWzckXonU5pVfD19vJQr+lzw96sZpH9S0HNhpcf9o9FyJBQwARSmEaSn0NS4swAONdn9HLryx02/m2eftNjz9m2fctp1E1PmqW/UE9IeUu9lJAmk8kZ/AbYba/0g6bwKQAAAAlwSFlzAAALEwAACxMBAJqcGAAAGIRJREFUeAHt3AewZkWxB/DZXZKgIlEUlIsBM2YxlSLmHMC4oChGLEyFOWOpr7DMGbTEhLnMllmoMoI5R1gwgKgsEmQJu77z62//l+Hsd/d+dxHrvSp66zthTk93T6fpmXPuLvv3AO3/CBBl2bJlC0qz2PMFO16GDxaTabHni4m2lP5Lwe35bmq/nsZSrpfCDy7YmF8shfdScWeRdRacpfK9tPhjmZYNDRsE+r/+9a92yimntDVr1rTly5e3KSiLysEwa9eubVe5ylXaNa95zbZixYqi0xsM3Z42XhdddFE7+eST2+rVq+vZFa5whbb77ru3K13pSvM8//a3v7VVq1bVc3T123zzzdsFF1zQ1q1bVz985ubm2k477VR4+MAjE/rwrn3ta5cDRQZ98D3xxBNLjs0226x4brHFFnVPtsBuu+3WrnrVqxZNbX/+85/bX//618IjyzWucY224447Fjqe5DzrrLPaH//4x+IdvUYfZMBvq622ale84hVLb+Gf/hdeeGHJzj7oAeNA42pXu1rbYYcd2rnnnls86CI4hbj+gC+d4rHtttuW3jwyNvzOP//86n/eeecVXfg9j+233/4SNsM7PMkHH6RPbGd8+UUu4zr99NPbX/7yl3bGGWc0/Y3fOIxn5513Llr6oYc2fvrQtWs/AGcMnukH4oNsGzpjfPf60AU59HHGi8/luTOcHXfcaZBzl6KHD58855xz5vWOljFtueWW5Wv//Oc/y09i1yI4OhgH2myz6667lm7044PR36hLtRuTfvDmBr8nN/zoZ+LJQ880EvTtb397e85znlP0tt5668axlgKYGBwB0XnpS1/a0AmPnpY2ShIcjPC+972v/fa3v61BavvTn/5UDvj4xz++3fa2ty2lavvIRz5STikBCLLvfe977fa3v305iDEY4KMf/ej5QOdUlPGPf/yjHXLIIZXEPvjBDxYfCvKMAzLqJz7xiZJdkmLgb3/72+1mN7tZBa9AYLxHPepRxYuDfvjDH27f+ta3itc222zT/v73v1f/hz/84e2+973vfDAZ3xOf+MR2wgkntOtd73rt7LPPLp7RAb0JJE5+q1vdqt3nPvdpt7jFLeaNRZ8vfvGLi98ee+xROv71r3/drnvd67Z3vetd7U53ulPp6+lPf3r78pe/3K5//euX4xlbeNCpQJKIjOke97hH8YIDBO2rXvWq9p73vKcchuOwh6T1gQ98oN3znvecDzp2ozMO/tSnPrUdd9xxxZOOTjrppKJ7zDHHVJKGSwZO7vonP/lJ++IXv9i++tWvln5NKgG82Bov8u25557Fh530x+dhD3tYJVr6ltTGgIdnv/vd7+rRd7/73bbddtu1u9/97pUornWta1U/fkIuwEfg/PKXv2yPeMQj2mtf+9p29atfvWQ84IADyr4CcO1Fa9tJq05qb37zm9uTnvSk8h12YFt+wDZFb93adsrJp7S3vOUtNYZvfOMbJbfneJFxMK7gKxnYgA+QWdw873nPa+9973vby172supPr/oleIdebUh11cZXyU1f73znO8t26Cep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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>statsbiblioteket.dk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICnjCCAYYCAQcwDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKQklSSzAwMTA3
+NzAeFw0xNTAxMDEwMDAwMDBaFw0yNTEyMzEyMzU5NTlaMBUxEzARBgNVBAMMCkJJ
+UkswMDEwNzcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDngretRPjv
+dPY63lVFdbRR0HvZt4etdlt/Dmrln7VVa8B9AiaWAhRgDFAXAxZD4KHAPl6Qdqmn
+Rfv3ZxKyA201YMasnsAdEzlpjKKjJJ65JktMdAIkRyAbZMyFhWpvhMBrRRgOR8N7
+Ixj6A14OHBk+99bqApLbB+RC7fnhQ10gTlIMcis2X/DU10Wy5LCHT8TYGdOHuSWs
+BaNXJ2G01WEHJXjKjmGN6yA18QPAU5uGWAjZMSztL+2Cu/pnxeU9UOQuxV4r6ECP
+gNpov6hpcC7fqA/NY3WJIv7+wKV2YtLHXEaLwPR+MhQr+LU+X/z5bvGCfGl0hqSf
+IAEz7ZGPbpfXAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJQlftoIWQSUKU5z/dow
+3fdIBs4DhZz3k+z1YylMh6TquvG1LOZsmtJdQ/CcyJTH8a5sfPeYqIvo/pBG3ND+
+kjIxeWVC+AHQacW5UPdLf/AUai9rTrm4WQ6Ku8j4miAexpb9m857m6QvcslId/U3
+/EIqSXIpuHhKeCGr/NNbk9bBTHlIMPBXBIaHa0c6gEufQsTi7yoTSxxjWZK+F7DS
+IJGJxPolKEuIb4r/Kk3NWI8QTVethcWkzuA7tRrgbzvLK9HV+yn+ldCu86v3fpdS
+1T53UTkM6WUWXWuWA1/pRQbsk685Et1XXZSZrTNlgQlTkdDzFQow3XuFitP8GNTE
+TQg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICnjCCAYYCAQcwDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKQklSSzAwMTA3
+NzAeFw0xNTAxMDEwMDAwMDBaFw0yNTEyMzEyMzU5NTlaMBUxEzARBgNVBAMMCkJJ
+UkswMDEwNzcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDngretRPjv
+dPY63lVFdbRR0HvZt4etdlt/Dmrln7VVa8B9AiaWAhRgDFAXAxZD4KHAPl6Qdqmn
+Rfv3ZxKyA201YMasnsAdEzlpjKKjJJ65JktMdAIkRyAbZMyFhWpvhMBrRRgOR8N7
+Ixj6A14OHBk+99bqApLbB+RC7fnhQ10gTlIMcis2X/DU10Wy5LCHT8TYGdOHuSWs
+BaNXJ2G01WEHJXjKjmGN6yA18QPAU5uGWAjZMSztL+2Cu/pnxeU9UOQuxV4r6ECP
+gNpov6hpcC7fqA/NY3WJIv7+wKV2YtLHXEaLwPR+MhQr+LU+X/z5bvGCfGl0hqSf
+IAEz7ZGPbpfXAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJQlftoIWQSUKU5z/dow
+3fdIBs4DhZz3k+z1YylMh6TquvG1LOZsmtJdQ/CcyJTH8a5sfPeYqIvo/pBG3ND+
+kjIxeWVC+AHQacW5UPdLf/AUai9rTrm4WQ6Ku8j4miAexpb9m857m6QvcslId/U3
+/EIqSXIpuHhKeCGr/NNbk9bBTHlIMPBXBIaHa0c6gEufQsTi7yoTSxxjWZK+F7DS
+IJGJxPolKEuIb4r/Kk3NWI8QTVethcWkzuA7tRrgbzvLK9HV+yn+ldCu86v3fpdS
+1T53UTkM6WUWXWuWA1/pRQbsk685Et1XXZSZrTNlgQlTkdDzFQow3XuFitP8GNTE
+TQg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://birk.wayf.dk/SLO/birk.php/sts.statsbiblioteket.dk/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://birk.wayf.dk/SLO/birk.php/sts.statsbiblioteket.dk/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://birk.wayf.dk/birk.php/sts.statsbiblioteket.dk/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://birk.wayf.dk/birk.php/sts.statsbiblioteket.dk/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="da">Statsbiblioteket – ansatte</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">State and University Library – employees</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="da">Statsbiblioteket – ansatte</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">State and University Library – employees</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="da">http://www.statsbiblioteket.dk</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://en.statsbiblioteket.dk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:appdrift@statsbiblioteket.dk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>WAYF</md:GivenName>
+	<md:SurName>Operations</md:SurName>
+	<md:EmailAddress>mailto:operations@wayf.dk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

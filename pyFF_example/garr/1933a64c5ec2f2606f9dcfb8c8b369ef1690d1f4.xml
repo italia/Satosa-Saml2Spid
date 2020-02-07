@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://fiuidp.fiu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://fiu.service-now.com/sp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fiu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Florida International University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://it.fiu.edu/index.shtlm</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://policies.fiu.edu/files/96.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="85" width="64" xml:lang="en">https://fiuidp.fiu.edu/idp/images/fiulogo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAM7rDFYiAD7ejQynyojPagGeGUuGMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmZpdWlkcC5maXUuZWR1MB4XDTEyMDMxMzEzNTEzNVoX
+DTMyMDMxMzE0NTEzNVowGTEXMBUGA1UEAxMOZml1aWRwLmZpdS5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCnubM4QbTQQYvUMNGlVB1uO4xwDlcy
+9tyXYqE4sjAFu/Fqjv+C4IkDD1BZy+pI+glAWgftq9Vox/dvC1oMcfuhSxAWB7st
++aBlKusubh7UAQs+2lym/x0i4E30OMrG2MAcO9pZoGJT+xiOTgba+Vd977KzZdOv
+o2wAvABy9dJmH+TboHR7w8AOgzQ/QDqOlTq75uMG5fuZhtRAULUKUsMG7niWQCXe
+Yf3zGE4hStEXos17DnFWzP7S+BZtaPShkPupLR7A23ZiEg8UMRNtdAzXl5ljbrus
+A6UgnbYslO3NTinTUlRzeB79P7iv3tGujsKEZBZM7jnbEaCnYOthhrwlAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmZpdWlkcC5maXUuZWR1hiVodHRwczovL2ZpdWlkcC5m
+aXUuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQ/EzTBahbswoM9gJhVbmdK
+LzJsBjANBgkqhkiG9w0BAQUFAAOCAQEAE/oT8PSELMiKXo9QKG3YiHY5+2QxQBs2
+hqUI3HpTrRCegfQMc8ymCp3nWU6MMa/R2JxPyekKHTCJyrBvYv8FT/sBPnRXXLHV
+bfZk10puNnuILfkT8vsdd3fBJ1/dBWd2Aop5axWdPCse2zB8ChJ1ImrhCu8fhI1T
+H4Rqr8AkOIuUXRvDvlOj6PUP6J1luFFcQZl5v+uREv5Pih8W5NhKY+ENPrFX2g59
+iWZ7NojDxss/TtqsvGDbMHlt3PNg/FC6rHlcW9gH0qudXf1wLh8u+quX/7mGGvIv
+FfPU6B1stKoyNoo42HbUm+KOc8S3L3yaxGZfWtL8kNhY0hSXrYI13w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://fiuidp.fiu.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://fiuidp.fiu.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://fiuidp.fiu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fiuidp.fiu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://fiuidp.fiu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fiuidp.fiu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fiu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAM7rDFYiAD7ejQynyojPagGeGUuGMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmZpdWlkcC5maXUuZWR1MB4XDTEyMDMxMzEzNTEzNVoX
+DTMyMDMxMzE0NTEzNVowGTEXMBUGA1UEAxMOZml1aWRwLmZpdS5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCnubM4QbTQQYvUMNGlVB1uO4xwDlcy
+9tyXYqE4sjAFu/Fqjv+C4IkDD1BZy+pI+glAWgftq9Vox/dvC1oMcfuhSxAWB7st
++aBlKusubh7UAQs+2lym/x0i4E30OMrG2MAcO9pZoGJT+xiOTgba+Vd977KzZdOv
+o2wAvABy9dJmH+TboHR7w8AOgzQ/QDqOlTq75uMG5fuZhtRAULUKUsMG7niWQCXe
+Yf3zGE4hStEXos17DnFWzP7S+BZtaPShkPupLR7A23ZiEg8UMRNtdAzXl5ljbrus
+A6UgnbYslO3NTinTUlRzeB79P7iv3tGujsKEZBZM7jnbEaCnYOthhrwlAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmZpdWlkcC5maXUuZWR1hiVodHRwczovL2ZpdWlkcC5m
+aXUuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQ/EzTBahbswoM9gJhVbmdK
+LzJsBjANBgkqhkiG9w0BAQUFAAOCAQEAE/oT8PSELMiKXo9QKG3YiHY5+2QxQBs2
+hqUI3HpTrRCegfQMc8ymCp3nWU6MMa/R2JxPyekKHTCJyrBvYv8FT/sBPnRXXLHV
+bfZk10puNnuILfkT8vsdd3fBJ1/dBWd2Aop5axWdPCse2zB8ChJ1ImrhCu8fhI1T
+H4Rqr8AkOIuUXRvDvlOj6PUP6J1luFFcQZl5v+uREv5Pih8W5NhKY+ENPrFX2g59
+iWZ7NojDxss/TtqsvGDbMHlt3PNg/FC6rHlcW9gH0qudXf1wLh8u+quX/7mGGvIv
+FfPU6B1stKoyNoo42HbUm+KOc8S3L3yaxGZfWtL8kNhY0hSXrYI13w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://fiuidp.fiu.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://fiuidp.fiu.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Florida International University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Florida International University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.fiu.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>idpadmins@fiu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>anu chirinos</md:GivenName>
+	<md:EmailAddress>anu@fiu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shibboleth Support</md:GivenName>
+	<md:EmailAddress>idpadmins@fiu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shibboleth Security</md:GivenName>
+	<md:EmailAddress>idpadmins@fiu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

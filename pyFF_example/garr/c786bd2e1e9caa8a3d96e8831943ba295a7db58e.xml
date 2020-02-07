@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.lynda.com/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIJAMLZrCd7zl9XMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDXd3dy5seW5kYS5jb20wHhcNMTExMDIxMTQ0OTE5WhcNMzExMDE2MTQ0OTE5
+WjAYMRYwFAYDVQQDEw13d3cubHluZGEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA6j3DFreCqV2jROA5Y0LR/q5BCpbI3NmdMyq5wF0CbkZOfp/s
+rnGyK2Xf6EdidAwGe8E2DwzvQpQHcs3iUb9jyaep8uo4Vkih8UTuO5G7+iZGprYI
+6qi83uH0euXoCmH7Z0iiFsyYrtnzmxWzGYYiFyXS0/7HaGBnWgXrMCqs5e0VZO0I
+uYn58OC4HR4Ydx7S11CwV8l/3Yuf1iESuT8718ik2N6xGEY+yAe1GB/QT/GVzuel
+4R7y+Aas9Gl+6SgvY1Mkxo7iqERx+viGY3sWLzMuQblC4+pCrKU6AeK4Exs+NxWL
+HT+/B4ADE+vdSF4L6r/D2CBw/kog7x33ociv2QIDAQABo2EwXzA+BgNVHREENzA1
+gg13d3cubHluZGEuY29thiRodHRwczovL3NoaWIubHluZGEuY29tL3NoaWJib2xl
+dGgtc3AwHQYDVR0OBBYEFE7TaeX7Yg7gEyzogSoL4g+zg2EzMA0GCSqGSIb3DQEB
+BQUAA4IBAQCeIHAuamRAKxlbCsSi8xqG9KrFgCA75JhT1eJqkM1IofR0Ylx5fLnp
+Qi99/vxNtqfPLCvFBEIkOjKy1INVM8rjkz2koMbLSQuyM4e69P3Xdd691sceFgMb
+f0T7vMGKHoRElMWERg4VPjYA7vQaVQ+DWV+WPhHILmCBkKXI4ja4p4pW3NWBU96E
+ooh1dyZQJXIr1k+cKdlHm9q8QtJfE7O6dZsm3aKBwQVkOuwZnv7lL8/ePgxp/bDv
+oaHoiht2caAGV9kXMykmV7dAK/qQlkGz1l1/3r+EN/NorVNj2KXJNH6Ut/0rp9o1
+TJM9F1C2c+z/p0fksgBV2U5qy5W32bkU
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.lynda.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.lynda.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.lynda.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.lynda.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shib.lynda.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.lynda.com/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.lynda.com/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.lynda.com/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shib.lynda.com/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.lynda.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.lynda.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shib.lynda.com/Shibboleth.sso/SAML2/Artifact" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shib.lynda.com/Shibboleth.sso/SAML2/ECP" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shib.lynda.com/Shibboleth.sso/SAML/POST" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://shib.lynda.com/Shibboleth.sso/SAML/Artifact" index="8"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lynda.com</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lynda.com</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lynda.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mike</md:GivenName>
+	<md:SurName>Flynn</md:SurName>
+	<md:EmailAddress>mailto:mflynn@lynda.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mike</md:GivenName>
+	<md:SurName>Flynn</md:SurName>
+	<md:EmailAddress>mailto:mflynn@lynda.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

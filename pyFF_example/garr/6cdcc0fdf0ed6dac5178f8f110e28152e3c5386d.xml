@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cnwl.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-02-22T16:13:14Z"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">College North West London</mdui:DisplayName>
+		<mdui:Description xml:lang="en">College North West London</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">cnwl.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUEJciO46aX1zd30VubLZW8mTbPWcwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmNud2wuYWMudWswHhcNMTMwMjIyMTM0MTQ2WhcN
+MzMwMjIyMTM0MTQ2WjAZMRcwFQYDVQQDEw5pZHAuY253bC5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKw5eKNDVnIjYE4C57t/K2+u+4c/tirp
+rk9ozEGO0JCSnCq+GcxJm5Mfxs5sM6u919g7BOZZU5zm5sykEvhM1YonMcjzcBsd
+EHVs78c9Nlv6ZueO5923ArCYybTPTpqZWr9px0XdltBkLafFOWPUt3mUVUglv6X6
+esMQaiDPAbrG+Nvdo0ZbnlA5tBy7WMNEk6SyB0VhxIN3KDWsTi39tRpNVaroO+VG
+pdrC31S4g5aropb/27kOTIltrxVokJDLHjo0PMO2o2eKLZvtgYRnL8/XTTXexZyy
+U85U3G5zPw2jptUHHx1W9Ojs/9rUsp61znAJEXfgMS5iQLl2JwA9EsUCAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLmNud2wuYWMudWuGJWh0dHBzOi8vaWRwLmNud2wu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFBWW2Q/zTBI5/JWM/SHx/Kg2
+YRleMA0GCSqGSIb3DQEBBQUAA4IBAQAFcWzf6iOnJGNSlIOCJjj6aOoM3wNqLZ7s
+WAtBhxVb+w2vs5w2mTrgpj24wbfpyQVhCrQjUFLdVmOqyUlpF9A/kJOgUYuq5JZa
+GeJy1cwl1CdVtzsZ7UZPz6ToC97uVuhKiVevPoAmaJ+zDiFdVPBiTmkOz7nMZnCt
+5PqDYeRNAlFDTx0nQ1WjaPuwWBhdii3EaHLQWrFPN6dfoxX6YPtboQKZk9b3/r7N
+WzPw4pujvskfh9Hw6/3ghnooiV9ZYq3SrpCB8m+xj78CoSz6FPXKvFoQGEKPbOQn
+8Ava86ENk3hQjKbGmaS8RNl6EtCrQNiAaBNYx1xlAoP3IZ+nO1h9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cnwl.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cnwl.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cnwl.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cnwl.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cnwl.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cnwl.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cnwl.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUEJciO46aX1zd30VubLZW8mTbPWcwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmNud2wuYWMudWswHhcNMTMwMjIyMTM0MTQ2WhcN
+MzMwMjIyMTM0MTQ2WjAZMRcwFQYDVQQDEw5pZHAuY253bC5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKw5eKNDVnIjYE4C57t/K2+u+4c/tirp
+rk9ozEGO0JCSnCq+GcxJm5Mfxs5sM6u919g7BOZZU5zm5sykEvhM1YonMcjzcBsd
+EHVs78c9Nlv6ZueO5923ArCYybTPTpqZWr9px0XdltBkLafFOWPUt3mUVUglv6X6
+esMQaiDPAbrG+Nvdo0ZbnlA5tBy7WMNEk6SyB0VhxIN3KDWsTi39tRpNVaroO+VG
+pdrC31S4g5aropb/27kOTIltrxVokJDLHjo0PMO2o2eKLZvtgYRnL8/XTTXexZyy
+U85U3G5zPw2jptUHHx1W9Ojs/9rUsp61znAJEXfgMS5iQLl2JwA9EsUCAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLmNud2wuYWMudWuGJWh0dHBzOi8vaWRwLmNud2wu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFBWW2Q/zTBI5/JWM/SHx/Kg2
+YRleMA0GCSqGSIb3DQEBBQUAA4IBAQAFcWzf6iOnJGNSlIOCJjj6aOoM3wNqLZ7s
+WAtBhxVb+w2vs5w2mTrgpj24wbfpyQVhCrQjUFLdVmOqyUlpF9A/kJOgUYuq5JZa
+GeJy1cwl1CdVtzsZ7UZPz6ToC97uVuhKiVevPoAmaJ+zDiFdVPBiTmkOz7nMZnCt
+5PqDYeRNAlFDTx0nQ1WjaPuwWBhdii3EaHLQWrFPN6dfoxX6YPtboQKZk9b3/r7N
+WzPw4pujvskfh9Hw6/3ghnooiV9ZYq3SrpCB8m+xj78CoSz6FPXKvFoQGEKPbOQn
+8Ava86ENk3hQjKbGmaS8RNl6EtCrQNiAaBNYx1xlAoP3IZ+nO1h9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cnwl.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cnwl.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">United Colleges Group</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">College North West London</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cnwl.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Overt Software </md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Overt Software </md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.umes.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">umes.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Maryland Eastern Shore</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://sso.umes.edu/idp/shibboleth</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.umes.edu/Registrar/Pages/Student-Services/Confidentiality-of-Records/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="115" width="209" xml:lang="en">https://sso.umes.edu/idp/images/UnivES_w-rotunda_202-gray.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAOQPkpf+vpLiNlvX7lfqY/9YL8PeMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDHNzby51bWVzLmVkdTAeFw0xNjA5MjIxODAyMjFaFw0z
+NjA5MjIxODAyMjFaMBcxFTATBgNVBAMMDHNzby51bWVzLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAIKDvtfmhu1eSTtoHsDBWamICI8cWSObVJJK
+/ccVenJ/bHP7BLowg8gKy+2gU56/3Ku0dPoGo/FxB5etPFaDD5mINu3iGmfFrwnn
+KrEoiOFzGpzZDEB2mFkTKf2G2EzofcZdlnNySeNAuvjwNqFh2ZP6bFRFFsE2l43z
+PWcCuvbNccceaT5xONgdQyAXiwIK9vItT9PSRn2g5I75juIju2iXDrxb+EYrQas/
+8E6wYMDk733+NdM6jUlQGHYvQdAMDGpe49aBoCCjhiX7CiHuzy0arE/MGPVFhzrC
+EHY7Img9T8c3xM26Jl9l6GK4c5GyMx/y5U0iOpwSl2nKcS6NGT0CAwEAAaNfMF0w
+HQYDVR0OBBYEFHKsfiMhYcpl1ndQa9a2L0fNXE80MDwGA1UdEQQ1MDOCDHNzby51
+bWVzLmVkdYYjaHR0cHM6Ly9zc28udW1lcy5lZHUvaWRwL3NoaWJib2xldGgwDQYJ
+KoZIhvcNAQELBQADggEBAFa4/ooNnRO1DXTZ35mG7yslJU4QbFfLGXZExl1mXs9Y
+RS53wDbz/GSJWqZByLImGWB6L3bpffachGSD/69d4YWdJneyvqJ3PEhU/i3Z4COS
+Yd8WAhyZqhmoAs2x4bs7SgxjhF96ISQ8c0CTGv+lt1mDVER7G9XQFaioEPQyHl50
+aAO5791lpaPW5jSS7hU7RBnOSqBi23wVw6pWERm5fUkGS6peMyeDnUM2l1q+KBej
+yYT29sjQqIxj/WrDb9bjFJWtLc61dKMApO8CRib3gnqpEEIfhJ1yEu7ADLVWxMkL
+eEfbOXENtFfnkTUcomVv6z8DCSMoXXqJojk5A1nPjFs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.umes.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.umes.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Maryland Eastern Shore</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Maryland Eastern Shore</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.umes.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Joseph Smith</md:GivenName>
+	<md:EmailAddress>jrsmith@umes.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Martin Perry</md:GivenName>
+	<md:EmailAddress>meperry@umes.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Martin Perry</md:GivenName>
+	<md:EmailAddress>meperry@umes.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Martin Perry</md:GivenName>
+	<md:EmailAddress>meperry@umes.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

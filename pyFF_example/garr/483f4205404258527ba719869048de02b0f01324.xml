@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://lists.gw-astronomy.org/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://lists.gw-astronomy.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Gravitational Wave Astronomy Community List Server</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Gravitational Wave Astronomy Community list server used to support collaboration across astronomy and astrophysics projects.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://gw-astronomy.org/lists/sp-info.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://gw-astronomy.org/lists/ca/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://gw-astronomy.org/img/gw-astro-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEMzCCApugAwIBAgIJALBQLprXN+NkMA0GCSqGSIb3DQEBCwUAMCAxHjAcBgNV
+BAMTFWxpc3QuZ3ctYXN0cm9ub215Lm9yZzAeFw0xODEwMDIyMDMxNDlaFw0yMTEw
+MDEyMDMxNDlaMCAxHjAcBgNVBAMTFWxpc3QuZ3ctYXN0cm9ub215Lm9yZzCCAaIw
+DQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBANHpRJljDcPZQQ5FN+rObQ0FUs0W
+WFG+P/NyZHIcUy5061G+xH0S5y45B5mZ7XzXPo5t5TDYv+p8Ykg0Smmx5k5e0XmG
+aL7aqfFGjG1WKjB8p29oURuu13zvjE0NTzoLSjlybWj44iAsF+jWEoS24S9hmR5t
+wASqjQMnx0nuHptGXNwK+hEuwUKFg1kH0VmUguXjkAxsJlleSO5jx6+4jRxXJXeM
+3UfXY3BDDa9lN+o3FgCyV6/69PQdFBy9hrKohAn9fk3siZw9LomKKZ2fnkA1ov6L
+qars1VB7zHWxjsfldM08v5vUPz0DojVatB2pwXiPhwIQPObnM6uORU+CyepEeWFw
+33hfIbEowMLigQQRjeNcFElZ9+qj4ixuESi0g9gKCVw9Dv63wGNmHEELoiStUcWa
+/VAM/IS2FoAgdin/YBRw5DldA5CKet0recOFm/aPowMhhF6Se7BLVGvF9gKijPM0
+wzFmktiTdRzFFGZiYZKC/EMzY9Ww9+WFT3KQAwIDAQABo3AwbjBNBgNVHREERjBE
+ghVsaXN0Lmd3LWFzdHJvbm9teS5vcmeGK2h0dHBzOi8vbGlzdC5ndy1hc3Ryb25v
+bXkub3JnL3NoaWJib2xldGgtc3AwHQYDVR0OBBYEFNngHaIrX4RTRQxi+vIOwi3c
+LkQPMA0GCSqGSIb3DQEBCwUAA4IBgQBbbfGgn0YbPa5am6caCyiLe7kmeXzhYYYR
+UXXa4Sd7w4Lv6fVcBbn4Xy14b/FervlnrPM3paNTNZ2+suD38wVZ6F/TlQYyLeWn
+r2x1+rZYPyA7Kc1TNSMts4rmn5RHxNVQHsWRz66mY0fyetBtfqMKPlAbKebr1PRl
+A6Ml4rj+jURak006sZY0u+4SULxli5UDVvyOGxpAGG7n6Mg1GlioZ9/YR1en2m14
+QsvKqCtP4r2YDHtE8nRl1/bshzN3o1t4BWxoNvSdtleh/QAtQ2DFLXnR5tCjSnIb
+Flp6ythpF2PqMocnfZDwIhgBd/wwWvReTUA8J5Lp7gjMNXkm4g0nFhWGHM1Cce1O
+QJyPeLH6LzSZbCY5ZguDW5sxmo8zsiNs0AWA0tlsXTAYEOGyski7nWVaSSI+mGz0
+kFpNCrOqQesEC4GlIV6kxFoa3Y7Bayhr2TI+/+MiVDka6CQNf5bTiHoC8T5a3yOS
+0CnYiz1VRel2w6SAEmWvcBtLtD0ARYE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lists.gw-astronomy.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://lists.gw-astronomy.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://lists.gw-astronomy.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://lists.gw-astronomy.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Wisconsin-Milwaukee</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Wisconsin-Milwaukee</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uwm.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Warren Anderson</md:GivenName>
+	<md:EmailAddress>anders15@uwm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael Manske</md:GivenName>
+	<md:EmailAddress>manskema@uwm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LIGO Scientific Collaboration Security Committee</md:GivenName>
+	<md:EmailAddress>lsc-seccomm@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UWM CGCA Help</md:GivenName>
+	<md:EmailAddress>uwm-help@gravity.phys.uwm.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

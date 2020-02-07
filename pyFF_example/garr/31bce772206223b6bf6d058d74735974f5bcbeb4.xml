@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.inrim.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2019-12-12T12:52:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">inrim.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">INRiM - Istituto Nazionale di Ricerca Metrologica</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">INRiM - Istituto Nazionale di Ricerca Metrologica</mdui:DisplayName>
+<mdui:Description xml:lang="en">IdP for INRiM users</mdui:Description>
+<mdui:Description xml:lang="it">IdP per gli utenti dell'INRiM</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idp.inrim.it/idem/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idp.inrim.it/idem/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idp.inrim.it/idem/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp.inrim.it/idem/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="800" width="800" xml:lang="it">https://idp.inrim.it/idem/images/Logo_INRIM_16x16.png</mdui:Logo>
+<mdui:Logo height="600" width="800" xml:lang="it">https://idp.inrim.it/idem/images/Logo_INRIM_80x60.png</mdui:Logo>
+<mdui:Logo height="800" width="800" xml:lang="en">https://idp.inrim.it/idem/images/Logo_INRIM_16x16.png</mdui:Logo>
+<mdui:Logo height="600" width="800" xml:lang="en">https://idp.inrim.it/idem/images/Logo_INRIM_80x60.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:GeolocationHint>geo:45.014392,7.638524</mdui:GeolocationHint>
+<mdui:IPHint>193.204.114.0/24</mdui:IPHint>
+<mdui:IPHint>193.204.115.0/24</mdui:IPHint>
+<mdui:DomainHint>inrim.it</mdui:DomainHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIUFVJelB3z8mij6IWhnOBW/gn27sUwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MB4XDTE5MTAxNTA3MDgxOVoXDTM5
+MTAxNTA3MDgxOVowFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MIIBojANBgkqhkiG
+9w0BAQEFAAOCAY8AMIIBigKCAYEAoUHecX974aNrXh0PcyseH78ml8x4x70ZEUoR
+jugjvlV9uQarQguTh1DNb2MYTlslTLFG9PNfvxi7DAP4CZ+fHLdKFDMZArjzXE1k
+Wrg0ahJG7mikbDC/SdMViWGgBj5niMah2Yv6/z33ACYRdmGFck9T3D9JgUH317iH
+x8+oVenWm3A2ln0WPXvPPS39TAx1IZTPyZYMzI9LZ+MwnuyeuVf/cfZ1j9hTgmm6
+Yhl0wvjqLJSS3dU18hogRpQgkehlgN3Inqug5ZhEb6c0GbvqYo8LuHRAHEQrbbZ5
+HJtC0fQ64EoXXv3iRbjyRXAGLNP+Ori2j1po2giq1plpugbvw+/O5wmMERm1NBH/
+2QoQrfQpZBVDOjcE6VI1oz8PQdzhvOXDHBucsVYvY8C5v+aonSdWMS8qq5cUlV61
+JmNCp11ZCOyynh0PfqH/dS3TIeFT288E5NFFZi47vQJO7LQpSklbFSPfI5nUSGXm
+ITTnaukmelf6lenQuaicgYmI1uBJAgMBAAGjXzBdMB0GA1UdDgQWBBTZDgREGKty
+KRlfQZ/q7MGO0LQcBTA8BgNVHREENTAzggxpZHAuaW5yaW0uaXSGI2h0dHBzOi8v
+aWRwLmlucmltLml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQA7
+z3LeInaGctG9ttvbADWL5SJKF9uubPwpXOlIPYTXRPWUEiUvVkY1MxEtXBubsQIl
+v0vi3xroN9aR3pb1hK3nMv4NCNM4fHyxNYJHwOuadZXNfFSNeTB56MKU6aa9J2La
+YAS2o6zAWw8H5qLDdLQURzYpoV5jIYGQ88xS2ak++EicOE/DZrC6q8K5G/3Ft74f
+ToxQeh2YzZ7CKMCSxj4CQPCkJ2hCTjxYcEqBU6XF2Vf4BXT/RdvSzb1pNloFvRxy
+M8vAJmEV5mY58q3QjZmmSntzpeVS5luccc8zZnoTmHUfSzwFFxEU4j5bVFdphht4
+5hAtrQ/gWFEyi7dk4KbBVUozScqKN0kV2hnVQonIYNwsGVwrloZTUcdVLstQXqzW
+f0+elO1aDonzsURhjsWK/kmx8mNfSjkNG5mZDArWfrV9ul6OisFM5oKf5x9xXifQ
+1y6RVF5auQm+xQP1vVrfKJM0LTmyOkNAKjuH3y/5mJiA1sA7uf30xP2SUBG+wK4=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIUf2pm2xZDXlGi7265xxUeJ4UvMWEwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MB4XDTE5MTAxNTA3MDgxN1oXDTM5
+MTAxNTA3MDgxN1owFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MIIBojANBgkqhkiG
+9w0BAQEFAAOCAY8AMIIBigKCAYEAwo+MZH0nuHDGTeJ/2Bt+oXEgUeBV3oolxBL+
+Zm0ogEHixUAzgGyaDE+CAt4mhDyLkuzmijsVNMlT5vv2uaVeS6kDVABRu359lov6
+Lh4qi0p9yRaWuq7uSbL4sW1ozE5M8XMjKQ5LdU7LTNC8Vrmr6/bUKI8JeQFR5TFz
+P8ijdcAWajxpvJb4Hw1sUM8stcv0vMvK7yZOqsYOGzvbQ0Wcmh1Sj8bcuq8iHgyc
+DrJs6u69+Z9Mwn8f8R3Q5ZenqY77vI0lLtvBEoKd85d+oT7PqM5Q3g6NinA4gtg3
+j8nhWpx0ymQ4Z0rgGPX22mIXRrxHt4xlo7JCh9yNQ3Sxm3tOGCyJtQl2XmqINziD
+A+dfTrtbk4SGDFO9/S1sWdIhxYykrEMtdoOa3Tu1IIrDXitAWlW5brQHb4PQQNSi
+zYizf+81+Z7MrSvCHSCWeP1FkpBw6czRPyqxsZWjKm6QMuLwhnHcQkiAOxjOF3oP
+Q2y3EoQmjncPtiHaXtqSMUzi2WWDAgMBAAGjXzBdMB0GA1UdDgQWBBSqReq4nPnG
+HZUFiPVLGCu+07RgVzA8BgNVHREENTAzggxpZHAuaW5yaW0uaXSGI2h0dHBzOi8v
+aWRwLmlucmltLml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQCa
++At7GW1d8XeB/I5Qes0gTlAuD9zbk0IjZojUkmFa+HyP5nFCfswZV+xPcR5jaokY
+uDIE1/JogwKGtwCAf+nI2h2QMeV+RiauUiwtO9YUbkK35q0xHUt2eqfbqTA/yYhY
+x3KOyl/2J5REzkhkF0nT+f73HYgNyDBdWRDW97jqwerhnMqCtOdDMXNaAg3ANQCS
+OAxnXzJdsiMx53EXjShI/mu8ChYypmSFFs23ZWi0xKAQs+btDIUjw82xp73i5gio
+WxV8dihuahshkI1jhdcRX4S+xsR6T3BMbtHEiGtr2Gv9Oh5pzn1oPZUuVAnIaDmt
+ZKC2M9KxlWD0b9qmrTHCXsHKFV9F84FZdsaJIcEnFfVd3urGkgYT+NgMZgKuPFhj
+mcU0v27Wx2+1oj7+8AOVblpnl+2WvLOfMMJaYxM5NU1JxFI0ffZhadpwco4jI3be
+Lc0uweBLetBtOxnJvlNyQ9P0H6zre/tsb0HpW/ErqF1/DROIpNmyVhtQEABHCSI=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAPuFGZpue+7W6IKNE+X84b3ta3BqMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5pbnJpbS5pdDAeFw0xOTEwMTUwNzA4MThaFw0z
+OTEwMTUwNzA4MThaMBcxFTATBgNVBAMMDGlkcC5pbnJpbS5pdDCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAJPndlLzNkI+ra1eeiJGBd9wDIMAsdnVYsrO
+2LwyP/EegdGikmyjgLulMCEuxkxSOHPqpUothBUW39EaPmb9En9B6R1UQt716x3e
+Eertcxv3FEpTWfosp2sWPvBy8ldQayyo9f9Fe7OgBqMFeZ63Of4RcUPHoOjQP3mW
+4d9RiMfbR0pMyvsHCVzpNkD7LqibV8wAqrHyFywm3gnNbc9Hs7x3NVuVPf8ypi+1
+h/2DK0o5lbP/UGXmZNHkHYIzpA9HwrVAEDUzj8HW+JcVfr9jLXqXBGmlZRFJX++4
+fpgR7l/GeIWJYciR/IR3LwqeeoGatRGS4PDvbVeb7vHLW4DUkUqYnkpqgyCCMxZD
+WsKP8buiXYMoeJT54IMQtFXZC0CI9nxXTVyFz6BXX8+E4tL74hICs21xdSx89Lay
+oUKvuyJFBxF7J4xVkyHQ3VbYzaKDjnO4+GElbPoJOuK7R3u5YS31KiEHcfkwP9KA
+9JaYpNJ2BqP6LnojNsoFBjgideOadwIDAQABo18wXTAdBgNVHQ4EFgQUCL/2Q4po
+M8k4hhSB5S7Ad8D4MlgwPAYDVR0RBDUwM4IMaWRwLmlucmltLml0hiNodHRwczov
+L2lkcC5pbnJpbS5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+i3YEwFVgM2cyWqvwwwAA2oXRpzdm/Z/hIrAQMG0LeBavBFuXi9Li0SLitq1boDhY
+5ZYA04eXKPBKcuDsFAM1lFuP0jrSmaTVGVMeUpVpmUgw1XMO90mQLSvlbZYELG0b
+grMUvb5oRIMtt+d4rMtCB4ACVaICtt01iMUvPLyfzhfSripCJ63aMhiZNtnesqaZ
+97EdJPaEbHqw7zaFBKv+ddXFOUHukB24TfijDRtUoShMrQT6iJ2M7PCgH72kpv60
+P7RP3UCQWD3XJfqcMn0t6R/IbnGGzj/Z+ZV0iqKXo69oDWKxkAu7JrBWRffP2zDa
+vDTq59e0pTvFL8u1i4t4YVOdQR3AW886HgvIJrUmUTr1ors+OJQG9aBTIRWlay4M
+Oq2xn5mHnjWTC+jq6chw1/HIcF3X+iHgBFTo2fbcEikKTvcyz1LuCEro2nXYjm17
+q9uOZn/5shC8YYdxg4f70OsPqx7cl0CJH1EMEGri3cCJZZWPWxlxHzM/QN0SYHcA
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.inrim.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.inrim.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.inrim.it/idp/profile/SAML2/POST/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.inrim.it/idp/profile/SAML2/SOAP/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.inrim.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.inrim.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.inrim.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">inrim.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIUFVJelB3z8mij6IWhnOBW/gn27sUwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MB4XDTE5MTAxNTA3MDgxOVoXDTM5
+MTAxNTA3MDgxOVowFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MIIBojANBgkqhkiG
+9w0BAQEFAAOCAY8AMIIBigKCAYEAoUHecX974aNrXh0PcyseH78ml8x4x70ZEUoR
+jugjvlV9uQarQguTh1DNb2MYTlslTLFG9PNfvxi7DAP4CZ+fHLdKFDMZArjzXE1k
+Wrg0ahJG7mikbDC/SdMViWGgBj5niMah2Yv6/z33ACYRdmGFck9T3D9JgUH317iH
+x8+oVenWm3A2ln0WPXvPPS39TAx1IZTPyZYMzI9LZ+MwnuyeuVf/cfZ1j9hTgmm6
+Yhl0wvjqLJSS3dU18hogRpQgkehlgN3Inqug5ZhEb6c0GbvqYo8LuHRAHEQrbbZ5
+HJtC0fQ64EoXXv3iRbjyRXAGLNP+Ori2j1po2giq1plpugbvw+/O5wmMERm1NBH/
+2QoQrfQpZBVDOjcE6VI1oz8PQdzhvOXDHBucsVYvY8C5v+aonSdWMS8qq5cUlV61
+JmNCp11ZCOyynh0PfqH/dS3TIeFT288E5NFFZi47vQJO7LQpSklbFSPfI5nUSGXm
+ITTnaukmelf6lenQuaicgYmI1uBJAgMBAAGjXzBdMB0GA1UdDgQWBBTZDgREGKty
+KRlfQZ/q7MGO0LQcBTA8BgNVHREENTAzggxpZHAuaW5yaW0uaXSGI2h0dHBzOi8v
+aWRwLmlucmltLml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQA7
+z3LeInaGctG9ttvbADWL5SJKF9uubPwpXOlIPYTXRPWUEiUvVkY1MxEtXBubsQIl
+v0vi3xroN9aR3pb1hK3nMv4NCNM4fHyxNYJHwOuadZXNfFSNeTB56MKU6aa9J2La
+YAS2o6zAWw8H5qLDdLQURzYpoV5jIYGQ88xS2ak++EicOE/DZrC6q8K5G/3Ft74f
+ToxQeh2YzZ7CKMCSxj4CQPCkJ2hCTjxYcEqBU6XF2Vf4BXT/RdvSzb1pNloFvRxy
+M8vAJmEV5mY58q3QjZmmSntzpeVS5luccc8zZnoTmHUfSzwFFxEU4j5bVFdphht4
+5hAtrQ/gWFEyi7dk4KbBVUozScqKN0kV2hnVQonIYNwsGVwrloZTUcdVLstQXqzW
+f0+elO1aDonzsURhjsWK/kmx8mNfSjkNG5mZDArWfrV9ul6OisFM5oKf5x9xXifQ
+1y6RVF5auQm+xQP1vVrfKJM0LTmyOkNAKjuH3y/5mJiA1sA7uf30xP2SUBG+wK4=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIUf2pm2xZDXlGi7265xxUeJ4UvMWEwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MB4XDTE5MTAxNTA3MDgxN1oXDTM5
+MTAxNTA3MDgxN1owFzEVMBMGA1UEAwwMaWRwLmlucmltLml0MIIBojANBgkqhkiG
+9w0BAQEFAAOCAY8AMIIBigKCAYEAwo+MZH0nuHDGTeJ/2Bt+oXEgUeBV3oolxBL+
+Zm0ogEHixUAzgGyaDE+CAt4mhDyLkuzmijsVNMlT5vv2uaVeS6kDVABRu359lov6
+Lh4qi0p9yRaWuq7uSbL4sW1ozE5M8XMjKQ5LdU7LTNC8Vrmr6/bUKI8JeQFR5TFz
+P8ijdcAWajxpvJb4Hw1sUM8stcv0vMvK7yZOqsYOGzvbQ0Wcmh1Sj8bcuq8iHgyc
+DrJs6u69+Z9Mwn8f8R3Q5ZenqY77vI0lLtvBEoKd85d+oT7PqM5Q3g6NinA4gtg3
+j8nhWpx0ymQ4Z0rgGPX22mIXRrxHt4xlo7JCh9yNQ3Sxm3tOGCyJtQl2XmqINziD
+A+dfTrtbk4SGDFO9/S1sWdIhxYykrEMtdoOa3Tu1IIrDXitAWlW5brQHb4PQQNSi
+zYizf+81+Z7MrSvCHSCWeP1FkpBw6czRPyqxsZWjKm6QMuLwhnHcQkiAOxjOF3oP
+Q2y3EoQmjncPtiHaXtqSMUzi2WWDAgMBAAGjXzBdMB0GA1UdDgQWBBSqReq4nPnG
+HZUFiPVLGCu+07RgVzA8BgNVHREENTAzggxpZHAuaW5yaW0uaXSGI2h0dHBzOi8v
+aWRwLmlucmltLml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQCa
++At7GW1d8XeB/I5Qes0gTlAuD9zbk0IjZojUkmFa+HyP5nFCfswZV+xPcR5jaokY
+uDIE1/JogwKGtwCAf+nI2h2QMeV+RiauUiwtO9YUbkK35q0xHUt2eqfbqTA/yYhY
+x3KOyl/2J5REzkhkF0nT+f73HYgNyDBdWRDW97jqwerhnMqCtOdDMXNaAg3ANQCS
+OAxnXzJdsiMx53EXjShI/mu8ChYypmSFFs23ZWi0xKAQs+btDIUjw82xp73i5gio
+WxV8dihuahshkI1jhdcRX4S+xsR6T3BMbtHEiGtr2Gv9Oh5pzn1oPZUuVAnIaDmt
+ZKC2M9KxlWD0b9qmrTHCXsHKFV9F84FZdsaJIcEnFfVd3urGkgYT+NgMZgKuPFhj
+mcU0v27Wx2+1oj7+8AOVblpnl+2WvLOfMMJaYxM5NU1JxFI0ffZhadpwco4jI3be
+Lc0uweBLetBtOxnJvlNyQ9P0H6zre/tsb0HpW/ErqF1/DROIpNmyVhtQEABHCSI=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAPuFGZpue+7W6IKNE+X84b3ta3BqMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5pbnJpbS5pdDAeFw0xOTEwMTUwNzA4MThaFw0z
+OTEwMTUwNzA4MThaMBcxFTATBgNVBAMMDGlkcC5pbnJpbS5pdDCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAJPndlLzNkI+ra1eeiJGBd9wDIMAsdnVYsrO
+2LwyP/EegdGikmyjgLulMCEuxkxSOHPqpUothBUW39EaPmb9En9B6R1UQt716x3e
+Eertcxv3FEpTWfosp2sWPvBy8ldQayyo9f9Fe7OgBqMFeZ63Of4RcUPHoOjQP3mW
+4d9RiMfbR0pMyvsHCVzpNkD7LqibV8wAqrHyFywm3gnNbc9Hs7x3NVuVPf8ypi+1
+h/2DK0o5lbP/UGXmZNHkHYIzpA9HwrVAEDUzj8HW+JcVfr9jLXqXBGmlZRFJX++4
+fpgR7l/GeIWJYciR/IR3LwqeeoGatRGS4PDvbVeb7vHLW4DUkUqYnkpqgyCCMxZD
+WsKP8buiXYMoeJT54IMQtFXZC0CI9nxXTVyFz6BXX8+E4tL74hICs21xdSx89Lay
+oUKvuyJFBxF7J4xVkyHQ3VbYzaKDjnO4+GElbPoJOuK7R3u5YS31KiEHcfkwP9KA
+9JaYpNJ2BqP6LnojNsoFBjgideOadwIDAQABo18wXTAdBgNVHQ4EFgQUCL/2Q4po
+M8k4hhSB5S7Ad8D4MlgwPAYDVR0RBDUwM4IMaWRwLmlucmltLml0hiNodHRwczov
+L2lkcC5pbnJpbS5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+i3YEwFVgM2cyWqvwwwAA2oXRpzdm/Z/hIrAQMG0LeBavBFuXi9Li0SLitq1boDhY
+5ZYA04eXKPBKcuDsFAM1lFuP0jrSmaTVGVMeUpVpmUgw1XMO90mQLSvlbZYELG0b
+grMUvb5oRIMtt+d4rMtCB4ACVaICtt01iMUvPLyfzhfSripCJ63aMhiZNtnesqaZ
+97EdJPaEbHqw7zaFBKv+ddXFOUHukB24TfijDRtUoShMrQT6iJ2M7PCgH72kpv60
+P7RP3UCQWD3XJfqcMn0t6R/IbnGGzj/Z+ZV0iqKXo69oDWKxkAu7JrBWRffP2zDa
+vDTq59e0pTvFL8u1i4t4YVOdQR3AW886HgvIJrUmUTr1ors+OJQG9aBTIRWlay4M
+Oq2xn5mHnjWTC+jq6chw1/HIcF3X+iHgBFTo2fbcEikKTvcyz1LuCEro2nXYjm17
+q9uOZn/5shC8YYdxg4f70OsPqx7cl0CJH1EMEGri3cCJZZWPWxlxHzM/QN0SYHcA
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.inrim.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">INRiM - Istituto Nazionale di Ricerca Metrologica</md:OrganizationName>
+<md:OrganizationName xml:lang="en">INRiM - Istituto Nazionale di Ricerca Metrologica</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">INRiM - Istituto Nazionale di Ricerca Metrologica</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">INRiM - Istituto Nazionale di Ricerca Metrologica</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.inrim.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.inrim.eu/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="support">
+<md:GivenName>Sistemi</md:GivenName>
+<md:SurName>Informatici</md:SurName>
+<md:EmailAddress>mailto:idem@inrim.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

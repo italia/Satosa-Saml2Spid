@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://irislogin.com">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Iris Services</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://seattletech.com</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://seattletech.com/downloads/IrisServicesPrivacyPolicy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="474" xml:lang="en">https://irislogin.com/Public/seattletechnology.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIQQ9cou0EJFYdKZ0mx/e4AdzANBgkqhkiG9w0BAQsFADAm
+MSQwIgYDVQQDExtTZWF0dGxlIFRlY2ggUm9vdCBBdXRob3JpdHkwHhcNMTYxMDEw
+MTI1NzAwWhcNMzkxMjMxMjM1OTU5WjAZMRcwFQYDVQQDEw5JcmlzU2hpYmJvbGV0
+aDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIdzdD3Sv7v78emUKeZV
+gx1phQ0349yBzefan7sFAbvnXzLz+tjD1s9lSRuqeJiOBeHIVyoQ8J5XuX7wXZms
+bgvst9EByD+dTFEg5osgh5R5iuqv3suLNSlkQbH8LtTaNDTbBNSh9Wp/MCoKNsFp
+JAG2Cm+/E4YEOHsTRDsKV6fep6AVxTj1KxN1mvMUGWnodjUYHqMLOTis2c1X23+7
+B5/ErR0Tf15kQ5oHsm/Cfp8NjDio7AFb5/czz7m0YNsl0ilXUwRg09jNRFw1EBJu
+eUl8OiWLQmHWD2TaDGwzoQ+DKlRwh9caWhwD5Xane3hFQ5vp77vnDED//NAD83aC
+OusCAwEAAaNbMFkwVwYDVR0BBFAwToAQtcMPTXp3rGpsgwko+QVCPaEoMCYxJDAi
+BgNVBAMTG1NlYXR0bGUgVGVjaCBSb290IEF1dGhvcml0eYIQEPkS0jAMhblNOXgL
+GwpqVjANBgkqhkiG9w0BAQsFAAOCAQEAS6Qv4lDHAQORMYnkcMLNvO2VefksiYto
+u0+f0sGbk0g0m8qhMEINz1p8bpZSwd59HaNhk7dQrl/vKLsl9qyddT+Y6G4k4mrr
+yQ01M3i8WnQPPAJIUPM0MYEMA/UkCPqOGwlolgglAtu1ly5ZPtEQR/hrG2IULI7c
+pUx8+b37kNDjjzTUUOGekBzkVI/wfdbKXoLV0+ZCT8X+t7M83djycvNmNpKjaQsx
+/CYhgJze2/R7xEZ5rfass98e00ciXsN4Z4GresKY3Xv66cJwQPh97AoCPxTBo3gF
+mHg24g2+LTCkZPM6RVlRX3geF4TRU2TGBAkI/PPe3EV6fW0NExT/ew==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://irislogin.com/identity/shibboleth/AssertionConsumerService" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Iris Services</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Seattle Technology Group, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Seattle Technology Group, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.seattletech.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Seattle Tech Support</md:GivenName>
+	<md:EmailAddress>support@seattletech.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Seattle Tech Support</md:GivenName>
+	<md:EmailAddress>support@seattletech.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Seattle Tech Support</md:GivenName>
+	<md:EmailAddress>support@seattletech.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

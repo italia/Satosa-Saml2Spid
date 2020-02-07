@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mhebooklibrary.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-09-13T08:50:15Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">McGraw-Hill eBook Library</mdui:DisplayName>
+		<mdui:Description xml:lang="en">McGraw-Hill eBook Library</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://mhebooklibrary.com/page/about</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIJANefTyauFJ/xMA0GCSqGSIb3DQEBBQUAMCExHzAdBgNV
+BAMMFnd3dy5taGVib29rbGlicmFyeS5jb20wHhcNMTcxMTEyMTEyNDQ1WhcNMjAx
+MTExMTEyNDQ1WjAhMR8wHQYDVQQDDBZ3d3cubWhlYm9va2xpYnJhcnkuY29tMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0xSlVzDRhq2H2pq8Cc+9yuSP
+QMiXiroGpmcTg/zCEqh2e8yvO07sukqCxzXoRBxnxslPjGcT8kHEBvRfUQrwcAV7
+D+GnIyEt1UgheLpCCmKbtpW6l55qLRzgW992s40UYl/n55aXlGjE7cAjRf2X8DCy
+AI3eAsb2AvXihWxgiFHFRj6EBsCwVE79OmoY58TMJHBjfCG/HaE3q2bDFbIcltwz
+oDEdNU/xZo0a/Go3mhVGAyViUk1AV9jbI4lpfQNvd8igNT44bv3OqCkBognA0Mzu
+kPLtcuF99DQotIdI7UcpfhNBuqjnU5/3ONytW4oYZjofBXrefqFTl+qQAij9IwID
+AQABo28wbTBMBgNVHREERTBDghZ3d3cubWhlYm9va2xpYnJhcnkuY29thilodHRw
+czovL3d3dy5taGVib29rbGlicmFyeS5jb20vc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+wkduVsRl77Ox0+vHkHjXenK5EykwDQYJKoZIhvcNAQEFBQADggEBAMbW7T/0qpI/
+vzHMu9f2GPqWu2xhlkDnYxJxfWDviaxg2tmaxQfgTsAVCfOYo8WzMvXkmZnFvk1D
+mNLLT1vbhgfYn5ehDK1zcuGXCkKky6tJsdOalmkCY/7BNijajnTZIul78LKk0sRa
+QpbHd+eyyitEyiOBxuCbEzHbfBqljyZ2Xa1M5I40oyHn6tPv3DMOOylH4ZPwMCAl
+Hy++5XXqbpJuLC+qI03kLPrYF3pgZXxRyTxBaiqroELlADZPv0gx/tnoB8Y5HkdN
+sas+g1gsfAQBkHxRjVgOziQ3nOx+IH3fKEYnPpNnxiIbTBZofHIl1/UCYVa92fkB
+9tcCFU+/mUA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://mhebooklibrary.com/action/samlACS" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mhebooklibrary.com/action/saml2post" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://mhebooklibrary.com/action/saml2artifact" index="3"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">McGraw-Hill Education LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">McGraw-Hill eBook Library</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://mhebooklibrary.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SSO-Support</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Support@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SSO-Tech</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Tech@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

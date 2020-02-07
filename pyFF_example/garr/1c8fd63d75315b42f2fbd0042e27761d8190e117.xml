@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:mit.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.mit.edu/help.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mit.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Massachusetts Institute of Technology</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://idp.mit.edu/privacy-statement.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://idp.mit.edu/images/mdui-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC6DCCAdCgAwIBAgIJAOOuZYuBUH2jMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2lkcC5taXQuZWR1MB4XDTEzMTAyMTE5NDczNloXDTMzMTAxNjE5NDczNlow
+FjEUMBIGA1UEAxMLaWRwLm1pdC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDD3t7oBvx5KMmA4+EEQWK421Jt8HsBYMsaUWAiIQVldTlre3rt51Jg
+dN93adYAMvo6LUr3v7jpT8tUsgV0bDD4MsoK5SAlOWh6tQuR172do1KbDi4VT3Gp
+ILJjTqRUjlLEtfCa4/NNQy+ZFXEXIYWoFsfK0J3Q8xCVNdSfNpd3KjlkKshkGsjY
+OMoHJLt8GQB9n7yJX+qZvxJGhiPQJZB5uNx/9omNbvqAF2Hl6b06u7NTPh/Jkvf4
+GGtttjNaWRfcQm1xVbYCCOlpCiTVI6AxCtCy2XqhZmcnY2zk9h2Q/W9lcJ+if1xV
+vMkaId+EBTJW3DI/zvBm0Q/OJTxIwUfzAgMBAAGjOTA3MBYGA1UdEQQPMA2CC2lk
+cC5taXQuZWR1MB0GA1UdDgQWBBRK6tEdA/6T67CMwyWlBEE7cvYaFjANBgkqhkiG
+9w0BAQUFAAOCAQEAUVOL/W1RRrRDm6k4Wtf39jCtHa7gyutt5fHguXUa6nrThRhu
+ISEmiQLqK4hVCiIiarZMuyxosdAwFKSGKaunpBFmqI7NcqzskpdRnMIZ0FLQsRJF
+vY6F6S2ou2Yl0UYonX2eVqzWtIR6jd4CqsQdixf5ZE2eQ6o6QICEpjDgMPK/EAKA
+CsVjcBbQw+YbSkmf30ebRTSzIYMhaGETQuf75xD/Ww0mM3njm79Ophg5Y7I9Ryud
+MdDQwsxAS7ECH7vLyu8V/HIfaPkOWYzKKKW5d4E1/X67J2XmTICT7PdxSd5ZKoB5
+jdqBxPVYM+C1V02QZFDb7TkTDEICzUnr/VBZ+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.mit.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mit.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mit.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mit.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC6DCCAdCgAwIBAgIJAOOuZYuBUH2jMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2lkcC5taXQuZWR1MB4XDTEzMTAyMTE5NDczNloXDTMzMTAxNjE5NDczNlow
+FjEUMBIGA1UEAxMLaWRwLm1pdC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDD3t7oBvx5KMmA4+EEQWK421Jt8HsBYMsaUWAiIQVldTlre3rt51Jg
+dN93adYAMvo6LUr3v7jpT8tUsgV0bDD4MsoK5SAlOWh6tQuR172do1KbDi4VT3Gp
+ILJjTqRUjlLEtfCa4/NNQy+ZFXEXIYWoFsfK0J3Q8xCVNdSfNpd3KjlkKshkGsjY
+OMoHJLt8GQB9n7yJX+qZvxJGhiPQJZB5uNx/9omNbvqAF2Hl6b06u7NTPh/Jkvf4
+GGtttjNaWRfcQm1xVbYCCOlpCiTVI6AxCtCy2XqhZmcnY2zk9h2Q/W9lcJ+if1xV
+vMkaId+EBTJW3DI/zvBm0Q/OJTxIwUfzAgMBAAGjOTA3MBYGA1UdEQQPMA2CC2lk
+cC5taXQuZWR1MB0GA1UdDgQWBBRK6tEdA/6T67CMwyWlBEE7cvYaFjANBgkqhkiG
+9w0BAQUFAAOCAQEAUVOL/W1RRrRDm6k4Wtf39jCtHa7gyutt5fHguXUa6nrThRhu
+ISEmiQLqK4hVCiIiarZMuyxosdAwFKSGKaunpBFmqI7NcqzskpdRnMIZ0FLQsRJF
+vY6F6S2ou2Yl0UYonX2eVqzWtIR6jd4CqsQdixf5ZE2eQ6o6QICEpjDgMPK/EAKA
+CsVjcBbQw+YbSkmf30ebRTSzIYMhaGETQuf75xD/Ww0mM3njm79Ophg5Y7I9Ryud
+MdDQwsxAS7ECH7vLyu8V/HIfaPkOWYzKKKW5d4E1/X67J2XmTICT7PdxSd5ZKoB5
+jdqBxPVYM+C1V02QZFDb7TkTDEICzUnr/VBZ+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mit.edu:8444/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mit.edu:8444/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Massachusetts Institute of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Massachusetts Institute of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://web.mit.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Touchstone Support</md:GivenName>
+	<md:EmailAddress>touchstone-support@mit.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@mit.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Touchstone Support</md:GivenName>
+	<md:EmailAddress>touchstone-support@mit.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service Desk</md:GivenName>
+	<md:EmailAddress>servicedesk@mit.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

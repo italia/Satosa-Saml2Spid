@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://bentleystudentservices.imodules.com/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bentley University 1888</mdui:DisplayName>
+		<mdui:Description xml:lang="en">iModules site 1888 Bentley University</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://bentleystudentservices.imodules.com/s/resources/templates/login/index.aspx?sid=1888&amp;pgid=230&amp;cid=157&amp;no_cookie=1</mdui:PrivacyStatementURL>
+		<mdui:Logo height="1" width="1" xml:lang="en">https://www.imodules.com/s/1333/images/editor/incommon/logo__2_.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC/DCCAeigAwIBAgIQhS/5R0TvUqlOVJu+RcUAPDAJBgUrDgMCHQUAMBcxFTAT
+BgNVBAMTDGltb2R1bGVzLmNvbTAeFw0xOTA2MTcxNjA5MjZaFw0zOTA2MTcxNjA5
+MjVaMBcxFTATBgNVBAMTDGltb2R1bGVzLmNvbTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAMg9CEvKjcgEz3UReh3vcvXjM5d46ehBUkgIDZByOOgHIhHn
+MxpmOhTFVevMLJmhsMeS/jR8A4YjP9rECsFpTSUE7PmRhNZttXrbX6Rm5pM2r50v
+3CXrFvG5OgGHT0fS/T/DB2Put39ofq/2n/VjKcUVW4K73oKidwSSawvpHf22xxpu
+YX2NWioiiyogHRWOBQO5US6TPGmlOCWgZdljQbyvNzgmu72HLKrBBjVdNDk125XK
+Z/Ch2kr0dquCWftkbTN5tnk24hkkMF5CWpy3RqblD+Rn9fc8zT+sUKm5tcnxHy9L
+9czCd6pkMek4P/sDvZsm/IMD44AATYql7P549v0CAwEAAaNMMEowSAYDVR0BBEEw
+P4AQSuB3J+bQc9Z5+fpT5G9hA6EZMBcxFTATBgNVBAMTDGltb2R1bGVzLmNvbYIQ
+hS/5R0TvUqlOVJu+RcUAPDAJBgUrDgMCHQUAA4IBAQBlte0L/zAcrppXilevydyE
+gapn43f0kxLsLYuiLl5fBIoP9zIxW8SMmQR+kQlj3CNwRBs/q33oIKtGcegl1W1C
+eFfyWo1DVP1r4VNHDZHAUytaCUf6p5ntq/TVnBnCQj6PXDZgakgyBTSqLu3tQkH+
+pjMFX37IW5xkpj+vUnn15MFX7MYou+AMzSrAs+tHei0zC8TzYR5cg447oddZ30Lm
+NiLpBQG54zA4M6lh9cdgMYw+9ywaPsDQCWwIX6Kukq5K8lkTEn7jmVjlDhYkZsZX
+SF661H3gvRNWwT6IyJwVREed+7IErf18WlwQSlVD83drUNuXhQ0UEK+7yDndbPxk
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://securelb.imodules.com/controls/login/AssertionConsumerService.aspx?sid=1888" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Imodules Software, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Imodules Software, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.imodules.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Production</md:GivenName>
+	<md:EmailAddress>prodqueue@imodules.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Production</md:GivenName>
+	<md:EmailAddress>prodqueue@imodules.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Production</md:GivenName>
+	<md:EmailAddress>prodqueue@imodules.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

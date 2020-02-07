@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.courseleaf.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shib.courseleaf.com/Shibboleth.sso/DS" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CourseLeaf</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Leepfrog Technologies CourseLeaf</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://courseleaf.com</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.leepfrog.com/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="176" width="600" xml:lang="en">https://www.courseleaf.com/images/cl-logo-incommon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIJALAsCdsphihDMA0GCSqGSIb3DQEBBQUAMB4xHDAaBgNV
+BAMME3NoaWIuY291cnNlbGVhZi5jb20wHhcNMTQwNDExMTYwMjAxWhcNMjQwNDA4
+MTYwMjAxWjAeMRwwGgYDVQQDDBNzaGliLmNvdXJzZWxlYWYuY29tMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtEXMRZGERUGU/S2fOfjXFCED6+d6k37L
+0p+qnU5lTKz3ry8f1fx8SAfbXUdmJWfnUocAbE6S7ldJr/y2McNqq24T4cMOpexP
+uUjO0QwdFYpl+zxccG9oMkBWvr9RSoaTY08oa7nwEkx1bZ12yq8K6Z1WUe/XaEWG
+Q/OGEQJ9K8TidElZr68PYh2bYYF+qiHBDQkWMqDV8fnb/ljjyIcmZijxJIQ0+FWO
+278UwCY85w3Vi0wMEF7jIrFEwoxf9NGrtJWn1hxaAqesJ5ILZTo3VFgXf52iZRhx
+LWwuxn8opZdA20oFJb0PxJvDfJldFhyacrml3DXkG0l6ysx3lweV9wIDAQABo1Aw
+TjAdBgNVHQ4EFgQUdh5Dd9hJbH8TwgiMchfyh/cYUfcwHwYDVR0jBBgwFoAUdh5D
+d9hJbH8TwgiMchfyh/cYUfcwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEAKGLyWTvE6CKxrlJAn/Z90Hp3O4phot0CDKkPZfTF145R523YFDlloJQ5pnMA
+MbPXdQ5Fk5qUzDwtWMW//gW3nSP3XpRnEwOR1EIUOil39wprH1Ny9Bxzb1dQue7i
+QgM1qiBUzw5ZYSzmuC44i6PuyPMresgopm5MRmrsGD3Nw86k2wc5nf0PVIKI7O6F
+EB9avy/o/5Ciu0/Iw/ogixkQoMvtDrh3cC4QdVz4d8OjQzP9xbPMtcWbzJIzf6/O
+EsvIY/ZNwb1RTkT8GIXwkC7EgO0m5UeRMJJWFU1K8Jk9chpCmebrXFcz1RqJBlUE
+jhao0WXgTHHQUUpEzZXrh/Bzyw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://shib.courseleaf.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currbulletin.wustl.edu/Shibboleth.sso/SAML2/POST" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.wustl.edu/Shibboleth.sso/SAML2/POST" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://coursecatalog-new.web.cmu.edu/Shibboleth.sso/SAML2/POST" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://upcomingcatalog.uchicago.edu/Shibboleth.sso/SAML2/POST" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stagingcatalog.uchicago.edu/Shibboleth.sso/SAML2/POST" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.odu.edu/Shibboleth.sso/SAML2/POST" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.odu.edu/Shibboleth.sso/SAML2/POST" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next-catalog.ncsu.edu/Shibboleth.sso/SAML2/POST" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current-catalog.ncsu.edu/Shibboleth.sso/SAML2/POST" index="15"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://exploredegrees-admin.stanford.edu/Shibboleth.sso/SAML2/POST" index="16"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://exploredegrees-nextyear.stanford.edu/Shibboleth.sso/SAML2/POST" index="17"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.brown.edu/Shibboleth.sso/SAML2/POST" index="18"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentbulletin.brown.edu/Shibboleth.sso/SAML2/POST" index="19"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uark.edu/Shibboleth.sso/SAML2/POST" index="20"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uark.edu/Shibboleth.sso/SAML2/POST" index="21"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.utexas.edu/Shibboleth.sso/SAML2/POST" index="22"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currcatalog.utexas.edu/Shibboleth.sso/SAML2/POST" index="23"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalogue.uci.edu/Shibboleth.sso/SAML2/POST" index="24"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.catalogue.uci.edu/Shibboleth.sso/SAML2/POST" index="25"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog-admin.calpoly.edu/Shibboleth.sso/SAML2/POST" index="26"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog-admin.calpoly.edu/Shibboleth.sso/SAML2/POST" index="27"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.missouri.edu/Shibboleth.sso/SAML2/POST" index="28"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.missouri.edu/Shibboleth.sso/SAML2/POST" index="29"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.umsl.edu/Shibboleth.sso/SAML2/POST" index="30"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentbulletin.umsl.edu/Shibboleth.sso/SAML2/POST" index="31"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.mst.edu/Shibboleth.sso/SAML2/POST" index="32"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.mst.edu/Shibboleth.sso/SAML2/POST" index="33"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.sandburg.edu/Shibboleth.sso/SAML2/POST" index="34"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.sandburg.edu/Shibboleth.sso/SAML2/POST" index="35"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.utsa.edu/Shibboleth.sso/SAML2/POST" index="36"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.catalog.utsa.edu/Shibboleth.sso/SAML2/POST" index="37"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-next.uvm.edu/Shibboleth.sso/SAML2/POST" index="38"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-current.uvm.edu/Shibboleth.sso/SAML2/POST" index="39"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.lehigh.edu/Shibboleth.sso/SAML2/POST" index="40"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.lehigh.edu/Shibboleth.sso/SAML2/POST" index="41"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uthscsa.edu/Shibboleth.sso/SAML2/POST" index="42"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uthscsa.edu/Shibboleth.sso/SAML2/POST" index="43"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://e-nextcatalog.jhu.edu/Shibboleth.sso/SAML2/POST" index="44"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://e-currentcatalog.jhu.edu/Shibboleth.sso/SAML2/POST" index="45"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.ku.edu/Shibboleth.sso/SAML2/POST" index="46"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.catalog.ku.edu/Shibboleth.sso/SAML2/POST" index="47"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uoregon.edu/Shibboleth.sso/SAML2/POST" index="48"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uoregon.edu/Shibboleth.sso/SAML2/POST" index="49"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uis.edu/Shibboleth.sso/SAML2/POST" index="50"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uis.edu/Shibboleth.sso/SAML2/POST" index="51"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uic.edu/Shibboleth.sso/SAML2/POST" index="52"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uic.edu/Shibboleth.sso/SAML2/POST" index="53"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.bulletin.gwu.edu/Shibboleth.sso/SAML2/POST" index="54"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.bulletin.gwu.edu/Shibboleth.sso/SAML2/POST" index="55"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcourses.illinois.edu/Shibboleth.sso/SAML2/POST" index="56"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcourses.illinois.edu/Shibboleth.sso/SAML2/POST" index="57"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.csusb.edu/Shibboleth.sso/SAML2/POST" index="58"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentbulletin.csusb.edu/Shibboleth.sso/SAML2/POST" index="59"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.apu.edu/Shibboleth.sso/SAML2/POST" index="60"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.apu.edu/Shibboleth.sso/SAML2/POST" index="61"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.umkc.edu/Shibboleth.sso/SAML2/POST" index="62"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://editcatalog.umkc.edu/Shibboleth.sso/SAML2/POST" index="63"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.creighton.edu/Shibboleth.sso/SAML2/POST" index="64"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.creighton.edu/Shibboleth.sso/SAML2/POST" index="65"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://classplanning.northwestern.edu/Shibboleth.sso/SAML2/POST" index="66"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.towson.edu/Shibboleth.sso/SAML2/POST" index="67"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.towson.edu/Shibboleth.sso/SAML2/POST" index="68"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uww-next.courseleaf.com/Shibboleth.sso/SAML2/POST" index="69"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uww-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="70"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.njit.edu/Shibboleth.sso/SAML2/POST" index="71"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.catalog.njit.edu/Shibboleth.sso/SAML2/POST" index="72"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://northwestern-dev.courseleaf.com/Shibboleth.sso/SAML2/POST" index="73"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.temple.edu/Shibboleth.sso/SAML2/POST" index="74"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentbulletin.temple.edu/Shibboleth.sso/SAML2/POST" index="75"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.mtholyoke.edu/Shibboleth.sso/SAML2/POST" index="76"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.mtholyoke.edu/Shibboleth.sso/SAML2/POST" index="77"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uwgb.edu/Shibboleth.sso/SAML2/POST" index="78"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uwgb.edu/Shibboleth.sso/SAML2/POST" index="79"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.twu.edu/Shibboleth.sso/SAML2/POST" index="80"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.twu.edu/Shibboleth.sso/SAML2/POST" index="81"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.stolaf.edu/Shibboleth.sso/SAML2/POST" index="82"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currcatalog.stolaf.edu/Shibboleth.sso/SAML2/POST" index="83"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.colostate.edu/Shibboleth.sso/SAML2/POST" index="84"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-dev.mit.edu/Shibboleth.sso/SAML2/POST" index="85"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mit-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="86"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://colostate-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="87"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.udayton.edu/Shibboleth.sso/SAML2/POST" index="88"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.udayton.edu/Shibboleth.sso/SAML2/POST" index="89"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://utexas-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="90"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uic-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="91"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-test.uwplatt.edu/Shibboleth.sso/SAML2/POST" index="92"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.mycatalog.txstate.edu/Shibboleth.sso/SAML2/POST" index="93"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://current.mycatalog.txstate.edu/Shibboleth.sso/SAML2/POST" index="94"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next-bulletin.miami.edu/Shibboleth.sso/SAML2/POST" index="95"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://miami-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="96"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uah.edu/Shibboleth.sso/SAML2/POST" index="97"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uah-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="98"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextschedule.unomaha.edu/Shibboleth.sso/SAML2/POST" index="99"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.shsu.edu/Shibboleth.sso/SAML2/POST" index="100"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shsu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="101"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.northeastern.edu/Shibboleth.sso/SAML2/POST" index="102"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://northeastern-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="103"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stanford-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="104"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://easyschedule.fau.edu/Shibboleth.sso/SAML2/POST" index="105"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uci-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="106"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.ou.edu/Shibboleth.sso/SAML2/POST" index="107"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ou-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="108"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unomaha-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="109"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uwec.edu/Shibboleth.sso/SAML2/POST" index="110"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uwec-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="111"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.registrar.iastate.edu/Shibboleth.sso/SAML2/POST" index="112"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.registrar.iastate.edu/Shibboleth.sso/SAML2/POST" index="113"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://georgetown-next.courseleaf.com/Shibboleth.sso/SAML2/POST" index="114"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uaf.edu/Shibboleth.sso/SAML2/POST" index="115"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uaf-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="116"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mines-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="117"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mines-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="118"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.mines.edu/Shibboleth.sso/SAML2/POST" index="119"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentbulletin.mines.edu/Shibboleth.sso/SAML2/POST" index="120"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://gatech-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="121"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-next.gatech.edu/Shibboleth.sso/SAML2/POST" index="122"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://temple-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="123"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uvu.edu/Shibboleth.sso/SAML2/POST" index="124"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uvu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="125"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uwplatt-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="126"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.unc.edu/Shibboleth.sso/SAML2/POST" index="127"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="128"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletin.sfsu.edu/Shibboleth.sso/SAML2/POST" index="129"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sfsu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="130"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://devcatalog.utep.edu/Shibboleth.sso/SAML2/POST" index="131"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://testcatalog.utep.edu/Shibboleth.sso/SAML2/POST" index="132"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next-guide.wisc.edu/Shibboleth.sso/SAML2/POST" index="133"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wisc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="134"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uww-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="135"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catdev.colorado.edu/Shibboleth.sso/SAML2/POST" index="136"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://colorado-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="137"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseleaf.rice.edu/Shibboleth.sso/SAML2/POST" index="138"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseleaf.emory.edu/Shibboleth.sso/SAML2/POST" index="139"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.courseleaf.emory.edu/Shibboleth.sso/SAML2/POST" index="140"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.umd.umich.edu/Shibboleth.sso/SAML2/POST" index="141"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://umdearborn-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="142"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.unl.edu/Shibboleth.sso/SAML2/POST" index="143"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unl-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="144"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://futurecatalog.wesleyan.edu/Shibboleth.sso/SAML2/POST" index="145"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wesleyan-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="146"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseleaf.unmc.edu/Shibboleth.sso/SAML2/POST" index="147"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unmc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="148"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.unomaha.edu/Shibboleth.sso/SAML2/POST" index="149"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unomaha-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="150"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://workingcatalog.gmu.edu/Shibboleth.sso/SAML2/POST" index="151"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://gmu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="152"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://clss.utah.edu/Shibboleth.sso/SAML2/POST" index="153"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://utsa-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="154"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalog-next.uwplatt.edu/Shibboleth.sso/SAML2/POST" index="155"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.csus.edu/Shibboleth.sso/SAML2/POST" index="156"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://csus-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="157"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uni.edu/Shibboleth.sso/SAML2/POST" index="158"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uni-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="159"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.fairfield.edu/Shibboleth.sso/SAML2/POST" index="160"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fairfield-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="161"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.louisville.edu/Shibboleth.sso/SAML2/POST" index="162"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://louisville-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="163"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.upenn.edu/Shibboleth.sso/SAML2/POST" index="164"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://upenn-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="165"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextbulletins.wayne.edu/Shibboleth.sso/SAML2/POST" index="166"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wayne-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="167"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.uni.edu/Shibboleth.sso/SAML2/POST" index="168"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://curriculum-courseleaf.bu.edu/Shibboleth.sso/SAML2/POST" index="169"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.csc.edu/Shibboleth.sso/SAML2/POST" index="170"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://csc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="171"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://draft.catalog.umt.edu/Shibboleth.sso/SAML2/POST" index="172"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://umt-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="173"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://georgetown-law-next.courseleaf.com/Shibboleth.sso/SAML2/POST" index="174"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.vsu.edu/Shibboleth.sso/SAML2/POST" index="175"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="176"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.sbcc.edu/Shibboleth.sso/SAML2/POST" index="177"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sbcc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="178"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uwm.edu/Shibboleth.sso/SAML2/POST" index="179"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uwm-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="180"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uic-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="181"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcourseleaf.evc.edu/Shibboleth.sso/SAML2/POST" index="182"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcourseleaf.sjcc.edu/Shibboleth.sso/SAML2/POST" index="183"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://evc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="184"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sjcc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="185"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currentcatalog.mines.edu/Shibboleth.sso/SAML2/POST" index="186"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.mines.edu/Shibboleth.sso/SAML2/POST" index="187"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catplanning.simon.rochester.edu/Shibboleth.sso/SAML2/POST" index="188"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://simon-rochester-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="189"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.citruscollege.edu/Shibboleth.sso/SAML2/POST" index="190"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://citruscollege-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="191"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://psu-next.courseleaf.com/Shibboleth.sso/SAML2/POST" index="192"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://psu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="193"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcourseleaf.nd.edu/Shibboleth.sso/SAML2/POST" index="194"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.bulletin.wfu.edu/Shibboleth.sso/SAML2/POST" index="195"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wfu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="196"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcourseleaf.nyu.edu/Shibboleth.sso/SAML2/POST" index="197"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://csusb-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="198"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.oregonstate.edu/Shibboleth.sso/SAML2/POST" index="199"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://oregonstate-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="200"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://schedule.gsu.edu/Shibboleth.sso/SAML2/POST" index="201"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://subjectproposal.mit.edu/Shibboleth.sso/SAML2/POST" index="202"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseleaf.umd.edu/Shibboleth.sso/SAML2/POST" index="203"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://umd-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="204"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.catalog.ufl.edu/Shibboleth.sso/SAML2/POST" index="205"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ufl-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="206"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uidaho.edu/Shibboleth.sso/SAML2/POST" index="207"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uidaho-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="208"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://georgetown-law-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="209"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://georgetown-law-prior.courseleaf.com/Shibboleth.sso/SAML2/POST" index="210"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rice-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="211"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalogs.northwestern.edu/Shibboleth.sso/SAML2/POST" index="212"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://northwestern-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="213"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uncg.edu/Shibboleth.sso/SAML2/POST" index="214"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uncg-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="215"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.haverford.edu/Shibboleth.sso/SAML2/POST" index="216"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://haverford-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="217"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.nic.edu/Shibboleth.sso/SAML2/POST" index="218"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nic-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="219"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcalendar.carleton.ca/Shibboleth.sso/SAML2/POST" index="220"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://currcalendar.carleton.ca/Shibboleth.sso/SAML2/POST" index="221"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bulletin-working.uakron.edu/Shibboleth.sso/SAML2/POST" index="222"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uakron-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="223"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://catalogbuild.depaul.edu/Shibboleth.sso/SAML2/POST" index="224"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://depaul-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="225"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.msubillings.edu/Shibboleth.sso/SAML2/POST" index="226"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://msubillings-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="227"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseentry.skidmore.edu/Shibboleth.sso/SAML2/POST" index="228"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://skidmore-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="229"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://northwestern-test.courseleaf.com/Shibboleth.sso/SAML2/POST" index="230"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next-catalog.valleycollege.edu/Shibboleth.sso/SAML2/POST" index="231"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://valleycollege-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="232"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.wit.edu/Shibboleth.sso/SAML2/POST" index="233"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wit-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="234"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sched.lmu.edu/Shibboleth.sso/SAML2/POST" index="235"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://courseleaf.dukehub.duke.edu/Shibboleth.sso/SAML2/POST" index="236"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.csupueblo.edu/Shibboleth.sso/SAML2/POST" index="237"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://csupueblo-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="238"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://curriculum.williams.edu/Shibboleth.sso/SAML2/POST" index="239"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://next.codes.deanofstudents.utexas.edu/Shibboleth.sso/SAML2/POST" index="240"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://utexas-sg-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="241"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.kent.edu/Shibboleth.sso/SAML2/POST" index="242"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kent-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="243"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.ithaca.edu/Shibboleth.sso/SAML2/POST" index="244"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ithaca-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="245"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.esc.edu/Shibboleth.sso/SAML2/POST" index="246"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://esc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="247"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.uwp.edu/Shibboleth.sso/SAML2/POST" index="248"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uwp-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="249"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cpac.ewu.edu/Shibboleth.sso/SAML2/POST" index="250"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ewu-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="251"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://handbook.apu.edu/Shibboleth.sso/SAML2/POST" index="252"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nextcatalog.msjc.edu/Shibboleth.sso/SAML2/POST" index="253"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://msjc-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="254"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://netcatalog.pace.edu/Shibboleth.sso/SAML2/POST" index="255"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pace-curr.courseleaf.com/Shibboleth.sso/SAML2/POST" index="256"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">CourseLeaf</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Leepfrog Technologies CourseLeaf</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Leepfrog Technologies, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Leepfrog Technologies, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.leepfrog.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Wes Bachman</md:GivenName>
+	<md:EmailAddress>wbachman@leepfrog.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Leepfrog Shibboleth Support</md:GivenName>
+	<md:EmailAddress>shibmaster@leepfrog.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Leepfrog Shibboleth Support</md:GivenName>
+	<md:EmailAddress>shibmaster@leepfrog.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Wes Bachman</md:GivenName>
+	<md:EmailAddress>wbachman@leepfrog.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

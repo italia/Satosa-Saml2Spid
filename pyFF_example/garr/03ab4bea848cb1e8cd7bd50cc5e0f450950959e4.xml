@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hs-rottenburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-09-25T21:04:32Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-rottenburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule für Forstwirtschaft Rottenburg (HFR)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Forest Sciences Rottenburg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">IdP der Hochschule für Forstwirtschaft Rottenburg (HFR)</mdui:Description>
+		<mdui:Description xml:lang="en">IdP of the University of Applied Forest Sciences</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.hs-rottenburg.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://idp.hs-rottenburg.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hs-rottenburg.net</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hs-rottenburg.net</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKfDCCCWSgAwIBAgIMIFu+PLhNEl967WisMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDExNDA3NTYzOVoXDTIxMDQxNzA3NTYzOVowgZ0xCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxHTAbBgNVBAcMFFJvdHRlbmJ1cmcgYW0g
+TmVja2FyMTMwMQYDVQQKDCpIb2Noc2NodWxlIGZ1ZXIgRm9yc3R3aXJ0c2NoYWZ0
+IFJvdHRlbmJ1cmcxHTAbBgNVBAMMFGlkcC5ocy1yb3R0ZW5idXJnLmRlMIICIjAN
+BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArK5df6lLEn32zthlxXURrsLdHtX5
+IQwykGar0DFxhXnckZIOGMD0Tb2VDX3qU6DQ51JvjGYN4GoZ+prAsqxyKUg7UpAw
+YpvU5l6rNVefTpQjb4TnnUNgyPrH5PdmFQxQ6SBiWTMTCvGIMcuUFxAaSfJoVIi+
+5/4ZerYijf70vy6tBItpIg0BasjoL2isWb0R1wq6prTeRlM6b6PiKTugICvPed8c
+E1xPOmU045k4srIeZN7/XCZ6xUtE+DrTAoX0Lj/4BByYBcFc+QTCsoZsTwLNxVty
+S+3JYd3WlIYPCezn1zDKrspiwPNEVQDIRD9XD+YSM+68yYwtXnu3tpOR8KNdvcur
+ZtjE2eWghN42nEecwQ5HLtfBP+yhbpbq/fm5ZHfrJ3TBDGB6nIuKr6dig+T2HsnQ
+JcsB9oEDYG8H0W+zwXQF8K0LLXHbT+Ag8qTLqH+1p35v56xRYTdn7+JRnSfCIZDh
+B5M7YAWk/KjXy259qZPzvsWVPAJI7NL5BgXcAloN971+Fu3vzVahf9T5oE+/uXTO
+3vasOShtjB0bHHqb0ZRySCcSl5mqXMP079xwFOb98cf+F2U9UoJZGuq4f+v+8LBI
+22K+cuJiRwJAS5Oj2QHlXALR1iAZbCTnrhd4BhSUj4qmhR0fTUNQPBqm2RFiuh9E
+HvXsjTFUHeYvSDcCAwEAAaOCBcgwggXEMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0G
+CysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMI
+MBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAd
+BgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFKi3ek5ChD3x
+DBLwZZVg9n7G9aGnMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MB8G
+A1UdEQQYMBaCFGlkcC5ocy1yb3R0ZW5idXJnLmRlMIGNBgNVHR8EgYUwgYIwP6A9
+oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCB
+yzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZl
+ci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MIIDXAYKKwYBBAHWeQIEAgSCA0wEggNIA0YAdgBvU3asMfAx
+GdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWhLXNxjAAAEAwBHMEUCIARB4nbo
+MJ71mx5hmQxFju9C2Fy7lxv7+go/9oCoop7wAiEAs3Lx025gEMZvY6/7rSSEo7mX
+oYP5VYG1sx4WP5XU+FsAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTz
+zQAAAWhLXNvuAAAEAwBGMEQCIFBUwVM2jQISjtFXaJR702OozHs4Aj3Adn0QQcE2
+ZzKrAiBBt3MBaVMpC09tohrZHeklu14CMEREE8jvvklSYG4AggB1AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaEtc3XcAAAQDAEYwRAIgYw1DbDPx
+eTFZb7G7TuGON5f7haUQt0dmbxjiPYyXfucCIG+I0YZnKIZ3QjSkiqqUKZwE2oCt
+Ai75hri2TTJz7CsHAHcA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csA
+AAFoS1zcgwAABAMASDBGAiEAg2W9nCtcsPwhwJQFohTi4Fh8VIcAFvKBgO4FpwmK
+0U4CIQDZodN/PCAKDXS+sH28cM8j3qGrvTK1YDYkoKE9yA49EwB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABaEtc3GUAAAQDAEcwRQIhAJclbgBh
+QsGwW7YI0dpHbYBBk8jgQZpnuxgiIcVXcMGoAiBQhcI6A7O/gdyr2+wYCaLRv0LS
+4mFbaD4XXALuJfOpSQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQ
+AAABaEtc3HoAAAQDAEcwRQIhAOjWSCAMRufj4j23hSIMsONqPUvZB4K2/QmfC0mM
+a9FOAiBfQvbO+GUB3vrDQtsFgZGxOEZX3pqVbKAUIcWThOWX6QB1AESUZS6w7s6v
+xEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaEtc4XUAAAQDAEYwRAIgJtYPlNom
+V1zhLToH15fB6QrW8PjkoUmvl/7TjJCTeFACIAgwgNsLgXcwWDdkV4sWmwjenpBG
+2e19leHogI3HGQlNMA0GCSqGSIb3DQEBCwUAA4IBAQB1T7jzAJORfqna0RPGdzIF
+IalmqISuV4joH9PfiJqcr3AU2A9MgETvBODuMK2YqLNKvdt3S794CN35tidx+Ipl
+BU+9iPJDY4nlIwblUDNnUOgCAKjMExPIoiwyxNMQPQCMsmsjgFdEpavFIVnDM8g0
+VYI2Ksorj7pEJgbSpsKe2xYg4Pj+iXDgcpeE4IBY64w2JB8mXDbD07nUsUJzW215
+vNn/jphnUxhtIj95oybKtlRMhsVD5Hd4uYELdjpB+XOpOyRGvFWJwW1N15vQI0w/
+Rx3c/4bZCagaJBq6VHjVnvEIyBLnau2cG99kYJlm0EpQ08loLzwSqEi9UZlo7idu
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-rottenburg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-rottenburg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-rottenburg.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hs-rottenburg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-rottenburg.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-rottenburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKfDCCCWSgAwIBAgIMIFu+PLhNEl967WisMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDExNDA3NTYzOVoXDTIxMDQxNzA3NTYzOVowgZ0xCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxHTAbBgNVBAcMFFJvdHRlbmJ1cmcgYW0g
+TmVja2FyMTMwMQYDVQQKDCpIb2Noc2NodWxlIGZ1ZXIgRm9yc3R3aXJ0c2NoYWZ0
+IFJvdHRlbmJ1cmcxHTAbBgNVBAMMFGlkcC5ocy1yb3R0ZW5idXJnLmRlMIICIjAN
+BgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEArK5df6lLEn32zthlxXURrsLdHtX5
+IQwykGar0DFxhXnckZIOGMD0Tb2VDX3qU6DQ51JvjGYN4GoZ+prAsqxyKUg7UpAw
+YpvU5l6rNVefTpQjb4TnnUNgyPrH5PdmFQxQ6SBiWTMTCvGIMcuUFxAaSfJoVIi+
+5/4ZerYijf70vy6tBItpIg0BasjoL2isWb0R1wq6prTeRlM6b6PiKTugICvPed8c
+E1xPOmU045k4srIeZN7/XCZ6xUtE+DrTAoX0Lj/4BByYBcFc+QTCsoZsTwLNxVty
+S+3JYd3WlIYPCezn1zDKrspiwPNEVQDIRD9XD+YSM+68yYwtXnu3tpOR8KNdvcur
+ZtjE2eWghN42nEecwQ5HLtfBP+yhbpbq/fm5ZHfrJ3TBDGB6nIuKr6dig+T2HsnQ
+JcsB9oEDYG8H0W+zwXQF8K0LLXHbT+Ag8qTLqH+1p35v56xRYTdn7+JRnSfCIZDh
+B5M7YAWk/KjXy259qZPzvsWVPAJI7NL5BgXcAloN971+Fu3vzVahf9T5oE+/uXTO
+3vasOShtjB0bHHqb0ZRySCcSl5mqXMP079xwFOb98cf+F2U9UoJZGuq4f+v+8LBI
+22K+cuJiRwJAS5Oj2QHlXALR1iAZbCTnrhd4BhSUj4qmhR0fTUNQPBqm2RFiuh9E
+HvXsjTFUHeYvSDcCAwEAAaOCBcgwggXEMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0G
+CysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMI
+MBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAd
+BgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFKi3ek5ChD3x
+DBLwZZVg9n7G9aGnMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MB8G
+A1UdEQQYMBaCFGlkcC5ocy1yb3R0ZW5idXJnLmRlMIGNBgNVHR8EgYUwgYIwP6A9
+oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCB
+yzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZl
+ci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MIIDXAYKKwYBBAHWeQIEAgSCA0wEggNIA0YAdgBvU3asMfAx
+GdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWhLXNxjAAAEAwBHMEUCIARB4nbo
+MJ71mx5hmQxFju9C2Fy7lxv7+go/9oCoop7wAiEAs3Lx025gEMZvY6/7rSSEo7mX
+oYP5VYG1sx4WP5XU+FsAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTz
+zQAAAWhLXNvuAAAEAwBGMEQCIFBUwVM2jQISjtFXaJR702OozHs4Aj3Adn0QQcE2
+ZzKrAiBBt3MBaVMpC09tohrZHeklu14CMEREE8jvvklSYG4AggB1AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaEtc3XcAAAQDAEYwRAIgYw1DbDPx
+eTFZb7G7TuGON5f7haUQt0dmbxjiPYyXfucCIG+I0YZnKIZ3QjSkiqqUKZwE2oCt
+Ai75hri2TTJz7CsHAHcA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csA
+AAFoS1zcgwAABAMASDBGAiEAg2W9nCtcsPwhwJQFohTi4Fh8VIcAFvKBgO4FpwmK
+0U4CIQDZodN/PCAKDXS+sH28cM8j3qGrvTK1YDYkoKE9yA49EwB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABaEtc3GUAAAQDAEcwRQIhAJclbgBh
+QsGwW7YI0dpHbYBBk8jgQZpnuxgiIcVXcMGoAiBQhcI6A7O/gdyr2+wYCaLRv0LS
+4mFbaD4XXALuJfOpSQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQ
+AAABaEtc3HoAAAQDAEcwRQIhAOjWSCAMRufj4j23hSIMsONqPUvZB4K2/QmfC0mM
+a9FOAiBfQvbO+GUB3vrDQtsFgZGxOEZX3pqVbKAUIcWThOWX6QB1AESUZS6w7s6v
+xEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaEtc4XUAAAQDAEYwRAIgJtYPlNom
+V1zhLToH15fB6QrW8PjkoUmvl/7TjJCTeFACIAgwgNsLgXcwWDdkV4sWmwjenpBG
+2e19leHogI3HGQlNMA0GCSqGSIb3DQEBCwUAA4IBAQB1T7jzAJORfqna0RPGdzIF
+IalmqISuV4joH9PfiJqcr3AU2A9MgETvBODuMK2YqLNKvdt3S794CN35tidx+Ipl
+BU+9iPJDY4nlIwblUDNnUOgCAKjMExPIoiwyxNMQPQCMsmsjgFdEpavFIVnDM8g0
+VYI2Ksorj7pEJgbSpsKe2xYg4Pj+iXDgcpeE4IBY64w2JB8mXDbD07nUsUJzW215
+vNn/jphnUxhtIj95oybKtlRMhsVD5Hd4uYELdjpB+XOpOyRGvFWJwW1N15vQI0w/
+Rx3c/4bZCagaJBq6VHjVnvEIyBLnau2cG99kYJlm0EpQ08loLzwSqEi9UZlo7idu
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-rottenburg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-rottenburg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e400</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e400</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule für Forstwirtschaft Rottenburg (HFR)</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Applied Forest Sciences Rottenburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hs-rottenburg.net/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hs-rottenburg.net/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Support</md:GivenName>
+	<md:SurName>HS Rottenburg</md:SurName>
+	<md:EmailAddress>mailto:support@hs-rottenburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:SurName>HS Rottenburg</md:SurName>
+	<md:EmailAddress>mailto:support@hs-rottenburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

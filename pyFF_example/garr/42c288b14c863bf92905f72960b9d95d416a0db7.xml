@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://bmcidp.brooksbymelton.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brooksby Melton College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Brooksby Melton College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">brooksbymelton.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAM0zHQkz79mS9Xson1u81Xo9Aql3MA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMTG2JtY2lkcC5icm9va3NieW1lbHRvbi5hYy51azAeFw0x
+MTA4MDExNTA1MzNaFw0zMTA4MDExNTA1MzNaMCYxJDAiBgNVBAMTG2JtY2lkcC5i
+cm9va3NieW1lbHRvbi5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMo6p6KIO6Ib50pl1GzmgAgpAWiK/g1KPdMcKHlsnVo/h1789Ka9iqu4wGaN
+DmRyBJ5EBgOjzNgEP9lgcnytxQBvJULUdqja3tYASeL2065N6kINtV+RFY0W9dbB
+/1NFs+5Ira3hhQzqNrwU8fCpjwGjD0x0bgmlAfm7v6/i8W2fsNhewDAC4VoJNY/l
+DJHnmH9fBO2O9E6CiOzP9z3KumIToKns+EI3GbYdrt+fWWqtIuBz/Sjnw9KsE6KM
+J+0ddM0jDXeHIDlGVlaJWmuBL0j1dBrL+E7oaC5T6mZbC2IeGkupog/GtpesNs16
++qgYU4Jw3bEBtux8NSEVzvDFctMCAwEAAaN9MHswWgYDVR0RBFMwUYIbYm1jaWRw
+LmJyb29rc2J5bWVsdG9uLmFjLnVrhjJodHRwczovL2JtY2lkcC5icm9va3NieW1l
+bHRvbi5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUxsgOb5l8DCKO46rw
+s3mAo/nBc68wDQYJKoZIhvcNAQEFBQADggEBALG6xylWTVMrf8g4BSwi5juiVTEe
+CzXeQEjivNHOYtAR0H+UL7RgLz3MGeTrRIDFfKOWQRpCo1TDSNWrwRESuROEK9Rs
+Q95eQ93qJ/oHVOl3MvrmDy56N7pyDs3wM2biDwnGdJf2ZLR0+INiiuVg1qZs9/w5
+WB4xV16ZE2oncKFAsHJHK2iVL6GbwtbxAYwTC5hDqOp8b+pXBn8ApsXDo/Ux1lV8
+ZVxpgzxi7zNgtSP/mSbk5AB1niYm4AGo569Anr5zvX/Dl9Sn3qIv2uDaBhoHg2TT
+veg66IFDer14n9QxiJiEhK0ywkzQddJ9YJDr+KiDVFpzN/t49uGiZc0+Wcc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://bmcidp.brooksbymelton.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://bmcidp.brooksbymelton.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://bmcidp.brooksbymelton.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bmcidp.brooksbymelton.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://bmcidp.brooksbymelton.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://bmcidp.brooksbymelton.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brooksbymelton.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAM0zHQkz79mS9Xson1u81Xo9Aql3MA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMTG2JtY2lkcC5icm9va3NieW1lbHRvbi5hYy51azAeFw0x
+MTA4MDExNTA1MzNaFw0zMTA4MDExNTA1MzNaMCYxJDAiBgNVBAMTG2JtY2lkcC5i
+cm9va3NieW1lbHRvbi5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMo6p6KIO6Ib50pl1GzmgAgpAWiK/g1KPdMcKHlsnVo/h1789Ka9iqu4wGaN
+DmRyBJ5EBgOjzNgEP9lgcnytxQBvJULUdqja3tYASeL2065N6kINtV+RFY0W9dbB
+/1NFs+5Ira3hhQzqNrwU8fCpjwGjD0x0bgmlAfm7v6/i8W2fsNhewDAC4VoJNY/l
+DJHnmH9fBO2O9E6CiOzP9z3KumIToKns+EI3GbYdrt+fWWqtIuBz/Sjnw9KsE6KM
+J+0ddM0jDXeHIDlGVlaJWmuBL0j1dBrL+E7oaC5T6mZbC2IeGkupog/GtpesNs16
++qgYU4Jw3bEBtux8NSEVzvDFctMCAwEAAaN9MHswWgYDVR0RBFMwUYIbYm1jaWRw
+LmJyb29rc2J5bWVsdG9uLmFjLnVrhjJodHRwczovL2JtY2lkcC5icm9va3NieW1l
+bHRvbi5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUxsgOb5l8DCKO46rw
+s3mAo/nBc68wDQYJKoZIhvcNAQEFBQADggEBALG6xylWTVMrf8g4BSwi5juiVTEe
+CzXeQEjivNHOYtAR0H+UL7RgLz3MGeTrRIDFfKOWQRpCo1TDSNWrwRESuROEK9Rs
+Q95eQ93qJ/oHVOl3MvrmDy56N7pyDs3wM2biDwnGdJf2ZLR0+INiiuVg1qZs9/w5
+WB4xV16ZE2oncKFAsHJHK2iVL6GbwtbxAYwTC5hDqOp8b+pXBn8ApsXDo/Ux1lV8
+ZVxpgzxi7zNgtSP/mSbk5AB1niYm4AGo569Anr5zvX/Dl9Sn3qIv2uDaBhoHg2TT
+veg66IFDer14n9QxiJiEhK0ywkzQddJ9YJDr+KiDVFpzN/t49uGiZc0+Wcc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://bmcidp.brooksbymelton.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://bmcidp.brooksbymelton.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Brooksby Melton College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Brooksby Melton College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.brooksbymelton.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Support</md:GivenName>
+	<md:EmailAddress>mailto:itsupport@BrooksbyMelton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Support</md:GivenName>
+	<md:EmailAddress>mailto:itsupport@BrooksbyMelton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

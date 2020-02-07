@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.editure.co.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-05-25T13:47:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIJALzAXoogu0OFMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGHNoaWJib2xldGguZWRpdHVyZS5jby51azAeFw0xMjA0MTMxNDE1NDFaFw0y
+MjA0MTExNDE1NDFaMCMxITAfBgNVBAMTGHNoaWJib2xldGguZWRpdHVyZS5jby51
+azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMG3mYtAvjNLIGIChu6j
+S4ia5UAGno6CWIeM3yIJje1WnjVc0K6Bm/ulQGou7KFw0QrMhqTmdcqoT25tUbD+
+YGTajArHEW/cefay3G1NKP/IqVfUp9xKFimvtUEqAPCAWTWUP7VeGPyhlB99p43F
+PxXNu4wb8TRleXTpstyarlstM5+AK6MoMZXaoGtkUh0c14ChE7KFvGiH32Z/I9L5
+oeTM3lE3naAyy3cUlmKGPcageo4r5ToiPaY2Ym8zmAI4XzSFLQPELbjZKua6zN8W
+Pgg6fm1xDsIw7V2hfOt3xlf+0JmY0e0L9yUbtqk8oQ1c5KaIN4pBahzQT6tt3P5o
+u7cCAwEAAaNzMHEwUAYDVR0RBEkwR4IYc2hpYmJvbGV0aC5lZGl0dXJlLmNvLnVr
+hitodHRwczovL3NoaWJib2xldGguZWRpdHVyZS5jby51ay9zaGliYm9sZXRoMB0G
+A1UdDgQWBBTzRjbL3Tk36c5S0QNEKRYtvxmf/TANBgkqhkiG9w0BAQUFAAOCAQEA
+hTfB/KawwGi4mjlbn+FzNAz3uxuS0vWxMQbaCgwuMSz2bP7c3c/bpT7RGZx+pZAp
+WYYKQgARJ1HZPBjKNKUqD7vGcEDWMFZbLD9uAhM/7ZWw5heZkObT1Z50i9RnOnQ9
+ZHxvcsQDEK642BUAccrT9hJnSOBv1HjryKFsjI4H2ISJwQAGZrx8gK1w3E7yN2Xz
+8JKVpWqvncLCV9twO3woRmjq9S9D59j7p0kNLfLO3cmk9CuBi9z2rwevsTlaSpHC
+rT64LLFKB468UlpfdpVyosQ6Fi5L5lG5SLtmmMgF+1vK+vAGHmR47hZLt+iKnmfw
+mZTLX4Py/Vl94v6sULZDtw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://shibboleth.editure.co.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">New Era Education Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">New Era Education Ltd</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.editure.co.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Customer Support</md:GivenName>
+	<md:EmailAddress>mailto:customersupport@neweraed.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Systems Team</md:GivenName>
+	<md:EmailAddress>mailto:systems@neweraed.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

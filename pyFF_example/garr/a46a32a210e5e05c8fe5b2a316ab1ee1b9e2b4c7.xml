@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.soas.ac.uk/entity">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-06-13T17:38:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">soas.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SOAS, University of London</mdui:DisplayName>
+		<mdui:Logo height="64" width="204">https://inet.soas.ac.uk/images/soas204-64.gif</mdui:Logo>
+		<mdui:Logo height="110" width="350">https://inet.soas.ac.uk/images/soas350-110.gif</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>soas.ac.uk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUHu+w7DSrNlupuFhKVEzWgnZN6howDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLnNvYXMuYWMudWswHhcNMTQwNDA4MjIxNzAxWhcN
+MzQwNDA4MjIxNzAxWjAZMRcwFQYDVQQDEw5pZHAuc29hcy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIuU7ElZ1vCWXXzk6p8OeidLIuxiuTLS
+QCok7JQ12DsN0sMkR3nB6Fc/p8JtF5Wi2AYYdiiLSnG9aL1X4IC/c13oLjpnaROF
+AmoUvphSM3KOxJbHRcgDyLPgUom3lrz06eVu+CaGd9ZcuTyLWDhcEb2OMM9/uYEX
+k7aEIGvz6srSf3mMMt0dfqtSgMNzz7TFnWa87slCC/9r+ZpWUkL/sBvmzx5O72qm
+7Z8mpi6REZpm40wqMUAxHjjjW8aJXmXiyVCOc7egpZ2AYMnotBVp+90YmQBUhJAb
+1FOChrciUjQkCyfK9tjTtCg6QSjJY8BwDGkt8KiCBZ1Ek+aXylC5FN0CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLnNvYXMuYWMudWuGJWh0dHBzOi8vaWRwLnNvYXMu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMVRZjXXKBbdahgAxd9112xb
+VrldMA0GCSqGSIb3DQEBBQUAA4IBAQB9WO18k3FgZfqXpeQ5VpEagA6GjUAQ1L5h
+dHX9qWZuhdUWmYfsZ76E7E48PMok6wikWGo52T5DAINMmoHeSI7I4TPncoKkhF/t
+xjBcdyV4aIv2vRyVJzhk8Nlhxa49OVcyx197cF7wZ6VTYfatmCgXz4SIY8+DJ0PN
+G/lX9hVVrfFS/vu88SbBTFUwTDEDsW42OjQjHxMgX1fq2Crxwo0xmthQLXju5o24
+4/6sLo9MlO7/xwhDBD783cYX2jYNmMjS7w01L5JUbVxyB2AOv+vlZbtBZqTtCIXN
+Z5pa5LX39aBuc/C0sjpUNCe4fkjCXfFXP+74dO/rCiGkXkAT2b/5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.soas.ac.uk:8443/shibboleth-idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.soas.ac.uk:8443/shibboleth-idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.soas.ac.uk/shibboleth-idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.soas.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.soas.ac.uk/shibboleth-idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.soas.ac.uk/shibboleth-idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">soas.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUHu+w7DSrNlupuFhKVEzWgnZN6howDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLnNvYXMuYWMudWswHhcNMTQwNDA4MjIxNzAxWhcN
+MzQwNDA4MjIxNzAxWjAZMRcwFQYDVQQDEw5pZHAuc29hcy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIuU7ElZ1vCWXXzk6p8OeidLIuxiuTLS
+QCok7JQ12DsN0sMkR3nB6Fc/p8JtF5Wi2AYYdiiLSnG9aL1X4IC/c13oLjpnaROF
+AmoUvphSM3KOxJbHRcgDyLPgUom3lrz06eVu+CaGd9ZcuTyLWDhcEb2OMM9/uYEX
+k7aEIGvz6srSf3mMMt0dfqtSgMNzz7TFnWa87slCC/9r+ZpWUkL/sBvmzx5O72qm
+7Z8mpi6REZpm40wqMUAxHjjjW8aJXmXiyVCOc7egpZ2AYMnotBVp+90YmQBUhJAb
+1FOChrciUjQkCyfK9tjTtCg6QSjJY8BwDGkt8KiCBZ1Ek+aXylC5FN0CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLnNvYXMuYWMudWuGJWh0dHBzOi8vaWRwLnNvYXMu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMVRZjXXKBbdahgAxd9112xb
+VrldMA0GCSqGSIb3DQEBBQUAA4IBAQB9WO18k3FgZfqXpeQ5VpEagA6GjUAQ1L5h
+dHX9qWZuhdUWmYfsZ76E7E48PMok6wikWGo52T5DAINMmoHeSI7I4TPncoKkhF/t
+xjBcdyV4aIv2vRyVJzhk8Nlhxa49OVcyx197cF7wZ6VTYfatmCgXz4SIY8+DJ0PN
+G/lX9hVVrfFS/vu88SbBTFUwTDEDsW42OjQjHxMgX1fq2Crxwo0xmthQLXju5o24
+4/6sLo9MlO7/xwhDBD783cYX2jYNmMjS7w01L5JUbVxyB2AOv+vlZbtBZqTtCIXN
+Z5pa5LX39aBuc/C0sjpUNCe4fkjCXfFXP+74dO/rCiGkXkAT2b/5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.soas.ac.uk:8443/shibboleth-idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.soas.ac.uk:8443/shibboleth-idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">School of Oriental and African Studies</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SOAS, University of London</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.soas.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SOAS IT helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@soas.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mark</md:GivenName>
+	<md:SurName>Douglas</md:SurName>
+	<md:EmailAddress>mailto:Md11@soas.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

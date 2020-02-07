@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.ph-noe.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2016-11-24T14:30:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ph-noe.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Pädagogische Hochschule Niederösterreich</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Pädagogische Hochschule Niederösterreich</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">PH+NÖ PH+NOE</mdui:Keywords>
+		<mdui:Logo height="120" width="120">https://www.ph-noe.ac.at/idp/apple-touch-icon-120x120.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.ph-noe.ac.at/idp/favicon-16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>ph-noe.ac.at</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAJS/RI44PCpAbyr9lp5a8XCLmSCZMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWF1dGgucGgtbm9lLmFjLmF0MB4XDTE2MTExMzA4Mzk1
+OFoXDTM2MTExMzA4Mzk1OFowHDEaMBgGA1UEAwwRYXV0aC5waC1ub2UuYWMuYXQw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCoh7pIkeWsJdXLPPZJPGNc
+78fGUj691g01ImkllCBr7V+sX1sufMkbvcnSK2+kuKlhC95Ev0FvT9MRo+gyYIR1
+kszSkyfL6mrSHEiU2CtNixw1erWVkLNLxDY5e4rIynHVnXNXV/uk7YpMO33fAKVv
+ZSc6W3qITTx972sAO0kuoyrwDeUN3kCNSG99H6rdGMsmKEMz7zIakkX44F529nmT
+PlArAiRhYixkWmPq7p90sqIZzyLp9vIQVbsvwdRJWvtrW4weEaUd4IKA2fGfzvKk
+TynG1QFwhBmrPlYOBXeXxCgQTBZ5JNBBlTEn41g6sAXEd0Kqf68ssc0idWipotFz
+AgMBAAGjaTBnMB0GA1UdDgQWBBTf12YVudYfP1yrxMTeu7zVSIDjbzBGBgNVHREE
+PzA9ghFhdXRoLnBoLW5vZS5hYy5hdIYoaHR0cHM6Ly9hdXRoLnBoLW5vZS5hYy5h
+dC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAnyRbge/r9rxnP33E
+HGkDyRUbXTi+fpY4nf6NHlo+rF/3+wOG/FUfiSEhWLSLQRks9RZc6WGtaIwd8+w/
+wxM8qVSJC8bHeS3LRTVJBcLIwZvS/UFtns8Y+tlZlOOp7dv2HBVH1wmW7DXxqGPP
+xXQFsbHvbvN7D3slt/lXqAOfNpZcPOOtUN+5VKniaUfDvwMnWHRktjO9JiaT8wVN
++eCiI+pZJAirdJHuH8A5pNDGp7bGB+MGm7cie74M4pwmfOoqGuSBJGXk2zqc7ZKT
+jC8j0yG//GlQyl1Y5N74rDZqP5HIffIfSvDXofrIb7RYoRvjDwbh5q/vcS98xy9R
++gpdCw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUYyEN94Oja0VLr8oRPm3BCkHJ2CMwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRYXV0aC5waC1ub2UuYWMuYXQwHhcNMTYxMTEzMDgzOTU3
+WhcNMzYxMTEzMDgzOTU3WjAcMRowGAYDVQQDDBFhdXRoLnBoLW5vZS5hYy5hdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI98e+ahKGTeOuyoLT+qEQr2
+TvKFQG27RXk+3EFa8ilaYlADk5mQiMuD6j7AbijOhQH2iEiFf56N7qYE7qL2EDAg
+0KnK+1mquZ9p1M+MOf+IiszZi+SvMfEgMx3d6m8kE/lh4B9TeTqdHxpbLavOJPpq
+T15zQ4h/XErBXo10mVA5FPxcKh8doL1LIvygR93CRK+WN0SJgsJQAeoafDhV2FUg
+fPsf2yatwCdXRdm31XA9eucRQYnUMxPJVIR+0rJQ41TjTLty5H7SB9ezyfes300j
+xyetLsgSzVAQnCX86rdHWas//Yhi2e8b0pUPc1c6AthZttXKyhBp62hhslU4QyEC
+AwEAAaNpMGcwHQYDVR0OBBYEFGdgIOxzJ73apQWsh4zxaiY1/WJmMEYGA1UdEQQ/
+MD2CEWF1dGgucGgtbm9lLmFjLmF0hihodHRwczovL2F1dGgucGgtbm9lLmFjLmF0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBKH7akhaKptFTKjMYz
+y+MOWMdvGlOsRA8KtJMA17J1E9beWByFhQd8ZBmkCiGKx7UhBcMCU1dQ63Ic1CIH
+2Uzs9rhrJrCSuaExoCOZYRMu2ZOphNl0njJXUHirHQvg6N0qjF+4jXvF+AWsGxUM
+LxUUOiLJ3Hbr/KQ89iJS3yMfLnX44zhM+Qe+kgkcWbkRP25tN7ha+WR4xCopu8vP
+mEJ/EO6msmYezMXuK3zwmesw0NiXeLyf22we16UJUv5XEGgBhk31pMdbFkd2UT0a
+rB5F6LP4pAGk7NWhyI4ZGXUpDLAdSNCpCMTVbDafSancNndF2p5vh2wtk4ZWriVj
+JvQe
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUcZlYbroZpZpL7jxBYL8IvQM0XqcwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRYXV0aC5waC1ub2UuYWMuYXQwHhcNMTYxMTEzMDgzOTU4
+WhcNMzYxMTEzMDgzOTU4WjAcMRowGAYDVQQDDBFhdXRoLnBoLW5vZS5hYy5hdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKn5HsH6Bfg7f/SKR03iERMa
++AxpQConW7dp0s6ESrM2aJIM4TE7zXSuhW3BG13BffoV8zfrHpfTwPIBna++WVmV
+IKY7oM6rtB3n3HztMInSKCZ9bd7Ik+JKYRlkzuq4MsHzEKXSJ19p3aTbvzR8GoHU
+E/G6uvVbYGNXXR8I7STAOwthezOAY1z2ZyOhCqQ6Lawcjs0JplkYwv5l7SmAzDOl
+gXeVd7d1H+Y8BeFC3Jzzi5RyX1XwMRqfvofv9ORvcf2+Avs7FafuBvEJ9OJBvHgj
+pbktll9oOkSR8OTyZUlN2NIvS2hTQL1cZAGuFllG600ZShAX1xG/Dj3UT82XwfsC
+AwEAAaNpMGcwHQYDVR0OBBYEFLDGWUgueEV9KUgIYjZ/ELAOlr5EMEYGA1UdEQQ/
+MD2CEWF1dGgucGgtbm9lLmFjLmF0hihodHRwczovL2F1dGgucGgtbm9lLmFjLmF0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCTYZiMeviCpWd1FZIS
+akzF7B7UoPjWFtF3blFAMD3A/FC3btI8roj5bFUpQ5rtQ/SeBWVyPzfH0x985B+w
+73AfZJPmH1bCIDk1Dj68umVWxj5SOI7Sl8R8jMF3b0HbHqfF7lFPKKIjuWQjIj22
+kKYA2C+LCgtN6Nrme1zVW0qrkp+3SwnboVEQUBkiCbcPEYp1GyuQi1hEFFV52G7d
+9wPMgpmLNmCfq+8gaATSFDcu/kedDSQNEC1Km1s2vD64jheOyBbVxq8ithUHg98T
+Pe0ojcyRhFNU5W/FF4M7DXWE2KE0xvOMzvoGp32SbufmH8wM5Tmf2+7A9KlZPPCV
+XcrU
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://auth.ph-noe.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.ph-noe.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://auth.ph-noe.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.ph-noe.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Pädagogische Hochschule Niederösterreich</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University College of Teacher Education in Lower Austria</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Pädagogische Hochschule Niederösterreich</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University College of Teacher Education in Lower Austria</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.ph-noe.ac.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.ph-noe.ac.at/en.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IDP Support</md:GivenName>
+	<md:SurName>PHNOE</md:SurName>
+	<md:EmailAddress>mailto:idpsupport@ph-noe.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IDP Support</md:GivenName>
+	<md:SurName>PHNOE</md:SurName>
+	<md:EmailAddress>mailto:idpsupport@ph-noe.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://repository.jisc.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-09-27T14:57:21Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://repository.jisc.ac.uk/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://repository.jisc.ac.uk/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">JISC Repository</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Online access for registered users to JISC Repository.</mdui:Description>
+		<mdui:Logo height="68" width="350">https://repository.jisc.ac.uk/shib/shib_repository_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIJALWBNu60kA8RMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGGpyZXBsdjAxLmppc2MudWxjYy5hYy51azAeFw0xMjA3MDUxMzQ1NTlaFw0y
+MjA3MDMxMzQ1NTlaMCMxITAfBgNVBAMTGGpyZXBsdjAxLmppc2MudWxjYy5hYy51
+azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANMowFcUBw/JzuJmgKZj
+FOomnF2WVKgHSx/o9t7qz1M2nFTDdPVyOoofneLhp2PMPfpOaymaM2wVby+bqn/Y
+chnbZlG4+QwVP5sPl0DmlYu3PTnI/rsEpE1rZYVn0KAM9TR45wgE6LeA7PDuJd2J
+y15bi7h3rXCuQRQ1aZ8tRHD1fjBf6KiLm9B4bguHwLGeDgDrkA/JdY1Xeh4XTVar
+WHrnXdvY9V3vlN7uBNSd1O/eWNwE0pd0Y4a1ysf4BfNoYKjgH1AL8+7BSJDyTX2C
+7KP6oHRSNyN1vNE3UXVSC7cYH0tFGzEim0U+y5iM2zUdtnK1+EhwgAo8brILd1As
+8tECAwEAAaNGMEQwIwYDVR0RBBwwGoIYanJlcGx2MDEuamlzYy51bGNjLmFjLnVr
+MB0GA1UdDgQWBBQ0t7spq60qClWktBGJSUPQIRVaxjANBgkqhkiG9w0BAQUFAAOC
+AQEApE0apWehglMp9y1cB0UdhOyXmfTq5pZ2C0alGrlEbNVT0Em7F8grWUylhTe4
+awNjE+xlABLi6tpG2KuMoHIhf1rrh5cdj/ghFupuhYM8f7I7lnXAGbJ4qHciHEyE
+ocQQCWlh5ad/iAQttMmOoXhvDafSP/Qo+HQCLK6DuhWWCySMdMHOYuqnQeQTFsC/
+XCvc3RmAP9XqWR/l5KW9IwdMXkrZRle9VYOjsx7BKKufVb5OTScl5B94AHrJvc4P
+SfFVmy2rkht+5rqtDhiHHVkQyr1p40RnXgRNdk1MmkmhXkt4odKYTvTqscnVYvR9
+fHsDbj+iVNwcJSOlMecWJDLdeA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://repository.jisc.ac.uk/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://repository.jisc.ac.uk/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Jisc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">JISC Repository</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.jisc.ac.uk/aboutus.aspx</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Laura</md:GivenName>
+	<md:SurName>Smyth</md:SurName>
+	<md:EmailAddress>mailto:itservicedesk@jisc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Justin</md:GivenName>
+	<md:SurName>Bradley</md:SurName>
+	<md:EmailAddress>mailto:jb4@ecs.soton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

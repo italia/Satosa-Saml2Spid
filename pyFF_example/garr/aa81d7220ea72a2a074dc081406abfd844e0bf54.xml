@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hj.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hj.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Högskolan i Jönköping</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Jönköping University</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för anställda och studenter vid Högskolan i Jönköping.</mdui:Description>
+		<mdui:Description xml:lang="en">The Jönköping University Identity Provider is used by employees and students at the university.</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://ju.se</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://ju.se/en.html</mdui:InformationURL>
+		<mdui:Logo height="140" width="315" xml:lang="sv">https://idp.hj.se/idp/images/logo.png</mdui:Logo>
+		<mdui:Logo height="140" width="315" xml:lang="en">https://idp.hj.se/idp/images/logo.png</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="sv">http://hj.se/it-helpdesk/faq---manualer/mitt-anvandarkonto/ovrigt/gemensam-inloggningstjanst.html</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://hj.se/en/it-helpdesk/ju-faq---manuals/my-user-account/other/joint-web-login-service.html</mdui:PrivacyStatementURL>
+		<mdui:Keywords xml:lang="sv">hj hogskolan+i+jonkoping jonkoping+university</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">hj hogskolan+i+jonkoping jonkoping+university</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>hj.se</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:57.7783,14.1633</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIUULHcuieC4zf04BYU0AR+DuY24ekwDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJaWRwLmhqLnNlMB4XDTE2MDMxNDExMzgxMVoXDTM2MDMx
+NDExMzgxMVowFDESMBAGA1UEAwwJaWRwLmhqLnNlMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAk6THbcnraohTYngZOycD0+ctVWACLADGljQThCwnJA/T
+skGkGDPKKsFBaYdldgUTJJ0Q3wYqzKx44M5FHNUKWwgBeZAnEWISm3t9Cq24hqEO
+c4QNCYt7PVNAK+vS7yarotYAPm4HP3Uo80CXWG69k5HFnpjaF3woQ2N+B0pd39O2
+iLzh7iWJ+Nt/qD3Hl7sTIfPzsoY4PdNCKLxvpLT8PGl2ON/PHuM4qK4R6HLqGFQJ
+DKhGcmxp6QgJA/5VK3uV8yYdDYuc/Pjk1vavLwlYbKUV0r0Tt8eMlbjPy94Nw/J0
+MXIMH56Q3xMIT1a4AZigUzUXkIZYfiYQu2YxU1eEpwIDAQABo1kwVzAdBgNVHQ4E
+FgQUn9XP4pFGWs88bAiERYN6xxdhub0wNgYDVR0RBC8wLYIJaWRwLmhqLnNlhiBo
+dHRwczovL2lkcC5oai5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAUJ5a7In0Z2V4MFky//RAsoCsqXdrHwzvqwB+w3rdN21A/qpyPOPeMX3T9afD
+afDbFF94EYNEvRIaH6NbGZLJ0CGfMiw4a37/c9sGLieQwLfRnACoe33jKf+Z/w8J
+mIym0ztaWUO/lx8SkWTcMl4YXocFXEujlpoAe3cW1N1q7qcjY9NsEzAoLLs3icKS
+D5VOTbkivKbs6KPKzqYe82f5++Hv+tjI/yVMLOVi3ktPo6e2PnhsGQ+qLpFs17Qn
+0P2ucB2neCFd88FgeIQoGAGycu9SVumUxi5sE/VEo8yzNIUZQRxyV7st5ECM2eIG
+qbiphg2PJniZhcfItlrn7pTs/g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEDCCAfigAwIBAgIVAMZDZCS54aZ6k2vTnIj+qeIbuU06MA0GCSqGSIb3DQEB
+CwUAMBQxEjAQBgNVBAMMCWlkcC5oai5zZTAeFw0xNjAzMTQxMTM4MTBaFw0zNjAz
+MTQxMTM4MTBaMBQxEjAQBgNVBAMMCWlkcC5oai5zZTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAIym14ZOnC+wJFKdlEmCtWCr3Gd1mWgsveBynbEKe/EU
+uuccSv094nBNgEYC5LyM8EhXpUqo7V6ZwIYvyasecmk1kFZMbR9qJ6GOH4j/mEC8
+EAAdLdPZ3tNKlUx8qCKDR6n7P1TaTrQKk+QZg2QiZI5aCfv9mlKL7ESI3+sjlcy2
+Uo59P8AjXt/5qg8mQPFdzy8y/j1Bp0yI6UON4oG+xZC/NX7L0WaJHJjwJwXTjlRs
+RAuau05JGOmRabkV6CWCEEqma2vuF2a8Evo2e0ImUv+4TNmlflokhyYQu1CB3Okr
+xZOTGSMFR8dltLQXkisMN2PpDIEjTpugTyw/q0Dldc8CAwEAAaNZMFcwHQYDVR0O
+BBYEFFCA2ZGMD+rZjVI9MFpHDe0pKSygMDYGA1UdEQQvMC2CCWlkcC5oai5zZYYg
+aHR0cHM6Ly9pZHAuaGouc2UvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBADxA6tq261XomAqzHLJtrwdElc85hy+TYUh/WZuLSDTG3Vg6NjFqZc86igsD
+rlwmwrzACWVR0DMzBDQCPaC8mDLUgrfm1zFkMm9ZkTS8F51TsW4On18TVLBNIOT/
+lKBEHXftJllK4y23ljSFIJ8dmJtra92rYBOTUrnougS5qgaEeoHYPXeJQ5VK+79Z
+XuTeAhq8HKrntnTn1sVQbE+BEEXDnp0cyKlM+pvBt+kbKx0ElXDJpxQuVOnDSuAO
+W+hK8vPoi/NhgSFCFHU6fbAWsZQYVXmKGggCdeiRF2hV1MBTPiMXzy/W7LEMKmD/
+wHTEWQ0LC1zCU0Mh0mCpi9a19HI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIUUC0X9zn/hpN9nrFMVgdJIiozgH0wDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJaWRwLmhqLnNlMB4XDTE2MDMxNDExMzgxMVoXDTM2MDMx
+NDExMzgxMVowFDESMBAGA1UEAwwJaWRwLmhqLnNlMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAuOBo7KMGzTUWzPwhOoJ66zezzBMvohhiII8r0aUggTpg
+amFmjWibMENctxiUNDEsY1Om0W+GrBWY3V9Gpw3rMN+q+N472S+gDbN7xYRlsffp
+OcX7AZar2W0/U032HtojgvoooEhY5lNkXrfDvqYZI7bLXaqNAyNhEuE83Cb1rGIw
+8728A05sGsG9Iu1RmJGZfhDkmqpo0zgmxBxrm9DvWjNusNLRGRExRAeS1NoihKUF
+ppLJjsx8uxM5Mtes4cwu9qP2ZYldO4dbXAmdu9hZqrZEI6sXu/5wq2wqHkNXJCQK
+kLElOOalwPUF8PUU/+AfymKCiYSA7Nbu7H4OmV01SQIDAQABo1kwVzAdBgNVHQ4E
+FgQUwLniboBk0meJreYvopeZun+A/2AwNgYDVR0RBC8wLYIJaWRwLmhqLnNlhiBo
+dHRwczovL2lkcC5oai5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAbHgUvE4N1vEqSNS7hsxbppBE7dXOTUgpEMkjxzs/2MW7bGuTeXX1vCY6nNd+
+C4RzrsOhbWrnenEsstJK08iBMBK48fMPlvCIcXvKXkcpl4v7VzOBQPQvOzUjgMXn
+Ed3w1/nbnQ/cp4+rTX9TJS30HOF3ZSSL6KnhbDFgP1WOM3AsLYYqvD75W9CTPHo5
+4z3cr8uIazmIHFafmpDbX3+Mm0VaHE9z7z6r3hWhcKxWDUUQKV5Is9QdQ4bQuWMw
+R+zjNzlS8LbSSelk0ukuH58O9YEBSxb4LpyJoAlpeUkIm8bhDoym2n+nXYSRwigh
+I91KnWp+FpSd3F3W0MlM1+MiKQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hj.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hj.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hj.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hj.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hj.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hj.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIUULHcuieC4zf04BYU0AR+DuY24ekwDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJaWRwLmhqLnNlMB4XDTE2MDMxNDExMzgxMVoXDTM2MDMx
+NDExMzgxMVowFDESMBAGA1UEAwwJaWRwLmhqLnNlMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAk6THbcnraohTYngZOycD0+ctVWACLADGljQThCwnJA/T
+skGkGDPKKsFBaYdldgUTJJ0Q3wYqzKx44M5FHNUKWwgBeZAnEWISm3t9Cq24hqEO
+c4QNCYt7PVNAK+vS7yarotYAPm4HP3Uo80CXWG69k5HFnpjaF3woQ2N+B0pd39O2
+iLzh7iWJ+Nt/qD3Hl7sTIfPzsoY4PdNCKLxvpLT8PGl2ON/PHuM4qK4R6HLqGFQJ
+DKhGcmxp6QgJA/5VK3uV8yYdDYuc/Pjk1vavLwlYbKUV0r0Tt8eMlbjPy94Nw/J0
+MXIMH56Q3xMIT1a4AZigUzUXkIZYfiYQu2YxU1eEpwIDAQABo1kwVzAdBgNVHQ4E
+FgQUn9XP4pFGWs88bAiERYN6xxdhub0wNgYDVR0RBC8wLYIJaWRwLmhqLnNlhiBo
+dHRwczovL2lkcC5oai5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAUJ5a7In0Z2V4MFky//RAsoCsqXdrHwzvqwB+w3rdN21A/qpyPOPeMX3T9afD
+afDbFF94EYNEvRIaH6NbGZLJ0CGfMiw4a37/c9sGLieQwLfRnACoe33jKf+Z/w8J
+mIym0ztaWUO/lx8SkWTcMl4YXocFXEujlpoAe3cW1N1q7qcjY9NsEzAoLLs3icKS
+D5VOTbkivKbs6KPKzqYe82f5++Hv+tjI/yVMLOVi3ktPo6e2PnhsGQ+qLpFs17Qn
+0P2ucB2neCFd88FgeIQoGAGycu9SVumUxi5sE/VEo8yzNIUZQRxyV7st5ECM2eIG
+qbiphg2PJniZhcfItlrn7pTs/g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEDCCAfigAwIBAgIVAMZDZCS54aZ6k2vTnIj+qeIbuU06MA0GCSqGSIb3DQEB
+CwUAMBQxEjAQBgNVBAMMCWlkcC5oai5zZTAeFw0xNjAzMTQxMTM4MTBaFw0zNjAz
+MTQxMTM4MTBaMBQxEjAQBgNVBAMMCWlkcC5oai5zZTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAIym14ZOnC+wJFKdlEmCtWCr3Gd1mWgsveBynbEKe/EU
+uuccSv094nBNgEYC5LyM8EhXpUqo7V6ZwIYvyasecmk1kFZMbR9qJ6GOH4j/mEC8
+EAAdLdPZ3tNKlUx8qCKDR6n7P1TaTrQKk+QZg2QiZI5aCfv9mlKL7ESI3+sjlcy2
+Uo59P8AjXt/5qg8mQPFdzy8y/j1Bp0yI6UON4oG+xZC/NX7L0WaJHJjwJwXTjlRs
+RAuau05JGOmRabkV6CWCEEqma2vuF2a8Evo2e0ImUv+4TNmlflokhyYQu1CB3Okr
+xZOTGSMFR8dltLQXkisMN2PpDIEjTpugTyw/q0Dldc8CAwEAAaNZMFcwHQYDVR0O
+BBYEFFCA2ZGMD+rZjVI9MFpHDe0pKSygMDYGA1UdEQQvMC2CCWlkcC5oai5zZYYg
+aHR0cHM6Ly9pZHAuaGouc2UvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBADxA6tq261XomAqzHLJtrwdElc85hy+TYUh/WZuLSDTG3Vg6NjFqZc86igsD
+rlwmwrzACWVR0DMzBDQCPaC8mDLUgrfm1zFkMm9ZkTS8F51TsW4On18TVLBNIOT/
+lKBEHXftJllK4y23ljSFIJ8dmJtra92rYBOTUrnougS5qgaEeoHYPXeJQ5VK+79Z
+XuTeAhq8HKrntnTn1sVQbE+BEEXDnp0cyKlM+pvBt+kbKx0ElXDJpxQuVOnDSuAO
+W+hK8vPoi/NhgSFCFHU6fbAWsZQYVXmKGggCdeiRF2hV1MBTPiMXzy/W7LEMKmD/
+wHTEWQ0LC1zCU0Mh0mCpi9a19HI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIUUC0X9zn/hpN9nrFMVgdJIiozgH0wDQYJKoZIhvcNAQEL
+BQAwFDESMBAGA1UEAwwJaWRwLmhqLnNlMB4XDTE2MDMxNDExMzgxMVoXDTM2MDMx
+NDExMzgxMVowFDESMBAGA1UEAwwJaWRwLmhqLnNlMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAuOBo7KMGzTUWzPwhOoJ66zezzBMvohhiII8r0aUggTpg
+amFmjWibMENctxiUNDEsY1Om0W+GrBWY3V9Gpw3rMN+q+N472S+gDbN7xYRlsffp
+OcX7AZar2W0/U032HtojgvoooEhY5lNkXrfDvqYZI7bLXaqNAyNhEuE83Cb1rGIw
+8728A05sGsG9Iu1RmJGZfhDkmqpo0zgmxBxrm9DvWjNusNLRGRExRAeS1NoihKUF
+ppLJjsx8uxM5Mtes4cwu9qP2ZYldO4dbXAmdu9hZqrZEI6sXu/5wq2wqHkNXJCQK
+kLElOOalwPUF8PUU/+AfymKCiYSA7Nbu7H4OmV01SQIDAQABo1kwVzAdBgNVHQ4E
+FgQUwLniboBk0meJreYvopeZun+A/2AwNgYDVR0RBC8wLYIJaWRwLmhqLnNlhiBo
+dHRwczovL2lkcC5oai5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAbHgUvE4N1vEqSNS7hsxbppBE7dXOTUgpEMkjxzs/2MW7bGuTeXX1vCY6nNd+
+C4RzrsOhbWrnenEsstJK08iBMBK48fMPlvCIcXvKXkcpl4v7VzOBQPQvOzUjgMXn
+Ed3w1/nbnQ/cp4+rTX9TJS30HOF3ZSSL6KnhbDFgP1WOM3AsLYYqvD75W9CTPHo5
+4z3cr8uIazmIHFafmpDbX3+Mm0VaHE9z7z6r3hWhcKxWDUUQKV5Is9QdQ4bQuWMw
+R+zjNzlS8LbSSelk0ukuH58O9YEBSxb4LpyJoAlpeUkIm8bhDoym2n+nXYSRwigh
+I91KnWp+FpSd3F3W0MlM1+MiKQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hj.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">HJ</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Högskolan i Jönköping</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Jönköping University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ju.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Jönköping University</md:Company>
+	<md:SurName>Joakim Danielsson</md:SurName>
+	<md:EmailAddress>mailto:swamid@ju.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 36 101116</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Jönköping University</md:Company>
+	<md:SurName>Stefan Kindh</md:SurName>
+	<md:EmailAddress>mailto:swamid@ju.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 36 101170</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Jönköping University</md:Company>
+	<md:SurName>IT-Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:swamid@ju.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 36 101112</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

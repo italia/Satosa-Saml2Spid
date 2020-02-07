@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.cc.lehigh.edu/sso/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://sso.cc.lehigh.edu/error" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lehigh.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lehigh University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Lehigh University IDP (SimpleSAMLPHP)</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.lehigh.edu/help</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://lts.lehigh.edu/services/explanation/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="44" width="200" xml:lang="en">https://sso.cc.lehigh.edu/sso/resources/lehightheme/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDeDCCAmACCQD2MdQMsOjE8DANBgkqhkiG9w0BAQUFADB+MQswCQYDVQQGEwJV
+UzEVMBMGA1UECBMMUGVubnN5bHZhbmlhMRIwEAYDVQQHEwlCZXRobGVoZW0xGjAY
+BgNVBAoTEUxlaGlnaCBVbml2ZXJzaXR5MQwwCgYDVQQLEwNMVFMxGjAYBgNVBAMT
+EXNzby5jYy5sZWhpZ2guZWR1MB4XDTExMDYyMTE5MjQzOFoXDTM3MTIyMTE5MjQz
+OFowfjELMAkGA1UEBhMCVVMxFTATBgNVBAgTDFBlbm5zeWx2YW5pYTESMBAGA1UE
+BxMJQmV0aGxlaGVtMRowGAYDVQQKExFMZWhpZ2ggVW5pdmVyc2l0eTEMMAoGA1UE
+CxMDTFRTMRowGAYDVQQDExFzc28uY2MubGVoaWdoLmVkdTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAL0XqyuXiJif8dgfjaz6nvH0BytvAie/+8aObW5Z
+82GtDzTYsnUjsq0hJoW28nZuMhQguMM0PJcWej5GoEhp8Hq7Ml03jWqxmqBBrvgQ
+5Dv7jHp9K1oHCOkMbSzSpy69dLL36VcRDX5Ncf6qo+VGmoZ5fee8ScoVVxQra7C8
+WcPbzc+Oav63rfShZcjGOk6vasR6kflpCM+BT3vmNLzcava8eMcGa+zX6d8eSAkn
+LFvVyQG2vGLQpWwMzhgCnV0bO5A13Aq2cJSfKdxwL+KNkmS44CDA4yfeXHk79O9m
+LoKfX1DRkvoKJwcYuDUrQWe5nB3qkDjLaKo/SXI957SIlgkCAwEAATANBgkqhkiG
+9w0BAQUFAAOCAQEAYZPOLM0E/AC1hNyJvB2xsMYN2WM6jgJ52upFMz41zqv//mXT
+o4JHhUfEezvsGS7z7nDh4ggYZtmePGlN0S1oYuJqPNESb5pkr0Vu8DF3BQRZw7Id
+/73uJ646aKCSsXqjUEso06Br0AuV+eB0hIVj3DE5MY8dQU8FjfElrP6QUy9q8fTl
+79A25sYS/t/ngaT3xlEyIkeyUc61YqZnCDIdpRyWhkH2dwL0PEnRHW/Pg9Kjgw/W
+i3cZL+A/f9dWYzc1xjWd/zW4jOGu1KIFApYnL7DOIRaW1d13OhGk0Ij0TDsO+Qnd
+ipGX2RJcUt6+Q02eiIU9LdOsjOvivr+kUO/bvw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.cc.lehigh.edu/sso/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.cc.lehigh.edu/sso/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lehigh University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lehigh University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lehigh.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan Schwartz</md:GivenName>
+	<md:EmailAddress>das1@lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Keith Erekson</md:GivenName>
+	<md:EmailAddress>kbe2@lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Colin Foley</md:GivenName>
+	<md:EmailAddress>caf209@lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Identity and Access Management Team</md:GivenName>
+	<md:EmailAddress>iniam@Lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Colin Foley</md:GivenName>
+	<md:EmailAddress>caf209@lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Eric Zematis</md:GivenName>
+	<md:EmailAddress>ciso@lehigh.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

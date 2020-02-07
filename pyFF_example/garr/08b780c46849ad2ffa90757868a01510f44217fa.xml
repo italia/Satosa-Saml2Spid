@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.uchastings.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uchastings.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of California, Hastings College of the Law</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uchastings.edu/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="144" width="144" xml:lang="en">https://www.uchastings.edu/wp-content/uploads/2018/09/144px.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIULgOAs/Tf+A5icFcGA4Rhib2qyiIwDQYJKoZIhvcNAQEF
+BQAwJDEiMCAGA1UEAxMZc2hpYmJvbGV0aC51Y2hhc3RpbmdzLmVkdTAeFw0xMjEx
+MjAwMjUzMTRaFw0zMjExMjAwMjUzMTRaMCQxIjAgBgNVBAMTGXNoaWJib2xldGgu
+dWNoYXN0aW5ncy5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCI
+3hbJpnF1jSXmIkYcgbkQihqtmY9kdeKweWZlnUq/9nGMDig7EEurRci7DPVf4an9
+nNqaFO9SnfXjkcK50XUlojtQReKu2y9XEtqP2bpb24NPeJZVC5lGKo14USBtXLQs
+h4SMipV2p9JbhgVVBoc5HK/+XN+ceSUJdQWDAGOb/plSBnT3Xpr5yEg88kiG+Ogl
+PawAqXBcTf7GX5pcIdRaivnCCVuMs1jdtjlOOZrm3jNpQ9lLluUjzlTJeQEaKdSp
+8lNhPXGYOK+nvjzzz7Q4WjhCOzBvJEQ65j7rG7xv67BPJaq/Z39NblYOorPyHyg0
+8bwyxTmByXDsv89GsAFNAgMBAAGjeTB3MFYGA1UdEQRPME2CGXNoaWJib2xldGgu
+dWNoYXN0aW5ncy5lZHWGMGh0dHBzOi8vc2hpYmJvbGV0aC51Y2hhc3RpbmdzLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU1AIdyJ3tLG0jtHse7Et6r/0wHHAw
+DQYJKoZIhvcNAQEFBQADggEBAF/MjsAp1CUH0HHW/IFm2RaYFkkTDTpsYgkiK9nR
+9lO0uBTLMPb4OAUSh0lWLCHGDI3XGcs88eOgrfUfMeEF0ZSzG5Re0XrdpdRr+08R
+uvwMOAkOffYOyj+QKnZ8Rc2wJ3lNjC4XJXDUAPms5KhKBcvS3OKdv9j4UIMZLihL
+lrY2fAeErFDqKpITwtKShev1mjxe/XdvgkWhSudryLi6KAiXZVAI58YJjDvnenXq
+cNfywjmUvtBaLs4PBLUGOdECvQ9b/yAV4OrVAkQhJmv2Qa8SRVCLVzhs9pui8DlJ
+Bd22SCSfMLz0OSX/8PQPqMyFNzt+pG3rP4r+8yHg/8wjgtE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uchastings.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.uchastings.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.uchastings.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.uchastings.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uchastings.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uchastings.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIULgOAs/Tf+A5icFcGA4Rhib2qyiIwDQYJKoZIhvcNAQEF
+BQAwJDEiMCAGA1UEAxMZc2hpYmJvbGV0aC51Y2hhc3RpbmdzLmVkdTAeFw0xMjEx
+MjAwMjUzMTRaFw0zMjExMjAwMjUzMTRaMCQxIjAgBgNVBAMTGXNoaWJib2xldGgu
+dWNoYXN0aW5ncy5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCI
+3hbJpnF1jSXmIkYcgbkQihqtmY9kdeKweWZlnUq/9nGMDig7EEurRci7DPVf4an9
+nNqaFO9SnfXjkcK50XUlojtQReKu2y9XEtqP2bpb24NPeJZVC5lGKo14USBtXLQs
+h4SMipV2p9JbhgVVBoc5HK/+XN+ceSUJdQWDAGOb/plSBnT3Xpr5yEg88kiG+Ogl
+PawAqXBcTf7GX5pcIdRaivnCCVuMs1jdtjlOOZrm3jNpQ9lLluUjzlTJeQEaKdSp
+8lNhPXGYOK+nvjzzz7Q4WjhCOzBvJEQ65j7rG7xv67BPJaq/Z39NblYOorPyHyg0
+8bwyxTmByXDsv89GsAFNAgMBAAGjeTB3MFYGA1UdEQRPME2CGXNoaWJib2xldGgu
+dWNoYXN0aW5ncy5lZHWGMGh0dHBzOi8vc2hpYmJvbGV0aC51Y2hhc3RpbmdzLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU1AIdyJ3tLG0jtHse7Et6r/0wHHAw
+DQYJKoZIhvcNAQEFBQADggEBAF/MjsAp1CUH0HHW/IFm2RaYFkkTDTpsYgkiK9nR
+9lO0uBTLMPb4OAUSh0lWLCHGDI3XGcs88eOgrfUfMeEF0ZSzG5Re0XrdpdRr+08R
+uvwMOAkOffYOyj+QKnZ8Rc2wJ3lNjC4XJXDUAPms5KhKBcvS3OKdv9j4UIMZLihL
+lrY2fAeErFDqKpITwtKShev1mjxe/XdvgkWhSudryLi6KAiXZVAI58YJjDvnenXq
+cNfywjmUvtBaLs4PBLUGOdECvQ9b/yAV4OrVAkQhJmv2Qa8SRVCLVzhs9pui8DlJ
+Bd22SCSfMLz0OSX/8PQPqMyFNzt+pG3rP4r+8yHg/8wjgtE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uchastings.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California Hastings College of the Law</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California Hastings College of the Law</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uchastings.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ronald Proschan</md:GivenName>
+	<md:EmailAddress>proschan@uchastings.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Adam Hamilton</md:GivenName>
+	<md:EmailAddress>hamiltoa@uchastings.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Camilla Tubbs</md:GivenName>
+	<md:EmailAddress>tubbsc@uchastings.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

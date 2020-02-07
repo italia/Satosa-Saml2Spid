@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.galegroup.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIJAJeid8J1f6CuMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGHNoaWJib2xldGguZ2FsZWdyb3VwLmNvbTAeFw0xMjAzMTIxNzMwMjNaFw0z
+MjAzMDcxNzMwMjNaMCMxITAfBgNVBAMTGHNoaWJib2xldGguZ2FsZWdyb3VwLmNv
+bTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN2Qn+1FW/n+4ZZGA0lv
+z9F+I5FdDnX35oD5M7JuN6cbprWA4F8EHir6bYAuvU5lK0knO4w56aiH0uhbWXu1
+SlUlxSbAIaJombApnC5AtCJ6WFOs+NaTi/gFlAyIh7w169ZhwfsLjQE/hkdplpWT
+xjFUNpt12ZyU8LL1yEJmfkeBUN3oK2fa7Qe+oqnyY0eOHHTKVO9IIr9/SvzdhoA0
+c8a2kXy4qM2T+qKGi7SGz3/Qhwpial3ZDGqeZ3m25n57h3I7BhxVSJGzzbSeOcib
+jbWRk5VjYalmG0V+XGjEJtN4oUdAgnkvJMj+yOQ8IXzDws4OR+KWGYl5lEAijXce
+qNcCAwEAAaOBhTCBgjAdBgNVHQ4EFgQUC3bQ/Jx1yAhQgWVLRtPePx/ipxYwUwYD
+VR0jBEwwSoAUC3bQ/Jx1yAhQgWVLRtPePx/ipxahJ6QlMCMxITAfBgNVBAMTGHNo
+aWJib2xldGguZ2FsZWdyb3VwLmNvbYIJAJeid8J1f6CuMAwGA1UdEwQFMAMBAf8w
+DQYJKoZIhvcNAQEFBQADggEBABAvL5eepD3fliAIefJ/4pDBxKBcCynRXLlmUWir
+1majii1tK0WEbDdF1a24njlftvCVDNDrrfdhu1rvXZ3UhyyiOS7fBpBvRPjCmzlf
+DdvGiMuar/T+uNzbiNqcLsVeKvwZJfzMt9Y1T7MXDABez8BD3CkdFt05j+hPK0t5
+3PLIZfOir72LoRAtXmilZs4ZAvvTL/BTTxYn4t165Vp5yBRPCLrdSAMIdTIENBZ7
+/tapXMzigHNS/YoxpEmtKkUrnkBm3nrWeF0Z6sqYEz49xS6NdnKLTSVQHyJ413LZ
+WQSvXs7RDm/214HIimD/TkaDp1Yv0Yk2iQAeO7fucXAIAv4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.dev.ggtest.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.dev.ggtest.com/Shibboleth.sso/SAML/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.qa.gghybrid.com/Shibboleth.sso/SAML/POST" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.galegroup.com/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.qa.gghybrid.com/Shibboleth.sso/SAML2/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.galegroup.com/Shibboleth.sso/SAML2/POST" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.qa.ggtest.com/Shibboleth.sso/SAML/POST" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.qa.ggtest.com/Shibboleth.sso/SAML2/POST" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.gale.com/Shibboleth.sso/SAML2/POST" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.gale.com/Shibboleth.sso/SAML/POST" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.qa.galetesting.com/Shibboleth.sso/SAML2/POST" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.qa.galetesting.com/Shibboleth.sso/SAML/POST" index="12"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Cengage Learning Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Gale Databases from Cengage Learning</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cengage.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Joe</md:GivenName>
+	<md:SurName>Mathews</md:SurName>
+	<md:EmailAddress>mailto:Joe.Mathews@cengage.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Prabu</md:GivenName>
+	<md:SurName>Krishnakumar</md:SurName>
+	<md:EmailAddress>mailto:prabu.krishnakumar@cengage.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nathaniel</md:GivenName>
+	<md:SurName>Good</md:SurName>
+	<md:EmailAddress>mailto:Nathaniel.Good@cengage.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

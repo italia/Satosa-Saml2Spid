@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.sfsu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sfsu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">San Francisco State University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://hr.sfsu.edu/Labor_Compliance_ProfDev/emp_relations/hr_Directives/P202</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80" xml:lang="en">https://www.sfsu.edu/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUaVXwsxeZ7HtpgzDRqkb/SXmxNCUwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNmc3UuZWR1MB4XDTEwMDExMjE3NTg0OVoXDTMw
+MDExMjE3NTg0OVowFzEVMBMGA1UEAxMMaWRwLnNmc3UuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnM2TW44FPEMlaZShdBub38iLLGtpvvtTZVvC
+tLo6xRQx0YCPYIQua2hxjf5lYFMe2KlwehxuCfujsTbegBX8TNg86NaN2s5iTFk7
+Q7BKY0o1UGEHhmELKZx/BVSH1AB0qwk1ZF9jGyynTITRwRGsr1yLvFM3aTH1tB4s
+iMpTTp7U4HfWcfCsAepxVJw8o8Nvgujgi6E8Mh4emTz+PdNmx0cgpiu7EpvruUEk
+ELlHifyFRhCCBUeOtxgsJXvXgqIYxLlxcz7aGnsylTCgX8fN2WABkJte90Cv06EU
+mkCnB4x8pKLxSfVkLDRDImpqPwnTjmizD6neSRQ5ano4qdAm9wIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2ZzdS5lZHWGI2h0dHBzOi8vaWRwLnNmc3UuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBT7bbal9a/eJjoYsQd6Stdkk9D6uTANBgkq
+hkiG9w0BAQUFAAOCAQEAB2UmDPQkEVR8YPNCUZS2+XjA5Pw7vdswtZpqLbN4x2RG
+AFnaUFs4Qw5/9RScVOdfuSKjbB32LSJzOTLUc2LA2zUhAcieprD9wBcW2gIVnpPC
+PQxMSI7vD7YuF6erW/qFh+gZwBod/PPmP30wy4uDAcWfW09f79wWv67v8ePXS/PA
+Ww8M8pNXffLcYo8NAdTY1ZddhYsqcAduFzL4Q0u/+QpV4K2qpMOK57sJ/4GuI0i4
+TF+IPVqP9ibO/PX7scYZDBm8wGCQ3G3UwADAQxJlSTJzyP7PthgH3ublYb3IbrY6
+OQKTDUHTSx//VpESlGrhleDG/BalOfbtxZka2UF05A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sfsu.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.sfsu.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.sfsu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.sfsu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.sfsu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.sfsu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sfsu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUaVXwsxeZ7HtpgzDRqkb/SXmxNCUwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNmc3UuZWR1MB4XDTEwMDExMjE3NTg0OVoXDTMw
+MDExMjE3NTg0OVowFzEVMBMGA1UEAxMMaWRwLnNmc3UuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnM2TW44FPEMlaZShdBub38iLLGtpvvtTZVvC
+tLo6xRQx0YCPYIQua2hxjf5lYFMe2KlwehxuCfujsTbegBX8TNg86NaN2s5iTFk7
+Q7BKY0o1UGEHhmELKZx/BVSH1AB0qwk1ZF9jGyynTITRwRGsr1yLvFM3aTH1tB4s
+iMpTTp7U4HfWcfCsAepxVJw8o8Nvgujgi6E8Mh4emTz+PdNmx0cgpiu7EpvruUEk
+ELlHifyFRhCCBUeOtxgsJXvXgqIYxLlxcz7aGnsylTCgX8fN2WABkJte90Cv06EU
+mkCnB4x8pKLxSfVkLDRDImpqPwnTjmizD6neSRQ5ano4qdAm9wIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2ZzdS5lZHWGI2h0dHBzOi8vaWRwLnNmc3UuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBT7bbal9a/eJjoYsQd6Stdkk9D6uTANBgkq
+hkiG9w0BAQUFAAOCAQEAB2UmDPQkEVR8YPNCUZS2+XjA5Pw7vdswtZpqLbN4x2RG
+AFnaUFs4Qw5/9RScVOdfuSKjbB32LSJzOTLUc2LA2zUhAcieprD9wBcW2gIVnpPC
+PQxMSI7vD7YuF6erW/qFh+gZwBod/PPmP30wy4uDAcWfW09f79wWv67v8ePXS/PA
+Ww8M8pNXffLcYo8NAdTY1ZddhYsqcAduFzL4Q0u/+QpV4K2qpMOK57sJ/4GuI0i4
+TF+IPVqP9ibO/PX7scYZDBm8wGCQ3G3UwADAQxJlSTJzyP7PthgH3ublYb3IbrY6
+OQKTDUHTSx//VpESlGrhleDG/BalOfbtxZka2UF05A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.sfsu.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sfsu.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">San Francisco State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">San Francisco State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.sfsu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical support</md:GivenName>
+	<md:EmailAddress>systems@sfsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Dmitry Vayntrub</md:GivenName>
+	<md:EmailAddress>dmitry@sfsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ameer Basha Nagore</md:GivenName>
+	<md:EmailAddress>nagore@sfsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ameer Basha Nagore</md:GivenName>
+	<md:EmailAddress>nagore@sfsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dmitry Vayntrub</md:GivenName>
+	<md:EmailAddress>dmitry@sfsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

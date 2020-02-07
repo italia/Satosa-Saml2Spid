@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ssotest.sifulan.my/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://sifulan.my" registrationInstant="2019-02-23T20:29:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://sifulan.my/sifulan-mrps-v1-2/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://ssotest.sifulan.my/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://ssotest.sifulan.my/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SIFULAN SSO Test Login</mdui:DisplayName>
+		<mdui:Description xml:lang="en">A dedicated site to test the SSO login</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://ssotest.sifulan.my</mdui:InformationURL>
+		<mdui:Logo height="212" width="300" xml:lang="en">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8TCCAlmgAwIBAgIJAMZT7hCOPxfqMA0GCSqGSIb3DQEBCwUAMBkxFzAVBgNV
+BAMTDm9uZS5zaWZ1bGFuLm15MB4XDTE5MDIyMTAwMjAwMVoXDTI5MDIxODAwMjAw
+MVowGTEXMBUGA1UEAxMOb25lLnNpZnVsYW4ubXkwggGiMA0GCSqGSIb3DQEBAQUA
+A4IBjwAwggGKAoIBgQDJuWZ+N3pxYE/BL/IsrISS6Yumh4WpWHt6ppYPN8UlteJ1
+XOzJ+8S+EZLa95b5TR4HMUpdgU+kTEkT8X4R12NUZZDYMyjGQRDBHAc215Q+GL4A
+kZpDnXYT8mNDdx3mZbd9KaQaAa+g97RPjIXDJRQ2U+OTjwyX5pSyiCdoiphreqHB
++2weWmFrgzaSdC5nO1sC5Ne+8uoHz9oTOqKY9MccG80O66bEi0x/B+FDhqmkgTCq
+FURBgPGbfq/vZoDKK5stF0DLthc1/MLZfs9Zp399ijx9TuwCg1IH/Y0MjY8xpUt2
+CO2/nd2ZZcbR5uOG4SRb77LdLU6F+IU66K/HIKjLR8B1ObogcoXO2fLB+4DhyoAY
+1wS0fQSRGFqfhO8uVDXZohjcVou/e4ffuyea+wIts27wVQhK2KtSr08uWjAA33De
+0ckuLOi4V+jgrXfHjWkEtJ4o8TTpH7GoZriXS6DkdG6/LxNmk8rU/nOpQrHQfxfq
+MQSHzqUqHnh+AMUZoe8CAwEAAaM8MDowGQYDVR0RBBIwEIIOb25lLnNpZnVsYW4u
+bXkwHQYDVR0OBBYEFB9vWftaBr0B7Tb826nvpUO5A51xMA0GCSqGSIb3DQEBCwUA
+A4IBgQAnjnHJibR8CekH4atZgRWMfhDN2W9USKy3JUIAbThCel5JRa4xGtbjlkl0
+Hm3M4vPRP0JnEOHROur5/eCE65Mp2O1KwQdCq7V1Quj4kRZeHhT3P2B74lf5wKez
+TsQUhY4b+U47l3ucha6CHwObDH2T8iil74u3gv34HulpXMjMc5DMVOyYieDABNLI
+StTjlaT4rL2sDPN0Aqg6cFtswYXNEvpxkCfSUcOVSU7w6O1CiZKaTVkGoFOkQCyB
+cd2XUErihRIVD4XBFohOZ4hpoSWBCBeECNSbKfwac08/ouxLLaq7LUkWQANm3j2A
+gjTyEmcGho8SUAiI4LlRuhwbz/M8tIEkh4hKbdEyNkePbX5G3TZuz5HHo0F1bvu4
+KZZXee9CdtpnWbfendoiuzo1csIzQB7foIKH+CyokFCV+KosML6WkbzL09V8NEYL
+3KJraKu7LHWt2f+/PLqzv8EuMNNmPMVAUvMRAnZsaGEz9tEQQPU7zctfe/jKmRy3
+7sh8WnQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8TCCAlmgAwIBAgIJALnvcb1ToDhIMA0GCSqGSIb3DQEBCwUAMBkxFzAVBgNV
+BAMTDm9uZS5zaWZ1bGFuLm15MB4XDTE5MDIyMTAwMjAwMloXDTI5MDIxODAwMjAw
+MlowGTEXMBUGA1UEAxMOb25lLnNpZnVsYW4ubXkwggGiMA0GCSqGSIb3DQEBAQUA
+A4IBjwAwggGKAoIBgQDNknUQBMkBJRdfuLWFfJJa8NVEbZ+UVCviFnH3oKM+RMBf
+WV7pwp32uAJtB3TpdkK+x4QjNeDbJ+6bi5vigab4fw0KXvVx222UL9oisECM6nnf
+p1lswFEz8VGL+XEFW4oHUlTYz0P55wtmyMGZPFusW6XT4NptnHu3F2C21P+MJBMF
+/wsDBkw5uVCa4uXix0l2MEmtt8vq4vBJHCaIBNUVT+RAFvLtNIQXYU+au8otwVyQ
+PPfpsY0iaI42I7pFpsBxPtorI9Or62EfB8IzjjlnmVjAsfsD/dzuBiNn3oMLnDCq
+kaLWZsMm9iMnIv5MtwnkvDwdtMYKSQ4nV7+RH5P7As/uM/5/lzS4uzqnUtol+fIX
+eAhF0zWfKFIn1g9k2LWTPenHnR2k26KpWq5XeLqu9ny1VUi62gmmT2aRLgqQdVPe
+wbvXD+TpDb4FXU6HjOFJRJn41U35wD6fLVT3oY/wLUucewwccE82HFyxnv3erzqW
+A4oGlQCPawje4bF3Z7sCAwEAAaM8MDowGQYDVR0RBBIwEIIOb25lLnNpZnVsYW4u
+bXkwHQYDVR0OBBYEFFUCEFl1EJCG2cD3lJGiY3IGHce8MA0GCSqGSIb3DQEBCwUA
+A4IBgQDAbdvc4a3DIcHKF1vErl4m43lmhBYfdqEz/1xA2Wyb7dMrgdyirNN82YaH
+2AeYPE6qEx65svAIi1bdLdAei3U6QeguHQ667V8j2u0K/B3kSy9D3BMx0/qb7yP6
+ufafI080ZsHvJo0Zby/5SAdzV6rssezl2TfUfNUkajlREuH2L2nddk4HsQuU2GIB
+Cb1va8h4iWZAIsm3htbH9qqZwwgo79IjKoBz2k5s8TbgX1P1d2Jm/1V461r3xJ9v
+PsIyyrBisoTUl5yruNXqHVx109LkW/Xf+w1BI/+B6knBVBDbw3eGVAmYsdP8eBYW
+3fzQI6q4FHMkLQipo2kJ9BZVlLe9I8MqOcLW4TY8x+eO+cBlpdrV6rnIUpRjCPKB
+fgXYcUQcSUfFRMwW4DeWRRVXpANYObxa3bk8JXJISaJB31TCXGVeHcur94kx0rjA
+MuyOTAIMzQbu5+afQfeaNPKh6H9bfA/9IjxhjekqLuJH3VYa/ZynC4NEk3I8TDy6
+UGqQhyU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ssotest.sifulan.my/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ssotest.sifulan.my/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ssotest.sifulan.my/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ssotest.sifulan.my/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ssotest.sifulan.my/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ssotest.sifulan.my/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ssotest.sifulan.my/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ssotest.sifulan.my/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ssotest.sifulan.my/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">SIFULAN SSO Test Login</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">A dedicated site to test the SSO login</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SIFULAN Malaysian Access Federation</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SIFULAN Malaysian Access Federation</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://sifulan.my</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technical</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@sifulan.my</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@sifulan.my</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

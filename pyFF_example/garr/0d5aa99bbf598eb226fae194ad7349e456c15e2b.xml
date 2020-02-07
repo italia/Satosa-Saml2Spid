@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://uat.roots.ucop.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://uat.roots.ucop.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Redwood Roots UAT</mdui:DisplayName>
+		<mdui:Description xml:lang="en">UAT Service Provider for Redwood Roots</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ucop.edu/ethics-compliance-audit-services/_files/compliance/privacy/statement-of-privacy-for-web-based-applications.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.ucop.edu/_common/_images/sso/uc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID/zCCAmegAwIBAgIUaYWNUksxn0FNHMKyrzCR65VTvd0wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAxMPdWMtdWF0ci1yb290czAxMB4XDTE5MDMyNzE3MzIyN1oX
+DTI5MDMyNDE3MzIyN1owGjEYMBYGA1UEAxMPdWMtdWF0ci1yb290czAxMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAu20KgyktBb9k1ukBeA3JDGNOfdx+
+MVTa55UsiLD+JcNsIRSw0WBFFAgxuTgSWLyHMv/vXsrlM0d/wA56au9hKAekG5nu
+C/LVXs1rkrRryTNDCOAHGyTJUQIbtG46Wgst0Xr0j3PoOy/0ce+hQvd47iJPX0Sf
+XwtSPkvEaMqP0u2tDXp7sYTOKoOg/Mkh2YDKyc7qIqrxVGPoMfsTAh6CeqTF1DqW
+tFXTB6xpIGF2Mc8NkWZD0Q2i5LNi+r/wZgihi0YULpoifhyTE2HIN2eT22/GtQgf
+1lpK8tlUZp1A0hAI15OvO/8I7kuuffEbyO5KoQCHSLaEdA0hyfGwiSwNAtzqS/3W
+XP8v64+t0bZIftkWvx8WzNvhAe///zgqiCssXh7KqPn+XGIUCu3KnibYQFrHRaL+
+ILKkiwt9AWM3W1iyhcU+fREZQj9Xr9BbGU1vhs5ENFCf2w6GWzhbzxFp06zv3TW8
+YSRjZAb4ErQaWl7DjI4w8VbfSL2GO633Dh2tAgMBAAGjPTA7MBoGA1UdEQQTMBGC
+D3VjLXVhdHItcm9vdHMwMTAdBgNVHQ4EFgQU4iF4ee+tfkW9ZOGMAX2tbzrLUVEw
+DQYJKoZIhvcNAQELBQADggGBACiTeWLSz0CetM6LWz7WQlM92gHk/KQaVDJWxaA9
+dyw1ca1m//3ctAK3UxFRogFyudtpgAn8mxF54uchrR3L3geXIfHh/nB1rTgniZv3
+xdoVKnuI09GtLFPqTO0NabxWWrUUYu9X7U26eqShwcebsVWEbVsRu/BBNunEebnr
+jFi2sGBAGrnXxlA688jTeYl6aoxOlCXuk8fNcG2+BZWb9WAaLiRlKCizELXrZm94
+XtnTRsgfCjuMLlFoJISavU3RJIcyk6IiC/EjeOd0/0Yp9v4rAV2w2kGkX/nuYRvj
+jWMrCnkjJcmmxx+4vKb+AFKUGnudxL/Gvk5I4o864ibfpsGo+8K4bjsHX7IB2Sax
+JLdFCTzbaOIonv71MKfRA07aBkKfb9Exz2JHgMqnr8141T5+Kw0bCYK68b0tJbnP
+fyh8mFdiNOJ+X/Ti2JQFnmYZpP+MyDw3KR3zzqBAAwS+KjUCXBbnkI2lqTSaG0vb
+2FXBjP0lLtvt1UE1Eqyv52aSSw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://uat.roots.ucop.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California - Office of the President</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California - Office of the President</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucop.edu/welcome.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IT Service Desk</md:GivenName>
+	<md:EmailAddress>servicedesk@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IAM Group</md:GivenName>
+	<md:EmailAddress>IAMGroup@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Operations</md:GivenName>
+	<md:EmailAddress>soc@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://travelplanet.click/v2">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2016-08-30T17:28:28Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://federation.renater.fr/category/collaboratif</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/local</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration=" urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Click Travel Planet</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="fr">http://travelplanet.click/v2/#/login</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Aws version of click control</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Click Travel Planet</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">click aws version</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHlDCCBnygAwIBAgIQAzvn4Tr4eNTKS9ImPu4gWTANBgkqhkiG9w0BAQsFADB1
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE3MTIyOTAwMDAwMFoXDTE5MDIxNTEy
+MDAwMFowgaYxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAkZSMRQwEgYDVQQFEwszODQgMjIxIDkyNTELMAkGA1UEBhMCRlIx
+DjAMBgNVBAcTBUxpbGxlMR0wGwYDVQQKExRUcmF2ZWwgUGxhbmV0IEZyYW5jZTEe
+MBwGA1UEAxMVY2xpY2sudHJhdmVscGxhbmV0LmZyMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA7e4bv9APOnaTNynxkdEmzDAGPYy0SKYBoMu0bWziF5cA
+zngjWS1KbTnmnKQt0upbJDO9+qiB258BKNOvZmcrKg3YT5TuiSEVRrwSTpIGb2m9
+TTexj3wEpG6FQWesF4PZpZEEgpujuA8IQqlWUAxOZqabt4dG/xbVEGWi8fdJKanE
+R2gq1GJtJxK6J70fgM2bpKjxHpdjsGwxR9VGKeCECWT0zdSo2ClWHa+EJB7/rHos
+CYXGaYJkelVnhLmjczoYh9+dZVX4PQ2EshHQkxfrNxnjiyCPZJl/ThR1BR3NgV2K
+cMhxEE4L4+Ahu821xZg/DGr93H/iICaUfrFBqE7aYwIDAQABo4ID7DCCA+gwHwYD
+VR0jBBgwFoAUPdNQpdagre7zSmAKZdMh1Pj41g8wHQYDVR0OBBYEFF5bp+83Id7p
+BWppApuBOq4gOVuJMCAGA1UdEQQZMBeCFWNsaWNrLnRyYXZlbHBsYW5ldC5mcjAO
+BgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUG
+A1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWV2
+LXNlcnZlci1nMi5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9z
+aGEyLWV2LXNlcnZlci1nMi5jcmwwSwYDVR0gBEQwQjA3BglghkgBhv1sAgEwKjAo
+BggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAHBgVngQwB
+ATCBiAYIKwYBBQUHAQEEfDB6MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdp
+Y2VydC5jb20wUgYIKwYBBQUHMAKGRmh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNv
+bS9EaWdpQ2VydFNIQTJFeHRlbmRlZFZhbGlkYXRpb25TZXJ2ZXJDQS5jcnQwDAYD
+VR0TAQH/BAIwADCCAfYGCisGAQQB1nkCBAIEggHmBIIB4gHgAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFgolLJbAAABAMARzBFAiBiBhqgkZFC
+1wuJ3RlK4c5jJK3J+KipDdAR+p3I0vzFsQIhAJ+XB9A4umdqS2eaMWP5uZqGIHj1
+YzPl/tIHK0LjHpmfAHUAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0A
+AAFgolLKagAABAMARjBEAiBTejQiqJ9pJ25vwMriKhwso3G/Ac/hkJGybtQY+8OJ
+AAIgcCSShwUsW97r9Xy+iiBgg9I7DVIjm2upUR//mcKydc0AdgDuS723dc5guuFC
+aR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWCiUsxoAAAEAwBHMEUCIQCRnfmQLTFm
+aNvHnj80PDV2IxMdOWafRg+cGamXwFI1wQIgbDYPc5nwVX6pF4isRJe18fs+FhJj
+2XPqIqXUuzlm21sAdwC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAA
+AWCiUsooAAAEAwBIMEYCIQDhSxl9WpDt2Q6K0P8FReeq014+zcomFueWTEAoe5jq
+kAIhAN68UttwbO+T/TeYpJIvxAWnmLYGljWyGdMfldQWPbONMA0GCSqGSIb3DQEB
+CwUAA4IBAQBloEOg1NZUtBSQ0dxjemQj6mxrXpNqA/l+63WY+dlnsnITAmlXfaoY
+ZtM6xVTcTKfASkUjSslaTqqaGoiRoDXWofcV7dc0sf59fcDQjCPpDquY/l3bvOZZ
+nPk84/3zOR/zLvRlOXTgRbDtvLsVxW46hcN4wmgnrdlAowUn2JWgD826HGw+NJLr
+MQBief5tEW/4O0bNu4Kg3ryyV0Ry5s2nUORXUyXqB4r9EL3bFpvn3GnZx+AN6rkB
+R6hF6mSDWflZvH1VGWgZwlh7kW/olnRDn5PpNawxCo0QZq7mLXvzCY3obW8de105
+hMclPzvYsC50FM4HypyTs+JUJtCrEqML
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHlDCCBnygAwIBAgIQAzvn4Tr4eNTKS9ImPu4gWTANBgkqhkiG9w0BAQsFADB1
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVk
+IFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTE3MTIyOTAwMDAwMFoXDTE5MDIxNTEy
+MDAwMFowgaYxHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYB
+BAGCNzwCAQMTAkZSMRQwEgYDVQQFEwszODQgMjIxIDkyNTELMAkGA1UEBhMCRlIx
+DjAMBgNVBAcTBUxpbGxlMR0wGwYDVQQKExRUcmF2ZWwgUGxhbmV0IEZyYW5jZTEe
+MBwGA1UEAxMVY2xpY2sudHJhdmVscGxhbmV0LmZyMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA7e4bv9APOnaTNynxkdEmzDAGPYy0SKYBoMu0bWziF5cA
+zngjWS1KbTnmnKQt0upbJDO9+qiB258BKNOvZmcrKg3YT5TuiSEVRrwSTpIGb2m9
+TTexj3wEpG6FQWesF4PZpZEEgpujuA8IQqlWUAxOZqabt4dG/xbVEGWi8fdJKanE
+R2gq1GJtJxK6J70fgM2bpKjxHpdjsGwxR9VGKeCECWT0zdSo2ClWHa+EJB7/rHos
+CYXGaYJkelVnhLmjczoYh9+dZVX4PQ2EshHQkxfrNxnjiyCPZJl/ThR1BR3NgV2K
+cMhxEE4L4+Ahu821xZg/DGr93H/iICaUfrFBqE7aYwIDAQABo4ID7DCCA+gwHwYD
+VR0jBBgwFoAUPdNQpdagre7zSmAKZdMh1Pj41g8wHQYDVR0OBBYEFF5bp+83Id7p
+BWppApuBOq4gOVuJMCAGA1UdEQQZMBeCFWNsaWNrLnRyYXZlbHBsYW5ldC5mcjAO
+BgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMHUG
+A1UdHwRuMGwwNKAyoDCGLmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9zaGEyLWV2
+LXNlcnZlci1nMi5jcmwwNKAyoDCGLmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9z
+aGEyLWV2LXNlcnZlci1nMi5jcmwwSwYDVR0gBEQwQjA3BglghkgBhv1sAgEwKjAo
+BggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAHBgVngQwB
+ATCBiAYIKwYBBQUHAQEEfDB6MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdp
+Y2VydC5jb20wUgYIKwYBBQUHMAKGRmh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNv
+bS9EaWdpQ2VydFNIQTJFeHRlbmRlZFZhbGlkYXRpb25TZXJ2ZXJDQS5jcnQwDAYD
+VR0TAQH/BAIwADCCAfYGCisGAQQB1nkCBAIEggHmBIIB4gHgAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFgolLJbAAABAMARzBFAiBiBhqgkZFC
+1wuJ3RlK4c5jJK3J+KipDdAR+p3I0vzFsQIhAJ+XB9A4umdqS2eaMWP5uZqGIHj1
+YzPl/tIHK0LjHpmfAHUAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0A
+AAFgolLKagAABAMARjBEAiBTejQiqJ9pJ25vwMriKhwso3G/Ac/hkJGybtQY+8OJ
+AAIgcCSShwUsW97r9Xy+iiBgg9I7DVIjm2upUR//mcKydc0AdgDuS723dc5guuFC
+aR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWCiUsxoAAAEAwBHMEUCIQCRnfmQLTFm
+aNvHnj80PDV2IxMdOWafRg+cGamXwFI1wQIgbDYPc5nwVX6pF4isRJe18fs+FhJj
+2XPqIqXUuzlm21sAdwC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAA
+AWCiUsooAAAEAwBIMEYCIQDhSxl9WpDt2Q6K0P8FReeq014+zcomFueWTEAoe5jq
+kAIhAN68UttwbO+T/TeYpJIvxAWnmLYGljWyGdMfldQWPbONMA0GCSqGSIb3DQEB
+CwUAA4IBAQBloEOg1NZUtBSQ0dxjemQj6mxrXpNqA/l+63WY+dlnsnITAmlXfaoY
+ZtM6xVTcTKfASkUjSslaTqqaGoiRoDXWofcV7dc0sf59fcDQjCPpDquY/l3bvOZZ
+nPk84/3zOR/zLvRlOXTgRbDtvLsVxW46hcN4wmgnrdlAowUn2JWgD826HGw+NJLr
+MQBief5tEW/4O0bNu4Kg3ryyV0Ry5s2nUORXUyXqB4r9EL3bFpvn3GnZx+AN6rkB
+R6hF6mSDWflZvH1VGWgZwlh7kW/olnRDn5PpNawxCo0QZq7mLXvzCY3obW8de105
+hMclPzvYsC50FM4HypyTs+JUJtCrEqML
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.travelplanet.click/click/Shibboleth.sso/SAML2/POST" index="1" isDefault="true"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">Click Travel Planet</md:ServiceName>
+		<md:ServiceName xml:lang="en">Click Travel Planet</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">click aws version</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Aws version of click control</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrimaryAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="supannEtablissement" Name="urn:oid:1.3.6.1.4.1.7135.1.2.1.14" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">TRAVEL PLANET</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">TRAVEL PLANET</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://travelplanet.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:developpement@travelplanet.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

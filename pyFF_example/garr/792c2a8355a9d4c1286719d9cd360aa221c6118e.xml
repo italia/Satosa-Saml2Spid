@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.sonoma.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.sonoma.edu/it/helpdesk/" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sonoma.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Sonoma State University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.sonoma.edu/about/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.sonoma.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="144" width="288" xml:lang="en">https://web.sonoma.edu/logos/web/primarybox-web143b87.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZjCCAs+gAwIBAgICAW4wDQYJKoZIhvcNAQEFBQAwgZAxCzAJBgNVBAYTAlVT
+MRMwEQYDVQQIEwpDYWxpZm9ybmlhMRUwEwYDVQQHEwxSb2huZXJ0IFBhcmsxIDAe
+BgNVBAoTF1Nvbm9tYSBTdGF0ZSBVbml2ZXJzaXR5MR8wHQYDVQQLExZJbmZvcm1h
+dGlvbiBUZWNobm9sb2d5MRIwEAYDVQQDEwlTU1UgSVQgQ0EwHhcNMTIxMDIzMjAx
+NzE0WhcNMzIxMDIzMjAxNzE0WjCBgzELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNh
+bGlmb3JuaWExFTATBgNVBAcTDFJvaG5lcnQgUGFyazEgMB4GA1UEChMXU29ub21h
+IFN0YXRlIFVuaXZlcnNpdHkxCzAJBgNVBAsTAklUMRkwFwYDVQQDExBsb2dpbi5z
+b25vbWEuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcawdP5T
+XGm/QPwvk/CUo8J8j3xzIGQk/iSUipR/YSU1v7n2lVkVmV1MPiQvNXFt/QpqDX7S
+5OB4q4OTeJAGpMvkJOJeyFTjDRifyOqa0zA9QjpYnpoFfEyjHucyPmhGpklSHICa
+z0zLF+BA6k8hJnm5aAWqY9SvDeLWiFQnOnKUoJhm+ZK629zjHiQkCP0qx5K0pmUq
+9GbE8hXt1P6bdUbHbVyf/bN+1Fjn0h8wlop8J6LLByqva/sRzdgwhJCIrNNeigZU
+Ss/FQhePRXht4yYIJ3YNGtYfPKmOpt4anT9ssdV9uAPi3r/DyGbKAS0AgO0VwJH8
+IPzjbEAQzUnRMwIDAQABo1YwVDBSBgNVHREESzBJgglsb2NhbGhvc3SCEGxvZ2lu
+LnNvbm9tYS5lZHWCFGxvZ2luLmRldi5zb25vbWEuZWR1ghRsb2dpbi50c3Quc29u
+b21hLmVkdTANBgkqhkiG9w0BAQUFAAOBgQCZ2KTynQZ44YnGTO6ARKc/P2+J0bto
+xP0nUWQ+N+yU6ylsHDmeRlxPvtJNKW5N+OvX45ZsGKKtBi9KzOXWH61dZ7vZreTq
+8x65mJ4/TVV3m5eTZzPV57n9dEsqXJx+4kGCVMVc9Y3h5Mqh2CiALUi78OhW3LC6
+xAsmDU5SmtNXeA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.sonoma.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.sonoma.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.sonoma.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.sonoma.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Sonoma State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Sonoma State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.sonoma.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Andru Luvisi</md:GivenName>
+	<md:EmailAddress>andru.luvisi@sonoma.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@sonoma.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IDP Administrator</md:GivenName>
+	<md:EmailAddress>idp-admin@sonoma.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Evan Ferguson</md:GivenName>
+	<md:EmailAddress>fergusoe@sonoma.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

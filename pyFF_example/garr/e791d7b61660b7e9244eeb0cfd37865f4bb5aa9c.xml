@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mkostrov.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-15T22:40:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mkostrov.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Municipal Library Ostrov</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Městská knihovna Ostrov</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for employees and readers of the Municipal Library Ostrov</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance a čtenáře Městské knihovny Ostrov</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://mkostrov.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">https://mkostrov.cz/</mdui:InformationURL>
+		<mdui:Logo height="50" width="65">https://mkostrov.knihovny.cz/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8TCCAtmgAwIBAgIJANhLmvyewaoWMA0GCSqGSIb3DQEBCwUAMIGOMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxHTAbBgNVBAMMFG1rb3N0cm92Lmtu
+aWhvdm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xOTA3
+MTUwNjE5MDVaFw0yOTA3MTUwNjE5MDVaMIGOMQswCQYDVQQGEwJDWjEXMBUGA1UE
+CAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2
+aWFuIExpYnJhcnkxHTAbBgNVBAMMFG1rb3N0cm92LmtuaWhvdm55LmN6MR0wGwYJ
+KoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMiG57aPP3JAApkOMQG8xT4SpqHSZbbzRbtq9CEuK9xFm0u3BadY
+jinp2hflJCiNJPuJ+pAA4QnaraG3TgvfZu+Ubow+1Du0G3Mjjk87dzSegaG8I+Vs
+Jg8INut76kwWf979nWcrttSv2jCHiN4111JV9auq404zacCAU04xfob0j61FbbLl
+HAEEy42G30KNFR+RJ8Fdf93+P+bA3T6ys4RhPcldV3J/V9voRNMuPd9Qew2JqBkZ
+qPaEEef1hFPiykgKlxD3XmUJy0w3Ne2CaJtN9z86Zebi90nh/PCVYt/jo5UYTF2F
+ikNuA2rxA78TbeYLYt64w4+qGh+BAR1hTvsCAwEAAaNQME4wHQYDVR0OBBYEFEsj
+VkcDs7r/WPLkBgn8RanYfig5MB8GA1UdIwQYMBaAFEsjVkcDs7r/WPLkBgn8RanY
+fig5MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAD2Rv9ZzJnZca0NC
+BGrQrQw9um4H61ArcEXXskb0U9C6iYHV2w0+42UTeGM6m/ikkOHTsBwnrG//3Jzo
+Ir6f5UEXlMeEzqfHrFnXJWO7/AU6FtX2G87Xfqa/o6eAy4q5tKTmxzIFLl/Jr/Tp
+6P+y8d+OP4Wcv/vi2t2KfdbW+v53ux/3Dj81E3mXaRr0bZ+cgy1qiWZhH1l2kE+e
+JL0vz1O0LdHcLvDN7PTJALTeY3ZXeXrHLgwzGNkgYenn23/cNecii9esGIr0EIUq
+oWp2FmFsCRPPT3+h7JVRyLuwBPduwIn1x5JCee5U1FPdFHLx8nHgT2Peb/RG/Vfp
++zNyfuc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8TCCAtmgAwIBAgIJANhLmvyewaoWMA0GCSqGSIb3DQEBCwUAMIGOMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxHTAbBgNVBAMMFG1rb3N0cm92Lmtu
+aWhvdm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xOTA3
+MTUwNjE5MDVaFw0yOTA3MTUwNjE5MDVaMIGOMQswCQYDVQQGEwJDWjEXMBUGA1UE
+CAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2
+aWFuIExpYnJhcnkxHTAbBgNVBAMMFG1rb3N0cm92LmtuaWhvdm55LmN6MR0wGwYJ
+KoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMiG57aPP3JAApkOMQG8xT4SpqHSZbbzRbtq9CEuK9xFm0u3BadY
+jinp2hflJCiNJPuJ+pAA4QnaraG3TgvfZu+Ubow+1Du0G3Mjjk87dzSegaG8I+Vs
+Jg8INut76kwWf979nWcrttSv2jCHiN4111JV9auq404zacCAU04xfob0j61FbbLl
+HAEEy42G30KNFR+RJ8Fdf93+P+bA3T6ys4RhPcldV3J/V9voRNMuPd9Qew2JqBkZ
+qPaEEef1hFPiykgKlxD3XmUJy0w3Ne2CaJtN9z86Zebi90nh/PCVYt/jo5UYTF2F
+ikNuA2rxA78TbeYLYt64w4+qGh+BAR1hTvsCAwEAAaNQME4wHQYDVR0OBBYEFEsj
+VkcDs7r/WPLkBgn8RanYfig5MB8GA1UdIwQYMBaAFEsjVkcDs7r/WPLkBgn8RanY
+fig5MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAD2Rv9ZzJnZca0NC
+BGrQrQw9um4H61ArcEXXskb0U9C6iYHV2w0+42UTeGM6m/ikkOHTsBwnrG//3Jzo
+Ir6f5UEXlMeEzqfHrFnXJWO7/AU6FtX2G87Xfqa/o6eAy4q5tKTmxzIFLl/Jr/Tp
+6P+y8d+OP4Wcv/vi2t2KfdbW+v53ux/3Dj81E3mXaRr0bZ+cgy1qiWZhH1l2kE+e
+JL0vz1O0LdHcLvDN7PTJALTeY3ZXeXrHLgwzGNkgYenn23/cNecii9esGIr0EIUq
+oWp2FmFsCRPPT3+h7JVRyLuwBPduwIn1x5JCee5U1FPdFHLx8nHgT2Peb/RG/Vfp
++zNyfuc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mkostrov.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://mkostrov.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mkostrov.knihovny.cz/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://mkostrov.knihovny.cz/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Municipal Library Ostrov</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Městská knihovna Ostrov</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Municipal Library Ostrov</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Městská knihovna Ostrov</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://mkostrov.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">https://mkostrov.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Žabička</md:SurName>
+	<md:EmailAddress>mailto:zabak@mzk.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

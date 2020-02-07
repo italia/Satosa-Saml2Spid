@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.carshalton.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-03-11T09:15:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Carshalton College UK</mdui:DisplayName>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">carshalton.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAK9zq/AGPCsO/yVh6eCXxG1GorxSMA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMMG3NoaWJib2xldGguY2Fyc2hhbHRvbi5hYy51azAeFw0x
+NTAzMjAyMTE0MjlaFw0zNTAzMjAyMTE0MjlaMCYxJDAiBgNVBAMMG3NoaWJib2xl
+dGguY2Fyc2hhbHRvbi5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMhqQcCsuNuhtnmSRMeocTutCXZkgaYK93fHH6k6jyS3GWlfhpIJisUt4oWH
+QBOFIDjWEFiLh78QatyTEzsJ3sCn/K65j69jEY4AlXFhYLw7Kva+3WOXNGvrxC3X
+hW1BbBmowXIs3J5b12huosQH6NR1/7jrZzPxAqtCexmdkmsnkAZdR1BoahuVH5AU
+UcLt70qKKFtP4sNLipZFfij9/voYTefD4+f7qejxjAOGPspDKBy71SJGIn1lAMKa
+EPzBBjUUpXIa4f+LK38ccUtJFbA6+sBzrBEgw4YVTIG919bdtdC6fVsL65gAlZes
+m/EeCZiPAVVzkyrA6MDB3EkM5tcCAwEAAaN9MHswHQYDVR0OBBYEFE69ioHDWu+y
+CvMQGnbrcXvrL4GtMFoGA1UdEQRTMFGCG3NoaWJib2xldGguY2Fyc2hhbHRvbi5h
+Yy51a4YyaHR0cHM6Ly9zaGliYm9sZXRoLmNhcnNoYWx0b24uYWMudWsvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQEFBQADggEBACsQILUEknK3w+OYS+nsR8bwaQ1t
+1cFIn13TU4uL0wk+ZqycRZb9FQHgmDwZC550m7XEuT8QJLuS5kA2XulJ+HzD3G5Z
+RLLZ7lHtsLcMI6+w8B414dR2oNCA4C1whGVOC9MVHE3JYRcXqR2c1gAEA1UdFCyH
+X77FHhdWlqqEsZOP+RfYy6pCd7w6KEh1/zMr+rAQhOcr8JzKPHpu3ejGQn0cPZ5C
+TvmDIyDspkoPMxW1M2dUl+g+nIZSqY1gUKdE+4wgvWZ64giL4VqmqsCpf1WmQuok
+aZ/E2PZAbR5KW3lPYXM3YF/ym2KBQM0F95HSTqAYWjiMbSVoBVhvRDtt+u0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.carshalton.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.carshalton.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.carshalton.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.carshalton.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.carshalton.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.carshalton.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.carshalton.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.carshalton.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.carshalton.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">carshalton.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAK9zq/AGPCsO/yVh6eCXxG1GorxSMA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMMG3NoaWJib2xldGguY2Fyc2hhbHRvbi5hYy51azAeFw0x
+NTAzMjAyMTE0MjlaFw0zNTAzMjAyMTE0MjlaMCYxJDAiBgNVBAMMG3NoaWJib2xl
+dGguY2Fyc2hhbHRvbi5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMhqQcCsuNuhtnmSRMeocTutCXZkgaYK93fHH6k6jyS3GWlfhpIJisUt4oWH
+QBOFIDjWEFiLh78QatyTEzsJ3sCn/K65j69jEY4AlXFhYLw7Kva+3WOXNGvrxC3X
+hW1BbBmowXIs3J5b12huosQH6NR1/7jrZzPxAqtCexmdkmsnkAZdR1BoahuVH5AU
+UcLt70qKKFtP4sNLipZFfij9/voYTefD4+f7qejxjAOGPspDKBy71SJGIn1lAMKa
+EPzBBjUUpXIa4f+LK38ccUtJFbA6+sBzrBEgw4YVTIG919bdtdC6fVsL65gAlZes
+m/EeCZiPAVVzkyrA6MDB3EkM5tcCAwEAAaN9MHswHQYDVR0OBBYEFE69ioHDWu+y
+CvMQGnbrcXvrL4GtMFoGA1UdEQRTMFGCG3NoaWJib2xldGguY2Fyc2hhbHRvbi5h
+Yy51a4YyaHR0cHM6Ly9zaGliYm9sZXRoLmNhcnNoYWx0b24uYWMudWsvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQEFBQADggEBACsQILUEknK3w+OYS+nsR8bwaQ1t
+1cFIn13TU4uL0wk+ZqycRZb9FQHgmDwZC550m7XEuT8QJLuS5kA2XulJ+HzD3G5Z
+RLLZ7lHtsLcMI6+w8B414dR2oNCA4C1whGVOC9MVHE3JYRcXqR2c1gAEA1UdFCyH
+X77FHhdWlqqEsZOP+RfYy6pCd7w6KEh1/zMr+rAQhOcr8JzKPHpu3ejGQn0cPZ5C
+TvmDIyDspkoPMxW1M2dUl+g+nIZSqY1gUKdE+4wgvWZ64giL4VqmqsCpf1WmQuok
+aZ/E2PZAbR5KW3lPYXM3YF/ym2KBQM0F95HSTqAYWjiMbSVoBVhvRDtt+u0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.carshalton.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.carshalton.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Carshalton College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Carshalton College UK</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.carshalton.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpline</md:GivenName>
+	<md:EmailAddress>mailto:helpline@carshalton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Helpline</md:GivenName>
+	<md:EmailAddress>mailto:helpline@carshalton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

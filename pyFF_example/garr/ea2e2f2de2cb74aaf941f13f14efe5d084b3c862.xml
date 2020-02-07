@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.unisa.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2018-11-28T17:09:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unisa.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="it">Università degli Studi di Salerno</mdui:DisplayName>
+<mdui:DisplayName xml:lang="en">University of Salerno</mdui:DisplayName>
+<mdui:Description xml:lang="en">Students and staff from University of Salerno</mdui:Description>
+<mdui:Description xml:lang="it">Studenti e staff dell'Università degli studi di Salerno</mdui:Description>
+<mdui:InformationURL xml:lang="en">http://web.unisa.it/servizi-on-line/idem</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">http://web.unisa.it/servizi-on-line/idem</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://web.unisa.it/servizi-on-line/idem</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://web.unisa.it/servizi-on-line/idem</mdui:PrivacyStatementURL>
+<mdui:Logo height="16" width="16" xml:lang="en">https://www.unisa.it/rescue/img/logo16x16.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://www.unisa.it/rescue/img/logo16x16.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://www.unisa.it/rescue/img/logo80x60.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="en">https://www.unisa.it/rescue/img/logo80x60.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUWg7C28UIaZi2tiAkfXY7e9bmfEYwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNYXV0aC51bmlzYS5pdDAeFw0xNzExMjMxMjEzMTRaFw0z
+NzExMjMxMjEzMTRaMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCJWUxrXFvw7Uh40dmivrzGovPyw9wnesr6
+qtiI4RhHZ/GWknnyPi7kZQOBmM7WTbX4mHejtRjCx/Gn8hnorhLesd0zJtJRiaTP
+FQR4/KGYr5DUQvB/GLQ+8r0wHisrFAtXJSeR/41THF3Ky9bYqzFJ+KC+Rq82Repv
+4UUGLkuTa75gbYYqF9esjx6NmvJP3CZKf00yNNbq9GId0+OXp8cFPRwJy6yhkQR6
+4Sul7pKcU1cmhFmhBnvirYGORxmSOm5FQy48brkMsPxv2eFFI8hqmZoxcItTJ5J8
+rvQheog7TjIES/aw01/4apJCYfd/LkZQ4fxdSxsAOrmfATbajTx5AgMBAAGjYTBf
+MB0GA1UdDgQWBBQZ4Gjqi17g7tzbP55olO1/Rj6tgjA+BgNVHREENzA1gg1hdXRo
+LnVuaXNhLml0hiRodHRwczovL2F1dGgudW5pc2EuaXQvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAGm2bWj1QLz/8SEnSYuXJ0J6p5tW/7AW+jQIDuj+
+fcLuSq6q//NpY+vKZN9ZsxyNcSy4F5jQHqBRaXQ7FczY37vst8sb6jBPy4DZHqp2
+WpCN3YLZaAF10Ls/+EJzOr0V+cz6Dv2oT7lHJV/oEX/N7xLzcVGGEcCkCv+S3jMK
+TdIQQqONb/2Kd7WHH/iZiKncdeOhb5FhyoDiDTEtZEGo9zDXmZcc7W5qHU/L6RUI
+vsKYQ0zDT2dpVkd3sKuVy47hID9AvbJIOqdeGraadyrbAIfVYRDTLHGdLyOJoHJI
+ShSum4/q8e0al67TMoCHPLDPM6Gkhc+d+QORoiFOc2ETNrA=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUeM+OHnoaIoGq2SYkugWBCrzTAz4wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNYXV0aC51bmlzYS5pdDAeFw0xNzExMjMxMjEzMTNaFw0z
+NzExMjMxMjEzMTNaMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6f54TUolotjCO6Ew2zLkKBEGC5idzBY04
+G3mQJGsonigaqTpBTRgwJxba9KHPPhu11GGk4usBSUj/y84Jfub1+17PQCkpC3UK
+6ck6cOsvN1lc4adHJQAKKTjeMIvjYG7hxVlpP4u4Q3xG/70tVVxdP+xjPIHZlnQ2
+UgRfhp28EPgyHvyYk+ufrV/6k1GpArA8neJHnKV3t/vZ37LXrNDNdyjKGVB/Yc0F
+7GPG1d7ucroQfnfjjYLetvWt7kve2V9QJbsH5NgoR+tGGEbMOlG0iRQL6b6NHkHM
+1IkLwALsrWMBDH48hZqqj/Gfcir1Liexy1x9WrxBbh9K+wG3NABdAgMBAAGjYTBf
+MB0GA1UdDgQWBBRj78FzZdF9aTb71qRs4bYZ9d0WtjA+BgNVHREENzA1gg1hdXRo
+LnVuaXNhLml0hiRodHRwczovL2F1dGgudW5pc2EuaXQvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHxLBnLk7jVrPgRnRJcBF5IfPLrqP3GcpuXUd0xG
+oRGklQRodvFtukwOZHYpTT0S61id9ytta1zqwdNOz1Xz1MXb0nx8KyuEp4Qf8HsH
+WDLnPvlqdR1focDn4DaullXT4zvkQcNfmJzsheA7gC8BWKhkVkdfkG3zYbZzV86Y
+S7Vm0kM56j2CUFCEYOHgsFCcQvn31M4UZOguK1ne5Bc7F5YpdYuEjaaIEpTju9yu
+UK37IgjjJj5/1HXgkrRLxDpGCf6i+fKlrvvhlxn6ShtoxI23CFG6G0Ne+jhtB33K
+HufwnMVz1ucJxFV/uJMFnwfSWnZKkC8OubmYZ7cfZtomf4U=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALkOASXYxjQ2ANo1w9hZCHBdheabMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwHhcNMTcxMTIzMTIxMzEzWhcN
+MzcxMTIzMTIxMzEzWjAYMRYwFAYDVQQDDA1hdXRoLnVuaXNhLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3E5o5vX350k0kWLBZEmRFbVDIRycBLMz
+zJfgipJx5ZzXdtFchBWa8UzwP7hMl2UJbgsM44dAl541tfqhFQOqzOr5lNYETQs1
+ly/1Fb/U1iin0ENiFjSmcPl+f1mgU5lCJZxU20CeVgesW964VVSGisRHJcwHQVpH
+/nP2KTRGCz/qFgIkqCWjUVo0c7FFutMIpd/aBYsl6HMa4Ykd2modZ1/x00qxz6c6
+TMrJWLNTIRnRdK70ECIfNQ7dlED0wE+9tapzu5lDZX9BLXCNJ33yu75qp++Wi7OX
+5GDCf00NcETL8PBmW9JBYAKe/FjPRqSpU02N5W8pAivdL6/EHuCaNQIDAQABo2Ew
+XzAdBgNVHQ4EFgQU6EfQTU7JHNmpMZM23TNjgDGPQvowPgYDVR0RBDcwNYINYXV0
+aC51bmlzYS5pdIYkaHR0cHM6Ly9hdXRoLnVuaXNhLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQC2Qc5IyymC5Rtqg1v8ubL+qkLX3p3pPHJDRc9i
+FamkWB00hZ0HAgvN/4UhjHEZQz6qnLORwEQBX12wDUDPEABODRFpzTsDppy/1i0N
+4HNoH/t6XTOaWIhT0Us9ltBfQf1VwOp2dvZSCgLSbaU+TUSnk5U9nob3wZes2EaZ
+dwo21X1HUqOAmOzyAAEI7C2JunBr9kSKQ80V5Nv+F3ZHEvpmAbJ+7Hf0oCodz1sr
+PMgiQ5orTW+DZjua4KwcO0+jpOnlB4HhEQsGgzsqxkJyBDOa2dOQZR45KxrJEvz6
+c0YZv1Y8dZkYpMIQhzyhef37Dahi2AEun7fN4PQ8OPBDk90X
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://auth.unisa.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.unisa.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://auth.unisa.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.unisa.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unisa.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUWg7C28UIaZi2tiAkfXY7e9bmfEYwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNYXV0aC51bmlzYS5pdDAeFw0xNzExMjMxMjEzMTRaFw0z
+NzExMjMxMjEzMTRaMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCJWUxrXFvw7Uh40dmivrzGovPyw9wnesr6
+qtiI4RhHZ/GWknnyPi7kZQOBmM7WTbX4mHejtRjCx/Gn8hnorhLesd0zJtJRiaTP
+FQR4/KGYr5DUQvB/GLQ+8r0wHisrFAtXJSeR/41THF3Ky9bYqzFJ+KC+Rq82Repv
+4UUGLkuTa75gbYYqF9esjx6NmvJP3CZKf00yNNbq9GId0+OXp8cFPRwJy6yhkQR6
+4Sul7pKcU1cmhFmhBnvirYGORxmSOm5FQy48brkMsPxv2eFFI8hqmZoxcItTJ5J8
+rvQheog7TjIES/aw01/4apJCYfd/LkZQ4fxdSxsAOrmfATbajTx5AgMBAAGjYTBf
+MB0GA1UdDgQWBBQZ4Gjqi17g7tzbP55olO1/Rj6tgjA+BgNVHREENzA1gg1hdXRo
+LnVuaXNhLml0hiRodHRwczovL2F1dGgudW5pc2EuaXQvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAGm2bWj1QLz/8SEnSYuXJ0J6p5tW/7AW+jQIDuj+
+fcLuSq6q//NpY+vKZN9ZsxyNcSy4F5jQHqBRaXQ7FczY37vst8sb6jBPy4DZHqp2
+WpCN3YLZaAF10Ls/+EJzOr0V+cz6Dv2oT7lHJV/oEX/N7xLzcVGGEcCkCv+S3jMK
+TdIQQqONb/2Kd7WHH/iZiKncdeOhb5FhyoDiDTEtZEGo9zDXmZcc7W5qHU/L6RUI
+vsKYQ0zDT2dpVkd3sKuVy47hID9AvbJIOqdeGraadyrbAIfVYRDTLHGdLyOJoHJI
+ShSum4/q8e0al67TMoCHPLDPM6Gkhc+d+QORoiFOc2ETNrA=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUeM+OHnoaIoGq2SYkugWBCrzTAz4wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNYXV0aC51bmlzYS5pdDAeFw0xNzExMjMxMjEzMTNaFw0z
+NzExMjMxMjEzMTNaMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6f54TUolotjCO6Ew2zLkKBEGC5idzBY04
+G3mQJGsonigaqTpBTRgwJxba9KHPPhu11GGk4usBSUj/y84Jfub1+17PQCkpC3UK
+6ck6cOsvN1lc4adHJQAKKTjeMIvjYG7hxVlpP4u4Q3xG/70tVVxdP+xjPIHZlnQ2
+UgRfhp28EPgyHvyYk+ufrV/6k1GpArA8neJHnKV3t/vZ37LXrNDNdyjKGVB/Yc0F
+7GPG1d7ucroQfnfjjYLetvWt7kve2V9QJbsH5NgoR+tGGEbMOlG0iRQL6b6NHkHM
+1IkLwALsrWMBDH48hZqqj/Gfcir1Liexy1x9WrxBbh9K+wG3NABdAgMBAAGjYTBf
+MB0GA1UdDgQWBBRj78FzZdF9aTb71qRs4bYZ9d0WtjA+BgNVHREENzA1gg1hdXRo
+LnVuaXNhLml0hiRodHRwczovL2F1dGgudW5pc2EuaXQvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHxLBnLk7jVrPgRnRJcBF5IfPLrqP3GcpuXUd0xG
+oRGklQRodvFtukwOZHYpTT0S61id9ytta1zqwdNOz1Xz1MXb0nx8KyuEp4Qf8HsH
+WDLnPvlqdR1focDn4DaullXT4zvkQcNfmJzsheA7gC8BWKhkVkdfkG3zYbZzV86Y
+S7Vm0kM56j2CUFCEYOHgsFCcQvn31M4UZOguK1ne5Bc7F5YpdYuEjaaIEpTju9yu
+UK37IgjjJj5/1HXgkrRLxDpGCf6i+fKlrvvhlxn6ShtoxI23CFG6G0Ne+jhtB33K
+HufwnMVz1ucJxFV/uJMFnwfSWnZKkC8OubmYZ7cfZtomf4U=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALkOASXYxjQ2ANo1w9hZCHBdheabMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWF1dGgudW5pc2EuaXQwHhcNMTcxMTIzMTIxMzEzWhcN
+MzcxMTIzMTIxMzEzWjAYMRYwFAYDVQQDDA1hdXRoLnVuaXNhLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3E5o5vX350k0kWLBZEmRFbVDIRycBLMz
+zJfgipJx5ZzXdtFchBWa8UzwP7hMl2UJbgsM44dAl541tfqhFQOqzOr5lNYETQs1
+ly/1Fb/U1iin0ENiFjSmcPl+f1mgU5lCJZxU20CeVgesW964VVSGisRHJcwHQVpH
+/nP2KTRGCz/qFgIkqCWjUVo0c7FFutMIpd/aBYsl6HMa4Ykd2modZ1/x00qxz6c6
+TMrJWLNTIRnRdK70ECIfNQ7dlED0wE+9tapzu5lDZX9BLXCNJ33yu75qp++Wi7OX
+5GDCf00NcETL8PBmW9JBYAKe/FjPRqSpU02N5W8pAivdL6/EHuCaNQIDAQABo2Ew
+XzAdBgNVHQ4EFgQU6EfQTU7JHNmpMZM23TNjgDGPQvowPgYDVR0RBDcwNYINYXV0
+aC51bmlzYS5pdIYkaHR0cHM6Ly9hdXRoLnVuaXNhLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQC2Qc5IyymC5Rtqg1v8ubL+qkLX3p3pPHJDRc9i
+FamkWB00hZ0HAgvN/4UhjHEZQz6qnLORwEQBX12wDUDPEABODRFpzTsDppy/1i0N
+4HNoH/t6XTOaWIhT0Us9ltBfQf1VwOp2dvZSCgLSbaU+TUSnk5U9nob3wZes2EaZ
+dwo21X1HUqOAmOzyAAEI7C2JunBr9kSKQ80V5Nv+F3ZHEvpmAbJ+7Hf0oCodz1sr
+PMgiQ5orTW+DZjua4KwcO0+jpOnlB4HhEQsGgzsqxkJyBDOa2dOQZR45KxrJEvz6
+c0YZv1Y8dZkYpMIQhzyhef37Dahi2AEun7fN4PQ8OPBDk90X
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://auth.unisa.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università degli Studi di Salerno</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Salerno</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università degli Studi di Salerno</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Salerno</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.unisa.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://web.unisa.it/en/home</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Alfonso</md:GivenName>
+<md:SurName>Sparano</md:SurName>
+<md:EmailAddress>mailto:idem@unisa.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

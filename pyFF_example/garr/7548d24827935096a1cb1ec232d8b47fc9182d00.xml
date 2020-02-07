@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.universite-paris-saclay.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2018-03-13T16:41:11Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">universite-paris-saclay.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Paris-Saclay University</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAY5JREFUOBFjTGKw9mRgYJzHwMAgAcSkgBcMDP+TGJMYbJ4DdZGqGWbRCxZiNAtrijFYRboyvHn0guHknP0M/4AQCiRABuAFTAxMDIUb+xgkVeXB6phZmBmOzNgF18MEZ+FgsAtzwDWDlEiqQQyCKSdowPe33xg2ts4Cq3/75AXDkSXbYXrBNCgQ/6OIQDnC6qIM72++A/r2L1iET5af4ceL7wy/fv9CUY7VBbrBpgxdN9YxhE/NgCv+9PgjhmaQJFYDfn79zvDvz1+Gr+8/wQ3AxcDpBQ5eDoYfn3/g0gcXx+oCkCwxmkHqMNKBtJk8g3dJLIOcgQbDy9sPGbb3L2G4s+c6SC1WgOICSSMZhopdMxjunrrCMD2mmuHspgMMhev6GRTsVbFqBgmihEHiojJwwK3KnwHXENCRwCCmLMswK7QZLobMAHkBmKsgmUndzpjhyZXbDEHdyXA1kuoKDPKGGnA+GuMFCyMDY8p/hv9zQIZ8//iF4eWdxwx3Tl6CqwOxD87fAOcjMZ4B9aYBAOY1eilMyEFyAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.renater.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Staff of Paris-Saclay University</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Paris-Saclay</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels de l'Université Paris-Saclay</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZjCCAk6gAwIBAgIVAKqhnkkocTiD1vG/7RQGOdgdaYDFMA0GCSqGSIb3DQEB
+CwUAMCkxJzAlBgNVBAMMHmlkcC51bml2ZXJzaXRlLXBhcmlzLXNhY2xheS5mcjAe
+Fw0xODAzMTMxNDQyMjJaFw0zODAzMTMxNDQyMjJaMCkxJzAlBgNVBAMMHmlkcC51
+bml2ZXJzaXRlLXBhcmlzLXNhY2xheS5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAK7UD4Rk2RGYx4T+oq0rUKhEgXx/zYyf93stTMePI6jotHbjsg9B
+l/aifZ0ExxZeXzU0qPAzwhHBG4qdyZmVXXbsJNdIWQ8m8nb8Q681iP44G+XcqBwa
+J4Cff97L64sqbY3C4cJ6hOqmboWu3oy4SspeX6imIDaRMLRz822GP27DdSYi1+9I
+smThpA71Aa6TRu8Ff0VuiXi2+ta8xhrN+IBRhi9mZ/jI46BPIZ4KwN9Cq3V0930w
+h5QEDP03cnjnkgxKsKdoum1GrfRVON1jFccxgo5SxYZeDkO+2c6nGAHzH2lkotq1
+7pH1Ip82j8ZJG6iHTpfwqUlYYvoCaeQX4/0CAwEAAaOBhDCBgTAdBgNVHQ4EFgQU
+Xp8+sOdqJYrUrFHyJdMB//I/UhMwYAYDVR0RBFkwV4IeaWRwLnVuaXZlcnNpdGUt
+cGFyaXMtc2FjbGF5LmZyhjVodHRwczovL2lkcC51bml2ZXJzaXRlLXBhcmlzLXNh
+Y2xheS5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAR+k5zi98
+RalzaCq5Ap8qcPqKGatQn93UDC4phzfp6oxRj2eGABC1CxcjJ91044R+LWWkZQqR
+v3dN/X0kU4pw1dxc+BEUPioTmlulUlTSjwywGE7taQLwu6QnGzeIx9Dxr7eKY17y
+89t77Kt8U22dvthfLrs2pPLRIye3iuwd4ABYvQRk6qHFrNeMssVLS6jP4QkaSwkN
+COa5TZUpcujwKNp8sEvlkTYmw/MxqfgH+jb2ZVdENJDLOhRjytru+vqXW9unpSPR
+Coj7HANUdFu7FB+2vSQTgax65kchtdKfQ0/VIHw9wIXiH2Ns0sl+uOsypdc81+EQ
++5V5OHT+a5zX1Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.universite-paris-saclay.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.universite-paris-saclay.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.universite-paris-saclay.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">universite-paris-saclay.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZjCCAk6gAwIBAgIVAKqhnkkocTiD1vG/7RQGOdgdaYDFMA0GCSqGSIb3DQEB
+CwUAMCkxJzAlBgNVBAMMHmlkcC51bml2ZXJzaXRlLXBhcmlzLXNhY2xheS5mcjAe
+Fw0xODAzMTMxNDQyMjJaFw0zODAzMTMxNDQyMjJaMCkxJzAlBgNVBAMMHmlkcC51
+bml2ZXJzaXRlLXBhcmlzLXNhY2xheS5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAK7UD4Rk2RGYx4T+oq0rUKhEgXx/zYyf93stTMePI6jotHbjsg9B
+l/aifZ0ExxZeXzU0qPAzwhHBG4qdyZmVXXbsJNdIWQ8m8nb8Q681iP44G+XcqBwa
+J4Cff97L64sqbY3C4cJ6hOqmboWu3oy4SspeX6imIDaRMLRz822GP27DdSYi1+9I
+smThpA71Aa6TRu8Ff0VuiXi2+ta8xhrN+IBRhi9mZ/jI46BPIZ4KwN9Cq3V0930w
+h5QEDP03cnjnkgxKsKdoum1GrfRVON1jFccxgo5SxYZeDkO+2c6nGAHzH2lkotq1
+7pH1Ip82j8ZJG6iHTpfwqUlYYvoCaeQX4/0CAwEAAaOBhDCBgTAdBgNVHQ4EFgQU
+Xp8+sOdqJYrUrFHyJdMB//I/UhMwYAYDVR0RBFkwV4IeaWRwLnVuaXZlcnNpdGUt
+cGFyaXMtc2FjbGF5LmZyhjVodHRwczovL2lkcC51bml2ZXJzaXRlLXBhcmlzLXNh
+Y2xheS5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAR+k5zi98
+RalzaCq5Ap8qcPqKGatQn93UDC4phzfp6oxRj2eGABC1CxcjJ91044R+LWWkZQqR
+v3dN/X0kU4pw1dxc+BEUPioTmlulUlTSjwywGE7taQLwu6QnGzeIx9Dxr7eKY17y
+89t77Kt8U22dvthfLrs2pPLRIye3iuwd4ABYvQRk6qHFrNeMssVLS6jP4QkaSwkN
+COa5TZUpcujwKNp8sEvlkTYmw/MxqfgH+jb2ZVdENJDLOhRjytru+vqXW9unpSPR
+Coj7HANUdFu7FB+2vSQTgax65kchtdKfQ0/VIHw9wIXiH2Ns0sl+uOsypdc81+EQ
++5V5OHT+a5zX1Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.universite-paris-saclay.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GIP RENATER</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">GIP RENATER</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.renater.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:equipe-federation@listes.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

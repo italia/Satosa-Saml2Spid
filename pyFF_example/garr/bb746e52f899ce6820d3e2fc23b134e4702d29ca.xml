@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://qmul.simitive.com">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-06-13T14:35:35Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://qmul.simitive.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://qmul.simitive.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIJAIWe2hAWoGqQMA0GCSqGSIb3DQEBBQUAMC4xLDAqBgNV
+BAMTI2hvc3QtOTUtMTU0LTI1NC0xMjcucnNjbGllbnRkbnMuY29tMB4XDTE0MDYx
+MzE0MTUxNFoXDTI0MDYxMDE0MTUxNFowLjEsMCoGA1UEAxMjaG9zdC05NS0xNTQt
+MjU0LTEyNy5yc2NsaWVudGRucy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCzdKvT4GTJO7A71YpcNcqOsCuBviRZeKiNTcCSYluuzje0N/pUe1F8
+ufP1DZqHYIrSAW3mg0cJYqD1X5bgtCU8EOIsaTZQTtPjT3ed5VgSON6Lg/S6FjE3
+XuJ1m7JLrMRmvnkIaPFgU5zum4FehgxqyQDFKQRZx93BtsKP+evPyHtlT0Em239I
+DShp4FQtIBKxPf7OxmIpQna+zU4rSayVZOU258MHkwtY6cKQjryrZCpHFVcr188q
+MBF5x+64lxNfdP5xkQ7X9hW/bmAQiUMzlF7MImCko4vvnMl9zY6duqZ0bTJwmLjk
+BccJ3+omtIm2ngVIJiY3CKdst19uYKkNAgMBAAGjbDBqMEkGA1UdEQRCMECCI2hv
+c3QtOTUtMTU0LTI1NC0xMjcucnNjbGllbnRkbnMuY29thhlodHRwczovL3FtdWwu
+c2ltaXRpdmUuY29tMB0GA1UdDgQWBBRPeM2+fxZB7bvxwd2ptFgsyF0JPDANBgkq
+hkiG9w0BAQUFAAOCAQEAY9B4aw4BHYBO1OCD7A5+7w45WU9G72QywKOzmXT0aAtW
+jq/43SGIiH2R186dmyz4OTiwNau7XBfxYBfPtadkiGtKPJNUce1kSXzjKb+N541P
+hGBs643+UQgKqOlxa7UM475DW2fNRV7J0Bru6TCcNlsxOUo9zxI7n1ce3eaiyT5i
+7tjzB4+FQ+VGdIgmenNgv1HJZmQn3crXtTWYIyhLHy+J63mEoxRUQobPXf0W0XAk
++m7n4+GXiN0LMzp39ylHlZ3PQv3iCO+V+fAvnZuPZGhFZa7JBJnzQewQG9rx0JhJ
+pYtepKaoxPC3ztnljHK7wrYiuT313JFBFOgkT2HSgw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://qmul.simitive.com/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://qmul.simitive.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://qmul.simitive.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://qmul.simitive.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://qmul.simitive.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://qmul.simitive.com/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://qmul.simitive.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://qmul.simitive.com/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://qmul.simitive.com/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://qmul.simitive.com/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://qmul.simitive.com/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Simitive Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">QMUL Simitive</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.simitive.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Nick</md:GivenName>
+	<md:SurName>Stilwell</md:SurName>
+	<md:EmailAddress>mailto:nick.stilwell@simitive.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nick</md:GivenName>
+	<md:SurName>Stilwell</md:SurName>
+	<md:EmailAddress>mailto:nick.stilwell@simitive.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

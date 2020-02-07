@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.grinnell.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.grinnell.edu/error" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">grinnell.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Grinnell College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.grinnell.edu/privacy-statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="70" width="333" xml:lang="en">https://www.grinnell.edu/sites/all/themes/grinnell_bootstrap/images/logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAKtxSaCQZsWhMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMMEGlkcC5ncmlubmVsbC5lZHUwHhcNMTgwMjA1MTcyNzEzWhcNMjgwMjAzMTcy
+NzEzWjAbMRkwFwYDVQQDDBBpZHAuZ3Jpbm5lbGwuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAzn1EcKJziC2ttUp06TNIeoxNWudTSGOfJCyFJZbY
+UTBYDwXBksi/xSmIW+XPnHiDuyiaauAWQMBRWrkYrgVyIuNf3oDO687ADlDYib/J
+jwyTM3kLhrzc8/+tE6dcZghtUWcxCnXZtkgGkTrW0SHbo+Fm/ePSg15MEM0snEh2
+9xPe+Y5maFrmlS0X3tb6GAvXVhSCnWtvWRtlag+koWxoa+3zuOMpzuUJ/BsztrFX
+EgageEo9jlSvo/44f2OvUce8weeo5xOXHZmP8x18Q4HSOMnuJrjYnoW6xX/eIovv
+Zah86CHV8D8xQrQDSCdmt8fNFwsx2MAfMc69jv+PovvYNwIDAQABo1AwTjAdBgNV
+HQ4EFgQUjdC6hYIw+1f2UG8KXccu37MAJk4wHwYDVR0jBBgwFoAUjdC6hYIw+1f2
+UG8KXccu37MAJk4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAsmbX
+6u03e4WLcLpVcvtUzfS0IptC7a0Wb9KHHxFA3K/sOOv3urUVkMCFBpx8QDZSNXdy
+mwrAPy3Xsgrrp7Eh69BPKcVdxdrXKLnT2GXGBAHOIT6ABinJZLkZqH70fVEg9uvP
+Nq4kVPa4LJ+fYDqpoHZljy1mdjbvUJnH6qGvrAWO8Gqj8nTMBp56d00/+PhneUn2
+EG1t09igqo1kJF3dnsftpKVT372dAyejRZRRa/kRHUWfH9dQYW8GqQ5vpL6xbXGH
+7gELLhs7A/y8mZPI3J1tEB3YlHCNWqYZJmWJYHELEfaNpzWjbufgi+b4P2Kk4VTs
+ybokLc9PUKb3ZKFJCQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.grinnell.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.grinnell.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.grinnell.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.grinnell.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.grinnell.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">grinnell.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAKtxSaCQZsWhMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMMEGlkcC5ncmlubmVsbC5lZHUwHhcNMTgwMjA1MTcyNzEzWhcNMjgwMjAzMTcy
+NzEzWjAbMRkwFwYDVQQDDBBpZHAuZ3Jpbm5lbGwuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAzn1EcKJziC2ttUp06TNIeoxNWudTSGOfJCyFJZbY
+UTBYDwXBksi/xSmIW+XPnHiDuyiaauAWQMBRWrkYrgVyIuNf3oDO687ADlDYib/J
+jwyTM3kLhrzc8/+tE6dcZghtUWcxCnXZtkgGkTrW0SHbo+Fm/ePSg15MEM0snEh2
+9xPe+Y5maFrmlS0X3tb6GAvXVhSCnWtvWRtlag+koWxoa+3zuOMpzuUJ/BsztrFX
+EgageEo9jlSvo/44f2OvUce8weeo5xOXHZmP8x18Q4HSOMnuJrjYnoW6xX/eIovv
+Zah86CHV8D8xQrQDSCdmt8fNFwsx2MAfMc69jv+PovvYNwIDAQABo1AwTjAdBgNV
+HQ4EFgQUjdC6hYIw+1f2UG8KXccu37MAJk4wHwYDVR0jBBgwFoAUjdC6hYIw+1f2
+UG8KXccu37MAJk4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAsmbX
+6u03e4WLcLpVcvtUzfS0IptC7a0Wb9KHHxFA3K/sOOv3urUVkMCFBpx8QDZSNXdy
+mwrAPy3Xsgrrp7Eh69BPKcVdxdrXKLnT2GXGBAHOIT6ABinJZLkZqH70fVEg9uvP
+Nq4kVPa4LJ+fYDqpoHZljy1mdjbvUJnH6qGvrAWO8Gqj8nTMBp56d00/+PhneUn2
+EG1t09igqo1kJF3dnsftpKVT372dAyejRZRRa/kRHUWfH9dQYW8GqQ5vpL6xbXGH
+7gELLhs7A/y8mZPI3J1tEB3YlHCNWqYZJmWJYHELEfaNpzWjbufgi+b4P2Kk4VTs
+ybokLc9PUKb3ZKFJCQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.grinnell.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Grinnell College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Grinnell College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.grinnell.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technology Services Desk</md:GivenName>
+	<md:EmailAddress>technologyservicesdesk@grinnell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Matt Hainley</md:GivenName>
+	<md:EmailAddress>hainley@grinnell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>NOC</md:GivenName>
+	<md:EmailAddress>noc@grinnell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Matt Hainley</md:GivenName>
+	<md:EmailAddress>hainley@grinnell.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

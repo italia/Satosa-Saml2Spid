@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.classiques-garnier.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2010-06-25T05:17:51Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/category/documentation</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/national</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Classiques Garnier Numérique</mdui:DisplayName>
+		<mdui:Logo height="60" width="260">https://www.classiques-garnier.com/numerique-bases/img/logo/logo.gif</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://www.classiques-garnier.com/shib/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Classiques Garnier Numérique offers academic libraries, public and research centers access to databases, online book collections and journals in the fields of literature, the humanities and social sciences.
+Teachers, academics, researchers, students, pupils and enthusiasts have tens of thousands of reference works at their disposal, on every device, in text mode, easily searchable at simple or advanced levels thanks to a full data mark-up and a powerful search engine.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Classiques Garnier Numérique</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Les Éditions Classiques Garnier proposent aux bibliothèques universitaires, aux bibliothèques publiques et aux centres de recherche, l’accès à des ressources électroniques dans les domaines de la littérature et des sciences humaines.
+Les enseignants, universitaires, chercheurs, étudiants, élèves et amateurs ont ainsi à leur disposition des dizaines de milliers d'ouvrages de référence en mode texte, facilement interrogeables, de façon simple ou spécialisée, grâce à un balisage intégral des données et à un puissant moteur de recherche spécialisé dans les bases de données littéraires.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://classiques-garnier.com/politique-de-confidentialite.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHcTCCBlmgAwIBAgIQI9FFV/Kd9PFL6K1wqMaKcjANBgkqhkiG9w0BAQsFADCB
+lTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMT0wOwYDVQQD
+EzRTZWN0aWdvIFJTQSBPcmdhbml6YXRpb24gVmFsaWRhdGlvbiBTZWN1cmUgU2Vy
+dmVyIENBMB4XDTE5MDQyOTAwMDAwMFoXDTIxMDQyODIzNTk1OVowgdUxCzAJBgNV
+BAYTAkZSMQ4wDAYDVQQREwU3NTAwNTEWMBQGA1UECBMNSWxlIGRlIGZyYW5jZTEO
+MAwGA1UEBxMFUGFyaXMxGjAYBgNVBAkTEUJ1cmVhdXggTGlicmFpcmllMRUwEwYD
+VQQJEww2IHIgU29yYm9ubmUxGzAZBgNVBAoTEkNsYXNzaXF1ZXMgR2FybmllcjEZ
+MBcGA1UECxMQTXVsdGktRG9tYWluIFNTTDEjMCEGA1UEAxMad3d3LmNsYXNzaXF1
+ZXMtZ2Fybmllci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/
+Jz/XekQoTs1Gog22JBUAKFfEM/HJ9dQomMDQc//kjkI670M9raDx/AG5cxWBuWEQ
+PJK3KmEtPcmeX7ZONz2MBbv0cBW79wMJnziPin6gIEkAY9kJN49+2RGKEu59qoXD
+FK2xzipFBTkx/Bwfhp9oxJxJpDRwCa/04x7QPzcdp3OQvXt1F9AK4eX96W8hPcYW
+8l46BdebHSFnqaGRw9CGZDXVQzTnzCeghD3yFT3I5hHhYt+3jHexnSxTDME+gsQi
+/RMmy/nLlVx6G+100i5agINWTd3HN0IUbSdIqm8yZBjC2i/okSV+m5t0UQ7T/M+J
+D65r/yr7lUMj6LrHVsyFAgMBAAGjggN5MIIDdTAfBgNVHSMEGDAWgBQX2dYlJ2f5
+McJJQ9kwNkSMbKlP6zAdBgNVHQ4EFgQUFAErbw7n6bYuLRsR5cxv63L/xIswDgYD
+VR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMEoGA1UdIARDMEEwNQYMKwYBBAGyMQECAQMEMCUwIwYIKwYBBQUH
+AgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECAjBaBgNVHR8EUzBR
+ME+gTaBLhklodHRwOi8vY3JsLnNlY3RpZ28uY29tL1NlY3RpZ29SU0FPcmdhbml6
+YXRpb25WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3JsMIGKBggrBgEFBQcBAQR+
+MHwwVQYIKwYBBQUHMAKGSWh0dHA6Ly9jcnQuc2VjdGlnby5jb20vU2VjdGlnb1JT
+QU9yZ2FuaXphdGlvblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwIwYIKwYB
+BQUHMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29tMD0GA1UdEQQ2MDSCGnd3dy5j
+bGFzc2lxdWVzLWdhcm5pZXIuY29tghZjbGFzc2lxdWVzLWdhcm5pZXIuY29tMIIB
+gAYKKwYBBAHWeQIEAgSCAXAEggFsAWoAdwC72d+8H4pxtZOUI5eqkntHOFeVCqtS
+6BqQlmQ2jh7RhQAAAWpo/zyWAAAEAwBIMEYCIQDEQfSwXAHeFTL2jyJyOcB9fzVi
+kv67Q9IBAX6nSstWTgIhAOOWewjgvQZ3VqnXGPSWwLvPBHbT+QhAq8s4Qp76eLiE
+AHYARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFqaP88qgAABAMA
+RzBFAiBit4arTG8qeudGS9WWULzSkfOtFSBTzK5WVmZzfv/vjQIhAJmXZRwXdb++
+9gM9FWBFG3jItOqrdxxuQ0YtCDmLhRPjAHcAb1N2rDHwMRnYmQCkURX/dxUcEdkC
+wQApBo2yCJo32RMAAAFqaP88sQAABAMASDBGAiEA536VCUIkGLToqnYCK9hyfhMd
+/eDVwa8U+el5dDaXadkCIQDtmSRNHjWeAdNuTCEuL6BdahrlyNlaPnC9B2LCc6hp
+7DANBgkqhkiG9w0BAQsFAAOCAQEAJFigtsxfPpqNtzHavvuk2TDpNkKQzwjMhVLD
+RVUZODOWPEpbtGOoqY4I/LqtdmUPFVaHmxVMvbEQVrLRAlkcpdQAFP/JoRcqE87e
+OY2SAW3lhECXm4CuZw2Hs3wTxt+lF7TCZU/3B8m9j1EOhxeOpsbZ3sBj/zNU+H1k
+k5xHEX9wTO5STXI/MT0vIrG+Szk8eDJeQLGxCmdShO1hw/Hgg1xzo+t9txXSkftb
+X7udNze1cIhvWO3S1bnWnncMgkZmy37Yx/sUXeO4kK+UEIaJPREsToBTG1Gcs0xV
+cXojca+qe0o6sAnByqpauY8117spG3aT5wh9qwOzkXxWgCZkKw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHcTCCBlmgAwIBAgIQI9FFV/Kd9PFL6K1wqMaKcjANBgkqhkiG9w0BAQsFADCB
+lTELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMT0wOwYDVQQD
+EzRTZWN0aWdvIFJTQSBPcmdhbml6YXRpb24gVmFsaWRhdGlvbiBTZWN1cmUgU2Vy
+dmVyIENBMB4XDTE5MDQyOTAwMDAwMFoXDTIxMDQyODIzNTk1OVowgdUxCzAJBgNV
+BAYTAkZSMQ4wDAYDVQQREwU3NTAwNTEWMBQGA1UECBMNSWxlIGRlIGZyYW5jZTEO
+MAwGA1UEBxMFUGFyaXMxGjAYBgNVBAkTEUJ1cmVhdXggTGlicmFpcmllMRUwEwYD
+VQQJEww2IHIgU29yYm9ubmUxGzAZBgNVBAoTEkNsYXNzaXF1ZXMgR2FybmllcjEZ
+MBcGA1UECxMQTXVsdGktRG9tYWluIFNTTDEjMCEGA1UEAxMad3d3LmNsYXNzaXF1
+ZXMtZ2Fybmllci5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/
+Jz/XekQoTs1Gog22JBUAKFfEM/HJ9dQomMDQc//kjkI670M9raDx/AG5cxWBuWEQ
+PJK3KmEtPcmeX7ZONz2MBbv0cBW79wMJnziPin6gIEkAY9kJN49+2RGKEu59qoXD
+FK2xzipFBTkx/Bwfhp9oxJxJpDRwCa/04x7QPzcdp3OQvXt1F9AK4eX96W8hPcYW
+8l46BdebHSFnqaGRw9CGZDXVQzTnzCeghD3yFT3I5hHhYt+3jHexnSxTDME+gsQi
+/RMmy/nLlVx6G+100i5agINWTd3HN0IUbSdIqm8yZBjC2i/okSV+m5t0UQ7T/M+J
+D65r/yr7lUMj6LrHVsyFAgMBAAGjggN5MIIDdTAfBgNVHSMEGDAWgBQX2dYlJ2f5
+McJJQ9kwNkSMbKlP6zAdBgNVHQ4EFgQUFAErbw7n6bYuLRsR5cxv63L/xIswDgYD
+VR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMEoGA1UdIARDMEEwNQYMKwYBBAGyMQECAQMEMCUwIwYIKwYBBQUH
+AgEWF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECAjBaBgNVHR8EUzBR
+ME+gTaBLhklodHRwOi8vY3JsLnNlY3RpZ28uY29tL1NlY3RpZ29SU0FPcmdhbml6
+YXRpb25WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3JsMIGKBggrBgEFBQcBAQR+
+MHwwVQYIKwYBBQUHMAKGSWh0dHA6Ly9jcnQuc2VjdGlnby5jb20vU2VjdGlnb1JT
+QU9yZ2FuaXphdGlvblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwIwYIKwYB
+BQUHMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29tMD0GA1UdEQQ2MDSCGnd3dy5j
+bGFzc2lxdWVzLWdhcm5pZXIuY29tghZjbGFzc2lxdWVzLWdhcm5pZXIuY29tMIIB
+gAYKKwYBBAHWeQIEAgSCAXAEggFsAWoAdwC72d+8H4pxtZOUI5eqkntHOFeVCqtS
+6BqQlmQ2jh7RhQAAAWpo/zyWAAAEAwBIMEYCIQDEQfSwXAHeFTL2jyJyOcB9fzVi
+kv67Q9IBAX6nSstWTgIhAOOWewjgvQZ3VqnXGPSWwLvPBHbT+QhAq8s4Qp76eLiE
+AHYARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFqaP88qgAABAMA
+RzBFAiBit4arTG8qeudGS9WWULzSkfOtFSBTzK5WVmZzfv/vjQIhAJmXZRwXdb++
+9gM9FWBFG3jItOqrdxxuQ0YtCDmLhRPjAHcAb1N2rDHwMRnYmQCkURX/dxUcEdkC
+wQApBo2yCJo32RMAAAFqaP88sQAABAMASDBGAiEA536VCUIkGLToqnYCK9hyfhMd
+/eDVwa8U+el5dDaXadkCIQDtmSRNHjWeAdNuTCEuL6BdahrlyNlaPnC9B2LCc6hp
+7DANBgkqhkiG9w0BAQsFAAOCAQEAJFigtsxfPpqNtzHavvuk2TDpNkKQzwjMhVLD
+RVUZODOWPEpbtGOoqY4I/LqtdmUPFVaHmxVMvbEQVrLRAlkcpdQAFP/JoRcqE87e
+OY2SAW3lhECXm4CuZw2Hs3wTxt+lF7TCZU/3B8m9j1EOhxeOpsbZ3sBj/zNU+H1k
+k5xHEX9wTO5STXI/MT0vIrG+Szk8eDJeQLGxCmdShO1hw/Hgg1xzo+t9txXSkftb
+X7udNze1cIhvWO3S1bnWnncMgkZmy37Yx/sUXeO4kK+UEIaJPREsToBTG1Gcs0xV
+cXojca+qe0o6sAnByqpauY8117spG3aT5wh9qwOzkXxWgCZkKw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.classiques-garnier.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.classiques-garnier.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">Classiques Garnier Numérique</md:ServiceName>
+		<md:ServiceName xml:lang="en">Classiques Garnier Numérique</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">Les Éditions Classiques Garnier proposent aux bibliothèques universitaires, aux bibliothèques publiques et aux centres de recherche, l’accès à des ressources électroniques dans les domaines de la littérature et des sciences humaines.
+Les enseignants, universitaires, chercheurs, étudiants, élèves et amateurs ont ainsi à leur disposition des dizaines de milliers d'ouvrages de référence en mode texte, facilement interrogeables, de façon simple ou spécialisée, grâce à un balisage intégral des données et à un puissant moteur de recherche spécialisé dans les bases de données littéraires.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Classiques Garnier Numérique offers academic libraries, public and research centers access to databases, online book collections and journals in the fields of literature, the humanities and social sciences.
+Teachers, academics, researchers, students, pupils and enthusiasts have tens of thousands of reference works at their disposal, on every device, in text mode, easily searchable at simple or advanced levels thanks to a full data mark-up and a powerful search engine.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Classiques Garnier</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Classiques Garnier</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wanadoo.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Didier Corbière</md:SurName>
+	<md:EmailAddress>mailto:didiercorbiere@classiques-garnier.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

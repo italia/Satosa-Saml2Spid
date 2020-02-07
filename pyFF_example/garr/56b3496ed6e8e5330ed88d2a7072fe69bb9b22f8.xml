@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai.arnes.si/test/edugain">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.arnes.si" registrationInstant="2014-11-05T12:11:07Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://aai.arnes.si/static/doc/ArnesAAI_general.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="sl">https://aai.arnes.si/static/doc/ArnesAAI_splosni_pogoji.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ArnesAAI IdP eduGAIN test</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sl">ArnesAAI IdP eduGAIN test</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Aplication for testing IdP eduGAIN compatibility</mdui:Description>
+		<mdui:Description xml:lang="sl">Aplikacija za preizkušanje kompatibilnosti IdP-jev vključenih v eduGAIN</mdui:Description>
+		<mdui:Keywords xml:lang="en">arnesaai edugain test service</mdui:Keywords>
+		<mdui:Keywords xml:lang="sl">arnesaai edugain test service</mdui:Keywords>
+		<mdui:Logo height="28" width="128">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://aai.arnes.si/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="sl">https://aai.arnes.si/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://aai.arnes.si/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="sl">https://aai.arnes.si/</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFnDCCA4SgAwIBAgIGElFhIMr9MA0GCSqGSIb3DQEBBQUAMGYxCzAJBgNVBAYT
+AlNJMRIwEAYDVQQHDAlManVibGphbmExQzBBBgNVBAMMOkFybmVzQUFJIGVkdUdB
+SU4gdGVzdCwgQXJuZXNBQUkgZWR1R0FJTiBjb21wYXRpYmlsaXR5IHRlc3QwHhcN
+MTQwNzMxMDkxODAzWhcNMzQwNDE3MDkxODAzWjBmMQswCQYDVQQGEwJTSTESMBAG
+A1UEBwwJTGp1YmxqYW5hMUMwQQYDVQQDDDpBcm5lc0FBSSBlZHVHQUlOIHRlc3Qs
+IEFybmVzQUFJIGVkdUdBSU4gY29tcGF0aWJpbGl0eSB0ZXN0MIICIjANBgkqhkiG
+9w0BAQEFAAOCAg8AMIICCgKCAgEA50u+vFRcUPXXBX0jxdsT/9FQt6wFmLiukYOj
+hqxQxWjHozzNQSuEN3sONdKsn+pulXp6QrzhUfoAyCSoFbrPprbgs7dgvTNgAqf6
+C1+CYT2J9C3DgvrRBMQt59IC7PLrHeSRvScUDBtl5X9if9R+SgGkv+UcjhvVuIsb
+3nhRqAmLOxnMNBM7PiWXw5bbV465I3EHObAa8E0uDiRqiF4rdsXoV9X4s14Npa4b
+DFikh4ejpiKOnPFDS4LjAkRoKTSvFaNIw33T/AOXFgY+pL2SO0293gUGMRVqerPE
+Wt2sy3KBmGFxTZz1o/LBYuKwmSSMRDTqlIWOh2F947p0JI3xuWvIlmVhs9zOqlA8
+4yoVOsuZYYWtkq7unsBT75cEg6CtjbNCdTwPSGxg0TMoMfZm2Nc387wovmgnEflc
+zqiqGjMGZo2HiTNgsGCogU4Cp2reaDr5bWr95XN6ha3gMsyTAxpgSUMXKr8OfXeX
+TH6imNzjru7cZiiYv90mOSi0NBUBdvhQoVcSHLN+riYvSrI3c6Fz2+ZaY4Capp57
+kx3JI41P7nDmvH146uy74MMzI3SpiKVffYPBh0gMWLNyS9oAAYe7nMMufd1eRq6S
+RgT/aARqxcOY9BU6DruklhCnY1SPU1ryKBLT487NEEdg2d3LpEhMwUw47vmCA1QC
+Ujo8IHUCAwEAAaNQME4wHQYDVR0OBBYEFG6JrB/IKKGU9wJF7SCEGx52grk3MB8G
+A1UdIwQYMBaAFG6JrB/IKKGU9wJF7SCEGx52grk3MAwGA1UdEwQFMAMBAf8wDQYJ
+KoZIhvcNAQEFBQADggIBADOJI3lPqCNSacyydDLT/g2o6cHjtXTLhdH8omQ8jKAD
+grDdoRePkjaeLOopY+sE/1Q76B7AwZVPSWw1s+dvdH6esgcsaSVKDZPFEyujRI1v
+OYRUTWxGJTyk4V1XC75mm9Mb6ReUTh97eCYB/X5XKbri56qlUuGmOKJoXAc/NnsE
+ioI/dhkdVGQVRkRf38Y9EXWfrUixklt7lt25ZSiJbTHsWOU8StKkaUgeDOgIzF8+
+sXaY3EMVG9PJN8jiwxyERnwjzyi6dYTFsJCiweVlVZZECcuCBRPO6En4XoGsUxKO
+dC9GkRGmcFYPnJtbATP06YL7G+xN15fhmYztCNN45XYDc0uu973DwZDDyaiS5k3i
+S0NdyAbexeFY1MIFAfGTH6BKYMzK07R/jQx4vBeTlsFfkB4Jr0TDwTbB2wf+bFb+
+RDCNKqTPltPFzPiqd19hxnFsXvmodNZUgqu+tcNWEbP5+EMXY4qTrF8b3s/SK8Zg
+Kl4VlmIx8XJQf0TQsmdFZPFLuBkoBOB+tEvhdp5ssSHVK126kXk26ISUATQ2DjXH
+jxSDsJgdfvnuDBe+84DG+dqQmL0nw8AzjqFhkME6gGdM4Z2Z+MlwUXcNjdaprZhW
+LZpzDAyHG1JQ2jukmxwRcsUJcLx7vSxbVPQ71/+U5/0SVQmNafuX8FWNvOWI/aJY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://aai.arnes.si/test/edugain/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">ArnesAAI IdP eduGAIN test</md:ServiceName>
+		<md:ServiceName xml:lang="sl">ArnesAAI IdP eduGAIN test</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Aplication for testing IdP eduGAIN compatibility</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="sl">Aplikacija za preizkušanje kompatibilnosti IdP-jev vključenih v eduGAIN</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="rfc822Mailbox" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="schacHomeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Akademska in raziskovalna mreža Slovenije</md:OrganizationName>
+	<md:OrganizationName xml:lang="sl">Akademska in raziskovalna mreža Slovenije</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Akademska in raziskovalna mreža Slovenije</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sl">Akademska in raziskovalna mreža Slovenije</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.arnes.si</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sl">http://www.arnes.si</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>AAA</md:GivenName>
+	<md:SurName>Podpora</md:SurName>
+	<md:EmailAddress>mailto:aaa-podpora@arnes.si</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Arnes</md:GivenName>
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@arnes.si</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Arnes</md:GivenName>
+	<md:SurName>Arnes</md:SurName>
+	<md:EmailAddress>mailto:arnes@arnes.si</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

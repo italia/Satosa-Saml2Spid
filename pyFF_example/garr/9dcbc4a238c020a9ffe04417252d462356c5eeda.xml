@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lhup.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.lhup.edu/idp/" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lhup.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lock Haven University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.lhup.edu/computing_and_tech</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.lhup.edu/computing_and_tech/aup.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="42" width="447" xml:lang="en">https://www.lhup.edu/images/web-logo-head-11.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEuTCCA6GgAwIBAgIQZcvMkgZaqKLekHBsU354XjANBgkqhkiG9w0BAQUFADA8
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMVGhhd3RlLCBJbmMuMRYwFAYDVQQDEw1U
+aGF3dGUgU1NMIENBMB4XDTEyMDcyNDAwMDAwMFoXDTE1MDcyNDIzNTk1OVowgY0x
+CzAJBgNVBAYTAlVTMRUwEwYDVQQIEwxQZW5uc3lsdmFuaWExEzARBgNVBAcUCkxv
+Y2sgSGF2ZW4xLjAsBgNVBAoUJUxvY2sgSGF2ZW4gVW5pdmVyc2l0eSBPZiBQZW5u
+c3lsdmFuaWExCzAJBgNVBAsUAklUMRUwEwYDVQQDFAxpZHAubGh1cC5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdFclUfLWsojRGkQA9JO6S8QOl
+FAYb3FaZ9Sn4d5uM7qgSC7EHcZ4UCTPZ3d/ni2Sp5HkFHzAO2Il3lRQN5rgtepk3
+OWW2KcfipbXczbwzBO2U/fz4EQfu+1fz9nhMD3j85nDDhbhEWynYcrfmS2xnRb3p
+llgI5MH0FLSN+5umufSf7yF2lwgl4Lr7vMoKn5hEP+imHDlh9Nq+SHATDIJO6f7x
+JuJL+hAj84xWRJqGfs28TiJMM5R18rsHoE9bjqOwHjeR7SFsZaS77mn+JX5DESzU
+AE+XkGxQq+LQ4dMFXpA3sVotytUxgKUNrp2VFVOTzSixo3JpDk+Jai5W32CvAgMB
+AAGjggFjMIIBXzAXBgNVHREEEDAOggxpZHAubGh1cC5lZHUwCQYDVR0TBAIwADBC
+BgNVHSAEOzA5MDcGCmCGSAGG+EUBBzYwKTAnBggrBgEFBQcCARYbaHR0cHM6Ly93
+d3cudGhhd3RlLmNvbS9jcHMvMA4GA1UdDwEB/wQEAwIFoDAfBgNVHSMEGDAWgBSn
+ooO7NEVAPfzVME8SuT6hAZ/22zA6BgNVHR8EMzAxMC+gLaArhilodHRwOi8vc3Zy
+LW92LWNybC50aGF3dGUuY29tL1RoYXd0ZU9WLmNybDAdBgNVHSUEFjAUBggrBgEF
+BQcDAQYIKwYBBQUHAwIwaQYIKwYBBQUHAQEEXTBbMCIGCCsGAQUFBzABhhZodHRw
+Oi8vb2NzcC50aGF3dGUuY29tMDUGCCsGAQUFBzAChilodHRwOi8vc3ZyLW92LWFp
+YS50aGF3dGUuY29tL1RoYXd0ZU9WLmNlcjANBgkqhkiG9w0BAQUFAAOCAQEAdy3s
+U5fAwa249ELF6aywqLvnk0GXaAaikI00D0Hos6tmMuUxTj40eQwICApm5Y6fBQFC
+mBQjFYpHWxvmxTnnED0/GKgfXNA2eUyY0RVHxtydFFJB0tmbMS0w0dhPaSjMjUVE
+kSBlxl5DMgM8CIEohWoZiMahTKVhRsTbpQgOsJCGEHv3qtrvbSfuJwYBP5F4DPPY
+blFlMDAkDVVUynA6Lp+wyrf/C2+2N0jg8EVGl8PuOnBeL860Lg9j+zEwJZiQrllW
+TKvZOVB6ym5AhHfgCOR4ZcQYIh+TVAYjxgtVqTADfuOZ6WiO5D2Hilad+xW3UQyx
+L6VIWeNvK0QGSePPsg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lhup.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lhup.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.lhup.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lhup.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lhup.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lhup.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEuTCCA6GgAwIBAgIQZcvMkgZaqKLekHBsU354XjANBgkqhkiG9w0BAQUFADA8
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMVGhhd3RlLCBJbmMuMRYwFAYDVQQDEw1U
+aGF3dGUgU1NMIENBMB4XDTEyMDcyNDAwMDAwMFoXDTE1MDcyNDIzNTk1OVowgY0x
+CzAJBgNVBAYTAlVTMRUwEwYDVQQIEwxQZW5uc3lsdmFuaWExEzARBgNVBAcUCkxv
+Y2sgSGF2ZW4xLjAsBgNVBAoUJUxvY2sgSGF2ZW4gVW5pdmVyc2l0eSBPZiBQZW5u
+c3lsdmFuaWExCzAJBgNVBAsUAklUMRUwEwYDVQQDFAxpZHAubGh1cC5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdFclUfLWsojRGkQA9JO6S8QOl
+FAYb3FaZ9Sn4d5uM7qgSC7EHcZ4UCTPZ3d/ni2Sp5HkFHzAO2Il3lRQN5rgtepk3
+OWW2KcfipbXczbwzBO2U/fz4EQfu+1fz9nhMD3j85nDDhbhEWynYcrfmS2xnRb3p
+llgI5MH0FLSN+5umufSf7yF2lwgl4Lr7vMoKn5hEP+imHDlh9Nq+SHATDIJO6f7x
+JuJL+hAj84xWRJqGfs28TiJMM5R18rsHoE9bjqOwHjeR7SFsZaS77mn+JX5DESzU
+AE+XkGxQq+LQ4dMFXpA3sVotytUxgKUNrp2VFVOTzSixo3JpDk+Jai5W32CvAgMB
+AAGjggFjMIIBXzAXBgNVHREEEDAOggxpZHAubGh1cC5lZHUwCQYDVR0TBAIwADBC
+BgNVHSAEOzA5MDcGCmCGSAGG+EUBBzYwKTAnBggrBgEFBQcCARYbaHR0cHM6Ly93
+d3cudGhhd3RlLmNvbS9jcHMvMA4GA1UdDwEB/wQEAwIFoDAfBgNVHSMEGDAWgBSn
+ooO7NEVAPfzVME8SuT6hAZ/22zA6BgNVHR8EMzAxMC+gLaArhilodHRwOi8vc3Zy
+LW92LWNybC50aGF3dGUuY29tL1RoYXd0ZU9WLmNybDAdBgNVHSUEFjAUBggrBgEF
+BQcDAQYIKwYBBQUHAwIwaQYIKwYBBQUHAQEEXTBbMCIGCCsGAQUFBzABhhZodHRw
+Oi8vb2NzcC50aGF3dGUuY29tMDUGCCsGAQUFBzAChilodHRwOi8vc3ZyLW92LWFp
+YS50aGF3dGUuY29tL1RoYXd0ZU9WLmNlcjANBgkqhkiG9w0BAQUFAAOCAQEAdy3s
+U5fAwa249ELF6aywqLvnk0GXaAaikI00D0Hos6tmMuUxTj40eQwICApm5Y6fBQFC
+mBQjFYpHWxvmxTnnED0/GKgfXNA2eUyY0RVHxtydFFJB0tmbMS0w0dhPaSjMjUVE
+kSBlxl5DMgM8CIEohWoZiMahTKVhRsTbpQgOsJCGEHv3qtrvbSfuJwYBP5F4DPPY
+blFlMDAkDVVUynA6Lp+wyrf/C2+2N0jg8EVGl8PuOnBeL860Lg9j+zEwJZiQrllW
+TKvZOVB6ym5AhHfgCOR4ZcQYIh+TVAYjxgtVqTADfuOZ6WiO5D2Hilad+xW3UQyx
+L6VIWeNvK0QGSePPsg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lhup.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lock Haven University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lock Haven University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lhup.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Lock Haven University IT Department</md:GivenName>
+	<md:EmailAddress>idp@lhup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lock Haven University IT Department</md:GivenName>
+	<md:EmailAddress>idp@lhup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Lock Haven University IT Department</md:GivenName>
+	<md:EmailAddress>idp@lhup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Lock Haven University IT Department</md:GivenName>
+	<md:EmailAddress>idp@lhup.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

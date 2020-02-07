@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.boltoncc.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-07-15T18:01:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bolton College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Bolton College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">bolton-community-college.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRjCCAi4CCQCsi3PM6isCkjANBgkqhkiG9w0BAQUFADBlMQswCQYDVQQGEwJH
+QjEPMA0GA1UECBMGQm9sdG9uMQ8wDQYDVQQHEwZCb2x0b24xFzAVBgNVBAoTDkJv
+bHRvbiBDb2xsZWdlMRswGQYDVQQDExJpZHAuYm9sdG9uY2MuYWMudWswHhcNMTMx
+MjA5MDk1NjEyWhcNMzMxMjA0MDk1NjEyWjBlMQswCQYDVQQGEwJHQjEPMA0GA1UE
+CBMGQm9sdG9uMQ8wDQYDVQQHEwZCb2x0b24xFzAVBgNVBAoTDkJvbHRvbiBDb2xs
+ZWdlMRswGQYDVQQDExJpZHAuYm9sdG9uY2MuYWMudWswggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDt/7etyusEoPkmBjb+vlI5qWaSK/nunnDDfKji4Rf1
+J2LcJ0AQBE7EZ9a3uaFLe3sHLIxav/VwuOGlLEFA+bIlpfuIUI00Pkv5lWpoSv3Q
+qDHKniLxLgOxeO3WKO0ziALCM9gKor0iZkPwESKjp8PkM4Kn9CgpM8BlYBdvedBA
+fxF3+OHy+RtsRRw1ObfG7U3mS8msLKjV8ziVK50XiM60EOvoK9Bb2QzLVxzL/Z3C
+Kwv8EpTSZMD0OFTBI/+vZ7evhPT96qYGvMomPZ2WjkcdfkmXRc8+IY7vfL1m5jp3
+3C2DkOHgEny4lQd/qJucf9jnhUkT69YoEsEXf0JE29NjAgMBAAEwDQYJKoZIhvcN
+AQEFBQADggEBAEjerzNXlUF0L/dYMpidDZmVpQpHSEjBhbcR3wravACGkwJcL2ek
+YUD5Jee1Kd7D/H2MmmBKtK8u7j7FbLIxxA/lnXMbAOecD1apzeG2jEz88PGnJswl
+g9XnRu/DvUggQs626CbJ3a9QkFrHel3VrL/WMnHn0aVEiBZphoiFSBZUpb8QuNyy
+FGkWWWeUJO9f7TG5qbW6TGKeOx6IlxmVmbui8gYrZ8rur5zKhAzd640zbtCgYh6O
+QUfQMXNSt4yna9Dh4QT6SaMcD4tKhA1nqlghNPBFFGgZo3hCyWzwCXVEIpCJmNqR
+K9mlz3r6b+Vka51fYE5nKPrUGT60d4hOe+s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.boltoncc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.boltoncc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.boltoncc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.boltoncc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.boltoncc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.boltoncc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bolton-community-college.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRjCCAi4CCQCsi3PM6isCkjANBgkqhkiG9w0BAQUFADBlMQswCQYDVQQGEwJH
+QjEPMA0GA1UECBMGQm9sdG9uMQ8wDQYDVQQHEwZCb2x0b24xFzAVBgNVBAoTDkJv
+bHRvbiBDb2xsZWdlMRswGQYDVQQDExJpZHAuYm9sdG9uY2MuYWMudWswHhcNMTMx
+MjA5MDk1NjEyWhcNMzMxMjA0MDk1NjEyWjBlMQswCQYDVQQGEwJHQjEPMA0GA1UE
+CBMGQm9sdG9uMQ8wDQYDVQQHEwZCb2x0b24xFzAVBgNVBAoTDkJvbHRvbiBDb2xs
+ZWdlMRswGQYDVQQDExJpZHAuYm9sdG9uY2MuYWMudWswggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDt/7etyusEoPkmBjb+vlI5qWaSK/nunnDDfKji4Rf1
+J2LcJ0AQBE7EZ9a3uaFLe3sHLIxav/VwuOGlLEFA+bIlpfuIUI00Pkv5lWpoSv3Q
+qDHKniLxLgOxeO3WKO0ziALCM9gKor0iZkPwESKjp8PkM4Kn9CgpM8BlYBdvedBA
+fxF3+OHy+RtsRRw1ObfG7U3mS8msLKjV8ziVK50XiM60EOvoK9Bb2QzLVxzL/Z3C
+Kwv8EpTSZMD0OFTBI/+vZ7evhPT96qYGvMomPZ2WjkcdfkmXRc8+IY7vfL1m5jp3
+3C2DkOHgEny4lQd/qJucf9jnhUkT69YoEsEXf0JE29NjAgMBAAEwDQYJKoZIhvcN
+AQEFBQADggEBAEjerzNXlUF0L/dYMpidDZmVpQpHSEjBhbcR3wravACGkwJcL2ek
+YUD5Jee1Kd7D/H2MmmBKtK8u7j7FbLIxxA/lnXMbAOecD1apzeG2jEz88PGnJswl
+g9XnRu/DvUggQs626CbJ3a9QkFrHel3VrL/WMnHn0aVEiBZphoiFSBZUpb8QuNyy
+FGkWWWeUJO9f7TG5qbW6TGKeOx6IlxmVmbui8gYrZ8rur5zKhAzd640zbtCgYh6O
+QUfQMXNSt4yna9Dh4QT6SaMcD4tKhA1nqlghNPBFFGgZo3hCyWzwCXVEIpCJmNqR
+K9mlz3r6b+Vka51fYE5nKPrUGT60d4hOe+s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.boltoncc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.boltoncc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bolton College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bolton College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bolton-community-college.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Railton</md:GivenName>
+	<md:SurName>Knott</md:SurName>
+	<md:EmailAddress>mailto:railton.knott@boltoncc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Aftab</md:GivenName>
+	<md:SurName>Hussain</md:SurName>
+	<md:EmailAddress>mailto:Aftab.Hussain@boltoncc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

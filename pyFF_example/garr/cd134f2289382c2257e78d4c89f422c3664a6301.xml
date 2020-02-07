@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-sciencespo-grenoble.renater.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-03-21T17:28:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sciencespo-grenoble.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Sciences Po Grenoble</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAbBJREFUOBGlk7tLw1AYxc9N2rS1tDa0Ij6Qri5O4ubi5uSmgwj+AYKbk9DFwdlVty7i5OCgsw5O7g6CDgoiWtO3aZPr+dIqShMVvJDcy338zvlOcpVt2xr/aMZPZz0uVrQP/4dNkQA5bPE5zI2hwT4CoiMBVSqXMgXMJoawbA3B0eGVhgI6VCwaMSymMnB5UClORLRQQN33sJsdwUblAQ7HnQh1YQ4A2tCYiyeRMUyctmu46bpoEmCFuxjMoOX72M4WsFd7BpSJGh3UmYf5lxIaVF+wUhim+pnbJEAF6TsBINzCtxJcqm9RvVx/5eHekmSfgoAGv4LMfAIqrHMpkcakGcdBy0GuH71L9Zl4Isjho4ouB7L/VftfMtAeNjN5nLRqgfWeYYVrhrietpFnWRXmIY9NdyXOHdsThpK7ILTVZBo7w6OYf7olWSNOFbFIFVwUpjBOZw9eF1nDwCP7o6aD/abj9QEeLgtF3HkdrLzcw6baR5NfukrgGgXE1ZnbCgCSka2UF5MN06aFKy6cv0nyn7EEDEFJHuW23Aggy/EXAR046KnIdeFiP7xg9++v7jscC7HtOLjl5gAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.renater.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Sciences Po Grenoble users</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Sciences Po Grenoble</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs Sciences Po Grenoble</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDdTCCAl2gAwIBAgIUUtxFaDSxstqp7+uHYSdOiwPQpsUwDQYJKoZIhvcNAQEL
+BQAwLTErMCkGA1UEAwwiaWRwLXNjaWVuY2VzcG8tZ3Jlbm9ibGUucmVuYXRlci5m
+cjAeFw0xOTAyMTQxMTA5MzhaFw0zOTAyMTQxMTA5MzhaMC0xKzApBgNVBAMMImlk
+cC1zY2llbmNlc3BvLWdyZW5vYmxlLnJlbmF0ZXIuZnIwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCf6TgGtwlWKSrax/Z6B/SHEd8V2uQoJIoyrJlKeuwx
+KzX5XbGnhjf84cPyjrPj+PfamoSTIxjbvRkr/si6CkUB19fQ1CS8g7piJTH3KXKI
+icmRxBDD37oSPQRZ1bJOudEKW2IUUK77am9j0+FDW089pJoH8pCGL0d6GxoUmQfc
+vvXLgBJmVgYaCYF5hNHSN6gtlMNtYHQqZfj2zkC4dfhko07fa/2gmfoTNQKhakMY
+mdiETgoCHA3gGb+rzQMsFtR7laDfuT3U+/CuR0ubdDOCHzVberkTxaJDxuAsV+Rc
+aQBMRW+kwpAA6vJZ1IzRxlKrqGe1LXI6+BJxz0LqWahxAgMBAAGjgYwwgYkwHQYD
+VR0OBBYEFGgRZCHrj9uCh2TfNhOGIwmMAu2QMGgGA1UdEQRhMF+CImlkcC1zY2ll
+bmNlc3BvLWdyZW5vYmxlLnJlbmF0ZXIuZnKGOWh0dHBzOi8vaWRwLXNjaWVuY2Vz
+cG8tZ3Jlbm9ibGUucmVuYXRlci5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0B
+AQsFAAOCAQEAbUX/cD5koEWBG9uA53XMPI3dGeICk6xppwj3SCvzl11IUmIxHyIp
+8QalkUbrNB2buUohMX8LrRMvvb0rXNevKohyFwgjd6HPqLBNclp/3+xaA3myGBiM
+heJhafh/lomU1o95uRTvJKRz/hU3QqOfqPH05nIuDAMbCxqusyJp+aEJN/OWY0sY
+rRQDxoyratdwSN7DOrwanvdJFwq2SIquPQK3dwRrcGqbPCC7XnyXGjVi5vH7677S
+SGR4/SMC5cBpfhlZCjKXWMMoP49Om7OzP5sk+wC4rix7kNrU/FKu3jPSvDV0RyOu
+RejuVpKjQY3NrvtU5RdxS96zFLzG3/LsLQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-sciencespo-grenoble.renater.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-sciencespo-grenoble.renater.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp-sciencespo-grenoble.renater.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sciencespo-grenoble.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDdTCCAl2gAwIBAgIUUtxFaDSxstqp7+uHYSdOiwPQpsUwDQYJKoZIhvcNAQEL
+BQAwLTErMCkGA1UEAwwiaWRwLXNjaWVuY2VzcG8tZ3Jlbm9ibGUucmVuYXRlci5m
+cjAeFw0xOTAyMTQxMTA5MzhaFw0zOTAyMTQxMTA5MzhaMC0xKzApBgNVBAMMImlk
+cC1zY2llbmNlc3BvLWdyZW5vYmxlLnJlbmF0ZXIuZnIwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCf6TgGtwlWKSrax/Z6B/SHEd8V2uQoJIoyrJlKeuwx
+KzX5XbGnhjf84cPyjrPj+PfamoSTIxjbvRkr/si6CkUB19fQ1CS8g7piJTH3KXKI
+icmRxBDD37oSPQRZ1bJOudEKW2IUUK77am9j0+FDW089pJoH8pCGL0d6GxoUmQfc
+vvXLgBJmVgYaCYF5hNHSN6gtlMNtYHQqZfj2zkC4dfhko07fa/2gmfoTNQKhakMY
+mdiETgoCHA3gGb+rzQMsFtR7laDfuT3U+/CuR0ubdDOCHzVberkTxaJDxuAsV+Rc
+aQBMRW+kwpAA6vJZ1IzRxlKrqGe1LXI6+BJxz0LqWahxAgMBAAGjgYwwgYkwHQYD
+VR0OBBYEFGgRZCHrj9uCh2TfNhOGIwmMAu2QMGgGA1UdEQRhMF+CImlkcC1zY2ll
+bmNlc3BvLWdyZW5vYmxlLnJlbmF0ZXIuZnKGOWh0dHBzOi8vaWRwLXNjaWVuY2Vz
+cG8tZ3Jlbm9ibGUucmVuYXRlci5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0B
+AQsFAAOCAQEAbUX/cD5koEWBG9uA53XMPI3dGeICk6xppwj3SCvzl11IUmIxHyIp
+8QalkUbrNB2buUohMX8LrRMvvb0rXNevKohyFwgjd6HPqLBNclp/3+xaA3myGBiM
+heJhafh/lomU1o95uRTvJKRz/hU3QqOfqPH05nIuDAMbCxqusyJp+aEJN/OWY0sY
+rRQDxoyratdwSN7DOrwanvdJFwq2SIquPQK3dwRrcGqbPCC7XnyXGjVi5vH7677S
+SGR4/SMC5cBpfhlZCjKXWMMoP49Om7OzP5sk+wC4rix7kNrU/FKu3jPSvDV0RyOu
+RejuVpKjQY3NrvtU5RdxS96zFLzG3/LsLQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp-sciencespo-grenoble.renater.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GIP RENATER</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">GIP RENATER</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.renater.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:equipe-federation@listes.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

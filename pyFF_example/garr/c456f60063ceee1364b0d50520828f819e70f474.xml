@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://warwickicsystems.com/Genohsis">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2019-05-13T10:06:10Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">eOPAS WICS Test</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Test Internal eOPAS System</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIQJyjW+EvXUbNLPs0z4rc67zANBgkqhkiG9w0BAQUFADAa
+MRgwFgYDVQQDDA9XSUNTLVVLRmVkLUNlcnQwIBcNMTkwNTEzMDkxNzM4WhgPMjEx
+OTEyMzEyMzAwMDBaMBoxGDAWBgNVBAMMD1dJQ1MtVUtGZWQtQ2VydDCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAL6K0lfZjO0C9DfennXTIzoc71+l1VOo
+OplH8SHKE6650CsOz73xLE0D0f7wC/opkGp3L7v+fPNA8XSGn/AkLPwPbd2QHwt4
+GTOvn6E/EcqRUCeEamkLTeeScrHyyIoMW1UrmnztDW5XyuS91wqvnSct1eBICpqk
+A5m9GRiLs7AvZyWEZOrUydUCd/i779U4AcCtqCzvxkfsa2Nb42rne6GytzweX147
+NNDN8qEQmsU48pLlYiFQyynkfgAjWYwF0S+w7DcMetaYp52k50boAIJUcDhZjykQ
+lT0Rw+fD4IUvqOCZq2K+k9ZqJmrpm+Mmi1zKURk5MJlkGN0HfvIaYVECAwEAAaNs
+MGowDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcD
+ATAaBgNVHREEEzARgg9XSUNTLVVLRmVkLUNlcnQwHQYDVR0OBBYEFBbM5Qhe5RUS
+SulD7aSSZp1jZxwoMA0GCSqGSIb3DQEBBQUAA4IBAQCK3btQ8573VND73GGKjCV1
+f+pxM68G2ZlwxZoXpeQJazFhdOiu/3M2JgzhFaIzz0CEKgXZaX8VV2yIy7fmD0gL
+RCM/pm3s6eUS6slNgV/fmuI41o6iDRyLZZGBSFRl+TSYrs56Eobby8Tj7pT+QNpP
+pWZI0tRomYNxhi20fG2XdF6lGiNapTFRtuESYzpimgXVjfTYlQffzvj8rqyHy2Uw
+Z3O9tscclapxYR+TPPo3/1qh0q+PmBoT6pZu1xPJXMqOGkojXyLkLlSOXuB4F3NB
+bNqlM4y0j+LQeBlqGiI3R/FWbv3wjZZYjL6OWlMpy4pUnCH+OqgWYeN4hw015MQM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://wicswhict006.warwickicsystems.com/Populated/AuthServices/Logout"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wicswhict006.warwickicsystems.com/Populated/AuthServices/Logout"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wicswhict006.warwickicsystems.com/Populated/AuthServices/Acs" index="0" isDefault="true"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wicswhict006.warwickicsystems.com/Populated/AuthServices/Acs" index="1" isDefault="false"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">eOPAS WICS Test</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Warwick International Computing Systems Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Warwick International Computing Systems Limited</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.warwickicsystems.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Richard</md:GivenName>
+	<md:SurName>Ward</md:SurName>
+	<md:EmailAddress>mailto:richard.ward@warwickicsystems.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Richard</md:GivenName>
+	<md:SurName>Ward</md:SurName>
+	<md:EmailAddress>mailto:richard.ward@warwickicsystems.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

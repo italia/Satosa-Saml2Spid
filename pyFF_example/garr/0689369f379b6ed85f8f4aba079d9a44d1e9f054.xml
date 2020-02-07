@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://lio-dcc.ligo-india.in/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://inflibnet.ac.in" registrationInstant="2019-12-20T11:00:31Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://parichay.inflibnet.ac.in/documents/rules_of_membership.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LIGO-INDIA Service Provider</mdui:DisplayName>
+		<mdui:Description xml:lang="en">LIGO-INDIA  WIKI</mdui:Description>
+		<mdui:Logo height="80" width="80">https://parichay.inflibnet.ac.in/logo/LIGO-India.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+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
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://lio-dcc.ligo-india.in/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">LIGO-INDIA Service Provider</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">LIGO-INDIA  WIKI</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IUCAA</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LIGO-INDIA</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ligo-india.in/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LIGO Sysadmin</md:GivenName>
+	<md:EmailAddress>mailto:ldas_admin@iucaa.in</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

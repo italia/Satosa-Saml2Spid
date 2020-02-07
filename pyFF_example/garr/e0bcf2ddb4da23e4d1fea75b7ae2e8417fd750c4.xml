@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.vcu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vcu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Virginia Commonwealth University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://ts.vcu.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.vcu.edu/privacy-statement/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="92" width="296" xml:lang="en">https://branding.vcu.edu/bar/academic/images/vcu-seal--gold.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIJAMyTsDp4A5caMA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMTEnNoaWJib2xldGgudmN1LmVkdTAeFw0xMjEwMDIxNTI2MzhaFw0yMjA5MzAx
+NTI2MzhaMB0xGzAZBgNVBAMTEnNoaWJib2xldGgudmN1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALFTvPHWzUL5EaaR1MVTG9wQ1Kn93kblwNRY
+Oa2vdsN25zod0NQCsp+XvqN1pn2w7zOvcY/ed3lYS9LqUZtiOTi6UCstT9w/4ci3
+9hJ9A4mRwk2+AUI7bQREhSF9z3Qk6FGjQfJXPFFyE3mnVIfavR9p/czIJIXlOIcX
+i6FCX3JQlMjdJue2xra0B6VkIavzFVkFNGlBkH/Mydxzt3HqgjI1k/57DnS0yCyy
+/pvfGmqtO11BxuZOHRfwIdxNIr3P5Mlc8kazUaPU+C3/fn0rfmvbdpAiCsSBSiAF
+uGapr9NfPRzVDnvwFNxz0PkLoHVm3yAaa7D7FeiFDUoo2ejrUR8CAwEAAaN+MHww
+HQYDVR0OBBYEFHp4Wom01tr/3XpayMXmUS5fLLCXME0GA1UdIwRGMESAFHp4Wom0
+1tr/3XpayMXmUS5fLLCXoSGkHzAdMRswGQYDVQQDExJzaGliYm9sZXRoLnZjdS5l
+ZHWCCQDMk7A6eAOXGjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAH
+iM8gjbZBldvhW1qopkF1KFqRh0HKOjSVTgQBNj5vU/AlL5PS7Cz9Ja/2X4+V24K+
+byitlj98kZF0OKDvWRb74w8cNDEE9us8Tl1txZVhTXfN7b5uzWb6g8CEcqxbLbHv
+RD3SSuWFEPpQlMAKDkGtSAS3ho3miQSIR1d236DA69ot8BTe8YM6P3AocDO7jPAn
+tlcoYKNW6ADof1DI8Q1z6ZgtYEnc/zVfA7dtudPYeYQZ6TL/R00gSdfN9GM+j7PA
+PBMWlPnwimjDzbm/2/sjWQ4+XXo1LpySq58tAyeqlmwQchr7rWzfQdJw8h5pBTLI
+tBa/rT5xLEJ4lKciSEO4
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUc1u3zV1w60ePVu0rfK1zMiXbB2MwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSc2hpYmJvbGV0aC52Y3UuZWR1MB4XDTE3MDMwODE2MDA0
+NFoXDTM3MDMwODE1MDA0NFowHTEbMBkGA1UEAwwSc2hpYmJvbGV0aC52Y3UuZWR1
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyGOXDnjd1B1PNlqECcHb
+aErkd78vjIj2WSbsNRQnpV7ge+U3Zilcd7JehI2ENK0Rb0ewHiRW7FpEugkCJ4vH
++rT5NjjjeISPv7KRyGq1pq2UyB/9PTF6e6EjdK2sLItzWymAD6GRBMd7LkvQEHeN
+0OtpULx9SxWt1AyhKiJBhwftc8t1YGvgyTI6WgUg76PkBSstSycDOORpgHXFQ8i8
+jE4nYkRvzENgjU4F96N4LS1LMrHsXHoANLwqs8h67ElQVuMjjY2iRsbq1UGXzGUF
+jG13e6OYwHB9F0OKAWTUFHcoNvvtML6fEl1NLEjD5c969H2zBU/sQ70kAY9VT30t
+ZwIDAQABo2swaTAdBgNVHQ4EFgQUNhAnqg667slPayHhRJTCsKcYZ6QwSAYDVR0R
+BEEwP4ISc2hpYmJvbGV0aC52Y3UuZWR1hilodHRwczovL3NoaWJib2xldGgudmN1
+LmVkdS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAneetnEMCH9vM
+Q19eyI8Ma+/Lwi/6FncPYySZ/Ca4RMsBLnAVBog9VZZRsWuEdnbj62aUu8HAuSsn
+EJ1h6WptgPSEBq7SGHdVaczvEs71yXzQ09faQPriYp38h+uc5ffJBdu0YCxjnWan
+ZSTzDFaLajs19LJEC+6Ke8L/WlHY5LURytBps2I9xv3TtezlqsoTPjw7Bd59N/GX
+BroHJ5eh7T050F6jVQCfPgJmvG8x14Xpih6isdPhOeemZzdkRQ49+GSBBpZR+eBv
+GHidldVputTOeeFSLqBbOh4OMnLWdrZ9L5D7KpnsF8agve5rFFb+XqvPNfbCpENv
+yYp0rs85SQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.vcu.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.vcu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.vcu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.vcu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vcu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIJAMyTsDp4A5caMA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMTEnNoaWJib2xldGgudmN1LmVkdTAeFw0xMjEwMDIxNTI2MzhaFw0yMjA5MzAx
+NTI2MzhaMB0xGzAZBgNVBAMTEnNoaWJib2xldGgudmN1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALFTvPHWzUL5EaaR1MVTG9wQ1Kn93kblwNRY
+Oa2vdsN25zod0NQCsp+XvqN1pn2w7zOvcY/ed3lYS9LqUZtiOTi6UCstT9w/4ci3
+9hJ9A4mRwk2+AUI7bQREhSF9z3Qk6FGjQfJXPFFyE3mnVIfavR9p/czIJIXlOIcX
+i6FCX3JQlMjdJue2xra0B6VkIavzFVkFNGlBkH/Mydxzt3HqgjI1k/57DnS0yCyy
+/pvfGmqtO11BxuZOHRfwIdxNIr3P5Mlc8kazUaPU+C3/fn0rfmvbdpAiCsSBSiAF
+uGapr9NfPRzVDnvwFNxz0PkLoHVm3yAaa7D7FeiFDUoo2ejrUR8CAwEAAaN+MHww
+HQYDVR0OBBYEFHp4Wom01tr/3XpayMXmUS5fLLCXME0GA1UdIwRGMESAFHp4Wom0
+1tr/3XpayMXmUS5fLLCXoSGkHzAdMRswGQYDVQQDExJzaGliYm9sZXRoLnZjdS5l
+ZHWCCQDMk7A6eAOXGjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAH
+iM8gjbZBldvhW1qopkF1KFqRh0HKOjSVTgQBNj5vU/AlL5PS7Cz9Ja/2X4+V24K+
+byitlj98kZF0OKDvWRb74w8cNDEE9us8Tl1txZVhTXfN7b5uzWb6g8CEcqxbLbHv
+RD3SSuWFEPpQlMAKDkGtSAS3ho3miQSIR1d236DA69ot8BTe8YM6P3AocDO7jPAn
+tlcoYKNW6ADof1DI8Q1z6ZgtYEnc/zVfA7dtudPYeYQZ6TL/R00gSdfN9GM+j7PA
+PBMWlPnwimjDzbm/2/sjWQ4+XXo1LpySq58tAyeqlmwQchr7rWzfQdJw8h5pBTLI
+tBa/rT5xLEJ4lKciSEO4
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUc1u3zV1w60ePVu0rfK1zMiXbB2MwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSc2hpYmJvbGV0aC52Y3UuZWR1MB4XDTE3MDMwODE2MDA0
+NFoXDTM3MDMwODE1MDA0NFowHTEbMBkGA1UEAwwSc2hpYmJvbGV0aC52Y3UuZWR1
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyGOXDnjd1B1PNlqECcHb
+aErkd78vjIj2WSbsNRQnpV7ge+U3Zilcd7JehI2ENK0Rb0ewHiRW7FpEugkCJ4vH
++rT5NjjjeISPv7KRyGq1pq2UyB/9PTF6e6EjdK2sLItzWymAD6GRBMd7LkvQEHeN
+0OtpULx9SxWt1AyhKiJBhwftc8t1YGvgyTI6WgUg76PkBSstSycDOORpgHXFQ8i8
+jE4nYkRvzENgjU4F96N4LS1LMrHsXHoANLwqs8h67ElQVuMjjY2iRsbq1UGXzGUF
+jG13e6OYwHB9F0OKAWTUFHcoNvvtML6fEl1NLEjD5c969H2zBU/sQ70kAY9VT30t
+ZwIDAQABo2swaTAdBgNVHQ4EFgQUNhAnqg667slPayHhRJTCsKcYZ6QwSAYDVR0R
+BEEwP4ISc2hpYmJvbGV0aC52Y3UuZWR1hilodHRwczovL3NoaWJib2xldGgudmN1
+LmVkdS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAneetnEMCH9vM
+Q19eyI8Ma+/Lwi/6FncPYySZ/Ca4RMsBLnAVBog9VZZRsWuEdnbj62aUu8HAuSsn
+EJ1h6WptgPSEBq7SGHdVaczvEs71yXzQ09faQPriYp38h+uc5ffJBdu0YCxjnWan
+ZSTzDFaLajs19LJEC+6Ke8L/WlHY5LURytBps2I9xv3TtezlqsoTPjw7Bd59N/GX
+BroHJ5eh7T050F6jVQCfPgJmvG8x14Xpih6isdPhOeemZzdkRQ49+GSBBpZR+eBv
+GHidldVputTOeeFSLqBbOh4OMnLWdrZ9L5D7KpnsF8agve5rFFb+XqvPNfbCpENv
+yYp0rs85SQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.vcu.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Virginia Commonwealth University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Virginia Commonwealth University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.vcu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>VCU Shibboleth</md:GivenName>
+	<md:EmailAddress>shibboleth@vcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>VCU Shibboleth</md:GivenName>
+	<md:EmailAddress>shibboleth@vcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>VCU Shibboleth</md:GivenName>
+	<md:EmailAddress>shibboleth@vcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>VCU Infosec</md:GivenName>
+	<md:EmailAddress>infosec@vcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

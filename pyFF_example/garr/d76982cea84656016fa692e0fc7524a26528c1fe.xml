@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.independence.co.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-08-12T15:52:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.independence.co.uk/Shibboleth.sso/Login"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.independence.co.uk/Shibboleth.sso/WAYF"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Issues Online</mdui:DisplayName>
+		<mdui:Logo height="79" width="329">https://www.issuesonline.co.uk/resources/images/header/logo.png</mdui:Logo>
+		<mdui:Description xml:lang="en">Issues Online explores today's most important social issues through 
+					articles, videos, ebooks &amp; more.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJALdHDkKittLZMA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTF3JlYWwxLnJlYWxuZXQyMDAwLmNvLnVrMB4XDTExMDgwMjEyMTYxNVoXDTIx
+MDczMDEyMTYxNVowIjEgMB4GA1UEAxMXcmVhbDEucmVhbG5ldDIwMDAuY28udWsw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/Ogks/sRjSvAzujMkoEn7
+89fJQ4EHrCbnvAF/7dAKRhsr2Yalkvuf6oNI+SI7NL1lUiNWOBYyIVBEl2Q9gyi3
+5/AWMPDe0c1Kw7Y0lBBvKDEzyixlSfTh/Nszh4qgaVBvV1qaFc65SK4m+EWXoB+3
+T1lUX/5upB188Xj4xtl+QDv1iPGNBRlfstG9RUMVgNHeHTCYLdWYQv+ZubbBJUkX
+SZ+xedFVulYAMPn5qjh2F0z0fTw6yzY9arrWRohbVoZyUXODO+ekGTGMj4OHJk2a
+BVvRzeCburjo8NRV58kq97zqEgPYqFeTj9eFxN7nkej5VRD3FWBPtH63DTLVIdAB
+AgMBAAGjRTBDMCIGA1UdEQQbMBmCF3JlYWwxLnJlYWxuZXQyMDAwLmNvLnVrMB0G
+A1UdDgQWBBQW+gIr9QKPFZn7blTtjZ4W/zt3JzANBgkqhkiG9w0BAQUFAAOCAQEA
+B52AFbao2FOGfM1rS/XAy8j3qrLVJOPoEGevcN6lA+J0xfzLIQnqGgLNagIYMR/t
+MMTLNK/Z7fTPQsDEXXr3aH+yKBjctyWz3vAkVM7r/JzopxSCuwzVNkawDqfeyXVW
+ZkQfI16kQXh/Rdom2K6MMHG8YEKvc1w2UlnjX8qo7N8n2NqZiDZvvB1rP12ER0cq
+QrQo1cgAM2crAb7eVXHxYVlfMqnD4y4xVkcwf1hoYEfxjFWExRKp+pom4tffxXs2
+Ot71rokgeIjZSPUMPCSfu/PGiw2S8yxiEi8/5sXx0mbFNJ+SlamPNl8AYSONeiTu
+CsJ2jfI9xrr+q7DFANi+HQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.independence.co.uk/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.independence.co.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.independence.co.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.independence.co.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.independence.co.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.independence.co.uk/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.independence.co.uk/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.independence.co.uk/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.independence.co.uk/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.independence.co.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.independence.co.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.independence.co.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.independence.co.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.independence.co.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.independence.co.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Independence Educational Publishers Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Independence Educational Publishers: Independence Issues Online</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://independence.co.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Issues</md:GivenName>
+	<md:EmailAddress>mailto:issues@independence.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kari</md:GivenName>
+	<md:SurName>Sewell</md:SurName>
+	<md:EmailAddress>mailto:kari@realnet.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

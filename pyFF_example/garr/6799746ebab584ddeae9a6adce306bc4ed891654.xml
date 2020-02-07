@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ttk.mta.hu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.hu" registrationInstant="2009-01-01T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://metadata.eduid.hu/eduid.hu-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.hu/category/registered-by-eduidhu</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ttk.mta.hu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">MTA Research Centre for  Natural Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="hu">MTA Természettudományi Kutatóközpont</mdui:DisplayName>
+		<mdui:Description xml:lang="en">MTA Research Centre for  Natural Sciences</mdui:Description>
+		<mdui:Description xml:lang="hu">MTA Természettudományi Kutatóközpont</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ttk.mta.hu/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="hu">http://www.ttk.mta.hu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.ttk.mta.hu/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="hu">http://www.ttk.mta.hu/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="64">https://metadata.eduid.hu/logos/mta-ttk-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPuZvgXHs4goqCUIgI0GlxMmT88RMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC50dGsubXRhLmh1MB4XDTEyMDQxMzEzMDkzOVoX
+DTMyMDQxMzEzMDkzOVowGTEXMBUGA1UEAxMOaWRwLnR0ay5tdGEuaHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvyY+F3sZWJ0RhGrCoIL2lCRIEEXJH
+zuoOHmemvyK5D9dtY5+38dwEIhIjgtOXGIVhKlAzxHyeZMWwBj8nH20qRK/da/JI
+l9P2eQMxf4BK40N/vA9VsT3KvA6mGKlUkqfPsDC1yYcaQkYZugVAmWcPL4gOMOaT
+fxpJGRYh5qknX0+bJsh8/aKLqTh6XbrqZv/Q9gWefamh5aGt1iornQy2JbtuFB3z
+TDa8X0q6UBZ41G/0h39IP08YY2wV49HwjQi//eHOPY2yuDrgo3o1iMiAxT1ffzOw
+4V1kxhPCsocojthf+PYirkkBc62x587fTtdDsX+zFx58VQCCroVyQtHJAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC50dGsubXRhLmh1hiVodHRwczovL2lkcC50dGsu
+bXRhLmh1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTz4rTZcnlkrQGjs5CRN+3b
+4GUNnzANBgkqhkiG9w0BAQUFAAOCAQEAiePPbghl172ENP6zQfA4Wxk1vm0ePemu
+3tZf7H7B2TDXC6c7KSigHwm96SLclqR6jgQi8htDpeYlC/YIWvO9CU7sb9Xk/JGn
+SUHvboV4TJqCDBuJPMIdTbyPwN6Tfh0QlPFydMgaJbjmOpyfKBNJG6p/d10tDVBD
+LCf7+ru9yrKR/OtpV9GkWoxZlzLKGJGNRiYtrrqDFtH/vz5tywE3X4jXS0Oaa6Q4
+vEGvybhfMQNhBanLwNrdkoQu3uaAhXhmQAx2RUksK1o9Brq6NzBILhRAzra0amCA
+hOXlrbEjYjYScbZ2gH6B5Nf0TQb+GwKVvEFBBGtzwRDzdyOb3Q7BVA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ttk.mta.hu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ttk.mta.hu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ttk.mta.hu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ttk.mta.hu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ttk.mta.hu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ttk.mta.hu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPuZvgXHs4goqCUIgI0GlxMmT88RMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC50dGsubXRhLmh1MB4XDTEyMDQxMzEzMDkzOVoX
+DTMyMDQxMzEzMDkzOVowGTEXMBUGA1UEAxMOaWRwLnR0ay5tdGEuaHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvyY+F3sZWJ0RhGrCoIL2lCRIEEXJH
+zuoOHmemvyK5D9dtY5+38dwEIhIjgtOXGIVhKlAzxHyeZMWwBj8nH20qRK/da/JI
+l9P2eQMxf4BK40N/vA9VsT3KvA6mGKlUkqfPsDC1yYcaQkYZugVAmWcPL4gOMOaT
+fxpJGRYh5qknX0+bJsh8/aKLqTh6XbrqZv/Q9gWefamh5aGt1iornQy2JbtuFB3z
+TDa8X0q6UBZ41G/0h39IP08YY2wV49HwjQi//eHOPY2yuDrgo3o1iMiAxT1ffzOw
+4V1kxhPCsocojthf+PYirkkBc62x587fTtdDsX+zFx58VQCCroVyQtHJAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC50dGsubXRhLmh1hiVodHRwczovL2lkcC50dGsu
+bXRhLmh1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTz4rTZcnlkrQGjs5CRN+3b
+4GUNnzANBgkqhkiG9w0BAQUFAAOCAQEAiePPbghl172ENP6zQfA4Wxk1vm0ePemu
+3tZf7H7B2TDXC6c7KSigHwm96SLclqR6jgQi8htDpeYlC/YIWvO9CU7sb9Xk/JGn
+SUHvboV4TJqCDBuJPMIdTbyPwN6Tfh0QlPFydMgaJbjmOpyfKBNJG6p/d10tDVBD
+LCf7+ru9yrKR/OtpV9GkWoxZlzLKGJGNRiYtrrqDFtH/vz5tywE3X4jXS0Oaa6Q4
+vEGvybhfMQNhBanLwNrdkoQu3uaAhXhmQAx2RUksK1o9Brq6NzBILhRAzra0amCA
+hOXlrbEjYjYScbZ2gH6B5Nf0TQb+GwKVvEFBBGtzwRDzdyOb3Q7BVA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ttk.mta.hu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="hu">MTA Természettudományi Kutatóközpont</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">MTA Research Centre for  Natural Sciences</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="hu">MTA Természettudományi Kutatóközpont</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">MTA Research Centre for  Natural Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="hu">http://www.ttk.mta.hu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ttk.mta.hu/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>MTA TTK AAI</md:GivenName>
+	<md:SurName>MTA TTK AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@ttk.mta.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>MTA TTK AAI</md:GivenName>
+	<md:SurName>MTA TTK AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@ttk.mta.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>MTA TTK AAI</md:GivenName>
+	<md:SurName>MTA TTK AAI</md:SurName>
+	<md:EmailAddress>mailto:informatika.ov@ttk.mta.hu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

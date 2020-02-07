@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://fs.uwlax.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uwlax.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Wisconsin - La Crosse</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.uwlax.edu/its/incommon/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uwlax.edu/its/incommon/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="112" width="534" xml:lang="en">https://www.uwlax.edu/images/logo2.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC1DCCAbygAwIBAgIQUjwC602x6b1ESLTkPh8i3DANBgkqhkiG9w0BAQsFADAm
+MSQwIgYDVQQDExtBREZTIFNpZ25pbmcgLSBmcy51d2xheC5lZHUwHhcNMTcwOTI5
+MjI1MjMwWhcNMjAwOTI4MjI1MjMwWjAmMSQwIgYDVQQDExtBREZTIFNpZ25pbmcg
+LSBmcy51d2xheC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCs
+hkACiiTZ9SnxUuaIdVKOGsofR6rISIL3iiPdQUMI/7ENTFWlqnZFbdxpacV4eH1N
+fBPq2f2BMG7begAhdLm+GtBCnJxuI7b0Mwgu4xHf/+c7Mjdd2vk/BIInuDQjT3G+
+2hsglNzXtpQCnHDqThf6pbfVT3Y0E73HIznfK1g7cOY9D1TWdnCfKGGzkPK8atbB
+DT0WI5/rv7fKb9qTjBill7fOMD5VvTc4iv/fmwsjsi7FnEOrQHSltGY4XIleGFiP
++lCQ/DLPrw74n3PJczK6OHP4s5bEWdO2g8bLOWoCd1ShtL1NdMXWlQVxNuy//4SK
+0cVPgeUHP2KMDTwAKiz1AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAE3X5qwIsZ9x
+CSMhKCYjCTtUeBmqrCILIriBhQevrduo85Z/p/qEZ8BDAtC+jaDspnmWfc5xK5cv
+6+se5ArMtEddMRs3n6pO5MCOXAay1ug2M1aPbDAymzQr0NGGWAdYpPW2addNQn/V
+3PMd9k7xNs1mKvzNh2on91a1Q8jjghyihYQ/6FdN7XAEB4c2m0CGtq23/7QLd5dn
+5V0iPvEdSA8hbOWueFqeo6S7Gj7+JKVELUcCLwyzfmyiNTN4gwqjpWNPZt/AmcE1
+KMnDA7yek/8iWE057eBManYtpkUUd4dxuguHtkwG9aiz8eq9Wg/zTuIpUryOF0Yq
+XqORiN+n6Q4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2jCCAcKgAwIBAgIQJTpL0PRLArZCib2pjEO+KzANBgkqhkiG9w0BAQsFADAp
+MScwJQYDVQQDEx5BREZTIEVuY3J5cHRpb24gLSBmcy51d2xheC5lZHUwHhcNMTcw
+OTI5MjI1MjIzWhcNMjAwOTI4MjI1MjIzWjApMScwJQYDVQQDEx5BREZTIEVuY3J5
+cHRpb24gLSBmcy51d2xheC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDC5TelDuZovTm5XVHJEPiyb0Ftx4oo34JsZNVY9uMHXBw1Qfb3I5Frf+ZL
+/STgtjJ07UqTzErG37K5+xPi+/+doBe/j4L7KXBZXSLjqH6wwjoB4ZZtZOmr9W/G
+ZV6uDqUd4oFVlJEtTUPCcEIRg0Soe+Eboqg0w8HT3iaBqHWsNxDS6C0MiuqGwrOV
+iS6HIUG1nSFK3uK0s9qCiQQIX+kvDTFErEe/d2gue/Uy0POjAZfjpInznXVzmH1u
+CfMie4yL51QSBR/leoAPycqrCM3nDg2k2yqJldNk3K3wJcP+tIptn1r10YQ59W2p
+jkjBp8FDgaverCekWNI1w2oZ+3/PAgMBAAEwDQYJKoZIhvcNAQELBQADggEBADz+
+TUGAdNipt/4jKFtN4R3/2532E9xN4CoGdEHEZmkh16MBsT40HNtQmCWdP805y1ys
+B9/TrdSpj+WvXauu4G6UpIKZr+W8ohyRoi7FyQyimzp9jSuue3arZYqXwkASlNwS
+D9Qx/gp7QCgB2FX4LLLX422cVpQeU6PsMUX0oU4bJ95Tic9NgtdP4PbJSNChhgxg
+EdPjlmS/bFqkPF0+XNhm/3SMRR6AkhqyXG1tB+jd7Dno3u5qiZD4J8fpVgsJzxqf
+X+3Qf5NeK2VKh+vWnHxHwNB2RKWF6dcXYZdvYnjF3TE7VxjKsqZclAo3TJTxUdSK
+UrYXTVy0N6wL97lWADM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://fs.uwlax.edu/adfs/services/trust/artifactresolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.uwlax.edu/adfs/ls/?wa=wsignout1.0"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fs.uwlax.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://fs.uwlax.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Wisconsin - La Crosse</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Wisconsin - La Crosse</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.uwlax.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Cynthia Carlson</md:GivenName>
+	<md:EmailAddress>ccarlson@uwlax.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nathan Weissenberger</md:GivenName>
+	<md:EmailAddress>nweissenberger@uwlax.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jim Treu</md:GivenName>
+	<md:EmailAddress>jtreu@uwlax.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Katie Herman</md:GivenName>
+	<md:EmailAddress>kherman@uwlax.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

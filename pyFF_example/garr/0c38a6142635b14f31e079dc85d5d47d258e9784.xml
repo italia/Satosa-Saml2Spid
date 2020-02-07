@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idem.unina2.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2011-06-07T13:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unina2.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">Second University of Naples</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Seconda Università degli Studi di Napoli</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for Second University of Naples users</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti della Seconda Università degli Studi di Napoli</mdui:Description>
+<mdui:InformationURL xml:lang="it">http://idem.unina2.it/info/</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">http://idem.unina2.it/info_en/</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://idem.unina2.it/info/</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://idem.unina2.it/info_en/</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idem.unina2.it/loghi/sun_italiano_idem80_60.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idem.unina2.it/loghi/sun_italiano_idem16.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idem.unina2.it/loghi/sun_inglese_idem80_60.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idem.unina2.it/loghi/sun_inglese_idem16.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMeHVbcMgkiyi7G8YIyVSk6/OsAEMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkZW0udW5pbmEyLml0MB4XDTEwMDkyNDEyNTcxNFoX
+DTMwMDkyNDEyNTcxNFowGTEXMBUGA1UEAxMOaWRlbS51bmluYTIuaXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDEJP3ZKXEqVvt+BU4r7yPQG3RNUCTx
+WQ+4k+nPi/UFRpRk5IHLpbO+/mqbkEJ8Z45eF+uSIsU37DGBmEkWB1ig6OrLqKdZ
+Y7/9XAxM2bACl8uCQqDZSod8etUQU60bxlxvAhYips6zKV3d7GKcvLbg6DwYCjL9
+rEdiXlbf/XMkx8H0s5JT/WeJN1UZmlfBbwAMj3kXPrxzexGFMj+xg87C/WWA4wPL
+EjIRMRu4URhwqowcaYBXDN6/d7zXoLCC7VzJjV2mPNqJXJD6Cius5aqLcGImmJPF
+OwufXmPu+cpYc7h5NWd6KMjvUEQ3ucniAEucn8S78Iakd3Kcm3VLZX9/AgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkZW0udW5pbmEyLml0hiVodHRwczovL2lkZW0udW5p
+bmEyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRh0OcndkGzMmnRUBpvGQ4s
+F9pzKzANBgkqhkiG9w0BAQUFAAOCAQEAJ7aS6KvM/hgIoSgK0iGogbCpxrLTVz/3
+MzsgbGBceGiv+zLe0kV8Qz4SIQYPg8Yi71vCel/Fn8UPCC9O9PzD/wwqmFxFnCtB
+kO/ERSlXHZ1X2JM/1mEfBQvyYONbf/8EaYQkuhu/niLB3arnftrOoWNFpGfVttgw
+9OCxJa+998vCAZF9Bj++lZ5LxBDMVbKhxj0XSZw+r8KTon6/X/xRmYpOLjqDiYUd
+kGo9S0UZfQNFVe9/H0TZ6CMUeSAFWsycyaAvApoOUbPD7qqTlfacQgB2MEhPSLq7
+Q1xivizsXOeSZk/Q9/DJDN5TzuB1vxSPpGwc5ghEtOnpUr+lMfdesw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem.unina2.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idem.unina2.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idem.unina2.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idem.unina2.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unina2.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMeHVbcMgkiyi7G8YIyVSk6/OsAEMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkZW0udW5pbmEyLml0MB4XDTEwMDkyNDEyNTcxNFoX
+DTMwMDkyNDEyNTcxNFowGTEXMBUGA1UEAxMOaWRlbS51bmluYTIuaXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDEJP3ZKXEqVvt+BU4r7yPQG3RNUCTx
+WQ+4k+nPi/UFRpRk5IHLpbO+/mqbkEJ8Z45eF+uSIsU37DGBmEkWB1ig6OrLqKdZ
+Y7/9XAxM2bACl8uCQqDZSod8etUQU60bxlxvAhYips6zKV3d7GKcvLbg6DwYCjL9
+rEdiXlbf/XMkx8H0s5JT/WeJN1UZmlfBbwAMj3kXPrxzexGFMj+xg87C/WWA4wPL
+EjIRMRu4URhwqowcaYBXDN6/d7zXoLCC7VzJjV2mPNqJXJD6Cius5aqLcGImmJPF
+OwufXmPu+cpYc7h5NWd6KMjvUEQ3ucniAEucn8S78Iakd3Kcm3VLZX9/AgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkZW0udW5pbmEyLml0hiVodHRwczovL2lkZW0udW5p
+bmEyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRh0OcndkGzMmnRUBpvGQ4s
+F9pzKzANBgkqhkiG9w0BAQUFAAOCAQEAJ7aS6KvM/hgIoSgK0iGogbCpxrLTVz/3
+MzsgbGBceGiv+zLe0kV8Qz4SIQYPg8Yi71vCel/Fn8UPCC9O9PzD/wwqmFxFnCtB
+kO/ERSlXHZ1X2JM/1mEfBQvyYONbf/8EaYQkuhu/niLB3arnftrOoWNFpGfVttgw
+9OCxJa+998vCAZF9Bj++lZ5LxBDMVbKhxj0XSZw+r8KTon6/X/xRmYpOLjqDiYUd
+kGo9S0UZfQNFVe9/H0TZ6CMUeSAFWsycyaAvApoOUbPD7qqTlfacQgB2MEhPSLq7
+Q1xivizsXOeSZk/Q9/DJDN5TzuB1vxSPpGwc5ghEtOnpUr+lMfdesw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem.unina2.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Seconda Università degli Studi di Napoli</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Second University of Naples</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Seconda Università di Napoli</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Second University of Naples</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.unina2.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://international.unina2.it/index.php/en/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>URT</md:GivenName>
+<md:SurName>Ufficio Reti Telecomunicazioni</md:SurName>
+<md:EmailAddress>mailto:urt@unicampania.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cirad.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2012-01-30T14:52:31Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cirad.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CIRAD</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAC30lEQVQ4y42TT2hcVRTGf/e++5o3k5nYTDStjVMRqrVaVwaRVmlFqYLQLoxIl4KgC0GwRbQuBEVRrCK6s4uCFPyH0kUVqlJJpabVtFWowSZNE9PEZjKTzL/MTO68d+9xkWgtdeHZnvN9nPOd71P8jxLeBFQfuWAfPVoYaz+reBEA9V+AE7KeU0zxBLBOfQZMvb3wiNorqw2q4qiPz/9481hrq+JdzL+BEwIj3N2bZ3J/P0G/xnUy+EazcGjn7XoqRzLZQOYTmGMLXH/1BpMChtRTlbHWAQPEAsnEdaSmb8FGRRZe38xtc1vw9RhpO5+nK1C8hAYYFojZ9fiFc60D01WYqMGlIsQjN2G1Z2Y4wvXNcmHTNwRtjWVpHO4BWD6h/0vh4LrsQZ1EiCh8mHDDmT6SDnAkLA5pulcJNl2lfOcoc7+tObaBB1cI5CM+ZfvTl49HndYqRAlBKSDfTNFKe8p/xGQqBtedYERzSp/lXjl//MSKAPodPmHoaPn+2VYnpXaaYpwmms5gtWfJO7LnIoQEv+TQNcfpBywl6R1YTRYAvUd9TV13rC1aQ6ltmE1COkuKZuyoNTWpszHOeoKm4+eKZeEhQ7kWbdis6ssEz8kurDZxOTZUEkO1ZTBtoeU8a2YjShcXoZVQHvV8vy9k0RpmGqH++3t6E2l8IzlfE0PNBdRcQOw8DRHCXx0K8IWAQ/tT2J6AahyQi1QRkWWCZ9TH7NjZ+0Gzrah7RUVpZtKazHyIG6zB2gwfvpflzzw0rKLqNT25eOgXOq4Y6SvZxpGTjaODF+2O0AtWwfZLkFlSfH6HkE0g8CBAOoK3Bopqmypc8cGjapDDsvXhUtXODxdULlLCd3nwCGkLHnBArDUvDPD8F9wFFK4N07eykSMj4ejhM/pW7yBc6YoCZeC+3V2vTrDqlR/UsX8w16TxpKynAk82fbT7pzHV2xGp+MYu+f2xbv/y+/ip19T4VfN/AbdxUQrXQYS3AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjQ4OjE2KzAyOjAwlICcrAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo0ODoxNiswMjowMOXdJBAAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.cirad.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">CIRAD Users</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CIRAD</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs CIRAD</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAIpsWCg8y/CbjokdRD9xw1tntEMjMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC5jaXJhZC5mcjAeFw0xMTA5MDkxMjEwMTZaFw0z
+MTA5MDkxMjEwMTZaMBcxFTATBgNVBAMTDGlkcC5jaXJhZC5mcjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAIK0BA0EwHBB7StG57NlgpNBqyQEM1Cg9QYw
+pNUPFGF4Jdxkho0yFmo5P++oTVHNl0XAYuDYXDOSShnwBuaqBETJJ2oXmHNtL1/J
+C8T/hXboKgs0gRz8vmSah7xaEFtsGrlhWfomY7JJg0tLfEOioP8gtcXDoujhsnmg
+k31s1ItCWqLMyKfUVJq/UjldS3yO4UHvWaM72Pr8/BhaeboLsAodOVuuARyB53cN
+lK5lbJ+wv/ar/OvKZQ6J+N38jRID9gOfbX9FJpEkxvsw8JrAigyVXoxXqwGeHSt+
+ku5mPLHOkcfeqoDOYlZAGOhr0Dsgq58TdYyfDfd/vvkUjhGXDUECAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLmNpcmFkLmZyhiNodHRwczovL2lkcC5jaXJhZC5mci9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUqRmJdkayB7m9gT7Hlj7ZWMvTxj4wDQYJ
+KoZIhvcNAQEFBQADggEBACYw1tFvkAe2ITVFgPC+DObsRMo+0IsLTDp04SDoic6p
+8LwkBedIsHMast0CX3oVHM31Wo9n1boW8qDJ+cd5u5adT9ZdxYiqqH6VCF3xSLr9
+I3Fjlm4KLIDYh9w7jhOIPPkvK5491naqIGcyrwxkpmttm2LsdUTrk3Fc0LylLBly
+W/S4lmyzcH5A+zobfOREY1nThRnVvLsAuvmD6W44sRodxDitH6MBst4Cw18LpTHk
+7ZKBQ87Qbdtbk1Se9lrDplk20K5lBisEEM5W+/W6lbqJCim24CPO8s8jq0af2ahM
+RIDZRysGp5esSU0Sm4xoDDASmC49fVStwwYMtq6P+T0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cirad.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cirad.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cirad.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CIRAD - Multisites</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CIRAD - Multisites</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cirad.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Frédéric MAZZINI</md:SurName>
+	<md:EmailAddress>mailto:frederic.mazzini@cirad.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.hs-mannheim.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-10-30T09:01:09Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-mannheim.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Mannheim</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Sciences Mannheim</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule Mannheim</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of the University of Applied Sciences Mannheim</mdui:Description>
+		<mdui:Logo height="32" width="32">https://login.hs-mannheim.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="83" width="300">https://login.hs-mannheim.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hs-mannheim.de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.english.hs-mannheim.de/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ6DCCCNCgAwIBAgIMH8xC86mQl/lj8QyLMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDkyNzExNTYyNFoXDTIwMTIyOTExNTYyNFowgY4xCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxETAPBgNVBAcMCE1hbm5oZWltMRwwGgYD
+VQQKDBNIb2Noc2NodWxlIE1hbm5oZWltMRIwEAYDVQQLDAlDYW1wdXMgSVQxHTAb
+BgNVBAMMFGxvZ2luLmhzLW1hbm5oZWltLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAvGattmyrXJzBr0WiA90ev3OPD2TF6W0FeidkwJpXS3qpD8ku
+NLViOur8pG7fWZcoTIV90TUkcl6GlkvFSnEMdYwCF5kXPx9qKEnODdJwEwEnhWjA
+SQQf3gOpurYud3BS3RO8n+cRnjw6C/v68Z0d8rOz3cf3qky98bd9cN/pNZEzlAGc
+bO8HdIkobsLaifWCfK+eak1VL69Mc+UHz8tsgud/dPmgLVCtMgrDXb8Vrbolh42d
+yDJ+vHu5e5h8wmQAl16gBN1reY5YoL/Q4OG7E/mlaebL+nvcL6QPWmM33q909KUr
+N9Ffkfws0a43yViwAtMTOHSCDfDVqcvUcC53KwIDAQABo4IGQzCCBj8wWQYDVR0g
+BFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDAR
+Bg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAw
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAd
+BgNVHQ4EFgQUzVL6K8uoJK6/OtpxkrYXJgCD1RowHwYDVR0jBBgwFoAUazqYi/ny
+U4na4K2yMh4JH+iqO3QwHwYDVR0RBBgwFoIUbG9naW4uaHMtbWFubmhlaW0uZGUw
+gY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+gdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2Eu
+ZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAx
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWds
+b2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggPXBgorBgEEAdZ5AgQCBIID
+xwSCA8MDwQB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABZhrj
+L3MAAAQDAEcwRQIgT1u0tcJWuDxNRo0+WMJDYBNSMc6NwLESZMyk5gxvH+kCIQCH
+pnfZhI1xamJgT8DUeirl10sE6FQC5GEgJ2Nb1EUDvwB1AO5Lvbd1zmC64UJpH6vh
+nmajD35fsHLYgwDEe4l6qP3LAAABZhrjL1UAAAQDAEYwRAIgGj+9npGnYAjGAiYK
+OLHQwjqqee/0FvmQi7oBgo8OwZsCICq5aWEMtlXONhQp7+SfmtKHo0sq4SXQDJP2
+V/LzsH9SAHYAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFmGuMu
+qAAABAMARzBFAiAZfnvSPpbClftrWZyIG3Fdkza+cgpGa38o9SDQIjWeOQIhAIM9
+lG5CM5IuQa3xD6UcFH+yizKxn9b/e3O31V8Fyqj9AHcAVYHUwhaQNgFK6gubVzxT
+8MDkOHhwJQgXL6OqHQcT0wwAAAFmGuMwkwAABAMASDBGAiEAgFOEhRn3BZdbqtLm
+JeCWhfki0yRjaWM5hLZMlsgB6W0CIQDeIi7xE2Be0I6W2eK5we3RUi+gbqLo44Bx
+y/clv+MXIwB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZhrj
+MZwAAAQDAEgwRgIhAL84rbZ+E6POjIcWhpPWMm0Z855WW28X0lSrhC8bC3uKAiEA
+zNP5xR8t0+T2mZW0yOu+x5RvaV0EL2ixcU+SZWVHh/gAdgCkuQmQtBhYFIe7E6LM
+Z3AKPDWYBPkb37jjd80OyA3cEAAAAWYa4zG9AAAEAwBHMEUCIBnqQ2w2VKicF6E0
+mm86lhNza8nS7txUfyf9kvBJCORnAiEAiRur1tDEu09YuPy+tT4wy74Tg1FEcI8I
+xC+JY2RN+V4AdgBep3P531bA57U2SH3QSeAyepGaDIShEhKEGHWWgXFFWAAAAWYa
+4zUcAAAEAwBHMEUCIQCc9B61EDqUHqNkfs5yWT0RE6wUWCw1tufCUIiQF5CnowIg
+ZJGiUCD52wdOCFIMBmYaa1Cl95RDywZjwJIU207NWQoAdgCyHgXMi6LNiiBOh2b5
+K7mKJSBna9r6cOeySVMt74uQXgAAAWYa4zQtAAAEAwBHMEUCIAbGFGiF8IHgzEqf
+mZXeX4oyQAUhc9fFsC28wCsK2ZV4AiEA0JTVawlhWpa4vtv1/HshHDXotaV14+5Z
+CWWsqm68ucswDQYJKoZIhvcNAQELBQADggEBAAxIQAjaALZF9NXJR/zlHHHcGiC4
+APoRL0LWfo6NU5zPKZebRtVVXSljJF2nnP/rPRlcHDeKHL1qhwR/88Vsz12SHqRr
+Lphqxcf5mrNeHFy9IvAzL04Y2AIm7lAPD2WssxceqQbQyj3R1M3L93gqIQr0C1MM
+64WGPpDX1S8/3ao6TogeHpvrhzTBNn7zoruX3L0/snFqgEY09vmyeTxBLOBHhU8L
+6osMBRvck5ePIKn04UavmaxRPTHfylzrr0JLeb8MJAkXAmjM10ZqnJSJWsFyFaT3
+FZwsyRQbpz2j0vNdmeWrsax0Ynop0bnf/igX2h+KZ963eNamh/9mPt7SicY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hs-mannheim.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-mannheim.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hs-mannheim.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hs-mannheim.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-mannheim.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.hs-mannheim.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hs-mannheim.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.hs-mannheim.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hs-mannheim.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-mannheim.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-mannheim.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ6DCCCNCgAwIBAgIMH8xC86mQl/lj8QyLMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDkyNzExNTYyNFoXDTIwMTIyOTExNTYyNFowgY4xCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxETAPBgNVBAcMCE1hbm5oZWltMRwwGgYD
+VQQKDBNIb2Noc2NodWxlIE1hbm5oZWltMRIwEAYDVQQLDAlDYW1wdXMgSVQxHTAb
+BgNVBAMMFGxvZ2luLmhzLW1hbm5oZWltLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAvGattmyrXJzBr0WiA90ev3OPD2TF6W0FeidkwJpXS3qpD8ku
+NLViOur8pG7fWZcoTIV90TUkcl6GlkvFSnEMdYwCF5kXPx9qKEnODdJwEwEnhWjA
+SQQf3gOpurYud3BS3RO8n+cRnjw6C/v68Z0d8rOz3cf3qky98bd9cN/pNZEzlAGc
+bO8HdIkobsLaifWCfK+eak1VL69Mc+UHz8tsgud/dPmgLVCtMgrDXb8Vrbolh42d
+yDJ+vHu5e5h8wmQAl16gBN1reY5YoL/Q4OG7E/mlaebL+nvcL6QPWmM33q909KUr
+N9Ffkfws0a43yViwAtMTOHSCDfDVqcvUcC53KwIDAQABo4IGQzCCBj8wWQYDVR0g
+BFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDAR
+Bg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAw
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAd
+BgNVHQ4EFgQUzVL6K8uoJK6/OtpxkrYXJgCD1RowHwYDVR0jBBgwFoAUazqYi/ny
+U4na4K2yMh4JH+iqO3QwHwYDVR0RBBgwFoIUbG9naW4uaHMtbWFubmhlaW0uZGUw
+gY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+gdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2Eu
+ZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAx
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWds
+b2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggPXBgorBgEEAdZ5AgQCBIID
+xwSCA8MDwQB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABZhrj
+L3MAAAQDAEcwRQIgT1u0tcJWuDxNRo0+WMJDYBNSMc6NwLESZMyk5gxvH+kCIQCH
+pnfZhI1xamJgT8DUeirl10sE6FQC5GEgJ2Nb1EUDvwB1AO5Lvbd1zmC64UJpH6vh
+nmajD35fsHLYgwDEe4l6qP3LAAABZhrjL1UAAAQDAEYwRAIgGj+9npGnYAjGAiYK
+OLHQwjqqee/0FvmQi7oBgo8OwZsCICq5aWEMtlXONhQp7+SfmtKHo0sq4SXQDJP2
+V/LzsH9SAHYAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFmGuMu
+qAAABAMARzBFAiAZfnvSPpbClftrWZyIG3Fdkza+cgpGa38o9SDQIjWeOQIhAIM9
+lG5CM5IuQa3xD6UcFH+yizKxn9b/e3O31V8Fyqj9AHcAVYHUwhaQNgFK6gubVzxT
+8MDkOHhwJQgXL6OqHQcT0wwAAAFmGuMwkwAABAMASDBGAiEAgFOEhRn3BZdbqtLm
+JeCWhfki0yRjaWM5hLZMlsgB6W0CIQDeIi7xE2Be0I6W2eK5we3RUi+gbqLo44Bx
+y/clv+MXIwB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZhrj
+MZwAAAQDAEgwRgIhAL84rbZ+E6POjIcWhpPWMm0Z855WW28X0lSrhC8bC3uKAiEA
+zNP5xR8t0+T2mZW0yOu+x5RvaV0EL2ixcU+SZWVHh/gAdgCkuQmQtBhYFIe7E6LM
+Z3AKPDWYBPkb37jjd80OyA3cEAAAAWYa4zG9AAAEAwBHMEUCIBnqQ2w2VKicF6E0
+mm86lhNza8nS7txUfyf9kvBJCORnAiEAiRur1tDEu09YuPy+tT4wy74Tg1FEcI8I
+xC+JY2RN+V4AdgBep3P531bA57U2SH3QSeAyepGaDIShEhKEGHWWgXFFWAAAAWYa
+4zUcAAAEAwBHMEUCIQCc9B61EDqUHqNkfs5yWT0RE6wUWCw1tufCUIiQF5CnowIg
+ZJGiUCD52wdOCFIMBmYaa1Cl95RDywZjwJIU207NWQoAdgCyHgXMi6LNiiBOh2b5
+K7mKJSBna9r6cOeySVMt74uQXgAAAWYa4zQtAAAEAwBHMEUCIAbGFGiF8IHgzEqf
+mZXeX4oyQAUhc9fFsC28wCsK2ZV4AiEA0JTVawlhWpa4vtv1/HshHDXotaV14+5Z
+CWWsqm68ucswDQYJKoZIhvcNAQELBQADggEBAAxIQAjaALZF9NXJR/zlHHHcGiC4
+APoRL0LWfo6NU5zPKZebRtVVXSljJF2nnP/rPRlcHDeKHL1qhwR/88Vsz12SHqRr
+Lphqxcf5mrNeHFy9IvAzL04Y2AIm7lAPD2WssxceqQbQyj3R1M3L93gqIQr0C1MM
+64WGPpDX1S8/3ao6TogeHpvrhzTBNn7zoruX3L0/snFqgEY09vmyeTxBLOBHhU8L
+6osMBRvck5ePIKn04UavmaxRPTHfylzrr0JLeb8MJAkXAmjM10ZqnJSJWsFyFaT3
+FZwsyRQbpz2j0vNdmeWrsax0Ynop0bnf/igX2h+KZ963eNamh/9mPt7SicY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hs-mannheim.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-mannheim.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e150</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e150</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Mannheim</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Applied Sciences Mannheim</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hs-mannheim.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.english.hs-mannheim.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Benutzerbetreuung</md:GivenName>
+	<md:SurName>Rechenzentrum</md:SurName>
+	<md:EmailAddress>mailto:benutzerbetreuung@hs-mannheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Benutzerbetreuung</md:GivenName>
+	<md:SurName>Rechenzentrum</md:SurName>
+	<md:EmailAddress>mailto:benutzerbetreuung@hs-mannheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

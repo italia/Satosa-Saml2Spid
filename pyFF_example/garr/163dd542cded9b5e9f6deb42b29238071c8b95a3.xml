@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.brockport.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.brockport.edu/authenticationendpoint/retry.do" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brockport.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SUNY The College at Brockport</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.brockport.edu/support/policies/adopted/aa_lits_web_privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="202" width="199" xml:lang="en">https://www.brockport.edu/about/identity/images/shield.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDzCCAfegAwIBAgIJAO411n2+GJnxMA0GCSqGSIb3DQEBBQUAMB4xHDAaBgNV
+BAMME2xvZ2luLmJyb2NrcG9ydC5lZHUwHhcNMTkwNjA1MTc0NzQ2WhcNMzQwNjAx
+MTc0NzQ2WjAeMRwwGgYDVQQDDBNsb2dpbi5icm9ja3BvcnQuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvDDCyBsrOrht/mUcDIhSzLC3FHWaEKn4
+4PTKj0cs+jatMoBoV9g6C2mkhUZmKhc9z1Pd9X4gpqwS+CtihoFNRm6mxa3QUjyr
+MzteFp8uLT5y3jbl2zsD6hHs2B/KHwjScpfqqRZ2pzGjGcQ2BoG5pSNN/rEZ5aGT
+aTLzn07Hi+gTh6wfrJlRXuq/CiJGPBP1Vdw2S25fHHdszBpdWJ5fAg7ckz+NvW6i
+9MPjugFvRA9nxJHCDdKke+6imx7f+Fb5ZpHjoJn7T12kMFyQQKSdh8JfjjvsGCit
+tjAhu4cWeO3l4BNjwY8EIrQovvxy0MRFELixeTvtLpnYVWlPwk76YQIDAQABo1Aw
+TjAdBgNVHQ4EFgQUejBRIRgJZBhqslnEiJ7/n+oAlYUwHwYDVR0jBBgwFoAUejBR
+IRgJZBhqslnEiJ7/n+oAlYUwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEAF63CGeg0pnslFKkSJ1PHhq9I9e2NlQ/IdzlC10zxEa71UZwcnYvrKghP1yjW
+IUYLWFkG1AYLz7114fxmCq2ai/LRwEhN8HmBTjfyfnt+XPpj5XhLVX9p+rfW4fUg
+n8sRU098IYu0wOsNNz8yMs0ZRwRQgrJEQWsvhIt1Exo1I1tioB+Tb9x5x+71JhF3
+VXsyYlb1m+RY4eYYmKRTT2WC5a7NU8KQf801DSuIi7ZuFFMd0dIR680rbQrApalb
+4/dw2AuebTCl5tZJYboic1ht0okG9FBI0vNHO8yG2xoe/zQkiVyqec5GFjamx2zj
+qliTx1ARPMBYjEDEt4ms+RkmPA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.brockport.edu/samlsso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.brockport.edu/samlsso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SUNY College at Brockport</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SUNY College at Brockport</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.brockport.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IdM Team</md:GivenName>
+	<md:EmailAddress>dl_idm@brockport.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IdM Team</md:GivenName>
+	<md:EmailAddress>dl_idm@brockport.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IdM Team</md:GivenName>
+	<md:EmailAddress>dl_idm@brockport.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

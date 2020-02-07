@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.unf.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.unf.edu/its/help/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unf.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of North Florida</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of North Florida Shibboleth</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://shib.unf.edu/idp/shibboleth</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.unf.edu/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="128" width="125" xml:lang="en">https://shib.unf.edu/UNFLogo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAPB63N80dgAu4QhrU5IH+i00VJ13MA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDHNoaWIudW5mLmVkdTAeFw0xNjA0MDExOTA1MzZaFw0z
+NjA0MDExOTA1MzZaMBcxFTATBgNVBAMMDHNoaWIudW5mLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAIcv13B7wX2jGfSR5UZVwtkhFM5pyg0I1bro
+FIXfERmP3UJpmO2tWZl+fqwwbT2bordc6bE7uVu0S+M28Zn3/IvBcIo81U7TYcM4
+2splqEL9F8+Sy03Wx16KUsX2jqkIeFGEfXkQtyfba3xJIkTKkQkPqz7K0rgeyGI8
+Ql2atAWWipzRAdIHC4I7yWdGVth3WJ55e6tRHQX5tSUqOCE77ThuPCR6U8Ie3Rym
+Iq7JXW5P6y0Z+CSBGGkhrz73OGu3gtsyiZ4xQk8lHxYVUXPjEy0hBC5zv9jQwucH
+mlq82p+UfeIZKv9M4jzd/SP18+D6isJPPkoVCsTaMA7qoAtH+tsCAwEAAaNfMF0w
+HQYDVR0OBBYEFLUET4d4Tg7lVjhXE+rP4Vt9Bwx0MDwGA1UdEQQ1MDOCDHNoaWIu
+dW5mLmVkdYYjaHR0cHM6Ly9zaGliLnVuZi5lZHUvaWRwL3NoaWJib2xldGgwDQYJ
+KoZIhvcNAQELBQADggEBAE8vvGeLB7mDNnoSXPtb5n1EkOhYE5KtFQIPWwuxmHhX
+zK0m0rt7AdeXYgpxJ45Rn1BXv2Ns/2m4mAWWsnyeOezZZ/ZejlzLogCxomB5xRkO
+QQD/N7EZnC/lWvZ2AwsTi5zDg4sRw9bVrHtxvr/izZ6r0zAi/KV5sjEYMKDWB+Gz
+UnEfRYaKPFCmGLwLYx6XCiIQuZHerPcjyPsO90HwvMU3XgPGkoSp0iG8eux4c+KY
++VzFUQqPGx5E8IOGlk07ei4AS7yPseeYKSwKA4XbtE5mC4auLn0Fv9sehZrmnERl
+kNoi8kYMpDYnAmIxDJyumnh8Y7pxuiFIfc3uQn+zQe0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.unf.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.unf.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.unf.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.unf.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.unf.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.unf.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.unf.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of North Florida</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of North Florida</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unf.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>UNF IT Security</md:GivenName>
+	<md:EmailAddress>ITSecurity@unf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UNF IT Security</md:GivenName>
+	<md:EmailAddress>ITSecurity@unf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UNF IT Security</md:GivenName>
+	<md:EmailAddress>ITSecurity@unf.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

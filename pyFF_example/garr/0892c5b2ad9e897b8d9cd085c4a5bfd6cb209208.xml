@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.istructe.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-04-14T14:23:59Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The Institution of Structural Engineers</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Institution of Structural Engineers</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">istructe.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUI8V/OTsGBfuY+YJQ6gZ1YyQctn0wDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAwwQaWRwLmlzdHJ1Y3RlLm9yZzAeFw0xNTA0MDIwOTM0MDla
+Fw0zNTA0MDIwOTM0MDlaMBsxGTAXBgNVBAMMEGlkcC5pc3RydWN0ZS5vcmcwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCDQkwFBQCDB2B0naV+iBvKmLB2
+uYC1Zu8qs9WhNAJFtPvR29ny1pUjrhiOOskXes+lWRoHmQ1wcDqFtLm1g/FgTN/5
++miEGEpwnc8BUrOHFbxXw18TXfXYzG7wZzUGS8YtD9J7F95GanQUHqmDSkXq4fVp
+S5ei+Eolj2bRfE8ZT0SvLc03nZz4SrpxSFNitmyU/0gn4HxoI+1AgYaXupa3xtMe
+nWLlV+Bu62A/NyZ8xMDuzlfTJII8987TStrnqvsxWW+tqr1oOQmjr1ESIaQasPHW
+I1WttJtHef4sidXV7rrzkYu54yZO0InW8wrpnCvyfS0m++Uzh4D8D7xc/a1dAgMB
+AAGjZzBlMB0GA1UdDgQWBBTLFk0yMI/Yd5BKz82ZHUwZQ5orQDBEBgNVHREEPTA7
+ghBpZHAuaXN0cnVjdGUub3JnhidodHRwczovL2lkcC5pc3RydWN0ZS5vcmcvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQEFBQADggEBAERDdJ0NShxoOn2wiArDC5fY
+ZDejFC16QS7wKoPZxSas1ASZCM9Dqf7f16RMODojZmXsJxS04blL9m8v3eL5X/Nj
+lRFdMBr+s3hw49HWjTXgOqzv090GSFMQ/U3A0JrkEKDs1PzhWi+szoYOdvNbGlwr
+5zVjQi4+3x2fax3hutAtpdmtJ7Byk3CI9o3W95YOqlzDrWZDEbkNZpj3OY0BVmCQ
+ZJT1SQ3WFFL98LSeg3nrdo12C5I7fhskFBsIQsbjxKoftyHHf7NFEgtcEihP21/x
++mn3EVKlLdMxUcghPyFm46KgIBvDcpOqo/k1ZqJ92DT6mIi5EGed8yeRbgGluPo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.istructe.org:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.istructe.org:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.istructe.org/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.istructe.org/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.istructe.org:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.istructe.org/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.istructe.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.istructe.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.istructe.org/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">istructe.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUI8V/OTsGBfuY+YJQ6gZ1YyQctn0wDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAwwQaWRwLmlzdHJ1Y3RlLm9yZzAeFw0xNTA0MDIwOTM0MDla
+Fw0zNTA0MDIwOTM0MDlaMBsxGTAXBgNVBAMMEGlkcC5pc3RydWN0ZS5vcmcwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCDQkwFBQCDB2B0naV+iBvKmLB2
+uYC1Zu8qs9WhNAJFtPvR29ny1pUjrhiOOskXes+lWRoHmQ1wcDqFtLm1g/FgTN/5
++miEGEpwnc8BUrOHFbxXw18TXfXYzG7wZzUGS8YtD9J7F95GanQUHqmDSkXq4fVp
+S5ei+Eolj2bRfE8ZT0SvLc03nZz4SrpxSFNitmyU/0gn4HxoI+1AgYaXupa3xtMe
+nWLlV+Bu62A/NyZ8xMDuzlfTJII8987TStrnqvsxWW+tqr1oOQmjr1ESIaQasPHW
+I1WttJtHef4sidXV7rrzkYu54yZO0InW8wrpnCvyfS0m++Uzh4D8D7xc/a1dAgMB
+AAGjZzBlMB0GA1UdDgQWBBTLFk0yMI/Yd5BKz82ZHUwZQ5orQDBEBgNVHREEPTA7
+ghBpZHAuaXN0cnVjdGUub3JnhidodHRwczovL2lkcC5pc3RydWN0ZS5vcmcvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQEFBQADggEBAERDdJ0NShxoOn2wiArDC5fY
+ZDejFC16QS7wKoPZxSas1ASZCM9Dqf7f16RMODojZmXsJxS04blL9m8v3eL5X/Nj
+lRFdMBr+s3hw49HWjTXgOqzv090GSFMQ/U3A0JrkEKDs1PzhWi+szoYOdvNbGlwr
+5zVjQi4+3x2fax3hutAtpdmtJ7Byk3CI9o3W95YOqlzDrWZDEbkNZpj3OY0BVmCQ
+ZJT1SQ3WFFL98LSeg3nrdo12C5I7fhskFBsIQsbjxKoftyHHf7NFEgtcEihP21/x
++mn3EVKlLdMxUcghPyFm46KgIBvDcpOqo/k1ZqJ92DT6mIi5EGed8yeRbgGluPo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.istructe.org:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.istructe.org:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The Institution of Structural Engineers</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The Institution of Structural Engineers</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.istructe.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Hirst</md:SurName>
+	<md:EmailAddress>mailto:ahirst@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Hirst</md:SurName>
+	<md:EmailAddress>mailto:ahirst@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-login.phbern.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2010-12-02T15:02:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.phbern.ch/support.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phbern.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PHBern - Pädagogische Hochschule Bern</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">PHBern - Pädagogische Hochschule Bern</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Pädagogische Hochschule Bern</mdui:Description>
+		<mdui:Description xml:lang="en">Pädagogische Hochschule Bern</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAeNJREFUeJxi+P/vH7Ho///CwkIGCItI4OTkRLqGf79/f3/06N3Jk28OH/545cqfb9+AEn++fPl46dLXe/cgjvn25MnHy5f/f/8O0vD33btr+flb5OW3Skvv0tO70dUF1PPh/Pm9pqbns7P//vr17+/fa21te4yMfh465OziwvDn5cuT7u5reXjOpafvNjFZLyn5bOPGt8eOrePjO+bvD1QNtPBCcfFqFpYv69c7u7pCNezU0Pj28OHN/v4V7Ow3OjrenTixWUrqgLX1qz173hw8eCwkZCMf39etW8EaXr067ee3WVz8UkXFHiurjbKyz7dufX/mzDZ5+TUsLNtlZYFoLQcHUMHXHTtAGv6+enUuNHQVI+NGKaldJia3enr+/Pz59vjxLZKSWxUVgd64kJu7S1d3k7Dw1+3boU467e29QVj4zuTJwFACBhrQ0a8OHtwgKHgiOBgYAP/+/AH6YT0399fNm8EaXrw47ui4WVLy6/378PB+uXfvWi6uoz4+wFACBuu53Nw1zMxQT//9/Pl+Tw/Q3l8fPsA1fLp+/Wxq6u2+PpCFf/8+XLTobHLyn6tXnZ2dQTENFP378+c/pCgHhiZQ5C9QNVgQooDcpEG8aiAoKipicCIFCAoKAgAAAP//AwBRrDE7/SEh5wAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAhpSURBVHic7Jh7bFPXHcdvbMd2bN/r2Ne+flw/rq+v7cTPJASaUrWb2lFNEyN0K6patkp0T0EKXoGWrWEhaVlIuxY6KkBaKwEhPPKwHeK0HZ20SdGk/bP+wz/5Z0hTpZH/UgkUzn/sdxzf4NhJ8NrQoyPlJ32V63te3/PxOed3HOb+/fvMhr6+iBugXcQN0C7iBmgXcQO0i7gB2kXcAO0iboB2ETdAu4gboF3EDdAu4gZoF3EDtIu4AdpF3ADtIm6AdhE3QLuIG6BdxA3QLuIGaBdxA7TrwQOOhgbmVKZjLsd70FilbC6U84fvDG7ZOhNrtr3WoNUylRHQ6hi1TcEpoqPJTA9TFazByAxnOufGcV9QD8aZxeNVxuOK0nXVK6EJqJNX1Syggl9e6O987PMQyx2BNtrqvklE/QDt7kXBM558wSejvaHIbUajWepsPQFe8wTQ+VjiZl+qLXs0kcr2J9v6hlvTt/N2D8rB2N+12t58tGjqi7oBXpdjc9MB5W6hYjUW/WHUHZT2qZ2tJ8C8GES73OKQwWxmDE1NjNFkYuzwvNsnHShC32eV1i94jnvEeB4e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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>192.41.150.0/23</mdui:IPHint>
+		<mdui:DomainHint>phbern.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.952062,7.422567</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENzCCAp+gAwIBAgIURTgCK5WB0i8cLs61cYgoQ1+PmAcwDQYJKoZIhvcNAQEL
+BQAwHjEcMBoGA1UEAwwTYWFpLWxvZ2luLnBoYmVybi5jaDAeFw0xOTA1MjgxNDUz
+MDJaFw0yMjA1MjgxNDUzMDJaMB4xHDAaBgNVBAMME2FhaS1sb2dpbi5waGJlcm4u
+Y2gwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCwREMPQrXN8TUenkLS
+e4/N7Np8Dty92Qlw/bj/dwHs/BJfgkbbI2mNFuzHViTNd7YGhnwUD82mJsdi6I1D
+mfszlUSzEmuYRo8MJqwXx0O6CHNF1RvkPj6LCU1IgQN2AYXtNLuPsRAKuB6w2Gtt
+q+I2+xt73Qq92zfIkuh9pkpak1d1AUIO2AfxDg0Edh5UM3PZ1J+99Fs9i8/7fb4O
+Q2ZxBwW+T9kElr4i2I5RhVVzzXsL1Dz29gRgp/OdvS1hK9oqJHr78j4pfHMXv8kT
+zyNXqASKT9VK8TZyqJYsNI1U49/Ym5Ed0l8kapYmDFB5dxxDMTgKiKHOhSO4ZiMq
+5B9dD/tU2YoMALKEpS4Eu3qo49zhwuy/FNPpg/DFPVNxgN4QnPLW7pQZm134Nrqx
+2Gz0YWzbjWRi41PFHZtFQOKftOmAx9bwWO5BLU+qu/KHo4cQ3PDEis1vESg8+gvy
+H3I1hvK+4tbYhvvfagaH2nheQen4dlZazZtKzElFVZf8qmcCAwEAAaNtMGswHQYD
+VR0OBBYEFG/OY2DQfuQxR/9RdVOxkd1Te9HxMEoGA1UdEQRDMEGCE2FhaS1sb2dp
+bi5waGJlcm4uY2iGKmh0dHBzOi8vYWFpLWxvZ2luLnBoYmVybi5jaC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEArj8UuPEO9ppvUhj6M3369mwTVGj7
+/zP21hQF8xy6Rb7hj5odzZvqDRkDDsRcyFlByihan0npzVHqt3rkFBX4Cw/7SyGs
+6ZOYU4DZ0ABxVSB5k9dXiEh0jMrLcM2fFoseEK1O0rHBXvXytkgkdAvPNKqcST/m
+KX7mBtzCPGIzIukhMzfwuwP8sac2mUgCFGjWMLbqgvwinq1Oeyk/GyhTyNGibhob
+nF/EAY2Uwn9eDbeDj/874lcvFa2DVRHE4nWk0A38qO+n28aPdh7EySLlP+34jQgJ
+X8o5wTpG3fn33Ww2Y6PirbTEJD2/Ktrl+rmoNCNz942WgJJ2bRNZr8JJTwlOaBA+
+DiNvlcaJ+qnThlQVuc3lXO+kgsI6EXXuzVMPf9cDOfguhcn0NQRRjZY7jgTLypEZ
+iLw4MOVzHbj4MsTqYGoWWJJyVR4LMDSXzZcB9/twSJd9HesB01bQu7IYuC5V1YWm
+9t6hq/qVFbQoKjc5UYVIR0C/s2PH2pXvitRq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.phbern.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-login.phbern.ch/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-login.phbern.ch/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.phbern.ch/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-login.phbern.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-login.phbern.ch/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phbern.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENzCCAp+gAwIBAgIURTgCK5WB0i8cLs61cYgoQ1+PmAcwDQYJKoZIhvcNAQEL
+BQAwHjEcMBoGA1UEAwwTYWFpLWxvZ2luLnBoYmVybi5jaDAeFw0xOTA1MjgxNDUz
+MDJaFw0yMjA1MjgxNDUzMDJaMB4xHDAaBgNVBAMME2FhaS1sb2dpbi5waGJlcm4u
+Y2gwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCwREMPQrXN8TUenkLS
+e4/N7Np8Dty92Qlw/bj/dwHs/BJfgkbbI2mNFuzHViTNd7YGhnwUD82mJsdi6I1D
+mfszlUSzEmuYRo8MJqwXx0O6CHNF1RvkPj6LCU1IgQN2AYXtNLuPsRAKuB6w2Gtt
+q+I2+xt73Qq92zfIkuh9pkpak1d1AUIO2AfxDg0Edh5UM3PZ1J+99Fs9i8/7fb4O
+Q2ZxBwW+T9kElr4i2I5RhVVzzXsL1Dz29gRgp/OdvS1hK9oqJHr78j4pfHMXv8kT
+zyNXqASKT9VK8TZyqJYsNI1U49/Ym5Ed0l8kapYmDFB5dxxDMTgKiKHOhSO4ZiMq
+5B9dD/tU2YoMALKEpS4Eu3qo49zhwuy/FNPpg/DFPVNxgN4QnPLW7pQZm134Nrqx
+2Gz0YWzbjWRi41PFHZtFQOKftOmAx9bwWO5BLU+qu/KHo4cQ3PDEis1vESg8+gvy
+H3I1hvK+4tbYhvvfagaH2nheQen4dlZazZtKzElFVZf8qmcCAwEAAaNtMGswHQYD
+VR0OBBYEFG/OY2DQfuQxR/9RdVOxkd1Te9HxMEoGA1UdEQRDMEGCE2FhaS1sb2dp
+bi5waGJlcm4uY2iGKmh0dHBzOi8vYWFpLWxvZ2luLnBoYmVybi5jaC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEArj8UuPEO9ppvUhj6M3369mwTVGj7
+/zP21hQF8xy6Rb7hj5odzZvqDRkDDsRcyFlByihan0npzVHqt3rkFBX4Cw/7SyGs
+6ZOYU4DZ0ABxVSB5k9dXiEh0jMrLcM2fFoseEK1O0rHBXvXytkgkdAvPNKqcST/m
+KX7mBtzCPGIzIukhMzfwuwP8sac2mUgCFGjWMLbqgvwinq1Oeyk/GyhTyNGibhob
+nF/EAY2Uwn9eDbeDj/874lcvFa2DVRHE4nWk0A38qO+n28aPdh7EySLlP+34jQgJ
+X8o5wTpG3fn33Ww2Y6PirbTEJD2/Ktrl+rmoNCNz942WgJJ2bRNZr8JJTwlOaBA+
+DiNvlcaJ+qnThlQVuc3lXO+kgsI6EXXuzVMPf9cDOfguhcn0NQRRjZY7jgTLypEZ
+iLw4MOVzHbj4MsTqYGoWWJJyVR4LMDSXzZcB9/twSJd9HesB01bQu7IYuC5V1YWm
+9t6hq/qVFbQoKjc5UYVIR0C/s2PH2pXvitRq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.phbern.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">phbern.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PHBern - Pädagogische Hochschule Bern</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">PHBern - Pädagogische Hochschule Bern</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.phbern.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.phbern.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Informatik Support</md:GivenName>
+	<md:SurName>PHBern</md:SurName>
+	<md:EmailAddress>mailto:informatik@phbern.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SWITCHaai IdP Hosting</md:GivenName>
+	<md:SurName>Team</md:SurName>
+	<md:EmailAddress>mailto:idphosting@switch.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 44 268 1505</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

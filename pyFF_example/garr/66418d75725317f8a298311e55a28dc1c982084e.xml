@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.univ-grenoble-alpes.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2016-04-01T16:04:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-grenoble-alpes.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University Grenoble Alpes - UGA</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAJsFAABkawGesHRBAAAAB3RJTUUH4AIZECkqDpoPGgAAAYpJREFUOMvN0jtrk3EUBvDf27xUA6ZBkdZLREWHVqsYWnEpeMGluxBRBD+J4uooInR0zHcQQaQoGgmKoUMIKq20QaFNsBha09fBU9TqUlw80//6nPNckkqlkvlZU9VqddY2asA/1v8HkGwXIN2y71cqlWGsYxDf4vwgVvAFR9HGYexN+8lvTddzWXYJXUzjHq4EYAdzOBHADexIp5Y7a5vTDCRZbrZY/JzxPGFffHqCQ9H1Q6znsYgDydKZiSzIz2VcH+n1Wov5/Nj+eu2lsVM5zVZfoZBLltvrGTqny+XiSrexVtiVDjZe95KF8mSG93iAhzFyB0fwMYQt4imO4xxe4Q2m0xDmLkZRwNfgeDke7sEjXEMOS7gaBlxMsYqhUDnBY4zjdoi5Fk2e4Rg2MIsm3qYYiYt5ZDHBKk5iplSvbSyUJ4dK9VoX77bYvrSpwX3sxh0M42bQaAaFnB+u3CrVa/N/S+INTER4ziOPnUFpNNYvgtofSRz/BawVTrQjfRdCsLMh3qetAN8BEBd4bcIUlrMAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-grenoble-alpes.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Grenoble Alpes University staff and students</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Grenoble Alpes - UGA</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">L'ensemble du personnel et des étudiants de l'Université Grenoble Alpes.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIUd4t2H5z9TaQY5iyAlE7kRfh/8FQwDQYJKoZIhvcNAQEL
+BQAwLDEqMCgGA1UEAwwhc2hpYmJvbGV0aC51bml2LWdyZW5vYmxlLWFscGVzLmZy
+MB4XDTE2MDMzMTE0MDExOFoXDTM2MDMzMTE0MDExOFowLDEqMCgGA1UEAwwhc2hp
+YmJvbGV0aC51bml2LWdyZW5vYmxlLWFscGVzLmZyMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEArnlbIfMiVLD6VWmeeeYxFdX8/Atz+Mnhe3GK/UgvqkBd
+m23wykUlDvzMc+PI29IPG7E2wqmaOedgvgllgW0LF7cIKQGzZuY/BXlQwqe9g8P3
+ZOH+CX7Z4WaxEnVIDwzcTrBL/fpoeMuPYXGZtogZIdXtVvQdw+75Ahwbf3tfXQQb
+D/QfchS7Jxea4+rfhar3wkqwJwxPeryq3+hUkhveMifraAQeVB0Tbff8Q2cFkzuF
+c4/dOQsgXCNS7K0UcdJ5LA9OHGKctAQnIL1VPMRaGYxbDDYIMpZ7rMbL0hPeoyqA
+JpVj7njiEV6/JfWrKLE1PKtLm3h+0dWmJ8t0Wi/20wIDAQABo4GKMIGHMB0GA1Ud
+DgQWBBTwkI6QUcubGeOIWHWb+kETna8xOjBmBgNVHREEXzBdgiFzaGliYm9sZXRo
+LnVuaXYtZ3Jlbm9ibGUtYWxwZXMuZnKGOGh0dHBzOi8vc2hpYmJvbGV0aC51bml2
+LWdyZW5vYmxlLWFscGVzLmZyL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUA
+A4IBAQAdWH5bAvi6Uuc4aGWLz/RkxajpCb9GFdOt+FW2ZNRcg8ddB7euKRU0YBTN
+y/k4qppFsGuKmiH+jJmLHDnmb6kwvhEfEZ/aZnFbXXjYpZgqLnUl5i/dnFftxw62
+FFKVIoM5lLtE1xPTjl0c9n5LZbqcwsHcrl/uZcsvIhvbMcy/nBSN0nX3RMOPLCA3
+wLdAWYFV9qsWC8MlU02u8mSLj8kRQdd6QgOsWGxweHy6W4XuFku5AXdLhARpovY8
+CiaFfEll1J7dyf/C7Hmj3LDiK8CXX6alM4ZcbVZZXQEjiAxCgwbFTCb0+3ghEJr8
+oO0zahDkkPQau5IyAPcgKkedumhq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.univ-grenoble-alpes.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.univ-grenoble-alpes.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.univ-grenoble-alpes.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université Grenoble Alpes</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université Grenoble Alpes</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-grenoble-alpes.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dgdsi-shibboleth@univ-grenoble-alpes.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

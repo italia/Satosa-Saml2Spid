@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idem.iss.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2019-10-17T09:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">iss.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">ISS - Istituto Superiore di Sanità</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">ISS - Istituto Superiore di Sanità</mdui:DisplayName>
+<mdui:Description xml:lang="en">IdP for Istituto Superiore di Sanità users</mdui:Description>
+<mdui:Description xml:lang="it">IdP per gli utenti dell'Istituto Superiore di Sanità</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idem.iss.it/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idem.iss.it/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idem.iss.it/en/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idem.iss.it/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="256" width="256">https://idem.iss.it/idp/images/logo.png</mdui:Logo>
+<mdui:Logo height="300" width="400">https://idem.iss.it/idp/images/logo-400x300.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:GeolocationHint>geo:41.904144,12.518065</mdui:GeolocationHint>
+<mdui:DomainHint>iss.it</mdui:DomainHint>
+<mdui:IPHint>193.205.224.0/24</mdui:IPHint>
+<mdui:IPHint>193.205.225.0/24</mdui:IPHint>
+<mdui:IPHint>193.205.226.0/24</mdui:IPHint>
+<mdui:IPHint>193.205.227.0/24</mdui:IPHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIUblDrUZf0OZrForreZGOxpIh5yp0wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAzWhcNMzkw
+MzA2MTAwNjAzWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAJfWTRFN4oaVWnIIhG7RC40KAT+kAz1n7cAgrgUF
+Z+r1EpsItHCQ/QhvRhI/23WBzsPXnovHI4t1WOTYAAd7lwiaOYZbCLXMbTdUHFBE
+t8KVFY5QxC6ZsjHdpIqSU1mLyjQMji9ZcKAINSGP/YRh3UcnFKqmkfZteExfBjn0
+pCb9a3oSjknzHZFMReqUjJNTD5KRemIUBq9iriFjzV6HoId9hH2QT0PAP9YBqJFQ
+r1HdKjTUXvIwekhNt+FqrEkU8zFJa6hpTQ4E57nyU6Kf+lIeZqtke1Tdlfp/IFWi
+KGrJDHVIiyUB0Z1c/cyqmUu6DHe/q/iDj11dG8XrQkHaGELTuRD8flKEfNByr8hr
+cW+ybDjpmnmh2LjGXFZoZH3Q6eVAopj+DcbYdYZtEOppqSl4WLtvPCskS8L+DhrD
+Xb/Ap8aEJCMWJmAfJ4Goxn156zZBjlerIQjXY6a6I/hR/s4K+29b7D91lc6uB4a/
+aYgi41HAI69b0N3WMpppekCacwIDAQABo10wWzAdBgNVHQ4EFgQUXECTWSXNHXg/
+ZpXNePhtqgh8kaUwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBADK60UkN
+trVLQ9ZVYGa+9JYRnAysj84xN16Er6aQT/n5vGsYLsTJogxm9k/9oiR3csR17o1T
+IUIFrEbSKUxWHC7O2MhCIEWnxKRWoP1pckZQrWpconghxHPreswsm5A03LqLl978
+WeMU2ONoNgwulvigQAEDArcBMzD3oVwg47ABv5/14wvofpdhPTTwPBy3iUIEqe36
+N1eevXGj6ZeKr54GSSJDmdytAcrmYZ8sDkoFzkOBmPuAmJRgB7eazzlXxrnCpfZi
+1+iTC9sPHXC5PzuJkMgWZ0X4K6pxMHWE8ly4Rd6vvw3oPLozV4RUr/v4YSdo7iJZ
+JlQuJ/FdpO/HkCdIzTpPv0/TTl/Dg0M7kT4JQl9/LNoI6L6ht+gOZpHwZL7xkXRf
+96gLDKb/sCV1Tax2ccBGLIYvDS3EZNTxl9m41CiX8a5RcJU+QAoWpRlcXULwKJCK
+JjhlX5LsM7j3HjXOrmQpUqBWLzeGHX5c3T+n5U0oOqFMaKpdoDu4Dbdxog==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIULTtUQ1uh1ZvCkjsaua1+mjVHBOIwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAwWhcNMzkw
+MzA2MTAwNjAwWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAKxqc6wYqajRroTJIoQ2l/wgaNZ7cPx4Yma6kfx0
+OpjwvMnB1U54oR5yylTAWx2xXsKg80B+PuBo/85F6TnI39myYZslokr0FYbKhmt/
+YLx/S3WTG67NXHYgtmC2zs3S0opmcQe/fwK0McblMVCNJsXaHFCxGTtcT+0+5G84
+HfntvGSsHL+UZWX292FnfNnANM2mIhCOElSEPVPbhBS8fKNe7M1BKzh1ymveHJ0w
+qSTy8OIUiR5FKHOv9d0w+DvSmfCvsfdlXrVpRtZSA/cK0bcmv9cpsJmShuvZDGIH
+7bL6ce8X4a+fBsn1ve9qTqw+mDeOrI4wpGzgBG75Umy7DJhwyLAHZmS1xb0d6mnY
+1vp+X1ZMZxePGKJlW5BqvR4WjUxghRVZTFxtvwrjHwjJTYX29v9RZQbZIQbkyRLR
+psj9mL01YRWgtSpi1qOeShBTSHM1/W3PON7XfgCCHkPhijyBKGwBhx9JJ1psN+Pe
+5VYHgB0ItmgFlVTEYWDr7sQmQwIDAQABo10wWzAdBgNVHQ4EFgQUA6oeeUQV4J56
+F/+qJNd66qt9PdAwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBAI26eq2k
+NH8m9Z3uZ7bvBoIMdonnxpz3ZuqdhhSgfkdHVIzt4/YAhIO6pS54ulZdHWSBadpm
+lSd8l+QBOnN2rr7CKeYYOBQyApWftohcap526Y2SCePh+0fUCiqx219APUIfr357
+GH3D1qFIohHqjwfQQsmuLzIol9l6N2gV2cBEhxkYP2WlIllpKU+5bT7oubYGkyE3
+z+UkCIwQBiJd1V/lfT1/yPDerFMbqpDUJtBzxN8rj7HbGT8KGtgrqzJfs4iKnRcU
+eKlSBhx8K9jEbgh0Lr1LdhdvlERouq2Kwt7TnVO0HSIF5WUPX6iC1YlsM5GTWvW8
+1mSdGc9DWnGm+8rx32rteXdaLl0EkhQYSOfSZsKC4MLIGdsMM+bRR2HpgVNj9DgD
+nAvbcOcS8AFTDB9BMa6UocdCbm9MT8Wx/mqPTPk7sdI4zvmS7iT9D+8hhrkZcb6w
+kEYv2wYhgl7iTBEehfRhpi3+pYsyJimCZKisQAlimXnD8gQenWJhIMMKWQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIUfkBICvW4/5HcGsFTmU6jT828UR4wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAyWhcNMzkw
+MzA2MTAwNjAyWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAIHiSL4609doSjiKQmYGRoHuyqWqsYWxTw5ua2ra
+v3Kdv8E07qsORuHsJr5TSaCRaEwzyStPMfRvBlKBr0Bo2yWVJeIyVV8/UyJlKpuu
+Kwue9pWnSA+yDFnuuwl1kP5qWR+fAuyPZX/Vt2BTruBtB4rGsbUbsgdTXN/FA56X
+Hv/GA6wdI4h02quz3JG65+bvDgmOLbCSbuZ0D3yBqiUhchgsAo95Rc1XuzcqTRA9
+fwiMsPL0msLtkKckZYJWjr+nVw9lG9OzMzdl7tuHe9KZCv9I91oUaGFIw/zwqX9H
+IgiHX9bfhfv89u07/5yICL0EyKo7JnNSp2DwuLc6KEcbc1RRHww9kdOSFknSGv3P
+r41q9SzMYBj7M9eB15LAMT4psFtVgn6zOlcZwN8iGwmx+m/KiAVcBElu+KtnJCdk
+o5/1QxJPpyEFJNys/RIYtLDoYC56c2wa4Cy71V+MmlDi3e5w0k33Bcu9kuIA2SOZ
+xN8VVxjZR0xZkeCD/TsQ82J2fwIDAQABo10wWzAdBgNVHQ4EFgQUXhmeQZnDXnFA
+cyvoLwCGhgKz7wAwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBACyrbI0j
+UyscVMfSA3SQbIP8QwDGMAK5VrNfS1Vti/fBrsf3yT5JMxdmekdf53HVo+EIWre4
+YazYWm67GafO1solm2zOKY9cVCkAGGo/QYw2xzD9wrxNDWtgqXvhJWKK671tJoDD
+UThGH3Hr38H3pv/hcxhK3IST0pk1FSQRfQmGdDmsDuSlVm/ZdY/J9LITmvUiayXM
++PtMYdOxc+IbJiBwFwNYHwm5L2ZRfxosAOsqfioY3jw/L+aFDMSyfezv5wLE7J/K
+189D0FCpTh2hUCkx2aX2uOKlVCNWx2Rl2Ar/Ftmyu+2SDV3xLs2xiND74xxiDoey
+2dZ4TrIxPfVDSiRMw2W+HKbhluj927AvVudAVrJteFxp5I4oM2oIx1pM7Q+ilJ+M
+5ZlFjUsUOv4ptt6yV2iKKIN+O3X6VbcpNJQkjcQv9/SF+Q65wghh3Szxu+qKUTyM
+xSGHzwMSawT9DQ0MNQH8AUrY+n6MxzhUFwZCmk+l8wg0/zqN/+IpQR2VNQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem.iss.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idem.iss.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idem.iss.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idem.iss.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">iss.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIUblDrUZf0OZrForreZGOxpIh5yp0wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAzWhcNMzkw
+MzA2MTAwNjAzWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAJfWTRFN4oaVWnIIhG7RC40KAT+kAz1n7cAgrgUF
+Z+r1EpsItHCQ/QhvRhI/23WBzsPXnovHI4t1WOTYAAd7lwiaOYZbCLXMbTdUHFBE
+t8KVFY5QxC6ZsjHdpIqSU1mLyjQMji9ZcKAINSGP/YRh3UcnFKqmkfZteExfBjn0
+pCb9a3oSjknzHZFMReqUjJNTD5KRemIUBq9iriFjzV6HoId9hH2QT0PAP9YBqJFQ
+r1HdKjTUXvIwekhNt+FqrEkU8zFJa6hpTQ4E57nyU6Kf+lIeZqtke1Tdlfp/IFWi
+KGrJDHVIiyUB0Z1c/cyqmUu6DHe/q/iDj11dG8XrQkHaGELTuRD8flKEfNByr8hr
+cW+ybDjpmnmh2LjGXFZoZH3Q6eVAopj+DcbYdYZtEOppqSl4WLtvPCskS8L+DhrD
+Xb/Ap8aEJCMWJmAfJ4Goxn156zZBjlerIQjXY6a6I/hR/s4K+29b7D91lc6uB4a/
+aYgi41HAI69b0N3WMpppekCacwIDAQABo10wWzAdBgNVHQ4EFgQUXECTWSXNHXg/
+ZpXNePhtqgh8kaUwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBADK60UkN
+trVLQ9ZVYGa+9JYRnAysj84xN16Er6aQT/n5vGsYLsTJogxm9k/9oiR3csR17o1T
+IUIFrEbSKUxWHC7O2MhCIEWnxKRWoP1pckZQrWpconghxHPreswsm5A03LqLl978
+WeMU2ONoNgwulvigQAEDArcBMzD3oVwg47ABv5/14wvofpdhPTTwPBy3iUIEqe36
+N1eevXGj6ZeKr54GSSJDmdytAcrmYZ8sDkoFzkOBmPuAmJRgB7eazzlXxrnCpfZi
+1+iTC9sPHXC5PzuJkMgWZ0X4K6pxMHWE8ly4Rd6vvw3oPLozV4RUr/v4YSdo7iJZ
+JlQuJ/FdpO/HkCdIzTpPv0/TTl/Dg0M7kT4JQl9/LNoI6L6ht+gOZpHwZL7xkXRf
+96gLDKb/sCV1Tax2ccBGLIYvDS3EZNTxl9m41CiX8a5RcJU+QAoWpRlcXULwKJCK
+JjhlX5LsM7j3HjXOrmQpUqBWLzeGHX5c3T+n5U0oOqFMaKpdoDu4Dbdxog==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIULTtUQ1uh1ZvCkjsaua1+mjVHBOIwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAwWhcNMzkw
+MzA2MTAwNjAwWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAKxqc6wYqajRroTJIoQ2l/wgaNZ7cPx4Yma6kfx0
+OpjwvMnB1U54oR5yylTAWx2xXsKg80B+PuBo/85F6TnI39myYZslokr0FYbKhmt/
+YLx/S3WTG67NXHYgtmC2zs3S0opmcQe/fwK0McblMVCNJsXaHFCxGTtcT+0+5G84
+HfntvGSsHL+UZWX292FnfNnANM2mIhCOElSEPVPbhBS8fKNe7M1BKzh1ymveHJ0w
+qSTy8OIUiR5FKHOv9d0w+DvSmfCvsfdlXrVpRtZSA/cK0bcmv9cpsJmShuvZDGIH
+7bL6ce8X4a+fBsn1ve9qTqw+mDeOrI4wpGzgBG75Umy7DJhwyLAHZmS1xb0d6mnY
+1vp+X1ZMZxePGKJlW5BqvR4WjUxghRVZTFxtvwrjHwjJTYX29v9RZQbZIQbkyRLR
+psj9mL01YRWgtSpi1qOeShBTSHM1/W3PON7XfgCCHkPhijyBKGwBhx9JJ1psN+Pe
+5VYHgB0ItmgFlVTEYWDr7sQmQwIDAQABo10wWzAdBgNVHQ4EFgQUA6oeeUQV4J56
+F/+qJNd66qt9PdAwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBAI26eq2k
+NH8m9Z3uZ7bvBoIMdonnxpz3ZuqdhhSgfkdHVIzt4/YAhIO6pS54ulZdHWSBadpm
+lSd8l+QBOnN2rr7CKeYYOBQyApWftohcap526Y2SCePh+0fUCiqx219APUIfr357
+GH3D1qFIohHqjwfQQsmuLzIol9l6N2gV2cBEhxkYP2WlIllpKU+5bT7oubYGkyE3
+z+UkCIwQBiJd1V/lfT1/yPDerFMbqpDUJtBzxN8rj7HbGT8KGtgrqzJfs4iKnRcU
+eKlSBhx8K9jEbgh0Lr1LdhdvlERouq2Kwt7TnVO0HSIF5WUPX6iC1YlsM5GTWvW8
+1mSdGc9DWnGm+8rx32rteXdaLl0EkhQYSOfSZsKC4MLIGdsMM+bRR2HpgVNj9DgD
+nAvbcOcS8AFTDB9BMa6UocdCbm9MT8Wx/mqPTPk7sdI4zvmS7iT9D+8hhrkZcb6w
+kEYv2wYhgl7iTBEehfRhpi3+pYsyJimCZKisQAlimXnD8gQenWJhIMMKWQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEFzCCAn+gAwIBAgIUfkBICvW4/5HcGsFTmU6jT828UR4wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLSWRlbS5pc3MuaXQwHhcNMTkwMzA2MTAwNjAyWhcNMzkw
+MzA2MTAwNjAyWjAWMRQwEgYDVQQDDAtJZGVtLmlzcy5pdDCCAaIwDQYJKoZIhvcN
+AQEBBQADggGPADCCAYoCggGBAIHiSL4609doSjiKQmYGRoHuyqWqsYWxTw5ua2ra
+v3Kdv8E07qsORuHsJr5TSaCRaEwzyStPMfRvBlKBr0Bo2yWVJeIyVV8/UyJlKpuu
+Kwue9pWnSA+yDFnuuwl1kP5qWR+fAuyPZX/Vt2BTruBtB4rGsbUbsgdTXN/FA56X
+Hv/GA6wdI4h02quz3JG65+bvDgmOLbCSbuZ0D3yBqiUhchgsAo95Rc1XuzcqTRA9
+fwiMsPL0msLtkKckZYJWjr+nVw9lG9OzMzdl7tuHe9KZCv9I91oUaGFIw/zwqX9H
+IgiHX9bfhfv89u07/5yICL0EyKo7JnNSp2DwuLc6KEcbc1RRHww9kdOSFknSGv3P
+r41q9SzMYBj7M9eB15LAMT4psFtVgn6zOlcZwN8iGwmx+m/KiAVcBElu+KtnJCdk
+o5/1QxJPpyEFJNys/RIYtLDoYC56c2wa4Cy71V+MmlDi3e5w0k33Bcu9kuIA2SOZ
+xN8VVxjZR0xZkeCD/TsQ82J2fwIDAQABo10wWzAdBgNVHQ4EFgQUXhmeQZnDXnFA
+cyvoLwCGhgKz7wAwOgYDVR0RBDMwMYILSWRlbS5pc3MuaXSGImh0dHBzOi8vSWRl
+bS5pc3MuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBACyrbI0j
+UyscVMfSA3SQbIP8QwDGMAK5VrNfS1Vti/fBrsf3yT5JMxdmekdf53HVo+EIWre4
+YazYWm67GafO1solm2zOKY9cVCkAGGo/QYw2xzD9wrxNDWtgqXvhJWKK671tJoDD
+UThGH3Hr38H3pv/hcxhK3IST0pk1FSQRfQmGdDmsDuSlVm/ZdY/J9LITmvUiayXM
++PtMYdOxc+IbJiBwFwNYHwm5L2ZRfxosAOsqfioY3jw/L+aFDMSyfezv5wLE7J/K
+189D0FCpTh2hUCkx2aX2uOKlVCNWx2Rl2Ar/Ftmyu+2SDV3xLs2xiND74xxiDoey
+2dZ4TrIxPfVDSiRMw2W+HKbhluj927AvVudAVrJteFxp5I4oM2oIx1pM7Q+ilJ+M
+5ZlFjUsUOv4ptt6yV2iKKIN+O3X6VbcpNJQkjcQv9/SF+Q65wghh3Szxu+qKUTyM
+xSGHzwMSawT9DQ0MNQH8AUrY+n6MxzhUFwZCmk+l8wg0/zqN/+IpQR2VNQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem.iss.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">ISS - Istituto Superiore di Sanità</md:OrganizationName>
+<md:OrganizationName xml:lang="en">ISS - Istituto Superiore di Sanità</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">ISS - Istituto Superiore di Sanità</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">ISS - Istituto Superiore di Sanità</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.iss.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.iss.it</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Marco</md:GivenName>
+<md:SurName>Tallon</md:SurName>
+<md:EmailAddress>mailto:marco.tallon@iss.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>IT</md:GivenName>
+<md:SurName>Service</md:SurName>
+<md:EmailAddress>mailto:idem-help@iss.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

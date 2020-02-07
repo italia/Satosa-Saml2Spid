@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idpv3.lu.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/authentication/swamid-al2-mfa</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/authentication/swamid-al2-mfa-hi</saml:AttributeValue>
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lu.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Lunds universitet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Lund University</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identitetstjänst för anställda och studenter vid Lunds universitet</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for employees and students at Lund University</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://www.lu.se</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.lunduniversity.lu.se</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="sv">https://lucat.blogg.lu.se/att-anvanda-lu-konto/anvandarvillkor-personuppgifter/hantering-av-personuppgifter/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://lucat.blogg.lu.se/att-anvanda-lu-konto/anvandarvillkor-personuppgifter/policy-for-management-of-personal-data/</mdui:PrivacyStatementURL>
+		<mdui:Keywords xml:lang="sv">lu lth Lunds+universitet Lund+University</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">lu lth Lunds+universitet Lund+University</mdui:Keywords>
+		<mdui:Logo height="92" width="450" xml:lang="sv">https://idpv3.lu.se/idp/images/LU_swe_logo_450px.jpg</mdui:Logo>
+		<mdui:Logo height="76" width="382" xml:lang="en">https://idpv3.lu.se/idp/images/LU_eng_logo_382px.jpg</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>lu.se</mdui:DomainHint>
+		<mdui:DomainHint>lth.se</mdui:DomainHint>
+		<mdui:IPHint>130.235.0.0/16</mdui:IPHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUD4RyhLFIuNZ5O77xXaRFLYeZgJAwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwdjMubHUuc2UwHhcNMTYwMjIyMDc1NDA2WhcNMzYw
+MjIyMDc1NDA2WjAWMRQwEgYDVQQDDAtpZHB2My5sdS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJlUtfZBGTW2+XOD2UgwN/KFkrfoyaDrc/CJ9DnG
+rDjHJjlN2Fey7rB3sexvyM6RfLpxkOX7LKcwKBDq3Rjh0IyGUyEjolPls8vlPORz
+WyLGJ/JkXSRYFnOniQxeqfL2Xjo53Hk0yOFUh6gLiRSxla+EueOHwIeXkXhpTYz5
+K8O7lXwmGhS1+kd4HJZFOB8YOYDqaxMHOvcAJH01Khwe6HB0x/0MQ3LTMF0YusHv
+Ob+WjFNGZs5qX7KJcQLEhrzgBhyFVLdKX024+JREzMB7AhNrysuh+h9tLC0oUVPF
+0y0Xf+L18dCH92UamqR3IOC7k+hytZ6QqMnKIq8whXzrpeECAwEAAaNdMFswHQYD
+VR0OBBYEFFADTOECG3DC6WFR7tlcnx9pcn0oMDoGA1UdEQQzMDGCC2lkcHYzLmx1
+LnNlhiJodHRwczovL2lkcHYzLmx1LnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQAKSwpkEGkZmQPyB22U3bSWcI/QpZlOzNvWMaGaFvwmI+Vn4GS7
+gaPW03B7Pnk71MaPnWXzbDOWvKVMhtkNJiZNSldPqwqt2RnR7SS+af2XbQDqJS0n
+Wb4jgXaO25MLslWrOIeuUn4nfeO5JrUDialovqlN4Om8rn6JPao4wGEiqts3HeAB
+xCsMdAMr8CrJMoK+1sBIgfIr8nBuIo3SvXAsHd6ts0xYVqgeYM6qPg97qiHytJvU
+RkaCJ5ca0ZutSetcL3mkXdHIl+5S9zhgcs3hOLA6v7Yqsd+lWA8Jqh4wbBXixpGu
+cGOFP9UH1ptYCE+azH3kJ0N00MmrXdZgH323
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAOAJRp4FcZsN0Apk6n6NJRREV+6VMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2lkcHYzLmx1LnNlMB4XDTE2MDIyMjA3NTQwNVoXDTM2
+MDIyMjA3NTQwNVowFjEUMBIGA1UEAwwLaWRwdjMubHUuc2UwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCrPl5u1sQ/6/O9SZFlQHOIxewNK1HpNe9ZSXp+
+91pIlOLiJb16R5rH4KFLzFr6XEghwyNreduL4NSHwnS208rU0UHGnPFK58e4WSUY
+4P5RJSipDAGY1oIIrL4kBrpM50Gwhyxj42xXTq9evG2RsyyeLaPSJePlLtotPt2o
+41RBvW1vzYNcXb7JgSx8s5px6jdtjm+BtWgZtscFomSqSGWFm3/TLo+gntvG4/xT
+o1K9zlDuqfbHIMjD0t8wI4BYX3Wd7pXYNf6i0oXtOpS/9Khae4/orA9d1+8xadHM
+XID2Jk0OdvfEeuTbs5AlUyDlvQgc5nUZUVRvKwqtSSv8pbZdAgMBAAGjXTBbMB0G
+A1UdDgQWBBSxffHocHR0RA65Wd8uRplMXh4VFzA6BgNVHREEMzAxggtpZHB2My5s
+dS5zZYYiaHR0cHM6Ly9pZHB2My5sdS5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEARk9ha/w5IQs1qKygFTFsCAWkrpAhnOVMeXWCPG+7yzYliCQv
+XX2shOz7RlQpZT+3uyDSWgJ+Z2xdISsThXbDfnMJnU5bbUXSgUy+CYkXjx8lI5b+
+RoLi7bzycPuGIFcOjUzfZxjM5mDxpVUmGP9e3cnosNUAI0iqt34nQwusx+jRZqOi
+HEa8UnjwOtglHEiRxQwyildnenAuXn37ZEe1n9jLiMAzPRFVxIrnuSyalUSyvGc2
+6c9Aozb+3ozGufmWcuVc6wZeZtGdHYRT3N1uVBN2agzRNrlhcuP/gDDjhFHlFMDs
+4YT1j/q6c6UU7MANv5mTzc3hL5MSrvj4CCpVgA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUauI49n1u/B9z1f0b/KUMu1vDD3EwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwdjMubHUuc2UwHhcNMTYwMjIyMDc1NDA1WhcNMzYw
+MjIyMDc1NDA1WjAWMRQwEgYDVQQDDAtpZHB2My5sdS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBALNlmrTcOU72uwaA3T0pe1avdrzmjEH+Yq9fhbvz
+Jbm8jorNVJot4nLTwXrE8zubuVyndPNYda69SKFW/H2sdsPl6nXiMQv0p3Izw1Ee
+bz4zwWbvSVu7D9ohvwWR5MtV0a5sGkQW8oylyHMS8mwtp+HPEO66D8NDracxZ7/p
+kRobp16SXnsq/jekkFpph5AHsJjRTsX93vB2eFZ5+g2Yx1JloGHuSxQvkgFUktek
+Xf2i6NZYj1Vgr21woVvO6YoErrqrfjtD5ul/MlWD7V8BNZA1I89huTLBMqbFtT/R
+q3vjkHiFDgzyiOSrH6KwcYWdJuNHVISHOOYJil8Gl2eYj5UCAwEAAaNdMFswHQYD
+VR0OBBYEFAOF0q/Lew4bO5kzUKLTi4sKfi6PMDoGA1UdEQQzMDGCC2lkcHYzLmx1
+LnNlhiJodHRwczovL2lkcHYzLmx1LnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCwGnCjGcIYhmoKwhcyHmEI2npMZ0zUMUjLxcpY8OjJFXGDUi9j
+fJlhja02L7O/kiRdVadhlIqpi5g3aNwoNyVxLbriiToDNIIm0ixrBMGWoUj9WYe6
+rA86XwGeATly1iQu9EVWH+nCBYs+MLogsB9qtA/2vd4nCM9jNGe9+PhC+p84l3nK
+2E3SR1RhRynJzC+hpoO5KARTw9ymeeMt4FM8lFXhL3rbUJq/Dl3deU0U6xCzyPDh
+KE7aiSxYsHeCrgDI13bWgb/5xaYBMwJLDYj/KTIrtThku/WU8kDgEZtjcfCWCMiJ
+9rjFqJ/gXzCEj4IVOIWKvE1TswY/c0hymlJ3
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idpv3.lu.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpv3.lu.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpv3.lu.se/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpv3.lu.se/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpv3.lu.se:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idpv3.lu.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpv3.lu.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpv3.lu.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LU</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Lunds universitet</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Lund University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lu.se/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Eskil</md:GivenName>
+	<md:SurName>Swahn</md:SurName>
+	<md:EmailAddress>mailto:eskil.swahn@ldc.lu.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Johan</md:GivenName>
+	<md:SurName>Silverup</md:SurName>
+	<md:EmailAddress>mailto:johan.silverup@ldc.lu.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>LU Servicedesk</md:SurName>
+	<md:EmailAddress>mailto:servicedesk@lu.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IRT Lund University</md:GivenName>
+	<md:EmailAddress>mailto:abuse@lu.se</md:EmailAddress>
+	<md:TelephoneNumber>+46462229000</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

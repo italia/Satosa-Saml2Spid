@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://lists.lbl.gov/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://lists.lbl.gov/Shibboleth.sso/DS" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LBL Lists</mdui:DisplayName>
+		<mdui:Description xml:lang="en">LBL Self-Service mailing list manager</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://commons.lbl.gov/x/TQFdAw</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.lbl.gov/disclaimers/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="111" width="130" xml:lang="en">https://commons.lbl.gov/download/attachments/58393603/lbl-logo-scaled.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC7jCCAdagAwIBAgIJAK9Fhyrkn2P+MA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDWxpc3RzLmxibC5nb3YwHhcNMTIxMjE4MDQyMjM3WhcNMjIxMjE2MDQyMjM3
+WjAYMRYwFAYDVQQDEw1saXN0cy5sYmwuZ292MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA5XlkSyKY4LzWoI1kEARPUpWGIBuhK/f/Bv4hAFcJzvucUlcH
+sAtdKPpi46+fR+v7V9BEUbX+2hwG6NCDL5nr+9DxN0cbAupoKtmD1btOCQuVYEXD
+wf0Ofy8G7ZdLO24Pe9wN8A1w/1eWL3AccufGPyDzReH2cyQIjiA9GpdzJN8VEMC+
+WjOR6hcO3P5W82ZQiPi0ISaJKQVFTHw3gffkLpRju6xWSia4XKmg78fLH/MFubkr
+I+fiivZZ159wpZttEW8tiuV8NVM0vb7UOu9Y70u2eI1K15etdDok2w7WQUQtIkTY
+FmhlR5HJMkGBqLz68WTZ/R43fzWnR1eUPSyd0QIDAQABozswOTAYBgNVHREEETAP
+gg1saXN0cy5sYmwuZ292MB0GA1UdDgQWBBRFqWY5fVPve7K8S89adkI3bZmE1TAN
+BgkqhkiG9w0BAQUFAAOCAQEAA2g55cK33+PzKuI4SQNbN4u9YNj8GJQtWhbx3neq
+sS9G2DsomeSVUV0m9tz3xGccFUzoTn98s7UkHnweY4HRavrOIixoEZeavZ3Y84jG
+K/cEsAlc6xihomi6/WmIWIt08II0kOfe5fKiASby9oSQRO5N4u7vZO31V1uYMrKv
+6kOo8mxTzPIE3pW1ALNyoHpLjKYf4wJhdTqwuCvMAcsjbBvCy/xovzT5zYwjxEYO
+gaqdKv1PYCkYhs/+2Y5s78MvMYc3MI5dmTo4Beyouojl5alxK6Uop/wZNXeXbr1s
+U6hFIQBas74Lpep6QLfuTw3jc/JsWnNNs9j3WOdW4meS5A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lists.lbl.gov/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://lists.lbl.gov/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://lists.lbl.gov/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://lists.lbl.gov/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">LBL Lists</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">LBL Self-Service mailing list manager</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lawrence Berkeley National Laboratory</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lawrence Berkeley National Laboratory</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lbl.gov/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>LBL Collaboration Services Group</md:GivenName>
+	<md:EmailAddress>collaborate@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>LBL Listmaster</md:GivenName>
+	<md:EmailAddress>listmaster@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LBL IT Help Desk</md:GivenName>
+	<md:EmailAddress>help@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LBL Cybersecurity</md:GivenName>
+	<md:EmailAddress>security@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

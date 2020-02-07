@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://webauth.umaryland.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">umaryland.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Maryland Baltimore</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The University of Maryland, Baltimore (UMB) is the State's public health, law and human services university devoted to excellence in professional and graduate education, research, patient care, and public service. As a diverse community of outstanding faculty, staff and students, and using state-of-the-art technological support, we educate leaders in health care delivery, biomedical science, global health, social work and the law. We emphasize interdisciplinary education and research in an atmosphere that explicitly values civility, diversity, collaboration, teamwork and accountability. By conducting internationally recognized research to cure disease and to improve the health, social functioning and just treatment of the people we serve, we foster economic development in the City, State, and nation. We are committed to ensuring that the knowledge we generate provides maximum benefit to society and directly enhances our various communities.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.umaryland.edu/policies-and-procedures/library/information-technology/policies/x-9915a.php</mdui:PrivacyStatementURL>
+		<mdui:Logo height="89" width="340" xml:lang="en">https://directory.umaryland.edu/shibboleth/umblogo.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAIJL3xlKBtxM29EgLG3uO45k3D/WMA0GCSqGSIb3DQEB
+BQUAMCAxHjAcBgNVBAMTFXdlYmF1dGgudW1hcnlsYW5kLmVkdTAeFw0xMjEwMjYx
+NjQ5MDRaFw0zMjEwMjYxNjQ5MDRaMCAxHjAcBgNVBAMTFXdlYmF1dGgudW1hcnls
+YW5kLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKA/GisjATA6
+jTXmT0yDRFjtBBpWz50qYpPpLJ5+QJEt26jTlztQRg3aimomjLyeMaSMrk6NaVd5
+MqUSDwhAW6lmhkkc7SK0DXSVNNmvd8BT60ZlNxYSNF3jAEjsgQu+o3+KWLkVPlY8
+njCUvGh3+Gg7eTULf66UfM5oRgHYaonWBzd2Ayx3sxFD6HTupfC0o/MmXyJsnuOV
+hAzKp1x52fDndYDvA7ki7+z/RCgYYTNsgwjp+1preNQeJfIXwTr9bOpkvLx4v4ij
+8lDTWDtsxvq3WyZNrAHTJoEaKym6AeoloDTtNXIHWl99Z8OIhJVJdBSjQaE8580m
+BuinQ/3GWJECAwEAAaNxMG8wTgYDVR0RBEcwRYIVd2ViYXV0aC51bWFyeWxhbmQu
+ZWR1hixodHRwczovL3dlYmF1dGgudW1hcnlsYW5kLmVkdS9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUcjvwyPv4suKIR1/ISJTsDvddPYcwDQYJKoZIhvcNAQEFBQAD
+ggEBAEN+MsMdV4cUYWfF8WQTgD5U1wnkB/7Ya11wvsRA2ycFo3XIGXnfiN/nAdd9
+3QVzjeXy5Eck2hL6O4b7jBXhaC6V58HdskSKEQv1pV5g0Uc9umXfeI2qwGgiDG+/
+AYp5sQfEOR2iqm2fFOcg8jHY0rA6x+TaSG4HPxNGyPUMr++lB7/GVveOtApbiUy1
+oy9sjvoB6Q2spGvKL9ztGS7DArQ5vmppu/cW6KLyKxvlex0l2eqSLc6ykbmmsZfS
+C3tP4wi5CZgqM/Ak34O9PntDHTUgXUUmK0TAXJqXwsRffYByDJFXlNgTQWLiYf5e
+pnBcdqtVQcuIV+E+RUNLcxS0b5w=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://webauth.umaryland.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://webauth.umaryland.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.umaryland.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.umaryland.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://webauth.umaryland.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://webauth.umaryland.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">umaryland.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAIJL3xlKBtxM29EgLG3uO45k3D/WMA0GCSqGSIb3DQEB
+BQUAMCAxHjAcBgNVBAMTFXdlYmF1dGgudW1hcnlsYW5kLmVkdTAeFw0xMjEwMjYx
+NjQ5MDRaFw0zMjEwMjYxNjQ5MDRaMCAxHjAcBgNVBAMTFXdlYmF1dGgudW1hcnls
+YW5kLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKA/GisjATA6
+jTXmT0yDRFjtBBpWz50qYpPpLJ5+QJEt26jTlztQRg3aimomjLyeMaSMrk6NaVd5
+MqUSDwhAW6lmhkkc7SK0DXSVNNmvd8BT60ZlNxYSNF3jAEjsgQu+o3+KWLkVPlY8
+njCUvGh3+Gg7eTULf66UfM5oRgHYaonWBzd2Ayx3sxFD6HTupfC0o/MmXyJsnuOV
+hAzKp1x52fDndYDvA7ki7+z/RCgYYTNsgwjp+1preNQeJfIXwTr9bOpkvLx4v4ij
+8lDTWDtsxvq3WyZNrAHTJoEaKym6AeoloDTtNXIHWl99Z8OIhJVJdBSjQaE8580m
+BuinQ/3GWJECAwEAAaNxMG8wTgYDVR0RBEcwRYIVd2ViYXV0aC51bWFyeWxhbmQu
+ZWR1hixodHRwczovL3dlYmF1dGgudW1hcnlsYW5kLmVkdS9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUcjvwyPv4suKIR1/ISJTsDvddPYcwDQYJKoZIhvcNAQEFBQAD
+ggEBAEN+MsMdV4cUYWfF8WQTgD5U1wnkB/7Ya11wvsRA2ycFo3XIGXnfiN/nAdd9
+3QVzjeXy5Eck2hL6O4b7jBXhaC6V58HdskSKEQv1pV5g0Uc9umXfeI2qwGgiDG+/
+AYp5sQfEOR2iqm2fFOcg8jHY0rA6x+TaSG4HPxNGyPUMr++lB7/GVveOtApbiUy1
+oy9sjvoB6Q2spGvKL9ztGS7DArQ5vmppu/cW6KLyKxvlex0l2eqSLc6ykbmmsZfS
+C3tP4wi5CZgqM/Ak34O9PntDHTUgXUUmK0TAXJqXwsRffYByDJFXlNgTQWLiYf5e
+pnBcdqtVQcuIV+E+RUNLcxS0b5w=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://webauth.umaryland.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://webauth.umaryland.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Maryland Baltimore</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Maryland Baltimore</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.umaryland.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Brian Coats</md:GivenName>
+	<md:EmailAddress>bscoats@umaryland.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Brent Nickles</md:GivenName>
+	<md:EmailAddress>brent@umaryland.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Brian Coats</md:GivenName>
+	<md:EmailAddress>bscoats@umaryland.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Help Desk</md:GivenName>
+	<md:EmailAddress>help@umaryland.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Fred Smith</md:GivenName>
+	<md:EmailAddress>security-compliance@umaryland.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

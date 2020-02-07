@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.bath.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2007-09-21T13:17:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bath.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Bath</mdui:DisplayName>
+		<mdui:Logo height="64" width="159">https://auth.bath.ac.uk/images/mdui-logo-trans.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAOqBrGCnJlQiSzyI6NPPnvws1tCfMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD2F1dGguYmF0aC5hYy51azAeFw0xMTA4MTYwNjM1MjVa
+Fw0zMTA4MTYwNjM1MjVaMBoxGDAWBgNVBAMTD2F1dGguYmF0aC5hYy51azCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL95cyOywpJXBzn8efSdlNIJQiZi
+dNagu7t8YjInzqARwzB/7Ii2QHNkYVbOHeYuRdlQGeSS350NdHV7Cyn4IhurrEUW
+NG9JFQ1knyw2O6A8ZkoT6QE5XBt1j/aQi9emY8id3vcIdZCWFVRBVjEZ6BR58ne9
+5FGMVVusGfHgtayt3MoJvQUcl7m7bP+mvNwPL/wXBWmvg83g3Ngi6B4R3uHY0kkL
+hSsYJEkoX91cv7RAspKYDjtuhdrvoywcwltwD7GDs+e6wXAdMyVgMRNq2ACK+age
+IQCWZ3o/1cd0RFAVCwmUOzGd4jFmqaWneQFK+DqFyOxTW3LO3zLZ3xq22RsCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPYXV0aC5iYXRoLmFjLnVrhiZodHRwczovL2F1dGgu
+YmF0aC5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUMBAXgoXqNZufAstd
+XJjQBDQka9wwDQYJKoZIhvcNAQEFBQADggEBAJlY93MwsogYvqEA32y+uhe516tb
+VpnagIQ6EdPfZlibvHM5RQy1sYdSXkg5aab1aBP05yaA/S23DARAQocbBUGvmM3q
+2Kv/r6XoGZxWZp1d0iIRnDnRBcY/KlGqzoHGOpEp06wgbUSSrYQAgLMcZat7lER7
+TRrqZ6mwhHVpiJkRsZWTshVZEw0Mz44NoeADcM2Ao6U+h6oc9CCJmBguXdPFH+ti
+gc9lPrivWMfMU64EedcDvakTkW8wPne4BklOmYPecOG6k/CW8F27k0T7nuJKKa41
+wVJCyjIVKbGuDsEITTV/TE4sTDQCvRXjKF3enji4c0Ap3MBGaCBo/FDYXAI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://auth.bath.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://auth.bath.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://auth.bath.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.bath.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://auth.bath.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.bath.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bath.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAOqBrGCnJlQiSzyI6NPPnvws1tCfMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD2F1dGguYmF0aC5hYy51azAeFw0xMTA4MTYwNjM1MjVa
+Fw0zMTA4MTYwNjM1MjVaMBoxGDAWBgNVBAMTD2F1dGguYmF0aC5hYy51azCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL95cyOywpJXBzn8efSdlNIJQiZi
+dNagu7t8YjInzqARwzB/7Ii2QHNkYVbOHeYuRdlQGeSS350NdHV7Cyn4IhurrEUW
+NG9JFQ1knyw2O6A8ZkoT6QE5XBt1j/aQi9emY8id3vcIdZCWFVRBVjEZ6BR58ne9
+5FGMVVusGfHgtayt3MoJvQUcl7m7bP+mvNwPL/wXBWmvg83g3Ngi6B4R3uHY0kkL
+hSsYJEkoX91cv7RAspKYDjtuhdrvoywcwltwD7GDs+e6wXAdMyVgMRNq2ACK+age
+IQCWZ3o/1cd0RFAVCwmUOzGd4jFmqaWneQFK+DqFyOxTW3LO3zLZ3xq22RsCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPYXV0aC5iYXRoLmFjLnVrhiZodHRwczovL2F1dGgu
+YmF0aC5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUMBAXgoXqNZufAstd
+XJjQBDQka9wwDQYJKoZIhvcNAQEFBQADggEBAJlY93MwsogYvqEA32y+uhe516tb
+VpnagIQ6EdPfZlibvHM5RQy1sYdSXkg5aab1aBP05yaA/S23DARAQocbBUGvmM3q
+2Kv/r6XoGZxWZp1d0iIRnDnRBcY/KlGqzoHGOpEp06wgbUSSrYQAgLMcZat7lER7
+TRrqZ6mwhHVpiJkRsZWTshVZEw0Mz44NoeADcM2Ao6U+h6oc9CCJmBguXdPFH+ti
+gc9lPrivWMfMU64EedcDvakTkW8wPne4BklOmYPecOG6k/CW8F27k0T7nuJKKa41
+wVJCyjIVKbGuDsEITTV/TE4sTDQCvRXjKF3enji4c0Ap3MBGaCBo/FDYXAI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://auth.bath.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://auth.bath.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Bath</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Bath</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bath.ac.uk/bucs/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Webmaster</md:GivenName>
+	<md:EmailAddress>mailto:webmaster@bath.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tim</md:GivenName>
+	<md:SurName>Barrett</md:SurName>
+	<md:EmailAddress>mailto:T.R.Barrett@bath.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

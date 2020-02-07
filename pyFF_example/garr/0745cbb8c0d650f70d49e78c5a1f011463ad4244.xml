@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://krad.cityplym.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">City College Plymouth</mdui:DisplayName>
+		<mdui:Description xml:lang="en">City College Plymouth</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">cityplym.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVAMOc1kqMl4mYFgYDAXyXKjoH9obQMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXNoaWJib2xldGguY2l0eXBseW0uYWMudWswHhcNMTEw
+NjE3MTEzNjUwWhcNMzEwNjE3MTEzNjUwWjAkMSIwIAYDVQQDExlzaGliYm9sZXRo
+LmNpdHlwbHltLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+nET5Mc3Z+5IC8b2KhU2EyWVau8c/sMwNos2wAWwQGJWVq70ZFnPAKWMjmVYx37TC
+DJk0uMtZHBWqNcHRooNqHXy3yVVhve+Sc03YCQ6VwAfJJXFkjgCaL274mLLADIhF
+/UV86AJ48yq7x/4LNtKZA1U86uJvTOT41TkJkPNix1H7IT0ssevZHOgV/jdKJw+T
+FixUsccDdv5+RxRfM24gx7vQ2IGIpYRsISgAtejbtpO/PKNSunqgjjbWE8QB0+UE
+AyGjAEXq1t6HJ6yjLrRR6YAMkfHHpjU1sNBICv5ambVVXX8iS9EzTat9O4cSCU6B
+lklM7JQ0schSt+CQZd9iHwIDAQABo3kwdzBWBgNVHREETzBNghlzaGliYm9sZXRo
+LmNpdHlwbHltLmFjLnVrhjBodHRwczovL3NoaWJib2xldGguY2l0eXBseW0uYWMu
+dWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFLwDRVMVjMMG9ZF7cH13znMifPUP
+MA0GCSqGSIb3DQEBBQUAA4IBAQCXpJ+3D+ONPxEb/+WhbIHTFFZNYyWK01l4q4Jq
+X3tDpd6vAFvcKr/wqj1UZ6YeXi1MvQpStlNrOnF7ASsQlKIQ167PrcZu6W3mlkiZ
+8WZQ4AGsRuoCxywamNK0tXkdd9Dz1lDwzrkwE/g1GGHg6c/9YFQb2MUjm+6kqvQ8
+iqFQFpdPj9VNUgXt5+3bPeaOluJnAOE9T3IQv8+0MQp+mJ9M+3dChHotIgiXqCuh
+KZ8R8jX4oT44/g+blazA+IP5Jz7/i28JHHdwdq7YXZ13eLezyVV3UI+ldTRvPx8k
+6kGOv0JdsjheocsdY7/KuT0E+oqGEMvnZbXRlF8UKvgxgUgE
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.cityplym.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.cityplym.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.cityplym.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.cityplym.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.cityplym.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.cityplym.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cityplym.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVAMOc1kqMl4mYFgYDAXyXKjoH9obQMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXNoaWJib2xldGguY2l0eXBseW0uYWMudWswHhcNMTEw
+NjE3MTEzNjUwWhcNMzEwNjE3MTEzNjUwWjAkMSIwIAYDVQQDExlzaGliYm9sZXRo
+LmNpdHlwbHltLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+nET5Mc3Z+5IC8b2KhU2EyWVau8c/sMwNos2wAWwQGJWVq70ZFnPAKWMjmVYx37TC
+DJk0uMtZHBWqNcHRooNqHXy3yVVhve+Sc03YCQ6VwAfJJXFkjgCaL274mLLADIhF
+/UV86AJ48yq7x/4LNtKZA1U86uJvTOT41TkJkPNix1H7IT0ssevZHOgV/jdKJw+T
+FixUsccDdv5+RxRfM24gx7vQ2IGIpYRsISgAtejbtpO/PKNSunqgjjbWE8QB0+UE
+AyGjAEXq1t6HJ6yjLrRR6YAMkfHHpjU1sNBICv5ambVVXX8iS9EzTat9O4cSCU6B
+lklM7JQ0schSt+CQZd9iHwIDAQABo3kwdzBWBgNVHREETzBNghlzaGliYm9sZXRo
+LmNpdHlwbHltLmFjLnVrhjBodHRwczovL3NoaWJib2xldGguY2l0eXBseW0uYWMu
+dWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFLwDRVMVjMMG9ZF7cH13znMifPUP
+MA0GCSqGSIb3DQEBBQUAA4IBAQCXpJ+3D+ONPxEb/+WhbIHTFFZNYyWK01l4q4Jq
+X3tDpd6vAFvcKr/wqj1UZ6YeXi1MvQpStlNrOnF7ASsQlKIQ167PrcZu6W3mlkiZ
+8WZQ4AGsRuoCxywamNK0tXkdd9Dz1lDwzrkwE/g1GGHg6c/9YFQb2MUjm+6kqvQ8
+iqFQFpdPj9VNUgXt5+3bPeaOluJnAOE9T3IQv8+0MQp+mJ9M+3dChHotIgiXqCuh
+KZ8R8jX4oT44/g+blazA+IP5Jz7/i28JHHdwdq7YXZ13eLezyVV3UI+ldTRvPx8k
+6kGOv0JdsjheocsdY7/KuT0E+oqGEMvnZbXRlF8UKvgxgUgE
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.cityplym.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.cityplym.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">City College Plymouth</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">City College Plymouth</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cityplym.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@cityplym.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Services</md:GivenName>
+	<md:EmailAddress>mailto:itservices@cityplym.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

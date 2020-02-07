@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibb-idp.hs-weingarten.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-08-13T09:54:28Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-weingarten.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Ravensburg-Weingarten</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Sciences Ravensburg Weingarten</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider für Angehörige der Hochschule Ravensburg-Weingarten</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for Members of the University of Applied Sciences Ravensburg Weingarten</mdui:Description>
+		<mdui:Logo height="16" width="16">https://shibb-idp.hs-weingarten.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://shibb-idp.hs-weingarten.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hs-weingarten.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hs-weingarten.de</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKBTCCCO2gAwIBAgIMH5HxjwlnnJFTwjqSMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgxNDA2MTc0MFoXDTIwMTExNTA2MTc0MFowgacxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEzARBgNVBAcMClJhdmVuc2J1cmcxKTAn
+BgNVBAoMIEhvY2hzY2h1bGUgUmF2ZW5zYnVyZy1XZWluZ2FydGVuMRYwFAYDVQQL
+DA1SZWNoZW56ZW50cnVtMSMwIQYDVQQDDBpzaGliYi1pZHAuaHMtd2VpbmdhcnRl
+bi5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKMc0LC9UK0NlW1i
+tnnZlkUYK86AWgdN2PGu64MACtA10YSVcMBoIk/Avice0ssYSTuppqFKMBbAMXt7
+WZGql9x0qwqCDDkqdurpuBUrCK9b94+G0G5EYC787gifLMSm0Zxd1T5io/PlW4xQ
+1Fq7OxxnsA0tZCEhafv5ZWIGQ/KZLMFi6VsXRseM0fCWO7bU7LxxPe9fWtRqP8Ko
+f/yxeaqEH0h7NKO0nAjuUBVXN844QgoSjK7HnhLrsdivBFe54YzIAdEhINEtct91
+idrnjxzw809JmTMQhEMOkVHssT2pCQfb1CwT3eqPaAzkM2Lbujyb+6APWvoHYVWb
+BowDKBkCAwEAAaOCBkcwggZDMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQB
+ga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysG
+AQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUE
+FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFAPuRNOQ2f+4uM49BZJN
+ST6SsKY4MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MCUGA1UdEQQe
+MByCGnNoaWJiLWlkcC5ocy13ZWluZ2FydGVuLmRlMIGNBgNVHR8EgYUwgYIwP6A9
+oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCB
+yzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZl
+ci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MIID1QYKKwYBBAHWeQIEAgSCA8UEggPBA78AdQBvU3asMfAx
+GdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWU3FUF8AAAEAwBGMEQCIFQGLQxI
+8Wt3iKpIN7nme/laLkEVMfI24LliaV9FGcmOAiAgO5r4YezdYBRDIgRGzNjlRLFA
+1umZk5fBCbh0Zs0kRAB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3L
+AAABZTcVQW8AAAQDAEcwRQIhAIsQEOF7IJowue0H7rqRrs+81cQwczmXBgNv+BzJ
+9DXcAiBiH20v9c3eILtDVcZanXKtum1yuqsE17LcDVtRK00WWwB2AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZTcVQnEAAAQDAEcwRQIhAJt5WWbL
+yId3ecPsHXJNeAEsP+Kn7hRkO9Qzto814CLDAiAhog5dlEEnZWoA+l80RDMNkxE8
+qKc4dB7DFyNpuahkawB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABZTcVQWAAAAQDAEcwRQIhAJpLbjHyq2/7dg4aCUDLj/wOqjUM4f5r+yHLoZ2P
+zsjeAiAVMRIKiJVPBtKSYF1mmk2p6Ps23fBHDcLYQZkX8zt2ZgB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZTcVQ7YAAAQDAEcwRQIgfYB6tLPm
+1V9+y4jogAI/pmZcGqUpZL0yb4L3y/hDCtICIQD8wxYp7MVqt4hoxcNHfLGJUFRA
+LpzxAvdcCVi6j2SftgB2AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVY
+AAABZTcVRL0AAAQDAEcwRQIhALEAhajKmJ01NOEXFbaYQh2tcMn367rnnq6zVRAN
+VoxzAiBCT/5fCo/2K+ayJVMk0inoKVrcLWsyGKN8+76k3AEbEgB2AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZTcVQ84AAAQDAEcwRQIhAKHozkeq
+McAnzlmZe7giDM0KCm2lUxlDzClptHsOejMwAiAUECqqRj7blfYOMCD0IPyLTk+M
+v+x3/k24MQX9evkKygB2ALIeBcyLos2KIE6HZvkruYolIGdr2vpw57JJUy3vi5Be
+AAABZTcVQuUAAAQDAEcwRQIgfis/Knz1f8UmGq2eDXXSjLs9HONKjxRcwwVYhNo4
+vDoCIQC1eBwlHGgYRQ51F4r7naMWaLbPxsDodbAUNbANjfya7TANBgkqhkiG9w0B
+AQsFAAOCAQEANCOiSrMG94jXi9fL40fUvTONTbHRJG/V/SBsGX7abGTXMWBdC0Zd
+bCDQevOApkXV3ETsA4KiJhIf+enBqOe2kLIeeaSW6V+skGF3YDQdCxeh5eiIKQ/N
+CF3ZkvHh1avHoV8M3ig5plIJu46vBQ1ui+S/7wymkW+FxD455OK2JPhV6zOaclMD
+4EIEOBrGiq+qGeUW+wzx9J4lDlk19By+q7XOjfbuKtb7yW5y6G4YfjVczd93XLye
+oXgtcGYh2eavaEdKHgnxcZKyMZBgk05sKTF7FXre/+eMc9ClFtXqpp1BRQT2y8Lf
+Bn6AgVYxRDnNtDa6330Ry9Kfzo5P3skmmw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibb-idp.hs-weingarten.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb-idp.hs-weingarten.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb-idp.hs-weingarten.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibb-idp.hs-weingarten.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb-idp.hs-weingarten.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-weingarten.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKBTCCCO2gAwIBAgIMH5HxjwlnnJFTwjqSMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgxNDA2MTc0MFoXDTIwMTExNTA2MTc0MFowgacxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEzARBgNVBAcMClJhdmVuc2J1cmcxKTAn
+BgNVBAoMIEhvY2hzY2h1bGUgUmF2ZW5zYnVyZy1XZWluZ2FydGVuMRYwFAYDVQQL
+DA1SZWNoZW56ZW50cnVtMSMwIQYDVQQDDBpzaGliYi1pZHAuaHMtd2VpbmdhcnRl
+bi5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKMc0LC9UK0NlW1i
+tnnZlkUYK86AWgdN2PGu64MACtA10YSVcMBoIk/Avice0ssYSTuppqFKMBbAMXt7
+WZGql9x0qwqCDDkqdurpuBUrCK9b94+G0G5EYC787gifLMSm0Zxd1T5io/PlW4xQ
+1Fq7OxxnsA0tZCEhafv5ZWIGQ/KZLMFi6VsXRseM0fCWO7bU7LxxPe9fWtRqP8Ko
+f/yxeaqEH0h7NKO0nAjuUBVXN844QgoSjK7HnhLrsdivBFe54YzIAdEhINEtct91
+idrnjxzw809JmTMQhEMOkVHssT2pCQfb1CwT3eqPaAzkM2Lbujyb+6APWvoHYVWb
+BowDKBkCAwEAAaOCBkcwggZDMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQB
+ga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysG
+AQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUE
+FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFAPuRNOQ2f+4uM49BZJN
+ST6SsKY4MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MCUGA1UdEQQe
+MByCGnNoaWJiLWlkcC5ocy13ZWluZ2FydGVuLmRlMIGNBgNVHR8EgYUwgYIwP6A9
+oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCB
+yzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZl
+ci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MIID1QYKKwYBBAHWeQIEAgSCA8UEggPBA78AdQBvU3asMfAx
+GdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWU3FUF8AAAEAwBGMEQCIFQGLQxI
+8Wt3iKpIN7nme/laLkEVMfI24LliaV9FGcmOAiAgO5r4YezdYBRDIgRGzNjlRLFA
+1umZk5fBCbh0Zs0kRAB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3L
+AAABZTcVQW8AAAQDAEcwRQIhAIsQEOF7IJowue0H7rqRrs+81cQwczmXBgNv+BzJ
+9DXcAiBiH20v9c3eILtDVcZanXKtum1yuqsE17LcDVtRK00WWwB2AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZTcVQnEAAAQDAEcwRQIhAJt5WWbL
+yId3ecPsHXJNeAEsP+Kn7hRkO9Qzto814CLDAiAhog5dlEEnZWoA+l80RDMNkxE8
+qKc4dB7DFyNpuahkawB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABZTcVQWAAAAQDAEcwRQIhAJpLbjHyq2/7dg4aCUDLj/wOqjUM4f5r+yHLoZ2P
+zsjeAiAVMRIKiJVPBtKSYF1mmk2p6Ps23fBHDcLYQZkX8zt2ZgB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZTcVQ7YAAAQDAEcwRQIgfYB6tLPm
+1V9+y4jogAI/pmZcGqUpZL0yb4L3y/hDCtICIQD8wxYp7MVqt4hoxcNHfLGJUFRA
+LpzxAvdcCVi6j2SftgB2AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVY
+AAABZTcVRL0AAAQDAEcwRQIhALEAhajKmJ01NOEXFbaYQh2tcMn367rnnq6zVRAN
+VoxzAiBCT/5fCo/2K+ayJVMk0inoKVrcLWsyGKN8+76k3AEbEgB2AKS5CZC0GFgU
+h7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZTcVQ84AAAQDAEcwRQIhAKHozkeq
+McAnzlmZe7giDM0KCm2lUxlDzClptHsOejMwAiAUECqqRj7blfYOMCD0IPyLTk+M
+v+x3/k24MQX9evkKygB2ALIeBcyLos2KIE6HZvkruYolIGdr2vpw57JJUy3vi5Be
+AAABZTcVQuUAAAQDAEcwRQIgfis/Knz1f8UmGq2eDXXSjLs9HONKjxRcwwVYhNo4
+vDoCIQC1eBwlHGgYRQ51F4r7naMWaLbPxsDodbAUNbANjfya7TANBgkqhkiG9w0B
+AQsFAAOCAQEANCOiSrMG94jXi9fL40fUvTONTbHRJG/V/SBsGX7abGTXMWBdC0Zd
+bCDQevOApkXV3ETsA4KiJhIf+enBqOe2kLIeeaSW6V+skGF3YDQdCxeh5eiIKQ/N
+CF3ZkvHh1avHoV8M3ig5plIJu46vBQ1ui+S/7wymkW+FxD455OK2JPhV6zOaclMD
+4EIEOBrGiq+qGeUW+wzx9J4lDlk19By+q7XOjfbuKtb7yW5y6G4YfjVczd93XLye
+oXgtcGYh2eavaEdKHgnxcZKyMZBgk05sKTF7FXre/+eMc9ClFtXqpp1BRQT2y8Lf
+Bn6AgVYxRDnNtDa6330Ry9Kfzo5P3skmmw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibb-idp.hs-weingarten.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb-idp.hs-weingarten.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e178</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e178</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Ravensburg-Weingarten</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Hochschule Ravensburg-Weingarten</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hs-weingarten.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hs-weingarten.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Rechenzentrum-Service</md:GivenName>
+	<md:SurName>Hochschule Ravensburg-Weingarten</md:SurName>
+	<md:EmailAddress>mailto:rz-service@rwu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michaiela</md:GivenName>
+	<md:SurName>Erdoes</md:SurName>
+	<md:EmailAddress>mailto:erdoes@rwu.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

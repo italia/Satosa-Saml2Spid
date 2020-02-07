@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://2012.qmplus.qmul.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-06-30T09:22:05Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAKfCPp1ZOBsNMA0GCSqGSIb3DQEBBQUAMCExHzAdBgNV
+BAMTFjIwMTIucW1wbHVzLnFtdWwuYWMudWswHhcNMTQwNjI1MDk1ODE3WhcNMjQw
+NjIyMDk1ODE3WjAhMR8wHQYDVQQDExYyMDEyLnFtcGx1cy5xbXVsLmFjLnVrMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtKJY1LEzeMszLBA7vIwDWTvd
+a07jaXtUFBdFyEqnwBIr91EJxyCdkHd4qGhw3riCUE5XEEaHq7YkIA1sHjzAxkv3
+bpjnI1iaP4gU4+Dwec0kJ4VkPFt4vE6TSICeA//DBrL+ZMcD8hjZDRhTxAHv9t96
+bIfsmxrlBizuS6GAAAHm3eWbzYJ6V5tf79Z9GZjMTjZtrloem4B1+UsS0Ze17CU9
+liUSJUZKT39gQN7JywnQ+DAkGe1rfQmQHdwdt1ekPnPomOBy9h6aymxgOqGHxmIK
+l2tixtmYVZYoAPlrDEZEtdU6BRUMPiJCYlz/wG+QRN75PvMjbmpNIKAyJUwAZwID
+AQABo0QwQjAhBgNVHREEGjAYghYyMDEyLnFtcGx1cy5xbXVsLmFjLnVrMB0GA1Ud
+DgQWBBS9sdhTGd7ns9eUGONqUjAaTo1ADjANBgkqhkiG9w0BAQUFAAOCAQEAKtjj
+o3HiYvqfjOcaUNv0yq3i3LCTf+PobbmX5YBXDBQhYrvkuaUcfTRr6hIE86RZwMC7
+9rGV63IqTKQtpjF3odt/rSTNgRz0iEc2p+HtCdN4cBR6aSEwOyHfj8MotC8L5JO9
+3GTfasl+ZuRDEtsgZeIZv+zIjO1CDL6eE/OyyMo9bFmvOrrvGKXp01LR2VuqEy+M
+s9GzHa6yGaWQBoQaLVXMhRT3AM3y9hRh1P4GgsIS+Z0oOeW1VGEg6nDC29fXLfrN
+YWbnO44vlTi3MGoezwxe/U2v+4+rXPEJ28rVZp74FaLYsR+5OpsC5VR7moj78OWF
+uifWa1iscTfgACwOQg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://2012.qmplus.qmul.ac.uk/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Queen Mary and Westfield College, University of London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Queen Mary and Westfield College :2012 Archive service QMPlus</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.qmul.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Academic Applications</md:GivenName>
+	<md:EmailAddress>mailto:its-aa@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Moodle Support</md:GivenName>
+	<md:EmailAddress>mailto:moodle-support@ulcc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Academic Applications</md:GivenName>
+	<md:EmailAddress>mailto:its-aa@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

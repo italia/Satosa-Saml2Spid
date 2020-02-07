@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.k-int.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-12-16T12:25:37Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">KI Generic Shib Endpoint</mdui:DisplayName>
+		</mdui:UIInfo>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.k-int.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.k-int.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDADCCAeigAwIBAgIJAPE1DaMBDG/KMA0GCSqGSIb3DQEBBQUAMB4xHDAaBgNV
+BAMTE2RldmVsb3Blci5rLWludC5jb20wHhcNMTMxMjE1MTI1OTM3WhcNMjMxMjEz
+MTI1OTM3WjAeMRwwGgYDVQQDExNkZXZlbG9wZXIuay1pbnQuY29tMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1X9UPpMcPP6583r9Apa8PNw0btsNcU83
+Jfi/fPAGhXBTEKW0g83Heurx/VSpdWNuZzqvgV84qZDdOsk6VKKbaYDJ4Z59cqX6
+kbc8DECOf16fyjjfqZmVRfVmk+gXOVjsWCReF4ju4Il74xDPaHu8gXiZFRzYJJtL
+ZlFxn6rRleDFBJ/OEgrkN2XFupmhYWtUjxd24tbudVBvoKq00ry8wWHSMxJrJzAO
+ai2wd+Kvf7OzBRS2oNcp6c/ZJzKcD8G/LSZ61tG/33ch0/zvdHd+70DfNE5eNGA4
+vQqykydToBDL/2SVJJQ0RmeU6IXnaPv0RgEtvzUWHf5s6HZvxwFI+QIDAQABo0Ew
+PzAeBgNVHREEFzAVghNkZXZlbG9wZXIuay1pbnQuY29tMB0GA1UdDgQWBBQc7dBS
+20D1r2+c/kRdq5LNfXNk5TANBgkqhkiG9w0BAQUFAAOCAQEAhz6Cg8zQPe37crrd
+4saHx5e5PhFjEMWumgwgUNX7Nt7J1OSYrisRZ3CPfg+8CbUXMQw9SS5lIsuI1amg
+GUAR/+9dQFyfT+E1efV0JHV8KZs80YllXIlYoWgIvlBq4NCVOiuIzkkv3kHXbOA5
+18OJNC3fqXAzYZbuCtMf7OWhelbxlAXB4a9HEB1MqpHgk68SeQWeTkvICbRREPQJ
+0szpJq5d2J84k8pwsb6wWoL4+nd4A4hM85v61Lz2pP6w2HDqkBdrPjo3IZ2/g7nu
+rvWQYSEnAU6ssX0Fhc+VOJsPwKqjApeIYHoM4CQ6etT4OC891iikBrMTOTmsLFNt
+ASZsqA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.k-int.com/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.k-int.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.k-int.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.k-int.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.k-int.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.k-int.com/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.k-int.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.k-int.com/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.k-int.com/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.k-int.com/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.k-int.com/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Knowledge Integration Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">KI Generic Shib Endpoint</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.k-int.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@k-int.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ian</md:GivenName>
+	<md:SurName>Ibbotson</md:SurName>
+	<md:EmailAddress>mailto:ian.ibbotson@k-int.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

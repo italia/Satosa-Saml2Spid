@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.esh.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">esh.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Ersta Sköndal Högskola</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Ersta Sköndal University College</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för Ersta Sköndal Högskola</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for Ersta Sköndal University College</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVALaN98IcoLX3UQ+fKlQVmqP23WvBMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5lc2guc2UwHhcNMTMwODA3MDkwOTU4WhcNMzMw
+ODA3MDkwOTU4WjAVMRMwEQYDVQQDEwppZHAuZXNoLnNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAn2ZQb1kuPTXtueUtR79lZa5hCV2fMlOlfFJFMyC3
++6qQR6CGGZ7GvntHtIKpbfFqIeCsWNGXLttNDmGroG6koge0CEKv6z6JVD5tHert
+UVRA7GpDZpZLR7qRYcrbZp1tLrk9gKL3/PaudZhwAKuWiMz5HNyqk9Ojh3YRWJUD
+1O3RX6l2tvc8MjT8JYE2D+TpqqiT5k1WgV7zgCv3QVnazfuANKZ2qjxiKVi3bh1w
+V/3VDJiN9DYhN1NvU412QBZR1AU1XJL36qkKmeTOi8qhhlxh6abl2oEpgyjR0lxn
+o1HwkDipkIJJiN/h7CKlUnEHpPidI5tMy/PezW78h2znfwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuZXNoLnNlhiFodHRwczovL2lkcC5lc2guc2UvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFDGWVB2qNc/D6uRZt2wqI4/SM3Y6MA0GCSqGSIb3DQEB
+BQUAA4IBAQCMaKhHwEwcXTM7/HO6RbavAsisMab0TsCmuYsrCtYFccdrFNEUs+R5
+qGwHre8J+0cMi0WgSIHXLnbhvjG3JPmBeLkZdSw/rOGtF6w6VSVpT2iGvfjNbsBq
+wFGkaEnsDKzhiBaIOcJyAJoh97PJygz7yriziwxDZrB7b0xnBHVs6u4HNuQjd/NA
+geGI3bNTbXj3Fgu9lanUQE7DbWETQEnrqI2QH+8tr4vVnhG7jaET+qP/ya+XXPJ1
++PUaqX2b8yCDIeHr7NkqtYf1nqphQ71OvdKe1R6Pzw9N19ny10FJcZypisRt/ghv
+9SqhISRU1eEjg6GtcLZCkvdVGag/E4qO
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.esh.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.esh.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.esh.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.esh.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.esh.se/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.esh.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">esh.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVALaN98IcoLX3UQ+fKlQVmqP23WvBMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5lc2guc2UwHhcNMTMwODA3MDkwOTU4WhcNMzMw
+ODA3MDkwOTU4WjAVMRMwEQYDVQQDEwppZHAuZXNoLnNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAn2ZQb1kuPTXtueUtR79lZa5hCV2fMlOlfFJFMyC3
++6qQR6CGGZ7GvntHtIKpbfFqIeCsWNGXLttNDmGroG6koge0CEKv6z6JVD5tHert
+UVRA7GpDZpZLR7qRYcrbZp1tLrk9gKL3/PaudZhwAKuWiMz5HNyqk9Ojh3YRWJUD
+1O3RX6l2tvc8MjT8JYE2D+TpqqiT5k1WgV7zgCv3QVnazfuANKZ2qjxiKVi3bh1w
+V/3VDJiN9DYhN1NvU412QBZR1AU1XJL36qkKmeTOi8qhhlxh6abl2oEpgyjR0lxn
+o1HwkDipkIJJiN/h7CKlUnEHpPidI5tMy/PezW78h2znfwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuZXNoLnNlhiFodHRwczovL2lkcC5lc2guc2UvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFDGWVB2qNc/D6uRZt2wqI4/SM3Y6MA0GCSqGSIb3DQEB
+BQUAA4IBAQCMaKhHwEwcXTM7/HO6RbavAsisMab0TsCmuYsrCtYFccdrFNEUs+R5
+qGwHre8J+0cMi0WgSIHXLnbhvjG3JPmBeLkZdSw/rOGtF6w6VSVpT2iGvfjNbsBq
+wFGkaEnsDKzhiBaIOcJyAJoh97PJygz7yriziwxDZrB7b0xnBHVs6u4HNuQjd/NA
+geGI3bNTbXj3Fgu9lanUQE7DbWETQEnrqI2QH+8tr4vVnhG7jaET+qP/ya+XXPJ1
++PUaqX2b8yCDIeHr7NkqtYf1nqphQ71OvdKe1R6Pzw9N19ny10FJcZypisRt/ghv
+9SqhISRU1eEjg6GtcLZCkvdVGag/E4qO
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.esh.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.esh.se:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="sv">Ersta Sköndal Högskola</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Ersta Sköndal University College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Ersta Sköndal Högskola</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Ersta Sköndal University College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="sv">http://www.esh.se/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.esh.se/in-english/ersta-skondal-hogskola---english.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:klas.eriksson@esh.se</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

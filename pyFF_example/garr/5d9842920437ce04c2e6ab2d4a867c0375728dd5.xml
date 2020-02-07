@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://brown.events.alumniq.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://brown.events.alumniq.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brown University Reunion</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Reunion registration and management</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.alumniq.com/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="200" width="200" xml:lang="en">https://www.alumniq.com/assets/img/alumniq-twitter-profile.png?</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9DCCAdygAwIBAgIJAPLtlKfEWfR0MA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNV
+BAMTD3dpbi1lMTdvYzFhdnFubTAeFw0xNjAxMTMxNjQzMDFaFw0yNjAxMTAxNjQz
+MDFaMBoxGDAWBgNVBAMTD3dpbi1lMTdvYzFhdnFubTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBANWeBii/qszmnDidXBxm9bm9BLlsQj7bjbZLnHw/Rb89
+2Ajp33f/7RGXu/Eq7f2wF2/icUTNuRKGISEYHrrFGX2r0HXVoAbkEywLqxmb4eXm
+RG31dDERVc4j7nRBsSwbKU4cuBswIvNoi93GP3oHqMupq5aamlPzpNq2PXxvzPLA
+nAmKMQdBefkLqnTliaqPTMCZJ91Hd4mmH0X7JOlKkoU6QFEO1s+uU+T7nCukSLc3
+Vqcvb3/PQifUasso3qORSBdAZ7VnZvBCnlbtOQtM5jqZ0z+3gyjAKgFjNss9u3LU
+NlyvRhBr1j7AB9c6Nv/wWuwLhFFXVEr9IofP5/p0fcMCAwEAAaM9MDswGgYDVR0R
+BBMwEYIPd2luLWUxN29jMWF2cW5tMB0GA1UdDgQWBBSzO4jP841/iGVlxcJMPB4w
+varGdTANBgkqhkiG9w0BAQUFAAOCAQEAo9XrFRtHzyF4m9/Vf1zuvD2VazzGCKSH
+zurS1sjDFqjg8wVTK5PAiETcbpcyVcRWx//IY8hF0Mldn/irYY5UgJgrvFp3hhcF
+Xr+WA+dfKdaEZNd0R0AsNr6WABCwANcxpXrvSt9sfrKP5p1xjG7t8f1FgwEct/Ln
+Xa5m2/TFzWjD+HVTuqJbxH1ONmHmoWJkVoGulELWgBv0aVzSkrLvBkcKCBaF7Bby
+6LW8vvibrZwAZL4yu0nup9HiixUAZZaVBJqo8Fr9D7dCZqxM93odwnBEY2JHF9UA
+g8KmjaXQ2TRLCoPo/3hcuXnM2kz3gVXfEU0Zh+s6VLUbo/puIcsdvA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://brown.events.alumniq.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://brown.events.alumniq.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://brown.events.alumniq.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://brown.events.alumniq.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Brown University Reunion</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Reunion registration and management</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CounterMarch Systems LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CounterMarch Systems LLC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.countermarch.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>AlumnIQ Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@alumniq.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>AlumnIQ Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@alumniq.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>AlumnIQ Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@alumniq.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

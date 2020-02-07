@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ssoportal.stsci.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://ssoportal.stsci.edu/idpinfo/idp_error.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stsci.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Space Telescope Science Institute</mdui:DisplayName>
+		<mdui:Description xml:lang="en">We help humanity explore the universe with advanced space telescopes and ever-growing data archives.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://outerspace.stsci.edu/display/SSO</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.stsci.edu/institute/Privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="116" xml:lang="en">https://ssoportal.stsci.edu/idpinfo/stsci-logo-horiz-116x64.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDODCCAiCgAwIBAgIVAIHe+aq+yPbuC7zqxzFezWA1SbJAMA0GCSqGSIb3DQEB
+BQUAMB4xHDAaBgNVBAMTE3Nzb3BvcnRhbC5zdHNjaS5lZHUwHhcNMTQwMTE2MjA0
+MjQwWhcNMzQwMTE2MjA0MjQwWjAeMRwwGgYDVQQDExNzc29wb3J0YWwuc3RzY2ku
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgAi2Mu7fTfZCpDaN
+/scv0q7ad8f395bTq9UPccfgB9dXcQ4Kr1XoFmrck/jBwZHaiKq9MwMAXyy6yt/x
+wgFbi7iUDYDHlIWpp9jrzT6HrHuqPIfHKvKg18rg1N5+dt2Ga/7uLc/OrLSOoAkH
+iE/2GsrCsZuQqAR8w4k/j2dfU3RBR9eFkpGbCnmkFP+wTa0+mTaTpNikbt+0GGmz
+igu5jDTj3JY7Z9YNzOwRgbnv19KOCTBZEcEHkiEVa0EOlchHiAP2yXcw88tFy0m6
+qpCj1AHkSsGeKWwyuEJ1zN+CXND+m6GYqI2GMGQpo/L5IbLJXhYCshPQD36W2/VS
+EjwQXwIDAQABo20wazBKBgNVHREEQzBBghNzc29wb3J0YWwuc3RzY2kuZWR1hipo
+dHRwczovL3Nzb3BvcnRhbC5zdHNjaS5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0O
+BBYEFN9nQ+n8jKj2TvayPkBxzQZbJ23qMA0GCSqGSIb3DQEBBQUAA4IBAQBczp6M
+s5jEfzM+tVmmfKweBy2TbGR5+aIKn/MLCL7Ar1q5UiLfX3SHUs481zwSpkvZi8BH
+vWFQz0jPvQryjTb5uH2F9gm35WvCBmNnZ/bKERRx9jIyO8cwAJxkevEArCkkkvCt
+GrZvNAIJA5N5vgnd4beq3GSRY7eRBO5vNYwzDblKd64QiH9deqeLbGZerP1spFpu
+FVh0IydhHcvLq1d+qa6OzFiBdPycdhjxi0JAMqcgEOpxksA1NxAzxJwYESVlaP2x
+n+VdI4IByCiZ18vHB2h7QjgVn8yBhtRuQ6q/0HWcGn+INX/9MT8WHqQbe6IyakQ3
+8dkmbDDC2V60ECES
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ssoportal.stsci.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ssoportal.stsci.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Space Telescope Science Institute</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Space Telescope Science Institute</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.stsci.edu/portal/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>SSO administrative contact</md:GivenName>
+	<md:EmailAddress>sso_admin@stsci.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SSO technical contact</md:GivenName>
+	<md:EmailAddress>sso_tech@stsci.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security Office</md:GivenName>
+	<md:EmailAddress>security-staff@stsci.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Support</md:GivenName>
+	<md:EmailAddress>support@stsci.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

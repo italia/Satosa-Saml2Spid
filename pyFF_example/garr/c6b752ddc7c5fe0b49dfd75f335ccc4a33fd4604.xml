@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://adfs.asu.edu.om/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.omren.om" registrationInstant="2019-10-16T02:25:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.omren.om/wp-content/uploads/2019/10/OMREN_Federation_policies_1.3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		<saml:AttributeValue>https://noec.release-check.edugain.org/shibboleth</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">adfs.asu.edu.om</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">A’Sharqiyah University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">’Sharqiyah University (ASU) is a private institution of higher education located in the north of the A’Sharqiyah Governorate of the Sultanate of Oman. It is located in Ibra 150 km from Muscat, the capital. It was established in 2009 by Ministerial Decision (78/2009) issued by the Ministry of Higher Education.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://en.asu.edu.om/post?aid=14&amp;p=About%20A%E2%80%99Sharqiyah%20University</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.omren.om/wp-content/uploads/2019/10/OMREN_Federation_policies_1.3.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="200" width="200" xml:lang="en">https://media.licdn.com/dms/image/C4D0BAQH5zehRRFY7SQ/company-logo_200_200/0?e=2159024400&amp;v=beta&amp;t=nohar_KjVmVlc5M9boCcvWSnOByzWQPwGoAXql__tpo</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>adfs.asu.edu.om</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC4DCCAcigAwIBAgIQGV9dQIK96pxNvZpsw9V54zANBgkqhkiG9w0BAQsFADAs
+MSowKAYDVQQDEyFBREZTIEVuY3J5cHRpb24gLSBhZGZzLmFzdS5lZHUub20wHhcN
+MTkwNTE1MDg1MTU2WhcNMjAwNTE0MDg1MTU2WjAsMSowKAYDVQQDEyFBREZTIEVu
+Y3J5cHRpb24gLSBhZGZzLmFzdS5lZHUub20wggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDe4PvGO91Vfabm/lzipsjeAjaAItPM9XKmYRF21Issada4kJuS
+PritG6F43lu/n4wGUaiHCVUG0w6P1O62OuGLKZBrySDd9s3051PvQQUzzpJJCThc
+BOKkAIPXXYg6RX/P+hBJsQhe/r0uY3aqqfOl30bmvHRzJGaEwt5ravg2zDP1XK6q
+gmG09BHPRs9/nRee3x1jspUePamVjYc43Coj7rvZxDvHxndDL0ciF4svkQefRHL7
+eXZWjVnC2yvwvl2KEC5BghVLEBrsgTpx7cTESqwNCk4ToO+PyMwzeK2ISlmeyFdj
+c3y7u9bPfrAByHTB2MUDxFnMDudXBKzdzMA9AgMBAAEwDQYJKoZIhvcNAQELBQAD
+ggEBAJVvFKoO75f0IcLPkGCjcOU9hYIsFz9btzPqUE/+36cWIboYc9pTz58I99po
+QXeDp2FFTJomMUwd7KM2Fu4C36nGQWitYiG1GIwh0oUiL2XxZaEYjGoh7af2LRC+
+cZxP6GL6UWo9tX0gXOI6oS6oTLqv/zoF/fcFfjoz7Hjwo3d07RqzKS0vhLBLIVrc
+GgmJbOLKqoUtKmlwbFiWPvjx+KSiiyWiSexZioDHm7DCBkPPztfPaoIXv4pPOuoD
+f0wiFzM/YEZPL3JnrfiysQmDWqen+ugZsTZI6HKDkIK/Np6GbSC/krh/hKt+5ThV
+O4TSugtvj1X5lFeT83RhirdMN8k=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2jCCAcKgAwIBAgIQSTDsne9mioFD2STYlvJ+pDANBgkqhkiG9w0BAQsFADAp
+MScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBhZGZzLmFzdS5lZHUub20wHhcNMTkw
+NTE1MDg1MTU2WhcNMjAwNTE0MDg1MTU2WjApMScwJQYDVQQDEx5BREZTIFNpZ25p
+bmcgLSBhZGZzLmFzdS5lZHUub20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCpPnn4lOLMTXPUXCWbXyfxG7p1JRTw2BosvKnGet3bPXKtT8OVskXfdCIR
+JJc8nIjktblqV4wiH+p8892MzdZzd4oXoi5teC6R7M6Ba/8sZowLqEG5DjilE63c
+IxPGWZh85cpI9kf+DDijxsoL7D9jq/q5SE6WQLuPP3zeOCKEGxPu3ckKIci6bll/
+plZThDhlUQD5lt2bPSFX37O6F55Vj7VXpAaZRio/5pGKBru5ubmLe/s0T3EJHbBn
+B+GOxDLzo6xq5KOFVliCKqiBFGHLZk1vtJdVvXAkwx2jJafKjkxk4bcOLMHGpzbz
+BZoe1NfoVeFySNd0xxuE1eA6M8LfAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAC5M
+SwIMG8E3M/5nLwmyn6IGcrTjTX2hNtke7ryBUPPNrBpcTuHI3kq1pj+YJ3CsNxhU
+TNjAz0ts45UGA7HLO0GDBVgI1V2Ywvr4AH1KlFUkH/it/uT46ZA115eNVC9JO892
+BwdW5Gn11PDTHXyZni1BtPuEXOP0CQ6sdPqJXoGOE0pUADqUtJAktXitcAvKOXbV
+mttcSyPdrSxv0ZCl0/dJtJNWudK4M3ZhPbRi7xlevoyojk6Ptrc+nI3o5T4kPqqy
+rYZsBKMJrNMsSkP1jEjneybAlQUQYXUDuJuk1vhvItStQDDezCZ8LlzxmXAFXMjM
+WOK6MDDs7CNlkw/DShA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.asu.edu.om/adfs/ls/?wa=wsignout1.0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.asu.edu.om/adfs/ls/?wa=wsignout1.0"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.asu.edu.om/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.asu.edu.om/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">A’Sharqiyah University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">A’Sharqiyah University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://portal.asu.edu.om/ar/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dileep</md:GivenName>
+	<md:SurName>Akkil</md:SurName>
+	<md:EmailAddress>mailto:dileep.akkil@asu.edu.om</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dileep</md:GivenName>
+	<md:SurName>Akkil</md:SurName>
+	<md:EmailAddress>mailto:dileep.akkil@asu.edu.om</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dileep</md:GivenName>
+	<md:SurName>Akkil</md:SurName>
+	<md:EmailAddress>mailto:dileep.akkil@asu.edu.om</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

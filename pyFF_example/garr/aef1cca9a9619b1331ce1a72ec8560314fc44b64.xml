@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.hmc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.hmc.edu/idp/shibboleth/error.jsp" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hmc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Harvey Mudd College</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.hmc.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.hmc.edu/cis/about-cis/policies/claremont-appropriate-use-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://www.hmc.edu/communications/wp-content/uploads/sites/19/2013/11/HMC-BGW-RGB-150dpi-150x150.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgKgAwIBAgIUN47xMNeIGq+9fTb4aJR1KEWc7wswDQYJKoZIhvcNAQEF
+BQAwIzEhMB8GA1UEAxMYaWRwMi5maXNjaGVyaWRlbnRpdHkuY29tMB4XDTExMTIx
+MjE2NTc0NFoXDTMxMTIxMjE2NTc0NFowIzEhMB8GA1UEAxMYaWRwMi5maXNjaGVy
+aWRlbnRpdHkuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm/SU
+7QC7q5ijdiZ1aq7/wwOYGWUkI5TvIGAZgOtVwteHfiwNjsQL1YcVtmxPj37Gts1z
+/+DbRaPGWaXxvMj0SzwsYiJEw/P5EKOC3ujhc10cs6RutdpNLno3CjbQazZrpDqk
+OPwGsGtc0r6Jn9MRsZDpfzaVS8E1wbBUQ1uU5PfUUvW+Q1pxDqzOSv8ZtqIgFQgS
+k1JpjqL45h5t+C5WnxidLjkB1L0fgVLi+DDjYYK+6sTlCd600Ixufr1Vb9Qj+90v
+//U5XkUNYwCAVASuVlXpWXfdfKyCuUyVa+3VZIWRKxye8abN/jJoE1uHmgbnVWul
+aPzrvNjbzVLo7nBo2QIDAQABo0YwRDAjBgNVHREEHDAaghhpZHAyLmZpc2NoZXJp
+ZGVudGl0eS5jb20wHQYDVR0OBBYEFN3LsRRIf64KoZtwrtGt1bfwnSX6MA0GCSqG
+SIb3DQEBBQUAA4IBAQAVSzbN7EtwyvMka3hIX/5KGKbavF7FtIGN4p7jg2UMeH89
+pAzjxIGOnibFIr5QF9RV0qtG/3SaQMyH18OV73SkcLYOifjJKEnceGi44TdBkfIG
+/6LY3n5lMd3UvC0qbR59qZ0qIkd2kmfo/b9mfPjwy3+6ypN6J9DeSQFxffu+o7UI
+pi+52yms2KD8klrC+Ptq76kKetJifRalHNK0cEMzNae6s+sQYxGVhqOHijEgXvTB
+abocdzekYdo3N1BoA3TNcqWvBcVEt6m9iW/cDKMr8xlkpII8A8p9piPozcFmCDll
+ip/lOg2kOdU7AB80pFPqQLvDSArQpzItz88dbws6
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hmc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hmc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Harvey Mudd College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Harvey Mudd College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hmc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Cindy Abercrombie</md:GivenName>
+	<md:EmailAddress>cabercrombie@hmc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mitch Shacklett</md:GivenName>
+	<md:EmailAddress>mshacklett@hmc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:icmd="http://id.incommon.org/metadata" contactType="other" icmd:contactType="http://id.incommon.org/metadata/contactType/security">
+	<md:GivenName>Duke Vu</md:GivenName>
+	<md:EmailAddress>dvu@hmc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andy Davenport</md:GivenName>
+	<md:EmailAddress>andy@hmc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

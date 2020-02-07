@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://vmpidp.universcience.fr/idp/">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-06-06T17:29:19Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">universcience.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Universcience-EPPDCSI</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAEG2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzIgNzkuMTU5Mjg0LCAyMDE2LzA0LzE5LTEzOjEzOjQwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6ZTllMDQyOTctOGFjNy1kYzQxLWEyODItY2JlOGUwOWI5MGVmIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZGMDRFRDI4MzI0NzExRThBQzE1RUVDQTZGOEVCMjE1IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjYyNEU2MEJBMzIxODExRThBQzE1RUVDQTZGOEVCMjE1IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIElsbHVzdHJhdG9yIENDIDIwMTUuMyAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA1NDRhNGY3LTIzMTUtNDc1MS1hMDg1LTU0NmM0MGZmZjdjMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowNTQ0YTRmNy0yMzE1LTQ3NTEtYTA4NS01NDZjNDBmZmY3YzMiLz4gPGRjOnRpdGxlPiA8cmRmOkFsdD4gPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5DaXRlX0xvZ29fTk9JUl9QQUxBSVNfVU5JVkVSU0NJRU5DRTwvcmRmOmxpPiA8L3JkZjpBbHQ+IDwvZGM6dGl0bGU+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rl8zYwAAAh5JREFUOE/Fk71rk1EUxn/3/UiTps2HaRonLaiNtiXSRR2k2IioSMEiCE7+Ay7WRVBalyKoqHRsow6Ci9qCdRCloLiKFh00dTCa2DSJjbFJTNq8H94k4uRSO/jA5Rzu+XjOc7hX2BJsAMpv+89Q+3p7Lp07O4JlWjy8/4BbsRjpdJrL4+NEIhGCnZ3URyyfH6V0ZoTK1B3MTBbHgYFGA2XP3n0MRgdJJBL09PbSKQuiB6Osrq6SWlxsJH3fEkbvCWOnvkLuG2tXb5Lf2d+IKWsy0el04na7eTw7i6OlhWQyRTaTweH3Y165gTAMhM8H0mKa0ObGjsepPnmGNjMzzdjFUTweD5qmSSkmsclJqpUqequL2qvXiM0hjDfz6IeiCJerwWwXCphfkii6pqPrOqqqNgJCUfBJtvpdnU3r3o4ZX0Af2E/t6Ry1Fy+bZ+45is8r4+Ewx4eH8ft9FAo/5NKC3J6KUautYRdLaGMX0OffYsy/a7LXG/+sQHsbrpMnUFqk5lwux9JSBq/XQ7FY5NjQEFu7uiivrMgCjdaJa5SvT6AfieI8fQrRtwv/cqo58XoeUj1RNN0/EEYyZRv5POb7BURHAHXHNiw5Mp52rOU8Qlo1GMSu+3Js27KwEp9Rw93yvgNRuXvPLk0/wtG/G0tu3Y5/xM7mUOXGrQ9x1EAAoyI1yyJCIURgE5rcQ+1TAufRw+uT8Dds+C/87wbwCwbm0oOmfrWPAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.cite-sciences.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Staff of EPPDCSI</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Universcience-EPPDCSI</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels de l'EPPDCSI</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENjCCAp6gAwIBAgIVAN0z/+/NbkkkfVvIStGRiuz1q+4AMA0GCSqGSIb3DQEB
+CwUAMCIxIDAeBgNVBAMMF3ZtcGlkcC51bml2ZXJzY2llbmNlLmZyMB4XDTE5MDYw
+NjA4NTkzNVoXDTM5MDYwNjA4NTkzNVowIjEgMB4GA1UEAwwXdm1waWRwLnVuaXZl
+cnNjaWVuY2UuZnIwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCN1783
++SBsTIdVn2RcaKSqSwxuNvJs9BioUIABUywnFY+nTG9M/otOZD56VRxPDeYO/Rsu
+MQE9wPJZ24pLJp51jZlEPA/HwPi9a6C2n3VHLD/llIzXFX2q1a7inTRlrAZ1iwV4
+w2QjYV1eyZ0OJXg5UztxpOKxb03ILHrlRkHh/IWYNctOB544oTiDR2OCcIyCOd5l
+eNkwPtkiUkG6MsZtSdt0gMx5W7TOv1u3xFfomPU+aR5mnQZpwzzwRGUzdiwm9Ook
+aTaU04PRTXBN1ykkAN5LbE1WA2kDDUbprZFUPP2hL3G68IBCQahlJ0Xmf5y85c8x
+JPyIlCx5JUIEB3ucouEsxiBEAfEJeRX4wpbT3q3D/Uv3+z73/B33Ny7n8yuy9Hcy
+jelgO4bGsSc70jbxJsLRvN1IdGh/Gxssl2CATlcrYPMSpU11EZ7gTcymShJJ6zLx
+SydDaNDNrPkMYRK1+8GpegMpJHbwbuP2/fA8laEpEOaW/BfGOIW4jFzslkkCAwEA
+AaNjMGEwHQYDVR0OBBYEFJ/bQSYjC+5CkyTbybIfi47kVJ+IMEAGA1UdEQQ5MDeC
+F3ZtcGlkcC51bml2ZXJzY2llbmNlLmZyhhxodHRwczovL3VuaXZlcnNjaWVuY2Uu
+ZnIvaWRwMA0GCSqGSIb3DQEBCwUAA4IBgQCNuDLT7j0unkgjBSTBG8FDW9flILTu
+GRcumnXZRSORItIa7fFHtLsrrr6l1Dj9fEDs/Xmzry/pmEuIHC1lw3zaCMq0quRU
+kvCp2j3HzBibHpdxQvBl9Nwbc/9SnUEkFZvg2+R8jphUPoQ9a0cHvzWcooNC/quQ
+oshiZV0grlkC5hXyxbzNg3qvAh+srrEo30CZtC2804fXAVU1YVQVrykTH50m+dwl
+BUJ1HD/pTNrCDCnIQ4nF9bbq1+GktFzOe+1V6NRalzR8ME5UFOuYSdq5Hn3YRrg/
+jTtz/Vb5qgHgNbuQLzjZaDpVEgRsMQql3hFyCEU/en8SnPKChhTIr4gfovFgEILn
+pjHe4vBWrFU10JH/dMNcAGZq5UcTGtfnJxvrFZUPpgqnPoRdvW2ROLF6wOyXMyoa
+Z3RGgpDwfeY9UMA0SN3nS0Ye5EI4E9JX2kl+uHKlY/eBw7o7e9AD7A9rVQ3eOa9n
+qiK13/IG0jCB2407xVN5mRFLlHhl9afekb0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vmpidp.universcience.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://vmpidp.universcience.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://vmpidp.universcience.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">universcience.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENjCCAp6gAwIBAgIVAN0z/+/NbkkkfVvIStGRiuz1q+4AMA0GCSqGSIb3DQEB
+CwUAMCIxIDAeBgNVBAMMF3ZtcGlkcC51bml2ZXJzY2llbmNlLmZyMB4XDTE5MDYw
+NjA4NTkzNVoXDTM5MDYwNjA4NTkzNVowIjEgMB4GA1UEAwwXdm1waWRwLnVuaXZl
+cnNjaWVuY2UuZnIwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCN1783
++SBsTIdVn2RcaKSqSwxuNvJs9BioUIABUywnFY+nTG9M/otOZD56VRxPDeYO/Rsu
+MQE9wPJZ24pLJp51jZlEPA/HwPi9a6C2n3VHLD/llIzXFX2q1a7inTRlrAZ1iwV4
+w2QjYV1eyZ0OJXg5UztxpOKxb03ILHrlRkHh/IWYNctOB544oTiDR2OCcIyCOd5l
+eNkwPtkiUkG6MsZtSdt0gMx5W7TOv1u3xFfomPU+aR5mnQZpwzzwRGUzdiwm9Ook
+aTaU04PRTXBN1ykkAN5LbE1WA2kDDUbprZFUPP2hL3G68IBCQahlJ0Xmf5y85c8x
+JPyIlCx5JUIEB3ucouEsxiBEAfEJeRX4wpbT3q3D/Uv3+z73/B33Ny7n8yuy9Hcy
+jelgO4bGsSc70jbxJsLRvN1IdGh/Gxssl2CATlcrYPMSpU11EZ7gTcymShJJ6zLx
+SydDaNDNrPkMYRK1+8GpegMpJHbwbuP2/fA8laEpEOaW/BfGOIW4jFzslkkCAwEA
+AaNjMGEwHQYDVR0OBBYEFJ/bQSYjC+5CkyTbybIfi47kVJ+IMEAGA1UdEQQ5MDeC
+F3ZtcGlkcC51bml2ZXJzY2llbmNlLmZyhhxodHRwczovL3VuaXZlcnNjaWVuY2Uu
+ZnIvaWRwMA0GCSqGSIb3DQEBCwUAA4IBgQCNuDLT7j0unkgjBSTBG8FDW9flILTu
+GRcumnXZRSORItIa7fFHtLsrrr6l1Dj9fEDs/Xmzry/pmEuIHC1lw3zaCMq0quRU
+kvCp2j3HzBibHpdxQvBl9Nwbc/9SnUEkFZvg2+R8jphUPoQ9a0cHvzWcooNC/quQ
+oshiZV0grlkC5hXyxbzNg3qvAh+srrEo30CZtC2804fXAVU1YVQVrykTH50m+dwl
+BUJ1HD/pTNrCDCnIQ4nF9bbq1+GktFzOe+1V6NRalzR8ME5UFOuYSdq5Hn3YRrg/
+jTtz/Vb5qgHgNbuQLzjZaDpVEgRsMQql3hFyCEU/en8SnPKChhTIr4gfovFgEILn
+pjHe4vBWrFU10JH/dMNcAGZq5UcTGtfnJxvrFZUPpgqnPoRdvW2ROLF6wOyXMyoa
+Z3RGgpDwfeY9UMA0SN3nS0Ye5EI4E9JX2kl+uHKlY/eBw7o7e9AD7A9rVQ3eOa9n
+qiK13/IG0jCB2407xVN5mRFLlHhl9afekb0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://vmpidp.universcience.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Cité des sciences et de l&amp;#039;industrie</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Cité des sciences et de l&amp;#039;industrie</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cite-sciences.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>BETIN Dominique</md:SurName>
+	<md:EmailAddress>mailto:dominique.betin@universcience.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

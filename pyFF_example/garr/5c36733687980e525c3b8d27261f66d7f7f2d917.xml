@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://account.uat.turningtechnologies.com/account/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://account.uat.turningtechnologies.com/account/shibboleth/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Turning Technologies Beta Testing</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.turningtechnologies.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="35" width="259" xml:lang="en">https://imgsrv.turningtechnologies.com/images/navbarImage.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFUjCCBDqgAwIBAgIJAMo4GjnD2cuBMA0GCSqGSIb3DQEBBQUAMIHLMQswCQYD
+VQQGEwJVUzENMAsGA1UECBMET2hpbzETMBEGA1UEBxMKWW91bmdzdG93bjEdMBsG
+A1UEChMUVHVybmluZyBUZWNobm9sb2dpZXMxGTAXBgNVBAsTEEFjY291bnQgU1NP
+IFRlYW0xLDAqBgNVBAMTI2FjY291bnQudWF0LnR1cm5pbmd0ZWNobm9sb2dpZXMu
+Y29tMTAwLgYJKoZIhvcNAQkBFiFkaGFsbGFkYXlAdHVybmluZ3RlY2hub2xvZ2ll
+cy5jb20wHhcNMTUwNzAxMTU0NzQyWhcNMjUwNjI4MTU0NzQyWjCByzELMAkGA1UE
+BhMCVVMxDTALBgNVBAgTBE9oaW8xEzARBgNVBAcTCllvdW5nc3Rvd24xHTAbBgNV
+BAoTFFR1cm5pbmcgVGVjaG5vbG9naWVzMRkwFwYDVQQLExBBY2NvdW50IFNTTyBU
+ZWFtMSwwKgYDVQQDEyNhY2NvdW50LnVhdC50dXJuaW5ndGVjaG5vbG9naWVzLmNv
+bTEwMC4GCSqGSIb3DQEJARYhZGhhbGxhZGF5QHR1cm5pbmd0ZWNobm9sb2dpZXMu
+Y29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAswjq0ZuGa0j/insB
+JptRZya11BByqU6/cfkQcPkF6MpDRJ+iPvRLdq/10BjMkgBmE6eWke/kSjNvMDCz
+ZQ9VLqK35588pTyUlz61l5bea0LEw/DQGZbnF6kkiZmOB9X65Zvq2qdi50jJjsPw
+gvwmjctPjl7tzUdNCwElp9Ws8b2VLNPdgJ/RgQcBXA00wtbkHNAa4ug481NLhBHN
+yNDlZPAaaXjTRFFkS1znkJbroU6kfPIVeVBXjTgkPxBKvVwergW9+z902TlVAkUz
+JY5PKsPocaiBhXMNR5MHedVy/Q0YVpy8z/o3t1s/8kxTCospNefnhiO8zSuq6SJh
+bka96QIDAQABo4IBNTCCATEwHQYDVR0OBBYEFIAiZITkEsHtrkY2Fy0f1HYZXzhf
+MIIBAAYDVR0jBIH4MIH1gBSAImSE5BLB7a5GNhctH9R2GV84X6GB0aSBzjCByzEL
+MAkGA1UEBhMCVVMxDTALBgNVBAgTBE9oaW8xEzARBgNVBAcTCllvdW5nc3Rvd24x
+HTAbBgNVBAoTFFR1cm5pbmcgVGVjaG5vbG9naWVzMRkwFwYDVQQLExBBY2NvdW50
+IFNTTyBUZWFtMSwwKgYDVQQDEyNhY2NvdW50LnVhdC50dXJuaW5ndGVjaG5vbG9n
+aWVzLmNvbTEwMC4GCSqGSIb3DQEJARYhZGhhbGxhZGF5QHR1cm5pbmd0ZWNobm9s
+b2dpZXMuY29tggkAyjgaOcPZy4EwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUF
+AAOCAQEANWMFaMjzwh+wAqx7dTZpEzEdQMgEu+LmFTH8vf3qS9XBG84TO87QZC6a
+jGSnJlG8PYB9z2CwjXRXx+ViSdbX9d+pjLz2Y92koQtLqVz9vEDE0zjbc6YsljLq
+/KdHwEeGpf8lyOftx2GQog4vAhaI/bGWmTkK0n+lSz01ObPwtTmi7oc2LjRFF0nj
+Vtht8dQ8R3StjVM6lyzXjRbin4VrTT0NXQgsezxCfUp2FkonhL1kVywptWBUEga1
+s+aZGcabVSj16x5Y2VD+HIdHIjLUO5iQOvuaa2nR1+r8hh9RkLnmLkaXWIA5PPZH
+FRbDalYxxNiLLA0IlrVRk20iCT6vLg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://account.uat.turningtechnologies.com/account/shibboleth/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Turning Technologies Beta Testing</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Turning Technologies</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Turning Technologies</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.turningtechnologies.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Single Sign On Support Team</md:GivenName>
+	<md:EmailAddress>support@turningtechnologies.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Single Sign On Technical Support Team</md:GivenName>
+	<md:EmailAddress>SSOSupport@turningtechnologies.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Single Sign On Administrative Team</md:GivenName>
+	<md:EmailAddress>SSOSupport@turningtechnologies.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Single Sign On Security Team</md:GivenName>
+	<md:EmailAddress>SSOSupport@turningtechnologies.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

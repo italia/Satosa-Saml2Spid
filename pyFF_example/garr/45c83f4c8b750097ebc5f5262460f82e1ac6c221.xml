@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fh-offenburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-08-21T07:52:22Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-offenburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">fh-offenburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Offenburg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Offenburg University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule Offenburg</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of the Offenburg University of Applied Sciences</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.hs-offenburg.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://idp.hs-offenburg.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hs-offenburg.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hs-offenburg.de/en/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMICdwOXyeN4hWx1ISMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTIwNTE1NDU1MFoXDTIxMDMwODE1NDU1MFowgbAxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCU9mZmVuYnVyZzE+MDwG
+A1UECgw1SG9jaHNjaHVsZSBPZmZlbmJ1cmcgLSBUZWNobmlrLCBXaXJ0c2NoYWZ0
+IHVuZCBNZWRpZW4xEjAQBgNVBAsMCUNhbXB1cyBJVDEcMBoGA1UEAwwTaWRwLmhz
+LW9mZmVuYnVyZy5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALPl
+C3dCR1J08SVT1r1a1RefwdEbhNJRWZAPtk28PiPBFiAwrAMlku4n86/D7MbC17bh
+1aTPq3v5xNGFolEEujBPHFLKpuwiGPefKLgOduGtbL28q69lObDFB5oeTgo4UpBW
+5jTwks34QhPBi24nNgunnGCy4Kynu0qRZ3hfN+bGxnf16g3YrmL8d1eYX3l8IFsv
+nix/NERAzU0P9xyBmlTqQS7w1KENTkhSAuISdFf0WdqVyC2Awq1Pv0pv4RvhN3L7
+YBEvxqsj+p9VfpiWVwqtDv3/n+VqCtHIsu+KEXbSZlItSkk1mvRjNBRGTVAq/8FT
+AWMWGU0TAqJ7iNfDGt8CAwEAAaOCBcowggXGMFkGA1UdIARSMFAwCAYGZ4EMAQIC
+MA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEB
+BAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIF
+oDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFMY2FEcr
+U6Ku4O9TMhJK3+elwfR5MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0
+MB4GA1UdEQQXMBWCE2lkcC5ocy1vZmZlbmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/
+oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHO
+MIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2Vy
+dmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKG
+PWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2Fj
+ZXJ0L2NhY2VydC5jcnQwggNfBgorBgEEAdZ5AgQCBIIDTwSCA0sDSQB1AG9Tdqwx
+8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABZ38MB48AAAQDAEYwRAIgdJ6D
+EH6ojzyVpSV9pvWlZr5y9q8zRu4bhZa1Scz6ZUMCIBxeYa6NXeG1nG4tMmZ8G+ao
+JcqIDomr7f6fgoNEp1U2AHUA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo
+/csAAAFnfwwHbQAABAMARjBEAiA+LXPWpl99TmmpZBoNeKiLlpQiPmthdsnW/qvs
+V8SzagIgHWUsd40IcLirwxGOgPB9noV18xaWQxdS4VOAzKLWWzMAdwCq5wt/PLjV
+ZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWd/DAbBAAAEAwBIMEYCIQD/fVED
+/QT1Pxv0K2YVwjOeGXSt3rC4uNdZCY/kCQPNwwIhAO35+BShYjU/c2+iIK9XaY5t
+Vl96S1lv44AWs96GM0JwAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT
+0wwAAAFnfwwIhQAABAMARzBFAiEAy/7BWBWaZJbOOEBTdSLKarVw/5HWGt22M6kL
+Iwjfk8sCIG5si1GyKoIetvFmQRznEDSuyBHgFGueVYr+yfF3qJIbAHcAu9nfvB+K
+cbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFnfwwHawAABAMASDBGAiEAsLvc
+d1BEJohSRGaDiRnKMXktO6+A2UPZncWNPec/4O4CIQDcOHbK0a4p790PJDLsE4ux
+yeCBxTo+qb/90WEQOxyMNwB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7I
+DdwQAAABZ38MB4QAAAQDAEgwRgIhAKzgjwG1N9ucvyUegBVrqHMnFWMYtZ1oGFlc
+vi9xkcHeAiEAmnSiKFUDZGLxI1Vg5VLv2lTUVeibQVuuBQ7gq0o2YXoAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWd/DAv+AAAEAwBHMEUCIGZe
+1aAqjiBmL8iQUgWYyCbgOguNiqILNTMKVMDetCFyAiEAmtqkoM+NXZKlftkGvDGg
+oU+MfrJMHFcrSXEGCSRCghIwDQYJKoZIhvcNAQELBQADggEBAIcrVbz/Sy+SbeTj
+XB5Qxtb7xNAV1SUEr507+e6lvUv8frpeESZiETI9MgHy1p0Hvj5B9a9n0HUE+ITU
+LqAOMu8h1pSvdAWZLdlSAvO9hvD5pq8r5NzsWed6x+HO9uLOkVMLPOrS79EoSy56
+mq+cBjW/Dq3elXIU/kB1G2zrK3kP4/fof3+tYhEYRfY69VEt8QFJdKJDc+o/Mzq+
+rIi/jl9DSEbPhF3/URr/jCbpJFe63Ns+5UMawioj8rSxtO9zjsRV3RUOQsAD8v0q
+KtNa6cVntHlxtLNsVDo66tXwBFwyNazUU87AH6Oo9/IWR//02pL4EybahREb/Ta9
+Rb0VE7E=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-offenburg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-offenburg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-offenburg.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hs-offenburg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-offenburg.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-offenburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">fh-offenburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMICdwOXyeN4hWx1ISMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTIwNTE1NDU1MFoXDTIxMDMwODE1NDU1MFowgbAxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCU9mZmVuYnVyZzE+MDwG
+A1UECgw1SG9jaHNjaHVsZSBPZmZlbmJ1cmcgLSBUZWNobmlrLCBXaXJ0c2NoYWZ0
+IHVuZCBNZWRpZW4xEjAQBgNVBAsMCUNhbXB1cyBJVDEcMBoGA1UEAwwTaWRwLmhz
+LW9mZmVuYnVyZy5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALPl
+C3dCR1J08SVT1r1a1RefwdEbhNJRWZAPtk28PiPBFiAwrAMlku4n86/D7MbC17bh
+1aTPq3v5xNGFolEEujBPHFLKpuwiGPefKLgOduGtbL28q69lObDFB5oeTgo4UpBW
+5jTwks34QhPBi24nNgunnGCy4Kynu0qRZ3hfN+bGxnf16g3YrmL8d1eYX3l8IFsv
+nix/NERAzU0P9xyBmlTqQS7w1KENTkhSAuISdFf0WdqVyC2Awq1Pv0pv4RvhN3L7
+YBEvxqsj+p9VfpiWVwqtDv3/n+VqCtHIsu+KEXbSZlItSkk1mvRjNBRGTVAq/8FT
+AWMWGU0TAqJ7iNfDGt8CAwEAAaOCBcowggXGMFkGA1UdIARSMFAwCAYGZ4EMAQIC
+MA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEB
+BAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIF
+oDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFMY2FEcr
+U6Ku4O9TMhJK3+elwfR5MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0
+MB4GA1UdEQQXMBWCE2lkcC5ocy1vZmZlbmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/
+oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHO
+MIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2Vy
+dmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKG
+PWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2Fj
+ZXJ0L2NhY2VydC5jcnQwggNfBgorBgEEAdZ5AgQCBIIDTwSCA0sDSQB1AG9Tdqwx
+8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABZ38MB48AAAQDAEYwRAIgdJ6D
+EH6ojzyVpSV9pvWlZr5y9q8zRu4bhZa1Scz6ZUMCIBxeYa6NXeG1nG4tMmZ8G+ao
+JcqIDomr7f6fgoNEp1U2AHUA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo
+/csAAAFnfwwHbQAABAMARjBEAiA+LXPWpl99TmmpZBoNeKiLlpQiPmthdsnW/qvs
+V8SzagIgHWUsd40IcLirwxGOgPB9noV18xaWQxdS4VOAzKLWWzMAdwCq5wt/PLjV
+ZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWd/DAbBAAAEAwBIMEYCIQD/fVED
+/QT1Pxv0K2YVwjOeGXSt3rC4uNdZCY/kCQPNwwIhAO35+BShYjU/c2+iIK9XaY5t
+Vl96S1lv44AWs96GM0JwAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT
+0wwAAAFnfwwIhQAABAMARzBFAiEAy/7BWBWaZJbOOEBTdSLKarVw/5HWGt22M6kL
+Iwjfk8sCIG5si1GyKoIetvFmQRznEDSuyBHgFGueVYr+yfF3qJIbAHcAu9nfvB+K
+cbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFnfwwHawAABAMASDBGAiEAsLvc
+d1BEJohSRGaDiRnKMXktO6+A2UPZncWNPec/4O4CIQDcOHbK0a4p790PJDLsE4ux
+yeCBxTo+qb/90WEQOxyMNwB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7I
+DdwQAAABZ38MB4QAAAQDAEgwRgIhAKzgjwG1N9ucvyUegBVrqHMnFWMYtZ1oGFlc
+vi9xkcHeAiEAmnSiKFUDZGLxI1Vg5VLv2lTUVeibQVuuBQ7gq0o2YXoAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWd/DAv+AAAEAwBHMEUCIGZe
+1aAqjiBmL8iQUgWYyCbgOguNiqILNTMKVMDetCFyAiEAmtqkoM+NXZKlftkGvDGg
+oU+MfrJMHFcrSXEGCSRCghIwDQYJKoZIhvcNAQELBQADggEBAIcrVbz/Sy+SbeTj
+XB5Qxtb7xNAV1SUEr507+e6lvUv8frpeESZiETI9MgHy1p0Hvj5B9a9n0HUE+ITU
+LqAOMu8h1pSvdAWZLdlSAvO9hvD5pq8r5NzsWed6x+HO9uLOkVMLPOrS79EoSy56
+mq+cBjW/Dq3elXIU/kB1G2zrK3kP4/fof3+tYhEYRfY69VEt8QFJdKJDc+o/Mzq+
+rIi/jl9DSEbPhF3/URr/jCbpJFe63Ns+5UMawioj8rSxtO9zjsRV3RUOQsAD8v0q
+KtNa6cVntHlxtLNsVDo66tXwBFwyNazUU87AH6Oo9/IWR//02pL4EybahREb/Ta9
+Rb0VE7E=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-offenburg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-offenburg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e180</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e180</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Offenburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Offenburg University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hs-offenburg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hs-offenburg.de/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>RZ</md:GivenName>
+	<md:SurName>IT-Support</md:SurName>
+	<md:EmailAddress>mailto:rz.it-support@hs-offenburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>RZ</md:GivenName>
+	<md:SurName>IT-Support</md:SurName>
+	<md:EmailAddress>mailto:rz.it-support@hs-offenburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

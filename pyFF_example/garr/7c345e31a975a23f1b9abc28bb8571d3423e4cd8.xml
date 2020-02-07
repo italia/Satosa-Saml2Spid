@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://solutions.sciquest.com">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2010-12-13T16:38:32Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC8zCCAlygAwIBAgIIXNlF3j4QphEwDQYJKoZIhvcNAQEEBQAwXjELMAkGA1UE
+BhMCVVMxETAPBgNVBAoTCFNjaVF1ZXN0MRMwEQYDVQQLEwpQcm9kdWN0aW9uMScw
+JQYDVQQDEx5TY2lRdWVzdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMTMwOTA5
+MjAzMjE1WhcNMzMwMzMxMjAzMjE1WjBgMRUwEwYDVQQDEwxzY2lxdWVzdC5jb20x
+FDASBgNVBAsTC0RldmVsb3BtZW50MRcwFQYDVQQKEw5TY2lRdWVzdCwgSW5jLjEL
+MAkGA1UECBMCTkMxCzAJBgNVBAYTAlVTMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAggpL7bnjeQ/BI6voeasB/4RUMIL7d9rJN4ZAn+fUSbXquYhzHG5u
+ifOOuEFnKFq1XaXcGPRBy1Gvrt/JQb9ZL/0c/Z/IqtR0vsEthX+EStwtQUr1XJDC
+1l+eg9Z6x+CFXx2zsgHmsIUcNeZ7nlDK6P+CI33P8wR1SkZZCce+4I0qc+C1Q3sN
+7LsNr2kdB2xAjHdRQtfBsD/3R/B9hChPSvk9SiesQuiL5DnRC+GpLqmBeA6CQQ9n
+9LOg/E3NiSdLgUdQOyHt82eptEydm3vbZ/xRmfnNHEsZbAukNB2Iar+kg5dK9Qcw
+6QtqJhapi7nB1/cSRFj6uprpWw4bzBzEwwIDAQABozQwMjAOBgNVHQ8BAf8EBAMC
+BaAwIAYDVR0lAQH/BBYwFAYIKwYBBQUHAwQGCCsGAQUFBwMCMA0GCSqGSIb3DQEB
+BAUAA4GBAHVXeQpZA5kEj/qufyv2U7NbVYKpscsAQ+G+9zMSF7Tclks6Nas1QybY
+Xzpx7z84KfcsppK5kDCehLIDIkMAjvohSIQutcNv6MY/snhHfrB+0cbabtIItYC8
+aAVhS5FLXmFMTxjZFUUPMVqMWo8Ltth7vyK/SYLX2V4sn3LELAUA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://solutions.sciquest.com/apps/Router/ExternalAuth/SAML/Login/Edinburgh" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://solutions.sciquest.com/apps/Router/ExternalAuth/SAML/Login/Warwick" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SciQuest Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">JAGGAER</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.sciquest.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Andrew</md:GivenName>
+	<md:SurName>Marshall</md:SurName>
+	<md:EmailAddress>mailto:amarshal@jaggaer.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andrew</md:GivenName>
+	<md:SurName>Marshall</md:SurName>
+	<md:EmailAddress>mailto:amarshal@jaggaer.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

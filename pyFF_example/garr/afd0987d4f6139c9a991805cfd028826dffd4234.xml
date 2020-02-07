@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://rps-sp.sams-sigma.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2017-05-25T10:43:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDujCCAqKgAwIBAgIJAKI9TQnb+IkzMA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNV
+BAYTAlVLMQ8wDQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYD
+VQQKEwlzZW1hbnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTAe
+Fw0xNzA1MTUxMjU2NDdaFw0zNzA1MTAxMjU2NDdaMGUxCzAJBgNVBAYTAlVLMQ8w
+DQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYDVQQKEwlzZW1h
+bnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAMAXBOCmKLgOO4TGSRyNK7zXauf7ced1DFxr
+2YwMrk7BG1/HY30R80L5KkTCpfxtAI39N0dP+5qGbYjc9pVBSBD9MZpM077q8Cel
+cqCH/ih9wlcegqsPv89x+Dv36aBgcGzMhqe/C+22xZdF4na3B2MGCEwFg7adUcAL
+jPcKBaZsSPnsUEU7c5LjAJNQ994/UYiYb3oEFITy/BpPRrn/jkaWBSKtV+uRESJR
+55JXFrxN9fNxd0YUVWHSA1iqi+Xu1brcBziMIjT7aUsn2FLoSCukVbaVKwgoUC94
+rmPcQQRRDdNM7JZ2+f2Mi+YyVGdLsbjT3eW24x18DC+mPv02+oMCAwEAAaNtMGsw
+SgYDVR0RBEMwQYIVcnBzLXNwLnNhbXMtc2lnbWEuY29thihodHRwczovL3Jwcy1z
+cC5zYW1zLXNpZ21hLmNvbS9zaGliYm9sZXRoMB0GA1UdDgQWBBTwD0lM+qlPRIb3
+hZnnhQoNWEyOuDANBgkqhkiG9w0BAQUFAAOCAQEAeDhEOAeEOL/VLcorqAIMbYUa
+HyhVZd0Aqs02nHplYJGV+m4ORMOUSXccWk2RnGdayPuva2vhYrZl5+a1JU0LYFpe
+AP4LlpeJDqeQVwzsz3VABeYSbYN00U+VvZVRmZZM79LjJc1sZODPaA5YWOMEfLYP
+M7yddaatG89K0E4oSD/f0iB8kVmXLK7HD+NAjkdCWzIwaOfHqNh+UCrLFt1wx04U
+Py1LUezNkWdPHQyisVTI6GdVM9p5XUU7fk3rI9X9YKROtG6vhIyFm8Ib1D4/CG90
+D2BusoqFYOnbxz2DfzjbqHqoVya295MI19cdxv9MaQQVvw9gI7Qt9mLd0MdFjg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDujCCAqKgAwIBAgIJALo0LxG2hPVSMA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNV
+BAYTAlVLMQ8wDQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYD
+VQQKEwlzZW1hbnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTAe
+Fw0xNzA1MTUxMjU2NDlaFw0yMjA1MTQxMjU2NDlaMGUxCzAJBgNVBAYTAlVLMQ8w
+DQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYDVQQKEwlzZW1h
+bnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBANAHZhupbitYuoeMonQNuNvqdQF/6Bg5EQKt
+b8bbRLZRubotb7CsmBAA+lRmAyQoVPOyHDKw/G+CdH+c0gSWOQD042s8vhjkLiT4
+NotYYiWjHahKQVqQKaJONEBk5lcvj74cUI8DTPByhgCz1XA4lCHU73ZKRixHDe8B
+Iy64Cops/2DWa0btYlGk4CAfRRS1DVtzISLCM9BARbCsBQpLKuul1RVln3M186/v
+0KNMAk+iCFxZnTLNpTc4+cCjnoR+VEVu0zVQQaOJPhMAe6ufYRMBYdhVmcQpns0t
+dS/IiIq/qLcoFOKxxXfCfqHKr2LzrnVwMNt0F7kGOj+W2uXjMgECAwEAAaNtMGsw
+SgYDVR0RBEMwQYIVcnBzLXNwLnNhbXMtc2lnbWEuY29thihodHRwczovL3Jwcy1z
+cC5zYW1zLXNpZ21hLmNvbS9zaGliYm9sZXRoMB0GA1UdDgQWBBQcu9OpDd26Bmna
+YovADoYiV84V5jANBgkqhkiG9w0BAQUFAAOCAQEAaMTF+hPrGT7Vmd6w7UN2TeSB
+J+wdqLa4eClqp0BaddrshCLq3DpoSZQ6tdf8PDy8uumix5qRFxNzc7V0oVXnHGLq
+/svm/q6LhGkGHkIQ7rcPRE5UIlcyb7nkD3A9latTvlBv063m8xZeOghW1YbzISeH
+364LAXGMG+35ucgYMb0Gd2tURN0bHV0BQLdAZYfabJfYlQZnyoTiASZHxe1f0XBr
+pd6tuHFe7FB29L1FfHXjrf6j4WFnufe4qioNtlOXFbXlmEhauTHiVCaOlnQyBF7H
+CkuiCHy1jCfsbA2r0YTz5ueVoPaf+1xouSkhx2Qny8gkyUuHk7LSdYlzjO+aDQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDujCCAqKgAwIBAgIJAJCXR/NuTAAwMA0GCSqGSIb3DQEBBQUAMGUxCzAJBgNV
+BAYTAlVLMQ8wDQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYD
+VQQKEwlzZW1hbnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTAe
+Fw0xNzA1MTUxMjU2NTBaFw0yMDA1MTQxMjU2NTBaMGUxCzAJBgNVBAYTAlVLMQ8w
+DQYDVQQIEwZTdXNzZXgxETAPBgNVBAcTCEJyaWdodG9uMRIwEAYDVQQKEwlzZW1h
+bnRpY28xHjAcBgNVBAMTFXJwcy1zcC5zYW1zLXNpZ21hLmNvbTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALzDYOjbgn0e9ujTy0GU2/CJGXvTVRrtP/+t
+Buy3+5nTOIxbrzewlQkrbp6B8xJtlVcN1N1sgFOHb9iCt4g4Zj43ZiTIMmES015h
+f2nbb/95Gy1X0thXKmNFAVeMI8lce/eTtZdaPvJ74suoQOV/IkMhoJGDUJdVtmg4
+UHC30wQiRJguWZxvNPLova1r1ePY8gT1Zs3DJe+hWOp0X9euvvNhUHQcv9j/Ja7P
+zxv+dh1t+sNyd3iRkZKhFxTO5hlhNmBc9ag0aIvBV3GCCq0li0SrrC6eF04KuWCh
+KWTVoWgeC/qU8f9/L6WRm888WrYtGcryGmRWt9rSalvEDhkc2UUCAwEAAaNtMGsw
+SgYDVR0RBEMwQYIVcnBzLXNwLnNhbXMtc2lnbWEuY29thihodHRwczovL3Jwcy1z
+cC5zYW1zLXNpZ21hLmNvbS9zaGliYm9sZXRoMB0GA1UdDgQWBBR4N+NtmYWgRMN8
+6OE94RNI9KYRJjANBgkqhkiG9w0BAQUFAAOCAQEAqk2JLpMa+7dSkj9nRFf4/V1N
+CdXDSiymsXAVBAEgQOFpUyZ1DxIAYWdbxqtOkr4bgiUtKJ3XBcMg1+uv2faY0C7u
+UYWXFWIJVjPvunw28r1s00b6vbr4UbqXOJ3iLvryAXEazjHqrrTlamSS07iqgk6Q
+FezBs3crQOzLGZj6UkOHkhCjLsxX7RocqVpf0KLyLTevFtSEN6VMRuqzU/3BB8gH
+vZZTIPBpoc+jbyELxmMf6Qxu8nXPQhByvMKSW9q77WpxyjvEx8+tHUhYGTLV0ibD
+LWfBxa/uj27lZ0NXSUyx9hAUP8JUZ7AG/bL6JpBREYeTMq4VqszVaqOTTdRiZA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://rps-sp.sams-sigma.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Royal Pharmaceutical Society of Great Britain</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">RPS SAMS Sigma</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://semantico.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Semantico-support</md:GivenName>
+	<md:EmailAddress>mailto:shibboleth-support@semantico.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Semantico-technical</md:GivenName>
+	<md:EmailAddress>mailto:shibboleth-support@semantico.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

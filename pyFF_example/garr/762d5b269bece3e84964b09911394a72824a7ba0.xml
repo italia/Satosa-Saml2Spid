@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://hstalks.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-08-26T08:48:02Z"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Henry Stewart Talks</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Online presentations by leading world experts in biomedicine, life sciences, management &amp; marketing.</mdui:Description>
+		<mdui:Logo height="78" width="96">https://hstalks.com/shibboleth/img/logo.gif</mdui:Logo>
+		</mdui:UIInfo>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://hstalks.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://hstalks.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAPOoQOYTDcolMA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTFzIxMTA0Ni13d3cxLmhzdGFsa3MuY29tMB4XDTEzMDgxOTA4NDIzNVoXDTIz
+MDgxNzA4NDIzNVowIjEgMB4GA1UEAxMXMjExMDQ2LXd3dzEuaHN0YWxrcy5jb20w
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDwUS4Z4M6ixecb4Vbc0df
+SM0rK7UoFyUZL/uSvhDcDQ1mVIaZW2/JVrNwvyoypQfezCAYrHhynA/JajADjftM
+rh/TEUSh/BcL/xyohZ6WsyWn22vvQRRSWTNOvY0P+c2VnW59o6yS3Xlw7HVIBS3E
+jUBu2NDbU/UmxAAAgtv2ItIq3vY0zAj11ZsXypvGY9UiB2sWVdaz/DhffJlMUfKw
+6seKYXY24FoRLO1NsxPl5K3sA6h9kpvh/ptuoaqUiWurVW5b09Cag/C3qTWGZ3f4
+bSTAlNfBzESKAKQ6p7i7ykSGBxFOzyuSgOrdzBmiHHTSADN2s8kOqmMq8SdFRJ09
+AgMBAAGjRTBDMCIGA1UdEQQbMBmCFzIxMTA0Ni13d3cxLmhzdGFsa3MuY29tMB0G
+A1UdDgQWBBRcbPDBD7FUM6VckPyUUf1FJaoOljANBgkqhkiG9w0BAQUFAAOCAQEA
+Qf4hezdmCmhSfbg3ocxbWrROdwYUAW8JaBxerYTKdVOVIVgsNHZh8e1joDYBcmjK
+TYGmC4C0mXhzdIwqnPdBpY7S8RXcl71FRbn4CdqOzIgn4O8Y4bgwMwSNs7JH+qFy
+OpekXMCX0409+PmdbNvQBFk3uznEiCdkW+P2RnlNF3HaAfd8U9YBVGZvlHE/i1Qt
+evKdTg8DniD9m/fmUJySob5xsbCyNb0DW+52VzVBlOWDteMdD5snEKi49Lod1RIN
+/SLLOwRq3tC3sJSqLJKeYl1AJrhenhReOXXMuk+CNGpag/HRtsObyEpV8upRF3wy
+5KwSB/UVbWmCLme4qlhnRQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://hstalks.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://hstalks.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://hstalks.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://hstalks.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://hstalks.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://hstalks.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://hstalks.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://hstalks.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://hstalks.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://hstalks.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://hstalks.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Henry Stewart Talks Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Henry Stewart Talks</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://hstalks.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>HST - Support Team</md:GivenName>
+	<md:EmailAddress>mailto:support@hstalks.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Barak</md:GivenName>
+	<md:SurName>Shohat</md:SurName>
+	<md:EmailAddress>mailto:barak@bazzisoft.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

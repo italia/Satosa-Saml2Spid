@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.weston.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-01-30T13:30:39Z"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Weston College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Weston College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">weston.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAPcnzcVGLzEqHB1pMsO1kGPh7IV9MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC53ZXN0b24uYWMudWswHhcNMTMwMTE2MTcxMzUy
+WhcNMzMwMTE2MTcxMzUyWjAbMRkwFwYDVQQDExBpZHAud2VzdG9uLmFjLnVrMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqznc6D9m1YX+EyNAeRfFBVD9
+Ayf15/t1kpP4A05WfmENLz+FdM1Kk2bnCrRsjcsO3n++ua/vKouHThHYa8IdFady
+nyC9M/PYDA5hkEwtWG+D32U0+NCwq0ZfDx3sd/BdfBkJHTyebM/yqy4EJRn764Wi
+D9ORI4V6e2q5WbS/u+ujwkfDGOuThsKAAxlnW/fUk+EXjCDoYs8N+ar4GYhKD+w0
+h6FVl7NPQ1T1loxstFB47wVCxNloTmBZc8w/6zPPiIaFKVA+/ROQAmDcWbvbA5u6
+4iZhTieGXw8DRim+iqKlrrWpq7CE3IbtC14YXPRQsg8EdT912QOVCkoI+ETd+wID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAud2VzdG9uLmFjLnVrhidodHRwczovL2lk
+cC53ZXN0b24uYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOCbusYezUEQ
+N+uyvBFAD7q+sQtKMA0GCSqGSIb3DQEBBQUAA4IBAQBRLQicI1ilCyx9sQODb0nj
+sd3Za1CHPTweNw1iIWflTEZl3s6qP1caJqmWu38gSqSsJFG9pdGhOOxjPTX9qp/H
+5oqjKIzGmvow5e8rIGUkH1Wy9Xku4U0fcIl8jCH41SumJiBskxNBwrGOQ7ek/pqQ
+7zi0xyckQPto/EzHVKNgLjtOMCzoQTCSc6VuydsvpseiS8PhVz7mE1wObvoXmYzI
+VUPiI5aeGWruZIRk4zgGQEuX9xCofV/Wf0k6yKkV1t5si9aXs66rsGgZLcj5PVD8
+s0O78Bd48FWN4zeRq+RXI1eqpkYlnD07i0S4ICliPBBe0CmFxplfScWzMKVyUip9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.weston.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.weston.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.weston.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.weston.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.weston.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.weston.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">weston.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAPcnzcVGLzEqHB1pMsO1kGPh7IV9MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC53ZXN0b24uYWMudWswHhcNMTMwMTE2MTcxMzUy
+WhcNMzMwMTE2MTcxMzUyWjAbMRkwFwYDVQQDExBpZHAud2VzdG9uLmFjLnVrMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqznc6D9m1YX+EyNAeRfFBVD9
+Ayf15/t1kpP4A05WfmENLz+FdM1Kk2bnCrRsjcsO3n++ua/vKouHThHYa8IdFady
+nyC9M/PYDA5hkEwtWG+D32U0+NCwq0ZfDx3sd/BdfBkJHTyebM/yqy4EJRn764Wi
+D9ORI4V6e2q5WbS/u+ujwkfDGOuThsKAAxlnW/fUk+EXjCDoYs8N+ar4GYhKD+w0
+h6FVl7NPQ1T1loxstFB47wVCxNloTmBZc8w/6zPPiIaFKVA+/ROQAmDcWbvbA5u6
+4iZhTieGXw8DRim+iqKlrrWpq7CE3IbtC14YXPRQsg8EdT912QOVCkoI+ETd+wID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAud2VzdG9uLmFjLnVrhidodHRwczovL2lk
+cC53ZXN0b24uYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOCbusYezUEQ
+N+uyvBFAD7q+sQtKMA0GCSqGSIb3DQEBBQUAA4IBAQBRLQicI1ilCyx9sQODb0nj
+sd3Za1CHPTweNw1iIWflTEZl3s6qP1caJqmWu38gSqSsJFG9pdGhOOxjPTX9qp/H
+5oqjKIzGmvow5e8rIGUkH1Wy9Xku4U0fcIl8jCH41SumJiBskxNBwrGOQ7ek/pqQ
+7zi0xyckQPto/EzHVKNgLjtOMCzoQTCSc6VuydsvpseiS8PhVz7mE1wObvoXmYzI
+VUPiI5aeGWruZIRk4zgGQEuX9xCofV/Wf0k6yKkV1t5si9aXs66rsGgZLcj5PVD8
+s0O78Bd48FWN4zeRq+RXI1eqpkYlnD07i0S4ICliPBBe0CmFxplfScWzMKVyUip9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.weston.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.weston.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Weston College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Weston College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.weston.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>I.T. Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:it.helpdesk@weston.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jon</md:GivenName>
+	<md:SurName>Hofgartner</md:SurName>
+	<md:EmailAddress>mailto:Jon.Hofgartner@weston.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

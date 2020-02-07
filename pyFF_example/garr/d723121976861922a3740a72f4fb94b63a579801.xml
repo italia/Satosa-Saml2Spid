@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://integration.wcn.co.uk/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://integration.wcn.co.uk/Shibboleth.sso/DS" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/UKfederation" index="2"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/UKfederation"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/BAML"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFjDCCA3QCCQDY/5lx43eOoTANBgkqhkiG9w0BAQUFADCBhzELMAkGA1UEBhMC
+R0IxDzANBgNVBAgTBkxvbmRvbjEPMA0GA1UEBxMGTG9uZG9uMSIwIAYDVQQKExlX
+b3JsZCBDYXJlZXJzIE5ldHdvcmsgUExDMRIwEAYDVQQLEwl0ZWNobmljYWwxHjAc
+BgNVBAMTFWludGVncmF0aW9uLndjbi5jby51azAeFw0wOTEyMTYxNTE2NDJaFw0x
+OTEyMTcxNTE2NDJaMIGHMQswCQYDVQQGEwJHQjEPMA0GA1UECBMGTG9uZG9uMQ8w
+DQYDVQQHEwZMb25kb24xIjAgBgNVBAoTGVdvcmxkIENhcmVlcnMgTmV0d29yayBQ
+TEMxEjAQBgNVBAsTCXRlY2huaWNhbDEeMBwGA1UEAxMVaW50ZWdyYXRpb24ud2Nu
+LmNvLnVrMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvrf1ETn8BhT8
+s52CBJ9LyGmGnTtM/C083rx8h3es5OxrP28+dAL4aD5OBtocpJDWhbtDBjYJKF8P
+ZJOCK6AkmsRb/NoLifWNDcguwkhETSGjoYdp3CqmeSbaPsCsCqb3vRfP5OH/BXTB
+vVv6NwfotXYsp5zTyQawyG2C/bMZk3bBjOlwZ0kKK0RjvAivfODIIylDsbueBvrL
+5Te328/fQt+cmKHdpCLDZk0x8WUuEpcZIVrysEAivAQbQjddBZULs0nVnmacAjl0
+LzwGJSkVxu2JhECPHh5KXvauTqD66ZC6PToNXX1b6gmW9N4SZH5X8C1vbltLTiL2
+OzNKHY4ZhPsQmaZTcIhxNSJcypK0HwXxbGqodIqdLub7buF4ZiqXsocG0QQiDMsF
+aMjjS76MpUqSrIEXtt8HsGlJeYvvSiuoU+US1YHMK3iKOycErKTM2eHOBUlijZ4N
+42YCaI01PJrs/M0fvtKxsS9xl7BMg69gLpChTYYOy9ieMSiinfqRY/f5EWW9SePE
+vrXliik8CBjhz5CIwdLbUTP6MM12WSFPYmNQJ2k3SgETi2uxSkM8CoJp2WH/8YOd
+9Z+tvDCvyzcgJwBITet8kNq/GeFrl00CtYMC+zojnllzD7FQjAogE5SB0ibgi1dW
+PBKuRgYISMVS+4J2wp9qEkjWL6JETdsCAwEAATANBgkqhkiG9w0BAQUFAAOCAgEA
+Wl7cp7aSpDSfHW35edbOQdDnJwPBhb61DtP2ypyLr5TXtCGUy04le6Isqa0n0JC7
+Wjvm3mW4WmEKJIdijAV0ILdKLxdIpX7qyEbIY39S7G6q7867DxW4J0ANvo3B2MkM
+n91Hj0ZeDie1Oiha9Ul94seEqz5/oxIvzUI7uULfBDisVzlnYJS/seXDBq3D0h+s
+D6tZ4DIr6HrGqkb47heg+mwLgQBEpmB4x+qhAnkrTGE1Fw2OSPt3p/ayddRzdKQX
+tk0si7mWSfWo8W1rfBuy0EErIFByBxGhtNq4Wlxf5yzt0Ln/T1KBDHTgilYqhSgQ
+XvvgTcBa1pmiaRdZ5T6LT5hVybhpoFAm6xQecURFvXhlFHjK+H/Ia7H5Ecr1vcQq
+LbD07pGwTVUcJAJ5VM5g2jfGzYCHlBiUPiE3J3Aj506duKDJZRwuDQfnl4IGG1ca
+b9KTU0KPPBNSynKb++GcCyUtoknrMDGMSnfDcs2SsqzuFQHHA87p2ookjrC5z8//
+mIdiC4GxRRby9bddF2uF4kFjGYhHGP0ELHD+McESSUPqfG1Ooyw7XRhgl+DRl8Re
+9ARQE6+zAMp2Rx7N8cOYipc2h+eZF+jjgoCByAJiOB81x+/diB5UmCLwLx0u2BQq
+2KalbJoEekyZZ3ki7yfgLvyquDs9xGAqGbQ7pVnYKHM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFjDCCA3QCCQDY/5lx43eOoTANBgkqhkiG9w0BAQUFADCBhzELMAkGA1UEBhMC
+R0IxDzANBgNVBAgTBkxvbmRvbjEPMA0GA1UEBxMGTG9uZG9uMSIwIAYDVQQKExlX
+b3JsZCBDYXJlZXJzIE5ldHdvcmsgUExDMRIwEAYDVQQLEwl0ZWNobmljYWwxHjAc
+BgNVBAMTFWludGVncmF0aW9uLndjbi5jby51azAeFw0wOTEyMTYxNTE2NDJaFw0x
+OTEyMTcxNTE2NDJaMIGHMQswCQYDVQQGEwJHQjEPMA0GA1UECBMGTG9uZG9uMQ8w
+DQYDVQQHEwZMb25kb24xIjAgBgNVBAoTGVdvcmxkIENhcmVlcnMgTmV0d29yayBQ
+TEMxEjAQBgNVBAsTCXRlY2huaWNhbDEeMBwGA1UEAxMVaW50ZWdyYXRpb24ud2Nu
+LmNvLnVrMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvrf1ETn8BhT8
+s52CBJ9LyGmGnTtM/C083rx8h3es5OxrP28+dAL4aD5OBtocpJDWhbtDBjYJKF8P
+ZJOCK6AkmsRb/NoLifWNDcguwkhETSGjoYdp3CqmeSbaPsCsCqb3vRfP5OH/BXTB
+vVv6NwfotXYsp5zTyQawyG2C/bMZk3bBjOlwZ0kKK0RjvAivfODIIylDsbueBvrL
+5Te328/fQt+cmKHdpCLDZk0x8WUuEpcZIVrysEAivAQbQjddBZULs0nVnmacAjl0
+LzwGJSkVxu2JhECPHh5KXvauTqD66ZC6PToNXX1b6gmW9N4SZH5X8C1vbltLTiL2
+OzNKHY4ZhPsQmaZTcIhxNSJcypK0HwXxbGqodIqdLub7buF4ZiqXsocG0QQiDMsF
+aMjjS76MpUqSrIEXtt8HsGlJeYvvSiuoU+US1YHMK3iKOycErKTM2eHOBUlijZ4N
+42YCaI01PJrs/M0fvtKxsS9xl7BMg69gLpChTYYOy9ieMSiinfqRY/f5EWW9SePE
+vrXliik8CBjhz5CIwdLbUTP6MM12WSFPYmNQJ2k3SgETi2uxSkM8CoJp2WH/8YOd
+9Z+tvDCvyzcgJwBITet8kNq/GeFrl00CtYMC+zojnllzD7FQjAogE5SB0ibgi1dW
+PBKuRgYISMVS+4J2wp9qEkjWL6JETdsCAwEAATANBgkqhkiG9w0BAQUFAAOCAgEA
+Wl7cp7aSpDSfHW35edbOQdDnJwPBhb61DtP2ypyLr5TXtCGUy04le6Isqa0n0JC7
+Wjvm3mW4WmEKJIdijAV0ILdKLxdIpX7qyEbIY39S7G6q7867DxW4J0ANvo3B2MkM
+n91Hj0ZeDie1Oiha9Ul94seEqz5/oxIvzUI7uULfBDisVzlnYJS/seXDBq3D0h+s
+D6tZ4DIr6HrGqkb47heg+mwLgQBEpmB4x+qhAnkrTGE1Fw2OSPt3p/ayddRzdKQX
+tk0si7mWSfWo8W1rfBuy0EErIFByBxGhtNq4Wlxf5yzt0Ln/T1KBDHTgilYqhSgQ
+XvvgTcBa1pmiaRdZ5T6LT5hVybhpoFAm6xQecURFvXhlFHjK+H/Ia7H5Ecr1vcQq
+LbD07pGwTVUcJAJ5VM5g2jfGzYCHlBiUPiE3J3Aj506duKDJZRwuDQfnl4IGG1ca
+b9KTU0KPPBNSynKb++GcCyUtoknrMDGMSnfDcs2SsqzuFQHHA87p2ookjrC5z8//
+mIdiC4GxRRby9bddF2uF4kFjGYhHGP0ELHD+McESSUPqfG1Ooyw7XRhgl+DRl8Re
+9ARQE6+zAMp2Rx7N8cOYipc2h+eZF+jjgoCByAJiOB81x+/diB5UmCLwLx0u2BQq
+2KalbJoEekyZZ3ki7yfgLvyquDs9xGAqGbQ7pVnYKHM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://integration.wcn.co.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://integration.wcn.co.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://integration.wcn.co.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://integration.wcn.co.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://integration.wcn.co.uk/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://integration.wcn.co.uk/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://integration.wcn.co.uk/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://integration.wcn.co.uk/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://integration.wcn.co.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML2/POST" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML2/Artifact" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML2/ECP" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML/POST" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://shibboleth.wcn.co.uk/Shibboleth.sso/SAML/Artifact" index="12"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">World Careers Network plc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">World Careers Network plc</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wcn.co.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Duncan</md:GivenName>
+	<md:SurName>Forsyth</md:SurName>
+	<md:EmailAddress>mailto:duncan@wcn.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Duncan</md:GivenName>
+	<md:SurName>Forsyth</md:SurName>
+	<md:EmailAddress>mailto:duncan@wcn.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

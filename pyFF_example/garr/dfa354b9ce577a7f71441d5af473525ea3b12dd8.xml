@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://access-check.edugain.org/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2015-01-30T15:32:58Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">access-check.edugain.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">eduGAIN Access Check</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAABbUlEQVQoz52RPW4UQRCFv6ru6fnZNSxCJuVKpFwAicR3IUI+AakvhQhI7JU8M/1T3QQzsg1sAhWV3qtPVaonfPrCX9W+fpTP3y7otzceGJKJxCiujpVUkCv0+m3K967hixUfWgWSHwAPxG6UqtIFbEFHGoCqR721BX+wirO8LVGg+a6amEXXjqxhM5ZxNFPvX1Odocn5ZwB7HCn4hWI42wxD6KWUBVfIZxXd9J2zNhHFmro2Gx3QPKSReGCiV40ESM/A1NcxTDnn7HvLFViXBRZ6MKJnmwaktca/lFzO4fZG7n5e0D9cK4DjFI69yrGbwvhqP7KWp7kR99QrQAn3cW5N5/SQ1rivDgdUCUegFfkDkKF26TG7FijzZoS0sM7kM7D6gncvgG5d7cEdu6wN+v3R/cRwQgaAdnA2vACQvn9Tk6NNqjtwjis1Iyp4JOpafwvu3ZAYa3TV2fBjBnjfe8uLKErOZLk6fU//lcMvhuSrh7MzMwcAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NTA6MTErMDI6MDCDfj0WAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjUwOjExKzAyOjAw8iOFqgAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.renater.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">eduGAIN Access Check allows administrators of a Service Provider (SP) registered in eduGAIN to create test accounts with different profiles to validate the behaviour and test federated login. The test accounts can only be used to access own services.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">eduGAIN Access Check</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">eduGAIN Access Check permet aux administrateurs d'un Service Provider (SP) enregistré dans eduGAIN de créer des comptes de test avec des profils différents pour valider son comportement et tester l'identification fédérée. Ces comptes ne peuvent être utilisés que pour tester ses propres services.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRjCCAi4CCQC7zcA/oV2+KzANBgkqhkiG9w0BAQsFADBlMQwwCgYDVQQLDANT
+U0kxITAfBgNVBAMMGGFjY2Vzcy1jaGVjay5lZHVnYWluLm9yZzEyMDAGCSqGSIb3
+DQEJARYjZXF1aXBlLWZlZGVyYXRpb25AbGlzdGVzLnJlbmF0ZXIuZnIwHhcNMTkw
+ODA3MDk1ODM5WhcNMjkwODA0MDk1ODM5WjBlMQwwCgYDVQQLDANTU0kxITAfBgNV
+BAMMGGFjY2Vzcy1jaGVjay5lZHVnYWluLm9yZzEyMDAGCSqGSIb3DQEJARYjZXF1
+aXBlLWZlZGVyYXRpb25AbGlzdGVzLnJlbmF0ZXIuZnIwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDd/diecYJgXbtxk/WL6zYCbKo7r0DZG6oJ/XDMxEY6
+3n6p1C5GhixBMVWuBdRUw/i1ekfJnoxqXHhdNr5fl/lxkwUqTMrWxOxuLjy0EMpE
+G4uXDXArqwBMYCEv8m09kfYlBwceV3zKBMT4ONFzdOEQ0irzCUOxMeNfSCXZIXnm
+uZQoegbmGFM32Z7ph4Y+v+V58vA6sv+3un5M4JmqHjFPrRpOB4cRz5eTjUfKo1on
+laQd4TALcOXXSE1Nb5OeNigNs+5m0PohdmioZXWnaaAVw0daSBEcezUaiDfGEcL4
+rPdCALk6Icnv63F4smYWR0kZ20B3gs/hZu56IkEuZCPjAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBAMxOICOOQGO0WDnkolb//8iwiQD0foTUyprRxnFVocajkc9Urbfo
+TG44nKzqPBP5W0aGcEn6jI6rnhcsvo1JLiYYMuxeb1cyjvnowETEHbtXcvYPSYDD
+tT39CqjEiN9NI9P6SZLOkVCJtv25dfwdO1/GHix2g6ecjE9DEHoqbhrIVkAIwE96
+qSNySlCwNcuN/OjWT/CpwokA4MwmGXZFXziBGHIiWR04VztcUIktQpmW5LSxA/M/
+IcwA72ZxbM+007Z6gWAWf4QDYMkE/WH55W4uyHijUyeBVUT4xspf6F3KtPyjbkoj
+EdjXJlzZL7NbJPy29CXeWCYMwoUVX0d6lws=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDwTCCAqmgAwIBAgIJAJ0Xj9b3xuSvMA0GCSqGSIb3DQEBBQUAMHcxEDAOBgNV
+BAoMB1JFTkFURVIxDDAKBgNVBAsMA1NTSTEhMB8GA1UEAwwYYWNjZXNzLWNoZWNr
+LmVkdWdhaW4ub3JnMTIwMAYJKoZIhvcNAQkBFiNlcXVpcGUtZmVkZXJhdGlvbkBs
+aXN0ZXMucmVuYXRlci5mcjAeFw0xNzEyMTIwODU5NDhaFw0yNzEyMTAwODU5NDha
+MHcxEDAOBgNVBAoMB1JFTkFURVIxDDAKBgNVBAsMA1NTSTEhMB8GA1UEAwwYYWNj
+ZXNzLWNoZWNrLmVkdWdhaW4ub3JnMTIwMAYJKoZIhvcNAQkBFiNlcXVpcGUtZmVk
+ZXJhdGlvbkBsaXN0ZXMucmVuYXRlci5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAMLa8oIwl/N+xSWvGcdcsnw0uTr2bImsSgHSKWXf84TrxU/P4Srp
+RJsoYZqxaPYHsHGTgvnDawemXAtKfeNqwF2AlUftzpVwKDZgXj2U9GMhXfS/8rGl
+fr4MvoS1m96gPoIAht+xscMAoFRGFJjFBaPoidzLy1HTt+VR4jKObsTLNgymSHMq
+QjLl1cETrCQT6qKVez6kwKqbNT0QBRjI5ZrdnS6M/b3nYTs/0CbtQafsCL0+l02l
+BlQp5tAM4QLyG7+hd7c0GEocX8mNHmnu9dE9NUeWejOk3+1etV7ZluS6AuDv7Evs
+YZTboI6IKRqq/PMn1QOHRChIQtEL/fQNj00CAwEAAaNQME4wHQYDVR0OBBYEFF72
+WVn74S2onnDqN+DA+9miOhMPMB8GA1UdIwQYMBaAFF72WVn74S2onnDqN+DA+9mi
+OhMPMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAJgk3je+5EBPaK0R
+OHz3UReiEslnycMs6HVGE0/J3aNQcg0W9QBQrQMrdsqwhQhWZd7hiIxDjvxurO2O
+AbcTkjP8SvMZY3kdTVeezc6+yDsjQNL5uub9YS1Ez2zCtD5Tw9RZoeud6AmPVpxj
+WeoKgLAOvkBoOiQKvo5DZIIN4M6LwsfceOAQrEXUKX/rVIITwDpU6JoDLw1TNxH1
+S8T1gSuEh2w9zr0m7RKDnretgWnv0BlXMPpj8gUeFoFrAqeYyfS1GclilUSVsxsF
+WHqHPX257NwNxgb91JItruZgOq02LXVhwOv4XT+UfC8bT/sQqHaUvSVqWz3MjUY+
+Bl8MbkQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://access-check.edugain.org/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://access-check.edugain.org/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GIP RENATER</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">GIP RENATER</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.renater.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:equipe-federation@listes.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.inra.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2009-03-17T16:49:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">inra.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">INRA - Institut National de la Recherche Agronomique</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAAt0lEQVQ4y2NkIACmbVL+D2Nn+d1lRJdnQuYs2Kf6nljDqAYYYTZ/+/JPAJsz0W01tuE+wMDAwMAnyPJAk/FcIgsDAwMDTDMDAwPD9f9GDsga9m/+iGLj2SNfkeUTMQKFkL/RXchCaUAx4vIjDJgLXXIkGIiUeIHx+n+jBmQBTcZzKHwsgbofbxigA03GcwfQhBhxckgNxCy/u4yMhDQRHajTNin/J8Z2dHXUT0gMDKghj5yUsWVnAJH5WDhNWjRwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjQ5OjAzKzAyOjAw5dDYqwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo0OTowMyswMjowMJSNYBcAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://www.inra.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users of INRA - Institut National de la Recherche Agronomique</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">INRA - Institut National de la Recherche Agronomique</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs de l'INRA - Institut National de la Recherche Agronomique</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAwygAwIBAgIJAOpqYvYKPY5EMA0GCSqGSIb3DQEBBQUAMGkxCzAJBgNV
+BAYTAkZSMRMwEQYDVQQIEwpTb21lLVN0YXRlMQ0wCwYDVQQKEwRJTlJBMRQwEgYD
+VQQDEwtpZHAuaW5yYS5mcjEgMB4GCSqGSIb3DQEJARYRaXJpc0Bqb3V5LmlucmEu
+ZnIwHhcNMTIxMTEzMTQ0MDM2WhcNMzcwNzMwMTQ0MDM2WjBpMQswCQYDVQQGEwJG
+UjETMBEGA1UECBMKU29tZS1TdGF0ZTENMAsGA1UEChMESU5SQTEUMBIGA1UEAxML
+aWRwLmlucmEuZnIxIDAeBgkqhkiG9w0BCQEWEWlyaXNAam91eS5pbnJhLmZyMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1JTdk4XTqBi1r68i3u0qYR8P
+4NynVg2F7SoCLDf9ZXrpxMiyik135988ch/8mqyJK451klfCoLTgZfu1YfPQtU4x
+b463LyxSDX0SCnK4XQIBD7W6E+MysAa/hghTs1xamoNZOxZVXGSeRS6iLIZgaMfa
+O4+T/rWciwFJonESjtY2cw6HSx0OSR5lE/Lv/JDnfDMfpyF0dY4hNT8EWFzwwqMv
+q9TyeareTYMI4kd6+rw1bbX1HOWURNTFH3j+bnUx/uH3UMhywueuQTgYdR1wA/+X
+1lGsPy9k9uBQNMhJICL63O8wOLdDxuGWGjKUUF3eOv2W53zm0vA9vPkcnSqayQID
+AQABo4HOMIHLMB0GA1UdDgQWBBQuFYdp2C5bNykoCJKU6Zvck9npFjCBmwYDVR0j
+BIGTMIGQgBQuFYdp2C5bNykoCJKU6Zvck9npFqFtpGswaTELMAkGA1UEBhMCRlIx
+EzARBgNVBAgTClNvbWUtU3RhdGUxDTALBgNVBAoTBElOUkExFDASBgNVBAMTC2lk
+cC5pbnJhLmZyMSAwHgYJKoZIhvcNAQkBFhFpcmlzQGpvdXkuaW5yYS5mcoIJAOpq
+YvYKPY5EMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBACVWt4h6qZXm
+gGA+rFStbfxgVX+S749r9CuN+iwKObnwxI93SiiwNnb2PKO9OStTc8urvfNsgy8O
+vWGAZclkl2aeesV3r5oZxj26Jui2csSAh9SN0qozuTGStVxi7mCw4g+eT757IZs2
+FE2UnVn3QV2keLIsfk6excx9DcdomHhhaZXnqF/o8w8WUWRR8+RgoT8b2S1NjM63
+lJSyrOoagLkgU/k4XV81/NE+fWiQvNQl1GmcvtrN1UZmuza3g/miWRHxf6PgCC/M
+ZbGGM6SI8RhHkV9rmtvlCAbI4nwkIxYP+RX7me4vueKiUCiuod40PJlRQ0D8Wrr7
+UCoh/SWrQNc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.inra.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.inra.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.inra.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">inra.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAwygAwIBAgIJAOpqYvYKPY5EMA0GCSqGSIb3DQEBBQUAMGkxCzAJBgNV
+BAYTAkZSMRMwEQYDVQQIEwpTb21lLVN0YXRlMQ0wCwYDVQQKEwRJTlJBMRQwEgYD
+VQQDEwtpZHAuaW5yYS5mcjEgMB4GCSqGSIb3DQEJARYRaXJpc0Bqb3V5LmlucmEu
+ZnIwHhcNMTIxMTEzMTQ0MDM2WhcNMzcwNzMwMTQ0MDM2WjBpMQswCQYDVQQGEwJG
+UjETMBEGA1UECBMKU29tZS1TdGF0ZTENMAsGA1UEChMESU5SQTEUMBIGA1UEAxML
+aWRwLmlucmEuZnIxIDAeBgkqhkiG9w0BCQEWEWlyaXNAam91eS5pbnJhLmZyMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1JTdk4XTqBi1r68i3u0qYR8P
+4NynVg2F7SoCLDf9ZXrpxMiyik135988ch/8mqyJK451klfCoLTgZfu1YfPQtU4x
+b463LyxSDX0SCnK4XQIBD7W6E+MysAa/hghTs1xamoNZOxZVXGSeRS6iLIZgaMfa
+O4+T/rWciwFJonESjtY2cw6HSx0OSR5lE/Lv/JDnfDMfpyF0dY4hNT8EWFzwwqMv
+q9TyeareTYMI4kd6+rw1bbX1HOWURNTFH3j+bnUx/uH3UMhywueuQTgYdR1wA/+X
+1lGsPy9k9uBQNMhJICL63O8wOLdDxuGWGjKUUF3eOv2W53zm0vA9vPkcnSqayQID
+AQABo4HOMIHLMB0GA1UdDgQWBBQuFYdp2C5bNykoCJKU6Zvck9npFjCBmwYDVR0j
+BIGTMIGQgBQuFYdp2C5bNykoCJKU6Zvck9npFqFtpGswaTELMAkGA1UEBhMCRlIx
+EzARBgNVBAgTClNvbWUtU3RhdGUxDTALBgNVBAoTBElOUkExFDASBgNVBAMTC2lk
+cC5pbnJhLmZyMSAwHgYJKoZIhvcNAQkBFhFpcmlzQGpvdXkuaW5yYS5mcoIJAOpq
+YvYKPY5EMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBACVWt4h6qZXm
+gGA+rFStbfxgVX+S749r9CuN+iwKObnwxI93SiiwNnb2PKO9OStTc8urvfNsgy8O
+vWGAZclkl2aeesV3r5oZxj26Jui2csSAh9SN0qozuTGStVxi7mCw4g+eT757IZs2
+FE2UnVn3QV2keLIsfk6excx9DcdomHhhaZXnqF/o8w8WUWRR8+RgoT8b2S1NjM63
+lJSyrOoagLkgU/k4XV81/NE+fWiQvNQl1GmcvtrN1UZmuza3g/miWRHxf6PgCC/M
+ZbGGM6SI8RhHkV9rmtvlCAbI4nwkIxYP+RX7me4vueKiUCiuod40PJlRQ0D8Wrr7
+UCoh/SWrQNc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.inra.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">INRA - Institut National de la Recherche Agronomique</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">INRA - Institut National de la Recherche Agronomique</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.inra.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsi-rfc@inrae.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Pierre Catala</md:GivenName>
+	<md:EmailAddress>mailto:pierre.catala@inrae.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://vsso.uni-muenster.de/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-03-02T21:04:48Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://vsso.uni-muenster.de/-shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://vsso.uni-muenster.de/-shibboleth.sso/Login" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Videoportale „ViU: Early Science - Videobasierte Unterrichtsanalyse“ und „ProVision“</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Videoportale „ViU: Early Science - Videobasierte Unterrichtsanalyse“ und „ProVision“</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Diese Videoportale der Westfälischen Wilhelms-Universität Münster enthalten Unterrichtsaufzeichnungen aus unterschiedlichen Klassenstufen und Fächern sowie Zusatzmaterialien und Hinweise zur Nutzung dieser Videos in Lehrveranstaltungen. Die Projekte zur Entstehung der beiden Portale wurden jeweils vom Bundesministerium für Bildung und Forschung gefördert. Benötigt werden: (eduPersonPrincipalName ODER eine persistente SAML2-NameID ODER eduPersonTargetedID) UND (mail) UND (displayName ODER sn)</mdui:Description>
+		<mdui:Description xml:lang="en">These video portals of the Westfälische Wilhelms-Universität Münster contain lesson records from different grades and subjects as well as additional materials and notes on the use of these videos in courses. The projects for the creation of the two portals were each funded by the Federal Ministry of Education and Research. Required are: (eduPersonPrincipalName OR a persistent SAML2-NameID OR eduPersonTargetedID) AND (mail) AND (displayName or sn)</mdui:Description>
+		<mdui:Logo height="146" width="240">https://www.uni-muenster.de/imperia/md/images/koviu/_v/doppellogo_shibboleth_240pixel.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.uni-muenster.de/WWW/sssoinfo.html</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.uni-muenster.de/WWW/en/sssoinfo.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.uni-muenster.de/Koviu/Datenschutzdisclaimer.shtml</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uni-muenster.de/Koviu/Datenschutzdisclaimer.shtml</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJrTCCCJWgAwIBAgIMINa20b3Zg36RQhO9MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzE0MzM0MloXDTIxMDcxOTE0MzM0MlowgZQxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMREwDwYDVQQHDAhNdWVuc3RlcjE1MDMG
+A1UECgwsV2VzdGZhZWxpc2NoZSBXaWxoZWxtcy1Vbml2ZXJzaXRhZXQgTXVlbnN0
+ZXIxHTAbBgNVBAMMFHZzc28udW5pLW11ZW5zdGVyLmRlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAu2s21IwX3/PXdxPDwzbQWyGn+lgTffTBPsPzJF4m
+UUR0ZKx8DUHc+SPHKYQsc/udtJ5Th1CszbtUoPuUi1k/fJhNgSqU3yWC3BpaRnAA
+Xc+dN7/b7L1mh318bMj1QLwxWC71jgTDZ/fX+v1mTSLW+uWkLPVOBRYKpNF1MjtI
+D2WmqU0LN+iWc+ouj7JjVxi50LRTn34khXn/bIIIGFVRF9pi+YlPWsaS5KOBiiLy
+AjtanhqeCbh5DBYC0y2dVhsI1Er8YqvnhPljJ/gkNUrkG5mEso0PCkn+uszs5FJl
+WBgaQQpCLwWphcXtvTCkcbFW6InPxuoNVCIy5QrEnLXGHQIDAQABo4IGAjCCBf4w
+WQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGC
+LAEBBDARBg8rBgEEAYGtIYIsAQEEAwkwEQYPKwYBBAGBrSGCLAIBBAMJMAkGA1Ud
+EwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+BQcDATAdBgNVHQ4EFgQUzs8RsxNu/+C3MJKDVHy+euf1mcMwHwYDVR0jBBgwFoAU
+azqYi/nyU4na4K2yMh4JH+iqO3QwVwYDVR0RBFAwToIUdnNzby51bmktbXVlbnN0
+ZXIuZGWCC3Zzc28ud3d1LmRlghh3d3cudnNzby51bmktbXVlbnN0ZXIuZGWCD3d3
+dy52c3NvLnd3dS5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5w
+Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9
+oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0
+dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcw
+AoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+YWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRm
+bi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA14G
+CisGAQQB1nkCBAIEggNOBIIDSgNIAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQAp
+Bo2yCJo32RMAAAFqK7fgOQAABAMARzBFAiAbuENxo9c2QNphTDXNnHz9zVQCKeRO
+wrT/Pb/HOYoNSQIhAMBKQQypga1W/siDSar1gNwIQqa9DdOBirUSf/s+gWRxAHUA
+qucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE880AAAFqK7fgHAAABAMARjBE
+AiBv8S8Ctpps30yOlyxiwYDyZaQ9mgT5cmf52mhjKvjIMAIgUORM5P9C9OrF4CB3
+CoQJfXClw4THRcfWloBAg0C1oe0AdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcv
+o6odBxPTDAAAAWort+E8AAAEAwBHMEUCIQDLOryu6yZTK4WBn1HblxzMCD7M92W+
+yHyKaU+DfZmhMAIgAJT76bOI8Qo/Vr5tr5Vg+CckK+dKUtQDAAREnYWpkwUAdwCk
+uQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWort+CaAAAEAwBIMEYC
+IQCa7+E5iH3bKLRhySGgttGFip1zF8JcP1HT1ZTwef1OqgIhAJ0pMzc3y79PQNkg
+yVm3xUzrVH8V/Q7urH0HkEWBUMoGAHUA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiD
+AMR7iXqo/csAAAFqK7fgmgAABAMARjBEAiBzY1wd0NcyIl82gloZFaj8a6pPMp/H
+ilZKfZhD84lKEgIgNuMjN1vmxb4NkXWf78wBp9vv3EBGVEVZvUbYBOTKsJ0AdgC7
+2d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAAAWort+CaAAAEAwBHMEUC
+IQCY386VKuh6z/DLm0TiXQZjXredFEf0CRnrQUVeL7nqcAIgUKX5mJRWesvFX/Vu
+alBZJu/FzS6/Pw1AOfWbYwtJAnwAdwBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/
+0zOWtbaBqAAAAWort+SYAAAEAwBIMEYCIQCZvL7wddrtjv7YyvUZVyJEJ3xzWyOq
+iEc8Vxm3EqiULwIhANvROFrnag98AP2Nvmc0xuzuu1hP/ynZFZi8vcHuyF4+MA0G
+CSqGSIb3DQEBCwUAA4IBAQAK0bl97BxFSs3v8h7iGReTzAM+FOimL85yGIA8XFtd
+uwJUvTu6d9SLvDFWEG/mC/3RS9pmtIlHiDHgH9F7TPfeC7MhIF4gygyAJjh9FRwV
+NcXIF4GDcChpopBmMs+XLnXQiWwSQ32hLLKdRq7nIsL4wtzKdTtW5Ij2CKsmo3M/
+nDNTgUmq5g49nvVL3drlEE3qHLlY4TG5SN1IlDwcPWOBPW3cxKGwLnJ2eNbs9lfg
+ZHf8HbDISLlzD3w3Uao1BCZW812HfxJJyc5D0jpqB4BxeN4rJ1NX9Xpwsz1SRbzQ
+mvgu+O/KV1BdFAccBZO1oe/8Gto8rZ4pbC7vFZXRp2OA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vsso.uni-muenster.de/-shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://vsso.uni-muenster.de/-shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">Videoportale „ViU: Early Science - Videobasierte Unterrichtsanalyse“ und „ProVision“</md:ServiceName>
+		<md:ServiceName xml:lang="en">Videoportale „ViU: Early Science - Videobasierte Unterrichtsanalyse“ und „ProVision“</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">Diese Videoportale der Westfälischen Wilhelms-Universität Münster enthalten Unterrichtsaufzeichnungen aus unterschiedlichen Klassenstufen und Fächern sowie Zusatzmaterialien und Hinweise zur Nutzung dieser Videos in Lehrveranstaltungen. Die Projekte zur Entstehung der beiden Portale wurden jeweils vom Bundesministerium für Bildung und Forschung gefördert. Benötigt werden: (eduPersonPrincipalName ODER eine persistente SAML2-NameID ODER eduPersonTargetedID) UND (mail) UND (displayName ODER sn)</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">These video portals of the Westfälische Wilhelms-Universität Münster contain lesson records from different grades and subjects as well as additional materials and notes on the use of these videos in courses. The projects for the creation of the two portals were each funded by the Federal Ministry of Education and Research. Required are: (eduPersonPrincipalName OR a persistent SAML2-NameID OR eduPersonTargetedID) AND (mail) AND (displayName or sn)</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonUniqueId" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.13" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e247</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e247</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Westfälische Wilhelms-Universität Münster</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Westfälische Wilhelms-Universität Münster</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.uni-muenster.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.uni-muenster.de/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Rainer</md:GivenName>
+	<md:SurName>Perske</md:SurName>
+	<md:EmailAddress>mailto:wwwadmin@uni-muenster.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Rainer</md:GivenName>
+	<md:SurName>Perske</md:SurName>
+	<md:EmailAddress>mailto:wwwadmin@uni-muenster.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>CERT/IRT</md:GivenName>
+	<md:SurName>Team</md:SurName>
+	<md:EmailAddress>mailto:abuse@uni-muenster.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://dialect.liv-coll.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The City of Liverpool College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The City of Liverpool College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">liv-coll.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUe2/KXRs2WbpKulqXL6OOhVDFMWQwDQYJKoZIhvcNAQEF
+BQAwIDEeMBwGA1UEAwwVZGlhbGVjdC5saXYtc3R1LmNvLnVrMB4XDTE1MTEwNTE1
+MzMyMVoXDTM1MTEwNTE1MzMyMVowIDEeMBwGA1UEAwwVZGlhbGVjdC5saXYtc3R1
+LmNvLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhlsncxjioWzh
+osMLSvqjM8GS7uPtTyX82vYQXeMRZmWYW1APaWHUom5fwJ21YORaVn4XYWQSS7uM
+vfW+MV3bIUGqCUSvXMztGacSbY/NR+i0XQ583C8AL523KO7SLX+WyPMwmXcmffJt
+n7d9g5Skosuuiy/grOQEmHQKE/XlpH4RiRh/kLQb38kG5ZhL9SR39wMfaWZzWBhc
+YRpRFKjLFiVAHnKYRQ1fu9F02A89zFUEv+pTv+i3Vz9hL0q/TF61Oi7Tk5A57vMQ
+CYTZ4DSx0cjCsjzxOLtQ6fwN10RTUjHrxGouFg/vKFpCZyi9PBkfxp6z6/6snZQP
+AItRT6wBMQIDAQABo3EwbzAdBgNVHQ4EFgQU7OR2K7Vgwe2rTHCcPZ2+DEhTJsMw
+TgYDVR0RBEcwRYIVZGlhbGVjdC5saXYtc3R1LmNvLnVrhixodHRwczovL2RpYWxl
+Y3QubGl2LXN0dS5jby51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOC
+AQEAbiIW2ppSfDwBdrZJE1itt93UZooBxRh5NR3yoB+vUjoBOFMSSvUZkPlXBtsQ
+FE5jXQZAwxRU0PBa679V9L4wMpgzp3S76m2lggO5fjD/VlbQddaRsYNfRGQ1ekzR
+oFW18gZVO5i9PmqI8U3uNuMLgw3ZpBFn4t1x2M+7lFGLeA5xxr+GUQ3sZ2udm3AW
+NbPwGN6xXZAVDtJ/y98Z+HLPvWyQH7C8NEyrI1zW/6GhhnzCwcgN3/nBeG+YLyab
+XGqVeeQnBT4gvDRcb7yP1rxmt4yKXkKshf4xz/pDZBjK1LWlkkZz64LFByHicBJw
+VrLt5484eyAnlQnkdiEKJiL+BA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://dialect.liv-stu.co.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dialect.liv-stu.co.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://dialect.liv-stu.co.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dialect.liv-stu.co.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://dialect.liv-stu.co.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://dialect.liv-stu.co.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">liv-coll.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUe2/KXRs2WbpKulqXL6OOhVDFMWQwDQYJKoZIhvcNAQEF
+BQAwIDEeMBwGA1UEAwwVZGlhbGVjdC5saXYtc3R1LmNvLnVrMB4XDTE1MTEwNTE1
+MzMyMVoXDTM1MTEwNTE1MzMyMVowIDEeMBwGA1UEAwwVZGlhbGVjdC5saXYtc3R1
+LmNvLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhlsncxjioWzh
+osMLSvqjM8GS7uPtTyX82vYQXeMRZmWYW1APaWHUom5fwJ21YORaVn4XYWQSS7uM
+vfW+MV3bIUGqCUSvXMztGacSbY/NR+i0XQ583C8AL523KO7SLX+WyPMwmXcmffJt
+n7d9g5Skosuuiy/grOQEmHQKE/XlpH4RiRh/kLQb38kG5ZhL9SR39wMfaWZzWBhc
+YRpRFKjLFiVAHnKYRQ1fu9F02A89zFUEv+pTv+i3Vz9hL0q/TF61Oi7Tk5A57vMQ
+CYTZ4DSx0cjCsjzxOLtQ6fwN10RTUjHrxGouFg/vKFpCZyi9PBkfxp6z6/6snZQP
+AItRT6wBMQIDAQABo3EwbzAdBgNVHQ4EFgQU7OR2K7Vgwe2rTHCcPZ2+DEhTJsMw
+TgYDVR0RBEcwRYIVZGlhbGVjdC5saXYtc3R1LmNvLnVrhixodHRwczovL2RpYWxl
+Y3QubGl2LXN0dS5jby51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOC
+AQEAbiIW2ppSfDwBdrZJE1itt93UZooBxRh5NR3yoB+vUjoBOFMSSvUZkPlXBtsQ
+FE5jXQZAwxRU0PBa679V9L4wMpgzp3S76m2lggO5fjD/VlbQddaRsYNfRGQ1ekzR
+oFW18gZVO5i9PmqI8U3uNuMLgw3ZpBFn4t1x2M+7lFGLeA5xxr+GUQ3sZ2udm3AW
+NbPwGN6xXZAVDtJ/y98Z+HLPvWyQH7C8NEyrI1zW/6GhhnzCwcgN3/nBeG+YLyab
+XGqVeeQnBT4gvDRcb7yP1rxmt4yKXkKshf4xz/pDZBjK1LWlkkZz64LFByHicBJw
+VrLt5484eyAnlQnkdiEKJiL+BA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://dialect.liv-stu.co.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dialect.liv-stu.co.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The City of Liverpool College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The City of Liverpool College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.liv-coll.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dale</md:GivenName>
+	<md:SurName>Davies</md:SurName>
+	<md:EmailAddress>mailto:dale.davies@shared-ed.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dale</md:GivenName>
+	<md:SurName>Davies</md:SurName>
+	<md:EmailAddress>mailto:dale.davies@shared-ed.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

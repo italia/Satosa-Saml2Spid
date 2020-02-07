@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-login.hep-bejune.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2016-01-28T14:14:45Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://support.hep-bejune.ch/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hep-bejune.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">HEP-BEJUNE – Pädagogische Hochschule - BEJUNE</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">HEP-BEJUNE - Haute Ecole Pédagogique BEJUNE</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr">HEP-BEJUNE - Haute Ecole Pédagogique BEJUNE</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="it">HEP-BEJUNE – Alta Scuola Pedagogica - BEJUNE</mdui:DisplayName>
+		<mdui:Description xml:lang="de">HEP-BEJUNE – Pädagogische Hochschule der Kantone Bern (französischsprachig), Jura und Neuenburg</mdui:Description>
+		<mdui:Description xml:lang="en">HEP-BEJUNE – Haute Ecole Pédagogique des cantons de Berne (francophone), Jura et Neuchâtel</mdui:Description>
+		<mdui:Description xml:lang="fr">HEP-BEJUNE – Haute Ecole Pédagogique des cantons de Berne (francophone), Jura et Neuchâtel</mdui:Description>
+		<mdui:Description xml:lang="it">HEP-BEJUNE – Alta Scuola Pedagogica dei cantoni Berna (francofona), Giura e Neuchâtel</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNUJGNDg3M0Q2Q0ZFNTExOEU4RTk2QTQ5NzZFMzI2QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowQTI3MkM5MUM4MDgxMUU1ODc1QkRDNjFDMTJBRDZCRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowQTI3MkM5MEM4MDgxMUU1ODc1QkRDNjFDMTJBRDZCRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA2QkY0ODczRDZDRkU1MTE4RThFOTZBNDk3NkUzMjZDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA1QkY0ODczRDZDRkU1MTE4RThFOTZBNDk3NkUzMjZDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+y6o3IwAAAmtJREFUeNpMUs9rE0EUfjM7u5tukk3NlibUKEqgUCih4MGCoCDttSiIiIheSg9iEbz07xAURY9WUfBWROmlNw+eRDwo/uqhYtTSJm6yu5mZN+PbpIKPYeYNvO+9933vsePnnyilUiU1WOZ51uFoQFocCwJjTBzHlWJpMEgF47VabXt7W1C0lFJpRQAAGAEUGJsk9GWMaa0RMUv7WZZhmoqelgpVitpayxhwwzVoQFTIAaXDbJZIbjX0uppBq9US9p/l6Q8cSx4oBahEULAWA9/Xgk3VJldWrgk9JpRjrMzDueMwzunHrPF94aJiphN3fqBny8LOHa2fmwfBDyzPfeABZ5b3+73W9LHJqJR2f6OMsd+hFt68jUUGRJHYGSqhGcvDreFmsHjm1PLV0yea4AIIyG86mQJBCoAxxDLvmw1x5CNubW1NTQSbqvf96/tGvXJhaXG+VadAQSaHbw5wHIf6ASNAeH6wsbHhyJir7tmbK7Oz9U/f9o4cqXIaQi4I3UMHFY0kn8yf/f0kSaIoWl1dvXLx5Pr6q7W1tYIA7pP8VMGw/CAMp8cM8/zxiQG6l5dvLF2ae/D848PHL0V1ui1BuK5L+iiby0Qd5SoZ4g7Fon/r+vLCQvj02Zd7d267mM3MzJQ8AmQIyqCm5HluqkAiEJ1gfPLwdLj5Gu4+etHF6FBYfLcDn3vAyov3qePBSCVBnDmwXKVyVK2UxmSWdHZ/0Y4IZsJi0Gw2RegVJPBstHzUnsNp0LSt8c7P2PNAawjKYRRm/aS922m3P4hKpUIV/P8Ao23l1Srx8X2/INy9vd0gCBqNBkX+FWAAUAV2GXqhlC0AAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAIAAAB+RarbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowN0JGNDg3M0Q2Q0ZFNTExOEU4RTk2QTQ5NzZFMzI2QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowQTI3MkM5OUM4MDgxMUU1ODc1QkRDNjFDMTJBRDZCRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowQTI3MkM5OEM4MDgxMUU1ODc1QkRDNjFDMTJBRDZCRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjAxODAxMTc0MDcyMDY4MTE4QzE0Qzk1NzFEMEM2MTQ2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA3QkY0ODczRDZDRkU1MTE4RThFOTZBNDk3NkUzMjZDIi8+IDwvcmRmOkRlc2NyaXB0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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>hep-bejune.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.13701,7.26676</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.41101,7.07387</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.1078006,6.8220329</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEODCCAqCgAwIBAgIJALjOs+c4IFHFMA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNV
+BAMTF2FhaS1sb2dpbi5oZXAtYmVqdW5lLmNoMB4XDTE5MDExMDE0MzQ0NFoXDTIy
+MDExMDE0MzQ0NFowIjEgMB4GA1UEAxMXYWFpLWxvZ2luLmhlcC1iZWp1bmUuY2gw
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCoSewMOB3q+3SNYVp2nUZu
+gKQ1XPzzjXRPpv1MrF3J8cCqN8tadqX0g6eZpuAR0Tnph4asWe0sccEOkQ8/k+j4
+m9d2t82wsP3bjuyxZHo+f6aoy51QfFj6UsMlxaKieI6BnH+r+3QlAN/KuuQIFh2n
+8ixvXPHL0ZYovvVl3I2chd5z2h9aCr+kQGk+oUwmV214QH0KnVdo0cdhef3g75Pt
+hji2ENCo959H24f0W1SJkChN7Nvcjxe8poWRofIvjq8YEs1If0xz6dXCj5GUEK8S
+ca0nxg8dQlV8IrQrz+FCyIvXcxCJ8yLNNfzM+R4qJQsz40Gs7IUgSs9SeRjFS6H3
+L8RCcgTaBZJuuZmZVwSpnY4EkLYthiUxx8dQBG+YZQ50xo1siiPWYI96lIoUS6dy
+GKZjRbNx/x14zRFnKdQPDLZasHnQFy9QgGUGmx1nos9PWkb8RHYLOaVXO51ZDRwM
+BlSsw7bpcwPKi/ACUk1go3mZ0WTXPciQSao0CTLv8bMCAwEAAaNxMG8wTgYDVR0R
+BEcwRYIXYWFpLWxvZ2luLmhlcC1iZWp1bmUuY2iGKmh0dHBzOi8vYWFpLWxvZ2lu
+LmhlcC1iZWp1bmUuY2gvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUM2/UYUvZIA+32A8F
+bsT2UN4VErswDQYJKoZIhvcNAQELBQADggGBACLCWg8ibYbg06xCawCYNOVALhVL
+Y1gUQQE/r3ZUARz+BO0LXAVIIHP3KQSp/zoqUa9aE8erLmuzzhLVOz3QxdFU/HpB
+a8Isha0CEA1YgD38oyhxsIiHnCQ5i3ydPfclKP8evPuO/0/OWZRiG+KE8yenleab
+VMuqgf0Bdf01Z5FAkZE50d/e6/4nniZVyvfBP5zx8N3+P3V4LkXLfmb5SkxvNcLc
+G1ncIS1PgrgI1OBJ4Fu+o051a/h4OD6DZ9sRJ78VpietNsf/YQOluc6OvtL92fOH
+W9J/Iz4fa2aU0K7obla7pAQV75qA3os5crs0Bxn0gwkaw53GW8O4W25d5XYBDHWH
+MJPSwn+GOsw7AMu0Bl7rNJkuOcmso6jz5SEp/2Yn3zYKCfs6/KsiZHm+FVlMCSR7
+k8iC/gYUs5xvKioHj4nbLtMHkQtlpNuJW5YOiuMywy2AlXCqa67EI/Dx4Yk15rlo
+9B4V2XrKPGB92ZkHpzqfXULdwJb7ypfiZ6uxzw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.hep-bejune.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-login.hep-bejune.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-login.hep-bejune.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-login.hep-bejune.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hep-bejune.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEODCCAqCgAwIBAgIJALjOs+c4IFHFMA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNV
+BAMTF2FhaS1sb2dpbi5oZXAtYmVqdW5lLmNoMB4XDTE5MDExMDE0MzQ0NFoXDTIy
+MDExMDE0MzQ0NFowIjEgMB4GA1UEAxMXYWFpLWxvZ2luLmhlcC1iZWp1bmUuY2gw
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCoSewMOB3q+3SNYVp2nUZu
+gKQ1XPzzjXRPpv1MrF3J8cCqN8tadqX0g6eZpuAR0Tnph4asWe0sccEOkQ8/k+j4
+m9d2t82wsP3bjuyxZHo+f6aoy51QfFj6UsMlxaKieI6BnH+r+3QlAN/KuuQIFh2n
+8ixvXPHL0ZYovvVl3I2chd5z2h9aCr+kQGk+oUwmV214QH0KnVdo0cdhef3g75Pt
+hji2ENCo959H24f0W1SJkChN7Nvcjxe8poWRofIvjq8YEs1If0xz6dXCj5GUEK8S
+ca0nxg8dQlV8IrQrz+FCyIvXcxCJ8yLNNfzM+R4qJQsz40Gs7IUgSs9SeRjFS6H3
+L8RCcgTaBZJuuZmZVwSpnY4EkLYthiUxx8dQBG+YZQ50xo1siiPWYI96lIoUS6dy
+GKZjRbNx/x14zRFnKdQPDLZasHnQFy9QgGUGmx1nos9PWkb8RHYLOaVXO51ZDRwM
+BlSsw7bpcwPKi/ACUk1go3mZ0WTXPciQSao0CTLv8bMCAwEAAaNxMG8wTgYDVR0R
+BEcwRYIXYWFpLWxvZ2luLmhlcC1iZWp1bmUuY2iGKmh0dHBzOi8vYWFpLWxvZ2lu
+LmhlcC1iZWp1bmUuY2gvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUM2/UYUvZIA+32A8F
+bsT2UN4VErswDQYJKoZIhvcNAQELBQADggGBACLCWg8ibYbg06xCawCYNOVALhVL
+Y1gUQQE/r3ZUARz+BO0LXAVIIHP3KQSp/zoqUa9aE8erLmuzzhLVOz3QxdFU/HpB
+a8Isha0CEA1YgD38oyhxsIiHnCQ5i3ydPfclKP8evPuO/0/OWZRiG+KE8yenleab
+VMuqgf0Bdf01Z5FAkZE50d/e6/4nniZVyvfBP5zx8N3+P3V4LkXLfmb5SkxvNcLc
+G1ncIS1PgrgI1OBJ4Fu+o051a/h4OD6DZ9sRJ78VpietNsf/YQOluc6OvtL92fOH
+W9J/Iz4fa2aU0K7obla7pAQV75qA3os5crs0Bxn0gwkaw53GW8O4W25d5XYBDHWH
+MJPSwn+GOsw7AMu0Bl7rNJkuOcmso6jz5SEp/2Yn3zYKCfs6/KsiZHm+FVlMCSR7
+k8iC/gYUs5xvKioHj4nbLtMHkQtlpNuJW5YOiuMywy2AlXCqa67EI/Dx4Yk15rlo
+9B4V2XrKPGB92ZkHpzqfXULdwJb7ypfiZ6uxzw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.hep-bejune.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">hep-bejune.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">HEP-BEJUNE – Pädagogische Hochschule - BEJUNE</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">HEP-BEJUNE - Haute Ecole Pédagogique BEJUNE</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="fr">HEP-BEJUNE - Haute Ecole Pédagogique BEJUNE</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="it">HEP-BEJUNE – Alta Scuola Pedagogica - BEJUNE</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hep-bejune.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hep-bejune.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="fr">http://www.hep-bejune.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="it">http://www.hep-bejune.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help</md:GivenName>
+	<md:SurName>desk</md:SurName>
+	<md:EmailAddress>mailto:support@hep-bejune.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 32 886 9990</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alexandre</md:GivenName>
+	<md:SurName>Balmelli</md:SurName>
+	<md:EmailAddress>mailto:alexandre.balmelli@hep-bejune.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dylan</md:GivenName>
+	<md:SurName>Merlos</md:SurName>
+	<md:EmailAddress>mailto:dylan.merlos@hep-bejune.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 32 886 9986</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

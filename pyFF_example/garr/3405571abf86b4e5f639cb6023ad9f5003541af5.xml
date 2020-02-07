@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idpshibboleth.irf.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">irf.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Institutet för rymdfysik</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Swedish Institute of Space Physics</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för Institutet för rymdfysik</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for the Swedish Institute of Space Physics</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://www.irf.se</mdui:InformationURL>
+		<mdui:Logo height="145" width="144">https://www.irf.se/image/IRF_logo.png</mdui:Logo>
+		<mdui:Logo height="145" width="144" xml:lang="sv">https://www.irf.se/image/IRF_logo.png</mdui:Logo>
+		<mdui:Logo height="145" width="144" xml:lang="en">https://www.irf.se/image/IRF_logo.png</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="sv">http://documents.irf.se/get_document.php?group=Computer%26docid=302</mdui:PrivacyStatementURL>
+		<mdui:Keywords xml:lang="sv">irf kiruna rymdcampus rymdfysik</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">irf kiruna rymdcampus rymdfysik</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>irf.se</mdui:DomainHint>
+		<mdui:IPHint>192.71.13.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.33.0/24</mdui:IPHint>
+		<mdui:IPHint>192.71.152.0/24</mdui:IPHint>
+		<mdui:GeolocationHint>geo:67.84,20.41</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUA93wi+Avn0weW0JMfqJ3DxZWLjgwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5pcmYuc2UwHhcNMTYwMjA4MTIy
+MDMzWhcNMzYwMjA4MTIyMDMzWjAfMR0wGwYDVQQDDBRpZHBzaGliYm9sZXRoLmly
+Zi5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMRf6rttUT2iQB/z
+kEiVH7YzON4WB92Y/UmnD3WiN8fjkvbZEMLj3ESWP/ldqVIutldlksAPFTf7xhRm
+wMtOJQmf7WvXY0IR+d/zxNOTH8raeYDmlcaeNAcEjmLNCwgZv51Ow2kq0piAN5EK
+35RuV0khqm79R7hc11Gx30ZMxcuV+7sAm6T2ojFx6F/lsj6sQxrTD/uqBY28hVBy
+m58srJDeWiE5VbUmiQaEAnMXr5oFrCK9/UDDFFEX/Y25UOgQIHnUa/G43jVvPIV4
+NYT8wUkuijo5jkXb72eRq3Fqg0T1Ou8uVTYvTMvRNeAVUqKsFgOpbqWPT6kh27/1
+tOGRsycCAwEAAaNvMG0wHQYDVR0OBBYEFBuWdnt63xXR5ZTkEG0YaoTUVQUtMEwG
+A1UdEQRFMEOCFGlkcHNoaWJib2xldGguaXJmLnNlhitodHRwczovL2lkcHNoaWJi
+b2xldGguaXJmLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAG
+ZCuTZpgSP69Qgz3JHPPcqi7+PF893zb5omDPf0AdWC+CrLGdYEOpOrODQ7gC2t/3
+318o0vjj4hyShPO3DczMPMKH0DoI7PvS8pJ9dR3vSsc9i04z9nMEOVg3+ofPRWR3
+iDPll7XTALQNSwen7/Q1TxQQS/PFUGbgxSt+Hk9woU5QMlbvsiqM813JsVS7vxgA
+AJ1MDeT4luzSG1Vc/bfH8RkaDI+lhR0FZe0xmhYaS2nG7kyEn0lBYjbevE1ZpaRe
+wrDZBcvSQ6jJw91F/CHHutF2nzaZuALlK9/3azDGx5LbUFCIxvmeM4Gmz8csx8rz
+4okhyqwoeyl2XUl1z+PB
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAKNIMRVddJl8Eq2nzLvhFamfj39qMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcHNoaWJib2xldGguaXJmLnNlMB4XDTE2MDIwODEy
+MjAzMloXDTM2MDIwODEyMjAzMlowHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5p
+cmYuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCa/mHPOa5/M9Ur
+INayTyL9eTIYmYet2QHaVICODn20KBzRBIVrm0n33Z3N6bZ2qqi4yJ48qQsJnJWi
+951yN0CUXVEGWgJIb0ERQrnKHw63d/JBqmp1ImYBWom97Upzdiy0eXwkASzD3ztl
+6ri3+SqZmltEXc9bIEavVcFUTPqU68aP8AtoiRzTxjGfwWBcsDri+ZkN76t1mt/Y
+epWvt/EPEX6Xp1/1qAiyZO6ja8zcksfKn70u6fPgCYHXxqJ0pEwRwReT8PbuQmyl
+vHhncs/EXqTiNlfcpK67ydigQ84Cp1f1qf8snYZPuIUfUbuFrTUnoKjGP1qiaxJo
+l/qaSqz5AgMBAAGjbzBtMB0GA1UdDgQWBBSYP4tgO7b03F98vWe6ZEbQkqbzETBM
+BgNVHREERTBDghRpZHBzaGliYm9sZXRoLmlyZi5zZYYraHR0cHM6Ly9pZHBzaGli
+Ym9sZXRoLmlyZi5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+b0dwwUW0J0ZTdbZeehpoOQGB71sc3ZwdBxkmlFqr+xJqjT/shX3yNYrpmuhcVjog
+i4hnWitIE79kJ9FXEvgSnJORuIvaKzlheno7fa5x3mU3TnnHrPdc5nLSXNhFnezk
+4kqvIK5GL0bJQGuf6BKU/Ot8GFYPTKAi1D2aRaI3xzc7cj/EpCpFiEKWUbBFOHN8
+FYtcAWcGkYZsHioAMaaKNuVnk2srKT4lNrIVMFn+8mzri18rIs7GPrUi2tK2LoX0
+CkZfFUJynwfG4GDixCdVykAiT+DJAZ0AUOGAD0ASgp0fcYp4q54WqFngl3IvCr2T
+0Kcn98Fuw5/qCHZ1mIAgyA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAN/1x1Wau72Xw/BL88E9dnVPnD1MMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcHNoaWJib2xldGguaXJmLnNlMB4XDTE2MDIwODEy
+MjAzMloXDTM2MDIwODEyMjAzMlowHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5p
+cmYuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDc87Ku2vkiAXTa
+RroaKkTsMlazPXje3jgxIW+k+tIZruBChAoRT1BMuhVgy5K2qWUT027B/kZBpzzg
+sOmWPcoXDnItMFMDmSNFM18NuE+Hr02/rhpD4hHQCazZrBSbIHJxlEVDUAc00BXq
+z7tnHz5XGDnDfRtEqqTE1L0QAIN7Y+vsdAGdMfvMfOHN8za7d8/wWdoE6rTofBPU
+nMdrSNdk+ZwVKrszq2E+G7ppZ3QpyBaPXc41tkml1GXYhh6c7+GDJ8QZssLFLrpB
+TPLGz6DKDXwQ5Yn0ViF0a1AZI91+0sM1yvKExU1lFRD8vGO5gtqn+aa7MY59IZ+/
+e9mAI9ObAgMBAAGjbzBtMB0GA1UdDgQWBBTEa8AlX8hAecrW1mTHw/rHN9fiZTBM
+BgNVHREERTBDghRpZHBzaGliYm9sZXRoLmlyZi5zZYYraHR0cHM6Ly9pZHBzaGli
+Ym9sZXRoLmlyZi5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+t4r3f0DdNjsG1BVjQGE0/r3wzKwD9VgfI7YTyj9T01G0SzTPzEjwS2xSvPyBh+SY
+XGKoaSjrvMQRLyQ0yzGUkJkrEA026bAS+XtKXt3N1QnSnCDg8iyRG3eMJMQxlADw
+tM7KXBNdmmyZoFQsvgazQKCfcqpSieznAfpHS6QkOjSJS7qjmZvE9gR9+LrQjtGb
+SUpvSthL7xqz9bSHJsH3LBh/0fnQ1+eEY5XkMAKzdjaesWYSfJOUWcUojcyYY7TO
+vsUgGd85RO4yz1NF7JL/8KMHODq6/vHeE53VgHXRdeH0ntl04Gvzu6oyl7En3G5B
+CQNfH97cIrTE5N/RQ7XWcw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idpshibboleth.irf.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpshibboleth.irf.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idpshibboleth.irf.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpshibboleth.irf.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpshibboleth.irf.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">irf.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUA93wi+Avn0weW0JMfqJ3DxZWLjgwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5pcmYuc2UwHhcNMTYwMjA4MTIy
+MDMzWhcNMzYwMjA4MTIyMDMzWjAfMR0wGwYDVQQDDBRpZHBzaGliYm9sZXRoLmly
+Zi5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMRf6rttUT2iQB/z
+kEiVH7YzON4WB92Y/UmnD3WiN8fjkvbZEMLj3ESWP/ldqVIutldlksAPFTf7xhRm
+wMtOJQmf7WvXY0IR+d/zxNOTH8raeYDmlcaeNAcEjmLNCwgZv51Ow2kq0piAN5EK
+35RuV0khqm79R7hc11Gx30ZMxcuV+7sAm6T2ojFx6F/lsj6sQxrTD/uqBY28hVBy
+m58srJDeWiE5VbUmiQaEAnMXr5oFrCK9/UDDFFEX/Y25UOgQIHnUa/G43jVvPIV4
+NYT8wUkuijo5jkXb72eRq3Fqg0T1Ou8uVTYvTMvRNeAVUqKsFgOpbqWPT6kh27/1
+tOGRsycCAwEAAaNvMG0wHQYDVR0OBBYEFBuWdnt63xXR5ZTkEG0YaoTUVQUtMEwG
+A1UdEQRFMEOCFGlkcHNoaWJib2xldGguaXJmLnNlhitodHRwczovL2lkcHNoaWJi
+b2xldGguaXJmLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAG
+ZCuTZpgSP69Qgz3JHPPcqi7+PF893zb5omDPf0AdWC+CrLGdYEOpOrODQ7gC2t/3
+318o0vjj4hyShPO3DczMPMKH0DoI7PvS8pJ9dR3vSsc9i04z9nMEOVg3+ofPRWR3
+iDPll7XTALQNSwen7/Q1TxQQS/PFUGbgxSt+Hk9woU5QMlbvsiqM813JsVS7vxgA
+AJ1MDeT4luzSG1Vc/bfH8RkaDI+lhR0FZe0xmhYaS2nG7kyEn0lBYjbevE1ZpaRe
+wrDZBcvSQ6jJw91F/CHHutF2nzaZuALlK9/3azDGx5LbUFCIxvmeM4Gmz8csx8rz
+4okhyqwoeyl2XUl1z+PB
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAKNIMRVddJl8Eq2nzLvhFamfj39qMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcHNoaWJib2xldGguaXJmLnNlMB4XDTE2MDIwODEy
+MjAzMloXDTM2MDIwODEyMjAzMlowHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5p
+cmYuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCa/mHPOa5/M9Ur
+INayTyL9eTIYmYet2QHaVICODn20KBzRBIVrm0n33Z3N6bZ2qqi4yJ48qQsJnJWi
+951yN0CUXVEGWgJIb0ERQrnKHw63d/JBqmp1ImYBWom97Upzdiy0eXwkASzD3ztl
+6ri3+SqZmltEXc9bIEavVcFUTPqU68aP8AtoiRzTxjGfwWBcsDri+ZkN76t1mt/Y
+epWvt/EPEX6Xp1/1qAiyZO6ja8zcksfKn70u6fPgCYHXxqJ0pEwRwReT8PbuQmyl
+vHhncs/EXqTiNlfcpK67ydigQ84Cp1f1qf8snYZPuIUfUbuFrTUnoKjGP1qiaxJo
+l/qaSqz5AgMBAAGjbzBtMB0GA1UdDgQWBBSYP4tgO7b03F98vWe6ZEbQkqbzETBM
+BgNVHREERTBDghRpZHBzaGliYm9sZXRoLmlyZi5zZYYraHR0cHM6Ly9pZHBzaGli
+Ym9sZXRoLmlyZi5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+b0dwwUW0J0ZTdbZeehpoOQGB71sc3ZwdBxkmlFqr+xJqjT/shX3yNYrpmuhcVjog
+i4hnWitIE79kJ9FXEvgSnJORuIvaKzlheno7fa5x3mU3TnnHrPdc5nLSXNhFnezk
+4kqvIK5GL0bJQGuf6BKU/Ot8GFYPTKAi1D2aRaI3xzc7cj/EpCpFiEKWUbBFOHN8
+FYtcAWcGkYZsHioAMaaKNuVnk2srKT4lNrIVMFn+8mzri18rIs7GPrUi2tK2LoX0
+CkZfFUJynwfG4GDixCdVykAiT+DJAZ0AUOGAD0ASgp0fcYp4q54WqFngl3IvCr2T
+0Kcn98Fuw5/qCHZ1mIAgyA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAN/1x1Wau72Xw/BL88E9dnVPnD1MMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcHNoaWJib2xldGguaXJmLnNlMB4XDTE2MDIwODEy
+MjAzMloXDTM2MDIwODEyMjAzMlowHzEdMBsGA1UEAwwUaWRwc2hpYmJvbGV0aC5p
+cmYuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDc87Ku2vkiAXTa
+RroaKkTsMlazPXje3jgxIW+k+tIZruBChAoRT1BMuhVgy5K2qWUT027B/kZBpzzg
+sOmWPcoXDnItMFMDmSNFM18NuE+Hr02/rhpD4hHQCazZrBSbIHJxlEVDUAc00BXq
+z7tnHz5XGDnDfRtEqqTE1L0QAIN7Y+vsdAGdMfvMfOHN8za7d8/wWdoE6rTofBPU
+nMdrSNdk+ZwVKrszq2E+G7ppZ3QpyBaPXc41tkml1GXYhh6c7+GDJ8QZssLFLrpB
+TPLGz6DKDXwQ5Yn0ViF0a1AZI91+0sM1yvKExU1lFRD8vGO5gtqn+aa7MY59IZ+/
+e9mAI9ObAgMBAAGjbzBtMB0GA1UdDgQWBBTEa8AlX8hAecrW1mTHw/rHN9fiZTBM
+BgNVHREERTBDghRpZHBzaGliYm9sZXRoLmlyZi5zZYYraHR0cHM6Ly9pZHBzaGli
+Ym9sZXRoLmlyZi5zZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+t4r3f0DdNjsG1BVjQGE0/r3wzKwD9VgfI7YTyj9T01G0SzTPzEjwS2xSvPyBh+SY
+XGKoaSjrvMQRLyQ0yzGUkJkrEA026bAS+XtKXt3N1QnSnCDg8iyRG3eMJMQxlADw
+tM7KXBNdmmyZoFQsvgazQKCfcqpSieznAfpHS6QkOjSJS7qjmZvE9gR9+LrQjtGb
+SUpvSthL7xqz9bSHJsH3LBh/0fnQ1+eEY5XkMAKzdjaesWYSfJOUWcUojcyYY7TO
+vsUgGd85RO4yz1NF7JL/8KMHODq6/vHeE53VgHXRdeH0ntl04Gvzu6oyl7En3G5B
+CQNfH97cIrTE5N/RQ7XWcw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idpshibboleth.irf.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IRF</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Institutet för rymdfysik</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Swedish Institute of Space Physics</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.irf.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Swedish Institute of Space Physics</md:Company>
+	<md:SurName>Mats Luspa</md:SurName>
+	<md:EmailAddress>mailto:datagruppen@irf.se</md:EmailAddress>
+	<md:TelephoneNumber>+4698079000</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Swedish Institute of Space Physics</md:Company>
+	<md:SurName>Mats Luspa</md:SurName>
+	<md:EmailAddress>mailto:datagruppen@irf.se</md:EmailAddress>
+	<md:TelephoneNumber>+4698079022</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Swedish Institute of Space Physics</md:Company>
+	<md:SurName>Mats Luspa</md:SurName>
+	<md:EmailAddress>mailto:datagruppen@irf.se</md:EmailAddress>
+	<md:TelephoneNumber>+4698079022</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://pubs.acs.org/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2012-11-23T14:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><mdui:UIInfo><mdui:DisplayName xml:lang="en">ACS Publications</mdui:DisplayName><mdui:Description xml:lang="en">Publishes products and services for the practice and advancement of the chemical sciences.</mdui:Description><mdui:InformationURL xml:lang="en">http://pubs.acs.org/page/about-us.html</mdui:InformationURL></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAOzcasgcJSa4MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDHB1YnMuYWNzLm9yZzAeFw0xMzExMTkxODU1MDNaFw0yMzExMTcxODU1MDNa
+MBcxFTATBgNVBAMTDHB1YnMuYWNzLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALImSxorZmmzwmreQuS1BVGZkMj73sgCMICQzTYANKHnh+ePY3gC
+z01Y+hT/hEy7cugwJm5UXynMhIsFo5N8gnhyouCbvZ0Lxh9gwk9bUAGfiz2jqSJH
+xx8Q3HTpPR8HkIa7UmHzlDIpkqAD9snW7V4YomQE3j+4rW/svlla3H14g6o0XuX4
+FL+1oufOmOfVfTKjzMfIiFfR6B5Dy4wJwFanPg6J/hF7/FZDX2sgS8x9KsKrLeVY
+OfduVu5zABA77RDKTI6aNecePKTVndzLrSn5pTEtTPckRYuoD9SMR3SZCS79ldhz
+oG0qTMfgCuGY2emKb4XoOb/ZWhZ7iYlS9Q0CAwEAAaNbMFkwOAYDVR0RBDEwL4IM
+cHVicy5hY3Mub3Jnhh9odHRwczovL3B1YnMuYWNzLm9yZy9zaGliYm9sZXRoMB0G
+A1UdDgQWBBTbqI9nN5yxvTDNHBMS8b0QZJ6JXTANBgkqhkiG9w0BAQUFAAOCAQEA
+X69dLDGafkljVuMCEGPLKvPkHIlmKjhKAH4dN02XQ8RKIYURa5wPnmL/yEp9Zncy
+cALR9HvfFwYFx+g+8RIU6S9kOUFz0n5vKLmjOXX/8TSVKTrV0z/tq3/rXK0A7ERI
+3F27TMEqazUTvLu3qsdcTC9geQBrwikJfEdtOzzHAtCUiAxW5UakfvjUnoZ9o+iO
+ydnNa/tXKePgutQedylFePevjWY720k48YGfPjGK13nrYLrF52k7QjvSkj7Y18x/
+8GUzvq+yCgYrddBczbR8g2OcC0/xDKm3vE+T6oJkpKHJFMUW26mgOMR3bgtm2Tey
+ZOvs4J+UrDF71xNxlC9wTQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://pubs.acs.org/action/samlACS" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pubs.acs.org/action/saml2post" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://pubs.acs.org/action/saml2artifact" index="3"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">ACS Publications</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">Publishes products and services for the practice and advancement of the chemical sciences.</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">American Chemical Society, Inc</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">ACS Publications</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en">http://www.acs.org/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="support">
+<md:GivenName>Kal</md:GivenName>
+<md:SurName>Hashmani</md:SurName>
+<md:EmailAddress>mailto:k_hashmani@acs.org</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Gabriel</md:GivenName>
+<md:SurName>Kiblin</md:SurName>
+<md:EmailAddress>mailto:g_kiblin@acs.org</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>John</md:GivenName>
+<md:SurName>MacArthur</md:SurName>
+<md:EmailAddress>mailto:j_macarthur@acs.org</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

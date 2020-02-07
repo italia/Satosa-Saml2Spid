@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.accessible.com/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-07-09T09:50:32Z"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.accessible.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.accessible.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Accessible Archives</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Accessible Archives, searching for archived historical information.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3zCCAcegAwIBAgIJAJ+6AdB4y2zzMA0GCSqGSIb3DQEBBQUAMBMxETAPBgNV
+BAMTCHNlcnZlcjAxMB4XDTEyMDQxMDAxNDE0MFoXDTIyMDQwODAxNDE0MFowEzER
+MA8GA1UEAxMIc2VydmVyMDEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDWNb/VquX0JPLbLTH53stVrwc2e4B+XCr/WrM1JXmXk2pvOa6S388U9XwqtB9r
+6SW+zyAZlItnajD55oSFUDI+pyUyBqICzAyGXq2iXfCEpy4i5uozdAakeuUp4bUB
+YyZXvjqb8Naee1HH8QP9W3ua9VjTara3/mrD5B5gm27ViGRJsT+gn1mJq5mka9AB
+XG41dZJFZDB2faqk2eRWdxFqB38FVjBMYbswI2dlptKJTLZFMB8oSeEpqsjNHYRp
+M4bEPn8vu4PpDK4LruxLDApQLWUqy9MP1vxwbHP60HtMa026cl9+tYlD6iMGPxnE
+sFhhekzNbwCv+yvj36cioNArAgMBAAGjNjA0MBMGA1UdEQQMMAqCCHNlcnZlcjAx
+MB0GA1UdDgQWBBTUDXOIGI4cirL8eFZPfagMyT6jUjANBgkqhkiG9w0BAQUFAAOC
+AQEAmiBakqubDVjKl3RtwYVmWac/2SbU84E8U8f/3sbPfiYhxYidVdu81DSyHF23
+Lx+2K2m0Fa/DHx0ZjGjtcxZlL06gYYovW1kg30MIorZ+QUyGVCr8zIGvyKruQlGG
+0drNsH9XZhzOv/SmOEf/KgnOHQUpYePwkU4SKYDAMTTq0/tc4XZch7NjDQKP21e6
+k3woa7JmUDwH/9QPjFzNjPQTR/2QMDb14JQEqraA1n7BTuIqIiCpR+V1GgLl1cNK
+/DIS94RKu/qrZio7WyuIxlmFsZkmg8pkmpc6OWrxWKvMnsrxQc3Vv7/zxlp5Y2QK
+/JXMj4kKkCKtCRxhdwUHIhoEJA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.accessible.com/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.accessible.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.accessible.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.accessible.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.accessible.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.accessible.com/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.accessible.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.accessible.com/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.accessible.com/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.accessible.com/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.accessible.com/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Accessible Archives, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Accessible Archives</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.accessible-archives.com/about-accessible-archives/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Thomas</md:GivenName>
+	<md:SurName>Nagy</md:SurName>
+	<md:EmailAddress>mailto:tnagy@accessible.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Joseph</md:GivenName>
+	<md:SurName>Paulsen</md:SurName>
+	<md:EmailAddress>mailto:jpaulsen@accessible.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Chris</md:GivenName>
+	<md:SurName>Sheridan</md:SurName>
+	<md:EmailAddress>mailto:csheridan@accessible.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Joseph</md:GivenName>
+	<md:SurName>Paulsen</md:SurName>
+	<md:EmailAddress>mailto:jpaulsen@accessible.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chris</md:GivenName>
+	<md:SurName>Sheridan</md:SurName>
+	<md:EmailAddress>mailto:csheridan@accessible.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

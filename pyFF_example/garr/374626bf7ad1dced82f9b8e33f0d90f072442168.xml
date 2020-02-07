@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-test.shibboleth.qmul.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2017-07-18T11:59:41Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">qmul.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Queen Mary University of London [Test]</mdui:DisplayName>
+		<mdui:Logo height="53" width="200">https://idcheck.qmul.ac.uk/data/qmul_black.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIIAzCCBeugAwIBAgIURlSV679UX4qrkhp2nEQ0jSIBWOcwDQYJKoZIhvcNAQEL
+BQAwSTELMAkGA1UEBhMCQk0xGTAXBgNVBAoMEFF1b1ZhZGlzIExpbWl0ZWQxHzAd
+BgNVBAMMFlF1b1ZhZGlzIEVWIFNTTCBJQ0EgRzMwHhcNMTcwNzExMDc0NzM4WhcN
+MTkwNzExMDc1NzAwWjCB6DETMBEGCysGAQQBgjc8AgEDEwJHQjEaMBgGA1UEDwwR
+R292ZXJubWVudCBFbnRpdHkxFTATBgNVBAUTDEF1Z3VzdC0wMi04OTELMAkGA1UE
+BhMCR0IxFzAVBgNVBAgMDkNlbnRyYWwgTG9uZG9uMQ8wDQYDVQQHDAZMT05ET04x
+KDAmBgNVBAoMH1F1ZWVuIE1hcnkgVW5pdmVyc2l0eSBvZiBMb25kb24xFDASBgNV
+BAsMC0lUIFNlcnZpY2VzMScwJQYDVQQDDB5pZHAtdGVzdC5zaGliYm9sZXRoLnFt
+dWwuYWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDI+qoHvM2E
+mma4aafllqHFj+BEAVrqN+V3QtB1taz7M3LGqZbAYeTclqoFKO8FsTaNS/YRIq+b
+VjW2PzJ+lEWzftQqld1idHVlOTrHkpUJtjQ7wsPlpKVokXj2w8nFj1yV7r/7sl61
+Cy30chTEQotHvEGg5PFht+qRzfumfbGpeH0DZpLEJfEaKpUpTtffdqMWtdugN8aA
+xlNwJBEv5r4NjGCY5HgVhIwl+x+TMotRhwldhvfg/rDfNW9fHUUPh2fptSwn6PYZ
+k4B9DCZir5hfSA/8PmDDUcNtqdP2W6WGF1RdKcVnZd7Jir/Gt4/OjnZZoouOh9ik
+BD7ErM9csQgJAgMBAAGjggNBMIIDPTB4BggrBgEFBQcBAQRsMGowOQYIKwYBBQUH
+MAKGLWh0dHA6Ly90cnVzdC5xdW92YWRpc2dsb2JhbC5jb20vcXZldnNzbGczLmNy
+dDAtBggrBgEFBQcwAYYhaHR0cDovL2V2Lm9jc3AucXVvdmFkaXNnbG9iYWwuY29t
+MB0GA1UdDgQWBBRT4GkZwWCgzemYX6gvXL7nw7U8PDAMBgNVHRMBAf8EAjAAMB8G
+A1UdIwQYMBaAFOWEVNCQSZ84uvLJ4SoIxU6foEg/MFoGA1UdIARTMFEwRgYMKwYB
+BAG+WAACZAECMDYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93d3cucXVvdmFkaXNnbG9i
+YWwuY29tL3JlcG9zaXRvcnkwBwYFZ4EMAQEwPAYDVR0fBDUwMzAxoC+gLYYraHR0
+cDovL2NybC5xdW92YWRpc2dsb2JhbC5jb20vcXZldnNzbGczLmNybDAOBgNVHQ8B
+Af8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMCkGA1UdEQQi
+MCCCHmlkcC10ZXN0LnNoaWJib2xldGgucW11bC5hYy51azCCAX0GCisGAQQB1nkC
+BAIEggFtBIIBaQFnAHYAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0A
+AAFdMKdTPwAABAMARzBFAiBrT8cyChVhJ3zHHNCG91kLkG1lQOOc3cNHEmsTwAm6
+9gIhAPI8Qv2+B1+WtaSwxq8e2ZtxaKsmL0LIpLuGNLqRaYIgAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFdMKdTGwAABAMARzBFAiEAr6Fr3gWN
+OOcO7VArNwvVGSKIw5rrOgak6YmF/o5XHRwCIFU4KA8GfDpcEc1o/9NvrtUslP+Z
+hkF9JaLphpUhz9N2AHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUA
+AAFdMKdS8AAABAMARjBEAiA0MB9d0Gi/fuWXjVq7c4WHiHD+cdftioeMfSyZJEUA
+MQIgbabQWvaMlE7n+q+E52uLt3JW94++2SHdnXWneNFQXT8wDQYJKoZIhvcNAQEL
+BQADggIBAG2/JHpV7wHCKNRYe6MPNMLOp+FFiEv8yOLluiHzXZJ4VYE3gLi/n5Nd
+GPmKDPXTHxSKeIbTmvBewOvD/Kdg575jhVfMy5AzebCnr/b5ElFOc4w8ZOp3BXZF
+7fdo+beKq3nMlaiGZdPCzdSLE8iMsxf+zCKL8fHUVKucwdfSUqvBafXmGLyn1A6Z
+ExAK1s8MPaYCV4JownBDEtI7oBGSTpPkxWFIIQ3LQT1GdZo1HARrpZ4VFVw2Ffzn
+Bv8/PTY3uETnl26stDnPZ8/02GfJkRVKovDqCkMTdQS2UGeU+7TnNwGwMFu1ElWc
+r7see1qhblh+eHyvoR8p5CGxJ810XtVVxRIx2qBfM+nIpflqOJgQbvFwarc0JDUa
++IQ2UsIK9oWIc+byMiBXcoSmh80C5ZKikMg8kJBIdIqsFk40imEoeKIxlSoPmoSw
+P6aueUiCezezbgymBgUJ8DjDYzktQAUYSY1lFK0RirRLkyxAiajQlRgMqJ72YkMS
+N5NqdJHOwUkujcMfMwnOyuEYD8bYZpGgfdZXFJrlMB1ZsNUZ038Uw7ykNKjy7inA
+Uk7f0cb2t7XRUA0wOQGoQrIhEUyf66qYv3RLiCoWq6vdLIW5GAq9h6t13yvRtGC4
+yBQUA5zOVWZ2oW2CqJ4j/hwm6wt7yS8F19yG08kd68U1CHVm2q28
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp-test.shibboleth.qmul.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-test.shibboleth.qmul.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-test.shibboleth.qmul.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-test.shibboleth.qmul.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">qmul.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIIAzCCBeugAwIBAgIURlSV679UX4qrkhp2nEQ0jSIBWOcwDQYJKoZIhvcNAQEL
+BQAwSTELMAkGA1UEBhMCQk0xGTAXBgNVBAoMEFF1b1ZhZGlzIExpbWl0ZWQxHzAd
+BgNVBAMMFlF1b1ZhZGlzIEVWIFNTTCBJQ0EgRzMwHhcNMTcwNzExMDc0NzM4WhcN
+MTkwNzExMDc1NzAwWjCB6DETMBEGCysGAQQBgjc8AgEDEwJHQjEaMBgGA1UEDwwR
+R292ZXJubWVudCBFbnRpdHkxFTATBgNVBAUTDEF1Z3VzdC0wMi04OTELMAkGA1UE
+BhMCR0IxFzAVBgNVBAgMDkNlbnRyYWwgTG9uZG9uMQ8wDQYDVQQHDAZMT05ET04x
+KDAmBgNVBAoMH1F1ZWVuIE1hcnkgVW5pdmVyc2l0eSBvZiBMb25kb24xFDASBgNV
+BAsMC0lUIFNlcnZpY2VzMScwJQYDVQQDDB5pZHAtdGVzdC5zaGliYm9sZXRoLnFt
+dWwuYWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDI+qoHvM2E
+mma4aafllqHFj+BEAVrqN+V3QtB1taz7M3LGqZbAYeTclqoFKO8FsTaNS/YRIq+b
+VjW2PzJ+lEWzftQqld1idHVlOTrHkpUJtjQ7wsPlpKVokXj2w8nFj1yV7r/7sl61
+Cy30chTEQotHvEGg5PFht+qRzfumfbGpeH0DZpLEJfEaKpUpTtffdqMWtdugN8aA
+xlNwJBEv5r4NjGCY5HgVhIwl+x+TMotRhwldhvfg/rDfNW9fHUUPh2fptSwn6PYZ
+k4B9DCZir5hfSA/8PmDDUcNtqdP2W6WGF1RdKcVnZd7Jir/Gt4/OjnZZoouOh9ik
+BD7ErM9csQgJAgMBAAGjggNBMIIDPTB4BggrBgEFBQcBAQRsMGowOQYIKwYBBQUH
+MAKGLWh0dHA6Ly90cnVzdC5xdW92YWRpc2dsb2JhbC5jb20vcXZldnNzbGczLmNy
+dDAtBggrBgEFBQcwAYYhaHR0cDovL2V2Lm9jc3AucXVvdmFkaXNnbG9iYWwuY29t
+MB0GA1UdDgQWBBRT4GkZwWCgzemYX6gvXL7nw7U8PDAMBgNVHRMBAf8EAjAAMB8G
+A1UdIwQYMBaAFOWEVNCQSZ84uvLJ4SoIxU6foEg/MFoGA1UdIARTMFEwRgYMKwYB
+BAG+WAACZAECMDYwNAYIKwYBBQUHAgEWKGh0dHA6Ly93d3cucXVvdmFkaXNnbG9i
+YWwuY29tL3JlcG9zaXRvcnkwBwYFZ4EMAQEwPAYDVR0fBDUwMzAxoC+gLYYraHR0
+cDovL2NybC5xdW92YWRpc2dsb2JhbC5jb20vcXZldnNzbGczLmNybDAOBgNVHQ8B
+Af8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMCkGA1UdEQQi
+MCCCHmlkcC10ZXN0LnNoaWJib2xldGgucW11bC5hYy51azCCAX0GCisGAQQB1nkC
+BAIEggFtBIIBaQFnAHYAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0A
+AAFdMKdTPwAABAMARzBFAiBrT8cyChVhJ3zHHNCG91kLkG1lQOOc3cNHEmsTwAm6
+9gIhAPI8Qv2+B1+WtaSwxq8e2ZtxaKsmL0LIpLuGNLqRaYIgAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFdMKdTGwAABAMARzBFAiEAr6Fr3gWN
+OOcO7VArNwvVGSKIw5rrOgak6YmF/o5XHRwCIFU4KA8GfDpcEc1o/9NvrtUslP+Z
+hkF9JaLphpUhz9N2AHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUA
+AAFdMKdS8AAABAMARjBEAiA0MB9d0Gi/fuWXjVq7c4WHiHD+cdftioeMfSyZJEUA
+MQIgbabQWvaMlE7n+q+E52uLt3JW94++2SHdnXWneNFQXT8wDQYJKoZIhvcNAQEL
+BQADggIBAG2/JHpV7wHCKNRYe6MPNMLOp+FFiEv8yOLluiHzXZJ4VYE3gLi/n5Nd
+GPmKDPXTHxSKeIbTmvBewOvD/Kdg575jhVfMy5AzebCnr/b5ElFOc4w8ZOp3BXZF
+7fdo+beKq3nMlaiGZdPCzdSLE8iMsxf+zCKL8fHUVKucwdfSUqvBafXmGLyn1A6Z
+ExAK1s8MPaYCV4JownBDEtI7oBGSTpPkxWFIIQ3LQT1GdZo1HARrpZ4VFVw2Ffzn
+Bv8/PTY3uETnl26stDnPZ8/02GfJkRVKovDqCkMTdQS2UGeU+7TnNwGwMFu1ElWc
+r7see1qhblh+eHyvoR8p5CGxJ810XtVVxRIx2qBfM+nIpflqOJgQbvFwarc0JDUa
++IQ2UsIK9oWIc+byMiBXcoSmh80C5ZKikMg8kJBIdIqsFk40imEoeKIxlSoPmoSw
+P6aueUiCezezbgymBgUJ8DjDYzktQAUYSY1lFK0RirRLkyxAiajQlRgMqJ72YkMS
+N5NqdJHOwUkujcMfMwnOyuEYD8bYZpGgfdZXFJrlMB1ZsNUZ038Uw7ykNKjy7inA
+Uk7f0cb2t7XRUA0wOQGoQrIhEUyf66qYv3RLiCoWq6vdLIW5GAq9h6t13yvRtGC4
+yBQUA5zOVWZ2oW2CqJ4j/hwm6wt7yS8F19yG08kd68U1CHVm2q28
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp-test.shibboleth.qmul.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-test.shibboleth.qmul.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Queen Mary and Westfield College, University of London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Queen Mary University of London [Test]</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.qmul.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ITS Systems</md:GivenName>
+	<md:EmailAddress>mailto:its-systems@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tom</md:GivenName>
+	<md:SurName>Jordaan</md:SurName>
+	<md:EmailAddress>mailto:t.s.jordaan@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Martin</md:GivenName>
+	<md:SurName>Evans</md:SurName>
+	<md:EmailAddress>mailto:m.d.t.evans@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

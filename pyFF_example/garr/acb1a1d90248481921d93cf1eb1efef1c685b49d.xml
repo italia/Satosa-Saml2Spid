@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.rcndev.org.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2018-05-30T08:12:17Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">rcndev.org.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Royal College of Nursing - Test</mdui:DisplayName>
+		<mdui:Logo height="106" width="270">https://www.rcn.org.uk/-/media/royal-college-of-nursing/images/sitecore-thumbnails/site-assets/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEVjCCAz6gAwIBAgIJAMffUwW0uB4RMA0GCSqGSIb3DQEBCwUAMIGrMQswCQYD
+VQQGEwJHQjEVMBMGA1UEBwwMRGVmYXVsdCBDaXR5MTswOQYDVQQKDDJUaGUgUm95
+YWwgQ29sbGVnZSBvZiBOdXJzaW5nIG9mIHRoZSBVbml0ZWQgS2luZ2RvbTEhMB8G
+A1UEAwwYc2hpYmJvbGV0aC5yY25kZXYub3JnLnVrMSUwIwYJKoZIhvcNAQkBFhZk
+ZXZlbG9wbWVudEByY24ub3JnLnVrMB4XDTE4MDYxMzE1NTExOVoXDTI4MDYxMDE1
+NTExOVowgasxCzAJBgNVBAYTAkdCMRUwEwYDVQQHDAxEZWZhdWx0IENpdHkxOzA5
+BgNVBAoMMlRoZSBSb3lhbCBDb2xsZWdlIG9mIE51cnNpbmcgb2YgdGhlIFVuaXRl
+ZCBLaW5nZG9tMSEwHwYDVQQDDBhzaGliYm9sZXRoLnJjbmRldi5vcmcudWsxJTAj
+BgkqhkiG9w0BCQEWFmRldmVsb3BtZW50QHJjbi5vcmcudWswggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDnMH/d0cgQuW5oqSv6CtNUM6UBncO1sQM2ZbD2
+PMU6UxKzhaKf535VD9OdUZx1Z8zzfa83jlzetncBDtbhPRhgoz19na8x9HZQTRRx
+slSiQpXHQ5dLAhJD/bElvTVhy1dUI85q1n5VjXfn1Diun3K+RZywbZQ9hqhsZV3I
+R9QRhHAYx0oeTDpa0SgQPRTh1nSL5ynim18tZ4IlPLD7oSBxoCOW6htPztd6ZKl5
+WY7ZMSVajIwFG4Yv4U7khbIn5Fs25kkkU1r2g6TyP/OTU6YT20IqXtK8USftywo8
+thqY/OdgFniGE2K48i/FeWqPp76vKMOL64hPZ2kD6jm7NZX9AgMBAAGjezB5MAkG
+A1UdEwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRp
+ZmljYXRlMB0GA1UdDgQWBBQFrD/kaSeoapaIZqFxd6hj0PFu/zAfBgNVHSMEGDAW
+gBQFrD/kaSeoapaIZqFxd6hj0PFu/zANBgkqhkiG9w0BAQsFAAOCAQEA1/lIsh6+
+Of+J2Mkbcfw8OSbvsHTM5IpQwE3peoH6gIdntmfoT5EfDR3PI50IIk/MEO6WrGR3
+9CLxjWn4XmPcYM3ogkqPD5S+FPlRDpJE8joNpYGl34tm+nQKSta5hA3t0Q5ZKsAI
+lztbgbp25PJNbuE1hw2dVWiaX1HSRR+L3akE9jwVKbBAHJraoWwYIYbmDP+TL7Ye
+Lpsf9lQ6u+pHoNU9LDfvaPwFG6GMB813gGpLhEbNvnq4qabqCGe18sLGBqmf+eXZ
+t91O8wjWK9G4k87Agg6QykGcyiwogWPMypJKeOIkJhs9fY1F7Zu3/rwJZO5CyXCG
+ETkuKYwWLEpKOQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEVjCCAz6gAwIBAgIJAMffUwW0uB4RMA0GCSqGSIb3DQEBCwUAMIGrMQswCQYD
+VQQGEwJHQjEVMBMGA1UEBwwMRGVmYXVsdCBDaXR5MTswOQYDVQQKDDJUaGUgUm95
+YWwgQ29sbGVnZSBvZiBOdXJzaW5nIG9mIHRoZSBVbml0ZWQgS2luZ2RvbTEhMB8G
+A1UEAwwYc2hpYmJvbGV0aC5yY25kZXYub3JnLnVrMSUwIwYJKoZIhvcNAQkBFhZk
+ZXZlbG9wbWVudEByY24ub3JnLnVrMB4XDTE4MDYxMzE1NTExOVoXDTI4MDYxMDE1
+NTExOVowgasxCzAJBgNVBAYTAkdCMRUwEwYDVQQHDAxEZWZhdWx0IENpdHkxOzA5
+BgNVBAoMMlRoZSBSb3lhbCBDb2xsZWdlIG9mIE51cnNpbmcgb2YgdGhlIFVuaXRl
+ZCBLaW5nZG9tMSEwHwYDVQQDDBhzaGliYm9sZXRoLnJjbmRldi5vcmcudWsxJTAj
+BgkqhkiG9w0BCQEWFmRldmVsb3BtZW50QHJjbi5vcmcudWswggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDnMH/d0cgQuW5oqSv6CtNUM6UBncO1sQM2ZbD2
+PMU6UxKzhaKf535VD9OdUZx1Z8zzfa83jlzetncBDtbhPRhgoz19na8x9HZQTRRx
+slSiQpXHQ5dLAhJD/bElvTVhy1dUI85q1n5VjXfn1Diun3K+RZywbZQ9hqhsZV3I
+R9QRhHAYx0oeTDpa0SgQPRTh1nSL5ynim18tZ4IlPLD7oSBxoCOW6htPztd6ZKl5
+WY7ZMSVajIwFG4Yv4U7khbIn5Fs25kkkU1r2g6TyP/OTU6YT20IqXtK8USftywo8
+thqY/OdgFniGE2K48i/FeWqPp76vKMOL64hPZ2kD6jm7NZX9AgMBAAGjezB5MAkG
+A1UdEwQCMAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRp
+ZmljYXRlMB0GA1UdDgQWBBQFrD/kaSeoapaIZqFxd6hj0PFu/zAfBgNVHSMEGDAW
+gBQFrD/kaSeoapaIZqFxd6hj0PFu/zANBgkqhkiG9w0BAQsFAAOCAQEA1/lIsh6+
+Of+J2Mkbcfw8OSbvsHTM5IpQwE3peoH6gIdntmfoT5EfDR3PI50IIk/MEO6WrGR3
+9CLxjWn4XmPcYM3ogkqPD5S+FPlRDpJE8joNpYGl34tm+nQKSta5hA3t0Q5ZKsAI
+lztbgbp25PJNbuE1hw2dVWiaX1HSRR+L3akE9jwVKbBAHJraoWwYIYbmDP+TL7Ye
+Lpsf9lQ6u+pHoNU9LDfvaPwFG6GMB813gGpLhEbNvnq4qabqCGe18sLGBqmf+eXZ
+t91O8wjWK9G4k87Agg6QykGcyiwogWPMypJKeOIkJhs9fY1F7Zu3/rwJZO5CyXCG
+ETkuKYwWLEpKOQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.rcndev.org.uk/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.rcndev.org.uk/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Royal College of Nursing</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Royal College of Nursing - Test</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.rcn.org.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service desk</md:GivenName>
+	<md:EmailAddress>mailto:service.desk@rcn.org.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Development</md:SurName>
+	<md:EmailAddress>mailto:development@rcn.org.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

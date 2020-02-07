@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:odu.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://shibboleth.odu.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">odu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Old Dominion University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Old Dominion University Monarch-Key</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://shibboleth.odu.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.odu.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="48" width="128" xml:lang="en">https://shibboleth.odu.edu/images/mkwl-logo-sm.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDTCCAfWgAwIBAgIJAIKxhbZxzAf1MA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMMEnNoaWJib2xldGgub2R1LmVkdTAeFw0xNzEwMTAxNDMzMDRaFw0yNzEwMDgx
+NDMzMDRaMB0xGzAZBgNVBAMMEnNoaWJib2xldGgub2R1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAMU4qOa8rQQwC3p2dXWqebzTR6ONVid8utfK
+nCLR5siSjzHSZfB04iVQcnc7FY4x3VXpW2dnsKvVSPYVR+Jn5CHQEK/lMQ8hUv3U
+a2L/N5e0T1gSVyUTmeo/HB1dQERccA0ENG5fw2D9SN6A7p++h053IgUtk6DvXmBJ
+GmHH2TY/nP0eXXAttexMEJZQkGPOqbKbFO/zBmNk8Nzmcxcl5sy5tb5nlGey8gtT
+XSlc8cOfesKw7QgBkBl272UpvKOQem2D3+ymSqGL0UWiSlmDC5iErlpjn+K20kpx
+cXuAlgiN+SyNtBWa4j2n5z+QmCcRKw3B8f3eBjrtk6vLgUaa2lECAwEAAaNQME4w
+HQYDVR0OBBYEFEQC0LGrsDrZkeRlK9F9Q917XCCkMB8GA1UdIwQYMBaAFEQC0LGr
+sDrZkeRlK9F9Q917XCCkMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEB
+AKcn0OqJoty22fcwkxh7L8VkqJSOUzi3oP6lKPZW3nZHsi/fwg2Wpl9W+0cVd+aZ
+S+jUQs9KX9P4JmPcU18fH1wKd6fC1cnkmPIa6Ntbr1p8RytpOa8V60tFTFLB6IY2
+MC4ODdTbWFvJ2mY5IIX1Fwd9RN2aOgF0JMsPpjZJvqht6dfOWGLGC9QKmjvdZQj+
+5E62rOKPCNli5UP8HxZRi4YzgTYNZ1uZHBHzR8mk8pDTedLyy5kWS2HAWvPOEhdJ
+cUSxOsPBrowehauy5u8BfbSJHa+3+izc8R6+b6LJjTScSslwkPgNqiO5VZeIDl+1
+2sP+kcxxca7d0yyMHZPXpU8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.odu.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.odu.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.odu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.odu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.odu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.odu.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">odu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDTCCAfWgAwIBAgIJAIKxhbZxzAf1MA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMMEnNoaWJib2xldGgub2R1LmVkdTAeFw0xNzEwMTAxNDMzMDRaFw0yNzEwMDgx
+NDMzMDRaMB0xGzAZBgNVBAMMEnNoaWJib2xldGgub2R1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAMU4qOa8rQQwC3p2dXWqebzTR6ONVid8utfK
+nCLR5siSjzHSZfB04iVQcnc7FY4x3VXpW2dnsKvVSPYVR+Jn5CHQEK/lMQ8hUv3U
+a2L/N5e0T1gSVyUTmeo/HB1dQERccA0ENG5fw2D9SN6A7p++h053IgUtk6DvXmBJ
+GmHH2TY/nP0eXXAttexMEJZQkGPOqbKbFO/zBmNk8Nzmcxcl5sy5tb5nlGey8gtT
+XSlc8cOfesKw7QgBkBl272UpvKOQem2D3+ymSqGL0UWiSlmDC5iErlpjn+K20kpx
+cXuAlgiN+SyNtBWa4j2n5z+QmCcRKw3B8f3eBjrtk6vLgUaa2lECAwEAAaNQME4w
+HQYDVR0OBBYEFEQC0LGrsDrZkeRlK9F9Q917XCCkMB8GA1UdIwQYMBaAFEQC0LGr
+sDrZkeRlK9F9Q917XCCkMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEB
+AKcn0OqJoty22fcwkxh7L8VkqJSOUzi3oP6lKPZW3nZHsi/fwg2Wpl9W+0cVd+aZ
+S+jUQs9KX9P4JmPcU18fH1wKd6fC1cnkmPIa6Ntbr1p8RytpOa8V60tFTFLB6IY2
+MC4ODdTbWFvJ2mY5IIX1Fwd9RN2aOgF0JMsPpjZJvqht6dfOWGLGC9QKmjvdZQj+
+5E62rOKPCNli5UP8HxZRi4YzgTYNZ1uZHBHzR8mk8pDTedLyy5kWS2HAWvPOEhdJ
+cUSxOsPBrowehauy5u8BfbSJHa+3+izc8R6+b6LJjTScSslwkPgNqiO5VZeIDl+1
+2sP+kcxxca7d0yyMHZPXpU8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.odu.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Old Dominion University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Old Dominion University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://web.odu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Todd Dergenski</md:GivenName>
+	<md:EmailAddress>tdergens@odu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Todd Dergenski</md:GivenName>
+	<md:EmailAddress>tdergens@odu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technical Support Center</md:GivenName>
+	<md:EmailAddress>itshelp@odu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ITS Security</md:GivenName>
+	<md:EmailAddress>abuse@odu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

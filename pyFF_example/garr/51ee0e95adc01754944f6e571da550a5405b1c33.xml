@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.gli.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-04-09T14:17:34Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gli.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Geology AS CR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Geologický ústav AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider GLI AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance GLÚ AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.gli.cas.cz/en</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.gli.cas.cz/cs</mdui:InformationURL>
+		<mdui:Logo height="44" width="74">https://gedeon.cas.cz/loga/logo-gli-44.png</mdui:Logo>
+		<mdui:Logo height="411" width="960">https://gedeon.cas.cz/loga/logo-gli-633.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJKSAwXePVHrFEtnrTZ+4UxQdRZDMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5nbGkuY2FzLmN6MB4XDTE2MTAxMDE0MTQxNVoX
+DTM2MTAxMDE0MTQxNVowGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDT/vds+/7AJWmiod3Infr/5xSXUCWe
+k8TsQZFalak06LVEpTL1l4LuFPORMsxsrXr61zW7HqiCm3csWYC+6O65HYpU8dhr
+QgHIJ5i8iulp/CtY0xCmBPL558GBulAGJksLjoD2Yuzpc5+tcd1JrMjGX3Hra7ON
+iH8eDSfaQblMdhI/92OHLl8L0EzO2nbpGyJpfwoEP29yr5MoYWVvxmD9wy6ujBCJ
+rNLejIN/SmpkVc6QC6geDsyiocJZIPGkmB32IC6Ahb2KheVZmOm+fEYS1XFBSiav
+MTbvPtK99awnRbnY1uvi4zNdnDwxw7DH2w24cUV1uMEfa+Y9nxhjkipLAgMBAAGj
+YzBhMB0GA1UdDgQWBBTF7J15pagJpypF6Mu08Sc6yIrSmTBABgNVHREEOTA3gg5p
+ZHAuZ2xpLmNhcy5jeoYlaHR0cHM6Ly9pZHAuZ2xpLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAiSNbXym/GtB4GFWzFd9x9uz1KiS7HY6Y
+f5Bw/UQ1LZaQvhzMpdkFZVBj9lNRhjSDQPOXCipNA7YaZGlXkG6z9nrTmZvK0rrX
+v81mAtldX+l9QcJqXNY0YC4PTvqjSLc2jPTEyy6F1rb5QxxHc6yAY1SEZwBAZSDc
+ZlGC4gAwiuN2B4eb1udZCmDYmKjCNmPP94muqs3bMWtOvLBf8ljJX06sSarOtHgF
+fWM6O2MjccukfLza5ACjFMLHzTeBBwzMZ1csdXU1f9P7GgWCMkrEAQMRvQCu6+p8
+dxbUVZmsWMLn1wCS1jvWKRhNuchXQxu4e+QIslEqi7MZaANgPMsTwA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUO+/Rivnvdgnk9HcM7hoPisnlJ08wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owHhcNMTYxMDEwMTQxNDE0WhcN
+MzYxMDEwMTQxNDE0WjAZMRcwFQYDVQQDDA5pZHAuZ2xpLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALfmXxgRqnyDcOic1779AuL/UXEK6vdo
+W5gnqUrqxGLvQ/B1qquPx4gRfJy0mKGZDOK5nOMqdAc06uttJsuVo4A9bfM4z2FG
+VOVHX5+YoSgpLkrfSVtnmGohyt+k2xvJCCj5oK03owT7j6jPL9KXcqT7EwvomFVY
+2qYG489zVxv0W4RQNkGVCZ+8SjjOHLNBbAPG/XCtg8g7k9keN9pk5xSVevrExOZP
+t7WFxbntGxUr0mbbh0q62eOwxOblw7bxeyCdVAyuyWu8M8gcfUcqrGYaFrCATwFi
+kn7DxNTo6LhDsOCCYzMd4kJqFVJ8U+6k3fBnEEygwDw+f8ZD+HN8CQECAwEAAaNj
+MGEwHQYDVR0OBBYEFGi5basBSBDCaCVMrNBz6UUIms9sMEAGA1UdEQQ5MDeCDmlk
+cC5nbGkuY2FzLmN6hiVodHRwczovL2lkcC5nbGkuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAHOfxFlx8Mg7qFdXQH0/VAexX/6soEeZs/
+w1tYfs2a0x1WwSN/LH3cE9l7TalHhS1c9qxKUH6rHNdqN+WiLhNCpKC8p7fLOF4j
+XXKHNZOVl/sDLUKHfMl3ebCT9KK2lhVsV7YHd0agqW+Z6Xy64zXyGIW8Ay0Ya/lN
+WhxysqjGefHrunWIHHUF9rGMTA8dcE06GO3AUUpfTRWRL0uBPzSjOYK/Qn959jb/
+qbLpm6ere0O4LUXF8qscLTq5IufqJxAoH8djCfLAwpnCExheJZeDCdVg0NPoWJlK
+J0ZL586Bq8hjp1DaZfCJ34Wn4CzGPwm9fVn8XB9zLJe5Bh4xkaVM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUHyFSxi2HQ2DazjmSyso9AUTcmCwwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owHhcNMTYxMDEwMTQxNDE0WhcN
+MzYxMDEwMTQxNDE0WjAZMRcwFQYDVQQDDA5pZHAuZ2xpLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALDrOV2yiok4x/AlkZg3PX4LRkCPD26o
+xGmmqQeIJq7nY3OKnhs0XdjHJsVPz5DdZwA5waDnVh7rVgGK49cHqM6b16F1r/4r
+EE0VEfxstAfK/h/MF/kqp4eyxnuJaD5f1hXnuT4s8GiLZCg2e1swpHYahFkdc3oL
+n0h1/qUW4wVNBX2+ikzERCedb640lq3mFfjmSUlL89FYWsqFyjWWAiryQkNNPIyG
+fOW2NEgLjoedaGsJp0mxNCmkDDpTww1ZRTNJvox77uBhrqC+m70M3qL05QypnPhT
+xRXQCH8bsU3IvgBly6J1W3ol+rcejoqS14iZqFc3ZPQfE6EB5hSwKY8CAwEAAaNj
+MGEwHQYDVR0OBBYEFOyCPS5iHdVjP4AwWOXZCM+f5MtnMEAGA1UdEQQ5MDeCDmlk
+cC5nbGkuY2FzLmN6hiVodHRwczovL2lkcC5nbGkuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBfgIbJra4XT7idRQL3lRy/0NM/ExVngxLj
+yDt0P73erYSkXByjHsf5wednvqchy+yXBKXZ2kmc3wOfRuvubYLv7d5CPl3Wa/zv
+wBJHJXFfN91r0jPqN/TmuqoURLwUX4k+q0juAk+oA6ClnpHZwB4U7g6kHNFC3p5N
+zHngayFMHnYbY5a+TqdpsInumsbr5dfXG5eRqoHM7hyS1P9A4dw4reFWqWRH7XPh
+fBxQGqOQ3Xfuwta1AuGuIp0TWAJTIec2y9XB5X2M2JAuXzRN9wiTfryvG/H5w5Y4
+psX3Vty+MvqqNQyIsItFnL4IaNLiM9CR6jY7RIZzJi9VVmbj0bNn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.gli.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.gli.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.gli.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.gli.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.gli.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.gli.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gli.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJKSAwXePVHrFEtnrTZ+4UxQdRZDMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5nbGkuY2FzLmN6MB4XDTE2MTAxMDE0MTQxNVoX
+DTM2MTAxMDE0MTQxNVowGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDT/vds+/7AJWmiod3Infr/5xSXUCWe
+k8TsQZFalak06LVEpTL1l4LuFPORMsxsrXr61zW7HqiCm3csWYC+6O65HYpU8dhr
+QgHIJ5i8iulp/CtY0xCmBPL558GBulAGJksLjoD2Yuzpc5+tcd1JrMjGX3Hra7ON
+iH8eDSfaQblMdhI/92OHLl8L0EzO2nbpGyJpfwoEP29yr5MoYWVvxmD9wy6ujBCJ
+rNLejIN/SmpkVc6QC6geDsyiocJZIPGkmB32IC6Ahb2KheVZmOm+fEYS1XFBSiav
+MTbvPtK99awnRbnY1uvi4zNdnDwxw7DH2w24cUV1uMEfa+Y9nxhjkipLAgMBAAGj
+YzBhMB0GA1UdDgQWBBTF7J15pagJpypF6Mu08Sc6yIrSmTBABgNVHREEOTA3gg5p
+ZHAuZ2xpLmNhcy5jeoYlaHR0cHM6Ly9pZHAuZ2xpLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAiSNbXym/GtB4GFWzFd9x9uz1KiS7HY6Y
+f5Bw/UQ1LZaQvhzMpdkFZVBj9lNRhjSDQPOXCipNA7YaZGlXkG6z9nrTmZvK0rrX
+v81mAtldX+l9QcJqXNY0YC4PTvqjSLc2jPTEyy6F1rb5QxxHc6yAY1SEZwBAZSDc
+ZlGC4gAwiuN2B4eb1udZCmDYmKjCNmPP94muqs3bMWtOvLBf8ljJX06sSarOtHgF
+fWM6O2MjccukfLza5ACjFMLHzTeBBwzMZ1csdXU1f9P7GgWCMkrEAQMRvQCu6+p8
+dxbUVZmsWMLn1wCS1jvWKRhNuchXQxu4e+QIslEqi7MZaANgPMsTwA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUO+/Rivnvdgnk9HcM7hoPisnlJ08wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owHhcNMTYxMDEwMTQxNDE0WhcN
+MzYxMDEwMTQxNDE0WjAZMRcwFQYDVQQDDA5pZHAuZ2xpLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALfmXxgRqnyDcOic1779AuL/UXEK6vdo
+W5gnqUrqxGLvQ/B1qquPx4gRfJy0mKGZDOK5nOMqdAc06uttJsuVo4A9bfM4z2FG
+VOVHX5+YoSgpLkrfSVtnmGohyt+k2xvJCCj5oK03owT7j6jPL9KXcqT7EwvomFVY
+2qYG489zVxv0W4RQNkGVCZ+8SjjOHLNBbAPG/XCtg8g7k9keN9pk5xSVevrExOZP
+t7WFxbntGxUr0mbbh0q62eOwxOblw7bxeyCdVAyuyWu8M8gcfUcqrGYaFrCATwFi
+kn7DxNTo6LhDsOCCYzMd4kJqFVJ8U+6k3fBnEEygwDw+f8ZD+HN8CQECAwEAAaNj
+MGEwHQYDVR0OBBYEFGi5basBSBDCaCVMrNBz6UUIms9sMEAGA1UdEQQ5MDeCDmlk
+cC5nbGkuY2FzLmN6hiVodHRwczovL2lkcC5nbGkuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAHOfxFlx8Mg7qFdXQH0/VAexX/6soEeZs/
+w1tYfs2a0x1WwSN/LH3cE9l7TalHhS1c9qxKUH6rHNdqN+WiLhNCpKC8p7fLOF4j
+XXKHNZOVl/sDLUKHfMl3ebCT9KK2lhVsV7YHd0agqW+Z6Xy64zXyGIW8Ay0Ya/lN
+WhxysqjGefHrunWIHHUF9rGMTA8dcE06GO3AUUpfTRWRL0uBPzSjOYK/Qn959jb/
+qbLpm6ere0O4LUXF8qscLTq5IufqJxAoH8djCfLAwpnCExheJZeDCdVg0NPoWJlK
+J0ZL586Bq8hjp1DaZfCJ34Wn4CzGPwm9fVn8XB9zLJe5Bh4xkaVM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUHyFSxi2HQ2DazjmSyso9AUTcmCwwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmdsaS5jYXMuY3owHhcNMTYxMDEwMTQxNDE0WhcN
+MzYxMDEwMTQxNDE0WjAZMRcwFQYDVQQDDA5pZHAuZ2xpLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALDrOV2yiok4x/AlkZg3PX4LRkCPD26o
+xGmmqQeIJq7nY3OKnhs0XdjHJsVPz5DdZwA5waDnVh7rVgGK49cHqM6b16F1r/4r
+EE0VEfxstAfK/h/MF/kqp4eyxnuJaD5f1hXnuT4s8GiLZCg2e1swpHYahFkdc3oL
+n0h1/qUW4wVNBX2+ikzERCedb640lq3mFfjmSUlL89FYWsqFyjWWAiryQkNNPIyG
+fOW2NEgLjoedaGsJp0mxNCmkDDpTww1ZRTNJvox77uBhrqC+m70M3qL05QypnPhT
+xRXQCH8bsU3IvgBly6J1W3ol+rcejoqS14iZqFc3ZPQfE6EB5hSwKY8CAwEAAaNj
+MGEwHQYDVR0OBBYEFOyCPS5iHdVjP4AwWOXZCM+f5MtnMEAGA1UdEQQ5MDeCDmlk
+cC5nbGkuY2FzLmN6hiVodHRwczovL2lkcC5nbGkuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBfgIbJra4XT7idRQL3lRy/0NM/ExVngxLj
+yDt0P73erYSkXByjHsf5wednvqchy+yXBKXZ2kmc3wOfRuvubYLv7d5CPl3Wa/zv
+wBJHJXFfN91r0jPqN/TmuqoURLwUX4k+q0juAk+oA6ClnpHZwB4U7g6kHNFC3p5N
+zHngayFMHnYbY5a+TqdpsInumsbr5dfXG5eRqoHM7hyS1P9A4dw4reFWqWRH7XPh
+fBxQGqOQ3Xfuwta1AuGuIp0TWAJTIec2y9XB5X2M2JAuXzRN9wiTfryvG/H5w5Y4
+psX3Vty+MvqqNQyIsItFnL4IaNLiM9CR6jY7RIZzJi9VVmbj0bNn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.gli.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Geology AS CR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Geologický ústav AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Geology AS CR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Geologický ústav AV ČR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.gli.cas.cz/en</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.gli.cas.cz/cs</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

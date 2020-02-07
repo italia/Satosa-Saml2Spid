@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hs-bremerhaven.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2019-11-13T11:51:38Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/fileadmin/documents/mrps_dfn-aai_1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-bremerhaven.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Bremerhaven</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Hochschule Bremerhaven University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule Bremerhaven</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of University of Applied Sciences Bremerhaven</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.hs-bremerhaven.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="105" width="320">https://idp.hs-bremerhaven.de/logo.png</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.hs-bremerhaven.de/service/datenschutz/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.hs-bremerhaven.de/en/privacy-notice/</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIII/DCCB+SgAwIBAgIMIc5Ti2CF2wYWjcxjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MTAyMjEwMTIxMloXDTIyMDEyMzEwMTIxMlowgYQxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZCcmVtZW4xFDASBgNVBAcMC0JyZW1lcmhhdmVuMR8wHQYDVQQKDBZIb2No
+c2NodWxlIEJyZW1lcmhhdmVuMQ0wCwYDVQQLDARaQlJWMR4wHAYDVQQDDBVpZHAu
+aHMtYnJlbWVyaGF2ZW4uZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoIC
+AQDVr1boaGFcIwcQCWD/oI8YDpPiwqnSEawh0zdtwvepBeAXatO0OpGHKLdXQBdV
+mcwZqf7+VtRK1qIs1A2tShfjhk2YpJ0RcheeHriH9cZqa9fPbbsdipNRXMxjyJF2
+RpgJYzcvMFYYN5evqpFce+vs06YgkE8YEl45RgbUzKK1Dw7UZd0kmRluDG4bPGBn
+HnIpIYsV9sF2skcAALTsT5EMyJ0L6Qmk0BtMW2gMwTiz5mU9FgsQKgBMVOjk8V4i
+U7SlbRUd/1keSXBy6e7HV8p79hrb0X4l5qI/X1va+d+YW2r+cHvkCjY3UVZmmCyf
+zdzso9wPwHJGbdaGANx8aB4x98Ul0oq1hh02FCRYuzBFQImeuav7bk5TsTL5yGOo
+GQhF/wSwuCwKT5HOmIf9sdv8ACiQytXpgFdhJI/nU0GxxX3fAHbzorYi1txB9XZA
+70RJqRRzKn7FR9e2RyVeX3I1zAVAhYR/g3GJbreeKP43zmE2Mdz+Ntuiz76BNFk1
+U+Cs+Hhi+nt1A/dgFlmIgGAjEzjPSokuGRo8Qcf2f95VtalljH+r5AkYHUBxXWeg
+4EokNulAwKYP2n8BqyuMWYOcXZ5/4WQuanjW+xwYg5tmsVszEQFvKPBPJfuCjZsX
+owrJAZm6e/tb9nBs87YyqoHiV8VZBB3jff9+y1i+3fd81wIDAQABo4IEYTCCBF0w
+VwYDVR0gBFAwTjAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGC
+LAEBBDAQBg4rBgEEAYGtIYIsAQEEBDAQBg4rBgEEAYGtIYIsAgEEBDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFJf4ajyAUO7QzUPyu3gzhHHH5+ujMB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MCAGA1UdEQQZMBeCFWlkcC5ocy1icmVtZXJoYXZl
+bi5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6
+Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3Js
+LmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3Nw
+LnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDov
+L2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2Fj
+ZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCAfYGCisGAQQB1nkC
+BAIEggHmBIIB4gHgAHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csA
+AAFt8vP1jAAABAMARzBFAiEAghcnlNy9U1+RCdGSpjdx/hkVjfLUsCiq82WARGF5
+dB0CIHUGbLZoj2lNZPxqd8WTdGiGcrRaxI+uBKxj0VQGBaRcAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFt8vP1yQAABAMARzBFAiEAiQJg2d8Y
+UV3kf3jtP1lAFaMSgtgsXsElTXU0PVZnfUMCICdKowUzWqWvbpLXSiZvIlfbi+Ii
+hNQfaE/5tNHRBY4SAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMA
+AAFt8vP1sQAABAMARzBFAiEA87MnJUTvA9AAybCGNxbf6bUtpfTU8CYOquWDzAls
+L9ACIA7C55aiyn+wA/24Wk08Z+MXj8YzA0CThNOt6SG0cK+FAHYAVYHUwhaQNgFK
+6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFt8vP2sgAABAMARzBFAiEAtJT/iGup
+mCWgffLYYUTDGTC4ozjT0Naspebd9VafOe4CIC4db3lmQyFOPLmhjMGW9pbUJyw2
+FbQstTyPe7WrWJDbMA0GCSqGSIb3DQEBCwUAA4IBAQBXXDdefTVM7OMgXwUhDUhr
+d/yBe09UxJNrclkGVpUXAlDMJpnJGWVqwhAsLTLl9DgFOMRuUY66uCk5lrfiVDRC
+qaIU1jR70VpjGjcRu3zLSmwJCzPhfbx2PWGFTMpNJ82Yc+/91BwPeuQlpIbiRuNq
+/Lzlgiax0nptO/sFy/TX7ydaiQC+Ej/yJGE18Ar9B0FQ1RPyKsRjYrWxWCmNhN7m
+rfXSHTc4uQTsOViyFBj8oVxLbS1DHrzyhgYYxr8d5lepNhcl5RaBnb/oZU0beb9n
+wBsoXRFkP2Wkq0Sx1oj2SOTEJnhZGz/g5klz43z0DJZ6fNbUBCJxiQkeyCSpsomp
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-bremerhaven.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-bremerhaven.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-bremerhaven.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hs-bremerhaven.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-bremerhaven.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-bremerhaven.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIII/DCCB+SgAwIBAgIMIc5Ti2CF2wYWjcxjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MTAyMjEwMTIxMloXDTIyMDEyMzEwMTIxMlowgYQxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZCcmVtZW4xFDASBgNVBAcMC0JyZW1lcmhhdmVuMR8wHQYDVQQKDBZIb2No
+c2NodWxlIEJyZW1lcmhhdmVuMQ0wCwYDVQQLDARaQlJWMR4wHAYDVQQDDBVpZHAu
+aHMtYnJlbWVyaGF2ZW4uZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoIC
+AQDVr1boaGFcIwcQCWD/oI8YDpPiwqnSEawh0zdtwvepBeAXatO0OpGHKLdXQBdV
+mcwZqf7+VtRK1qIs1A2tShfjhk2YpJ0RcheeHriH9cZqa9fPbbsdipNRXMxjyJF2
+RpgJYzcvMFYYN5evqpFce+vs06YgkE8YEl45RgbUzKK1Dw7UZd0kmRluDG4bPGBn
+HnIpIYsV9sF2skcAALTsT5EMyJ0L6Qmk0BtMW2gMwTiz5mU9FgsQKgBMVOjk8V4i
+U7SlbRUd/1keSXBy6e7HV8p79hrb0X4l5qI/X1va+d+YW2r+cHvkCjY3UVZmmCyf
+zdzso9wPwHJGbdaGANx8aB4x98Ul0oq1hh02FCRYuzBFQImeuav7bk5TsTL5yGOo
+GQhF/wSwuCwKT5HOmIf9sdv8ACiQytXpgFdhJI/nU0GxxX3fAHbzorYi1txB9XZA
+70RJqRRzKn7FR9e2RyVeX3I1zAVAhYR/g3GJbreeKP43zmE2Mdz+Ntuiz76BNFk1
+U+Cs+Hhi+nt1A/dgFlmIgGAjEzjPSokuGRo8Qcf2f95VtalljH+r5AkYHUBxXWeg
+4EokNulAwKYP2n8BqyuMWYOcXZ5/4WQuanjW+xwYg5tmsVszEQFvKPBPJfuCjZsX
+owrJAZm6e/tb9nBs87YyqoHiV8VZBB3jff9+y1i+3fd81wIDAQABo4IEYTCCBF0w
+VwYDVR0gBFAwTjAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGC
+LAEBBDAQBg4rBgEEAYGtIYIsAQEEBDAQBg4rBgEEAYGtIYIsAgEEBDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFJf4ajyAUO7QzUPyu3gzhHHH5+ujMB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MCAGA1UdEQQZMBeCFWlkcC5ocy1icmVtZXJoYXZl
+bi5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6
+Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3Js
+LmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3Nw
+LnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDov
+L2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2Fj
+ZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCAfYGCisGAQQB1nkC
+BAIEggHmBIIB4gHgAHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csA
+AAFt8vP1jAAABAMARzBFAiEAghcnlNy9U1+RCdGSpjdx/hkVjfLUsCiq82WARGF5
+dB0CIHUGbLZoj2lNZPxqd8WTdGiGcrRaxI+uBKxj0VQGBaRcAHYApLkJkLQYWBSH
+uxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFt8vP1yQAABAMARzBFAiEAiQJg2d8Y
+UV3kf3jtP1lAFaMSgtgsXsElTXU0PVZnfUMCICdKowUzWqWvbpLXSiZvIlfbi+Ii
+hNQfaE/5tNHRBY4SAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMA
+AAFt8vP1sQAABAMARzBFAiEA87MnJUTvA9AAybCGNxbf6bUtpfTU8CYOquWDzAls
+L9ACIA7C55aiyn+wA/24Wk08Z+MXj8YzA0CThNOt6SG0cK+FAHYAVYHUwhaQNgFK
+6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFt8vP2sgAABAMARzBFAiEAtJT/iGup
+mCWgffLYYUTDGTC4ozjT0Naspebd9VafOe4CIC4db3lmQyFOPLmhjMGW9pbUJyw2
+FbQstTyPe7WrWJDbMA0GCSqGSIb3DQEBCwUAA4IBAQBXXDdefTVM7OMgXwUhDUhr
+d/yBe09UxJNrclkGVpUXAlDMJpnJGWVqwhAsLTLl9DgFOMRuUY66uCk5lrfiVDRC
+qaIU1jR70VpjGjcRu3zLSmwJCzPhfbx2PWGFTMpNJ82Yc+/91BwPeuQlpIbiRuNq
+/Lzlgiax0nptO/sFy/TX7ydaiQC+Ej/yJGE18Ar9B0FQ1RPyKsRjYrWxWCmNhN7m
+rfXSHTc4uQTsOViyFBj8oVxLbS1DHrzyhgYYxr8d5lepNhcl5RaBnb/oZU0beb9n
+wBsoXRFkP2Wkq0Sx1oj2SOTEJnhZGz/g5klz43z0DJZ6fNbUBCJxiQkeyCSpsomp
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-bremerhaven.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-bremerhaven.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e652</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e652</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Bremerhaven</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Hochschule Bremerhaven</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.hs-bremerhaven.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.hs-bremerhaven.de/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Norfried</md:GivenName>
+	<md:SurName>Kulawik</md:SurName>
+	<md:EmailAddress>mailto:nkulawik@hs-bremerhaven.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stefan</md:GivenName>
+	<md:SurName>Botter</md:SurName>
+	<md:EmailAddress>mailto:sbotter@hs-bremerhaven.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ZBRV</md:GivenName>
+	<md:EmailAddress>mailto:zbrv@hs-bremerhaven.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ZBRV</md:GivenName>
+	<md:EmailAddress>mailto:zbrv@hs-bremerhaven.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

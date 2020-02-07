@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://dmz-shib-dg-01.dmz.roehampton.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">roehampton.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Roehampton</mdui:DisplayName>
+		<mdui:Logo height="60" width="166">https://www2.roehampton.ac.uk/roehampton/resources/images/url-logo-166x60.gif</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www2.roehampton.ac.uk/roehampton/resources/images/url-quad.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDejCCAmKgAwIBAgIVAJw0niI78J9LVDelS/WX6kLw2ONrMA0GCSqGSIb3DQEB
+BQUAMC4xLDAqBgNVBAMTI2Rtei1zaGliLWRnLTAxLmRtei5yb2VoYW1wdG9uLmFj
+LnVrMB4XDTA5MDQwNjEzNTgxOVoXDTI5MDQwNjEzNTgxOVowLjEsMCoGA1UEAxMj
+ZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWswggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCLewrO3PRLdkLPc0WQ8pyV3lUyqjQotbAoCwAD
+J82zAjGEjM2f7ItT0znjoOeL+0mk82lGNLpnUgdlCN1/CCWsVtpDHiX/cONcetfB
+LApwbhlC/VkyVw64Q31BpDpmwRR8xl0G7wIDyGLgm65F4YGwLAIJ29ekX0iPW23G
+3cnRB+Qxuss+ltLppKbKOg0RRHw8rGMqvpcl5RNaG5RoDd75ke4sulXzmnsiT1kX
+zJ3N6gbYuKuYGDFbTNPxmUn8tDOY9XiMYmSXYAPC76Tm67yrsACybYfhamAKGLDJ
+LzRPcdb+4ztpSwg3JAmoV9Wh71x/QY5xqRFYc6BFR+qr49sTAgMBAAGjgY4wgYsw
+agYDVR0RBGMwYYIjZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWuG
+Omh0dHBzOi8vZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWsvaWRw
+L3NoaWJib2xldGgwHQYDVR0OBBYEFMBb1DPf728KsP2L5BR2RK8T3MDIMA0GCSqG
+SIb3DQEBBQUAA4IBAQBQsK2G0NUmIAzUjnxKvM29W2BCPmXAntHFOku6g3eLuh8b
+mvIgoQ+vRpPTdw9rN0hmz7Rohq5CiL7avvIbhYrbvC4UX86eAiss224K7OVHZxUc
+jQOd40XcNctmhu558CeKQGqfurB1k9l78q9rNgrIyx+TfcyXI7Imy+koBVDk+m0P
+Pzdno7nVF6ijBmrRcO1f6Tjn84RIn6Vv6beCZzwe99TUaV3hQt2f+k/yeZmebKK4
+CvUiVr5csHXAtF2UoDIIvaXipHbaN7g3XU8D3xPCIgism64TuiZZSnTQa4nNv1ZZ
+tsCE45WFHTtwjDr3fhwnrvOO0mnQQ1sRXig53IR1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">roehampton.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDejCCAmKgAwIBAgIVAJw0niI78J9LVDelS/WX6kLw2ONrMA0GCSqGSIb3DQEB
+BQUAMC4xLDAqBgNVBAMTI2Rtei1zaGliLWRnLTAxLmRtei5yb2VoYW1wdG9uLmFj
+LnVrMB4XDTA5MDQwNjEzNTgxOVoXDTI5MDQwNjEzNTgxOVowLjEsMCoGA1UEAxMj
+ZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWswggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCLewrO3PRLdkLPc0WQ8pyV3lUyqjQotbAoCwAD
+J82zAjGEjM2f7ItT0znjoOeL+0mk82lGNLpnUgdlCN1/CCWsVtpDHiX/cONcetfB
+LApwbhlC/VkyVw64Q31BpDpmwRR8xl0G7wIDyGLgm65F4YGwLAIJ29ekX0iPW23G
+3cnRB+Qxuss+ltLppKbKOg0RRHw8rGMqvpcl5RNaG5RoDd75ke4sulXzmnsiT1kX
+zJ3N6gbYuKuYGDFbTNPxmUn8tDOY9XiMYmSXYAPC76Tm67yrsACybYfhamAKGLDJ
+LzRPcdb+4ztpSwg3JAmoV9Wh71x/QY5xqRFYc6BFR+qr49sTAgMBAAGjgY4wgYsw
+agYDVR0RBGMwYYIjZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWuG
+Omh0dHBzOi8vZG16LXNoaWItZGctMDEuZG16LnJvZWhhbXB0b24uYWMudWsvaWRw
+L3NoaWJib2xldGgwHQYDVR0OBBYEFMBb1DPf728KsP2L5BR2RK8T3MDIMA0GCSqG
+SIb3DQEBBQUAA4IBAQBQsK2G0NUmIAzUjnxKvM29W2BCPmXAntHFOku6g3eLuh8b
+mvIgoQ+vRpPTdw9rN0hmz7Rohq5CiL7avvIbhYrbvC4UX86eAiss224K7OVHZxUc
+jQOd40XcNctmhu558CeKQGqfurB1k9l78q9rNgrIyx+TfcyXI7Imy+koBVDk+m0P
+Pzdno7nVF6ijBmrRcO1f6Tjn84RIn6Vv6beCZzwe99TUaV3hQt2f+k/yeZmebKK4
+CvUiVr5csHXAtF2UoDIIvaXipHbaN7g3XU8D3xPCIgism64TuiZZSnTQa4nNv1ZZ
+tsCE45WFHTtwjDr3fhwnrvOO0mnQQ1sRXig53IR1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dmz-shib-dg-01.dmz.roehampton.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Roehampton University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Roehampton</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.roehampton.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Amos</md:GivenName>
+	<md:SurName>Eka</md:SurName>
+	<md:EmailAddress>mailto:A.Eka@roehampton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Amos</md:GivenName>
+	<md:SurName>Eka</md:SurName>
+	<md:EmailAddress>mailto:A.Eka@roehampton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

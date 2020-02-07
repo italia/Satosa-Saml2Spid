@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.4cd.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">4cd.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Contra Costa Community College District</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.4cd.edu/webapps/Confidentiality/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="90" width="117" xml:lang="en">https://webapps.4cd.edu/apps/files/img/4cdLogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3jCCAcagAwIBAgIQY/dQsE83PaZJoxxonVIzyzANBgkqhkiG9w0BAQUFADAY
+MRYwFAYDVQQDEw1NRUcuYWMucG9ydGFsMB4XDTE1MDczMDE3MzU0NVoXDTE2MDcz
+MDAwMDAwMFowGDEWMBQGA1UEAxMNTUVHLmFjLnBvcnRhbDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJuqbkxV/IezNIvfuL/JYtWjVc+A4GYsfHV0t77/
+KP7RzXD8uUfax9NaNo6Vvh35fD8FjBRBybOnjsA9mBcHGC3uhQeveX5qgrzqvZfa
+cBlQ0nnXDzAEAdM20mFRATpqZMqaR83ZsSdul2Mvf29KJdktPBNfvBiuXfGNP0Bb
+hQWsc4XOVjSvtYd3vKUmJUtor8UttL4V4YJLXy7jcKPBYHEIjiaoDSv3A14waZmO
+iO9kK6520bEnJfRZ1s0QzIXfJRY/YWAFxSmnWLu99tunzNY7JiK3GXj9LbY643Ou
+IafLtJP6+/ZjYJG8SX+nThYUmvXbsgMFzZ/3fJELnk1xXZECAwEAAaMkMCIwCwYD
+VR0PBAQDAgQwMBMGA1UdJQQMMAoGCCsGAQUFBwMBMA0GCSqGSIb3DQEBBQUAA4IB
+AQBEysihZ5OnJKTHDaV3h/HEcAxY0ALCrVwk4Buv1SHdeZowCgA0Dqey1j24tANH
+P3CEd4HX6C7wBBMtrMBtZUDH7yZpjfh0YAXZD289l7Frm6P2/4eIXEzdYUvN9X+M
+5vBo2RSgfV0Z8CvdfahVe6zj3B2LURzZ6/Aj5CpAIQnv9qyQ5LJ0eDPIkcHvq+xy
+6WEb/JeSfcXjfbEvt8A7XhsaCYH+EDxLNqazR0y+/CGdzldZzT484KH3ighNM7It
+VGhn/FMx6CwPgaVvSUFhZSF1S/Zy5LGo5L+NwSskBZbsggvcFK81A8OQyRpqkfJ0
+FdNlLCLTu6n6ORJmir+X2PzI
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUbFc/9Zd90s2OyW+CDf6IsoyodFIwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLjRjZC5lZHUwHhcNMTUwNzE1MjIwNTM4WhcNMzUw
+NzE1MjIwNTM4WjAWMRQwEgYDVQQDDAtpZHAuNGNkLmVkdTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJbSYoWAUTBA7xoIOTmGtfr9OmJixa3N/euDzOay
+Ztlcf7S48qoo7uBW0H4QHkIIBBkK8YstmsgIqRtA03QL+62trDygN9oWqdbtT5CE
+q7JBI0qxcHb2AXW2LMAW1rjgSeyjRMxUdrbii8aNpJ/PQyHSwqo6l62Xdg9kzDRH
+s7NPchMrplv1NIILukLR87Lu1heirZtpBEzJcc/bj8T98A7Pt/BJURsJsixO3pkq
+q8DmCWggrajOFsYuUsNuwK7AObp3SEv/RvDHwoVLbtO9hCqMzVcS5DwpmHT/TRNd
+Su03LWv/U2tWAY7r2HVeVJmB1QoZCXDtIvCtLa8KkFKCP9kCAwEAAaNdMFswHQYD
+VR0OBBYEFPmijRIb0Yjq1QnJUWQQee6zJVxFMDoGA1UdEQQzMDGCC2lkcC40Y2Qu
+ZWR1hiJodHRwczovL2lkcC40Y2QuZWR1L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCJjWVXlEaCfNiUUngeOgeU/Afe6juBV7kN0C9+SqxlmK/hgj9l
+32yoALnA/jec86VVif2sQUy7IJBwsl4+rqx4x04mfZxb0y719YDj5kIgP8ZxOT2s
+yknrDzqbGwe21sAkeirtLANYDjCTgWUB3BpKdqz9iBHI8A0rY1g4glKcWxTYVnej
+mDPEfrVywFVFmXyEtwyEYJSYXsfWLrFwAOpeiO1mq9T1Vk2Mr3P/F5+2E4+J06wg
++iP2GsQmy1PGMfVhuKKGDMDx2YhCzbiGaDjF2782KYJ5xHr8jRIr3qzTRr/SIMsd
+5JecuW9DWVNJsuwR/jW02/KrcCa429lfK5mp
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.4cd.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.4cd.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.4cd.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.4cd.edu:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.4cd.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.4cd.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.4cd.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Contra Costa Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Contra Costa Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.4cd.edu/default.aspx</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Fred Tahan</md:GivenName>
+	<md:EmailAddress>ftahan@4cd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeanie Smith</md:GivenName>
+	<md:EmailAddress>jsmith@4cd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Fred Tahan</md:GivenName>
+	<md:EmailAddress>ftahan@4cd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Fred Tahan</md:GivenName>
+	<md:EmailAddress>ftahan@4cd.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

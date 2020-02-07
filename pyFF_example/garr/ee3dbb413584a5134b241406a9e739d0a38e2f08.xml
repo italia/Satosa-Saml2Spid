@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://global.hgncloud.com/med_miamiedu/saml/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Saba TalentSpace for University of Miami – Coral Gables Campus (Main)</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.saba.com/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://images.saba.com/img/logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgKgAwIBAgIEJvTxQTANBgkqhkiG9w0BAQsFADBPMRkwFwYDVQQDDBBI
+YWxvZ2VuIFNvZnR3YXJlMQ0wCwYDVQQLDAROb25lMRQwEgYDVQQKDAtOb25lIEw9
+Tm9uZTENMAsGA1UEBhMETm9uZTAeFw0xNTEyMTAxOTQ3MDdaFw0zNTEyMTAxOTQ3
+MDdaME8xGTAXBgNVBAMMEEhhbG9nZW4gU29mdHdhcmUxDTALBgNVBAsMBE5vbmUx
+FDASBgNVBAoMC05vbmUgTD1Ob25lMQ0wCwYDVQQGEwROb25lMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqHWzJuAH5tzCHdqY7fgBMBJu+MoUp7e9UhAy
+E+TiCzBBJeinos+eOaAFXGtKS3ihk2Ps16PV+Ix5uppxvD4tSFmjXBcBRolyBBpr
+lEzHTnI3g6IXSeDp0SCbDjbeKKqb+KUNMx+NHksjALR11ur6wZOkYx9dsrt6sD5b
+LCj2CYazyWg/gEhsKvKoPcNrYcXFRift7zAg+d8+YTvbqemF1hT4vhXT7oNGVYmo
+rmbdKrbTdxrf0KEJ4XoxSEHZ/LNlurJL4VXy4tKGqz2jkjwhkZayvcSBmepHyAi/
+/rgdNY75pvIn8Sp5b6s0HlIfOk98+/1B05gZZdSAYZGEM5xHqQIDAQABMA0GCSqG
+SIb3DQEBCwUAA4IBAQBzINhEBquMuwUwhou1/LLuBtvWIBRwA1Lau58QupfJ5M6o
+gTNrgtL8i+coGw+BjCA+LVkhAnnQQSIhX7965B788J9fDtkvmFsvN8hegHYCSi76
+lt0omjrDEGytxo7YARCzGTKOUSViON0GevqeEL7oH/xfsznajnvsIHjrgIi/hJDW
+7Cf6TRofokFIZ/v7Mc2x9jM0r6MrqTZcjslWVMO5L/YmCBK6WmrO6VBU/5xnTDC4
+EMF8DICx0jqUXmL+/T2R19MT4Og1qbahbqgOgczEfxmkgeKn0XVsm+Wz+ei2ICH3
+q2E+Mlml+jUBn1HQQTMTUWFIRX/ivDASCcWabbK4
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://global.hgncloud.com/med_miamiedu/saml/SSO" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Saba TalentSpace for University of Miami – Coral Gables Campus (Main)</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Halogen Software Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Halogen Software Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.halogensoftware.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>support@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>support@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib2.utep.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utep.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Texas at El Paso</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Logon service for The University of Texas at El Paso</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.utsystem.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="75" xml:lang="en">https://idm.utsystem.edu/images/utep-logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUSDSYO+BRB2O9LZP6/yb56FSVeZAwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOc2hpYjIudXRlcC5lZHUwHhcNMTAwNDI5MjE1NTM1WhcN
+MzAwNDI5MjE1NTM1WjAZMRcwFQYDVQQDEw5zaGliMi51dGVwLmVkdTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKhymeRCHrNVP7XIRf3Wkyw3eyONM2cR
+fBrW2d6v5Bdr+4nk7a23BAFi2urLGkQog91KaZ2V6kVkpOn9nxFYzm5xAT3w93De
+SxX2PH5d7WD+7kjREuBx/2OSF0BMTBA6jZxT23WSYLJRkKBN5L8cVDvz/HtvI8dJ
+TcHx+J/K6lSqDwPSjk7ShzOk/MPcIdFUlYY49cvTAReHOUR6pKNuyDU1BRM8AuoF
+7UGEqjLOpz/RitoTkJFwpP/+AM48KIhXC8g/ip/e1uq2yBGnCECI/IQmzxqlrXAz
+qHeNY16jjiVPbIm1BioHFjLpluYCg4dhtxf8Q9rARZ67jF9+vIT7DCUCAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOc2hpYjIudXRlcC5lZHWGJWh0dHBzOi8vc2hpYjIudXRl
+cC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOU2rYgczWF4trebCY091BZN
+QnvYMA0GCSqGSIb3DQEBBQUAA4IBAQCdzB7xc9s2vXRBf+fJKpVeuNFFYqM/UMsm
+v4uhGS85yYXXTwyfekfyKPmp0wf0Tl5EAxrR0SxIG5wQU4v+O5SiVzXoq4/ldjH0
+Q+wjgHazX7Z7KzToHcvo8qyzmUREKfzAdCBbfSEaRA1JrzepwsTn0OVKO7BDDYCj
+rOHQE4QHJpgt05WsxsrN5dslpg3NChR90uxgS1SaYvHk2PfLqLsWY0MX438ScgY5
+bFEBNN3InSuW4rFBadZRNZsFgfejnw5apBHDW5EGlZKYrtAHFQCjliAVhOmA711U
+N0vWPiofU45Ka1EWdfwhlEuVQW2UzUcogTJreXpCBhj61gExq6FZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib2.utep.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib2.utep.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib2.utep.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib2.utep.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib2.utep.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utep.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUSDSYO+BRB2O9LZP6/yb56FSVeZAwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOc2hpYjIudXRlcC5lZHUwHhcNMTAwNDI5MjE1NTM1WhcN
+MzAwNDI5MjE1NTM1WjAZMRcwFQYDVQQDEw5zaGliMi51dGVwLmVkdTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKhymeRCHrNVP7XIRf3Wkyw3eyONM2cR
+fBrW2d6v5Bdr+4nk7a23BAFi2urLGkQog91KaZ2V6kVkpOn9nxFYzm5xAT3w93De
+SxX2PH5d7WD+7kjREuBx/2OSF0BMTBA6jZxT23WSYLJRkKBN5L8cVDvz/HtvI8dJ
+TcHx+J/K6lSqDwPSjk7ShzOk/MPcIdFUlYY49cvTAReHOUR6pKNuyDU1BRM8AuoF
+7UGEqjLOpz/RitoTkJFwpP/+AM48KIhXC8g/ip/e1uq2yBGnCECI/IQmzxqlrXAz
+qHeNY16jjiVPbIm1BioHFjLpluYCg4dhtxf8Q9rARZ67jF9+vIT7DCUCAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOc2hpYjIudXRlcC5lZHWGJWh0dHBzOi8vc2hpYjIudXRl
+cC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOU2rYgczWF4trebCY091BZN
+QnvYMA0GCSqGSIb3DQEBBQUAA4IBAQCdzB7xc9s2vXRBf+fJKpVeuNFFYqM/UMsm
+v4uhGS85yYXXTwyfekfyKPmp0wf0Tl5EAxrR0SxIG5wQU4v+O5SiVzXoq4/ldjH0
+Q+wjgHazX7Z7KzToHcvo8qyzmUREKfzAdCBbfSEaRA1JrzepwsTn0OVKO7BDDYCj
+rOHQE4QHJpgt05WsxsrN5dslpg3NChR90uxgS1SaYvHk2PfLqLsWY0MX438ScgY5
+bFEBNN3InSuW4rFBadZRNZsFgfejnw5apBHDW5EGlZKYrtAHFQCjliAVhOmA711U
+N0vWPiofU45Ka1EWdfwhlEuVQW2UzUcogTJreXpCBhj61gExq6FZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib2.utep.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib2.utep.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Texas at El Paso</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Texas at El Paso</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.utep.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Gerard Cochrane</md:GivenName>
+	<md:EmailAddress>gdcochrane@utep.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Information Security Office</md:GivenName>
+	<md:EmailAddress>security@utep.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@utep.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ISO</md:GivenName>
+	<md:EmailAddress>security@utep.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

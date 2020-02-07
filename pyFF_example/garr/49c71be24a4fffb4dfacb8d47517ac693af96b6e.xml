@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.ihs.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2014-06-03T09:19:52Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ihs.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Institut für Höhere Studien (IHS)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Institute for Advanced Studies (IHS)</mdui:DisplayName>
+		<mdui:Logo height="39" width="250">https://www.ihs.ac.at/fileadmin/public/2016_Files/Logos/K-IHS-Logo_Typo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://shib.ihs.ac.at/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>78.104.136.0/21</mdui:IPHint>
+		<mdui:DomainHint>ihs.ac.at</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:48.19539,16.34310</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAOgeJhXY1VXjDMkzFquM9nu+yZo+MA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDnNoaWIuaWhzLmFjLmF0MB4XDTE0MDUwOTE1MjU1MloX
+DTM0MDUwOTE1MjU1MlowGTEXMBUGA1UEAxMOc2hpYi5paHMuYWMuYXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeED2QysFaRKSzdMP+QuJArV7j8bBP
+bVVZqLwW25RDrL6kBl5FRyQYtnkTE9yXKlEy2mAj43FzqBTknxnTMWHShXSFISdi
+3mY/tjqoTAgaN6JfyISlBSNLsx+0XcZ3ZelakqZHp1b5mvJnSiGI6o69dunFcxGU
+vPf9NJaaZsUxM+9wYlQQqLM7HYeknl6KpCi9jgDr9k3INlqE6wpVXHdyDytd7CAh
+8NGvmmlB9744Pd07raqnQGOHizgZ97/33of6S5QAC0F+KihcSSMxq93VTkC6eRUI
+YEZUyhPfPDyv1a26+bqikA5PWER/Vfq6bdaS62ARr9hvbZafYwfM8YpTAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDnNoaWIuaWhzLmFjLmF0hiVodHRwczovL3NoaWIuaWhz
+LmFjLmF0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSkJ/IMZqy7K+EaaDk3roup
+bMsUJjANBgkqhkiG9w0BAQUFAAOCAQEAd1TCkWpH7wc9NVWtzJ1y67C7ZX9C6SL2
+lIUqBMKL95mVmnLloOUhUSqydLznim5sMdduKAh+p6axDxAwP+3Q9uwVtcHh0tlb
+C0+F70Mm6MnVaQwVDITcqCIBqeONDDXUd++dTxPqDj2cQ1Mg6a+ULXxwhjBwfW8g
+sGSusWJI4ZNZ4/Nd9u4/RJ7te2n84xl9qYQ0RsQ/7vr5Tp31JiFlsi+0nrUr6y0N
+lEVKAYqUEoEwL/X/qMs2kR2kp148SaKFZ5JwjiFjss9eXOIMwJuue5khX4on7WkB
+JLo91A2mOkXHy02yCevI30nGPpmdkozBkfz59uy1k2gzB0XQ85jQuw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.ihs.ac.at:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ihs.ac.at:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.ihs.ac.at/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.ihs.ac.at/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ihs.ac.at:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.ihs.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.ihs.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.ihs.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.ihs.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Institut für Höhere Studien</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Institute for Advanced Studies</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Institut für Höhere Studien (IHS)</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Institute for Advanced Studies (IHS)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.ihs.ac.at/de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.ihs.ac.at/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IHS</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@ihs.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

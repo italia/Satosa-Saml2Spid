@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cpsp.edu.pk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://pkifed.pk" registrationInstant="2019-10-20T14:20:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://pkifed.pk/wp-content/uploads/2018/09/PKIFED-MRPS-v0.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cpsp.edu.pk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">College of Physicians and Surgeons Pakistan</mdui:DisplayName>
+		<mdui:Description xml:lang="en">College of Physicians and Surgeons Pakistan</mdui:Description>
+		<mdui:Keywords xml:lang="en">College of Physicians and Surgeons Pakistan</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.cpsp.edu.pk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.cpsp.edu.pk</mdui:PrivacyStatementURL>
+		<mdui:Logo height="69" width="531">https://cpsp.edu.pk/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJzCCAo+gAwIBAgIUJkGyRUr9LLfH0WQGmMQn3nvqVigwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMB4XDTE5MTAyMDEzMjYyNVoX
+DTM5MTAyMDEzMjYyNVowGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAgie/7oxN55N5XYoYFtOuiCjROASM
+O8KAu4JMZnV3kcNxy23f82C+pRx9/CxYL0jjTesXPJkCweBG/TxUC5d1CtGAkVNC
+3ssLNRcu09inoaM1AC/B1qiabe4EOFWO1+y6wR+nhbc3Uo6aDYrqqREPp/6UeGqs
+Ca5RwbSrobwcHXx8nCe0kjq2WTSKqS603XTUJrbf0m758xb5cz7IO/Udf8YSViCZ
+KMIeuMyE2wMFzm451VAFCyT8QIeIcwjp08HuTkERcsKXBRzquMQ5ejjFdNp6LUIG
+36utmNsjn/YVbC4IIxXIAOkOua4mod8Nwwv8DuoNJ3m1OtH8dFiJW2cntk+W7SJk
+WBigLnBtFYK/UcDjW8ga5UyOKrcnsoeswTU5bJQvcwHDWIWsT4OYR0d6pXXAteWu
+Y7LrEmr6w3Aa+3/AOr0z+ZpwOtIzKHAoI2ooQU2nxCcHEuvgex4nWtLEUswfzcck
+C7ozpT+oniBJJKCFILxaUnhdCx5himbq5QZfAgMBAAGjZTBjMB0GA1UdDgQWBBTl
++vRfejzR5w98zj4gVuAj6qsK2zBCBgNVHREEOzA5gg9pZHAuY3BzcC5lZHUucGuG
+Jmh0dHBzOi8vaWRwLmNwc3AuZWR1LnBrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBgQAn5Zr1C9JvtoqJKib9L+PwxrVV/u/E7pCDsj4cSk+oxFmTfZem
+mrDgemv1Zsj3/oRE/x3h99dU6oHYNGUybxrJl9ZfCNblgHmApwE81fxRrVrQXY94
+6s7y6590wZ0DATD5nxI5k8bWH9nXia7/HLSzo3o16He1lByGIo82WGYih/HIb7lg
+nZg1oGBFzrH4tnltWLNHZbh8fBAIM+Bkn1ldraTp4TpVc/q2rIV21TYASyDPAIbR
+ZFdoCqrTwMnDuiSyVAHIiJQtZP3xeD4Iz3ddG1tUytcbdCEPjRw1Rnt4yeg1A/J1
+nTBZ3LzUQHWf9W+WLcGImp6c4iV3spED+cg2ysriQZK58ZmtqQ56yBkTtaKkqZ3I
+BnHx40Qn30iyrYkKDu4PZJOTFB0rhfiHi8GT1UeaYXi81cYJHd7TZMLAk1KFjqiM
+SPVPwkH65x+g2gruPb+VZ7EV4Pfb9vmkdJ+DMQUPL3i6KedTYFZ6KPLWiUiLinFY
+S8y0bZUJv/OHPUw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEKDCCApCgAwIBAgIVANQSJ1O2WFuh1Vrfkb8Hus15LrgZMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5jcHNwLmVkdS5wazAeFw0xOTEwMjAxMzI2MjNa
+Fw0zOTEwMjAxMzI2MjNaMBoxGDAWBgNVBAMMD2lkcC5jcHNwLmVkdS5wazCCAaIw
+DQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAIEP6A9rY3vWI+Lp/KBwmvtmiZ9e
+gK6aitExgYtvnXhJ71zKup1aEJU0k1B1/VWWjlE5eVZBCORXLc6ny3qZbYSTaeKb
+a4KHxJRHuDXDLZvfUqmNB4GudZn91AMISVr5YADKQpD/Umtkr9XBGLTzaK88dvby
+adWYaMVmyweI2sFXgT4A+C4WpDes+E6ZP5Yi/sMYXuJ3PVMr/3JQnGJAwo3bitaC
+neEM4qZr3wqNZN/DXfd0XC95ARp0BpU/jZIGPiUnR5bmFu1q2lBcOj1xv4BdouYV
+psRV+ZbZzDo81gPak6sfIQDyohVKT6t3D0X/DG5utLh/6ZAA43JXxykFObOaAsjp
+dxt2LjUSenQdkbVsdvqxUS3l+MFBflT0PMlf1LOGNUPmzVirXtDM7qkMv1dT7x8F
+ZPEuuOXm3zQb6XU19PGOMDi6dCWXrZluPw9IMYcIit81UezLT6/zSB+OYmcyMPkz
+RPrBi+BpBCl0FoW9Yzb2NEa/RodcqvcI9ivrVwIDAQABo2UwYzAdBgNVHQ4EFgQU
+yAupfaWKiTzpCQwuww1e6X9KWwAwQgYDVR0RBDswOYIPaWRwLmNwc3AuZWR1LnBr
+hiZodHRwczovL2lkcC5jcHNwLmVkdS5way9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAYEASXC3RfphmFmtv6DtJQLpnlTiY5sQs7iDmXNwDD8hgAahwkf9
+4eevTNzJX95LtXg3e43Mu7AZG38vMA0jfpax11aRIoQZ0XoT7baFiq+QsnKjNBdZ
+N3LVo8rrHNySOGn5Xt7uUoxax3N+IRRiiC/Yiz/CTSMbXqd5rD2e6bc1kq41eTzT
+3fxkEvQkARYUVs63ZzOyFz3QwQ+i4aDMg4GM1+8+72Ph30v5gsKvCgRrZj2DgqsI
+31AsvJCIXtr3Kd90LjPq0kqSahgPWHZvqrBbCV6S6OuKWXnqgqilsZvZD1CoSnbS
+VLea2gfDrpzgsmhMCkeq2bHT0CFRC0qwCGHGf29Nu/ja8StlwHqkarggIEm6LciB
+787NU8gXHvDhOZTBA7MaWlwbC3qEqhiH0r4JLeQuGgRgqR3nImW3z/po2vAY0cb2
+OUd2GPjktrv+aze8fo3LFsP7UbT0Gp52cb3qid1xtLqwKwYixV/0DHfE4yPtG2m5
+43ZD+4l5ObogURhD
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJzCCAo+gAwIBAgIUJWFePptw8Nw5WFsbeX9cveXYWGowDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMB4XDTE5MTAyMDEzMjYyNFoX
+DTM5MTAyMDEzMjYyNFowGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAkoRndDtl1f6RIOvtQzc2hvlw1q8/
+yEu/J3kP0Ph6/rilUhw5q9W42GJIloUoHar9Dv1EaroagLdlNy5HIu8W7tQeGcTv
+B2hN9rYMFYmnwa8aXlzxojJ3CfM01w9YJ81TvYH7EMYACErlLSCQh4YKhwUu/yCr
+oR5yTc1EUg+LpSi3Cm1r+U7kzd9npq5HvFYKxH2z37TJNBnZE4j1qPNMcy3e+TUt
+iqkObIOe2psqNVRqfVmgkHEcgHSblQpIf6yxDRGXn9uXYWJT1YzG17KetP0+cCix
+zZJ8KMYjh0L/x13nI61ayBaDofHLm1JDFnQ7ObHaOmE3UTgHTOrdCnPgaZmmX5up
+7vgBHNEHnDhf5wyeBqKd4Kwd1djmlVNKlxnK1Y/dnqF08FMlHuNtm2trXzVWliF+
+y5KI6WcL5ExJ0V8uSZFoEYWYyIzjssGSJG43HhFS6zAnJC4QhoKBAhfXOITUwUKw
+lLwwbtbRUEnGxT8ieC0kd5YB/BMN15H5joTBAgMBAAGjZTBjMB0GA1UdDgQWBBTE
+t4TbqJH0TiGIMuACPWt6EHibADBCBgNVHREEOzA5gg9pZHAuY3BzcC5lZHUucGuG
+Jmh0dHBzOi8vaWRwLmNwc3AuZWR1LnBrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBgQBDMLs2pSchK7P56lBwW8ynQG1UwJDaSruIIEEMQeuvVDUbOQnN
+AyS2ZK0s7zOE6Y9dAPVl3lSWrI+hwDsjeY5mISic5kS4pw95kA+h7p89qIbwPjjM
+5GPs1sSpSNm6jSdtLSi+xCfQPl8n+GCG4qp1q8qOBJ7XARSDgHxhIZl9kexyQWgz
+JHDXtCCLBIsPo6hFxYHIY5VnjLB5hKW8ES4fX7LEDEfGe4fZIs68YU4iyHkwZyWb
+Ajy6JSE5GYqQavWZkla7HU34UXN8jk7oJ2eFEEhRIm1rCCwO9Z6GpfbLCiT9Sqzd
+IvNFkUtE5IW5eyuHk2c7v4q7W8/TZp8mNPa/wkzqbqr6IsiJiWoVXTRbWOmuPc2b
+nq+QhTINXnSxzAqnbLW88BuO58oAsIRF5Wi95PPpVO7oFNkC7TKRHEgxLTDzRHg9
+JaaZIRWcMv8/B664i0IN8/stvyOWEASKrLDrsciJOu6QxsdqhjS1M5Ma8qigoQcu
+TYMpWm3SHQZHkYo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cpsp.edu.pk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cpsp.edu.pk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cpsp.edu.pk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cpsp.edu.pk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cpsp.edu.pk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cpsp.edu.pk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cpsp.edu.pk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJzCCAo+gAwIBAgIUJkGyRUr9LLfH0WQGmMQn3nvqVigwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMB4XDTE5MTAyMDEzMjYyNVoX
+DTM5MTAyMDEzMjYyNVowGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAgie/7oxN55N5XYoYFtOuiCjROASM
+O8KAu4JMZnV3kcNxy23f82C+pRx9/CxYL0jjTesXPJkCweBG/TxUC5d1CtGAkVNC
+3ssLNRcu09inoaM1AC/B1qiabe4EOFWO1+y6wR+nhbc3Uo6aDYrqqREPp/6UeGqs
+Ca5RwbSrobwcHXx8nCe0kjq2WTSKqS603XTUJrbf0m758xb5cz7IO/Udf8YSViCZ
+KMIeuMyE2wMFzm451VAFCyT8QIeIcwjp08HuTkERcsKXBRzquMQ5ejjFdNp6LUIG
+36utmNsjn/YVbC4IIxXIAOkOua4mod8Nwwv8DuoNJ3m1OtH8dFiJW2cntk+W7SJk
+WBigLnBtFYK/UcDjW8ga5UyOKrcnsoeswTU5bJQvcwHDWIWsT4OYR0d6pXXAteWu
+Y7LrEmr6w3Aa+3/AOr0z+ZpwOtIzKHAoI2ooQU2nxCcHEuvgex4nWtLEUswfzcck
+C7ozpT+oniBJJKCFILxaUnhdCx5himbq5QZfAgMBAAGjZTBjMB0GA1UdDgQWBBTl
++vRfejzR5w98zj4gVuAj6qsK2zBCBgNVHREEOzA5gg9pZHAuY3BzcC5lZHUucGuG
+Jmh0dHBzOi8vaWRwLmNwc3AuZWR1LnBrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBgQAn5Zr1C9JvtoqJKib9L+PwxrVV/u/E7pCDsj4cSk+oxFmTfZem
+mrDgemv1Zsj3/oRE/x3h99dU6oHYNGUybxrJl9ZfCNblgHmApwE81fxRrVrQXY94
+6s7y6590wZ0DATD5nxI5k8bWH9nXia7/HLSzo3o16He1lByGIo82WGYih/HIb7lg
+nZg1oGBFzrH4tnltWLNHZbh8fBAIM+Bkn1ldraTp4TpVc/q2rIV21TYASyDPAIbR
+ZFdoCqrTwMnDuiSyVAHIiJQtZP3xeD4Iz3ddG1tUytcbdCEPjRw1Rnt4yeg1A/J1
+nTBZ3LzUQHWf9W+WLcGImp6c4iV3spED+cg2ysriQZK58ZmtqQ56yBkTtaKkqZ3I
+BnHx40Qn30iyrYkKDu4PZJOTFB0rhfiHi8GT1UeaYXi81cYJHd7TZMLAk1KFjqiM
+SPVPwkH65x+g2gruPb+VZ7EV4Pfb9vmkdJ+DMQUPL3i6KedTYFZ6KPLWiUiLinFY
+S8y0bZUJv/OHPUw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEKDCCApCgAwIBAgIVANQSJ1O2WFuh1Vrfkb8Hus15LrgZMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5jcHNwLmVkdS5wazAeFw0xOTEwMjAxMzI2MjNa
+Fw0zOTEwMjAxMzI2MjNaMBoxGDAWBgNVBAMMD2lkcC5jcHNwLmVkdS5wazCCAaIw
+DQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAIEP6A9rY3vWI+Lp/KBwmvtmiZ9e
+gK6aitExgYtvnXhJ71zKup1aEJU0k1B1/VWWjlE5eVZBCORXLc6ny3qZbYSTaeKb
+a4KHxJRHuDXDLZvfUqmNB4GudZn91AMISVr5YADKQpD/Umtkr9XBGLTzaK88dvby
+adWYaMVmyweI2sFXgT4A+C4WpDes+E6ZP5Yi/sMYXuJ3PVMr/3JQnGJAwo3bitaC
+neEM4qZr3wqNZN/DXfd0XC95ARp0BpU/jZIGPiUnR5bmFu1q2lBcOj1xv4BdouYV
+psRV+ZbZzDo81gPak6sfIQDyohVKT6t3D0X/DG5utLh/6ZAA43JXxykFObOaAsjp
+dxt2LjUSenQdkbVsdvqxUS3l+MFBflT0PMlf1LOGNUPmzVirXtDM7qkMv1dT7x8F
+ZPEuuOXm3zQb6XU19PGOMDi6dCWXrZluPw9IMYcIit81UezLT6/zSB+OYmcyMPkz
+RPrBi+BpBCl0FoW9Yzb2NEa/RodcqvcI9ivrVwIDAQABo2UwYzAdBgNVHQ4EFgQU
+yAupfaWKiTzpCQwuww1e6X9KWwAwQgYDVR0RBDswOYIPaWRwLmNwc3AuZWR1LnBr
+hiZodHRwczovL2lkcC5jcHNwLmVkdS5way9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAYEASXC3RfphmFmtv6DtJQLpnlTiY5sQs7iDmXNwDD8hgAahwkf9
+4eevTNzJX95LtXg3e43Mu7AZG38vMA0jfpax11aRIoQZ0XoT7baFiq+QsnKjNBdZ
+N3LVo8rrHNySOGn5Xt7uUoxax3N+IRRiiC/Yiz/CTSMbXqd5rD2e6bc1kq41eTzT
+3fxkEvQkARYUVs63ZzOyFz3QwQ+i4aDMg4GM1+8+72Ph30v5gsKvCgRrZj2DgqsI
+31AsvJCIXtr3Kd90LjPq0kqSahgPWHZvqrBbCV6S6OuKWXnqgqilsZvZD1CoSnbS
+VLea2gfDrpzgsmhMCkeq2bHT0CFRC0qwCGHGf29Nu/ja8StlwHqkarggIEm6LciB
+787NU8gXHvDhOZTBA7MaWlwbC3qEqhiH0r4JLeQuGgRgqR3nImW3z/po2vAY0cb2
+OUd2GPjktrv+aze8fo3LFsP7UbT0Gp52cb3qid1xtLqwKwYixV/0DHfE4yPtG2m5
+43ZD+4l5ObogURhD
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJzCCAo+gAwIBAgIUJWFePptw8Nw5WFsbeX9cveXYWGowDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMB4XDTE5MTAyMDEzMjYyNFoX
+DTM5MTAyMDEzMjYyNFowGjEYMBYGA1UEAwwPaWRwLmNwc3AuZWR1LnBrMIIBojAN
+BgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAkoRndDtl1f6RIOvtQzc2hvlw1q8/
+yEu/J3kP0Ph6/rilUhw5q9W42GJIloUoHar9Dv1EaroagLdlNy5HIu8W7tQeGcTv
+B2hN9rYMFYmnwa8aXlzxojJ3CfM01w9YJ81TvYH7EMYACErlLSCQh4YKhwUu/yCr
+oR5yTc1EUg+LpSi3Cm1r+U7kzd9npq5HvFYKxH2z37TJNBnZE4j1qPNMcy3e+TUt
+iqkObIOe2psqNVRqfVmgkHEcgHSblQpIf6yxDRGXn9uXYWJT1YzG17KetP0+cCix
+zZJ8KMYjh0L/x13nI61ayBaDofHLm1JDFnQ7ObHaOmE3UTgHTOrdCnPgaZmmX5up
+7vgBHNEHnDhf5wyeBqKd4Kwd1djmlVNKlxnK1Y/dnqF08FMlHuNtm2trXzVWliF+
+y5KI6WcL5ExJ0V8uSZFoEYWYyIzjssGSJG43HhFS6zAnJC4QhoKBAhfXOITUwUKw
+lLwwbtbRUEnGxT8ieC0kd5YB/BMN15H5joTBAgMBAAGjZTBjMB0GA1UdDgQWBBTE
+t4TbqJH0TiGIMuACPWt6EHibADBCBgNVHREEOzA5gg9pZHAuY3BzcC5lZHUucGuG
+Jmh0dHBzOi8vaWRwLmNwc3AuZWR1LnBrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBgQBDMLs2pSchK7P56lBwW8ynQG1UwJDaSruIIEEMQeuvVDUbOQnN
+AyS2ZK0s7zOE6Y9dAPVl3lSWrI+hwDsjeY5mISic5kS4pw95kA+h7p89qIbwPjjM
+5GPs1sSpSNm6jSdtLSi+xCfQPl8n+GCG4qp1q8qOBJ7XARSDgHxhIZl9kexyQWgz
+JHDXtCCLBIsPo6hFxYHIY5VnjLB5hKW8ES4fX7LEDEfGe4fZIs68YU4iyHkwZyWb
+Ajy6JSE5GYqQavWZkla7HU34UXN8jk7oJ2eFEEhRIm1rCCwO9Z6GpfbLCiT9Sqzd
+IvNFkUtE5IW5eyuHk2c7v4q7W8/TZp8mNPa/wkzqbqr6IsiJiWoVXTRbWOmuPc2b
+nq+QhTINXnSxzAqnbLW88BuO58oAsIRF5Wi95PPpVO7oFNkC7TKRHEgxLTDzRHg9
+JaaZIRWcMv8/B664i0IN8/stvyOWEASKrLDrsciJOu6QxsdqhjS1M5Ma8qigoQcu
+TYMpWm3SHQZHkYo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cpsp.edu.pk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">College of Physicians and Surgeons Pakistan</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">College of Physicians and Surgeons Pakistan</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cpsp.edu.pk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Waqas Ahmed</md:GivenName>
+	<md:SurName>Khan</md:SurName>
+	<md:EmailAddress>mailto:wakhan@hec.gov.pk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Waqas Ahmed</md:GivenName>
+	<md:SurName>Khan</md:SurName>
+	<md:EmailAddress>mailto:wakhan@hec.gov.pk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Waqas Ahmed</md:GivenName>
+	<md:SurName>Khan</md:SurName>
+	<md:EmailAddress>mailto:wakhan@hec.gov.pk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Waqas Ahmed</md:GivenName>
+	<md:SurName>Khan</md:SurName>
+	<md:EmailAddress>mailto:wakhan@hec.gov.pk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

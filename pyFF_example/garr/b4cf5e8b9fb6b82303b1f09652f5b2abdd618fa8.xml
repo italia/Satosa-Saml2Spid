@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:johnshopkins.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">johnshopkins.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Johns Hopkins</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.jhu.edu/university-policies/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="544" width="1167" xml:lang="en">https://incommon.johnshopkins.edu/jhlogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIUB/OyD4uWMP6wD8bB45UeirMblPAwDQYJKoZIhvcNAQEF
+BQAwJDEiMCAGA1UEAxMZaW5jb21tb24uam9obnNob3BraW5zLmVkdTAeFw0xMDA1
+MTAxODQ1NTlaFw0zMDA1MTAxODQ1NTlaMCQxIjAgBgNVBAMTGWluY29tbW9uLmpv
+aG5zaG9wa2lucy5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCa
+dXUykxcqSVXo9zk+8KsxzXBBiSdQP3nYOvBaTNyBOrsTOM3grW6u12TjMtmBuevg
+0708FNY03w4vJYho60I1JO4eNgXsQUxyj2XiVxrcOnq1vBc0T1NtkzcXV0X3+7n6
+BoCOXt8akO8tC4jSFg4dY7hzH7pGfSqHFHw9o76bvKu264gHsEwubm0kPIebifWI
+eWg5D4CvY4F36Tb7RmIbxu+pLXT8RiI4UWGkzLarRiKucMcR5NBNqlSiwp+fts7X
+YTh7vkJ+R36O5h2EVIMm2eJZyal195wRUu12IO/mZ9L2Iu6hcfnZ3oy56+VV3Eq2
+l3EhbsU43VSjBLC0Mq2RAgMBAAGjeTB3MFYGA1UdEQRPME2CGWluY29tbW9uLmpv
+aG5zaG9wa2lucy5lZHWGMGh0dHBzOi8vaW5jb21tb24uam9obnNob3BraW5zLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU4RjF7xk9rqSty02DIgPQOLnf6P8w
+DQYJKoZIhvcNAQEFBQADggEBACFPG1uKNWz6cMxtzL4gRRCjfP9AKmHEb5yhg2MI
+rVg3Tw1UkFnFcU6jfesVE3MPdabU2gquCrhnL6SKuZ4Gk19UZk7fBla/59AIIb8v
+cy0123fJow5yKtSNe5O70ouN4S2HCErl6NH30Z5iJn8tWMor5NEMI1u7QcFr108/
+GnAWzBvbr5GNrOnCQ8k35KVK6d+xwr3f+3H346CWcklxTNAYEn5+N3vR0F+uw0wP
+96QOFedHSLC7JwfG66uSWijmLy+QhtTiNEA1b8rn5Wq4AZnqwcjXoilz1yjSS1tT
+WYVvBm6n6IU0hHNWwnYCQT6WSHABz7vlkqM0c7A0oqltFPQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://incommon.johnshopkins.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://incommon.johnshopkins.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://incommon.johnshopkins.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://incommon.johnshopkins.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://incommon.johnshopkins.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://incommon.johnshopkins.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">johnshopkins.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIUB/OyD4uWMP6wD8bB45UeirMblPAwDQYJKoZIhvcNAQEF
+BQAwJDEiMCAGA1UEAxMZaW5jb21tb24uam9obnNob3BraW5zLmVkdTAeFw0xMDA1
+MTAxODQ1NTlaFw0zMDA1MTAxODQ1NTlaMCQxIjAgBgNVBAMTGWluY29tbW9uLmpv
+aG5zaG9wa2lucy5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCa
+dXUykxcqSVXo9zk+8KsxzXBBiSdQP3nYOvBaTNyBOrsTOM3grW6u12TjMtmBuevg
+0708FNY03w4vJYho60I1JO4eNgXsQUxyj2XiVxrcOnq1vBc0T1NtkzcXV0X3+7n6
+BoCOXt8akO8tC4jSFg4dY7hzH7pGfSqHFHw9o76bvKu264gHsEwubm0kPIebifWI
+eWg5D4CvY4F36Tb7RmIbxu+pLXT8RiI4UWGkzLarRiKucMcR5NBNqlSiwp+fts7X
+YTh7vkJ+R36O5h2EVIMm2eJZyal195wRUu12IO/mZ9L2Iu6hcfnZ3oy56+VV3Eq2
+l3EhbsU43VSjBLC0Mq2RAgMBAAGjeTB3MFYGA1UdEQRPME2CGWluY29tbW9uLmpv
+aG5zaG9wa2lucy5lZHWGMGh0dHBzOi8vaW5jb21tb24uam9obnNob3BraW5zLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU4RjF7xk9rqSty02DIgPQOLnf6P8w
+DQYJKoZIhvcNAQEFBQADggEBACFPG1uKNWz6cMxtzL4gRRCjfP9AKmHEb5yhg2MI
+rVg3Tw1UkFnFcU6jfesVE3MPdabU2gquCrhnL6SKuZ4Gk19UZk7fBla/59AIIb8v
+cy0123fJow5yKtSNe5O70ouN4S2HCErl6NH30Z5iJn8tWMor5NEMI1u7QcFr108/
+GnAWzBvbr5GNrOnCQ8k35KVK6d+xwr3f+3H346CWcklxTNAYEn5+N3vR0F+uw0wP
+96QOFedHSLC7JwfG66uSWijmLy+QhtTiNEA1b8rn5Wq4AZnqwcjXoilz1yjSS1tT
+WYVvBm6n6IU0hHNWwnYCQT6WSHABz7vlkqM0c7A0oqltFPQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://incommon.johnshopkins.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://incommon.johnshopkins.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Johns Hopkins University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Johns Hopkins</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.jhu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Andrew Baldwin</md:GivenName>
+	<md:EmailAddress>andrew.baldwin@jhu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Daniel Carter</md:GivenName>
+	<md:EmailAddress>daniel.carter@jhu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Enterprise Authentication Team</md:GivenName>
+	<md:EmailAddress>enterpriseauth@jhmi.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>John Taylor</md:GivenName>
+	<md:EmailAddress>John.Taylor@jhmi.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth-idp.ics.forth.gr/idp/shibboleth/">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ics.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iesl.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">imbb.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iacm.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iceht.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">admin.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">pek.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ims.forth.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Foundation for Research and Technology - Hellas</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="el">Ίδρυμα Τεχνολογίας και Έρευνας</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.forth.gr/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="el">https://www.forth.gr/index.php?l=g</mdui:InformationURL>
+		<mdui:Description xml:lang="el">Το ΙΤΕ ξεκίνησε τη λειτουργία του το 1983 και είναι ένα από τα μεγαλύτερα ερευνητικά κέντρα της χώρας</mdui:Description>
+		<mdui:Description xml:lang="en">FORTH, established in 1983, is one of the largest research centers in Greece with a reputation as a top-level research foundation worldwide.</mdui:Description>
+		<mdui:Logo height="61" width="267">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>forth.gr</mdui:DomainHint>
+		<mdui:IPHint>139.91.0.0/16</mdui:IPHint>
+		<mdui:IPHint>2001:648:2C30::/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:35.304985,25.0759282</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:35.370264,24.4721583</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:38.297177,21.8066261</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:39.616795,20.8412807</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIECTCCAvGgAwIBAgIJAIAFFNmTM96cMA0GCSqGSIb3DQEBBQUAMIGaMQswCQYD
+VQQGEwJHUjEOMAwGA1UECAwFQ3JldGUxEjAQBgNVBAcMCUhlcmFrbGlvbjEOMAwG
+A1UECgwFRk9SVEgxDDAKBgNVBAsMA0lDUzEkMCIGA1UEAwwbc2hpYmJvbGV0aC1p
+ZHAuaWNzLmZvcnRoLmdyMSMwIQYJKoZIhvcNAQkBFhRzdXBwb3J0QGljcy5mb3J0
+aC5ncjAeFw0xNTEwMDgxMDM5MjBaFw00MDEwMDExMDM5MjBaMIGaMQswCQYDVQQG
+EwJHUjEOMAwGA1UECAwFQ3JldGUxEjAQBgNVBAcMCUhlcmFrbGlvbjEOMAwGA1UE
+CgwFRk9SVEgxDDAKBgNVBAsMA0lDUzEkMCIGA1UEAwwbc2hpYmJvbGV0aC1pZHAu
+aWNzLmZvcnRoLmdyMSMwIQYJKoZIhvcNAQkBFhRzdXBwb3J0QGljcy5mb3J0aC5n
+cjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK44C09K73i6drwcyTYY
+yfUHRdNoecBGCKiEW4Nv3XPROKyJEpZeXcqNIjX9Ay5tCgXLI7pwVyD2zvmrw9J+
+Bh2zJUSez5icumO3kwoQd+5kt9vqusHCs168ttlcSQ7ulWReSU0geS+uQ7uY2MOw
+m1dCSZJ8lBX3l13AZ/KIm2+Q/zt6FDy42ZliosWoi+HBns7W3PzpjSWtfpq+scyd
+7jAu8y/pyYoWUK6FCp2CuRSHl4DPzMKcUXdbmN0WsjZVPmnRCedXqXpfu21DRJRK
+aI47OJ2E29XqqqiLozbwSsex9sOy8rDyqkwXF5jxfRsTBZTCuT3pOiFnfUJQCeI9
+0PUCAwEAAaNQME4wHQYDVR0OBBYEFB0BaUQoT2qrSl67KfbiuzComuW2MB8GA1Ud
+IwQYMBaAFB0BaUQoT2qrSl67KfbiuzComuW2MAwGA1UdEwQFMAMBAf8wDQYJKoZI
+hvcNAQEFBQADggEBAIQfZ8sg/vT2r3FBaF79wUN5Y0IzvsAhBGcswiljzOJDxOn/
+xFLgUjhmpwW7Mo8siDR5RVg0ANRw5nMdvG05SkhJsuzKgQkweQin3NflNR5U5ZOe
+3oOM7gMvSP0OR6e1o7PdTU9QnDiWrB760lwUf1ny86dUooNZ0VZNo/CU+2IB6dnQ
+K3H7c0cMoWoMFolzhsAxg/HZvv0igIMAJ83Nj0ktzpxJR4s9vSTL+RTVHL3vRVjG
+mXvUT48DDF48hmWDN9rh1aApoBf+OvrVGfeaazdMrK/ho6xts+kbJdCumfGx5cyP
+AXf1z42E/mE/ELURJf75+xO8AShPK4Ua/5qsbnM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth-idp.ics.forth.gr:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth-idp.ics.forth.gr:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth-idp.ics.forth.gr/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth-idp.ics.forth.gr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth-idp.ics.forth.gr/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth-idp.ics.forth.gr/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ics.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iesl.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">imbb.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iacm.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">iceht.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">admin.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">pek.forth.gr</shibmd:Scope>
+		<shibmd:Scope regexp="false">ims.forth.gr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIECTCCAvGgAwIBAgIJAIAFFNmTM96cMA0GCSqGSIb3DQEBBQUAMIGaMQswCQYD
+VQQGEwJHUjEOMAwGA1UECAwFQ3JldGUxEjAQBgNVBAcMCUhlcmFrbGlvbjEOMAwG
+A1UECgwFRk9SVEgxDDAKBgNVBAsMA0lDUzEkMCIGA1UEAwwbc2hpYmJvbGV0aC1p
+ZHAuaWNzLmZvcnRoLmdyMSMwIQYJKoZIhvcNAQkBFhRzdXBwb3J0QGljcy5mb3J0
+aC5ncjAeFw0xNTEwMDgxMDM5MjBaFw00MDEwMDExMDM5MjBaMIGaMQswCQYDVQQG
+EwJHUjEOMAwGA1UECAwFQ3JldGUxEjAQBgNVBAcMCUhlcmFrbGlvbjEOMAwGA1UE
+CgwFRk9SVEgxDDAKBgNVBAsMA0lDUzEkMCIGA1UEAwwbc2hpYmJvbGV0aC1pZHAu
+aWNzLmZvcnRoLmdyMSMwIQYJKoZIhvcNAQkBFhRzdXBwb3J0QGljcy5mb3J0aC5n
+cjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK44C09K73i6drwcyTYY
+yfUHRdNoecBGCKiEW4Nv3XPROKyJEpZeXcqNIjX9Ay5tCgXLI7pwVyD2zvmrw9J+
+Bh2zJUSez5icumO3kwoQd+5kt9vqusHCs168ttlcSQ7ulWReSU0geS+uQ7uY2MOw
+m1dCSZJ8lBX3l13AZ/KIm2+Q/zt6FDy42ZliosWoi+HBns7W3PzpjSWtfpq+scyd
+7jAu8y/pyYoWUK6FCp2CuRSHl4DPzMKcUXdbmN0WsjZVPmnRCedXqXpfu21DRJRK
+aI47OJ2E29XqqqiLozbwSsex9sOy8rDyqkwXF5jxfRsTBZTCuT3pOiFnfUJQCeI9
+0PUCAwEAAaNQME4wHQYDVR0OBBYEFB0BaUQoT2qrSl67KfbiuzComuW2MB8GA1Ud
+IwQYMBaAFB0BaUQoT2qrSl67KfbiuzComuW2MAwGA1UdEwQFMAMBAf8wDQYJKoZI
+hvcNAQEFBQADggEBAIQfZ8sg/vT2r3FBaF79wUN5Y0IzvsAhBGcswiljzOJDxOn/
+xFLgUjhmpwW7Mo8siDR5RVg0ANRw5nMdvG05SkhJsuzKgQkweQin3NflNR5U5ZOe
+3oOM7gMvSP0OR6e1o7PdTU9QnDiWrB760lwUf1ny86dUooNZ0VZNo/CU+2IB6dnQ
+K3H7c0cMoWoMFolzhsAxg/HZvv0igIMAJ83Nj0ktzpxJR4s9vSTL+RTVHL3vRVjG
+mXvUT48DDF48hmWDN9rh1aApoBf+OvrVGfeaazdMrK/ho6xts+kbJdCumfGx5cyP
+AXf1z42E/mE/ELURJf75+xO8AShPK4Ua/5qsbnM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth-idp.ics.forth.gr:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth-idp.ics.forth.gr:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Foundation for Research and Technology - Hellas</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">Ίδρυμα Τεχνολογίας και Έρευνας</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Foundation for Research and Technology - Hellas</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Ίδρυμα Τεχνολογίας και Έρευνας</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.forth.gr/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="el">http://www.forth.gr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Foundation for Research and Technology - Hellas</md:Company>
+	<md:EmailAddress>mailto:noc@ics.forth.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Foundation for Research and Technology - Hellas</md:Company>
+	<md:EmailAddress>mailto:noc@ics.forth.gr</md:EmailAddress>
+	<md:TelephoneNumber>+30-2810-391647</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

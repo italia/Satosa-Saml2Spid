@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.univ-paris8.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2010-09-24T11:17:48Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-paris8.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université de Paris 8 (old)</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACXklEQVQ4y6VTTWgTYRB9822yu0mM+kmo4MGfVtJsJYgb0VYrrQcVETwIHjyUomAFUQ/iQRCvepPipRcFD95EQcQf6MFSREFsFQNNa1p6qVAqTbRtsrvZ7DcemoSWVi99x2HmzbzHG2CDoEQiccf3/R6l1EI0Gv06Ozt7hYgaDWzZAKirGFTPaURqs9BeAjxEuVEAgAiCYHupVGrVNG26UCj0GYbBmUymuz7ss5rM++6Qq1TfYjW4mvfd9wo8sUwMkJTyoeM4F13XjTMzpJQffi/86eCDRzUslr87rLZGSNtJuZHaRRmUOJiJCfETig6LuhQAICIUi8VOGAaj7NzKV7x0BFpnfRgAKDeCGLSOfMU7BMEQa0whAjSRm3CcTAAGiJvXOsdWwAwACK3n7BYtrKemxircZj/74bmDbNntINQ0oHui4r5J6eZTKGoQNGxnZsTj8SQE+sFiIKmb37Ke82WTEGUGqKRUpEU3pgH00PhIg4CZGclk8piU8vWSUjN8oGMAZe9J1nP2p83IOzA+QSGKMHaNec75NiMyyfsye0MAAgAxKaUHQA+Hw8MonuiCNXVp3Hd700bkLI2NvlopkS37wrTvlfaEjeeQUvabpslNTU03uWYMAHzc3fqCLXv4XwnkNvtGttlSoqbfnZube7Aqgcv18n9S7DBAq3KwEkeisc/jFfcUW3bLmu2pDApB9V7aMAdDAAQAbZ03uZ/SzdNZz5lky34M8FsQlcA4PlP1rikg2KaFTlIikbjLzGfm5+fb19sEwbeXAnX9V1DdAQCKGS268QjA5fpDbQh/Af+zC6c7Nz0LAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjUwOjA0KzAyOjAwHewSLwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo1MDowNCswMjowMGyxqpMAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-paris8.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Old Idp for users of University of Paris 8 - Vincennes</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de Paris 8 (old)</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Ancien Idp pour les utilisateurs de l'Université de Paris 8 - Vincennes</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFUTCCBDmgAwIBAgIQBvNXcpNZIA5GdWHu3UdtBzANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xNjA2MzAwMDAwMDBaFw0xOTA3MDUxMjAwMDBaMIGVMQswCQYDVQQG
+EwJGUjEWMBQGA1UECBMNSWxlLWRlLUZyYW5jZTEaMBgGA1UEBxMRU2FpbnQgRGVu
+aXMgQ2VkZXgxHDAaBgNVBAoME1VuaXZlcnNpdMOpIFBhcmlzIDgxFzAVBgNVBAsT
+DkRTSSBQb2xlIEluZnJhMRswGQYDVQQDExJpZHAudW5pdi1wYXJpczguZnIwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDmo0SkZ0JMlY6h/s/GZ06X+OKL
+v3pvhob3myRVfK+dHO+PomnDiydgHo5lS5ihZCuUIGqjLMrmMB1oOrpMHFxYlVCA
+hqrt/4/EnY6niTSsnm38ngkzsONG5Rx4UPchpSRYm9TOKcuQg/yDdi6iSrwqmMWJ
+puxOIt2HCfXFBTULCc6n18v2mg5Ah4FTssi81R8qBk5F1RzPl32jPA+X6G8gIJ4i
+GuNF+LgiHeNRcEHAuy9XLd7/4FH9DJdAjTwiA9D3E3tK4fx4wZC0sOacx775Um5C
++UxMNftuObZcSLAMT1rsHzfJMdWxuxbzaub/AzwyYjl/tKSxvPMk3ez04E+5AgMB
+AAGjggHLMIIBxzAfBgNVHSMEGDAWgBRn/YggFCeYxwnSJRm76VERY3VQYjAdBgNV
+HQ4EFgQUMArZEB/NP0dHX30H+1w0TzyO7uQwHQYDVR0RBBYwFIISaWRwLnVuaXYt
+cGFyaXM4LmZyMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYI
+KwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4YpaHR0cDovL2NybDMuZGlnaWNlcnQu
+Y29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuGKWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0
+LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAEBMCow
+KAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EM
+AQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGln
+aWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5j
+b20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMBAf8EAjAAMA0GCSqGSIb3DQEBCwUA
+A4IBAQAOyWIdZ9FFpD7B8xQM5nr3DTsLVzybYq+2vYPnkZiEiCMm32rzmYPTpHw4
++TFwARrVQ9fq7og1YPsY4zWgp/3lgdbqGRhnzjTwvqQnk31E8EKA7gXSLPqC+qRO
+zlOXw3m0fCUYIKB3zqDh9bU3fbAC7gyhkrQ/0BlZeIzgcuuYmC35tPTnVauWuEg3
+5S9M3L0bFsQ5jIfDsr0mkvviXprrbG1SqtBgO85zIQAN3UDYlAfrds7W+rs+V9Ss
+zWteETn+JPkvH2L1sbNZZtCRE4GQjwHpkLTg2JGijSypCOlQEJEjgirNFnQPeIQH
+dGR7jv+JI4f7rBdE7zLia2L5YW0y
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.univ-paris8.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.univ-paris8.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.univ-paris8.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Paris 8</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Paris 8</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-paris8.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:reseau@univ-paris8.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

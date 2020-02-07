@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.univ-savoie.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2009-09-18T11:18:18Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-savoie.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université Savoie Mont Blanc</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACgElEQVQoz1VTW0hUYRCe//zn7MXcs0tkEUUWmF0wsiJIg5B62Yj1kpWSLwViNy0Ss6QyyYweEiKwhyIMKUgyy7IbottDJLhrskEbK+7aQykbBtq6655z/v+fHs5q9b3MwDfDfDN8A3weiKjrRsu1F4bB6useR8LRp10+70AQERljjKXKCOccABAhHtdU1V5edjvxW1+1OgO5+DAYau84lrs5U9eY1aYgIgAQzjkh5EzNw1gsmZ+fZbMp/b6J7EznrziHRMK9Z11vb2ByYrq2zr0jL8swGCDi7OxcdfUDTdMZYwIxUnPu57uBsdP1Mf8nAxER29r6OjsHTc0SAAIQi6xQKkkSEQiyS7U60qyLXUgpAACARZaplMolMwiBiIgIhACPz/GkzmbjIESKNbl/GwAIAEEhBIDsdCxS7TaXAxSLmOcWsNAAiEgkKiOuaLxQeefL6O5Djk0bQWfwP2QAIASEEIoi+/3jikL73nxeszz90b3+Jao7FIqW7N8mBJL5MbK5gMUix2LJqsr7I4FvDeeLrt84OPhxrNBzKzz+/b23yelKY5z/lSRJhEhQfapjJBDcmbe+8Uqxrht5+Vlna90A7MTxdr8voqr2lCZdNxCx4nAbQMnSjJOjoUlETCZ1TTMQ8eiRuwClTrUqHI4iomEwMImuJ0MAZa9fBRAxHk/u29v68sUIIibiWs6GhoJdLWY151yiVBJClB7YXlFeoCgUAC5f7PZ4cp91D4fHovY0S07OyqvNpeYhU15CRErp1FSsualnejqxNnvZpcYi31Ck9ebb9HRrUfFWT+EWw2CUSgAApmkZY0IITTN6ng/PzCQYY4jo9Qa/Bn+YFlr4gj9nNohWG/NjZQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo1MDowNiswMjowMIpzAwYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NTA6MDYrMDI6MDD7Lru6AAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-savoie.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users of University of Savoie Mont Blanc</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Savoie Mont Blanc</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs de l'Université Savoie Mont Blanc</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIExDCCA6ygAwIBAgIJAJbxent7hKLoMA0GCSqGSIb3DQEBCwUAMIGcMQswCQYD
+VQQGEwJGUjEPMA0GA1UECBMGU2F2b2llMSUwIwYDVQQKExxVbml2ZXJzaXRlIFNh
+dm9pZSBNb250IEJsYW5jMQwwCgYDVQQLEwNkc2kxIjAgBgNVBAMTGXNoaWJib2xl
+dGgudW5pdi1zYXZvaWUuZnIxIzAhBgkqhkiG9w0BCQEWFGFkbWluQHVuaXYtc2F2
+b2llLmZyMB4XDTE2MDIxMDE1NTMwNloXDTI2MDIwNzE1NTMwNlowgZwxCzAJBgNV
+BAYTAkZSMQ8wDQYDVQQIEwZTYXZvaWUxJTAjBgNVBAoTHFVuaXZlcnNpdGUgU2F2
+b2llIE1vbnQgQmxhbmMxDDAKBgNVBAsTA2RzaTEiMCAGA1UEAxMZc2hpYmJvbGV0
+aC51bml2LXNhdm9pZS5mcjEjMCEGCSqGSIb3DQEJARYUYWRtaW5AdW5pdi1zYXZv
+aWUuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC4KlcQxN5T9TCY
+G9HJc93oBGyp/IPPUhHNwbVuGaR9KAgWPlnIO35975SlA6Qqaa61K3nQduRf1iii
+AdqY1ydteTdz1tfj4TSRjisQpuL4aLl+nRjIlmeLQtnGuQODwWLnmtEt9sXhFv+e
+hRGtFz9tx0IMOhjwRcMO0+Ww9uMJgmq3CNk20Y4T4LCa5IhySMTJcKr29N190LrF
+PzqTNPj63BQkW024kaSbJ2Y+iZltki6LkBR1ImW72+BzT1y67Bm9CXfoZQwYG7SM
+oeWSwOGb1udoT0D5VVjcHtn7Rm6A70clfSiGdYejCu8hRpR39LKu0Ho7jpeJeV61
+ij7mWIPVAgMBAAGjggEFMIIBATAdBgNVHQ4EFgQUleairMIFuBdMbW1POt5FaZwt
+1HMwgdEGA1UdIwSByTCBxoAUleairMIFuBdMbW1POt5FaZwt1HOhgaKkgZ8wgZwx
+CzAJBgNVBAYTAkZSMQ8wDQYDVQQIEwZTYXZvaWUxJTAjBgNVBAoTHFVuaXZlcnNp
+dGUgU2F2b2llIE1vbnQgQmxhbmMxDDAKBgNVBAsTA2RzaTEiMCAGA1UEAxMZc2hp
+YmJvbGV0aC51bml2LXNhdm9pZS5mcjEjMCEGCSqGSIb3DQEJARYUYWRtaW5AdW5p
+di1zYXZvaWUuZnKCCQCW8Xp7e4Si6DAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEB
+CwUAA4IBAQAtaBrE87iXhJVQ38JOgy29ruhkxsAQGJfxAmhPIhXvUFGm7gBtYkHG
+AHxGAOfXlgsvF6ekC7z4rGwJdiH97ptJhGZIBe0pSdhzaX1FOGOADb5stDXIMaVI
+qpW9O8oLPaOUvQyZ7RNbuJZiCLjd7KtfJAy63nnmPTlaO1KseEcEZrST5uuWbltU
+sa0Kdh5BaG+SZGojEU7rdaPHLivYBl01AqHUH8GGh8lEpW927qT5DbHB8PQ0ADLb
+Ejy9Isdv3XKc4EQXb0tXfL4ot92kqqykLaoMAePFpC84lOl7ImeTh/ZCKXIbIcHX
+TZ4u3TcwVEXeqvbuZPUec7hFrEtrVbcA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIErTCCA5WgAwIBAgIRALPbdkEOx6FPwPjzvFKn2PswDQYJKoZIhvcNAQELBQAw
+ZDELMAkGA1UEBhMCTkwxFjAUBgNVBAgTDU5vb3JkLUhvbGxhbmQxEjAQBgNVBAcT
+CUFtc3RlcmRhbTEPMA0GA1UEChMGVEVSRU5BMRgwFgYDVQQDEw9URVJFTkEgU1NM
+IENBIDIwHhcNMTUwNjAxMDAwMDAwWhcNMTgwNjA2MjM1OTU5WjBHMSEwHwYDVQQL
+ExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxIjAgBgNVBAMTGXNoaWJib2xldGgu
+dW5pdi1zYXZvaWUuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDc
+n+cQ/mdGc3AY6bv830qQsonjGaGyWQ51vQUZFZHp29Icwb6ALXtlvZAo8Qq8r3xD
+TA6FxG3s+oLvVjMhkKxID4LC/8yqtMPq7DNj++1SX+7gLDhIPf05/bwnMN3tfgqY
+trOTeNOjClEmCyuPRFZVMqU4jdSS/NGwPHTEG1hKn43dzRMR/eSaA6b4rrOqGETC
+TVnWOTvBy+nF61HwV5ZSwRaqcwby3fk6GmysrNEWqOH0QCxKoOWMbD6mWlP2C3Xl
+my783dWTlBZLYLj3uHnacY876T4gW13PA+uI0RrI6PrBu/u7PirnhD3en4PRgZW2
+sQ+BUQ4l6yGrcDo5wFmHAgMBAAGjggF1MIIBcTAfBgNVHSMEGDAWgBRb0IocmjJb
+4LXdllQb4YYosP22vTAdBgNVHQ4EFgQU5SwCQHTC34s3Ji4uOI26ObhwSoAwDgYD
+VR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMCIGA1UdIAQbMBkwDQYLKwYBBAGyMQECAh0wCAYGZ4EMAQIBMDoG
+A1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwudXNlcnRydXN0LmNvbS9URVJFTkFT
+U0xDQTIuY3JsMGwGCCsGAQUFBwEBBGAwXjA1BggrBgEFBQcwAoYpaHR0cDovL2Ny
+dC51c2VydHJ1c3QuY29tL1RFUkVOQVNTTENBMi5jcnQwJQYIKwYBBQUHMAGGGWh0
+dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wJAYDVR0RBB0wG4IZc2hpYmJvbGV0aC51
+bml2LXNhdm9pZS5mcjANBgkqhkiG9w0BAQsFAAOCAQEAcLqMd/xRnFts0Ww92RCE
+bKKcHlzHKXwhhS3nod2dvcw/fVTdqUno7ixuyFuRyEjj0+MkDNB7+avIwBpzFg8x
+Job5B3yADerKwycwZvK9x7IeKF9k4XpQr6NYQEwzefCf824URQoe9gfKqpsikcJE
+2SbtIZkdk9iPRsllEYtX8wBrpRojuxd8KTnrs9H+avbiMEMGNab6abXo/LlzV24r
+spTSQxjPfGyDRqxfdI72tc0ES0O0S1NyCI9BovBjTz0sNXqHajpaOKfOmdSjasI4
+vKSy/VQ/I5RdC1gSqP+zBpdnBCrc2PHmKeDo1ofCxa0kR8omQn+Y994RoV1PdKkv
+7w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.univ-savoie.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.univ-savoie.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.univ-savoie.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Savoie - Amplivia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Savoie - Amplivia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-savoie.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:admin@univ-savoie.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

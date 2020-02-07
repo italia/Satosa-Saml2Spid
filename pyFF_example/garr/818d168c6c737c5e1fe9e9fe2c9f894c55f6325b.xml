@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://junebug2.mcc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mcc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mott Community College</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.mcc.edu/about/about_index.shtml</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.mcc.edu/policies/mcc_ferpa.shtml</mdui:PrivacyStatementURL>
+		<mdui:Logo height="40" width="40" xml:lang="en">https://www.mcc.edu/_resources/mcc/mott-logo-footer.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAIFt9MNs36PbMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMMEGp1bmVidWcyLm1jYy5lZHUwHhcNMTcwMzI4MTgzODA1WhcNMjcwMzI2MTgz
+ODA1WjAbMRkwFwYDVQQDDBBqdW5lYnVnMi5tY2MuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAyLUmwzaDnGtKQt5+CcavbnRxQxXD8KjHRbZO2v2w
+fKL2JCP50m2tukXdinfreFTRtMDb41fPE5Hhkmj76MZvSVxtsO/CRnWRqc+gY53+
+Bsw995EAG06rqQTzUQnrzPET5WqeVBJE481+ayVKqfMlzpQm5/E5JaBU1n/dy7KT
+u+iSDWvx5s9RAts+lWsWIZhzQOkv/g5x8vi3fQFcbiZUt9tXBo/PcCPwKQR2fLTY
+73PjwgMCNGe7+GmciYJhD+/8u0QWmROrjO+msS40VPvFFhb4tPFJFzNy1sSejDUp
+4MlAmuWt7BOxgzZe4AGY4cIAUaKlLqhlm9e/T1Mh8KBvLQIDAQABo1AwTjAdBgNV
+HQ4EFgQUwqto91n8K9L/9ZA+riDXUN0DS9EwHwYDVR0jBBgwFoAUwqto91n8K9L/
+9ZA+riDXUN0DS9EwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAHD3R
+ERIx+WXJ4xpiLrLQLzbzOsdbpySJ6d23/4IQ6Qgb8JTdS9Rkt4IT+B9m1LqFWcwJ
+K213izWEKU4b4qp7FLsHsVMHAdQOu1GFxucQXYvS/D5o+KQ3OYBtUvFS/DC62lsu
+bWiOLn4KReaYw1ltVZ0MQ0M0MK76/WiGybx1HGPFnrCNGWE8fJ+GqfU8Mhiusndq
+uHSw0BFaewdzB4JbJ75aVpY6fcOZHRbvF/WQPgOnp/qW5QIQxataSA57b7vJoDgZ
+jSvtyZfNrLGHGi+UVjIY00v+wqAjIuhA4DSWmmBbGeshuoXFDZ5QKEoyCS4nQAqh
+eDvpVNFDbufDqd5ijQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://junebug2.mcc.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://junebug2.mcc.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://junebug2.mcc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://junebug2.mcc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://junebug2.mcc.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://junebug2.mcc.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mcc.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAIFt9MNs36PbMA0GCSqGSIb3DQEBCwUAMBsxGTAXBgNV
+BAMMEGp1bmVidWcyLm1jYy5lZHUwHhcNMTcwMzI4MTgzODA1WhcNMjcwMzI2MTgz
+ODA1WjAbMRkwFwYDVQQDDBBqdW5lYnVnMi5tY2MuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAyLUmwzaDnGtKQt5+CcavbnRxQxXD8KjHRbZO2v2w
+fKL2JCP50m2tukXdinfreFTRtMDb41fPE5Hhkmj76MZvSVxtsO/CRnWRqc+gY53+
+Bsw995EAG06rqQTzUQnrzPET5WqeVBJE481+ayVKqfMlzpQm5/E5JaBU1n/dy7KT
+u+iSDWvx5s9RAts+lWsWIZhzQOkv/g5x8vi3fQFcbiZUt9tXBo/PcCPwKQR2fLTY
+73PjwgMCNGe7+GmciYJhD+/8u0QWmROrjO+msS40VPvFFhb4tPFJFzNy1sSejDUp
+4MlAmuWt7BOxgzZe4AGY4cIAUaKlLqhlm9e/T1Mh8KBvLQIDAQABo1AwTjAdBgNV
+HQ4EFgQUwqto91n8K9L/9ZA+riDXUN0DS9EwHwYDVR0jBBgwFoAUwqto91n8K9L/
+9ZA+riDXUN0DS9EwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAHD3R
+ERIx+WXJ4xpiLrLQLzbzOsdbpySJ6d23/4IQ6Qgb8JTdS9Rkt4IT+B9m1LqFWcwJ
+K213izWEKU4b4qp7FLsHsVMHAdQOu1GFxucQXYvS/D5o+KQ3OYBtUvFS/DC62lsu
+bWiOLn4KReaYw1ltVZ0MQ0M0MK76/WiGybx1HGPFnrCNGWE8fJ+GqfU8Mhiusndq
+uHSw0BFaewdzB4JbJ75aVpY6fcOZHRbvF/WQPgOnp/qW5QIQxataSA57b7vJoDgZ
+jSvtyZfNrLGHGi+UVjIY00v+wqAjIuhA4DSWmmBbGeshuoXFDZ5QKEoyCS4nQAqh
+eDvpVNFDbufDqd5ijQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://junebug2.mcc.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://junebug2.mcc.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mott Community College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mott Community College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mcc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Randy Schapel</md:GivenName>
+	<md:EmailAddress>randy.schapel@mcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sheila Grennay</md:GivenName>
+	<md:EmailAddress>sheila.grennay@mcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Marc Smith</md:GivenName>
+	<md:EmailAddress>marc.smith@mcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Marc Smith</md:GivenName>
+	<md:EmailAddress>marc.smith@mcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.emeraldinsight.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-07-14T14:43:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Emerald Insight</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Emerald is a global publisher linking research and practice to the benefit of society.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.emeraldinsight.com</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIJAJrpJxU7RDeUMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMMFnd3dy5lbWVyYWxkaW5zaWdodC5jb20wHhcNMTkwNDE0MTAzMDExWhcNMjIw
+NDEzMTAzMDExWjAhMR8wHQYDVQQDDBZ3d3cuZW1lcmFsZGluc2lnaHQuY29tMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3WzO5VdkR2Udzt9jd4biwDVW
+rPkolBqykhEru673XRO1T/r4g88guYo6y6sA3IXB9LYxFjgZtAcbeQ8zFalkyaMx
+LdcAUeCLQ3Su0/lulhb3sTDN6FyBAwhLC3472/xddlNZQsmihlDBMttwu1+C/fw+
+wrW94P+yeudgvRF8H09yI+OOrvGFdnOWNzpCudZ7vkdYJZG8ja7+1pa3p4OcRjnQ
+DzlN5ObZ/ac0/5LMKTB5pCOmeGSqCoSRzG5tnY0mjJ5XaYVzPWgoQ2T6iiQBkbBU
+WrEwAY+syP/zSdcnL313F808d53Bz0pjr9WmAoYIPjzUQlDKMPPtQfpBKw3bSQID
+AQABo28wbTBMBgNVHREERTBDghZ3d3cuZW1lcmFsZGluc2lnaHQuY29thilodHRw
+czovL3d3dy5lbWVyYWxkaW5zaWdodC5jb20vc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+awNUAgkiT5QzYour8MdiLC2IsSIwDQYJKoZIhvcNAQELBQADggEBAM+Qq59JQ/BM
+uDL3L4pQq1DnRB28edUOFcrYgyczAHtL275Ub6XoBcLFXBlDUDkI3PiRLRIacsE2
+WJlUWR9EcwU1BIXj0xIOcLnw/G/L/T6Tm3eDuHRGZoY8Yq1FmcJR8O6gnO/IIO3h
+ZVSvgbzT7ubsVoytwZpSsM7OEMFYEkPrsZ3UDaX3W3OuF/R3aF2P1/LejbNgIao2
+8a5c98ZnzIkzhTO1FRzHoS/Hdi9TxDVyHjCEIpLueehOG+0CKurRg+ndY6V17nj/
+Nlq608yh0D3WxFsYR8D3KOlkspFYy3siVh5yyMdQCwwZM9/e9C36kbHe4q3hARQf
+KVTKfbxm8bE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.emeraldinsight.com/action/samlACS" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.emeraldinsight.com/action/saml2post" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.emeraldinsight.com/action/saml2artifact" index="3"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Atypon Systems, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Emerald Insight</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.emeraldgrouppublishing.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SSO-Support</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Support@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SSO-Tech</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Tech@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

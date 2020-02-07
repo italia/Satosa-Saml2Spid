@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://fmdev.inc.testbed.tier.internet2.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fmdev.inc.testbed.tier.internet2.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">InCommon Federation Manager Development</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.internet2.edu/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="91" width="122" xml:lang="en">https://www.internet2.edu/media/medialibrary/2013/10/15/internet2_logo_200pxtrans.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDejCCAmICCQCYYbgFAxLBeTANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+UzERMA8GA1UECAwITWljaGlnYW4xEjAQBgNVBAcMCUFubiBBcmJvcjESMBAGA1UE
+CgwJSW50ZXJuZXQyMQ0wCwYDVQQLDARUSUVSMSYwJAYDVQQDDB1mbS50ZXN0YmVk
+LnRpZXIuaW50ZXJuZXQyLmVkdTAeFw0xNjEwMTkyMTAxNDVaFw0yNjEwMTcyMTAx
+NDVaMH8xCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhNaWNoaWdhbjESMBAGA1UEBwwJ
+QW5uIEFyYm9yMRIwEAYDVQQKDAlJbnRlcm5ldDIxDTALBgNVBAsMBFRJRVIxJjAk
+BgNVBAMMHWZtLnRlc3RiZWQudGllci5pbnRlcm5ldDIuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzUMghR8e8LJfPYj2klF/mtQO9yqSpDj763uP
+N9tfAfIpi8FBOVvTrYzU2iwAsdosGzYL+CaKiadhazF/8EYm1ydjxMaKk1kogyOh
+gdD/dmKExJvbYoUIM2+tz/XBRwe0Qiad075Q5H9dTDtFduyNHaPBaQ5AyPVKiGkA
+FDqXDpayRUSWXAGWrw0YTxOPoTEju3vSGXzuK+DwczjI4uxfjhXJ8TpmVDmzkew2
+xW2+m+inx/9o8Me3sIk6evcQIGzRxj9MWWdjh48F4V8FgbF3n9Xs5mvwvrXezLoc
+CynTFqvchn4sOJMKs069kVVCQ3Li+R1Pz1aAsUzaME/Qvk8NIwIDAQABMA0GCSqG
+SIb3DQEBCwUAA4IBAQCpQT+9aad96PUFzMcm6hRud0EY8dUQ3Y+KpL8OTXZDYUP0
+CBgVjTpjOevXkjUMOIMtTXyRIgMxiOh+OB1/kGKR3y95/WO311DKf6F0smmBGM3j
+DFRtfFlartRa8duyscDMbvDgi4ggtVgONB3PFNl33JmBTc4tryfoOyWYYdvTEEQL
+f3TWRgJ8S+oeYJ45FlhWiyWk8eGxRWvFDp/53SWJJoab0MhL0IAR74U1AD4HoGZD
+uCckQNZOgG+67ANviZ0ecVtvZNOMBb+dunky/kXfDSQqUTR5NRw7dOJPkbgreZTZ
+9SLzGE8yTxVfX5wibj0lxY1nA9U5j2glQzNaOq9e
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fmdev.inc.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://fmdev.inc.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://fmdev.inc.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://fmdev.inc.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">InCommon Federation Manager Development</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Internet2</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Internet2</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.internet2.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Christopher Hubing</md:GivenName>
+	<md:EmailAddress>chubing@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Paul Caskey</md:GivenName>
+	<md:EmailAddress>pcaskey@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Nick Roy</md:GivenName>
+	<md:EmailAddress>nroy@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

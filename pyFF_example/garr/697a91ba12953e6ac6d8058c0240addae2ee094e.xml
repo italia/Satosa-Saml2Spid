@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibidp.oca.eu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2010-10-12T19:40:58Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">oca.eu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Observatoire de la Côte d'Azur</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH6y5QEjNUMIJD1YBxkpOgkaJjEBAAAAAAYJDAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQGAAMEBg4BAwYYAAAFGQEFCWcAAwwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAYOAgQGJgIEBjkAAgQ7AAIETTAiE7RONBv2Ujgcx1g8IQg6KRsFEA0KBgAAAAAAAAAAAAAAAAAAAAAAAAAAAgQGIQIEBikDBQcbAwICL0w1JdVZPin/XT8ifFw+H00AAAAAAAAABVc8KD5WPy1yAAAAAAAAAAAAAAAAAAAAAAIEBhYCBAYKAAAAAkw5LcBhRzb1RC8hak87L41BMik8TTkugTcpIzdPOi03WUAuSGVLO4YAAAAAAAAAAAAAAAACBAYEAAAAATksJ2BmTkH/blJBW0I1MI5mTkLdUT41TVlEOtpCMSkaOS0nRnFXSmhdRjqZcldLfzkbCwEAAAAAAAAAAAAAAAJVRD3AeV9U4SgiISxsVUzybFNJdlZEOzZsVUzKAAAACjksJiRnUki7QjMtN3JbUPN4YFYXAAAAAAAAAAAAAAAAa1dQ1oJqYMBKPjl6gmhfywAAAAgmIB8ic11VdVRGQEkAAAAAa1hQ4wAAAAt3Yln/gWlfMAAAAAAAAAAAAAAAAHBdVqCPeG3LYlJLe4p0aqIAAAACAAAADzEmJA9pV1BHXlBJZoRuZdsYFBQriHJo/4x1azMAAAAAAAAAAAAAAABqWVI1lYB10HZlXEiTfnKanId6HAAAAACNe28/jnxwZoNwZt6ZgXVtZlhRiJ2GePuVfnMfAAAAAAAAAAAAAAAAAAAAAJeDdmuslohloIt9U5qGeE55amAIlIF1q5+KfeCii36EYFZOLpyIe/SmkoK1qpGCAwAAAAAAAAAAAAAAAAAAAAAAAAAAsp2MiLijkjmwnIwZeWpgGp2Nfz+olodTnpCBN5WFd+O4opHgtqGRJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4pZIYqJaGIgAAAACQg3V+s6KQ2cKvnP7NuKXhx7SeJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAy7ijO+HOtNfcyrCUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD16ccFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA+P8AAPP/AADldwAA6XcAAMtrAADL6wAAy+sAAOvTAAD/EwAA9+cAAP+PAAD/nwAA//8AAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.oca.eu</mdui:InformationURL>
+		<mdui:Description xml:lang="en">People with an OCA account.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Observatoire de la Côte d'Azur</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnes ayant un compte OCA.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBzCCAe+gAwIBAgIJAM2jFkXp2IOxMA0GCSqGSIb3DQEBCwUAMBkxFzAVBgNV
+BAMMDnNoaWJpZHAub2NhLmV1MCAXDTE4MDQxNzE0MjMzMFoYDzIxMTgwMzI0MTQy
+MzMwWjAZMRcwFQYDVQQDDA5zaGliaWRwLm9jYS5ldTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAKl0Fqr6HwiWz5W3XUslK3n6SzEJ+XWqrHO9m+bghwk2
+acxakmyBd9o3FL3Ewt9dBSu587bjkKhYT8nVstpJiYmFoUfQv6GUp5ShtprWTXPX
+xl2X4f7BsCnY/JUBFbfSGyc1bYK/dodr10af9Of/zowUFcWGltGtHJ2ayW1AXLMO
+n48N0T06TGsvcwNLOuWRenUx2Iiaem/p6txH80w4HC1td99C1GlBG06DFP9soCJW
+6LVjub3uYuWs9w2c8TthXA5ck9oVSot9uyd9UyWxCY4X/KpOq34YCxRupDIpprHX
+nFJkt5sTeYtfxbDy19GwxGxWD02xFXxM86mrDXxQR5cCAwEAAaNQME4wHQYDVR0O
+BBYEFMTpqQ74H4XksFact2PJk+uv8wliMB8GA1UdIwQYMBaAFMTpqQ74H4XksFac
+t2PJk+uv8wliMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAjQdyr5
+4ODiJPeLTRJk2nvgvYSpcse4Za7IrVbtvCgl0bCvWMk3yw/qRPx8uMOSVVotEF1E
+IY5Jl0LOszRbpEbw2CWCv85XRigZwVrffxmkYTh1KLggdPhprQDRI4vBbg/MzrZL
+YrjGhnTh1eYcobZbAP+uutmTs1xMpuk5uXQI5/jOaNAz+rhdzRLnxhown5gJWA+3
+qIUj9yk15gFqEwdakHOYDrPteisay3Vm+Mjj7z/VnxmU47ygC8fivOzE/B0bfnU8
+P9dTQecWWx/Axz7SeV25qCtG6g91RsKLVL4eJHsCC7JUoaVq8selSR6eTiad44ru
+UIlzYnzCQuX/5AI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQTCCAimgAwIBAgIJAOV7bDK2kJs0MA0GCSqGSIb3DQEBDQUAMDcxCzAJBgNV
+BAYTAkZSMQ8wDQYDVQQKDAZvY2EuZXUxFzAVBgNVBAMMDnNoaWJpZHAub2NhLmV1
+MB4XDTE1MDcyMDE3NDQzNVoXDTE4MDcxOTE3NDQzNVowNzELMAkGA1UEBhMCRlIx
+DzANBgNVBAoMBm9jYS5ldTEXMBUGA1UEAwwOc2hpYmlkcC5vY2EuZXUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPrcMzEvozMviR0Ux2TDQJ/IRM63bF
+KRhOTpY6DxVS2U3QShAgSfXCJ7vtcZuKsNkjDbItYOyrO2Qlz98dXKd3F5HYfH9E
+mpWuE9Y6R2LNTiC2rfuyzVSoNQthj3JkRFEjUlmU4V25wa+6tEC/+qL336MBsMCM
+K6SVjMh9Io8ypPhcvwa9fk0pjN62cEhB+oHBrKQhNUzw6QMw9eK7ES+MvrWdlmg0
+iAWXAnTvUkuHCCU9gHMSRwvrpBn7wEsBUftIvQJ4EycZqQe+y1PV/tGlKcUOoHva
+BxepDCXDMGOskD8UkroMxGk9mS/SKYvTnSjzzsctMf2cRSXlQAC+Z/zrAgMBAAGj
+UDBOMB0GA1UdDgQWBBQ2M1IiOnEUkA/Dad0vZnqEYzKVhTAfBgNVHSMEGDAWgBQ2
+M1IiOnEUkA/Dad0vZnqEYzKVhTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBDQUA
+A4IBAQAy/EICYQABN8gfoQbg40tAEtboKbgRVrTOGEDn3YIP8zkIx46YOvt1jPEL
+ElnJuCkgFLaP5BcqIa3Ao2JqhKc0vt9NB2+iFAoXLlKnX1qA9GQynclA2adrIlFs
+2CEIZNs37ch1jm8VN0h3kvUBGJPf6uwspnEbGhU7+iUpzBDMt1lhq5aC12IGtcYB
+KhTmiD1DrndtsdMrD9T69ra2BSW/MgUhuUOUisMqqJZNWDnrVG1bb1OBoC8zx1kV
+22klzEX/n1uKYUj1tmLdD8PgS+xD4qsYc4dUwdSc1Ee+jzy6Fw+IDlZWXETbwsd3
+4cPhU/7ZhxoTQe+Vryc61Cs97o5u
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibidp.oca.eu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibidp.oca.eu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibidp.oca.eu/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibidp.oca.eu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibidp.oca.eu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibidp.oca.eu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Observatoire de la Côte d'Azur</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Observatoire de la Côte d'Azur</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.oca.eu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsi@oca.eu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

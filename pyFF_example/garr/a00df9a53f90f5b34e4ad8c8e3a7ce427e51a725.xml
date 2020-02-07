@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:duke.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">duke.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Duke University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://oarc.duke.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="225" width="225" xml:lang="en">https://shib.oit.duke.edu/incommon_duke_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEWjCCA0KgAwIBAgIJAP1rB/FjRgy6MA0GCSqGSIb3DQEBBQUAMHsxCzAJBgNV
+BAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEPMA0GA1UEBxMGRHVyaGFt
+MRgwFgYDVQQKEw9EdWtlIFVuaXZlcnNpdHkxDDAKBgNVBAsTA09JVDEaMBgGA1UE
+AxMRc2hpYi5vaXQuZHVrZS5lZHUwHhcNMTAwOTA5MTI0NDU1WhcNMjgwOTA0MTI0
+NDU1WjB7MQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzAN
+BgNVBAcTBkR1cmhhbTEYMBYGA1UEChMPRHVrZSBVbml2ZXJzaXR5MQwwCgYDVQQL
+EwNPSVQxGjAYBgNVBAMTEXNoaWIub2l0LmR1a2UuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAt+hnl6gSRi0Y8VuNl6PCPYejj7VfVs/y8bRa5zAY
+RHwb75+vBSs2j1yeUcSore9Ba5Ni7v947V34afRMGRPOqr4TEDZxU+1Bg0zAvSrR
+n4Y8B+zyJuhtOpmOZzTwE9o/Oc+CB4kYV/K0woKZdcoxHJm8TbqBqdxU4fFYUlNU
+o4Dr5jRdCSr9MHBOqGWXtQMg16qYNB7StNk4twY29FNnpZwkVTfsE76uVsRMkG8i
+6/RiHpXZ/ioOOqndptbEGdsOIE3ivAJOZdvYwnDe5NnTH06P01HsxH3OOnYqhuG2
+J6qdhqoelGeHRG+jfl8YkYXCcKQvja2tJ5G+6iqSN7DP6QIDAQABo4HgMIHdMB0G
+A1UdDgQWBBQHYXwB6otkfyMOmUI59j8823hFRDCBrQYDVR0jBIGlMIGigBQHYXwB
+6otkfyMOmUI59j8823hFRKF/pH0wezELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5v
+cnRoIENhcm9saW5hMQ8wDQYDVQQHEwZEdXJoYW0xGDAWBgNVBAoTD0R1a2UgVW5p
+dmVyc2l0eTEMMAoGA1UECxMDT0lUMRowGAYDVQQDExFzaGliLm9pdC5kdWtlLmVk
+dYIJAP1rB/FjRgy6MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAG7q
+wJpiSLJbx2gj/cGDYeuBW/CeRGNghjQ/mb076P3WXsRNPAimcXulSUbQkS6eDH4t
+Ifvsa0jf4FRsEOwH/x8354/0wyv4RwuavX25kjpmoFn3O+eKokyzsc7/Q2gsm0mv
+V8XQo+5b+4we8AFYlAVp26nLeIqAiJM8xZJ9yHuzVL1O4yxIWIKECWHLqY5+1nas
+XNiLURrHhsK5pZUPLuhzJFgZuJT62TtnrjJXlrRhJ389VSkh6R64C6ncjNkg6/Cu
+tA6SX0infqNRyPRNJK+bnQd1yOP4++tjD/lAPE+5tiD/waI3fArt43ZE/qp7pYMS
+9TEfyQ5QpfRYAUFWXBc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.oit.duke.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.oit.duke.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.oit.duke.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.oit.duke.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">duke.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEWjCCA0KgAwIBAgIJAP1rB/FjRgy6MA0GCSqGSIb3DQEBBQUAMHsxCzAJBgNV
+BAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEPMA0GA1UEBxMGRHVyaGFt
+MRgwFgYDVQQKEw9EdWtlIFVuaXZlcnNpdHkxDDAKBgNVBAsTA09JVDEaMBgGA1UE
+AxMRc2hpYi5vaXQuZHVrZS5lZHUwHhcNMTAwOTA5MTI0NDU1WhcNMjgwOTA0MTI0
+NDU1WjB7MQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzAN
+BgNVBAcTBkR1cmhhbTEYMBYGA1UEChMPRHVrZSBVbml2ZXJzaXR5MQwwCgYDVQQL
+EwNPSVQxGjAYBgNVBAMTEXNoaWIub2l0LmR1a2UuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAt+hnl6gSRi0Y8VuNl6PCPYejj7VfVs/y8bRa5zAY
+RHwb75+vBSs2j1yeUcSore9Ba5Ni7v947V34afRMGRPOqr4TEDZxU+1Bg0zAvSrR
+n4Y8B+zyJuhtOpmOZzTwE9o/Oc+CB4kYV/K0woKZdcoxHJm8TbqBqdxU4fFYUlNU
+o4Dr5jRdCSr9MHBOqGWXtQMg16qYNB7StNk4twY29FNnpZwkVTfsE76uVsRMkG8i
+6/RiHpXZ/ioOOqndptbEGdsOIE3ivAJOZdvYwnDe5NnTH06P01HsxH3OOnYqhuG2
+J6qdhqoelGeHRG+jfl8YkYXCcKQvja2tJ5G+6iqSN7DP6QIDAQABo4HgMIHdMB0G
+A1UdDgQWBBQHYXwB6otkfyMOmUI59j8823hFRDCBrQYDVR0jBIGlMIGigBQHYXwB
+6otkfyMOmUI59j8823hFRKF/pH0wezELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5v
+cnRoIENhcm9saW5hMQ8wDQYDVQQHEwZEdXJoYW0xGDAWBgNVBAoTD0R1a2UgVW5p
+dmVyc2l0eTEMMAoGA1UECxMDT0lUMRowGAYDVQQDExFzaGliLm9pdC5kdWtlLmVk
+dYIJAP1rB/FjRgy6MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAG7q
+wJpiSLJbx2gj/cGDYeuBW/CeRGNghjQ/mb076P3WXsRNPAimcXulSUbQkS6eDH4t
+Ifvsa0jf4FRsEOwH/x8354/0wyv4RwuavX25kjpmoFn3O+eKokyzsc7/Q2gsm0mv
+V8XQo+5b+4we8AFYlAVp26nLeIqAiJM8xZJ9yHuzVL1O4yxIWIKECWHLqY5+1nas
+XNiLURrHhsK5pZUPLuhzJFgZuJT62TtnrjJXlrRhJ389VSkh6R64C6ncjNkg6/Cu
+tA6SX0infqNRyPRNJK+bnQd1yOP4++tjD/lAPE+5tiD/waI3fArt43ZE/qp7pYMS
+9TEfyQ5QpfRYAUFWXBc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.oit.duke.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.oit.duke.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Duke University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Duke University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.duke.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shilen Patel</md:GivenName>
+	<md:EmailAddress>idmstech@duke.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shilen Patel</md:GivenName>
+	<md:EmailAddress>idmstech@duke.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Duke IT Security Office</md:GivenName>
+	<md:EmailAddress>security@duke.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.si.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">si.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Smithsonian Institution</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.si.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="141" width="112" xml:lang="en">https://logo.si.edu/wp-content/uploads/2014/08/si-suntop-2lines-3x.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIURicbi+W5DJNnSH6V80PzY0w8bqowDQYJKoZIhvcNAQEF
+BQAwFTETMBEGA1UEAxMKaWRwLnNpLmVkdTAeFw0xMTA4MTYxMzE4NDRaFw0zMTA4
+MTYxMzE4NDRaMBUxEzARBgNVBAMTCmlkcC5zaS5lZHUwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCsLSjr8Hs24ca3oKpOoRUVpnbgx1ixdBcVGXywde+Z
+24zgm9rvRDucxCwQH1LYSCGXSfDChVmutdPZkAsSdt/j6eUp3VvRLIy8zA2lb/+Z
+4rIzRX/+07+Ti65FjgZ7rE4SiNQua0fsvkTtZuvJqJcfS7itrGQnzJ9vSq42Rbrp
+KjXUZHTWxSi2FEcfdiQqifo8rmV/uvCaTma4n4WzMxQOuN9Jfpz2FvobSZuW/dcd
+kCfsvoNBYW4zBQ/6bKMINlcWxVWVhrQe2ycZzp0q/E/8wr1SPfKiKWjaRylmA3Td
+8sGfDuIegpc8C+m8yYbs4AUQ38FGP9lCSHoEAgfBX503AgMBAAGjWzBZMDgGA1Ud
+EQQxMC+CCmlkcC5zaS5lZHWGIWh0dHBzOi8vaWRwLnNpLmVkdS9pZHAvc2hpYmJv
+bGV0aDAdBgNVHQ4EFgQUH7eODleiY1FnkHhARn6bhlXc5yswDQYJKoZIhvcNAQEF
+BQADggEBABTIKmvq4Pu9qZiRYRSpCX2WcLbHqbZ651mdIXcmz3QB9xIeyWDCWRzp
+lH+Zg2Zt4SBareU5m1UTnJxzyQRAFqopbxFqxhwDtd7Q/s23TH8C0XEvOu4RYOMG
+uMpOhcoMM2RulU/8MY4ga7wmOUkNcDpmorurVUT44puSi3jxUegUSwsVhHIJeIBL
+vcfm468S++LCzuKnkKiOYXSxaQlAjZDD5zOH8CBADP/A/CEzdf3mPBCMx/Hhtcsk
+BOetPLICbnq+Qh8VieTSm1b2EcS/c2NqtwbBv0RSsjN/LwIMmyTyUTagP360Nhvb
+RfYItwvvswQ2wtebkQpbdpNcuE7Ng8g=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.si.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.si.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.si.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.si.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Smithsonian Institution</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Smithsonian Institution</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.si.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jeffrey McAvoy</md:GivenName>
+	<md:EmailAddress>mcavoyj@si.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Weber Wung</md:GivenName>
+	<md:EmailAddress>wungw@si.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alex Aveta</md:GivenName>
+	<md:EmailAddress>AvetaA@si.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jas Jamwal</md:GivenName>
+	<md:EmailAddress>JamwalJ@si.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Juliette Sheppard</md:GivenName>
+	<md:EmailAddress>security@si.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

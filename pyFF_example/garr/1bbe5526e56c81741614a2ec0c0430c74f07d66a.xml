@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.shuaa.om/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.omren.om" registrationInstant="2019-03-21T06:19:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.omren.om/wp-content/uploads/2019/10/OMREN_Federation_policies_1.3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		<saml:AttributeValue>https://noec.release-check.edugain.org/shibboleth</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shuaa.om/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shuaa.om/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Oman Research Repository (Shuaa)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shuaa is an electronic database of research, studies, journal articles, abstracts research, Omani specialized academic statistics, and innovation materials that were written or compiled in the Sultanate of Oman and viewed on a specific website (indexed and classified according to the modern systems base) in order to ease the access and utilization of researchers and innovators and to clarify the role of the institutions and responsible bodies for the dissemination and issuance..</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://shuaa.om/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://fed.omren.om/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="120" width="150" xml:lang="en">https://www.omren.om/sites/default/files/orr_0.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHHzCCBgegAwIBAgIQBVpI+SMm4Ytzh3Y8GF05nzANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xOTAyMjYwMDAwMDBaFw0yMTAzMDIxMjAwMDBaMF8xCzAJBgNVBAYT
+Ak9NMQ8wDQYDVQQHEwZNdXNjYXQxLDAqBgNVBAoTI09tYW4gUmVzZWFyY2ggYW5k
+IEVkdWNhdGlvbiBOZXR3b3JrMREwDwYDVQQDEwhzaHVhYS5vbTCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBANyEechUdjfBDbsFztVpBoI9qQBSxqe5mz15
+f5AkZbkCgfaKy2mohhOWCU9z254jkvJZLlnW8ta4NmTkE3/hopbQjfQbgBz5fuJd
+I56/7+I4UW5NfYROHcuvKY8Q4DHkKNobWVnmtKGPlfjXs5aaIwH5ZdLk/QYzLQ/s
+Lz0giUdqSA7zm+wkuU13FpCnJ3jlOOLpc6CjqMFYOdhpRUbgQlmvhBTNcPB1qbGl
+JOtbTmHOeDvVvAMSksJL3bwWEFK9ltQ2YTsj1s4heDliUSK+gLl5RrAbCUBIjSII
+7tlZftLOOwlRVXJj1vEmHia+3u+Q+Rd9mIsIkt/DQgsRkcl+Zgt4u2CEnKjECIgM
+EEXYAFYSib+fal1zK4/Pai+CuMBg0wBte34elW49yxiE8+mdGrasH6ko95UqyqvI
+3fwMa6AKA1MfkyRfUtPikEIWcJA70xKNo8oVybl16mJ6EZb7YDtI9qVV1HhrzK7X
+0e/IU2yQsRyaO6hPdq9TfOfpioZVOQIDAQABo4IDUDCCA0wwHwYDVR0jBBgwFoAU
+Z/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFPdKf0ZEiR1nR3n1MmpI4zU8
+oaRuMCEGA1UdEQQaMBiCCHNodWFhLm9tggx3d3cuc2h1YWEub20wDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBi
+MC+gLaArhilodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNy
+bDAvoC2gK4YpaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5j
+cmwwTAYDVR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6
+Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwbgYIKwYBBQUHAQEEYjBg
+MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wOAYIKwYBBQUH
+MAKGLGh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3J0
+MAwGA1UdEwEB/wQCMAAwggF9BgorBgEEAdZ5AgQCBIIBbQSCAWkBZwB2ALvZ37wf
+inG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABaSm9irgAAAQDAEcwRQIhAN+m
+QmPvbHgdLZk9/CEdm05iqte1XiPj/ZkVugGUepKpAiBbi4GMH27xgXLxKmuj20BA
+mDomdim6z45B9o85i37EnwB1AId1v+dZfPiMQ5lfvfNu/1aNR1Y2/0q1YMG06v9e
+oIMPAAABaSm9i/UAAAQDAEYwRAIgJCYm5IhFvqOFx2JKluFgLA5og50hlnOGYyQ5
+o9A0EIsCICXA2aW1P9pdLqjkQvTadAWawB8Nd2kJKwSZ9sLWENusAHYARJRlLrDu
+zq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFpKb2KuAAABAMARzBFAiAIJutB
+Zp2gir4y1qViN0bTxaHtrNRqDWWWdXQPDOcvIwIhAORwbNJpqGQZWiVK/4tAuqbt
+wcgOymzMUI94ywF7O4TgMA0GCSqGSIb3DQEBCwUAA4IBAQAvTFgkDQnqHCmdxd0n
+Lv1VbA2I6GJlEgAVXim7/Dp9hu2MZ6gBKQz8da8RqN3gwAc2GEWctIMhI4njfSP8
+emYqJZk5zjqrSYU6TMNhs0r8AEFJjDZYfgJcMZV++70gShN73+6oT2VzS2iZCslF
+mS6xVMU0ndyDT9VCjRfNP1HB0Qc68XsCrJ7n2HB0UZNXYiTE3uoUL6E33QM4owM+
+KmRArr9WIV2i6B16y3qZIK7HRVXo0V7Fuo+Ta4QJr89X6+OONkF0JcNWtLDC+7G0
+TSIHkY95AtkJk+SxLNzjeebokKVDtZZ7zIQEivJikhB+ZKoVRAUYJxNwc1Bxmp9g
+paww
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHHzCCBgegAwIBAgIQBVpI+SMm4Ytzh3Y8GF05nzANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xOTAyMjYwMDAwMDBaFw0yMTAzMDIxMjAwMDBaMF8xCzAJBgNVBAYT
+Ak9NMQ8wDQYDVQQHEwZNdXNjYXQxLDAqBgNVBAoTI09tYW4gUmVzZWFyY2ggYW5k
+IEVkdWNhdGlvbiBOZXR3b3JrMREwDwYDVQQDEwhzaHVhYS5vbTCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBANyEechUdjfBDbsFztVpBoI9qQBSxqe5mz15
+f5AkZbkCgfaKy2mohhOWCU9z254jkvJZLlnW8ta4NmTkE3/hopbQjfQbgBz5fuJd
+I56/7+I4UW5NfYROHcuvKY8Q4DHkKNobWVnmtKGPlfjXs5aaIwH5ZdLk/QYzLQ/s
+Lz0giUdqSA7zm+wkuU13FpCnJ3jlOOLpc6CjqMFYOdhpRUbgQlmvhBTNcPB1qbGl
+JOtbTmHOeDvVvAMSksJL3bwWEFK9ltQ2YTsj1s4heDliUSK+gLl5RrAbCUBIjSII
+7tlZftLOOwlRVXJj1vEmHia+3u+Q+Rd9mIsIkt/DQgsRkcl+Zgt4u2CEnKjECIgM
+EEXYAFYSib+fal1zK4/Pai+CuMBg0wBte34elW49yxiE8+mdGrasH6ko95UqyqvI
+3fwMa6AKA1MfkyRfUtPikEIWcJA70xKNo8oVybl16mJ6EZb7YDtI9qVV1HhrzK7X
+0e/IU2yQsRyaO6hPdq9TfOfpioZVOQIDAQABo4IDUDCCA0wwHwYDVR0jBBgwFoAU
+Z/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFPdKf0ZEiR1nR3n1MmpI4zU8
+oaRuMCEGA1UdEQQaMBiCCHNodWFhLm9tggx3d3cuc2h1YWEub20wDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBi
+MC+gLaArhilodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNy
+bDAvoC2gK4YpaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5j
+cmwwTAYDVR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6
+Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwbgYIKwYBBQUHAQEEYjBg
+MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wOAYIKwYBBQUH
+MAKGLGh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3J0
+MAwGA1UdEwEB/wQCMAAwggF9BgorBgEEAdZ5AgQCBIIBbQSCAWkBZwB2ALvZ37wf
+inG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABaSm9irgAAAQDAEcwRQIhAN+m
+QmPvbHgdLZk9/CEdm05iqte1XiPj/ZkVugGUepKpAiBbi4GMH27xgXLxKmuj20BA
+mDomdim6z45B9o85i37EnwB1AId1v+dZfPiMQ5lfvfNu/1aNR1Y2/0q1YMG06v9e
+oIMPAAABaSm9i/UAAAQDAEYwRAIgJCYm5IhFvqOFx2JKluFgLA5og50hlnOGYyQ5
+o9A0EIsCICXA2aW1P9pdLqjkQvTadAWawB8Nd2kJKwSZ9sLWENusAHYARJRlLrDu
+zq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFpKb2KuAAABAMARzBFAiAIJutB
+Zp2gir4y1qViN0bTxaHtrNRqDWWWdXQPDOcvIwIhAORwbNJpqGQZWiVK/4tAuqbt
+wcgOymzMUI94ywF7O4TgMA0GCSqGSIb3DQEBCwUAA4IBAQAvTFgkDQnqHCmdxd0n
+Lv1VbA2I6GJlEgAVXim7/Dp9hu2MZ6gBKQz8da8RqN3gwAc2GEWctIMhI4njfSP8
+emYqJZk5zjqrSYU6TMNhs0r8AEFJjDZYfgJcMZV++70gShN73+6oT2VzS2iZCslF
+mS6xVMU0ndyDT9VCjRfNP1HB0Qc68XsCrJ7n2HB0UZNXYiTE3uoUL6E33QM4owM+
+KmRArr9WIV2i6B16y3qZIK7HRVXo0V7Fuo+Ta4QJr89X6+OONkF0JcNWtLDC+7G0
+TSIHkY95AtkJk+SxLNzjeebokKVDtZZ7zIQEivJikhB+ZKoVRAUYJxNwc1Bxmp9g
+paww
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shuaa.om/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shuaa.om/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shuaa.om/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shuaa.om/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shuaa.om/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shuaa.om/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shuaa.om/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shuaa.om/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shuaa.om/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">Oman Research Repository (Shuaa)</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Shuaa is an electronic database of research, studies, journal articles, abstracts research, Omani specialized academic statistics, and innovation materials that were written or compiled in the Sultanate of Oman and viewed on a specific website (indexed and classified according to the modern systems base) in order to ease the access and utilization of researchers and innovators and to clarify the role of the institutions and responsible bodies for the dissemination and issuance..</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Oman Research Repository (Shuaa)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Oman Research Repository (Shuaa)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://shuaa.om</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Warda</md:GivenName>
+	<md:SurName>Alhabsi</md:SurName>
+	<md:EmailAddress>mailto:warda@omren.om</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Warda</md:GivenName>
+	<md:SurName>Alhabsi</md:SurName>
+	<md:EmailAddress>mailto:warda@omren.om</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

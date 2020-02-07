@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.utrgv.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idm.utsystem.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utrgv.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Texas Rio Grande Valley</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Logon service for The University of Texas Rio Grande Valley</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.utsystem.edu/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="75" width="75" xml:lang="en">https://idm.utsystem.edu/images/UTRGV_Logo_Sm.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUV4KRu3uQlT3F0LReyxy3ECMvQWYwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLnV0cmd2LmVkdTAeFw0xNDA3MTAyMTU5MTZaFw0z
+NDA3MTAyMTU5MTZaMBgxFjAUBgNVBAMTDWlkcC51dHJndi5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN7bZ2wGlD9gnX01EDwAXF/a3pNiecceYz
+CAHeEpcHVquCGdqf1FolWVp6rtH00FfqERRG3BvXy0O+zWBTr9qhzH1X6mh+PS4b
+L4koUrmWmGD3+YG5+H8aZkNo85dt37OgeY/wq656/CzvXBEX4ddLtogpa0/vrHIN
+cdaTWJVseYvZ2inOpXZGFIeTgg6Q5UMYowRLl1HmSb6pMxR7+sYjveBCftsIsWIe
+ZQl7JgDQif6QZz5HzRXq9LvqbR81t86p7674ayw+rQiRY+/2BFCxmIFsbuH3e/AG
+wmNvGmMfNUG9BUFyHYNOnVcqVYuyfCAYYMZo4Vr9tqnmYlYYDnvbAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC51dHJndi5lZHWGJGh0dHBzOi8vaWRwLnV0cmd2LmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUyyIIKGaqKdswBvRHs96YHu7eRq8w
+DQYJKoZIhvcNAQEFBQADggEBAGxgsydvkHEzhuGwayU9+AaqGNOZV8NZtrtjp9it
+xeXXfyJC5jrQeu+gJLHKDAlSFpCaJ7z9VAlrygjMBVdmTqUsX58G5W95emcSSi05
+pToy3vi7jaQHKDqIK0GyNwXkq2eVnbZsVUowHdxufN84y/89nO3e88eVrSqLDRqC
+fHYMEJ4zy83IB6ZTAp6tsETguG89BU2souTVtoft4lRprMqJljbkTmwW7GzACTuQ
+HwyOSUKc+ksNbpf4860E7NQrb4Rhm5GLsJIcrRO/Q0VoWZrsJmevbmoKsBzENjvn
+0BBEHvl2WwlajXWGBvNV45lHVqRi+ugWOxMCrqjvQcijAiI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.utrgv.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.utrgv.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.utrgv.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.utrgv.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.utrgv.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.utrgv.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.utrgv.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.utrgv.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utrgv.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUV4KRu3uQlT3F0LReyxy3ECMvQWYwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLnV0cmd2LmVkdTAeFw0xNDA3MTAyMTU5MTZaFw0z
+NDA3MTAyMTU5MTZaMBgxFjAUBgNVBAMTDWlkcC51dHJndi5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN7bZ2wGlD9gnX01EDwAXF/a3pNiecceYz
+CAHeEpcHVquCGdqf1FolWVp6rtH00FfqERRG3BvXy0O+zWBTr9qhzH1X6mh+PS4b
+L4koUrmWmGD3+YG5+H8aZkNo85dt37OgeY/wq656/CzvXBEX4ddLtogpa0/vrHIN
+cdaTWJVseYvZ2inOpXZGFIeTgg6Q5UMYowRLl1HmSb6pMxR7+sYjveBCftsIsWIe
+ZQl7JgDQif6QZz5HzRXq9LvqbR81t86p7674ayw+rQiRY+/2BFCxmIFsbuH3e/AG
+wmNvGmMfNUG9BUFyHYNOnVcqVYuyfCAYYMZo4Vr9tqnmYlYYDnvbAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC51dHJndi5lZHWGJGh0dHBzOi8vaWRwLnV0cmd2LmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUyyIIKGaqKdswBvRHs96YHu7eRq8w
+DQYJKoZIhvcNAQEFBQADggEBAGxgsydvkHEzhuGwayU9+AaqGNOZV8NZtrtjp9it
+xeXXfyJC5jrQeu+gJLHKDAlSFpCaJ7z9VAlrygjMBVdmTqUsX58G5W95emcSSi05
+pToy3vi7jaQHKDqIK0GyNwXkq2eVnbZsVUowHdxufN84y/89nO3e88eVrSqLDRqC
+fHYMEJ4zy83IB6ZTAp6tsETguG89BU2souTVtoft4lRprMqJljbkTmwW7GzACTuQ
+HwyOSUKc+ksNbpf4860E7NQrb4Rhm5GLsJIcrRO/Q0VoWZrsJmevbmoKsBzENjvn
+0BBEHvl2WwlajXWGBvNV45lHVqRi+ugWOxMCrqjvQcijAiI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.utrgv.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.utrgv.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Texas Rio Grande Valley</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Texas Rio Grande Valley</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.utrgv.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Jaime Nunez</md:GivenName>
+	<md:EmailAddress>jaime.nunez@utrgv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jaime Nunez</md:GivenName>
+	<md:EmailAddress>jaime.nunez@utrgv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jaime Nunez</md:GivenName>
+	<md:EmailAddress>jaime.nunez@utrgv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jaime Nunez</md:GivenName>
+	<md:EmailAddress>jaime.nunez@utrgv.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

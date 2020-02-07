@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.nejm.org/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2011-01-11T15:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAIBpEkq6FhlUMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDHd3dy5uZWptLm9yZzAeFw0xMzA3MTAyMTA3MDJaFw0yMzA3MDgyMTA3MDJa
+MBcxFTATBgNVBAMTDHd3dy5uZWptLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBANK1qbc1ivsRyR7Lch3ED1VC9eB76M93xlw4cNo/dvOZIxKDXj08
+iKA0m6Ku3/iyiXHvCpVlwTgI4Ip/Xt6lFFWBpY4+jd+ava+E9+ANCWOQJf9G62qo
+bvaz8PQRxXKEck+rWLDnWja5GgXHzTiPZpdNeiN3HxbDXbqzZyiOBESwEeMXuMuB
+COs+iDVh4BhrhL0hD9976og0YyFlpZNnN0wkHJuhCVdWgwscK4sheTM/Hl4FCxb6
+HogoNWsnURLZCIvd9QfHJ+K33LN3zUbjJFBcN4LjhE9mt13gwliiXDwNl0RdYxvB
+epOKacojBJlV2kJdhe3G9olGYgX1GDTEA3UCAwEAAaNbMFkwOAYDVR0RBDEwL4IM
+d3d3Lm5lam0ub3Jnhh9odHRwczovL3d3dy5uZWptLm9yZy9zaGliYm9sZXRoMB0G
+A1UdDgQWBBTWPgvv+5CtphKIteQIzAPkFdbZ8jANBgkqhkiG9w0BAQUFAAOCAQEA
+A5NpngLVi9/1vHPrbLVhXwkrVlBfGvirUNgLlfp29pO2EXHhPcpyMZXRM9hkttGu
+lEJetzEXKVMaNyhoqnvnQ1JqCt4rFp/PV+MQO1ZPxJ4nPcXU3kdAJG3VuSu7jRRZ
+iyS7KYql93SEwfOyIuPB/lPnOQ3uHV94bRGgfYnTq8S1NAdEXp/rMWM4yWPF+8nq
+kBkgu74s1BfumuoQbNNatX/yAxy8kSiPLOWQpotcA1JR6qQ02PlphNp33+T6asTn
+3y2fAMI1ef+C1XDMkJBYSS/o9AiY5VF+TSmsgpN4Etlr2BCk2aOvfEsi0cQMuThu
+ZN3XBFLXsiMX/MLD9bpLrA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.nejm.org/action/samlACS" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.nejm.org/action/saml2artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.nejm.org/action/saml2post" index="2"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">NEJM - New England Journal of Medicine erogato da Massachussets Medical Society</md:ServiceName>
+	<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">New England Journal of Medicine</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">NEJM - New England Journal of Medicine erogato da Massachussets Medical Society</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en">http://www.nejm.org/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="support">
+<md:GivenName>Ed</md:GivenName>
+<md:SurName>Evans</md:SurName>
+<md:EmailAddress>mailto:eevans@atypon.com</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Winson</md:GivenName>
+<md:SurName>Quock</md:SurName>
+<md:EmailAddress>mailto:winson@atypon.com</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>SSO-Support</md:GivenName>
+<md:EmailAddress>mailto:SSO-Support@atypon.com</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>SSO-Tech</md:GivenName>
+<md:EmailAddress>mailto:SSO-Tech@atypon.com</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://yin.faheystuart.co.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-11-28T10:57:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Alexander Stuart test IdP (yin)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Alexander Stuart test IdP (yin)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">yin.faheystuart.co.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">yang.faheystuart.co.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUMsc4XqCF3FdQnlwy3wJGHLiFY2kwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVeWluLmZhaGV5c3R1YXJ0LmNvLnVrMB4XDTE2MTEyNjIy
+MjQ0NFoXDTM2MTEyNjIyMjQ0NFowIDEeMBwGA1UEAwwVeWluLmZhaGV5c3R1YXJ0
+LmNvLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgH4CX48tzdSw
+eaLfz297uZDnxq3b01x/a5GryPEZ2gCMpYU0DNpOdAKBaSMTeQon/sLaz7Xtpn+4
+ucbBnQY2jsOe7qWLKOoHldPzHwEjFDMGqX3Z6aYbny9/gtDMISlY1sPZAxU0c8Ls
+hsBxKHCIdKsFbc7Jxp8bQi0UzC7LrMLRQAAWfRizXBWFaxiD1ey2pDKANf7hk7W4
+6OE97h70xlaxef18hk+rLaEoSQvaHsGQcBW741CxACfSXiPzJNUWLPqw1ZIfJlgH
+u2jPnRu9TL4s0ZxmuHN2RdVaRjA/q01bzfhZRttbn2CAy4FVpzStViDLPiahdcr+
+PkSkBAJqFwIDAQABo3EwbzAdBgNVHQ4EFgQU/HRwNZVcX0/X7m89Gxn+vH4dJwsw
+TgYDVR0RBEcwRYIVeWluLmZhaGV5c3R1YXJ0LmNvLnVrhixodHRwczovL3lpbi5m
+YWhleXN0dWFydC5jby51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAEb00+N4h5WBIXGy4JORbPnn/BTfYvrU4bOrtIi+EYdUiE6T6jU5/gDTReEJL
+WvhE7GLYGBbuk4lJAqvFJ+XWlDwqB+Gbzey4UNzynHOFMi3pjuDBGbPRy05y8T9n
+k2BM1Ruz0jJwG9Xhgvk8qixMKrl2oCT1DYlIj37gEvTRzr41UBse1nMbsy18AjzR
+34npeoHgHcqE2axgOh6my6kWMtandI4Iyn6phiVDjlZg3yBklWLS6tY+xg2P0l14
+O67Kfr8oPXSp7Oa+CuiOlRhLdH/KpFlykBsG8J/e29HK+1kR/Nn/wiAMDv4s9x+8
+JsYATFfIfC6PSmTRHiTLDgH5mA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://yin.faheystuart.co.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Alexander Stuart</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Alexander Stuart test IdP (yin)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://yin.faheystuart.co.uk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@faheystuart.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@faheystuart.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

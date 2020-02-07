@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://login.mayo.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mayo.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mayo Clinic</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://signup.mayoclinic.org/register/privacypolicy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="88" width="77" xml:lang="en">https://www.mayoclinic.org/UniversalNav/Styles/img/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGRTCCBS2gAwIBAgIRAMp/91zJPbPZ/O+Btk8XPYYwDQYJKoZIhvcNAQELBQAw
+gZYxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGjAYBgNVBAoTEUNPTU9ETyBDQSBMaW1pdGVkMTwwOgYD
+VQQDEzNDT01PRE8gUlNBIE9yZ2FuaXphdGlvbiBWYWxpZGF0aW9uIFNlY3VyZSBT
+ZXJ2ZXIgQ0EwHhcNMTYxMDAzMDAwMDAwWhcNMTkxMDAzMjM1OTU5WjCCASMxCzAJ
+BgNVBAYTAlVTMQ4wDAYDVQQREwU1NTkwNTELMAkGA1UECBMCTU4xEjAQBgNVBAcT
+CVJvY2hlc3RlcjEaMBgGA1UECRMRMjAwIDFzdCBTdHJlZXQgU1cxOzA5BgNVBAoT
+Mk1heW8gRm91bmRhdGlvbiBmb3IgTWVkaWNhbCBFZHVjYXRpb24gYW5kIFJlc2Vh
+cmNoMQwwCgYDVQQLEwNHUFMxRTBDBgNVBAsTPEhvc3RlZCBieSBNYXlvIEZvdW5k
+YXRpb24gZm9yIE1lZGljYWwgRWR1Y2F0aW9uIGFuZCBSZXNlYXJjaDEUMBIGA1UE
+CxMLUGxhdGludW1TU0wxHzAdBgNVBAMTFnNpZ25pbmcubG9naW4ubWF5by5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDEHqG32M813N/hbcg8w2cK
+yffS7Q/1NWGVhgBu30RIOFJUPAkP8n8HWlPOltVcZKY+N4mJ/Ip08PUiFVBOHqy7
+BeRprRSFd+JrBobxhchsjhU7LXfY9suMUcXO+Jxvq3k89uPcpK/XmlPt/jrMniBv
+SoB4p7y2tZJt2yFgcdLMJl+VqUlW1G1fb6a8m2wnBnGbQnQFw5ceRm3VTKdi/GQT
+YZDnQ3rMk/TfuFI83205/S/0ynr9oq6SLxgBY0F0bLhIK9/b9DkZBEXQhiaxKSZa
+XxQYcSwWPKI6MlpXfoXXiNY5tftgo9Q8ZL4boS/lWbKxTXgQNlxjIZYseCvnJmvb
+AgMBAAGjggH8MIIB+DAfBgNVHSMEGDAWgBSa8yvaz61Pti+7KkhIKhK3G0LBJDAd
+BgNVHQ4EFgQUur7E3EsRX0uF8a7U7eoIgBQdtXQwDgYDVR0PAQH/BAQDAgWgMAwG
+A1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMFAGA1Ud
+IARJMEcwOwYMKwYBBAGyMQECAQMEMCswKQYIKwYBBQUHAgEWHWh0dHBzOi8vc2Vj
+dXJlLmNvbW9kby5jb20vQ1BTMAgGBmeBDAECAjBaBgNVHR8EUzBRME+gTaBLhklo
+dHRwOi8vY3JsLmNvbW9kb2NhLmNvbS9DT01PRE9SU0FPcmdhbml6YXRpb25WYWxp
+ZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3JsMIGLBggrBgEFBQcBAQR/MH0wVQYIKwYB
+BQUHMAKGSWh0dHA6Ly9jcnQuY29tb2RvY2EuY29tL0NPTU9ET1JTQU9yZ2FuaXph
+dGlvblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwJAYIKwYBBQUHMAGGGGh0
+dHA6Ly9vY3NwLmNvbW9kb2NhLmNvbTA9BgNVHREENjA0ghZzaWduaW5nLmxvZ2lu
+Lm1heW8uZWR1ghp3d3cuc2lnbmluZy5sb2dpbi5tYXlvLmVkdTANBgkqhkiG9w0B
+AQsFAAOCAQEApPP1G3D/maWx+pBMT7u5WayQyXjaRhSyUo2FG1T1GWn4tSSZMUUC
+fY1PzHDSQeKyyYGAktqCkmEaUVR3mx/M1AzGFHPGH32Rl5P4w6BNcVxwFIvd353T
+669hVYMiFVGe0XUE2q6viQMwsXtvZHqkC1wlBmu6IHD/AbOwUxraIswL7HjPRZTe
+aHpfDN5Uz50J0G3OBGb1TYxxhgVxhVedjir4/ENrVWF1XRyYnhQwr3FT+wzlU/BM
+ticBLYmfMKVg+gf/qm4D21Ds6voo4u55WFLjhjs+hkgFtD7SDNTsY5Ux4BtBEYab
+UAPzATs8eQSA0vQ5+Re4mg0zTINPqUd/nQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIH3jCCBsagAwIBAgIRAIpkJ4DsgjlXBwGKwfnvOE0wDQYJKoZIhvcNAQELBQAw
+gZUxCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO
+BgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoTD1NlY3RpZ28gTGltaXRlZDE9MDsGA1UE
+AxM0U2VjdGlnbyBSU0EgT3JnYW5pemF0aW9uIFZhbGlkYXRpb24gU2VjdXJlIFNl
+cnZlciBDQTAeFw0xOTA5MDMwMDAwMDBaFw0yMTA5MDIyMzU5NTlaMIIBQTELMAkG
+A1UEBhMCVVMxDjAMBgNVBBETBTU1OTA1MRIwEAYDVQQIEwlNaW5uZXNvdGExEjAQ
+BgNVBAcTCVJvY2hlc3RlcjEaMBgGA1UECRMRMjAwIDFzdCBTdHJlZXQgU1cxOzA5
+BgNVBAoTMk1heW8gRm91bmRhdGlvbiBmb3IgTWVkaWNhbCBFZHVjYXRpb24gYW5k
+IFJlc2VhcmNoMRwwGgYDVQQLExNJRE1QIEFjY2VzcyBDb250cm9sMUUwQwYDVQQL
+EzxIb3N0ZWQgYnkgTWF5byBGb3VuZGF0aW9uIGZvciBNZWRpY2FsIEVkdWNhdGlv
+biBhbmQgUmVzZWFyY2gxGzAZBgNVBAsTEkVudGVycHJpc2UgU1NMIFBybzEfMB0G
+A1UEAxMWc2lnbmluZy5sb2dpbi5tYXlvLmVkdTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAM3nHHi6QfKfFEOCe8nlyC1iSclFIJk1vY1em4QDUQfsI3c/
+PtnaZvT8v5tjAqjLO/z6n4asGNtBgxqLKT4ZHqXkH/KL3LfVGHg3h5u8KE0EioRo
+9ReUSGAXHQGrpZoLNu1ZGCkOrjj2Fmm7kzcaL1MDz9JOag7GPSkQ1dExV1aqkaRL
+/hRrikkPh+NCZroy4S4xqxU1tZ1oXGLn37wL9sK/C1CFI9u7zhbUMdPWb5YfnAVM
+jzRtdCr6gpOK9iODMx9a1gfh7Bjkq12s5MW9l1bpswiMEQW66zLu4Nz7XE2BdISA
+Eg+sC4Ch9t8Yoebkd/b2qYuTDbg/KKLOJiUGw28CAwEAAaOCA3gwggN0MB8GA1Ud
+IwQYMBaAFBfZ1iUnZ/kxwklD2TA2RIxsqU/rMB0GA1UdDgQWBBSCo/11CQ9PKwuV
+0bx/8rLk+Ok8WjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUE
+FjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSgYDVR0gBEMwQTA1BgwrBgEEAbIxAQIB
+AwQwJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EM
+AQICMFoGA1UdHwRTMFEwT6BNoEuGSWh0dHA6Ly9jcmwuc2VjdGlnby5jb20vU2Vj
+dGlnb1JTQU9yZ2FuaXphdGlvblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcmww
+gYoGCCsGAQUFBwEBBH4wfDBVBggrBgEFBQcwAoZJaHR0cDovL2NydC5zZWN0aWdv
+LmNvbS9TZWN0aWdvUlNBT3JnYW5pemF0aW9uVmFsaWRhdGlvblNlY3VyZVNlcnZl
+ckNBLmNydDAjBggrBgEFBQcwAYYXaHR0cDovL29jc3Auc2VjdGlnby5jb20wPQYD
+VR0RBDYwNIIWc2lnbmluZy5sb2dpbi5tYXlvLmVkdYIad3d3LnNpZ25pbmcubG9n
+aW4ubWF5by5lZHUwggF/BgorBgEEAdZ5AgQCBIIBbwSCAWsBaQB3APZclC/RdzAi
+FFQYCDCUVo7jTRMZM7/fDC8gC8xO8WTjAAABbPjusNQAAAQDAEgwRgIhAN99oav/
+sATAQt1KwdCw6tlCZYjCz9pCRwTyI36ukE5TAiEA1fDKvW1yQ7NTkfa7ZQhJilNh
+TEy6PMAXdHFhuz/wGOEAdwBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaB
+qAAAAWz47rD3AAAEAwBIMEYCIQCn6xTB9btpm/9hX78bfPC0xdRMFkB0/SL3kBlu
+jv1zwwIhAJn+OqWsyMtxbep+yJ7TpOT59wYfVGSwYEJe2t9BEOgpAHUAVYHUwhaQ
+NgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFs+O6xgwAABAMARjBEAiAeAcUM
+PxXnGTQJ/02Zy4uGnpWXM4Rg5Nvw+OhfkDWKpAIgaQCq4uWGkhhklHea4Mx+Hwua
+JjeHvnyzd05otYrE7ZcwDQYJKoZIhvcNAQELBQADggEBAE7H4PQ/49Ww/NBRLJHY
+ltBxVRaYzKfcvzeakw3dXSEgyRGdbMHzN02dAkliTc3tI9jCfT480O+nKuDaUXge
+8Seo0kg8M8n7/lULpEgQxzJwbQ/nH+AqlCW7GNY3ebWdawl5Tmp7ErelWkVru+ne
+3S8KcPZHM62PGBwpzF9Lklq0FMhoOl4gbSHheZqdAikVeh8lIkaFw/BPGKEC3NXA
+4S7ex5QNHNKE+Q6B5qBm4CNpzADfFsNZ7+yMFQj+DrL5qS3bmvijb3ASGIRtNU6d
+Fcehx1Jid6bp5y7kgVwiLXWo4KEJ2F+nHlNVi5gHpjzIHTNF4f1K/w73Fn+bzQu4
+PIU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.mayo.edu/adfs/services/trust/artifactresolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.mayo.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.mayo.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mayo Clinic</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mayo Clinic</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mayo.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IDMP Access Control</md:GivenName>
+	<md:EmailAddress>rstgpsidm@mayo.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Sandy Outcalt</md:GivenName>
+	<md:EmailAddress>Outcalt.Sandra@mayo.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Troy Wirth</md:GivenName>
+	<md:EmailAddress>wirth.troy@mayo.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IDMP Access Control</md:GivenName>
+	<md:EmailAddress>rstgpsidm@mayo.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

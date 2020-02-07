@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://redcap-phone.ctsi.ufl.edu/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CTSI RedCAP for UF</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://ufhealth.org/website-privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="72" width="177" xml:lang="en">https://ufhealth.org/sites/all/themes/ufandshands/library/images/footer-ufhealth-logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEjCCAfqgAwIBAgIJAOCTvm2Brt8rMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMTGXJlZGNhcC1waG9uZS5jdHNpLnVmbC5lZHUwHhcNMTcwODA4MjA1ODE5WhcN
+MjcwODA2MjA1ODE5WjAkMSIwIAYDVQQDExlyZWRjYXAtcGhvbmUuY3RzaS51Zmwu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvYfq9VhtUCUejWkf
+XhDpnHL01XSD2PUOLhGJsx+0teFy7T4qm75DasSpFxARlMcVGYSRv54VeAAJ9ha2
+Lxz3kQPloVfAnSQlaq1M+3RqnFyUWEZNb4GLjcxMZ76XCVcrJ1Ss7wVHxlYhqzT3
+K1ylCmRSqw25WcJoicybeVAmohZlFiEXDjKZMdg5ByHW2IO/8CMyovX05fR9lxEN
+06PUe3KhhPp9fSmMGgdN/BG4/zuIf3NPnOEzU6oMj3Eg+/K6X+RUW0l+y3om5r0l
+W+ykup8SX6ty7TKehIpQxq4PieAAaM1wB1nFbl2GDaqvgun4bI3Kkhzuwy6dzi8y
+aJvHHwIDAQABo0cwRTAkBgNVHREEHTAbghlyZWRjYXAtcGhvbmUuY3RzaS51Zmwu
+ZWR1MB0GA1UdDgQWBBT7wah2i8UBjJqde8NsyTYxhMLezTANBgkqhkiG9w0BAQUF
+AAOCAQEAPlrQ4P5VaE4JFHey2NcGlY5U6u10hPuvUGEr6OLOFkyfM7nQ0n8jCDKe
+Gz4IZB1OG61V1Kb3Vni1jZ3YLhRo/KDBkRxU0htpV+4CahU+I4OeWQLegDxdfiVX
+068O2t7HNkKdTGWx4Bh/hNsOZLjmMpx5YknobdCdcdWrbEpcyV9jUpiVUpAuAfJC
+qggxKzDWgOJDKnAJMH592GNOmKQgVrKJogRw/k7bGZpkmWX94VahthL7pHLqbFEq
+/NdJflq3liPV96SbF9AY6rstI9GxitqJb9ODmRkxYfa6JGcw2Fw061F0qspPyqnt
+P1t+IiFOgGim5PJJcdXFTXaxOXGoPg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://redcap-phone.ctsi.ufl.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://redcap-phone.ctsi.ufl.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://redcap-phone.ctsi.ufl.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">CTSI RedCAP for UF</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Florida</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Florida</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ufl.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Clinical and Translational Science Institute REDCAP</md:GivenName>
+	<md:EmailAddress>info@ctsi.ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>AHC Unix Team</md:GivenName>
+	<md:EmailAddress>AHC_UNIX@shands.ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UF Security Team</md:GivenName>
+	<md:EmailAddress>security@ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://pgsso.cccd.edu/sso">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.cccd.edu/employees/ITServiceDesk/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cccd.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Coast Community College District</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Coast College Central SSO - Portal Guard</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.cccd.edu/boardoftrustees/Documents/BP_5040_Student_Records_Directory_Information_and_Privacy.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="58" width="190" xml:lang="en">https://www.cccd.edu/Style%20Library/CCCD/Images/Cccd-logo1.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQzCCAyugAwIBAgIJAN/8O9QiPMIGMA0GCSqGSIb3DQEBCwUAMIG3MQswCQYD
+VQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTETMBEGA1UEBwwKQ29zdGEgTWVz
+YTE6MDgGA1UECgwxQ2FsaWZvcm5pYSBDb21tdW5pdHkgQ29sbGVnZXMgQ2hhbmNl
+bGxvcidzIE9mZmljZTEpMCcGA1UECwwgQ29hc3QgQ29tbXVuaXR5IENvbGxlZ2Ug
+RGlzdHJpY3QxFzAVBgNVBAMMDnBnc3NvLmNjY2QuZWR1MB4XDTE3MDMyODE4NTQz
+N1oXDTI3MDMyNjE4NTQzN1owgbcxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxp
+Zm9ybmlhMRMwEQYDVQQHDApDb3N0YSBNZXNhMTowOAYDVQQKDDFDYWxpZm9ybmlh
+IENvbW11bml0eSBDb2xsZWdlcyBDaGFuY2VsbG9yJ3MgT2ZmaWNlMSkwJwYDVQQL
+DCBDb2FzdCBDb21tdW5pdHkgQ29sbGVnZSBEaXN0cmljdDEXMBUGA1UEAwwOcGdz
+c28uY2NjZC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDzqHks
+HwLawsiVGHjFmKjPA8nvfo33OC/Bdg7wIZySPLGtVQ5o9BX+x9lzCAnyp+j0UlpE
+/52SEx/qCksXl863DPxuM2mKOt6nWyJinWmmL7Y/sdvP6dAoqGDPmHf2GUwNMktN
+stlrxBom4ap1KfsS/NqtPM5OmP0e1gzzqDcDq57taNPmkGnkDLOeaggvDDW1f1Xm
+k+WG0lzqsEzodPq9rkGjFc78VGxeWxXMkH5Rhz88lo92/OwNxpfnX9nJK0zV+Bf0
+cB4MVsaYVBFaRu/nIJXzgrXQ7pRqVL44ULG1NCusBr+BxC6mHklKseDxK4KrI3Iy
+A/OIgTNDrkPPNwG9AgMBAAGjUDBOMB0GA1UdDgQWBBTCSAgGVmLKUX95EPaTbApU
+tG6NYDAfBgNVHSMEGDAWgBTCSAgGVmLKUX95EPaTbApUtG6NYDAMBgNVHRMEBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBjlo4Q7wpbAUk6z7IM1rnvnqsMyK89WxoM
+GIhaKUF9tGX4xC1amHB6ZLYceZku0vHgflCyQbueJ5ugYPwTXLbe17PoBcQ4EwAF
+6cCBEqP64w5mNx9OVXN5F9gawRWJOfqoN88dqUhm751p2pxJPVNx8R+JfUaO0wtt
+11DMDxRMYKiZrCVhwvLMB0M29QH5dL5psk5JkCweNJIhnMXZIw2TCuonzReuQQ2Q
+fJLd5Szjdeb5OzAwbdm8T8dTIXduV4MfoOsscR0iTVjmh/1mtDxQeRTsVdHWBjMo
+SxceFaXSpHbp0oCtTOBi1V0Djre2VKeL21UD5MPQTznPiiIcPQQ7
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://pgsso.cccd.edu/sso/slo.ashx"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://pgsso.cccd.edu/sso/go.ashx"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pgsso.cccd.edu/sso/go.ashx"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Coast Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Coast Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.cccd.edu/Pages/home.aspx</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steve Mihatov</md:GivenName>
+	<md:EmailAddress>stevem@coastline.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Eric Hobbs</md:GivenName>
+	<md:EmailAddress>ehobbs@cccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kevin Riley</md:GivenName>
+	<md:EmailAddress>kriley@cccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ralph Looney</md:GivenName>
+	<md:EmailAddress>rlooney@cccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

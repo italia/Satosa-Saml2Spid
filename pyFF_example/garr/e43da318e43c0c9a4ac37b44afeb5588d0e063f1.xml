@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.louisville.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">louisville.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Louisville</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://louisville.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://louisville.edu/privacy-statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="65" width="291" xml:lang="en">https://louisville.edu/brand/logos/primary-signature/main_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIJALDu/ry2L6bqMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMMGXNoaWJib2xldGgubG91aXN2aWxsZS5lZHUwHhcNMTUwNjE3MTczNDA1WhcN
+MjUwNjE0MTczNDA1WjAkMSIwIAYDVQQDDBlzaGliYm9sZXRoLmxvdWlzdmlsbGUu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv8A4Tzxa/PMT6NaC
+iqlQkARIILJhzO4rjL1Kcl1Pic9nSSCBOaLTAT3EpSWScS0u939zzfSLGFtv2NYs
+Hl2UuSi6jgalL8wDoYLsrKjU178i5zqzIdo1+zIS+fx3jeV0qAwqjiJEknzolol+
+roQD945++3tn1fmo1rsyMm0ET+6E1zgKaxyzeOGxciUoddv+9IaaoU96ZXOlRYm6
+QSlxrrPFv6tsJ9BGTU/5KaOAzcP6keZRAJqs0hxzButeyRnpuSOxjv97Ouwyl1b/
+BxFuWVaXMmvYtOcqL6eTy4Ev0asQglQo+Z1Let3GL4lHS197XksL3N7lI/6x7sFg
+V1NowQIDAQABo1AwTjAdBgNVHQ4EFgQUxv0kRZN8bw+FTTgvXNzWQjaC0pQwHwYD
+VR0jBBgwFoAUxv0kRZN8bw+FTTgvXNzWQjaC0pQwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQUFAAOCAQEAJAWkC8Mu1BKt2HtV3Uh2A4zwqQj0hrlt9UFICJZ8M6Vo
+nD+A194tS8aL4DM03SfM1GFZxzC0ZWq1Uwpy4ncfeGQJ4scTpQQxvOV+EUA7merr
+RTALxWh4QJeN4ctico/5cLn0U1jFfmTIHpmrdShCyj62uXP1sxXGktIDnYLL6HJ1
+9tax85z5ayftqJYrZtk3tnK4LmxYoYC5tXq0AU2f1dvqIfmCUYKr6zEu8bI4oniy
+qeO+hQCk0ogILP/3WDJe8nkDLGsjy4aQguui//rgJu5R975bmdBmMwuXYo7ZJGOM
+/RUeiSUWA/0+u7DLASHh+VR3fG5e1XEH8YDch0/sjA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.louisville.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.louisville.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.louisville.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.louisville.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.louisville.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">louisville.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIJALDu/ry2L6bqMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMMGXNoaWJib2xldGgubG91aXN2aWxsZS5lZHUwHhcNMTUwNjE3MTczNDA1WhcN
+MjUwNjE0MTczNDA1WjAkMSIwIAYDVQQDDBlzaGliYm9sZXRoLmxvdWlzdmlsbGUu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv8A4Tzxa/PMT6NaC
+iqlQkARIILJhzO4rjL1Kcl1Pic9nSSCBOaLTAT3EpSWScS0u939zzfSLGFtv2NYs
+Hl2UuSi6jgalL8wDoYLsrKjU178i5zqzIdo1+zIS+fx3jeV0qAwqjiJEknzolol+
+roQD945++3tn1fmo1rsyMm0ET+6E1zgKaxyzeOGxciUoddv+9IaaoU96ZXOlRYm6
+QSlxrrPFv6tsJ9BGTU/5KaOAzcP6keZRAJqs0hxzButeyRnpuSOxjv97Ouwyl1b/
+BxFuWVaXMmvYtOcqL6eTy4Ev0asQglQo+Z1Let3GL4lHS197XksL3N7lI/6x7sFg
+V1NowQIDAQABo1AwTjAdBgNVHQ4EFgQUxv0kRZN8bw+FTTgvXNzWQjaC0pQwHwYD
+VR0jBBgwFoAUxv0kRZN8bw+FTTgvXNzWQjaC0pQwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQUFAAOCAQEAJAWkC8Mu1BKt2HtV3Uh2A4zwqQj0hrlt9UFICJZ8M6Vo
+nD+A194tS8aL4DM03SfM1GFZxzC0ZWq1Uwpy4ncfeGQJ4scTpQQxvOV+EUA7merr
+RTALxWh4QJeN4ctico/5cLn0U1jFfmTIHpmrdShCyj62uXP1sxXGktIDnYLL6HJ1
+9tax85z5ayftqJYrZtk3tnK4LmxYoYC5tXq0AU2f1dvqIfmCUYKr6zEu8bI4oniy
+qeO+hQCk0ogILP/3WDJe8nkDLGsjy4aQguui//rgJu5R975bmdBmMwuXYo7ZJGOM
+/RUeiSUWA/0+u7DLASHh+VR3fG5e1XEH8YDch0/sjA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.louisville.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Louisville</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Louisville</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://louisville.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Derick Hill</md:GivenName>
+	<md:EmailAddress>derick.hill@louisville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Keith Stevenson</md:GivenName>
+	<md:EmailAddress>keith.stevenson@louisville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Derick Hill</md:GivenName>
+	<md:EmailAddress>derick.hill@louisville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Mike Purcell</md:GivenName>
+	<md:EmailAddress>mike.purcell@louisville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Enterprise Security</md:GivenName>
+	<md:EmailAddress>secureit@louisville.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

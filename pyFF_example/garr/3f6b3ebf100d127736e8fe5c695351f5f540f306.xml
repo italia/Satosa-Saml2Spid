@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://authentication.ubc.ca">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2017-06-06T00:11:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="fr">https://www.canarie.ca/?wpdmdl=10723</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ubc.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of British Columbia</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Authentication Identity Provider</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ubc.ca/about/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://you.ubc.ca/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80">https://authentication.ubc.ca/ubc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIUWJCuJ2fBR3ks66f0+Cicvr8HguAwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVYXV0aGVudGljYXRpb24udWJjLmNhMB4XDTE3MDMwMTIw
+NTQzMVoXDTM3MDMwMTIwNTQzMVowIDEeMBwGA1UEAwwVYXV0aGVudGljYXRpb24u
+dWJjLmNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4L+YKgVeo+w
+PcVRABe19FKQHvTtS0w5zRlDxIPQC+vrC5RJ1E+WspxbIVimD8OV70E8p7zW83XN
+gcnvkGJZ+funPF2POi4b16oxWsNxTN/5ow0MfDV8zcUrFfWIHBfKy/4LObrTPp3G
+heya1XwZ8WOUROWoWHCOdtGQCLHj+sMGvFR5vy17zHy4byT+BN3q5w8gclewi30T
+H4PBVPe/x77yHSxzxbv2s+PcSVSafV/9rFNRKxt+961JMGW4Tq7gvWjs/5AH6iCE
+EIC7GbMI0SfrUvLRzDJonEDUX6vLEehoo8f4WGtum/2wwl5L32A9H/HEJUESj6iz
+VA8EdJRBDQIDAQABo2IwYDAdBgNVHQ4EFgQUPXjaScj36w8sU0pcGJO2PBer7Xkw
+PwYDVR0RBDgwNoIVYXV0aGVudGljYXRpb24udWJjLmNhhh1odHRwczovL2F1dGhl
+bnRpY2F0aW9uLnViYy5jYTANBgkqhkiG9w0BAQsFAAOCAQEAGw6mVaUFyFcj2xfi
+P0QO7T+CAhVJPmTSrtJYcjiCScKMgc8jnZSrAY1jcYNshGM1qc9g0IvoCOg58z6z
+H2TTq9kcwRQgQZpdAh6xKeRhU7SM7Ck3/KgR1+lcE25W9g95Algdj1Fp47bBRp5B
+VzXTn7r1+7u5ddnkvLu9/2h7h5zREs+HwnzidMGckk2zjLlIRKPgJwVUgXA9BPTu
+10W15fbJ7m1QEz4KYg8pkE4yv6CAfs5q5ovjsUpXsEcAau3Klezs6nEHBLu1HKn9
+XiXVPT17bJPtbMSsowPAngJv8Hd4cNACv+mbsd+Z77hWn7rX8u6ER9Fv7xtdEG61
+3jAsAg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMTCCAhmgAwIBAgIVAKsPemXgTlwq8/Rc3PYYuYJFP84BMA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWF1dGhlbnRpY2F0aW9uLnViYy5jYTAeFw0xNzAzMDEy
+MDU0MzBaFw0zNzAzMDEyMDU0MzBaMCAxHjAcBgNVBAMMFWF1dGhlbnRpY2F0aW9u
+LnViYy5jYTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTVraDsHjG9
+BM2EK1jkLidzQAa1ay6YJ+QWnlfT7A/Xy1di9uQRbOMmWzeiqsgQrtRWOSiBLFed
+XIQXK8Oo/Re4d8OFDly2hrAWv2/nKKowBI8wm1wFTv7AI6p3CC0PsrNi9S0KfWbr
+mQXeEH60IM23VkW7FTvbhOdgljQZmgf5OHe2XnY5fGkWh+VBzzycfOoxu7Ga+0Vn
+PdTOgopVOKcGD2UaAMEuqwk2S/cu+A7ad9jkbhdx6VbnpnpGJ6RVeYOVXcgRrnSo
+/b0XoJRcpAa8sG/Sz4n7qH0Kvvv9+NchlP27iFjvgVQtRGj+AoSZEqtX+RLN2nA0
+U5xPgbK6kMkCAwEAAaNiMGAwHQYDVR0OBBYEFFogy5ZJGsfDroMIttahaC1Pzi6G
+MD8GA1UdEQQ4MDaCFWF1dGhlbnRpY2F0aW9uLnViYy5jYYYdaHR0cHM6Ly9hdXRo
+ZW50aWNhdGlvbi51YmMuY2EwDQYJKoZIhvcNAQELBQADggEBACSlNQDPzpbeaN6+
+bdTsKk26fcihp2SYX9ULM/wFY+JThrvtXjBL90Ym1vbvsic+plyf2ubYw/WvjHU3
+8HEgqd2M+h/ltqT/ZKvEdxYxehLAJcPQmveh+QmqLsOY5bDLLpnT731lb6kcQhJ5
+BXlLOxunIOUEY2vH53cLoTSkJgkTuV5AF9RxWdiqFzJVAZwOo7SUYqVC25WfzLUF
+borTeWMZNNvbTeT7ue37p1wEpuBbrRKNaHGaLg1x324VOx7t+g62t8y6e/uj2W/b
+QJDZ2JS3t1qx3TV3PlT2hpsuEAEjXBphJNdZ/E6gRCtNAs9WvmucwLXDmJk5HWtr
+aU7Aueo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authentication.ubc.ca/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authentication.ubc.ca/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://authentication.ubc.ca/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authentication.ubc.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://authentication.ubc.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authentication.ubc.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of British Columbia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of British Columbia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ubc.ca/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hari</md:GivenName>
+	<md:SurName>Mailvaganam</md:SurName>
+	<md:EmailAddress>mailto:hari.mailvaganam@ubc.ca</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Hari</md:GivenName>
+	<md:SurName>Mailvaganam</md:SurName>
+	<md:EmailAddress>mailto:hari.mailvaganam@ubc.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

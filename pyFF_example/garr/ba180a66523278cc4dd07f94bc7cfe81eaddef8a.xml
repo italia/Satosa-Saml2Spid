@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cloud.uran.ua/myEntityID">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://peano.uran.ua" registrationInstant="2018-01-11T20:21:40Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://peano.uran.ua/~eng/policy.htm</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">PEANO file hosting service</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Nextcloud is a suite of client-server software for creating and using file hosting services. It is functionally similar to Dropbox, although Nextcloud is free and open-source, allowing anyone to install and operate it on a private server.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://uran.ua</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICrDCCAZQCCQC6V5PnxwO2wDANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1j
+bG91ZC51cmFuLnVhMB4XDTE4MDExMTIwMDc1OVoXDTI4MDExMTIwMDc1OVowGDEW
+MBQGA1UEAwwNY2xvdWQudXJhbi51YTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAKuzroJdj05VCP3b/4gN27CUGh8TChwxXVEc7LNXNlBZ0onTXoxnmu1g
+5fOYAhDfB8nzabSJ1bHDOBJpxW4AWIkOBulRRMGXD/adwg9FFj9MfQoYqVoieGtd
+h8nKPSt4t7jGOZBySEM7624Txx49tyTomxqmSlNAbYu4YnnyxX/NbTMZhoz+VsYO
+gQAW+wV3XvpMiLfM91C1wyH58pzuGdZmu9542Il6LfJyay0b67oaB77mQKx+ggcD
+V2pBGcFWMGS3KwHQSJN3dEDtknFI1raFbN9loJ2fIOJEqIIIgC+1BnSNCcUrM+kg
+viKdSPcpfjG1X1jxwAFkLaXWxFAofT0CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEA
+CbPjI9ncxMFGdEBEktSWaJRexljSMy6mVDOxJ5+GxWeL957vB7yKo9+Sh0VaIest
+juLaPc+ffUjkR5Pmp7i6vD6MnTfwKAcKPdFV98z3FxdMucjLk0yIztgGmwGslkVf
+AJNCAO9s9JWqHzypvYD/HCwWZw9TYKFnzMCBDZxgCkIvBXJrYV/uNMcS0vtkdZ/L
+14H+SXsT1LhzXxrF/W2r+s+oxSFAC5iXlxgYEB0NpXPW03l9afRusBwwjCRNVPpB
+vWOU2TV243fkdtpkjBuOapNSzjYuMsmZudJtmPAvVsSqw4ma+FoemoPrrU+90k5d
+zWNCVeXzrhHh4LdSfhJ3dw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cloud.uran.ua/logout"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloud.uran.ua/mellon/postResponse" index="0"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">PEANO file hosting service</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Nextcloud is a suite of client-server software for creating and using file hosting services. It is functionally similar to Dropbox, although Nextcloud is free and open-source, allowing anyone to install and operate it on a private server.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">URAN Association</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">URAN Association</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uran.ua</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:admins@uran.ua</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

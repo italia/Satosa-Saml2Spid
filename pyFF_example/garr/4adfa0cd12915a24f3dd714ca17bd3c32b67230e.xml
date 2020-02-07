@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://manage.hpc.virginia.edu/registry">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://manage.hpc.virginia.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ACCORD COmanage</mdui:DisplayName>
+		<mdui:Description xml:lang="en">ACCORD Project COmanage</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://accord.cs.virginia.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.virginia.edu/siteinfo/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="125" width="221" xml:lang="en">https://shibidp.its.virginia.edu/images/uva_incommon_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENjCCAp6gAwIBAgIJALNABmYUBHa7MA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNV
+BAMTF21hbmFnZS5ocGMudmlyZ2luaWEuZWR1MB4XDTE3MDQyNjE1MDQ0NVoXDTI3
+MDQyNDE1MDQ0NVowIjEgMB4GA1UEAxMXbWFuYWdlLmhwYy52aXJnaW5pYS5lZHUw
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCkvLWjHU0+ASAH2z6wgikp
+S1F4cseeZOXz5JX8828gnoE5473ehkYtJ6Fx6RE6nuXIDrvOzZku/6iBnSC/wC1c
+tTnsdk/zFz2jnnXHBuUoSgjBdJ03g17RgvmUhAH/z2AoV0IzeklaWvti4hZZQDUK
+fDVzXKiq50/+UQeljcWm6EDeVsHokDLtW6NTEAT/jzJSZRsV9/dVertDwHIB+rK1
+1J3/SjKXzTcNQvKBMQ/3/T4eQ1yF2+eJEuIdZ8cWwjkU2puMAf+NwPPrjANpOaf1
+eVEQxnFrlGtevSPDExX2HiRP4FYtN+TPV2ldY4pflAtFswmk2j/45F6BxIym/we1
+hC8KG23zX/Do68KT68VMnIzA4J4k3YwdRpPGotfK6YGrQ8fEWNTqGgyuWmla1Bfw
+lKHqRnYyVhZz8GLclonSzc1XMh9DceTaARSTVog6SHO/khcXZzGor7WCs4VEY/gZ
+cYt+Fi4R5bKH5R+sjf4iKihJ+0CZmtRBFWOTIOc0rlMCAwEAAaNvMG0wTAYDVR0R
+BEUwQ4IXbWFuYWdlLmhwYy52aXJnaW5pYS5lZHWGKGh0dHBzOi8vbWFuYWdlLmhw
+Yy52aXJnaW5pYS5lZHUvcmVnaXN0cnkwHQYDVR0OBBYEFMLzeWY7ou/rqGHv1ulx
+FZpPVsrUMA0GCSqGSIb3DQEBCwUAA4IBgQCPdRY3V9QwpkXwbOn8BuECD0Xpkr52
+dc6B+s7WAWwDB7g6pLPqHp06pWOhZwDkzJgngYLXWv4oH5yJzwDqaL9mRa9t6/As
+98/rFe2KYGZXJaKEvJZg5uxLdVp+37R7tvYdIvFBA9QLi8y0h3SucbuPkkhQD0en
+IRL6r5jMuJUChN2u2bhQfO6bi6ygKTEzGfoERVn/tfvIkI+oM1atDTTAplQI+Hbx
+H8KiqaFeDX4HG04YGdLQpvr6wFHckkXBCcPtwPU4kUrBOsjmWC907DqGEL0j7nlz
+rZ+F37KitxEt7GkqHqA0ldm9xtHLaT6YcWovqKLaT7y5OctID8r1TuBLJxsnhyTT
+ecL+jQ4ppzHUlEXF0r38gFbi6tqPs2Nv1zfd3DpLSAQZV4dyM6jCtBjNoU5OPkr8
+jvH8+QlYyWWTybrRaMY6MaJl9JjpNITzwZ+8g6ZwpvNgEMzSN5DwoDIyC1qbaDxH
+OOSNaUPXoTEZDUYMqa4tE8cyL+hmsS5AokY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://manage.hpc.virginia.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">ACCORD COmanage</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">ACCORD Project COmanage</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Virginia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Virginia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.virginia.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UVA IT Security</md:GivenName>
+	<md:EmailAddress>it-security@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jim Jokl</md:GivenName>
+	<md:EmailAddress>jaj@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UVA ITS Systems</md:GivenName>
+	<md:EmailAddress>systems@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>UVA InCommon Admin</md:GivenName>
+	<md:EmailAddress>incommon-admin@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UVA ITS Systems</md:GivenName>
+	<md:EmailAddress>systems@virginia.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Default.aspx" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lehman.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lehman College of the City University of New York</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Lehman One Access for Medicat</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.lehman.edu/about/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www2.cuny.edu/website/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="126" width="457" xml:lang="en">https://oneaccess.lehman.edu/CloudAccessManager/Customization/resources/img/leh/lehman-cuny-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC7jCCAdagAwIBAgIQAJwU5w1d0inpDKuUKXG7JTANBgkqhkiG9w0BAQsFADAy
+MTAwLgYDVQQDDCdEZWxsIENsb3VkIEFjY2VzcyBNYW5hZ2VyIEFwcCBNZWRpY2F0
+djIwIBcNMTgwMzE4MDAwMDAwWhgPMjA1ODAzMTkwMDAwMDBaMDIxMDAuBgNVBAMM
+J0RlbGwgQ2xvdWQgQWNjZXNzIE1hbmFnZXIgQXBwIE1lZGljYXR2MjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJMFHM9LmaUV/Cqh4xVfJoljKQkj8Bov
+/PHNXjbIkYp+6NC8Tw5kvL4De5NVJ13qyQ8lzw1p+ISAQBYO9TZflxoOGlqsEkg0
+k/DAqEYz+g47hENhZY08cfm+vE5QqQFDHY2As4K8j52Bro4zRBJvLLLRNEEOAvNh
+hyEDmkC91HVy0oKkFmm4smIDoOHnIi9g2/sEE8F5VDUNHk5CW0fr32PuamUNNSyd
+mO2z/i2clWlHpcz3pfUZ9Qgodpx/Oln75p4vhEcAPg5QgSRx5W8psJPwQFwJITmL
+XteGo3fmyWq+DNPChQnxWIt/F4tDNIMibuUke4onswHrWxEt3J13D3MCAwEAATAN
+BgkqhkiG9w0BAQsFAAOCAQEASN9FvZjG9+ia4IeruR0APw20BRGQoPJ1NrprT4eg
+2Gdhdt95to9zxdAp9k9ch4RxWgy+7Vk9gMxZ6gB9jZoLVCsAgIJEFvJzcoWJ1zxp
+0qWMEF7Esqf3HQHL5WN2VEUJTjsIvqhDeopIgf1bpjqkd8cvC13dEneMPPz584q4
+81bnmXpOuwXsCBwvoYKdWtoCOX/DvGJyz7kdDUyNCJqlzu+pmyMKHCOHxlUl/AEo
+jIDeS4EC9tyKXlWEhgKd7vjiimtVyRsO7THWdCWRoUPdMaovq57TsTDM6GXKfuTQ
+3ApYtcl9xDSH+31fiVHuJYbE2Ke3EmYNquE4eoEG8dfSlw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Logout.aspx"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Logout.aspx"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Default.aspx"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Default.aspx"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lehman.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC7jCCAdagAwIBAgIQAJwU5w1d0inpDKuUKXG7JTANBgkqhkiG9w0BAQsFADAy
+MTAwLgYDVQQDDCdEZWxsIENsb3VkIEFjY2VzcyBNYW5hZ2VyIEFwcCBNZWRpY2F0
+djIwIBcNMTgwMzE4MDAwMDAwWhgPMjA1ODAzMTkwMDAwMDBaMDIxMDAuBgNVBAMM
+J0RlbGwgQ2xvdWQgQWNjZXNzIE1hbmFnZXIgQXBwIE1lZGljYXR2MjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJMFHM9LmaUV/Cqh4xVfJoljKQkj8Bov
+/PHNXjbIkYp+6NC8Tw5kvL4De5NVJ13qyQ8lzw1p+ISAQBYO9TZflxoOGlqsEkg0
+k/DAqEYz+g47hENhZY08cfm+vE5QqQFDHY2As4K8j52Bro4zRBJvLLLRNEEOAvNh
+hyEDmkC91HVy0oKkFmm4smIDoOHnIi9g2/sEE8F5VDUNHk5CW0fr32PuamUNNSyd
+mO2z/i2clWlHpcz3pfUZ9Qgodpx/Oln75p4vhEcAPg5QgSRx5W8psJPwQFwJITmL
+XteGo3fmyWq+DNPChQnxWIt/F4tDNIMibuUke4onswHrWxEt3J13D3MCAwEAATAN
+BgkqhkiG9w0BAQsFAAOCAQEASN9FvZjG9+ia4IeruR0APw20BRGQoPJ1NrprT4eg
+2Gdhdt95to9zxdAp9k9ch4RxWgy+7Vk9gMxZ6gB9jZoLVCsAgIJEFvJzcoWJ1zxp
+0qWMEF7Esqf3HQHL5WN2VEUJTjsIvqhDeopIgf1bpjqkd8cvC13dEneMPPz584q4
+81bnmXpOuwXsCBwvoYKdWtoCOX/DvGJyz7kdDUyNCJqlzu+pmyMKHCOHxlUl/AEo
+jIDeS4EC9tyKXlWEhgKd7vjiimtVyRsO7THWdCWRoUPdMaovq57TsTDM6GXKfuTQ
+3ApYtcl9xDSH+31fiVHuJYbE2Ke3EmYNquE4eoEG8dfSlw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://oneaccess.lehman.edu/CloudAccessManager/RPSTS/Saml2/Default.aspx"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lehman College of the City University of New York</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lehman College of the City University of New York</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://lehman.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Renan Ovalles</md:GivenName>
+	<md:EmailAddress>renan.ovalles@lehman.cuny.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Renan Ovalles</md:GivenName>
+	<md:EmailAddress>renan.ovalles@lehman.cuny.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renan Ovalles</md:GivenName>
+	<md:EmailAddress>renan.ovalles@lehman.cuny.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hkr.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hkr.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Högskolan Kristianstad</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Kristianstad University Sweden</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Inloggning i webbtjänster för anställda och studenter vid Högskolan Kristianstad.</mdui:Description>
+		<mdui:Description xml:lang="en">The Kristianstad University Login Service is used by employees and students at the university.</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://www.hkr.se/sv/om-hkr/organisation/administration-och-stodverksamhet/it-service/kontoinformation/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hkr.se/en/study-at-hkr/service-and-support/it-support-for-students/user-name-and-password/</mdui:InformationURL>
+		<mdui:Logo height="84" width="96" xml:lang="sv">https://idp.hkr.se/idp/images/hkrsmall.png</mdui:Logo>
+		<mdui:Logo height="84" width="96" xml:lang="en">https://idp.hkr.se/idp/images/hkrsmall.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>hkr.se</mdui:DomainHint>
+		<mdui:IPHint>194.47.24.0/21</mdui:IPHint>
+		<mdui:IPHint>194.47.32.0/21</mdui:IPHint>
+		<mdui:IPHint>194.47.40.0/21</mdui:IPHint>
+		<mdui:GeolocationHint>geo:56.04848,14.14416</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAJFwJo5KjpvOv/slniklC/Nf19gKMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5oa3Iuc2UwHhcNMTAxMjEwMTExMDM2WhcNMzAx
+MjEwMTExMDM2WjAVMRMwEQYDVQQDEwppZHAuaGtyLnNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAmLMMJQyBS/1Caas2d1zoAj1jlxYs9axLJPDujiP0
+fJ8F3gjMxtl/A7Y+eVFqnRFzHNuaEKaqZ8S+XGnRi8kw3AdPbPJZB4g+LTRPI8WB
+xDo49uubfZbpyi8zZUqoqOSLeNxMKFqgkq9bd0Yeh4bI7r/bjuvcx4tioOP3UnT4
+CBfTL6uxyCWFW8mP9TbmnQ4lZN5O4elIKrea+8XiumRa2q5qpXVtdqF5h9YI+jYK
+6zj9pMzUlPPvIyOzGFLxLSN0KRM7EgV3FRD65y9hCnTzuQtFrqwktBOVs5fwavyr
+bKht5KrIaVrozMBscr8STgQ8SKEDMCDqxu/hS0IqoweTyQIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuaGtyLnNlhiFodHRwczovL2lkcC5oa3Iuc2UvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFLIjYPKZGp/Bncfc+KnH8Pdf7FukMA0GCSqGSIb3DQEB
+BQUAA4IBAQCQ3m4eN6leAlXf9v8xcZjrzQhHCg4ceDnixMUINTsFfXktfYsSSonr
+Cdh/mhttMxnk/34Tu1XMfYn8ABPVxvvcaBZ9Brl21BBsvk3MOdbDNO6cB05GXdms
+exr3aJFvRwY6Vy0AWtUgDFXdYPiIVPUrpC7NA+X78fq3IVmPn0WFlQ9KpM8hXNz0
+HwlY06myFNjI7dvt8xjAqJy+ICilu06RTs7oCynE45nkrLaZjpploIn3xcYt0ceK
+qU1LY9aaqaEgKSsNHlPoCW9eH4oUP3f/X8h21pAtgGA8AIt2RegT6HfVqnZPAtUk
+kgLpO4NuqQRRqV5FxbnmTvt25NApGY5k
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hkr.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hkr.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hkr.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hkr.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hkr.se/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hkr.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hkr.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAJFwJo5KjpvOv/slniklC/Nf19gKMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5oa3Iuc2UwHhcNMTAxMjEwMTExMDM2WhcNMzAx
+MjEwMTExMDM2WjAVMRMwEQYDVQQDEwppZHAuaGtyLnNlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAmLMMJQyBS/1Caas2d1zoAj1jlxYs9axLJPDujiP0
+fJ8F3gjMxtl/A7Y+eVFqnRFzHNuaEKaqZ8S+XGnRi8kw3AdPbPJZB4g+LTRPI8WB
+xDo49uubfZbpyi8zZUqoqOSLeNxMKFqgkq9bd0Yeh4bI7r/bjuvcx4tioOP3UnT4
+CBfTL6uxyCWFW8mP9TbmnQ4lZN5O4elIKrea+8XiumRa2q5qpXVtdqF5h9YI+jYK
+6zj9pMzUlPPvIyOzGFLxLSN0KRM7EgV3FRD65y9hCnTzuQtFrqwktBOVs5fwavyr
+bKht5KrIaVrozMBscr8STgQ8SKEDMCDqxu/hS0IqoweTyQIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuaGtyLnNlhiFodHRwczovL2lkcC5oa3Iuc2UvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFLIjYPKZGp/Bncfc+KnH8Pdf7FukMA0GCSqGSIb3DQEB
+BQUAA4IBAQCQ3m4eN6leAlXf9v8xcZjrzQhHCg4ceDnixMUINTsFfXktfYsSSonr
+Cdh/mhttMxnk/34Tu1XMfYn8ABPVxvvcaBZ9Brl21BBsvk3MOdbDNO6cB05GXdms
+exr3aJFvRwY6Vy0AWtUgDFXdYPiIVPUrpC7NA+X78fq3IVmPn0WFlQ9KpM8hXNz0
+HwlY06myFNjI7dvt8xjAqJy+ICilu06RTs7oCynE45nkrLaZjpploIn3xcYt0ceK
+qU1LY9aaqaEgKSsNHlPoCW9eH4oUP3f/X8h21pAtgGA8AIt2RegT6HfVqnZPAtUk
+kgLpO4NuqQRRqV5FxbnmTvt25NApGY5k
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hkr.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hkr.se:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">HKR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Högskolan Kristianstad</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Kristianstad University Sweden</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="sv">http://www.hkr.se</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hkr.se/en/english-start-page/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Högskolan Kristianstad</md:Company>
+	<md:SurName>Service desk 3030</md:SurName>
+	<md:EmailAddress>mailto:3030@hkr.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 44 20 3030</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Högskolan Kristianstad</md:Company>
+	<md:SurName>Service desk 3030</md:SurName>
+	<md:EmailAddress>mailto:3030@hkr.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 44 20 3030</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Högskolan Kristianstad</md:Company>
+	<md:SurName>Service desk 3030</md:SurName>
+	<md:EmailAddress>mailto:3030@hkr.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 44 20 3030</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

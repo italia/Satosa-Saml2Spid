@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.fak.dk/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.wayf.dk" registrationInstant="2017-07-04T10:27:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wayf.dk/sites/default/files/uploads/PDF/MDRPS.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fak.dk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="da">Forsvarets Bibliotekscenter</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Danish Defence Library Center </mdui:DisplayName>
+		<mdui:Logo height="100" width="79" xml:lang="da">data:image/jpeg;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>fak.dk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICnjCCAYYCAQcwDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKQklSSzAwMTM3
+MTAeFw0xNTAxMDEwMDAwMDBaFw0yNTEyMzEyMzU5NTlaMBUxEzARBgNVBAMMCkJJ
+UkswMDEzNzEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDngretRPjv
+dPY63lVFdbRR0HvZt4etdlt/Dmrln7VVa8B9AiaWAhRgDFAXAxZD4KHAPl6Qdqmn
+Rfv3ZxKyA201YMasnsAdEzlpjKKjJJ65JktMdAIkRyAbZMyFhWpvhMBrRRgOR8N7
+Ixj6A14OHBk+99bqApLbB+RC7fnhQ10gTlIMcis2X/DU10Wy5LCHT8TYGdOHuSWs
+BaNXJ2G01WEHJXjKjmGN6yA18QPAU5uGWAjZMSztL+2Cu/pnxeU9UOQuxV4r6ECP
+gNpov6hpcC7fqA/NY3WJIv7+wKV2YtLHXEaLwPR+MhQr+LU+X/z5bvGCfGl0hqSf
+IAEz7ZGPbpfXAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAITZNWK25GQyjHTOVcRV
+VC9EHBUNO0yt3aljprfBKhiPDuyrcpvvHT0Tbmt6Njk+4OtciiALFP+wBDh91mJn
+7k14F9feAIqPNgsBYpsilak6xswrqtLYjz8DY8b4Yg6ZOfVErtIyBNrJaWStmd9r
+qYtg1yS/FhFskEOyxYKO+D+v8VWcsSnZuM6zrGoLAhsS5jzfIMvaCAUH6J2fpcyx
+cFwSOllYBTbIajMCuaizN9nR9I4jdjRBUI8L8IrZALz+obtbHBcPgnA22LKXoFqw
+kue4sVYCMJN/R8ErNLmYSkspfAAExlFlHL2y/gKyw7wCgKip13Hy3EDeeESOKYo0
+RoQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICnjCCAYYCAQcwDQYJKoZIhvcNAQELBQAwFTETMBEGA1UEAwwKQklSSzAwMTM3
+MTAeFw0xNTAxMDEwMDAwMDBaFw0yNTEyMzEyMzU5NTlaMBUxEzARBgNVBAMMCkJJ
+UkswMDEzNzEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDngretRPjv
+dPY63lVFdbRR0HvZt4etdlt/Dmrln7VVa8B9AiaWAhRgDFAXAxZD4KHAPl6Qdqmn
+Rfv3ZxKyA201YMasnsAdEzlpjKKjJJ65JktMdAIkRyAbZMyFhWpvhMBrRRgOR8N7
+Ixj6A14OHBk+99bqApLbB+RC7fnhQ10gTlIMcis2X/DU10Wy5LCHT8TYGdOHuSWs
+BaNXJ2G01WEHJXjKjmGN6yA18QPAU5uGWAjZMSztL+2Cu/pnxeU9UOQuxV4r6ECP
+gNpov6hpcC7fqA/NY3WJIv7+wKV2YtLHXEaLwPR+MhQr+LU+X/z5bvGCfGl0hqSf
+IAEz7ZGPbpfXAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAITZNWK25GQyjHTOVcRV
+VC9EHBUNO0yt3aljprfBKhiPDuyrcpvvHT0Tbmt6Njk+4OtciiALFP+wBDh91mJn
+7k14F9feAIqPNgsBYpsilak6xswrqtLYjz8DY8b4Yg6ZOfVErtIyBNrJaWStmd9r
+qYtg1yS/FhFskEOyxYKO+D+v8VWcsSnZuM6zrGoLAhsS5jzfIMvaCAUH6J2fpcyx
+cFwSOllYBTbIajMCuaizN9nR9I4jdjRBUI8L8IrZALz+obtbHBcPgnA22LKXoFqw
+kue4sVYCMJN/R8ErNLmYSkspfAAExlFlHL2y/gKyw7wCgKip13Hy3EDeeESOKYo0
+RoQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://birk.wayf.dk/SLO/birk.php/auth.fak.dk/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://birk.wayf.dk/birk.php/auth.fak.dk/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="da">Forsvarets Bibliotekscenter</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Danish Defence Library Center </md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="da">Forsvarets Bibliotekscenter</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Danish Defence Library Center</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="da">http://www.fak.dk/fbc/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.fak.dk/en/about/organization/Pages/TheDanishDefenceLibraryCenter.aspx</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:fbc@fak.dk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>WAYF</md:GivenName>
+	<md:SurName>Operations</md:SurName>
+	<md:EmailAddress>mailto:operations@wayf.dk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.inshea.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2015-05-22T17:43:45Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">inshea.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">INS HEA - Institut national supérieur de formation et de recherche pour l'éducation des jeunes handicapés et les enseignements adaptés</mdui:DisplayName>
+		<mdui:Logo height="11" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAACwD18GZZAAACHUlEQVQoz41RTUiTcRx+/h/v5qYrRZEEda1w9mGHNazEg0ERFEJE59ahGnmM8hLIMMjo1qEOkdcEDRUkIoKMJJAI6UOSEeU28KPplm2++3j3vv//r8sOHQp84Dk9H/z4PQDA/ssJEgAQmMl14z0deoT7px42PegHgBhiHACTAAj/AhEHYwrT1Jgw6N6Zj6klL8x42l//FBlgGMP6bzsDYhzVVsSIAwAmyON5nn05+OTz1ouzQzNvL14PAcDjcNSoXgl5uC26n2ttKZl0DOURFo9qMTfkDQLb05s/es61bNT0LEx9qtPLi2NdtauYHGgby9l0MHBFMBsGCwejTWWbAqTJx5jOErEWbjpJ1VxXKrc0Hjv5885X8zfUs7qbDN/yrd0B5EwtHElWjrNdvxgAdLVfu6ShTxATq8InKj6nHBc9oeVcci2y+Kb4BUZFdDY7HR6XcllazAlCr2Z4vZQanZXVB6xDyg/SLNgilanMo34TIfdGqzS+H+9la3y14La0m8q2aBCCuxyohMHhAADr9F/ey7jL5S7mKzLdLlZu72k/7U2WQuN5e94kezJRyob3NYhiUTEh2G4lSbggt2zlSMG15jXKY8cD/kI0PZ5ZGB3sOBLuHzm/7Z0NBytXeSSwAniVv1brgiMqUql1t6VXFFclCMfk2m1VJycGAMiQb+rW2Kt3kRupxEjfAQAgVLWdgIDWXB8G1u5eOLrTzB8gJ/AD0J/JFwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo0OTowMyswMjowMOXQ2KsAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NDk6MDMrMDI6MDCUjWAXAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.inshea.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">staff and students</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">INS HEA - Institut national supérieur de formation et de recherche pour l'éducation des jeunes handicapés et les enseignements adaptés</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnel et étudiants</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUJbK6nstF0pm/+lEcGZ5dEj8AFb4wDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAwwNaWRwLmluc2hlYS5mcjAeFw0xNTA1MjAwODUxMzhaFw0z
+NTA1MjAwODUxMzhaMBgxFjAUBgNVBAMMDWlkcC5pbnNoZWEuZnIwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCahuHmZ6NDcW9HfvttC0XLT2KxuADsDKJe
+2ACC5LNMAKbPDi6V3kjOA1Zk+dbI4BfSGDc0fGuJG/AxwPs2Aib5iNDnqYAGCdsF
+k+Yy30cxyIgAOsSQHcM6ylmiGbSUu/cMi2GnV5wR+hB0Idg4unraPQZZKS8BYAk9
+wsY1/qiEE4yD9xIf+xZN5ayMNwhuuCAtOYCPU/dM1hJS4lcmjxWT6flgiTLqgcd2
+UHMeyjgAx+0XJdDB2sterF9IQaRLW3SeVss1VulpDGuH4a9pIRHwXkZSMgy+l5ta
+zTI58LO55BL9ECg3N3iVehYmdMJyeF4PFUnwAgmv3qdU+SeYlm69AgMBAAGjYTBf
+MB0GA1UdDgQWBBTeDLA+ljfEcR8dCt4jK+6NTNns6zA+BgNVHREENzA1gg1pZHAu
+aW5zaGVhLmZyhiRodHRwczovL2lkcC5pbnNoZWEuZnIvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQEFBQADggEBAFG8x0TGKW8ksapTCq7Zo3jUThjmlqxCVjVj8T//
+SL5wLdXoqT/ykUHwk/w3bhB0suGepIez/UpUahK/wiNxJlWO/HV5fcVucf3Y+X7E
+ipYxj92wwzC5c+BU0Hp/l4YLe/VTI2WRn6Ir1h09udLxrnanvdsqV1FN8wI0bB9T
+Bf9T9mnR+nYvfPnk5/hox3490z7h9wOddP/I+BT55OOCecjZZxc7BhcqCVMHVYop
+7giVJzQjJAvZh/gTvvZE3LFD83JAwjLBovLc8ZPb7xPNy7fk+9eH1hOkEeOs9kcZ
+549vcVK5oOJCGuRuLlb0XayJKoOPX9vZ+DEGQdVAZaRbVuI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.inshea.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.inshea.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.inshea.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Inst. Nat. Sup. de Formation et de Recherche pour les Jeunes Handicapés et les Enseignements Adaptés</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Inst. Nat. Sup. de Formation et de Recherche pour les Jeunes Handicapés et les Enseignements Adaptés</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.inshea.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>SOCCALINGAM</md:SurName>
+	<md:EmailAddress>mailto:Sejiane.Soccalingam@inshea.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>HAFFNER</md:SurName>
+	<md:EmailAddress>mailto:Didier.Haffner@inshea.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.farnborough.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2010-02-23T16:06:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The Sixth Form College Farnborough</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Sixth Form College Farnborough</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">farnboroughsfc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDcDCCAligAwIBAgIIL2mEl0oUtHAwDQYJKoZIhvcNAQEFBQAwTzErMCkGA1UE
+CgwiVGhlIFNpeHRoIEZvcm0gQ29sbGVnZSBGYXJuYm9yb3VnaDEgMB4GA1UEAwwX
+bG9naW4uZmFybmJvcm91Z2guYWMudWswHhcNMTMwMjA4MTU0NDEwWhcNMjMwMjA4
+MTU0NDEwWjBPMSswKQYDVQQKDCJUaGUgU2l4dGggRm9ybSBDb2xsZWdlIEZhcm5i
+b3JvdWdoMSAwHgYDVQQDDBdsb2dpbi5mYXJuYm9yb3VnaC5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMRVMpKY0pRwd8ia8sEN5DpxKvSIBmxq
+BuK/7SOhA5zQvifhWPOezXNxBBEaSmnt7/5H/TRdVOcyO6drd+spmqlZ0RrciBOL
+ASbaU42liQfwUq3MRreefgFxaoio8DDN3VPtb5M/U2WR0bTduCBV2EaoODHKHtuD
+M2NJsEYs4qHUiTR5Hnzr4Yweg+TUACHnrYfL3V+C79cTdkYbvEESdx4kavVPDRIr
+m1j6nH7iKWvJR2AECI19WeRyIbTFMqQIYvHqIcCjf1KC/U1sq3gOkxEULDoxo0iV
++cHgTj17D83ytp5bZMTv9CNznRvtQy3jR5A3kPeEHWT2QZRPnFrwnC0CAwEAAaNQ
+ME4wHQYDVR0OBBYEFPfWxt/apKNnKbzYtLQ0V1yHWa+uMB8GA1UdIwQYMBaAFPfW
+xt/apKNnKbzYtLQ0V1yHWa+uMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQAD
+ggEBAH4/t3tZRL+l9A5KQPO4gvJNuDwzBOjcH6mAg2ShAjx3PQhC98zN1u5lzQGs
+b01J4jMZoXM+k3zJU8TNKxm7fKK2/lVE2HtI5Bl7IrFJ/Tdl2n6pbCkRX78ZrDXo
+nOkdd31uvbwIHurMBxe0mVEhyrZ+VXr5u8XBnnHgANOU6hzQrwTJsXEmHDLjytbw
+hFQ66uuWGMtgbHjRhZ6r8xn04af3JCFY+WToDjTAgeGGU7D4qa59j0aGyy4D3raP
+hQZM94Sfx+/GBTyMsBHnXGmwzQcPF+50REkOgz4NRihK849CiSBV4Il3geGvpWzm
+XV1TX8+5LwiT8F8J8CFKgoB2RnI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.farnborough.ac.uk/oala/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.farnborough.ac.uk/oala/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The Sixth Form College, Farnborough</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The Sixth Form College Farnborough</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.farnborough.ac.uk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Pollard</md:SurName>
+	<md:EmailAddress>mailto:apollard@farnborough.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Pollard</md:SurName>
+	<md:EmailAddress>mailto:apollard@farnborough.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

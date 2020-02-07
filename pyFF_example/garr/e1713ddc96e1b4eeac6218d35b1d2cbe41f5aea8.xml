@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.pte.hu/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.hu" registrationInstant="2009-01-01T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://metadata.eduid.hu/eduid.hu-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.hu/category/registered-by-eduidhu</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pte.hu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Pécs</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="hu">Pécsi Tudományegyetem</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Pécs</mdui:Description>
+		<mdui:Description xml:lang="hu">Pécsi Tudományegyetem</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://idp.pte.hu</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="hu">https://idp.pte.hu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://pte.hu/sites/pte.hu/files/files/Adminisztracio/Szabalyzatok_utasitasok/Hat_Es_Egyeb_Sz/informatikaiszabalyzat20170525.pdf</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="hu">https://pte.hu/sites/pte.hu/files/files/Adminisztracio/Szabalyzatok_utasitasok/Hat_Es_Egyeb_Sz/informatikaiszabalyzat20170525.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="90" width="90">https://idp.pte.hu/img/PTE_emblema_90_90_black.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:46.070529634432404,18.208419799804688</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEBjCCAu6gAwIBAgIJAO1KkTid1oWGMA0GCSqGSIb3DQEBBQUAMF8xCzAJBgNV
+BAYTAkhVMRAwDgYDVQQIEwdCYXJhbnlhMQ0wCwYDVQQHEwRQZWNzMQwwCgYDVQQK
+EwNQVEUxDDAKBgNVBAsTA0lJRzETMBEGA1UEAxMKaWRwLnB0ZS5odTAeFw0xMTEy
+MDkwODQwNTFaFw0yMTEyMDgwODQwNTFaMF8xCzAJBgNVBAYTAkhVMRAwDgYDVQQI
+EwdCYXJhbnlhMQ0wCwYDVQQHEwRQZWNzMQwwCgYDVQQKEwNQVEUxDDAKBgNVBAsT
+A0lJRzETMBEGA1UEAxMKaWRwLnB0ZS5odTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBANaBDaXoLcKixCE9ApBP/gYGJRTYlb4adtOSyXmNgz1Q3UnaEfvI
+/xsIg5bBJQpF/aRo4M95lETluYKUUko0mb1Gc5ENRomjY5EOtO0u231Et1HWfw0E
+UC8vMFIk1jW7A/RgBUJ5+iUuqfY/Y4d6wtle8YARSXAJUcDt2j4Ol1/TN70ybYSw
+tM12EeSwggH9zjnUP7C3euNqZKLKOY3rqH+f5zPVXnq4VOPBnxXVPFAvsyVFM3gK
+HXZkbfZKtD8YVUE0Mdxw8W1woYFGQ60GTe7wLA/gCPyyWD0TujJvSPb4DJdU46a9
+FlAkeAf7e5swskraEAnwhW9BQEQ1QFXIJ3cCAwEAAaOBxDCBwTAdBgNVHQ4EFgQU
+lMXISNOL71wzl9naHOlcluO+rQ8wgZEGA1UdIwSBiTCBhoAUlMXISNOL71wzl9na
+HOlcluO+rQ+hY6RhMF8xCzAJBgNVBAYTAkhVMRAwDgYDVQQIEwdCYXJhbnlhMQ0w
+CwYDVQQHEwRQZWNzMQwwCgYDVQQKEwNQVEUxDDAKBgNVBAsTA0lJRzETMBEGA1UE
+AxMKaWRwLnB0ZS5odYIJAO1KkTid1oWGMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcN
+AQEFBQADggEBACND1KPdCd4VuwQWFfbquwvdaC8qD1KenQqpzB9KOR61nYUNQ/gM
+QDta8bybF/E+grjenx7Ttlny7IULCOtenZERbrI/li3RROz3PZDpHuZ+fZmJXqJV
+zo3lBUp1+lWqAnJGYJ6fBRKwaraeL26+gfX4huhxZbq5wrCjOaXglhUAZCgyBL7Z
+v0V9enrhgTz+3vGds69gKY1lyvY3a7PLB3OrygN293dxo/rAB9KaFLUDdK7K5JPW
+lie0a9Ck1bry3Pc2asdnf8QJh4PtcxQnK0wb7o23gJIIUs5/ckSYPXAUeFACvIte
+JVnpM0c0OQaplHPh37jHzJd0NgfnwoR4inU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.pte.hu/saml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.pte.hu/saml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="hu">Pécsi Tudományegyetem</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Pécs</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="hu">Pécsi Tudományegyetem</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Pécs</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="hu">http://pte.hu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://english.pte.hu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Garamszegi László</md:GivenName>
+	<md:SurName>Garamszegi László</md:SurName>
+	<md:EmailAddress>mailto:gara@pte.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Uherkovich Péter</md:GivenName>
+	<md:SurName>Uherkovich Péter</md:SurName>
+	<md:EmailAddress>mailto:uherkovich.peter@pte.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Uherkovich Péter</md:GivenName>
+	<md:SurName>Uherkovich Péter</md:SurName>
+	<md:EmailAddress>mailto:uherkovich.peter@pte.hu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.ulster.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-09-29T15:21:15Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ulster University - Shibboleth</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Ulster University - Shibboleth</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">ulster.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUDpGkh/duNiN6+rhYKO7+e0H+z0owDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRc2hpYi51bHN0ZXIuYWMudWswHhcNMTQwOTI5MTMxMDQw
+WhcNMzQwOTI5MTMxMDQwWjAcMRowGAYDVQQDExFzaGliLnVsc3Rlci5hYy51azCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIzQ0qaikQBm8TZ4mHIlwkqF
+mc0XXnZoH1mBi1nU/jK0ofWvDzr13EueVf+kkIwdq1NcGhy4Q45tPpCJ/ut+Hx1Y
+ui51P952G6gkZaa70FaW0y6x98Lo9MnJEazdBYH8tXNmDBOaUV+r6FvSWkCA+943
+PDrRLbdVXr3SvwNAMY0sjbqAoaqQ34jyR5vwICvQvm2kgZnO/b2pWBIcnUUihRl/
+C23Lhzc2h4XzLoo05mxUqkZwTWoZG3LvayctaN3/4wQD6OMFg50JvK25JoKLBiFw
+ywvcDl3s0lWaPy2D6k1qtNiSXkNmQKNdTqnZ1P55U41jnhruP2bstMFdfMCRtaUC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRc2hpYi51bHN0ZXIuYWMudWuGKGh0dHBzOi8v
+c2hpYi51bHN0ZXIuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMlgjh3c
+rPcwJ+B2l9Oe56HULqhaMA0GCSqGSIb3DQEBBQUAA4IBAQAede2459De5mPMtedE
+hGfrQtgggyPWJqsu+nvWhHpDQAJ2Rcq+dvMmMmCWpdWjhUiTQ1AQnWbuhKmMsker
+sWZZIQ7WqcFwSMNS8OQyyO+OqDxJaoyu2qRS39URPMgKwWPtHOeYp93zfEdE5cGA
+kWw4oPABOL0VlWRoVlGFOGxiyvTuq0DOPC9M50ICx/suLNyuidxyK35XGCUzjn6c
+MkaQH8OymowRW981IQbhbtM6IWY9ATbrmw7+YJwstcEaQN6LvUhkUESTrdCKPobT
+hmWzROvxEEf88wjO6qxxJCahd+tcJ7k8ef5q/5xinQwuwIW3ln8CGcPXEfJiYnHo
+k4aR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.ulster.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ulster.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.ulster.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.ulster.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ulster.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUDpGkh/duNiN6+rhYKO7+e0H+z0owDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRc2hpYi51bHN0ZXIuYWMudWswHhcNMTQwOTI5MTMxMDQw
+WhcNMzQwOTI5MTMxMDQwWjAcMRowGAYDVQQDExFzaGliLnVsc3Rlci5hYy51azCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIzQ0qaikQBm8TZ4mHIlwkqF
+mc0XXnZoH1mBi1nU/jK0ofWvDzr13EueVf+kkIwdq1NcGhy4Q45tPpCJ/ut+Hx1Y
+ui51P952G6gkZaa70FaW0y6x98Lo9MnJEazdBYH8tXNmDBOaUV+r6FvSWkCA+943
+PDrRLbdVXr3SvwNAMY0sjbqAoaqQ34jyR5vwICvQvm2kgZnO/b2pWBIcnUUihRl/
+C23Lhzc2h4XzLoo05mxUqkZwTWoZG3LvayctaN3/4wQD6OMFg50JvK25JoKLBiFw
+ywvcDl3s0lWaPy2D6k1qtNiSXkNmQKNdTqnZ1P55U41jnhruP2bstMFdfMCRtaUC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRc2hpYi51bHN0ZXIuYWMudWuGKGh0dHBzOi8v
+c2hpYi51bHN0ZXIuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMlgjh3c
+rPcwJ+B2l9Oe56HULqhaMA0GCSqGSIb3DQEBBQUAA4IBAQAede2459De5mPMtedE
+hGfrQtgggyPWJqsu+nvWhHpDQAJ2Rcq+dvMmMmCWpdWjhUiTQ1AQnWbuhKmMsker
+sWZZIQ7WqcFwSMNS8OQyyO+OqDxJaoyu2qRS39URPMgKwWPtHOeYp93zfEdE5cGA
+kWw4oPABOL0VlWRoVlGFOGxiyvTuq0DOPC9M50ICx/suLNyuidxyK35XGCUzjn6c
+MkaQH8OymowRW981IQbhbtM6IWY9ATbrmw7+YJwstcEaQN6LvUhkUESTrdCKPobT
+hmWzROvxEEf88wjO6qxxJCahd+tcJ7k8ef5q/5xinQwuwIW3ln8CGcPXEfJiYnHo
+k4aR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.ulster.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ulster.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Ulster</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ulster University - Shibboleth</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ulster.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ISD Service desk</md:GivenName>
+	<md:EmailAddress>mailto:servicedesk@ulster.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Terence</md:GivenName>
+	<md:SurName>Nicholl</md:SurName>
+	<md:EmailAddress>mailto:tc.nicholl@ulster.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Gareth</md:GivenName>
+	<md:SurName>McAleese</md:SurName>
+	<md:EmailAddress>mailto:gareth@ulster.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

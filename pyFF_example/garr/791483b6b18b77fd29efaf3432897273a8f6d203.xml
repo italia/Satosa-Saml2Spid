@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://access.research.cchmc.org/fed/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.research.cchmc.org/pub/apperror.aspx" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cchmc.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cincinnati Children's Hospital Medical Center</mdui:DisplayName>
+		<mdui:Description xml:lang="en">CCHMC Research IdP</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.cincinnatichildrens.org/site</mdui:PrivacyStatementURL>
+		<mdui:Logo height="292" width="864" xml:lang="en">https://research.cchmc.org/metadata/CCHMCLogo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDtDCCApwCAQAwDQYJKoZIhvcNAQEFBQAwgZ8xCzAJBgNVBAYTAlVTMQ0wCwYD
+VQQIEwRPaGlvMRMwEQYDVQQHEwpDaW5jaW5uYXRpMTUwMwYDVQQKEyxDaW5jaW5u
+YXRpIENoaWxkcmVucyBIb3NwaXRhbCBNZWRpY2FsIENlbnRlcjE1MDMGA1UEAxMs
+Q2luY2lubmF0aSBDaGlsZHJlbnMgSG9zcGl0YWwgTWVkaWNhbCBDZW50ZXIwHhcN
+MTcwNTA0MTUyMjQ4WhcNMjIwNTAzMTUyMjQ4WjCBnzELMAkGA1UEBhMCVVMxDTAL
+BgNVBAgTBE9oaW8xEzARBgNVBAcTCkNpbmNpbm5hdGkxNTAzBgNVBAoTLENpbmNp
+bm5hdGkgQ2hpbGRyZW5zIEhvc3BpdGFsIE1lZGljYWwgQ2VudGVyMTUwMwYDVQQD
+EyxDaW5jaW5uYXRpIENoaWxkcmVucyBIb3NwaXRhbCBNZWRpY2FsIENlbnRlcjCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN9SGQ3HGsIf8xL7Ug1WOU4o
+qLFeEtxbiebbB8OA92a8CeiA9jSMALP5lTMlsvooaP4jOuOmStAlb4d0gVbfm94Y
+VogNWopNSMprwjFMHVaME8COUaiRTmf7MhlVzAwaSeR4EJTaStoGNd8rh/ca89bf
+u1wb3W//+RDbMFxCNqV73PXQlj55EiwbdN8JSo70hjDD28sdzfgaRWNPiWSZdTD/
+x2YcPhUXGBDEuKBYdP3nOPw9d94f5fusETR4g811if6kOSPWsUjBCf6GnaLigPAk
+odhBc+D1txcIDSQ7xB8wyBBR2UemABQpeHzNFat95q4NpbP4GJHYHfjuUU9AFzUC
+AwEAATANBgkqhkiG9w0BAQUFAAOCAQEATGZXAI3hq9SbHWA64acpt5QQDj2OLC/+
+JxSu5YnAvYoZ909Qw3rwns1aoI9ExtmTWisH/R+lh/nZUmJsjWGPgMT0rY2NTtlE
+UtpEEILaKGSPkwHuxGpljXkrWjB8QY+cP5pDncV86u8nAUF2t2vRj2/vRf1OmQaB
+LNkp2sCNx8udDhIGZQPYTYhdUnDNDXzorFh5wYckf80HfSQKq17mjyCW8tsmL+a7
+Vx4n7rO9DULQIF1ggG/v0Z8726cihxwEs/hEGDKdiza72fNfULsuowWpgQRLgrG6
+0C+1f1yyOSpOwXiQ992b8+AgrItaPyCWNQIHF1KvZEAYgz8/xWc/3w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIESDCCArCgAwIBAgIUHiYpftU/VrrHBAGpeNP3rUrY4fQwDQYJKoZIhvcNAQEL
+BQAwJDEiMCAGA1UEAwwZYWNjZXNzLnJlc2VhcmNoLmNjaG1jLm9yZzAeFw0xOTA5
+MDQxODQ4MDRaFw0zOTA5MDQxODQ4MDRaMCQxIjAgBgNVBAMMGWFjY2Vzcy5yZXNl
+YXJjaC5jY2htYy5vcmcwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDV
+uVFKq6EoZaX4YHulAwNwp7NDS5cwgtCvZ8IZGIqQp9MtrmMKggtQkrlRtP3TUp/e
+txNUuwldlYZ5aWHM/odga8MzU7nx74nVBjH2ylL3jNJiyrG2G29CQP4Lc11PexD8
+bupyQuz9CdvJHieKdm/tMZx7fGJXvENiB7RhCfIbQWoajP8zsrvL+3PdeuwJMwhu
+QfDiO8l/kbM+O86fh1juCAz5IMujW7AQTblDIY6qJC6FT1G6r0uHanGMlFprMUDm
+kih/bKdeg46Kf3SPkrAWmLKx8uHQ5Dtf+Z1BhCSaSkO1AyDjIEYXMjcdZ8lM0RO/
+ujLVp31ALXOF1HGmZfg9nviqm1pElpBF4xfuChO2AO6EpxPykwp9HpZU3cmuw2IP
+Yi2AZqTeFeguujLzV3zAX1WonDgRKNX3MBvutqciEJTar2MyaLUhqzh0FjErog6m
+vXGCivJS9QK+dPP9O2RJyIvC9HJSE1iNZDAYc5mETHHRqBn1CvvKzbinsGij+jkC
+AwEAAaNyMHAwHQYDVR0OBBYEFD04FNiwJgdzDzP0LbMEYtFssp4nME8GA1UdEQRI
+MEaCGWFjY2Vzcy5yZXNlYXJjaC5jY2htYy5vcmeGKWh0dHBzOi8vYWNjZXNzLnJl
+c2VhcmNoLmNjaG1jLm9yZy9mZWQvaWRwMA0GCSqGSIb3DQEBCwUAA4IBgQCK8lCd
+QekU4awi5HTqn8gVJaQWPxXyyNuQ3LFMnTLz6EOkQ8s18lEmeQDxYtvi/yhVIJKN
+dxH95R+JH0wt1Uj+65OMOK6wTpAfG5x8IvP8bMj71zvKllzYsXUnywa7fDepCGYm
+GtYPV9yzJO3L9WiISy1ve357lyZ6LdGcC1RV2ooo1jyCzvblbaS4N24xbi4TJieD
+V3yLSjMYOn5Q6z2WXDPGg7DZQyE+B3DyWEi2u/9GgtjUr1a+WFXe2Aa200X/VjaV
+293NiZPmICF9Qgzi+hfZXWLLXI/iuMQ4jxCy05+K/Wycbgg7kRBulTaTlm/ojkdz
+L8p2PLg8+U/saBZ+d6fhksp61VIVUjMpCFw2qkj/jIykTUywdJ6OGy6QtKknLjr+
+wcGxUiDDJITYbDUcnCwl+7DBAHFYERJMKlaRWJdyp7o8irZGVMgSaTNeUobcRUdq
+lSY/DrKdcaQJuhCi1VpuRyPtOHRmt+kDSuEQ497KeWN2psuLEzC2UzHtFVU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://access.research.cchmc.org/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://access.research.cchmc.org/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://access.research.cchmc.org/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://access.research.cchmc.org/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://access.research.cchmc.org/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://access.research.cchmc.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://access.research.cchmc.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://access.research.cchmc.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Cincinnati Children's Hospital Medical Center</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Cincinnati Children's Hospital Medical Center</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cincinnatichildrens.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Prakash Velayutham</md:GivenName>
+	<md:EmailAddress>prakash.velayutham@cchmc.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kevin Sandy</md:GivenName>
+	<md:EmailAddress>Kevin.Sandy@cchmc.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>John Zimmerly</md:GivenName>
+	<md:EmailAddress>john.zimmerly@cchmc.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michal Kouril</md:GivenName>
+	<md:EmailAddress>Michal.Kouril@cchmc.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

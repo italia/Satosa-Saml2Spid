@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.flu.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-04-23T10:29:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">flu.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Philosophy AS CR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Filosofický ústav AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IPL CAS employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance FLU AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.flu.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.flu.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="41">https://gedeon.cas.cz/loga/logoflu-44.png</mdui:Logo>
+		<mdui:Logo height="138" width="130">https://gedeon.cas.cz/loga/logoflu.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUcFu3so/KF+dtiIYvWR2+TjRmMnMwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owHhcNMTgwNTA5MTUyMzU1WhcN
+MzgwNTA5MTUyMzU1WjAZMRcwFQYDVQQDDA5pZHAuZmx1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJKoUR/L7QAFVnM2j5KD/XPxD/YsVUS3
+aMWvKp6FDXoqG3VvPp/4QibhnFRvzYcAtUWXeXxQCYphIGDrjw3Xr91JhW4adtQb
+Eb4zoLH38oxTP9V5gJzLCiPoDgojNMfQj12clJBethT7EXhn5fNcV649kfreQwCZ
+p0wQQPPJh7u/oM9CziFcHsT2cpmRxGerwdo+Ump62x/4APDUJHd6v8cYPOKiVKE6
+05VUJnt9eN9/+U2Z+SpHzcOBFjm6xcW1pGCWsyqjHhYnj0oYL5scmfmPSdlVT59j
+KLPxUX7VB4932JRMz2rTjNL995l6xzqxVrO4rjgXV3IgV78MErfgIuMCAwEAAaNj
+MGEwHQYDVR0OBBYEFC6Vbh/zQze2+2eJVoRVmoZlS+3FMEAGA1UdEQQ5MDeCDmlk
+cC5mbHUuY2FzLmN6hiVodHRwczovL2lkcC5mbHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAXCjgmo49t6pT1JJKsM2D9YHOh3D1WeCVI
+2WXm1YDUz1Jddqfr1Sp1CrGNwNi2c04abkLqpuQ5LG9jMCxGiDJF6dQlMtvx9fue
+eR/0apQCZ9da/sDjSXsC5x4QKm5TqQPT51/xpIbR32yU3JsQgxyf/5ceeq7mXvyb
+7WK/vLCrFowRnulis2dfHZIw/mBuWrgKDSv9/qv6DGVP0DHhxt0BqGDQfLeJ6Ykf
+TkJrz7HsSQBV0RHBQZGEKQkMvYGZqsEgvIE92GG+w2nZdBaEIUwICoQjCt9uWF45
+WUTvmUTKXFYKAYRj0KdrEi/ByKYsrt9JaI8nZK+spPaOC+oirGhb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAP068s+4gV7EBnvVaoglx5OWH0g9MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5mbHUuY2FzLmN6MB4XDTE4MDUwOTE1MjM1NVoX
+DTM4MDUwOTE1MjM1NVowGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFUUzlOcVDq3zJHz+A0QX0sj85e1Pk
+ASF2I+QpmIsaxaKzKVzwHAlx9W5/41VxEB21Oolw6WwcT5/9EQjdw4RaeXU+zEti
+WxiMHVM1AmLg/ggYN9FzUjqoYQdGCXi7MHfRN2hZHAOR887or61SskpqcJEln1VP
+3oh3xJlQtFP6RpPhfZnESmW52a5LuldbhfmDrGQhAq54NPv8hh2dsb3Iu7kGDsyt
+70AkvyUU5HTAy2VTu+otllfiiv/vrIyqdFSy0vNQjgfQ+guhmnGO9dYSS/vFSIJ1
+DP3Ju1dPmg2OrZ5RrXa4HxUHmKxGE5oKSQ6raT/Fz0Ctw4Gsv5bojjhxAgMBAAGj
+YzBhMB0GA1UdDgQWBBTvdjYkfFndEclAHngF9ok+i6JgYjBABgNVHREEOTA3gg5p
+ZHAuZmx1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuZmx1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAgzrMXGoPhnxf77ByJ5Mav73MBcdSGyPo
+dxWrxHYodEryA/nwtvvVQKT6WvjY0KP7KLpqdnOQbzhxinc+iDTfKgS4xJVa81gZ
+oeFkpPNfH/ohC/zgSuAdSvtvWJP13nYdvPRkxGyBLR5GZb94oxM4kake/V3KyJR7
+TkW72w8KbI2YCs9Ie/jytqLt5I3ElUn9NG4tcND8J7Gj7RnkjsiOLKwfV0Y4FgNO
+qMk1ipWexejfmUpI2pI71NVc/68UF89vjK4UWm3A8Sdmqn2cDL7/5zuu2rfzXmSI
+Xl0PaazzZ7Z0XFOMydDMcMNSIivd1ZSbB6LKG/a/b9Qy/dBKW0UH2w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUIna0fDsh1fzMjJxBQIzuljLc02owDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owHhcNMTgwNTA5MTUyMzU1WhcN
+MzgwNTA5MTUyMzU1WjAZMRcwFQYDVQQDDA5pZHAuZmx1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIi6wOolb2doQrWgTZ96lzyZ6GT5cskD
+oEXZj71o7V68L5wIVO6ahX/tOp0ufao13iQfO2Jr/CwdoPa3cku5mhMP8bTW+8VU
+pLQXw41VdPaS58WERFLpQuXusjhTibUDOcflUCBam86HQ0DIzldrIThqGYIPqgeP
+5F7N/GfRKkuHu7/u1QN0P0RBORGfdJO+IMYa2QT/+jCfdSeaQxO5JCgnNoihfB6N
+QhFsJbjui6p0x8saR1Zmcjr6oNutZBjmy1pQxtyN+i8MHrZ/ZPy4cmIggUSS6rsu
+9ohAXo/EH+A/SO/jllo1xYMWXJfKwjZE4tym8MgzRLG8yhIp4KlfM00CAwEAAaNj
+MGEwHQYDVR0OBBYEFJ5awwfLFT0jB7Vhvp064qH2iS43MEAGA1UdEQQ5MDeCDmlk
+cC5mbHUuY2FzLmN6hiVodHRwczovL2lkcC5mbHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBgSp9FRvmo43wBGVirQKmDX3yVSYsnMknp
+Q9n/Eo47MwpsCoUO46a/xWSsqfK2zg8BcWOcWPYSipp/hvfw2xAkmDPA2cIf4KON
+O1wwIIOQiQU59IlZlJTPChkeH5GScdcmzaQ9061st/z/C76dp/XY7SbhHJ3kfPD2
+pMKAWnsrQ950ZibECb+hh7/MUSk7dbv0e++UyeZDwr7hzd0ZuNoNz6Qsq2TKGjIb
+CgvW5//vdCdli9qvioyiHXRHUNRx4LGDMEQNDwMcoXdyhPqEIwdTD4BxBtcx+yDh
+9zVtVuf3zptNj7hXL8rKdAVOgvVnClRM5DijysFOB+AetyfO96nZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.flu.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.flu.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.flu.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.flu.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.flu.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.flu.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">flu.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUcFu3so/KF+dtiIYvWR2+TjRmMnMwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owHhcNMTgwNTA5MTUyMzU1WhcN
+MzgwNTA5MTUyMzU1WjAZMRcwFQYDVQQDDA5pZHAuZmx1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJKoUR/L7QAFVnM2j5KD/XPxD/YsVUS3
+aMWvKp6FDXoqG3VvPp/4QibhnFRvzYcAtUWXeXxQCYphIGDrjw3Xr91JhW4adtQb
+Eb4zoLH38oxTP9V5gJzLCiPoDgojNMfQj12clJBethT7EXhn5fNcV649kfreQwCZ
+p0wQQPPJh7u/oM9CziFcHsT2cpmRxGerwdo+Ump62x/4APDUJHd6v8cYPOKiVKE6
+05VUJnt9eN9/+U2Z+SpHzcOBFjm6xcW1pGCWsyqjHhYnj0oYL5scmfmPSdlVT59j
+KLPxUX7VB4932JRMz2rTjNL995l6xzqxVrO4rjgXV3IgV78MErfgIuMCAwEAAaNj
+MGEwHQYDVR0OBBYEFC6Vbh/zQze2+2eJVoRVmoZlS+3FMEAGA1UdEQQ5MDeCDmlk
+cC5mbHUuY2FzLmN6hiVodHRwczovL2lkcC5mbHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAXCjgmo49t6pT1JJKsM2D9YHOh3D1WeCVI
+2WXm1YDUz1Jddqfr1Sp1CrGNwNi2c04abkLqpuQ5LG9jMCxGiDJF6dQlMtvx9fue
+eR/0apQCZ9da/sDjSXsC5x4QKm5TqQPT51/xpIbR32yU3JsQgxyf/5ceeq7mXvyb
+7WK/vLCrFowRnulis2dfHZIw/mBuWrgKDSv9/qv6DGVP0DHhxt0BqGDQfLeJ6Ykf
+TkJrz7HsSQBV0RHBQZGEKQkMvYGZqsEgvIE92GG+w2nZdBaEIUwICoQjCt9uWF45
+WUTvmUTKXFYKAYRj0KdrEi/ByKYsrt9JaI8nZK+spPaOC+oirGhb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAP068s+4gV7EBnvVaoglx5OWH0g9MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5mbHUuY2FzLmN6MB4XDTE4MDUwOTE1MjM1NVoX
+DTM4MDUwOTE1MjM1NVowGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCFUUzlOcVDq3zJHz+A0QX0sj85e1Pk
+ASF2I+QpmIsaxaKzKVzwHAlx9W5/41VxEB21Oolw6WwcT5/9EQjdw4RaeXU+zEti
+WxiMHVM1AmLg/ggYN9FzUjqoYQdGCXi7MHfRN2hZHAOR887or61SskpqcJEln1VP
+3oh3xJlQtFP6RpPhfZnESmW52a5LuldbhfmDrGQhAq54NPv8hh2dsb3Iu7kGDsyt
+70AkvyUU5HTAy2VTu+otllfiiv/vrIyqdFSy0vNQjgfQ+guhmnGO9dYSS/vFSIJ1
+DP3Ju1dPmg2OrZ5RrXa4HxUHmKxGE5oKSQ6raT/Fz0Ctw4Gsv5bojjhxAgMBAAGj
+YzBhMB0GA1UdDgQWBBTvdjYkfFndEclAHngF9ok+i6JgYjBABgNVHREEOTA3gg5p
+ZHAuZmx1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuZmx1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAgzrMXGoPhnxf77ByJ5Mav73MBcdSGyPo
+dxWrxHYodEryA/nwtvvVQKT6WvjY0KP7KLpqdnOQbzhxinc+iDTfKgS4xJVa81gZ
+oeFkpPNfH/ohC/zgSuAdSvtvWJP13nYdvPRkxGyBLR5GZb94oxM4kake/V3KyJR7
+TkW72w8KbI2YCs9Ie/jytqLt5I3ElUn9NG4tcND8J7Gj7RnkjsiOLKwfV0Y4FgNO
+qMk1ipWexejfmUpI2pI71NVc/68UF89vjK4UWm3A8Sdmqn2cDL7/5zuu2rfzXmSI
+Xl0PaazzZ7Z0XFOMydDMcMNSIivd1ZSbB6LKG/a/b9Qy/dBKW0UH2w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUIna0fDsh1fzMjJxBQIzuljLc02owDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmZsdS5jYXMuY3owHhcNMTgwNTA5MTUyMzU1WhcN
+MzgwNTA5MTUyMzU1WjAZMRcwFQYDVQQDDA5pZHAuZmx1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIi6wOolb2doQrWgTZ96lzyZ6GT5cskD
+oEXZj71o7V68L5wIVO6ahX/tOp0ufao13iQfO2Jr/CwdoPa3cku5mhMP8bTW+8VU
+pLQXw41VdPaS58WERFLpQuXusjhTibUDOcflUCBam86HQ0DIzldrIThqGYIPqgeP
+5F7N/GfRKkuHu7/u1QN0P0RBORGfdJO+IMYa2QT/+jCfdSeaQxO5JCgnNoihfB6N
+QhFsJbjui6p0x8saR1Zmcjr6oNutZBjmy1pQxtyN+i8MHrZ/ZPy4cmIggUSS6rsu
+9ohAXo/EH+A/SO/jllo1xYMWXJfKwjZE4tym8MgzRLG8yhIp4KlfM00CAwEAAaNj
+MGEwHQYDVR0OBBYEFJ5awwfLFT0jB7Vhvp064qH2iS43MEAGA1UdEQQ5MDeCDmlk
+cC5mbHUuY2FzLmN6hiVodHRwczovL2lkcC5mbHUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBgSp9FRvmo43wBGVirQKmDX3yVSYsnMknp
+Q9n/Eo47MwpsCoUO46a/xWSsqfK2zg8BcWOcWPYSipp/hvfw2xAkmDPA2cIf4KON
+O1wwIIOQiQU59IlZlJTPChkeH5GScdcmzaQ9061st/z/C76dp/XY7SbhHJ3kfPD2
+pMKAWnsrQ950ZibECb+hh7/MUSk7dbv0e++UyeZDwr7hzd0ZuNoNz6Qsq2TKGjIb
+CgvW5//vdCdli9qvioyiHXRHUNRx4LGDMEQNDwMcoXdyhPqEIwdTD4BxBtcx+yDh
+9zVtVuf3zptNj7hXL8rKdAVOgvVnClRM5DijysFOB+AetyfO96nZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.flu.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IPL CAS</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">FLU AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Philosophy</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Filosofický ústav AV ČR</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.flu.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.flu.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

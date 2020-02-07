@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.pdn.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-08-17T05:40:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pdn.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Peradeniya</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Peradeniya IDP</mdui:Description>
+		<mdui:Keywords xml:lang="en">UoP</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.pdn.ac.lk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.pdn.ac.lk</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">https://idp.pdn.ac.lk/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.pdn.ac.lk/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMTdftmAYB9qEfu8n7EQ1QKRWtinMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmOgDGW1oV7b3zczG64vi2PRBsCiDB9hE
+g5MDXozr1yxVYL/xm78Y47aPI+bJ0vPhQCbSgfyv9LZ8pVHuWC7YMzXL4+d4JEas
+gCZyID5nVNTwHpiJleypnC9ltg+gJUXOOyVLT2tex5a34ZulAt8XjtprJH2I8lQt
+SYvOUtnax9SMsBeaY9H3RYJoGRnbQfRcmKh9v404kUrvmYKukuO5Hizmm19hlhfD
+cW3NkeBIHrmZG2l6zrhkxoP5g5wxuACZkh5BtKZq+IIawIwIQtJ/FVo0/OeLf3sK
+Ik0WbMcWx1Z+vNx/dCl3NHFJPMYWpY+gLVl9CEQucdlVyci3E5kmswIDAQABo2Ew
+XzAdBgNVHQ4EFgQUM1PwF+ootRKQsC0tv31dG0wFTFwwPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCT6Gc6BVDhUUEjnw7XMeFwXSVxKsZRsgbmgbwA
+XEVJ5s6nQer3HdymQ4u1L9H7aaCYPi+F4qB4/8cHUSxs4zbMokd2Jy3/QfMT8vkp
+pvtYwga/eCCSrNRyDizlmYjhi/4z/35ull0XJvgYvJZ6oe567txMamyv/D6DInzT
+82Pr2eveiZ0/Eey49zxmbL5opZaUrmwHWn0I4tgqSfDgGXpXfa9ySPk/tV+/0sey
+JseGy7VcnoQ2OdSnOYoJbvyk8KKHUUEh9U8dvnexNa65hYirNId8Uswprf/BGlPp
+WhEA3V+qVnoSSxigFIXI2CtJecfim86WRYDqXH9cQHlY3l14
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANBZeB7HxhBuItOWepsMUIClelkqMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAib4+VFUWF/tQtKl1aW4vhU2gTkM1ZvRB
+NzUWwJ1Kw1GuNxI2BkaychtxxlaUaFp8jddOW3nmKhzIhWkCu+hpvUDxuyM2/g8O
+czeNHx0dXuz/xqhjiXL8WmRvwLakDl42/GbA4iXBijOu+v4yYasZakFO10HgWF4p
+tVnA5JEUTS2bPUvpkyMoglhuJMJCrVEqQAMEE1luwTA5cT01Iov94pEibhygNlZ4
+icxKvFAw2ETmturVjBx+Bt/6ZUsfx0dLOEtdVB/vLRjQlXDh2P+JkhkelG3HQ4it
+aczAjui/H5ZbhhvhmwI+CBGt4Ov37QamEL/E+rLvptbwbo3M+Vx8zQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUqMy0DTornvLDvap1BJyObkyO/NYwPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQB3uNFXvLZPrLjnuZCMHB5Gfmmupos3Z9hMlLDk
+jZxEEhk2djBcpdgbPTEtK/vKXvO1z/h8PChnMUhtC4F53ro70/LZCMPiKF2CmNoO
+8Jb18pw+1zZKaV1SZU+iqqpxr3ZHEBjURW15AsNL7xg6DAR7sN2gM/+ctADh/Z3g
+5bC1p86dHQB2sWqB6r+MeaieA/O3SEApJGZGbeeY/tUxnsMwPSUfAkJDe598bHvI
+wzEQYWGKHQtGDU4X9HSaJr6h4Xht6wqbnrbIzr3JhCaoMmUCluzWfbgiMxAq9gtK
+Ray3MTcfWy+RxR79SVQi3dvacDOw/NH65RYZTc6V7hiE8WRv
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAPMHdPFEWa0359JdlzeWT5Jz60R+MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq0JoLdYEq6Xs2TInj06/Ex8Kml4vOrws
+OyrWIF1mjXzrqMv+7H6ncz5HHqwA8ngLKZX5MDpYxk2DfaMgOX378VvAE2dc90o4
+reu8shcsO2sY5UW+oQ6OHxk8tyGFmaphXBG3WSa+mXDb4cYxLiA4/o8Kg7UvoDDV
+wVNrE4omFHVv+1MQ8lxsa7kM8PeBmlsD9+PdGh5jQAd/kToTXkdYe5Bjlgku6yvU
+1ddC8KC7fVefqwuGk/Gux0BT/PSwo/87bBdBdPebWauF3ZnX+y3WY7U96Wd1wdH7
+jxHLE3Q5cqXiTeBQZl+kSAOQfFPOjHk5Gtko1oReh0EatFG+vU7t3wIDAQABo2Ew
+XzAdBgNVHQ4EFgQU5Ky8smI7nTQecx0T+s7MHr5t5S4wPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCVBvzMrA5jnPwBbdIlGZrzR0XbJOPW6fOjDpLD
+D5PqUqVaQRSRh09vFINshDbDxYS5cY68sBJFgMUHYkh7ojD1QHUyFHBkpNmttlot
+8xxZRHhAVFLlUKgUgjs57NIz6K+tRp61mLKVa8uv8m+TnHMwQvLvBwLfZdvslEvq
+lSXxJFp39Rq99Hpsb2nhOyS4AHCCnAvT4Mt0drCI1wA7Vf6jbkU/Afk7tzerN4QZ
+blcFpm9uByFlF2X3724TqkR3XweAb1iE7H62fgqXWe4YEq28U/n5xE2/13meNp37
+H9zIKZ8HxU0jR9yJSAPvu99hlzxvfS7mvpD7I44sww7Z9btW
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pdn.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMTdftmAYB9qEfu8n7EQ1QKRWtinMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmOgDGW1oV7b3zczG64vi2PRBsCiDB9hE
+g5MDXozr1yxVYL/xm78Y47aPI+bJ0vPhQCbSgfyv9LZ8pVHuWC7YMzXL4+d4JEas
+gCZyID5nVNTwHpiJleypnC9ltg+gJUXOOyVLT2tex5a34ZulAt8XjtprJH2I8lQt
+SYvOUtnax9SMsBeaY9H3RYJoGRnbQfRcmKh9v404kUrvmYKukuO5Hizmm19hlhfD
+cW3NkeBIHrmZG2l6zrhkxoP5g5wxuACZkh5BtKZq+IIawIwIQtJ/FVo0/OeLf3sK
+Ik0WbMcWx1Z+vNx/dCl3NHFJPMYWpY+gLVl9CEQucdlVyci3E5kmswIDAQABo2Ew
+XzAdBgNVHQ4EFgQUM1PwF+ootRKQsC0tv31dG0wFTFwwPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCT6Gc6BVDhUUEjnw7XMeFwXSVxKsZRsgbmgbwA
+XEVJ5s6nQer3HdymQ4u1L9H7aaCYPi+F4qB4/8cHUSxs4zbMokd2Jy3/QfMT8vkp
+pvtYwga/eCCSrNRyDizlmYjhi/4z/35ull0XJvgYvJZ6oe567txMamyv/D6DInzT
+82Pr2eveiZ0/Eey49zxmbL5opZaUrmwHWn0I4tgqSfDgGXpXfa9ySPk/tV+/0sey
+JseGy7VcnoQ2OdSnOYoJbvyk8KKHUUEh9U8dvnexNa65hYirNId8Uswprf/BGlPp
+WhEA3V+qVnoSSxigFIXI2CtJecfim86WRYDqXH9cQHlY3l14
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANBZeB7HxhBuItOWepsMUIClelkqMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAib4+VFUWF/tQtKl1aW4vhU2gTkM1ZvRB
+NzUWwJ1Kw1GuNxI2BkaychtxxlaUaFp8jddOW3nmKhzIhWkCu+hpvUDxuyM2/g8O
+czeNHx0dXuz/xqhjiXL8WmRvwLakDl42/GbA4iXBijOu+v4yYasZakFO10HgWF4p
+tVnA5JEUTS2bPUvpkyMoglhuJMJCrVEqQAMEE1luwTA5cT01Iov94pEibhygNlZ4
+icxKvFAw2ETmturVjBx+Bt/6ZUsfx0dLOEtdVB/vLRjQlXDh2P+JkhkelG3HQ4it
+aczAjui/H5ZbhhvhmwI+CBGt4Ov37QamEL/E+rLvptbwbo3M+Vx8zQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUqMy0DTornvLDvap1BJyObkyO/NYwPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQB3uNFXvLZPrLjnuZCMHB5Gfmmupos3Z9hMlLDk
+jZxEEhk2djBcpdgbPTEtK/vKXvO1z/h8PChnMUhtC4F53ro70/LZCMPiKF2CmNoO
+8Jb18pw+1zZKaV1SZU+iqqpxr3ZHEBjURW15AsNL7xg6DAR7sN2gM/+ctADh/Z3g
+5bC1p86dHQB2sWqB6r+MeaieA/O3SEApJGZGbeeY/tUxnsMwPSUfAkJDe598bHvI
+wzEQYWGKHQtGDU4X9HSaJr6h4Xht6wqbnrbIzr3JhCaoMmUCluzWfbgiMxAq9gtK
+Ray3MTcfWy+RxR79SVQi3dvacDOw/NH65RYZTc6V7hiE8WRv
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAPMHdPFEWa0359JdlzeWT5Jz60R+MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5wZG4uYWMubGswHhcNMTkwODAxMDU1MDE3WhcN
+MzkwODAxMDU1MDE3WjAYMRYwFAYDVQQDDA1pZHAucGRuLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq0JoLdYEq6Xs2TInj06/Ex8Kml4vOrws
+OyrWIF1mjXzrqMv+7H6ncz5HHqwA8ngLKZX5MDpYxk2DfaMgOX378VvAE2dc90o4
+reu8shcsO2sY5UW+oQ6OHxk8tyGFmaphXBG3WSa+mXDb4cYxLiA4/o8Kg7UvoDDV
+wVNrE4omFHVv+1MQ8lxsa7kM8PeBmlsD9+PdGh5jQAd/kToTXkdYe5Bjlgku6yvU
+1ddC8KC7fVefqwuGk/Gux0BT/PSwo/87bBdBdPebWauF3ZnX+y3WY7U96Wd1wdH7
+jxHLE3Q5cqXiTeBQZl+kSAOQfFPOjHk5Gtko1oReh0EatFG+vU7t3wIDAQABo2Ew
+XzAdBgNVHQ4EFgQU5Ky8smI7nTQecx0T+s7MHr5t5S4wPgYDVR0RBDcwNYINaWRw
+LnBkbi5hYy5sa4YkaHR0cHM6Ly9pZHAucGRuLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCVBvzMrA5jnPwBbdIlGZrzR0XbJOPW6fOjDpLD
+D5PqUqVaQRSRh09vFINshDbDxYS5cY68sBJFgMUHYkh7ojD1QHUyFHBkpNmttlot
+8xxZRHhAVFLlUKgUgjs57NIz6K+tRp61mLKVa8uv8m+TnHMwQvLvBwLfZdvslEvq
+lSXxJFp39Rq99Hpsb2nhOyS4AHCCnAvT4Mt0drCI1wA7Vf6jbkU/Afk7tzerN4QZ
+blcFpm9uByFlF2X3724TqkR3XweAb1iE7H62fgqXWe4YEq28U/n5xE2/13meNp37
+H9zIKZ8HxU0jR9yJSAPvu99hlzxvfS7mvpD7I44sww7Z9btW
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.pdn.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Peradeniya</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Peradeniya - Sri Lanka</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.pdn.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Suranga</md:GivenName>
+	<md:SurName>Rathnayake</md:SurName>
+	<md:EmailAddress>mailto:suranga@pdn.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Tharindu</md:GivenName>
+	<md:SurName>Perera</md:SurName>
+	<md:EmailAddress>mailto:tharinduc@pdn.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

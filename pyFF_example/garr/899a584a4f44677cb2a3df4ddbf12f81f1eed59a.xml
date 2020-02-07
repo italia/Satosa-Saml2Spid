@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cit.frankfurt-university.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-03-20T10:28:19Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">frankfurt-university.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Frankfurt University of Applied Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Frankfurt University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">IdP der Frankfurt University of Applied Sciences</mdui:Description>
+		<mdui:Description xml:lang="en">IdP of the Frankfurt University of Applied Sciences</mdui:Description>
+		<mdui:Logo height="64" width="80">https://www.frankfurt-university.de/fileadmin/templates/images/fuas-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJlzCCCH+gAwIBAgIMIQM/uQ2OFjX51gPeMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUyMTA5MTczNFoXDTIxMDgyMjA5MTczNFowgasxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xGjAYBgNVBAcMEUZyYW5rZnVydCBhbSBNYWluMTEwLwYDVQQK
+DChGcmFua2Z1cnQgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNjaWVuY2VzMRIwEAYD
+VQQLDAlDYW1wdXMgSVQxKDAmBgNVBAMMH2lkcC5jaXQuZnJhbmtmdXJ0LXVuaXZl
+cnNpdHkuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCrR29GqNR3
+24+Up1aYXFzLubtga2RhtnpTpp/s5sPJb9IbRNgxnwwN1o6W/mOKSLxqRnxqkL7F
+rW1QPZAYMKDihddI0/CVy4ZkRf04jbLgpNQHjO/XZdYrk57FApLbIPDRNliYRyLJ
+ixhVkG7jUAwW1YQJa6M7O2+tOC7x2CRfLna/rc46/uAfR9hCpDwRPurraTxQhR66
+Q+wcJO3F+TcjCi00uoL0lP1vFAPLReNLMoJjk4WYiAhKUXeOL3FZ3Qp7kQf/Of1F
+iIhMzze+4/V9y+Xxxpj2voV7lkV7nshMFaR6PU7Y+DFEzstKTRKCP5aR81Y2KMDJ
+2OpHhd06bFjRAgMBAAGjggXVMIIF0TBXBgNVHSAEUDBOMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBAGDisGAQQBga0hgiwBAQQEMBAG
+DisGAQQBga0hgiwCAQQEMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQU3B9O6yFuHWymM5VY
+oCR3LZcYMcIwHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwKgYDVR0R
+BCMwIYIfaWRwLmNpdC5mcmFua2Z1cnQtdW5pdmVyc2l0eS5kZTCBjQYDVR0fBIGF
+MIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwt
+ZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUH
+AQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NT
+UC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEF
+BQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA2AGCisGAQQB1nkCBAIEggNQBIIDTANKAHYA
+b1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFq2a6YwAAABAMARzBF
+AiB50YUW5qEvSwneCg7POKrhiJRMEzpfAaau1/ZaM4sQOwIhAJ1/4WJf651oS5jw
+YnK2HUvbyspnBnU6s6uzuL7foFDcAHUAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgX
+L6OqHQcT0wwAAAFq2a6ZwQAABAMARjBEAiBY1swYUwNJxXLw2yvysQ7OxXxO/UUZ
+DvVJCFYDPPFL/AIgCSuaIVDVVn6fo9BtpzVbPReM48RPx9E+AGnkVUIeGvUAdwCq
+5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWrZrpiDAAAEAwBIMEYC
+IQCWQGlyVJ23MLx1mPXFssbOSglalUJcuP23lUyMWeB8MwIhAMjZPDPVQNMdyHOS
+GgGMAYvN08K5n0+elvlP2vku+18cAHcApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+4
+43fNDsgN3BAAAAFq2a6Y/QAABAMASDBGAiEAtXdttJjhStRcP8cDPfi/9yKcbseY
+YfpDCjAA3lwN9AQCIQDkWMiU8bXqOhaD8cV5HRo2brGITjD0VEcTUUMvUgwL/wB3
+ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABatmumQEAAAQDAEgw
+RgIhAJjZiqEy+N5rNm9xxutNY5m6rStJEJhQ+5Tfsm1ZeQhpAiEA36UvgjHUXCqZ
+oFwtgT1agHvks1jqRj8FKNyGWBJxGeEAdwDuS723dc5guuFCaR+r4Z5mow9+X7By
+2IMAxHuJeqj9ywAAAWrZrpkEAAAEAwBIMEYCIQCnCQXkEELSkyJGEcSAQ+MIPC+6
+HrLwFuvkp+XKT9QmsQIhAPhFki233vmUYFcVLdE+pl4jQhzoyvPMknfk5b0e4y0S
+AHUARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFq2a6hPgAABAMA
+RjBEAiBCREcz7xh8ZxjZIQQGN/hD9KOYxU81+A4ZYW6SMFag1QIgZg3bVh7lYfIC
+evqJghwipS3QChVthjSCA4tNA24rcXYwDQYJKoZIhvcNAQELBQADggEBAEnC07ob
+h2a3LbLVKkghaNbIoz9L841/6lXey+O0zx9TorqBIdYWcit7gWo11mf+QIYjhNxt
+xArZkH6Y1K9ZPF7Ast1ZnLeo0UVHWIJ4qEjldUxAT5ejQWG3x8qVKdslWMyUFm35
+MuIKAscKxzDCU4+Z75pZI4en3v6fmaHqIlF5V6wEL/ZCAwFcGFMU4LsSE3WBq8OV
+CXzkQqm6TXkMOtHuZUJd45226eGNCEseJpUvkqrM9+yuIY2pB9kJf495FbWulfi1
+tYPr3gevd7o5/Vbwe6RV/WM6tWlnhZF5O0UYqVfo+fZk67e35scq3W62O6gRRen9
+l1kVyMNbTtj0+sQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJlzCCCH+gAwIBAgIMIQM/uQ2OFjX51gPeMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUyMTA5MTczNFoXDTIxMDgyMjA5MTczNFowgasxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xGjAYBgNVBAcMEUZyYW5rZnVydCBhbSBNYWluMTEwLwYDVQQK
+DChGcmFua2Z1cnQgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNjaWVuY2VzMRIwEAYD
+VQQLDAlDYW1wdXMgSVQxKDAmBgNVBAMMH2lkcC5jaXQuZnJhbmtmdXJ0LXVuaXZl
+cnNpdHkuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCrR29GqNR3
+24+Up1aYXFzLubtga2RhtnpTpp/s5sPJb9IbRNgxnwwN1o6W/mOKSLxqRnxqkL7F
+rW1QPZAYMKDihddI0/CVy4ZkRf04jbLgpNQHjO/XZdYrk57FApLbIPDRNliYRyLJ
+ixhVkG7jUAwW1YQJa6M7O2+tOC7x2CRfLna/rc46/uAfR9hCpDwRPurraTxQhR66
+Q+wcJO3F+TcjCi00uoL0lP1vFAPLReNLMoJjk4WYiAhKUXeOL3FZ3Qp7kQf/Of1F
+iIhMzze+4/V9y+Xxxpj2voV7lkV7nshMFaR6PU7Y+DFEzstKTRKCP5aR81Y2KMDJ
+2OpHhd06bFjRAgMBAAGjggXVMIIF0TBXBgNVHSAEUDBOMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBAGDisGAQQBga0hgiwBAQQEMBAG
+DisGAQQBga0hgiwCAQQEMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQU3B9O6yFuHWymM5VY
+oCR3LZcYMcIwHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwKgYDVR0R
+BCMwIYIfaWRwLmNpdC5mcmFua2Z1cnQtdW5pdmVyc2l0eS5kZTCBjQYDVR0fBIGF
+MIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwt
+ZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUH
+AQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NT
+UC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEF
+BQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA2AGCisGAQQB1nkCBAIEggNQBIIDTANKAHYA
+b1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFq2a6YwAAABAMARzBF
+AiB50YUW5qEvSwneCg7POKrhiJRMEzpfAaau1/ZaM4sQOwIhAJ1/4WJf651oS5jw
+YnK2HUvbyspnBnU6s6uzuL7foFDcAHUAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgX
+L6OqHQcT0wwAAAFq2a6ZwQAABAMARjBEAiBY1swYUwNJxXLw2yvysQ7OxXxO/UUZ
+DvVJCFYDPPFL/AIgCSuaIVDVVn6fo9BtpzVbPReM48RPx9E+AGnkVUIeGvUAdwCq
+5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWrZrpiDAAAEAwBIMEYC
+IQCWQGlyVJ23MLx1mPXFssbOSglalUJcuP23lUyMWeB8MwIhAMjZPDPVQNMdyHOS
+GgGMAYvN08K5n0+elvlP2vku+18cAHcApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+4
+43fNDsgN3BAAAAFq2a6Y/QAABAMASDBGAiEAtXdttJjhStRcP8cDPfi/9yKcbseY
+YfpDCjAA3lwN9AQCIQDkWMiU8bXqOhaD8cV5HRo2brGITjD0VEcTUUMvUgwL/wB3
+ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABatmumQEAAAQDAEgw
+RgIhAJjZiqEy+N5rNm9xxutNY5m6rStJEJhQ+5Tfsm1ZeQhpAiEA36UvgjHUXCqZ
+oFwtgT1agHvks1jqRj8FKNyGWBJxGeEAdwDuS723dc5guuFCaR+r4Z5mow9+X7By
+2IMAxHuJeqj9ywAAAWrZrpkEAAAEAwBIMEYCIQCnCQXkEELSkyJGEcSAQ+MIPC+6
+HrLwFuvkp+XKT9QmsQIhAPhFki233vmUYFcVLdE+pl4jQhzoyvPMknfk5b0e4y0S
+AHUARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9MzlrW2gagAAAFq2a6hPgAABAMA
+RjBEAiBCREcz7xh8ZxjZIQQGN/hD9KOYxU81+A4ZYW6SMFag1QIgZg3bVh7lYfIC
+evqJghwipS3QChVthjSCA4tNA24rcXYwDQYJKoZIhvcNAQELBQADggEBAEnC07ob
+h2a3LbLVKkghaNbIoz9L841/6lXey+O0zx9TorqBIdYWcit7gWo11mf+QIYjhNxt
+xArZkH6Y1K9ZPF7Ast1ZnLeo0UVHWIJ4qEjldUxAT5ejQWG3x8qVKdslWMyUFm35
+MuIKAscKxzDCU4+Z75pZI4en3v6fmaHqIlF5V6wEL/ZCAwFcGFMU4LsSE3WBq8OV
+CXzkQqm6TXkMOtHuZUJd45226eGNCEseJpUvkqrM9+yuIY2pB9kJf495FbWulfi1
+tYPr3gevd7o5/Vbwe6RV/WM6tWlnhZF5O0UYqVfo+fZk67e35scq3W62O6gRRen9
+l1kVyMNbTtj0+sQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cit.frankfurt-university.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cit.frankfurt-university.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cit.frankfurt-university.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cit.frankfurt-university.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e23</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e23</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Frankfurt University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Frankfurt University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.frankfurt-university.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.frankfurt-university.de/en.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Anne</md:GivenName>
+	<md:SurName>Sommermann</md:SurName>
+	<md:EmailAddress>mailto:asommer@cit.fra-uas.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Anne</md:GivenName>
+	<md:SurName>Sommermann</md:SurName>
+	<md:EmailAddress>mailto:asommer@cit.fra-uas.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Anne</md:GivenName>
+	<md:SurName>Sommermann</md:SurName>
+	<md:EmailAddress>mailto:asommer@cit.fra-uas.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

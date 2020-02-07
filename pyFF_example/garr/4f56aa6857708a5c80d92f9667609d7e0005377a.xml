@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.usd.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-04-23T10:29:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">usd.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Contemporary History</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav pro soudobé dějiny AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider USD AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance ÚSD AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.usd.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.usd.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="29">https://gedeon.cas.cz/loga/logo-usd-44.png</mdui:Logo>
+		<mdui:Logo height="150" width="98">https://gedeon.cas.cz/loga/logo-usd-150.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAoygAwIBAgIVAJIIyXWSPYcootJEuw7QaGi8BcoLMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51c2QuY2FzLmN6MB4XDTE5MDMyMTA3MjEzMVoX
+DTM5MDMyMTA3MjEzMVowGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCXZNGF7qggCpo1ueygYxZhBeXklT+e
+ZaGF8fdEQ2JvYS/WxXpHR7QM5NRzRM83fcQruUBxLIstC9XzBZNdawGh4H2qUiu0
+kTIDnoVlg0CmuliMOkP7Yeh/zEqfGhpR82t2JKMfOKdmFAI6dfsqfCK4FHlFjDI7
+gl6YdxWs5JzNbeD+/0KwIbtzKZpaOwAj8em7JdZ3aWx9+odIDajz9+nooRERFdkK
+sNHJqBunAoaYAJjbFzgNzGWqtVlnyK6j7OyS2X124H6bWLqcbFThew5cjyY/gMZu
+OXmRtNMl1WsxK7Ej/PJt5PJoAv8g+mvt0yYrKFCt61uElLD3/ne/5ElmXeJE4ixj
+sXJwq0Ut+rZYzsXgJOvEX3wfSnqLrtFQKy5WT2lwuVgFMrTquVn2BpHVmIHlk2mP
+SA8o11TJagCi+uEqIgQTT/kM/MD08RwQkhIJkWKVGy3hOy1NdXazIdL4rUS7ckYc
+G3tdfJc7DHj0PTYDgCmdcGF1b0npWvaNZe8CAwEAAaNjMGEwHQYDVR0OBBYEFIcR
+yWWqI9hiaZiPdsuBAAlcCH+zMEAGA1UdEQQ5MDeCDmlkcC51c2QuY2FzLmN6hiVo
+dHRwczovL2lkcC51c2QuY2FzLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBgQAg8KTJLWFe/qwckqdJGcCdJihocPjIvOA+N9GbTD0Rpz3AFDMOb/CY
+hr2FJu/ncm1b0dKpmIOBRHLtQHtVDciRUWgr5P78Rq6R+F7yG89/yPOsGstwkXKL
+aNUUFkjHoR0QJNnUr/2/QP5D6jLupeMPuPfSmsL9TREOmgBm2+G965SnswjUs4Cd
+KI7+sojlZjrv4WSg5dFy4grYz2zIKlWqFHn8Kbcx10rsA/8ofVS62YUk57n5IyxJ
+pFYRK7OxRj1tQsbUq5ORddmed1viu1iLVv/XtyHUvMCFB0+zhL7jDkb7IdjjMGsf
+Ey0nFcFKIzntQzrzzvVvl+mvQ9mgVh71UwoSY6W/eMuTco2y94XOJckL192u5AD1
+aXdAm8YhljRSRyMgECvldvnb2HPF1DnKkY09U/vxykAit7IakCJ5znjO6IwBupi3
+2GhnmYb+ErUAfL6bWlGS5cLz0lB2qT3hnw1/nwYt6oeoLi46Udav2x/rAKxRw4AV
+qQ4eAazCSd4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAoygAwIBAgIVAL5RDAecW68PcN9DhwwWFZrSH90HMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51c2QuY2FzLmN6MB4XDTE5MDMyMTA3MjEyOFoX
+DTM5MDMyMTA3MjEyOFowGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCm1TiRPIwF1yYQN2jYp04PsGN0yTlj
+awk7ra227TcycPhUzM5M2DmycvRNVzov45xJdOiVHjGZtPDqy4ZrQ0cRW0sR6yky
+cRB8Dj3YwJeA9LXV60pxiuq3cYTKGvongoZJkBG+3EUxV71DNn8TFlCBX5r7XElS
+McE8ijSL+9DGnjV9FdlCH88vPOGUdXr1k1JPWlqIgs1/F2JIJ3GWr+2qU6S0yIHf
+5LncBJkMJ6irOW4AS5uMEpOizKPbZ5rXq9c+2xpbYBaQoE7dGXlG/2RK97wlDZnM
+FKql4WJOgO4u/NXWPy17wfvFEmWm/fIZ+OuTwCjZK/bs0IfF1Z+iKfcEWpWtbAod
+Np7ipmxn1BWKUm+6xPPHFaUD1M8q06MRySnWiPQkW8ZFMGDSAVtwblzRtMKxVnZ9
++xc2V7rFrZWmWzwJ7OiUD7dhCcpe4sTpf68t+vHNQerLrdBl48dWsNPagzr45IEx
+Jj+EcAqJcPHI9FD6WQGUrLuiMQy9019IAukCAwEAAaNjMGEwHQYDVR0OBBYEFE+Y
+7sPfK7FSWzef0nfyU1e+wZzmMEAGA1UdEQQ5MDeCDmlkcC51c2QuY2FzLmN6hiVo
+dHRwczovL2lkcC51c2QuY2FzLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBgQAVCFqjJUqtfBVn0hMWS0OrRra+54dHu7Qx9WjScYd4hudyqENK7YRi
+G3at5VIP0i2heENp0f961FOWX05S4qQY1stjEWAnHisBt/yb58xFm/CJtsDGDzUU
+2Mmq4lxvhLn2ItyZSW7mwuldXHHD5cdFSqRpoY6Cb9UnmaTKpklzX6HR+dRYBK5C
+9TQVC6tSGRVZRO7T5O4baDn3KvHLz5sOLaqeTOUNDxPCJZc+59c/eyvy41rOSo4K
+lNaDDt/ZphgZ2KTv7OWKFHtn8uEW6J7dQXICaYMuW2wuvxr/QbsPqjTLyEZW+QvW
+daLC2Boa2A0nsqYOFhfiUTsI5R5MSUefut/fXMH8iPwYqurF5S4OOKSBJBCd5/sx
+w52IQQqUoRGT+816/qSW1hBDm7EjcjzOFd4a6LyqS3/W58PHAJSRGdPeaPg4hBCk
+nkW5SWDpMZz81Qz29k21UkEIZEnEZbZ293us4OT0hkckCbYuWmTw7XUMxOcXE0oF
+kqpMnmxdgaI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEIzCCAougAwIBAgIUYBkTgukww8eLdR/LPSu7ehQOWlEwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owHhcNMTkwMzIxMDcyMTMwWhcN
+MzkwMzIxMDcyMTMwWjAZMRcwFQYDVQQDDA5pZHAudXNkLmNhcy5jejCCAaIwDQYJ
+KoZIhvcNAQEBBQADggGPADCCAYoCggGBAM36rfdK307Lxv7JVxIcxL8rwq3gEplE
+3hMGBORQwFy11lVN14Wao7xyE9kyY/gYQr1MFwg5TuVhWwcuzcdjKjOXDOlzbDJt
+NpwcYNJLI68B60He608HLSWgvxgjDjOfmOW7etVWD//db1MrnhAxqYuwtAxoY8ZR
+9PTCo+HLM9menpztuwGFzc8UWW6iDKaVkc32tyuAD5hOE3CtsZWykRFpbNVfUrUh
+KcS30cupLBf/sbX/kHbpcQ78essF5zv2q9ZQ/74oySAo6lNZW59ur67YwvJWdFRM
+ipzfYc4NPetQ+ELCBJOwPDgsK52LmtBaUpv4oUs2l8Dk96Xv19K/4cI3b9Wrpgwa
+aXlQrg3nsJftLNYI7xHROBAy1TbrymhAv+pgwjk3InIbLnoSk7iUzeJnZLeKjyZd
+CoCJSUMoBYzy9CMbutpQBwJd6P6WCD1kNyceaKOEtqeJfZPgR5Tuqysw5QuX7FYf
+uJ8z66hJuCJt9AZoOsiVfDkbCu6R0oOZzQIDAQABo2MwYTAdBgNVHQ4EFgQUQ6Iw
+VAodLJU6WQ7otOIB1ULPw+0wQAYDVR0RBDkwN4IOaWRwLnVzZC5jYXMuY3qGJWh0
+dHBzOi8vaWRwLnVzZC5jYXMuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggGBADRmxD8ZNSd+SUkT8f7x5LWNogH1Eiqwon+vwK/rhw09mo5sOm3WRSi8
+VxzdVRis9+qtdxKIZ4LJt4j6+TLBWGSWzaooSNFsbdQLATsJgfZ8A9R0ibvxhvIK
+MV2bQY4zBA3oXI/mSCjGWG+XLF2BuZO2VIugmOkF2VwG7Tk5gnvj/xjzgKvyEvT6
+IJe16B3GQUhABnyKfwb6jOLuJPMjewdQsg4vso4AMZ2gdGF9mbDM8+VHhT3hpQP3
+ue2aqyBLjJzCzCS1LqpqS+JA6S2I+BM2Kfl2/PcmKShJOKVbK0Y9sCyq+um/dvfU
+/szzOB9PSTJT4iA8FvtoIb7LvszzK7Xu66XbXgeyiHFTAsslgiWzOuTkNIfI9zyw
+sBqbC7R9mLGQGANtYm5V0b4KxdA8wsWgdX4Z9o6IfzCOvXGAbgl3xcrcJUaovLlo
+GJNDLDXGfTLG6SXnslmLyAoCXOYSstV7dJl742zkSJ1Ro/mEyomGDGEBrTA4AnXI
+icKFzLK/pg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.usd.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.usd.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.usd.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.usd.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.usd.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.usd.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">usd.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAoygAwIBAgIVAJIIyXWSPYcootJEuw7QaGi8BcoLMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51c2QuY2FzLmN6MB4XDTE5MDMyMTA3MjEzMVoX
+DTM5MDMyMTA3MjEzMVowGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCXZNGF7qggCpo1ueygYxZhBeXklT+e
+ZaGF8fdEQ2JvYS/WxXpHR7QM5NRzRM83fcQruUBxLIstC9XzBZNdawGh4H2qUiu0
+kTIDnoVlg0CmuliMOkP7Yeh/zEqfGhpR82t2JKMfOKdmFAI6dfsqfCK4FHlFjDI7
+gl6YdxWs5JzNbeD+/0KwIbtzKZpaOwAj8em7JdZ3aWx9+odIDajz9+nooRERFdkK
+sNHJqBunAoaYAJjbFzgNzGWqtVlnyK6j7OyS2X124H6bWLqcbFThew5cjyY/gMZu
+OXmRtNMl1WsxK7Ej/PJt5PJoAv8g+mvt0yYrKFCt61uElLD3/ne/5ElmXeJE4ixj
+sXJwq0Ut+rZYzsXgJOvEX3wfSnqLrtFQKy5WT2lwuVgFMrTquVn2BpHVmIHlk2mP
+SA8o11TJagCi+uEqIgQTT/kM/MD08RwQkhIJkWKVGy3hOy1NdXazIdL4rUS7ckYc
+G3tdfJc7DHj0PTYDgCmdcGF1b0npWvaNZe8CAwEAAaNjMGEwHQYDVR0OBBYEFIcR
+yWWqI9hiaZiPdsuBAAlcCH+zMEAGA1UdEQQ5MDeCDmlkcC51c2QuY2FzLmN6hiVo
+dHRwczovL2lkcC51c2QuY2FzLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBgQAg8KTJLWFe/qwckqdJGcCdJihocPjIvOA+N9GbTD0Rpz3AFDMOb/CY
+hr2FJu/ncm1b0dKpmIOBRHLtQHtVDciRUWgr5P78Rq6R+F7yG89/yPOsGstwkXKL
+aNUUFkjHoR0QJNnUr/2/QP5D6jLupeMPuPfSmsL9TREOmgBm2+G965SnswjUs4Cd
+KI7+sojlZjrv4WSg5dFy4grYz2zIKlWqFHn8Kbcx10rsA/8ofVS62YUk57n5IyxJ
+pFYRK7OxRj1tQsbUq5ORddmed1viu1iLVv/XtyHUvMCFB0+zhL7jDkb7IdjjMGsf
+Ey0nFcFKIzntQzrzzvVvl+mvQ9mgVh71UwoSY6W/eMuTco2y94XOJckL192u5AD1
+aXdAm8YhljRSRyMgECvldvnb2HPF1DnKkY09U/vxykAit7IakCJ5znjO6IwBupi3
+2GhnmYb+ErUAfL6bWlGS5cLz0lB2qT3hnw1/nwYt6oeoLi46Udav2x/rAKxRw4AV
+qQ4eAazCSd4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJDCCAoygAwIBAgIVAL5RDAecW68PcN9DhwwWFZrSH90HMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51c2QuY2FzLmN6MB4XDTE5MDMyMTA3MjEyOFoX
+DTM5MDMyMTA3MjEyOFowGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCm1TiRPIwF1yYQN2jYp04PsGN0yTlj
+awk7ra227TcycPhUzM5M2DmycvRNVzov45xJdOiVHjGZtPDqy4ZrQ0cRW0sR6yky
+cRB8Dj3YwJeA9LXV60pxiuq3cYTKGvongoZJkBG+3EUxV71DNn8TFlCBX5r7XElS
+McE8ijSL+9DGnjV9FdlCH88vPOGUdXr1k1JPWlqIgs1/F2JIJ3GWr+2qU6S0yIHf
+5LncBJkMJ6irOW4AS5uMEpOizKPbZ5rXq9c+2xpbYBaQoE7dGXlG/2RK97wlDZnM
+FKql4WJOgO4u/NXWPy17wfvFEmWm/fIZ+OuTwCjZK/bs0IfF1Z+iKfcEWpWtbAod
+Np7ipmxn1BWKUm+6xPPHFaUD1M8q06MRySnWiPQkW8ZFMGDSAVtwblzRtMKxVnZ9
++xc2V7rFrZWmWzwJ7OiUD7dhCcpe4sTpf68t+vHNQerLrdBl48dWsNPagzr45IEx
+Jj+EcAqJcPHI9FD6WQGUrLuiMQy9019IAukCAwEAAaNjMGEwHQYDVR0OBBYEFE+Y
+7sPfK7FSWzef0nfyU1e+wZzmMEAGA1UdEQQ5MDeCDmlkcC51c2QuY2FzLmN6hiVo
+dHRwczovL2lkcC51c2QuY2FzLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBgQAVCFqjJUqtfBVn0hMWS0OrRra+54dHu7Qx9WjScYd4hudyqENK7YRi
+G3at5VIP0i2heENp0f961FOWX05S4qQY1stjEWAnHisBt/yb58xFm/CJtsDGDzUU
+2Mmq4lxvhLn2ItyZSW7mwuldXHHD5cdFSqRpoY6Cb9UnmaTKpklzX6HR+dRYBK5C
+9TQVC6tSGRVZRO7T5O4baDn3KvHLz5sOLaqeTOUNDxPCJZc+59c/eyvy41rOSo4K
+lNaDDt/ZphgZ2KTv7OWKFHtn8uEW6J7dQXICaYMuW2wuvxr/QbsPqjTLyEZW+QvW
+daLC2Boa2A0nsqYOFhfiUTsI5R5MSUefut/fXMH8iPwYqurF5S4OOKSBJBCd5/sx
+w52IQQqUoRGT+816/qSW1hBDm7EjcjzOFd4a6LyqS3/W58PHAJSRGdPeaPg4hBCk
+nkW5SWDpMZz81Qz29k21UkEIZEnEZbZ293us4OT0hkckCbYuWmTw7XUMxOcXE0oF
+kqpMnmxdgaI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEIzCCAougAwIBAgIUYBkTgukww8eLdR/LPSu7ehQOWlEwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVzZC5jYXMuY3owHhcNMTkwMzIxMDcyMTMwWhcN
+MzkwMzIxMDcyMTMwWjAZMRcwFQYDVQQDDA5pZHAudXNkLmNhcy5jejCCAaIwDQYJ
+KoZIhvcNAQEBBQADggGPADCCAYoCggGBAM36rfdK307Lxv7JVxIcxL8rwq3gEplE
+3hMGBORQwFy11lVN14Wao7xyE9kyY/gYQr1MFwg5TuVhWwcuzcdjKjOXDOlzbDJt
+NpwcYNJLI68B60He608HLSWgvxgjDjOfmOW7etVWD//db1MrnhAxqYuwtAxoY8ZR
+9PTCo+HLM9menpztuwGFzc8UWW6iDKaVkc32tyuAD5hOE3CtsZWykRFpbNVfUrUh
+KcS30cupLBf/sbX/kHbpcQ78essF5zv2q9ZQ/74oySAo6lNZW59ur67YwvJWdFRM
+ipzfYc4NPetQ+ELCBJOwPDgsK52LmtBaUpv4oUs2l8Dk96Xv19K/4cI3b9Wrpgwa
+aXlQrg3nsJftLNYI7xHROBAy1TbrymhAv+pgwjk3InIbLnoSk7iUzeJnZLeKjyZd
+CoCJSUMoBYzy9CMbutpQBwJd6P6WCD1kNyceaKOEtqeJfZPgR5Tuqysw5QuX7FYf
+uJ8z66hJuCJt9AZoOsiVfDkbCu6R0oOZzQIDAQABo2MwYTAdBgNVHQ4EFgQUQ6Iw
+VAodLJU6WQ7otOIB1ULPw+0wQAYDVR0RBDkwN4IOaWRwLnVzZC5jYXMuY3qGJWh0
+dHBzOi8vaWRwLnVzZC5jYXMuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggGBADRmxD8ZNSd+SUkT8f7x5LWNogH1Eiqwon+vwK/rhw09mo5sOm3WRSi8
+VxzdVRis9+qtdxKIZ4LJt4j6+TLBWGSWzaooSNFsbdQLATsJgfZ8A9R0ibvxhvIK
+MV2bQY4zBA3oXI/mSCjGWG+XLF2BuZO2VIugmOkF2VwG7Tk5gnvj/xjzgKvyEvT6
+IJe16B3GQUhABnyKfwb6jOLuJPMjewdQsg4vso4AMZ2gdGF9mbDM8+VHhT3hpQP3
+ue2aqyBLjJzCzCS1LqpqS+JA6S2I+BM2Kfl2/PcmKShJOKVbK0Y9sCyq+um/dvfU
+/szzOB9PSTJT4iA8FvtoIb7LvszzK7Xu66XbXgeyiHFTAsslgiWzOuTkNIfI9zyw
+sBqbC7R9mLGQGANtYm5V0b4KxdA8wsWgdX4Z9o6IfzCOvXGAbgl3xcrcJUaovLlo
+GJNDLDXGfTLG6SXnslmLyAoCXOYSstV7dJl742zkSJ1Ro/mEyomGDGEBrTA4AnXI
+icKFzLK/pg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.usd.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">USD</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">ÚSD AV ČR, v. v. i.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Contemporary History</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav pro soudobé dějiny AV ČR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.usd.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.usd.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

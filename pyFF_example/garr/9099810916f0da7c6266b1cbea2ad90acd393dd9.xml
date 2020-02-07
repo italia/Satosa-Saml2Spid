@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://nlw-shib.hosted.exlibrisgroup.com/shib">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-07-02T11:38:42Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">National Library of Wales - Primo</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This is an Ex Libris Primo Hosted SP on behalf of National Library of Wales</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3DCCAcSgAwIBAgIJAJtjN/Sjy8NPMA0GCSqGSIb3DQEBBQUAMBIxEDAOBgNV
+BAMTB2FpbzAwMjYwHhcNMTUwNDAyMTkyMDQ1WhcNMjUwMzMwMTkyMDQ1WjASMRAw
+DgYDVQQDEwdhaW8wMDI2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+7Jt19IZw6ICRXtbeaAcFrr5D6aadKv+8DW6DCLU7COaPBgPhlQW3Y6yqh4T8XTpz
+AU4I5HISgZlm9/C8aLQWWzxa432p6FcGrkY4EYGyT7Ez4qcwamisIN6Hsb6mtPaJ
+a/ZpRWcEYhS3z0wiJiGHJa3z81DmZ8fBqZkGEj2PRYpdQdV80ILiJeAHUnAKL59E
+IFFfbzJwqz0OImdHMS8BI8ewojta8Cnun/Ue8JOvp703Yt4/YmXQlb69lN29Rhet
+bDEUL3rjQK+Omf/kCGUdQtXfuFl5zvL3JUz6ktwzj5rMtCAqNaZnEHsdh2YC6IWK
+HeE3OR5THvu5+NLDuAkDywIDAQABozUwMzASBgNVHREECzAJggdhaW8wMDI2MB0G
+A1UdDgQWBBR8qDCK47IUQfSx79u36cex86OrXzANBgkqhkiG9w0BAQUFAAOCAQEA
+6nVdsxI/Z3eSLnIjQt2xvpLHbA0xfhcNi5VvKOHSRxZryE+PIe+Lzu9ycj3d3t4O
+OWIGLafxvNi52udtPa8uG4ZsUEe3UUm5SV0ezVWZK2H2LkX3E7rq6xWGuZxmZtGy
+8yaLXKOQsecj+O111rCOSmVGPwho7+AKtBMl7qD+2kN7j3ZGc8Ze9MG/M1RuOhpB
+4sefEKZCcWZJfjwmSQa8KKz7p3teflnKndl0yovrb1Yosy3C0GqGJz5OmyOxfO3I
+vOdVbh1NvO7LYzioXPk7URk1vst4P9pQbmcUFNRrd+WjfzOUjiAJYGm43DNqQEqC
+XfBl+0BWyo22ZUbTodVKFw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://nlw-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ex Libris (UK) Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">This is a Shibboleth SP for National Library of Wales</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://exlibrisgroup.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Benoit</md:GivenName>
+	<md:SurName>Ginestet</md:SurName>
+	<md:EmailAddress>mailto:benoit.ginestet@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Benoit</md:GivenName>
+	<md:SurName>Ginestet</md:SurName>
+	<md:EmailAddress>mailto:benoit.ginestet@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

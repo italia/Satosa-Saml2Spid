@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.grenoble-inp.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2012-07-11T10:36:51Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">grenoble-inp.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Grenoble INP - Institut polytechnique de Grenoble</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACG0lEQVQ4y4WTv2sUQRTHPzO7s5fd5LyQxGgEtZDTNjZBtBVBTSOif4F/g4U/QMFCCIggabQTbIKNxMKkEBLJtUaQkKAEUROSIN6dSfZyuZt5Frt7d3pF3rDsY9h97/s+M18FKMAAEdAHhICf7neGAE0gBnbTdwMgB4zMzs4+2tzc/CoHxNra2vL09PQDYATIKaB/cXFxYtscufX83TJXLtwFFVG/cwkzEPBq/Cp5o3nRuA0mYvXTCU5ev8YX3OTY2Ng9H8gXi8Ublx++R2mF8QsYbxA93IvX69FnNDlPQdMH2+Dn3Dwb8x84P/P2JvDYB8IoigpRj08hMuS8AZSO0KGH8jQI/KjU2f82A7ZO+XNI7/BhgiDIAz1+Coy+HkNoNCiDiGL7V4Xf37eYOnSWyChcXEGZEBFB2mB9P8s8DbvxPuuVj1RqW/yZu4gf+iCS8E8fgWQvq5Alb0qrBDhGR1cRQhwOJw6cIKLApUX+C50le3sNxFqaTnAiiDgka+kyFUK2ugrgLDiLdYlCh0NwHT8foABnkabFuqR+a4RsdtdmIJ0U0+uZKFBp939GkJYK6VbR1EAtjuPq0f4IsTb5NhuhQ0H7FIRwaIh6vV4F9jSws7Ky8vrl/XFOHR9MmSWgHNkptDkMnjnNuScTLC0tTQE7mZmOlUqlZ9VqdeMgM5XL5fWFhYWnnWZSQJDaOLOz6ebdsnMt7VwD9v8C3mZSAcLTEj0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NDk6MDErMDI6MDByT8mCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjQ5OjAxKzAyOjAwAxJxPgAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.grenoble-inp.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">staff and students</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Grenoble INP - Institut polytechnique de Grenoble</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">personnels et étudiants</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVDCCAjygAwIBAgIVAO/QaN+dR8TZXZ6cNFwn8jJiB3QdMA0GCSqGSIb3DQEB
+BQUAMCUxIzAhBgNVBAMTGnNoaWJib2xldGguZ3Jlbm9ibGUtaW5wLmZyMB4XDTEy
+MDEwOTA5MzY1NVoXDTMyMDEwOTA5MzY1NVowJTEjMCEGA1UEAxMac2hpYmJvbGV0
+aC5ncmVub2JsZS1pbnAuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDKu60J1wRxU9drIKvmtJJfsJ/w+Xmdd+PQOxz0+mIwpdUSpkMbkXWoiYTsj2nf
+BorFExB0qYHAUJTdPVBJL1LVSqOBK8k1w7BopKJnQ/XYujiSPuodTifKRYjiGyiB
+rDKs+pNLawv8jzWTtqnM8NYsfa0+25kdVDwHhKqmSmypB6leLyjNr9MKdHDQ38ca
+q3tKlKz0Mif1iZ0BZdo5eQSzZwO67pzU/4YUgmN2HpJxrwRsk9U98oILg2NVW+0U
+BNcheLXY2XrRd+fTbbPbTTMA4RNcYLCS0EPJ6YA77+wZ5YfD1FGu/hxBKUbCP8b8
+hhQ5O7Y//nWY3w5MlGqLAPjbAgMBAAGjezB5MFgGA1UdEQRRME+CGnNoaWJib2xl
+dGguZ3Jlbm9ibGUtaW5wLmZyhjFodHRwczovL3NoaWJib2xldGguZ3Jlbm9ibGUt
+aW5wLmZyL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTAG7NXFV8rO7re+ySoBXuv
+3FrnkDANBgkqhkiG9w0BAQUFAAOCAQEAIFBwVqbJE++ODmHmwh6E3ScDv+LDM3q3
+GBpZKQ6I+g5uVdM1r5TRKZBxKL59J51wHBQ2+AmDhlNEeqUszaw42GXFJhWLf8RU
+5hnqyBQawD8NpztjyoNgHg1dLdg6uz8k1YHXTw3mG4eWaqxmeeUKspv+XXyBg7Sw
+xVox8mkoixLKQpOZ20xTOK41X+bAockt816dkuSR2ZV+v8fwE4BZbFunf9XZRJmD
+eyd91K5Q48y3V66rM3lnwlbdRFcBD9QC8vL+kHL1L5RIUSiClWuSm4J6adU29spC
+OXNNpafFw7y4uune6Y8Jq542pO0I1Hlx1rcd9u0vZ3P+ewZdQP5kkw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.grenoble-inp.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.grenoble-inp.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.grenoble-inp.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institut National Polytechnique de Grenoble</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institut National Polytechnique de Grenoble</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.grenoble-inp.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:federation.sos@grenoble-inp.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

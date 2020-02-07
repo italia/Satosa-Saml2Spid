@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.helsinki.fi/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">helsinki.fi</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Helsinki</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">Helsingfors universitet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Helsingin yliopisto</mdui:DisplayName>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFCzCCAvOgAwIBAgIJAPtmOYNbClWkMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
+BAMMEWxvZ2luLmhlbHNpbmtpLmZpMB4XDTE4MDUxODA4NDk1M1oXDTM4MDUxODA4
+NDk1M1owHDEaMBgGA1UEAwwRbG9naW4uaGVsc2lua2kuZmkwggIiMA0GCSqGSIb3
+DQEBAQUAA4ICDwAwggIKAoICAQDhxj8XiSWRbzRUcPoCjdotkJnvtNK7OGG72k4F
+Lxm0VCNvv6kYKY58lamOCPT/er64IxN3MUzmAIguuQPidVCk7ZYodb0+STOwy8fq
+TDJTH4H47dvoyK2O1li/74Fh/UVCfKzeVAv0nGPErAmOHULrROFiUxmeFE+7RO1I
+G1NGAXei1uAIuzNPrv/8pqhJw8MucMZAIX3ngZjGk0gaSs6HB8bZfQZo9UTYN7wa
+HuENjan+OzDYwf1fim6VfDmMatWZsnCWb3qDJt7rF2G+YfgVE6QwFA/9z4xERtbw
+4Ub1vdFLsu9i3zVv4Qxx/UxvvANNK4tloeiEMHPD/6/Ww90HZ1lUQ3qNERyv20lI
+HT2BiJSpOvF6UJSH8FESKLOMuBRzQicwgXtUNUAg3yw7IirQZVsv71MxiBgcCZOB
+hUqX+JG/MlUWrac0cj0WmACvhrUBRjKUkHXNLws3lOW1d646TWbtIaSRNNF/irLn
+scHsADdOnDT/E9V7UCzGJdJZtbjv2KjeNgoNM5uUYxg+cFqbv+5japKKoTOPHLYA
+3Fcf4PyiTiJSCLCgHLXYmsTRxUWAku4P7OJMK7xZweWySlP+tXFrXIVP7XGLj/Xg
+5xVxoU8PwrSAyT0VZigaCDSG5B0+mXjrv2LZwyPAL/EXXycICnWUz2wf5HwbV9/w
+e0HTjQIDAQABo1AwTjAdBgNVHQ4EFgQUC5QR1gXp3ltxIZr0SwKg4X5SpTIwHwYD
+VR0jBBgwFoAUC5QR1gXp3ltxIZr0SwKg4X5SpTIwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQsFAAOCAgEACCtoT/M+YT8uExP6kTqkww6IwMEtW/X3mT2sJQv5I3vD
+ivHXwYEoVfvwDe8B/H48RE4Bh93vHqPPQ0iXEUPtldM4dcOMd7711AVxpKe62iF7
+Uy3YtQ+5Jxk6mexfnjMek5L5jz0eLkHTqw9v6K22VQHAx8GQ7SPSfpt+Qow3JIXS
+z+nzPURR14STo4CnC6a/DO1r4yXMThIf+wfQwTyRQBFPFzDBROmYa9wMJxegcDHv
+ps5QUIoAdOefO++2SVnfKebkwS3UbXhCvnLt3Onfl8Juuppja/6v4ReKmX8/SHJM
+dEpPcnqU+fFcApqqmtTgDfxguCKrP4QLA899RaXn2KKz57jyrtMWzTIw/R3fnbeY
+ad7O2piQDFkWGpL87kX+rw2rcR2gARkiE3QPbNWte7aUI7nbJ1bmrCajIxqZAmK7
+xJ3tuUgriaxE5e8R3gC1kjwe6Q+gTusZSFp522fc+3IXS7473LCiYUNTYAqMLIEZ
+NDBsIG86FEHtr+JmSUetlnH8P6IpRJSjhSCGR+kaWaTGlXaUbqNzsACi9vZpKDz3
+9+0c121p2IFuZk7RHlAjPjVJZa/b/0Etv5pFoduHR+iT4QmB/8EJ5x8VrKqokIkE
+/nVED8wlU5toDn0zH3AateXZreGNyTuXmIU3RlZr0iVtcnu+QcsTfd4CEV2gubE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.helsinki.fi/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.helsinki.fi/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.helsinki.fi/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">Helsingin yliopisto</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Helsinki</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">Helsingfors universitet</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">Helsingin yliopisto</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Helsinki</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">Helsingfors universitet</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.helsinki.fi/yliopisto/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.helsinki.fi/yliopisto/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.helsinki.fi/yliopisto/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jukka</md:GivenName>
+	<md:SurName>Karvonen</md:SurName>
+	<md:EmailAddress>mailto:idm-hosting@helsinki.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Jukka</md:GivenName>
+	<md:SurName>Karvonen</md:SurName>
+	<md:EmailAddress>mailto:idm-hosting@helsinki.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:SurName>team</md:SurName>
+	<md:EmailAddress>mailto:cert@helsinki.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

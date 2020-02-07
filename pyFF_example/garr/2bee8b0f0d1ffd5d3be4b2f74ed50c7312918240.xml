@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.miracosta.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">miracosta.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">MiraCosta Community College District</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.miracosta.edu/officeofthepresident/board/downloads/5040BP-StudentRecords-DirectoryInformation-Privacy.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="170" xml:lang="en">https://pg.cloud.miracosta.edu/_layouts/images/PG/images/MCC%20Logo_RGB.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAKJA4OhuAIW2/VtHAwPPuvITL/gLMA0GCSqGSIb3DQEB
+BQUAMBwxGjAYBgNVBAMTEWlkcC5taXJhY29zdGEuZWR1MB4XDTExMTAzMTE2MDE1
+OFoXDTMxMTAzMTE2MDE1OFowHDEaMBgGA1UEAxMRaWRwLm1pcmFjb3N0YS5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCqzXssw4BcEIhnfFOihSt0
+nXHGD+BWrrYm4OBhKYiXsiSmoYxHPijNnnsunWDoSbpbs8UkY1WMjNuSCfYGqZSy
+nEzN2mxKU2/l2CtvLjHWkU1DvBCBm75d4ruV7hd/68GbdV2NXRC+NEbanKrBdds3
+fuezg9TXfhFyANi8B5zMUUYW5z6umFpWE/f0HVXv9GneGDqeUYXi1MtXejKa2Cvr
+x6VFgi/4lFXunO+g0ZsNMhd4A3OHsUXS8dq57FHGoscWa9y4gG9AaHZ9T/j+uzOc
+MAiuZsMUGHXuv8UjIW2D72GezzENhXPLDbE053aJYhau0OLnn7qoM3qBeDPc1Git
+AgMBAAGjaTBnMEYGA1UdEQQ/MD2CEWlkcC5taXJhY29zdGEuZWR1hihodHRwczov
+L2lkcC5taXJhY29zdGEuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBT94mza
+l4YPs6XhkNrMmajwqDwGYTANBgkqhkiG9w0BAQUFAAOCAQEAEfoNc6WyHEcPvFI2
+er3Bboa2D8UMyOHNaQOrhLXAqyHCWMxrfk9qrmLJWuV1z8JC5K/6ILQPgAkJFc7z
+SZP+wSRJWipds6ooMIL07cLe2VgDTibAzjfCSUcmzJSfFlCZsOJhnbFeCNqvDCfz
+vLt3iq1t9n/+CKll/KNEIFwAEsTsGrn/ciQHMs67FnOhnV/O23opkoYF9rQwBVwb
+d9ZKvE7UQ7Rq4x/VPzGLw6SdUVIUk/XFkfMFg53TmYJ9oQoJ5Gqyk0EK+0Q7iEJu
+RRFJHJ3x0OEfpGM9JN2iBiJUN7OWBMKvlqpOSqD/4PWzMEz2A1aYFaacWtYAs2Gz
+BgyYMA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.miracosta.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.miracosta.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.miracosta.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.miracosta.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.miracosta.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.miracosta.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">MiraCosta Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">MiraCosta Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.miracosta.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Anthony Ginger</md:GivenName>
+	<md:EmailAddress>aginger@miracosta.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Steve Schultz</md:GivenName>
+	<md:EmailAddress>sschultz@miracosta.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Erich Donze</md:GivenName>
+	<md:EmailAddress>edonze@miracosta.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ukfed.ukpressonline.co.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2009-08-27T16:32:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/DS" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIJAPiDlYs5S2Y2MA0GCSqGSIb3DQEBBQUAMCgxJjAkBgNV
+BAMTHWRpZ2ktd2ViLXN2ci5kaWdpdG9yaWFsLmNvLnVrMB4XDTE0MDcwMTExMTY0
+NVoXDTM0MDYyNjExMTY0NVowKDEmMCQGA1UEAxMdZGlnaS13ZWItc3ZyLmRpZ2l0
+b3JpYWwuY28udWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJqtxk
+XLaWpCtU00hwXbdTdF0bAXa5qA9NNHoD3Pc2SD+QAZCHFSNYUn5LkI2MNzKuD9Lo
+jF+R6dun5C6jaU8vtSJHaVLWJwNn6vfTLFidCyKAa/0fY+qSB46NNjSiXwmFNpiI
+Sgy5HwDOJpC4avgA0nlO57BLs7Qal1is7/goZWodTwIPIzDU3bwmlNm0gJxR2UkX
+mZvmx6LPozYL6lbSfuY3MKfbRpfrCXAgH8xYW3F7jBxIhJuv7Rou6zAXhBj+Ss8h
+3bONUquNMZmQ0K0ngp2G4+XIJy99GDDZfCUKxeliu0OjA42B6iJJq+QRQo3PLyUz
+3h1Vaw5jqt9lQJc/AgMBAAGjSzBJMCgGA1UdEQQhMB+CHWRpZ2ktd2ViLXN2ci5k
+aWdpdG9yaWFsLmNvLnVrMB0GA1UdDgQWBBTTnfZ7sgdhNZp0vUUtK2ZWGR9tqjAN
+BgkqhkiG9w0BAQUFAAOCAQEAtMa03ENgZE9c8LgdaiK4lLjbxXGEr16QAkScjodF
+Vm0mO/Ohda2avbqFtRXU3u987dcZ9InQ+dCrtfXnU8qRjXc68YYA+ZrKhnMQXmMA
+9y9pDu8QxhMR+kQLTVAcseX1sStZYoxA7zboO3CZ/aDUvdvkVFHH5mlEZuzBeQys
+/7kzMosrFpe4dwQiHE9zk+tJjMHoEiHbN0xevID70j7rcO8NHUsYl6vkvqZRKcEJ
+aMNyvJmu5u9z7IUYGESPox+4a4B4epdkdwHcOFw7/01URXfb19HfTNtKhS/tHw42
+C7xMZ7c4p7rZOnaeqwso9Zpf+yP9/7sNh9iKvS3kEvITAg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://ukfed.ukpressonline.co.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Digitorial Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">UKPressOnline</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ukpressonline.co.uk/ukpressonline/open/aboutus.jsp</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Alasdair</md:GivenName>
+	<md:SurName>Mellis</md:SurName>
+	<md:EmailAddress>mailto:alasdair@digitorial.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dawn</md:GivenName>
+	<md:SurName>Raison</md:SurName>
+	<md:EmailAddress>mailto:dawn@digitorial.co.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

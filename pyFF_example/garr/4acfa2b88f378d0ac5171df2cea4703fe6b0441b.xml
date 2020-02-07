@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uleth.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2015-11-06T11:04:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uleth.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Lethbridge</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for University of Lethbridge</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.uleth.ca/about</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.uleth.ca/privacy-office/web-privacy-statement</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUKFdRBXznaN42NiZhpcimoB86BD4wDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnVsZXRoLmNhMB4XDTEzMDUyMjIxNDU0MFoXDTMz
+MDUyMjIxNDU0MFowFzEVMBMGA1UEAxMMaWRwLnVsZXRoLmNhMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEApYI3MmpF36HzPG0T57Y38vdN0M5tLNjk4nBQ
+kYnG/+1lQZ+kTyXak7whzSmAp7oFbYKpXJh6IP/8Q3YJKCrYa7sDGHdnWBc8NFG6
+wyKUcK2YqSgeoydNwMItFwadpZy47WsGCc8yJRM6t3kY4avJ+QWxU+54fVVPe+IU
+db3C3jiWJBysGhadxkGEo4raPZf+dAvXBra4H17JtRoKzJFvMVcXAHlx3IgzmJYX
+t2UWh8YU3hyH3ISU8PqprjBPW+F1lmGYDWJosBHAB1QzVs0Qr5IhQfUKzC5m+y1C
+C8mKSgQy1fbH0glkvtzZCwTaUBdy6sh/YWBAFpOtmxPSOixR8wIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAudWxldGguY2GGI2h0dHBzOi8vaWRwLnVsZXRoLmNhL2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBSMcvQnr/ET7UWqQQvcNcnwQr88zjANBgkq
+hkiG9w0BAQUFAAOCAQEAnL2kpGA0DChGj5xdoCJfsPlfkuWHKt0+HEAxVXSb4UAs
+9P7+4mV/ilgCkrzJ/V1wJX610yAF8IMOxMjGta2qijwB7y/Plqt96lFf1EvoJv1j
+9BRLltLx32I8GgjaLcmURi7wZFajF3f6x0SSyIBLLLkHCoBs9pJK5cFNZTz+5NUf
+C2FTOeVdbLXWoAGriZGmwJ06iw+wOjpnt9/c6ycSKzDQJ2Kihxuz0Z18+SmDmrW+
+8o930GXdGCANSWh5v6H+c0QMJScgA9L0G6lX08jOVlbRstuP3A/1vsKO8QMHPlJ7
+hmUx27+shkkkyZ9WxQ/1bJmN6+Lw4We2MjBiHFY8Yw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uleth.ca:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uleth.ca:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uleth.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uleth.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.uleth.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uleth.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uleth.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUKFdRBXznaN42NiZhpcimoB86BD4wDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnVsZXRoLmNhMB4XDTEzMDUyMjIxNDU0MFoXDTMz
+MDUyMjIxNDU0MFowFzEVMBMGA1UEAxMMaWRwLnVsZXRoLmNhMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEApYI3MmpF36HzPG0T57Y38vdN0M5tLNjk4nBQ
+kYnG/+1lQZ+kTyXak7whzSmAp7oFbYKpXJh6IP/8Q3YJKCrYa7sDGHdnWBc8NFG6
+wyKUcK2YqSgeoydNwMItFwadpZy47WsGCc8yJRM6t3kY4avJ+QWxU+54fVVPe+IU
+db3C3jiWJBysGhadxkGEo4raPZf+dAvXBra4H17JtRoKzJFvMVcXAHlx3IgzmJYX
+t2UWh8YU3hyH3ISU8PqprjBPW+F1lmGYDWJosBHAB1QzVs0Qr5IhQfUKzC5m+y1C
+C8mKSgQy1fbH0glkvtzZCwTaUBdy6sh/YWBAFpOtmxPSOixR8wIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAudWxldGguY2GGI2h0dHBzOi8vaWRwLnVsZXRoLmNhL2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBSMcvQnr/ET7UWqQQvcNcnwQr88zjANBgkq
+hkiG9w0BAQUFAAOCAQEAnL2kpGA0DChGj5xdoCJfsPlfkuWHKt0+HEAxVXSb4UAs
+9P7+4mV/ilgCkrzJ/V1wJX610yAF8IMOxMjGta2qijwB7y/Plqt96lFf1EvoJv1j
+9BRLltLx32I8GgjaLcmURi7wZFajF3f6x0SSyIBLLLkHCoBs9pJK5cFNZTz+5NUf
+C2FTOeVdbLXWoAGriZGmwJ06iw+wOjpnt9/c6ycSKzDQJ2Kihxuz0Z18+SmDmrW+
+8o930GXdGCANSWh5v6H+c0QMJScgA9L0G6lX08jOVlbRstuP3A/1vsKO8QMHPlJ7
+hmUx27+shkkkyZ9WxQ/1bJmN6+Lw4We2MjBiHFY8Yw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uleth.ca:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uleth.ca:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Lethbridge</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Lethbridge</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uleth.ca/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>IT Solutions Center</md:SurName>
+	<md:EmailAddress>mailto:help@uleth.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

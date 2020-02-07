@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idptest.edinburghcollege.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-07-19T14:09:06Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">edinburghcollege.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Edinburgh College (Test)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This is a test identity provider for the edinburghcollege.ac.uk domain</mdui:Description>
+		<mdui:Logo height="60" width="80">https://idptest.edinburghcollege.ac.uk/idp/images/edcoll-80t.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idptest.edinburghcollege.ac.uk/idp/images/edcoll-16t.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.edinburghcollege.ac.uk</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>edinburghcollege.ac.uk</mdui:DomainHint>
+		<mdui:IPHint>195.194.47.0/24</mdui:IPHint>
+		<mdui:IPHint>194.81.56.24/29</mdui:IPHint>
+		<mdui:IPHint>194.81.56.240/29</mdui:IPHint>
+		<mdui:IPHint>194.83.180.0/24</mdui:IPHint>
+		<mdui:IPHint>194.83.181.0/24</mdui:IPHint>
+		<mdui:GeolocationHint>geo:55.9432,-3.0971</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:55.9263,-3.2892</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:55.9774,-3.2445</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:55.8825,-3.0795</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIUYcXactBG9JiUb4iduSZK0TdkW00wDQYJKoZIhvcNAQEL
+BQAwKTEnMCUGA1UEAwweaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMB4X
+DTE2MDYxNzEyMzMyN1oXDTM2MDYxNzEyMzMyN1owKTEnMCUGA1UEAwweaWRwdGVz
+dC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAiBZoonD0dwpX96FGpIdRDbXIYkAMSNlZFxkHdO6PGhTgydQFUVik
+tVHmw+1kxy/Neo0wBTyqZf6oEdkjHPwHBdmk72caeO7R2wMqQlKS6IDzopSSOjmW
+YumTy9/k27c1nSCJDsPZXAqidl1LqfnSiJswBUsPhUqtoHeLbIpFc5DIMJwfuACW
+MtRKtdwLgtXK1hgE74Z90lcYK8nF/wvJu1f3tO2Hk20+qzLswJoqy+B6QKZKkOxd
+vhb48/0pT/3VJ0wmg035MdWasoEE/dngxpgpTqwAsRK+Jl/fNlHH6jYi41ZeD5pV
+bmu2wXNsyw1f8vE1wq3L8A3Z0YxKoQVjcQIDAQABo4GEMIGBMB0GA1UdDgQWBBTk
+RO8KZFd0fpibv6B56zzOvCrUzzBgBgNVHREEWTBXgh5pZHB0ZXN0LmVkaW5idXJn
+aGNvbGxlZ2UuYWMudWuGNWh0dHBzOi8vaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAdAXZMe25m
+eMhmcMPsdMMZgZL1dMpJ4i3qmE12t4Z+T6FfY56ysdw3Ct3Vf5zcNyfV1wa5y2wG
+uEVMU3BPT1VYwxNJ1OoLjTLkjLdtmap1Vj9IwgZdk43LBYd1I8AxChsd5gulCqZU
+HjbqoNTuG5fRflbpfrVBSy+5EodghxjjjO1hIX3S8Gw3RVlnVzHjhqlR6qTgNzio
+ItyqCyEBHPcSTGiAQzUV7VcRqI9aiAboSc3x39VUOC4TsoSvSlSrs0PGx3yaJCJS
+9zTfmuPKQJPkEdHMqk507IVxsePTetMflWtReBTfgvLQ7rOZ0YiO2X4HZ8vSxz5m
+N/U3FHrUNtYA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIUeVIsPBubysxq1JHCeKiMUmxCeHEwDQYJKoZIhvcNAQEL
+BQAwKTEnMCUGA1UEAwweaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMB4X
+DTE2MDYxNzEyMzMyNloXDTM2MDYxNzEyMzMyNlowKTEnMCUGA1UEAwweaWRwdGVz
+dC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAkXiNO9679L64XLIwcRPHIbwzamm2pgAQ5KqITrAUunzpKm1FjMMO
+6Yg1EDtm34x1aSZ51Z7mOqyxumgPdAJaN2s3UcKyiRlb/qGI5dEC/C3hijGhW475
+UtLlRiiZZqPZltThbhQ8lVj1RzTuSC0HBElhfb22sxq8+R2copOSfDviQZbfmjpL
+jz8Lc7VE0cFqFRWk1IVyZLKFHnZpVM5sS28mLPKlB+aSBKvOzoL0F2v1TrrS/l4A
+DdvgduR2/UpJIU2+wu9UOfiilIVSvw565R2OVOlSF/3CDfNbgRtPBrMFeDgQ/g2N
++lJ+LSWsc11zk9sZpTy92xMRsUk+Hjb3xQIDAQABo4GEMIGBMB0GA1UdDgQWBBQK
+aD43zGBhte1VruNIXdb6bo8WJTBgBgNVHREEWTBXgh5pZHB0ZXN0LmVkaW5idXJn
+aGNvbGxlZ2UuYWMudWuGNWh0dHBzOi8vaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAZaJ7twWr1
+VoNfQ0J25IV006w0ipipESH+ZPCk6P5ZCBQIe2FBGH4uxtiBlMBmfoDuZChDqxHH
+7cIQPZ5wHKPzpHw36crmSjzs4p5MpS73Hyqvi+nWJoNZ0XqstqqDKLTQUWrwYTor
+GB9eD2LR0NGzw6R6zqrsvKV8iAyXAMJ6QaqklOY7LyBGsXnGvGwKglcgn4+ir0xP
+DZ/GHHPSraxNtUwFWk8aQlI/qXCoYLH/qgvrkKOSfGVYQoQGy78fNHy9vSqAxB8Y
+4/9lCJ9t+MChEtjYDn8fAi/jZ9mofrgVrsD+nX+scSrVOKEBeN3BeoAtykHVvHwt
+6S3+IGqU1uHd
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZjCCAk6gAwIBAgIVAJCqlZBUDi+xVO4OVQBGyElJ19aSMA0GCSqGSIb3DQEB
+CwUAMCkxJzAlBgNVBAMMHmlkcHRlc3QuZWRpbmJ1cmdoY29sbGVnZS5hYy51azAe
+Fw0xNjA2MTcxMjMzMjZaFw0zNjA2MTcxMjMzMjZaMCkxJzAlBgNVBAMMHmlkcHRl
+c3QuZWRpbmJ1cmdoY29sbGVnZS5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALYZZesG8XPNCFlWtJEMhCMtgAkceJ+m4QBXnDjPHKnO0vvNfctl
+UjsL91qvyUBaEDFWIi+Q1u89mj6ybl0PooHjRyoDYmG6ADaCVn+u03BNNPcc7mio
+kXsLvceFojJrWlPHKQK2wPtj/jQ3WMBZh027vo0MB5dQba9Aj00gBmGuSe/n7joR
+IgSLCt1I6sQomdLS09+MuafEQH8TSFR9a3NFEOePIMtMUbsPIwCa4rrxVgTAfEhC
++kE3tfOr3bSKzcQ3Oco+Prc5zyxeGg0Bc/0V7kUB9fOzEd/gat+mIKcflkQBTCzk
+grKtAfnWPisUGQrM7B0407HYE9e8jL3zaD0CAwEAAaOBhDCBgTAdBgNVHQ4EFgQU
+2k0EaGV6GHJ81RhUSGAkPaV8QqswYAYDVR0RBFkwV4IeaWRwdGVzdC5lZGluYnVy
+Z2hjb2xsZWdlLmFjLnVrhjVodHRwczovL2lkcHRlc3QuZWRpbmJ1cmdoY29sbGVn
+ZS5hYy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAOqc3m8oS
+4NR2AuPDbzEX9s/HnqdyYVEryl/ig9tA3WN8dVD/o296HQhChTk+5yArqybEmK79
+OSRVfMEeHKldTc74Zk3+EA2Y4bEak1ZsdvdrQ2tOtBA99ASvG8T04sBNqnn/05ek
+gXUyxM0ZLydXBnc2+CkQAHjt1G7GihZ8zkGnqyCHPE1fonH8loiXYO8KyNlc4Z02
+YQ1BxTnjIe+PGPYWl00+KV55hDJAgGnVxPv/RT9meUPHXXMbsYTRDUmY/mz3cIF4
+dZSg9/pckFYZN97B7WzKcpnc34wHbr2gQZp37cjZFi+XLqxPFFFlH9W2/n62vwaj
+ifshafzzOCkRvQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idptest.edinburghcollege.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idptest.edinburghcollege.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idptest.edinburghcollege.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idptest.edinburghcollege.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idptest.edinburghcollege.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idptest.edinburghcollege.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">edinburghcollege.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIUYcXactBG9JiUb4iduSZK0TdkW00wDQYJKoZIhvcNAQEL
+BQAwKTEnMCUGA1UEAwweaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMB4X
+DTE2MDYxNzEyMzMyN1oXDTM2MDYxNzEyMzMyN1owKTEnMCUGA1UEAwweaWRwdGVz
+dC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAiBZoonD0dwpX96FGpIdRDbXIYkAMSNlZFxkHdO6PGhTgydQFUVik
+tVHmw+1kxy/Neo0wBTyqZf6oEdkjHPwHBdmk72caeO7R2wMqQlKS6IDzopSSOjmW
+YumTy9/k27c1nSCJDsPZXAqidl1LqfnSiJswBUsPhUqtoHeLbIpFc5DIMJwfuACW
+MtRKtdwLgtXK1hgE74Z90lcYK8nF/wvJu1f3tO2Hk20+qzLswJoqy+B6QKZKkOxd
+vhb48/0pT/3VJ0wmg035MdWasoEE/dngxpgpTqwAsRK+Jl/fNlHH6jYi41ZeD5pV
+bmu2wXNsyw1f8vE1wq3L8A3Z0YxKoQVjcQIDAQABo4GEMIGBMB0GA1UdDgQWBBTk
+RO8KZFd0fpibv6B56zzOvCrUzzBgBgNVHREEWTBXgh5pZHB0ZXN0LmVkaW5idXJn
+aGNvbGxlZ2UuYWMudWuGNWh0dHBzOi8vaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAdAXZMe25m
+eMhmcMPsdMMZgZL1dMpJ4i3qmE12t4Z+T6FfY56ysdw3Ct3Vf5zcNyfV1wa5y2wG
+uEVMU3BPT1VYwxNJ1OoLjTLkjLdtmap1Vj9IwgZdk43LBYd1I8AxChsd5gulCqZU
+HjbqoNTuG5fRflbpfrVBSy+5EodghxjjjO1hIX3S8Gw3RVlnVzHjhqlR6qTgNzio
+ItyqCyEBHPcSTGiAQzUV7VcRqI9aiAboSc3x39VUOC4TsoSvSlSrs0PGx3yaJCJS
+9zTfmuPKQJPkEdHMqk507IVxsePTetMflWtReBTfgvLQ7rOZ0YiO2X4HZ8vSxz5m
+N/U3FHrUNtYA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIUeVIsPBubysxq1JHCeKiMUmxCeHEwDQYJKoZIhvcNAQEL
+BQAwKTEnMCUGA1UEAwweaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMB4X
+DTE2MDYxNzEyMzMyNloXDTM2MDYxNzEyMzMyNlowKTEnMCUGA1UEAwweaWRwdGVz
+dC5lZGluYnVyZ2hjb2xsZWdlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAkXiNO9679L64XLIwcRPHIbwzamm2pgAQ5KqITrAUunzpKm1FjMMO
+6Yg1EDtm34x1aSZ51Z7mOqyxumgPdAJaN2s3UcKyiRlb/qGI5dEC/C3hijGhW475
+UtLlRiiZZqPZltThbhQ8lVj1RzTuSC0HBElhfb22sxq8+R2copOSfDviQZbfmjpL
+jz8Lc7VE0cFqFRWk1IVyZLKFHnZpVM5sS28mLPKlB+aSBKvOzoL0F2v1TrrS/l4A
+DdvgduR2/UpJIU2+wu9UOfiilIVSvw565R2OVOlSF/3CDfNbgRtPBrMFeDgQ/g2N
++lJ+LSWsc11zk9sZpTy92xMRsUk+Hjb3xQIDAQABo4GEMIGBMB0GA1UdDgQWBBQK
+aD43zGBhte1VruNIXdb6bo8WJTBgBgNVHREEWTBXgh5pZHB0ZXN0LmVkaW5idXJn
+aGNvbGxlZ2UuYWMudWuGNWh0dHBzOi8vaWRwdGVzdC5lZGluYnVyZ2hjb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAZaJ7twWr1
+VoNfQ0J25IV006w0ipipESH+ZPCk6P5ZCBQIe2FBGH4uxtiBlMBmfoDuZChDqxHH
+7cIQPZ5wHKPzpHw36crmSjzs4p5MpS73Hyqvi+nWJoNZ0XqstqqDKLTQUWrwYTor
+GB9eD2LR0NGzw6R6zqrsvKV8iAyXAMJ6QaqklOY7LyBGsXnGvGwKglcgn4+ir0xP
+DZ/GHHPSraxNtUwFWk8aQlI/qXCoYLH/qgvrkKOSfGVYQoQGy78fNHy9vSqAxB8Y
+4/9lCJ9t+MChEtjYDn8fAi/jZ9mofrgVrsD+nX+scSrVOKEBeN3BeoAtykHVvHwt
+6S3+IGqU1uHd
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZjCCAk6gAwIBAgIVAJCqlZBUDi+xVO4OVQBGyElJ19aSMA0GCSqGSIb3DQEB
+CwUAMCkxJzAlBgNVBAMMHmlkcHRlc3QuZWRpbmJ1cmdoY29sbGVnZS5hYy51azAe
+Fw0xNjA2MTcxMjMzMjZaFw0zNjA2MTcxMjMzMjZaMCkxJzAlBgNVBAMMHmlkcHRl
+c3QuZWRpbmJ1cmdoY29sbGVnZS5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALYZZesG8XPNCFlWtJEMhCMtgAkceJ+m4QBXnDjPHKnO0vvNfctl
+UjsL91qvyUBaEDFWIi+Q1u89mj6ybl0PooHjRyoDYmG6ADaCVn+u03BNNPcc7mio
+kXsLvceFojJrWlPHKQK2wPtj/jQ3WMBZh027vo0MB5dQba9Aj00gBmGuSe/n7joR
+IgSLCt1I6sQomdLS09+MuafEQH8TSFR9a3NFEOePIMtMUbsPIwCa4rrxVgTAfEhC
++kE3tfOr3bSKzcQ3Oco+Prc5zyxeGg0Bc/0V7kUB9fOzEd/gat+mIKcflkQBTCzk
+grKtAfnWPisUGQrM7B0407HYE9e8jL3zaD0CAwEAAaOBhDCBgTAdBgNVHQ4EFgQU
+2k0EaGV6GHJ81RhUSGAkPaV8QqswYAYDVR0RBFkwV4IeaWRwdGVzdC5lZGluYnVy
+Z2hjb2xsZWdlLmFjLnVrhjVodHRwczovL2lkcHRlc3QuZWRpbmJ1cmdoY29sbGVn
+ZS5hYy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAOqc3m8oS
+4NR2AuPDbzEX9s/HnqdyYVEryl/ig9tA3WN8dVD/o296HQhChTk+5yArqybEmK79
+OSRVfMEeHKldTc74Zk3+EA2Y4bEak1ZsdvdrQ2tOtBA99ASvG8T04sBNqnn/05ek
+gXUyxM0ZLydXBnc2+CkQAHjt1G7GihZ8zkGnqyCHPE1fonH8loiXYO8KyNlc4Z02
+YQ1BxTnjIe+PGPYWl00+KV55hDJAgGnVxPv/RT9meUPHXXMbsYTRDUmY/mz3cIF4
+dZSg9/pckFYZN97B7WzKcpnc34wHbr2gQZp37cjZFi+XLqxPFFFlH9W2/n62vwaj
+ifshafzzOCkRvQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idptest.edinburghcollege.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idptest.edinburghcollege.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Edinburgh College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Edinburgh College (Test)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.edinburghcollege.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Lindsey</md:GivenName>
+	<md:SurName>Parish</md:SurName>
+	<md:EmailAddress>mailto:Lindsey.Parish@edinburghcollege.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Gordon</md:GivenName>
+	<md:SurName>Hope</md:SurName>
+	<md:EmailAddress>mailto:Gordon.Hope@edinburghcollege.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Request</md:GivenName>
+	<md:EmailAddress>mailto:itrequest@edinburghcollege.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

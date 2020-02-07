@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.silverchair.com/asme/development/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-12-14T10:40:52Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://asmedevscm6.asme.org/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIJAMfTOFohtsoAMA0GCSqGSIb3DQEBBQUAMB8xHTAbBgNV
+BAMTFGFzbWVkZXZzY202LmFzbWUub3JnMB4XDTE1MDgzMTE0NTMzMVoXDTI1MDgy
+ODE0NTMzMVowHzEdMBsGA1UEAxMUYXNtZWRldnNjbTYuYXNtZS5vcmcwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSIr0BKju2k50Sy1RXMDOr8FwVVvpb
+vKu9UV48mmpSofl2iUvfohhDIahO0GxZGpUElfobckm37ON6CPZW/Qzeu3mO/Lsq
+Czg92js9dRZ/NSvE6xMrZEt46VxsND8lWrepU0E/k7HsexZnh4U2itZ5e8gpzyRP
+xAueR3SKDEtpPhoabGKqRD1LfzevS7ozGwQ02r/YysMYV/M+l86zREKMSfQijRFk
+UYQj5O2Pf78zX7cbuPFJJFNeCns74GV5+ILgia0STTRNRiigBGDFq1xFltxLarZD
+j5cPQdMGPoFjDsJc5CNv2jsfvMiC7zl8qQ/ZHJk8h7J0L2wTZDe9S56bAgMBAAGj
+ejB4MFcGA1UdEQRQME6CFGFzbWVkZXZzY202LmFzbWUub3JnhjZodHRwczovL3Nw
+LnNpbHZlcmNoYWlyLmNvbS9hc21lL2RldmVsb3BtZW50L3NoaWJib2xldGgwHQYD
+VR0OBBYEFOO5r/GmeZWnFDh7lRQxNgZdZycRMA0GCSqGSIb3DQEBBQUAA4IBAQBw
+wnbyHm+pB8WR8Aj7C1QXUVDXW8G1ZOj7Ltgw9c58MaaZttNqk1euI/E4F6JNYIoe
+kmqrLXxaQodFgXVzbzA+qZ5wMoe7Z1mrc6tipT4HKLwwqxbv7IQ/8yhtyUGhjcKl
+PhNsNc5YO9/rLGO6XDBniny2MelwT+lXV2iQaKp/BUKq8+Wb55q9mW+/uu1KUIuq
+FMt+UCEZxiIeWk2XvifgntDR8BGvoLx8Ofu6aGjUQm75XLxmKqXkC8Z5gPs4rxZ4
+rMp9E87N8wIkNyEvWdd5YgDwtMqHgcFSuzv0r1aEr8AbTxKU4cNTiHMYd/8DJDSI
+bSaO7kJ1d0p5tmwRU8PK
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://asmedevscm6.asme.org/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://asmedevscm6.asme.org/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Silverchair Science + Communications, LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Silverchair Development:  ASME Digital Collection</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.asme.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>mailto:ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>mailto:ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

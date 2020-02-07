@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.sso.uni-erlangen.de/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2010-08-11T14:59:01Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-erlangen.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">fau.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität Erlangen-Nürnberg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Universität Erlangen-Nürnberg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Friedrich-Alexander Universität Erlangen-Nürnberg (FAU)</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of Friedrich-Alexander Universität Erlangen-Nürnberg (FAU)</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idm.fau.de/static/images/favicons/fau/favicon.ico</mdui:Logo>
+		<mdui:Logo height="47" width="240">https://idm.fau.de/static/images/logos/logo_fau_240x47.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.sso.uni-erlangen.de/impressum</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.sso.uni-erlangen.de/imprint</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.sso.uni-erlangen.de/datenschutz</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.sso.uni-erlangen.de/privacy</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIILKjCCChKgAwIBAgIMIMPwBS3iQwMIYaLUMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQwMzA4NDQ0M1oXDTIxMDcwNTA4NDQ0M1owgZcxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZCYXllcm4xETAPBgNVBAcMCEVybGFuZ2VuMTwwOgYDVQQKDDNGcmllZHJp
+Y2gtQWxleGFuZGVyLVVuaXZlcnNpdGFldCBFcmxhbmdlbi1OdWVybmJlcmcxDTAL
+BgNVBAsMBFJSWkUxFzAVBgNVBAMMDnd3dy5zc28uZmF1LmRlMIICIjANBgkqhkiG
+9w0BAQEFAAOCAg8AMIICCgKCAgEArDMkYLXoej9jjWq+K4hCcm8dRgyxbpMQevfd
+KBhpipHjFPs9xphbtYyVUY/y7b+3NpnQ7rTxR8OX8js4/P9faTW2lUN3L3a8X0cG
+m7h/LyHC9tPZSbsSosJXZ8ws7UebzpNSo0EtykmQcpLifPh0VazcZ1EIu1xbG3mq
+LTs6Zz0YEyhHxhBPAi3rsl3mUPLOi7wv97fRkkfWvMdg4oENeqbpqEg0uIlJIBo/
+DTNPlVumxsv5GyKLC87mfGerdnNB0FUVDOortb279XaQnIdhWFZLtvUNls6jpkLX
+424ZV2TqL8jvGnbSIFw23qFVQJoh4ZphEefP9dgpU04gBQ2r7hbV5hvEyPE2u1iG
+vS0wEstLcZZEAYiz3cKsf/u6vfO44Y8aO9cisrOlF7W8wlVT6unagdZMMue+dEiL
+YoX04CNgcyHYAxEmZdzsfXBNGeLLsHgI05DL4uejCtE99mCigGUHUnzCJtosz13z
+pnt0l0A/6iXa3NLydrjN+t2RNnI1Y07MzN0TUiF6G28gzzM2Km/dmdQePeCepjpI
+wE/4jPckWX4RhGxyWtr8ttjRGW3+aSpoQRolGEmMu/I7Kk4kOT/P8EReHtQ7ItG7
+yGeze1Bl6SweY7mqlcx7ioXjnPqTyl0yQSTth+LftyMnA57BaQ3bJoTCxiPoUMe2
+dx4Ky68CAwEAAaOCBnwwggZ4MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQB
+ga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysG
+AQQBga0hgiwCAQQDCTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUE
+FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFFmXtdahMf1801qUW/s9
+XNsBEQvEMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MIHRBgNVHREE
+gckwgcaCCnNzby5mYXUuZGWCC3Nzby5ycnplLmRlgg9zc28ucnJ6ZS5mYXUuZGWC
+GHNzby5ycnplLnVuaS1lcmxhbmdlbi5kZYITc3NvLnVuaS1lcmxhbmdlbi5kZYIO
+d3d3LnNzby5mYXUuZGWCD3d3dy5zc28ucnJ6ZS5kZYITd3d3LnNzby5ycnplLmZh
+dS5kZYIcd3d3LnNzby5ycnplLnVuaS1lcmxhbmdlbi5kZYIXd3d3LnNzby51bmkt
+ZXJsYW5nZW4uZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7
+hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2Ny
+bC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRw
+Oi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKG
+PWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2Fj
+ZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNdBgor
+BgEEAdZ5AgQCBIIDTQSCA0kDRwB1AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3
+egMBBPPNAAABaeJfQXYAAAQDAEYwRAIgT03hVQVK5k5HncHRrItC2ePlVNDVLDiq
+RJDIa56xdKkCICTL2iX0HiaSK/gy93IDCC+s6kJL9nI/6LSMKpGRQ6e+AHYAb1N2
+rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFp4l9CGAAABAMARzBFAiBN
+FHNpdFKXL1sgS9d5ZdPzRwnh+xG6uy7+0EvMpHjtaAIhAIXYTtjjhYXBNLEN7Cjy
+2W5HQ/1iVkfFsQ97ho+LvO8HAHUAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6Oq
+HQcT0wwAAAFp4l9DcgAABAMARjBEAiEA3yYqEdUweUDynhzZOL3F+5PiMWxOaVrZ
+0qoRcvR9MaECHxKd895XFeywi1ZyAN/6qNmAaA83JvhAw/7BGpXxVikAdwC72d+8
+H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAAAWniX0GdAAAEAwBIMEYCIQCS
+o/xNSaMN3V7Szigaa1kY6rHMj8QD72YDZXpfloxb+QIhAL2cdcUCPB0/DEotRL8j
+wpGljXfcl2wc4wO+I2H9J56eAHcA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7
+iXqo/csAAAFp4l9BnwAABAMASDBGAiEAljwpXJzIjP8wZbUp43VTSfOcH41eQxp2
+N/XiP0Krj28CIQD+IoMXMW8t5SMnuMbuzaLwn3CGn9XTmOsbLKqXnqkBSAB2AKS5
+CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaeJfQaQAAAQDAEcwRQIh
+APiQftby/sMWw+BTv0jq5P0VINCxHa0djFdGxEwPxEl8AiBSMjXAxhDL+PLVjhRC
+pxx6EfIuCSTTSbNnMF7aIomSNQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/T
+M5a1toGoAAABaeJfRc8AAAQDAEYwRAIgA8vMBX8CnKq//ZeWhpYtTo3AEOluNyKc
+KXRHwbD2ikkCIG7jzPWP6LpWf2uUlA4rVXa7rPQ3ZD4mQzVVrlH6x6mtMA0GCSqG
+SIb3DQEBCwUAA4IBAQCLqHK8jXNFqnfNj+YkWgJV73azuv0IQWG/5wpHwJtn5eEb
+EOYScJivuDVWdk0UwJVMkScdHzqYwFhpi4Minv6NRjBhT+JP1CTNnGqRP7rYX1Qe
+vPr22agXuD9p9nFxOXbv8y+bbHD57ppUIaUIH6wSuFas5cy+kZaVprB7CpIcb4ze
+CJ9ejh2iN2+VFWfIFMHVDs7L3C6BQrgdAIzD706F0L8mt3NeWFlBbbW4IjyIDfoz
+DnnCeS0Eu9ZdZmVEHhnDvUTl+8o6JPbUjUUtF7+CKEqPuHkQnrh/LqvgZHUpO/Vo
+QSyQcHBqmdDLTk+GJCUOor78azMS6EjaATdJmQIk
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.sso.uni-erlangen.de/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.sso.uni-erlangen.de/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://www.sso.uni-erlangen.de/simplesaml/shib13/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.sso.uni-erlangen.de/idp/profile/SAML2/SOAP/ECP"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.sso.uni-erlangen.de/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e131</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e131</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Friedrich-Alexander-Universität Erlangen-Nürnberg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Friedrich-Alexander-Universität Erlangen-Nürnberg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.sso.uni-erlangen.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.sso.uni-erlangen.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:EmailAddress>mailto:abuse@fau.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Frank</md:GivenName>
+	<md:SurName>Tröger</md:SurName>
+	<md:EmailAddress>mailto:sso@fau.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Frank</md:GivenName>
+	<md:SurName>Tröger</md:SurName>
+	<md:EmailAddress>mailto:sso-admins@fau.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Frank</md:GivenName>
+	<md:SurName>Tröger</md:SurName>
+	<md:EmailAddress>mailto:sso-admins@fau.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

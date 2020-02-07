@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.towson.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://shib.towson.edu/errorpage.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">towson.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Towson University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Towson University Shibboleth Identity Provider allows TU faculty, staff and students to access external service providers using their TU NetID.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://shib.towson.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.towson.edu/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="52" width="225" xml:lang="en">https://shib.towson.edu/tulogo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDqDCCApACCQD7EyU78OybHDANBgkqhkiG9w0BAQsFADCBlTELMAkGA1UEBhMC
+TUQxETAPBgNVBAgMCE1hcnlsYW5kMQ8wDQYDVQQHDAZUb3dzb24xGjAYBgNVBAoM
+EVRvd3NvbiBVbml2ZXJzaXR5MQwwCgYDVQQLDANPVFMxGDAWBgNVBAMMD3NoaWIu
+dG93c29uLmVkdTEeMBwGCSqGSIb3DQEJARYPc2hpYkB0b3dzb24uZWR1MB4XDTE2
+MDQwNDEzMzYwNFoXDTMxMDQwMTEzMzYwNFowgZUxCzAJBgNVBAYTAk1EMREwDwYD
+VQQIDAhNYXJ5bGFuZDEPMA0GA1UEBwwGVG93c29uMRowGAYDVQQKDBFUb3dzb24g
+VW5pdmVyc2l0eTEMMAoGA1UECwwDT1RTMRgwFgYDVQQDDA9zaGliLnRvd3Nvbi5l
+ZHUxHjAcBgkqhkiG9w0BCQEWD3NoaWJAdG93c29uLmVkdTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAL04yIK83uQvaKr6XZtHz42YYwcfr2WtOqr0k40Z
+2+3Leb1gShnQGjRl4ZtUmUw0chH27ZrvJL8YUTf+IfZTOv3vkoRuQ1Y43BQ8FYPd
+SN0rHzjHqjU3i9SI85iuNzTcCiqwwNnyMrYt1fi5LT6dXAviN2E+bEBmMplX9Qjc
+SwJWYHs3YA27+R3PS66JNPw5ApsO4T4l1x4+Dc2R7W7g5X/PX+nURwSeR/Cz9NYh
+y8x2QwQrk5azrRU5TLJFlE7EXGqx92JsMDO0Lv7eg7ia6ipbk0av3obWtERA4fcu
+7b6RYARuqUBxiUhGWS5DIemN04Fr1pQIUkH2gf/arE26cDECAwEAATANBgkqhkiG
+9w0BAQsFAAOCAQEAO9F5iz4qGu4DOnvRxdWIttozkfgXlqJEGEexiNb2SW8vmvv+
+27vCt7MdmSYDPA99Gb/ECs/jt9y5X7i2+1LJpTgOKIRtJPswZlyeqgwqKKV+ISjG
+sI9OoViscW+B1t4MQPVgq4B0KR8P/OXQsdJ34jth2LD1w0sUCgd9WNklZqc3OrCp
+Tpt+FOsZ+xFe0nqAU81kchOoOjgR02OY0CoYERX6oaQDblw1mhyw7xM4U+j2Qjkh
+CvmuHM+tUlsm9qISuZCNGXwplGakkjduF5PQ9UXI/otLC2hiuAnA0R2QWpWI9cn0
+cgveWZLPjJi18fsuQa7S0C4bslW+fhWIwqzYVA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.towson.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.towson.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.towson.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.towson.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.towson.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.towson.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">towson.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDqDCCApACCQD7EyU78OybHDANBgkqhkiG9w0BAQsFADCBlTELMAkGA1UEBhMC
+TUQxETAPBgNVBAgMCE1hcnlsYW5kMQ8wDQYDVQQHDAZUb3dzb24xGjAYBgNVBAoM
+EVRvd3NvbiBVbml2ZXJzaXR5MQwwCgYDVQQLDANPVFMxGDAWBgNVBAMMD3NoaWIu
+dG93c29uLmVkdTEeMBwGCSqGSIb3DQEJARYPc2hpYkB0b3dzb24uZWR1MB4XDTE2
+MDQwNDEzMzYwNFoXDTMxMDQwMTEzMzYwNFowgZUxCzAJBgNVBAYTAk1EMREwDwYD
+VQQIDAhNYXJ5bGFuZDEPMA0GA1UEBwwGVG93c29uMRowGAYDVQQKDBFUb3dzb24g
+VW5pdmVyc2l0eTEMMAoGA1UECwwDT1RTMRgwFgYDVQQDDA9zaGliLnRvd3Nvbi5l
+ZHUxHjAcBgkqhkiG9w0BCQEWD3NoaWJAdG93c29uLmVkdTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAL04yIK83uQvaKr6XZtHz42YYwcfr2WtOqr0k40Z
+2+3Leb1gShnQGjRl4ZtUmUw0chH27ZrvJL8YUTf+IfZTOv3vkoRuQ1Y43BQ8FYPd
+SN0rHzjHqjU3i9SI85iuNzTcCiqwwNnyMrYt1fi5LT6dXAviN2E+bEBmMplX9Qjc
+SwJWYHs3YA27+R3PS66JNPw5ApsO4T4l1x4+Dc2R7W7g5X/PX+nURwSeR/Cz9NYh
+y8x2QwQrk5azrRU5TLJFlE7EXGqx92JsMDO0Lv7eg7ia6ipbk0av3obWtERA4fcu
+7b6RYARuqUBxiUhGWS5DIemN04Fr1pQIUkH2gf/arE26cDECAwEAATANBgkqhkiG
+9w0BAQsFAAOCAQEAO9F5iz4qGu4DOnvRxdWIttozkfgXlqJEGEexiNb2SW8vmvv+
+27vCt7MdmSYDPA99Gb/ECs/jt9y5X7i2+1LJpTgOKIRtJPswZlyeqgwqKKV+ISjG
+sI9OoViscW+B1t4MQPVgq4B0KR8P/OXQsdJ34jth2LD1w0sUCgd9WNklZqc3OrCp
+Tpt+FOsZ+xFe0nqAU81kchOoOjgR02OY0CoYERX6oaQDblw1mhyw7xM4U+j2Qjkh
+CvmuHM+tUlsm9qISuZCNGXwplGakkjduF5PQ9UXI/otLC2hiuAnA0R2QWpWI9cn0
+cgveWZLPjJi18fsuQa7S0C4bslW+fhWIwqzYVA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.towson.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.towson.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Towson University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Towson University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://towson.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Technical Issues</md:GivenName>
+	<md:EmailAddress>shib@towson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Student Computing Services</md:GivenName>
+	<md:EmailAddress>scs@towson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>OTS Help Center</md:GivenName>
+	<md:EmailAddress>helpcenter@towson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth Technical Issues</md:GivenName>
+	<md:EmailAddress>shib@towson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shibboleth Security Issues</md:GivenName>
+	<md:EmailAddress>shib@towson.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

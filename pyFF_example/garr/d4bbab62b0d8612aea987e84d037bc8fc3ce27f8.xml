@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ucdlibrary.aeon.atlas-sys.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://ucdlibrary.aeon.atlas-sys.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of California, Davis - Aeon</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.atlas-sys.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="217" width="1251" xml:lang="en">https://static1.squarespace.com/static/586d3c61725e2524685ac5b9/t/586fabe33e00be70aef56668/1528205345335/?format=1500w</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgIJAIYEbLslBET+MA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNV
+BAMMHXVjZGxpYnJhcnkuYWVvbi5hdGxhcy1zeXMuY29tMB4XDTE3MDYwNjE0NTI1
+M1oXDTI3MDYwNDE0NTI1M1owKDEmMCQGA1UEAwwddWNkbGlicmFyeS5hZW9uLmF0
+bGFzLXN5cy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC1riVK
+QbIvCPIZAbkYLhmpkxP6cl3Y8xQ36DJu35C6mikUZswEIEBEUkRWqYreS/KVDzaz
+FRgLOA0rG+k3Dtid6oJRWrXh4NsZnZbx828NnEZyvLlWc3YB0OCWckP/x4Cu3tMi
+fQh/OZABsP3PoNJqPhI9CQGqDTHNstVMU2qOLmZPv24tuh/PEGFnWGDKCbdi2p8N
+Mh8sCawiS5qOYrgMs35bpDKHvRAQax4bnzZ02V4yqnbrCg37HDn57Zo7fhXI8wEj
+ZDLFb3oksokcp7q0u+oPQgON1QyjZMcKisLiWx6SsRL/DKqrcW/fyDKFDMDbic8r
+mepZpubnPecVZaiDAgMBAAGjUzBRMB0GA1UdDgQWBBSdE9YNE4W4Q3eiL23NQ9u1
+/IHOmDAfBgNVHSMEGDAWgBSdE9YNE4W4Q3eiL23NQ9u1/IHOmDAPBgNVHRMBAf8E
+BTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBuEd8nIQ1XWczB68CBTTTdtnJP8+Rx
+J+mo/bHsJIGb2RPeXBgYjuhYhai6wY+F5ECibkWBnEB/NOiESENjk0Wq2Gg1oktC
+SM3M74Sjde+8B6AoW+EthKlxzD/PJd+wPbsFvCUGvg70dy9yCLr3SGdO96msvtEn
+hEHVYaaAh8djT8NJAjV5QgzIEFNG7zqXxpivt6SzRUlQxymxANLeatT8HBhfQcRM
+SgW7m44bUYJLJ5eMX8QUJfdsw5A5ryVuWLrjZ9ZQ8GB07oiG3HXLUlKB4iOLQP2L
+I7COYvTMBtKiYg3cALoptx9pwY9fwE2IiROfAKy8deUIiSuFeKIqQGe4
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ucdlibrary.aeon.atlas-sys.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ucdlibrary.aeon.atlas-sys.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ucdlibrary.aeon.atlas-sys.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ucdlibrary.aeon.atlas-sys.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Atlas Systems, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Atlas Systems, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.atlas-sys.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Curtis Poston</md:GivenName>
+	<md:EmailAddress>cposton@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kathy Poston</md:GivenName>
+	<md:EmailAddress>kposton@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nathan Tefft</md:GivenName>
+	<md:EmailAddress>ntefft@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan Schneider</md:GivenName>
+	<md:EmailAddress>dschneider@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

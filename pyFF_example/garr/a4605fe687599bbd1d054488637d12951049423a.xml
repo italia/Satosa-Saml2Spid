@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://uncgprodmp2.innosoftfusion.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://rec-well.uncg.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">UNC Greensboro Department of Recreation &amp; Wellness</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://policy.uncg.edu/university-policies/data/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="233" width="590" xml:lang="en">https://recwell.uncg.edu/wp-content/uploads/AbbrevRWHColor.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENjCCAp6gAwIBAgIJANaBd7pPhyfBMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNV
+BAMTJXByb2QtZnVzaW9uLW5vcnRoLWNhcm9saW5hLWdyZWVuc2Jvcm8wHhcNMTgw
+NjI3MTYwNDE0WhcNMjgwNjI0MTYwNDE0WjAwMS4wLAYDVQQDEyVwcm9kLWZ1c2lv
+bi1ub3J0aC1jYXJvbGluYS1ncmVlbnNib3JvMIIBojANBgkqhkiG9w0BAQEFAAOC
+AY8AMIIBigKCAYEA6+jdMqmDQezScgcZd+kyryCScTDn4X4ILPSHIr5oR4JQkngp
+KkPkI0tgS6n6h92wuRf7QAZ41B2h8kPvcKOsUU+ce/wWChXC/uxXidr2GYD+d9vf
+VEKX0CLKLMfMNkNTzPEL9ldg86NPbRklMtlOOouOSjtdyP9NVZhSxeo9Hb82MCTO
+7tdQN72+6c61I0/FQ1jQSRjjq8qkhK6iFi8KqUPIeeWCvYg5eHNOfHvWWE1b7HA1
+EgvqYyVov1r155jcKkq4XVDXWCvt5k9RSfqqqHQBQo8sI4wYOcPTvmK9MthYJaR7
+CTOn5TD2hx2vzDFODuEA7PiUc0WhoVlCGGmdhl5hmRtNQPPV/e5NIMx8GR83VM+1
+zcWlC+qla5YDTjWI3+byYMKQX/fmRSpkiBzwX4Q+T4h1njGqYjoqCXfRot98cpMQ
+ItXgqjNnA2YIqMXIUQT+wnpnGgAHadU7RyQegf1/QGToyJ0kkjxFsu6yYpEwhET2
+9ry7IcYkQKSZDkinAgMBAAGjUzBRMDAGA1UdEQQpMCeCJXByb2QtZnVzaW9uLW5v
+cnRoLWNhcm9saW5hLWdyZWVuc2Jvcm8wHQYDVR0OBBYEFBAE7wYICM3Eojs9keKk
+DUn+j69cMA0GCSqGSIb3DQEBCwUAA4IBgQAhV9jE5jXaBWfBw+/9HNmfL8u+Kyee
+9YSOPmNhFuSKWT9Pv66y5O2OjYZNr/f5ErPlnZqUIYweUSIw836SZNSl4zEzavj3
+6bZtK6AZ+Wi03G/c5/lSFemlXd7q0FtV0DlU7nE0CtBruSlyIOQCLgrhP8cfRwHi
+nTZnkoQRZ3NSvCgYeiM5Q6iHyTfBntZKdqSk1k1REKFcUyCbzcQdi6G3rOjXdAsw
+01vkuRo6QUGW9OFpopCTgbH+rQ5y5pQr8GkzBVFyMIon0cakeV9FP0gIm53dmIXY
+fF2b2Uc2jPj0mQ/q4iWgp6aMABA1n3np/oNi0/p+jSITGptdd5kkgmHyAxGHPvta
+ovOnIdrenI84IhpmRY+OySAh5i2vOIISnQbA8sXdQet4u90VjLGjixiJuvYncxfc
+AMtVULYScEX+Vi/ALtu13Dip5ruH/9P8A61TVj4blStg0bTn+ZZ3j0ylBAtlObyB
+SWShFetDlY0equNpIQccAlhZH9V5zSUofFo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rec-well.uncg.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://rec-well.uncg.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rec-well.uncg.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://rec-well.uncg.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">InnoSoft Canada Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">InnoSoft Canada Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://innosoft.ca/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeff Williams</md:GivenName>
+	<md:EmailAddress>jfwillia@uncg.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mike Rollins</md:GivenName>
+	<md:EmailAddress>jmrollin@uncg.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Tim Pilson</md:GivenName>
+	<md:EmailAddress>tdpilson@uncg.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

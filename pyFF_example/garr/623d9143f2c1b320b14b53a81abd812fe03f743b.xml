@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://authentification.prive.ineris.fr/nidp/saml2/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-02-06T10:32:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">authentification.prive.ineris.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">INERIS - Institut National de l'Environnement Industriel et des Risques</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/gif;base64,R0lGODlhEAAQAPcAAAAAAAAAMwAAZgAAmQAAzAAA/wArAAArMwArZgArmQArzAAr/wBVAABVMwBVZgBVmQBVzABV/wCAAACAMwCAZgCAmQCAzACA/wCqAACqMwCqZgCqmQCqzACq/wDVAADVMwDVZgDVmQDVzADV/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMrADMrMzMrZjMrmTMrzDMr/zNVADNVMzNVZjNVmTNVzDNV/zOAADOAMzOAZjOAmTOAzDOA/zOqADOqMzOqZjOqmTOqzDOq/zPVADPVMzPVZjPVmTPVzDPV/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YrAGYrM2YrZmYrmWYrzGYr/2ZVAGZVM2ZVZmZVmWZVzGZV/2aAAGaAM2aAZmaAmWaAzGaA/2aqAGaqM2aqZmaqmWaqzGaq/2bVAGbVM2bVZmbVmWbVzGbV/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkAM5kAZpkAmZkAzJkA/5krAJkrM5krZpkrmZkrzJkr/5lVAJlVM5lVZplVmZlVzJlV/5mAAJmAM5mAZpmAmZmAzJmA/5mqAJmqM5mqZpmqmZmqzJmq/5nVAJnVM5nVZpnVmZnVzJnV/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wrAMwrM8wrZswrmcwrzMwr/8xVAMxVM8xVZsxVmcxVzMxV/8yAAMyAM8yAZsyAmcyAzMyA/8yqAMyqM8yqZsyqmcyqzMyq/8zVAMzVM8zVZszVmczVzMzV/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8rAP8rM/8rZv8rmf8rzP8r//9VAP9VM/9VZv9Vmf9VzP9V//+AAP+AM/+AZv+Amf+AzP+A//+qAP+qM/+qZv+qmf+qzP+q///VAP/VM//VZv/Vmf/VzP/V////AP//M///Zv//mf//zP///wAAAAAAAAAAAAAAACH5BAEAAPwALAAAAAAQABAAAAiQABMgSCAAwQAEAggaHDhQYIJ9ECNG1JRwoIyHEiVqSnDRIcSNOWaEzMHQIQKIaSoiKNnwIkQ1AxMenMHR5EcBD4gU8WEygcd9Yyro1GlR4IyDLzUQIbKBp8OnLwX8qIBjZk2BJ/dNEniwZ9GoDi8imNFw4MexORLMeECzLMaMEJUllCEWrsSnMRHqLSigYoKAADs=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.ineris.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">All Ineris users</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">INERIS - Institut National de l'Environnement Industriel et des Risques</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Tout le personnel Ineris</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFXDCCBESgAwIBAgIkAhwR/6b9q3inOS5IW5v4eogfJNOtUfl9GYzPJyPjAgIg
+GbMZMA0GCSqGSIb3DQEBBQUAMDYxGjAYBgNVBAsTEU9yZ2FuaXphdGlvbmFsIENB
+MRgwFgYDVQQKFA9uYW1faWRzX2NhX3RyZWUwHhcNMTYxMjA3MTM0NjIyWhcNMjAx
+MjA3MTM0NjIyWjBlMRMwEQYDVQQDEwppbmVyaXMtaWRwMQ0wCwYDVQQLEwREU0lQ
+MQwwCgYDVQQKEwNEU0kxETAPBgNVBAcTCHZlcm5ldWlsMQ0wCwYDVQQIEwRvaXNl
+MQ8wDQYDVQQGEwZmcmFuY2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQC6jV7dEkmMHfywxnx6l0Nel+QmVYQgEsmHa/bJV35065lq8oX3i7ZYJEguoext
+1DOpBF2I+nujR2h/PIoO4AlJkF1h0cf2eMk0dPneYXB3zVftik0O5Gak5GhcsF42
+jiEZXvBunvgMWfjBZ1IlTXOkbl3kKqKEoPXj71YYynD/jiWtsJCXB0LIOwg6kz3y
+MiH41A4cpJjDxJ4hPxpT3dUFhA7XHxDBmyotYcJnm4GERbscUEkCjWKZi6ORySfm
+C9agRwa83zB7fR4/L4ztkPUMdF4xDaaaUcIB/TGzD40adIyCothCDhbUDFAW5DYg
+978kGiUp+Q2uTA9zvni7GVrlAgMBAAGjggIhMIICHTAdBgNVHQ4EFgQURINLeAEy
+n73B3Gm6oBnwOJGHsvgwHwYDVR0jBBgwFoAULTWIIUB0rdqFs4uh4aJeZrrTwoAw
+CwYDVR0PBAQDAgSwMIIBzAYLYIZIAYb4NwEJBAEEggG7MIIBtwQCAQABAf8THU5v
+dmVsbCBTZWN1cml0eSBBdHRyaWJ1dGUodG0pFkNodHRwOi8vZGV2ZWxvcGVyLm5v
+dmVsbC5jb20vcmVwb3NpdG9yeS9hdHRyaWJ1dGVzL2NlcnRhdHRyc192MTAuaHRt
+MIIBSKAaAQEAMAgwBgIBAQIBRjAIMAYCAQECAQoCAWmhGgEBADAIMAYCAQECAQAw
+CDAGAgEBAgEAAgEAogYCARcBAf+jggEEoFgCAQICAgD/AgEAAw0AgAAAAAAAAAAA
+AAAAAwkAgAAAAAAAAAAwGDAQAgEAAgh//////////wEBAAIEBvDfSDAYMBACAQAC
+CH//////////AQEAAgQG8N9IoVgCAQICAgD/AgEAAw0AQAAAAAAAAAAAAAAAAwkA
+QAAAAAAAAAAwGDAQAgEAAgh//////////wEBAAIEEf+m/TAYMBACAQACCH//////
+////AQEAAgQR/6b9ok4wTAIBAgIBAAICAP8DDQCAAAAAAAAAAAAAAAADCQCAAAAA
+AAAAADASMBACAQACCH//////////AQEAMBIwEAIBAAIIf/////////8BAQAwDQYJ
+KoZIhvcNAQEFBQADggEBAB5AK9VSB8A7UEy1z+X/Xt+k6eTPaeePHsAecYanX8Jk
+/7ykcYMQ1pSGdWEao+Tdov9oNv45G4kwVUxM9QM+NWKMOPJZ6j0QGoMGP/Fpl7vZ
+VhtjWc9Nlw2nBkRWH87s5eHHNhPC5XJ+F7BIDoQZu+RRNzREkEOt6WKH9CKZFhCH
+c5lKP8fl616bP+DJV9+l/jP2oiThf+3x/QmJ4gueF9aWMl1eJN0LmKlgM9bET1eI
+pAz+p6B+qJ8KYpeIjfuZcKRxDcqBoyQMtMCX9SwDIs06tnvZkdI2cf0d5oSNj0Gw
+LpCYjbhZZbY6mau5j2DUmVQgpgnheG9Oulno1/ijk0w=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authentification.prive.ineris.fr/nidp/saml2/slo"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authentification.prive.ineris.fr/nidp/saml2/slo"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authentification.prive.ineris.fr/nidp/saml2/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authentification.prive.ineris.fr/nidp/saml2/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institut National de l&amp;#039;Environnement Industriel et des Risques (INERIS)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institut National de l&amp;#039;Environnement Industriel et des Risques (INERIS)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ineris.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:sysadmin@ineris.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

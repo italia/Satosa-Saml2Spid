@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:arizona.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://it.arizona.edu/service/247-it-support" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">arizona.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The University of Arizona</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://policy.arizona.edu/information-technology/electronic-privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="633" xml:lang="en">https://s3-us-west-2.amazonaws.com/ua-uits-iam-prod-shib-idp-config/ua_horiz.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEejCCA2KgAwIBAgIJAKeNAZjK8MQiMA0GCSqGSIb3DQEBBQUAMIGEMQswCQYD
+VQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTEPMA0GA1UEBxMGVHVjc29uMSIwIAYD
+VQQKExlUaGUgVW5pdmVyc2l0eSBvZiBBcml6b25hMQ0wCwYDVQQLEwRVSVRTMR8w
+HQYDVQQDExZzaGliYm9sZXRoLmFyaXpvbmEuZWR1MB4XDTEzMDkxMDAxMTEwNVoX
+DTIzMDkwODAxMTEwNVowgYQxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdBcml6b25h
+MQ8wDQYDVQQHEwZUdWNzb24xIjAgBgNVBAoTGVRoZSBVbml2ZXJzaXR5IG9mIEFy
+aXpvbmExDTALBgNVBAsTBFVJVFMxHzAdBgNVBAMTFnNoaWJib2xldGguYXJpem9u
+YS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDlPH23E9OBgvnr
+Mqn/ji95Jl0u3iYCdLvx2J0XZ2byG6ZH6iMO1XprQdckzIxqKUgI4DvKpYvzZ4Tk
+aMawXdQFKLFC8G7/ISWe0c9wlogYypni5+JpV+ew3SKcOac1YaMh0UQ4wLVKig+Q
+khfv0Iz1RmHS78MyBur8zKS7z4Dkr934GWPupy8yG+pWLwsRtL1Z7eeQZ8I4vAws
+L/D5ifEcn2ZlnrnCUPM1O8+MaErH6jTlNNzkNutKP/SW/3ElecMYq2rnPso3G7XY
+yna5iQz6Dj0dujMKcxDsRgl2jqVXkKdSAPmhnTDYTdT+WEGB5QMEcbQavYSLCahu
+U/t83Kb1AgMBAAGjgewwgekwHQYDVR0OBBYEFLuVwMyTX3mzqlBBLawIDa/4d+xJ
+MIG5BgNVHSMEgbEwga6AFLuVwMyTX3mzqlBBLawIDa/4d+xJoYGKpIGHMIGEMQsw
+CQYDVQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTEPMA0GA1UEBxMGVHVjc29uMSIw
+IAYDVQQKExlUaGUgVW5pdmVyc2l0eSBvZiBBcml6b25hMQ0wCwYDVQQLEwRVSVRT
+MR8wHQYDVQQDExZzaGliYm9sZXRoLmFyaXpvbmEuZWR1ggkAp40BmMrwxCIwDAYD
+VR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEA0eUpkx3wlbeoggIxlD7+4n0Y
+X50BUKB63iIpnnyKIrGLA7UM++0ybZkOv4kPJRy7nKhypqSyzshaaw+GoiirWHdW
+2vEgpSsxjEN8lF4aUkkOwKWOJtpChKbXHn6Ed7J/NndVpGReEwS9VVXPaqDE5Sx2
+3rTQINxpqNchH0QIif3WTW9YQ/wXGq1UJVNslRcnXYbpXAXJZrmsM0Obn3uwe0PQ
+IZIpATHnb/kCgn0zItoFv1USDzPmVUrw568eK/TK5/7tf4M9F3dU47hLDixo4522
+fEjKSM/7WyBx25FQJQ7IePI1kfVA8BNRI5atCm8DJd5lqFlQK/rmZiZWYrADVQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.arizona.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.arizona.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The University of Arizona</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The University of Arizona</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.arizona.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Gary Windham</md:GivenName>
+	<md:EmailAddress>gary.windham@arizona.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UITS 24/7 IT Support Center</md:GivenName>
+	<md:EmailAddress>support@email.arizona.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UITS Systems Integration &amp; Architecture</md:GivenName>
+	<md:EmailAddress>uits-sia@list.arizona.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UA Information Security Office</md:GivenName>
+	<md:EmailAddress>infosec@email.arizona.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

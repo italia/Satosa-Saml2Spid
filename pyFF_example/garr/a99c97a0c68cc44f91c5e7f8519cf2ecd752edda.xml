@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:starkstate.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">starkstate.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Stark State College of Technology</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.starkstate.edu/about/policies/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="75" width="501" xml:lang="en">https://www.starkstate.edu/wp-content/uploads/2017/01/SSC-web-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUT9QggmP8jV4TyjzCp6stVBNWP9wwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWd2ViYXV0aC5zdGFya3N0YXRlLmVkdTAeFw0xODA4MTUx
+NTM3MzBaFw0zODA4MTUxNTM3MzBaMCExHzAdBgNVBAMMFndlYmF1dGguc3Rhcmtz
+dGF0ZS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC2KAkY6Bm8
+iXh7hT1ATNia//9PBsxn0IqX4fg3sQPf0Sgtr+M9ldacEpIYWF7kBeK5Et3QfOMc
+WF3uzZACBQRztt/xZGPZqx0AC6+SDa2WFVfVdyGpXgAyXVRU9JEQoTYfXfcLt3nc
+t45Gd7K/qIaI+oet/aIDpl9YtZiKeLR2Kqk20clg9n7kfy9Rd0aGtEQQ3mJpkb3E
+vr70TBxvJ6Twr/3wu/N0Z99sB6kkBKUFMof7Rr6m3qRL8V0QaidR5GOEafK4P4zh
+e4YwkYofbEHKcgbQ6vKZzS036uO9gaKCKFpecAnHtOPIs+t0gMc4bLuTlwIXeH3Q
++JiDFCTv0v9BAgMBAAGjczBxMB0GA1UdDgQWBBSOIcWZVz7iYKhhtlrDWJ7EF6Lk
+GzBQBgNVHREESTBHghZ3ZWJhdXRoLnN0YXJrc3RhdGUuZWR1hi1odHRwczovL3dl
+YmF1dGguc3RhcmtzdGF0ZS5lZHUvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBACUz2fWQROThmsLjHSWwHvsqSia9zrHUXA+L5pax8DdQaPtL054iDxE3
+FblQTYY2Nwd3zPkY7ViFvodoWcTXjyRicFy4qA07iCoc94VD6zvb6CxLN7f821ZN
+SnmEAH/cKAId8irsCm0ULJDbgbbqopahpX5Yw+CKUFpj2Vd0YaVQytHD9IDR083J
+wgnAGJ8/9EmXaYlSqrsQUOsef40Pg4xr9G3CSe3YeKOpVK28Z/aztvSP5bPRESnW
+L9LmL9VdFT0aJr7uMNcQZsb+TPuPRLfEAgel9ayi+lziM3JNjn5/GyfoHkCmsLQD
+ghVNpZmIikR+jj2XT7QQcaG1Ou7n+Z8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://webauth.starkstate.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://webauth.starkstate.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://webauth.starkstate.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.starkstate.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.starkstate.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://webauth.starkstate.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">starkstate.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUT9QggmP8jV4TyjzCp6stVBNWP9wwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWd2ViYXV0aC5zdGFya3N0YXRlLmVkdTAeFw0xODA4MTUx
+NTM3MzBaFw0zODA4MTUxNTM3MzBaMCExHzAdBgNVBAMMFndlYmF1dGguc3Rhcmtz
+dGF0ZS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC2KAkY6Bm8
+iXh7hT1ATNia//9PBsxn0IqX4fg3sQPf0Sgtr+M9ldacEpIYWF7kBeK5Et3QfOMc
+WF3uzZACBQRztt/xZGPZqx0AC6+SDa2WFVfVdyGpXgAyXVRU9JEQoTYfXfcLt3nc
+t45Gd7K/qIaI+oet/aIDpl9YtZiKeLR2Kqk20clg9n7kfy9Rd0aGtEQQ3mJpkb3E
+vr70TBxvJ6Twr/3wu/N0Z99sB6kkBKUFMof7Rr6m3qRL8V0QaidR5GOEafK4P4zh
+e4YwkYofbEHKcgbQ6vKZzS036uO9gaKCKFpecAnHtOPIs+t0gMc4bLuTlwIXeH3Q
++JiDFCTv0v9BAgMBAAGjczBxMB0GA1UdDgQWBBSOIcWZVz7iYKhhtlrDWJ7EF6Lk
+GzBQBgNVHREESTBHghZ3ZWJhdXRoLnN0YXJrc3RhdGUuZWR1hi1odHRwczovL3dl
+YmF1dGguc3RhcmtzdGF0ZS5lZHUvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBACUz2fWQROThmsLjHSWwHvsqSia9zrHUXA+L5pax8DdQaPtL054iDxE3
+FblQTYY2Nwd3zPkY7ViFvodoWcTXjyRicFy4qA07iCoc94VD6zvb6CxLN7f821ZN
+SnmEAH/cKAId8irsCm0ULJDbgbbqopahpX5Yw+CKUFpj2Vd0YaVQytHD9IDR083J
+wgnAGJ8/9EmXaYlSqrsQUOsef40Pg4xr9G3CSe3YeKOpVK28Z/aztvSP5bPRESnW
+L9LmL9VdFT0aJr7uMNcQZsb+TPuPRLfEAgel9ayi+lziM3JNjn5/GyfoHkCmsLQD
+ghVNpZmIikR+jj2XT7QQcaG1Ou7n+Z8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://webauth.starkstate.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://webauth.starkstate.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Stark State College of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stark State College of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.starkstate.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Geoff Starnes</md:GivenName>
+	<md:EmailAddress>gstarnes@starkstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mike Rochford</md:GivenName>
+	<md:EmailAddress>mrochford@starkstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mike Rochford</md:GivenName>
+	<md:EmailAddress>mrochford@starkstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

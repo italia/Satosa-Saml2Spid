@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://proxy.safire.ac.za/birk.php/wwwqa.up.ac.za:443/oam/fed">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://safire.ac.za">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://safire.ac.za/safire/policy/mrps/v20190207.html</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">qa.up.ac.za</shibmd:Scope>
+		<shibmd:Scope regexp="false">up.ac.za</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Pretoria TEST</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="af">Universiteit van Pretoria TEST</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="nso">Yunibesithi ya Pretoria TEST</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This is the University of Pretoria QA SAFIRE Service</mdui:Description>
+		<mdui:Description xml:lang="af">Hierdie is die Universiteit van Pretoria se TOETS SAFIRE Federasie diens</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.up.ac.za/</mdui:InformationURL>
+		<mdui:Logo height="294" width="300">https://wwwqa.up.ac.za/cs/groups/public/@public/documents/webrelatedcontent/chrz/mde4/~edisp/upts018856.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID0TCCArmgAwIBAgIJAI6zR5UEtOkyMA0GCSqGSIb3DQEBCwUAMH8xCzAJBgNV
+BAYTAlpBMSowKAYDVQQKDCFTb3V0aCBBZnJpY2FuIElkZW50aXR5IEZlZGVyYXRp
+b24xMzAxBgNVBAMMKlNBRklSRSBJZGVudGl0eSBQcm92aWRlciBQcm94eSAoSUQ9
+MDAwMDEyKTEPMA0GA1UEBRMGMDAwMDEyMB4XDTE3MDEzMDEzMzY0NVoXDTM3MDEz
+MDEzMzY0NVowfzELMAkGA1UEBhMCWkExKjAoBgNVBAoMIVNvdXRoIEFmcmljYW4g
+SWRlbnRpdHkgRmVkZXJhdGlvbjEzMDEGA1UEAwwqU0FGSVJFIElkZW50aXR5IFBy
+b3ZpZGVyIFByb3h5IChJRD0wMDAwMTIpMQ8wDQYDVQQFEwYwMDAwMTIwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDNzjnbj34b+6O1U/8bJL2dY/xk9Opt
+FwqPar0vy0f0KTZTaLN9Ue7ilrYy5JE9Tx8FO3eKYYcdKqP1KIMZ0sMYOqLP55sQ
+moNv6wzD8L9guD5F0Z30s1JoTqUShKJgqBCgh8JMuzlEeWhfxVfRoXca00XAANjy
+9bSyIpwL0TkdzfZBOUvor7O/81JaxirEGzi//stbMx0KC2EtD7EgQ+wX8U89ddCC
+LBnLZlkgIBo0sCp0v02sVa5eZ2A6y49AsTGqh8mZf9WDLd+9cCSGZ/utsZGNp6me
+I+AGF2C9vHRGpOQfx7r0kuAsMCXMfdxo+aM5JHWsY1pdM3Cw6uPWoprbAgMBAAGj
+UDBOMB0GA1UdDgQWBBQZKSFUy1IUd7vq62RtQMes5YHlVzAfBgNVHSMEGDAWgBQZ
+KSFUy1IUd7vq62RtQMes5YHlVzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUA
+A4IBAQBn3+gAeS8xPOXrsSbCj5mgEMhEoRd3WAsJAICGkj2Ce4FZeA7TWLvLOHKV
+ggtxy7dLekARFQoAY/8A4JLd/Zmek8DaHadzxcbfVzTqzwUmzquohQxk6y1shHvm
+wZa9NL7B9cRjo2VhfqZORg5IoWm0TMKNpSAhLGw9/MNpVWDDQLBs0x9bkzAx5hvc
+KRkR7+3F4cwx35Z91RSNAtlHLNjgFPTuJwCxsLiF/wJkgAtjLkMzlSvIBT//OVzU
+sazXJNZxcCmJIuDIMGp0qhG+Hng57JEOIz2J+qqOx/XMFknYavTEpowSVMcuc/qK
+DJrQDojK13lGeJnb7PAB37gYqJ5A
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy.safire.ac.za/birk.php/wwwqa.up.ac.za/oamfed/idp/samlv20"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://proxy.safire.ac.za/birk.php/wwwqa.up.ac.za/oamfed/idp/samlv20"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Pretoria TEST</md:OrganizationName>
+	<md:OrganizationName xml:lang="af">Universiteit van Pretoria TEST</md:OrganizationName>
+	<md:OrganizationName xml:lang="nso">Yunibesithi ya Pretoria TEST</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Pretoria TEST</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="af">Universiteit van Pretoria TEST</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="nso">Yunibesithi ya Pretoria TEST</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.up.ac.za/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Federation Technical Support</md:GivenName>
+	<md:EmailAddress>mailto:federation@up.ac.za</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk</md:GivenName>
+	<md:EmailAddress>mailto:help@it.up.ac.za</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>South African Identity Federation</md:GivenName>
+	<md:EmailAddress>mailto:safire@tenet.ac.za</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

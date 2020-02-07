@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cornellsaas-test.blackboard.com/auth-saml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cornellsaas-test.blackboard.com/auth-saml/saml/login/alias/_102_1?disco=true" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cornell Bb Learn SaaS Test</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Cornell University's Blackboard Learn test SaaS deployment</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.dfa.cornell.edu/policy/policies/access-information-technology-data-and-monitoring-network-transmissions</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.cornell.edu/privacy-notice.cfm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="383" xml:lang="en">https://shibidp.cit.cornell.edu/cornell-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICrTCCAZWgAwIBAgIBATANBgkqhkiG9w0BAQsFADAaMRgwFgYDVQQDEw9CbGFj
+a2JvYXJkIFNBTUwwHhcNMTcwMzE1MjExMzM3WhcNMjcwMzE1MjExMzM3WjAaMRgw
+FgYDVQQDEw9CbGFja2JvYXJkIFNBTUwwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQC03SH0F0XL0qetbGZvbWH0Y4HYLfWhema1maVT0mhVItaXbViXNxCs
+/JFAlSdQx9hFLchaJLYewp5e89bFsio9xL11DNBsBf5eQ3tKd7vMk2ilvS4rpNQ5
+Xvm6Q08srGK3GC5xxrFdVism7py3CMUgS++7D3rd0TuZQWB+nU/MoVzLZ6iu5M7o
+Ok7NzsIyzptdDVSh/wkaHG30HGk86uFg6FWrRRORiP12uxNMtAks9YgfBzS5dlly
+IhqoCpy5yrHH55EhXHscS3Br/7bygHrXEY9nov56y1dsiJLQDnwV8XAkPZlAKBQX
+LwSsUip4owjVF1j5ks8/Mnn7ngIrtrnzAgMBAAEwDQYJKoZIhvcNAQELBQADggEB
+ADeqtihNfuXNMxJEZv2Opn6qXg+GJAgv9f6xkAzC7vkvdf4bk65SnM7K21B4Ppt+
+tqOQMZLzLlFbhZO97FXN1i/G0/IU6lchR6ZYLgU3U799KLyTbweDYut6G3MuYMVH
+HYVacWDC3zXQNRDYSXRXeMGGn9nlY0LaBcgHvpQVeUFQ7Qz/R2Dp0u7SLr4hVYw+
+g6LI0QK5EIIuYZ/yOQRuhI0rxz9FxrF0bwQpHFgyDopbtJzHM0omw6WdTiveH/IN
+zN5jQ5mcaRS6h64vhhh63k3iEvN8dEKU+EEGNn81APbZAQQMK6teun1QzhIuvBy0
+6Wpao/SXiHiJINVl6ljkIKA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cornellsaas-test.blackboard.com/auth-saml/saml/SingleLogout/alias/_102_1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cornellsaas-test.blackboard.com/auth-saml/saml/SingleLogout/alias/_102_1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cornellsaas-test.blackboard.com/auth-saml/saml/SSO/alias/_102_1" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cornellsaas-test.blackboard.com/auth-saml/saml/SSO/alias/_102_1" index="2"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Blackboard, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Blackboard, Inc</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.blackboard.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jeff Kelley</md:GivenName>
+	<md:EmailAddress>jeff.kelley@blackboard.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hong Ye</md:GivenName>
+	<md:EmailAddress>hy93@cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>University Security Office</md:GivenName>
+	<md:EmailAddress>security-services@cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

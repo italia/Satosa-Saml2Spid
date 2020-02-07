@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp1.ioe.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-03-20T14:43:42Z"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Education, University of London</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Institute of Education, University of London</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">ioe.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUMNyG7wrtkwxFGRAstVzy1ROpxGgwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwMi5pb2UuYWMudWswHhcNMTIwMjA4MTUzMjM3WhcN
+MzIwMjA4MTUzMjM3WjAZMRcwFQYDVQQDEw5pZHAyLmlvZS5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAN37KVPn30CW2BIleDIha2CleSXGY0a6
+1OA/eOLI+lsBvug487BAw/Rcf9Y7ooF3D8JIOxixwX1USXFyNCl0sf7/718UVpe0
+GxtcPYw/NwhtyVpQH+OqE/vh56pKw1o3WPnrFSHmj6/vSg0Pj1R0OFdvn+hoV+JC
+5POvdSBVkhS8KrRqse9Cr/CdYSmoQ55J1YCgiWngimPtes1zY4s2omZS9kEIi2Px
+Shhgne1ZG3zR/4b6OXoEOr8K0LfAaPqsKYhwOzXXez6mYKak0rImeVqTdpk0Slyh
+NNYx7OsA++h2CmAgPOnevOjFNy7sbJ1GT1dAeRE3O+uDcURIgdZokf8CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwMi5pb2UuYWMudWuGJWh0dHBzOi8vaWRwMi5pb2Uu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOLtRIRYnBMYIo5SxgAJChkg
+ZhbtMA0GCSqGSIb3DQEBBQUAA4IBAQCze9F7kn4uxmMTTyIel3fByZZNSmFj/blC
+UIOvCuuKWes5c7gMXCWP0INVj1ndi02zhdFxu6SoCDESy0kpGsYupcWNXMdUuNSA
+WnqbU+OfQ8byNGcnFf0p8TuHwANOaPWCK3Irthu2JXvm9mBe35Ghzf1uNOKkKP2i
+skDYHKQbL5LBKXJoDqtQeFtZSUHR1pwrcN8o25QPQzfRpgWhqA9pp9DscbLhzgSu
+nireWPUNaiihBLtqAQGIGauhQ1iznkN4BAolAnxC6encTbpdeF6zb+v22vm0JXfd
+w9lCORwIgQvhUPvXxS9oiA3XIwEAkid4j/wOQLE9plZLQx5+z78n
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.ioe.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.ioe.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp2.ioe.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp2.ioe.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp2.ioe.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp2.ioe.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ioe.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUMNyG7wrtkwxFGRAstVzy1ROpxGgwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwMi5pb2UuYWMudWswHhcNMTIwMjA4MTUzMjM3WhcN
+MzIwMjA4MTUzMjM3WjAZMRcwFQYDVQQDEw5pZHAyLmlvZS5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAN37KVPn30CW2BIleDIha2CleSXGY0a6
+1OA/eOLI+lsBvug487BAw/Rcf9Y7ooF3D8JIOxixwX1USXFyNCl0sf7/718UVpe0
+GxtcPYw/NwhtyVpQH+OqE/vh56pKw1o3WPnrFSHmj6/vSg0Pj1R0OFdvn+hoV+JC
+5POvdSBVkhS8KrRqse9Cr/CdYSmoQ55J1YCgiWngimPtes1zY4s2omZS9kEIi2Px
+Shhgne1ZG3zR/4b6OXoEOr8K0LfAaPqsKYhwOzXXez6mYKak0rImeVqTdpk0Slyh
+NNYx7OsA++h2CmAgPOnevOjFNy7sbJ1GT1dAeRE3O+uDcURIgdZokf8CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwMi5pb2UuYWMudWuGJWh0dHBzOi8vaWRwMi5pb2Uu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOLtRIRYnBMYIo5SxgAJChkg
+ZhbtMA0GCSqGSIb3DQEBBQUAA4IBAQCze9F7kn4uxmMTTyIel3fByZZNSmFj/blC
+UIOvCuuKWes5c7gMXCWP0INVj1ndi02zhdFxu6SoCDESy0kpGsYupcWNXMdUuNSA
+WnqbU+OfQ8byNGcnFf0p8TuHwANOaPWCK3Irthu2JXvm9mBe35Ghzf1uNOKkKP2i
+skDYHKQbL5LBKXJoDqtQeFtZSUHR1pwrcN8o25QPQzfRpgWhqA9pp9DscbLhzgSu
+nireWPUNaiihBLtqAQGIGauhQ1iznkN4BAolAnxC6encTbpdeF6zb+v22vm0JXfd
+w9lCORwIgQvhUPvXxS9oiA3XIwEAkid4j/wOQLE9plZLQx5+z78n
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.ioe.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.ioe.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University College London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Education, University of London</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ioe.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Yu-king</md:GivenName>
+	<md:SurName>Lau</md:SurName>
+	<md:EmailAddress>mailto:y.lau@ioe.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Yu-king</md:GivenName>
+	<md:SurName>Lau</md:SurName>
+	<md:EmailAddress>mailto:y.lau@ioe.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

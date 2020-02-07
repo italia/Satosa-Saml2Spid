@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://namid.fairfield.edu:8443/nidp/saml2/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.fairfield.edu/404/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fairfield.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Fairfield University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.fairfield.edu/about-fairfield/leadership-offices/departments/marketing-communications/digital-marketing/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80" xml:lang="en">https://www.fairfield.edu/hostedfiles/images/f-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGjTCCBXWgAwIBAgIQIIgSzdw3tO3H35oBgjdUSTANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xNjA1MDMwMDAwMDBaFw0xOTA1MDMy
+MzU5NTlaMIHDMQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMDY4MjQxCzAJBgNVBAgT
+AkNUMRIwEAYDVQQHEwlGYWlyZmllbGQxHDAaBgNVBAkTEzEwNzMgTi4gQmVuc29u
+IFJvYWQxHTAbBgNVBAoTFEZhaXJmaWVsZCBVbml2ZXJzaXR5MSgwJgYDVQQLEx9J
+bmZvcm1hdGlvbiBUZWNobm9sb2d5IFNlcnZpY2VzMRwwGgYDVQQDExNuYW1pZC5m
+YWlyZmllbGQuZWR1MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAyChM
+9jErBU6w67dEm9ETsWsm96bB0djJRZi40klZzYiQDa0hrS2QLpnPcrFGniDhtCHN
+xVBDPs83GGnlm1IC+c2hksNKaduOm6xUOL2+ev141AJROxOIqeAW1Emhvy63UNj4
+ZyqXhkPW+Q5TMRiB34S2kOhNhHv12VSNm7STrj1L62DrEX7SNCw8mUqNBUpUCNjt
+K/zu6rAJz6EiWXu1KaJ+WLAMmnNGuHggmQucZs1tupAnBNm/I/0vkPEboZkAYzty
+/BkEkaSrLZXdeeX0sZ5H28nwo5VqxTD8WqVzx07vd11OQu+VUGI21rrj9LnjpSf0
+8s5OKCyF2ENzQf8K8GvNspQaIgLqHkwMF/xkqyLLDczhJy8voPzj9wy3PZOgzO8T
+iVwDnbHLZpo0r5Ifm5Y6IZLR2Q/HD16VbqBkOM76UrrtVnmLiT+IOieLcvIMl0GT
+HK5T43ytw6nx4m++EtE6il0MaJ7YOLE1hCpR4ANtft2BmIOouYwXeclOJ+Dzb4+9
+AFPdleLUjZlQJoOufKtCnrDlcN1yMYH273UGtmIq508CAJ/kJ4WvYmSeWlUiLj7Z
+BfAMk3veYySzZebRDhYfH6duJ0MlMkgRaGHX1XQvctiSjWpJ/1iMzY6Pjpp7Cyfw
+3//TXUthpkDA4+isdNg9yRt3NY/F6boaG6ARfIsCAwEAAaOCAccwggHDMB8GA1Ud
+IwQYMBaAFB4Fo3ePbJbiW4dLprSGrHEADOc4MB0GA1UdDgQWBBSi/42PIC0XeUe+
+O9YZJv2Is8C1SjAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUE
+FjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwZwYDVR0gBGAwXjBSBgwrBgEEAa4jAQQD
+AQEwQjBABggrBgEFBQcCARY0aHR0cHM6Ly93d3cuaW5jb21tb24ub3JnL2NlcnQv
+cmVwb3NpdG9yeS9jcHNfc3NsLnBkZjAIBgZngQwBAgIwRAYDVR0fBD0wOzA5oDeg
+NYYzaHR0cDovL2NybC5pbmNvbW1vbi1yc2Eub3JnL0luQ29tbW9uUlNBU2VydmVy
+Q0EuY3JsMHUGCCsGAQUFBwEBBGkwZzA+BggrBgEFBQcwAoYyaHR0cDovL2NydC51
+c2VydHJ1c3QuY29tL0luQ29tbW9uUlNBU2VydmVyQ0FfMi5jcnQwJQYIKwYBBQUH
+MAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wHgYDVR0RBBcwFYITbmFtaWQu
+ZmFpcmZpZWxkLmVkdTANBgkqhkiG9w0BAQsFAAOCAQEAL9bcDnlB+d/iRgp2V1AY
+qawVNUOuswiugkx2gI2l56XZV9Z4Aa1mq0wsdJdLQ3phn5ng5h1NNnvfiF10Z3qQ
+MGpsKFXnz2n0dYteeWFTuWZZEHVE+/6gD0UH29neSA7+pR5okoOJZeXCRzeRsT5e
+0mYIZwRm/IDcEXJYc982AjvGPudVLJsPaawGslojioTBcvLHbf5urnp+sBKcvYzh
+3mU9K2PA/8vMo9l08cHgQyV7EI2yeQwlSDHMxl+33IEmGsYvBl9dkYD4GeRayWwP
+zkEEN3jmtxDtmeF8l8uhkefTLdWVeNnyj6/J2HhFbK0fz44adtj1ozoy6s5DkaDy
+zw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://namid.fairfield.edu:8443/nidp/saml2/soap" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://namid.fairfield.edu:8443/nidp/saml2/slo"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://namid.fairfield.edu:8443/nidp/saml2/slo"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://namid.fairfield.edu:8443/nidp/saml2/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://namid.fairfield.edu:8443/nidp/saml2/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Fairfield University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Fairfield University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.fairfield.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Steven H. Mann</md:GivenName>
+	<md:EmailAddress>smann@fairfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Eli Kharaz</md:GivenName>
+	<md:EmailAddress>ekharaz@fairfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Eli Kharaz</md:GivenName>
+	<md:EmailAddress>ekharaz@fairfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

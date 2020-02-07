@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.rediris.es/sir/ifaeidp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.rediris.es/" registrationInstant="2017-03-07T08:50:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.rediris.es/sir/edugain/SIR_MRPS.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ifae.es</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute for High Energy Physics</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="es">Instituto de Fisica de Altas Energias</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ca">Institut de Física d'Altes Energies</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Institute for High Energy Physics</mdui:Description>
+		<mdui:Description xml:lang="es">Instituto de Fisica de Altas Energias</mdui:Description>
+		<mdui:Description xml:lang="ca">Institut de Física d'Altes Energies</mdui:Description>
+		<mdui:Keywords xml:lang="en">ifae</mdui:Keywords>
+		<mdui:Keywords xml:lang="ca">ifae</mdui:Keywords>
+		<mdui:Keywords xml:lang="es">ifae</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.ifae.es/eng/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="ca">http://www.ifae.es/cat/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="es">http://www.ifae.es/cast/</mdui:InformationURL>
+		<mdui:Logo height="96" width="200" xml:lang="en">https://img.sir2.rediris.es/200px-f722506be48cacd81f64e9182e925e58.png</mdui:Logo>
+		<mdui:Logo height="96" width="200" xml:lang="ca">https://img.sir2.rediris.es/200px-f722506be48cacd81f64e9182e925e58.png</mdui:Logo>
+		<mdui:Logo height="96" width="200" xml:lang="es">https://img.sir2.rediris.es/200px-f722506be48cacd81f64e9182e925e58.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>ifae.es</mdui:DomainHint>
+		<mdui:DomainHint>pic.es</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID+zCCAuOgAwIBAgIJAOk0VVOVbuSdMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYD
+VQQGEwJFUzEPMA0GA1UECAwGTWFkcmlkMQ8wDQYDVQQHDAZNYWRyaWQxEDAOBgNV
+BAoMB1JlZElSSVMxEzARBgNVBAsMCk1pZGRsZXdhcmUxHDAaBgNVBAMME2lmYWUu
+c2lyLnJlZGlyaXMuZXMxHTAbBgkqhkiG9w0BCQEWDnNpckByZWRpcmlzLmVzMB4X
+DTE3MDUwNTEyMDczNloXDTI3MDUwNTEyMDczNlowgZMxCzAJBgNVBAYTAkVTMQ8w
+DQYDVQQIDAZNYWRyaWQxDzANBgNVBAcMBk1hZHJpZDEQMA4GA1UECgwHUmVkSVJJ
+UzETMBEGA1UECwwKTWlkZGxld2FyZTEcMBoGA1UEAwwTaWZhZS5zaXIucmVkaXJp
+cy5lczEdMBsGCSqGSIb3DQEJARYOc2lyQHJlZGlyaXMuZXMwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQC1ifOfZaEt2uCC0qWtt1RO44LlR78JSDHItiWK
+e7vXY91qlrEC+azg565RClVAoxysliIwDYRXDNHaI0dBAn4hJ0QC7WZu/vI4btrP
+W/P3mZADO4Rumd12pPlUBD78hmOrbfoJyAUo8BTu2wwFVerJjRQmL0ixfuly8uyU
+P8uHP1AP6ofBObfR/Czm4SEGceFbLRkKj0mX5qocaIXORiA8CmtNQlDTU3lWhaYZ
+rsg6MCNj6uSpodOyLKJmXCDeQEZIe+SGZW9UH8HFp2P+UQH6iSm7e88UBjON+MHe
+N3nW4mtZ7C0voeFfU/wGGFli9T2F/SThg9KmEI2EAYv23tVRAgMBAAGjUDBOMB0G
+A1UdDgQWBBTIqJLa6UgXj5Raf9ccSyNjELgEEjAfBgNVHSMEGDAWgBTIqJLa6UgX
+j5Raf9ccSyNjELgEEjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB8
+K3pTcYX5asA9Onv32NNbdQVyChLr8VrO0Krzasg+MIlp6OghK0mowALuOJI18+g5
+yaH5z7UxvLeSXPipAmUUYxgOWNa6oQC7VLVBImPtgj/Xwy7yZa04InCx+Pui4RP6
+R5VuCSShp8Gnm+nbO7EkE6g6AsQacMV8jwhzMeXBuuQiaMrCoeDmY8BzRAOSWRWp
+JovOF5tHqesxGAIyWVOxXt3vqTtLQc2ZgVfXyYbBzzS/tHF2enO/MzzDFEU2igKK
+24pH4Fw/yPGImzC70MTtMJfyUfGUsndGog5ZBwLilCU+WF/um+I1R6OH15YKu2cf
+835s4crC9wTZPG2vfWPj
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sir.rediris.es/ifae/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sir.rediris.es/ifae/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="ca">Institut de Física d'Altes Energies</md:OrganizationName>
+	<md:OrganizationName xml:lang="es">Instituto de Fisica de Altas Energias</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Institute for High Energy Physics</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="ca">Institut de Física d'Altes Energies</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="es">Instituto de Fisica de Altas Energias</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Institute for High Energy Physics</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="ca">http://www.ifae.es/cat/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="es">http://www.ifae.es/cast/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ifae.es/eng/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>RedIRIS SIRTFI-CSIRT Team</md:GivenName>
+	<md:EmailAddress>mailto:sirtfi-csirt@rediris.es</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>SIR Team</md:SurName>
+	<md:EmailAddress>mailto:sir@rediris.es</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idps.ulg.ac.be/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://federation.belnet.be/" registrationInstant="2012-03-27T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en"> http://federation.belnet.be/files/Belnet-metadata-registration-practice-statement.txt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ulg.ac.be</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en"> University of Liege - ULG </mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr"> Universite de Liege - ULG </mdui:DisplayName>
+		<mdui:Description xml:lang="en"> International university located in the heart of Europe, where the Euregio-Meuse-rhine axes converge, one of the University of Liege's main priorities is to open itself to the world. </mdui:Description>
+		<mdui:Description xml:lang="fr"> Universite internationale implantee en plein coeur de l'Europe, au point de convergence des grands axes de l'Euregio Meuse-Rhin, l'ULg fait de l'ouverture au monde une de ses priorites.   </mdui:Description>
+		<mdui:Logo height="16" width="16">https://idps.ulg.ac.be/favicon.ico</mdui:Logo>
+		<mdui:Logo height="170" width="350">https://idps.ulg.ac.be/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>139.165.0.0/16</mdui:IPHint>
+		<mdui:IPHint>2a04:b5c0::/29</mdui:IPHint>
+		<mdui:DomainHint>ulg.ac.be</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:50.584747,5.566485</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUCdLCW6WLBH177UghqiJkRLN2e2AwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwcy51bGcuYWMuYmUwHhcNMTcwNzA3MDkzOTU2WhcN
+MzcwNzA3MDkzOTU2WjAZMRcwFQYDVQQDDA5pZHBzLnVsZy5hYy5iZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKqLFqr3DcSDoSYkUdh+0p8jDD5dZXIY
+Y3UlI8R7616uebbp6MrjVBX0ZyF6CI+uC2j4NJ4VTmA6TJKe9nqo4ktIPCx771Rg
+V0iUWkEtRhOIkfN25XDqSMwA9J3DSDLNbAgfMVDa2YIMi7LTuxAAxyJvBOq3RrCp
+B+Ztw1DX4LyFoBMeGKrNZpHb3oUFAk3+cmfeHgBpSsEpeXEn4NkfirkODrPxFvHs
++PHWgPIovt9iyQtzydcCyiEuo0PBDzes5kCagZSBTnY4fmZvmrrqQoQa2Xz76ess
+UJ8x4jobSWpHg5RkrgXoQXnji7zW5qtR83azaRR3ZDNOgVhr+ITClzkCAwEAAaNj
+MGEwHQYDVR0OBBYEFCu6jx445BmCkRK6Kkk3sYL7GqPHMEAGA1UdEQQ5MDeCDmlk
+cHMudWxnLmFjLmJlhiVodHRwczovL2lkcHMudWxnLmFjLmJlL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAPmM4TNVG3bKeq1YM3V33FOkIsSqlyPFJk
+iunLICReg3Eh0RN01Ptd/XUK9YWhMMmoNONIZu6BfBU/4kh+KiOlUrYwOkeOb3QR
+oCl/wgHYFIG7YV+q8k1X1Cmfx45ZtoqnHlNjsviK08tu4P9JCKTJtmGnobNy95dD
+5uVAIb3cZsBLAxddSlFD486EdppYCGowbSYQQENuAdTvm5OdnDf9ApZ3RD8Vu0UJ
+L+9jNHmz2OlJbwP8t+1ucJ0JSCPJrSW3Rfv9O07hXw+0iOdMpp5SX9m3uDa9cGl1
+yU6fEdu0oeNMi6vtNmtdSaPHStUF0quwFpCLLqrcEkuvnjCCBA3Q
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idps.ulg.ac.be:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idps.ulg.ac.be:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idps.ulg.ac.be/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idps.ulg.ac.be/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idps.ulg.ac.be/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idps.ulg.ac.be:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idps.ulg.ac.be/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idps.ulg.ac.be/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idps.ulg.ac.be/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idps.ulg.ac.be/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ulg.ac.be</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUCdLCW6WLBH177UghqiJkRLN2e2AwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwcy51bGcuYWMuYmUwHhcNMTcwNzA3MDkzOTU2WhcN
+MzcwNzA3MDkzOTU2WjAZMRcwFQYDVQQDDA5pZHBzLnVsZy5hYy5iZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKqLFqr3DcSDoSYkUdh+0p8jDD5dZXIY
+Y3UlI8R7616uebbp6MrjVBX0ZyF6CI+uC2j4NJ4VTmA6TJKe9nqo4ktIPCx771Rg
+V0iUWkEtRhOIkfN25XDqSMwA9J3DSDLNbAgfMVDa2YIMi7LTuxAAxyJvBOq3RrCp
+B+Ztw1DX4LyFoBMeGKrNZpHb3oUFAk3+cmfeHgBpSsEpeXEn4NkfirkODrPxFvHs
++PHWgPIovt9iyQtzydcCyiEuo0PBDzes5kCagZSBTnY4fmZvmrrqQoQa2Xz76ess
+UJ8x4jobSWpHg5RkrgXoQXnji7zW5qtR83azaRR3ZDNOgVhr+ITClzkCAwEAAaNj
+MGEwHQYDVR0OBBYEFCu6jx445BmCkRK6Kkk3sYL7GqPHMEAGA1UdEQQ5MDeCDmlk
+cHMudWxnLmFjLmJlhiVodHRwczovL2lkcHMudWxnLmFjLmJlL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAPmM4TNVG3bKeq1YM3V33FOkIsSqlyPFJk
+iunLICReg3Eh0RN01Ptd/XUK9YWhMMmoNONIZu6BfBU/4kh+KiOlUrYwOkeOb3QR
+oCl/wgHYFIG7YV+q8k1X1Cmfx45ZtoqnHlNjsviK08tu4P9JCKTJtmGnobNy95dD
+5uVAIb3cZsBLAxddSlFD486EdppYCGowbSYQQENuAdTvm5OdnDf9ApZ3RD8Vu0UJ
+L+9jNHmz2OlJbwP8t+1ucJ0JSCPJrSW3Rfv9O07hXw+0iOdMpp5SX9m3uDa9cGl1
+yU6fEdu0oeNMi6vtNmtdSaPHStUF0quwFpCLLqrcEkuvnjCCBA3Q
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idps.ulg.ac.be:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Universite de Liege - ULG</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Universite de Liege - ULG</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.uliege.be/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michel</md:GivenName>
+	<md:SurName>Minsoul</md:SurName>
+	<md:EmailAddress>mailto:idp@segi.ulg.ac.be</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Team</md:GivenName>
+	<md:EmailAddress>mailto:abuse@uliege.be</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

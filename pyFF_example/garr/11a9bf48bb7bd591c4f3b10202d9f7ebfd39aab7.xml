@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.getty.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.getty.edu/staff/incommon/help.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">getty.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">J. Paul Getty Trust</mdui:DisplayName>
+		<mdui:Description xml:lang="en"> J. Paul Getty Trust OneID Simple Sign On Service</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.getty.edu/legal/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="690" width="821" xml:lang="en">https://idp.getty.edu/idp/images/Getty_black.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUS7hOxq7K+tD3pLdlJLgg7ba11SIwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmdldHR5LmVkdTAeFw0xNzA5MTIxNzE5MzlaFw0z
+NzA5MTIxNzE5MzlaMBgxFjAUBgNVBAMMDWlkcC5nZXR0eS5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCCfF1sHiSinRX8wlm5a0Tbiy875mgpRMuN
+6fi5df4AbBlQh5mUC/iXqahbhX1u0trYPgelRdTmPyBFqs6D1Nb4N/zcFbi/hjDf
+31ozi4weMO7WsAGaND5sMUhfg/XTIqIexeXnIb4bJBMRzS10HHqnTfzTBvBETmPs
+yo+K0VxUlPGBEwCUW0a4vrKsUhcjznotnnFyMQstRFNr8bMs2cA2O7mIIyHLi1YI
+2cuCO2nxHUCConxMK6EwXDup0iXGTxk20v+o7O4yawMig6jMCpb9N6R2RewXKZQD
+TIkhtS3rqspDJlMyIQHZvmWlah1drdLTfrzQKfyUa5SrxstLqXZ/AgMBAAGjYTBf
+MB0GA1UdDgQWBBQNLf58f1h61xARviX9azh1uoDyHjA+BgNVHREENzA1gg1pZHAu
+Z2V0dHkuZWR1hiRodHRwczovL2lkcC5nZXR0eS5lZHUvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHNGRgzDZOYp147oriHyXT96SumeStEGtnww53rk
+GMqKSLKNs0AeOhnxXKoZDs48x8HTm+7X7l5hO+JqAixTbFNcljstxnttjXYuDQzK
+AhCrv+K2bsMW2yu+73Wte4cgTjBIbTLOmb+JgvMtVMjUon3tFGxaCHKRN/waADu+
+D6P1Bw0IyKVuzdgZD1ge2vAASTUVC2C1JGgcwHaOFLOejnYPWb/Q0XpW7tFPTOSg
+tuCPWvmftvHvzpkzOUV9r//9HYwPlXfOIy1gyI61npRrkSe3iXbuob5o0tjBJEjc
+GJ+jeTLNeTCWr7sn3CiJenTkiV7tGAcVJ2/OJOVp/4lYEqc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.getty.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.getty.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.getty.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.getty.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The J. Paul Getty Trust</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The J. Paul Getty Trust</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://getty.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Armando A. Perez</md:GivenName>
+	<md:EmailAddress>aperez@getty.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Petrus Williams</md:GivenName>
+	<md:EmailAddress>pwilliams@getty.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Armando A. Perez</md:GivenName>
+	<md:EmailAddress>aperez@getty.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Getty Digital Help Desk</md:GivenName>
+	<md:EmailAddress>gettydigitalhelp@getty.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

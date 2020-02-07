@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://retrieverstories-dev.umbc.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://retrieverstories-dev.umbc.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Retriever Stories (development)</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://retrieverstories-dev.umbc.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://my.umbc.edu/go/web-privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="133" width="345" xml:lang="en">https://webauth.umbc.edu/umbclogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIJAI0RUT0r/oX8MA0GCSqGSIb3DQEBBQUAMCgxJjAkBgNV
+BAMTHWphYmJhLXd3dy1wcm9kMS5jb3JlLnVtYmMuZWR1MB4XDTExMTAxMDIwMzYx
+MFoXDTIxMTAwNzIwMzYxMFowKDEmMCQGA1UEAxMdamFiYmEtd3d3LXByb2QxLmNv
+cmUudW1iYy5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC2IDFJ
+AGo41UtzNssD22c7fX0B+pRbMR51qpQL041yLnzcOJ+bke+R6OmX34pIWA0vagKM
+qu9iY+3GyEUxGHiuTNhDBvFKYcnO6qAEsgSroUrBCDbZo9Ntpli3ktf4zA5l11Wi
+zcMBt4HAbuXOlqD2LfE3jiPyUtOhgr2ODUoqBBIoYk3RjqxnWJ5kg5uroNjtWHOQ
+TpAM+lzm/aZEei9MO+iOu68kUR9Cf0QZQEAlxvUNWR/CPN2CF00FcfobN6r1rzkd
+Q7vNCXROs232WCL0RjqVl57NLg5ED02gelGzNWSl1MRN3tRxzWGyW0F5GLKwG888
+cT9LsXNEa+efkHYnAgMBAAGjSzBJMCgGA1UdEQQhMB+CHWphYmJhLXd3dy1wcm9k
+MS5jb3JlLnVtYmMuZWR1MB0GA1UdDgQWBBQh7CUvbTSbYcrvs/SftNs70q6XSDAN
+BgkqhkiG9w0BAQUFAAOCAQEASdHFzNxj+9RstGDYQxNTcBXzthJ0RZgwm2WgwRj4
+peDj19tKH7k/txzj2BaaVfusTxBBqdlWZElQuv5302MPH8zDP/lhtI2j4xsuOxHL
+Wk6K8OzkjihskQeZnF6xaNlajtnab7BbrkFYmS4UCbiIOduJCmKQzbE0AFDZUN1j
+OXVVS7Im4xemrgUPAUArzcGEMhAuGc4fZgiJJ93Vtw/MzpcqXW3woU4s+yuY3Dcn
+wJC08P8O53sa3+tLYDHiJdjRo5cOXwbFhex/GrHIMAnN2s7lFw55P04VmLuo/7pB
+ao6Rbsibw3/fICNNEUjDp113Ypd6MW4ncJ0OJhknmmrRRg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://retrieverstories-dev.umbc.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://retrieverstories-dev.umbc.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://retrieverstories-dev.umbc.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://retrieverstories-dev.umbc.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Retriever Stories (development)</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Maryland Baltimore County</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Maryland Baltimore County</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.umbc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>B. Collier Jones</md:GivenName>
+	<md:EmailAddress>collier@umbc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ed Rude</md:GivenName>
+	<md:EmailAddress>erude1@umbc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Billy Schneider</md:GivenName>
+	<md:EmailAddress>will3@umbc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UMBC Security Office</md:GivenName>
+	<md:EmailAddress>security@umbc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

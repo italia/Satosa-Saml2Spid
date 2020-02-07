@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cc.uga.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://idp.uga.edu/idp/error" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uga.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Georgia</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shibboleth 2.x</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="96" width="125" xml:lang="en">https://cas2.uga.edu/cas/images/Screen-GEORGIA-V-FC.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRjCCAi4CCQD0C+UOJQz5qjANBgkqhkiG9w0BAQUFADBlMRgwFgYDVQQDDA9p
+ZHAuZGV2LnVnYS5lZHUxHjAcBgNVBAoMFVVuaXZlcnNpdHkgb2YgR2VvcmdpYTEL
+MAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQHDAZBdGhlbnMwHhcNMTUw
+MzEzMTU0ODI3WhcNMTYwMzEyMTU0ODI3WjBlMRgwFgYDVQQDDA9pZHAuZGV2LnVn
+YS5lZHUxHjAcBgNVBAoMFVVuaXZlcnNpdHkgb2YgR2VvcmdpYTELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQHDAZBdGhlbnMwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQC39mQdrZiYhMAfLcMQCWDUU2IySnIbro+xWE29UKZl
+3OAjD2UjjDBOs77YDk2TmUsKucG7vEogVIPPAtWK+RCuIkLMUFs+v3ZPvYuRqBDY
+9ComFpsuVqXaopaYRcddAIkHf+bgNwLCMYe4E8xGdumr95EnV7qdPPZqoju72VL5
+UgSris8FMoXFkkh5SEgvchV2voeKVySi8XjP3U4lubqhAyP6s0Kl5EgVNeha3JXI
+wdWBcAizE7vO/tgClDNdcgN0lOghNX7neWxkT8I7JACKnn277kQPNOiXq0z2EEzl
+AFDvGbzhEHDCq31hJ1XH2DujLoN2EfSPlGZsu/YGMF63AgMBAAEwDQYJKoZIhvcN
+AQEFBQADggEBAJUXilMXABVFYbaEvptvMvuoN5yvxu6U1xhGKJ6RHNqcF32Kq8M8
+cn4VsbTaT4OmaP77TcbnaoxbYwA9kmQI/s0I7IRkYnGSFm7fIjmttLHwci9Ve8lN
+RI44IKzN3h2IENCq86zLpu0t9eBb6FRT1QBxr42p6Gv+PwNyDfthxW85bO2sSVDd
+1DOzxzmOfWekXdypSsC/FKqtk2+bordT5n9A61x8xfKG8LtM1ThhHqAO/0j8fd8N
+Ki/S+qS1S8KfxPmHlUYIw7dHs3xrAJXmKadkZK30KhT5nw2dJ6iLDoOMRV7Xq18W
+Pod/7K5BxkdiDL8kTktbtYDFm1OdZXo/isk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAggCCQDYTLE1vTqdiTANBgkqhkiG9w0BAQUFADBSMRcwFQYDVQQDDA5p
+ZHAuY2MudWdhLmVkdTEMMAoGA1UECgwDVUdBMQswCQYDVQQGEwJVUzELMAkGA1UE
+CAwCR0ExDzANBgNVBAcMBkF0aGVuczAeFw0xNTAzMjMxNDM0NTlaFw0xNjAzMjIx
+NDM0NTlaMFIxFzAVBgNVBAMMDmlkcC5jYy51Z2EuZWR1MQwwCgYDVQQKDANVR0Ex
+CzAJBgNVBAYTAlVTMQswCQYDVQQIDAJHQTEPMA0GA1UEBwwGQXRoZW5zMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsD6dDssY48p9YeR/G+zoJEqvaFKz
+WaCdYLsFxfGf7wF/ChgAtRZd29s6Flz9acht+2zhiuf8jIdvuB8OX2Bvq+CkJDNi
+3SU46W3e7meY4Hzs7kLcOFh03lbcrInGJbnDYR9yxLhrLINVhOzaLD0qf8dxLt/N
+g0Jr96atvpHmY4hv8BIbuqDO8ViR0Qckoe6qcR8S6Ezca4vWZNwrvBPuorn5kVFV
+XJqNciwsIE1d3cHpjb2s5jrEW7JsliHjXrtcj0/u5TFtyNmH0Wme9jQTeEy88iO0
+nIxx683zS7OEWYRzidJY7iXnHC9ulc8fY5cE2ZEWjz23LPDctMiITP51zQIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQABXOtGnkLzWTHFcRPpwOIrkN1vytQKk2UTFEvt
+s2orodiL7j8yoXViYogxzyQuRk1wJmDS8arUHNDMa/ph0+1aWV4kg1AgvnSCMIg+
+2PdyCVklbI+CRoDbSUonlC9PtKlCkxUK8BBM+P+qrxJ6I703pDR/wEfI3OoxLv8T
+BGrzVttkbT455bMbCQC/PBdpVRuEpUMiXQCMOymr2Jw2yOaazS8u0k3JCA4LOCDU
+AJ9/YMkcjWB3NvaXhpKoeYlvMHEsxvSZT0mqNXImDI7VttSVS3Oxm05/JRGfdqRa
+M/mm6iec1w/QK2k+0r/xVKB8C6q9AYPPhXQsPnS6xhugQNWn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDdzCCAl+gAwIBAgIJAIg4vDCvnn7+MA0GCSqGSIb3DQEBCwUAMFIxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJHQTEPMA0GA1UEBwwGQXRoZW5zMQwwCgYDVQQKDANV
+R0ExFzAVBgNVBAMMDmlkcC5jYy51Z2EuZWR1MB4XDTE3MDEzMDE4NDE1OVoXDTIy
+MDEyOTE4NDE1OVowUjELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQH
+DAZBdGhlbnMxDDAKBgNVBAoMA1VHQTEXMBUGA1UEAwwOaWRwLmNjLnVnYS5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAwWMTSMqDHXq73yatqRUB
+OYUDeIbrFRy9xBVa71FQgdCUcTpPK8wgo05wHmGH93+ZqkZ/DLBPfVr8+VHI22ZD
+p5j3yqDKEqQV9N+2Kk8mjdz0nAoEEFvh7d3yVk3KnpLNFDBjPcsi3CeR0wNUfauM
+N7WgtweO5eQBMDd+P0Cdaxe7GUGa6GvCz64tUxteYkYiD2+DK8oHjZAVD79Qc6n+
+CyhLe2a5Wu9dBN6VVSdibOUJcUK/tXYnr+js859Wz477ttgPHsXSh2wlO4XgWOpZ
+eY/F8vomE2N5OdOcHtuqfEVD/5ZLHPCyLMfHpn9b4Q005V++xKzlBuOBo5uwymJb
+AgMBAAGjUDBOMB0GA1UdDgQWBBSPg19qmizOQeZjdtfoeO1YiKuLmzAfBgNVHSME
+GDAWgBSPg19qmizOQeZjdtfoeO1YiKuLmzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3
+DQEBCwUAA4IBAQBlN6E2NApmmXmeW6zpxwxL7XrdXa35/eSflRmHyiVj0UzXDmH2
+XnkdkEbUbLzAmtrZk6qIsjaZVa3tsGZFdH6W8nrJN7QNA/cwAZCsDSjbqlqJo8lD
+xsEoICWE4cDhsWdYCo4eJeNRyqIraFySVpqbW1lMELz/JH5H8+/YXXw4ti3u/PNv
+oTa9Jfoj5RZ2U4ZFB3l5uP36QmjVq+J76fDySsRcndFk4BqY7LGbwewYl1suY9TA
+5N1hL2gM37WoTSlDoWcfREexYA5O6kwE3B3p7abjdm45y7FB9gkZX7fETHJXf0CM
+FfX6RtTU12Zj+YLqIuYE6v44wp0KiBRHlGG1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cc.uga.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cc.uga.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cc.uga.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cc.uga.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cc.uga.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uga.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRjCCAi4CCQD0C+UOJQz5qjANBgkqhkiG9w0BAQUFADBlMRgwFgYDVQQDDA9p
+ZHAuZGV2LnVnYS5lZHUxHjAcBgNVBAoMFVVuaXZlcnNpdHkgb2YgR2VvcmdpYTEL
+MAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQHDAZBdGhlbnMwHhcNMTUw
+MzEzMTU0ODI3WhcNMTYwMzEyMTU0ODI3WjBlMRgwFgYDVQQDDA9pZHAuZGV2LnVn
+YS5lZHUxHjAcBgNVBAoMFVVuaXZlcnNpdHkgb2YgR2VvcmdpYTELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQHDAZBdGhlbnMwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQC39mQdrZiYhMAfLcMQCWDUU2IySnIbro+xWE29UKZl
+3OAjD2UjjDBOs77YDk2TmUsKucG7vEogVIPPAtWK+RCuIkLMUFs+v3ZPvYuRqBDY
+9ComFpsuVqXaopaYRcddAIkHf+bgNwLCMYe4E8xGdumr95EnV7qdPPZqoju72VL5
+UgSris8FMoXFkkh5SEgvchV2voeKVySi8XjP3U4lubqhAyP6s0Kl5EgVNeha3JXI
+wdWBcAizE7vO/tgClDNdcgN0lOghNX7neWxkT8I7JACKnn277kQPNOiXq0z2EEzl
+AFDvGbzhEHDCq31hJ1XH2DujLoN2EfSPlGZsu/YGMF63AgMBAAEwDQYJKoZIhvcN
+AQEFBQADggEBAJUXilMXABVFYbaEvptvMvuoN5yvxu6U1xhGKJ6RHNqcF32Kq8M8
+cn4VsbTaT4OmaP77TcbnaoxbYwA9kmQI/s0I7IRkYnGSFm7fIjmttLHwci9Ve8lN
+RI44IKzN3h2IENCq86zLpu0t9eBb6FRT1QBxr42p6Gv+PwNyDfthxW85bO2sSVDd
+1DOzxzmOfWekXdypSsC/FKqtk2+bordT5n9A61x8xfKG8LtM1ThhHqAO/0j8fd8N
+Ki/S+qS1S8KfxPmHlUYIw7dHs3xrAJXmKadkZK30KhT5nw2dJ6iLDoOMRV7Xq18W
+Pod/7K5BxkdiDL8kTktbtYDFm1OdZXo/isk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAggCCQDYTLE1vTqdiTANBgkqhkiG9w0BAQUFADBSMRcwFQYDVQQDDA5p
+ZHAuY2MudWdhLmVkdTEMMAoGA1UECgwDVUdBMQswCQYDVQQGEwJVUzELMAkGA1UE
+CAwCR0ExDzANBgNVBAcMBkF0aGVuczAeFw0xNTAzMjMxNDM0NTlaFw0xNjAzMjIx
+NDM0NTlaMFIxFzAVBgNVBAMMDmlkcC5jYy51Z2EuZWR1MQwwCgYDVQQKDANVR0Ex
+CzAJBgNVBAYTAlVTMQswCQYDVQQIDAJHQTEPMA0GA1UEBwwGQXRoZW5zMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsD6dDssY48p9YeR/G+zoJEqvaFKz
+WaCdYLsFxfGf7wF/ChgAtRZd29s6Flz9acht+2zhiuf8jIdvuB8OX2Bvq+CkJDNi
+3SU46W3e7meY4Hzs7kLcOFh03lbcrInGJbnDYR9yxLhrLINVhOzaLD0qf8dxLt/N
+g0Jr96atvpHmY4hv8BIbuqDO8ViR0Qckoe6qcR8S6Ezca4vWZNwrvBPuorn5kVFV
+XJqNciwsIE1d3cHpjb2s5jrEW7JsliHjXrtcj0/u5TFtyNmH0Wme9jQTeEy88iO0
+nIxx683zS7OEWYRzidJY7iXnHC9ulc8fY5cE2ZEWjz23LPDctMiITP51zQIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQABXOtGnkLzWTHFcRPpwOIrkN1vytQKk2UTFEvt
+s2orodiL7j8yoXViYogxzyQuRk1wJmDS8arUHNDMa/ph0+1aWV4kg1AgvnSCMIg+
+2PdyCVklbI+CRoDbSUonlC9PtKlCkxUK8BBM+P+qrxJ6I703pDR/wEfI3OoxLv8T
+BGrzVttkbT455bMbCQC/PBdpVRuEpUMiXQCMOymr2Jw2yOaazS8u0k3JCA4LOCDU
+AJ9/YMkcjWB3NvaXhpKoeYlvMHEsxvSZT0mqNXImDI7VttSVS3Oxm05/JRGfdqRa
+M/mm6iec1w/QK2k+0r/xVKB8C6q9AYPPhXQsPnS6xhugQNWn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDdzCCAl+gAwIBAgIJAIg4vDCvnn7+MA0GCSqGSIb3DQEBCwUAMFIxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJHQTEPMA0GA1UEBwwGQXRoZW5zMQwwCgYDVQQKDANV
+R0ExFzAVBgNVBAMMDmlkcC5jYy51Z2EuZWR1MB4XDTE3MDEzMDE4NDE1OVoXDTIy
+MDEyOTE4NDE1OVowUjELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkdBMQ8wDQYDVQQH
+DAZBdGhlbnMxDDAKBgNVBAoMA1VHQTEXMBUGA1UEAwwOaWRwLmNjLnVnYS5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAwWMTSMqDHXq73yatqRUB
+OYUDeIbrFRy9xBVa71FQgdCUcTpPK8wgo05wHmGH93+ZqkZ/DLBPfVr8+VHI22ZD
+p5j3yqDKEqQV9N+2Kk8mjdz0nAoEEFvh7d3yVk3KnpLNFDBjPcsi3CeR0wNUfauM
+N7WgtweO5eQBMDd+P0Cdaxe7GUGa6GvCz64tUxteYkYiD2+DK8oHjZAVD79Qc6n+
+CyhLe2a5Wu9dBN6VVSdibOUJcUK/tXYnr+js859Wz477ttgPHsXSh2wlO4XgWOpZ
+eY/F8vomE2N5OdOcHtuqfEVD/5ZLHPCyLMfHpn9b4Q005V++xKzlBuOBo5uwymJb
+AgMBAAGjUDBOMB0GA1UdDgQWBBSPg19qmizOQeZjdtfoeO1YiKuLmzAfBgNVHSME
+GDAWgBSPg19qmizOQeZjdtfoeO1YiKuLmzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3
+DQEBCwUAA4IBAQBlN6E2NApmmXmeW6zpxwxL7XrdXa35/eSflRmHyiVj0UzXDmH2
+XnkdkEbUbLzAmtrZk6qIsjaZVa3tsGZFdH6W8nrJN7QNA/cwAZCsDSjbqlqJo8lD
+xsEoICWE4cDhsWdYCo4eJeNRyqIraFySVpqbW1lMELz/JH5H8+/YXXw4ti3u/PNv
+oTa9Jfoj5RZ2U4ZFB3l5uP36QmjVq+J76fDySsRcndFk4BqY7LGbwewYl1suY9TA
+5N1hL2gM37WoTSlDoWcfREexYA5O6kwE3B3p7abjdm45y7FB9gkZX7fETHJXf0CM
+FfX6RtTU12Zj+YLqIuYE6v44wp0KiBRHlGG1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cc.uga.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Georgia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Georgia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uga.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shannon Marable</md:GivenName>
+	<md:EmailAddress>Shannon.Marable@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Chris Workman</md:GivenName>
+	<md:EmailAddress>cworkman@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kristi Wall</md:GivenName>
+	<md:EmailAddress>kristi.wall@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Lindsay Schirato</md:GivenName>
+	<md:EmailAddress>lschira@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

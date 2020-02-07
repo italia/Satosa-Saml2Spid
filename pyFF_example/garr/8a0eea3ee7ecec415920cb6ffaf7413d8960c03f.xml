@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.rz.uni-hohenheim.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-12-04T17:51:07Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-hohenheim.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität Hohenheim</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Hohenheim</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Universität Hohenheim</mdui:Description>
+		<mdui:Description xml:lang="en">University of Hohenheim Identity Provider</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.uni-hohenheim.de/favicon-16x16.png</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://www.uni-hohenheim.de/typo3conf/ext/uni_layout/Resources/Public/Images/uni-logo-de.svg</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.uni-hohenheim.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.uni-hohenheim.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJeDCCCGCgAwIBAgIMINZpPa6SHslFwpYHMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA5MDI0NFoXDTIxMDcxOTA5MDI0NFowgZUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVN0dXR0Z2FydDEfMB0G
+A1UECgwWVW5pdmVyc2l0YWV0IEhvaGVuaGVpbTESMBAGA1UECwwJS0lNICg2MzAp
+MSAwHgYDVQQDDBdpZHAucnoudW5pLWhvaGVuaGVpbS5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMP9Esb/XeWAwAu2DXhTjBAHgP+UBH11Hq3ZyoyW
+mu+/bbSjARWPYbbpFhHeHX/dNldYLK5pbWaoKxmsBtdz4jX/EXD8zJhupLknwxfu
+vFNlqpYWTFLYL63skTDUxsh0RHh35UbzhipIGw5xcOCNHLO+vGB0GKWaczTiG7aX
+OGAEFpYHiX5A/BmLvmgi6UGJuwtMS75Sy+RuUCICLzEoiDxcKma0bNMyoy2zYn5S
+96olYrXWUq7C0l0GXwI5iz+0ddpnyhRTu50SR2FV4Rh2SeFyNek+C27xUccRIwZT
+Tca/qwtwheuaJ6inNa/FjGQf1ihGUMx6r37Rk7QzZHP5HdMCAwEAAaOCBcwwggXI
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFPJWCCxSsvoXj4iBWNWyjeK0VD9kMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCIGA1UdEQQbMBmCF2lkcC5yei51bmktaG9o
+ZW5oZWltLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwv
+Y2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDov
+L29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYB
+BAHWeQIEAgSCA00EggNJA0cAdQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWoqiM9lAAAEAwBGMEQCIHEDRxstjEfFL3U0eWQfL11SomX2MJen7LYl
+ri4SB9IhAiB09wGZK5TFTaEhwcITITUDyytUm1jSJz7kV+2K7zsH8gB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaiqI0F4AAAQDAEgwRgIhAJDz
+GZFYQYZKu2K7Eyxg9xxgQUYiFNZ99IV+p2ZxKsIdAiEA+eUKjczLvvKc4ZN8edaT
+w/7eIAY0GR9W3bs4inrFMLYAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWoqiM9GAAAEAwBGMEQCIFBZbxct8l8XjxY8JDcbI3KkYLc4MqB3Yvbj
++rLM+oKjAiBQb3znHz/Q7k4/GHMKIZFJbpZRLnJIuDbRUm1wDhw6BAB1AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaiqIz14AAAQDAEYwRAIgcGDA
+Hh1cr7ltfx5VNei0F/XQI3gYCXH/DVbsVi5KFB8CICP/jSgXe9X40dPZMjquOrOm
+1v3oyxA0srl+WUxPpYDWAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFqKojPXgAABAMASDBGAiEAqmfKW2+Nqq/tKdbQpZYMavFFc2SJJoY7y2nl
+T/24uGcCIQCoF3u8/KCq2Hs5IlQP/rLgOcFByzWk4o5cv4PPHYWp0wB3AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaiqI0/IAAAQDAEgwRgIhAJ+U
+AcPQgKm0tmpaYNnH59PrvJKR0rfyK9JxbgQoCb0gAiEA24h8NUxmi9Uzx3BFQr93
+Fc8FqSLBHamh3xvpkRB+ylwAdQCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80O
+yA3cEAAAAWoqiM9bAAAEAwBGMEQCID54/xy+bI4k9UW3LdMjBMSzzUpYw/JvavIi
+imPJw8dvAiAU7H5sqPyorgMSFDVVmYiVm4/nYH3tv6fHb5TpizTu3zANBgkqhkiG
+9w0BAQsFAAOCAQEAB96BgLlRffT28BBih81wIRThGutouVkusWtw7Q/X11diA9FH
+cy/wrA4kiq6tDSFS9MG5cVcT+IZR7MMLXse+bERENrjKknWh4MktjsURCuFnKDvo
+OPLW7G9I88ObHfDIF/dUpAzztDko2cvrlFaaXQaa883fMtSuHk0n3NScfw1zlRAE
+E7ydmYltqwT4qUJEWgW805UCXl3QuF/KK0MpyN4aMlPfoJZ+FpesQ0dzyM7igCYW
+tKaDvA3OGUSRhEKvDf1N/yGa7wJC/688qkrqn0CylPQV5p28trSvQuYDb1Rovec2
+rrsa/3z+LmfSCCi2lwgMKmwqlwI4vOPgcDAM0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJeDCCCGCgAwIBAgIMINZpPa6SHslFwpYHMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA5MDI0NFoXDTIxMDcxOTA5MDI0NFowgZUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVN0dXR0Z2FydDEfMB0G
+A1UECgwWVW5pdmVyc2l0YWV0IEhvaGVuaGVpbTESMBAGA1UECwwJS0lNICg2MzAp
+MSAwHgYDVQQDDBdpZHAucnoudW5pLWhvaGVuaGVpbS5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMP9Esb/XeWAwAu2DXhTjBAHgP+UBH11Hq3ZyoyW
+mu+/bbSjARWPYbbpFhHeHX/dNldYLK5pbWaoKxmsBtdz4jX/EXD8zJhupLknwxfu
+vFNlqpYWTFLYL63skTDUxsh0RHh35UbzhipIGw5xcOCNHLO+vGB0GKWaczTiG7aX
+OGAEFpYHiX5A/BmLvmgi6UGJuwtMS75Sy+RuUCICLzEoiDxcKma0bNMyoy2zYn5S
+96olYrXWUq7C0l0GXwI5iz+0ddpnyhRTu50SR2FV4Rh2SeFyNek+C27xUccRIwZT
+Tca/qwtwheuaJ6inNa/FjGQf1ihGUMx6r37Rk7QzZHP5HdMCAwEAAaOCBcwwggXI
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFPJWCCxSsvoXj4iBWNWyjeK0VD9kMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCIGA1UdEQQbMBmCF2lkcC5yei51bmktaG9o
+ZW5oZWltLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwv
+Y2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDov
+L29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYB
+BAHWeQIEAgSCA00EggNJA0cAdQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWoqiM9lAAAEAwBGMEQCIHEDRxstjEfFL3U0eWQfL11SomX2MJen7LYl
+ri4SB9IhAiB09wGZK5TFTaEhwcITITUDyytUm1jSJz7kV+2K7zsH8gB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaiqI0F4AAAQDAEgwRgIhAJDz
+GZFYQYZKu2K7Eyxg9xxgQUYiFNZ99IV+p2ZxKsIdAiEA+eUKjczLvvKc4ZN8edaT
+w/7eIAY0GR9W3bs4inrFMLYAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWoqiM9GAAAEAwBGMEQCIFBZbxct8l8XjxY8JDcbI3KkYLc4MqB3Yvbj
++rLM+oKjAiBQb3znHz/Q7k4/GHMKIZFJbpZRLnJIuDbRUm1wDhw6BAB1AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaiqIz14AAAQDAEYwRAIgcGDA
+Hh1cr7ltfx5VNei0F/XQI3gYCXH/DVbsVi5KFB8CICP/jSgXe9X40dPZMjquOrOm
+1v3oyxA0srl+WUxPpYDWAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFqKojPXgAABAMASDBGAiEAqmfKW2+Nqq/tKdbQpZYMavFFc2SJJoY7y2nl
+T/24uGcCIQCoF3u8/KCq2Hs5IlQP/rLgOcFByzWk4o5cv4PPHYWp0wB3AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaiqI0/IAAAQDAEgwRgIhAJ+U
+AcPQgKm0tmpaYNnH59PrvJKR0rfyK9JxbgQoCb0gAiEA24h8NUxmi9Uzx3BFQr93
+Fc8FqSLBHamh3xvpkRB+ylwAdQCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80O
+yA3cEAAAAWoqiM9bAAAEAwBGMEQCID54/xy+bI4k9UW3LdMjBMSzzUpYw/JvavIi
+imPJw8dvAiAU7H5sqPyorgMSFDVVmYiVm4/nYH3tv6fHb5TpizTu3zANBgkqhkiG
+9w0BAQsFAAOCAQEAB96BgLlRffT28BBih81wIRThGutouVkusWtw7Q/X11diA9FH
+cy/wrA4kiq6tDSFS9MG5cVcT+IZR7MMLXse+bERENrjKknWh4MktjsURCuFnKDvo
+OPLW7G9I88ObHfDIF/dUpAzztDko2cvrlFaaXQaa883fMtSuHk0n3NScfw1zlRAE
+E7ydmYltqwT4qUJEWgW805UCXl3QuF/KK0MpyN4aMlPfoJZ+FpesQ0dzyM7igCYW
+tKaDvA3OGUSRhEKvDf1N/yGa7wJC/688qkrqn0CylPQV5p28trSvQuYDb1Rovec2
+rrsa/3z+LmfSCCi2lwgMKmwqlwI4vOPgcDAM0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.rz.uni-hohenheim.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rz.uni-hohenheim.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rz.uni-hohenheim.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.rz.uni-hohenheim.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/SOAP/ECP"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rz.uni-hohenheim.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-hohenheim.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJeDCCCGCgAwIBAgIMINZpPa6SHslFwpYHMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA5MDI0NFoXDTIxMDcxOTA5MDI0NFowgZUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVN0dXR0Z2FydDEfMB0G
+A1UECgwWVW5pdmVyc2l0YWV0IEhvaGVuaGVpbTESMBAGA1UECwwJS0lNICg2MzAp
+MSAwHgYDVQQDDBdpZHAucnoudW5pLWhvaGVuaGVpbS5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMP9Esb/XeWAwAu2DXhTjBAHgP+UBH11Hq3ZyoyW
+mu+/bbSjARWPYbbpFhHeHX/dNldYLK5pbWaoKxmsBtdz4jX/EXD8zJhupLknwxfu
+vFNlqpYWTFLYL63skTDUxsh0RHh35UbzhipIGw5xcOCNHLO+vGB0GKWaczTiG7aX
+OGAEFpYHiX5A/BmLvmgi6UGJuwtMS75Sy+RuUCICLzEoiDxcKma0bNMyoy2zYn5S
+96olYrXWUq7C0l0GXwI5iz+0ddpnyhRTu50SR2FV4Rh2SeFyNek+C27xUccRIwZT
+Tca/qwtwheuaJ6inNa/FjGQf1ihGUMx6r37Rk7QzZHP5HdMCAwEAAaOCBcwwggXI
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFPJWCCxSsvoXj4iBWNWyjeK0VD9kMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCIGA1UdEQQbMBmCF2lkcC5yei51bmktaG9o
+ZW5oZWltLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwv
+Y2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDov
+L29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYB
+BAHWeQIEAgSCA00EggNJA0cAdQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWoqiM9lAAAEAwBGMEQCIHEDRxstjEfFL3U0eWQfL11SomX2MJen7LYl
+ri4SB9IhAiB09wGZK5TFTaEhwcITITUDyytUm1jSJz7kV+2K7zsH8gB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaiqI0F4AAAQDAEgwRgIhAJDz
+GZFYQYZKu2K7Eyxg9xxgQUYiFNZ99IV+p2ZxKsIdAiEA+eUKjczLvvKc4ZN8edaT
+w/7eIAY0GR9W3bs4inrFMLYAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWoqiM9GAAAEAwBGMEQCIFBZbxct8l8XjxY8JDcbI3KkYLc4MqB3Yvbj
++rLM+oKjAiBQb3znHz/Q7k4/GHMKIZFJbpZRLnJIuDbRUm1wDhw6BAB1AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaiqIz14AAAQDAEYwRAIgcGDA
+Hh1cr7ltfx5VNei0F/XQI3gYCXH/DVbsVi5KFB8CICP/jSgXe9X40dPZMjquOrOm
+1v3oyxA0srl+WUxPpYDWAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFqKojPXgAABAMASDBGAiEAqmfKW2+Nqq/tKdbQpZYMavFFc2SJJoY7y2nl
+T/24uGcCIQCoF3u8/KCq2Hs5IlQP/rLgOcFByzWk4o5cv4PPHYWp0wB3AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaiqI0/IAAAQDAEgwRgIhAJ+U
+AcPQgKm0tmpaYNnH59PrvJKR0rfyK9JxbgQoCb0gAiEA24h8NUxmi9Uzx3BFQr93
+Fc8FqSLBHamh3xvpkRB+ylwAdQCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80O
+yA3cEAAAAWoqiM9bAAAEAwBGMEQCID54/xy+bI4k9UW3LdMjBMSzzUpYw/JvavIi
+imPJw8dvAiAU7H5sqPyorgMSFDVVmYiVm4/nYH3tv6fHb5TpizTu3zANBgkqhkiG
+9w0BAQsFAAOCAQEAB96BgLlRffT28BBih81wIRThGutouVkusWtw7Q/X11diA9FH
+cy/wrA4kiq6tDSFS9MG5cVcT+IZR7MMLXse+bERENrjKknWh4MktjsURCuFnKDvo
+OPLW7G9I88ObHfDIF/dUpAzztDko2cvrlFaaXQaa883fMtSuHk0n3NScfw1zlRAE
+E7ydmYltqwT4qUJEWgW805UCXl3QuF/KK0MpyN4aMlPfoJZ+FpesQ0dzyM7igCYW
+tKaDvA3OGUSRhEKvDf1N/yGa7wJC/688qkrqn0CylPQV5p28trSvQuYDb1Rovec2
+rrsa/3z+LmfSCCi2lwgMKmwqlwI4vOPgcDAM0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJeDCCCGCgAwIBAgIMINZpPa6SHslFwpYHMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA5MDI0NFoXDTIxMDcxOTA5MDI0NFowgZUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCVN0dXR0Z2FydDEfMB0G
+A1UECgwWVW5pdmVyc2l0YWV0IEhvaGVuaGVpbTESMBAGA1UECwwJS0lNICg2MzAp
+MSAwHgYDVQQDDBdpZHAucnoudW5pLWhvaGVuaGVpbS5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMP9Esb/XeWAwAu2DXhTjBAHgP+UBH11Hq3ZyoyW
+mu+/bbSjARWPYbbpFhHeHX/dNldYLK5pbWaoKxmsBtdz4jX/EXD8zJhupLknwxfu
+vFNlqpYWTFLYL63skTDUxsh0RHh35UbzhipIGw5xcOCNHLO+vGB0GKWaczTiG7aX
+OGAEFpYHiX5A/BmLvmgi6UGJuwtMS75Sy+RuUCICLzEoiDxcKma0bNMyoy2zYn5S
+96olYrXWUq7C0l0GXwI5iz+0ddpnyhRTu50SR2FV4Rh2SeFyNek+C27xUccRIwZT
+Tca/qwtwheuaJ6inNa/FjGQf1ihGUMx6r37Rk7QzZHP5HdMCAwEAAaOCBcwwggXI
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFPJWCCxSsvoXj4iBWNWyjeK0VD9kMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCIGA1UdEQQbMBmCF2lkcC5yei51bmktaG9o
+ZW5oZWltLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwv
+Y2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDov
+L29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1o
+dHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2Vy
+dC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYB
+BAHWeQIEAgSCA00EggNJA0cAdQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbII
+mjfZEwAAAWoqiM9lAAAEAwBGMEQCIHEDRxstjEfFL3U0eWQfL11SomX2MJen7LYl
+ri4SB9IhAiB09wGZK5TFTaEhwcITITUDyytUm1jSJz7kV+2K7zsH8gB3AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaiqI0F4AAAQDAEgwRgIhAJDz
+GZFYQYZKu2K7Eyxg9xxgQUYiFNZ99IV+p2ZxKsIdAiEA+eUKjczLvvKc4ZN8edaT
+w/7eIAY0GR9W3bs4inrFMLYAdQCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oD
+AQTzzQAAAWoqiM9GAAAEAwBGMEQCIFBZbxct8l8XjxY8JDcbI3KkYLc4MqB3Yvbj
++rLM+oKjAiBQb3znHz/Q7k4/GHMKIZFJbpZRLnJIuDbRUm1wDhw6BAB1AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaiqIz14AAAQDAEYwRAIgcGDA
+Hh1cr7ltfx5VNei0F/XQI3gYCXH/DVbsVi5KFB8CICP/jSgXe9X40dPZMjquOrOm
+1v3oyxA0srl+WUxPpYDWAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFqKojPXgAABAMASDBGAiEAqmfKW2+Nqq/tKdbQpZYMavFFc2SJJoY7y2nl
+T/24uGcCIQCoF3u8/KCq2Hs5IlQP/rLgOcFByzWk4o5cv4PPHYWp0wB3AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaiqI0/IAAAQDAEgwRgIhAJ+U
+AcPQgKm0tmpaYNnH59PrvJKR0rfyK9JxbgQoCb0gAiEA24h8NUxmi9Uzx3BFQr93
+Fc8FqSLBHamh3xvpkRB+ylwAdQCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80O
+yA3cEAAAAWoqiM9bAAAEAwBGMEQCID54/xy+bI4k9UW3LdMjBMSzzUpYw/JvavIi
+imPJw8dvAiAU7H5sqPyorgMSFDVVmYiVm4/nYH3tv6fHb5TpizTu3zANBgkqhkiG
+9w0BAQsFAAOCAQEAB96BgLlRffT28BBih81wIRThGutouVkusWtw7Q/X11diA9FH
+cy/wrA4kiq6tDSFS9MG5cVcT+IZR7MMLXse+bERENrjKknWh4MktjsURCuFnKDvo
+OPLW7G9I88ObHfDIF/dUpAzztDko2cvrlFaaXQaa883fMtSuHk0n3NScfw1zlRAE
+E7ydmYltqwT4qUJEWgW805UCXl3QuF/KK0MpyN4aMlPfoJZ+FpesQ0dzyM7igCYW
+tKaDvA3OGUSRhEKvDf1N/yGa7wJC/688qkrqn0CylPQV5p28trSvQuYDb1Rovec2
+rrsa/3z+LmfSCCi2lwgMKmwqlwI4vOPgcDAM0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.rz.uni-hohenheim.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rz.uni-hohenheim.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e152</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e152</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Hohenheim</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Universität Hohenheim</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.uni-hohenheim.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.uni-hohenheim.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Steffen</md:GivenName>
+	<md:SurName>Bücheler</md:SurName>
+	<md:EmailAddress>mailto:stb@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steffen</md:GivenName>
+	<md:SurName>Bücheler</md:SurName>
+	<md:EmailAddress>mailto:stb@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Buchfink</md:SurName>
+	<md:EmailAddress>mailto:michael.buchfink@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Buchfink</md:SurName>
+	<md:EmailAddress>mailto:michael.buchfink@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Buchfink</md:SurName>
+	<md:EmailAddress>mailto:michael.buchfink@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>KIM</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:kim-bw-projekt@uni-hohenheim.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

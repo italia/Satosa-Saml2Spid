@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ruskin.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ruskin College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Ruskin College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">ruskin.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTDCCAjQCCQCeO7iggJ8z5DANBgkqhkiG9w0BAQUFADBoMQswCQYDVQQGEwJH
+QjEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxDzANBgNVBAcTBk94Zm9yZDEXMBUGA1UE
+ChMOUnVza2luIENvbGxlZ2UxGTAXBgNVBAMTEGlkcC5ydXNraW4uYWMudWswHhcN
+MTIwNzEwMDk1MzQ0WhcNMzIwNzA1MDk1MzQ0WjBoMQswCQYDVQQGEwJHQjEUMBIG
+A1UECBMLT3hmb3Jkc2hpcmUxDzANBgNVBAcTBk94Zm9yZDEXMBUGA1UEChMOUnVz
+a2luIENvbGxlZ2UxGTAXBgNVBAMTEGlkcC5ydXNraW4uYWMudWswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6+fdNYJiZH+zIfW6xLXXv5JNd/uJP8JQh
+yfrPx2PmggxywfTrMKJdRPpKtAUqPXlSB7acLAjD0U3XErjzYttjt+qXJEU2YUks
+gvwd7lJiIQXW5cf3LU14YySLpCbh/8dNQ1cmmwjQpAYA+vpYjckdOtL0qkt/7qMV
+59crl8ZpMpXusWIq2aZLlHU+Gf21Ez18O+aCkSj4vpcjyFc75YPZFNvDkRdccTtg
+nHxMB3k2ddm8IGbK4VlWymZZWxyl+fNilP0Yqs0OFdCOO6Uo15N60CXw+LcfGhKh
+hntFJ9+9Z4MEAxKQanezzF2C9VtSHuni1Q5CiQWLXMEgzshgkSO3AgMBAAEwDQYJ
+KoZIhvcNAQEFBQADggEBAC/xMtV84acTdAf98Pw7W2IGdi3dUXErdQkkmGMPxC/v
+WJcHbF5+WMozmWSdvci6XhipnxiHWbepsTrpqX4hp83fBb/H7F2NxKHD9VQXLb9m
+xn4sLVWIE/+JLYYGEMupR71JoPwqNEig2Of8H2Oe8/CNYS6IT0w+18ZbLKRfGEFV
+TUk4x96tPFm4+ARUZ8ZWeX2p8eCCicfm8UaShK8DQI3jELAkaSJvd1Pq5ZWrQxbj
++ZwcGmKwLJavwEiBhafJxXrup5yvzIPOzW0skgpxK2jcfQqWO8I90dF7eqKDaUYW
+139vmCjkaZwlSi/F6jOBEEseHoL4lXr//gWKExA6bhk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ruskin.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ruskin.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ruskin.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ruskin.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ruskin.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ruskin.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ruskin.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTDCCAjQCCQCeO7iggJ8z5DANBgkqhkiG9w0BAQUFADBoMQswCQYDVQQGEwJH
+QjEUMBIGA1UECBMLT3hmb3Jkc2hpcmUxDzANBgNVBAcTBk94Zm9yZDEXMBUGA1UE
+ChMOUnVza2luIENvbGxlZ2UxGTAXBgNVBAMTEGlkcC5ydXNraW4uYWMudWswHhcN
+MTIwNzEwMDk1MzQ0WhcNMzIwNzA1MDk1MzQ0WjBoMQswCQYDVQQGEwJHQjEUMBIG
+A1UECBMLT3hmb3Jkc2hpcmUxDzANBgNVBAcTBk94Zm9yZDEXMBUGA1UEChMOUnVz
+a2luIENvbGxlZ2UxGTAXBgNVBAMTEGlkcC5ydXNraW4uYWMudWswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6+fdNYJiZH+zIfW6xLXXv5JNd/uJP8JQh
+yfrPx2PmggxywfTrMKJdRPpKtAUqPXlSB7acLAjD0U3XErjzYttjt+qXJEU2YUks
+gvwd7lJiIQXW5cf3LU14YySLpCbh/8dNQ1cmmwjQpAYA+vpYjckdOtL0qkt/7qMV
+59crl8ZpMpXusWIq2aZLlHU+Gf21Ez18O+aCkSj4vpcjyFc75YPZFNvDkRdccTtg
+nHxMB3k2ddm8IGbK4VlWymZZWxyl+fNilP0Yqs0OFdCOO6Uo15N60CXw+LcfGhKh
+hntFJ9+9Z4MEAxKQanezzF2C9VtSHuni1Q5CiQWLXMEgzshgkSO3AgMBAAEwDQYJ
+KoZIhvcNAQEFBQADggEBAC/xMtV84acTdAf98Pw7W2IGdi3dUXErdQkkmGMPxC/v
+WJcHbF5+WMozmWSdvci6XhipnxiHWbepsTrpqX4hp83fBb/H7F2NxKHD9VQXLb9m
+xn4sLVWIE/+JLYYGEMupR71JoPwqNEig2Of8H2Oe8/CNYS6IT0w+18ZbLKRfGEFV
+TUk4x96tPFm4+ARUZ8ZWeX2p8eCCicfm8UaShK8DQI3jELAkaSJvd1Pq5ZWrQxbj
++ZwcGmKwLJavwEiBhafJxXrup5yvzIPOzW0skgpxK2jcfQqWO8I90dF7eqKDaUYW
+139vmCjkaZwlSi/F6jOBEEseHoL4lXr//gWKExA6bhk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ruskin.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ruskin.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ruskin College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ruskin College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ruskin.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Bill</md:GivenName>
+	<md:SurName>Dewhurst</md:SurName>
+	<md:EmailAddress>mailto:bdewhrst@ruskin.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Bill</md:GivenName>
+	<md:SurName>Dewhurst</md:SurName>
+	<md:EmailAddress>mailto:bdewhrst@ruskin.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

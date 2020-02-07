@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.capella.edu/ic">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">capella.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Capella University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.capella.edu/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="36" width="170" xml:lang="en">https://s2.q4cdn.com/585385277/files/design/logos/capella-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDjzCCAnegAwIBAgIEO67pvDANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQGEwJV
+UzESMBAGA1UECBMJTWlubmVzb3RhMRQwEgYDVQQHEwtNaW5uZWFwb2xpczEbMBkG
+A1UEChMSQ2FwZWxsYSBVbml2ZXJzaXR5MQ0wCwYDVQQLEwRVT1BTMRMwEQYDVQQD
+EwpDYXBlbGxhIElUMB4XDTE3MDQwNTIwMzUzMloXDTI3MDQwMzIwMzUzMloweDEL
+MAkGA1UEBhMCVVMxEjAQBgNVBAgTCU1pbm5lc290YTEUMBIGA1UEBxMLTWlubmVh
+cG9saXMxGzAZBgNVBAoTEkNhcGVsbGEgVW5pdmVyc2l0eTENMAsGA1UECxMEVU9Q
+UzETMBEGA1UEAxMKQ2FwZWxsYSBJVDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAKi414taSmCWG8e4zS2Q4Aazb3F8brHGea4J3aWk0f06ihr78+EP8dhB
+V7MQ70YwODwfo1hwD1l7EZBTf9OA/qQohwc9zTjZF2emaka0XDyvjWqxTt9TJWT4
+ublPbvJRzNIzj+ykBQohxPlmYD2QzSm0WFLrDWFpH5Q39fwCkHrsTZjXqxwSiEpE
+2xcoPAIZT/m9T6mkHsu4kmgZITJJDalYdSPHi2YhEFRioSTvQxjh0xM0UtG2SF2v
+0IMQHlwDxxD7au6IZtmXuw2RDa4nrt64e2DFqgfP6jkHnR6kIbRm3p94cqPxzq/r
+1iNvq0JsskLxgRU7bNjVIcF/VsOVL5UCAwEAAaMhMB8wHQYDVR0OBBYEFNpPtgSn
+voRnldiPFHZ6xpc5meJkMA0GCSqGSIb3DQEBCwUAA4IBAQAj8lLq1MrX27bQhKIi
+nH07uP4tc/M7XsrB3DSYiJZNdmgwW0CbsjDAOCv68Di/9Vpxl1DjyWISJxcpylz6
+u8hIUmnNtMivlHbrFJueOvyjCZfcMILaQVyuYweBxwIJdrFuoM0q2umRw+aAjyra
+dsBh24ww5T9ZPkNW7kc+ejwzdzoGlBBljU3uYeiupJY02Z9sowvyldoIQ8cy7cP/
+iD4yAgvF/L9GKxckx0cxpilloFNOEP0m6aNBPP8Z1pKoJ214GFlpZ2tzdQfACM5M
+dfgi5MqRyT+TsTLU2EpfsT28vT6smdAJQyxNl3VBQ34+GXxlcC9yRdvgVAEMqU7E
+54X9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso3.capella.edu:443/openam/ArtifactResolver/metaAlias/idp3" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso3.capella.edu:443/openam/IDPSloRedirect/metaAlias/idp3"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso3.capella.edu:443/openam/IDPSloPOST/metaAlias/idp3"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso3.capella.edu:443/openam/SSORedirect/metaAlias/idp3"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso3.capella.edu:443/openam/SSOPOST/metaAlias/idp3"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso3.capella.edu:443/openam/SSOSoap/metaAlias/idp"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Capella University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Capella University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.capella.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Angie Quitter</md:GivenName>
+	<md:EmailAddress>Angie.Quitter@capella.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mike Walstrom</md:GivenName>
+	<md:EmailAddress>Mike.Walstrom@capella.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Angie Quitter</md:GivenName>
+	<md:EmailAddress>angie.quitter@capella.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

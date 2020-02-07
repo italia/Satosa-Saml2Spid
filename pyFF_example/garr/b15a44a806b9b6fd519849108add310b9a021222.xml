@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://msauth.kent.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://support.kent.edu" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kent.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kent State University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Kent State University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.kent.edu/it</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.kent.edu/it/policies-and-procedures</mdui:PrivacyStatementURL>
+		<mdui:Logo height="172" width="180" xml:lang="en">https://s3.amazonaws.com/undeniable.kent.edu/files/kent_state_university_stacked_2-color.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2jCCAcKgAwIBAgIQVN8d0rD1v5lIPqBLAdFDTjANBgkqhkiG9w0BAQsFADAp
+MScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBtc2F1dGgua2VudC5lZHUwHhcNMTkw
+NjE5MDAzMDAyWhcNMjAwNjE4MDAzMDAyWjApMScwJQYDVQQDEx5BREZTIFNpZ25p
+bmcgLSBtc2F1dGgua2VudC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDI3I4z7YxiA8nOHbUWLTqEcdmHib4vHJ4O98pJjFjPxLR6rPseVGmHfZDS
+AvZw0iXapkFC/8fVHwRgwFIVAuu0s9L/56osxs4fX8Rw1//nUvgEygBMTlpiiLBB
+dmjvZFVRcFRKmYq9ffkQmLuZz1o/PgpbjtdbhS1kIjPs47AMegY6ceexzMTOIWEA
+VDwr2DvPkS7ajQDunzLEzh8j6S9De8uJg72M2StGwg/iafXbN+U5Lw4BQp4uOoxW
+oIZ66dab8g9yUdFrbebrr2DSTJKf7igDnuoe0IXwNaN8Ek+0qGP1ec8aj0Cwji5C
+uzeR8bneUaei+KDxLkOSIIIFpDr5AgMBAAEwDQYJKoZIhvcNAQELBQADggEBABiv
+Pwi5i4p/eY+aG7ZJUrMWDv+BdNtEwapmbOq8tYexVrPh9RjK4wRH81CIhfFJ5vuh
+LG8wDd/2q5lRfWgWCqS3DkH2AjtqEsmAx7sK4jv8mIezenAJLJ20sfUfo9yX3KzF
+MLTxCB1lsT6iErHXXxQK1dpuvdGqnWaKo4haAl/BIWlXrcVjnq1OfwkeUjEwYRo0
+NivT8QyaEbikabs8JUQIcJDacFhPVhcEE9gCE1hrzm6Mdh4Hm137Z1EzJGk9tGNL
+Z8OIyd2bQv+mJegdCMu7JpXUyeSREEc3ynRAcU6+afTOG7OjDSCG7EOw+5jR5QNm
+hDsKeAsR2EKNGmeBkCo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://msauth.kent.edu/adfs/ls/?wa=wsignout1.0"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://msauth.kent.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://msauth.kent.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kent State University - Main Campus</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kent State University - Main Campus</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.kent.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Identity Management</md:GivenName>
+	<md:EmailAddress>it-idm@kent.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Identity Management</md:GivenName>
+	<md:EmailAddress>it-idm@kent.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@kent.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>support@kent.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

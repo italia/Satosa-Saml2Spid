@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ujep.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2010-09-21T15:26:39Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/university</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ujep.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Jan Evangelista Purkyne University in Usti nad Labem</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Univerzita Jana Evangelisty Purkyně v Ústí nad Labem</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for UJEP in Usti nad Labem</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro UJEP v Ústí nad Labem</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ujep.cz/en/welcome.html</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.ujep.cz</mdui:InformationURL>
+		<mdui:Logo height="40" width="102">https://trilian.ujep.cz/logo_ujep40.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIELjCCAxYCCQD8WhkthREzrjANBgkqhkiG9w0BAQUFADCB2DELMAkGA1UEBhMC
+Q1oxFzAVBgNVBAgTDkN6ZWNoIFJlcHVibGljMRcwFQYDVQQHEw5Vc3RpIG5hZCBM
+YWJlbTE9MDsGA1UEChM0SmFuIEV2YW5nZWxpc3RhIFB1cmt5bmUgVW5pdmVyc2l0
+eSBpbiBVc3RpIG5hZCBMYWJlbTEcMBoGA1UECxMTQ2VudHJ1bSBJbmZvcm1hdGlr
+eTEUMBIGA1UEAxMLaWRwLnVqZXAuY3oxJDAiBgkqhkiG9w0BCQEWFXBhdmVsLnBv
+bGFjZWtAdWplcC5jejAeFw0xMzAyMTEwODEzNTJaFw0yMzAyMDkwODEzNTJaMIHY
+MQswCQYDVQQGEwJDWjEXMBUGA1UECBMOQ3plY2ggUmVwdWJsaWMxFzAVBgNVBAcT
+DlVzdGkgbmFkIExhYmVtMT0wOwYDVQQKEzRKYW4gRXZhbmdlbGlzdGEgUHVya3lu
+ZSBVbml2ZXJzaXR5IGluIFVzdGkgbmFkIExhYmVtMRwwGgYDVQQLExNDZW50cnVt
+IEluZm9ybWF0aWt5MRQwEgYDVQQDEwtpZHAudWplcC5jejEkMCIGCSqGSIb3DQEJ
+ARYVcGF2ZWwucG9sYWNla0B1amVwLmN6MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAvJIxOavTd0EX9/IM/cpWc/RlFw1wsDiZuN96yFRACjMeY0jxyF80
+KQJbSSUhgnBIXfeLcgOFBYMivtkxpKRw/dqIB7Pq0Reh9sdHvV0Kec7pphHhwiGv
+f5jz9OiqtP8ZfkK8dgZwJfjBhqjt6V5cHI5lGSMek0pH0KcrCo+yAhwtZecuDhTe
+xPHfBJ5UsQ9t/ynCQn6/NckOQrYIkeP9u+wS/XsF8Z5aB35Pjq6RCZCUqrWYomfg
+LpZKAjSikFyA/Er6UiZCXHysYkq1O4kE87ndhkN5ngtH6FBSJQO5QfG8BgrxiOCm
+chPtodxO++n1ZBhMVt4kHAC5txaEhhl9ZwIDAQABMA0GCSqGSIb3DQEBBQUAA4IB
+AQAdNqOKtWjjw2L1YZ7hOxLNyZlAmboyDKeirErCXVK64QVCQvWZTl3BLDmvJzP7
+YbW0NeKq9STOfnxlJOV23NRPLjlaDwMn4B9wF6elNi+FeBplKt8NbXwXPfSSIHN7
+ytJJMwPrEBrrXhSKedT/rpGx28Ld4UuC4aKCjhCVor0fGh3B8BPQZoAY3iO+lXJg
+5jSx2xyJS9xVGE4sjeHrPTYNApQUKHboj4d2aswEQg+JvQYqdEU+SCBveo3Qou3Y
+6VLxR/4Su2F6qooWNjensavLeNix6/TurrOgMcIMOsJ1DcWml8HH2yBqEW40QNFQ
+U19RU7sLdrZ60inUFxdxr+AR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIVAPYZgY/EnyK2ur6BjEwHE5DmcA9aMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owHhcNMTUxMjA1MjE0MDQ1WhcN
+MzUxMjA1MjE0MDQ1WjAYMRYwFAYDVQQDDA1pZHBzMy51amVwLmN6MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgWvkEHZ6YZf83AwNWqc8CNaTjgVsdkRU
+DTrfB4rmgGy0vF0oM8sUnPvvqk6pbBHy6D0bD0C4iz8K1F6LLp4bO/A0xwVmNkiK
+P/7V3Q6BxEIFOeys3VypUwSkbljAoGJS9UT5NSiSP/GefCUlcYzbwMTChz58TOFK
+MtaL0Dtcr9pPaJDQe7qkX3cS4kUCjqrHD+s/KQqDzntm0ptHKf4R8jOfo4OOWYwX
+hRZmdd82XsRW/1ogvnnBgDT5FKY6k1oGWviQ/daMvcr5lyWVJzJCY7HIADTuAWSp
+jv8x01xvyuCKlGG1+1w2taBts7yMRvDMjnlVkRAsORbRNHrg3ILUyQIDAQABo18w
+XTAdBgNVHQ4EFgQUttS1sr+jHTtLfZL4ajNCUXCV160wPAYDVR0RBDUwM4INaWRw
+czMudWplcC5jeoYiaHR0cHM6Ly9pZHAudWplcC5jei9pZHAvc2hpYmJvbGV0aDAN
+BgkqhkiG9w0BAQsFAAOCAQEAc2+L/VEEUzlUuRRXdYOBbS5+hUkHmAdDoij60Ub6
+P4ql/W5Cm5wnwVQJma29lAs5b7HmAdB/2F2Q2oWs2Ligh8F7qZmHNSdvNLP8FuJK
+iHCwGTq4bDA/NL4fdkm4d7i517fKzi4Imb22UN5I67c0POlCdSxQc7h5YZaR5VRI
+VQrxggOvg4KihrkEjs0fMtq8DPZMv7VhXq8rKRwZAeKlhuwaVR9xhuSL1fN9YW55
+43z5teCbhSILTr5UWMKbx6Nm15kFhKHLP2urpRIRSvYscc6xsiFzmumBoW/flh+h
+SBSTkBzY/6c0Gg3YuNInC/H2ajZ0PJpowK0NP9HHVheI2w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHTCCAgWgAwIBAgIURnqmAJqtdL1M8jQE255U8iChmp0wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwczMudWplcC5jejAeFw0xNTEyMDUyMTQwNDVaFw0z
+NTEyMDUyMTQwNDVaMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCm9RSuNj6jIc6CFr6MNzjrXW45su06/uv2
+X5E/9iDvbAuo4iJmyDkyOVMMN47vbu3MwjF6ZFGYlh+HGefLjEm5ft4ou/YF1I7y
+CVOkAV1kX8zjdUaupoaUnLiOlrRywEQSFpZJLapTnDKQhOgmCysw5s2AuGtn+F3G
+N6aMUCu/mjpblbbaQljIR2zSqpE488G2nuG9q4gCoL/BLmGreJpt90NV3IjsIgp0
+cvM5/zbnR58cPeABrFkcpc+lVGRC8y0nrpEroZdCeaSZDOafTdXgAcrd2keoaoAP
+jJzP4u8mhaZ4yCpXFz8ZFVGI6l+2Vw1AhBRzoiGFU1wbzH8DQddFAgMBAAGjXzBd
+MB0GA1UdDgQWBBSMJAqNQJcNhppfaKs8kREiRph6gjA8BgNVHREENTAzgg1pZHBz
+My51amVwLmN6hiJodHRwczovL2lkcC51amVwLmN6L2lkcC9zaGliYm9sZXRoMA0G
+CSqGSIb3DQEBCwUAA4IBAQCCvz/XouGuSsuZ15pyKMjBnyvqSmUBtUT/qs18XVBV
+58KOmt8bK31It9Thsn9f0+dakqJ74+rIvS3VSsHddRXnOM2VTdo/w87THpmpPcnx
+VstwS/VMSaDwl530aJc4aiGdjKlFtHRnd87PjyEQpYVAH4R7rO75HQWWixRMGgr2
+naCMNcTQlZem8rSd4bsisvxXy5osyFfkhCCXHswi8WdDmqykWRjoFtfckJBStpVJ
+38vIBetNRUXdUAgDCbGvb6qyxRU39+B9GZRAzqQpWoTBcDFmReIkXeUZX2VR6DDT
+JSusGYs0TrctbW3VyIJJA7hM77uBWGRfDNRsxvrTVpEY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIVAOtj85Z7Iaqj4yN3qkuq4zMFA1zuMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owHhcNMTUxMjA1MjE0MDQ1WhcN
+MzUxMjA1MjE0MDQ1WjAYMRYwFAYDVQQDDA1pZHBzMy51amVwLmN6MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtQ1TMWViKhGRTnaY40cImzmRc82xgVXA
+MPW3msod2Y+/fgFf5a+/ClQWGmdSd8qBVsG+O0AXJ6rlVAUCMUpBtTK9M6L1sdtX
+PME6GjjErXKRmntcJ7FKhKgr1i0aQRGiQT9XwRHtMuG2y4AQpJ/nJeNKdCblfqaK
+/FTZFk0V46BeksS6JtA+KclOMKmx4pl+LQ7g1YnM8rVAaezyZsJb13ZCQ+Xmu6Sp
+oaTUP+Pb5kEhaQQwPUccwrDbBJIb5XqnhPQ+IFoza4rirzt3a0ZEh96eoI201Q42
+M7PIwvQAoz+aYfklZvvSxi1SXTyWNMs3g8zv891UBBNcJoQWmoLpmQIDAQABo18w
+XTAdBgNVHQ4EFgQUuA4mPScEj+8K16EvYMZR+58t4xowPAYDVR0RBDUwM4INaWRw
+czMudWplcC5jeoYiaHR0cHM6Ly9pZHAudWplcC5jei9pZHAvc2hpYmJvbGV0aDAN
+BgkqhkiG9w0BAQsFAAOCAQEAA6TeSdeTYZO6T4hWwqN5tF0zv28BZp5E+r4RpILe
+SRbsdwqe+3JwEWcFhQVz+CPCyH2CxOKJZ2HNO5Zx+9276xaYmDSMSwpR0qRNGYdj
+SE1fO2czOD5jvnlgJUWchjEoxAbiUGoRKz+BzL9U8thZgLj4ItbhfJHi04He1CZ2
+WtWaXKDnrBb0tTunG0m+sIowrh+A5Vr8F0Nh4U0gLhQQzIon+d9Va2biMtTdD+Em
+O9ac50/5ZOYsRZuLWbMgM+0Cmb/hELfwl1kJdVcSlc/XtPXHYEqjnyh0DF0ew9PW
+SbZ12F+snMAFc+5AsDrCqg/IufGla3/9M6UqC/C4AO4K2A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ujep.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ujep.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ujep.cz/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ujep.cz/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ujep.cz/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ujep.cz:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ujep.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ujep.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ujep.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ujep.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ujep.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIELjCCAxYCCQD8WhkthREzrjANBgkqhkiG9w0BAQUFADCB2DELMAkGA1UEBhMC
+Q1oxFzAVBgNVBAgTDkN6ZWNoIFJlcHVibGljMRcwFQYDVQQHEw5Vc3RpIG5hZCBM
+YWJlbTE9MDsGA1UEChM0SmFuIEV2YW5nZWxpc3RhIFB1cmt5bmUgVW5pdmVyc2l0
+eSBpbiBVc3RpIG5hZCBMYWJlbTEcMBoGA1UECxMTQ2VudHJ1bSBJbmZvcm1hdGlr
+eTEUMBIGA1UEAxMLaWRwLnVqZXAuY3oxJDAiBgkqhkiG9w0BCQEWFXBhdmVsLnBv
+bGFjZWtAdWplcC5jejAeFw0xMzAyMTEwODEzNTJaFw0yMzAyMDkwODEzNTJaMIHY
+MQswCQYDVQQGEwJDWjEXMBUGA1UECBMOQ3plY2ggUmVwdWJsaWMxFzAVBgNVBAcT
+DlVzdGkgbmFkIExhYmVtMT0wOwYDVQQKEzRKYW4gRXZhbmdlbGlzdGEgUHVya3lu
+ZSBVbml2ZXJzaXR5IGluIFVzdGkgbmFkIExhYmVtMRwwGgYDVQQLExNDZW50cnVt
+IEluZm9ybWF0aWt5MRQwEgYDVQQDEwtpZHAudWplcC5jejEkMCIGCSqGSIb3DQEJ
+ARYVcGF2ZWwucG9sYWNla0B1amVwLmN6MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAvJIxOavTd0EX9/IM/cpWc/RlFw1wsDiZuN96yFRACjMeY0jxyF80
+KQJbSSUhgnBIXfeLcgOFBYMivtkxpKRw/dqIB7Pq0Reh9sdHvV0Kec7pphHhwiGv
+f5jz9OiqtP8ZfkK8dgZwJfjBhqjt6V5cHI5lGSMek0pH0KcrCo+yAhwtZecuDhTe
+xPHfBJ5UsQ9t/ynCQn6/NckOQrYIkeP9u+wS/XsF8Z5aB35Pjq6RCZCUqrWYomfg
+LpZKAjSikFyA/Er6UiZCXHysYkq1O4kE87ndhkN5ngtH6FBSJQO5QfG8BgrxiOCm
+chPtodxO++n1ZBhMVt4kHAC5txaEhhl9ZwIDAQABMA0GCSqGSIb3DQEBBQUAA4IB
+AQAdNqOKtWjjw2L1YZ7hOxLNyZlAmboyDKeirErCXVK64QVCQvWZTl3BLDmvJzP7
+YbW0NeKq9STOfnxlJOV23NRPLjlaDwMn4B9wF6elNi+FeBplKt8NbXwXPfSSIHN7
+ytJJMwPrEBrrXhSKedT/rpGx28Ld4UuC4aKCjhCVor0fGh3B8BPQZoAY3iO+lXJg
+5jSx2xyJS9xVGE4sjeHrPTYNApQUKHboj4d2aswEQg+JvQYqdEU+SCBveo3Qou3Y
+6VLxR/4Su2F6qooWNjensavLeNix6/TurrOgMcIMOsJ1DcWml8HH2yBqEW40QNFQ
+U19RU7sLdrZ60inUFxdxr+AR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIVAPYZgY/EnyK2ur6BjEwHE5DmcA9aMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owHhcNMTUxMjA1MjE0MDQ1WhcN
+MzUxMjA1MjE0MDQ1WjAYMRYwFAYDVQQDDA1pZHBzMy51amVwLmN6MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgWvkEHZ6YZf83AwNWqc8CNaTjgVsdkRU
+DTrfB4rmgGy0vF0oM8sUnPvvqk6pbBHy6D0bD0C4iz8K1F6LLp4bO/A0xwVmNkiK
+P/7V3Q6BxEIFOeys3VypUwSkbljAoGJS9UT5NSiSP/GefCUlcYzbwMTChz58TOFK
+MtaL0Dtcr9pPaJDQe7qkX3cS4kUCjqrHD+s/KQqDzntm0ptHKf4R8jOfo4OOWYwX
+hRZmdd82XsRW/1ogvnnBgDT5FKY6k1oGWviQ/daMvcr5lyWVJzJCY7HIADTuAWSp
+jv8x01xvyuCKlGG1+1w2taBts7yMRvDMjnlVkRAsORbRNHrg3ILUyQIDAQABo18w
+XTAdBgNVHQ4EFgQUttS1sr+jHTtLfZL4ajNCUXCV160wPAYDVR0RBDUwM4INaWRw
+czMudWplcC5jeoYiaHR0cHM6Ly9pZHAudWplcC5jei9pZHAvc2hpYmJvbGV0aDAN
+BgkqhkiG9w0BAQsFAAOCAQEAc2+L/VEEUzlUuRRXdYOBbS5+hUkHmAdDoij60Ub6
+P4ql/W5Cm5wnwVQJma29lAs5b7HmAdB/2F2Q2oWs2Ligh8F7qZmHNSdvNLP8FuJK
+iHCwGTq4bDA/NL4fdkm4d7i517fKzi4Imb22UN5I67c0POlCdSxQc7h5YZaR5VRI
+VQrxggOvg4KihrkEjs0fMtq8DPZMv7VhXq8rKRwZAeKlhuwaVR9xhuSL1fN9YW55
+43z5teCbhSILTr5UWMKbx6Nm15kFhKHLP2urpRIRSvYscc6xsiFzmumBoW/flh+h
+SBSTkBzY/6c0Gg3YuNInC/H2ajZ0PJpowK0NP9HHVheI2w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHTCCAgWgAwIBAgIURnqmAJqtdL1M8jQE255U8iChmp0wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwczMudWplcC5jejAeFw0xNTEyMDUyMTQwNDVaFw0z
+NTEyMDUyMTQwNDVaMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCm9RSuNj6jIc6CFr6MNzjrXW45su06/uv2
+X5E/9iDvbAuo4iJmyDkyOVMMN47vbu3MwjF6ZFGYlh+HGefLjEm5ft4ou/YF1I7y
+CVOkAV1kX8zjdUaupoaUnLiOlrRywEQSFpZJLapTnDKQhOgmCysw5s2AuGtn+F3G
+N6aMUCu/mjpblbbaQljIR2zSqpE488G2nuG9q4gCoL/BLmGreJpt90NV3IjsIgp0
+cvM5/zbnR58cPeABrFkcpc+lVGRC8y0nrpEroZdCeaSZDOafTdXgAcrd2keoaoAP
+jJzP4u8mhaZ4yCpXFz8ZFVGI6l+2Vw1AhBRzoiGFU1wbzH8DQddFAgMBAAGjXzBd
+MB0GA1UdDgQWBBSMJAqNQJcNhppfaKs8kREiRph6gjA8BgNVHREENTAzgg1pZHBz
+My51amVwLmN6hiJodHRwczovL2lkcC51amVwLmN6L2lkcC9zaGliYm9sZXRoMA0G
+CSqGSIb3DQEBCwUAA4IBAQCCvz/XouGuSsuZ15pyKMjBnyvqSmUBtUT/qs18XVBV
+58KOmt8bK31It9Thsn9f0+dakqJ74+rIvS3VSsHddRXnOM2VTdo/w87THpmpPcnx
+VstwS/VMSaDwl530aJc4aiGdjKlFtHRnd87PjyEQpYVAH4R7rO75HQWWixRMGgr2
+naCMNcTQlZem8rSd4bsisvxXy5osyFfkhCCXHswi8WdDmqykWRjoFtfckJBStpVJ
+38vIBetNRUXdUAgDCbGvb6qyxRU39+B9GZRAzqQpWoTBcDFmReIkXeUZX2VR6DDT
+JSusGYs0TrctbW3VyIJJA7hM77uBWGRfDNRsxvrTVpEY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIVAOtj85Z7Iaqj4yN3qkuq4zMFA1zuMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcHMzLnVqZXAuY3owHhcNMTUxMjA1MjE0MDQ1WhcN
+MzUxMjA1MjE0MDQ1WjAYMRYwFAYDVQQDDA1pZHBzMy51amVwLmN6MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtQ1TMWViKhGRTnaY40cImzmRc82xgVXA
+MPW3msod2Y+/fgFf5a+/ClQWGmdSd8qBVsG+O0AXJ6rlVAUCMUpBtTK9M6L1sdtX
+PME6GjjErXKRmntcJ7FKhKgr1i0aQRGiQT9XwRHtMuG2y4AQpJ/nJeNKdCblfqaK
+/FTZFk0V46BeksS6JtA+KclOMKmx4pl+LQ7g1YnM8rVAaezyZsJb13ZCQ+Xmu6Sp
+oaTUP+Pb5kEhaQQwPUccwrDbBJIb5XqnhPQ+IFoza4rirzt3a0ZEh96eoI201Q42
+M7PIwvQAoz+aYfklZvvSxi1SXTyWNMs3g8zv891UBBNcJoQWmoLpmQIDAQABo18w
+XTAdBgNVHQ4EFgQUuA4mPScEj+8K16EvYMZR+58t4xowPAYDVR0RBDUwM4INaWRw
+czMudWplcC5jeoYiaHR0cHM6Ly9pZHAudWplcC5jei9pZHAvc2hpYmJvbGV0aDAN
+BgkqhkiG9w0BAQsFAAOCAQEAA6TeSdeTYZO6T4hWwqN5tF0zv28BZp5E+r4RpILe
+SRbsdwqe+3JwEWcFhQVz+CPCyH2CxOKJZ2HNO5Zx+9276xaYmDSMSwpR0qRNGYdj
+SE1fO2czOD5jvnlgJUWchjEoxAbiUGoRKz+BzL9U8thZgLj4ItbhfJHi04He1CZ2
+WtWaXKDnrBb0tTunG0m+sIowrh+A5Vr8F0Nh4U0gLhQQzIon+d9Va2biMtTdD+Em
+O9ac50/5ZOYsRZuLWbMgM+0Cmb/hELfwl1kJdVcSlc/XtPXHYEqjnyh0DF0ew9PW
+SbZ12F+snMAFc+5AsDrCqg/IufGla3/9M6UqC/C4AO4K2A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ujep.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ujep.cz:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Jan Evangelista Purkyne University in Usti nad Labem</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Univerzita Jana Evangelisty Purkyně v Ústí nad Labem</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Jan Evangelista Purkyne University in Usti nad Labem</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Univerzita Jana Evangelisty Purkyně v Ústí nad Labem</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ujep.cz/en/welcome.html</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.ujep.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Pavel</md:GivenName>
+	<md:SurName>Polacek</md:SurName>
+	<md:EmailAddress>mailto:pavel.polacek@ujep.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://iam.kisti.re.kr/idp/simplesamlphp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://kafe.kreonet.net" registrationInstant="2017-04-24T07:57:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.kafe.or.kr/e_join</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kisti.re.kr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Korea Institute of Science and Technology Information</mdui:DisplayName>
+		<mdui:Description xml:lang="en">KISTI Home Organization</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.kisti.re.kr</mdui:InformationURL>
+		<mdui:Logo height="19" width="60">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:36.365725,127.359497</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.590836,127.045072</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDqzCCApOgAwIBAgIJANghraqRL6oOMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNV
+BAYTAktSMRAwDgYDVQQHDAdEYWVqZW9uMQ4wDAYDVQQKDAVLSVNUSTEYMBYGA1UE
+AwwPaWFtLmtpc3RpLnJlLmtyMSEwHwYJKoZIhvcNAQkBFhJjb3JlZW5Aa3Jlb25l
+dC5uZXQwHhcNMTcwNzIxMDIyMDUwWhcNMjcwNzIxMDIyMDUwWjBsMQswCQYDVQQG
+EwJLUjEQMA4GA1UEBwwHRGFlamVvbjEOMAwGA1UECgwFS0lTVEkxGDAWBgNVBAMM
+D2lhbS5raXN0aS5yZS5rcjEhMB8GCSqGSIb3DQEJARYSY29yZWVuQGtyZW9uZXQu
+bmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA06BGEZZUhNhvs5PI
+2fP28ahGQwOjroQjGSSHiGZmOC5n0RoMFikW+fXO2kfnieKvlAEHc33B55vhZAJl
+swixNSVUX5bTu/SZzAZYfjJ2StTyC1UtABEvrtVXUHDA3d6Mtfc7IO3734c6byaj
+/LVWM9P521AiEKJXRfgajPkjCSE3CFkQ3rgP4roJo1ql1Jv6ve3lAAQLid6t2hyu
+WVh4Ara8ag7au5iWtfxX1H7m4O7GvBnUuJlOTKo3qxFjwHgXVDuNma2M4gkP/7jt
+RDCsV/iS8dX63d6TDpc0Szgvk9UFXEg5lk97zxAZ3HJO7fwBAg+vvH/tjdAdxW1U
+orXK8wIDAQABo1AwTjAdBgNVHQ4EFgQUxH4dY7wwIyVVqNNvoGDKSscQ6sIwHwYD
+VR0jBBgwFoAUxH4dY7wwIyVVqNNvoGDKSscQ6sIwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQsFAAOCAQEAwkJa306X4DZag+en+PzH56bGVYOYEsY+zpBEE2b7023b
++06lnKMYfs/xIdiE4x5LCaCZbHUcOyZ+SGCt9MFSXrD6ukmLw5LZSNnkJs1sENZH
+8FATvW0HuKDLh7HydcQZYPWmPapZ3kwK7T0YJ4tewDHd7/RV6ufBWdEzKjfnRE5V
++uIHHEI3SbfY87ZKLWJd/3Dco3MMqHOJPULzfwBH7lzfPmkMerm9rFiLBB3M3TbQ
+rHizSZImtADuKYieb4hdvEueyeFOqxBpOrOVHj+pLW6mNAA+ysjrBjw/BjnVgr+I
+Pr6YvICkhGfxmoFrE/oScmdnrziprKYzX5TMJeKyZw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDqzCCApOgAwIBAgIJANghraqRL6oOMA0GCSqGSIb3DQEBCwUAMGwxCzAJBgNV
+BAYTAktSMRAwDgYDVQQHDAdEYWVqZW9uMQ4wDAYDVQQKDAVLSVNUSTEYMBYGA1UE
+AwwPaWFtLmtpc3RpLnJlLmtyMSEwHwYJKoZIhvcNAQkBFhJjb3JlZW5Aa3Jlb25l
+dC5uZXQwHhcNMTcwNzIxMDIyMDUwWhcNMjcwNzIxMDIyMDUwWjBsMQswCQYDVQQG
+EwJLUjEQMA4GA1UEBwwHRGFlamVvbjEOMAwGA1UECgwFS0lTVEkxGDAWBgNVBAMM
+D2lhbS5raXN0aS5yZS5rcjEhMB8GCSqGSIb3DQEJARYSY29yZWVuQGtyZW9uZXQu
+bmV0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA06BGEZZUhNhvs5PI
+2fP28ahGQwOjroQjGSSHiGZmOC5n0RoMFikW+fXO2kfnieKvlAEHc33B55vhZAJl
+swixNSVUX5bTu/SZzAZYfjJ2StTyC1UtABEvrtVXUHDA3d6Mtfc7IO3734c6byaj
+/LVWM9P521AiEKJXRfgajPkjCSE3CFkQ3rgP4roJo1ql1Jv6ve3lAAQLid6t2hyu
+WVh4Ara8ag7au5iWtfxX1H7m4O7GvBnUuJlOTKo3qxFjwHgXVDuNma2M4gkP/7jt
+RDCsV/iS8dX63d6TDpc0Szgvk9UFXEg5lk97zxAZ3HJO7fwBAg+vvH/tjdAdxW1U
+orXK8wIDAQABo1AwTjAdBgNVHQ4EFgQUxH4dY7wwIyVVqNNvoGDKSscQ6sIwHwYD
+VR0jBBgwFoAUxH4dY7wwIyVVqNNvoGDKSscQ6sIwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQsFAAOCAQEAwkJa306X4DZag+en+PzH56bGVYOYEsY+zpBEE2b7023b
++06lnKMYfs/xIdiE4x5LCaCZbHUcOyZ+SGCt9MFSXrD6ukmLw5LZSNnkJs1sENZH
+8FATvW0HuKDLh7HydcQZYPWmPapZ3kwK7T0YJ4tewDHd7/RV6ufBWdEzKjfnRE5V
++uIHHEI3SbfY87ZKLWJd/3Dco3MMqHOJPULzfwBH7lzfPmkMerm9rFiLBB3M3TbQ
+rHizSZImtADuKYieb4hdvEueyeFOqxBpOrOVHj+pLW6mNAA+ysjrBjw/BjnVgr+I
+Pr6YvICkhGfxmoFrE/oScmdnrziprKYzX5TMJeKyZw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://iam.kisti.re.kr/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iam.kisti.re.kr/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://iam.kisti.re.kr/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iam.kisti.re.kr/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Korea Institute of Science and Technology Information</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Korea Institute of Science and Technology Information</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kisti.re.kr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:coreen@kreonet.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>mailto:wyheo@kisti.re.kr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

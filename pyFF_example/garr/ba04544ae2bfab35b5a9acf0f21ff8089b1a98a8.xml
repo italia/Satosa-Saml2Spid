@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.nederlab.nl/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-10-09T19:24:43Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://clarin.eu/category/clarin-member</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.nederlab.nl/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Meertens Institut</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Meertens Institute</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Dieser Service Provider regelt den Zugang zur Nederlab-Forschungsumgebung</mdui:Description>
+		<mdui:Description xml:lang="en">This Service Provider regulates access to the Nederlab research environment</mdui:Description>
+		<mdui:Logo height="135" width="200">https://www.meertens.knaw.nl/cms/templates/mi_hetgelaat/css/images/logo_meertens_full.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.meertens.knaw.nl/cms/en</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.meertens.knaw.nl/cms/en/collections/data-protection</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGBTCCA+2gAwIBAgIJAIGzep3p2hjqMA0GCSqGSIb3DQEBBQUAMIGYMQswCQYD
+VQQGEwJOTDEWMBQGA1UECAwNTm9vcmQgSG9sbGFuZDESMBAGA1UEBwwJQW1zdGVy
+ZGFtMREwDwYDVQQKDAhNZWVydGVuczEMMAoGA1UECwwDSSZBMRgwFgYDVQQDDA93
+d3cubmVkZXJsYWIubmwxIjAgBgkqhkiG9w0BCQEWE3NlcnZpY2VkZXNrQGtuYXcu
+bmwwHhcNMTQwNzE3MTIxMDUzWhcNMjQwNzE0MTIxMDUzWjCBmDELMAkGA1UEBhMC
+TkwxFjAUBgNVBAgMDU5vb3JkIEhvbGxhbmQxEjAQBgNVBAcMCUFtc3RlcmRhbTER
+MA8GA1UECgwITWVlcnRlbnMxDDAKBgNVBAsMA0kmQTEYMBYGA1UEAwwPd3d3Lm5l
+ZGVybGFiLm5sMSIwIAYJKoZIhvcNAQkBFhNzZXJ2aWNlZGVza0BrbmF3Lm5sMIIC
+IjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA23RweYXXwA9mGVNYCpfxOOMc
+HGsGjCB/rdCHJ9REW3fmdmKn3Rtm9jxI3W/3AneMuE4s+QUog3ec2+iHuOvSYFZx
+SNybqaqZMSTB2IddNPoQiaWV/NNQXC8Cl/BBdCal3TM82R6HgfL3cSFcbq9JPIrh
+TeRfU9QhO7guGKooZGd/emC5GgM4iXowI+UenTHcPVj2eEpCEvigOzBYxY9S9u2n
+yV26sROTLKRTu8q+uZ92YmDbL07oqhmVX7LAjanO/0PcG6Cvhv5m57vyEt4Cwzsf
+mqBswSQSPBSUXRCOeRXh6dvU2Zg2+9+gS4D1VjWDRuSjibQV5BvvbtRe6aVm4TC6
+llySlKw/+WQHKiJF6JgLK8vCg8PWlVPRDskCMEa1z/uwdN4aIb43xsyu6RzzDti5
+Qjgiy3dMK7ARrIKoByF289lw9PR2w6/YGiefgzdp5DVSM6XSax6+4MnpQhd9FrnI
+aW16bvErETJIV8folcTivazGf6pA9/5esJCzZjr4cxAkC22HysNsVHVZpdp+6oqG
+ObeOQ9YflT/0Mp3jZbzANAXHADZCLmqO0pqb8xC5gpd1ITvIWIndgy8M2BWz+QtE
+FVK4Vf/ynjaOp6e+ZFrszdne/d8VRRpUnFpDOHsGsi6uuT/3N13WjQmEYNxOfCST
+IkIAwi8mVQbhD5ARy48CAwEAAaNQME4wHQYDVR0OBBYEFPU7oll5Mreed7gM0ubx
+wNxhJWb9MB8GA1UdIwQYMBaAFPU7oll5Mreed7gM0ubxwNxhJWb9MAwGA1UdEwQF
+MAMBAf8wDQYJKoZIhvcNAQEFBQADggIBACaAhHAW5xNKt9bjOBk3Sr5Tj0x5puRo
+zg+B5RgNQiWR8PIBMCgn1RPGHKXHKbNP4M6b/MWXsmo5VBBcv4ofZW2jlwnonu0b
+aKHNpxhV4xbF1oYicGHN25Uw/VbJFljCHOGy2k+UFpSHAOm0kp67wYo/4p7yy4oq
+5twu1tPDlURwlOcjA8g/2m1ym2j3pNLcyKKWhvzUzUvq4SM3IHZ8RR0OLwBBim7k
+AW6/jydmTX8/EVgFnwh1gkWm5w01ok+5Zy+NhMeqpFixL848pLmOdh8L7r4RYbmD
+8iQKrBgI8dpVTtZLgkEfh3IsDB9vwwyEqkdRXTwLLxCnjyEapp1s13mTjo86Fx6j
+L0V2bWOEZiQqFObmI1GJOqCwx9Fiot5zyUpZ9cTTOufwo5dsL4SLpuDPXCOcgZ7P
+Zn7P9mTNyK5bm454f/Y4lYVZyOLp0hUVrKkXSdOPap2QqO5Hcui6wvCMENKaZrP4
+VckqI0UohXM40SjP5Q9f6od6NevvBBg2R/7amAkXXm/MtGEpYtauZZp/XvBWEw3U
+anLI4k0jYr3bxxk2d325UpxVKnKp+vaIRli99xYLLroaiolrj8k981I4u1gBoEGD
+728wR2l94IA0c+LxNkOwwv4cwsnqO6QKeENxz/eN6RXVcrO1U7ZS2qVvKgQ9sORu
+7Hwjg9MqBq4i
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.nederlab.nl/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.nederlab.nl/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.nederlab.nl/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.nederlab.nl/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.nederlab.nl/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.nederlab.nl/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.nederlab.nl/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.nederlab.nl/Shibboleth.sso/NIM/Artifact"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.nederlab.nl/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.nederlab.nl/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.nederlab.nl/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.nederlab.nl/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.nederlab.nl/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.nederlab.nl/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">Meertens Institut</md:ServiceName>
+		<md:ServiceName xml:lang="en">Meertens Institute</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">Dieser Service Provider regelt den Zugang zur Nederlab-Forschungsumgebung</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">This Service Provider regulates access to the Nederlab research environment</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e459</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e459</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://clarin.eu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://clarin.eu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>KNAW</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:servicedesk@knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Concern</md:GivenName>
+	<md:SurName>Infrastructure</md:SurName>
+	<md:EmailAddress>mailto:concern-infrastructure@di.huc.knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Concern</md:GivenName>
+	<md:SurName>Infrastructure</md:SurName>
+	<md:EmailAddress>mailto:concern-infrastructure@di.huc.knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

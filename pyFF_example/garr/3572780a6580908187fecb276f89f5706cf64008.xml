@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unb.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2015-01-24T01:50:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="fr">https://www.canarie.ca/?wpdmdl=10723</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unb.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of New Brunswick</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of New Brunswick</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.unb.ca</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIURLDfhqryV9GxVrS3QEZfziUWRGAwDQYJKoZIhvcNAQEF
+BQAwFTETMBEGA1UEAxMKaWRwLnVuYi5jYTAeFw0xMTA4MjUxNjM1MjdaFw0zMTA4
+MjUxNjM1MjdaMBUxEzARBgNVBAMTCmlkcC51bmIuY2EwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCXvPrW/Udu8RmKI/7vI3LsayG3yJhEMgcZ9KswHZ3x
+dE7avwIwE20brD2fEMmt46SKCRUF9shpZslaahGTq0jor5dvLUY2lG3B7R5fsTAe
+s69wNRrsx1QSw7ACTbv9rfURSzIn0iUeDCOVIcCp9Ol5Cr3uN5POmaQ2F+xVfVOT
+TbZ8dQcrFHq19Fs3la3izkYCq1490VwQqA6QEsCpDXMRUEfe4MZNl+OLms1MMJr+
+gTvL6SPYJb03sygLnVQJ+1xVuEAS2zfe0/mvo1ef1Vnn+52nxup96CJXdYKX5QjT
+6XQKKQNXq1VomchuJs/HgUB3+StIoahHVWZhh6Zh1/NDAgMBAAGjWzBZMDgGA1Ud
+EQQxMC+CCmlkcC51bmIuY2GGIWh0dHBzOi8vaWRwLnVuYi5jYS9pZHAvc2hpYmJv
+bGV0aDAdBgNVHQ4EFgQUfdegQvD/Wf4gdypoSF5P5uf7wgMwDQYJKoZIhvcNAQEF
+BQADggEBAAf9zd3zkHwTKRx4diCWjHjDqZ4cmekaxJbUItp3E/ZfYbvcT0oKITo/
+CKYAvXcvDL9XiWiwGz9MVAkRCr0OLb2WALMaCOiyZ3FkirikLpQX8h9CmDDkuNve
+Lf3ZA4GUkzJmNHpkFLemP36ydh5pGX15KGZTcGFG+Nhz+MkIzsX/Pz19vZrwBWTM
++05mnaEgn6qX0gkJw56+5xFNz9plDLGkVpSCv//0zHuLfzS6RfVwFptXIQx31G1E
+ogRrXrUfW1k3AD9hY0/YNIIZ8JO3rSRyGr1MEnIIeQ0abZEmF5Nrhje/G1n/scq9
+NGM3l0dquBRhq0MP6DY4/L0lLn87h2M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.unb.ca/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unb.ca/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unb.ca/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unb.ca/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unb.ca/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.unb.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unb.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.unb.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unb.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unb.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIURLDfhqryV9GxVrS3QEZfziUWRGAwDQYJKoZIhvcNAQEF
+BQAwFTETMBEGA1UEAxMKaWRwLnVuYi5jYTAeFw0xMTA4MjUxNjM1MjdaFw0zMTA4
+MjUxNjM1MjdaMBUxEzARBgNVBAMTCmlkcC51bmIuY2EwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCXvPrW/Udu8RmKI/7vI3LsayG3yJhEMgcZ9KswHZ3x
+dE7avwIwE20brD2fEMmt46SKCRUF9shpZslaahGTq0jor5dvLUY2lG3B7R5fsTAe
+s69wNRrsx1QSw7ACTbv9rfURSzIn0iUeDCOVIcCp9Ol5Cr3uN5POmaQ2F+xVfVOT
+TbZ8dQcrFHq19Fs3la3izkYCq1490VwQqA6QEsCpDXMRUEfe4MZNl+OLms1MMJr+
+gTvL6SPYJb03sygLnVQJ+1xVuEAS2zfe0/mvo1ef1Vnn+52nxup96CJXdYKX5QjT
+6XQKKQNXq1VomchuJs/HgUB3+StIoahHVWZhh6Zh1/NDAgMBAAGjWzBZMDgGA1Ud
+EQQxMC+CCmlkcC51bmIuY2GGIWh0dHBzOi8vaWRwLnVuYi5jYS9pZHAvc2hpYmJv
+bGV0aDAdBgNVHQ4EFgQUfdegQvD/Wf4gdypoSF5P5uf7wgMwDQYJKoZIhvcNAQEF
+BQADggEBAAf9zd3zkHwTKRx4diCWjHjDqZ4cmekaxJbUItp3E/ZfYbvcT0oKITo/
+CKYAvXcvDL9XiWiwGz9MVAkRCr0OLb2WALMaCOiyZ3FkirikLpQX8h9CmDDkuNve
+Lf3ZA4GUkzJmNHpkFLemP36ydh5pGX15KGZTcGFG+Nhz+MkIzsX/Pz19vZrwBWTM
++05mnaEgn6qX0gkJw56+5xFNz9plDLGkVpSCv//0zHuLfzS6RfVwFptXIQx31G1E
+ogRrXrUfW1k3AD9hY0/YNIIZ8JO3rSRyGr1MEnIIeQ0abZEmF5Nrhje/G1n/scq9
+NGM3l0dquBRhq0MP6DY4/L0lLn87h2M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.unb.ca/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unb.ca/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of New Brunswick</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of New Brunswick</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unb.ca</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>UNB Information Technology Services Help Desk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@unb.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

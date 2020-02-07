@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://upkcontent.imparando.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-05-14T16:01:41Z"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://upkcontent.imparando.com/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIJAOd6oO6JdGfIMA0GCSqGSIb3DQEBBQUAMCgxJjAkBgNV
+BAMTHWltcC1jb250ZW50MDEtcC5pbXBhcmFuZG8uY29tMB4XDTEyMDUwODE1MjEw
+MVoXDTIyMDUwNjE1MjEwMVowKDEmMCQGA1UEAxMdaW1wLWNvbnRlbnQwMS1wLmlt
+cGFyYW5kby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwCqZL
+lGdDR1+8p9tWhNpAiWwR4N1Fe0ZuAosO++DU8ihOg9shAuaIbgavZ+LQDxDT4q60
+H/NSpFm0L5NCNdJbztlZDST30MkvbQk/x6rVWUV7N/vmH2uGlbYfXLdSWiIJN0lt
+BFZt9BejI85TLGcQQmU844KF1+QdlhcAETTvCJ9e4gJvOnua46WIDjcc+lE+a9fL
+B6vto9gliTiKzP9AbrCOKo5lPgcxozJ5ZV77KckRYzJnwOna8GTqwiJXqhMB6uPi
+aYVMhbT7tq1veiCvRT8ME/pZTNV3g5UVby6ZTsit19jATqQ0IRZdfLBzPMVf13f6
+YXexYEP3N5sMCmnpAgMBAAGjeDB2MFUGA1UdEQROMEyCHWltcC1jb250ZW50MDEt
+cC5pbXBhcmFuZG8uY29thitodHRwczovL3Vwa2NvbnRlbnQuaW1wYXJhbmRvLmNv
+bS9zaGliYm9sZXRoMB0GA1UdDgQWBBSzFWIXER4HxW6ugBZoKX8DmGwYLjANBgkq
+hkiG9w0BAQUFAAOCAQEAET9AJLSfmZZSI6yvQrQWTplBulwW7thsItdk/2YMY4In
+OAFieBBkZehVWj2j+y8HytWgYh0S3WC3RQ3+/YPAAH/IN+k7y9MIsQBhKU27/FAR
+LE7IdN0YqKBK/kHvKdCPQn9ePpwEhVR27yArZiVkb50PMX+YfkAZgS6rFg2M1NL9
+tSuKU0Ka/7lb6xcc6naWaRfBxhUjMzKnWTFAgKF0873nr3TDvSokmJjvUrU5NHGG
+A05LtZya40PZ6vdC56IE0Ch0Sqjn0kLbt6KnKT8sfqXfwdOCvXLdvs2ISzzQZMak
+KbW8+5q5lNgkgzIwTRFYyp1vbDoPNm2tqPuMfJsOOA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://upkcontent.imparando.com/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://upkcontent.imparando.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://upkcontent.imparando.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://upkcontent.imparando.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://upkcontent.imparando.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://upkcontent.imparando.com/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Imparando (UK) Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Imparando: Oracle UPK Training Environment</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.imparando.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>upk-support</md:GivenName>
+	<md:EmailAddress>mailto:upk-support@imparando.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>technical</md:GivenName>
+	<md:EmailAddress>mailto:technical@imparando.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

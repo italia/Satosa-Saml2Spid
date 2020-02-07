@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://janus.cnrs.fr/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2014-10-02T14:55:56Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cnrs.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CNRS</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAC1klEQVQ4y4WTaUjTARjGf/+5NaduqzXLWK5a1+yge2W3SZeQMfpUEF2mFB1QBBFZUQRddNIlFEIRVtBh9MGi0o6PLpOif5uFdijZGrbSTf/b3j5YRgf0fHo/PM/z4eX3KPxDq3aXnKyofjmvLRYzO3vZ6hdNH3+1eMWCg/xPe85fP4UyWnDmCVNXCrOKhOmrhcFeITNPio5cuvNnRvl5OPI3qB/Kbw5l0gwwGUGvhyQ9GPSdtngCAu/hU5C3deX5TrvlFoAOYOPRC2c+3K0Yyrgp0PgJPgbhWwQlkaDb1zZo/AwJQZdph3FZOJ2Lyh+8eL0cABExYugrq/aXiki7SPtXYetZoSog3H8hFB4SaQmLiMiwktuiVKrCkesCbgFIqg2Zzqu+plHXLhTTI3Ua6Y7eZCzOw3/jHp5Xdbybl8uuXqnoczbT7J1J8o7jxPyvwGhj3c7tVl2N/+0Ie7ab2uo66GFl3Zq9ALhSjAxITgCg2tMwKVHMz/1oWwphRBbYTVTWBGbp0oz6b8HmEFazCcdYN47cbACaox1dnw4rCu29baRUPCTpWCmsXQoGAx1tEaNuxoTh1TTUMyV7DAD+s8UEQl+Ia/HOtBbHo+jRPgYJeuej5Xgg0gFaB067tUE3e+qYO7S2Mq1wF/V3S8jdd45HBbuxqWpnweUbFJ24AslG4r5axNkXdhwA3zu8c7Kv/uBgpOB2QWMIMtIh2cCQYS48bgcXL1WBzQw9LRCJQqgFUk1Q44fWJ4oOYPaKhfdRVXD1AasJknQQj3V2mwyQ1g2iUSAB3c3wxMem/esP/0YiZAiusWBJg5gwJKs/nuH9uFhWBelmfkADzwLgcsCzy0oXiQDhcIObNw+gJQwx7VdvJAKaBtF2eOwDa0pX+C+JiBtcAplimbhE3N6NwsB8wTJZYIAsKz5R+d9FAuw9VbZlYE7B03TP4qZBc4vUgm3HTouI9V/e77ShIdcL4sPwAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjQ4OjE2KzAyOjAwlICcrAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo0ODoxNiswMjowMOXdJBAAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.dsi.cnrs.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">CNRS IDP server</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CNRS</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Serveur IDP du CNRS</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUcyCcvrPE6sFdJyVsCKfKmZg0/70wDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNamFudXMuY25ycy5mcjAeFw0xNDA2MTYyMTA1MDZaFw0y
+NDA2MTYyMTA1MDZaMBgxFjAUBgNVBAMTDWphbnVzLmNucnMuZnIwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCAQ7NtsTYjE/tTo9LM8y7AUlqejU6lpiph
+dW2yR2Ii7Xcm+niy+F4sjy3OoSt83Osuu1SXb/Cp2BZ8Spw3EMzSAKI0T9sIq4/F
+ePspMLRThXW6cQLgUYekICh4H9ZQBU/luTS6ekTB3IgUPAFiiwFw8idC7KBc3OR8
+IDng0iOZSWejKahELmPWh6KeXj6SShPwdYiRMHZgCS2Sijzsv53tlQPm88nO0aQf
+6aEe5wXZqoAF1pkL6VhNo1R9pf7Wl4uiRvyiojflr09Pg3GsEOZg342J8PSIBQzJ
++do/BNT7bWRsX2yEyX0PoieFpTMNz/Y6+IVMUrhZn2+n1X2iEtOxAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWphbnVzLmNucnMuZnKGJGh0dHBzOi8vamFudXMuY25ycy5m
+ci9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUy/9dd6btq/teyttwa2YjbrSnQ/ow
+DQYJKoZIhvcNAQEFBQADggEBAGWm6W+fJ6dQ0cHFcg1S8haiBQnGTcdWF17YXyYG
+WuiFFBX4RXuhoRyu0aWxcw7THdHP19/K3+lAueFPBCG6K7qz9gtvf4ZWJWWLq0jQ
+z9uNdB09xLWTleRe7c4ptCaQ/nU07ZibFHVXIGT2zZOODBXIiWsiXchH56D4TN0Z
+bKQsdICU4/Q+thqPKtYHL5T3leyJKCoEQC0o7jZ2q7T2SF6j7d7kwoa58qopcMTz
+J9FdzyFEdepofr6Cj3sQu4nA28iAc91t0ZYvTbbrFu1KBby90rPH1p4+xLV42/Fy
+wPrS8Iosd99N9HZcyPWEuGXeoFyLRK8VArJPtD6f2ZHusXQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://janus.cnrs.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://janus.cnrs.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://janus.cnrs.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CNRS</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CNRS</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.dsi.cnrs.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsichangement@dsi.cnrs.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

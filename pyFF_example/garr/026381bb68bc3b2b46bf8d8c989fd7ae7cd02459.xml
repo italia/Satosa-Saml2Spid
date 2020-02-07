@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hs-ludwigsburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-06-22T07:22:40Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-ludwigsburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule für öffentliche Verwaltung und Finanzen Ludwigsburg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Sciences Ludwigsburg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">IdP für die Hochschule für öffentliche Verwaltung und Finanzen Ludwigsburg</mdui:Description>
+		<mdui:Description xml:lang="en">IdP of the advanced school for public management and financial services Ludwigsburg</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.hs-ludwigsburg.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="150" width="237">https://www.hs-ludwigsburg.de/_layout/logo-hvf.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKPTCCCSWgAwIBAgIMH4PJ5dwwmLjb84R3MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgwMzEyMzY0MFoXDTIwMTEwNDEyMzY0MFowgeUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMUkw
+RwYDVQQKDEBIb2Noc2NodWxlIGZ1ZXIgb2VmZmVudGxpY2hlIFZlcndhbHR1bmcg
+dW5kIEZpbmFuemVuIEx1ZHdpZ3NidXJnMTgwNgYDVQQLDC9aZW50cnVtIGZ1ZXIg
+TWVkaWVuIHVuZCBJbmZvcm1hdGlvbnN0ZWNobm9sb2dpZTEeMBwGA1UEAwwVaWRw
+LmhzLWx1ZHdpZ3NidXJnLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEA31YveqpRrXfroh7Wk+RXgEHTY8aG/uigd9/94a0tHPFUdxHlQB7akUm8qXeu
+2j1yknFavyO+85/mB8wLay60aYk42zn89Xe2kJHyxHPr620xZd4buLzbvPU2oRTT
+b50XKGt1xupnOhtdo28F/UnFW4bOp1SWHHyc15h1beKn9alukfKf4xzpKjMEGrhk
+401unDXy/LZUvFZ5gEyilTMGO/ByqWksTVT0vWDQVt7lgbcVwao+WVBfLKVkFPZN
++gFomMSWR2cHsDEwftcH4Hp4D3LacV/W1aLv7N0LvH/bBuX0wr+Yqe8jNCW66f6a
+SbAXwmfSjezHpVoVbRauSl7v1wIDAQABo4IGQTCCBj0wWQYDVR0gBFIwUDAIBgZn
+gQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGt
+IYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQU
+zFJ6cM7DkMMIekiDP+HBHG6ZnBIwHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4J
+H+iqO3QwIAYDVR0RBBkwF4IVaWRwLmhzLWx1ZHdpZ3NidXJnLmRlMIGNBgNVHR8E
+gYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRm
+bi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEF
+BQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9P
+Q1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsG
+AQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NhY2VydC9jYWNlcnQuY3J0MIID1AYKKwYBBAHWeQIEAgSCA8QEggPAA74A
+dQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWT/ykqYAAAEAwBG
+MEQCIB33occFyBIBKXCFsQfkh6iPvYVxGDKah8QvqaBd90V7AiB27lcN0TaDqckp
+5vb/WRxcEVXWxAFY1tYDqPnoa6notgB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLY
+gwDEe4l6qP3LAAABZP/KSnoAAAQDAEcwRQIhAOxP6p4xOeSE9J8P0imGvahJLxZY
+3GghlrrwlFsVJOPDAiBJg/stZSuezUYLAEN1P1QkntwAeWnp/lpn3LNedPe9JgB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZP/KSnUAAAQDAEcw
+RQIgIVUuLEsQTAwu+tT71HcmG8HRd3E1HTDcjPAtaqovQi8CIQCxXTOVdV96SPyo
+q9HCA+XlqCbFm+4X+1bnuHC8xHxOdQB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZP/KS6IAAAQDAEYwRAIgYI9ddA/FXwfHUI5QQ8Gudj5jA8J5
+axZQDffLm1Bn2bYCIGFGOXAIGEtd+VzLUZsmjZNKZ/XLW91bpQUX9Gtq6qo3AHcA
+Xqdz+d9WwOe1Nkh90EngMnqRmgyEoRIShBh1loFxRVgAAAFk/8pM6QAABAMASDBG
+AiEA4JkFqi7xmVhbfoSFboLqCrWOVLKlM1dPhllCpp+IbE0CIQD9tH1EcdpIG6GX
+GyOUt5JTN6VtHX5TjjKr0RMM8ouTyAB1ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1Lo
+GpCWZDaOHtGFAAABZP/KTMEAAAQDAEYwRAIgFed752VkUBZx9zrr9jlfgSvjPX1D
+GCUydf45A9pLHB8CIB1+Uw3JAPX1RZaQce9emAxGNwZMqN6U22D/jvbmvVOvAHUA
+pLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFk/8pM7AAABAMARjBE
+AiApPBvbdNgaJErgAaqaU85IEfXbwXj9FrLW3LSyyGlP9QIgTAAWg7M96bMpm1d+
+kUu01ypk0WVtcfcK9nr0BmXCQG4AdwCyHgXMi6LNiiBOh2b5K7mKJSBna9r6cOey
+SVMt74uQXgAAAWT/yku6AAAEAwBIMEYCIQCupRE9u5Yj7yh7hmk7pVALVG2Ca8XW
+qoMXij0qPeRliwIhAKdNhG/rxbvwuOjmkUzR4jwR7UaFdnRylJG+9rb9rEszMA0G
+CSqGSIb3DQEBCwUAA4IBAQBgA9t4cCRUd9OJyLteZ7dIe8Y5af7N7O+ty6GdWiRU
+U3CRpNSmmRnMkYPAOKbwmT8pbRChxWin2NyB87M+tKDV/Bmx9WTDV8RuhKGfg/x1
+QNDbtiPhOnZUqFrE5XEm/tg5rN5fFRdpUd4hspPxhSQEFX3QwlsgR6XuXv784QAG
+nvw2Po/4D39XuEPTEbMmfi/WDYs+jxazeiU2bZpZ9qWtSYz2yiOfVDT9trWCrnKb
+vRZmvStPxwTMpU4ROSkD1s350LvrGyKouDgwSFqNFhu7So6TeGtz19QH9xZcimYR
+wuu77OgDm9XtsxXMeI057KM+crCvSyAwaLiWxdH9aZFh
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-ludwigsburg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-ludwigsburg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-ludwigsburg.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hs-ludwigsburg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-ludwigsburg.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-ludwigsburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKPTCCCSWgAwIBAgIMH4PJ5dwwmLjb84R3MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgwMzEyMzY0MFoXDTIwMTEwNDEyMzY0MFowgeUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxFDASBgNVBAcMC0x1ZHdpZ3NidXJnMUkw
+RwYDVQQKDEBIb2Noc2NodWxlIGZ1ZXIgb2VmZmVudGxpY2hlIFZlcndhbHR1bmcg
+dW5kIEZpbmFuemVuIEx1ZHdpZ3NidXJnMTgwNgYDVQQLDC9aZW50cnVtIGZ1ZXIg
+TWVkaWVuIHVuZCBJbmZvcm1hdGlvbnN0ZWNobm9sb2dpZTEeMBwGA1UEAwwVaWRw
+LmhzLWx1ZHdpZ3NidXJnLmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEA31YveqpRrXfroh7Wk+RXgEHTY8aG/uigd9/94a0tHPFUdxHlQB7akUm8qXeu
+2j1yknFavyO+85/mB8wLay60aYk42zn89Xe2kJHyxHPr620xZd4buLzbvPU2oRTT
+b50XKGt1xupnOhtdo28F/UnFW4bOp1SWHHyc15h1beKn9alukfKf4xzpKjMEGrhk
+401unDXy/LZUvFZ5gEyilTMGO/ByqWksTVT0vWDQVt7lgbcVwao+WVBfLKVkFPZN
++gFomMSWR2cHsDEwftcH4Hp4D3LacV/W1aLv7N0LvH/bBuX0wr+Yqe8jNCW66f6a
+SbAXwmfSjezHpVoVbRauSl7v1wIDAQABo4IGQTCCBj0wWQYDVR0gBFIwUDAIBgZn
+gQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGt
+IYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQU
+zFJ6cM7DkMMIekiDP+HBHG6ZnBIwHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4J
+H+iqO3QwIAYDVR0RBBkwF4IVaWRwLmhzLWx1ZHdpZ3NidXJnLmRlMIGNBgNVHR8E
+gYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRm
+bi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEF
+BQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9P
+Q1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsG
+AQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NhY2VydC9jYWNlcnQuY3J0MIID1AYKKwYBBAHWeQIEAgSCA8QEggPAA74A
+dQBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWT/ykqYAAAEAwBG
+MEQCIB33occFyBIBKXCFsQfkh6iPvYVxGDKah8QvqaBd90V7AiB27lcN0TaDqckp
+5vb/WRxcEVXWxAFY1tYDqPnoa6notgB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLY
+gwDEe4l6qP3LAAABZP/KSnoAAAQDAEcwRQIhAOxP6p4xOeSE9J8P0imGvahJLxZY
+3GghlrrwlFsVJOPDAiBJg/stZSuezUYLAEN1P1QkntwAeWnp/lpn3LNedPe9JgB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZP/KSnUAAAQDAEcw
+RQIgIVUuLEsQTAwu+tT71HcmG8HRd3E1HTDcjPAtaqovQi8CIQCxXTOVdV96SPyo
+q9HCA+XlqCbFm+4X+1bnuHC8xHxOdQB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZP/KS6IAAAQDAEYwRAIgYI9ddA/FXwfHUI5QQ8Gudj5jA8J5
+axZQDffLm1Bn2bYCIGFGOXAIGEtd+VzLUZsmjZNKZ/XLW91bpQUX9Gtq6qo3AHcA
+Xqdz+d9WwOe1Nkh90EngMnqRmgyEoRIShBh1loFxRVgAAAFk/8pM6QAABAMASDBG
+AiEA4JkFqi7xmVhbfoSFboLqCrWOVLKlM1dPhllCpp+IbE0CIQD9tH1EcdpIG6GX
+GyOUt5JTN6VtHX5TjjKr0RMM8ouTyAB1ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1Lo
+GpCWZDaOHtGFAAABZP/KTMEAAAQDAEYwRAIgFed752VkUBZx9zrr9jlfgSvjPX1D
+GCUydf45A9pLHB8CIB1+Uw3JAPX1RZaQce9emAxGNwZMqN6U22D/jvbmvVOvAHUA
+pLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFk/8pM7AAABAMARjBE
+AiApPBvbdNgaJErgAaqaU85IEfXbwXj9FrLW3LSyyGlP9QIgTAAWg7M96bMpm1d+
+kUu01ypk0WVtcfcK9nr0BmXCQG4AdwCyHgXMi6LNiiBOh2b5K7mKJSBna9r6cOey
+SVMt74uQXgAAAWT/yku6AAAEAwBIMEYCIQCupRE9u5Yj7yh7hmk7pVALVG2Ca8XW
+qoMXij0qPeRliwIhAKdNhG/rxbvwuOjmkUzR4jwR7UaFdnRylJG+9rb9rEszMA0G
+CSqGSIb3DQEBCwUAA4IBAQBgA9t4cCRUd9OJyLteZ7dIe8Y5af7N7O+ty6GdWiRU
+U3CRpNSmmRnMkYPAOKbwmT8pbRChxWin2NyB87M+tKDV/Bmx9WTDV8RuhKGfg/x1
+QNDbtiPhOnZUqFrE5XEm/tg5rN5fFRdpUd4hspPxhSQEFX3QwlsgR6XuXv784QAG
+nvw2Po/4D39XuEPTEbMmfi/WDYs+jxazeiU2bZpZ9qWtSYz2yiOfVDT9trWCrnKb
+vRZmvStPxwTMpU4ROSkD1s350LvrGyKouDgwSFqNFhu7So6TeGtz19QH9xZcimYR
+wuu77OgDm9XtsxXMeI057KM+crCvSyAwaLiWxdH9aZFh
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-ludwigsburg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-ludwigsburg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e394</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e394</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule für öffentliche Verwaltung und Finanzen Ludwigsburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Applied Sciences Ludwigsburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.hs-ludwigsburg.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.hs-ludwigsburg.de/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>MIT</md:GivenName>
+	<md:SurName>LB</md:SurName>
+	<md:EmailAddress>mailto:mit@hs-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>MIT</md:GivenName>
+	<md:SurName>LB</md:SurName>
+	<md:EmailAddress>mailto:mit@hs-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Tobias</md:GivenName>
+	<md:SurName>Czempik</md:SurName>
+	<md:EmailAddress>mailto:czempik@ph-ludwigsburg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

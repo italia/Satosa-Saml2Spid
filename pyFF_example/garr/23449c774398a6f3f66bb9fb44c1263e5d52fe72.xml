@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://api.bridgemanimages.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-08-21T12:54:59Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://api.bridgemanimages.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://api.bridgemanimages.com/Shibboleth.sso/Login" index="1"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://api.bridgemanimages.com/Shibboleth.sso/UKfederation"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://api.bridgemanimages.com/Shibboleth.sso/UKfederation" index="2"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDITCCAgmgAwIBAgIJAJ3czdb0R2hQMA0GCSqGSIb3DQEBBQUAMCkxJzAlBgNV
+BAMTHmFwaW5zdGFuY2UuYnJpZGdlbWFuaW1hZ2VzLmNvbTAeFw0xNTA4MTgxMzUw
+MDlaFw0yNTA4MTUxMzUwMDlaMCkxJzAlBgNVBAMTHmFwaW5zdGFuY2UuYnJpZGdl
+bWFuaW1hZ2VzLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ9b
+IY7MjLpmntgBUMyLd+uXb6XPbhCx5db2LBGlzhmLRr5EowlHmK/94lb15rc8iWd1
+g4GqY9eM+eV3iENVSsd2VRVzGgb4vQpS4nFYy0RxarhWtVA9WlgNooMXk5bUB645
+TQbcSAaCkGyhLlqO8M6EUCwWqjflH5incXgId4fpE9h9FGmLBGROmGAeZMF2cJf3
+sBlVM727CRepJIyRB3oY2TZ4DbH+KVdQrA8DjHzm3qhB9WaMk51PNXJKetTeaT+t
+c26TDqy7Eq8dZqmOjgejlMPSvN0PgIKxFIte53anUqrESN/wB8v37K7XZlrRIufS
+5nBd9FqTvJpiDE1FtWkCAwEAAaNMMEowKQYDVR0RBCIwIIIeYXBpbnN0YW5jZS5i
+cmlkZ2VtYW5pbWFnZXMuY29tMB0GA1UdDgQWBBRKecH57s3sItz2dH60A33pLN3I
+cTANBgkqhkiG9w0BAQUFAAOCAQEAcobfnWV/lrSG3feeD1XA2xtZfaXkaVwDrv6W
+xlFJ7c351l2H13pAPiwHwinMJAf43R5dQBylq5HO4a70EEys4Dfa0s6dqiLZ+NaD
+KHld2UQ6F7BATH8ydZx8JqDu0MSme8zJXytePRlZMwHpNW7sKP+zoxQ5b0ZwcrOm
+tnSUiRRpBHEll0HprabEauXfgVtOE21ukKy9FklWY34Azhk/xiMw7i4GdQqgeY8o
+f4a3t5SoUQdhtmJiegvPVyE8t2CvrOP0SCXIZ5XYFNu4cHjUzZVg2zmc5d2zTGRW
+zN6H7og0AK1oMx+zi6VsV3liq768srmyafMOAuYPqXR48VXcHQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://api.bridgemanimages.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://api.bridgemanimages.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bridgeman Art Library Limited (The)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bridgeman Education</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bridgemaneducation.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Kerstin</md:GivenName>
+	<md:SurName>Anschuetz</md:SurName>
+	<md:EmailAddress>mailto:kerstin.anschuetz@bridgemanimages.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sean</md:GivenName>
+	<md:SurName>Chambers</md:SurName>
+	<md:EmailAddress>mailto:sean.chambers@bridgemanimages.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

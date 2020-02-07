@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://northampton.campus.auth.edublogs.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Northampton University - CampusPress</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Northampton University sites by CampusPress.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://incsub.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="56" width="242" xml:lang="en">https://campuspress.com/wp-content/themes/campuspress-divi-2016/assets/images/logo-header.png?ver=2</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQjCCAiqgAwIBAgIJAIZhX/ssGqsZMA0GCSqGSIb3DQEBCwUAMDQxMjAwBgNV
+BAMTKW1lZGl1bS1ldS13ZXN0LTIuY2FtcHVzLmF1dGguZWR1YmxvZ3Mub3JnMB4X
+DTE4MTAyOTE3MTg1NVoXDTI4MTAyNjE3MTg1NVowNDEyMDAGA1UEAxMpbWVkaXVt
+LWV1LXdlc3QtMi5jYW1wdXMuYXV0aC5lZHVibG9ncy5vcmcwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQC+zmDYcNY2qBn6WkLNB7LP1ctcrWW0RYQj5BsL
+rsVo5vy4hdFGs5MnKOsqKMVjxAVbtJqba+GQxj2lcd/2l5mPgiKm6V0lIdDzyGov
+zfkgGCxrXrDVvoAAoLLkOgCRRWuvbb2UhFQcEjTCNbjhsd+VMy55Y+VamgWgL4lS
+GKZy0S/L2iBsFjiefQ0yGl3fO9NkzTA1xi8RDF+p+9DLNIQSgiJDN4Nq52YdBOYS
+G/V8I0+/dxIec1pydfUXJGYTgJaBhACD/+XC62Bad0s+ldv4DM6AUhfr9QLie6ME
+2bqH27MvHK5aB2DmWNoVruvSeovZVuMkgYwRpTjmsGYPBeZLAgMBAAGjVzBVMDQG
+A1UdEQQtMCuCKW1lZGl1bS1ldS13ZXN0LTIuY2FtcHVzLmF1dGguZWR1YmxvZ3Mu
+b3JnMB0GA1UdDgQWBBQdQQsxEovU5AF5wBJcSn2tnsq7oTANBgkqhkiG9w0BAQsF
+AAOCAQEAgq80NU4i0ZTAc8wQsbUiVA/aX3INxgVoXHuHvcPcEXlsSvW5MkJWONQK
+JgDawgY8diCCdf3Wx93rnCjFfxbv+UrjUfSnvKQ7Qk00xQBnXKS5GKaqKhWWJ+vB
+k9mI+eShowMx906NQ3IFpiVYlEgHEL6ZCIfJIFe6f3lcEAmc6x5usdEXXFaafed3
+OffbR8yVhcsG/EkLUUYP5FgU8Rqwqua5GkC36tmRgHgPwIEz4vnIonlpTXW6PPf0
+M9Tmd0hYbL2UYkTJo6yh28JBQOIGlKc8lDJtuR8iAzLGwEEsmuz66eC7k2rGQQXP
+Nxr1v8+CdR76GE7j2PSD0wm1ylxnFw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://mypaddev.northampton.ac.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Northampton University - CampusPress</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Northampton University sites by CampusPress.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Edublogs</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Edublogs</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://edublogs.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>CampusPress Support</md:GivenName>
+	<md:EmailAddress>contact@campuspress.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Oskar Kossuth</md:GivenName>
+	<md:EmailAddress>oskar@incsub.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Incsub SysAdmins</md:GivenName>
+	<md:EmailAddress>sysadmins@incsub.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

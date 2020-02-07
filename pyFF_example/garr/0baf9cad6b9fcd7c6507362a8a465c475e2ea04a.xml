@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://online.statref.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-12-05T15:23:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://onlinebeta.statref.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://onlinebeta.statref.com/Shibboleth.sso/Login" index="1"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://online.statref.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://online.statref.com/Shibboleth.sso/Login" index="2"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID+TCCAuGgAwIBAgIJAJwEXu6tonahMA0GCSqGSIb3DQEBBQUAMIGSMQswCQYD
+VQQGEwJVUzEQMA4GA1UECAwHV3lvbWluZzEQMA4GA1UEBwwHSmFja3NvbjEbMBkG
+A1UECgwSVGV0b24gRGF0YSBTeXN0ZW1zMRswGQYDVQQDDBJvbmxpbmUuc3RhdHJl
+Zi5jb20xJTAjBgkqhkiG9w0BCQEWFmptYXh3ZWxsQHRldG9uZGF0YS5jb20wHhcN
+MTAxMjAyMTY1MzE1WhcNMjAxMjAxMTY1MzE1WjCBkjELMAkGA1UEBhMCVVMxEDAO
+BgNVBAgMB1d5b21pbmcxEDAOBgNVBAcMB0phY2tzb24xGzAZBgNVBAoMElRldG9u
+IERhdGEgU3lzdGVtczEbMBkGA1UEAwwSb25saW5lLnN0YXRyZWYuY29tMSUwIwYJ
+KoZIhvcNAQkBFhZqbWF4d2VsbEB0ZXRvbmRhdGEuY29tMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAvxUW98iDiWy1rnYLXmrSut26X+wCpXsS+xit1uhr
+oD83HOiE18fidOCPR2Reusw2PVS2Mv3Z2MouDxrbnxI1f40YTWmxWLJD9D+MeAbI
+Dvt2uRctN82aVwL1Hy0GFsiS0RXztW0XiSZy6u/bqHVpSjYNw3AcnSadCPrt0ue0
+eW1x+nvefeXxSgFfFxyjG+F/6br+CDvZk6oXNkDs8xRGiekM9mPo2DF1Qx3zxqPl
+zW5homj1P2LlaeNvtXSj5EAfob0SPpx+gnNzXMbNzqwCLcY/amQkNjTPQC4nFYpc
+JWiEOt4GKS8NuztVvrk1z6e0q4/2UUZJuiSUEB4Bk9BtEQIDAQABo1AwTjAdBgNV
+HQ4EFgQU0mxo874bLxgMm12FGngVP4j3EnYwHwYDVR0jBBgwFoAU0mxo874bLxgM
+m12FGngVP4j3EnYwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAuN4c
+d4KiRWdzWokz0NV0SRulD0yBRyMpR2LjVr9y7Btg+/IbKJdooR6+kStOvmZHctvI
+KVZ5Kr9dUuOgQ2Kkyf4nXVPkwzpNj+N1+gNJ4/JlOzZEkshBf++ASMbQ8OEWkrl+
+iimaLh3BSCDp/giL8/geH+5fFSgtXyCXx7pcP0GKxdOR7vLcZ9EK+qsutOW4006w
+FaXTVDbgg006UGxD1VGW78cSfM5DGkwQvkG+52xLWNe3VhasnbqeirkuSHfmD6Ma
+fV8vvSNyvTmWbK+/nHcVDJiqmb81XOuXy/NJDOZQpcK8Rx8vc6eAlgNTbLj6iTAJ
+ZHzp7ICc2EW3RkJNUQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://onlinebeta.statref.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://online.statref.com/Shibboleth.sso/Artifact/SOAP" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML2/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML2/Artifact" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML2/ECP" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML/POST" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://onlinebeta.statref.com/Shibboleth.sso/SAML/Artifact" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://online.statref.com/Shibboleth.sso/SAML2/POST" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://online.statref.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://online.statref.com/Shibboleth.sso/SAML2/Artifact" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://online.statref.com/Shibboleth.sso/SAML2/ECP" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://online.statref.com/Shibboleth.sso/SAML/POST" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://online.statref.com/Shibboleth.sso/SAML/Artifact" index="13"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Teton Data Systems</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stat!Ref</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.statref.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Pearce</md:SurName>
+	<md:EmailAddress>mailto:ppearce@tetondata.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Pearce</md:SurName>
+	<md:EmailAddress>mailto:ppearce@tetondata.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

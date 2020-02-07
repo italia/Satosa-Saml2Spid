@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uark.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.uark.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uark.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Arkansas</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Arkansas, Fayetteville</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.uark.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://its.uark.edu/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="72" width="300" xml:lang="en">https://its.uark.edu/personal/uark-central-login/ualogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAPt1Tv1bYP4+r/4oWy1Mih/6SWp3MA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC51YXJrLmVkdTAeFw0xMTEwMTQyMDU3NTJaFw0z
+MTEwMTQyMDU3NTJaMBcxFTATBgNVBAMTDGlkcC51YXJrLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAJaaUOTHkbmeB+65zFM9TvW1GJIjta5iMHFM
+Z48+iSMvvzEEipS3PAOHlv0S9kjC5tltNp0MLK53u2RM2x35fzLBTw6cJX++AeSF
+R0huFlnlSO1mn+UBcyTUQ8sPc0Um7DHhXykVo92a/vrPWiEOcaNVYj5YYgpBgTky
+nZpH5cxjFv5NvsClXEOis7iS+deCKFmpbwg3Ahxque+jZ2mWEHZOrOKujrdMI7fo
+FeozmcPSfIAyWMM+FdBQNcU0sWazWNWryRKSCwv8BEUb+4JUS++pue+LNb6Ad+El
+hvHQJhM0CvJb6ohL9eCVIue54x8/P3GONugW/u88zwes3P2F4EkCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnVhcmsuZWR1hiNodHRwczovL2lkcC51YXJrLmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUnvF+6HJDc36mcLNHeby0AZVjPU8wDQYJ
+KoZIhvcNAQEFBQADggEBAAjNGo4LedfEkQFyUtXllN5PZHVw24/GMIjZhXfuk+wJ
+RrVheFjV7PmJLps5gM0h+dH0wBo9ZDeER7T+jqWcsig1zuvi2jOPMzlZi6Cgus8M
+dW8C9uy9PKEPCI9HFidVkrU4E8nbF2LNsDlYoclyliMb1wALKFpsOIvxYE4DR10F
+Drl/RShq++Sd9n5AQT3X66WvXuoaeLsA0Et4gh+fUtY4vu2/hRO10yiCCaiyMSEE
+VWXbuzfaz3iJqNG1rs/lOMzysDqAxzZHZKYYtnwvQYyhfSkpBKlTCRjr2vDG1k4M
+JkNZiOnZ+OBZcqrcpzW0N93Twh4aoOHdO7qTCafVe0M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uark.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uark.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uark.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uark.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uark.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uark.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAPt1Tv1bYP4+r/4oWy1Mih/6SWp3MA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC51YXJrLmVkdTAeFw0xMTEwMTQyMDU3NTJaFw0z
+MTEwMTQyMDU3NTJaMBcxFTATBgNVBAMTDGlkcC51YXJrLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAJaaUOTHkbmeB+65zFM9TvW1GJIjta5iMHFM
+Z48+iSMvvzEEipS3PAOHlv0S9kjC5tltNp0MLK53u2RM2x35fzLBTw6cJX++AeSF
+R0huFlnlSO1mn+UBcyTUQ8sPc0Um7DHhXykVo92a/vrPWiEOcaNVYj5YYgpBgTky
+nZpH5cxjFv5NvsClXEOis7iS+deCKFmpbwg3Ahxque+jZ2mWEHZOrOKujrdMI7fo
+FeozmcPSfIAyWMM+FdBQNcU0sWazWNWryRKSCwv8BEUb+4JUS++pue+LNb6Ad+El
+hvHQJhM0CvJb6ohL9eCVIue54x8/P3GONugW/u88zwes3P2F4EkCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnVhcmsuZWR1hiNodHRwczovL2lkcC51YXJrLmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUnvF+6HJDc36mcLNHeby0AZVjPU8wDQYJ
+KoZIhvcNAQEFBQADggEBAAjNGo4LedfEkQFyUtXllN5PZHVw24/GMIjZhXfuk+wJ
+RrVheFjV7PmJLps5gM0h+dH0wBo9ZDeER7T+jqWcsig1zuvi2jOPMzlZi6Cgus8M
+dW8C9uy9PKEPCI9HFidVkrU4E8nbF2LNsDlYoclyliMb1wALKFpsOIvxYE4DR10F
+Drl/RShq++Sd9n5AQT3X66WvXuoaeLsA0Et4gh+fUtY4vu2/hRO10yiCCaiyMSEE
+VWXbuzfaz3iJqNG1rs/lOMzysDqAxzZHZKYYtnwvQYyhfSkpBKlTCRjr2vDG1k4M
+JkNZiOnZ+OBZcqrcpzW0N93Twh4aoOHdO7qTCafVe0M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uark.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Arkansas Main Campus</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Arkansas</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uark.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>System Administrator</md:GivenName>
+	<md:EmailAddress>root@uark.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@uark.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@uark.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

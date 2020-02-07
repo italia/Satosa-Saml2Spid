@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unitn.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2010-09-30T13:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unitn.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">University of Trento</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Università di Trento</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for University of Trento users</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti dell'Università di Trento</mdui:Description>
+<mdui:InformationURL xml:lang="it">https://icts.unitn.it/case/it/catalog/ssofederato/</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">https://icts.unitn.it/case/en/catalog/ssofederato/</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://icts.unitn.it/unitrento-idem-privacy-policy</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://icts.unitn.it/en/unitrento-idem-privacy-policy</mdui:PrivacyStatementURL>
+<mdui:Logo height="120" width="160" xml:lang="it">https://idp.unitn.it/doc/conf/logo_unitrento_it_widht_160px_colore.png</mdui:Logo>
+<mdui:Logo height="32" width="32">https://idp.unitn.it/doc/conf/favicon-32x32.png</mdui:Logo>
+<mdui:Logo height="120" width="160" xml:lang="en">https://idp.unitn.it/doc/conf/logo_unitrento_en_widht_160px_colore.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:GeolocationHint>geo:46.066797,11.123117</mdui:GeolocationHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAIG9TtUKx11xGhvJVWJiQdJGaFAlMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC51bml0bi5pdDAeFw0wOTA1MTkxMDM1MDJaFw0y
+OTA1MTkxMDM1MDJaMBcxFTATBgNVBAMTDGlkcC51bml0bi5pdDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAISBCBJSMVJi1WHKET8aBYZIrlhp8ikT4hz5
+rbPXRLX1l2TPwzLlHq8K4b2XcBbmhT8nOO8XCDQSwzdPPDWXjzSq3/8NWvZjDhEA
+O8AB03VG+WVQrD6VeGhG0byfxpJghdO/y4lr188Ejb2ynPVduTVc7UcvuneVhKPP
+nn07Mzw0W09yG3Y7ygPJrv7t+Xitxp0skQZ0k/XaTEGxCp9uJgg8ngrPByclb2jY
+EGxuw2fNXM/psB6abxyeK+v/sCp/6RDXMC6oUk2DlKY7opjihhAhtW8wAivqZd9g
+YWFXgPa95SfGLORYKp3c9kEoU+eY/v4ZZGI4SVaPiMvSSDko7DcCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnVuaXRuLml0hiNodHRwczovL2lkcC51bml0bi5pdC9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUTb1c/d9fvaXr1BBjRQhoMLCywfgwDQYJ
+KoZIhvcNAQEFBQADggEBAA3ZvXWRl+dnlwRAPkoBGjmJHzjwkjRAszHzd1fOr/2y
+vN+8d2gLjnF7F6Ge/z3xrmZAUuiI6iN7RWP6bXc4dce8cUhXE+U2yKJxEnlDIuMd
+u82HYWJ/uM4fVnenQaf1L9g7Y5TMTK/LGhapxZVReL6JROYWhntXgkEw6ccBQvge
+IX86tgYD6FJe9mD1p/1vKQ1tyGcE92D45T2uXa7XEJ54NaZk7vtuIRBB50VRDcbX
+7L4+1kAfwLJIJdzrpqckYW0FCUKCj/4pTfk33N+kKm22AhWMSixW4pjAGWPPPdOz
+PD4N74JoeDBjTnh5SkomQrcf0FeYr/nXWuUh7P1510Y=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unitn.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unitn.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.unitn.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unitn.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unitn.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAIG9TtUKx11xGhvJVWJiQdJGaFAlMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC51bml0bi5pdDAeFw0wOTA1MTkxMDM1MDJaFw0y
+OTA1MTkxMDM1MDJaMBcxFTATBgNVBAMTDGlkcC51bml0bi5pdDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAISBCBJSMVJi1WHKET8aBYZIrlhp8ikT4hz5
+rbPXRLX1l2TPwzLlHq8K4b2XcBbmhT8nOO8XCDQSwzdPPDWXjzSq3/8NWvZjDhEA
+O8AB03VG+WVQrD6VeGhG0byfxpJghdO/y4lr188Ejb2ynPVduTVc7UcvuneVhKPP
+nn07Mzw0W09yG3Y7ygPJrv7t+Xitxp0skQZ0k/XaTEGxCp9uJgg8ngrPByclb2jY
+EGxuw2fNXM/psB6abxyeK+v/sCp/6RDXMC6oUk2DlKY7opjihhAhtW8wAivqZd9g
+YWFXgPa95SfGLORYKp3c9kEoU+eY/v4ZZGI4SVaPiMvSSDko7DcCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnVuaXRuLml0hiNodHRwczovL2lkcC51bml0bi5pdC9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUTb1c/d9fvaXr1BBjRQhoMLCywfgwDQYJ
+KoZIhvcNAQEFBQADggEBAA3ZvXWRl+dnlwRAPkoBGjmJHzjwkjRAszHzd1fOr/2y
+vN+8d2gLjnF7F6Ge/z3xrmZAUuiI6iN7RWP6bXc4dce8cUhXE+U2yKJxEnlDIuMd
+u82HYWJ/uM4fVnenQaf1L9g7Y5TMTK/LGhapxZVReL6JROYWhntXgkEw6ccBQvge
+IX86tgYD6FJe9mD1p/1vKQ1tyGcE92D45T2uXa7XEJ54NaZk7vtuIRBB50VRDcbX
+7L4+1kAfwLJIJdzrpqckYW0FCUKCj/4pTfk33N+kKm22AhWMSixW4pjAGWPPPdOz
+PD4N74JoeDBjTnh5SkomQrcf0FeYr/nXWuUh7P1510Y=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unitn.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università di Trento</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Trento</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università di Trento</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Trento</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.unitn.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.unitn.it/en</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:comunicazioni.aai@unitn.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:comunicazioni.aai@unitn.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

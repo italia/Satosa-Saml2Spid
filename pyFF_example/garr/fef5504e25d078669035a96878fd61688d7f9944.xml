@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.iit.cnr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2010-07-06T13:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">iit.cnr.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">CNR Institute of Informatics and Telematics</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">CNR Istituto di Informatica e Telematica</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for CNR Institute of Informatics and Telematics users</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti di CNR Istituto di Informatica e Telematica</mdui:Description>
+<mdui:InformationURL xml:lang="it">http://idp.iit.cnr.it/idpservice.php</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">http://www.iit.cnr.it/en</mdui:InformationURL>
+<mdui:Logo height="160" width="160">https://idp.iit.cnr.it/idp/images/IITlogo_160x160.png</mdui:Logo>
+<mdui:Logo height="180" width="240">https://idp.iit.cnr.it/idp/images/IITlogo_240x180.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVANNctxDOg6xktyigLZGJNgH/9KDGMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5paXQuY25yLml0MB4XDTA5MDMwMjEwMDQ1OFoX
+DTI5MDMwMjEwMDQ1OFowGTEXMBUGA1UEAxMOaWRwLmlpdC5jbnIuaXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUU9hTCDxUfrFa+IsB4gTIYZCyDRau
+tXeow0NhSDYZrDBwYrc2CiuM26zz9N1TKx6Ap+8CXwQA0PXou+WdFCz1RTMJX+Uq
+kOCjAKN2HmoiDIrI5P2MsHKl+DPLd9Lvnob1dTCDYrWMnPNYBm0iuRDvU59RZWPE
+V9hiqKcKAmT3KB4Gt2SqbFoD3ML/VpZOzolak4/7qvV3/YmuBl82ekz1+w3Adbwy
+gNQsyILyw020F1lL2FDWji5LaUuMPqYzPKykZDWT6wnDw2fZ9j0XxmUCWHDKsUqR
+rbPei38Gy+jtToJ2kNQp7qwFW1C9pvP4PBqhq3gGu6QF1qOT8qTEYs8nAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5paXQuY25yLml0hiVodHRwczovL2lkcC5paXQu
+Y25yLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSkgwUVx8ERu+P2jzA6x8r6
+e9wUzTANBgkqhkiG9w0BAQUFAAOCAQEAVoMKYN2nyFAF9dsAV21/r9Gse2s4d/zJ
+4lVNUCJGrKvWkiUD9GKInX8TdqrQOW5bjjTB4ldkzrHKqVfi2sPDTfvscQ/4OM7w
+E6dsFiiTz71NrDQ2bYIplDqrpWNzRTs5hxXCKkXmGwCtWd9MWlb181qCFuKq+3u0
+Oygjy0U5YBCULsebWcg1GT5swQiRYtRuJkFDEnwQ79j91ceADPiQ+DeIdeBeK+Xz
+8eGhNrtn3uOLW2SCx5QBkfE5cBFYMPMSQLM5FaCetuZl6mePHuaj0IkpVQDJpYI6
+RS0HkZxnqxq0gCbYR4dSCVUR/8NFcO/jsQCEZIauvzx9bXt7vpBKSg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.iit.cnr.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iit.cnr.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iit.cnr.it/idp/profile/SAML2/POST/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.iit.cnr.it/idp/profile/SAML2/SOAP/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iit.cnr.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.iit.cnr.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iit.cnr.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">iit.cnr.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVANNctxDOg6xktyigLZGJNgH/9KDGMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5paXQuY25yLml0MB4XDTA5MDMwMjEwMDQ1OFoX
+DTI5MDMwMjEwMDQ1OFowGTEXMBUGA1UEAxMOaWRwLmlpdC5jbnIuaXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUU9hTCDxUfrFa+IsB4gTIYZCyDRau
+tXeow0NhSDYZrDBwYrc2CiuM26zz9N1TKx6Ap+8CXwQA0PXou+WdFCz1RTMJX+Uq
+kOCjAKN2HmoiDIrI5P2MsHKl+DPLd9Lvnob1dTCDYrWMnPNYBm0iuRDvU59RZWPE
+V9hiqKcKAmT3KB4Gt2SqbFoD3ML/VpZOzolak4/7qvV3/YmuBl82ekz1+w3Adbwy
+gNQsyILyw020F1lL2FDWji5LaUuMPqYzPKykZDWT6wnDw2fZ9j0XxmUCWHDKsUqR
+rbPei38Gy+jtToJ2kNQp7qwFW1C9pvP4PBqhq3gGu6QF1qOT8qTEYs8nAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5paXQuY25yLml0hiVodHRwczovL2lkcC5paXQu
+Y25yLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSkgwUVx8ERu+P2jzA6x8r6
+e9wUzTANBgkqhkiG9w0BAQUFAAOCAQEAVoMKYN2nyFAF9dsAV21/r9Gse2s4d/zJ
+4lVNUCJGrKvWkiUD9GKInX8TdqrQOW5bjjTB4ldkzrHKqVfi2sPDTfvscQ/4OM7w
+E6dsFiiTz71NrDQ2bYIplDqrpWNzRTs5hxXCKkXmGwCtWd9MWlb181qCFuKq+3u0
+Oygjy0U5YBCULsebWcg1GT5swQiRYtRuJkFDEnwQ79j91ceADPiQ+DeIdeBeK+Xz
+8eGhNrtn3uOLW2SCx5QBkfE5cBFYMPMSQLM5FaCetuZl6mePHuaj0IkpVQDJpYI6
+RS0HkZxnqxq0gCbYR4dSCVUR/8NFcO/jsQCEZIauvzx9bXt7vpBKSg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.iit.cnr.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Consiglio Nazionale delle Ricerche (CNR)</md:OrganizationName>
+<md:OrganizationName xml:lang="en">National Research Council (CNR)</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">CNR Istituto di Informatica e Telematica</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">CNR Institute of Informatics and Telematics</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.iit.cnr.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.iit.cnr.it/en</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:iit-idem@iit.cnr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

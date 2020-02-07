@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://webso.iup.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iup.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Indiana University of Pennsylvania</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.iup.edu/itsupportcenter/accounts/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.iup.edu/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="110" width="83" xml:lang="en">https://webso.iup.edu/images/iup_mdui.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAOTnWFQvSD+86kNUXPzAVSUthutDMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDXdlYnNvLml1cC5lZHUwHhcNMDkwMzA1MTMzMzQ3WhcN
+MjkwMzA1MTMzMzQ3WjAYMRYwFAYDVQQDEw13ZWJzby5pdXAuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo/szDgQIthWA2E9+3epEVghO9Ra9IMPh
+yVNe49ySqX45DCRXrCaIBRvvtztZMIyVGf2sNQuqkjWmJSBVBS4gC0Ix/dQbANa9
+EDUBOw7MCpv6Vuu7Cn2DW5hclk1T59LC5h8R6X+aV4QlA17rH8Trf2hJppGQH8fx
+hGvvldoOIWDNE+gqSpg7SkAmRnO275T/9TCElKMfimvICZ5+arbtpD+90X8KJc9b
+VhKjxPSYnpS0dl5gIqOezDuq9HUGkvFKALjPXLoo+KAZswtQ1/2OxTk4R0HzvMKe
+Fhu9vVh9uy9o6T8GZxCEa3b/SuaBbu7/W0lLAm8e4x6HhpXVc4yQIwIDAQABo2Ew
+XzA+BgNVHREENzA1gg13ZWJzby5pdXAuZWR1hiRodHRwczovL3dlYnNvLml1cC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFGqp/vyzsQxjEPSn3gmUh4hULruJ
+MA0GCSqGSIb3DQEBBQUAA4IBAQAZlp4ngiYj13Pq5TQ9pGmHAFEYS1onqsYtNBCa
+lX7M3ZU8or02ZkPfsURQEbczknsu+VU58ak789aEkM3+DjAhYQoTknzaalWuRFHH
+2FdTFfJ/aHNPHtIymWWkIaZhT7mBRAp/0pdEl4Sul7s3MrBc7k7dsPOlRxFx2iHP
+E1FPQQZOlPKXXqbtsD8dPE6/05AKTAL2VzlX0DmM9bJSRjuyynjG/D9DGOueC2LM
+JC0OdrACruIN43LmFSS/ll4Y68if3BdC2oS97FaAb6yjdPxfSWKiOej/0+LSrZww
+6mcl5+FgTKV8i5U1jSa7iuj4KQ+wwOluYy+5qz2M4xPk9g09
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://webso.iup.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webso.iup.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://webso.iup.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webso.iup.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Indiana University of Pennsylvania</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Indiana University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.iup.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Paul Grieggs</md:GivenName>
+	<md:EmailAddress>pmgriegg@iup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Craig Pluchinsky</md:GivenName>
+	<md:EmailAddress>tsc-sysadmin@iup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Craig Pluchinsky</md:GivenName>
+	<md:EmailAddress>craigp@iup.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security Office</md:GivenName>
+	<md:EmailAddress>abuse@iup.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

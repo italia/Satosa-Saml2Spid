@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://keystone-beta.cloud.ipnett.se/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/category/hei-service</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/category/research-and-education</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">IPnett Cloud Services Beta</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">IPnett Cloud Services Beta</mdui:DisplayName>
+		<mdui:Description xml:lang="en">IPnett Cloud Services OpenStack</mdui:Description>
+		<mdui:Description xml:lang="sv">IPnett Cloud Services OpenStack</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">https://wiki.sunet.se/display/Molntjanster</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://wiki.sunet.se/display/Molntjanster</mdui:InformationURL>
+		<mdui:Logo height="64" width="77">https://idp.cloud.ipnett.se/ipnett.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIJAPPowPSKvgZgMA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNV
+BAMMHWtleXN0b25lLWJldGEuY2xvdWQuaXBuZXR0LnNlMB4XDTE2MDMzMDA2MTY0
+OVoXDTI3MDMxMzA2MTY0OVowKDEmMCQGA1UEAwwda2V5c3RvbmUtYmV0YS5jbG91
+ZC5pcG5ldHQuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDbE4Dd
+PYdXSY28N+u22x7Zpe+9tw/GA8ZqUY82loAk0tZ1m5erQNcW11USum8a8socSi0r
+QDzHsratiV6s/+8pyp+NorwfONAx/tP5HdvDDWUhJFld6oo6fEhyxk7XIFyuz9Th
+PkGls8CLphjPvUcvoBu86Uw0bBGC4+bmde5UiNN/8spCWB4IeAzWLNYtF81r9+wA
+uDPqimL5u2SUH3INquU72oGg6brL+lGOkoFt162YQnBnN6fQEzVmLzvagdXGKw+m
+/YTph+WnNEeOz2gV9Hhf5gyri3fPk1kXqGlO0w/F4UdTSIV7ypdW8NkrYCf7INbk
+kETtWcxTjNYOEnL7AgMBAAGjUDBOMB0GA1UdDgQWBBRJBzbqYNaDlZW94WVGApLN
+XtSrrjAfBgNVHSMEGDAWgBRJBzbqYNaDlZW94WVGApLNXtSrrjAMBgNVHRMEBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAHw0OXubM7aFCCQal1ZQiNBMZnvePqzujg
+Yn6c9IRNNMvax9w31hVOLWaE6Kpa++T6LppwI952y3wSqevDPf180dySQWtstziI
+D7Lz/Kjll9LN8mArW1jJ4psqDU9RX4otDP8AUUVo5K9daCjBbxcj4RIMfpmlcw7a
+MpN8pGtS0Z6VNxC4XsCmM+2mRu4cvlwhHOwu7hy4vK8OLOaj6SNiJYHSi/5ZoQv7
+VNEtE1FJ0y6Fox7OG48x+S//SkzDkNkOgo/tRSJhb5bQQBpOMtNF6WNp8cqnkFst
+uCNQenEiZ9DSiyNJmsiqWMsdir/9+GWp0VpsJLLq878kAxtPFQid
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIJAPPowPSKvgZgMA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNV
+BAMMHWtleXN0b25lLWJldGEuY2xvdWQuaXBuZXR0LnNlMB4XDTE2MDMzMDA2MTY0
+OVoXDTI3MDMxMzA2MTY0OVowKDEmMCQGA1UEAwwda2V5c3RvbmUtYmV0YS5jbG91
+ZC5pcG5ldHQuc2UwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDbE4Dd
+PYdXSY28N+u22x7Zpe+9tw/GA8ZqUY82loAk0tZ1m5erQNcW11USum8a8socSi0r
+QDzHsratiV6s/+8pyp+NorwfONAx/tP5HdvDDWUhJFld6oo6fEhyxk7XIFyuz9Th
+PkGls8CLphjPvUcvoBu86Uw0bBGC4+bmde5UiNN/8spCWB4IeAzWLNYtF81r9+wA
+uDPqimL5u2SUH3INquU72oGg6brL+lGOkoFt162YQnBnN6fQEzVmLzvagdXGKw+m
+/YTph+WnNEeOz2gV9Hhf5gyri3fPk1kXqGlO0w/F4UdTSIV7ypdW8NkrYCf7INbk
+kETtWcxTjNYOEnL7AgMBAAGjUDBOMB0GA1UdDgQWBBRJBzbqYNaDlZW94WVGApLN
+XtSrrjAfBgNVHSMEGDAWgBRJBzbqYNaDlZW94WVGApLNXtSrrjAMBgNVHRMEBTAD
+AQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAHw0OXubM7aFCCQal1ZQiNBMZnvePqzujg
+Yn6c9IRNNMvax9w31hVOLWaE6Kpa++T6LppwI952y3wSqevDPf180dySQWtstziI
+D7Lz/Kjll9LN8mArW1jJ4psqDU9RX4otDP8AUUVo5K9daCjBbxcj4RIMfpmlcw7a
+MpN8pGtS0Z6VNxC4XsCmM+2mRu4cvlwhHOwu7hy4vK8OLOaj6SNiJYHSi/5ZoQv7
+VNEtE1FJ0y6Fox7OG48x+S//SkzDkNkOgo/tRSJhb5bQQBpOMtNF6WNp8cqnkFst
+uCNQenEiZ9DSiyNJmsiqWMsdir/9+GWp0VpsJLLq878kAxtPFQid
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://keystone-beta.cloud.ipnett.se/Shibboleth.sso/Logout"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://keystone-beta.cloud.ipnett.se/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">IPnett Cloud Services OpenStack</md:ServiceName>
+		<md:ServiceName xml:lang="sv">IPnett Cloud Services OpenStack</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SUNET</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SUNET Cloud Services</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://sunet.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Technical Support (SafeSpring)</md:SurName>
+	<md:EmailAddress>mailto:iaas@cloud.ipnett.se</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

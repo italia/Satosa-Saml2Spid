@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://weblogin.kau.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/authentication/swamid-al2-mfa</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/authentication/swamid-al2-mfa-hi</saml:AttributeValue>
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kau.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Karlstads universitet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Karlstad University</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för Karlstads universitet</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for Karlstad University</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://www.kau.se</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.kau.se/en</mdui:InformationURL>
+		<mdui:Logo height="280" width="248" xml:lang="sv">https://www.kau.se/themes/custom/kau16/images/logotype.png</mdui:Logo>
+		<mdui:Logo height="280" width="248" xml:lang="en">https://www.kau.se/themes/custom/kau16/images/logotype.png</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="sv">http://www.kau.se/om-webbplatsen/juridisk-information</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.kau.se/en/about-this-website</mdui:PrivacyStatementURL>
+		<mdui:Keywords xml:lang="sv">kau karlstads+universitet karlstad+universitet karlstad+university</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">kau karlstads+universitet karlstad+universitet karlstad+university</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>kau.se</mdui:DomainHint>
+		<mdui:IPHint>130.243.16.0/20</mdui:IPHint>
+		<mdui:IPHint>193.10.162.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.220.0/22</mdui:IPHint>
+		<mdui:IPHint>193.10.224.0/21</mdui:IPHint>
+		<mdui:IPHint>193.10.238.0/24</mdui:IPHint>
+		<mdui:IPHint>193.11.148.0/22</mdui:IPHint>
+		<mdui:IPHint>193.11.152.0/21</mdui:IPHint>
+		<mdui:IPHint>2001:6b0:34::0/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:59.4059,13.5816</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAKqRgJlUZAb1CREA2cmklaWM4Hs/MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTAeFw0xNjAzMjUxMTAyMjBa
+Fw0zNjAzMjUxMTAyMjBaMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIrfx2rTVhTB7Pm0oTIvfBpSwkLk
+D8U7RYZH8vx+tOKWZp2d6g6QBOxpaNAZRKpvJoj/vclG37HKjkNi8xQQSNAWqUqo
+Gg7HTbg7GP/Q4MR5SVKZNsxTg4y9xz18Z2+YmiU26XLZHg1S1Dpvz1QkP/bWK4Ci
+7hIcANs//xJnurUHkxOJELtsx3NgR/SGCS3THcZhzFd1kr8c6vnjO6FBywUkbcdP
+pnyRmJnP17PL6r51f29m8/PDXghA98m04mB6p4bCrHrEsXw5fkqsHxa5a2/T0ULu
+31Tsaqmri6s+pgCyZ4P2itaLw0JG0kOpF5wuGlH7abKFOt2/+julrk0osfsCAwEA
+AaNlMGMwHQYDVR0OBBYEFA0OLDhIJ0KBHqZuAWyDTXLllATDMEIGA1UdEQQ7MDmC
+D3dlYmxvZ2luLmthdS5zZYYmaHR0cHM6Ly93ZWJsb2dpbi5rYXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAHjo2rrBQJw4w2XerUZad9Bnnj/C
+E+gAidE2Xdz6UaQId+BJ8P4FexxjJbwOz+qEx8lYyWt3ooqIfAbvyebFCRKSjFny
+L1chS4B8WuTPP+8UfPOcSoiOyXHtNqsWWLAIOcFwUUx27hF3IL2DvYi9zebO0uFO
+PiCp6QE0qQ/0HeDbnDjNmS7F8HPgx2IsJyEiEgYdR70w8n1DQB5ccekzpUDCBBNq
+W3q6OazE9V8ZdHjEA8FAJZ7Fo3cjgvkiVtow0CTiB7Aidya8HJc1KTemqUAAwLsT
+J3tGPHwu/RoCjpTvgbZcfT7vb+rMHYjlAaGfAe+dwgLq0XGn+id/ZdMf510=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAKxgqy7GuYcvyA/bSKh2g6NFUiCOMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTAeFw0xNjAzMjUxMTAyMTla
+Fw0zNjAzMjUxMTAyMTlaMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALLpj1x2QOzpy5P769ZzMDBWd/SB
+IamtFwi3yWpGNPFPxgFcRdH9srirVG/jCf8CV63xbqIFw5t5avllFx1sdGDexV0j
+xaikv3IEzUFuAdu1G/Y3gA6WT0Eaz3Wo539B6OMOWm/+S7LhtO92wEmD9QGEnzqK
+hWHafhLNIyatF6nRd8nW6qR1LIeWCJIc6+l9EIN7fgGv91F7qoUmdWWYFEbMaGjg
+aCU+G63qksrn8lme+qYu/mg7PLTkoGpWN5PDF1+ZJ+PWUauWF0BaHkZ1J/2oVBI9
+gTPRAcyapxI/vkbY76ntt9Tpds+ZnjgLt0UvglEHg62QfvjOqkDRn9INMr0CAwEA
+AaNlMGMwHQYDVR0OBBYEFMALZKbkq9w3sXzoVj19Ybn4iHoMMEIGA1UdEQQ7MDmC
+D3dlYmxvZ2luLmthdS5zZYYmaHR0cHM6Ly93ZWJsb2dpbi5rYXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFcnLl3I15O+8P1nbTwrl3ON7lYd
+maRmTTShHl3lUH87aRHbiyyoufQ9IZUVx7/lYr9R0956SXUeiXgrBwxGA7GFBR2g
+cOR0d99zxb5O5fp98Q2AsrNsfYkdkufrM07ro5kPUlAvmQyJSjoJ6eN6jn2nOJaQ
+wc5T0ouk9m5goKUJRK7mw6tRTVOw+3sA7Q8R6KW5Hge4uCCJVCnYXLAy/LR117A/
+zAjX3Z+Ui+HQajRXgxc1HyYHWJRnAzE2lb5na1/T6II0rInH7PMeqoUpmFWOOD86
+ZPI4RtsDWZUL5YWyHEokiQxtD9wZmhXrTUiHoVwbFjK+zfFpH/K4vhnweyw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUGpvwFdQDTd5OR/3tImBGs68ViIIwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPd2VibG9naW4ua2F1LnNlMB4XDTE2MDMyNTExMDIyMFoX
+DTM2MDMyNTExMDIyMFowGjEYMBYGA1UEAwwPd2VibG9naW4ua2F1LnNlMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlWvlRN7Q3Mh8KriChoB80l1JXzQw
+MthELvY6wwzf3fJ4VVIKFn0Kqql0JgwD/VOuA+MPbaqZDNWVcD5EmYhAs4k5cxSq
+jtb7RHdmAfTrnqB8XqM6wGP23sqa7brz7FDpT2kdCHkVn5Reazvltc4aUWepiXu4
+zDOd4fvyTwKcG4R2al6vPPg1ocvYOpOaaskNhjKk7KKF1fm233yLSiZZt/6yGipw
+EB/Vaj6+0ZOzmVCv8RFS5GiHroDzDRFquyrMKNXoqIVgcdsdq1ajeVazOvz+5p7k
+DonBQ31iphDxI3177QPWNIFy5VjvZoHzpiSIOHB7PEpJUkdfxlTS5Q6R6wIDAQAB
+o2UwYzAdBgNVHQ4EFgQUJNaYAquqKRGvgUZVPiWrZ0OSJI8wQgYDVR0RBDswOYIP
+d2VibG9naW4ua2F1LnNlhiZodHRwczovL3dlYmxvZ2luLmthdS5zZS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAbsPfGxOUvMCzNS+ZIa+1woB7wRJH
+UdvS+jdnC86qB7pcfeUgqC+hWGzEQjeBpL31lrplfJq5j+c5E4AC97J11cCG7XP7
+6vZniOszZEvPnjI34OL4NrAs4VGSLeF7F9ZC8jyPdWEK2nan3ivWb5tIcfJzd1zp
+1amHFcKAlLVl8kMkLY1GB4kA+/Tz8epC0QDrgRHCdtgKmwfr1vbmAa6KmdldaBAa
+Cn3WZ3K74iMQSSbaR9g9oX/Ag+jeXkBCdEKknolZ+6FWVinu3oeuRiqvWYkLCF0Q
+cHgs7D1QiqGixbmFlSZyPcCPcIzPDzRaoXyb+yKQy31QP/VEt8VGXH5H2A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.kau.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://weblogin.kau.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://weblogin.kau.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://weblogin.kau.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://weblogin.kau.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kau.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAKqRgJlUZAb1CREA2cmklaWM4Hs/MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTAeFw0xNjAzMjUxMTAyMjBa
+Fw0zNjAzMjUxMTAyMjBaMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIrfx2rTVhTB7Pm0oTIvfBpSwkLk
+D8U7RYZH8vx+tOKWZp2d6g6QBOxpaNAZRKpvJoj/vclG37HKjkNi8xQQSNAWqUqo
+Gg7HTbg7GP/Q4MR5SVKZNsxTg4y9xz18Z2+YmiU26XLZHg1S1Dpvz1QkP/bWK4Ci
+7hIcANs//xJnurUHkxOJELtsx3NgR/SGCS3THcZhzFd1kr8c6vnjO6FBywUkbcdP
+pnyRmJnP17PL6r51f29m8/PDXghA98m04mB6p4bCrHrEsXw5fkqsHxa5a2/T0ULu
+31Tsaqmri6s+pgCyZ4P2itaLw0JG0kOpF5wuGlH7abKFOt2/+julrk0osfsCAwEA
+AaNlMGMwHQYDVR0OBBYEFA0OLDhIJ0KBHqZuAWyDTXLllATDMEIGA1UdEQQ7MDmC
+D3dlYmxvZ2luLmthdS5zZYYmaHR0cHM6Ly93ZWJsb2dpbi5rYXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAHjo2rrBQJw4w2XerUZad9Bnnj/C
+E+gAidE2Xdz6UaQId+BJ8P4FexxjJbwOz+qEx8lYyWt3ooqIfAbvyebFCRKSjFny
+L1chS4B8WuTPP+8UfPOcSoiOyXHtNqsWWLAIOcFwUUx27hF3IL2DvYi9zebO0uFO
+PiCp6QE0qQ/0HeDbnDjNmS7F8HPgx2IsJyEiEgYdR70w8n1DQB5ccekzpUDCBBNq
+W3q6OazE9V8ZdHjEA8FAJZ7Fo3cjgvkiVtow0CTiB7Aidya8HJc1KTemqUAAwLsT
+J3tGPHwu/RoCjpTvgbZcfT7vb+rMHYjlAaGfAe+dwgLq0XGn+id/ZdMf510=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAKxgqy7GuYcvyA/bSKh2g6NFUiCOMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTAeFw0xNjAzMjUxMTAyMTla
+Fw0zNjAzMjUxMTAyMTlaMBoxGDAWBgNVBAMMD3dlYmxvZ2luLmthdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALLpj1x2QOzpy5P769ZzMDBWd/SB
+IamtFwi3yWpGNPFPxgFcRdH9srirVG/jCf8CV63xbqIFw5t5avllFx1sdGDexV0j
+xaikv3IEzUFuAdu1G/Y3gA6WT0Eaz3Wo539B6OMOWm/+S7LhtO92wEmD9QGEnzqK
+hWHafhLNIyatF6nRd8nW6qR1LIeWCJIc6+l9EIN7fgGv91F7qoUmdWWYFEbMaGjg
+aCU+G63qksrn8lme+qYu/mg7PLTkoGpWN5PDF1+ZJ+PWUauWF0BaHkZ1J/2oVBI9
+gTPRAcyapxI/vkbY76ntt9Tpds+ZnjgLt0UvglEHg62QfvjOqkDRn9INMr0CAwEA
+AaNlMGMwHQYDVR0OBBYEFMALZKbkq9w3sXzoVj19Ybn4iHoMMEIGA1UdEQQ7MDmC
+D3dlYmxvZ2luLmthdS5zZYYmaHR0cHM6Ly93ZWJsb2dpbi5rYXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFcnLl3I15O+8P1nbTwrl3ON7lYd
+maRmTTShHl3lUH87aRHbiyyoufQ9IZUVx7/lYr9R0956SXUeiXgrBwxGA7GFBR2g
+cOR0d99zxb5O5fp98Q2AsrNsfYkdkufrM07ro5kPUlAvmQyJSjoJ6eN6jn2nOJaQ
+wc5T0ouk9m5goKUJRK7mw6tRTVOw+3sA7Q8R6KW5Hge4uCCJVCnYXLAy/LR117A/
+zAjX3Z+Ui+HQajRXgxc1HyYHWJRnAzE2lb5na1/T6II0rInH7PMeqoUpmFWOOD86
+ZPI4RtsDWZUL5YWyHEokiQxtD9wZmhXrTUiHoVwbFjK+zfFpH/K4vhnweyw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUGpvwFdQDTd5OR/3tImBGs68ViIIwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPd2VibG9naW4ua2F1LnNlMB4XDTE2MDMyNTExMDIyMFoX
+DTM2MDMyNTExMDIyMFowGjEYMBYGA1UEAwwPd2VibG9naW4ua2F1LnNlMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlWvlRN7Q3Mh8KriChoB80l1JXzQw
+MthELvY6wwzf3fJ4VVIKFn0Kqql0JgwD/VOuA+MPbaqZDNWVcD5EmYhAs4k5cxSq
+jtb7RHdmAfTrnqB8XqM6wGP23sqa7brz7FDpT2kdCHkVn5Reazvltc4aUWepiXu4
+zDOd4fvyTwKcG4R2al6vPPg1ocvYOpOaaskNhjKk7KKF1fm233yLSiZZt/6yGipw
+EB/Vaj6+0ZOzmVCv8RFS5GiHroDzDRFquyrMKNXoqIVgcdsdq1ajeVazOvz+5p7k
+DonBQ31iphDxI3177QPWNIFy5VjvZoHzpiSIOHB7PEpJUkdfxlTS5Q6R6wIDAQAB
+o2UwYzAdBgNVHQ4EFgQUJNaYAquqKRGvgUZVPiWrZ0OSJI8wQgYDVR0RBDswOYIP
+d2VibG9naW4ua2F1LnNlhiZodHRwczovL3dlYmxvZ2luLmthdS5zZS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAbsPfGxOUvMCzNS+ZIa+1woB7wRJH
+UdvS+jdnC86qB7pcfeUgqC+hWGzEQjeBpL31lrplfJq5j+c5E4AC97J11cCG7XP7
+6vZniOszZEvPnjI34OL4NrAs4VGSLeF7F9ZC8jyPdWEK2nan3ivWb5tIcfJzd1zp
+1amHFcKAlLVl8kMkLY1GB4kA+/Tz8epC0QDrgRHCdtgKmwfr1vbmAa6KmdldaBAa
+Cn3WZ3K74iMQSSbaR9g9oX/Ag+jeXkBCdEKknolZ+6FWVinu3oeuRiqvWYkLCF0Q
+cHgs7D1QiqGixbmFlSZyPcCPcIzPDzRaoXyb+yKQy31QP/VEt8VGXH5H2A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.kau.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">KAU</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">KAU</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Karlstads universitet</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Karlstad University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kau.se/en</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.kau.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Karlstad University</md:Company>
+	<md:SurName>IT-avdelningen</md:SurName>
+	<md:EmailAddress>mailto:2525@kau.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 54 700 2525</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Karlstad University</md:Company>
+	<md:SurName>IT-avdelningen</md:SurName>
+	<md:EmailAddress>mailto:webbteknik@kau.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Karlstad University</md:Company>
+	<md:SurName>IT-avdelningen Karlstads universitet</md:SurName>
+	<md:EmailAddress>mailto:datasupport@kau.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 54 700 2525</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Incident Response Team</md:GivenName>
+	<md:EmailAddress>mailto:irt@kau.se</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.mansfield.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mansfield.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mansfield University of Pennsylvania</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.mansfield.edu/policies-procedures/upload/Privacy-and-Security.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="213" width="948" xml:lang="en">https://www.mansfield.edu/style/png/mu-primary.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEDTCCAvWgAwIBAgIJAMpfhe4bs+LPMA0GCSqGSIb3DQEBCwUAMIGcMQswCQYD
+VQQGEwJVUzELMAkGA1UECAwCUEExEjAQBgNVBAcMCU1hbnNmaWVsZDEdMBsGA1UE
+CgwUTWFuc2ZpZWxkIFVuaXZlcnNpdHkxCzAJBgNVBAsMAkNUMRowGAYDVQQDDBFz
+c28ubWFuc2ZpZWxkLmVkdTEkMCIGCSqGSIb3DQEJARYVYW1pbGxlckBtYW5zZmll
+bGQuZWR1MB4XDTE3MDMyNjE4MTI0OVoXDTI3MDMyNDE4MTI0OVowgZwxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJQQTESMBAGA1UEBwwJTWFuc2ZpZWxkMR0wGwYDVQQK
+DBRNYW5zZmllbGQgVW5pdmVyc2l0eTELMAkGA1UECwwCQ1QxGjAYBgNVBAMMEXNz
+by5tYW5zZmllbGQuZWR1MSQwIgYJKoZIhvcNAQkBFhVhbWlsbGVyQG1hbnNmaWVs
+ZC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDKP/3cksv6zCoS
+Bs0LQqh3HYogusG2NyarfqGjhGxma7JwkCzXBfPCaD/FgUep6mpiZWob3o8GJ7id
+8PoA/xA6dwumE2Ye49FDCflnmQyiMUQXORtygjAUyrxTl+3g1eMH5kXJOA3gazMx
+x0M9FuB7kwjEp3zhn8mn0ADOZYKqNUAQxU1QYrcVArYosHRE4zuFXvEGqjI7f/Id
+H8L3cXGKcDoh+0f8qw4VroWHWx7jKwVbUIxBYZZXxGzG+IMuygqDAp/aEeUxxDlt
+zLl3oUnyBFYO3Gm7Gohxdjm47HuBI6YhSKSFZfLkK/YwPBeoCJLbOs0J5vKVtO2X
+0EVrwz23AgMBAAGjUDBOMB0GA1UdDgQWBBTOMKm9W0b4NY7MG7/I8fpe0HRRyjAf
+BgNVHSMEGDAWgBTOMKm9W0b4NY7MG7/I8fpe0HRRyjAMBgNVHRMEBTADAQH/MA0G
+CSqGSIb3DQEBCwUAA4IBAQCThVfK4ay3P3841IEFZWPBLW6c0UjHPH0gda5IxeKt
+LvldCwdc6CrGRk7eFU8zyzcbgcLh8xYhsy3s6VaR/oyRjI44A0H1cOdRfLlCTavP
+cAnk2667S0hLxWxOMBS9QFA58iI4flZSYDX/zJvmsbBAGETJeDvt0cqL5aagbxNX
+0n1c/FK66sYYpaU1cPvFdf5x7kj8O2in+pYRNcLKwAN88MLqo49JGQeQZDotV1jL
+UV+AvwxIjp0EqJikKqpxh/6Fx/K3r6j2idwLxnAOVGGzhbECzSsETDCSbL8hh+xs
+QOOylADN1ShHM1Gf+3iue0vkCgoV/BWx/JPJ5RaMNzVc
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.mansfield.edu/idp/profile/Logout"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.mansfield.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.mansfield.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.mansfield.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mansfield University of Pennsylvania</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mansfield University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mansfield.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>alex miller</md:GivenName>
+	<md:EmailAddress>amiller@mansfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nick Andre</md:GivenName>
+	<md:EmailAddress>nandre@mansfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Alex Miller</md:GivenName>
+	<md:EmailAddress>amiller@mansfield.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

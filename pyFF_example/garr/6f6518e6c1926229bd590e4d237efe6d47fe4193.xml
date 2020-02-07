@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://spinup-000622.yu.yale.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://spinup-000622.yu.yale.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Test SP for Gateway</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://registrar.yale.edu/yale-university-statement-disclosure-directory-information</mdui:PrivacyStatementURL>
+		<mdui:Logo height="76" width="169" xml:lang="en">https://www.yale.edu/sites/all/themes/yale_blue/images/logo-print.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEEjCCAnqgAwIBAgIJAOeOZ7XMUejiMA0GCSqGSIb3DQEBCwUAMCQxIjAgBgNV
+BAMTGXNwaW51cC0wMDA2MjIueXUueWFsZS5lZHUwHhcNMTcwNzIwMDA0ODEyWhcN
+MjcwNzE4MDA0ODEyWjAkMSIwIAYDVQQDExlzcGludXAtMDAwNjIyLnl1LnlhbGUu
+ZWR1MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEApY9dHJq45GsgD89G
+eH+Hn3MgjRMZq45Xa0Kb61krSYzNFPiGgOYgX5CH9IQrWWvV6yY0z3a1P6liog9V
+HgSZ/8qbyDeEzwqwXSUd7Ga4ppYM8qtwTtTPU1wpz3XQQFRd60AiX+GcstO9BOZu
+7A2W43qV+aodtXFjRK592dLXHQDU5E5OOpp8cGYGSpFlfIK0NMIe9KEI+lRO+uFy
+YEZeQAl2FLS/Zz6SPJClL5yhBBYcA71VoJA9L6A/VL82ZQ5dK28vh0ekyaQKRC2Y
+mCRf2/oSHLACheapEHzXAJ+Q7Jn9rR+kB2KR7V/smYbZFTHjWpxhpa8N/x/KTVL6
+sZT6X2dxO2NgFnC5gnUQJA05C0jA5dILtcPawEq8dyKmjjVBMGPA+eivI8WHSkdD
+pYHeGfWsazlU2oZT8z7kTQuzJNX6BrzIUKj4BRKEyFUp5HnbqGAOE72amSligVOM
+PiYP0i1rtlcyw4iynypsXeHvhXjxVV4xsy8zyqq4QEUf9L7xAgMBAAGjRzBFMCQG
+A1UdEQQdMBuCGXNwaW51cC0wMDA2MjIueXUueWFsZS5lZHUwHQYDVR0OBBYEFLDS
+dgCArGA+kxOgYd8j6QbvnGdfMA0GCSqGSIb3DQEBCwUAA4IBgQA2kHl70K/2zBf5
+ooc3PMg9RUR+Klbk5BxXcZU3R2GzA4oHfhwBb9GNCWx5mH5Q2L63jCeM31PyOd2K
+nZ4zECeB9h0wx/ME7rUaqt6NmpFxu2VMrkxiW8jjs6TAhAZ20cCzONBmQxgKBarQ
+MFnGmRxtTyiOSD8/vtXSNdPIryEqW/cyhsWolF/IG7HAE8gnfHVn3rPTUK9FheRm
+81DbY/c4T0ffsBYwrcv5A6O53TIgDAeWjd8xLEdK1go97RnvOt2qf0GpXDHyEnPw
+z524PyKGDmJpzH2SV1YDNKo1+8FmFq1JGZUR7H9OTJqXcrNKMga4e/ngLaiFoUGh
+hFVYMjLpoAc2nfrEPL0nvB8LfV1lCSyxMEMfPRO9XXmFTuSssddw0V78GdXxMY4p
+qThMipLfNSYKZdxE+CWPRfmgmOZGVPl32+2ttpt8d0JlWfdIm2DcrYlJFaV6RWqv
+xYAZ4Ti8QjH8pN7IIoBIO5d1qaABGQJeuJq/j5VH4Lvjh8/upMM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://spinup-000622.yu.yale.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Yale University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Yale University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.yale.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Amit Poddar</md:GivenName>
+	<md:EmailAddress>amit.poddar@yale.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Andrew Newman</md:GivenName>
+	<md:EmailAddress>newman-andy@yale.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Amit Poddar</md:GivenName>
+	<md:EmailAddress>amit.poddar@yale.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Andrew Newman</md:GivenName>
+	<md:EmailAddress>newman-andy@yale.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

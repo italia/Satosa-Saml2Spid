@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cern.ch/login">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2014-07-29T13:17:52Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/federation/switchaai/metadata-registration-practice-statement-20110711.txt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute FriendlyName="swissEduPersonHomeOrganization" Name="urn:oid:2.16.756.1.2.5.1.1.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>cern.ch</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute FriendlyName="swissEduPersonHomeOrganizationType" Name="urn:oid:2.16.756.1.2.5.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>others</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor errorURL="http://cern.ch/serviceportal" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CERN Service Provider Proxy</mdui:DisplayName>
+		<mdui:Description xml:lang="en">CERN Service Provider Proxy</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPElEQVR42pVT21HDQAx0B5RACSkB25N/SqAEPs+ZfFACJaSElOAPrHwxQwmUkBKMdk+S5YRk4GYuj9NqT7vSNY2tbfl8aMvptRtk1D3/dTO5Kx+bbpi+mVzkGWT9Xh7bMr0bcMRZkxZyeIYPJPeDHDxYKwGhkeK7yLkd5C0IlJgEOATIAyBS8Fe3Oz1leUY2I1b/R/kK1rJ5M8gM0FwsVNUXORqeO0pZdMk537zSrOeUqt64LysCApz1JoHMRjCGZy7BAOMtAvNqbnfTC36HoTQNTt8h4K2Qp3G0Fl7Ak9QyLQ0GeWvSouNaJeMmk2Q6B8sQ8UADTgSgbpJbzIlXBmb3OXmqL/c79z37cNWprMmGJN4DNNeRrlNJbJrIMGnlOCqx0fXtmtmxO92K5DDpt46k4ftX8vKQ8Lgq5geGpVRM3R4TeQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="60">data:image/png;base64,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</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="en">https://home.cern/data-privacy-protection-statement</mdui:PrivacyStatementURL>
+		<mdui:InformationURL xml:lang="en">http://www.cern.ch</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIIEjCCBfqgAwIBAgIKLYgjvQAAAAAAMDANBgkqhkiG9w0BAQsFADBRMRIwEAYK
+CZImiZPyLGQBGRYCY2gxFDASBgoJkiaJk/IsZAEZFgRjZXJuMSUwIwYDVQQDExxD
+RVJOIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTEzMTEwODA4Mzg1NVoXDTIz
+MDcyOTA5MTkzOFowVjESMBAGCgmSJomT8ixkARkWAmNoMRQwEgYKCZImiZPyLGQB
+GRYEY2VybjESMBAGA1UECxMJY29tcHV0ZXJzMRYwFAYDVQQDEw1sb2dpbi5jZXJu
+LmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp6t1C0SGlLddL2M+
+ltffGioTnDT3eztOxlA9bAGuvB8/Rjym8en6+ET9boM02CyoR5Vpn8iElXVWccAE
+xPIQEq70D6LPe86vb+tYhuKPeLfuICN9Z0SMQ4f+57vk61Co1/uw/8kPvXlyd+Ai
+8Dsn/G0hpH67bBI9VOQKfpJqclcSJuSlUB5PJffvMUpr29B0eRx8LKFnIHbDILSu
+6nVbFLcadtWIjbYvoKorXg3J6urtkz+zEDeYMTvA6ZGOFf/Xy5eGtroSq9csSC97
+6tx+umKEPhXBA9AcpiCV9Cj5axN03Aaa+iTE36jpnjcd9d02dy5Q9jE2nUN6KXnB
+6qF6eQIDAQABo4ID5TCCA+EwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIg73Q
+CYLtjQ2G7Ysrgd71N4WA0GIehd2yb4Wu9TkCAWQCARkwHQYDVR0lBBYwFAYIKwYB
+BQUHAwIGCCsGAQUFBwMBMA4GA1UdDwEB/wQEAwIFoDBoBgNVHSAEYTBfMF0GCisG
+AQQBYAoEAQEwTzBNBggrBgEFBQcCARZBaHR0cDovL2NhLWRvY3MuY2Vybi5jaC9j
+YS1kb2NzL2NwLWNwcy9jZXJuLXRydXN0ZWQtY2EyLWNwLWNwcy5wZGYwJwYJKwYB
+BAGCNxUKBBowGDAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAdBgNVHQ4EFgQUqtJc
+wUXasyM6sRaO5nCMFoFDenMwGAYDVR0RBBEwD4INbG9naW4uY2Vybi5jaDAfBgNV
+HSMEGDAWgBQdkBnqyM7MPI0UsUzZ7BTiYUADYTCCASoGA1UdHwSCASEwggEdMIIB
+GaCCARWgggERhkdodHRwOi8vY2FmaWxlcy5jZXJuLmNoL2NhZmlsZXMvY3JsL0NF
+Uk4lMjBDZXJ0aWZpY2F0aW9uJTIwQXV0aG9yaXR5LmNybIaBxWxkYXA6Ly8vQ049
+Q0VSTiUyMENlcnRpZmljYXRpb24lMjBBdXRob3JpdHksQ049Q0VSTlBLSTA3LENO
+PUNEUCxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1D
+b25maWd1cmF0aW9uLERDPWNlcm4sREM9Y2g/Y2VydGlmaWNhdGVSZXZvY2F0aW9u
+TGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIIBVAYI
+KwYBBQUHAQEEggFGMIIBQjBcBggrBgEFBQcwAoZQaHR0cDovL2NhZmlsZXMuY2Vy
+bi5jaC9jYWZpbGVzL2NlcnRpZmljYXRlcy9DRVJOJTIwQ2VydGlmaWNhdGlvbiUy
+MEF1dGhvcml0eS5jcnQwgbsGCCsGAQUFBzAChoGubGRhcDovLy9DTj1DRVJOJTIw
+Q2VydGlmaWNhdGlvbiUyMEF1dGhvcml0eSxDTj1BSUEsQ049UHVibGljJTIwS2V5
+JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz1jZXJu
+LERDPWNoP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0
+aW9uQXV0aG9yaXR5MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5jZXJuLmNoL29j
+c3AwDQYJKoZIhvcNAQELBQADggIBAGKZ3bknTCfNuh4TMaL3PuvBFjU8LQ5NKY9G
+LZvY2ibYMRk5Is6eWRgyUsy1UJRQdaQQPnnysqrGq8VRw/NIFotBBsA978/+jj7v
+4e5Kr4o8HvwAQNLBxNmF6XkDytpLL701FcNEGRqIsoIhNzihi2VBADLC9HxljEyP
+T52IR767TMk/+xTOqClceq3sq6WRD4m+xaWRUJyOhn+Pqr+wbhXIw4wzHC6X0hcL
+j8P9Povtm6VmKkN9JPuymMo/0+zSrUt2+TYfmbbEKYJSP0+sceQ76IKxxmSdKAr1
+qDNE8v+c3DvPM2PKmfivwaV2l44FdP8ulzqTgphkYcN1daa9Oc+qJeyu/eL7xWzk
+6Zq5R+jVrMlM0p1y2XczI7Hoc96TMOcbVnwgMcVqRM9p57VItn6XubYPR0C33i1y
+UZjkWbIfqEjq6Vev6lVgngOyzu+hqC/8SDyORA3dlF9aZOD13kPZdF/JRphHREQt
+aRydAiYRlE/WHTvOcY52jujDftUR6oY0eWaWkwSHbX+kDFx8IlR8UtQCUgkGHBGw
+nOYLIGu7SRDGSfOBOiVhxKoHWVk/pL6eKY2SkmyOmmgO4JnQGg95qeAOMG/EQZt/
+2x8GAavUqGvYy9dPFwFf08678hQqkjNSuex7UD0ku8OP1QKvpP44l6vZhFc6A5Xq
+jdU9lus1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.cern.ch/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.cern.ch/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.cern.ch/adfs/ls/" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://login.cern.ch/adfs/ls/" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">CERN Service Provider Proxy</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">CERN Service Provider Proxy</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="swissEduPersonHomeOrganization" Name="urn:oid:2.16.756.1.2.5.1.1.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="swissEduPersonHomeOrganizationType" Name="urn:oid:2.16.756.1.2.5.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="swissEduPersonUniqueID" Name="urn:oid:2.16.756.1.2.5.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="schacHomeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="schacHomeOrganizationType" Name="urn:oid:1.3.6.1.4.1.25178.1.2.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cern.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CERN</mdui:DisplayName>
+		<mdui:Description xml:lang="en">CERN Identity Provider</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPElEQVR42pVT21HDQAx0B5RACSkB25N/SqAEPs+ZfFACJaSElOAPrHwxQwmUkBKMdk+S5YRk4GYuj9NqT7vSNY2tbfl8aMvptRtk1D3/dTO5Kx+bbpi+mVzkGWT9Xh7bMr0bcMRZkxZyeIYPJPeDHDxYKwGhkeK7yLkd5C0IlJgEOATIAyBS8Fe3Oz1leUY2I1b/R/kK1rJ5M8gM0FwsVNUXORqeO0pZdMk537zSrOeUqt64LysCApz1JoHMRjCGZy7BAOMtAvNqbnfTC36HoTQNTt8h4K2Qp3G0Fl7Ak9QyLQ0GeWvSouNaJeMmk2Q6B8sQ8UADTgSgbpJbzIlXBmb3OXmqL/c79z37cNWprMmGJN4DNNeRrlNJbJrIMGnlOCqx0fXtmtmxO92K5DDpt46k4ftX8vKQ8Lgq5geGpVRM3R4TeQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="60">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.cern.ch</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>128.141.0.0/16</mdui:IPHint>
+		<mdui:DomainHint>cern.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.23304,6.05528</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIIEjCCBfqgAwIBAgIKLYgjvQAAAAAAMDANBgkqhkiG9w0BAQsFADBRMRIwEAYK
+CZImiZPyLGQBGRYCY2gxFDASBgoJkiaJk/IsZAEZFgRjZXJuMSUwIwYDVQQDExxD
+RVJOIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTEzMTEwODA4Mzg1NVoXDTIz
+MDcyOTA5MTkzOFowVjESMBAGCgmSJomT8ixkARkWAmNoMRQwEgYKCZImiZPyLGQB
+GRYEY2VybjESMBAGA1UECxMJY29tcHV0ZXJzMRYwFAYDVQQDEw1sb2dpbi5jZXJu
+LmNoMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp6t1C0SGlLddL2M+
+ltffGioTnDT3eztOxlA9bAGuvB8/Rjym8en6+ET9boM02CyoR5Vpn8iElXVWccAE
+xPIQEq70D6LPe86vb+tYhuKPeLfuICN9Z0SMQ4f+57vk61Co1/uw/8kPvXlyd+Ai
+8Dsn/G0hpH67bBI9VOQKfpJqclcSJuSlUB5PJffvMUpr29B0eRx8LKFnIHbDILSu
+6nVbFLcadtWIjbYvoKorXg3J6urtkz+zEDeYMTvA6ZGOFf/Xy5eGtroSq9csSC97
+6tx+umKEPhXBA9AcpiCV9Cj5axN03Aaa+iTE36jpnjcd9d02dy5Q9jE2nUN6KXnB
+6qF6eQIDAQABo4ID5TCCA+EwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIg73Q
+CYLtjQ2G7Ysrgd71N4WA0GIehd2yb4Wu9TkCAWQCARkwHQYDVR0lBBYwFAYIKwYB
+BQUHAwIGCCsGAQUFBwMBMA4GA1UdDwEB/wQEAwIFoDBoBgNVHSAEYTBfMF0GCisG
+AQQBYAoEAQEwTzBNBggrBgEFBQcCARZBaHR0cDovL2NhLWRvY3MuY2Vybi5jaC9j
+YS1kb2NzL2NwLWNwcy9jZXJuLXRydXN0ZWQtY2EyLWNwLWNwcy5wZGYwJwYJKwYB
+BAGCNxUKBBowGDAKBggrBgEFBQcDAjAKBggrBgEFBQcDATAdBgNVHQ4EFgQUqtJc
+wUXasyM6sRaO5nCMFoFDenMwGAYDVR0RBBEwD4INbG9naW4uY2Vybi5jaDAfBgNV
+HSMEGDAWgBQdkBnqyM7MPI0UsUzZ7BTiYUADYTCCASoGA1UdHwSCASEwggEdMIIB
+GaCCARWgggERhkdodHRwOi8vY2FmaWxlcy5jZXJuLmNoL2NhZmlsZXMvY3JsL0NF
+Uk4lMjBDZXJ0aWZpY2F0aW9uJTIwQXV0aG9yaXR5LmNybIaBxWxkYXA6Ly8vQ049
+Q0VSTiUyMENlcnRpZmljYXRpb24lMjBBdXRob3JpdHksQ049Q0VSTlBLSTA3LENO
+PUNEUCxDTj1QdWJsaWMlMjBLZXklMjBTZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1D
+b25maWd1cmF0aW9uLERDPWNlcm4sREM9Y2g/Y2VydGlmaWNhdGVSZXZvY2F0aW9u
+TGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIIBVAYI
+KwYBBQUHAQEEggFGMIIBQjBcBggrBgEFBQcwAoZQaHR0cDovL2NhZmlsZXMuY2Vy
+bi5jaC9jYWZpbGVzL2NlcnRpZmljYXRlcy9DRVJOJTIwQ2VydGlmaWNhdGlvbiUy
+MEF1dGhvcml0eS5jcnQwgbsGCCsGAQUFBzAChoGubGRhcDovLy9DTj1DRVJOJTIw
+Q2VydGlmaWNhdGlvbiUyMEF1dGhvcml0eSxDTj1BSUEsQ049UHVibGljJTIwS2V5
+JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz1jZXJu
+LERDPWNoP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0
+aW9uQXV0aG9yaXR5MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5jZXJuLmNoL29j
+c3AwDQYJKoZIhvcNAQELBQADggIBAGKZ3bknTCfNuh4TMaL3PuvBFjU8LQ5NKY9G
+LZvY2ibYMRk5Is6eWRgyUsy1UJRQdaQQPnnysqrGq8VRw/NIFotBBsA978/+jj7v
+4e5Kr4o8HvwAQNLBxNmF6XkDytpLL701FcNEGRqIsoIhNzihi2VBADLC9HxljEyP
+T52IR767TMk/+xTOqClceq3sq6WRD4m+xaWRUJyOhn+Pqr+wbhXIw4wzHC6X0hcL
+j8P9Povtm6VmKkN9JPuymMo/0+zSrUt2+TYfmbbEKYJSP0+sceQ76IKxxmSdKAr1
+qDNE8v+c3DvPM2PKmfivwaV2l44FdP8ulzqTgphkYcN1daa9Oc+qJeyu/eL7xWzk
+6Zq5R+jVrMlM0p1y2XczI7Hoc96TMOcbVnwgMcVqRM9p57VItn6XubYPR0C33i1y
+UZjkWbIfqEjq6Vev6lVgngOyzu+hqC/8SDyORA3dlF9aZOD13kPZdF/JRphHREQt
+aRydAiYRlE/WHTvOcY52jujDftUR6oY0eWaWkwSHbX+kDFx8IlR8UtQCUgkGHBGw
+nOYLIGu7SRDGSfOBOiVhxKoHWVk/pL6eKY2SkmyOmmgO4JnQGg95qeAOMG/EQZt/
+2x8GAavUqGvYy9dPFwFf08678hQqkjNSuex7UD0ku8OP1QKvpP44l6vZhFc6A5Xq
+jdU9lus1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.cern.ch/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.cern.ch/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.cern.ch/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.cern.ch/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">cern.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CERN</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cern.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>CERN</md:GivenName>
+	<md:SurName>Service Desk</md:SurName>
+	<md:EmailAddress>mailto:service-desk@cern.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>CERN</md:GivenName>
+	<md:SurName>Service Desk</md:SurName>
+	<md:EmailAddress>mailto:service-desk@cern.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>CERN Computer Security</md:GivenName>
+	<md:EmailAddress>mailto:computer.security@cern.ch</md:EmailAddress>
+	<md:EmailAddress>mailto:Romain.Wartel@cern.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

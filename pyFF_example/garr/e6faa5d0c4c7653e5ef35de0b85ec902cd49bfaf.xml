@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.itam.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-10-24T16:47:06Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">itam.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Theoretical and Applied Mechanics AS CR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav teoretické a aplikované mechaniky AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider ITAM AS CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance ÚTAM AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.itam.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.itam.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="42">https://gedeon.cas.cz/loga/logo-itam-44.png</mdui:Logo>
+		<mdui:Logo height="1095" width="1044">https://gedeon.cas.cz/loga/logo-itam-1095.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAI0UKnA4+P8sYwKi6vY4Uf/jSAT4MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejAeFw0xNjExMDgwNzE4MjVa
+Fw0zNjExMDgwNzE4MjVaMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANtjoV05ox9oVzk6hUYjtJS5uI34
+CkY+RdvtpAeG0AQSSIDQYu4rmEvvpgvk/K1bN5U5UsJ1V6IuAjj07RrIHFIGo/Y/
+5jbWQ9k5Kfm38w1/8/zj+9bJIbo1emokCteccOXx6XP/Oy8GVhUBjHHhJEAiMdZR
+3UgPeo673HfoeLUuDfHZ4MRBkDuJ0heibKSVShXkqhzt1IxATTEmKhTFAs7cmSbP
+Tufk80neYxWh0SFbEUH7AlPmfFoENd3s4hA6QtjPVShMYl+tbB0BvfRQ+++SzI2s
+EpYeVMzCiA7M52y3JfYRWIcayWgjMdBZ+qjUvs2NsGxF9bnWBfBI4ktQdlMCAwEA
+AaNlMGMwHQYDVR0OBBYEFLes5niegkxkJkVi4FFd77Yia6LNMEIGA1UdEQQ7MDmC
+D2lkcC5pdGFtLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaXRhbS5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAGA2vaxhsxtLsyL+Xwe4SzysaYpa
+Vi7HMwMYhdG+YcI4JkAQzYSMUyLKiV5jIzXS+nPbX64BL35NLZMXBe8aKXDernJv
+tmQoos0Hi6+J04DtKtJLse5lraK0k5zPfk5COKmlK8mFjgBaYns4iqJp2xOKYmyY
+5UEIkfqty6tmWNGUoQUu6fbxlSyiq031bQ/hLnS0DXa9/D7qm8Iby3aMRsfFybWY
+UTRz5/YE6Af9JTOg1bdBe59Clk2KO/4h7WavBB1mDEFyRgwgxQZYDEqnhxbh94qv
+A8EOVnZsOtT4nVz8Fx+d4ip1YKoE9e4ETK8Fflz6hX0acHdL+mcDi7pG1uk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUTsJG7DqoSro/8prgAfiwJPZtR1IwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLml0YW0uY2FzLmN6MB4XDTE2MTEwODA3MTgyM1oX
+DTM2MTEwODA3MTgyM1owGjEYMBYGA1UEAwwPaWRwLml0YW0uY2FzLmN6MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1GdrwRLttpicb+YMASkKzxjCxFEn
+SKF2VPUNRj8EFxgFK3jhBWlLLdpKHybywSg3ma0fDxpAq94WvEqtELUF6PjU1QOU
+caKWu1Cun51kLzC+87YnubBMm77RZ+I1qspdUQGXBTgJMHkbms/eUnWuhbMuhPSi
+cfr9gZqjjl7JRDJLoOPcNA/dRQZYEd8JE5bq4v6ZeRh+ZIuAKccmA+TJLhSOshyW
+1G/S6frZH4nhBsaWeWx5XhBEApgbsBwVHKq5k5j1OzXhTQCO530BfGjbJ+P5fWNK
+MPmrk4sQS71s2dEEAxTLGd23mctccLO957MiWQZFyzzwO9Uq01Xq1uC0pQIDAQAB
+o2UwYzAdBgNVHQ4EFgQU42SdYUixlDGkSDRK+423Y96S1hYwQgYDVR0RBDswOYIP
+aWRwLml0YW0uY2FzLmN6hiZodHRwczovL2lkcC5pdGFtLmNhcy5jei9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAExPN013jJxOTzuSdfvvXt6JF3CGC
+llsCITRvZoM4DmzQsVjP+3qWZ4D+giy+dgZiCMgMpYQb82R0TqiPpxdZfoYbE4ED
++8KS5uBn+IiqKLNkohM2y4uzJ2DYlT2tTMZZm6r+7DkUFKvafPzii4lytF5x86Al
+eFM9Y8GLFXxByeQyo/c2htwt5CfGgSKnHEsqwxW96rPOKEU+NYF1GNG15SK3kD/U
+k3Vk+SetrcPy/V1kDOY+MFXO/AVdwaUHFNis7BZo24GcF69/NuVwS0WLIxmWREPU
+iFu5T9cl0/Rh1hPLBSAbDzAnLHwJlJ6MLiFn6s6vqEiGD4Za1N8tl+3W0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAJCme1C3ge5Q6Y4psEopzxLrK5TaMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejAeFw0xNjExMDgwNzE4MjVa
+Fw0zNjExMDgwNzE4MjVaMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJEnPF4eCaLxyXyzLeUbzKtFutMe
+PxlztNcAEJ2LGGoJ16YEViXMa8nGvF92D/cFMwdQtG0cfzzLt93PsEqCfFb6pax9
+c4cjRX0tiQguB75BfFUorDnX8okeXqNtu0TAuQXx9d7MT8iK4eln+TO8q9YkNSr+
+UIUxiomxwvNALOFGPLz06VXEM4mConqsAhEPeeNiyvocB3/I3QZNMdlmocN/YH/B
+KVLT1AjgKMvGax0LMwLDoRA7Ljsdwz6e6h87eQyca3DjTEY9RfozGrMZeXLn4j5m
+fkkHsg7i/p3vaRmh4fgeZT4+yVXV1nw+Lp8vMn1vBD96FPFDoFkfIVFFhTkCAwEA
+AaNlMGMwHQYDVR0OBBYEFC14YaL3ewGKr8EvGg4+ct7KKxpzMEIGA1UdEQQ7MDmC
+D2lkcC5pdGFtLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaXRhbS5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAIlTXui6sdcYZY6g+lTmBQdIbv4l
+xffQ1nyhzEF1HInfh2DVxIyj36g7J6hImCZ/HhCkhE/WHycyVaW5CBoiOIiIXE++
+SSG5qo/2jwXp8XrY1kByeqfV1yRcPaJmtd4R+DxZJgARTnl8vSJy3NEQXvpFhI9A
+/7yOKpMJN7pNS9Hc336DmP5v10ErLMFpkN2+mRhTwDrVsGMunQ1qaZYfmSG6QICH
+ct+e6X3gffctJRWSeUgQYVpx8ohfgmh9ikErNri1fDpfcrC4WnGeArh3/DqUNUDa
+FNxNpfIz9AgLB5P8BHlFGmHiF29sDbWkzpINTaFLh9LlW45tsJ8AsD9iVjc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.itam.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.itam.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.itam.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.itam.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.itam.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.itam.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">itam.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAI0UKnA4+P8sYwKi6vY4Uf/jSAT4MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejAeFw0xNjExMDgwNzE4MjVa
+Fw0zNjExMDgwNzE4MjVaMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANtjoV05ox9oVzk6hUYjtJS5uI34
+CkY+RdvtpAeG0AQSSIDQYu4rmEvvpgvk/K1bN5U5UsJ1V6IuAjj07RrIHFIGo/Y/
+5jbWQ9k5Kfm38w1/8/zj+9bJIbo1emokCteccOXx6XP/Oy8GVhUBjHHhJEAiMdZR
+3UgPeo673HfoeLUuDfHZ4MRBkDuJ0heibKSVShXkqhzt1IxATTEmKhTFAs7cmSbP
+Tufk80neYxWh0SFbEUH7AlPmfFoENd3s4hA6QtjPVShMYl+tbB0BvfRQ+++SzI2s
+EpYeVMzCiA7M52y3JfYRWIcayWgjMdBZ+qjUvs2NsGxF9bnWBfBI4ktQdlMCAwEA
+AaNlMGMwHQYDVR0OBBYEFLes5niegkxkJkVi4FFd77Yia6LNMEIGA1UdEQQ7MDmC
+D2lkcC5pdGFtLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaXRhbS5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAGA2vaxhsxtLsyL+Xwe4SzysaYpa
+Vi7HMwMYhdG+YcI4JkAQzYSMUyLKiV5jIzXS+nPbX64BL35NLZMXBe8aKXDernJv
+tmQoos0Hi6+J04DtKtJLse5lraK0k5zPfk5COKmlK8mFjgBaYns4iqJp2xOKYmyY
+5UEIkfqty6tmWNGUoQUu6fbxlSyiq031bQ/hLnS0DXa9/D7qm8Iby3aMRsfFybWY
+UTRz5/YE6Af9JTOg1bdBe59Clk2KO/4h7WavBB1mDEFyRgwgxQZYDEqnhxbh94qv
+A8EOVnZsOtT4nVz8Fx+d4ip1YKoE9e4ETK8Fflz6hX0acHdL+mcDi7pG1uk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUTsJG7DqoSro/8prgAfiwJPZtR1IwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLml0YW0uY2FzLmN6MB4XDTE2MTEwODA3MTgyM1oX
+DTM2MTEwODA3MTgyM1owGjEYMBYGA1UEAwwPaWRwLml0YW0uY2FzLmN6MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1GdrwRLttpicb+YMASkKzxjCxFEn
+SKF2VPUNRj8EFxgFK3jhBWlLLdpKHybywSg3ma0fDxpAq94WvEqtELUF6PjU1QOU
+caKWu1Cun51kLzC+87YnubBMm77RZ+I1qspdUQGXBTgJMHkbms/eUnWuhbMuhPSi
+cfr9gZqjjl7JRDJLoOPcNA/dRQZYEd8JE5bq4v6ZeRh+ZIuAKccmA+TJLhSOshyW
+1G/S6frZH4nhBsaWeWx5XhBEApgbsBwVHKq5k5j1OzXhTQCO530BfGjbJ+P5fWNK
+MPmrk4sQS71s2dEEAxTLGd23mctccLO957MiWQZFyzzwO9Uq01Xq1uC0pQIDAQAB
+o2UwYzAdBgNVHQ4EFgQU42SdYUixlDGkSDRK+423Y96S1hYwQgYDVR0RBDswOYIP
+aWRwLml0YW0uY2FzLmN6hiZodHRwczovL2lkcC5pdGFtLmNhcy5jei9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAExPN013jJxOTzuSdfvvXt6JF3CGC
+llsCITRvZoM4DmzQsVjP+3qWZ4D+giy+dgZiCMgMpYQb82R0TqiPpxdZfoYbE4ED
++8KS5uBn+IiqKLNkohM2y4uzJ2DYlT2tTMZZm6r+7DkUFKvafPzii4lytF5x86Al
+eFM9Y8GLFXxByeQyo/c2htwt5CfGgSKnHEsqwxW96rPOKEU+NYF1GNG15SK3kD/U
+k3Vk+SetrcPy/V1kDOY+MFXO/AVdwaUHFNis7BZo24GcF69/NuVwS0WLIxmWREPU
+iFu5T9cl0/Rh1hPLBSAbDzAnLHwJlJ6MLiFn6s6vqEiGD4Za1N8tl+3W0w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAJCme1C3ge5Q6Y4psEopzxLrK5TaMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejAeFw0xNjExMDgwNzE4MjVa
+Fw0zNjExMDgwNzE4MjVaMBoxGDAWBgNVBAMMD2lkcC5pdGFtLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJEnPF4eCaLxyXyzLeUbzKtFutMe
+PxlztNcAEJ2LGGoJ16YEViXMa8nGvF92D/cFMwdQtG0cfzzLt93PsEqCfFb6pax9
+c4cjRX0tiQguB75BfFUorDnX8okeXqNtu0TAuQXx9d7MT8iK4eln+TO8q9YkNSr+
+UIUxiomxwvNALOFGPLz06VXEM4mConqsAhEPeeNiyvocB3/I3QZNMdlmocN/YH/B
+KVLT1AjgKMvGax0LMwLDoRA7Ljsdwz6e6h87eQyca3DjTEY9RfozGrMZeXLn4j5m
+fkkHsg7i/p3vaRmh4fgeZT4+yVXV1nw+Lp8vMn1vBD96FPFDoFkfIVFFhTkCAwEA
+AaNlMGMwHQYDVR0OBBYEFC14YaL3ewGKr8EvGg4+ct7KKxpzMEIGA1UdEQQ7MDmC
+D2lkcC5pdGFtLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaXRhbS5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAIlTXui6sdcYZY6g+lTmBQdIbv4l
+xffQ1nyhzEF1HInfh2DVxIyj36g7J6hImCZ/HhCkhE/WHycyVaW5CBoiOIiIXE++
+SSG5qo/2jwXp8XrY1kByeqfV1yRcPaJmtd4R+DxZJgARTnl8vSJy3NEQXvpFhI9A
+/7yOKpMJN7pNS9Hc336DmP5v10ErLMFpkN2+mRhTwDrVsGMunQ1qaZYfmSG6QICH
+ct+e6X3gffctJRWSeUgQYVpx8ohfgmh9ikErNri1fDpfcrC4WnGeArh3/DqUNUDa
+FNxNpfIz9AgLB5P8BHlFGmHiF29sDbWkzpINTaFLh9LlW45tsJ8AsD9iVjc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.itam.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Theoretical and Applied Mechanics AS CR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Ústav teoretické a aplikované mechaniky AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Theoretical and Applied Mechanics AS CR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav teoretické a aplikované mechaniky AV ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.itam.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.itam.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

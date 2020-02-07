@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fh-burgenland.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2018-07-18T15:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fh-burgenland.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">FH Burgenland</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Sciences Burgenland</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">Fachhochschule+Burgenland</mdui:Keywords>
+		<mdui:Logo height="91" width="160">https://www.fh-burgenland.at/fileadmin/user_upload/InformationServices/Eisenstadt/Bilder/extern/eduId_FH_logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.fh-burgenland.at/fileadmin/user_upload/InformationServices/Eisenstadt/Bilder/extern/eduId_FH_favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>78.104.88.0/21</mdui:IPHint>
+		<mdui:IPHint>2001:628:2290::/48</mdui:IPHint>
+		<mdui:DomainHint>fh-burgenland.at</mdui:DomainHint>
+		<mdui:DomainHint>fh-burgenland.ac.at</mdui:DomainHint>
+		<mdui:DomainHint>forschung-burgenland.at</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.82941,16.53505</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.36250,16.12681</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAPuWp+W8KtVuU6UIxxRZXZtb1DwCMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcC5maC1idXJnZW5sYW5kLmF0MB4XDTE4MDUxNTEx
+NDYyMFoXDTM4MDUxNTExNDYyMFowHzEdMBsGA1UEAwwUaWRwLmZoLWJ1cmdlbmxh
+bmQuYXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCHmOOBr+NX7f8T
+V1I0v6AOeWuYovpicrbv3Kfkut6zlyMvHfQQMHJXD+KpCG3iBCLhycaqRiy9fLu8
+iaz++5I1nmAL2LekS3Dy+j4kzcRVXC+Yh5a7GfTV/QUbjcjOjhbuxoBPlDRjq3dO
+w/YovcLS6jHoJjhS+uUhbbDgNrkS1hosbk6GmVDX3zRv4koSvtW8avlSn9dzyHB2
+UPwcatlRpEbIyXkgHaLLjP7KfZNTPgCVfJ9AdfvdIRw5Tvq+0cPZocAD8FEtfoYz
+1YIt7k1wSDlxOgXNu2MwqQ1M6lBwnTwyvddh04KXsc8NkA/nL0g2j7gVElPuipeA
+N7giyGZzAgMBAAGjbzBtMB0GA1UdDgQWBBQz2HkydMRsccm27MgadwTymN2hRzBM
+BgNVHREERTBDghRpZHAuZmgtYnVyZ2VubGFuZC5hdIYraHR0cHM6Ly9pZHAuZmgt
+YnVyZ2VubGFuZC5hdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+b8cU27oJ+Sft4OMpPybgWgW9gEjqBPgi7zZdmEkhPX/8vQVcGv2e2bdt0WMM0/v2
+dPnpyuhLikkgdRhN2g21DRXB2r8ZH4zKKzv57LDAzn9cKTuJJkI9CoAzkr0bXAlA
+WYYDOH2lsdhHXCaVNXFtSE4usQ5vzYKo/IwDaWkTpTVGlAawYrWMLanQrWjOZYjV
+rGcxT/FfiZ7R8qZ7yZCqwt/32TEQ8NlCza4Hr97FWFC49S7z5c7Orb3fluxoWetE
+6lhfnBJlbJ+KKpNdOAcA2a51VjpcbgOkqc/Yg2/Rac/aQF9AINHvuvLn/eOuqkS5
+Fi03OVW8FYASpOanev1Ykw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUPFLkc8E6vnvxYS02ZMWv6YKzB6IwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRwLmZoLWJ1cmdlbmxhbmQuYXQwHhcNMTgwNTE1MTE0
+NjE5WhcNMzgwNTE1MTE0NjE5WjAfMR0wGwYDVQQDDBRpZHAuZmgtYnVyZ2VubGFu
+ZC5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKyYG8oNJk/Pji28
+9GQh+MEAz9oG8JOMgMLIVA10Ezdp9XLRyNCG34xQcdcTsC9DvXiAfQAxZtwcuvJn
+pv7WfjkylHNkj8b1bUnKZL8PCK9c2XbXYe8VcsZzJPZbdzT0GvkczUNnmH2ng4B2
+CNHnm/SgI+cN7KGi3ne5/WAWrOFXc5kSAPw6JcvE3r/sAunPvNuh73TDNCSCdPrV
+w6PHq5AN7QNmqieIVTfvhoLbduvXptOpsVHE7xYkVVemvlH0MVc84YqZfn3QpGNh
+DWcP3FIW04s1t4OeqBYhCqzTM7FX2Gj+s1qk0ueNduG9Ne/ffTwEMGwpYTqgPQ70
+QYk5n2ECAwEAAaNvMG0wHQYDVR0OBBYEFDNDqfCbRc+PMQ4IKbpe8cITur4GMEwG
+A1UdEQRFMEOCFGlkcC5maC1idXJnZW5sYW5kLmF0hitodHRwczovL2lkcC5maC1i
+dXJnZW5sYW5kLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBC
+T8a9wnX650KKXnzO0RZ+el43CWLcztZSp0kXjwqIEmHK96EG5SLgN1wZqTCXmV1d
+qCHLlwXUyIrtsf5za1q27SDf8OnuwNYDISD4Z1HQMar3Q3d/4hmNsh4Gjd6AiDed
+hh870dRM/z/StdyLG5HRs97puCs89g3e3cBHfKTZuMH03dDNV+GNPnfZJxqgYzmc
+fqvy+xevGEW/XlfttnkxTf0fc4J3Hr+XqQFFHHFRckmQnIJ5vpV1LraBNxmHAfoM
+0AkN7RaSQZHheVWwJu3rGnnEhB49JlDG12A9X3iL+NVTEk4Hbw4MO0/9IEZ0vBFj
+sX6q3wMp0h7DZT3Tq6rt
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAKwsDzcUyVnFMKCGW2cAZDOZckJeMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFGlkcC5maC1idXJnZW5sYW5kLmF0MB4XDTE4MDUxNTEx
+NDYyMFoXDTM4MDUxNTExNDYyMFowHzEdMBsGA1UEAwwUaWRwLmZoLWJ1cmdlbmxh
+bmQuYXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDzIwQnocH4WACz
+Zff8WA0eCEJZixXJo/DIiLgRUMXPXiWg3a6kzTjpUYdVWYZsGkXUeOx7SeGqL+fk
+XRGI3WwP+VpRO4hBpXB0LDK6MMmFo9oP/eX6rv5dWOgEol2L2oyM0xL5bzbs7Lac
+5IK6+rQgV9cQDZ2AC3b2TJuRpS7TixvR/MAvyGo6o/bshn4/b99KKveVWP/Zdx0b
+Q+gjWLDmzhRc4MpUEcN+eAHSV8wqD5wNwxeDVJU+wj59tkR9SdNde6WffVAUBY2I
+TjDhXvLZOWG9tMaLw/L+8zgowHOetXncy4ofj+lB85d+ocMEXPVy0O3lGOKRE8zd
+fAU4vKuvAgMBAAGjbzBtMB0GA1UdDgQWBBTjY4J/eozLMgSaqQqZW/KvpuYLVTBM
+BgNVHREERTBDghRpZHAuZmgtYnVyZ2VubGFuZC5hdIYraHR0cHM6Ly9pZHAuZmgt
+YnVyZ2VubGFuZC5hdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+FYhYCupm/ysfVmxfSEt/L1akVxSL3KZb3EuxjUctd1TqMvGVQ3zZTbJAs0p0S2ry
+813Y5N/uTvcy4R41X+E2b0a+dkp1zcEQ1W/RWsktkVeKFl8QvYc8nATLDjg3Phod
+e92Z9d9bWRCSJV8Vel+3hQXy6D9mdEU0CSMEiQJ4wvqUfc0t1axcXwfTlBd7tAKu
+Z0L9myBpDkzOqj8uwKB7nc8m0kIyEOMqPFtv1+LvEHLmhVkBIQjOaQSU7H0kLzd5
+bH/ZBdXi0g88rCS3MeQECHFH4u5eCkG00sb5agu1vfKkBxXSo5VHL1ljer+tNovG
+pFAgA3j4zLXZkpK3eiJkSA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fh-burgenland.at:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.fh-burgenland.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fh-burgenland.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Fachhochschule Burgenland GmbH</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Applied Sciences Burgenland</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">FH Burgenland</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Applied Sciences Burgenland</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.fh-burgenland.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.fh-burgenland.at/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpline@fh-burgenland.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpline@fh-burgenland.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:SurName>Contact</md:SurName>
+	<md:EmailAddress>mailto:helpline@fh-burgenland.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

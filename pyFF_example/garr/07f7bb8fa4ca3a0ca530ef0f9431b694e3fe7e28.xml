@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ibt.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-08T12:52:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ibt.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Biotechnology CAS, v.v.i.</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Biotechnologický ústav AV ČR, v.v.i.</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IBT AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance BTÚ AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ibt.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.ibt.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="63">https://gedeon.cas.cz/loga/logo-btu-44.png</mdui:Logo>
+		<mdui:Logo height="366" width="524">https://gedeon.cas.cz/loga/logo-btu-366.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPKHsso4A8D+6XjgvJQs+cFAO61hMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwNFoX
+DTM2MTExNDEwMjQwNFowGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDF9GFEWmDd/YvdBBA0F+scMr7ENXG5
+JcXqRA33FIx6oHuhxY9DhjHL20pvWoH8UUIa7KXb/Te7Zf+Gz2a9slqmqa5rks0n
+ccRBwlZF1bwohWgg/N5egsYGF2T964llM3DQRYMk7mZ0/xJM5dFm9JD5uOxivBgS
+BvAddaroulkrKpHvbwbFXYqsLnEYfudxswatTV45y0R/BmOn7Ow3ZZ4mZVir7Kkw
+rNjN/sxs90QSy8sG/1U4g8um44YSPEuqjsWAXfngQEURL4Jf7x9O69vvX/HBQ3n4
+Gk6vxchSsNVIxzxIAT1dq5bBMTconreDAHzbxRzEb1F653dwkMTcJAuZAgMBAAGj
+YzBhMB0GA1UdDgQWBBQUVuCsI7AEejYuGrf5DZjj+/2C9DBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAH9K10ma5ChleP5/7OnnKImA7nN5aBUF1
+uckPMTALIQ8ps4ZJOGEDB3NLvrylMENqU5aURMhruQQ4DcL3Zj9rZEKRLDOqSpl1
+usCsJP+P7VVp1VQeQeLBQr5ezfbQWnc+AxvF7SwJ2hpZRWVm5OJ3zocElArEy1By
+3QMhjvk5wOXLLYuWlD9Pt7snMQTMJZqiDGOb0kCgc0b7rXHHQnkv/jAhok+XwIx4
+/BR3ywpZw3CGgRGe62cK8PvXM0O+3en6ihjcTiPE3+lSmpc7FS8YTxnCL1y0F7eG
+O9SbEJXrPxF2DJV5D4MfDl5NqOPBqqzZJOILK1CD15gdXjv4Jgf2Tg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAN2lfsD9WZirHM2htr3ey+nTJ+CmMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwM1oX
+DTM2MTExNDEwMjQwM1owGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmtgWKB5xPI3XHyVYwIl7pcOVEuxwF
+kl9FUJ8w/UOHZYPAtfZFslEQlr4dg4kmfs/xnSDLhCUG/WNmLFW84zSbA4pD0Gaf
+4B8J+Z4l847nXJtfCzj6yPoJla9EJ4oeq7LEEU+i1wRtOw8ds9SX2RQgfF1ocn3t
+WeERq7TvGdQv3pFxqtzo1duan4LpsRLh/mU0GeOGppYfrOk1WEpXesO4qImGRRg1
+ovci9mhk4ruBOjAc5y6B58tHjTC0llFWTPHuVZ/pSFkmd0OJEeVlPft8/+lOm7oM
+WIwizfLAcTR7rRh9zbODE/iS8KiMB0ZVpyiMN/CqWafmWuHrEzVn9CJzAgMBAAGj
+YzBhMB0GA1UdDgQWBBT4v33Qti0W3Uo2eFBxMFEXMrCRZTBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJt3fuocOj0582TQQww8wgt8C36nnTY0b
+WKn2HeWtY5lDywSJsLzGPop19+XfrK6i0TPnb/ZXT0SfJO2rxpNCmLRa8EoXZy3k
+85qGN0kuQC3KWxpOGiogQ5Z03hNmCNFD1Vnr7ej8qcuDeIEPiqVNl4Yvv25/5OOa
+0yJx6/DzAU64xiyLSIgk0hjMKtUZePJG0nQwPSaj+asZlbvqDgAWuRg7tag6Up1R
+Qtw/v6aq+xoeFSB5RUjKn5eKrV0fQHKxYADC4dtofTv/W77Z1TxpisKKRxNEx7NF
+Fo3V+zbXpUR6rYe5ZcZG0SjkR3x5VJih9o3eo5PFGdlNHNjoRwZDYA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVANn8hH0rP1toNipGSDrI6cLOAfpVMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwM1oX
+DTM2MTExNDEwMjQwM1owGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHbIPKtjMKdLWSjQvvQZC9lEKT/l+3
+oZQa9GHIxeJP/GqOsfw3z/oqDMA4IlhF2/VS45IvIdTnR942wgUZ4b2u+mc4o/MO
+EkAKP+Iq06bXKRNmfVd1fnMiq0eKABZIZknasvNpR9wIERvlou1u7vRqkvvHJ3qA
+jnC3oXTemmLHIxrHJGEKwFF0Lpti0u1toWUFr+6S+mWGAZ8KYyUH1c9qEV2hcUS4
+NLUv999tpJ58N2obJ3ZzQ6oaZcbtngbOSQsJUqaJQk7OtYICGrUOmgmeEc35EKmU
+90YNmlyGVldFHCV3+tFNc6KUlMHlbZv4Jc3jlhInt7553xSZdu4DNwFLAgMBAAGj
+YzBhMB0GA1UdDgQWBBTEhRRiNNiJO/nRDGiUomWThW7MiDBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAAcfRvgcznSoWfSmqQ2M4ZVKLekUjFTf/
+/lzckET54dO9c0gRDHJK7UsyDL+4lYgOgk7408gQo92gLg74tVBuKiA1eREPHaQJ
+6rl7wLSLyHb9JYhDPeFeCdyiXhq66d0M8GQSYqgFa63MNVpkUS7lxRhmWakKdgJ1
+D+zjxkfKoSSn8+uppqdOGf3rkLdiNc5rW7AKcGb8PXkxFN9FJSPoqgECqGJEB3wF
+dV1pyGUtteB/VycA1tYxXPI+XxraSzKwq3B2fO82HDlSSA53/WKkG34K6O9GL8Of
+L41DxoWltYg4PPLKPNxGHW0/wQnYAQp/6uJoic6JF+DG3+RAgNcvog==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ibt.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ibt.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ibt.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ibt.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ibt.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ibt.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ibt.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPKHsso4A8D+6XjgvJQs+cFAO61hMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwNFoX
+DTM2MTExNDEwMjQwNFowGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDF9GFEWmDd/YvdBBA0F+scMr7ENXG5
+JcXqRA33FIx6oHuhxY9DhjHL20pvWoH8UUIa7KXb/Te7Zf+Gz2a9slqmqa5rks0n
+ccRBwlZF1bwohWgg/N5egsYGF2T964llM3DQRYMk7mZ0/xJM5dFm9JD5uOxivBgS
+BvAddaroulkrKpHvbwbFXYqsLnEYfudxswatTV45y0R/BmOn7Ow3ZZ4mZVir7Kkw
+rNjN/sxs90QSy8sG/1U4g8um44YSPEuqjsWAXfngQEURL4Jf7x9O69vvX/HBQ3n4
+Gk6vxchSsNVIxzxIAT1dq5bBMTconreDAHzbxRzEb1F653dwkMTcJAuZAgMBAAGj
+YzBhMB0GA1UdDgQWBBQUVuCsI7AEejYuGrf5DZjj+/2C9DBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAH9K10ma5ChleP5/7OnnKImA7nN5aBUF1
+uckPMTALIQ8ps4ZJOGEDB3NLvrylMENqU5aURMhruQQ4DcL3Zj9rZEKRLDOqSpl1
+usCsJP+P7VVp1VQeQeLBQr5ezfbQWnc+AxvF7SwJ2hpZRWVm5OJ3zocElArEy1By
+3QMhjvk5wOXLLYuWlD9Pt7snMQTMJZqiDGOb0kCgc0b7rXHHQnkv/jAhok+XwIx4
+/BR3ywpZw3CGgRGe62cK8PvXM0O+3en6ihjcTiPE3+lSmpc7FS8YTxnCL1y0F7eG
+O9SbEJXrPxF2DJV5D4MfDl5NqOPBqqzZJOILK1CD15gdXjv4Jgf2Tg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAN2lfsD9WZirHM2htr3ey+nTJ+CmMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwM1oX
+DTM2MTExNDEwMjQwM1owGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmtgWKB5xPI3XHyVYwIl7pcOVEuxwF
+kl9FUJ8w/UOHZYPAtfZFslEQlr4dg4kmfs/xnSDLhCUG/WNmLFW84zSbA4pD0Gaf
+4B8J+Z4l847nXJtfCzj6yPoJla9EJ4oeq7LEEU+i1wRtOw8ds9SX2RQgfF1ocn3t
+WeERq7TvGdQv3pFxqtzo1duan4LpsRLh/mU0GeOGppYfrOk1WEpXesO4qImGRRg1
+ovci9mhk4ruBOjAc5y6B58tHjTC0llFWTPHuVZ/pSFkmd0OJEeVlPft8/+lOm7oM
+WIwizfLAcTR7rRh9zbODE/iS8KiMB0ZVpyiMN/CqWafmWuHrEzVn9CJzAgMBAAGj
+YzBhMB0GA1UdDgQWBBT4v33Qti0W3Uo2eFBxMFEXMrCRZTBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJt3fuocOj0582TQQww8wgt8C36nnTY0b
+WKn2HeWtY5lDywSJsLzGPop19+XfrK6i0TPnb/ZXT0SfJO2rxpNCmLRa8EoXZy3k
+85qGN0kuQC3KWxpOGiogQ5Z03hNmCNFD1Vnr7ej8qcuDeIEPiqVNl4Yvv25/5OOa
+0yJx6/DzAU64xiyLSIgk0hjMKtUZePJG0nQwPSaj+asZlbvqDgAWuRg7tag6Up1R
+Qtw/v6aq+xoeFSB5RUjKn5eKrV0fQHKxYADC4dtofTv/W77Z1TxpisKKRxNEx7NF
+Fo3V+zbXpUR6rYe5ZcZG0SjkR3x5VJih9o3eo5PFGdlNHNjoRwZDYA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVANn8hH0rP1toNipGSDrI6cLOAfpVMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pYnQuY2FzLmN6MB4XDTE2MTExNDEwMjQwM1oX
+DTM2MTExNDEwMjQwM1owGTEXMBUGA1UEAwwOaWRwLmlidC5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDHbIPKtjMKdLWSjQvvQZC9lEKT/l+3
+oZQa9GHIxeJP/GqOsfw3z/oqDMA4IlhF2/VS45IvIdTnR942wgUZ4b2u+mc4o/MO
+EkAKP+Iq06bXKRNmfVd1fnMiq0eKABZIZknasvNpR9wIERvlou1u7vRqkvvHJ3qA
+jnC3oXTemmLHIxrHJGEKwFF0Lpti0u1toWUFr+6S+mWGAZ8KYyUH1c9qEV2hcUS4
+NLUv999tpJ58N2obJ3ZzQ6oaZcbtngbOSQsJUqaJQk7OtYICGrUOmgmeEc35EKmU
+90YNmlyGVldFHCV3+tFNc6KUlMHlbZv4Jc3jlhInt7553xSZdu4DNwFLAgMBAAGj
+YzBhMB0GA1UdDgQWBBTEhRRiNNiJO/nRDGiUomWThW7MiDBABgNVHREEOTA3gg5p
+ZHAuaWJ0LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaWJ0LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAAcfRvgcznSoWfSmqQ2M4ZVKLekUjFTf/
+/lzckET54dO9c0gRDHJK7UsyDL+4lYgOgk7408gQo92gLg74tVBuKiA1eREPHaQJ
+6rl7wLSLyHb9JYhDPeFeCdyiXhq66d0M8GQSYqgFa63MNVpkUS7lxRhmWakKdgJ1
+D+zjxkfKoSSn8+uppqdOGf3rkLdiNc5rW7AKcGb8PXkxFN9FJSPoqgECqGJEB3wF
+dV1pyGUtteB/VycA1tYxXPI+XxraSzKwq3B2fO82HDlSSA53/WKkG34K6O9GL8Of
+L41DxoWltYg4PPLKPNxGHW0/wQnYAQp/6uJoic6JF+DG3+RAgNcvog==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ibt.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Biotechnology CAS</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Biotechnologický ústav AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Biotechnology CAS, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Biotechnologický ústav AV ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ibt.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.ibt.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

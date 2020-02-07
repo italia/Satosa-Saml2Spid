@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.sthelenslife.net/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2011-09-01T16:34:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.sthelenslife.net/Shibboleth.sso/Secure"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIJAMzAs1ASwVMDMA0GCSqGSIb3DQEBBQUAMB8xHTAbBgNV
+BAMTFHd3dy5zdGhlbGVuc2xpZmUubmV0MB4XDTExMDgzMTEzMTk0M1oXDTIxMDgy
+ODEzMTk0M1owHzEdMBsGA1UEAxMUd3d3LnN0aGVsZW5zbGlmZS5uZXQwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDsKV5eWwWRG6z8eVRrTLoDtZcSftHI
+BYUX13hrU8cE1IofG58fDeoJhwJY0joxnnpwNQZGNolX0EIIjNNbW9CSckPwJxSl
+RTHXK2J6R4PjMePxLNAetK9V0oxC0PMz28n30N6iyP/LyYr9+rdYyLElQawtM2ZN
+2U7erDr215gP7GDd6sqWmp+s6hKhHdjLFbCLBgTOlCFVMiz17x4Z0DbemQZsbmja
+j7YdIcVeqTNLludEKIcg5Hl7XXyXbiAyBnlK1S0ljW89+2b6g9Kr2aVNBg3hRi6O
+Tdru8W+kbkvU5JxGK7hOSZZtRiZi9YO9wcbsuQh43mVfyyTS6+4TQsd3AgMBAAGj
+azBpMEgGA1UdEQRBMD+CFHd3dy5zdGhlbGVuc2xpZmUubmV0hidodHRwczovL3d3
+dy5zdGhlbGVuc2xpZmUubmV0L3NoaWJib2xldGgwHQYDVR0OBBYEFHcQZY+V9asV
+5kkMf9gJVci4/nK4MA0GCSqGSIb3DQEBBQUAA4IBAQDjzLkEqEVDhilutvybAtkZ
+QaO++l/AlDpB8Bb4E2EdeKxIFXRxWoRmPT4SFtbKlGRMG6Pw9hpC6ujw9s+oNq2E
+GRnGRT44qUcd3YpUdjS2puF13vtqY7q+dWgMk2WzI+5v+I8DckPo0j603F9rlGgR
+WUT2yIvdX+m/AEMeWowT5qYfv0Qdmf7dWrn/H4ITlUb8Rw10DtFL5aWSEu+lVK0E
+afPqDUGNuJgpItPpvxVX7yKHooGSQkdigJqwN+lyrusV6OZt2fnrKZkr3nSTjYfg
+yQBZZJMd4TmXDz4KAxPrktUlomUIorfnKHBMSVwvF6hYYNOe4rXpTCqHxeNetBcW
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.sthelenslife.net/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.sthelenslife.net/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.sthelenslife.net/Shibboleth.sso/SLO/Artifact"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.sthelenslife.net/Shibboleth.sso/SLO/Redirect"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.sthelenslife.net/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.sthelenslife.net/Shibboleth.sso/SAML/POST" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">UniServity Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">UniServity Limited: St Helens Council</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uniservity.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UniServity Support</md:GivenName>
+	<md:EmailAddress>mailto:support@uniservity.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Rezar</md:GivenName>
+	<md:SurName>Zefaj</md:SurName>
+	<md:EmailAddress>mailto:rezar.zafaj@uniservity.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

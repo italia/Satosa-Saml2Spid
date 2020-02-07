@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://maison.io/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://maison.io/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Maison</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Office Hours made easy.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://maison.io/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://maison.io/privacy-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="25" width="177" xml:lang="en">https://maison.io/assets/images/maison-logo-medium.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID3DCCAkSgAwIBAgIJAN3H/7DWPXH/MA0GCSqGSIb3DQEBCwUAMBIxEDAOBgNV
+BAMTB2xvbmdmaW4wHhcNMTYwODEzMTkxNzQwWhcNMjYwODExMTkxNzQwWjASMRAw
+DgYDVQQDEwdsb25nZmluMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA
+s6OM96kEd95ZDqthUnaxmtgR5FDJc/hzNUtOZh33dXez3aBxwCxbk5UFcLcQPyYZ
+r2eXjok2DSJmTASTGuW3L0Y9D19rhFGFlJK0XW9jv89pVDU/Rb/Go+Dx6jbJUEKU
+xMkDrJu0cjXhCxUeExDNuVsxLdDN9Ygx1PwzUUAdwjCdIaVIs0m08zMriSJY08Yt
+dXMt1c+J9p8uN1PpO0Hw4jc2uEWIEwChuSKWHDaej2KV85HZQpMjUAez8DA6qmKP
+OH/0rKj5pY+tZFFfyudlC7ZzKC/qdNKK/XtZNP7hocU/d6b+P0PN01LIAy6ZWJQr
+o469Lx0NOOb8BK3TxHx9gp1cVtxHI16l4SlPMl1AMaMkaSKQtOwNKdJSIoyQwYRP
+ZoxJnGq2j4HxOB+E6pmXKCh9p7dvjeD1hkoyX9BrAFao8A59tRkhx7jLYYYF/wPb
++8W9txcqn3Oe4w7GqId0RdS0ArHtyuQEn2BpDATHy3JWBUWuJ69UqLDggm9YIZ+3
+AgMBAAGjNTAzMBIGA1UdEQQLMAmCB2xvbmdmaW4wHQYDVR0OBBYEFCpKswUfifAr
+mQcuhsTRhgpQn4RXMA0GCSqGSIb3DQEBCwUAA4IBgQBj/IA9Xa+bt53mmd92Iey8
+pDCY+HkBauk3CsnTiJ9r48mDq+EbVowMnxuykpe2LPcNsKKkkH4zv8rkyTfJhcDl
+PSw0EpD+sDTd6KhXOHB+Pb/pnQZScXU+J51bDG77LEk927o05aKinnQkxQSJSqEH
+s76PoXeR3g5mgkO6/YPAM8TQ/2SdixLaQhwFt8mH2S+oh7bB1Fz9HIiu+DJdCncb
+n+OaOq3QJddrLSL5ZuYoG0FbpTp/xa3CkL8vale5Yw03L33UdtX/1LHexEuWP5U/
+/Uv7eXSAD4xLbBm9B9lG+eIIcPFll5ibtb9QBxtou/C2SSKAG9oaG4WEJul5+Ho/
+zAb5DKapzYMhpz3WD4QmY2IhWqnf9PuQj6+7YM/S6dn1s2ts2GOGX5sNp/HF1Ze4
+IqD6SIp2pnw/Lmx/cbXvKJ6KCl9mcMRd47E/HKiVRQEQcy4LkjHkb282hDAK1yfU
+Xtgx1lJsczJ35524QreOWXDQZjZ4M0qFj1yeK7JPGkM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://maison.io/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://maison.io/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://maison.io/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://maison.io/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Hampshire College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Hampshire College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hampshire.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jose Fuentes</md:GivenName>
+	<md:EmailAddress>jafafuentes@gmail.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Becca Groveman</md:GivenName>
+	<md:EmailAddress>bgroveman@hampshire.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jose Fuentes</md:GivenName>
+	<md:EmailAddress>jafafuentes@gmail.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

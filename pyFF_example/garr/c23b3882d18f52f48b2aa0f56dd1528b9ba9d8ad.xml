@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.zu.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-03-21T10:13:48Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>basic</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zu.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.zu.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Zeppelin Universität</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Zeppelin University</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Idendity Provider für Mitarbeiter und Studenten der Zeppelin Universität</mdui:Description>
+		<mdui:Description xml:lang="en">Idendity provider for employees and students of  zeppelin university</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.zu.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="68" width="260">https://idp.zu.de/idp/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGDTCCBPWgAwIBAgIMHgl+HwbN1m8bmFofMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MTAyMDEzNTYzMVoXDTIxMDExNjEzNTYzMVowgZkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxGDAWBgNVBAcMD0ZyaWVkcmljaHNoYWZl
+bjEyMDAGA1UECgwpWmVwcGVsaW4gVW5pdmVyc2l0YWV0IGdlbWVpbm51ZXR6aWdl
+IEdtYkgxCzAJBgNVBAsMAklUMRIwEAYDVQQDDAlpZHAuenUuZGUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCHuRbDsHHuE7XfbooeHSuP2HQnbJujW+ev
+yZI92E4iX3DqRsC1mNXrWpYzfSSCWWu/PcyWAQI+nDq3Sy89PDQo31Lj6Eyuw/Yt
+OX6dmDwNN+2Uu+JTLgNaOvrzahl5EuWdZeYTSfuC3jL4yRz9PmnHhEw1Pn87573K
+/SaP+0AnFlcIrlbj6DQkuYLD7LaqJcOecEh5LYo9TEUM9eLvNr9CAyZxvslEckG3
+8w49g16FBGMQQXhjKHlMo1phyocLdKGG2gFmmM1UzM0sbsxOMr85rP/He3Al9zPw
+lObQ/U1kjTMbkgZ0Qc9dyyq8bmvuSJmXyPPHukkGqBVg1kJmqAnVAgMBAAGjggJd
+MIICWTBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEE
+AYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDBjARBg8rBgEEAYGtIYIsAgEEAwYw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRycP79ZFPYgLAF3ITq1IMsjKzczjAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAUBgNVHREEDTALgglpZHAuenUuZGUw
+gY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+gdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2Eu
+ZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAx
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWds
+b2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQELBQADggEB
+AHg8plAKSFqkBmbmEH+afuAiE5zFqT0RWfWjVYmGb1gVuAAzZPXv15zr0bTYyx/F
+Kky47GIx6aXnu65+bmkcj8dmEsrFW1ZAsdiIKUnbWthRfTJ+z7u2YxNy2mJ+EXGF
+b3El0BjTbiaFJYvbZxbkvV+r+lOmborXnhFTq4NUcHBii8N/Xyipz55BzVejO8TI
+lH/p53s1v2SQEKUb2JeRytFvzjyK0vfTq3nTpa8WqRplhcWpl30RW5dU0A9RB6LP
+hDSYrM606AY/gVqMOlVWx2MGK7OmEdHL38/a9E/AhDFTH6RgtbE8xMLSEvr4mcQp
+ZIH4vs2YzArTtgudg+4w5js=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.zu.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.zu.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.zu.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.zu.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.zu.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.zu.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.zu.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.zu.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.zu.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.zu.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.zu.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zu.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.zu.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGDTCCBPWgAwIBAgIMHgl+HwbN1m8bmFofMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE3
+MTAyMDEzNTYzMVoXDTIxMDExNjEzNTYzMVowgZkxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxGDAWBgNVBAcMD0ZyaWVkcmljaHNoYWZl
+bjEyMDAGA1UECgwpWmVwcGVsaW4gVW5pdmVyc2l0YWV0IGdlbWVpbm51ZXR6aWdl
+IEdtYkgxCzAJBgNVBAsMAklUMRIwEAYDVQQDDAlpZHAuenUuZGUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCHuRbDsHHuE7XfbooeHSuP2HQnbJujW+ev
+yZI92E4iX3DqRsC1mNXrWpYzfSSCWWu/PcyWAQI+nDq3Sy89PDQo31Lj6Eyuw/Yt
+OX6dmDwNN+2Uu+JTLgNaOvrzahl5EuWdZeYTSfuC3jL4yRz9PmnHhEw1Pn87573K
+/SaP+0AnFlcIrlbj6DQkuYLD7LaqJcOecEh5LYo9TEUM9eLvNr9CAyZxvslEckG3
+8w49g16FBGMQQXhjKHlMo1phyocLdKGG2gFmmM1UzM0sbsxOMr85rP/He3Al9zPw
+lObQ/U1kjTMbkgZ0Qc9dyyq8bmvuSJmXyPPHukkGqBVg1kJmqAnVAgMBAAGjggJd
+MIICWTBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEE
+AYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDBjARBg8rBgEEAYGtIYIsAgEEAwYw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBRycP79ZFPYgLAF3ITq1IMsjKzczjAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAUBgNVHREEDTALgglpZHAuenUuZGUw
+gY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+gdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2Eu
+ZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAx
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWds
+b2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwDQYJKoZIhvcNAQELBQADggEB
+AHg8plAKSFqkBmbmEH+afuAiE5zFqT0RWfWjVYmGb1gVuAAzZPXv15zr0bTYyx/F
+Kky47GIx6aXnu65+bmkcj8dmEsrFW1ZAsdiIKUnbWthRfTJ+z7u2YxNy2mJ+EXGF
+b3El0BjTbiaFJYvbZxbkvV+r+lOmborXnhFTq4NUcHBii8N/Xyipz55BzVejO8TI
+lH/p53s1v2SQEKUb2JeRytFvzjyK0vfTq3nTpa8WqRplhcWpl30RW5dU0A9RB6LP
+hDSYrM606AY/gVqMOlVWx2MGK7OmEdHL38/a9E/AhDFTH6RgtbE8xMLSEvr4mcQp
+ZIH4vs2YzArTtgudg+4w5js=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.zu.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.zu.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e573</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e573</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Zeppelin Universität</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Zeppelin University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://idp.zu.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://idp.zu.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sven</md:GivenName>
+	<md:SurName>Carstens</md:SurName>
+	<md:EmailAddress>mailto:sven.carstens@zu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>campus</md:GivenName>
+	<md:SurName>support</md:SurName>
+	<md:EmailAddress>mailto:campussupport@zu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Sven</md:GivenName>
+	<md:SurName>Carstens</md:SurName>
+	<md:EmailAddress>mailto:sven.carstens@zu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alexander</md:GivenName>
+	<md:SurName>Pfau</md:SurName>
+	<md:EmailAddress>mailto:alexander.pfau@zu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Alexander</md:GivenName>
+	<md:SurName>Pfau</md:SurName>
+	<md:EmailAddress>mailto:alexander.pfau@zu.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

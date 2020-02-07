@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uaic.ro/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.roedu.net" registrationInstant="2019-03-08T15:30:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.roedu.net/wp-content/uploads/2019/03/RoEduNet-Metadata_Registration-v0.7.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uaic.ro</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="ro">Universitatea "Alexandru Ioan Cuza" din Iași</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University "Alexandru Ioan Cuza" from Iasi</mdui:DisplayName>
+		<mdui:Description xml:lang="ro">Acest IdP deservește Universitatea "Alexandru Ioan Cuza" din Iași</mdui:Description>
+		<mdui:Description xml:lang="en">This Identity Provider (IdP) serves "Alexandru Ioan Cuza" University of Iasi</mdui:Description>
+		<mdui:InformationURL xml:lang="ro">https://www.uaic.ro/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.uaic.ro/</mdui:InformationURL>
+		<mdui:Logo height="16" width="90" xml:lang="ro">https://www.uaic.ro/wp-content/uploads/2013/12/logo-retina1.png</mdui:Logo>
+		<mdui:Logo height="16" width="90" xml:lang="en">https://www.uaic.ro/wp-content/uploads/2013/12/logo-retina1.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGyTCCBbGgAwIBAgIQB/29PjxxzWANnI+b6s5/CDANBgkqhkiG9w0BAQsFADBz
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExJzAlBgNVBAMTHlRFUkVOQSBTU0wg
+SGlnaCBBc3N1cmFuY2UgQ0EgMzAeFw0xOTExMDgwMDAwMDBaFw0yMDExMjMxMjAw
+MDBaMIHFMRowGAYDVQQPDBFHb3Zlcm5tZW50IEVudGl0eTETMBEGCysGAQQBgjc8
+AgEDEwJSTzEaMBgGA1UEBRMRR292ZXJubWVudCBFbnRpdHkxCzAJBgNVBAYTAlJP
+MQ0wCwYDVQQHEwRJYXNpMTYwNAYDVQQKDC1Vbml2ZXJzaXRhdGVhICJBbGV4YW5k
+cnUgSW9hbiBDdXphIiBkaW4gSWHImWkxDDAKBgNVBAsTA0RDRDEUMBIGA1UEAxML
+aWRwLnVhaWMucm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcwq6f
+OHQiUQbvASteuY/dYqgciDGPP6O5SGLw/Sf+I4eJN6Xx6szNRj/TeKBgUQiE5UVk
+6Rk2cmPk1ZMsj07cvP8BPsou86UQ5NV6gCcV/NSZfeN3FMox1q9eTUJfauQoc3X/
+KhYBG7OWexBzYnqN9ZGYkFIMy4dKCMaxG/3jrldgzvO+BlNBkCwnl6uBYr2PIxam
+XHdgFzyHVvUPr2Kh8552p01hWnhm/5R634yebzYrj3FqdKQ5wkMgOUgqYOcPOvfT
+W/j9tXcsy7/PoTBmk4J0wOoj01A9DgOEjwUTmh5l6CjFguGT1dBJ8or5C6JDw3uJ
++Wf73fOfMvnNmvVtAgMBAAGjggMEMIIDADAfBgNVHSMEGDAWgBTCuIXX4bkTvdFI
+vP1e3H2QQnqKqTAdBgNVHQ4EFgQUb8p8ILvApwIdgV8/uPQnaSvWqkQwJwYDVR0R
+BCAwHoILaWRwLnVhaWMucm+CD3d3dy5pZHAudWFpYy5ybzAOBgNVHQ8BAf8EBAMC
+BaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIGFBgNVHR8EfjB8MDyg
+OqA4hjZodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMSGlnaEFzc3Vy
+YW5jZUNBMy5jcmwwPKA6oDiGNmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9URVJF
+TkFTU0xIaWdoQXNzdXJhbmNlQ0EzLmNybDBLBgNVHSAERDBCMDcGCWCGSAGG/WwC
+ATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAcG
+BWeBDAEBMHsGCCsGAQUFBwEBBG8wbTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3Au
+ZGlnaWNlcnQuY29tMEUGCCsGAQUFBzAChjlodHRwOi8vY2FjZXJ0cy5kaWdpY2Vy
+dC5jb20vVEVSRU5BU1NMSGlnaEFzc3VyYW5jZUNBMy5jcnQwDAYDVR0TAQH/BAIw
+ADCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB1AKS5CZC0GFgUh7sTosxncAo8NZgE
++RvfuON3zQ7IDdwQAAABbkqyW8kAAAQDAEYwRAIgAZK9Xy7nq0vOL6FAgiqG7AdC
+wG7jOC2GViZYCHe9nGkCIGKb/mV3JQu8Ce2Xozx7Ak4hZ0MMeltGQzbItJ21kFEO
+AHcAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0AAAFuSrJcigAABAMA
+SDBGAiEAjGnKNBipaUSw6c/vvwj1jnB7Y9A+elxjP2JxayQw5asCIQCEhaVY614m
+rFW8XWygaWzpWETRQ2xXd72+iQAlpGVekjANBgkqhkiG9w0BAQsFAAOCAQEAUuDO
+aD0hX10V/SwD+SSGy9FUD1CQAIK4VROpwzjOX2BPrlBWWbNIEDIe38dD2b3Byxa9
+EAf0X1wec+aU31rK0Xrow8YwW0GwCGRTRe9fHWX2GYKy6pArPbV4uUh1dN7HN6Vu
+9giuLOnFpLRt9IRmFTgbRVS1XzVA2ykolFBypvh8ky0i5wqj5jKdYtTuKOydgXuE
++yvODGQenFMIeiFihaSroA1BIElE44wsSoqHNhg8GKRcglMxSJnqPkfiqZI5jPZE
+6YR5uDOPBBBCv9kS5lec0UQLxTaDoxB78Mua445bjfVDQnxSg8wt6TbTJbOWsqvA
+9fWmHpR5fFS9jkBvkQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGyTCCBbGgAwIBAgIQB/29PjxxzWANnI+b6s5/CDANBgkqhkiG9w0BAQsFADBz
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExJzAlBgNVBAMTHlRFUkVOQSBTU0wg
+SGlnaCBBc3N1cmFuY2UgQ0EgMzAeFw0xOTExMDgwMDAwMDBaFw0yMDExMjMxMjAw
+MDBaMIHFMRowGAYDVQQPDBFHb3Zlcm5tZW50IEVudGl0eTETMBEGCysGAQQBgjc8
+AgEDEwJSTzEaMBgGA1UEBRMRR292ZXJubWVudCBFbnRpdHkxCzAJBgNVBAYTAlJP
+MQ0wCwYDVQQHEwRJYXNpMTYwNAYDVQQKDC1Vbml2ZXJzaXRhdGVhICJBbGV4YW5k
+cnUgSW9hbiBDdXphIiBkaW4gSWHImWkxDDAKBgNVBAsTA0RDRDEUMBIGA1UEAxML
+aWRwLnVhaWMucm8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcwq6f
+OHQiUQbvASteuY/dYqgciDGPP6O5SGLw/Sf+I4eJN6Xx6szNRj/TeKBgUQiE5UVk
+6Rk2cmPk1ZMsj07cvP8BPsou86UQ5NV6gCcV/NSZfeN3FMox1q9eTUJfauQoc3X/
+KhYBG7OWexBzYnqN9ZGYkFIMy4dKCMaxG/3jrldgzvO+BlNBkCwnl6uBYr2PIxam
+XHdgFzyHVvUPr2Kh8552p01hWnhm/5R634yebzYrj3FqdKQ5wkMgOUgqYOcPOvfT
+W/j9tXcsy7/PoTBmk4J0wOoj01A9DgOEjwUTmh5l6CjFguGT1dBJ8or5C6JDw3uJ
++Wf73fOfMvnNmvVtAgMBAAGjggMEMIIDADAfBgNVHSMEGDAWgBTCuIXX4bkTvdFI
+vP1e3H2QQnqKqTAdBgNVHQ4EFgQUb8p8ILvApwIdgV8/uPQnaSvWqkQwJwYDVR0R
+BCAwHoILaWRwLnVhaWMucm+CD3d3dy5pZHAudWFpYy5ybzAOBgNVHQ8BAf8EBAMC
+BaAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIGFBgNVHR8EfjB8MDyg
+OqA4hjZodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vVEVSRU5BU1NMSGlnaEFzc3Vy
+YW5jZUNBMy5jcmwwPKA6oDiGNmh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9URVJF
+TkFTU0xIaWdoQXNzdXJhbmNlQ0EzLmNybDBLBgNVHSAERDBCMDcGCWCGSAGG/WwC
+ATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAcG
+BWeBDAEBMHsGCCsGAQUFBwEBBG8wbTAkBggrBgEFBQcwAYYYaHR0cDovL29jc3Au
+ZGlnaWNlcnQuY29tMEUGCCsGAQUFBzAChjlodHRwOi8vY2FjZXJ0cy5kaWdpY2Vy
+dC5jb20vVEVSRU5BU1NMSGlnaEFzc3VyYW5jZUNBMy5jcnQwDAYDVR0TAQH/BAIw
+ADCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB1AKS5CZC0GFgUh7sTosxncAo8NZgE
++RvfuON3zQ7IDdwQAAABbkqyW8kAAAQDAEYwRAIgAZK9Xy7nq0vOL6FAgiqG7AdC
+wG7jOC2GViZYCHe9nGkCIGKb/mV3JQu8Ce2Xozx7Ak4hZ0MMeltGQzbItJ21kFEO
+AHcAVhQGmi/XwuzT9eG9RLI+x0Z2ubyZEVzA75SYVdaJ0N0AAAFuSrJcigAABAMA
+SDBGAiEAjGnKNBipaUSw6c/vvwj1jnB7Y9A+elxjP2JxayQw5asCIQCEhaVY614m
+rFW8XWygaWzpWETRQ2xXd72+iQAlpGVekjANBgkqhkiG9w0BAQsFAAOCAQEAUuDO
+aD0hX10V/SwD+SSGy9FUD1CQAIK4VROpwzjOX2BPrlBWWbNIEDIe38dD2b3Byxa9
+EAf0X1wec+aU31rK0Xrow8YwW0GwCGRTRe9fHWX2GYKy6pArPbV4uUh1dN7HN6Vu
+9giuLOnFpLRt9IRmFTgbRVS1XzVA2ykolFBypvh8ky0i5wqj5jKdYtTuKOydgXuE
++yvODGQenFMIeiFihaSroA1BIElE44wsSoqHNhg8GKRcglMxSJnqPkfiqZI5jPZE
+6YR5uDOPBBBCv9kS5lec0UQLxTaDoxB78Mua445bjfVDQnxSg8wt6TbTJbOWsqvA
+9fWmHpR5fFS9jkBvkQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uaic.ro/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uaic.ro/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="ro">Universitatea "Alexandru Ioan Cuza" din Iași</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University "Alexandru Ioan Cuza" from Iasi</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="ro">Universitatea "Alexandru Ioan Cuza" din Iași</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University "Alexandru Ioan Cuza" from Iasi</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="ro">https://www.uaic.ro</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.uaic.ro</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IdP @ UAIC</md:GivenName>
+	<md:EmailAddress>mailto:valeriu.vraciu@uaic.ro</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Abuse Contact</md:GivenName>
+	<md:EmailAddress>mailto:abuse@uaic.ro</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

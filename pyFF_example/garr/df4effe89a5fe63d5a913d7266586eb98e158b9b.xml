@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fraunhofer.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2010-01-15T14:21:47Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fraunhofer.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Fraunhofer-Gesellschaft</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Fraunhofer-Gesellschaft</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Die Fraunhofer-Gesellschaft ist die führende Organisation für angewandte Forschung in Europa. Sie betreibt anwendungsorientierte Forschung zum direkten Nutzen für Unternehmen und zum Vorteil der Gesellschaft. Die Zentrale der Fraunhofer-Gesellschaft stellt u.a. unternehmesweite IT-Dienstleistungen zur Verfügung und betreibt in diesem Zusammenhang den Shibboleth Identity Provider.</mdui:Description>
+		<mdui:Description xml:lang="en">Die Fraunhofer-Gesellschaft ist die führende Organisation für angewandte Forschung in Europa. Sie betreibt anwendungsorientierte Forschung zum direkten Nutzen für Unternehmen und zum Vorteil der Gesellschaft. Die Zentrale der Fraunhofer-Gesellschaft stellt u.a. unternehmesweite IT-Dienstleistungen zur Verfügung und betreibt in diesem Zusammenhang den Shibboleth Identity Provider.</mdui:Description>
+		<mdui:InformationURL xml:lang="de">http://www.fraunhofer.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.fraunhofer.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJaTCCCFGgAwIBAgIMICX+GeBFwgPaYqg0MA0GCSqGSIb3DQEBCwUAMIGPMQsw
+CQYDVQQGEwJERTEPMA0GA1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjET
+MBEGA1UECgwKRnJhdW5ob2ZlcjEhMB8GA1UECwwYRnJhdW5ob2ZlciBDb3Jwb3Jh
+dGUgUEtJMSQwIgYDVQQDDBtGcmF1bmhvZmVyIFNlcnZpY2UgQ0EgLSBHMDIwHhcN
+MTgxMjA0MTMyNjM1WhcNMjEwMzA3MTMyNjM1WjB1MQswCQYDVQQGEwJERTEPMA0G
+A1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjETMBEGA1UECgwKRnJhdW5o
+b2ZlcjERMA8GA1UECwwIU2VydmljZXMxGjAYBgNVBAMMEWlkcC5mcmF1bmhvZmVy
+LmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuahIPazAZ3iNWkwi
+YPg3H6IKEyfSiK9b0n1zddXH5bFPyWyKePbqSQfcD2rHlG030OqoypQbu05xpJVp
+N2CvOBVYEHIvxW/PhE5HvSeM7IljpmatNWsE7+B+xCE2lyaiqNIuVVj9RgTXyZO8
+OChdsGsMjvirjrztThbwGlWMDp3xm98qLxWmtvBtpa0T5Job+HvQsskas4XQD6uo
+kfWXBOlLnDDJ61SHAv+9DHwzgqq6CxO4gHdZhj4J9HFwNAZyPnGVmODEiEjSoJYA
+f6jeE9kt5HmyBn02E5qFIK8mpIEiTZzSRa2LwKgZt5z6V4w04vMW8YsWr0oUy52k
+8utNHQIDAQABo4IF3DCCBdgwWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGB
+rSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYB
+BAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM
+MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRjeQpfCh0q7ua2NX01qx18c8PhMTAfBgNV
+HSMEGDAWgBQARDSXHB8rmSaNFqcdYGiV7ZqXrjAcBgNVHREEFTATghFpZHAuZnJh
+dW5ob2Zlci5kZTCBnQYDVR0fBIGVMIGSMEegRaBDhkFodHRwOi8vY2RwMS5wY2Eu
+ZGZuLmRlL2ZyYXVuaG9mZXItc2VydmljZS1nMi1jYS9wdWIvY3JsL2NhY3JsLmNy
+bDBHoEWgQ4ZBaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZp
+Y2UtZzItY2EvcHViL2NybC9jYWNybC5jcmwwgesGCCsGAQUFBwEBBIHeMIHbMDMG
+CCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09D
+U1AwUQYIKwYBBQUHMAKGRWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZnJhdW5ob2Zl
+ci1zZXJ2aWNlLWcyLWNhL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBRBggrBgEFBQcw
+AoZFaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZpY2UtZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYBBAHWeQIEAgSCA00EggNJ
+A0cAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWd5ZjFEAAAE
+AwBHMEUCIQCAFdUTfsqQ0Xs3JBxTtsi082AQ1HX48MF7ZTuB5pKFwQIgC1uCANgg
+jYLQ5sz/XROW3EaZ9YofRpucid1WiI2Y68kAdQDuS723dc5guuFCaR+r4Z5mow9+
+X7By2IMAxHuJeqj9ywAAAWd5ZjEuAAAEAwBGMEQCIDA8aAXxZ0b8NCKGOCJ1PONi
+KBKA6TdS9T1G2JJZIvWSAiBlwr7UkuWKBa6Xg3D0J0Rcbzjmo/w5hfFPQrWt1J/B
+HgB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZ3lmMj0AAAQD
+AEcwRQIgI/gE5qQXI48mABg7sQDfcK+Onap4iOGGf6DxjHK92dgCIQD9U38N9mWt
+qhVWrDv8pR3aD8R/wdfJlN6GxpbmW5mYXQB2AKrnC388uNVmyGwvFpecn0RfaasO
+tFNVibL3egMBBPPNAAABZ3lmMU8AAAQDAEcwRQIhAKuJ47jpWE8+6KoEshHK5j68
+4ESuZOuT3lehFg/NaQvBAiB1vpzRzMnkkh0rlxl88NCeHNPzB6HBSLW69CYkWQ1N
+3AB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZ3lmMUwAAAQD
+AEgwRgIhAP0rnZEbKNm0r9XvlzsPYG13+UhM/FBY274/ofUDcqXmAiEAv6zS3dM1
+EfNUgibQL+2FHphCTTrb8IrcgL3PCyp7O/AAdQC72d+8H4pxtZOUI5eqkntHOFeV
+CqtS6BqQlmQ2jh7RhQAAAWd5ZjFIAAAEAwBGMEQCIAvOELrvc1ZhNnSmDzUHFdTX
+H1baQVbWZefd8TVcuVFxAiBdvdrPfjS2MboQBZ/fDA7VwnNXLZQozLAkrxee6dj+
+9wB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABZ3lmNaMAAAQD
+AEcwRQIhAKZSKpyfId6825nS2ZgS/C2UOvg44Wp3hY4TGZLJP4dFAiBQpS2OcmYJ
+wuH2YkQewRpNk+qSFZcRSZ7dQrVvOYeMITANBgkqhkiG9w0BAQsFAAOCAQEAmBZZ
+mNM5oL2vy1H+zXXS/h4E66fp2Nyq5pQBlo05oCXk6VH92eW3V7NHcktsybN2zKgl
+lEq5TC+t1bx2qHjlR5ZmWqI03Hc4aeX6e9r5aKR73d89wG14bWY73N46ZYvNciKM
+jlIgxV96YdSpvJqsTihYbR8sNUtVgl2fhx2gtaXC1oUSPAzmN5rT/tnr0k3po2Gz
+YuHOGOYMH0gfOUOCViA4HhtCjw68Ycy3+rG5UcuPYV78HNmcDWcLybHovmAnao2B
+Zu32oO5zCgkyNeNy0+TbggINBRo87CInQBTUBongv8gabLapdhS3BeWO//SsvQs/
+xosftOfq4f/MtVS6DA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJaTCCCFGgAwIBAgIMICX+GeBFwgPaYqg0MA0GCSqGSIb3DQEBCwUAMIGPMQsw
+CQYDVQQGEwJERTEPMA0GA1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjET
+MBEGA1UECgwKRnJhdW5ob2ZlcjEhMB8GA1UECwwYRnJhdW5ob2ZlciBDb3Jwb3Jh
+dGUgUEtJMSQwIgYDVQQDDBtGcmF1bmhvZmVyIFNlcnZpY2UgQ0EgLSBHMDIwHhcN
+MTgxMjA0MTMyNjM1WhcNMjEwMzA3MTMyNjM1WjB1MQswCQYDVQQGEwJERTEPMA0G
+A1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjETMBEGA1UECgwKRnJhdW5o
+b2ZlcjERMA8GA1UECwwIU2VydmljZXMxGjAYBgNVBAMMEWlkcC5mcmF1bmhvZmVy
+LmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuahIPazAZ3iNWkwi
+YPg3H6IKEyfSiK9b0n1zddXH5bFPyWyKePbqSQfcD2rHlG030OqoypQbu05xpJVp
+N2CvOBVYEHIvxW/PhE5HvSeM7IljpmatNWsE7+B+xCE2lyaiqNIuVVj9RgTXyZO8
+OChdsGsMjvirjrztThbwGlWMDp3xm98qLxWmtvBtpa0T5Job+HvQsskas4XQD6uo
+kfWXBOlLnDDJ61SHAv+9DHwzgqq6CxO4gHdZhj4J9HFwNAZyPnGVmODEiEjSoJYA
+f6jeE9kt5HmyBn02E5qFIK8mpIEiTZzSRa2LwKgZt5z6V4w04vMW8YsWr0oUy52k
+8utNHQIDAQABo4IF3DCCBdgwWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGB
+rSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYB
+BAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM
+MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRjeQpfCh0q7ua2NX01qx18c8PhMTAfBgNV
+HSMEGDAWgBQARDSXHB8rmSaNFqcdYGiV7ZqXrjAcBgNVHREEFTATghFpZHAuZnJh
+dW5ob2Zlci5kZTCBnQYDVR0fBIGVMIGSMEegRaBDhkFodHRwOi8vY2RwMS5wY2Eu
+ZGZuLmRlL2ZyYXVuaG9mZXItc2VydmljZS1nMi1jYS9wdWIvY3JsL2NhY3JsLmNy
+bDBHoEWgQ4ZBaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZp
+Y2UtZzItY2EvcHViL2NybC9jYWNybC5jcmwwgesGCCsGAQUFBwEBBIHeMIHbMDMG
+CCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09D
+U1AwUQYIKwYBBQUHMAKGRWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZnJhdW5ob2Zl
+ci1zZXJ2aWNlLWcyLWNhL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBRBggrBgEFBQcw
+AoZFaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZpY2UtZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYBBAHWeQIEAgSCA00EggNJ
+A0cAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWd5ZjFEAAAE
+AwBHMEUCIQCAFdUTfsqQ0Xs3JBxTtsi082AQ1HX48MF7ZTuB5pKFwQIgC1uCANgg
+jYLQ5sz/XROW3EaZ9YofRpucid1WiI2Y68kAdQDuS723dc5guuFCaR+r4Z5mow9+
+X7By2IMAxHuJeqj9ywAAAWd5ZjEuAAAEAwBGMEQCIDA8aAXxZ0b8NCKGOCJ1PONi
+KBKA6TdS9T1G2JJZIvWSAiBlwr7UkuWKBa6Xg3D0J0Rcbzjmo/w5hfFPQrWt1J/B
+HgB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZ3lmMj0AAAQD
+AEcwRQIgI/gE5qQXI48mABg7sQDfcK+Onap4iOGGf6DxjHK92dgCIQD9U38N9mWt
+qhVWrDv8pR3aD8R/wdfJlN6GxpbmW5mYXQB2AKrnC388uNVmyGwvFpecn0RfaasO
+tFNVibL3egMBBPPNAAABZ3lmMU8AAAQDAEcwRQIhAKuJ47jpWE8+6KoEshHK5j68
+4ESuZOuT3lehFg/NaQvBAiB1vpzRzMnkkh0rlxl88NCeHNPzB6HBSLW69CYkWQ1N
+3AB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZ3lmMUwAAAQD
+AEgwRgIhAP0rnZEbKNm0r9XvlzsPYG13+UhM/FBY274/ofUDcqXmAiEAv6zS3dM1
+EfNUgibQL+2FHphCTTrb8IrcgL3PCyp7O/AAdQC72d+8H4pxtZOUI5eqkntHOFeV
+CqtS6BqQlmQ2jh7RhQAAAWd5ZjFIAAAEAwBGMEQCIAvOELrvc1ZhNnSmDzUHFdTX
+H1baQVbWZefd8TVcuVFxAiBdvdrPfjS2MboQBZ/fDA7VwnNXLZQozLAkrxee6dj+
+9wB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABZ3lmNaMAAAQD
+AEcwRQIhAKZSKpyfId6825nS2ZgS/C2UOvg44Wp3hY4TGZLJP4dFAiBQpS2OcmYJ
+wuH2YkQewRpNk+qSFZcRSZ7dQrVvOYeMITANBgkqhkiG9w0BAQsFAAOCAQEAmBZZ
+mNM5oL2vy1H+zXXS/h4E66fp2Nyq5pQBlo05oCXk6VH92eW3V7NHcktsybN2zKgl
+lEq5TC+t1bx2qHjlR5ZmWqI03Hc4aeX6e9r5aKR73d89wG14bWY73N46ZYvNciKM
+jlIgxV96YdSpvJqsTihYbR8sNUtVgl2fhx2gtaXC1oUSPAzmN5rT/tnr0k3po2Gz
+YuHOGOYMH0gfOUOCViA4HhtCjw68Ycy3+rG5UcuPYV78HNmcDWcLybHovmAnao2B
+Zu32oO5zCgkyNeNy0+TbggINBRo87CInQBTUBongv8gabLapdhS3BeWO//SsvQs/
+xosftOfq4f/MtVS6DA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fraunhofer.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fraunhofer.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.fraunhofer.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fraunhofer.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fraunhofer.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fraunhofer.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fraunhofer.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJaTCCCFGgAwIBAgIMICX+GeBFwgPaYqg0MA0GCSqGSIb3DQEBCwUAMIGPMQsw
+CQYDVQQGEwJERTEPMA0GA1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjET
+MBEGA1UECgwKRnJhdW5ob2ZlcjEhMB8GA1UECwwYRnJhdW5ob2ZlciBDb3Jwb3Jh
+dGUgUEtJMSQwIgYDVQQDDBtGcmF1bmhvZmVyIFNlcnZpY2UgQ0EgLSBHMDIwHhcN
+MTgxMjA0MTMyNjM1WhcNMjEwMzA3MTMyNjM1WjB1MQswCQYDVQQGEwJERTEPMA0G
+A1UECAwGQmF5ZXJuMREwDwYDVQQHDAhNdWVuY2hlbjETMBEGA1UECgwKRnJhdW5o
+b2ZlcjERMA8GA1UECwwIU2VydmljZXMxGjAYBgNVBAMMEWlkcC5mcmF1bmhvZmVy
+LmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuahIPazAZ3iNWkwi
+YPg3H6IKEyfSiK9b0n1zddXH5bFPyWyKePbqSQfcD2rHlG030OqoypQbu05xpJVp
+N2CvOBVYEHIvxW/PhE5HvSeM7IljpmatNWsE7+B+xCE2lyaiqNIuVVj9RgTXyZO8
+OChdsGsMjvirjrztThbwGlWMDp3xm98qLxWmtvBtpa0T5Job+HvQsskas4XQD6uo
+kfWXBOlLnDDJ61SHAv+9DHwzgqq6CxO4gHdZhj4J9HFwNAZyPnGVmODEiEjSoJYA
+f6jeE9kt5HmyBn02E5qFIK8mpIEiTZzSRa2LwKgZt5z6V4w04vMW8YsWr0oUy52k
+8utNHQIDAQABo4IF3DCCBdgwWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYLKwYBBAGB
+rSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYB
+BAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMBMGA1UdJQQM
+MAoGCCsGAQUFBwMBMB0GA1UdDgQWBBRjeQpfCh0q7ua2NX01qx18c8PhMTAfBgNV
+HSMEGDAWgBQARDSXHB8rmSaNFqcdYGiV7ZqXrjAcBgNVHREEFTATghFpZHAuZnJh
+dW5ob2Zlci5kZTCBnQYDVR0fBIGVMIGSMEegRaBDhkFodHRwOi8vY2RwMS5wY2Eu
+ZGZuLmRlL2ZyYXVuaG9mZXItc2VydmljZS1nMi1jYS9wdWIvY3JsL2NhY3JsLmNy
+bDBHoEWgQ4ZBaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZp
+Y2UtZzItY2EvcHViL2NybC9jYWNybC5jcmwwgesGCCsGAQUFBwEBBIHeMIHbMDMG
+CCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09D
+U1AwUQYIKwYBBQUHMAKGRWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZnJhdW5ob2Zl
+ci1zZXJ2aWNlLWcyLWNhL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBRBggrBgEFBQcw
+AoZFaHR0cDovL2NkcDIucGNhLmRmbi5kZS9mcmF1bmhvZmVyLXNlcnZpY2UtZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYBBAHWeQIEAgSCA00EggNJ
+A0cAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWd5ZjFEAAAE
+AwBHMEUCIQCAFdUTfsqQ0Xs3JBxTtsi082AQ1HX48MF7ZTuB5pKFwQIgC1uCANgg
+jYLQ5sz/XROW3EaZ9YofRpucid1WiI2Y68kAdQDuS723dc5guuFCaR+r4Z5mow9+
+X7By2IMAxHuJeqj9ywAAAWd5ZjEuAAAEAwBGMEQCIDA8aAXxZ0b8NCKGOCJ1PONi
+KBKA6TdS9T1G2JJZIvWSAiBlwr7UkuWKBa6Xg3D0J0Rcbzjmo/w5hfFPQrWt1J/B
+HgB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABZ3lmMj0AAAQD
+AEcwRQIgI/gE5qQXI48mABg7sQDfcK+Onap4iOGGf6DxjHK92dgCIQD9U38N9mWt
+qhVWrDv8pR3aD8R/wdfJlN6GxpbmW5mYXQB2AKrnC388uNVmyGwvFpecn0RfaasO
+tFNVibL3egMBBPPNAAABZ3lmMU8AAAQDAEcwRQIhAKuJ47jpWE8+6KoEshHK5j68
+4ESuZOuT3lehFg/NaQvBAiB1vpzRzMnkkh0rlxl88NCeHNPzB6HBSLW69CYkWQ1N
+3AB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABZ3lmMUwAAAQD
+AEgwRgIhAP0rnZEbKNm0r9XvlzsPYG13+UhM/FBY274/ofUDcqXmAiEAv6zS3dM1
+EfNUgibQL+2FHphCTTrb8IrcgL3PCyp7O/AAdQC72d+8H4pxtZOUI5eqkntHOFeV
+CqtS6BqQlmQ2jh7RhQAAAWd5ZjFIAAAEAwBGMEQCIAvOELrvc1ZhNnSmDzUHFdTX
+H1baQVbWZefd8TVcuVFxAiBdvdrPfjS2MboQBZ/fDA7VwnNXLZQozLAkrxee6dj+
+9wB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABZ3lmNaMAAAQD
+AEcwRQIhAKZSKpyfId6825nS2ZgS/C2UOvg44Wp3hY4TGZLJP4dFAiBQpS2OcmYJ
+wuH2YkQewRpNk+qSFZcRSZ7dQrVvOYeMITANBgkqhkiG9w0BAQsFAAOCAQEAmBZZ
+mNM5oL2vy1H+zXXS/h4E66fp2Nyq5pQBlo05oCXk6VH92eW3V7NHcktsybN2zKgl
+lEq5TC+t1bx2qHjlR5ZmWqI03Hc4aeX6e9r5aKR73d89wG14bWY73N46ZYvNciKM
+jlIgxV96YdSpvJqsTihYbR8sNUtVgl2fhx2gtaXC1oUSPAzmN5rT/tnr0k3po2Gz
+YuHOGOYMH0gfOUOCViA4HhtCjw68Ycy3+rG5UcuPYV78HNmcDWcLybHovmAnao2B
+Zu32oO5zCgkyNeNy0+TbggINBRo87CInQBTUBongv8gabLapdhS3BeWO//SsvQs/
+xosftOfq4f/MtVS6DA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fraunhofer.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fraunhofer.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e165</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e165</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e. V.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e. V.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.fraunhofer.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.fraunhofer.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Björn</md:GivenName>
+	<md:SurName>Vollmer</md:SurName>
+	<md:EmailAddress>mailto:bjoern.vollmer@zv.fraunhofer.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Björn</md:GivenName>
+	<md:SurName>Vollmer</md:SurName>
+	<md:EmailAddress>mailto:bjoern.vollmer@zv.fraunhofer.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Björn</md:GivenName>
+	<md:SurName>Vollmer</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@directory.fraunhofer.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

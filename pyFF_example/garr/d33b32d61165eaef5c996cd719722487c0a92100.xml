@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.mbu.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-09-08T13:24:31Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mbu.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Microbiology AS CR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Mikrobiologický ústav AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IMIC AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance MBÚ AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.mbu.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.mbu.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="60">https://gedeon.cas.cz/loga/logo-mbu-44.png</mdui:Logo>
+		<mdui:Logo height="100" width="137">https://gedeon.cas.cz/loga/logo-mbu-100.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAM9a7nZzKnBYbjqRYLwxfcPbOVpyMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OVoX
+DTM2MDkxMzEyMzE0OVowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzc4GsD358KTU9InGRDnaMnxKHuSRP
+9+ae1HdyepfSFMD1xxWQOicvYB6r8dRQVzF7qGNgfigdL2zlkB287HChn3zX2z/Q
+6vh8J4AZDmtz4lyZZUXzNcUgank8sbCGDxDAr3fPSFPMbu76YO9coN8A2RQ2re8U
+wa7qaj+e2NS+Vc35pYCeGVvqkSHOXr1znSONQCtvl4ZZ8c/jYCgU6Cj5A2dqR2w1
+CHSjpWwRzNYoO4MktNzRNO7gUnHJB0bTVx3qw+ShumZh03vIeRTSY+y4SYs0Nj9d
+UsmxSpGb9Qj+6DGp6NW+g/E4fy1pi76QlpNAtsO3S2Zv/JqKAH2bmKbvAgMBAAGj
+YzBhMB0GA1UdDgQWBBQn4tk6dE2fj3rEHATxGsLJ3Hgz2jBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAghBjcKPhW787BwfCWZh90whZSy9ju0sg
+AvrYrQKaAzImNwf+sRz4IO+Sg18b2/HBcGN6itHA8wUKuRAilGn5vhvGZQFZVStM
+7VtIPF4X7i7YuQ9gmWUaJhUtS05WOomz6x1USwExAArS9C3c0ymF58u6wSGBtvxK
+3Msp9u3kjLoZHiX65uZ7E4lfy5IqVC+TdCnnsQUBTSJ9LwLGBZTTGeCwZlaFmgbi
+zli0m/Iokhe13PxZivuMs857bMkl1/lvzyliazWNJB11EUju4VAurMvHWRZixAFS
+Ehh758bRrCYsZnikrSTueUrZ24d9/CjhE2riNHqv1hfcljdrtya2UQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIFuRnNf5BHyo1OTHFuxLqSPS0YHMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OFoX
+DTM2MDkxMzEyMzE0OFowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCLVJJiYh9YDZK96ZytPuo32vJgdS9Q
+AlASJU5Nf9cym3OKfb5F16eDokbyBRiLxrwUNnvCdLBKXE5glO/p9KJmoBCBJkY4
+Llq/UuDWo6QvpAtzNRcgdK12qeVUFEUDuEKesd5/iGhHafiRr1UZuO/aGsQsW8Iw
+5FNX5CSwf8kFSSnItsD4AD7bAUiu1x2A/KoX7mG4y0XmHNmqrZ3sFI8MIWSo96ea
+dd4Efpzke8f9wDNpN+dDFZx3h/20pFBJ/Nrz3oY+XIEv8M/Rg6TJZ79O7RcQFpz/
+lUEyDG1V8OD79Wl8/RD5Bw7qo2opQwKMqyiVrVHWibODUza/xv1rogxnAgMBAAGj
+YzBhMB0GA1UdDgQWBBQxBuKZjzMem0yUVOwMi8eWHxe8ZTBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIq8nLD0Yjc9h4x6BX6RzT4zqOp9zNOA0
+YHk0SlhToqxsGmyz9jzbhMnEQYupwA0LdIJTuWRCoL5dMFU3kOgs1fF+MoZnUVI8
+EZK3tNRFA0m5sInO1sMZjm6IMPmohtKJ80E0hWIRhHZ5eK6rQi9TrBNsVkgwz0q8
+TYvJ61DEJpqDbfiPsp3ZKmw9e3D1IiaOhwjIESOwpSmb/rwLC9c4Aor4wWfGZrCu
+f0JB0mYAcEYBAQmLoI/JS3PN8OMdN/MQdTjVvH4P+MzHQNLo1lHD+dH8PtCfM6ih
+PnQTDX0k3Q9LBgevz57cf0zvC5seqGk5vqwwOncNPkVNbM4Y8/SvUg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAI+tuh6KZfer8erZJINLWQ/LQSptMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OFoX
+DTM2MDkxMzEyMzE0OFowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCHlTg6jYKMUMdQN+1lVSfaTAY1agZB
+Z+i6e0M6/Ms0tIGtFf+OvZbfbAepINKrL1U5GL/OA555i6K6V7bDTWVaaXcoU+8N
+zs/EfTMVDyvRfVD2HVTqyx483bRhW0DWcZxcke/sCdYp71/4qN/Tslob0AwDWRgi
+uvnfexcU9qYTkyvBBz2gNK2m98FE6Df3tdzdKshuMRojJS1i4LSQUD5uaNWMoyYg
+2ObUSJgDhySiywn03GfL+N/26rMJYIOisevfgKKV00hSrzSPcx1btHTS/VD/LgD4
+A8IuN75Vt+8dPhgF3fvrY5pHg1Rtq1I1KYF9RaU6b3F1+yNuER96/r8hAgMBAAGj
+YzBhMB0GA1UdDgQWBBTOHRTYrfeZ3mrb4/obj6PJ0ITsODBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAHqsZGDOh010v3Tjr4rjpELBcyQr/a4IX
+Eh/UWtcHSEi9J8aVJAmPoz8BWovpCVSgef0dkzQwxz2EOvRdCwziRXfjzyZt6Llv
+O84D+8ipuK49lgaqffEB7np/vd+NnII2okPc39mcNhiR7xO90RXrneZzyQvCv3SG
+qQHiU9/Mdk7h3yiEojCjRc1haPgYFqkXWa+t3bl6Mu8Esx4cwDGBrwcbwRboo9hr
+fD+Oh0MA0LFgFp6CDNuhCKG67Y1bsu+ppZdC34CRL2js0UpEKrEAVcKeSyz9nvgt
+87igZNyakDur6pZVQKbAVfClI3ZDbrfeM7SkGoopp5gAC4KoYs2Wng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mbu.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mbu.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.mbu.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mbu.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.mbu.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mbu.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mbu.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAM9a7nZzKnBYbjqRYLwxfcPbOVpyMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OVoX
+DTM2MDkxMzEyMzE0OVowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzc4GsD358KTU9InGRDnaMnxKHuSRP
+9+ae1HdyepfSFMD1xxWQOicvYB6r8dRQVzF7qGNgfigdL2zlkB287HChn3zX2z/Q
+6vh8J4AZDmtz4lyZZUXzNcUgank8sbCGDxDAr3fPSFPMbu76YO9coN8A2RQ2re8U
+wa7qaj+e2NS+Vc35pYCeGVvqkSHOXr1znSONQCtvl4ZZ8c/jYCgU6Cj5A2dqR2w1
+CHSjpWwRzNYoO4MktNzRNO7gUnHJB0bTVx3qw+ShumZh03vIeRTSY+y4SYs0Nj9d
+UsmxSpGb9Qj+6DGp6NW+g/E4fy1pi76QlpNAtsO3S2Zv/JqKAH2bmKbvAgMBAAGj
+YzBhMB0GA1UdDgQWBBQn4tk6dE2fj3rEHATxGsLJ3Hgz2jBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAghBjcKPhW787BwfCWZh90whZSy9ju0sg
+AvrYrQKaAzImNwf+sRz4IO+Sg18b2/HBcGN6itHA8wUKuRAilGn5vhvGZQFZVStM
+7VtIPF4X7i7YuQ9gmWUaJhUtS05WOomz6x1USwExAArS9C3c0ymF58u6wSGBtvxK
+3Msp9u3kjLoZHiX65uZ7E4lfy5IqVC+TdCnnsQUBTSJ9LwLGBZTTGeCwZlaFmgbi
+zli0m/Iokhe13PxZivuMs857bMkl1/lvzyliazWNJB11EUju4VAurMvHWRZixAFS
+Ehh758bRrCYsZnikrSTueUrZ24d9/CjhE2riNHqv1hfcljdrtya2UQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIFuRnNf5BHyo1OTHFuxLqSPS0YHMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OFoX
+DTM2MDkxMzEyMzE0OFowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCLVJJiYh9YDZK96ZytPuo32vJgdS9Q
+AlASJU5Nf9cym3OKfb5F16eDokbyBRiLxrwUNnvCdLBKXE5glO/p9KJmoBCBJkY4
+Llq/UuDWo6QvpAtzNRcgdK12qeVUFEUDuEKesd5/iGhHafiRr1UZuO/aGsQsW8Iw
+5FNX5CSwf8kFSSnItsD4AD7bAUiu1x2A/KoX7mG4y0XmHNmqrZ3sFI8MIWSo96ea
+dd4Efpzke8f9wDNpN+dDFZx3h/20pFBJ/Nrz3oY+XIEv8M/Rg6TJZ79O7RcQFpz/
+lUEyDG1V8OD79Wl8/RD5Bw7qo2opQwKMqyiVrVHWibODUza/xv1rogxnAgMBAAGj
+YzBhMB0GA1UdDgQWBBQxBuKZjzMem0yUVOwMi8eWHxe8ZTBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIq8nLD0Yjc9h4x6BX6RzT4zqOp9zNOA0
+YHk0SlhToqxsGmyz9jzbhMnEQYupwA0LdIJTuWRCoL5dMFU3kOgs1fF+MoZnUVI8
+EZK3tNRFA0m5sInO1sMZjm6IMPmohtKJ80E0hWIRhHZ5eK6rQi9TrBNsVkgwz0q8
+TYvJ61DEJpqDbfiPsp3ZKmw9e3D1IiaOhwjIESOwpSmb/rwLC9c4Aor4wWfGZrCu
+f0JB0mYAcEYBAQmLoI/JS3PN8OMdN/MQdTjVvH4P+MzHQNLo1lHD+dH8PtCfM6ih
+PnQTDX0k3Q9LBgevz57cf0zvC5seqGk5vqwwOncNPkVNbM4Y8/SvUg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAI+tuh6KZfer8erZJINLWQ/LQSptMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5tYnUuY2FzLmN6MB4XDTE2MDkxMzEyMzE0OFoX
+DTM2MDkxMzEyMzE0OFowGTEXMBUGA1UEAwwOaWRwLm1idS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCHlTg6jYKMUMdQN+1lVSfaTAY1agZB
+Z+i6e0M6/Ms0tIGtFf+OvZbfbAepINKrL1U5GL/OA555i6K6V7bDTWVaaXcoU+8N
+zs/EfTMVDyvRfVD2HVTqyx483bRhW0DWcZxcke/sCdYp71/4qN/Tslob0AwDWRgi
+uvnfexcU9qYTkyvBBz2gNK2m98FE6Df3tdzdKshuMRojJS1i4LSQUD5uaNWMoyYg
+2ObUSJgDhySiywn03GfL+N/26rMJYIOisevfgKKV00hSrzSPcx1btHTS/VD/LgD4
+A8IuN75Vt+8dPhgF3fvrY5pHg1Rtq1I1KYF9RaU6b3F1+yNuER96/r8hAgMBAAGj
+YzBhMB0GA1UdDgQWBBTOHRTYrfeZ3mrb4/obj6PJ0ITsODBABgNVHREEOTA3gg5p
+ZHAubWJ1LmNhcy5jeoYlaHR0cHM6Ly9pZHAubWJ1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAHqsZGDOh010v3Tjr4rjpELBcyQr/a4IX
+Eh/UWtcHSEi9J8aVJAmPoz8BWovpCVSgef0dkzQwxz2EOvRdCwziRXfjzyZt6Llv
+O84D+8ipuK49lgaqffEB7np/vd+NnII2okPc39mcNhiR7xO90RXrneZzyQvCv3SG
+qQHiU9/Mdk7h3yiEojCjRc1haPgYFqkXWa+t3bl6Mu8Esx4cwDGBrwcbwRboo9hr
+fD+Oh0MA0LFgFp6CDNuhCKG67Y1bsu+ppZdC34CRL2js0UpEKrEAVcKeSyz9nvgt
+87igZNyakDur6pZVQKbAVfClI3ZDbrfeM7SkGoopp5gAC4KoYs2Wng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mbu.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Microbiology  AS CR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Mikrobiologický ústav AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Microbiology  AS CR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Mikrobiologický ústav AV ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mbu.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.mbu.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

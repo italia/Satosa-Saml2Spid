@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.marquette.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">marquette.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Marquette University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.marquette.edu/tools/privacy.php</mdui:PrivacyStatementURL>
+		<mdui:Logo height="69" width="176" xml:lang="en">https://www.marquette.edu/omc/documents/MU%20Logo%20Standards.pdf</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDqjCCApKgAwIBAgIEDgUW8zANBgkqhkiG9w0BAQsFADCBljELMAkGA1UEBhMC
+VVMxEjAQBgNVBAgTCVdpc2NvbnNpbjESMBAGA1UEBxMJTWlsd2F1a2VlMR0wGwYD
+VQQKExRNYXJxdWV0dGUgVW5pdmVyc2l0eTEbMBkGA1UEAxQSaW5jb21tb25fc2Ft
+bF9jZXJ0MSMwIQYJKoZIhvcNAQkBFhRjaGFkLmdvcmVjdGtlQG11LmVkdTAeFw0x
+NzA2MTUxNzIyNTlaFw0yNzA2MTMxNzIyNTlaMIGWMQswCQYDVQQGEwJVUzESMBAG
+A1UECBMJV2lzY29uc2luMRIwEAYDVQQHEwlNaWx3YXVrZWUxHTAbBgNVBAoTFE1h
+cnF1ZXR0ZSBVbml2ZXJzaXR5MRswGQYDVQQDFBJpbmNvbW1vbl9zYW1sX2NlcnQx
+IzAhBgkqhkiG9w0BCQEWFGNoYWQuZ29yZWN0a2VAbXUuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGHSvYeuTPdPLsZ9ZLSTOFtA+6Zh1WRvhOAv
+OD+9F+KqcQhJutxZNmb1aoAm31HzOd4EVQr7CqhTb4UM8FQDrluepfNs7f6vo+0Q
+4c9ZPEJU6rFuO7v7qyX7qcFPJUiV0v27ta+0Vz0p8WeBIBDa4gyqTz1nyQ2Rfq03
+I5wunDFWcwJOpxALZvDCrTiZLBj91fUegS8I9UqfoE7c97X1vlyCg4TSEedzOdFW
+EGDpl1N+ax4Xyh9QNCl8g7uX6NjVoR6Ua+nhbjlXcHh76Hyo7y/Q2E4jBv0/h7yf
+MD5ygozqx/mWVaIDQ66b7DqWKFS2ZCGqqcnpk0MjZAv90ZhiLQIDAQABMA0GCSqG
+SIb3DQEBCwUAA4IBAQCwbV9lCjd3TxA9mF5Ut9uuOKQ7xuWLmY31vel2WWWGkFbX
+8oQ/8dl6n7e+ABGGLorwDRdgUciI4CP91KTbJZTGUC5D2yvNerOaEm9QlI2JLAcG
+ws6D/7sNQacABvSiOjDwd5yYsAiO0zbCKlZJinyb93yu/UnkERmBtu/TD1hYSZyA
+WfWMHeISAmpgvuO5KKAcSkFdw/j3wvNDZOvNXWuyufMOmaAB+BwPspuENd2b+srH
+/Rg3VvQUl97FpogOV1NPulWgR0IynUsemT/to1XHA7UnUOBrpinGe5KE0BHhKnAv
+PhNR2e3F0RxBtql3WpMFgEZtP35D8QwI7RX58pOP
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.marquette.edu/saml/idp/profile/redirect/sls"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.marquette.edu/saml/idp/profile/post/sls"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.marquette.edu/saml/idp/profile/redirectorpost/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.marquette.edu/saml/idp/profile/redirectorpost/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Marquette University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Marquette University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.marquette.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Chad Gorectke</md:GivenName>
+	<md:EmailAddress>chad.gorectke@marquette.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chad Gorectke</md:GivenName>
+	<md:EmailAddress>chad.gorectke@marquette.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jeremy Edson</md:GivenName>
+	<md:EmailAddress>jeremy.edson@marquette.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

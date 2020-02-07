@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ipm.weill.cornell.edu/federated-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://pmkb.weill.cornell.edu/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://pmkb-local.weill.cornell.edu/Shibboleth.sso/Login" index="2"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://pmkb-s.weill.cornell.edu/Shibboleth.sso/Login" index="3"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Weill Cornell Institute for Precision Medicine</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://ipm.weill.cornell.edu/about/about-institute</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://weill.cornell.edu/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="51" width="234" xml:lang="en">https://weill.cornell.edu/sites/all/themes/wcm_edu/images/WCM_2Line_CoBrand_RGB.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC6zCCAdOgAwIBAgIJAPqg8605cVWPMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGMzZTUxNjk5OTIwZTAeFw0xNjAyMjUyMDM4NDJaFw0yNjAyMjIyMDM4NDJa
+MBcxFTATBgNVBAMTDGMzZTUxNjk5OTIwZTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAOC9K7UVdQnOLMD+T/LFT+Rn084+16TbS+SxupqDiwDdpFgcy0Uh
+45kEEHsGMLw+AjkfVqq7Ni6SW66qmcG0rJVtRScF/TAQFrBVotxNAqsdEphhzyy1
+0iu9VfKNBkZ41lhgIwX92wjcZibsaRKYsnOgnnrQ24pIUx7NI2B+dCPY2AW8nvOx
+zZHvMdP4k39psVcQgnZ07H6vChYDg2d/58tAjyqB/6mxM1zgUCNmIdMfQK0k40yk
+1Ea7oZAayBXrBy2Ik0HGBXpFn2To4w9pU7W3XCLlzJO7ryoCjCdvtjA4/85TUtA0
+53Jomrqz52XsYGNGwrTf8DFPTDMwO3Ussr8CAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+YzNlNTE2OTk5MjBlMB0GA1UdDgQWBBTO4An8KxCRMlWyY4FpLgUHN7I+XzANBgkq
+hkiG9w0BAQUFAAOCAQEA1nBRHvVb23X9A8AqAD/lwgipivrZFzlXdD6bgrDvPLwZ
+CYTEXXt4Gi15kB7dUkY+aWBjSInB1EobikE5fwAOh7hpXBreKwYHIFWmjgWPCmKx
+uMEg1eXrrJbt2WgkP7woViJvkRmmkweuBkA3EEd7198jx8wxDZiqWBDOk1VzAIBv
+1WN4rqlxXAaNQatzxVa9bgSFjHZD7ByaxGNp/Dy9cNIpln9dQsy8HR6D6QFXRlvh
+xPFX7aGmryJwMudoa1LAFIosj1Q3rEBLKVYhhqUQ4ZXUtgSzvi0baN8v8LV17i3w
+YgcqnuA/snTukkLF/01orTzUp2MzQu8XI/qSfUv/Gg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://pmkb.weill.cornell.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pmkb-local.weill.cornell.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pmkb.weill.cornell.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pmkb-local.weill.cornell.edu/Shibboleth.sso/SAML2/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ipm-saml-test.weill.cornell.edu/Shibboleth.sso/SAML2/POST" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pmkb-s.weill.cornell.edu/Shibboleth.sso/SAML2/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://xits-ipmd02.med.cornell.edu/Shibboleth.sso/SAML2/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://pmkb-d.weill.cornell.edu/Shibboleth.sso/SAML2/POST" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Weill Cornell Institute for Precision Medicine</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Weill Cornell Medical College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Weill Cornell Medical College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.med.cornell.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Linda Huang</md:GivenName>
+	<md:EmailAddress>lih3001@med.cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Alexandros Sigaras</md:GivenName>
+	<md:EmailAddress>als2076@med.cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Linda Huang</md:GivenName>
+	<md:EmailAddress>lih3001@med.cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Linda Huang</md:GivenName>
+	<md:EmailAddress>lih3001@med.cornell.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

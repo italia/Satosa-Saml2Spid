@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ukshib.labarchives.com/sp/production">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2018-03-09T13:59:59Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://ukshib.labarchives.com/Shibboleth.sso/Login"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LabArchives (UK)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Electronic Laboratory Notebook, including Professional and Classroom Editions.</mdui:Description>
+		<mdui:Logo height="100" width="100">https://mynotebook.labarchives.com/images/la_beaker.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEPDCCAqSgAwIBAgIJAOTcVEFffyQMMA0GCSqGSIb3DQEBCwUAMDIxMDAuBgNV
+BAMTJ2lwLTEwLTAtMC03OS5ldS13ZXN0LTIuY29tcHV0ZS5pbnRlcm5hbDAeFw0x
+ODAzMDYwMTA2MjBaFw0yODAzMDMwMTA2MjBaMDIxMDAuBgNVBAMTJ2lwLTEwLTAt
+MC03OS5ldS13ZXN0LTIuY29tcHV0ZS5pbnRlcm5hbDCCAaIwDQYJKoZIhvcNAQEB
+BQADggGPADCCAYoCggGBAO3Dk6o2MSMbEIuDPmI+EORKPSBJe7nPH2GEq6QeZotS
+ogNVS3pht3o2CmD2zRcHWQypo9evUq1mjMOdc8gUZVEgfocWheWHhtuh41db8qxi
+bzucsyYPOlmZX9+6a1fMqCAvBlQuhcFDoPGjV1q9wE29A5o/BT0568pbYbIOhdqE
+5+leBFdTR9YOhXEpHoNHUefa4si3cI1xW9jtJixmPhMxoSVMt5qPiHcE+MUkm8Va
+3qOo4Bjb/ZYf6Eic5fg7BVc5U/b66slOH06XkQXaxx9Wf1+gsMvKH2TajhNATAz4
+1tC+PDO5cu+0agHp/uZVGn6Ja/YH14nzIlhS560HC46sbdBwCcZcHOLJDDtVx9GJ
+HtcCtFIN87bcz8jEYWvAz9xCrF/bnGxV2BFbzS6jIFzBkrDXPPpUpVjGPFoUMNXd
+ASDiGydK9PA9BpiyCoFi7d/YfKjYPENm4xjA0HLjCliGnhvW++OXq0QqjM/W1oQJ
+dyBnrZgQPhR3xhdNpNQTrwIDAQABo1UwUzAyBgNVHREEKzApgidpcC0xMC0wLTAt
+NzkuZXUtd2VzdC0yLmNvbXB1dGUuaW50ZXJuYWwwHQYDVR0OBBYEFLGrSFfA26ar
+DBwk2H/ICGki6fxMMA0GCSqGSIb3DQEBCwUAA4IBgQAChN56Ofy4Y4n6Zgp2Q0CT
+JghIliqKNVO2UkhrG2bbxRQ+CmNsAiPzcGuEmAE7M898AatuIwVYW6MaMp5O43R1
+r1ev0O9oD9qxYbqRCk8ITD+s1gXworFIlfv3ImDp/U4aks+AauicxuB2VZb3VqV4
+KXR4qGy4LzbxfCZoDn813mERPvXkVpOIK2Sr+rmtuaBs2sS1GiVIT7pZlBh31O8T
+4ztQCboR6sCG59fjwlNDom1uzAt1ZcftyOzFC/zYdz8pRF/CvChc86mdUjTuilmA
+vYHgWpXfVViXi/zSH8s1vbm/ht01FNLz9RUpXn6ce6aZHLLCso0I8pNbepGZCTSI
+7HBQ4m8E79RN4j738WYIQDlRRhYRmkN2ACj/XGoflqXwQLfC/CweIE/U+caNL73a
+WlRjGvzNJGfwzVWNNAfHddQSNQPzROwknF3cK14KZrj0qBbH+lwhX248uIPzh9j5
+gKy4TAq3M1oT17urW9uCjI7BtnI6Ou0zkNaNyihgD2Q=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ukshib.labarchives.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ukshib.labarchives.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ukshib.labarchives.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ukshib.labarchives.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ukshib.labarchives.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://ukshib.labarchives.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">LabArchives (UK)</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LabArchives, LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LabArchives (UK)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.labarchives.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LabArchives Support</md:GivenName>
+	<md:EmailAddress>mailto:support@labarchives.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Norman</md:GivenName>
+	<md:SurName>Kenney</md:SurName>
+	<md:EmailAddress>mailto:nkenney@labarchives.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

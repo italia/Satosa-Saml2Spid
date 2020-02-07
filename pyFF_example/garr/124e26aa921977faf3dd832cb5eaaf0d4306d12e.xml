@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cmb.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-08-08T11:42:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cmb.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Colombo</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider - University of Colombo, Colombo 03, Sri Lanka</mdui:Description>
+		<mdui:Keywords xml:lang="en">eduroam, research, university</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">https://cmb.ac.lk/eduroam</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://cmb.ac.lk/eduroam</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">https://idp.cmb.ac.lk/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.cmb.ac.lk/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:6.900023,79.858793</mdui:GeolocationHint>
+		<mdui:DomainHint>cmb.ac.lk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUEKjpYL0oYYFLSJ9VNs6LhalXWNUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmNtYi5hYy5sazAeFw0xOTA4MTUwNTM2MjFaFw0z
+OTA4MTUwNTM2MjFaMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCY7C5CpL7SvK+YaDGf6FySjEzVfEk5csjh
+2mVmzwFHInMh8WptaZxZ5Mg3bg0A7a6JFBwyZjhSmZLGXbTqZLoPyrp2vFpVHPxn
+jzPDj1xjY28pbsVkR8rjw26/cKxM7CwIjGyxabGhyhIiayr6F4nK0+0ftH972+He
++RS6nkBEQi8FSNHuIKPWLtgOAS1bzWu4DCq0jH7q01LQVn0EmicUdCcEUpm6BLvo
+drUas8zrJngPQAmtMljFnOk2iUaJYjRjWMbNd3rqMoDeYPJM3LSyXKNGQvIVRW9H
+UWHJ1TqqhWUYaVanJv4NjoHAXpmFTG/1qjT/q+bQe7TWOZMpHY4hAgMBAAGjYTBf
+MB0GA1UdDgQWBBQiIXZ+QIoe38PCQVBUpJob7XEzozA+BgNVHREENzA1gg1pZHAu
+Y21iLmFjLmxrhiRodHRwczovL2lkcC5jbWIuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAFw0KVe1KheZHOOOXohRsduIlRuDZCKtNfw5EsdU
+jqXiIQwIYsrHJEt/djdUskiWad4YbNet7247GbTOGPSSI7qxZ97tlryp/p1YsNNh
+lva8rs9ywd9kjpxkSi+nd2hSe0KYYLP6xfzVBdZuXLzyGOPk1pJhlVO3MQJv7HwC
+uQ0vXAnayemFkoXloOcgYSlADLuvrWisY/obAj5gzRzOhFghuxhHCoFqzFVj2Web
++2PdTzIgkM8ptYdVvyCubsIPoEoMiIgmDwrFHOsXKMbuhwwumau1cNk4nbsKqIW/
+qs0oX8rlW8qivuZJ1coQMfnQoAlnpvpwZ+E/GS9NgYA2ItY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAM7Wys6gfrq981QTBNbAGBzLh0VVMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswHhcNMTkwODE1MDUzNjIxWhcN
+MzkwODE1MDUzNjIxWjAYMRYwFAYDVQQDDA1pZHAuY21iLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4YJ1fyFz1dw4J+MPnCJm2s7fz/auR30
+d7Huwdx6Y3afxLiDx/4fphwuI7tPhvyuuaKCDjWyhA+F7NF48RB4c+RCuMpIn0PF
+eSR3Cba0zx6VQge2lUr/5M+Xu4eJVTF3fehf/yeOFCPQKYdmOoja/yrV1iI+xSGY
+h669Izw2ouulcPYo03IZQhzqZTpbmemMEyfehy2N5ohSqjvaNCMioNyPGMOsBF7T
+R2V2DMOdxpF1kXxG2HOgWyFYtjFIw7aqjCFZD6xsQbi7x8EfNx9azQZQnr/STTD+
+T/tmdAeuYMP46UQ8TwumCHb0X+8YGuSxeSghIgHQhwF/sUPThGwHSwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUNbfJLglKjCGph0pJ8z1B8cDgx18wPgYDVR0RBDcwNYINaWRw
+LmNtYi5hYy5sa4YkaHR0cHM6Ly9pZHAuY21iLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBWUcBtWJ+Qhm8FSkeqz2qwBLdx1115P3k7tNlh
+eYr8MumxJmV58kzqvrfigLvg4Pq6djjPXSQny+H02DeMGp3v0AaomggAS0OrPC7N
+5fMyTppKCdigcdTYRiYsB68rM7nj7BIJC3f3n4KWdRJtdBBvaVVCi3uIzOmrwziZ
+1V0KWeiF3S2ez0lFcc57NWFr/35cOjCCB9p7QxWsC58lkXEemWD/h1OJX6nxvzQe
+jajhWYYjUCDtfCRGcj79DzigRb0IMtmEicQ5N29k3zUnFh5/dxirBMZrtStjjOV1
+AESzO4g7EQxw5S4WcKxfhDB/loS8LNhdMO3OrHBONJNB292q
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUZ0b3BuTLE7FBqhzDMYqLLLnKhxUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmNtYi5hYy5sazAeFw0xOTA4MTUwNTM2MjFaFw0z
+OTA4MTUwNTM2MjFaMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCouuKfam9/11xBtP9ajl7E/015VnFtj92K
+T4rZsODfXldslE1Uh6AFtZw3NlINwhTJTB7k+H+BRRAJilk5TxneCQ1BgKUR9SNB
+ZIh/UdufV0KnAaO2a+8vhc35GsXMPfS8EV31h8Qycv4Onv9bPZMqCSER30IYcqX2
+zlBetdcYFXHy3kZW9e2De4q2EQ9SZ78r9LLFTy5EV3F3Fr3n8rWP/MM4WetvmhSV
+wA43u4lVUoAEnUebn3QojqBPyDOKUxleoqikh10L8xwLy2qfYv5Pvp0fOo25rpie
+JFcLMjNxdPa1Xqd13ZmUefzCuhkIAQRlvDukwZjG4vtbsK/SVTKRAgMBAAGjYTBf
+MB0GA1UdDgQWBBTG5dXXs23mjPHgMg36ugjOlo5OuzA+BgNVHREENzA1gg1pZHAu
+Y21iLmFjLmxrhiRodHRwczovL2lkcC5jbWIuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHaer8wxJxWMS+f9ZQa7lzsrIfDU7BLhttfWjhVg
+7VpxE3LU04riKxAWEiUZgkP4k7gBh5crAqrTsA+XWBf32YJS7IgBZfC/j3FPfOmr
+jta/Ad0EioYK4jm6ay4UzM3TMk3S2x0pBpPgmD5QwdDaAbQvIoaW1Ypn+7JNCOQz
+KeHTI0IRnL86KxBpz1SAh6jeae2QVfm+Ox3troIEEg8Nag+Zhkz97hDPV0RSwHMc
+8Zwu9A828ho8KCoJNab0GcVaKakN6mt5PQs6flTGhexx0Gi6yyQYDYIxHwAwFiS/
+9JrCVpp61M/shwYAseDCxs0lwJoxC7oiVRttdDxNG40MUEg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cmb.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUEKjpYL0oYYFLSJ9VNs6LhalXWNUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmNtYi5hYy5sazAeFw0xOTA4MTUwNTM2MjFaFw0z
+OTA4MTUwNTM2MjFaMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCY7C5CpL7SvK+YaDGf6FySjEzVfEk5csjh
+2mVmzwFHInMh8WptaZxZ5Mg3bg0A7a6JFBwyZjhSmZLGXbTqZLoPyrp2vFpVHPxn
+jzPDj1xjY28pbsVkR8rjw26/cKxM7CwIjGyxabGhyhIiayr6F4nK0+0ftH972+He
++RS6nkBEQi8FSNHuIKPWLtgOAS1bzWu4DCq0jH7q01LQVn0EmicUdCcEUpm6BLvo
+drUas8zrJngPQAmtMljFnOk2iUaJYjRjWMbNd3rqMoDeYPJM3LSyXKNGQvIVRW9H
+UWHJ1TqqhWUYaVanJv4NjoHAXpmFTG/1qjT/q+bQe7TWOZMpHY4hAgMBAAGjYTBf
+MB0GA1UdDgQWBBQiIXZ+QIoe38PCQVBUpJob7XEzozA+BgNVHREENzA1gg1pZHAu
+Y21iLmFjLmxrhiRodHRwczovL2lkcC5jbWIuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAFw0KVe1KheZHOOOXohRsduIlRuDZCKtNfw5EsdU
+jqXiIQwIYsrHJEt/djdUskiWad4YbNet7247GbTOGPSSI7qxZ97tlryp/p1YsNNh
+lva8rs9ywd9kjpxkSi+nd2hSe0KYYLP6xfzVBdZuXLzyGOPk1pJhlVO3MQJv7HwC
+uQ0vXAnayemFkoXloOcgYSlADLuvrWisY/obAj5gzRzOhFghuxhHCoFqzFVj2Web
++2PdTzIgkM8ptYdVvyCubsIPoEoMiIgmDwrFHOsXKMbuhwwumau1cNk4nbsKqIW/
+qs0oX8rlW8qivuZJ1coQMfnQoAlnpvpwZ+E/GS9NgYA2ItY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAM7Wys6gfrq981QTBNbAGBzLh0VVMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswHhcNMTkwODE1MDUzNjIxWhcN
+MzkwODE1MDUzNjIxWjAYMRYwFAYDVQQDDA1pZHAuY21iLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo4YJ1fyFz1dw4J+MPnCJm2s7fz/auR30
+d7Huwdx6Y3afxLiDx/4fphwuI7tPhvyuuaKCDjWyhA+F7NF48RB4c+RCuMpIn0PF
+eSR3Cba0zx6VQge2lUr/5M+Xu4eJVTF3fehf/yeOFCPQKYdmOoja/yrV1iI+xSGY
+h669Izw2ouulcPYo03IZQhzqZTpbmemMEyfehy2N5ohSqjvaNCMioNyPGMOsBF7T
+R2V2DMOdxpF1kXxG2HOgWyFYtjFIw7aqjCFZD6xsQbi7x8EfNx9azQZQnr/STTD+
+T/tmdAeuYMP46UQ8TwumCHb0X+8YGuSxeSghIgHQhwF/sUPThGwHSwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUNbfJLglKjCGph0pJ8z1B8cDgx18wPgYDVR0RBDcwNYINaWRw
+LmNtYi5hYy5sa4YkaHR0cHM6Ly9pZHAuY21iLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBWUcBtWJ+Qhm8FSkeqz2qwBLdx1115P3k7tNlh
+eYr8MumxJmV58kzqvrfigLvg4Pq6djjPXSQny+H02DeMGp3v0AaomggAS0OrPC7N
+5fMyTppKCdigcdTYRiYsB68rM7nj7BIJC3f3n4KWdRJtdBBvaVVCi3uIzOmrwziZ
+1V0KWeiF3S2ez0lFcc57NWFr/35cOjCCB9p7QxWsC58lkXEemWD/h1OJX6nxvzQe
+jajhWYYjUCDtfCRGcj79DzigRb0IMtmEicQ5N29k3zUnFh5/dxirBMZrtStjjOV1
+AESzO4g7EQxw5S4WcKxfhDB/loS8LNhdMO3OrHBONJNB292q
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUZ0b3BuTLE7FBqhzDMYqLLLnKhxUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmNtYi5hYy5sazAeFw0xOTA4MTUwNTM2MjFaFw0z
+OTA4MTUwNTM2MjFaMBgxFjAUBgNVBAMMDWlkcC5jbWIuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCouuKfam9/11xBtP9ajl7E/015VnFtj92K
+T4rZsODfXldslE1Uh6AFtZw3NlINwhTJTB7k+H+BRRAJilk5TxneCQ1BgKUR9SNB
+ZIh/UdufV0KnAaO2a+8vhc35GsXMPfS8EV31h8Qycv4Onv9bPZMqCSER30IYcqX2
+zlBetdcYFXHy3kZW9e2De4q2EQ9SZ78r9LLFTy5EV3F3Fr3n8rWP/MM4WetvmhSV
+wA43u4lVUoAEnUebn3QojqBPyDOKUxleoqikh10L8xwLy2qfYv5Pvp0fOo25rpie
+JFcLMjNxdPa1Xqd13ZmUefzCuhkIAQRlvDukwZjG4vtbsK/SVTKRAgMBAAGjYTBf
+MB0GA1UdDgQWBBTG5dXXs23mjPHgMg36ugjOlo5OuzA+BgNVHREENzA1gg1pZHAu
+Y21iLmFjLmxrhiRodHRwczovL2lkcC5jbWIuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHaer8wxJxWMS+f9ZQa7lzsrIfDU7BLhttfWjhVg
+7VpxE3LU04riKxAWEiUZgkP4k7gBh5crAqrTsA+XWBf32YJS7IgBZfC/j3FPfOmr
+jta/Ad0EioYK4jm6ay4UzM3TMk3S2x0pBpPgmD5QwdDaAbQvIoaW1Ypn+7JNCOQz
+KeHTI0IRnL86KxBpz1SAh6jeae2QVfm+Ox3troIEEg8Nag+Zhkz97hDPV0RSwHMc
+8Zwu9A828ho8KCoJNab0GcVaKakN6mt5PQs6flTGhexx0Gi6yyQYDYIxHwAwFiS/
+9JrCVpp61M/shwYAseDCxs0lwJoxC7oiVRttdDxNG40MUEg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cmb.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Colombo, Sri Lanka</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Colombo, Sri Lanka</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://cmb.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nirosha</md:GivenName>
+	<md:SurName>Rathnayake</md:SurName>
+	<md:EmailAddress>mailto:nirosha@noc.cmb.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Rusiru</md:GivenName>
+	<md:SurName>Dalpathadu</md:SurName>
+	<md:EmailAddress>mailto:rusiru@noc.cmb.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

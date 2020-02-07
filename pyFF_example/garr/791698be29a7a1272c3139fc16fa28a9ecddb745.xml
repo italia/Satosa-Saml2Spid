@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:jmu.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">jmu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">James Madison University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.jmu.edu/policies/web-privacy-statement.shtml</mdui:PrivacyStatementURL>
+		<mdui:Logo height="125" width="230" xml:lang="en">https://itfederation.jmu.edu/idp/images/James_Madison_logo_black.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEvTCCA6WgAwIBAgIJAMwnlWaj6tOPMA0GCSqGSIb3DQEBBQUAMIGaMQswCQYD
+VQQGEwJVUzERMA8GA1UECBMIVmlyZ2luaWExFTATBgNVBAcTDEhhcnJpc29uYnVy
+ZzEhMB8GA1UEChMYSmFtZXMgTWFkaXNvbiBVbml2ZXJzaXR5MR8wHQYDVQQLExZJ
+bmZvcm1hdGlvbiBUZWNobm9sb2d5MR0wGwYDVQQDExRpdGZlZGVyYXRpb24uam11
+LmVkdTAeFw0xMjA2MDUxNTExMTRaFw0yMjA2MDUxNTExMTRaMIGaMQswCQYDVQQG
+EwJVUzERMA8GA1UECBMIVmlyZ2luaWExFTATBgNVBAcTDEhhcnJpc29uYnVyZzEh
+MB8GA1UEChMYSmFtZXMgTWFkaXNvbiBVbml2ZXJzaXR5MR8wHQYDVQQLExZJbmZv
+cm1hdGlvbiBUZWNobm9sb2d5MR0wGwYDVQQDExRpdGZlZGVyYXRpb24uam11LmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMoRMpZ+1Y8Z6de8v1Zj
+3UYNEj0b2V/mSd9rseQtcAgPMwL2khVt/GJoPpdG7DGmRCATuVpkzD/k1vA06cBO
+knCHpOhHvn2AgYyfPFqbHY1bBLE0sKqynnj2W5S19Sb+9DYl5lY7gQsoXCX5o0ql
+iBjp7Yqo1aMT/rImOZlcw4r7GL/dTi+0Q1ScWUX+YNCJF22sAg/HctNjqCkEwPqV
+v5K0UHZ96YpdOXmC+pzQ9oo33RANpaMGHpA63eM70rzVZccVspb0LG8sZZLuTavH
+XTpGf2tR2TauKS1zP9ok0ZD5rweDem3BKtRP7i9R+tuejzHi3JH2Dur59At616y1
+jN0CAwEAAaOCAQIwgf8wHQYDVR0OBBYEFJ50wNaJkgk5WSLNo0w/NhDjxmYpMIHP
+BgNVHSMEgccwgcSAFJ50wNaJkgk5WSLNo0w/NhDjxmYpoYGgpIGdMIGaMQswCQYD
+VQQGEwJVUzERMA8GA1UECBMIVmlyZ2luaWExFTATBgNVBAcTDEhhcnJpc29uYnVy
+ZzEhMB8GA1UEChMYSmFtZXMgTWFkaXNvbiBVbml2ZXJzaXR5MR8wHQYDVQQLExZJ
+bmZvcm1hdGlvbiBUZWNobm9sb2d5MR0wGwYDVQQDExRpdGZlZGVyYXRpb24uam11
+LmVkdYIJAMwnlWaj6tOPMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEB
+AK8EXe8Og7W6M384gTsVNHcG1h6B6pmXhHZfVwVucYEenggcSQ7ErWCZliCE0Ae8
+hfiqPZDdLrrzaF6/gp6sfueuRbKXaa41FfcuvOGaUs25TD3hf7tH2N4Voq7akAtP
+YCdtupLvbB7eM8CFJwKdOc43tLUO3eG4eJzMWV6hX+PwwqCbZIvcKbFpFhzMSN/u
+MsH+FBVwtyV/jxAkRpw/MRczHruwPObYT6mKoVMdOaP0NvAEtqQRFBuJQh760wpz
+QzYSjyLb8gehpoRs8nWw73l8FgKhXa/hz06Vp9hibCfxxSWb8bktOu8MruAM4zVe
+ItgUieNNRzPjqrr/K8B4rWo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://itfederation.jmu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://itfederation.jmu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://itfederation.jmu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">James Madison University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">James Madison University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.jmu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@jmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Team</md:GivenName>
+	<md:EmailAddress>it-shib-team@jmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth Team</md:GivenName>
+	<md:EmailAddress>it-shib-team@jmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Team</md:GivenName>
+	<md:EmailAddress>it-security@jmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

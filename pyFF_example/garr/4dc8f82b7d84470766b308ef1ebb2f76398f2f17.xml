@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.crous-nancy-metz.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2013-07-19T10:43:55Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">crous-nancy-metz.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CROUS Lorraine</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAACMuAAAjLgAAAAAAAAAAAAD//////f3/////////////xcX//1hY//8ZGf//AgL//wIC//8YGP//V1f//8TE//////////////39/////////f3////////+/v//Z2f//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//Zmb///39/////////f3////////+/v//PT3//wAA//8BAf//AwP//wEB//8AAP//AQH//wEB//8EBP//AgL//wAA//88PP///f3/////////////Z2f//wAA//8HB///AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8DA///AAD//2Zm////////xcX//wAA//8BAf//AAD//wAA//8AAP//AAD//woK//8XF///DQ3//xER//8SEv//ExP//wUF//8AAP//xsb//1lZ//8AAP//AwP//wAA//8AAP//AQH//wAA//8dHf//S0v//0tL//9YWP//VFT//1dX//8CAv//AAD//09P//8aGv//AAD//wEB//8AAP//AAD//wIC//8AAP//KSn//y8v//8NDf//AgL//zAw//8BAf//Ly///w8P//9BQf//AgL//wAA//8AAP//AAD//wEB//8AAP//Hx///3p6//82Nv//c3P//2Fh//+bm///e3v//5iY//93d///p6f//wIC//8AAP//AAD//wAA//8BAf//AAD//xwc//95ef//QED//zw8//9FRf//WFj//zw8//8yMv//PDz//2Rk//8aGv//AAD//wEB//8AAP//AAD//wIC//8AAP//ISH//zEx//8AAP//AAD//wAA//8AAP//AAD//wAA//8NDf//Wlr//wAA//8DA///AAD//wAA//8AAP//AgL//wAA//8AAP//AgL//wIC//8DA///AgL//wUF//8AAP//W1v//8bG//8AAP//AQH//wAA//8AAP//AAD//wAA//8BAf//AgL//wAA//8AAP//AAD//wAA//8BAf//AAD//8XF////////aGj//wAA//8HB///AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8HB///AAD//2dn//////////////////8+Pv//AAD//wEB//8DA///AQH//wAA//8AAP//AQH//wMD//8BAf//AAD//z09///+/v////////39/////////////2ho//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//2dn///+/v////////39/////////f3/////////////xsb//1pa//8aGv//AgL//wIC//8aGv//WVn//8XF//////////////39////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.crous-nancy-metz.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">CROUS Lorraine staff</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CROUS Lorraine</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnel CROUS Lorraine</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRzCCAi+gAwIBAgIUerZ2ZizOgehyJOiGxIzy6uJrBhEwDQYJKoZIhvcNAQEF
+BQAwIjEgMB4GA1UEAxMXaWRwLmNyb3VzLW5hbmN5LW1ldHouZnIwHhcNMTMwMzE5
+MTAzNDExWhcNMzMwMzE5MTAzNDExWjAiMSAwHgYDVQQDExdpZHAuY3JvdXMtbmFu
+Y3ktbWV0ei5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJfqgv+a
+hzEbgZTMN+3DsGNYbn0eqcKexGHOGkSixYgAo5goGNaJXfjucPTitJn85DikEltR
+j6pDqAUZjht7MHCLJfFaWuKpoXjF5/JOFqFQUM8ah7Kfht2F6MlqSiLuRf6myliJ
+iQO+XsDY+iCLSG5UcF3GkkgXw/0yICi+lnHit0eYFtQu4dEsIPTcrwLkDlAywbVl
+pCvOGEJ8xQZ2X/m1cwGmO6AWxTxN+4PMTmrZnFFfucTJ6npaALznMcf46QFoWAhQ
+SZtQ5HJDJlakSZ//FDFcDYi2+WfPzzsHZaWlnNfFjhqMwSkJDJF1O7GPEiJlFPYR
+viM0zdt7AC0zifUCAwEAAaN1MHMwUgYDVR0RBEswSYIXaWRwLmNyb3VzLW5hbmN5
+LW1ldHouZnKGLmh0dHBzOi8vaWRwLmNyb3VzLW5hbmN5LW1ldHouZnIvaWRwL3No
+aWJib2xldGgwHQYDVR0OBBYEFLOgOSBObN7KYlmAMa6V69Zel4FTMA0GCSqGSIb3
+DQEBBQUAA4IBAQBY9+ZFX/VL/IqvpjcNTLP+FMIzfRspOoHEJi3t5f+b8+YwnpyJ
+RCftuuLQKWKgj5kOJ25Ct0GxJPaVHjNxsyf75pMUFqW3nRX+zRgd2D98+t0NZQlC
+mtpt6ypr1I++S8ra53CrRZ8HsAboFFpNkJeq1J/IId0EJSsK5p/MLs8oXJVXvNJo
+BIfpMbJXD45pQpWk4A2NnIf6XvuHkE20dOKSAmg5tvAXHiXe+h06VOPQeuMJ8Tav
+lCZDR2OLrY9t4NtgZvnqfCbqo2OwkK8D2/QtQZca/uU5zI1m+i4erZM26AMCJp0T
+XjCxIZ6BkbpQAzs6p2HBuxHgUARCEQ+YXzUf
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEfDCCA2SgAwIBAgIRAM5o4WD6O95qTaaU1z+tWw4wDQYJKoZIhvcNAQEFBQAw
+NjELMAkGA1UEBhMCTkwxDzANBgNVBAoTBlRFUkVOQTEWMBQGA1UEAxMNVEVSRU5B
+IFNTTCBDQTAeFw0xMzAzMjAwMDAwMDBaFw0xNjAzMTkyMzU5NTlaMEUxITAfBgNV
+BAsTGERvbWFpbiBDb250cm9sIFZhbGlkYXRlZDEgMB4GA1UEAxMXaWRwLmNyb3Vz
+LW5hbmN5LW1ldHouZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDL
+R1c4GL3zTfYfOGNLV5wcJIlhDDYdk1286uSM4zbrXIbWc5C+vxbuYKXCN3BJeOpX
+rxGjVMP0Kz/nJQVsWZGAIOxiejcXo4npAEgnPjnHVl0Y263vS5/QrT0H2ttIQsdt
+HBZy2Gq+AOIO4hUOL4MuIFK6uZBC12yqoARb34+IO2DJ77ElbvSHu03bJAoSGLXG
+ERdGIS3lEO0jJTdVbho3EmPR+ht+GysuVfSGrUNWlQf7ZMrche+fI5unjbUS4LRm
+XB92H+3kJA+51EWrgdslcIB43Yr7oxlZUng3V9WByIY5x7/U4GhXobyI/rkyqISo
+q0lzXR5ZQLBgRkil30FdAgMBAAGjggF0MIIBcDAfBgNVHSMEGDAWgBQMvZNoDPPe
+q6NJays3V0fqkOO57TAdBgNVHQ4EFgQUPqT/EG7DgKwpR5aj+ZaZTv2QOlYwDgYD
+VR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMCIGA1UdIAQbMBkwDQYLKwYBBAGyMQECAh0wCAYGZ4EMAQIBMDoG
+A1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly9jcmwudGNzLnRlcmVuYS5vcmcvVEVSRU5B
+U1NMQ0EuY3JsMG0GCCsGAQUFBwEBBGEwXzA1BggrBgEFBQcwAoYpaHR0cDovL2Ny
+dC50Y3MudGVyZW5hLm9yZy9URVJFTkFTU0xDQS5jcnQwJgYIKwYBBQUHMAGGGmh0
+dHA6Ly9vY3NwLnRjcy50ZXJlbmEub3JnMCIGA1UdEQQbMBmCF2lkcC5jcm91cy1u
+YW5jeS1tZXR6LmZyMA0GCSqGSIb3DQEBBQUAA4IBAQAZXnrox99qVZFbXueFnN9l
+uY6MZnN393FnefeNNGadvEWF0gXyI3rdd3AYKz36cob+ByC3RaMyopOMDJZ5yfX/
+yC1aBqSGPHAkmFazWwFevwegau0rDil+QOhZfrMPJT+YTfFSmvym++tbrgIWyOTF
+2tNGJyeSA8S6qxrnnVFqvxt4W6jNupG5axSfrdvX+WETG9Im9B3Ulc81t3cYzItC
+FtoTzmdJCiKJa0dAguaETSDW9qY/9o3pzAQTehDm0Y0OCimTQNK9LlpYirHCxuig
+GLwPKwHbqAiA7alxm3xMxv+C38F2cIaVxgdXen4sWHqqXDc91gJjIXb9hW8uSo6Z
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.crous-nancy-metz.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.crous-nancy-metz.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.crous-nancy-metz.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CROUS de Nancy-Metz</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CROUS de Nancy-Metz</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.crous-nancy-metz.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:informatique@crous-lorraine.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

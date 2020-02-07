@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://incommon-sp.login.ufl.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://incommon-sp.login.ufl.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">UF Test Service Provider</mdui:DisplayName>
+		<mdui:Description xml:lang="en">UF Test Service Provider</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.privacy.ufl.edu</mdui:PrivacyStatementURL>
+		<mdui:Logo height="135" width="38" xml:lang="en">https://images.webadmin.ufl.edu/signatures/wordmark.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNTCCAh2gAwIBAgIJALSrSJX/Ph/uMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMTGWluY29tbW9uLXNwLmxvZ2luLnVmbC5lZHUwHhcNMTIwNjI5MTc1MDQ2WhcN
+MjIwNjI3MTc1MDQ2WjAkMSIwIAYDVQQDExlpbmNvbW1vbi1zcC5sb2dpbi51Zmwu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzhc1oWwLLPSn3VH/
+F/eOpZ3EX+bpIYqF6eMVAJGYjXQwiCwvONshK/coSJX9HEgDsOueOO0awUQl1GgH
+p6d+NaNbM/VB0LcS45w86iaez3RV8t284kMe4T9MgWks4JSgioTXUZeaAjfdgcb1
+9qwfGI5k7R4tZjsYajxphu3n1vuwU12r5LciFyAjcruHmpDJfzM+o0jaR/48hmiG
+jNVZZzf/Wp32J2QvQNLvy7HvbZ8GIDjrpr5ThZ9d5cqc04pugVi+Cqv0Q8HNYFVa
+BTgozkKyR2ryRl2jU7gYZDRPsy/Zc9JFsl1xc7UogMf/e+Q1303jG2V3tWKAlNQ0
+ILyOMwIDAQABo2owaDBHBgNVHREEQDA+ghlpbmNvbW1vbi1zcC5sb2dpbi51Zmwu
+ZWR1hiFodHRwczovL2luY29tbW9uLXNwLmxvZ2luLnVmbC5lZHUwHQYDVR0OBBYE
+FDCVfBKVLOAOEblhvgD7+za4piTQMA0GCSqGSIb3DQEBBQUAA4IBAQBEbscmxR+b
+bAVvAiGJ+gSMFkKxim0tqtVxXGaC9kPkxupTxLUhodqYX+1Zat0okIT5IWOa2YV9
+Sg5gxVroLLrc3XLlnAMORC2M48ckMV7Yzq9zo0mA4GqLF0Yt36QncknJkqXp6sKL
+U6ysGQRfbtjXMbZpWo3LtPW6SI2sJDpSTSCLNJcHiwNwduygZtaWUtazxSxfB6s6
+rUfw0Ly8vhnnwWaUfYRFazfVtnQeVWFGd50bN+6MFBhkzKTxHRzRwTLJdcNzfTf3
+18QAVi9VPGETrTQyiX3bcAKYNGEUCnNd7Tba0o9c3+366OJe7I2Fy4A4Za5LnhCu
+Om0EEqIZ8jgO
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://incommon-sp.login.ufl.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Florida</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Florida</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ufl.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Warren Curry</md:GivenName>
+	<md:EmailAddress>whcurry@ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Charles Tompkins</md:GivenName>
+	<md:EmailAddress>crt@ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UF Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:icmd="http://id.incommon.org/metadata" contactType="other" icmd:contactType="http://id.incommon.org/metadata/contactType/security">
+	<md:GivenName>UF Incident Response Team</md:GivenName>
+	<md:EmailAddress>ufirt@ufl.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

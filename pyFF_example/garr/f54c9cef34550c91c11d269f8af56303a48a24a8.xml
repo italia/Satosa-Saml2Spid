@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.wellcome.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Wellcome Trust</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Wellcome Trust</mdui:Description>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>wellcome.ac.uk</mdui:DomainHint>
+		</mdui:DiscoHints>
+		<shibmd:Scope regexp="false">wellcome.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDjDCCAnQCCQDSxQ0pkFszHTANBgkqhkiG9w0BAQUFADCBhzELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0VuZ2xhbmQxDzANBgNVBAcTBkxvbmRvbjEbMBkGA1UEChMS
+VGhlIFdlbGxjb21lIFRydXN0MRswGQYDVQQLExJTaGliYm9sZXRoIFByb2plY3Qx
+GzAZBgNVBAMTEmlkcC53ZWxsY29tZS5hYy51azAeFw0xMzA2MTkwODQ1MzVaFw0z
+MzA2MTQwODQ1MzVaMIGHMQswCQYDVQQGEwJHQjEQMA4GA1UECBMHRW5nbGFuZDEP
+MA0GA1UEBxMGTG9uZG9uMRswGQYDVQQKExJUaGUgV2VsbGNvbWUgVHJ1c3QxGzAZ
+BgNVBAsTElNoaWJib2xldGggUHJvamVjdDEbMBkGA1UEAxMSaWRwLndlbGxjb21l
+LmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6MfUt+kgNykR
+8E2o8xQg67Td9sUz3Xh/4q8jDZTlbblsWn0xCHnpoglT0+dMX2roLWoU1wj2WhyR
+0aV/gIc1HsFePGvg0/AzKhAFniWUygPTU8lRICZYr6L09gjk1cioiG/b6JQbkhup
+q68Os3mAWcmndLw64TuY90BdxjCSd+lgAFpPmHhhtQSrhTCWwQFmzGkERTLMRchY
+WZRGNc66TuCzYfGoiaEfdZzxxm+/VDVJked1vUH4x91fcVEFAuEl2nEpu5pq3gjT
+u2TVkVZ4tvokZdcGQ4rXjU6Sam/o7Xbj+nz8UsjyyrlYjB8YokgPR87pONi+KmFk
+0vu6NLuOCwIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQBX91XErSfqgmH8RVxMtZQu
+0KWQZB/US90cJhlUa/1CyrCaMVOLDD5tphz588Gkq12cDaoZ9gBSAf92XsDuQqlM
+DsU2p1OwqAiQ/Qt7eRUnealBsG/FT+ZDPd0Ieec0l42cltp45FaqpZqniaqMNhW6
+jeZBsl3D8nPC0YLFMdnT81GX+BKxoX4h5BcJzYzpYB/GtcSSbUTZBEfb46K216wo
+l4tAQPXq7W/jhQ2fGiSDIAPDxUnMaCak1DXL5T/3nyA6F9RbC8z9FPvP7sAjgfdE
+QTLzavN+fHNlz6ykEglkseHbRs19a1x/EP7tNR8juq3QBCnIpLDFzPt7OQE7mrre
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.wellcome.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.wellcome.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.wellcome.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.wellcome.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.wellcome.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.wellcome.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wellcome.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDjDCCAnQCCQDSxQ0pkFszHTANBgkqhkiG9w0BAQUFADCBhzELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0VuZ2xhbmQxDzANBgNVBAcTBkxvbmRvbjEbMBkGA1UEChMS
+VGhlIFdlbGxjb21lIFRydXN0MRswGQYDVQQLExJTaGliYm9sZXRoIFByb2plY3Qx
+GzAZBgNVBAMTEmlkcC53ZWxsY29tZS5hYy51azAeFw0xMzA2MTkwODQ1MzVaFw0z
+MzA2MTQwODQ1MzVaMIGHMQswCQYDVQQGEwJHQjEQMA4GA1UECBMHRW5nbGFuZDEP
+MA0GA1UEBxMGTG9uZG9uMRswGQYDVQQKExJUaGUgV2VsbGNvbWUgVHJ1c3QxGzAZ
+BgNVBAsTElNoaWJib2xldGggUHJvamVjdDEbMBkGA1UEAxMSaWRwLndlbGxjb21l
+LmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6MfUt+kgNykR
+8E2o8xQg67Td9sUz3Xh/4q8jDZTlbblsWn0xCHnpoglT0+dMX2roLWoU1wj2WhyR
+0aV/gIc1HsFePGvg0/AzKhAFniWUygPTU8lRICZYr6L09gjk1cioiG/b6JQbkhup
+q68Os3mAWcmndLw64TuY90BdxjCSd+lgAFpPmHhhtQSrhTCWwQFmzGkERTLMRchY
+WZRGNc66TuCzYfGoiaEfdZzxxm+/VDVJked1vUH4x91fcVEFAuEl2nEpu5pq3gjT
+u2TVkVZ4tvokZdcGQ4rXjU6Sam/o7Xbj+nz8UsjyyrlYjB8YokgPR87pONi+KmFk
+0vu6NLuOCwIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQBX91XErSfqgmH8RVxMtZQu
+0KWQZB/US90cJhlUa/1CyrCaMVOLDD5tphz588Gkq12cDaoZ9gBSAf92XsDuQqlM
+DsU2p1OwqAiQ/Qt7eRUnealBsG/FT+ZDPd0Ieec0l42cltp45FaqpZqniaqMNhW6
+jeZBsl3D8nPC0YLFMdnT81GX+BKxoX4h5BcJzYzpYB/GtcSSbUTZBEfb46K216wo
+l4tAQPXq7W/jhQ2fGiSDIAPDxUnMaCak1DXL5T/3nyA6F9RbC8z9FPvP7sAjgfdE
+QTLzavN+fHNlz6ykEglkseHbRs19a1x/EP7tNR8juq3QBCnIpLDFzPt7OQE7mrre
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.wellcome.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.wellcome.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Wellcome Trust</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Wellcome Trust</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wellcome.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Nichols</md:SurName>
+	<md:EmailAddress>mailto:p.nichols@wellcome.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Nichols</md:SurName>
+	<md:EmailAddress>mailto:p.nichols@wellcome.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

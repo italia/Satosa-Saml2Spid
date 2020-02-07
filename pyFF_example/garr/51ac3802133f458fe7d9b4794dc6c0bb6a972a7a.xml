@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://academica.aws.wayne.edu/saml2/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wayne.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Wayne State University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://wayne.edu/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="883" width="1365" xml:lang="en">https://mac.wayne.edu/images/wsu_primary_stacked_color.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGBDCCA+wCCQCrxOUfYoSUczANBgkqhkiG9w0BAQsFADCBwzELMAkGA1UEBhMC
+VVMxETAPBgNVBAgMCE1pY2hpZ2FuMRAwDgYDVQQHDAdEZXRyb2l0MR8wHQYDVQQK
+DBZXYXluZSBTdGF0ZSBVbml2ZXJzaXR5MSswKQYDVQQLDCJDb21wdXRpbmcgJiBJ
+bmZvcm1hdGlvbiBUZWNobm9sb2d5MSAwHgYDVQQDDBdhY2FkZW1pY2EuYXdzLndh
+eW5lLmVkdTEfMB0GCSqGSIb3DQEJARYQYWsxNTIwQHdheW5lLmVkdTAeFw0xNjA4
+MTAxNzI5MDRaFw0zNjA4MDUxNzI5MDRaMIHDMQswCQYDVQQGEwJVUzERMA8GA1UE
+CAwITWljaGlnYW4xEDAOBgNVBAcMB0RldHJvaXQxHzAdBgNVBAoMFldheW5lIFN0
+YXRlIFVuaXZlcnNpdHkxKzApBgNVBAsMIkNvbXB1dGluZyAmIEluZm9ybWF0aW9u
+IFRlY2hub2xvZ3kxIDAeBgNVBAMMF2FjYWRlbWljYS5hd3Mud2F5bmUuZWR1MR8w
+HQYJKoZIhvcNAQkBFhBhazE1MjBAd2F5bmUuZWR1MIICIjANBgkqhkiG9w0BAQEF
+AAOCAg8AMIICCgKCAgEAw4GFs161XOuilfsrckyrQX0GuPPyP9KJW1EZuO7LBp1A
+oD+ZbTDXWKBlRJC37ih5LSn3rcA03siBfAwFcrMwLVNkSm25AylsCIXU+pszO/Ec
+xuS4IXb5W2HFsLJyM5td0Jcm2dpWoy7E1cL5WC5bQ1TR0Q1np0wIPuNurpYRNwbn
+MIRZiuxhq3weKfydEyB7DsO9gPj7HWZk9D3bpwfgo81hzYoUJx3B3CgTSKgcDvP8
+Cwnla2gcS5xlqRPyl3Oz7sTkeKCW5+lGTiltlbttbzGUgfitlFvFuGw8qu7w+TUv
+TjT+7Wi713VP1bsRaStJ+P/+5DvOgyU0WNya3JkIMqd7h4YRoMfclZMQBm7C5qKK
+pLh092ZcR/nhdx8mwdAd5iaqPULOTMvI+71m4SLM/aASC9Csf9Ozqwi9WOlqlwx1
+XVqF5per1M21aA5eo5IPmXdCxNd7QXMmiuTid6Q4MoaQ7W/OB3fs7xOcHi8sznH1
+nfrwy8Ktrg9mVQo0QLKyIxKhjQ9sb8J2+e+XTEIJoERoBqk7dAnSQQfUlUnz4ZmP
+1qzWnIGIbb2Z0Eu6NX1cjmsLOxbU4UIAm4wYaC4pNjH0GTYUphaXJLxXCTeCkjJ1
+D8qj5qfTvR7kjp8/ukDf85vZZ2u4XRow2d+dz55lo6eSvn1V362ZbV9O1uDZ/GsC
+AwEAATANBgkqhkiG9w0BAQsFAAOCAgEATNlvPhS+9nFnBkmg+Nprq/Z0HFwrRKgO
+jwLcjs+OZ35X7O0yK+xhkiNKqPAquumBLj4zBV+4Inj2uX6zuPe5FhhyF8BzGTFH
+uzy4xk5jyHr835bgCU78zj0rj3oY+tQrPqrPe+C4BDkflHpP+0z+1+L9aB470jKy
+KpGK8HSruOVeI0qUngQp6GOF9CN5Ho24lTNbGyuu70KERDmVK9UDUXZ+2rm60D+e
+/qqKSPbQqkI9Yrffb13IROgD1S7yYNQ35LrljKHbS0DeLmyDbTZ/CrWB4UX05lli
+X+LXhT0loRcswja3c31Px8y2VgsuADZV6KhSJBulSLbmz8X4zw1OCTPuZq1e8N2L
+BIYoHk9HMU6wKqHh3yu+KzD/AzKCmDk1Qs2izsMHAp3S/SymQpqMM6SNCb9AFtMY
+NEbhOY9B9tWB7276DLn1Rbugnlsgg7JUvFOEIYZnBqBVQsQ9+3EAow8/8OG/zwEj
+FMn1avYSiaQ3YVuhhnjA0ZRXcr/19aYGFSf2vOlkcB0uSisw9dNTfm2l316Mt0Vd
+X156DfEU2Q0xhhA7m7C277941PpXSp/crHvwM80qawbNKvjZ1xlTOTPfonQqvqCY
+f39x30U4T+oqs7gsmdhSeP28YePMKMrn7KH98RjaDByUl5xLRCB44hi3uBUr3q/g
+ch8SG0Rniag=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://academica.aws.wayne.edu/saml2/logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://academica.aws.wayne.edu/saml2/http_redirect"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://academica.aws.wayne.edu/saml2/http_post"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Wayne State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Wayne State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wayne.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael Gregorowicz</md:GivenName>
+	<md:EmailAddress>ak1520@wayne.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Rob Thompson</md:GivenName>
+	<md:EmailAddress>rob@wayne.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kevin Hayes</md:GivenName>
+	<md:EmailAddress>krhayes@wayne.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>C&amp;IT Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@wayne.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kevin Hayes</md:GivenName>
+	<md:EmailAddress>krhayes@wayne.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

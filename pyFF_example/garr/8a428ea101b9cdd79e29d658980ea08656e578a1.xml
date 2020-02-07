@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:lafayette.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://help.lafayette.edu/federatediderror" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lafayette.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lafayette College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shibboleth Identity Provider for Lafayette College, Easton, PA</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://its.lafayette.edu/policies/accounts/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://its.lafayette.edu/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="125" width="327" xml:lang="en">https://cdn.lafayette.edu/images/mediakit/LAF_Logo_Stacked_Red-327x125.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVAJYxoS4g0HtVGMnXI6lqUky18fzdMA0GCSqGSIb3DQEB
+BQUAMB0xGzAZBgNVBAMTEmlkcDEubGFmYXlldHRlLmVkdTAeFw0xMDA0MTkxNjA3
+NDhaFw0zMDA0MTkxNjA3NDhaMB0xGzAZBgNVBAMTEmlkcDEubGFmYXlldHRlLmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIfAZOL7zDCIZIazXYRD
+Q1HuBhaHBAxRk7lGyCbl7OhdRN4JWgeyYF3ZwXnX1TZ1A6PoynS0Ax/52nU/oCoA
+ZNP9rCKLpbNPRIbIa8weqpfUH6Z/FYz4K0/UxtaXkxVZS01aXoTYpbKaTPT0iK8i
+r3LeDJwYHP9cMDpQOv0YBaf8gxtxcO+rmhDMgtP5UUpn6Aht4HZr1wJs3dXXiMii
+OWMeW/D0vAG4im4ImXHVyxfR1wb3AYbQ3g2/k3g6KlqbLPhYiDTPUbmDo1aJKhNI
+m2Cdn1puIhy2iPT/EErOb03vD8Zmnqu9npILEXNpitkJQ0S9AOXghz1DLIyf/crz
+XHkCAwEAAaNrMGkwSAYDVR0RBEEwP4ISaWRwMS5sYWZheWV0dGUuZWR1hilodHRw
+czovL2lkcDEubGFmYXlldHRlLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+NXfHvwg2u2UxRysyIvg9YEOimOowDQYJKoZIhvcNAQEFBQADggEBAA4YgrGDyz+5
+KjDchK55/DJvcpHIy8g845JgaUVuqwQuoUMNQ7X33jv+60BZ3SwZ2IeQ2Ob7H0Tg
+d4tVfBNVLIb35Eg5hzI7L+eAeP6GzaB65fBVzMxq2yFd2hBjjtAHny4gJS7ezPK6
+V9HFdoVQ90t9+HlfBJWs1tMf5+smMTGROTuN+nxHnEjr6nJPozofaZKXMDsZuuKd
+L95JVYfApoA4H6a/w1cxF9lMl2Bs+dlFOP4C9kvZNekgpOYWC1EmA5L4SLglywSw
+IxZ8wXmYPwB3rJluzCbFDPImBSY51mZTzT2AZnTjUPTY/7VhVFpk5jcBhxMVK/3z
+kmYrzZJG/UM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp1.lafayette.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.lafayette.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp1.lafayette.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp1.lafayette.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp1.lafayette.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp1.lafayette.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lafayette.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVAJYxoS4g0HtVGMnXI6lqUky18fzdMA0GCSqGSIb3DQEB
+BQUAMB0xGzAZBgNVBAMTEmlkcDEubGFmYXlldHRlLmVkdTAeFw0xMDA0MTkxNjA3
+NDhaFw0zMDA0MTkxNjA3NDhaMB0xGzAZBgNVBAMTEmlkcDEubGFmYXlldHRlLmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIfAZOL7zDCIZIazXYRD
+Q1HuBhaHBAxRk7lGyCbl7OhdRN4JWgeyYF3ZwXnX1TZ1A6PoynS0Ax/52nU/oCoA
+ZNP9rCKLpbNPRIbIa8weqpfUH6Z/FYz4K0/UxtaXkxVZS01aXoTYpbKaTPT0iK8i
+r3LeDJwYHP9cMDpQOv0YBaf8gxtxcO+rmhDMgtP5UUpn6Aht4HZr1wJs3dXXiMii
+OWMeW/D0vAG4im4ImXHVyxfR1wb3AYbQ3g2/k3g6KlqbLPhYiDTPUbmDo1aJKhNI
+m2Cdn1puIhy2iPT/EErOb03vD8Zmnqu9npILEXNpitkJQ0S9AOXghz1DLIyf/crz
+XHkCAwEAAaNrMGkwSAYDVR0RBEEwP4ISaWRwMS5sYWZheWV0dGUuZWR1hilodHRw
+czovL2lkcDEubGFmYXlldHRlLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+NXfHvwg2u2UxRysyIvg9YEOimOowDQYJKoZIhvcNAQEFBQADggEBAA4YgrGDyz+5
+KjDchK55/DJvcpHIy8g845JgaUVuqwQuoUMNQ7X33jv+60BZ3SwZ2IeQ2Ob7H0Tg
+d4tVfBNVLIb35Eg5hzI7L+eAeP6GzaB65fBVzMxq2yFd2hBjjtAHny4gJS7ezPK6
+V9HFdoVQ90t9+HlfBJWs1tMf5+smMTGROTuN+nxHnEjr6nJPozofaZKXMDsZuuKd
+L95JVYfApoA4H6a/w1cxF9lMl2Bs+dlFOP4C9kvZNekgpOYWC1EmA5L4SLglywSw
+IxZ8wXmYPwB3rJluzCbFDPImBSY51mZTzT2AZnTjUPTY/7VhVFpk5jcBhxMVK/3z
+kmYrzZJG/UM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp1.lafayette.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp1.lafayette.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lafayette College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lafayette College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lafayette.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Bill Thompson</md:GivenName>
+	<md:EmailAddress>thompsow@lafayette.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Identity and Access Managment</md:GivenName>
+	<md:EmailAddress>iam@lafayette.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Janemarie Duh</md:GivenName>
+	<md:EmailAddress>duhj@lafayette.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security</md:GivenName>
+	<md:EmailAddress>security@lafayette.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

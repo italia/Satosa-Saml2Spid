@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-ubx.u-bordeaux.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2016-05-11T09:24:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">u-bordeaux.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université de Bordeaux</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACNUlEQVQoz2VSS2sTYRQ99/tmJpOZpM1EQSou2tRmCroQdFXxgbhSdKfu/AGCP8Bf4KK+SE0jInQjuNKdEmybRBEUN7Uraxdqi0LTlkb6TKbz3esiSVW8m7u459xz7oPwogEADIiACABEoAl7QQRhEoibylWKFgAIDnoqbWE1EkdRysLiNrcYbTKxAZF4mdxUIV8rKQJAMCKX++zVi73lEX+/owCADdzUwIenpx5d1Sbur5aGpwuxm1ICKEJ9k599jwCeX4/f/4xiAQEg5W6spFa+Dk0+CKvFyA8gUG3P0MSaANUCweqMAoCIFk5cyf6YFVICAkS1nUKrja2tx/duvy6/QsJlZlEWRTv1wZG5C7dEWwAIAuwpKN1sNieelN69rSGRABt4mXz5Tnpt0bhptdtEd23qz/aUCoKs73tgw15mYHosrBUNKQh3u/9LgIgxxgiQtAenCmHlYeRlQF3A/wqAkDCED1UmwurDyMtAQBx3i51sddjCQrqVzDibjSOfRiM/C0CbVuQF4FiZ3c4TdBQEEOGE/+Xczdlrd5cPn7S3fyU2V+tDZ5aOXQoWZtz1JbYciLQVhCDipgfKo/u+fVw+en7m+nj28xsIN4ZP69ZWfvI+SfvP2pd5viZeb26qkK+Ng2j9QDh/9sZa/3EBBYszYXW8pz4XOz4Jd4d/GeUqxbAyFnkBiHS0ozhueQEAZ7shShs7uYcGoHN92XytFCd7SEDCrG22HB23lNk1dlK0/TcawG/PIwVYE5CYvQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo1MDowMCswMjowMOmjNjwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NTA6MDArMDI6MDCY/o6AAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://www.u-bordeaux.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Staff and students of UB</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de Bordeaux</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels (enseignants, chercheurs, BIATOS, ...) et étudiants de l'UB</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAJDeP9+dYR9HU0E1iRM7Om7Os9FbMA0GCSqGSIb3DQEB
+CwUAMCExHzAdBgNVBAMMFnRlc3RpZHAzLnUtYm9yZGVhdXguZnIwHhcNMTYwMjE1
+MTYyMjUyWhcNMzYwMjE1MTYyMjUyWjAhMR8wHQYDVQQDDBZ0ZXN0aWRwMy51LWJv
+cmRlYXV4LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApL4zJ9i1
+Ir0qcdueRDMu11M5j8hpljAvfcWs9cqz+TamxjKf9rHsP/LbpFYZaZiKeFXdSY2T
+uqPZL86V1oEO9StXPn2Ok9ej4VBod1ldpAbKHVDGhzWNqBciUwkRiRXxfkIYH7Dy
+0HsKoiVJf+QlRctoCjQNlzkF3RkwVDSHx1Yvi6iFVvLO6tfoEsIlDmcsGUcsfb9f
+NaliCwqDvZoZxWRSeo1ggpyD5vKNQoXE8NAXOmAMxFpqhvFViQ7JHWDZBB5XU9+E
+TgkDMdOJQvVi6twugr9d4w57f6+sVnA1Egz8E5SnjNoyUOm5XlGKBHzp6rWdGs8i
+LjL/3uSDd2WxvwIDAQABo3MwcTAdBgNVHQ4EFgQUH+3GM+dKJG98U4V9TW2iwmzA
+mKkwUAYDVR0RBEkwR4IWdGVzdGlkcDMudS1ib3JkZWF1eC5mcoYtaHR0cHM6Ly90
+ZXN0aWRwMy51LWJvcmRlYXV4LmZyL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBAQAYtwkhTT/h9K2BoWWcivUVjFpZis98fevgJ2HuMt7sgtO/+gVTXITq
+J6/xZQaBajpuzLGtUt3ubLaADQNL2h9pb1fccJTS9Neulb5sGnRWo9QYNZckS726
+vzY/Qx+LvZh1WMb8elzGmdgqI/TnFgcNJBxCCKPI3PAgJMrEv/Yn0eqZROczrIcQ
+fwNJLydDyJ3MhkGFDU0XcHF8axsK5ACJc/oDJUbQBdzFvim+ugUIUstyXpcIpUIe
+k+s4FJttFQvoPt/brlubSGiyizULf6WY0FEVJWjNkC+ZlDPgvySCkJU4JHbzs900
+apU3foFFJPquLHu6D/OwsKvllOP7HKme
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp-ubx.u-bordeaux.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Bordeaux</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Bordeaux</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.u-bordeaux.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsi-shibbo@u-bordeaux.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Equipe Shibboleth + RMSSI</md:GivenName>
+	<md:EmailAddress>mailto:sirtfi@u-bordeaux.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://webauth.uncc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://webauth.uncc.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uncc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of North Carolina At Charlotte</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity provider for University of North Carolina at Charlotte.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://webauth.uncc.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://legal.uncc.edu/policies/website-network-use-policies/privacy-statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="350" xml:lang="en">https://webauth.uncc.edu/assets/images/uncc_fed_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUE9Q+gC5nxV1laEjS/0Wz6pcH+RQwDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAxMQd2ViYXV0aC51bmNjLmVkdTAeFw0xNDA1MDYxNzQxNDJa
+Fw0zNDA1MDYxNzQxNDJaMBsxGTAXBgNVBAMTEHdlYmF1dGgudW5jYy5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCPA7pMdoQeaLMV2OLrePUxY9p4
+gAHGqMpUruERe0+2/tg2AvL98eGHMaJ7Oijr9R4RuYONR5WoQc8if36bZ5XP1i7M
+EDq1MLA2BPWrX8b366AG0wjIOlCreimCSQ3zATSICW6i6pNwvJe3KqNKOxK+PWwo
+wX3BiOSYQX2ASmIzKuM5yyjNrlwcx2jAPDu86e0oEiS4CuT0D3Y99cWy/+FGN2uE
+jrX/JuGWL2EOSthtVKT8qjYg4G7yXL4UobbG+LE3oOgk+fZG39sQK/a50VIhHAlG
+nS9C6B/2rvjX9h2RfrT2LIE7vhLqAtmt9C9O0k5CbniZHTQyHzilFvVmaPvLAgMB
+AAGjZzBlMEQGA1UdEQQ9MDuCEHdlYmF1dGgudW5jYy5lZHWGJ2h0dHBzOi8vd2Vi
+YXV0aC51bmNjLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUQKVbWSA/8qLr
+pVyyPD+QGdlRE6QwDQYJKoZIhvcNAQEFBQADggEBAAqC3iIjFCbFr8f6YnMZml6f
+lwi4lUgeRafI2rOq26x3D2/V1HMDAT1INgy950E7ChakXMKG691ee3a00j02P0I1
+eoJcrDRHrbt9fzobxOyhzU2qpaTZjMDTFD/du9GERjsz4TXRZcCvArOL7i1S8qWd
++YDKvUr8y3UqFfJD+hvH+/dyGiKWOTFpr6ac0lS7ofTOb7wTse1jHZyjEhR768jD
+uhC6wP1FE5HmACR4pPylxXJbvSLCKqLGmT8xYKb2VthIY4sBXIpQZ7C0FUn4p+bd
+Yv8S+IWg7U+XmXCrOaV03/kqASJCZW3gxtXJ3KKfsiH4tPfx3Wn3Msi03ZeVYMc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.uncc.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.uncc.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://webauth.uncc.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.uncc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.uncc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://webauth.uncc.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of North Carolina At Charlotte</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of North Carolina At Charlotte</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uncc.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Service Desk</md:GivenName>
+	<md:EmailAddress>help@uncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Web Services</md:GivenName>
+	<md:EmailAddress>WebServices-group@uncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Web Services</md:GivenName>
+	<md:EmailAddress>WebServices-group@uncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Services</md:GivenName>
+	<md:EmailAddress>Security-group@uncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-login.unine.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2005-08-31T14:45:37Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unine.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université de Neuchâtel</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr">Université de Neuchâtel</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Université de Neuchâtel</mdui:Description>
+		<mdui:Description xml:lang="fr">Université de Neuchâtel</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAY5JREFUeJxi4PFdRBJioI4GNo8FrO7zidXA4bXANHW9Y84mLq+FWDRweS9kdZnL5bOQzW0ei/NcIGKwnD5147VDF58z2M5hdlvA5rWQyW0Bi+sCFvcFIA2GESvWHLgn57+4ZdG5mauvLN11p37mqerZp1bsvVvWuaFt1jbDiKW5bRv7F+z0zV/N5r6QwS1m1f///7UDl564/OLV+2+bd93+9vPP/gvPbz181TN18/59B48eOLhl+/7qiVtunj9qEL2MwRWsQdNzwZnLL1YduKcTtuzD118PXn3ZdfIxk+Ws2St2nzh6aMWGvU1Tti5cs9slfzWDeeQKoIZT1179/PVn49GHlsnrfv/9//LDj71nn7I5zFm1ae+BAwd37do/afq2dVv2KQcvYWD3XBBVsyun9UBUzW7v4m1SQUtTWvbH1O72Kd3O4bHAJWeVVsxyn4I1Je2brFJWcHouBAUrk8tcRqc5QJLFbR4wuBid50LYQClgyLB7LQSSDC4L2DwX8vhRK6aHlgYAAAAA//8DANNuQ7ZiOaozAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>192.42.42.0/23</mdui:IPHint>
+		<mdui:IPHint>192.42.44.0/22</mdui:IPHint>
+		<mdui:IPHint>130.125.0.0/16</mdui:IPHint>
+		<mdui:DomainHint>unine.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.993442,6.937828</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUDCm3q5eGsKYoBBBRThqTnG9o+FowDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYWFpLWxvZ2luLnVuaW5lLmNoMB4XDTE4MTIxMDE0MDgz
+N1oXDTIxMTIxMDE0MDgzN1owHTEbMBkGA1UEAwwSYWFpLWxvZ2luLnVuaW5lLmNo
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+Zedxvp7CMUmapomgXE
+jluV9zS1kzOqSM8ErMm59VWStrKFdXgO73fNs3hAvlPVSGU3fbX6Zcs9HAyp7wlr
+UPFu4qI+MXJ0PQftgcweqJS4GYBSMU4RTixbT4Z7Xqr2xYWLI/BqGDaveEkab5Ea
+Z5W2yZh2ZmqH4AEns1jypsDRMNzgroXxZWDClakR0D+IkXtiUf2oJ8HL+eEfhfmw
+SmwJIZOZumGGqoHB4zv/Dpe29EvXbHYLQ2/zp0nqbm7PhaylkKzAby/Pu1NoF7ot
+j1nieHLtC2oKm8QCfMR+bVKbT/XfSimMdOJZeCb5oddUG0Gmh+qEMMbRb0QPnUR0
+TwIDAQABo2swaTAdBgNVHQ4EFgQUPdvHdGLTENriWX4zSQrVIx9F/PUwSAYDVR0R
+BEEwP4ISYWFpLWxvZ2luLnVuaW5lLmNohilodHRwczovL2FhaS1sb2dpbi51bmlu
+ZS5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJjoiGAnlPOnl
+AeUipYS+5oNC3IfmMSlv/Fzrh6zMauXSylg3DPr4eglpQjtp98LUsbGsl/QQp1YL
+Li9vEVqffU7va2cNhnGIIo7YTKoTrtQdHvUXXXG7EGDPrjfbAKVGLTq4x2fRn6Oo
+mPA+Lr+KHmmn/r0RjG4A8CodDJzm/MnCqL2cX33YeMlpHusCaxIpu1n7NGj+m8fQ
+ycy0l3YEyx9uIh61dNAbM2D0S7Mg7M414FxwF1tIj0QG6ftYze0n4exuJN0yUyBG
+7qxPnxNa8irb8eKnR1Lhsn1gY/Drp/hYFflHwPGq4lox5BnEV3LRLmW1raB2CUrU
+95av4COclQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-login.unine.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.unine.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-login.unine.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-login.unine.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-login.unine.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-login.unine.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unine.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUDCm3q5eGsKYoBBBRThqTnG9o+FowDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYWFpLWxvZ2luLnVuaW5lLmNoMB4XDTE4MTIxMDE0MDgz
+N1oXDTIxMTIxMDE0MDgzN1owHTEbMBkGA1UEAwwSYWFpLWxvZ2luLnVuaW5lLmNo
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+Zedxvp7CMUmapomgXE
+jluV9zS1kzOqSM8ErMm59VWStrKFdXgO73fNs3hAvlPVSGU3fbX6Zcs9HAyp7wlr
+UPFu4qI+MXJ0PQftgcweqJS4GYBSMU4RTixbT4Z7Xqr2xYWLI/BqGDaveEkab5Ea
+Z5W2yZh2ZmqH4AEns1jypsDRMNzgroXxZWDClakR0D+IkXtiUf2oJ8HL+eEfhfmw
+SmwJIZOZumGGqoHB4zv/Dpe29EvXbHYLQ2/zp0nqbm7PhaylkKzAby/Pu1NoF7ot
+j1nieHLtC2oKm8QCfMR+bVKbT/XfSimMdOJZeCb5oddUG0Gmh+qEMMbRb0QPnUR0
+TwIDAQABo2swaTAdBgNVHQ4EFgQUPdvHdGLTENriWX4zSQrVIx9F/PUwSAYDVR0R
+BEEwP4ISYWFpLWxvZ2luLnVuaW5lLmNohilodHRwczovL2FhaS1sb2dpbi51bmlu
+ZS5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJjoiGAnlPOnl
+AeUipYS+5oNC3IfmMSlv/Fzrh6zMauXSylg3DPr4eglpQjtp98LUsbGsl/QQp1YL
+Li9vEVqffU7va2cNhnGIIo7YTKoTrtQdHvUXXXG7EGDPrjfbAKVGLTq4x2fRn6Oo
+mPA+Lr+KHmmn/r0RjG4A8CodDJzm/MnCqL2cX33YeMlpHusCaxIpu1n7NGj+m8fQ
+ycy0l3YEyx9uIh61dNAbM2D0S7Mg7M414FxwF1tIj0QG6ftYze0n4exuJN0yUyBG
+7qxPnxNa8irb8eKnR1Lhsn1gY/Drp/hYFflHwPGq4lox5BnEV3LRLmW1raB2CUrU
+95av4COclQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-login.unine.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.unine.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">unine.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Neuchâtel</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="fr">Université de Neuchâtel</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unine.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="fr">http://www.unine.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hotline</md:GivenName>
+	<md:SurName>SITEL</md:SurName>
+	<md:EmailAddress>mailto:hotline.sitel@unine.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 32 718 2010</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Antoine</md:GivenName>
+	<md:SurName>Jacot-Descombes</md:SurName>
+	<md:EmailAddress>mailto:antoine.jacot-descombes@unine.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 32 718 2049</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jérôme</md:GivenName>
+	<md:SurName>Stadelmann</md:SurName>
+	<md:EmailAddress>mailto:jerome.stadelmann@unine.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 32 718 2019</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

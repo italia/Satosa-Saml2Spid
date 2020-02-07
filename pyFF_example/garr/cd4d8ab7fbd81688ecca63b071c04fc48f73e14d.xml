@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.fgcu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fgcu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Florida Gulf Coast University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://sso.fgcu.edu/authenticationendpoint/metadata.xml</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www2.fgcu.edu/generalcounsel/privacystatement.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="350" xml:lang="en">https://www.fgcu.edu/_resources/images/logo-blue@2x.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHaTCCBlGgAwIBAgIQBJLocfHiMtu6qtu/VQ2RsDANBgkqhkiG9w0BAQsFADBN
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMScwJQYDVQQDEx5E
+aWdpQ2VydCBTSEEyIFNlY3VyZSBTZXJ2ZXIgQ0EwHhcNMTgwMzA4MDAwMDAwWhcN
+MjAwNjEwMDAwMDAwWjCBmTELMAkGA1UEBhMCVVMxEDAOBgNVBAgTB0Zsb3JpZGEx
+EjAQBgNVBAcTCUZ0LiBNeWVyczEmMCQGA1UEChMdRmxvcmlkYSBHdWxmIENvYXN0
+IFVuaXZlcnNpdHkxJTAjBgNVBAsTHEJ1c2luZXNzIFRlY2hub2xvZ3kgU2Vydmlj
+ZXMxFTATBgNVBAMTDHNzby5mZ2N1LmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAKVbHmV/woK+GNBdtYjLjI2Pkk3661npi/ckNzVScAUl3ZfnzyAu
+4ArmivKwQhgtRWnH1uilpODeUirh7KZFFrOSCn0gMCzh0jy5SnMJRzN51GDZ5ZK0
+HsPbhZanzVX+g2sb7/gar2S0Ap2JRo7mUXuaTaw/vHTt2NOAu5Le1xBeOBdGOh1+
+8uGkb2KDvHBufV1UNYchkyGIlhN+KemBe8Qgm1MuwOOBz+z87X6O1PivvzFYjxuB
+bXqbOA9+J1Z8bwV24JBGlFdSoR81j3mVrNawT+cGqOwnf3yyLPOxz3YGzFYGKYbX
+ubNd3W5/SG5OAt0fnz6OoLYDRsAPPtu9/Q8CAwEAAaOCA/YwggPyMB8GA1UdIwQY
+MBaAFA+AYRyCMWHVLyjnjUY4tCzhxtniMB0GA1UdDgQWBBQTlCwVJk1why5XXazS
+jA0KtRQ8ATBBBgNVHREEOjA4ggxzc28uZmdjdS5lZHWCE2ZnY3UtZWlzMDEuZmdj
+dS5lZHWCE2ZnY3UtZWlzMDIuZmdjdS5lZHUwDgYDVR0PAQH/BAQDAgWgMB0GA1Ud
+JQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBiMC+gLaArhilodHRw
+Oi8vY3JsMy5kaWdpY2VydC5jb20vc3NjYS1zaGEyLWc2LmNybDAvoC2gK4YpaHR0
+cDovL2NybDQuZGlnaWNlcnQuY29tL3NzY2Etc2hhMi1nNi5jcmwwTAYDVR0gBEUw
+QzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNl
+cnQuY29tL0NQUzAIBgZngQwBAgIwfAYIKwYBBQUHAQEEcDBuMCQGCCsGAQUFBzAB
+hhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRgYIKwYBBQUHMAKGOmh0dHA6Ly9j
+YWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJTZWN1cmVTZXJ2ZXJDQS5j
+cnQwDAYDVR0TAQH/BAIwADCCAfUGCisGAQQB1nkCBAIEggHlBIIB4QHfAHYApLkJ
+kLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFiB2KSfAAABAMARzBFAiBb
+7C60sbWavvN+nMQhpRGZGC3GqxpyCO2PsU2f90H8uwIhAKEXiqZw2I7iZX38No9h
+tvrThD/EDfsRO2s04hcVAcNnAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2y
+CJo32RMAAAFiB2KUBQAABAMARzBFAiEA75QJglUj5tdoFhpVCVJ7p8IJ8Lnh2cj7
+4SzQxxT2Vy0CIA2WpuZSxCtcb5QBwxeL4Ia6pG4tBjY0dq1TcdBKhPZaAHUAu9nf
+vB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFiB2KSuwAABAMARjBEAiB6
+u4y4s6LCzSaXfJjHwOHZ00fB7JoUMpuOvv3+wL5KKgIgXDw/F57LBxsEw8wb/vLQ
+9q05ZyTKeU5ZJDLYWzNPblgAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6od
+BxPTDAAAAWIHYpUlAAAEAwBHMEUCIH3SWryCV4YrhZ3/O9m6M/8JDT5VKL144SSt
+rnh2tAg1AiEAtXnVLw7Z6BIGHjFZghj/WXyHWKDnJjjMuziHx7tU1JAwDQYJKoZI
+hvcNAQELBQADggEBAEyaHMNVLhpP6/0VdaWgia+E14d213oOiTI1yDMaWV8HI9HA
+1SdHpRP2ARfolDUz8ZAcJlESsNF74ziHmhFfkvOz+xPVp1Lc9mHtW3uCOqCxojXP
+29IBR7ZJn4OCvIJIchat/VhH/1Jv8Re/HifR7/Ygb7pFCOtd8He7ZOPh6k+bRqm9
+CNTpS+YTFZGuVR4wX3CxUnW0CNeDrysjBjzzq5bCsFNDrYj5XgxCGxk748tEz86I
+XxV58kn4u+W6tjGzBQufCDMeIoEmKPgmBPgVwFhyIj/w4EC2XOH8sDWWGv78EKbh
+G9/NQ4V/SS88UPQTGHBAIOoL3PYotsdcpjGbbQ4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.fgcu.edu/shibboleth-idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.fgcu.edu/shibboleth-idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.fgcu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.fgcu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.fgcu.edu/shibboleth-idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.fgcu.edu/shibboleth-idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Florida Gulf Coast University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Florida Gulf Coast University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www2.fgcu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Sven Hahues</md:GivenName>
+	<md:EmailAddress>shahues@fgcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tony Dalton</md:GivenName>
+	<md:EmailAddress>tdalton@fgcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Team</md:GivenName>
+	<md:EmailAddress>abuse@fgcu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

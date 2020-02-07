@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.csc.fi/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csc.fi</shibmd:Scope>
+		<shibmd:Scope regexp="false">funet.fi</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CSC - IT Center for Science Ltd.</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">CSC - Tieteen tietotekniikan keskus Oy</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">CSC - Tieteen tietotekniikan keskus Oy</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">CSC — Tieteen tietotekniikan keskus Oy är IT-centret för vetenskap.</mdui:Description>
+		<mdui:Description xml:lang="en">CSC — IT Center for Science Ltd is administered by the Ministry of Education, Science and Culture.</mdui:Description>
+		<mdui:Description xml:lang="fi">CSC on opetus- ja kulttuuriministeriön hallinnoima tieteen tietotekniikan keskus.</mdui:Description>
+		<mdui:Logo height="192" width="300">https://idp.csc.fi/idp/images/csc300.png</mdui:Logo>
+		<mdui:Logo height="64" width="100">https://idp.csc.fi/idp/images/csc100.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="fi">http://www.csc.fi/index_html</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="sv">http://www.csc.fi/svenska</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.csc.fi/english</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>csc.fi</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:64.2311008,27.7041552</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:60.1785928,24.8332895</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFPjCCAyYCCQD2F4QMKEpK3DANBgkqhkiG9w0BAQsFADBgMQswCQYDVQQGEwJG
+STEQMA4GA1UECAwHVVVTSU1BQTEOMAwGA1UEBwwFRXNwb28xDDAKBgNVBAsMA0lB
+TTEMMAoGA1UECgwDQ1NDMRMwEQYDVQQDDAppZHAuY3NjLmZpMCAXDTE3MDQwMjAz
+MDUzNloYDzIxMTcwMzA5MDMwNTM2WjBgMQswCQYDVQQGEwJGSTEQMA4GA1UECAwH
+VVVTSU1BQTEOMAwGA1UEBwwFRXNwb28xDDAKBgNVBAsMA0lBTTEMMAoGA1UECgwD
+Q1NDMRMwEQYDVQQDDAppZHAuY3NjLmZpMIICIjANBgkqhkiG9w0BAQEFAAOCAg8A
+MIICCgKCAgEA4cBZbEuZlnl+V/wHaPSXm3slAS9RIlTWCqXSJc4SKfA7Yz/eJq95
+u3q5bK/PqbtnG21cCA47MQRrnMcQQwLAGOAMCeRNJwxbJgrLj9RyF3yP4zsxJUAH
+odCi1jZvf+SQkGE3Cmw0Ar0K0rsjvwUAJEv5GYdshIco5pzfVtx6Eze+EHSLMgwm
+rnj0g2tPJ9rtL2l+UPpvqslapia7BfbxyL6BlbMlQy3dv2py8ao/xhjZS9m24H0N
+RrnC4aafNcabdJyQv4pCo8xLPUCd3lN7i7I0rIB6quTNgLmdAm4MVftdtShUt+QQ
+C0ugxukO30q7Rsgi9KWXtackTCLTRKKysFaTDQF2gtoivOdtSp8JLJQmS7XYL3Xs
+703Gwx545fuZ77v6C8880N7hRQ3wyz7a5drH7oXZgsRIOREJiD0a4ObYTkvPjkrG
+uY6v+3Q9kQePb7rwCew91H9cMeLewWwbRDRXd1Mca21O1CaE5Ta+lHkNbazwrGNy
+mZ2sVhK4xP3fo8yPXQKHQbZuQ7FTt4XhMNyMoHTL3NPEwtKSkG+CuPS8igtk9LhI
+P8awpmgBAEN8PEPyKCK1djmxRUUXoeg3dKVPXdYcdmjDacGOqlbFl0HbLcM9gon9
+A97Wm/zzq0UjM0RITBAGBnI1woS19auNFSiKhdToi461iSyJhhuwJ60CAwEAATAN
+BgkqhkiG9w0BAQsFAAOCAgEAWDHGcbpBQNpvpEmI3pr2oXt3LgWjYoaBFGEdC2uw
+l86E/bgAbaHFQYAtvw4aVYtwhNaNRC9Ut5ohLHn/aPLFvTaPLAOaO3JB+DPVpmNS
+4OyvR/3VQuiHGJX4yHqGcyNnORZ3xO0MpLcVwKxHaW1HfkORrdgvN4qimL5k6ASZ
+pWeTYXcT/TDYvehEsCe9c15IX8KcHbKEysta9irPQrhTBcoQguge2vQroWpBzydB
+snqdKaRAahLV6Bs0MF2p0rO73KGX9IEFy7K6I/AeJX155yi9YmtJ9oRfMX7RvSvQ
+C9hY6NS/VyuHyorzLRDz/f0EPcuvZxq6v4bg9W/IZIFauonjaORPSs+/0FJFlbE0
+Zm6nr7J38PZKHVmdNMVk4c1Zrt8gPoEAQaJttv9qqfeCcpsT809ncEUc0AwD52aX
+D5QpMTQs3ruh3bMOVqIkJ8p2vtt2C4hq5udg75eqDJvqOMYsyUTMGki1IdpHXmxT
+zgyziDLrj4oyauDNCcLSZ7p20HEi1rAAUjK4dFUH+EgcTYn/g7v2lKQnsxlMzqSU
+vpr5I9/NBe4zydJlVXAfgAxhFhLzJo3o16SITyCwKpqJLa8bkM6Y8MtNRshZcFoV
+gTcLmu132amtF60xtE0mG3b25i73+7CDA/w11fCTTXhQUjjVJfL4JWIQHcOJ9Ucl
+WRs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.csc.fi/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.csc.fi/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">CSC - IT Center for Science Ltd.</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CSC - IT Center for Science Ltd.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">CSC - Tieteen tietotekniikan keskus Oy</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.csc.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.csc.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.csc.fi</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sami</md:GivenName>
+	<md:SurName>Silén</md:SurName>
+	<md:EmailAddress>mailto:haka@csc.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:EmailAddress>mailto:haka@csc.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>CSC</md:GivenName>
+	<md:SurName>Security team</md:SurName>
+	<md:EmailAddress>mailto:security@csc.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

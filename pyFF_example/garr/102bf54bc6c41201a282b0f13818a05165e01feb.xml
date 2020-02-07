@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.oktaedu.com/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">oktaedu.com</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Okta, Inc</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Okta InCommon integration demo/test IDP</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.okta.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="50" width="82" xml:lang="en">https://sso.oktaedu.com/logo/Okta_Logo_BrightBlue_Medium.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEKDCCApCgAwIBAgIVAP6gmr26dsZgAEO5gRIvSCZgV2E1MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD3Nzby5va3RhZWR1LmNvbTAeFw0xODEwMTcxOTEyNDNa
+Fw0zODEwMTcxOTEyNDNaMBoxGDAWBgNVBAMMD3Nzby5va3RhZWR1LmNvbTCCAaIw
+DQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALmWvZvTGUNWrBuljhPO0cq8SSu8
+YHCeog2IFTt/8xAOsk7Vyg3ZHuHEmweh9zXcU4j21PvlS7oSdI2zhR9Dv+GVcQNF
+rcp5GSX308HWns0+24ksQD6wppSFKh4ZMRhr5nVZirKc7VqZHD9qSOvCfoRfTnBS
+7FPe4oZTEeGhgYzZxIy+GBEeoQrNZgPGKjfnfk2fdob5bRv+eEY9qA8SX7Vx45sZ
+XGVT6DVDrgAifey5Z7tAtWooHKGohqsNH4jkIpq15TzKRwRGS1tc3ZcSKRafv5si
++Sq85fcTLWaM7LBaCtlZ5p94bSSpdqAInVwa4eiPofDIhriThy7aCDptNQvKoqLa
+UTb/xHPY1Kh1nXlMQ0tzQa8u8GulVsWTpK3htyAnydTEC6iTcXxFouNdqZKOAFVs
+MEayAzDdhBQefnY/RgCGRQyCOTnblgpam7sGfiJs0be4Fycja9vLTfJVZzxf91Yt
+cvDcpSqribZnzIfPLEtwhdb/cbTfaVxyRDRk/wIDAQABo2UwYzAdBgNVHQ4EFgQU
+XvrOP+R0SoWnGwWx0eFtcvyv4OAwQgYDVR0RBDswOYIPc3NvLm9rdGFlZHUuY29t
+hiZodHRwczovL3Nzby5va3RhZWR1LmNvbS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAYEApKhh1wd8njosqquFFMGpypBFik+2i1x1e6j5lmAGliZoyGwH
+jKE0BDyHc/N55/nKFudX25loudzvzyDPBWMsvA5a6N+zC6Gd7iwrpT4ekDHEWdIO
+8PirA399xOU+DL6BrPl2zp8jIMcyd427ZQbR4edZfcB+U6F9pwRI+MdV/GMShkBy
+xavHoPXoGMSI4Qm0f3W3JW3wEvEr8muHClM1kEP7KR3HqlD8gUYX3IcTKQ51PD++
+Td7yGQb+l9do3P1TY/9iJfXz/r1fRZj/OK/MlOUYvxXB1Z10tp48/bRVkL8qxN8V
+244vfK6Jt5F2iArR1kudfMp13y35GXQ37E2JuQT3nHku24MkmA8LsMokqUchIqXO
+vj+GqOVh89vGF1yQUKs35Hn+FvUONRbGYaLN7kaieA/HvQaSiXzYpJbeoypmYoPO
+pQMCcNGci3ZzGY77t+eYM6PlMnONp5MkVptx27/eTQP0pZjC1AZAq8V39/zGqoOH
+D0hHaeM903MVNXO0
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.oktaedu.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.oktaedu.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.oktaedu.com/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.oktaedu.com/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Okta, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Okta, Inc</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.okta.com/100</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jim Faut</md:GivenName>
+	<md:EmailAddress>jim.faut@okta.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jim Faut</md:GivenName>
+	<md:EmailAddress>jim.faut@okta.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jim Faut</md:GivenName>
+	<md:EmailAddress>jim.faut@okta.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

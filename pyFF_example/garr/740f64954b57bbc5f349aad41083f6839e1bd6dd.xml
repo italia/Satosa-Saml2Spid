@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.uog.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uog.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Guam</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uog.edu/it/online-privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80" xml:lang="en">https://shibboleth.uog.edu/idp/images/dummylogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHBjCCBe6gAwIBAgIQb2AoHB6R0LDiL7VentP9/TANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xODEyMDQwMDAwMDBaFw0yMDEyMDMy
+MzU5NTlaMIG7MQswCQYDVQQGEwJHVTEOMAwGA1UEERMFOTY5MjMxDTALBgNVBAgT
+BEd1YW0xETAPBgNVBAcTCE1hbmdpbGFvMRQwEgYDVQQJEwtVT0cgU3RhdGlvbjEb
+MBkGA1UEChMSVW5pdmVyc2l0eSBvZiBHdWFtMSkwJwYDVQQLEyBPZmZpY2Ugb2Yg
+SW5mb3JtYXRpb24gVGVjaG5vbG9neTEcMBoGA1UEAxMTaWRwLXNpZ25pbmcudW9n
+LmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL3LjHf/tLSHFPyh
+U6aNFRRbE1rZXhA2KWgH4W6dRt590a8kclzYO523FS1o93ZZhH7s93WrxyL0rRv7
+++DF8hg2caViaXgd+ykh+yUxVd6mgcKvsjiqE8lg+h4xidg7eduVpL1Vq5tqCxjV
+yUVuP02INtTB1Q9BVbvAyZ2NAcFpFVZK0i23wmRpyDH0aMs/akEU3mgiqFzrWRD0
+symKyuicrCOTXkfXJqcNCCvAhXAHah9Vp3NaV67XvUSRxInXM7sUBCnowkzEHaXp
+Dy9AfAUUVCzQ8sXFYuLIbXq+sv7in2/0ktbO9a1yU/S88oEnlZjPCdTdjzICaBf0
+bqPgBqUCAwEAAaOCA0gwggNEMB8GA1UdIwQYMBaAFB4Fo3ePbJbiW4dLprSGrHEA
+DOc4MB0GA1UdDgQWBBQ8nbt/p77drLUOEBekxl5nOrW2MzAOBgNVHQ8BAf8EBAMC
+BaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIw
+ZwYDVR0gBGAwXjBSBgwrBgEEAa4jAQQDAQEwQjBABggrBgEFBQcCARY0aHR0cHM6
+Ly93d3cuaW5jb21tb24ub3JnL2NlcnQvcmVwb3NpdG9yeS9jcHNfc3NsLnBkZjAI
+BgZngQwBAgIwRAYDVR0fBD0wOzA5oDegNYYzaHR0cDovL2NybC5pbmNvbW1vbi1y
+c2Eub3JnL0luQ29tbW9uUlNBU2VydmVyQ0EuY3JsMHUGCCsGAQUFBwEBBGkwZzA+
+BggrBgEFBQcwAoYyaHR0cDovL2NydC51c2VydHJ1c3QuY29tL0luQ29tbW9uUlNB
+U2VydmVyQ0FfMi5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVz
+dC5jb20wHgYDVR0RBBcwFYITaWRwLXNpZ25pbmcudW9nLmVkdTCCAX0GCisGAQQB
+1nkCBAIEggFtBIIBaQFnAHUAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFnd+zEvwAABAMARjBEAiBBXXHvYYgNiSJG2GMuSCyS+cbpha6Er9yMvvqb
+mjdCZwIgaNZ/iaBoRIi0IpizyefoSyqMo7bMwIB/5y7btYVMXnAAdgBep3P531bA
+57U2SH3QSeAyepGaDIShEhKEGHWWgXFFWAAAAWd37MaDAAAEAwBHMEUCIQDNPWrX
+T/bV3ktez8l6gmk40iyeljbiXb55l7vBJ49aQQIgeK29fWDFnOduTvQo2Kx43DlY
+sVzSk3aqU+1cDzehHaIAdgDwlaRZ8gDRgkAQLS+TiI6tS/4dR+OZ4dA0prCoqo6y
+cwAAAWd37MWAAAAEAwBHMEUCIHuy+G4kVLoV8c3K0dREWl9coDNMgJNaGE6dNDvs
++3XAAiEA5l7jXWJRltdTwzL1LxtaGBPZRmY3zxvW6fhMQpeddJ4wDQYJKoZIhvcN
+AQELBQADggEBAD93Ab5bBvRcqzQMzXYxS29v7K9p2mGsyFk8FAuc8OA8H6RbQpo9
+ppSicjhIcSrC27CRCZdMFbHRLgth4p/Uzoe5EoPYnJTPGOT8iqSQb0UdgBPn03go
+dTFplmsz3rxygER+Zlwg24jkpOIkVs27LfpjBStUFcAvdT45SsfpO0mh6Jlc0lOd
+6qvcVWx9aR+g52rf4iglMD5m1HvKb1tdGFkwVTv8HIVE41MqcQSyGY8QiOOhuQQF
+JuTQcKYThWql3y7UbqHw1BA166ru+w3vON3HySX/MzYRfXe0z0EJ/uIRK3iqvlv/
+ZoqSW0HqCI64UtQayPdkmfM3XadSa+E78U0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uog.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.uog.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.uog.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.uog.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Guam</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Guam</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://uog.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Rommel Hidalgo</md:GivenName>
+	<md:EmailAddress>rhidalgo@uog.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Eugene Adanzo</md:GivenName>
+	<md:EmailAddress>adanzoe@uog.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UOG ISO</md:GivenName>
+	<md:EmailAddress>iso@uog.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UOG ISO</md:GivenName>
+	<md:EmailAddress>iso@uog.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

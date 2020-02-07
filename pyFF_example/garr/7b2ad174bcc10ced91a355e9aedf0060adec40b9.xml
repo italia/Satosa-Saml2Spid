@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://saml.cc.in2p3.fr/module.php/saml/sp/metadata.php/default-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-10-02T16:38:04Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://federation.renater.fr/category/metier</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/national</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">saml federation bridge production</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="fr">https://saml.cc.in2p3.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">saml federation bridge production</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">saml federation bridge production</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">saml federation bridge production</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID9TCCAt2gAwIBAgIJAO3asfM5stXWMA0GCSqGSIb3DQEBCwUAMIGQMQswCQYD
+VQQGEwJGUjEOMAwGA1UECAwFUmhvbmUxFTATBgNVBAcMDFZpbGxldXJiYW5uZTEN
+MAsGA1UECgwEQ05SUzERMA8GA1UECwwIQ0MtSU4yUDMxGTAXBgNVBAMMEHNhbWwu
+Y2MuaW4ycDMuZnIxHTAbBgkqhkiG9w0BCQEWDnJvdWV0QGluMnAzLmZyMB4XDTE5
+MTAwMjE0MjQyNVoXDTIyMDMyMDE0MjQyNVowgZAxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVSaG9uZTEVMBMGA1UEBwwMVmlsbGV1cmJhbm5lMQ0wCwYDVQQKDARDTlJT
+MREwDwYDVQQLDAhDQy1JTjJQMzEZMBcGA1UEAwwQc2FtbC5jYy5pbjJwMy5mcjEd
+MBsGCSqGSIb3DQEJARYOcm91ZXRAaW4ycDMuZnIwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDqUrybrf2haDP34o4L79ojnG7k1T3+4nhu+VEWuCef60DY
+ufb/9oBcLB29OD3ROHRNjcasRWuFlLTMzRbpUo68lErUmHASiadGkQgg+HKABtfe
+KviV8RdPyyJAwRbbrzFNCrSvjQ3HMV5G+y6LdbQAR7HF2ygTXK3yVDFhnJGxstjX
+DkptvXw8GUg7IvCDeVo8Ay8sYu+FGh5Whq6FjEggSxcO9BCplpa3NhmrgdrVPxEI
+aJKEcuKq0AatILiadk9jLhaYWWybXdTqxFmsHoJ4vJNhF/co85NhomAqWUTdCFh6
+pNo60wfQLGQYvtXp/dIkG5XZ/QbRxjqsJcx7D5BbAgMBAAGjUDBOMB0GA1UdDgQW
+BBSyNfq9yocyNAAz43A8dgR/9QVePTAfBgNVHSMEGDAWgBSyNfq9yocyNAAz43A8
+dgR/9QVePTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQC/4b4EBnJL
+b66WA+8A2jfHDXpLG/vQcMGuT5MBS+uoH4o5Kpj5PANntsHES8/UZAzRoruAS0Hc
+uqpiB6vHB7/kLl8OSpcskhEEP82nhCHMqm1Ax3ytcYyW8ISutvzmVIuMtnQt3jVN
+Zfcs1aGz+xnEupJp4Qf4jLrqs8/JjZQ+OIEv2ThJWfZlKC+HL11QSdXehBvl5rXT
+7n1RkJe9lXT+625J0ehyWEO17KNXNi2/b1A5RzxVwnsR/asmllT1bJZ+bCNZKErj
+/N8EH3NsIe7mX9yyrIbIW45w2c1UHdBkno/u7EZ9xcq3ZelWIfUd6nENfzy9/KmC
+EuhHaNinP0Et
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID9TCCAt2gAwIBAgIJAO3asfM5stXWMA0GCSqGSIb3DQEBCwUAMIGQMQswCQYD
+VQQGEwJGUjEOMAwGA1UECAwFUmhvbmUxFTATBgNVBAcMDFZpbGxldXJiYW5uZTEN
+MAsGA1UECgwEQ05SUzERMA8GA1UECwwIQ0MtSU4yUDMxGTAXBgNVBAMMEHNhbWwu
+Y2MuaW4ycDMuZnIxHTAbBgkqhkiG9w0BCQEWDnJvdWV0QGluMnAzLmZyMB4XDTE5
+MTAwMjE0MjQyNVoXDTIyMDMyMDE0MjQyNVowgZAxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVSaG9uZTEVMBMGA1UEBwwMVmlsbGV1cmJhbm5lMQ0wCwYDVQQKDARDTlJT
+MREwDwYDVQQLDAhDQy1JTjJQMzEZMBcGA1UEAwwQc2FtbC5jYy5pbjJwMy5mcjEd
+MBsGCSqGSIb3DQEJARYOcm91ZXRAaW4ycDMuZnIwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDqUrybrf2haDP34o4L79ojnG7k1T3+4nhu+VEWuCef60DY
+ufb/9oBcLB29OD3ROHRNjcasRWuFlLTMzRbpUo68lErUmHASiadGkQgg+HKABtfe
+KviV8RdPyyJAwRbbrzFNCrSvjQ3HMV5G+y6LdbQAR7HF2ygTXK3yVDFhnJGxstjX
+DkptvXw8GUg7IvCDeVo8Ay8sYu+FGh5Whq6FjEggSxcO9BCplpa3NhmrgdrVPxEI
+aJKEcuKq0AatILiadk9jLhaYWWybXdTqxFmsHoJ4vJNhF/co85NhomAqWUTdCFh6
+pNo60wfQLGQYvtXp/dIkG5XZ/QbRxjqsJcx7D5BbAgMBAAGjUDBOMB0GA1UdDgQW
+BBSyNfq9yocyNAAz43A8dgR/9QVePTAfBgNVHSMEGDAWgBSyNfq9yocyNAAz43A8
+dgR/9QVePTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQC/4b4EBnJL
+b66WA+8A2jfHDXpLG/vQcMGuT5MBS+uoH4o5Kpj5PANntsHES8/UZAzRoruAS0Hc
+uqpiB6vHB7/kLl8OSpcskhEEP82nhCHMqm1Ax3ytcYyW8ISutvzmVIuMtnQt3jVN
+Zfcs1aGz+xnEupJp4Qf4jLrqs8/JjZQ+OIEv2ThJWfZlKC+HL11QSdXehBvl5rXT
+7n1RkJe9lXT+625J0ehyWEO17KNXNi2/b1A5RzxVwnsR/asmllT1bJZ+bCNZKErj
+/N8EH3NsIe7mX9yyrIbIW45w2c1UHdBkno/u7EZ9xcq3ZelWIfUd6nENfzy9/KmC
+EuhHaNinP0Et
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saml.cc.in2p3.fr/module.php/saml/sp/saml2-acs.php/default-sp" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://saml.cc.in2p3.fr/module.php/saml/sp/saml1-acs.php/default-sp" index="1"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">saml federation bridge production</md:ServiceName>
+		<md:ServiceName xml:lang="en">saml federation bridge production</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">saml federation bridge production</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">saml federation bridge production</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrimaryAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="supannEtablissement" Name="urn:oid:1.3.6.1.4.1.7135.1.2.1.14" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CNRS</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CNRS</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.dsi.cnrs.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Jean-René ROUET</md:SurName>
+	<md:EmailAddress>mailto:rouet@in2p3.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Ahmed KHOUDER</md:SurName>
+	<md:EmailAddress>mailto:ahmed.koudher@cc.in2p3.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

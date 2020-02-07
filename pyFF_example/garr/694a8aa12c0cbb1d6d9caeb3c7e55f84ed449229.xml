@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.elon.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">elon.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Elon University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.elon.edu/u/about/policies-and-core-documents/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="45" width="130" xml:lang="en">https://idp.elon.edu/images/elon-signature-incommon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUErCouPRaW5QGkEHS598bwC7vTI4wDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLmVsb24uZWR1MB4XDTExMDQyNjE1MjgyM1oXDTMx
+MDQyNjE1MjgyM1owFzEVMBMGA1UEAxMMaWRwLmVsb24uZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19/GTJENTS8CCrh87Fr89XSbtgJo24ctlQ0k
+12sB6jOsFDIO+U0I0/nO4WcIouDfAjgtzquEAiv92ZCbpMVhA+r86LWqUbF94tTD
+BBdAI7JTXEwPNnFVttpI8w15kRVKBIL7uewQI8UhYtPPnzbOuFq2PgCd1CAaRL2s
+2ly2Ttb1eBRYjnq1aCW0vKLW36u/6Doupes/q6bA9dD3r4ThfZRNuEw4Y7yM+th+
+eVPisEnMHMI+hcTlM0GfQwi9f3YBsskq5t+G+4wk29IPwadKP1LMWdKkQtmLNiWU
+wHoJjFvsKcchuh1zsd3T7jTEgbVjIjgv9hXUu8PV1upYF1vTwQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuZWxvbi5lZHWGI2h0dHBzOi8vaWRwLmVsb24uZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBQYxrFRiIbMBJGM8kQ2vH7o70KWhzANBgkq
+hkiG9w0BAQUFAAOCAQEAK6w0oQT3rB9jYH1D32om2DDBY1ecKuTCOJMtbghdNkeU
+de+AXFvDUWPCLkhVeRVa1vYEmpp32wx0opb0TeK98JWbJ1nwoQ7jxv2YElpVkEA5
+GuHD95osYhVhWG8ME5JvjOqaXU+78GJ7AFJOaIejrG6dhg5++lC26M/M406njKbu
+smWmOQNGuBMna6h+vWWNc7DDSCEkL47jn86mGMhfivdMEsWAsixio2Oqi8/bf64G
+nxN2pAEY7/jalr7ldm6HDj+Cq6DzsUKGeY+eUFwa2DDwhdkDZI6W56v+2/zVxV6d
+pPnfmAnNrKnsHEet6lA93TS62NXQGgBuT0K69ASB/w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.elon.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.elon.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.elon.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.elon.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.elon.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">elon.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUErCouPRaW5QGkEHS598bwC7vTI4wDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLmVsb24uZWR1MB4XDTExMDQyNjE1MjgyM1oXDTMx
+MDQyNjE1MjgyM1owFzEVMBMGA1UEAxMMaWRwLmVsb24uZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEA19/GTJENTS8CCrh87Fr89XSbtgJo24ctlQ0k
+12sB6jOsFDIO+U0I0/nO4WcIouDfAjgtzquEAiv92ZCbpMVhA+r86LWqUbF94tTD
+BBdAI7JTXEwPNnFVttpI8w15kRVKBIL7uewQI8UhYtPPnzbOuFq2PgCd1CAaRL2s
+2ly2Ttb1eBRYjnq1aCW0vKLW36u/6Doupes/q6bA9dD3r4ThfZRNuEw4Y7yM+th+
+eVPisEnMHMI+hcTlM0GfQwi9f3YBsskq5t+G+4wk29IPwadKP1LMWdKkQtmLNiWU
+wHoJjFvsKcchuh1zsd3T7jTEgbVjIjgv9hXUu8PV1upYF1vTwQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuZWxvbi5lZHWGI2h0dHBzOi8vaWRwLmVsb24uZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBQYxrFRiIbMBJGM8kQ2vH7o70KWhzANBgkq
+hkiG9w0BAQUFAAOCAQEAK6w0oQT3rB9jYH1D32om2DDBY1ecKuTCOJMtbghdNkeU
+de+AXFvDUWPCLkhVeRVa1vYEmpp32wx0opb0TeK98JWbJ1nwoQ7jxv2YElpVkEA5
+GuHD95osYhVhWG8ME5JvjOqaXU+78GJ7AFJOaIejrG6dhg5++lC26M/M406njKbu
+smWmOQNGuBMna6h+vWWNc7DDSCEkL47jn86mGMhfivdMEsWAsixio2Oqi8/bf64G
+nxN2pAEY7/jalr7ldm6HDj+Cq6DzsUKGeY+eUFwa2DDwhdkDZI6W56v+2/zVxV6d
+pPnfmAnNrKnsHEet6lA93TS62NXQGgBuT0K69ASB/w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.elon.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Elon University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Elon University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.elon.edu/home/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Greg Colby</md:GivenName>
+	<md:EmailAddress>gcolby@elon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Greg Colby</md:GivenName>
+	<md:EmailAddress>gcolby@elon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@elon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Greg Colby</md:GivenName>
+	<md:EmailAddress>gcolby@elon.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

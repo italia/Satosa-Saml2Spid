@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.maine.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">um.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">uma.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umf.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umfk.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umm.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umpi.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">usm.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">ums.maine.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Maine System</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.maine.edu/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="180" width="250" xml:lang="en">https://identity.maine.edu/cas/images/UMS_logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDAzCCAeugAwIBAgIJAJAfuOLAnT3yMA0GCSqGSIb3DQEBCwUAMBgxFjAUBgNV
+BAMMDWlkcC5tYWluZS5lZHUwHhcNMTkwNjI3MjAwODEzWhcNMjkwNjI0MjAwODEz
+WjAYMRYwFAYDVQQDDA1pZHAubWFpbmUuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA4P6UNvYsgPe6b7z1ovwvB7nEPKQmQaJI+VcmUaX0KG3xcQ9N
+g9/7PPP3vdY0BmB3CbO/JY6OmTIotZDFA2OCb7Bdx2wJIjITP0HiFCWJpA/yv8QX
+zzq1ku3oJCkuAiwVSJ6UWGv1KkNuYopl6+8eYCyu+iW0rmYM9WCCnoMZ3VsGnxgf
+HmYJhqZdOuZoNkb+PLRipQhIX9TqrVr/IJ4V4az41hEmoYpMEHJxqxNeZ2wEZ8yR
+S5nyscrUIZ4fog0LBlViEj0WH1qb/sscvo8FZJvBOC36IU4sB4zTqJOhjASfeRCM
+TkRmfMm4BoBkc9283+ecG9m2aNDac7oULCnP6QIDAQABo1AwTjAdBgNVHQ4EFgQU
+7Lw+HpnQCwImDzJjdZ6Tp8fxpwIwHwYDVR0jBBgwFoAU7Lw+HpnQCwImDzJjdZ6T
+p8fxpwIwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAgvRAs3Wy4a+9
+Hs4sjd5+oSuD7rbXYG4Egr2B+EiVDFAVAOry5XykSBf18J6YqKXEuoh/63g5sQw5
+hjjTggb97q6I+RW4H83YpFzWelalASA8xOYO7oUDaU2+aZBX4byr28+u+RoXHtF6
+l6rFVtgqpghp6+iecZQbrH7iJzkIfPEzLaWQP7W+2GOvgIU/1/dXilETSxQpT4BC
+QhlCKOw17XNVK5ayQKk+dty3Jp2PL4RgHR3E0MSnq4SP8X/KZuWYb4wQvtIrC47B
+6Ixk5B6kbaySMtiHUQVN9S1k8ECdyPBXi1Jupczd4rLKolwKE3OdHMsGRwOpgcXT
+nZ1x9SpDKg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.maine.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.maine.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.maine.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.maine.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.maine.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.maine.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.maine.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">um.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">uma.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umf.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umfk.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umm.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">umpi.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">usm.maine.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">ums.maine.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDAzCCAeugAwIBAgIJAJAfuOLAnT3yMA0GCSqGSIb3DQEBCwUAMBgxFjAUBgNV
+BAMMDWlkcC5tYWluZS5lZHUwHhcNMTkwNjI3MjAwODEzWhcNMjkwNjI0MjAwODEz
+WjAYMRYwFAYDVQQDDA1pZHAubWFpbmUuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA4P6UNvYsgPe6b7z1ovwvB7nEPKQmQaJI+VcmUaX0KG3xcQ9N
+g9/7PPP3vdY0BmB3CbO/JY6OmTIotZDFA2OCb7Bdx2wJIjITP0HiFCWJpA/yv8QX
+zzq1ku3oJCkuAiwVSJ6UWGv1KkNuYopl6+8eYCyu+iW0rmYM9WCCnoMZ3VsGnxgf
+HmYJhqZdOuZoNkb+PLRipQhIX9TqrVr/IJ4V4az41hEmoYpMEHJxqxNeZ2wEZ8yR
+S5nyscrUIZ4fog0LBlViEj0WH1qb/sscvo8FZJvBOC36IU4sB4zTqJOhjASfeRCM
+TkRmfMm4BoBkc9283+ecG9m2aNDac7oULCnP6QIDAQABo1AwTjAdBgNVHQ4EFgQU
+7Lw+HpnQCwImDzJjdZ6Tp8fxpwIwHwYDVR0jBBgwFoAU7Lw+HpnQCwImDzJjdZ6T
+p8fxpwIwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAgvRAs3Wy4a+9
+Hs4sjd5+oSuD7rbXYG4Egr2B+EiVDFAVAOry5XykSBf18J6YqKXEuoh/63g5sQw5
+hjjTggb97q6I+RW4H83YpFzWelalASA8xOYO7oUDaU2+aZBX4byr28+u+RoXHtF6
+l6rFVtgqpghp6+iecZQbrH7iJzkIfPEzLaWQP7W+2GOvgIU/1/dXilETSxQpT4BC
+QhlCKOw17XNVK5ayQKk+dty3Jp2PL4RgHR3E0MSnq4SP8X/KZuWYb4wQvtIrC47B
+6Ixk5B6kbaySMtiHUQVN9S1k8ECdyPBXi1Jupczd4rLKolwKE3OdHMsGRwOpgcXT
+nZ1x9SpDKg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.maine.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.maine.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Maine System</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Maine System</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.maine.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Steven Premeau</md:GivenName>
+	<md:EmailAddress>steven.premeau@maine.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UMS SSO Support</md:GivenName>
+	<md:EmailAddress>sso-support@maine.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UMS SSO Support</md:GivenName>
+	<md:EmailAddress>sso-support@maine.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security Office</md:GivenName>
+	<md:EmailAddress>infosecurity@maine.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

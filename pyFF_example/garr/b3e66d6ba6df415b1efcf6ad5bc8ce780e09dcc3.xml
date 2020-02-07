@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.iasa.gr/auth/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iasa.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Accelerating Systems and Applications - IASA</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="el">Ινστιτούτο Επιταχυντικών Συστημάτων και Εφαρμογών - ΙΕΣΕ</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Institute of Accelerating Systems and Applications - IASA</mdui:Description>
+		<mdui:Description xml:lang="el">Ινστιτούτο Επιταχυντικών Συστημάτων και Εφαρμογών - ΙΕΣΕ</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.iasa.gr</mdui:InformationURL>
+		<mdui:Keywords xml:lang="en">Nuclear+and+Particle+physics Nuclear+medicine+and+imaging Accelerator+Science+&amp;+Engineering Automated+Control Scientific+Computing Cloud+Computing Grid+Computing Environmental+Physics Microwave+Engineering Telecommunications</mdui:Keywords>
+		<mdui:Logo height="155" width="111" xml:lang="en">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>195.134.89.0/25</mdui:IPHint>
+		<mdui:DomainHint>iasa.gr</mdui:DomainHint>
+		<mdui:DomainHint>www.iasa.gr</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:37.97,23.78</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDzzCCAregAwIBAgIJAOkqFbXSziWcMA0GCSqGSIb3DQEBCwUAMH4xCzAJBgNV
+BAYTAkdSMQ8wDQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczENMAsGA1UE
+CgwESUFTQTELMAkGA1UECwwCSVQxFjAUBgNVBAMMDWxvZ2luLmlhc2EuZ3IxGTAX
+BgkqhkiG9w0BCQEWCml0QGlhc2EuZ3IwHhcNMTcwNjIxMTA0NjM2WhcNMjcwNjIx
+MTA0NjM2WjB+MQswCQYDVQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQH
+DAZBdGhlbnMxDTALBgNVBAoMBElBU0ExCzAJBgNVBAsMAklUMRYwFAYDVQQDDA1s
+b2dpbi5pYXNhLmdyMRkwFwYJKoZIhvcNAQkBFgppdEBpYXNhLmdyMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyCaAHF99EY6c0wj9R/cilFKwii277h+F
+zKDPjx4uFfbhPpFzwfkizzyRY/aF7AG0ooeqkMGv9jzWTsrqKKpKqdaxmAMVdpuR
+44CrXxzAUmzkLFPaV55sYYONzzKgEky3ewu6WpvjhE+R+yPEwnZ6r5JZJUPOAthn
+CCwALUtpBaJdsqboM2iJqB+k7suMQU0HIRyo1+cZcLs4T7gYBIkKvcu34vmOBZS6
+pVc4c7fKs2F/w4nlYYVerUi8CLP8Kapf57ct2gy5iHRYx9UW0WsosDx2BrgSFmAx
+E3+o7gQ7pJ9EEeCqnBtZyUKcZHbJ2akDElcImly6bSTtiScE4WfgYwIDAQABo1Aw
+TjAdBgNVHQ4EFgQUiHp7+lzn1lPXCfPMa/Wh3euVhJ8wHwYDVR0jBBgwFoAUiHp7
++lzn1lPXCfPMa/Wh3euVhJ8wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFwsV/1cYqFkfz5FDtvZdGf01a/3TiaXtBnMcC0aPqbJJ3Y+1j1zO2BIpd/Jd
+K2V9d2C3Lr0uoJpRQb6514Gau3nP+C94L8EpMldYU1Rr1XGsiWEsNGbov03dfIpU
+2l4y9/1OSbq24oJkLCSAsNpjNSM9C1shAI5N9wjs4zjLTwQt+wJO03+QVZ1Sw6qp
+J0Nfca+XRBwSdOKpdNzqp7AhVS3G+sRSSBSURuhPxE+2vYC+s/QRQ1BgPG7O3l5E
+LlQlfkJkFq6HPBbsWl4o56AuzEB0gqtimi6bXgQO4IFk/HgzidQNHoksd6YDjDUq
+j01o20BSrodQDpqMCjtTnMlrOQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDzzCCAregAwIBAgIJAOkqFbXSziWcMA0GCSqGSIb3DQEBCwUAMH4xCzAJBgNV
+BAYTAkdSMQ8wDQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczENMAsGA1UE
+CgwESUFTQTELMAkGA1UECwwCSVQxFjAUBgNVBAMMDWxvZ2luLmlhc2EuZ3IxGTAX
+BgkqhkiG9w0BCQEWCml0QGlhc2EuZ3IwHhcNMTcwNjIxMTA0NjM2WhcNMjcwNjIx
+MTA0NjM2WjB+MQswCQYDVQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQH
+DAZBdGhlbnMxDTALBgNVBAoMBElBU0ExCzAJBgNVBAsMAklUMRYwFAYDVQQDDA1s
+b2dpbi5pYXNhLmdyMRkwFwYJKoZIhvcNAQkBFgppdEBpYXNhLmdyMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyCaAHF99EY6c0wj9R/cilFKwii277h+F
+zKDPjx4uFfbhPpFzwfkizzyRY/aF7AG0ooeqkMGv9jzWTsrqKKpKqdaxmAMVdpuR
+44CrXxzAUmzkLFPaV55sYYONzzKgEky3ewu6WpvjhE+R+yPEwnZ6r5JZJUPOAthn
+CCwALUtpBaJdsqboM2iJqB+k7suMQU0HIRyo1+cZcLs4T7gYBIkKvcu34vmOBZS6
+pVc4c7fKs2F/w4nlYYVerUi8CLP8Kapf57ct2gy5iHRYx9UW0WsosDx2BrgSFmAx
+E3+o7gQ7pJ9EEeCqnBtZyUKcZHbJ2akDElcImly6bSTtiScE4WfgYwIDAQABo1Aw
+TjAdBgNVHQ4EFgQUiHp7+lzn1lPXCfPMa/Wh3euVhJ8wHwYDVR0jBBgwFoAUiHp7
++lzn1lPXCfPMa/Wh3euVhJ8wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFwsV/1cYqFkfz5FDtvZdGf01a/3TiaXtBnMcC0aPqbJJ3Y+1j1zO2BIpd/Jd
+K2V9d2C3Lr0uoJpRQb6514Gau3nP+C94L8EpMldYU1Rr1XGsiWEsNGbov03dfIpU
+2l4y9/1OSbq24oJkLCSAsNpjNSM9C1shAI5N9wjs4zjLTwQt+wJO03+QVZ1Sw6qp
+J0Nfca+XRBwSdOKpdNzqp7AhVS3G+sRSSBSURuhPxE+2vYC+s/QRQ1BgPG7O3l5E
+LlQlfkJkFq6HPBbsWl4o56AuzEB0gqtimi6bXgQO4IFk/HgzidQNHoksd6YDjDUq
+j01o20BSrodQDpqMCjtTnMlrOQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.iasa.gr/auth/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.iasa.gr/auth/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Accelerating Systems and Applications - IASA</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">Ινστιτούτο Επιταχυντικών Συστημάτων και Εφαρμογών - ΙΕΣΕ</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Accelerating Systems and Applications - IASA</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Ινστιτούτο Επιταχυντικών Συστημάτων και Εφαρμογών - ΙΕΣΕ</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.iasa.gr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:Company>IASA</md:Company>
+	<md:GivenName>Marios</md:GivenName>
+	<md:SurName>Chatziangelou</md:SurName>
+	<md:EmailAddress>mailto:it@iasa.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>IASA</md:Company>
+	<md:GivenName>Marios</md:GivenName>
+	<md:SurName>Chatziangelou</md:SurName>
+	<md:EmailAddress>mailto:it@iasa.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>IASA</md:Company>
+	<md:GivenName>Marios</md:GivenName>
+	<md:SurName>Chatziangelou</md:SurName>
+	<md:EmailAddress>mailto:it@iasa.gr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

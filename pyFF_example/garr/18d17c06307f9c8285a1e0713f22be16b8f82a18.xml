@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.nptc.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-07-01T09:00:48Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">NPTC Group</mdui:DisplayName>
+		<mdui:Description xml:lang="en">NPTC Group</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">nptc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAOuMhJPh+PUsyjWCDIkMwY77mV8nMA0GCSqGSIb3DQEB
+BQUAMCAxHjAcBgNVBAMTFXNoaWJib2xldGgubnB0Yy5hYy51azAeFw0xNDA3MzEx
+MzM4MTRaFw0zNDA3MzExMzM4MTRaMCAxHjAcBgNVBAMTFXNoaWJib2xldGgubnB0
+Yy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIxTzrChL9Ud
+ALbMY1tQii/tKJb010drODV9hTRwm9p5kGPiviV9kMqaWkuBLihzZtaXnOa0RfBj
+b+wrJxGx1JGzSUXSvZaI3LMUKM+P8+ewhAfd4z+85uxdBtS7Foy5HD5xNZfCAQap
+ODUsT0nG/N7eMBv4v0CatmygS6WRRjE89UVQQcc69j+/hjfMvO+oBHlMXgfqMc2a
+jq/A3TUy/fHUosYdAZiQ5Cu2uJS2qwvxE59vkI1/x70k+PKuG2CB7UKmN5iGoYQ7
+kThjQJMyjL2W7V4f9/9Y3oe6Co6stCF+4v+RuVBXM8GzITGP1lpdPk0qFSxFMdS6
+XghrbldDD5cCAwEAAaNxMG8wTgYDVR0RBEcwRYIVc2hpYmJvbGV0aC5ucHRjLmFj
+LnVrhixodHRwczovL3NoaWJib2xldGgubnB0Yy5hYy51ay9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQULe2KsIkQADxw5Ty0+mY6dQuclkYwDQYJKoZIhvcNAQEFBQAD
+ggEBAHFeFNvxnYZS4C36tCWddIbqhy28j02wq9BNa1Z81rgFW4X/7bLYMCWVogz8
+Ix0XDTqYoYabDygGk5KNXMufaBg6or5Yc95YyVWYEfDMYZvttprXeY7wLtXqiZdq
+4swR+ZPGF5Dahmn+fG+2bqL3E7PdCDkQNzpIlc57a1faLMnh8qeZyN62mxYrFEKJ
+Rv5fXenQI9vwy9STCfHzgu7F9Lo3O3C3+VLsp128RL7RvAAt8ylswYPw5c1OhLVF
+1tPtzpQSWBjOGsjeFOI5IK0TbyX3e6GK8NjypAX0gjSqO70v6o2ZFm5svXDHyUl/
+rhxiSLK1U13f5Z1zFhi15dJ7tLE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.nptc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.nptc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.nptc.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.nptc.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.nptc.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.nptc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.nptc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.nptc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.nptc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nptc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAOuMhJPh+PUsyjWCDIkMwY77mV8nMA0GCSqGSIb3DQEB
+BQUAMCAxHjAcBgNVBAMTFXNoaWJib2xldGgubnB0Yy5hYy51azAeFw0xNDA3MzEx
+MzM4MTRaFw0zNDA3MzExMzM4MTRaMCAxHjAcBgNVBAMTFXNoaWJib2xldGgubnB0
+Yy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIxTzrChL9Ud
+ALbMY1tQii/tKJb010drODV9hTRwm9p5kGPiviV9kMqaWkuBLihzZtaXnOa0RfBj
+b+wrJxGx1JGzSUXSvZaI3LMUKM+P8+ewhAfd4z+85uxdBtS7Foy5HD5xNZfCAQap
+ODUsT0nG/N7eMBv4v0CatmygS6WRRjE89UVQQcc69j+/hjfMvO+oBHlMXgfqMc2a
+jq/A3TUy/fHUosYdAZiQ5Cu2uJS2qwvxE59vkI1/x70k+PKuG2CB7UKmN5iGoYQ7
+kThjQJMyjL2W7V4f9/9Y3oe6Co6stCF+4v+RuVBXM8GzITGP1lpdPk0qFSxFMdS6
+XghrbldDD5cCAwEAAaNxMG8wTgYDVR0RBEcwRYIVc2hpYmJvbGV0aC5ucHRjLmFj
+LnVrhixodHRwczovL3NoaWJib2xldGgubnB0Yy5hYy51ay9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQULe2KsIkQADxw5Ty0+mY6dQuclkYwDQYJKoZIhvcNAQEFBQAD
+ggEBAHFeFNvxnYZS4C36tCWddIbqhy28j02wq9BNa1Z81rgFW4X/7bLYMCWVogz8
+Ix0XDTqYoYabDygGk5KNXMufaBg6or5Yc95YyVWYEfDMYZvttprXeY7wLtXqiZdq
+4swR+ZPGF5Dahmn+fG+2bqL3E7PdCDkQNzpIlc57a1faLMnh8qeZyN62mxYrFEKJ
+Rv5fXenQI9vwy9STCfHzgu7F9Lo3O3C3+VLsp128RL7RvAAt8ylswYPw5c1OhLVF
+1tPtzpQSWBjOGsjeFOI5IK0TbyX3e6GK8NjypAX0gjSqO70v6o2ZFm5svXDHyUl/
+rhxiSLK1U13f5Z1zFhi15dJ7tLE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.nptc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.nptc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Neath Port Talbot College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">NPTC Group</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nptc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Chris</md:GivenName>
+	<md:SurName>Lewis</md:SurName>
+	<md:EmailAddress>mailto:chris.lewis@nptcgroup.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chris</md:GivenName>
+	<md:SurName>Lewis</md:SurName>
+	<md:EmailAddress>mailto:chris.lewis@nptcgroup.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.brynmawr.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brynmawr.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bryn Mawr College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.brynmawr.edu/lits/about/policies</mdui:PrivacyStatementURL>
+		<mdui:Logo height="89" width="325" xml:lang="en">https://idp.brynmawr.edu/idp/images/logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAMZQic8OVtgucOwzh/ScyVxJkqleMA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC5icnlubWF3ci5lZHUwHhcNMTQwNjEyMTUzNDEw
+WhcNMzQwNjEyMTUzNDEwWjAbMRkwFwYDVQQDExBpZHAuYnJ5bm1hd3IuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0WTH1kLr4ttRM/+0iFLGE+xG
+hlwgOKVjQL8yG5nBp/mFRV8kwZB5u6iOEcUfibRUvlDg2oXwMNtEbj0ieNBg8BC4
+7l3/Y7SYc70b7gB6vwzFGvzbYpro15RoJQn3HyEcAIT14sJ29cO/o4PUjvkp3Awd
+DsoekKLpGBHwnYhlr4MSBs/pWrpVXYhpJhtCr3ZcgD3lnEKXkrwFJ+/CTti2MvTy
+p6qg2znoLPtfjBi7PtkMyrNUpb7x1Ug6QszCU77bVD8QURqgTkb3mXVei2y+0zvV
+Da6gpiDeCF4KAzaY/6mZHJ//qySQlIE5h+88POfENbIOAKcisjNht9a7XbPhcQID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAuYnJ5bm1hd3IuZWR1hidodHRwczovL2lk
+cC5icnlubWF3ci5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFFr80dQNdVOL
+O13FO9DjVgsJgFZkMA0GCSqGSIb3DQEBBQUAA4IBAQBcJI4BqqaP7eCXOtlkUxpZ
+bUzqc/24RN20Fnp/Tva35Tnpd2XwNlRTILmmRJ1Zt525ikKTFz7zzCZFg/TuGasA
+GdOEqebquuPlInkU0QShR35azgopDRLT+xT6D0kk+Mcb6R6RcuhJJX6qncnOpxBn
+7ua73b32Yv4S+YEmXa4iZ7X9k2Su5xHXoGzcI25J2XRA7PSUhpS4XtaZ/hv9Jbz7
+Ei862+zrJ/dFHIW9QSPKAXPKbHd6e7dhkcNu338z+lbiat4i809Q66vNdYFwSSKD
+zLCYZhlk3ldpmygjFF5SpsEJjBIkDYxwiFYAzGQcDIawRMw21Gh3LJ2GRYUtIyrL
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.brynmawr.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.brynmawr.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.brynmawr.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.brynmawr.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.brynmawr.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brynmawr.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGPzCCBSegAwIBAgIQCKxWt74u7PaFnYsZWE0RpTANBgkqhkiG9w0BAQsFADBE
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMdGhhd3RlLCBJbmMuMR4wHAYDVQQDExV0
+aGF3dGUgRVYgU1NMIENBIC0gRzMwHhcNMTUwNTI4MDAwMDAwWhcNMTYwNjI2MjM1
+OTU5WjCB7zETMBEGCysGAQQBgjc8AgEDEwJVUzEdMBsGCysGAQQBgjc8AgECDAxQ
+ZW5uc3lsdmFuaWExGjAYBgNVBAoMEUJyeW4gTWF3ciBDb2xsZWdlMQswCQYDVQQG
+EwJVUzEVMBMGA1UECAwMUGVubnN5bHZhbmlhMRIwEAYDVQQHDAlCcnluIE1hd3Ix
+GjAYBgNVBA8TEUdvdmVybm1lbnQgRW50aXR5MQ8wDQYDVQQFEwY2MzMwMzkxHTAb
+BgNVBAsMFEluZm9ybWF0aW9uIFNlcnZpY2VzMRkwFwYDVQQDDBBpZHAuYnJ5bm1h
+d3IuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl27VxxThM7OF
+3Wqnix4tmw+I5tWvOMLSNG4hUmYuf4HoUJ9R7XnN/OZiIa4Ba8y9usufGjlH2cjf
+FNTw3PyqkCOhJ9A80/i0oDtV/aCmAUHvaYSUPxHABMFLwbxjmPAQcWv9dGCuWOD6
+svES5t+YLFFMO9NUw8B/X2YqGj7zAq09xbiqkel4tRr4OJtX+P53n1aS2q31HgYz
+OOGuddmdHD5eaA9ZFPo23ZCcLXFZ8HvV4/DBn5b0FhXKrA857nsSnP/MlOTnRcok
+ddb6HgnzXWt0czBW2wj0pRaGWeNac5Mjil/MGzgcZ0zFju7rcY09KdmZDe0dcuXB
+9QgQRZgkZwIDAQABo4ICfzCCAnswGwYDVR0RBBQwEoIQaWRwLmJyeW5tYXdyLmVk
+dTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDArBgNVHR8EJDAiMCCgHqAchhpo
+dHRwOi8vdGkuc3ltY2IuY29tL3RpLmNybDBzBgNVHSAEbDBqMGgGC2CGSAGG+EUB
+BzABMFkwJgYIKwYBBQUHAgEWGmh0dHBzOi8vd3d3LnRoYXd0ZS5jb20vY3BzMC8G
+CCsGAQUFBwICMCMMIWh0dHBzOi8vd3d3LnRoYXd0ZS5jb20vcmVwb3NpdG9yeTAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHwYDVR0jBBgwFoAU8HBR2tMq
+kU9Sd9eGd3QPznEabCIwVwYIKwYBBQUHAQEESzBJMB8GCCsGAQUFBzABhhNodHRw
+Oi8vdGkuc3ltY2QuY29tMCYGCCsGAQUFBzAChhpodHRwOi8vdGkuc3ltY2IuY29t
+L3RpLmNydDCCAQQGCisGAQQB1nkCBAIEgfUEgfIA8AB2AKS5CZC0GFgUh7sTosxn
+cAo8NZgE+RvfuON3zQ7IDdwQAAABTZu8EsAAAAQDAEcwRQIgNxUBjyLe4AvGjHh/
+xoORLUdt4bQZSmUeQUjHCfmCMwcCIQCSRxV7XBV5uxuO0hegmtqqK1lysAhTLoab
+Ix3pc7C7RAB2AFYUBpov18Ls0/XhvUSyPsdGdrm8mRFcwO+UmFXWidDdAAABTZu8
+E4YAAAQDAEcwRQIhAPVTKyWqPr9Mr6gJ7Sf4GIGwnMvzQwTkrovxI9iJvNy4AiAl
+wc0/fu1htlgpsQ0gVl0h0pB3vDIgMzTvmmcSNXeM1jANBgkqhkiG9w0BAQsFAAOC
+AQEAC3ee1Ad7L1ZUa8HdBAEU+BJ5JE3QvYxyP8yN5kwZxZi8mKZe5/qq3myIzpzD
+kArM8AgvLibKGPSQy6/zPmYeZ1seDZGgR9SJxFLWc0ncJewvE9Whz7D7T10+ZRZT
+XVyJZnZq/pdlHOqwEwEPgNv7tgrBIl1OR4W0cOjHpL+EFpIIrgbiCnhaRnmIF8uL
+5+nz1Oo/ySxCZkbgvHhSAjQGtLbDj4Tn9zksncaa5BNzug+73FqyxLkFPJY0hpzn
+YbJymzZUJQrdF0OsNdwIvWD52OiT9leFj9lR1BTkVyeEsrQO8UOiTCsQSo4igNHi
+PgfUnmesa3ddg0twrkz5l+SIJw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.brynmawr.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bryn Mawr College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bryn Mawr College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.brynmawr.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andrew Chiarello</md:GivenName>
+	<md:EmailAddress>achiarello@brynmawr.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Bryn Mawr Help Desk</md:GivenName>
+	<md:EmailAddress>help@brynmawr.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David Bertagni</md:GivenName>
+	<md:EmailAddress>dbertagni@brynmawr.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Andrew Chiarello</md:GivenName>
+	<md:EmailAddress>achiarello@brynmawr.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://adfs.philau.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">philau.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Philadelphia University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Philadelphia University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.philau.edu/oir/Policies/incommonfederation.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.philau.edu/oir/Policies/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="126" width="134" xml:lang="en">https://www.philau.edu/inc/img/img_footer_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2jCCAcKgAwIBAgIQRHBN4pvQap1LpNI5geCgczANBgkqhkiG9w0BAQsFADAp
+MScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBhZGZzLnBoaWxhdS5lZHUwHhcNMTUw
+MjAyMDIwMjU1WhcNMjAwMjAxMDIwMjU1WjApMScwJQYDVQQDEx5BREZTIFNpZ25p
+bmcgLSBhZGZzLnBoaWxhdS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCyDfbSvl30ofeRv7AQCChNRyfpvYhODupt5S+3ymHdartBHiDJkM5J1aNL
+vFs+7a5tb0GCbJReByokNWxPtdkqStD+/0NLXv6VnFB67IlT0xctB0J1IxkLkXAF
+T/FSNLvuoSlsD4FXV9p1Q1HjjTE5udOLYsSHtef2RXfsiLv0LPBOO794tkzZ4ozt
+D1kF/bgTeYpeyR/kfNCi0m7Dn+/oJix4wV/UHxFP+K6VoHvHui08qxOHmnea/0/H
+LR96u2Us7kNxt1mfv4jecyXawfXS6ndzui6MFtZIh9OJzc7/82hWTNkV7mWxeK4G
+/p+hBHoDY984EyY8mKn3aPCVDTEPAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAKdX
+8Sft+u4OQCSxo1SuM+AIL0/vNzBseLzqmOQPGwGAx6TFz/wQt3/qH5BcOtYLDroC
+VBoq97NnYqoXTCi+R7yG0Is7/i0TQiuApsMwiXzcI2ZBreLuzxdAidZQYR94OQm7
+ofXKfQ/ZlicsXvOg27h1W9KCqfnzPLTP+UsK4/BXMKUrdzJKl3Hrzw6CIF+6QWyl
+YWUwwDqL9m2mXXhKQGblwaU2yUC2pEdOextItEHMexD6qkSi0ALnEN9NLk6yrxT5
+6BZR18jVlYvNQRLTkzfplNmb8GWM/xYoTs4eJKFx2TMRbRBk1PtMV7+0ZGgFCFZ2
+Cvcd3WYYf9glQNGfltI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2jCCAcKgAwIBAgIQWohCcMYJ9oNC37B6C0pqQzANBgkqhkiG9w0BAQsFADAp
+MScwJQYDVQQDEx5BREZTIFNpZ25pbmcgLSBhZGZzLnBoaWxhdS5lZHUwHhcNMjAw
+MTEyMDI0MDM1WhcNMjUwMTEwMDI0MDM1WjApMScwJQYDVQQDEx5BREZTIFNpZ25p
+bmcgLSBhZGZzLnBoaWxhdS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCMvPXJ7Gb4d1z81e5on77Zypb/rnRCqN7RqaL0RjongFL3b50Bqg9FSLVy
+ZbBkbnERNPIVUJV5cQDFN7guaG/owqowulo38MDfPReJskqFkRgUixw73vBFU05m
+mJQLcOMXJ5jxHHkR/1Qa0vz8opyKk89dOM0IWYwwa2J9xN8XKSSJ4FqDJza+2qIA
+4tBd8lR3350ZZuh+M10rOiN4pXy11FhRVJIdiAZOK/6/oYGNpt1SO3AFjAI8NKI9
+9ucaZiYCSprARqJ6u9ru5PXmHdA0CQc+5Q2nLIt3+hEpw1x3ePVqLMWfzZyBy2uc
+KlT+e0WxZgJSWCRXqOUQKRAZdLkrAgMBAAEwDQYJKoZIhvcNAQELBQADggEBACA9
+rPpROvrjHPmFdLAGzOzTgJzxZgcYZ8eHf74Nlc9ThXRhV0h3gzkzKTPKL+XW/3gU
+8BRQWnW40HP5kkQfdZEh5We+jfIv2IKvYCa6OItmJPK4rhKOmID9vLBDPfDzOq1g
+F19LcAakx3ny/Je1hfXaWSK/f0MkF1QCDqs2cLmvdfVSk25YqJIa9MbEFRI7OVND
+ULbye5RICx1HjrqfmQYVtPBwJitMfrAywTeTUVMA6qyKTscefSEG97AQe/+5Sdqm
+bUrI68L09X2Aj0DZd45E/UssvbdsAvXj1uFuDgf6sAqOTUt3jK2lBb4CTZvrTXcy
+0WV4TSjnGkGLQpQXzPQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://adfs.philau.edu/adfs/services/trust/artifactresolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.philau.edu/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.philau.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.philau.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.philau.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Philadelphia University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Philadelphia University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.philau.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Network and Systems</md:GivenName>
+	<md:EmailAddress>oit-networking-d@philau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technology Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@philau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Network and Systems</md:GivenName>
+	<md:EmailAddress>oit-networking-d@philau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Network and Systems</md:GivenName>
+	<md:EmailAddress>oit-networking-d@philau.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

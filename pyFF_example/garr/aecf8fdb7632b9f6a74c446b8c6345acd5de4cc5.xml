@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.uvu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uvu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Utah Valley University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uvu.edu/legal/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="57" width="65" xml:lang="en">https://www.uvu.edu/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAIWjwZnQgd29AuQOjNMS9y2+8FFwMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDHNoaWIudXZ1LmVkdTAeFw0xMzEyMTAxNzU3MDNaFw0z
+MzEyMTAxNzU3MDNaMBcxFTATBgNVBAMTDHNoaWIudXZ1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAN1YKRKz+60gwNpZEYxw51V3q9BblanyftbM
+yaHTAA/SN9H855TBFiss878JtQLCvbbodnaYVlDK72z6vTBEnw4cJ+q8OkYmnSmx
+PkVDAn3rPN1ZhQXtRxQRQgVWVZafOMn8VtPSNWhKuuWHDkeAJ0eurJXkgnAHVdlZ
+xl+GCEtYqcNTzDY6rjRei2SIoIW8iTxslLSIOB3bKot4MSw76r/pTRTM2sT1LguW
+IBmWyiEf0ZE1eN2tFUuJ0YXRdY+gv5cXE/4FJvmRZLUIpESbgVhKYqE1nZ/uOdDy
+xelKK/KyiNobPC+j0kOEK8kqBH52uDEHYAEfgOZVY6jF8+bSOSkCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMc2hpYi51dnUuZWR1hiNodHRwczovL3NoaWIudXZ1LmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU9ry+XKPGV4qG5d5pmeOxy8macHgwDQYJ
+KoZIhvcNAQEFBQADggEBAEI3J/h+DD38s5sQAZ9CGLEryR38OcI3YoOVomOcbWqh
+4OySvoopqnpkKyn3CU7+6YY7JHKIM3dOZJCrVdMkLdMaiM+qZU/KVPoWCYP82fx7
+QpvT/IJmfVDOQvo5g74G071up6qoJD0/F7u4Ay88EeCeWZj56FDUEoLPdA7nbIPs
+VMrMibM4Ev/bsVae0FBMJFhOvNc23AbdB4tGn28u7TKhh9GhVT6OQCFt3Mh9t7s9
+8ImEM2KbtYysjpDT7fIvlc7AOeeXSAmhdjSB+D3BKcJfwWqHEl9mZ0WQHgmPUj+L
+Brv9aaSeb9ZfeFo2Sw2coWZe3ONc4UsUWdwDiPjTElU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.uvu.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.uvu.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.uvu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.uvu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.uvu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Utah Valley University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Utah Valley University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uvu.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Daniel Hutchison</md:GivenName>
+	<md:EmailAddress>daniel.hutchison@uvu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Roark Fisher</md:GivenName>
+	<md:EmailAddress>roark.fisher@uvu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ray Walker</md:GivenName>
+	<md:EmailAddress>ray.walker@uvu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UVU Service Desk</md:GivenName>
+	<md:EmailAddress>servicedesk@uvu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LeRoy Brown</md:GivenName>
+	<md:EmailAddress>Leroy.Brown@uvu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

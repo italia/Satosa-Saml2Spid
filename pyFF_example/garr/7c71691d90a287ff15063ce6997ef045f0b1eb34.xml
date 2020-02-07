@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.symplicity.com/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">symplicity.com</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Symplicity Corporation</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.symplicity.com/support/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="54" width="446" xml:lang="en">https://static.symplicity.com/images/symplicity_logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUOfQaXCnZp3MxcogT32JCn+X8E3gwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAwwSaWRwLnN5bXBsaWNpdHkuY29tMB4XDTE0MDkxMTExNTQx
+MloXDTE3MDkxMTExNTQxMlowHTEbMBkGA1UEAwwSaWRwLnN5bXBsaWNpdHkuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAltgoKsjeOCbzh06byjLj
+J3I3JI3gOunCQ5arKNwowk6t9nAn787JaRDz9TpyMDNt+TNKTKIydc3G3OCzRjiI
+M1IpGhKcBjK27si2x+rNAj5iV1aoCRYDDP9UPDh/1aQdZ6A2/dUgKLq2elkEzqQA
+LA66qfgxQ2SyGjbtQzI+osxLuWVExwF7uSEN3kixxu4I1kovcq+9nPhQVAE0Ym5X
+uAsJzfXRVG7Tt5aK9qgOcol65cox6mG/SRuQAvArsDT0IXa7PdrQKecGCPEIuoLr
+s/G9qJ6jodR1PaaTVPGr34sDzZ1a/CYq1cKrbw4NL5enniA9S/84QLg4yOuBZtCU
+jwIDAQABo2swaTAdBgNVHQ4EFgQUqoHh1qZEMsW0UP356xibFMVcuCswSAYDVR0R
+BEEwP4ISaWRwLnN5bXBsaWNpdHkuY29thilodHRwczovL2lkcC5zeW1wbGljaXR5
+LmNvbS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEAh865bn692oV7
+QEx/V8w6PLCmDDIQj8SQeVSsl21weXhrgOhEjClARWSEZK2NSqyeVztcxnyi7GuA
+Fmwy6I8ANFPrhsHhwU4U9V7h4NC1pFeMZj6NAMpaSH3XnwTHez45b7Nqjs6CTMGz
+1THl4xUVqT5VJKInWcyh3fBWRG7MppngLZ/JWUGanaqXWnv/5jdNr+dlrUOT+3+L
+Fy6QTkjoS5QSPQbYxi5SheX67dXNoaCCSWFTf+je1KNo5e9ju/Hlxsidy9wYeqiL
+tCgoORm4fTJOpIXoEmbWitHVX1wIDgxQoeKrAcA9hFtzuQHutF7FVHWtUFE9LwWy
+yH/KgXL8Rg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.symplicity.com:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.symplicity.com:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.symplicity.com/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.symplicity.com/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.symplicity.com/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">symplicity.com</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUeeI0i2k070NGLhN7XvLms1eA/AMwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAxMSaWRwLnN5bXBsaWNpdHkuY29tMB4XDTE0MDcxNDIwMjcw
+NFoXDTM0MDcxNDIwMjcwNFowHTEbMBkGA1UEAxMSaWRwLnN5bXBsaWNpdHkuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjE42eGM0ls48N3e0oBG9
+oXxwwOD4p7dmiO5fJsgPPED20dlVUdHwuWPgNcOF0iRuu0mW9CVXs7MqHN0kTSBA
+BT5SCCN+NfHjRujGedY8ZRffjF8hUfB9681Z+o2E0R6Yqj6ZEi3T9Yt/UUgEBn+S
+ZcMsCXhz/7OKmBwgfNC0jumD91ZA7HLUoJWf7ZTzkwennF9+j0su21j0C2rYXU3L
+72cI10FmTbKACylleqiMo2XXLTxQtFWvMKIqdHO4n4l+DcwjEN6pdcg+mX05hMUR
+NmNGrDSRdsy/pG2q6F/xo4EsaYiP7owqu6s+cSAEfGYh1IFS1arfhWJ4kVqO9167
+DQIDAQABo2swaTBIBgNVHREEQTA/ghJpZHAuc3ltcGxpY2l0eS5jb22GKWh0dHBz
+Oi8vaWRwLnN5bXBsaWNpdHkuY29tL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQ5
+Aos8TwzuOCW/4Rlh1siFVTfHtzANBgkqhkiG9w0BAQUFAAOCAQEAgNTW1+wtGxgG
+qfrdZsI1OB9cx/AVjZoV+GMB8A8OtCgkA9jqdtPg2QFal7npjSy0S+XvtV5uxiwE
+3bg55fhhZ88KyaABn/Qh5lU93tYwGC3OM9wtvxfWLcuabjSt21Ob/0x3S0KFOm+k
+L7437D6m6sbkpUy6oQRnh0rTX+p2R+g/KCF1e+gSLmCoiPNiZ80CThR5TpDbNRa5
+1AAbJoSibH+Idn1Vt/DMwviha/uoZ62KAA5t2Qe7gI4eut/VdpHjTS9I3ohMYFS/
+/zv2vpZCvvCBm3OBsv3vPOSpSYFVu+WulI9sRxtFqeWbFHIHBzNDFe+tjft/SU66
+Ql9RAWG4Dg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.symplicity.com:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Symplicity Corporation</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Symplicity Corporation</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.symplicity.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>shib@symplicity.com</md:GivenName>
+	<md:EmailAddress>shib@symplicity.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Symplicity NOC</md:GivenName>
+	<md:EmailAddress>shib@symplicity.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Symplicity NOC</md:GivenName>
+	<md:EmailAddress>shib@symplicity.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

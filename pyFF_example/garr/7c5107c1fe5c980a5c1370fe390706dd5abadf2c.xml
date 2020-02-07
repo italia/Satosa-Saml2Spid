@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.brooklands.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-06-13T13:27:34Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brooklands College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Brooklands College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">brooklands.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUXTHSnL92ioEhfn9CpPYcgVRrCm0wDQYJKoZIhvcNAQEF
+BQAwHzEdMBsGA1UEAxMUaWRwLmJyb29rbGFuZHMuYWMudWswHhcNMTQwNTI4MTM1
+OTQ3WhcNMzQwNTI4MTM1OTQ3WjAfMR0wGwYDVQQDExRpZHAuYnJvb2tsYW5kcy5h
+Yy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK52gpxhDNJWpaRz
+rgnCHXO9t7IgexRTKM3V2IPmsj/kVRGcnYjCrD9BI54sjWuYuNtknVmvu4XSc6pq
+qQyK5mQKqfBuenloi/RtOuOzdspu7DnQ85WDaln6Enhtxr0D/ZsUEZwBupltWVv9
+9REW2YFliMNir7g/uW3BDmAMjOpkbi8ee5zG7TbBzyIOYZqTo0evLF2u2BRY54HL
+CBKxSfNXmglhD8IHvj0Z7fbWMKODuZQ4ZKdy0UTxVFyrshcZXV2Qx7NGAnPgIRLA
+VOD4Q+NyeV4lJZ5d6n/Jz9Aja4QaERIVum5nN8Y0lg2lYRZLJjEr39EepGWXPgQk
++clOFysCAwEAAaNvMG0wTAYDVR0RBEUwQ4IUaWRwLmJyb29rbGFuZHMuYWMudWuG
+K2h0dHBzOi8vaWRwLmJyb29rbGFuZHMuYWMudWsvaWRwL3NoaWJib2xldGgwHQYD
+VR0OBBYEFJUptrrUSg7zjWY1J4ZMTmZIsuFPMA0GCSqGSIb3DQEBBQUAA4IBAQCZ
+0U77Z4Eqi/I+xBREEDxCkLzqb3wPGIcOQ7S1K12/mtFOnTSM0v4N/OGBtQZOtPjp
+Cr2TRcibo93Cs3RW3NaDsARpeluuZmJWrIGnRnKustgGmqqfHFSpYfD8kcWZHiRr
+Ss1wyDGmprH2xyySRH0mSAwwz9tFYT+k31PI52hiP3n0zJh9SC3p3nWyGEsj6lMW
+93ledG58FkdklzARJiruUuAYZwAxCER7VdxCjb+Do6YSu5cNdXIk8ZH8AQsigAp6
+558y9UPG4tE2GRueRJyjyH+6orKixPCF4f2DHJ+wKqITQ8n1xfpTFcvDw/Zo0GZL
+u4XG40SUQeuZ0sZZHe+V
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.brooklands.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.brooklands.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.brooklands.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.brooklands.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.brooklands.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.brooklands.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.brooklands.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.brooklands.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.brooklands.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brooklands.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUXTHSnL92ioEhfn9CpPYcgVRrCm0wDQYJKoZIhvcNAQEF
+BQAwHzEdMBsGA1UEAxMUaWRwLmJyb29rbGFuZHMuYWMudWswHhcNMTQwNTI4MTM1
+OTQ3WhcNMzQwNTI4MTM1OTQ3WjAfMR0wGwYDVQQDExRpZHAuYnJvb2tsYW5kcy5h
+Yy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK52gpxhDNJWpaRz
+rgnCHXO9t7IgexRTKM3V2IPmsj/kVRGcnYjCrD9BI54sjWuYuNtknVmvu4XSc6pq
+qQyK5mQKqfBuenloi/RtOuOzdspu7DnQ85WDaln6Enhtxr0D/ZsUEZwBupltWVv9
+9REW2YFliMNir7g/uW3BDmAMjOpkbi8ee5zG7TbBzyIOYZqTo0evLF2u2BRY54HL
+CBKxSfNXmglhD8IHvj0Z7fbWMKODuZQ4ZKdy0UTxVFyrshcZXV2Qx7NGAnPgIRLA
+VOD4Q+NyeV4lJZ5d6n/Jz9Aja4QaERIVum5nN8Y0lg2lYRZLJjEr39EepGWXPgQk
++clOFysCAwEAAaNvMG0wTAYDVR0RBEUwQ4IUaWRwLmJyb29rbGFuZHMuYWMudWuG
+K2h0dHBzOi8vaWRwLmJyb29rbGFuZHMuYWMudWsvaWRwL3NoaWJib2xldGgwHQYD
+VR0OBBYEFJUptrrUSg7zjWY1J4ZMTmZIsuFPMA0GCSqGSIb3DQEBBQUAA4IBAQCZ
+0U77Z4Eqi/I+xBREEDxCkLzqb3wPGIcOQ7S1K12/mtFOnTSM0v4N/OGBtQZOtPjp
+Cr2TRcibo93Cs3RW3NaDsARpeluuZmJWrIGnRnKustgGmqqfHFSpYfD8kcWZHiRr
+Ss1wyDGmprH2xyySRH0mSAwwz9tFYT+k31PI52hiP3n0zJh9SC3p3nWyGEsj6lMW
+93ledG58FkdklzARJiruUuAYZwAxCER7VdxCjb+Do6YSu5cNdXIk8ZH8AQsigAp6
+558y9UPG4tE2GRueRJyjyH+6orKixPCF4f2DHJ+wKqITQ8n1xfpTFcvDw/Zo0GZL
+u4XG40SUQeuZ0sZZHe+V
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.brooklands.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.brooklands.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Brooklands College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Brooklands College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.brooklands.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Vicky</md:GivenName>
+	<md:SurName>Wright</md:SurName>
+	<md:EmailAddress>mailto:vicky.wright@brooklands.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Roy</md:GivenName>
+	<md:SurName>Pachnanda</md:SurName>
+	<md:EmailAddress>mailto:roy.pachnanda@brooklands.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.omren.om/simplesaml/module.php/saml/sp/metadata.php/OMREN-Federation">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.omren.om" registrationInstant="2019-05-15T00:02:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.omren.om/wp-content/uploads/2019/10/OMREN_Federation_policies_1.3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		<saml:AttributeValue>https://noec.release-check.edugain.org/shibboleth</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">OMREN</mdui:DisplayName>
+		<mdui:Description xml:lang="en">OMREN is a central part of a sustainable infrastructure that contributes to the emergence of an effective national innovation ecosystem. It provides the research and education community in the Sultanate of Oman with a common network and collaboration infrastructure dedicated and adapted to their needs.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.omren.om/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en"> https://www.omren.om/wp-content/uploads/2019/10/OMREN_Federation_policies_1.3.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="95" width="150" xml:lang="en">https://www.omren.om/wp-content/uploads/2019/05/omren_150x95.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+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
+IC7P4BA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+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
+IC7P4BA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp.omren.om/simplesaml/module.php/saml/sp/saml2-logout.php/OMREN-Federation"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.omren.om/simplesaml/module.php/saml/sp/saml2-acs.php/OMREN-Federation" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp.omren.om/simplesaml/module.php/saml/sp/saml1-acs.php/OMREN-Federation" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.omren.om/simplesaml/module.php/saml/sp/saml2-acs.php/OMREN-Federation" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp.omren.om/simplesaml/module.php/saml/sp/saml1-acs.php/OMREN-Federation/artifact" index="3"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">OMREN</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">OMREN is a central part of a sustainable infrastructure that contributes to the emergence of an effective national innovation ecosystem. It provides the research and education community in the Sultanate of Oman with a common network and collaboration infrastructure dedicated and adapted to their needs.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">OMREN</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">OMREN</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.omren.om/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:SurName>Admin</md:SurName>
+	<md:EmailAddress>mailto:warda@omren.om</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:SurName>Admin</md:SurName>
+	<md:EmailAddress>mailto:warda@omren.om</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.nnc.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-09-30T10:04:48Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">North Notts College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">North Notts College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">nnc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUAVYbxlyk3ieD8sFKJKXLfvokSAIwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOc2hpYi5ubmMuYWMudWswHhcNMTQwODExMTUwNzQ4WhcN
+MzQwODExMTUwNzQ4WjAZMRcwFQYDVQQDEw5zaGliLm5uYy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMZwzwsxTC1S4Zdkq15KxeNPBEbJiboZ
+YZ2hEYpxFqy+A/DL2QSUGG4rwuOuMha2LTrJ7otU3kdtMSXEPfXdsxiBE4KAKIPH
+E0ZtFllhPLUcbI0N0LJ98XEgMca0Lla/gpM26fuWzWMNAMHYl/FH6Rd2HMxJ48qE
+iVbAPuBLb1tUNL5Ui3TwnrA9xww1XiRt2Uy2zLzEjRc2byeaOTGmF0XB3xzxQKfW
+tcWlAsLsIgoeE/R2XoJI8Te/hWBncvFqxJMZO0B2hBz6VhW8lf6l+bXSp7xlK5Di
+kqEfGFfx0OUXZyVyJXQVd3m37KfeibVa8idPhlpWGQU4YIboMp1+Cg0CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOc2hpYi5ubmMuYWMudWuGJWh0dHBzOi8vc2hpYi5ubmMu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFJddobBGcJBNHVz8Kk+BuJXI
+KiMdMA0GCSqGSIb3DQEBBQUAA4IBAQAZX/aRdg2GVkabHj/GL50YvG+BVIgAr5+p
+tg29AUnLVYL8kpC9FaV/fZnS35JRd2/fM60CZwJxdQ7gP7b9Ye9dXanZTTwTIcpf
+khlHK7mZbvhDwmoHdRRhmXE5UAiNzgXa6xZoAVYaNyW0jw83P7XS1YdRvo4uXK7U
+l50OB20JMRNVKn6M1Ot/Mu87f9+3bPEW+FiOzPQ+X3IKzJ+l9Tayqs299FNrMAXr
+JHiLYUmU5kt5LWExuOvufsm7O8xy5jU0rJ+Gtwo5ikylbxnGrET0E1YdIcug3Ps4
+vKyBVK0HbJsFP4JQVkZ84kTqxJWEXlUssTOLLeJ1l/2xAHhDd577
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.nnc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.nnc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.nnc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.nnc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.nnc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.nnc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nnc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUAVYbxlyk3ieD8sFKJKXLfvokSAIwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOc2hpYi5ubmMuYWMudWswHhcNMTQwODExMTUwNzQ4WhcN
+MzQwODExMTUwNzQ4WjAZMRcwFQYDVQQDEw5zaGliLm5uYy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAMZwzwsxTC1S4Zdkq15KxeNPBEbJiboZ
+YZ2hEYpxFqy+A/DL2QSUGG4rwuOuMha2LTrJ7otU3kdtMSXEPfXdsxiBE4KAKIPH
+E0ZtFllhPLUcbI0N0LJ98XEgMca0Lla/gpM26fuWzWMNAMHYl/FH6Rd2HMxJ48qE
+iVbAPuBLb1tUNL5Ui3TwnrA9xww1XiRt2Uy2zLzEjRc2byeaOTGmF0XB3xzxQKfW
+tcWlAsLsIgoeE/R2XoJI8Te/hWBncvFqxJMZO0B2hBz6VhW8lf6l+bXSp7xlK5Di
+kqEfGFfx0OUXZyVyJXQVd3m37KfeibVa8idPhlpWGQU4YIboMp1+Cg0CAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOc2hpYi5ubmMuYWMudWuGJWh0dHBzOi8vc2hpYi5ubmMu
+YWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFJddobBGcJBNHVz8Kk+BuJXI
+KiMdMA0GCSqGSIb3DQEBBQUAA4IBAQAZX/aRdg2GVkabHj/GL50YvG+BVIgAr5+p
+tg29AUnLVYL8kpC9FaV/fZnS35JRd2/fM60CZwJxdQ7gP7b9Ye9dXanZTTwTIcpf
+khlHK7mZbvhDwmoHdRRhmXE5UAiNzgXa6xZoAVYaNyW0jw83P7XS1YdRvo4uXK7U
+l50OB20JMRNVKn6M1Ot/Mu87f9+3bPEW+FiOzPQ+X3IKzJ+l9Tayqs299FNrMAXr
+JHiLYUmU5kt5LWExuOvufsm7O8xy5jU0rJ+Gtwo5ikylbxnGrET0E1YdIcug3Ps4
+vKyBVK0HbJsFP4JQVkZ84kTqxJWEXlUssTOLLeJ1l/2xAHhDd577
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.nnc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.nnc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">RNN Group</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">North Notts College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nnc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Help Desk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@rnngroup.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Help Desk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@rnngroup.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

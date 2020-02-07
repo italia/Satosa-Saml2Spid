@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://websso.esrf.fr/auth/realms/ESRF">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-02-22T10:36:50Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">esrf.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ESRF - European Synchrotron Radiation Facility</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAtwAAALcBRi4NFgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL+SURBVDiNbZPNbxtVFMXPfW/GnnE+7Iw7idVS1UPGcRNggQRdQJFaNeIP6KIL9kgsW9Q2uK2EsmmaZMEWwZ4F6gq2SFSisGGDKE2a2CFJharaTmyTj7E9b967LCyqyOqRzubqnru4+h0wM4Y9Gd6aZmYUwoqfK17PAaBs+Wbwul2BE/Jn78wAQD+WLf/8wntKIA/HyeVLlQvUT9oAMFW6PX0yIwCA6JrMvv2511y/v5kvVT7u7C61mTVJmDQpMUpC6/b2V51T5YUr9erK1tSbd6fo8qIFAMTMoMuL1uTu0Zwi2ZFpqaCS9w3THij6q5V+2cvH595lFmeFbf2qTOxIbbutWm2D+Xst8uG9s8UdWPW/V/+0pPGM4uJebeVHkrgEuDe8flABySv71eWHlOiS1DLTqi2tnz49kT5VvneGmBn++YUyAEBzgYVVB/PX1DOfkGQDAKxJsCO+A9FnBiYQSLaFtpNGbalGfvFWgV2bpB0fqEhMJD0VyUxqrrXx4PHJZ3nlLy7qKF4jkWaZOtbg8SxzQkKM86HQejKJ5DwbErabemLFpoYhWbGp2W7qCQlkBWU+YnA2L6K6GIv6idJSEyHRbnwE8HxzZ6QxfGAw43mg12GGZUstDzNpS+zpVIFA/xqOfqHDNDNo1Qujq8MHvDC6yqBVYaVGrYz+yUjZMAc0RgPyKqGRyjKwgpEofhS59kWA5pxj91sA6I10PwV4LdNVj3uOdQGSXgJA89nyBuVn7p5JHzXbL1580/XCyiwL45ERLUEmYMYHA9Dwm2HsAGJcUtJtbK78EQSLzoFU/gAkuia9MCxrqbq2SPWMSj4kgef7jnk6FtuOnWBGQPuwrd91X9s261zj3Oga//xlMujCpbfI0rTfeba6zTqZ268uPySCmThOBa4xb5CIk2Z1+QejzDutrQfPexn9Dx495Vco/6+p0u3penVlayK4kZO2W9aS69KQQ6RHVVdsdXaX2v7snZnm+v3NV6HXVTRbvhkAoFzxeq4QVvyTFR/2f/v7pDK9NOlmAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.esrf.eu/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">European Synchrotron Radiation Facility</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">ESRF - European Synchrotron Radiation Facility</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">European Synchrotron Radiation Facility</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIClzCCAX8CBgFaNrtD5jANBgkqhkiG9w0BAQsFADAPMQ0wCwYDVQQDDARFU1JG
+MB4XDTE3MDIxMzA5MDcwNloXDTI3MDIxMzA5MDg0NlowDzENMAsGA1UEAwwERVNS
+RjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJKox48u9RK6Hkzw19E1
+CBvCsimEuygYX/LLGxPcdRtTpqyo0deAgtafNc+bURd3GeX7bx6GF1GO+pWQI1sR
+4+D/MapaimHNsER8LphFNwpAftW1z5VPt31kULp3Oo3cOeTxuNlOUcEK+j65N22A
+gwpHSI/dUQMImD3F9J45/sNzeLKPdmYhraNZ/F6cm12HpNgOLS3zWmZrvTwXtQa9
+6NKiqj5jqt6hVjB9PqIXeFRAGm9MuhauYHw/HNT8v8zznrAuaAK14lZSfij9oBHt
+3MREYDZNVLjOlDQU5IZ7ikgY6zBnDbC4abozFkY8CLka7BT7nUyTa9Wf62cc2f5L
+rA0CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAjPr+lcRTGmE5BggA4kQyhCqLElRb
+oTFgJ+5yPj1hF97x1CWhCgdlav2KpKZZeLdHtoOkQKdjbYPwcv/iQJwG+tKu4w8g
+MlP8pwmdX2UOXv6K+bETZd0pVXV+XYjjD14Kph7sne8EzWeVJLUZ2L5z4Tv1avLw
+jPVb3gsu0IfDZ96rvi0bGEGZt02hPqEGUqstyK2K4sY7UanJ96dltyCVdQwdjC/l
+aFxDp1rixtDYIedpWWJuSbsDAgAayRzM7bEigrDyFUcqiFAuJKLPrq6//G4tq0EE
+Op2PykDlD9Lx84pqA91FYbVYl8X6RR0QrTkXbNAHl0xgSikVnMum5PcsXQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://websso.esrf.fr/auth/realms/ESRF/protocol/saml"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://websso.esrf.fr/auth/realms/ESRF/protocol/saml"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://websso.esrf.fr/auth/realms/ESRF/protocol/saml"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://websso.esrf.fr/auth/realms/ESRF/protocol/saml"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://websso.esrf.fr/auth/realms/ESRF/protocol/saml"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">European Synchrotron Radiation Facility Grenoble</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">European Synchrotron Radiation Facility Grenoble</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.esrf.eu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Antoine Roux</md:SurName>
+	<md:EmailAddress>mailto:antoine.roux@esrf.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Benoit Rousselle</md:SurName>
+	<md:EmailAddress>mailto:benoit.rousselle@esrf.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

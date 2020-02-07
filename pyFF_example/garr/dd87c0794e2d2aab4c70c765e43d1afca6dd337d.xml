@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.silverchair.com/port/production/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Portland Press Production - Silverchair</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.silverchair.com/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="54" width="175" xml:lang="en">https://port.silverchair.com/UI/app/svg/umbrella/logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBjCCAe6gAwIBAgIJALS3XAXxhQ45MA0GCSqGSIb3DQEBBQUAMCAxHjAcBgNV
+BAMTFXNjbS1wcm9kd2ViMDEuc2lzLmxhbjAeFw0xOTA2MTcxNDI5MTZaFw0yOTA2
+MTQxNDI5MTZaMCAxHjAcBgNVBAMTFXNjbS1wcm9kd2ViMDEuc2lzLmxhbjCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN6a3dy2lD+i2b7bNmFCrFS5GgZm
+B2lD7ZKTyMm3wFE1T4NtpwhDkDdIS0T8i+Bu1f3/GH+bFL+E8nA4L+rCTGhlwuJG
+BrT8WJ7rWoEAKliuRxsye1fFoE/Dj75JM9QhOY2Etky7CKmpgOZfSDgdui68K7AK
+Ns43sebvI/S3KE+O71qkySPHyCkVGg7ElCU/VuT6d0uySgrA/WRvxhkuv2LYJlRd
+oNPPSh3Su1l0KUspeGvSC0LQWq9OQM7NDP8Y7GP9JC96KNhZl+SSJShEFg2pC4To
+CWTlULAeZH2mZSQqsVEDuthYk/nOWk1K06b+vDHx57IjKviuwC/aAaEovpECAwEA
+AaNDMEEwIAYDVR0RBBkwF4IVc2NtLXByb2R3ZWIwMS5zaXMubGFuMB0GA1UdDgQW
+BBSW9x5SuCIpiqI8+IJFqmI+scSdGzANBgkqhkiG9w0BAQUFAAOCAQEATVQ97GT0
+eWRiKb08R7TVQsok1hAQ1z9pVuA9H7y7aUR6IvhW3cnXWjoAQxwZfWiErKrKCAzK
+0FPChO+osADqHT6FKpD6zAt813FkwHGcqL7ftnwgWBGok27uq3iKVzu4Hg1g6x2N
+usoJwuMGNqMGtyeUNqbSQij32ZSqsHwbUkRAYscgZXL44U+TUvUhBfKNpg3/tUOj
+bm200WhH76ixZkZ09X4rmyGvauCP17jBvaevlC4ABjU3XDUCo89w+o8fXEqNmq78
+mOW3Z1+Qjke2NVRYU9KQKk4SNtkkBEIo9gnIv18r0prwWbL5c3LUjHkga9HELMEp
+hpomT+eDymUfYg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portlandpress.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://portlandpress.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://portlandpress.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portlandpress.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://portlandpress.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://portlandpress.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://portlandpress.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://portlandpress.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://portlandpress.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Silverchair Information Systems</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Silverchair Information Systems</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.silverchair.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

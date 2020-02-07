@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://mediarepository.units.it/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2011-12-28T15:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+<md:Extensions><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://mediarepository.units.it/Shibboleth.sso/DS" index="1"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://media.units.it/Shibboleth.sso/DS" index="2"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://moodle2.units.it/Shibboleth.sso/DS" index="3"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://mooshib.units.it/Shibboleth.sso/DS" index="4"/></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIC6DCCAdCgAwIBAgIJALLGz9R2xzG0MA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC21lZGlhd2hlZXp5MB4XDTE2MDIyOTE0NDI0MloXDTQ2MDIyMTE0NDI0Mlow
+FjEUMBIGA1UEAxMLbWVkaWF3aGVlenkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCynnpcpYcPeotfDPsNW9DOhpueQBeM9ksZaCObXuDgFuUNf641GKxs
+Wds4Aw9IPiUWEfqFM59aotmX95beXjibNMEpVdtlfg8aS7JGexARipGNgm1dprTV
+2r7d/9o1x5ueuaZDTLJseh+qtA/RWCgbnx2M8t2PzbKJBW2zXfuOiiqlXksJG9rH
+I6vOYaXrglgUgyxTU6//O+NuwrtthCxiPr/PllH4BoJSYlyN/Jj6IhjWOKk9m8Tm
+xbUGYPI5YT9b/GbBRype0kNn2AUhJTF77SVbrgqc8Uz+uSmdEuRyUPc+RBjl+71U
+xNKlkABzFlWG2IR20jjo/rihuX2QgngjAgMBAAGjOTA3MBYGA1UdEQQPMA2CC21l
+ZGlhd2hlZXp5MB0GA1UdDgQWBBR6Fkk7cNGdQoANSl8h1AOGR7+jxzANBgkqhkiG
+9w0BAQUFAAOCAQEAMXJI3XrZPZhRXY0H63xoGmfUxclo/C1n+rkHpsZZFrBPg2Gg
+y9A2h0Z15yWqXAvaxc9djvUv9SA7mMD1oHv5UWslUK6tmOhdfar9y2SIhoVbx1qU
+6z1Onho1QvR7gegUg+1upjR+v1aa38p2NY9emd9B1YWuzoOheadxn20zQCEcjRqj
+Qp4Q8y4se3A4Cec0mU9BOE3FUcxWI82ApR/LyTkHhs8iCx5NBkz7e9+A7KkTvr2m
+5Hzuh2Ulb/fssFY5m6zfabwglljBFYDiBLryAcMh8EVAScXKI1B3ki0hdQZF2KY1
+IKroIa1UDj5lxnYy516JmKopVSSRbJxWd2v7Sg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mediarepository.units.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://mediarepository.units.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://mediarepository.units.it/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://mediarepository.units.it/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://mediarepository.units.it/Shibboleth.sso/SAML/POST" index="5"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://mediarepository.units.it/Shibboleth.sso/SAML/Artifact" index="6"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://moodle2.units.it/Shibboleth.sso/SAML2/POST" index="7"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://moodle2.units.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="8"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://moodle2.units.it/Shibboleth.sso/SAML2/Artifact" index="9"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://moodle2.units.it/Shibboleth.sso/SAML2/ECP" index="10"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://moodle2.units.it/Shibboleth.sso/SAML/POST" index="11"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://moodle2.units.it/Shibboleth.sso/SAML/Artifact" index="12"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://media.units.it/Shibboleth.sso/SAML2/POST" index="13"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://media.units.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="14"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://media.units.it/Shibboleth.sso/SAML2/Artifact" index="15"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://media.units.it/Shibboleth.sso/SAML2/ECP" index="16"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://media.units.it/Shibboleth.sso/SAML/POST" index="17"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://media.units.it/Shibboleth.sso/SAML/Artifact" index="18"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://mooshib.units.it/Shibboleth.sso/SAML2/POST" index="19"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://mooshib.units.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="20"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://mooshib.units.it/Shibboleth.sso/SAML2/Artifact" index="21"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://mooshib.units.it/Shibboleth.sso/SAML2/ECP" index="22"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://mooshib.units.it/Shibboleth.sso/SAML/POST" index="23"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://mooshib.units.it/Shibboleth.sso/SAML/Artifact" index="24"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="it">Moodle2 erogato da Università di Trieste</md:ServiceName>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università di Trieste</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Moodle2 erogato da Università di Trieste</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.units.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Diego</md:GivenName>
+<md:SurName>Fantoma</md:SurName>
+<md:EmailAddress>mailto:fantoma@units.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

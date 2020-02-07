@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.hepvs.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2012-11-02T09:57:41Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.hepvs.ch/besoin-d-aide-1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hepvs.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PHVS - Pädagogische Hochschule Wallis</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">HEPVS - Haute école pédagogique du Valais</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr">HEPVS - Haute école pédagogique du Valais</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Pädagogische Hochschule Wallis</mdui:Description>
+		<mdui:Description xml:lang="en">Haute école pédagogique du Valais</mdui:Description>
+		<mdui:Description xml:lang="fr">Haute école pédagogique du Valais</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAlBJREFUeJyUkstrE1EUxqdVW/sacVGk2pimjU0MvqkYXVmwWFC7cqUNiF24Eh/VhQsXogiiKx8g3ahVEUWlYlEraLULxX9AC7bSNPNIZiavycxk0mbm884NbWybFLzwDXdmzve759xzGN7P/hH8bNoR2auLxXmq1GhnQM1n0qrx7bPKuSpU/e1z1bIsVTl9PMIQoyL6WZSTsHEFjFeDgGVBPrgDqQt9cJZ29zo4V6XGcH5WKmtuWQW5Zw816A9uIxZ0wzZ0mF8/QGytRsRbpy4PcFVCfzoAeyaH2N4WmomdMyEd2ELh0z42w0R8rFwSsKkOsV1NsFMJGK+fQNrvA2wb+sM7EDYwNIYAtKUAXz01800M4r3dNP1EqBvq1X66lw/vhuCpKgLIg16i85GSvTWIbm8k9bZCH7xXAJzsQe7HGPITvwqHtNcXAWFPteLUKh/qgHrjEsxPw7BiPEot4+Uj2hXRxxYB3D6Pog3cWhA4OzGO7PAL5EUOVpSH/vg+zNF3SF/rLwD8/wBmtIzimMzR90ieCUHq3IxYRzPkrq2YnRyHOTYCYT0pra0GYmDNgoumgMzIkCIfCSK6cx2SZ0PIfhyCnU7OZ+Oc7NyL6K0lqTcsBUwH1irpK+dgxSVqsCQR2TfPoN68jNTFPsSPdRVqXmSeBxi/f9ISct+/IHHqKKLbGiG4V4InaTtdcQam3KBRgBkJK6nzJ0iNqyE0V9AZKHVaWQAfdCedNs719n9EAFlmqq12ikyjRl50IsNRmPxYTnNxk+0N0l8AAAD//wMAMHyFkegai4oAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAD72lDQ1BJQ0NQcm9maWxlAAB4nI1V3W/bVBQ/iW9cpBY/oLGODhWLr1VTW7kbGq3GBkmTpelCGrnN2CqkyXVuGlPXNrbTbVWf9gJvDPgDgLIHHpB4QhoMxPay7QG0SVNBFdUkpD102kBok/aCqnCur1O7Xca4ka9/Oed3Pu/RNUDHV5rjmEkZYN7yXTWfkY+fmJY7ViEJz0En9ECnpntOulwuAi7GhUfWw18hwd43B9rr/3N1VqmnAySeQmxXPX0e8WmAlKk7rg8g3kb58CnfQdzxPOIdLiaIWGF4luMswzMcHw84U+ooYpaLpNe1KuIlxP0zMflsDPMcgrUjTy3qGrrMelF27Zph0li6T1D/zzVvNlrxevHp8uYmj+K7j9Ved8fUEH+ua7lJxC8jvub4GSZ/FfG9xlwljXgvQPKZmnukwvnJNxbrU+8g3om4aviFqVC+aM2UJrhtcnnOPqqGnGu6N4o9gxcR36rTQpHnI0CVZnOsX4h7642x0L8w7i1M5lp+FuujJe5HcN/TxsuIexB/6NrqBM9ZWKZmXuX+hSuOXw5zENYts1TkPolEvaDGQO7Xp8a4LTng4yFyWzJdM44UQv6SYwaziLmR825DrYScG5qby3M/5D61KqHP1K6qlmW9HUR8GI4lNKBgwwzuOliwATKokIcMvh1wUVMDA0yUUNRSlBiJp2EOZe155YDDccSYDazXmTVGac/hEe6EHJt0E4Xsx+cgKZJDZJiMgEzeJG+RwySL0hFycNO2HIvPYt3Z9PM+NNAr4x2DzLmeRl8U76x70tCvf/T3Fmv7kZxpK594B8DDDrSYA/H6ry79sCvysUIuvHuz6+oSTDypv6nbqfXUCu6rqbWIkfo9tYa/VUhjbmaQ0Tw+RpCHF8sgXsNlfHzQcP8DeXaMtyVizTrXE2lYJ+gHpYclONsfSZXflD+VFeUL5bxyd1uX23ZJ+FT4VvhR+E74XvgZZOGScFn4SbgifCNcjJ3V4+dj8+yDelvVMk27XlMwpYy0W3pJykovSK9Ixcif1C0NSWPSHtTs3jy3eLx4LQacwL3V1faxOK+CWgNOBRV4QYctOLNt/kNr0kuGSGHb1A6zWW4xxJyYFdMgi3vFEXFIHGe4lZ+4B3UjuOe2TJ3+mApojBWvcyCYOjarzHoh0HlAfXraZxftqO2ccY3Zui/vU5TX5TR+qqhcsPTBflkzTTlQebJLPeou0OogsO8gv6IfqMH3LbHzeiTz3wY49BfeWTci2XQD4GsPoPu1SNaHd+KznwFcOKA33IXwzk8kfgHwavv38X9dGbybbjWbD/C+6vgEYOPjZvOf5WZz40v0vwZwyfwXWQBxeO6COJEAAAkjaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA0LjQuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiLz4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+p930kgAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAACEdJREFUeJzsWH9sXVUdv+/H/fHuu+/+/vl+teX1JxbXX3S2s2+j/kiFRFYLhuCYknY4jApOsjmYGwHCNjRR1iECIXMMug5czPAHGFASDJ0kohCMUXDqyGg71mZZ3XCvXT1+z+173e2bhc1/jifpST495557fnzu53y+33dSBiHELOF/B3ECtIM4AdpBnADtIE6AdhAn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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>hepvs.ch</mdui:DomainHint>
+		<mdui:DomainHint>phvs.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.21554,7.00554</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.31564,7.99073</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUToAZspsM2v2Oj/ijPPnhMv/vMLcwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYWFpLWxvZ29uLmhlcHZzLmNoMB4XDTE4MDgyNzEyNTg0
+MVoXDTIxMDgyNzEyNTg0MVowHTEbMBkGA1UEAwwSYWFpLWxvZ29uLmhlcHZzLmNo
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo8Kzrcy3aOMMyZoMEsIv
+aI0/zE6XKRsuLy7ohjHFGnjIGoYUqJRg5/iRP6EL3AgfdocCcDImMlkBGbxSAUUZ
+b3oZciuLkSTIaZD3KB61lt+rWn1l4uWnfZpKGdQuswx6s4h4iQRJI3ylIJPvKrpj
+ZIpBSTswHeSbhu95O9/c/okuOpmN9t9t1nfcDOEEopru29mMaYhz0FMPHb9BupEI
+chHah5sqi/EwisCYyrYEfzV4sYldVhS03ecjPnfjAUpJebJM/28vbYg+TIziSPv3
+kuWDUT5kyDuJqEAjD/pcMzVyE5kjE3l5PSunyqs44rwIe2g25QWpvM7uaiC4/Tew
+wQIDAQABo2swaTAdBgNVHQ4EFgQUhJV2xuD2aj2+D0Cqp3SjqgkbGEowSAYDVR0R
+BEEwP4ISYWFpLWxvZ29uLmhlcHZzLmNohilodHRwczovL2FhaS1sb2dvbi5oZXB2
+cy5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAXuSf3q+pMbOg
+nbXDjWoHhPHOHXY4ngZ/7CQ6Mhh67XUgJ56RuytT8bvpDOmDKSImDlwToWs1jIrw
+nu7oQc3jaCxPMLly0k8Q6veM0yuGFtTnCaMZlzX2G+Id5MawzMFWfTSpyMzbg2rE
+dgDV7vsz3oL0wLrm4v3ZH2DrMfgA2dnjKl23EiOujXUtGxSMuQvqt+7jzVPjtFWR
+EXoyxkNjULdJgjKPxdGuqjWrolQCmAmhFTmteFv350E2wjv/z/LYvqERKVBQlafP
+qLdeQ/a91ZeY1PrOGm1KQbXC6GA9uYSIUH95SCAnet79FWVznWSDQbd2SbSvCNQI
+OuZjodcl8Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.hepvs.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.hepvs.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-logon.hepvs.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-logon.hepvs.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-logon.hepvs.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-logon.hepvs.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hepvs.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUToAZspsM2v2Oj/ijPPnhMv/vMLcwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYWFpLWxvZ29uLmhlcHZzLmNoMB4XDTE4MDgyNzEyNTg0
+MVoXDTIxMDgyNzEyNTg0MVowHTEbMBkGA1UEAwwSYWFpLWxvZ29uLmhlcHZzLmNo
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo8Kzrcy3aOMMyZoMEsIv
+aI0/zE6XKRsuLy7ohjHFGnjIGoYUqJRg5/iRP6EL3AgfdocCcDImMlkBGbxSAUUZ
+b3oZciuLkSTIaZD3KB61lt+rWn1l4uWnfZpKGdQuswx6s4h4iQRJI3ylIJPvKrpj
+ZIpBSTswHeSbhu95O9/c/okuOpmN9t9t1nfcDOEEopru29mMaYhz0FMPHb9BupEI
+chHah5sqi/EwisCYyrYEfzV4sYldVhS03ecjPnfjAUpJebJM/28vbYg+TIziSPv3
+kuWDUT5kyDuJqEAjD/pcMzVyE5kjE3l5PSunyqs44rwIe2g25QWpvM7uaiC4/Tew
+wQIDAQABo2swaTAdBgNVHQ4EFgQUhJV2xuD2aj2+D0Cqp3SjqgkbGEowSAYDVR0R
+BEEwP4ISYWFpLWxvZ29uLmhlcHZzLmNohilodHRwczovL2FhaS1sb2dvbi5oZXB2
+cy5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAXuSf3q+pMbOg
+nbXDjWoHhPHOHXY4ngZ/7CQ6Mhh67XUgJ56RuytT8bvpDOmDKSImDlwToWs1jIrw
+nu7oQc3jaCxPMLly0k8Q6veM0yuGFtTnCaMZlzX2G+Id5MawzMFWfTSpyMzbg2rE
+dgDV7vsz3oL0wLrm4v3ZH2DrMfgA2dnjKl23EiOujXUtGxSMuQvqt+7jzVPjtFWR
+EXoyxkNjULdJgjKPxdGuqjWrolQCmAmhFTmteFv350E2wjv/z/LYvqERKVBQlafP
+qLdeQ/a91ZeY1PrOGm1KQbXC6GA9uYSIUH95SCAnet79FWVznWSDQbd2SbSvCNQI
+OuZjodcl8Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.hepvs.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.hepvs.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">hepvs.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PHVS - Pädagogische Hochschule Wallis</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">HEPVS - Haute école pédagogique du Valais</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="fr">HEPVS - Haute école pédagogique du Valais</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hepvs.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hepvs.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="fr">http://www.hepvs.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hepldesk</md:GivenName>
+	<md:SurName>HEPVs</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@hepvs.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stéphane</md:GivenName>
+	<md:SurName>Dolt</md:SurName>
+	<md:EmailAddress>mailto:stephane.dolt@hevs.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>System Group</md:GivenName>
+	<md:SurName>HEPVs</md:SurName>
+	<md:EmailAddress>mailto:sinf.sion@hevs.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

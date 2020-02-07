@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:ucsd.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ucsd.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of California, San Diego</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://ucsd.edu/about/privacy-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="75" width="300" xml:lang="en">https://a5.ucsd.edu/ucsd_incommon_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFjzCCBHegAwIBAgICAQwwDQYJKoZIhvcNAQEFBQAwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA4MDIyODIxMTg0NFoXDTEwMDIy
+ODIxMTg0NFowFjEUMBIGA1UEAxMLYTQudWNzZC5lZHUwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDcEzH+KYmuGSDjlZeaOJc8VJS0/bRBjfE6HHDV9nN8
+ghEm5AMS5OPx/ruM+5gchwuryogOMY7abSe3BpvVT/3A+fjKSNnklMPmQUuO6AqW
+7a6/w9w30tl/2OzG3u1sGAr1FkEXf/DmJOtXpAOhPAmyYb6o41k+ZwpvnRuyaoup
+IC1R5LLU2jCnnZCxBF6gvDlvmpaEO2c2aHrKJIaqxDuVhTDJRWp+IkcT8Jy4JAwv
+0R1w8FJXLyZ0RVeNL8v3ZcCzInfxsS1/+FuOOHitZ18WO4Ds5PJ5tEzree95EGe+
+U9dpjMrJQDdKiqPE18K7cQGuHfVkIMkU4phuyUXWKk09AgMBAAGjggKlMIICoTAO
+BgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AQYIKwYBBQUHAwIwHQYDVR0OBBYEFPe85gpJxg5DPieEeNZF9FHWbW0rMH4GA1Ud
+IwR3MHWAFJMtyGEYrWPjm2Wznd2Nk7rnymNFoVqkWDBWMQswCQYDVQQGEwJVUzEc
+MBoGA1UEChMTSW5Db21tb24gRmVkZXJhdGlvbjEpMCcGA1UEAxMgSW5Db21tb24g
+Q2VydGlmaWNhdGlvbiBBdXRob3JpdHmCAQAwgboGCCsGAQUFBwEBBIGtMIGqMIGn
+BggrBgEFBQcwAoaBmmh0dHA6Ly9pbmNvbW1vbmNhMS5pbmNvbW1vbmZlZGVyYXRp
+b24ub3JnL2JyaWRnZS9jZXJ0cy9jYS1jZXJ0cy5wN2IKCQlDQSBJc3N1ZXJzIC0g
+VVJJOmh0dHA6Ly9pbmNvbW1vbmNhMi5pbmNvbW1vbmZlZGVyYXRpb24ub3JnL2Jy
+aWRnZS9jZXJ0cy9jYS1jZXJ0cy5wN2IwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0
+cDovL2luY29tbW9uY3JsMS5pbmNvbW1vbmZlZGVyYXRpb24ub3JnL2NybC9lZWNy
+bHMuY3JsMD+gPaA7hjlodHRwOi8vaW5jb21tb25jcmwyLmluY29tbW9uZmVkZXJh
+dGlvbi5vcmcvY3JsL2VlY3Jscy5jcmwwXgYDVR0gBFcwVTBTBgsrBgEEAa4jAQQB
+ATBEMEIGCCsGAQUFBwIBFjZodHRwOi8vaW5jb21tb25jYS5pbmNvbW1vbmZlZGVy
+YXRpb24ub3JnL3ByYWN0aWNlcy5wZGYwFgYDVR0RBA8wDYILYTQudWNzZC5lZHUw
+DQYJKoZIhvcNAQEFBQADggEBAJeIDxI87H9yjtD8BLdiwEBsyKiADqL4jo2EeF9Z
+kz6GA89zEUXaL6M+UeWaHwrpbKbpR7JYb87qJhFYzCBBdLjUpHnvHI1M1/wl44XF
+/W8PpcuDF5vZmVDxYmKEJQJHnvRqOU08vIvk5bpgcI8ctNXUDWh9uEdtKMrg3+Tk
+gKCmAXAl9I6SOrnEy98RJ7yWL51qXHaWE5xXl9dTCh43JONZWlsah0smeDYkYhZq
+7g+zU6RW3i/LigqVYW84V0+WH30htKco5uwr0SGoL9u8PGbYPgrRtCJIo5r8eE7N
+R1kv+lykb9hrz1KUyDvLTDhWQ7l4bXDaP7/dIpaTrtd0zC4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgIJAPn3wXbFGjOZMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2E0LnVjc2QuZWR1MB4XDTEwMDQwODIyNDcwOVoXDTIwMDQwNTIyNDcwOVow
+FjEUMBIGA1UEAxMLYTQudWNzZC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDUEpd4l0/TgMjGp8nyEA3eyMDB001MZIq/u9wjSNsPFoXGudwyRryf
+B+yKk4MTX/VqQ6cMZ1oFjP1h1phl5xWG1PZu2vXpjJuHb5X1J4GCK2u7j5mwN6zK
+/ekTVI4X/0ALe7uPE6ltcKd1XQctZfCe27e+cUdbqz3y16s+RWyUrC2pRK2aJuxm
+hR7rxMwAcpUYBrINqvoGAz7MIBZ2MNwNlMNK2scGBLsdahBG/JZk0PUYiwRxA1aq
+YAEeOsuR6jVhudDOAfTK/XtWneUrO0G0C3fCVmX5MGrUCPIY/cVAbuNBLGYDjg1+
+7iazyImK4nbgXQzBd7QfLayuITY5pludAgMBAAGjdzB1MB0GA1UdDgQWBBTIPcIR
+7y/+BZAKv3XBLkJsAw0l9DBGBgNVHSMEPzA9gBTIPcIR7y/+BZAKv3XBLkJsAw0l
+9KEapBgwFjEUMBIGA1UEAxMLYTQudWNzZC5lZHWCCQD598F2xRozmTAMBgNVHRME
+BTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAwB9Fwts/0sEse6XtafnaYxoAukZwS
+CpbUv+LOLgwmFgLCm+eo9kCvbTTS4JZ3Ctz9/yGfRIcNygWsALSeBvpXmNA0gI/V
+CcsFrrllX1SrpIz5yuwHRZcj1WDDvAzqanvjXGT+2BxmjYS7E25XG+eMC0JlzxLV
+4PKbKEVZlfBEoRSZ/8wS2MqtZm2COZ21PRBHyfkxopkKpdqImQksx36nvEj4Ow6H
+ua34fsQvpcou9ufs1WPqLRTD6AVU1ZrGFdFFAOFY8mG6BEDEplp0Jpn8knxtc2Cg
+Y8R3vksytTmgdqrqYKEpA/CP8EUxyRB3IGOdZ3cJgxabq5X2FBWEFU8y
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://a4.ucsd.edu/tritON/HS"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://a5.ucsd.edu/tritON/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://a5.ucsd.edu/tritON/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ucsd.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFjzCCBHegAwIBAgICAQwwDQYJKoZIhvcNAQEFBQAwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA4MDIyODIxMTg0NFoXDTEwMDIy
+ODIxMTg0NFowFjEUMBIGA1UEAxMLYTQudWNzZC5lZHUwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQDcEzH+KYmuGSDjlZeaOJc8VJS0/bRBjfE6HHDV9nN8
+ghEm5AMS5OPx/ruM+5gchwuryogOMY7abSe3BpvVT/3A+fjKSNnklMPmQUuO6AqW
+7a6/w9w30tl/2OzG3u1sGAr1FkEXf/DmJOtXpAOhPAmyYb6o41k+ZwpvnRuyaoup
+IC1R5LLU2jCnnZCxBF6gvDlvmpaEO2c2aHrKJIaqxDuVhTDJRWp+IkcT8Jy4JAwv
+0R1w8FJXLyZ0RVeNL8v3ZcCzInfxsS1/+FuOOHitZ18WO4Ds5PJ5tEzree95EGe+
+U9dpjMrJQDdKiqPE18K7cQGuHfVkIMkU4phuyUXWKk09AgMBAAGjggKlMIICoTAO
+BgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AQYIKwYBBQUHAwIwHQYDVR0OBBYEFPe85gpJxg5DPieEeNZF9FHWbW0rMH4GA1Ud
+IwR3MHWAFJMtyGEYrWPjm2Wznd2Nk7rnymNFoVqkWDBWMQswCQYDVQQGEwJVUzEc
+MBoGA1UEChMTSW5Db21tb24gRmVkZXJhdGlvbjEpMCcGA1UEAxMgSW5Db21tb24g
+Q2VydGlmaWNhdGlvbiBBdXRob3JpdHmCAQAwgboGCCsGAQUFBwEBBIGtMIGqMIGn
+BggrBgEFBQcwAoaBmmh0dHA6Ly9pbmNvbW1vbmNhMS5pbmNvbW1vbmZlZGVyYXRp
+b24ub3JnL2JyaWRnZS9jZXJ0cy9jYS1jZXJ0cy5wN2IKCQlDQSBJc3N1ZXJzIC0g
+VVJJOmh0dHA6Ly9pbmNvbW1vbmNhMi5pbmNvbW1vbmZlZGVyYXRpb24ub3JnL2Jy
+aWRnZS9jZXJ0cy9jYS1jZXJ0cy5wN2IwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0
+cDovL2luY29tbW9uY3JsMS5pbmNvbW1vbmZlZGVyYXRpb24ub3JnL2NybC9lZWNy
+bHMuY3JsMD+gPaA7hjlodHRwOi8vaW5jb21tb25jcmwyLmluY29tbW9uZmVkZXJh
+dGlvbi5vcmcvY3JsL2VlY3Jscy5jcmwwXgYDVR0gBFcwVTBTBgsrBgEEAa4jAQQB
+ATBEMEIGCCsGAQUFBwIBFjZodHRwOi8vaW5jb21tb25jYS5pbmNvbW1vbmZlZGVy
+YXRpb24ub3JnL3ByYWN0aWNlcy5wZGYwFgYDVR0RBA8wDYILYTQudWNzZC5lZHUw
+DQYJKoZIhvcNAQEFBQADggEBAJeIDxI87H9yjtD8BLdiwEBsyKiADqL4jo2EeF9Z
+kz6GA89zEUXaL6M+UeWaHwrpbKbpR7JYb87qJhFYzCBBdLjUpHnvHI1M1/wl44XF
+/W8PpcuDF5vZmVDxYmKEJQJHnvRqOU08vIvk5bpgcI8ctNXUDWh9uEdtKMrg3+Tk
+gKCmAXAl9I6SOrnEy98RJ7yWL51qXHaWE5xXl9dTCh43JONZWlsah0smeDYkYhZq
+7g+zU6RW3i/LigqVYW84V0+WH30htKco5uwr0SGoL9u8PGbYPgrRtCJIo5r8eE7N
+R1kv+lykb9hrz1KUyDvLTDhWQ7l4bXDaP7/dIpaTrtd0zC4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgIJAPn3wXbFGjOZMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2E0LnVjc2QuZWR1MB4XDTEwMDQwODIyNDcwOVoXDTIwMDQwNTIyNDcwOVow
+FjEUMBIGA1UEAxMLYTQudWNzZC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDUEpd4l0/TgMjGp8nyEA3eyMDB001MZIq/u9wjSNsPFoXGudwyRryf
+B+yKk4MTX/VqQ6cMZ1oFjP1h1phl5xWG1PZu2vXpjJuHb5X1J4GCK2u7j5mwN6zK
+/ekTVI4X/0ALe7uPE6ltcKd1XQctZfCe27e+cUdbqz3y16s+RWyUrC2pRK2aJuxm
+hR7rxMwAcpUYBrINqvoGAz7MIBZ2MNwNlMNK2scGBLsdahBG/JZk0PUYiwRxA1aq
+YAEeOsuR6jVhudDOAfTK/XtWneUrO0G0C3fCVmX5MGrUCPIY/cVAbuNBLGYDjg1+
+7iazyImK4nbgXQzBd7QfLayuITY5pludAgMBAAGjdzB1MB0GA1UdDgQWBBTIPcIR
+7y/+BZAKv3XBLkJsAw0l9DBGBgNVHSMEPzA9gBTIPcIR7y/+BZAKv3XBLkJsAw0l
+9KEapBgwFjEUMBIGA1UEAxMLYTQudWNzZC5lZHWCCQD598F2xRozmTAMBgNVHRME
+BTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAwB9Fwts/0sEse6XtafnaYxoAukZwS
+CpbUv+LOLgwmFgLCm+eo9kCvbTTS4JZ3Ctz9/yGfRIcNygWsALSeBvpXmNA0gI/V
+CcsFrrllX1SrpIz5yuwHRZcj1WDDvAzqanvjXGT+2BxmjYS7E25XG+eMC0JlzxLV
+4PKbKEVZlfBEoRSZ/8wS2MqtZm2COZ21PRBHyfkxopkKpdqImQksx36nvEj4Ow6H
+ua34fsQvpcou9ufs1WPqLRTD6AVU1ZrGFdFFAOFY8mG6BEDEplp0Jpn8knxtc2Cg
+Y8R3vksytTmgdqrqYKEpA/CP8EUxyRB3IGOdZ3cJgxabq5X2FBWEFU8y
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://a4.ucsd.edu:8443/tritON/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California-San Diego</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California-San Diego</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucsd.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth/IDM Support</md:GivenName>
+	<md:EmailAddress>shibsupport@ucsd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ITS Service Desk</md:GivenName>
+	<md:EmailAddress>servicedesk@ucsd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth/IDM Support</md:GivenName>
+	<md:EmailAddress>shibsupport@ucsd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ITS Security</md:GivenName>
+	<md:EmailAddress>security@ucsd.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

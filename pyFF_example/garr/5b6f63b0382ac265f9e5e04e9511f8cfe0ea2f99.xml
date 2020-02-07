@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.tarleton.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tarleton.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Tarleton State University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.tarleton.edu/site/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="50" width="50" xml:lang="en">https://sso.tarleton.edu/images/Tarleton-Logo-100x100.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEzTCCA7WgAwIBAgIJANBr4B9Gk0bpMA0GCSqGSIb3DQEBCwUAMIGfMQswCQYD
+VQQGEwJVUzELMAkGA1UECBMCVFgxGDAWBgNVBAcTD0NvbGxlZ2UgU3RhdGlvbjEh
+MB8GA1UEChMYVGV4YXMgQSBhbmQgTSBVbml2ZXJzaXR5MSswKQYDVQQLEyJDb21w
+dXRpbmcgYW5kIEluZm9ybWF0aW9uIFNlcnZpY2VzMRkwFwYDVQQDExBzc28udGFy
+bGV0b24uZWR1MB4XDTE3MDEyMzE4NTYyNFoXDTI3MDEyMTE4NTYyNFowgZ8xCzAJ
+BgNVBAYTAlVTMQswCQYDVQQIEwJUWDEYMBYGA1UEBxMPQ29sbGVnZSBTdGF0aW9u
+MSEwHwYDVQQKExhUZXhhcyBBIGFuZCBNIFVuaXZlcnNpdHkxKzApBgNVBAsTIkNv
+bXB1dGluZyBhbmQgSW5mb3JtYXRpb24gU2VydmljZXMxGTAXBgNVBAMTEHNzby50
+YXJsZXRvbi5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDM3c3K
+2l8uMv5SNlho+rxcbeik+aCtltQijBpwRFIyrXdXQizyRItM36njhEba/Cd/yIJ/
+nLNxvdNOYYQ370N+fDiKysLtc1Y/kuFrGw/Eo68hR9E4VKo6wloYyhROHWEt84Xc
+u+bQn0bpkIkS47bLMgcVWZiIEIZExyb9UQYwXwKlO4Rg7D1H7fFwzyg0nWT0LO9w
+Y2DewqcuzgDcFujXOGKP9Lk10j6ISKWsUMssfb4BRRWTGclGkF8CthzJ9HGdGy7x
+OYwt8rgRqawhWv7BHeRv6grndclekx91wAaYbrt9Bz7AAIpZ1IE5kUcA/Ij8fm2S
+3UiZKfKHuEpjw/j9AgMBAAGjggEIMIIBBDAdBgNVHQ4EFgQU1FfCKEZ7/cq0PHdZ
+jfgFtDD85W8wgdQGA1UdIwSBzDCByYAU1FfCKEZ7/cq0PHdZjfgFtDD85W+hgaWk
+gaIwgZ8xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJUWDEYMBYGA1UEBxMPQ29sbGVn
+ZSBTdGF0aW9uMSEwHwYDVQQKExhUZXhhcyBBIGFuZCBNIFVuaXZlcnNpdHkxKzAp
+BgNVBAsTIkNvbXB1dGluZyBhbmQgSW5mb3JtYXRpb24gU2VydmljZXMxGTAXBgNV
+BAMTEHNzby50YXJsZXRvbi5lZHWCCQDQa+AfRpNG6TAMBgNVHRMEBTADAQH/MA0G
+CSqGSIb3DQEBCwUAA4IBAQByxfAPs4J9fiukNbyXEjPmByQPrNqL/+Ds87dpKGim
+XMq+44LWI2V7KZ0EAFPzYDqmRdu1R5/+cV0sJqzekxty2HAJXly44gkIPVwMEDpc
+cFQgcbqhUrIg2TQzqYy2xFr/U7/0O1mrwrTP0khLLfLstGQPGozLqWW+irAyfai7
+/9mw5ilJtSSf581OhWIfc2BTUkyDxd3+S0oX03jhOPXC9mV2jsTvRMRyDcBxTb0a
+uD/gCfhPWFGYBGA3GoxFt0zEk0a8vivdRwHX9BIdoe3BZSyMkGeBSxIlVnFwlXCP
+nKit/7772fa3q6pmp8MzU+ATzhkVl1VW3XG2uOhgEeum
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.tarleton.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.tarleton.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Tarleton State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Tarleton State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.tarleton.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Joseph Warner</md:GivenName>
+	<md:EmailAddress>warner@tarleton.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nathan Lee</md:GivenName>
+	<md:EmailAddress>leenathan24@tamu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Nathan Lee</md:GivenName>
+	<md:EmailAddress>leenathan24@tamu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dustin Pittman</md:GivenName>
+	<md:EmailAddress>dpittman@tarleton.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

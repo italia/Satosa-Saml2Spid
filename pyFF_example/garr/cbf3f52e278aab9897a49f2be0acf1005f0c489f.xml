@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.millersville.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">millersville.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Millersville University of Pennsylvania</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Millersville University Shibboleth Identity Provider</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.millersville.edu/registrar/faculty/ferpa.php</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="64" xml:lang="en">https://www.millersville.edu/ucm/img/identity/spirit-mark.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDvjCCAqYCCQCad9weHImjfTANBgkqhkiG9w0BAQUFADCBoDELMAkGA1UEBhMC
+VVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMGA1UEBwwMTWlsbGVyc3ZpbGxl
+MQswCQYDVQQKDAJNVTELMAkGA1UECwwCSVQxHTAbBgNVBAMMFGlkcC5taWxsZXJz
+dmlsbGUuZWR1MSowKAYJKoZIhvcNAQkBFhtrZWl0aC53ZW56QG1pbGxlcnN2aWxs
+ZS5lZHUwHhcNMTQwMjEyMjAzNDU2WhcNMjQwMjEyMjAzNDU2WjCBoDELMAkGA1UE
+BhMCVVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMGA1UEBwwMTWlsbGVyc3Zp
+bGxlMQswCQYDVQQKDAJNVTELMAkGA1UECwwCSVQxHTAbBgNVBAMMFGlkcC5taWxs
+ZXJzdmlsbGUuZWR1MSowKAYJKoZIhvcNAQkBFhtrZWl0aC53ZW56QG1pbGxlcnN2
+aWxsZS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDcxo3XJyJ4
+XFEbcFxi2tLbeYkgTpkCa5SkJ5iRXJ1nzY3QxtLdUlDPSDZ8yL0/aHmOrNYyblTu
+yS+7AWGONpUcO4TC+o/wXRX2bA351wqP2jB+epZmJeT+sGRwdwD4Zz8LsELlcI79
+KwzefVPE99q0lyeWr8AXK6uW3vV5y8akHmVcrjBxlh36inCwOgTQSlvYtbXHciVP
+B0/tSMGG8pNhKaCDhO9g8GCwJaZOGlA9Xyz42Nl+a+azjLznVMpgWbwY3YEZ3ju+
+jxnImQhKULjT+aY0PNk6+z+7NDeFEFfA/B/Q2QXUR64sVcP5lRNzIcV+56mJAbkM
+vwS7CF5l9FJxAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAJZYFahiDe2dzQIRA1jS
+jinR70bTzkiOnQNnGQeLi1soMsix+5+tlUNx51/kHevjEmIXaF/1ExdJMA7WgIrb
+WTkuZZ4Vavfj2R6JoNWu2FRW/2M1DrXJqpbwUGcXjdHQ2rbBYmVwSCatNFTsSHip
+lL2HPQZGvht42iAEbk/V/1yrk3oL2gMCQNE72LZsR+NsBwxqICq8VMA4MhRlmKj9
+W9f49ZEtPeCsIRlBj5+g8bp0Kp/01+ZBsUH3sz4Il7xdKP5SDmSliwsdtFdtGtG3
+B1Hr85xtqTtI/mbxmfcdcmmfrY5MeMsi3FWn25+n9vouDArR9CPBswnaC7QQv8Q5
+XaY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDmDCCAoACCQDPokmAeSlZezANBgkqhkiG9w0BAQUFADCBjTEdMBsGA1UEAwwU
+aWRwLm1pbGxlcnN2aWxsZS5lZHUxMTAvBgNVBAoMKE1pbGxlcnN2aWxsZSBVbml2
+ZXJzaXR5IG9mIFBlbm5zeWx2YW5pYSAxCzAJBgNVBAYTAlVTMRUwEwYDVQQIDAxQ
+ZW5uc3lsdmFuaWExFTATBgNVBAcMDE1pbGxlcnN2aWxsZTAeFw0xMzAyMjAwMTEx
+MTFaFw0xNDAyMjAwMTExMTFaMIGNMR0wGwYDVQQDDBRpZHAubWlsbGVyc3ZpbGxl
+LmVkdTExMC8GA1UECgwoTWlsbGVyc3ZpbGxlIFVuaXZlcnNpdHkgb2YgUGVubnN5
+bHZhbmlhIDELMAkGA1UEBhMCVVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMG
+A1UEBwwMTWlsbGVyc3ZpbGxlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAsk4pBIiHNa6xPAgluBgTro53X6UHITXz8nrMd2vE1q0+e5dBVcFMxtcKgXC9
+Hqeb5h4BCetgMVBjQcUqGVTvkVEc+U0oHYgA30QRknT64cY3fNobabbgDuw/BBM0
+1cvGVh//lg3p9hDfGPSvXDyJLh1+D0vcj+4UgaCYiHLBMvSjaJtzKI12ppvryNG8
+Tx5yVSLJGCFuuq5aeEH8h6i5n46RabRea0+g/Y1AEabToFf+4sJdQ55a96S7O1RR
+mFmFmCpv7DCFI96yaIRUUylGq0wTt0g/NGEbKDBdc1RVdJS0VVvQ12fXgakWtb8U
+YeoQtJyO11UhiY84GF1VB5O4PQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQAB8bN2
+Edf1s1dmx3OtrgrhWP+GTPwBXZEkPd89/aauVNF23sgYUYwd1FIJQUF3oxFxf6R4
+YVnaVTHw/6Lgzgkua+Vyq7cNsjmrWSqadFiBsT3lOw6CmTFwpJp1cbA17oEh6MzN
+5pKtg5vkF66uNK48G8McryCcP9jrX3n1ldDV33qITE9JgY9yGOcm5dmhU+tBNmzI
+zMjjr6ZldRn41oqKMVdr6Wsv7FXecCOwbFPzItMINzDJ5GAP8Fm2H02JBkai8jX8
+WAWsqXPCafwwasFkMDtUQbBIB70JqFTLFdb8xbP6ESn8cBr2nbB8qcvWPM8MBvX5
+rkHfGo7YiJzuzWRw
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.millersville.edu:9443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.millersville.edu:9443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.millersville.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.millersville.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.millersville.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.millersville.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">millersville.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDvjCCAqYCCQCad9weHImjfTANBgkqhkiG9w0BAQUFADCBoDELMAkGA1UEBhMC
+VVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMGA1UEBwwMTWlsbGVyc3ZpbGxl
+MQswCQYDVQQKDAJNVTELMAkGA1UECwwCSVQxHTAbBgNVBAMMFGlkcC5taWxsZXJz
+dmlsbGUuZWR1MSowKAYJKoZIhvcNAQkBFhtrZWl0aC53ZW56QG1pbGxlcnN2aWxs
+ZS5lZHUwHhcNMTQwMjEyMjAzNDU2WhcNMjQwMjEyMjAzNDU2WjCBoDELMAkGA1UE
+BhMCVVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMGA1UEBwwMTWlsbGVyc3Zp
+bGxlMQswCQYDVQQKDAJNVTELMAkGA1UECwwCSVQxHTAbBgNVBAMMFGlkcC5taWxs
+ZXJzdmlsbGUuZWR1MSowKAYJKoZIhvcNAQkBFhtrZWl0aC53ZW56QG1pbGxlcnN2
+aWxsZS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDcxo3XJyJ4
+XFEbcFxi2tLbeYkgTpkCa5SkJ5iRXJ1nzY3QxtLdUlDPSDZ8yL0/aHmOrNYyblTu
+yS+7AWGONpUcO4TC+o/wXRX2bA351wqP2jB+epZmJeT+sGRwdwD4Zz8LsELlcI79
+KwzefVPE99q0lyeWr8AXK6uW3vV5y8akHmVcrjBxlh36inCwOgTQSlvYtbXHciVP
+B0/tSMGG8pNhKaCDhO9g8GCwJaZOGlA9Xyz42Nl+a+azjLznVMpgWbwY3YEZ3ju+
+jxnImQhKULjT+aY0PNk6+z+7NDeFEFfA/B/Q2QXUR64sVcP5lRNzIcV+56mJAbkM
+vwS7CF5l9FJxAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAJZYFahiDe2dzQIRA1jS
+jinR70bTzkiOnQNnGQeLi1soMsix+5+tlUNx51/kHevjEmIXaF/1ExdJMA7WgIrb
+WTkuZZ4Vavfj2R6JoNWu2FRW/2M1DrXJqpbwUGcXjdHQ2rbBYmVwSCatNFTsSHip
+lL2HPQZGvht42iAEbk/V/1yrk3oL2gMCQNE72LZsR+NsBwxqICq8VMA4MhRlmKj9
+W9f49ZEtPeCsIRlBj5+g8bp0Kp/01+ZBsUH3sz4Il7xdKP5SDmSliwsdtFdtGtG3
+B1Hr85xtqTtI/mbxmfcdcmmfrY5MeMsi3FWn25+n9vouDArR9CPBswnaC7QQv8Q5
+XaY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDmDCCAoACCQDPokmAeSlZezANBgkqhkiG9w0BAQUFADCBjTEdMBsGA1UEAwwU
+aWRwLm1pbGxlcnN2aWxsZS5lZHUxMTAvBgNVBAoMKE1pbGxlcnN2aWxsZSBVbml2
+ZXJzaXR5IG9mIFBlbm5zeWx2YW5pYSAxCzAJBgNVBAYTAlVTMRUwEwYDVQQIDAxQ
+ZW5uc3lsdmFuaWExFTATBgNVBAcMDE1pbGxlcnN2aWxsZTAeFw0xMzAyMjAwMTEx
+MTFaFw0xNDAyMjAwMTExMTFaMIGNMR0wGwYDVQQDDBRpZHAubWlsbGVyc3ZpbGxl
+LmVkdTExMC8GA1UECgwoTWlsbGVyc3ZpbGxlIFVuaXZlcnNpdHkgb2YgUGVubnN5
+bHZhbmlhIDELMAkGA1UEBhMCVVMxFTATBgNVBAgMDFBlbm5zeWx2YW5pYTEVMBMG
+A1UEBwwMTWlsbGVyc3ZpbGxlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAsk4pBIiHNa6xPAgluBgTro53X6UHITXz8nrMd2vE1q0+e5dBVcFMxtcKgXC9
+Hqeb5h4BCetgMVBjQcUqGVTvkVEc+U0oHYgA30QRknT64cY3fNobabbgDuw/BBM0
+1cvGVh//lg3p9hDfGPSvXDyJLh1+D0vcj+4UgaCYiHLBMvSjaJtzKI12ppvryNG8
+Tx5yVSLJGCFuuq5aeEH8h6i5n46RabRea0+g/Y1AEabToFf+4sJdQ55a96S7O1RR
+mFmFmCpv7DCFI96yaIRUUylGq0wTt0g/NGEbKDBdc1RVdJS0VVvQ12fXgakWtb8U
+YeoQtJyO11UhiY84GF1VB5O4PQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQAB8bN2
+Edf1s1dmx3OtrgrhWP+GTPwBXZEkPd89/aauVNF23sgYUYwd1FIJQUF3oxFxf6R4
+YVnaVTHw/6Lgzgkua+Vyq7cNsjmrWSqadFiBsT3lOw6CmTFwpJp1cbA17oEh6MzN
+5pKtg5vkF66uNK48G8McryCcP9jrX3n1ldDV33qITE9JgY9yGOcm5dmhU+tBNmzI
+zMjjr6ZldRn41oqKMVdr6Wsv7FXecCOwbFPzItMINzDJ5GAP8Fm2H02JBkai8jX8
+WAWsqXPCafwwasFkMDtUQbBIB70JqFTLFdb8xbP6ESn8cBr2nbB8qcvWPM8MBvX5
+rkHfGo7YiJzuzWRw
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.millersville.edu:9443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.millersville.edu:9443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Millersville University of Pennsylvania</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Millersville University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.millersville.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stephanie Ayers</md:GivenName>
+	<md:EmailAddress>stephanie.ayers@millersville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Josh Hartranft</md:GivenName>
+	<md:EmailAddress>josh.hartranft@millersville.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Todd Echterling</md:GivenName>
+	<md:EmailAddress>todd.echterling@millersville.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

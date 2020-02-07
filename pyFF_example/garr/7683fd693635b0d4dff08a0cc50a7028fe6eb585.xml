@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.wmich.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.wmich.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wmich.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Western Michigan University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Western Michigan University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.wmich.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://wmich.edu/policies/computing-resources-acceptable-use</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="172" xml:lang="en">https://idp.wmich.edu/idp/images/wmu-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUa4EI2jTt6ViDq1EIcA/j+LW97W4wDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLndtaWNoLmVkdTAeFw0xMjA4MDExOTI0NTFaFw0z
+MjA4MDExOTI0NTFaMBgxFjAUBgNVBAMTDWlkcC53bWljaC5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7nBw1E5fmU+Nd+wyb1/YCO3pKUw+C+6Uw
+Kk0SF5daJWbZDI3UWKdQjl0aVp53yml3oEzQFbsRl9KXSC43Wy1zAWNYF2MSUxOQ
+2//8K1omFvWDaa1teaOVn+o8ID56FN3WCj0H1JGXsS/Ub6xgArLvQP4qwIbWAkw8
+gG2OxOwve5xWdyhI2kgALR57vWjx4IXPGcbrqcH5mQmh5G0T08b6yVd/QAm+eUqG
+iu2U0E2u5nYaGBUrbJhESwi1BUG5skVohdM7pywwkI89EX8kC55zo9f3PkTkI81+
+BW/4GYNq3jZdnOkQikwBD+BpZNYHwiIC0x7H6dVzxd/etmTJQ5enAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC53bWljaC5lZHWGJGh0dHBzOi8vaWRwLndtaWNoLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUr3+xm4m0gO5W3F0sK6Hbfy0tQeAw
+DQYJKoZIhvcNAQEFBQADggEBAIXq7tJZSGV+V6fTXpk31EIKEXqI4dpw/r2lb1cx
+Ph6pAyQ9SYBxOrdS1CDo0+OC5WvtgRYArnhgdajCwhtvbfMCufT4w3bCTU6/P6SE
+nhjIGWdZIfTvEEv9m3R6Q6tyTfW143IsSHA++aowZ4Vup5fBwOKqzclrWRWyIlr+
+RchDpIDX4nMpzZpWXmOuqXNbUjb5nejgUmF8jELzsNIsnouAOqYg8n9+cgYd+2w+
+p57il9Y4UDMnswbxscZKwp32B+e5o6Mc6YrFVeVuR6zWR6+FQaDG8YFesmTDBvTv
+8Pbk+Hx1N2rqKvwenWT850/va3DwTJBeKdJGwCN2d4QNqMM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.wmich.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.wmich.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.wmich.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.wmich.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.wmich.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wmich.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUa4EI2jTt6ViDq1EIcA/j+LW97W4wDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLndtaWNoLmVkdTAeFw0xMjA4MDExOTI0NTFaFw0z
+MjA4MDExOTI0NTFaMBgxFjAUBgNVBAMTDWlkcC53bWljaC5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7nBw1E5fmU+Nd+wyb1/YCO3pKUw+C+6Uw
+Kk0SF5daJWbZDI3UWKdQjl0aVp53yml3oEzQFbsRl9KXSC43Wy1zAWNYF2MSUxOQ
+2//8K1omFvWDaa1teaOVn+o8ID56FN3WCj0H1JGXsS/Ub6xgArLvQP4qwIbWAkw8
+gG2OxOwve5xWdyhI2kgALR57vWjx4IXPGcbrqcH5mQmh5G0T08b6yVd/QAm+eUqG
+iu2U0E2u5nYaGBUrbJhESwi1BUG5skVohdM7pywwkI89EX8kC55zo9f3PkTkI81+
+BW/4GYNq3jZdnOkQikwBD+BpZNYHwiIC0x7H6dVzxd/etmTJQ5enAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC53bWljaC5lZHWGJGh0dHBzOi8vaWRwLndtaWNoLmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUr3+xm4m0gO5W3F0sK6Hbfy0tQeAw
+DQYJKoZIhvcNAQEFBQADggEBAIXq7tJZSGV+V6fTXpk31EIKEXqI4dpw/r2lb1cx
+Ph6pAyQ9SYBxOrdS1CDo0+OC5WvtgRYArnhgdajCwhtvbfMCufT4w3bCTU6/P6SE
+nhjIGWdZIfTvEEv9m3R6Q6tyTfW143IsSHA++aowZ4Vup5fBwOKqzclrWRWyIlr+
+RchDpIDX4nMpzZpWXmOuqXNbUjb5nejgUmF8jELzsNIsnouAOqYg8n9+cgYd+2w+
+p57il9Y4UDMnswbxscZKwp32B+e5o6Mc6YrFVeVuR6zWR6+FQaDG8YFesmTDBvTv
+8Pbk+Hx1N2rqKvwenWT850/va3DwTJBeKdJGwCN2d4QNqMM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.wmich.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Western Michigan University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Western Michigan University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wmich.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>WMU OIT Shibboleth Authentication Support</md:GivenName>
+	<md:EmailAddress>oit-shibadmin@wmich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>WMU OIT Shibboleth Authentication Support</md:GivenName>
+	<md:EmailAddress>oit-shibadmin@wmich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>WMU Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@wmich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>WMU OIT Security</md:GivenName>
+	<md:EmailAddress>oit-security@wmich.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

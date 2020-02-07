@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.facsur.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sso.facsur.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">FSI-SP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Facilities Survey Inc. Service Provider</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://portalvhdsc1clt6c22szhn.blob.core.windows.net/videos/FSIPrivacyPolicy.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="98" width="200" xml:lang="en">https://cms.facsur.com/images/Logos/cms/logo6.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEMzCCAxugAwIBAgIhANoMBDrnvpZM4Gxz0o1evXl+VrSoOvPpPDbVdg3BuVgM
+MA0GCSqGSIb3DQEBBQUAMIGpMTUwMwYDVQQGEyw0MDAgUGVubiBDZW50ZXIgQmx2
+ZC4sIFN1aXRlIDU1MiwgUGl0dHNidXJnaDEfMB0GA1UECgwWRmFjaWxpdGllcyBT
+dXJ2ZXkgSW5jLjEMMAoGA1UECwwDQ01TMRcwFQYDVQQDDA5zc28uZmFjc3VyLmNv
+bTEPMA0GCSqGSIb3DQEJARYAMRcwFQYDVQQDDA5zc28uZmFjc3VyLmNvbTAeFw0x
+ODA1MjMyMTU3NDFaFw0yODA1MjMyMTU3NDFaMIGQMTUwMwYDVQQGEyw0MDAgUGVu
+biBDZW50ZXIgQmx2ZC4sIFN1aXRlIDU1MiwgUGl0dHNidXJnaDEfMB0GA1UECgwW
+RmFjaWxpdGllcyBTdXJ2ZXkgSW5jLjEMMAoGA1UECwwDQ01TMRcwFQYDVQQDDA5z
+c28uZmFjc3VyLmNvbTEPMA0GCSqGSIb3DQEJARYAMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAqsLyXUeN4fyt39baoskTiODubUZcuogtYTb1RlHQtH7c
++NbHE3l8xZkZN+0lO3BU77buY7lYq5v3lcRBD0s42W0C3jqDqJiyCIqLn+/ZVVJW
+SRx0uy64la58lgTnoT0Fttv8up3gSIm0nxZ4HMSm/AvCuTCOa3PCEoHMVhVbyosH
+KoOkIwG3RrXr2tKNJOigUsNMFt+xhA6DavL5/zZ3Nczsq8xy8XvAWm5vt8P0mPU+
+ZvvrdK6c5vt/BQnc9zvtSpQ5ISEEHn3Y69Dy6UuW7vQ52rtlSOdyQcSQQXXy9Kao
+3qfrBooS09uWYf8zHDnkj8M+zjUaYlaQ/HsLnfg3OwIDAQABo10wWzAdBgNVHQ4E
+FgQUw44tghvb3WHiJ/JEuDWK+SXXXJcwHwYDVR0jBBgwFoAUw44tghvb3WHiJ/JE
+uDWK+SXXXJcwGQYDVR0RBBIwEIIOc3NvLmZhY3N1ci5jb20wDQYJKoZIhvcNAQEF
+BQADggEBAGEnTqjhN2AjWptJAvjlPpG58IZUyPoC+gK4o8UUBvMJ2ePvxvUpr7lp
+LtN0rwdikzOsxUQrmGGBomiBQ01bsd/N0QbNO2R1xeI6yVlRNgV0NyjaxzepOdC3
+oatwHtgIgONUy0nErFu4BpiABlDCQsr0hQQAk3kUBQx3qcrBNUJwGr5TKh1uSiTn
+6+iuJX4N1u8oMKNxuW0haTnJczlKwBJwDw6bvp8VO5XZz9G+noKL5tppJyUii9ty
+HxhbbXmVTGAK3l8WkJRUZbQnzFPNpJNhuLMaFmu4s09ZhV0XMpSmoQ3rMrzM6Lon
+99bdrVWDK8JsRw+q3w2bkJgaDlgrEgU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.facsur.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.facsur.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.facsur.com/Shibboleth.sso/SLO/POST"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.facsur.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.facsur.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso.facsur.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sso.facsur.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sso.facsur.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sso.facsur.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">FSI-SP</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Facilities Survey Inc. Service Provider</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Facilities Survey, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Facilities Survey, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://facilitiessurvey.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mike Hetcko</md:GivenName>
+	<md:EmailAddress>mhetcko@fsiservices.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Megan Chipps</md:GivenName>
+	<md:EmailAddress>mday@fsiservices.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Megan Chipps</md:GivenName>
+	<md:EmailAddress>mchipps@fsiservices.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

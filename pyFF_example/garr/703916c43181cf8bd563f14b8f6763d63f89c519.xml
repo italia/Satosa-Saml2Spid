@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://youidlite.youid.net/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-07-01T14:56:47Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">YouID-E2BN Integration</mdui:DisplayName>
+		<mdui:Description xml:lang="en">YouID-E2BN Integration</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">youid.net</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNzCCAh+gAwIBAgIUa8xPw+mOVIxAKWoeoNJ1T1hc6p4wDQYJKoZIhvcNAQEF
+BQAwHjEcMBoGA1UEAxMTeW91aWRsaXRlLnlvdWlkLm5ldDAeFw0xNDA2MTExMjQ4
+MDhaFw0zNDA2MTExMjQ4MDhaMB4xHDAaBgNVBAMTE3lvdWlkbGl0ZS55b3VpZC5u
+ZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCBYPbq7OB/Qqs8F6U5
+vJ9e1oAwLlW17j2DMTV3vGqBk+F3Er1Zu97STKlhRQNHdBrH5S176Re2xbYyHQyc
+erLd5rc8Gd0gCMr2TtvmXoCLOT1ToObM6pZy014yCrGUjtaI0z6HxZKsGi+QtDPi
+s9AYYhINTv4MJyuZWH0a5w2YgoU0gQAvubCGeHmtbT/fEC0kcXCOXcljXJONyZVl
+dH6PTlSxzuU44lLDssvrnPnb07pQLbV9oXtZBN5Tp/7UA8JM5d+VMC1vqcM2Mjm2
+cm7pQz9hLAQschFh2jv/uHqyrH+0BibfVssQj2H+KjPk6qHmpkwt92rW+Jn7Bh3N
+NcbTAgMBAAGjbTBrMEoGA1UdEQRDMEGCE3lvdWlkbGl0ZS55b3VpZC5uZXSGKmh0
+dHBzOi8veW91aWRsaXRlLnlvdWlkLm5ldC9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4E
+FgQUAteTwYYaGMljF20EP0WeZ76psFIwDQYJKoZIhvcNAQEFBQADggEBAA1uyLQR
+RAGMPHDD+fis2bqS7Fz2GyXx/EsjW6GccOVGMShLcuDitzeI8YqNwvPK3AJY9pyW
+FjsLULR++K2RTNhXAAsG+kL7aHT8GtP8u8T304stuPgLG87BrIatXiizUPUnUaMv
+sz3EKWbnTP4qt1U4EkcuMQs9XBcNlvF9DTe4FdSA477b7Rr0slBDXEtysxAlZr70
+QqCLOxffcf6mmPf44qfkgnYOroEeF2zDHUiwUFFdGNnJ0TxpddCLwAzdZ7nZl9ah
+X2IqdL5C4SpWjnrD6/Y3VQAZl+FkssUHp4N/ebLeWRg2/ZsqhikESOcAOMnYnN2P
+ASTdIdKTeaOQfXw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://youidlite.youid.net:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://youidlite.youid.net:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://youidlite.youid.net:446/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://youidlite.youid.net:446/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://youidlite.youid.net:446/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://youidlite.youid.net:446/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">youid.net</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNzCCAh+gAwIBAgIUa8xPw+mOVIxAKWoeoNJ1T1hc6p4wDQYJKoZIhvcNAQEF
+BQAwHjEcMBoGA1UEAxMTeW91aWRsaXRlLnlvdWlkLm5ldDAeFw0xNDA2MTExMjQ4
+MDhaFw0zNDA2MTExMjQ4MDhaMB4xHDAaBgNVBAMTE3lvdWlkbGl0ZS55b3VpZC5u
+ZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCBYPbq7OB/Qqs8F6U5
+vJ9e1oAwLlW17j2DMTV3vGqBk+F3Er1Zu97STKlhRQNHdBrH5S176Re2xbYyHQyc
+erLd5rc8Gd0gCMr2TtvmXoCLOT1ToObM6pZy014yCrGUjtaI0z6HxZKsGi+QtDPi
+s9AYYhINTv4MJyuZWH0a5w2YgoU0gQAvubCGeHmtbT/fEC0kcXCOXcljXJONyZVl
+dH6PTlSxzuU44lLDssvrnPnb07pQLbV9oXtZBN5Tp/7UA8JM5d+VMC1vqcM2Mjm2
+cm7pQz9hLAQschFh2jv/uHqyrH+0BibfVssQj2H+KjPk6qHmpkwt92rW+Jn7Bh3N
+NcbTAgMBAAGjbTBrMEoGA1UdEQRDMEGCE3lvdWlkbGl0ZS55b3VpZC5uZXSGKmh0
+dHBzOi8veW91aWRsaXRlLnlvdWlkLm5ldC9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4E
+FgQUAteTwYYaGMljF20EP0WeZ76psFIwDQYJKoZIhvcNAQEFBQADggEBAA1uyLQR
+RAGMPHDD+fis2bqS7Fz2GyXx/EsjW6GccOVGMShLcuDitzeI8YqNwvPK3AJY9pyW
+FjsLULR++K2RTNhXAAsG+kL7aHT8GtP8u8T304stuPgLG87BrIatXiizUPUnUaMv
+sz3EKWbnTP4qt1U4EkcuMQs9XBcNlvF9DTe4FdSA477b7Rr0slBDXEtysxAlZr70
+QqCLOxffcf6mmPf44qfkgnYOroEeF2zDHUiwUFFdGNnJ0TxpddCLwAzdZ7nZl9ah
+X2IqdL5C4SpWjnrD6/Y3VQAZl+FkssUHp4N/ebLeWRg2/ZsqhikESOcAOMnYnN2P
+ASTdIdKTeaOQfXw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://youidlite.youid.net:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://youidlite.youid.net:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Impero Solutions Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">YouID-E2BN Integration</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.imperosoftware.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Payne</md:SurName>
+	<md:EmailAddress>mailto:mpayne@imperosoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Payne</md:SurName>
+	<md:EmailAddress>mailto:mpayne@imperosoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.bsms.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brighton.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">sussex.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brighton and Sussex Medical School</mdui:DisplayName>
+		<mdui:Logo height="63" width="40">https://idp.bsms.ac.uk/idp/images/logo-bsms.ac.uk.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.bsms.ac.uk/idp/images/favicon-bsms.ac.uk.ico</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUVPdR3/QgLrYLEH5e7QfhKE8r9VkwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmJzbXMuYWMudWswHhcNMTIwMTExMTAxNzQ5WhcN
+MzIwMTExMTAxNzQ5WjAZMRcwFQYDVQQDEw5pZHAuYnNtcy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALnAV+wrTxO7xJI38Rgiug18H58qBLB0
+6WuUwpUieb4FL263NiSvFn/PF2JLjTUx/1/B2JHyfaDxFpgco9PjQvOizTW4VRHV
+T4Oh5anJHbMPzECm1MgxqBS8RXSuqBiTWXMCZG3X84Qq6BzGuAzEOh05JFx9xn3K
+e8u3LTAFDiQS/Ig9u80NER1Coc0D8YXIsP+2A5XzfZ+o15aPPMaj+4oiKYzHj078
+vGA5krpb8hevv0n0meUo1iadCA5GUaGqEmV3J6mSHAE/28/ehFdj2SN4b5AkBsNa
+NvQ30i0ZZbMzV2F4LnJ0lIM+7Q73dfVS1IdUrH/e02ahbJal4ez5v2MCAwEAAaNf
+MF0wPAYDVR0RBDUwM4IOaWRwLmJzbXMuYWMudWuGIWh0dHBzOi8vaWRwLmJzbXMu
+YWMudWsvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUNEeuu+lzrJ9Cm/bRaeX/5qVeEsIw
+DQYJKoZIhvcNAQEFBQADggEBAA6T6+dtIoK6TMsHCgocxshlDa/fkPVc4QxVuf7+
+gqEGqiSdKs559ttMw12onBtfqEgLippyVo9M0mi8Xu5/iid+BYQrPKPh0ibVMaik
+msKZhO1AlmgGwi0ZosGVywcVeYnADEuDYMAO3ENEOzcs3nwYrHgoPUT8ozEoWRfU
+36CbxIdpBxW9E8KbPY9ILo6EH/AeaPY9HNklJr/oaWYgFyHlasMruZrD77mgNwCI
+r2gkn2ffy5Z/2izMU7nHRjO8z93LBHAsUlZK1qdbnKQa9ft5SEqVl22Ww/xWvrCD
+DCf9hZ/XDTkhfXkdFY4uujO+3Qqlin9ufSQG5VHzUVZ4knc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bsms.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bsms.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.bsms.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.bsms.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.bsms.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.bsms.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">brighton.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">sussex.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUVPdR3/QgLrYLEH5e7QfhKE8r9VkwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmJzbXMuYWMudWswHhcNMTIwMTExMTAxNzQ5WhcN
+MzIwMTExMTAxNzQ5WjAZMRcwFQYDVQQDEw5pZHAuYnNtcy5hYy51azCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALnAV+wrTxO7xJI38Rgiug18H58qBLB0
+6WuUwpUieb4FL263NiSvFn/PF2JLjTUx/1/B2JHyfaDxFpgco9PjQvOizTW4VRHV
+T4Oh5anJHbMPzECm1MgxqBS8RXSuqBiTWXMCZG3X84Qq6BzGuAzEOh05JFx9xn3K
+e8u3LTAFDiQS/Ig9u80NER1Coc0D8YXIsP+2A5XzfZ+o15aPPMaj+4oiKYzHj078
+vGA5krpb8hevv0n0meUo1iadCA5GUaGqEmV3J6mSHAE/28/ehFdj2SN4b5AkBsNa
+NvQ30i0ZZbMzV2F4LnJ0lIM+7Q73dfVS1IdUrH/e02ahbJal4ez5v2MCAwEAAaNf
+MF0wPAYDVR0RBDUwM4IOaWRwLmJzbXMuYWMudWuGIWh0dHBzOi8vaWRwLmJzbXMu
+YWMudWsvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUNEeuu+lzrJ9Cm/bRaeX/5qVeEsIw
+DQYJKoZIhvcNAQEFBQADggEBAA6T6+dtIoK6TMsHCgocxshlDa/fkPVc4QxVuf7+
+gqEGqiSdKs559ttMw12onBtfqEgLippyVo9M0mi8Xu5/iid+BYQrPKPh0ibVMaik
+msKZhO1AlmgGwi0ZosGVywcVeYnADEuDYMAO3ENEOzcs3nwYrHgoPUT8ozEoWRfU
+36CbxIdpBxW9E8KbPY9ILo6EH/AeaPY9HNklJr/oaWYgFyHlasMruZrD77mgNwCI
+r2gkn2ffy5Z/2izMU7nHRjO8z93LBHAsUlZK1qdbnKQa9ft5SEqVl22Ww/xWvrCD
+DCf9hZ/XDTkhfXkdFY4uujO+3Qqlin9ufSQG5VHzUVZ4knc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bsms.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bsms.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Brighton</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Brighton and Sussex Medical School</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bsms.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service Desk</md:GivenName>
+	<md:EmailAddress>mailto:servicedesk@brighton.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steve</md:GivenName>
+	<md:SurName>Holden</md:SurName>
+	<md:EmailAddress>mailto:ukfederation-tech@bsms.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

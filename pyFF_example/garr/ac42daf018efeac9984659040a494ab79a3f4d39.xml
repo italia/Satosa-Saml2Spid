@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://kjd.pb.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-05-24T12:26:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kjd.pb.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Jan Drda´s Library</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Knihovna Jana Drdy</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for employees and readers of the Jan Drda´s Library</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance a čtenáře Knihovna Jana Drdy</mdui:Description>
+		<mdui:InformationURL xml:lang="cs">https://www.kjd.pb.cz</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.kjd.pb.cz</mdui:InformationURL>
+		<mdui:Logo height="70" width="93">https://kjdpb.knihovny.cz/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6zCCAtOgAwIBAgIJAKlObxyLiCN1MA0GCSqGSIb3DQEBCwUAMIGLMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGjAYBgNVBAMMEWtqZHBiLmtuaWhv
+dm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xNzEwMTgw
+ODAyMThaFw0yNzEwMTkwODAyMThaMIGLMQswCQYDVQQGEwJDWjEXMBUGA1UECAwO
+Q3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2aWFu
+IExpYnJhcnkxGjAYBgNVBAMMEWtqZHBiLmtuaWhvdm55LmN6MR0wGwYJKoZIhvcN
+AQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALPf0RTN7QciGJJLqt8vA/fQI9uXYN0xuoyPc970qCFkcf9/jYWq2SRvg95U
+zfT8QTRuu2pfDzD5WpS1RkIyt0gq26Nc3Ce5KPq5Y056DAMF4QGDTCXy1MQYPETe
+8u9o9fEd0xaHLwFVjcGkwqx5+vrIfHa5Lt15Sz7MmaqsJljLi6fePGT1THQdm0o/
+iZT220BgJzG4kAasYuLzk5JC7xo9C83A75E1ip9JmF4+0lrBSXT3XfQNHuc/pVFF
+lXoRmRMpbUKoX615oTvywRGh3GAlBDGsUEZwhp4/4nNgvBaGUkbe6BC3CWAxxFQk
+w9k6FOMWCLGsq1FGGskPDzVP9U8CAwEAAaNQME4wHQYDVR0OBBYEFN3yTD6lGbZc
+ifYkqD/S9ujlQdUnMB8GA1UdIwQYMBaAFN3yTD6lGbZcifYkqD/S9ujlQdUnMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBADV2Oxw+eDZCxLm5gKTIAtoE
+HSDTJP36brxOQemu4KANJ6o9VTIf57C4qMKV5mm6yO54rRbzCbWdHypCajbLSBym
+MyR2xz743aJdU0lUtEXXfXtaJRz9F2xfJZD89bCbMgcV70eXWNqHNrDZqWRqelI7
+/lqDf3PO617s/yAc8KS0gHddbX/txD21iqIA2deB4yiJNI5qbB2CWhZn+yIL8jZH
+kUab8y5AwTs3HTp/fuOmDaXXxfMsgaSOGHJKZtGR43JbMxvL7YNdX5a2gaeWvtpS
+cJHX2fzV32O9ln+Fv5oZOyFs+yRZGKO31qP61/8D5iZ9JdSGNA3S35u9KhfB5OE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6zCCAtOgAwIBAgIJAKlObxyLiCN1MA0GCSqGSIb3DQEBCwUAMIGLMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGjAYBgNVBAMMEWtqZHBiLmtuaWhv
+dm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xNzEwMTgw
+ODAyMThaFw0yNzEwMTkwODAyMThaMIGLMQswCQYDVQQGEwJDWjEXMBUGA1UECAwO
+Q3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2aWFu
+IExpYnJhcnkxGjAYBgNVBAMMEWtqZHBiLmtuaWhvdm55LmN6MR0wGwYJKoZIhvcN
+AQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALPf0RTN7QciGJJLqt8vA/fQI9uXYN0xuoyPc970qCFkcf9/jYWq2SRvg95U
+zfT8QTRuu2pfDzD5WpS1RkIyt0gq26Nc3Ce5KPq5Y056DAMF4QGDTCXy1MQYPETe
+8u9o9fEd0xaHLwFVjcGkwqx5+vrIfHa5Lt15Sz7MmaqsJljLi6fePGT1THQdm0o/
+iZT220BgJzG4kAasYuLzk5JC7xo9C83A75E1ip9JmF4+0lrBSXT3XfQNHuc/pVFF
+lXoRmRMpbUKoX615oTvywRGh3GAlBDGsUEZwhp4/4nNgvBaGUkbe6BC3CWAxxFQk
+w9k6FOMWCLGsq1FGGskPDzVP9U8CAwEAAaNQME4wHQYDVR0OBBYEFN3yTD6lGbZc
+ifYkqD/S9ujlQdUnMB8GA1UdIwQYMBaAFN3yTD6lGbZcifYkqD/S9ujlQdUnMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBADV2Oxw+eDZCxLm5gKTIAtoE
+HSDTJP36brxOQemu4KANJ6o9VTIf57C4qMKV5mm6yO54rRbzCbWdHypCajbLSBym
+MyR2xz743aJdU0lUtEXXfXtaJRz9F2xfJZD89bCbMgcV70eXWNqHNrDZqWRqelI7
+/lqDf3PO617s/yAc8KS0gHddbX/txD21iqIA2deB4yiJNI5qbB2CWhZn+yIL8jZH
+kUab8y5AwTs3HTp/fuOmDaXXxfMsgaSOGHJKZtGR43JbMxvL7YNdX5a2gaeWvtpS
+cJHX2fzV32O9ln+Fv5oZOyFs+yRZGKO31qP61/8D5iZ9JdSGNA3S35u9KhfB5OE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kjdpb.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kjdpb.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kjdpb.knihovny.cz/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kjdpb.knihovny.cz/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Jan Drda´s Library</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Knihovna Jana Drdy</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Jan Drda´s Library</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Knihovna Jana Drdy</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="cs">https://www.kjd.pb.cz</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.kjd.pb.cz</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Žabička</md:SurName>
+	<md:EmailAddress>mailto:zabak@mzk.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

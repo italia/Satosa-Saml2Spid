@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.nantes.archi.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-06-11T15:15:19Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">enseignement.nantes.archi.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ecole Nationale Supérieure d'Architecture de Nantes (ENSA Nantes)</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzgyMUU0NUQ4QzRBMTFFOUI1OUFCMjU3RERFM0Q3NjUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzgyMUU0NUU4QzRBMTFFOUI1OUFCMjU3RERFM0Q3NjUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3ODIxRTQ1QjhDNEExMUU5QjU5QUIyNTdEREUzRDc2NSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3ODIxRTQ1QzhDNEExMUU5QjU5QUIyNTdEREUzRDc2NSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsN/3IUAAADAUExUReXl5bq6uv3++83mvtLS0vr6+vX78eHh4dfW14SEhH5+fvf39z09Pd3d3f7+/c3NzUlJSZWVlfv9+vn5+ba2t/////7+/tXV1bOzs8zpuePj49DowsLgr5eXl729vcvku62srfX19dTV1cjJx8PFwfT58FFRUcDfraPUhbHXmfLy8v39/eH11eby32BgYGtra9XqycPhscfjtsXks11dXfn89ywsLHd3d0JCQrfbobvcps7pvtvb28vLy+7u7v///2QIwBsAAABAdFJOU////////////////////////////////////////////////////////////////////////////////////wDCe7FEAAAAn0lEQVR42mzPxxKCQBAE0EZAssQBzIpizgkj/P9fyaJUUZZ92Np5h90eZD8BO+ibEogqgurMBJV5zQSaT+c45vk937nfpjsCl3OtvnrMmu3+/HBMEZmmPHDD53hEDcdxUgRXa3tSdE/Rh+wdDT0rUW012UwuYCDD8LggeNlC2JUYLJC5JEtGS5AQicW3eQ/Rz7MUP83+NP2zXCnF9S3AAILPIRg+ifU5AAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.nantes.archi.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Identity Provider ENSA Nantes</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Ecole Nationale Supérieure d'Architecture de Nantes (ENSA Nantes)</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Fournisseur d'identité de l'ENSA Nantes</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEODCCAqCgAwIBAgIVAL6aevpNolxETn8FGgVc3bX7I4ONMA0GCSqGSIb3DQEB
+CwUAMB4xHDAaBgNVBAMME2lkcC5uYW50ZXMuYXJjaGkuZnIwHhcNMTkwNjA3MDg1
+MjAwWhcNMzkwNjA3MDg1MjAwWjAeMRwwGgYDVQQDDBNpZHAubmFudGVzLmFyY2hp
+LmZyMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAgN3838H9qPOUKNm3
+TzePjdTdTsp/pvwCZ+oq71b5Hfe+VqRd+1gmVMOQ+YlpR/gdybCtdFirvI/FIfGI
+CDQvOSnodxWXjUfNwO0RiTPJ4D5C/7e2bAItwJLPCkOhTInQw+JAqxdiRUEScTZ0
+Qz48DXRlibKfuiDQJ1PVz4e4SyS2Y457TPWF4CzS40el+h6oisJAl3PO4NQ9+h2i
+synknX9pZLFCs9KlXrW9icUTF7za+cIh6tH6LutQ/w//+980pJ+sJjcEGdzVAnrb
+Mgb0HkCMYOychg6VG5yM5tn21BVaTZVhAUXuDxXB2TL6tCRsRH/UC0yEbGB3qvRW
+o+vljocFB+ZwMI2ImhwuNXQ1nA1IlplNztlxZVV2vIqaZNqQtx4RW4KuXKBwHr8m
+Dub1YviFp1iVtt+ZnwL75UNBhJptXi8MqUVwV/O7ZYmo5UT5XOjo0UOrbcGYttkK
+KyzlQkCpu8TQJkQDTpEM2ATampcMBGHVbkFMIPjZgnkYacOpAgMBAAGjbTBrMB0G
+A1UdDgQWBBQkxdZFrW7MvnIK6ummplgMI7OOkjBKBgNVHREEQzBBghNpZHAubmFu
+dGVzLmFyY2hpLmZyhipodHRwczovL2lkcC5uYW50ZXMuYXJjaGkuZnIvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggGBAC3bJr3+uADnmP6blwhijULhTUVV
+oowgMyffQ/piO0ewhp6JJeqEqEFHY92gT4ttjjGmoX0kkIO5JPZDU/GG+MwChfji
+y+FhhbyOAs3ORrn0X5KdF9/r9QlPItAdeXWGezSRE/7BEcI7i9/KfMnzkXQyd+3o
+LZ/n5MTxIN6yZ8GA7Ssd6Qp7xtSogI0huBPwbfAe+GKg3VxfucakYOy9hEDzzVEU
+gXk4PVr+U1N5tZSB9181zOY3nNk+iTJ2QapYTf64BJ2J45bEG0ILVEhk2oyE20UN
+7WJeAMDKmdASTICnNmWBf1rQ1gwo1gctuARV4lhAZP/GkHZDdE1YWvmBbnNDT4gx
+V2UBiUryb0MAKvS5xX6F35Q+8hDLecnoutjMlFACi3x6mWwNE1x+A4KkNu/8YzqG
+h19BYFrWwaeKlFPjxMHbc1ClW4G6/wHEEb1IbUKhEfNWCiPIyjwHq2iE36Do3HlJ
+TEV9IOMPghsTc8K/Vfi9zDwgmtJSMXw0kqXoWg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nantes.archi.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nantes.archi.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.nantes.archi.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ecole Nationale Supérieure d&amp;#039;Architecture de Nantes</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ecole Nationale Supérieure d&amp;#039;Architecture de Nantes</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nantes.archi.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Aymeric LAURY</md:SurName>
+	<md:EmailAddress>mailto:aymeric.laury@nantes.archi.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

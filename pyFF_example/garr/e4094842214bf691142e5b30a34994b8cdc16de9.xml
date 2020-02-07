@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.reed.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">reed.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Reed College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.reed.edu/policies/privacy_policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.reed.edu/global_assets/images/logo/reed-logo-incommon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAPuLDfin459bH1TviFJwMkClxzSZMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC5yZWVkLmVkdTAeFw0xMDEwMTMxODE1MjJaFw0z
+MDEwMTMxODE1MjJaMBcxFTATBgNVBAMTDGlkcC5yZWVkLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAI0JgYyDRVnupzwsap5SRjk6vQc4KY3A4GcT
+aWmwkbLILkXsK7+LqiJDcfQtyHQwZoJqJVBnd7NDXb1wPidAitC3m+bgOmf0SCM3
+cJ1u0giQGXxKqWW4Netq5ZWG/fZE7wR4rNqbYtQ31WPl5s5dkqVrq6na9NDKyCNb
+6qLd9306BiSCjAagJYN+xyMfCwZ2J2uBPwa1cTlv6B1M9k77v78PlwHeZTRBXQ7z
+J385E+iMnxhuyKhj6bHjFplPJmHTBF1NcK1HLBuraocmwyhyXt6hc/pG1fLhhZ6+
+7RtgsH5RLQgE15MSW0e6UDbZHgxze0g13LfaQBa92KZOesO7V5kCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnJlZWQuZWR1hiNodHRwczovL2lkcC5yZWVkLmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU+ZuMoVaqb0MEU+U21XvPJLeCVlowDQYJ
+KoZIhvcNAQEFBQADggEBAC1ygplLdMG2sQC47jxquc0L/QJEZsn91dPv4pb5RbhP
+ICvwKMhHqbG+4gc97ZRa5EzyuGNceHLJaG/MH18MPOyz06KlOL0zy3SdvFpRJMBV
+PfPWTRB/moSkz5lnBadHX3TQqdo/1AZvlzoPrWjz8lOu8//pIP7MxnzMxlm2KNuI
+Tg5D2SHhV9dQur/QGSlkJ2REjrqKhyw9yAogB3AH0IY3rGnpmbmAc3ian+C6IZXH
+BpQPMrLCFksiKP4tBOH88PLItWn3uFc4Q8f1s+5qDxVIqWVTdjOkZnysMRob1y+w
+ROMyInz+7gYPcFok9V3ghjhHj3POw+ZqlJA25Ap6v9Y=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.reed.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.reed.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.reed.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.reed.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.reed.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">reed.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAPuLDfin459bH1TviFJwMkClxzSZMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC5yZWVkLmVkdTAeFw0xMDEwMTMxODE1MjJaFw0z
+MDEwMTMxODE1MjJaMBcxFTATBgNVBAMTDGlkcC5yZWVkLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAI0JgYyDRVnupzwsap5SRjk6vQc4KY3A4GcT
+aWmwkbLILkXsK7+LqiJDcfQtyHQwZoJqJVBnd7NDXb1wPidAitC3m+bgOmf0SCM3
+cJ1u0giQGXxKqWW4Netq5ZWG/fZE7wR4rNqbYtQ31WPl5s5dkqVrq6na9NDKyCNb
+6qLd9306BiSCjAagJYN+xyMfCwZ2J2uBPwa1cTlv6B1M9k77v78PlwHeZTRBXQ7z
+J385E+iMnxhuyKhj6bHjFplPJmHTBF1NcK1HLBuraocmwyhyXt6hc/pG1fLhhZ6+
+7RtgsH5RLQgE15MSW0e6UDbZHgxze0g13LfaQBa92KZOesO7V5kCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLnJlZWQuZWR1hiNodHRwczovL2lkcC5yZWVkLmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU+ZuMoVaqb0MEU+U21XvPJLeCVlowDQYJ
+KoZIhvcNAQEFBQADggEBAC1ygplLdMG2sQC47jxquc0L/QJEZsn91dPv4pb5RbhP
+ICvwKMhHqbG+4gc97ZRa5EzyuGNceHLJaG/MH18MPOyz06KlOL0zy3SdvFpRJMBV
+PfPWTRB/moSkz5lnBadHX3TQqdo/1AZvlzoPrWjz8lOu8//pIP7MxnzMxlm2KNuI
+Tg5D2SHhV9dQur/QGSlkJ2REjrqKhyw9yAogB3AH0IY3rGnpmbmAc3ian+C6IZXH
+BpQPMrLCFksiKP4tBOH88PLItWn3uFc4Q8f1s+5qDxVIqWVTdjOkZnysMRob1y+w
+ROMyInz+7gYPcFok9V3ghjhHj3POw+ZqlJA25Ap6v9Y=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.reed.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.reed.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Reed College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Reed College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://reed.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ben Poliakoff</md:GivenName>
+	<md:EmailAddress>benp@reed.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Marianne Colgrove</md:GivenName>
+	<md:EmailAddress>mcolgrov@reed.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Computer User Services</md:GivenName>
+	<md:EmailAddress>cus@reed.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technology Infrastucture Services</md:GivenName>
+	<md:EmailAddress>tis@reed.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jacqueline Pitter</md:GivenName>
+	<md:EmailAddress>pitter@reed.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

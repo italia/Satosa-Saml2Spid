@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.tcd.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2011-03-02T01:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tcd.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Trinity College Dublin</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://isservices.tcd.ie</mdui:InformationURL>
+		<mdui:Logo height="92" width="165">https://edugate.heanet.ie/rr3/logos/tcd.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.343801,-6.254590</mdui:GeolocationHint>
+		<mdui:DomainHint>tcd.ie</mdui:DomainHint>
+		<mdui:IPHint>134.226.0.0/16</mdui:IPHint>
+		<mdui:IPHint>2001:0770:0010::/48</mdui:IPHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAPRPufbduHXCtO3D7xf4VyBenGK1MA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC50Y2QuaWUwHhcNMTEwMjExMTIyMDI3WhcNMzEw
+MjExMTIyMDI3WjAVMRMwEQYDVQQDEwppZHAudGNkLmllMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAgxPT7BB9FbyCsi+tS0c7qNCpW5iVWFG0Bb8EFWwP
+cJZjwC3UFm2CSUwc6iYBwXJ6hduAiKlzcms4d68aBBZLC9NNOFu24SjazMfCitD7
+cb+zOwZVsegEF/E+ZDReGJQ2fhxty5IhPBwZs5A3SUQ0kXESG2p4iDVS0ugLPuSH
+olZWNdhhCxjjlZL4GQsJ9vsX5VvkEuEygS/D6wOqzTzmM/YspJqsvI8XEhl8GftV
+zo1TGQzcncBLKSUKjElRH6D4fRzxd8iDwBxupDOoH+A90lClUuFjKwlDXiZdWJZ+
+wdVi6e1sjXzoU/CEXYGpEZ43Z+Gv9CUbW7uANh+1+A0I+wIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAudGNkLmllhiFodHRwczovL2lkcC50Y2QuaWUvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFF7+WlJ+91zFVE0TxAf1INwckKy/MA0GCSqGSIb3DQEB
+BQUAA4IBAQBe2KlhwI2a5teCe/g+mGtpgqbFr0ZVK5Q46843EyBPVI1SiT4M0zue
+oyYcllaTffyDHewnLmbLDPSCX4EFUCwtESto79BnP88Oh55MLq+nAGrJ3S2sCIWw
+zGKT6XuF3HohylbpC9c+3QaA+nsnkqgE3zwJC3130YCwxQGddnTx0PR8dhwKZqi6
+fwSAxBZ6Sa3Tu8mUpjpbrpMzMOVzm+eVq2svOziznMC0OH5gBe0m9JA5KOnKLNjV
+TKbh+Z5mRJsjPLO7Nw37TfB4qV4jqG1zsnToPK4g5bVWtDie9VREe7rVdik4ojQC
+Q3LYLrBZf+t0v+PaZ+yBfJCbEk4iRX/l
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.tcd.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.tcd.ie/idp/profile/SAML2/POST/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.tcd.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.tcd.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.tcd.ie/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Trinity College Dublin</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Trinity College Dublin</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.tcd.ie/itservices</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Jones</md:SurName>
+	<md:EmailAddress>mailto:pjones@tcd.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Colin</md:GivenName>
+	<md:SurName>Daly</md:SurName>
+	<md:EmailAddress>mailto:colin.daly@tcd.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

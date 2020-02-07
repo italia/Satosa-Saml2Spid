@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://progresstest.unibo.it/progresstestunibo">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2016-06-30T11:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://progresstest.unibo.it/Shibboleth.sso/UniboAuth"/><mdui:UIInfo><mdui:DisplayName xml:lang="en">Progress Test provided by University of Bologna</mdui:DisplayName><mdui:DisplayName xml:lang="it">Progress Test erogato da Università di Bologna</mdui:DisplayName><mdui:Description xml:lang="en">Progress Test is a Moodle platform designed by University of Bologna for Physiotherapy students for the evaluation of the knowledgement retention and acquired competences.The students can take the test only once in an Academic Year, in the timespan defined by the National coordinator. Users are mostly students and minimally tutors and teachers, that must supervise tests and check contents in their University's instances.</mdui:Description><mdui:Description xml:lang="it">La piattaforma Moodle Progress Test è un servizio messo a disposizione dall'Università di Bologna per gli studenti dei corsi di Studi di Fisioterapia per verificare il mantenimento delle competenze/conoscenze acquisite. Gli studenti possono usufruire del test una sola volta per ciascun anno accademico. L'utenza del Progress Test è prevalentemente composta da studenti e in minor numero da tutor e docenti incaricati di controllare il materiale e le prove dei corsi divisi per università</mdui:Description><mdui:InformationURL xml:lang="en">https://progresstest.unibo.it/?lang=en</mdui:InformationURL><mdui:InformationURL xml:lang="it">https://progresstest.unibo.it</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">https://progresstest.unibo.it/mod/page/view.php?id=101</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">https://progresstest.unibo.it/mod/page/view.php?id=82</mdui:PrivacyStatementURL><mdui:Logo height="16" width="16" xml:lang="en">https://shib.unibo.it/idp/img/logo16x16.png</mdui:Logo><mdui:Logo height="16" width="16" xml:lang="it">https://shib.unibo.it/idp/img/logo16x16.png</mdui:Logo><mdui:Logo height="60" width="80" xml:lang="en">https://shib.unibo.it/idp/img/logo80x60.png</mdui:Logo><mdui:Logo height="60" width="80" xml:lang="it">https://shib.unibo.it/idp/img/logo80x60.png</mdui:Logo></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAN87y44BIEMUMA0GCSqGSIb3DQEBBQUAMCExHzAdBgNV
+BAMTFm1vb2RsZS1icHQtMDIudW5pYm8uaXQwHhcNMTYwNTEzMDk0MTMxWhcNMjEw
+NTEyMDk0MTMxWjAhMR8wHQYDVQQDExZtb29kbGUtYnB0LTAyLnVuaWJvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2GquI1zxmD1CNbyzbJPC6O4/
+jF2j4tMyIsCfItoOHy2zWNUp+TR+P3DILgKa/WibbcNFLq1DUPsbzNFlGEGRRJWN
+gLE4DSJ1UgxNx7sCJznl3idGU/FuiVaaZNbdsKelBZWVqS9lGt/2HcYxeHWZe+yI
+/lp/ei88e2P1AOQrOpXc9dAyClQUc1EULgObOh744vo7QHCxUNm7NTBR11IfxrgG
++RQDhIgi7UTG6o5E1yh8dXBYOX/+IYtx4QYDjmilC93ZuZC0q5zr9erBpMDU/XyV
+EakqOp2wkM+2JGJBq7viuRqxgADN3LnJ3tAYt1ddmgHHzr7bHZrLGySvasvBZQID
+AQABo0QwQjAhBgNVHREEGjAYghZtb29kbGUtYnB0LTAyLnVuaWJvLml0MB0GA1Ud
+DgQWBBSA/eAMM6CIFpxWkdpx4ZDb5np+uzANBgkqhkiG9w0BAQUFAAOCAQEAP9Oc
+63B4GMoEwe2EsdJ+sjR9mLRSxKIqRPfviIX0dSqmmdves/Es6QqofIjNiDjiEyaz
+55VzUsiNQaS83KiUKuTVACqyzlLaqA+x0t76ph3MS0sfOs5oOBjdpV4mAgfSCZls
+U+fv6XDxm2ry9FXUl4VgW5XXR6BJGDkda4MMD+FGIbrQrKN3FmYNUdu/vUoEcDQV
+775REKpnqb1ZaCkQrYHv4iCEwPF2Xy1lzz2Dy4jvBOKF4lft3QK5S0rI2wRV/W2k
+uWsuMrs5Mdw+5LZrtCdtWXapfVd2fllZmm1GFkCu/msgXCUZEA7mjbjxo+agjSB9
+mGU5ip0ae3jhYaF8ZA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://progresstest.unibo.it/Shibboleth.sso/SLO/POST"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://progresstest.unibo.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">Progress Test provided by University of Bologna</md:ServiceName>
+	<md:ServiceName xml:lang="it">Progress Test erogato da Università di Bologna</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">Progress Test is a Moodle platform designed by University of Bologna for Physiotherapy students for the evaluation of the knowledgement retention and acquired competences.The students can take the test only once in an Academic Year, in the timespan defined by the National coordinator. Users are mostly students and minimally tutors and teachers, that must supervise tests and check contents in their University's instances.</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">La piattaforma Moodle Progress Test è un servizio messo a disposizione dall'Università di Bologna per gli studenti dei corsi di Studi di Fisioterapia per verificare il mantenimento delle competenze/conoscenze acquisite. Gli studenti possono usufruire del test una sola volta per ciascun anno accademico. L'utenza del Progress Test è prevalentemente composta da studenti e in minor numero da tutor e docenti incaricati di controllare il materiale e le prove dei corsi divisi per università</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università di Bologna</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Bologna</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Progress Test erogato da Università di Bologna</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Progress Test provided by University of Bologna</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://ww.unibo.it/it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.unibo.it/en</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:cesia.assistenzaelearning@unibo.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

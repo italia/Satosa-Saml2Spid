@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.unical.it/idp/metadata/">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/"/>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#ripemd160"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+</md:Extensions>
+<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">Unical IdP</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Unical IdP</mdui:DisplayName>
+<mdui:Description xml:lang="en">University of Calabria Identity Provider</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider della Università della Calabria</mdui:Description>
+<mdui:InformationURL xml:lang="it">https://www.unical.it/portale/strutture/centri/centroict/schdeserviziict/idem/</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://www.unical.it/portale/ateneo/privacy/</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80">https://auth.unical.it/static/img/logo.svg</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIUICnzwz/7RGVzD5R1rq9YJA5TifQwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOYXV0aC51bmljYWwuaXQwHhcNMTkwNzEwMDkwNzA0WhcN
+MjkwNzA3MDkwNzA0WjAZMRcwFQYDVQQDDA5hdXRoLnVuaWNhbC5pdDCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3dcJVEWxLlTCYKLov5QTxr0KJ6/7Kf
+ilILnvPrgBUxjbJ3NhZM69pNVRoeSapBxFt7IdqYYlrDvq9Ki1MKlOi7aJef3lyI
+l40wKcN3fnl9TTSd2aoi7LdlCtBaJRKTaUiJqaM/PrX8ZcuIBoMM52sW3slbI6d4
+keLX7ELp8nuwaW8rfC/CP8q3v+8VTFonDqk19Jmzv45ZeXX8rWx8tpylsZJnr4Or
+vD23hGEH8/qC47OiSoyW0be9BW3ukq/l4qhv0/Nu9ToczEPQW2QGI3b9E5azfeOp
+bdJs3v126OikaOUfb2WyPKAVANDMjt2E/J5IDT33PGY6r9qGdapr8I8CAwEAAaNT
+MFEwHQYDVR0OBBYEFNJrPegNqLvK+sFGsDbJH1O/z4BWMB8GA1UdIwQYMBaAFNJr
+PegNqLvK+sFGsDbJH1O/z4BWMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL
+BQADggEBAExpLK/ACb/1TQrmD/WyDQ6kAV57O72FNpmXpG/48CesMCR8l1vCUSA9
+CmEJocehRrbGiCJPTJ0CQodF7zbqq+S0TgMFII0wkz0whTzRiPeW1xoFmzQqPNnz
+dJh0GfN30dlP3sHKly1YlTqjQUuGvsA8dBd+BkF5pc/3DfVKeEg8HlMuFFKu8uXv
+K9xXSotGVYn3eyH/zFdQ5lZGU+bXZMKDbgHX8bM03cynT1/3Uns4SiEqFExxtOPD
+ww6ajH4qhaaKXZMXMJuM+Woy+vsKZXGMQoq+jWOflEZ/+oLF12eUyLLXxFAbw8CA
+rrsG1/PKCb5j66+3joHidV89Ae5c7Qo=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIUICnzwz/7RGVzD5R1rq9YJA5TifQwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOYXV0aC51bmljYWwuaXQwHhcNMTkwNzEwMDkwNzA0WhcN
+MjkwNzA3MDkwNzA0WjAZMRcwFQYDVQQDDA5hdXRoLnVuaWNhbC5pdDCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3dcJVEWxLlTCYKLov5QTxr0KJ6/7Kf
+ilILnvPrgBUxjbJ3NhZM69pNVRoeSapBxFt7IdqYYlrDvq9Ki1MKlOi7aJef3lyI
+l40wKcN3fnl9TTSd2aoi7LdlCtBaJRKTaUiJqaM/PrX8ZcuIBoMM52sW3slbI6d4
+keLX7ELp8nuwaW8rfC/CP8q3v+8VTFonDqk19Jmzv45ZeXX8rWx8tpylsZJnr4Or
+vD23hGEH8/qC47OiSoyW0be9BW3ukq/l4qhv0/Nu9ToczEPQW2QGI3b9E5azfeOp
+bdJs3v126OikaOUfb2WyPKAVANDMjt2E/J5IDT33PGY6r9qGdapr8I8CAwEAAaNT
+MFEwHQYDVR0OBBYEFNJrPegNqLvK+sFGsDbJH1O/z4BWMB8GA1UdIwQYMBaAFNJr
+PegNqLvK+sFGsDbJH1O/z4BWMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQEL
+BQADggEBAExpLK/ACb/1TQrmD/WyDQ6kAV57O72FNpmXpG/48CesMCR8l1vCUSA9
+CmEJocehRrbGiCJPTJ0CQodF7zbqq+S0TgMFII0wkz0whTzRiPeW1xoFmzQqPNnz
+dJh0GfN30dlP3sHKly1YlTqjQUuGvsA8dBd+BkF5pc/3DfVKeEg8HlMuFFKu8uXv
+K9xXSotGVYn3eyH/zFdQ5lZGU+bXZMKDbgHX8bM03cynT1/3Uns4SiEqFExxtOPD
+ww6ajH4qhaaKXZMXMJuM+Woy+vsKZXGMQoq+jWOflEZ/+oLF12eUyLLXxFAbw8CA
+rrsG1/PKCb5j66+3joHidV89Ae5c7Qo=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.unical.it/slo/post"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.unical.it/idp/sso/post"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università della Calabria</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Università della Calabria</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Unical</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Unical</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.unical.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.unical.it</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="administrative">
+<md:GivenName>Giuseppe</md:GivenName>
+<md:SurName>De Marco</md:SurName>
+<md:EmailAddress>mailto:idem-support@unical.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Francesco</md:GivenName>
+<md:SurName>Filicetti</md:SurName>
+<md:EmailAddress>mailto:idem-support@unical.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

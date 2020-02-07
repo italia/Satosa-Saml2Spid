@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.external.whoi.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">WHOI External - Test</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.whoi.edu/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="204" width="221" xml:lang="en">https://www.whoi.edu/images/whoi_logo_med_small_white.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC+jCCAeKgAwIBAgIJALRZ6jVgzXWCMA0GCSqGSIb3DQEBBQUAMBwxGjAYBgNV
+BAMTEWV4dGVybmFsLndob2kuZWR1MB4XDTE4MDQyNjE5Mjk1NloXDTI4MDQyMzE5
+Mjk1NlowHDEaMBgGA1UEAxMRZXh0ZXJuYWwud2hvaS5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQClY1oYfopFfQIEp9D6grPgKrOj49iCf8hw8qip
+O03d2Pgl8IC5Ed9rK5cxggHRsJBwrFvLsqrnGNDBlzS07vlAQ7HIUJdaPUrK/+jg
+5JXsGYvRRhCvg8Ybwuq7OPbxhmEHNwDKF3RFdthGfFDnFlydqMQvThdXiYQ+sSJX
+tKMadT3d8CeErb3myR6+oTwjFzIScSbqUR5LrC8Td89ry/SfW9cUOA1/dtkVe4Te
+43mj8dxTGorKUNLQbD11nq+SP2vnrN3Zdp1obt4Xkjtr9Zqi+4C3Depoffm+qzwk
+6hLj/JPGTe618wpTnz6wzkHopvm27uMNnC/vbRbLjDJepUrZAgMBAAGjPzA9MBwG
+A1UdEQQVMBOCEWV4dGVybmFsLndob2kuZWR1MB0GA1UdDgQWBBRcjHU5YclU1nWJ
+diYP3RmFFMb6bTANBgkqhkiG9w0BAQUFAAOCAQEAPPvpxN7Iabchd6SYjfSisRU3
+JXeWGLNas/DaqtdWbZ5GVc4vBkE6lSN95ywJRo0Fk8/E201Ad14Pa//Htwj3j5px
+LI1VREsWB6rwm7Q9BvGWXT2fLexTip5dsIJMSgd0DLgehbzhuWNTEPCQgGMf8CUf
+Z5djSn10Q304XN9Y0GGlnyHlTL7Uji3rcQwTlNNNeOC6OmbFpCDEzTHqGAY4DwrS
+z2TKByLRyD5FiTLM6G/QOEksPBKz4Jiq2hxMLgWCqYXoQ1lo9C83QpbXgC+NLS89
+6YoYZ9S0CX1kYMDjrm+SVtow1cwReD33fU1Uv1MI7PQ59OEiMg4epo4FCXQBDQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://external.whoi.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://external.whoi.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://external.whoi.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://external.whoi.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://external.whoi.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://external.whoi.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Woods Hole Oceanographic Institution</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Woods Hole Oceanographic Institution</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.whoi.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David Gaylord</md:GivenName>
+	<md:EmailAddress>dgaylord@whoi.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>David Gaylord</md:GivenName>
+	<md:EmailAddress>dgaylord@whoi.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mark Jones</md:GivenName>
+	<md:EmailAddress>mdjones@whoi.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

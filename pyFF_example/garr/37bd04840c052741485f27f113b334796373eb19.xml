@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://unmpidp.unm.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://help.unm.edu" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unm.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of New Mexico</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Primary IDP for the University of New Mexico</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://policy.unm.edu/regents-policies/index.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="348" xml:lang="en">https://webcore.unm.edu/v2/images/unm-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUHkqghRUEAkZxZ/0df+bxNNL7T9AwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPdW5tcGlkcC51bm0uZWR1MB4XDTEyMDExMTE4NTU1NloX
+DTMyMDExMTE4NTU1NlowGjEYMBYGA1UEAxMPdW5tcGlkcC51bm0uZWR1MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmROfmboGYsxF4ku4WuME7OETL99Z
+5Yx4ZvBd2YFDHwMuuEn3NoKcoQVd26ey+8Ae/Y9bvBS667g87+tKW3xAXAWvsvnT
+0eNh27YXtNkm8TZWs2rmRYM9k1QsF45O2NurMxj/P9TBF5F4BvSbT4/lxd5ZNpJC
+S96rVSfM1hgUXhCdDNOQEg6ZG4Kakhkmiki+1LlfWwM4EBXySWiKuFrPruz/tUTm
+p+kXJ7NI8vrDCTsWwD8f4CA4XoySkAsSXKYOtL/Vqmo6T4IoQmsNnkfNApn0AFLM
+ApS4Svgds/F8nm6+14/UV7Ol7P1Iy9M4o01Fc2HtUxm9/tPSPLRGj7O2PQIDAQAB
+o2UwYzBCBgNVHREEOzA5gg91bm1waWRwLnVubS5lZHWGJmh0dHBzOi8vdW5tcGlk
+cC51bm0uZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTZrZ1dPGWgZ9RxQDBp
+TtzO9iPGVzANBgkqhkiG9w0BAQUFAAOCAQEAMHPssz1ZNLmk4zm7ocuQY1CqlQxb
+plnjNRYxSznr1PQ2ZF6I6H/KQCsfyhY/gU0UGtnfh9bj60p5d50h9eCuHTi0KL54
+cCw9ijyKK0v/4EdYBk6ib9koDzwwX/BmGJxPuDPkoboWqmb0mCKM4TFkWmEivAw3
+TMXYK7ycdYBfsqaH9w7lG7esXXThYRiktRq5mzCxQx93x7H5LCF4o+OFvSx0mCX2
+IoYdDX58vQSM0wh4b8pjNSWyPhyyt7Ogee4EVq17sJLMLlFzggjbJCE6YkBvwxce
+mtW4BfJL5R5xn6jGVmGkCJ/H3Qn4XW26dFRbTtpoKVeYnogS4bPdvoc4qQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://unmpidp.unm.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unmpidp.unm.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://unmpidp.unm.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of New Mexico</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of New Mexico</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unm.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jared Galbraith</md:GivenName>
+	<md:EmailAddress>jagalb@unm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jared Galbraith</md:GivenName>
+	<md:EmailAddress>jagalb@unm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security Incident Response</md:GivenName>
+	<md:EmailAddress>security@unm.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

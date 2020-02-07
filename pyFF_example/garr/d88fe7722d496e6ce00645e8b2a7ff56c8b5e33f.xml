@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://authent.mh-freiburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2013-08-01T06:30:20Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mh-freiburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule für Musik Freiburg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Music Freiburg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule für Musik Freiburg</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of the University of Music Freiburg</mdui:Description>
+		<mdui:Logo height="64" width="80">https://authent.mh-freiburg.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.mh-freiburg.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.mh-freiburg.de/en/home/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKgDCCCWigAwIBAgIMIHO6Jy/N46KRseg5MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwMTEyMzMzMloXDTIxMDUwNTEyMzMzMlowgZwxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxGDAWBgNVBAcMD0ZyZWlidXJnIGkuIEJy
+LjEnMCUGA1UECgweSG9jaHNjaHVsZSBmdWVyIE11c2lrIEZyZWlidXJnMQwwCgYD
+VQQLDANFRFYxHzAdBgNVBAMMFmF1dGhlbnQubWgtZnJlaWJ1cmcuZGUwggIiMA0G
+CSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDV8mPsEvdCFovJT/tm9tbFBdOVmLEg
+AHhyo6QduQxd0IDCNVCb6rvE1Ow/8nS5HnW5eji+bgpISc0koHqthBhzm3tW7dXQ
+dki5guNYuauReymsqLeM/LjS8Z8sYHLYkxWuUBXuDJJeidLJgXJtx24pL40XjbTc
+OvNENj8p5jefZhlD1/Q2qcY/eHi7PUjjrHT/rPsRsLwVLtt4rfTNFHa/pBpG32lp
+TBUeGKHZVz9b4gH8NILcXQiEjsmTChdyEw3cX+IZ9A7nA9puw+Rrk7RCDUMv+C4P
+gm0SQd7ljDSaojRjZb1ZmVcEh8h1nf3JQH3SF4MS0WX5T3y/CYgz7mRqjtfF4HsN
+tOyKcrwckJPPHdXGj0S0B61WsmDSoHdcGHHZTBUr76EUqT7fbXhxUDIVKCS+3x7W
+Vups/3vQXBqKvovIZmnAhtD5jCEkEZYX5Tfh1//1uK3GBaepfw8UwKOBy8xRJV4I
+x2tAj16JCFT9axf5euuOqzLqxANyCqrTn6mNxI1aEM9Oj3xzkZJhopEeaKCsm8CQ
+WOGkujUFwljC19JW+ts3T6ON2K2UHVaEoz2OnhQzQ0Jz5H0ipWJ1hc8SGiorZ5C4
+fAMI0GKXgSJ4k0rlnkgBF/m51/OttDY0evM+OKQQ5IgVKPWnDgOs2dcH+ozkz+EI
+Bg0I/if3F8kKPwIDAQABo4IFzTCCBckwWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYL
+KwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgw
+EQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0G
+A1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUUzxrMdbPZ1wD
+nfj+SjI3+UGuHIswHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwIQYD
+VR0RBBowGIIWYXV0aGVudC5taC1mcmVpYnVyZy5kZTCBjQYDVR0fBIGFMIGCMD+g
+PaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4w
+gcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2
+ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNl
+cnQvY2FjZXJ0LmNydDCCA18GCisGAQQB1nkCBAIEggNPBIIDSwNJAHYAb1N2rDHw
+MRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFoqQzTvgAABAMARzBFAiEA+Auf
+mfJP7CE0Wsj+A8CuVqoNmaOkeWGoJm1bF93UEAwCIHOaps4QBnSDppgLhi9XktG+
+W1wcClF4nxsd0ZzXjUwhAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE
+880AAAFoqQzThgAABAMASDBGAiEAqpK+FlAJy+VKPS2AwA1Z/o1xeAkqd8Kk0Zux
+8YFhOHICIQCqC6uZN9nc8w59LsUo3owtt725UDOhYD2aNciZzZB4bAB1AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaKkM1NIAAAQDAEYwRAIgCvYT
+lQPqnMV7YPT1X9wgBL14l0XshgGagBrx3jMZdZMCIBYglaHHa76le01mF1OKx8Hq
+DSzztQDPjVOiFwG17NaJAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFoqQzUJQAABAMASDBGAiEA7nczP4AZVkuttDazHriO/BDWP8nCZGTMx5SD
+lnkY9fkCIQD9uoZ8rslztvVPeF9A29z3kWNPTKQrISt1dd2iCPRghgB2AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaKkM1u0AAAQDAEcwRQIhAPE2
+bSQfmcRKF1TQgfEZRtI53j2aM9+9bDd4B1Ca1aIcAiBvfLpWPCtKUHCDnEG5Wx95
+ttqHRFgLXmych4wlcb0hyAB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7I
+DdwQAAABaKkM1CoAAAQDAEcwRQIgb8II/pTPJaYy0V3qmpaGLUlDnGwphjfbx1/A
+wR4HqbUCIQC51slPr7m+vGrAEcOUtLCB5dKe405DUqtq1PYKITetuAB2AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaKkM1E0AAAQDAEcwRQIhAJoc
+z31TRV/M71R/BZC5ik9kmihNdVGyMiPjlGY1BhVWAiAMPGg/tnoYW+Ih0Y9NiAa/
+VK5OKK+SVQISc88CeVO8XjANBgkqhkiG9w0BAQsFAAOCAQEACC+tdvTa/SG8kOxY
+CH80SQ+xQMU+1a1h6GjFYNHoSN1Bshv2VU59jC+hWzkn+RJsJXHLVdC9sKqA7dY2
+bNtCDNj9ELHs8RH/Nysxx/Ccg1GDE3dK3bmhS9jrwTySzhEIYZ5phisSG4w0P8d1
+RbpP+06ZEzMdceJUIP4aXdOHnZ6/ZNzg0tq1435bCsPPSnj+ffWRFMKiAuuF4TfD
+3/UM30rYoS028MDTfDouxaYi2415Yn4ANPElgRwC003Udy7ATkI69qYbmytNYQaE
+OYuV/5MTeSX5isfW4MkuwjnlDTUbUYd35q5JjajPF2oZq794J6kwwoM2lj4XTeI8
+Aw6ygA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://authent.mh-freiburg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://authent.mh-freiburg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://authent.mh-freiburg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://authent.mh-freiburg.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mh-freiburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKgDCCCWigAwIBAgIMIHO6Jy/N46KRseg5MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDIwMTEyMzMzMloXDTIxMDUwNTEyMzMzMlowgZwxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxGDAWBgNVBAcMD0ZyZWlidXJnIGkuIEJy
+LjEnMCUGA1UECgweSG9jaHNjaHVsZSBmdWVyIE11c2lrIEZyZWlidXJnMQwwCgYD
+VQQLDANFRFYxHzAdBgNVBAMMFmF1dGhlbnQubWgtZnJlaWJ1cmcuZGUwggIiMA0G
+CSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDV8mPsEvdCFovJT/tm9tbFBdOVmLEg
+AHhyo6QduQxd0IDCNVCb6rvE1Ow/8nS5HnW5eji+bgpISc0koHqthBhzm3tW7dXQ
+dki5guNYuauReymsqLeM/LjS8Z8sYHLYkxWuUBXuDJJeidLJgXJtx24pL40XjbTc
+OvNENj8p5jefZhlD1/Q2qcY/eHi7PUjjrHT/rPsRsLwVLtt4rfTNFHa/pBpG32lp
+TBUeGKHZVz9b4gH8NILcXQiEjsmTChdyEw3cX+IZ9A7nA9puw+Rrk7RCDUMv+C4P
+gm0SQd7ljDSaojRjZb1ZmVcEh8h1nf3JQH3SF4MS0WX5T3y/CYgz7mRqjtfF4HsN
+tOyKcrwckJPPHdXGj0S0B61WsmDSoHdcGHHZTBUr76EUqT7fbXhxUDIVKCS+3x7W
+Vups/3vQXBqKvovIZmnAhtD5jCEkEZYX5Tfh1//1uK3GBaepfw8UwKOBy8xRJV4I
+x2tAj16JCFT9axf5euuOqzLqxANyCqrTn6mNxI1aEM9Oj3xzkZJhopEeaKCsm8CQ
+WOGkujUFwljC19JW+ts3T6ON2K2UHVaEoz2OnhQzQ0Jz5H0ipWJ1hc8SGiorZ5C4
+fAMI0GKXgSJ4k0rlnkgBF/m51/OttDY0evM+OKQQ5IgVKPWnDgOs2dcH+ozkz+EI
+Bg0I/if3F8kKPwIDAQABo4IFzTCCBckwWQYDVR0gBFIwUDAIBgZngQwBAgIwDQYL
+KwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8rBgEEAYGtIYIsAQEEAwgw
+EQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAwDgYDVR0PAQH/BAQDAgWgMB0G
+A1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQUUzxrMdbPZ1wD
+nfj+SjI3+UGuHIswHwYDVR0jBBgwFoAUazqYi/nyU4na4K2yMh4JH+iqO3QwIQYD
+VR0RBBowGIIWYXV0aGVudC5taC1mcmVpYnVyZy5kZTCBjQYDVR0fBIGFMIGCMD+g
+PaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZu
+LWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4w
+gcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2
+ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4t
+Y2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9
+aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNl
+cnQvY2FjZXJ0LmNydDCCA18GCisGAQQB1nkCBAIEggNPBIIDSwNJAHYAb1N2rDHw
+MRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFoqQzTvgAABAMARzBFAiEA+Auf
+mfJP7CE0Wsj+A8CuVqoNmaOkeWGoJm1bF93UEAwCIHOaps4QBnSDppgLhi9XktG+
+W1wcClF4nxsd0ZzXjUwhAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6AwEE
+880AAAFoqQzThgAABAMASDBGAiEAqpK+FlAJy+VKPS2AwA1Z/o1xeAkqd8Kk0Zux
+8YFhOHICIQCqC6uZN9nc8w59LsUo3owtt725UDOhYD2aNciZzZB4bAB1AFWB1MIW
+kDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaKkM1NIAAAQDAEYwRAIgCvYT
+lQPqnMV7YPT1X9wgBL14l0XshgGagBrx3jMZdZMCIBYglaHHa76le01mF1OKx8Hq
+DSzztQDPjVOiFwG17NaJAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e
+0YUAAAFoqQzUJQAABAMASDBGAiEA7nczP4AZVkuttDazHriO/BDWP8nCZGTMx5SD
+lnkY9fkCIQD9uoZ8rslztvVPeF9A29z3kWNPTKQrISt1dd2iCPRghgB2AESUZS6w
+7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABaKkM1u0AAAQDAEcwRQIhAPE2
+bSQfmcRKF1TQgfEZRtI53j2aM9+9bDd4B1Ca1aIcAiBvfLpWPCtKUHCDnEG5Wx95
+ttqHRFgLXmych4wlcb0hyAB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7I
+DdwQAAABaKkM1CoAAAQDAEcwRQIgb8II/pTPJaYy0V3qmpaGLUlDnGwphjfbx1/A
+wR4HqbUCIQC51slPr7m+vGrAEcOUtLCB5dKe405DUqtq1PYKITetuAB2AO5Lvbd1
+zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABaKkM1E0AAAQDAEcwRQIhAJoc
+z31TRV/M71R/BZC5ik9kmihNdVGyMiPjlGY1BhVWAiAMPGg/tnoYW+Ih0Y9NiAa/
+VK5OKK+SVQISc88CeVO8XjANBgkqhkiG9w0BAQsFAAOCAQEACC+tdvTa/SG8kOxY
+CH80SQ+xQMU+1a1h6GjFYNHoSN1Bshv2VU59jC+hWzkn+RJsJXHLVdC9sKqA7dY2
+bNtCDNj9ELHs8RH/Nysxx/Ccg1GDE3dK3bmhS9jrwTySzhEIYZ5phisSG4w0P8d1
+RbpP+06ZEzMdceJUIP4aXdOHnZ6/ZNzg0tq1435bCsPPSnj+ffWRFMKiAuuF4TfD
+3/UM30rYoS028MDTfDouxaYi2415Yn4ANPElgRwC003Udy7ATkI69qYbmytNYQaE
+OYuV/5MTeSX5isfW4MkuwjnlDTUbUYd35q5JjajPF2oZq794J6kwwoM2lj4XTeI8
+Aw6ygA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://authent.mh-freiburg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://authent.mh-freiburg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e276</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e276</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule für Musik Freiburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Music Freiburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.mh-freiburg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.mh-freiburg.de/en/home/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:shibboleth-support@mh-freiburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:shibboleth-support@mh-freiburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

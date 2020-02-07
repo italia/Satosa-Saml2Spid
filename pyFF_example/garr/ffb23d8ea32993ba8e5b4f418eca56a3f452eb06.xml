@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://incommon.sunycnse.com/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sunycnse.com</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SUNY Polytechnic Institute</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://sunypoly.edu/privacy-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="320" width="1880" xml:lang="en">https://sunypoly.edu/sites/default/files/logos/SUNY-Poly-wordmark.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUNlPRT/wyMz9vjHRYl0MkLeoK0zwwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAwwaaW5jb21tb24udW5pdi5zdW55Y25zZS5jb20wHhcNMTQw
+OTI5MTczNDQzWhcNMzQwOTI5MTczNDQzWjAlMSMwIQYDVQQDDBppbmNvbW1vbi51
+bml2LnN1bnljbnNlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AIT0Usp7YH9IFLQL5xKeRxHTpej08j6tuqXCCpj8RarjFbcrDraC09npHqWeutTz
+UyvMNea69E+UAn28uzg2ftsMX15Nrb+LCYPEGnqtsrabwgGXHewr7nf8WyPdjcWC
+DBhFcDAqhLjUHGhBGx4NhD/a6BYWKXHjAolgopZOwWvSR1FYgQUQjT7R83g407c/
+6L26FDAqxEufkg4x4TwihBRoC3j8kV6dyuz7tlzMAyAlRXnq3JuYTvEeNlDY5FxJ
+cxWPuNB4WSJKTiAzB9qavI6qUQUABgPHD0d6qYZg07UCIUm8k3bJU0J3M9fAsbXG
+0i0KS6iLN3gzsoGCrc7sRT0CAwEAAaN7MHkwHQYDVR0OBBYEFGcvUxpFLbbgtsle
+s4lFedorhKjAMFgGA1UdEQRRME+CGmluY29tbW9uLnVuaXYuc3VueWNuc2UuY29t
+hjFodHRwczovL2luY29tbW9uLnVuaXYuc3VueWNuc2UuY29tL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBBQUAA4IBAQByJw4667jgC8l27quq1YCeukkkMuMj/46n
+l688gKpD4PL6nDKQzeHlUXUC8js7dmDrfuK+F/eRlPo4QOadf0wO2h4PdzxPJzV6
+cdwQaLf7ZdiHNlG+WIgfSbzurEEESk35DVsNxtriHyeHU+7tcpfqjEMAP2K7sZHv
+Cghk6dXYhVpYc5fakaOcDNM7tIsG9AfPL37Piisn1eg5BNuHb6TzthxbJW8gq9Q5
+X/5/NVPkxIZlwfd1UUjHO0T0OrkWTgIsesPGvBkRIJO6hUmSUI6YZHA5FmSEVYB1
+BvvZMKZ3B0ygTK7PIe0RRTPUMFgtZNMUNNgqywHDyDbt+y+REp9K
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://incommon.sunycnse.com:443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://incommon.sunycnse.com:443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://incommon.sunycnse.com/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://incommon.sunycnse.com/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://incommon.sunycnse.com/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sunycnse.com</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUNlPRT/wyMz9vjHRYl0MkLeoK0zwwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAwwaaW5jb21tb24udW5pdi5zdW55Y25zZS5jb20wHhcNMTQw
+OTI5MTczNDQzWhcNMzQwOTI5MTczNDQzWjAlMSMwIQYDVQQDDBppbmNvbW1vbi51
+bml2LnN1bnljbnNlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AIT0Usp7YH9IFLQL5xKeRxHTpej08j6tuqXCCpj8RarjFbcrDraC09npHqWeutTz
+UyvMNea69E+UAn28uzg2ftsMX15Nrb+LCYPEGnqtsrabwgGXHewr7nf8WyPdjcWC
+DBhFcDAqhLjUHGhBGx4NhD/a6BYWKXHjAolgopZOwWvSR1FYgQUQjT7R83g407c/
+6L26FDAqxEufkg4x4TwihBRoC3j8kV6dyuz7tlzMAyAlRXnq3JuYTvEeNlDY5FxJ
+cxWPuNB4WSJKTiAzB9qavI6qUQUABgPHD0d6qYZg07UCIUm8k3bJU0J3M9fAsbXG
+0i0KS6iLN3gzsoGCrc7sRT0CAwEAAaN7MHkwHQYDVR0OBBYEFGcvUxpFLbbgtsle
+s4lFedorhKjAMFgGA1UdEQRRME+CGmluY29tbW9uLnVuaXYuc3VueWNuc2UuY29t
+hjFodHRwczovL2luY29tbW9uLnVuaXYuc3VueWNuc2UuY29tL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBBQUAA4IBAQByJw4667jgC8l27quq1YCeukkkMuMj/46n
+l688gKpD4PL6nDKQzeHlUXUC8js7dmDrfuK+F/eRlPo4QOadf0wO2h4PdzxPJzV6
+cdwQaLf7ZdiHNlG+WIgfSbzurEEESk35DVsNxtriHyeHU+7tcpfqjEMAP2K7sZHv
+Cghk6dXYhVpYc5fakaOcDNM7tIsG9AfPL37Piisn1eg5BNuHb6TzthxbJW8gq9Q5
+X/5/NVPkxIZlwfd1UUjHO0T0OrkWTgIsesPGvBkRIJO6hUmSUI6YZHA5FmSEVYB1
+BvvZMKZ3B0ygTK7PIe0RRTPUMFgtZNMUNNgqywHDyDbt+y+REp9K
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://incommon.sunycnse.com:443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SUNY Polytechnic Institute</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SUNY Polytechnic Institute</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.sunyit.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ralph Gartner</md:GivenName>
+	<md:EmailAddress>rgartner@sunycnse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Kyle Rosher</md:GivenName>
+	<md:EmailAddress>krosher@sunycnse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kyle Rosher</md:GivenName>
+	<md:EmailAddress>krosher@sunycnse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ralph Gartner</md:GivenName>
+	<md:EmailAddress>rgartner@sunypoly.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

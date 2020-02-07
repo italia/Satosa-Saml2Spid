@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.dickinson.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.dickinson.edu/info/20198/technology_services" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">dickinson.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Dickinson College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Dickinson College Single Sign-On Service</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.dickinson.edu/info/20043/about/3700/privacy_statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="75" width="379" xml:lang="en">https://auth.dickinson.edu/cas/dickinson.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDTCCAfWgAwIBAgIJAK6esk1TQIz1MA0GCSqGSIb3DQEBCwUAMB0xGzAZBgNV
+BAMMEmF1dGguZGlja2luc29uLmVkdTAeFw0xNjEyMDgxOTI4MjJaFw0zNjEyMDMx
+OTI4MjJaMB0xGzAZBgNVBAMMEmF1dGguZGlja2luc29uLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAKvh1VZE5y/KOawp3ccQOaQNw4obGmQ1GHDD
+/BAmAHOmzT0oaB/vx/5KCsMwKRxTGg28SqF/U+GPAqKRWTsmS5H4C5VfFziIyjWg
+CnSaJogdhQRleqjLhUklWQVngxAWpLKopTNjiTFjyNhD1DPtmDG31XgaY6whRF1Y
+LTLYdeZEQKP3foMQ4m+FeNk4/mJLJgLvIR3qsGuAUEYK+OfNP3XKKSdrLq1VeUsz
+D37SriIfafgDal2Cx0nb6GsD4/9LLorB6/QBY2W8ctUFXrZBeHPGIgugYrC3trmY
+eNHCMVnfDqC02Bg4pWaD6romRwHGC/W/EKxLKAe7uvumB4xhpNMCAwEAAaNQME4w
+HQYDVR0OBBYEFEGTxxoV+kOPoo4YB9z7jQPx6albMB8GA1UdIwQYMBaAFEGTxxoV
++kOPoo4YB9z7jQPx6albMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+AA4tfejKdjsB5ulLRP6xa1Qxq9XXHM81Guz3Aa/vNrBs8JT6NayJSE+LSaN1rQMw
+KlJZHBouNCmbE4+qeF0/h12onZiJ8h/U8cZbry/9hQ5Cfk0l/kJFev82cvgySJ+r
+fSQFQ4INMyCOpRPeIcXpn9nqZYVG0Y4oILYdSdnzsNLRKzw34aPgSKc4JBujT7Z/
+wqcvzc6nBC0jC6NXnhDMDPKpXegKCm5Bi54vp1KbNfC2SeRI4WTGkZErJsC2YbPT
+QzZxrY0crJyIAmXRQb2Q54W5a+WDzN5OvsyrpjDVxGFFUlIYOZS+A4h3DQRzfy7j
+QmnRc/CF9GGlB6eqoGAOw0E=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.dickinson.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.dickinson.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Dickinson College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Dickinson College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.dickinson.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dickinson Security</md:GivenName>
+	<md:EmailAddress>idp-sec@dickinson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dickinson Support</md:GivenName>
+	<md:EmailAddress>idp-sup@dickinson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dickinson Technical</md:GivenName>
+	<md:EmailAddress>idp-tech@dickinson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Dickinson Administrative</md:GivenName>
+	<md:EmailAddress>idp-admin@dickinson.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

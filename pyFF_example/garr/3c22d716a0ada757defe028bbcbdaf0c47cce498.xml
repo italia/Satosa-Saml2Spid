@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.ia2.inaf.it/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2017-01-16T16:30:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sso.ia2.inaf.it/Shibboleth.sso/Login"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sso.ia2.inaf.it/Shibboleth.sso/Login" index="1"/><mdui:UIInfo><mdui:DisplayName xml:lang="en">SSO Portal for INAF services</mdui:DisplayName><mdui:DisplayName xml:lang="it">Portale per il SSO verso i servizi INAF</mdui:DisplayName><mdui:Description xml:lang="en">SSO Portal for INAF services provided by IA2, the Italian Center for Astronomical Archives.</mdui:Description><mdui:Description xml:lang="it">Portale per il SSO per i servizi INAF forniti da IA2, il Centro Italiano Archivi Astronomici.</mdui:Description><mdui:InformationURL xml:lang="en">https://sso.ia2.inaf.it/home/index.php?lang=en</mdui:InformationURL><mdui:InformationURL xml:lang="it">https://sso.ia2.inaf.it/home/index.php?lang=it</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">https://sso.ia2.inaf.it/home/privacy.php?lang=en</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">https://sso.ia2.inaf.it/home/privacy.php?lang=it</mdui:PrivacyStatementURL><mdui:Logo height="120" width="120">https://sso.ia2.inaf.it/home/img/ia2-logo-120x120.png</mdui:Logo></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEGDCCAoCgAwIBAgIJAIaq6F7NPg8QMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMTD3Nzby5pYTIuaW5hZi5pdDAeFw0yMDAxMjAxNDE1MjhaFw0zMDAxMTcxNDE1
+MjhaMBoxGDAWBgNVBAMTD3Nzby5pYTIuaW5hZi5pdDCCAaIwDQYJKoZIhvcNAQEB
+BQADggGPADCCAYoCggGBAMNsIM8iV+UrmplqkWsHSnftMc57CtBmX8/nk/W8iaZo
+xHPbKjo/BN17LB22cxNAgImj6FWb6S1ZwDBEDnkOqYk+jy8HP56//NNUbASpX0mQ
+AqmdNx4QmZsQvJKxEUrrtVEsjqZF+T4ZtCA9RVV8q0rjbAgkPkUiJQ3TwwEI+u/8
+jpRRJgCEkdgULR8cJh2+R+Ag+6oy02AOyV5SVBDFU7BqmNVCRyu0TLYSeqfkDSjM
+WHuQhXAIXQes0hJZZMMzEGlkE9EcXcfmiBbaMjf/DNVmGZgjbnCEGudaJ3kx1KjB
+DIckyt2DqgkmAPaPkaY5m/W5eeAKdBfvsZ8XSuGI/zzkvJla1oZ/4AqdXYzj3smi
+qaXmgvQgMJ8zAxNnh6FYoAzjR/tsrB7v9pT0r3UD8j2NEmnTUMFPYIclDoBkIHaK
+eUYPJjfLZi0tHAU+I0d1NPL9H6bxVBGU7MeCnsCke6RGwHYWGYoInS8K+3xSw0u6
+NLlxevRfGcAN7sBoZit9GQIDAQABo2EwXzA+BgNVHREENzA1gg9zc28uaWEyLmlu
+YWYuaXSGImh0dHBzOi8vc3NvLmlhMi5pbmFmLml0L3NoaWJib2xldGgwHQYDVR0O
+BBYEFEIi9UCZa2Vg3x1s2C1a0vtQSwehMA0GCSqGSIb3DQEBCwUAA4IBgQBWM4Jb
+I8egrtJAR1BC01cK8Ubp6yG4Ot/Pzq3mvGsLPf8LApgnZ6DY0dhe7owkxwxFr37m
+beqvFE5T9aipkdOS+uq59gIZnhnRAWaLWRn5/wNJwZWkLWLqQnJ2t7M+zac2EZJh
+fcIcSqH5LlkNUKuGvTd8dWcZDlYZRbw23BsK0Y1oka+R0t99p1ZVEa/sCs956sdk
+pQTdC5kyfvM+Mg1T7dRSCNwN7QuU3ZrID0NzOPn1aMv/ylIpU8KBGZBBzvMajyvT
+fGvEbJmraeiOzAixPujjEMe/jY/dLqgpfjGwJC70MiqoJTHWgcFuduCCZWNAlkeG
+Ti9vGXFBDtZah+j9nmxsgq/piiYCP/KQ6K0m/4jyjMyWbOrQLZRlNZuVLGkSQ4N7
+zTqwhRV82SixqYsFqG5WcbXzORgAktCLOBgRsfD8+JtqUNpsvYXiN2JjmG3tuHPJ
+jhXD55V3YDi4CGMYYhu9D7gTQho56cIJNW9tt66iwGCg/xCl2ZPn+Y/xRqU=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.ia2.inaf.it/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SLO/Artifact"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sso.ia2.inaf.it/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">SSO Portal for INAF services</md:ServiceName>
+	<md:ServiceName xml:lang="it">Portale per il SSO verso i servizi INAF</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">SSO Portal for INAF services provided by IA2, the Italian Center for Astronomical Archives.</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">Portale per il SSO per i servizi INAF forniti da IA2, il Centro Italiano Archivi Astronomici.</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">INAF IA2 - Centro Italiano Archivi Astronomici</md:OrganizationName>
+<md:OrganizationName xml:lang="en">INAF IA2 - Italian Center for Astronomical Archives</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Portale per il SSO verso i servizi INAF erogato da INAF IA2</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">SSO Portal for INAF services provided by INAF IA2</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.ia2.inaf.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.ia2.inaf.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="support">
+<md:GivenName>IA2 Team</md:GivenName>
+<md:EmailAddress>mailto:ia2@inaf.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:cristina.knapic@inaf.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

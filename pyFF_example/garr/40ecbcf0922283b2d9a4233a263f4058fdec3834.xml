@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cloudstandards.cesnet.cz/sp/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2020-01-22T15:55:01Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/sp-group/aa.cesnet.cz</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/Login"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/Login"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/DS"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/DS" index="1"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/DSEG"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/DSEG" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cloud Standards</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Cloud Standards</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Cloud Standards Wiki.</mdui:Description>
+		<mdui:Description xml:lang="cs">Cloud Standards Wiki.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.ces.net</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">https://www.cesnet.cz</mdui:InformationURL>
+		<mdui:Logo height="40" width="99">https://whoami.cesnet.cz/idp/images/cesnet-logo-40.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICojCCAYoCCQDl+ffNPW8XLTANBgkqhkiG9w0BAQUFADATMREwDwYDVQQDEwhz
+dGFmZi1zcDAeFw0xMTA1MzExNTEyMDFaFw0yMTA2MDExNTEyMDFaMBMxETAPBgNV
+BAMTCHN0YWZmLXNwMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArw2P
+fWdRZqiAvzuhmPl/ZNOTsN3Pvp/bsAWtEMfZDNcd7KAbeBuVsiprbX16tdiJYTgD
+0VqxCnzfYqt3FVHi4zKN4nUJEYG2q78Nz+iMdsbF8w4KzljL7VMv1hR3K9C2dPBj
+feZ0mupBlxpk6VcVoHmcVWVP5pN7bTK1uGak0Qx15aJoT6WvhmKwIUB/aAlTn+bQ
+j901evtXa02r/dUHEADEA8ZmhWyxmr8yN8Nol/orwqODKcP269mO8XfTegIZeVYQ
+qj/4S+AhDkXxapJcZXFdlh9elIsQYICRxvEA51Dy8guFoVNNAqpoLj89Fer1R/P3
+xz38pBg6pUW11iVWvwIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQAGfoWQpL9YnlGk
+yeKreOtzpaPNL6UeHPaw/fpTP5RJFlJtxvHmVwDMsRtx+jWpEXaxtCdIrYil8FJL
+68M26xrXtHWSiTovlqMkLZZw4Xwjd2jAeuYVrS84z3c3PCDylafQNddkLJoP3k+y
+v7MEHao5A1SEqRi7CJoeEjTQYV95fsjccLgrjQZWlyC9JauC0+TTbLt3VeASOqaW
+EG3oNAFsAT2ZTYrBpcc1SilLhSV9AtkoYk+g5Ek72S4mCdAb5PColu5krxYZ7gz6
+N02qjxZaJg7RvbagR5qJHKKMuXhYoh87YBC5eheBYdTc4LVIsz74sF6xrcgytZRL
+JcBgGx9A
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://cloudstandards.cesnet.cz/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CESNET, a. l. e.</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">CESNET, z. s. p. o.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CESNET</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">CESNET</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ces.net/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.cesnet.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Vladimir</md:GivenName>
+	<md:SurName>Trestik</md:SurName>
+	<md:EmailAddress>mailto:Vladimir.Trestik@cesnet.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

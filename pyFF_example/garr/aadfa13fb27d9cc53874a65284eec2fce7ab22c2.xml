@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.sae.org/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-05-14T09:58:53Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.sae.org/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp.sae.org/Shibboleth.sso/Login" index="1"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.sae.org/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp.sae.org/Shibboleth.sso/Login" index="2"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.sae.org/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp.sae.org/Shibboleth.sso/Login" index="3"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.sae.org/Shibboleth.sso/Login"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.sae.org/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp.sae.org/Shibboleth.sso/Login" index="4"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SAE MOBILUS</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Subscription-based access to aerospace and automotive technical information from SAE International</mdui:Description>
+		<mdui:Logo height="50" width="82">https://www.sae.org/webfiles/1519906166893/images/sae-international-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8TCCAlmgAwIBAgIJAOR+ZbYbrDNXMA0GCSqGSIb3DQEBCwUAMBUxEzARBgNV
+BAMTCnNwLnNhZS5vcmcwHhcNMTgwMjI4MTUxODQ3WhcNMjgwMjI2MTUxODQ3WjAV
+MRMwEQYDVQQDEwpzcC5zYWUub3JnMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIB
+igKCAYEA4rQMsHk2oV6SgH8F1mviExZmu7WQOHE51N1nBX2xOsaPm7U6H9VC5/Gw
+W1ixRmzth9OiCpO6rbSDU7pZkOAyj1DeaA5KT4nSfoKqiiEElI3gnAFVgv5KSd/x
+VzsOm+uk4hbXdC8GhT1vV0dX2M98ncfxLGdfnVXEZUk1651JkxiR+hSo5HBmwDYW
+DjGNGFUjJbOeTulLjOl+AhdkNtG0Wgqms39/tjKi8F/Ik3hkmfJT6GbydwMG/RGI
+XFtZ90XsMtqf1gvgG/3ilmn7w4lyo+6wxdEY2XklV3/irSrX3lENuc+wfUCOT/DL
+PHf1zGKBGHNcIOHSV+bNP6e7OcNxc6eTxO/qV473ILzsNfn1SSCSsXKe/9yVPYa1
+pwdhRafd9/5dpbDrBQ+BL9MPBhSTIUjFoD0TTOZ2b50ouH5xVDcREJIlq/cWf7XU
+Np4wWGntJ3+HBnNKd7AtWR3Dys36QiCjuaYTGvbKN+qVg8oyf1PARpTMdefHzcBi
+mnK6nl9nAgMBAAGjRDBCMCEGA1UdEQQaMBiCCnNwLnNhZS5vcmeGCnNwLnNhZS5v
+cmcwHQYDVR0OBBYEFLLA3PsN47hyMzvSvt3GbVTnB1O9MA0GCSqGSIb3DQEBCwUA
+A4IBgQB+VY+8jL83+I5jIrLS+F3p/J3i4NvSY6KHOQnI2sdr44u9hv3MkLe/D4qX
+5GpYMswc1U/fdxQ7A0Nvb8G4J3PkLpi0kRfW7JspKOIXFx5BVM+sJmv96MIlvRT0
+VjJ2bNEKo0B5dZX+DGlqJSFvbyE2G68qNbplSGvK4KqAorw7b3ccbEdeUGIGjvI4
+nXXavQW30D2HE+/LmhwjuBgLV9W3m7HQ98xPDMahbyGrJptsMzfGuVM9YSAmrFss
+Eu8lg84vhaoQtiNz1quuGQ3CMM+xdK4/OBWrdaqqbAP2M8Jt4bhObB4vk1TkFHt7
+8pjlOX3tMvhypxayVF3I4GAHnX65uiAtCkvaGKexDt4ao/6wQCDfiIopIs3yCxRx
+3QDY4I633eCBpOYnJOhfj8ZGQlkQczL+sHt2EJWMnBIc8KNCBfH+v5F8Q5hcpM80
+BQaPheoa8f3SlGo+oKZUy0xo7iVNt15181RDODH49COyhf7ReRP8gMknFPYuln5N
+qoHO3vM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp.sae.org/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.sae.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp.sae.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.sae.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp.sae.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp.sae.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp.sae.org/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">SAE International</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SAE MOBILUS</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://saemobilus.sae.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Services</md:GivenName>
+	<md:EmailAddress>mailto:itservices@sae.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Services</md:GivenName>
+	<md:EmailAddress>mailto:itservices@sae.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

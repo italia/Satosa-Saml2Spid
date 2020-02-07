@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aaidp.academicanalytics.com/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://aaidp.academicanalytics.com/error.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">academicanalytics.com</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Academic Analytics</mdui:DisplayName>
+		<mdui:Description xml:lang="en">AA AD</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://academicanalytics.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="117" width="90" xml:lang="en">https://academicanalytics.com/wp-content/uploads/2018/06/AAlogowhite-for-website-117.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVANT0V0zB2oO6CDog+HVcu9SpFBNqMA0GCSqGSIb3DQEB
+CwUAMCYxJDAiBgNVBAMMG2FhaWRwLmFjYWRlbWljYW5hbHl0aWNzLmNvbTAeFw0x
+ODA1MDMxNDMyMTJaFw0zODA1MDMxNDMyMTJaMCYxJDAiBgNVBAMMG2FhaWRwLmFj
+YWRlbWljYW5hbHl0aWNzLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBANTrP3lmVy9uJ+pnufEaMFcEeWJnNu1DUVep6YN1nug/wWrnXdL9WDVqofVR
+oaHa+yAkmlhlPDyuNY0ZLHJf4Mv7MVQxm/j534nFUaoj6NCE1UVedCrnQdMOWvcH
+fbBwCkvcP8lLP0+1MHuHJeLxJyxeFiGYp1lfh+c18B/6/xq/qDUxtxYC+X3b/E4a
+R3s3XoKQkct5yGE7bIqDYE26+xutlBrLs1746TC1lcZXTfghEGjvSysTnocabKxx
+jp2TswI83yqtfz7q4EnzqZRX5AcOEPxz54aQ1pNzVTLJvz6hPVUFXCTqErv+20F8
+VW6KPbOPbwAaYKs9czz1kcm0iXcCAwEAAaN9MHswHQYDVR0OBBYEFH5LZXSF5Z15
+K1JVM0u1bSi6zy2fMFoGA1UdEQRTMFGCG2FhaWRwLmFjYWRlbWljYW5hbHl0aWNz
+LmNvbYYyaHR0cHM6Ly9hYWlkcC5hY2FkZW1pY2FuYWx5dGljcy5jb20vaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAJcN6eX03p2HDRg45G5gk9MI2/St
+haKIh+6rOwsczxWxf8VChpsuuN50XHspLmE64AlY+TwoWJlonx7ku1DCluvkHgi1
+MmZPq9Q/Qrgjpuw9tfIa0SIKJEAVT6mr7+X6ksZ2mkUceQ5vyzEElvRuA69MoUwL
+NpqrZ5iT9okoofvdga10asi+/VAZfGBOgGLiJLRMDNrTo92Mx2HuhQjPNo3L++vA
+2czuOFOj0RuQ82wbXjL2EYGjwGTQVnENrHUzRdYiSSv6UHBFgmTFKkTad2pweGcv
+wt91y6IHJhn2xct4gMOssybHA0bhjBB4PAJAW0TTsX+HZSqki7L4iTmcGlc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aaidp.academicanalytics.com/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aaidp.academicanalytics.com/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Academic Analytics</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Academic Analytics</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://academicanalytics.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Victor Rueda</md:GivenName>
+	<md:EmailAddress>vrueda@academicanalytics.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Eric Thrasher</md:GivenName>
+	<md:EmailAddress>eric.thrasher@academicanalytics.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Victor Rueda</md:GivenName>
+	<md:EmailAddress>vrueda@academicanalytics.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

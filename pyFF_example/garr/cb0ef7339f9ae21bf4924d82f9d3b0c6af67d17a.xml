@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://federation.utbm.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2012-12-13T13:48:40Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utbm.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université de Technologie de Belfort-Montbéliard</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACtUlEQVQ4y42SSU9TYRSGn+8Onawy1YJVnKDggKJCgpioLIzTQjdsMBhduXL8By40ceHWnSuMG2OMrNQoQYmIhkSJCmpaHAhg6+0FOnHpLb2fC4pjTHy2b86bPOccARAxpAdoMRPGrudPextNIx5Kp5LBXG6uREpHoYjb7U2uX7P69emTJ86pPjEBoEUM2Xn92tVzscnxZv5AIJEIVApoToFcdroit6lpsKOfnHpDthSOixfa40f32haH/T5PXDiOEEJITXfN6m5PpqK8YmJZuOXjSMX2kaFphm7M4MmO0YX1rQao19r2HbrzavDZwXw2GTSPXLk0OIXl1chbBTKzNi5FxT89Q2DWZCdzmbPEhuuoaelGD/YAaEDf5q07eof6H3Z+Ts63jUa+HKBgqUgpcPI6TkEFB6Sz4FVV9w44A/gAtPBykUkk5YOh/oed4ex78dxRFOy097dlaO45VjW8RXPdBu4AR4CjwH4N4FqUpz6XNp1NmUtZsfs90gbdYwBxYBwYA2ygnozZjfGphqq6D4sKXH5H4lSoIVqVinrdy/YmcgWPHxBANXPpbZhj1VjpUpACgNrWjmL5QoGtUGdWbjFDY88qSSfKiY1u+uH8K0sDcSrDl4D7QDvQqxWjkjeBZrsmNmCV6eRjiAVv3W1RtnISX+kbYAAYAarJJAZwHAW4rhU/RonYepm6pDS9PBD4GtMCURQMIA0ogB84zMTwRaxUGbWtN4HJHwoI8rn4+LpUaGtfyVRkJbH5nTg5hbztQRbU3zRqW/uB80DoZwFAxqwcXhtWg8kRh3mvj3nr56Dbn6J6y0ugG3gCXMC2DgE7FgvirG68NetiuGljYxCXbxwFCUSBD8BrwAD2AMeAMC7vo7+WfLhHevJp2d5wV7r/CrukoEvqdBVP+S8SSbnhkyF9/CffAewrIVnFa4oDAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjUwOjA3KzAyOjAwLAQIsgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo1MDowNyswMjowMF1ZsA4AAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.utbm.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users of Université de Technologie de Belfort-Montbéliard</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de Technologie de Belfort-Montbéliard</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs de Université de Technologie de Belfort-Montbéliard</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUadNlP/nc+Hm6z6mOFpGVwpDm3k8wDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWZmVkZXJhdGlvbnRlc3QudXRibS5mcjAeFw0xNjEyMDYx
+NDA5MDdaFw0zNjEyMDYxNDA5MDdaMCExHzAdBgNVBAMMFmZlZGVyYXRpb250ZXN0
+LnV0Ym0uZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCg9zij2z9G
+7jcSgYBHBOfRW2vP81S95heq3V2dWB5ajlOksG2VeLWGseSp46mGHM+S++JfwD5Y
+jbNYdhomSpZAZ+rhvnTPeZvIQM9LrTKP+QVhx1XUGt+nMHx9+SmQo7N1wdy+Z+Wd
+FREU1YqXFe26Onv2uRvioX4u2N17UrdFeq3K8FhXKYrNHUEAGJ2+l3X3ZohtAk9R
++2gYBQ/NyQlbSZ/C9BHao/PKlq2iu4lnmzyHLEOjwWeWQIJ4MmfapP+tnFrcH/Ut
+TUJ16z1n1avHUy2sdsKiHpQ6kxG06aWQI+3KJBOYYWKnx+RnWgQjaGf4EnTVBNcD
+h9D8v1fr0R2NAgMBAAGjczBxMB0GA1UdDgQWBBSiFPgPQrjK5lnV2TIuRf9IC/AK
+kjBQBgNVHREESTBHghZmZWRlcmF0aW9udGVzdC51dGJtLmZyhi1odHRwczovL2Zl
+ZGVyYXRpb250ZXN0LnV0Ym0uZnIvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBAIXIWt3Y5zDrVDltiI6qaxBC7F4n6pkKy8kaA1J3LKUOrvAbWaRBEvu+
+EkHWEicbfVERGcKd3x1D1irVuOyd7FrFUodEtRqhS5Hfh0PsS/a41Cw5SU0t+aty
+4dlQ+RiN+mP3hq6a6UlfOTSwVz1zZClNoauytdv/uxv1Xjn1jaKvPGhQEJXsFl1/
+pvYfhX6/COtwsJSD85kF8cWg6DtzOZdS8Eo0QSqtPLxFYOAbfRQVEMTLRgiKYI35
+RYNZ7C4SLc0Ndc/r9aaizjZM0t50ByjQC3WMCCKT2SL1uGNVsyGmicr48PSa9rZj
+uWrDZnJ0OH7mNw4qFcKtcErpz8zl2UU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUb4XRw/k+kZc+WFwzq1F9FsvDbwEwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAxMSZmVkZXJhdGlvbi51dGJtLmZyMB4XDTEyMDcxMjEyNDEw
+NFoXDTMyMDcxMjEyNDEwNFowHTEbMBkGA1UEAxMSZmVkZXJhdGlvbi51dGJtLmZy
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApR6JQmSaezaESAFmv21B
+sXk5DXZmezdLDuKlPjQJp68eOc/1MDaS+b0UCQzjW9CJGNKRGecNkts0EYlnS+fd
+9I3hukKCpKbQB+fzqyLfEbOktQ8HeSXCOVuZqbKyWn/tAeqRXPWa60j6aouZHGcs
+QsCxdN4A5H3m3BxRBUKZWl9YPhshoYS0X5s1cN3ryEM0F178F4Dx/d7wJSxjcqYp
+TkmwYOYLrDxIG34/12JrWhheephvSV6KHGqylZGm8PieeU/dMfYoqlPDygx3lLmG
+WYJ4czikUXYXutSxa9sx1YqjslDNjN/opVnL5ej/H7L0I6XaBuxvZ7EY8Ez5l8gW
+EwIDAQABo2swaTBIBgNVHREEQTA/ghJmZWRlcmF0aW9uLnV0Ym0uZnKGKWh0dHBz
+Oi8vZmVkZXJhdGlvbi51dGJtLmZyL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRn
+KDMEILCZOOzXatLQKA9dtx9RMzANBgkqhkiG9w0BAQUFAAOCAQEAAxvjTcRA2lsE
+MdepN1Pw8qgKgIVT8ptE7xspkSp3vbiMbFB6WUCBbmo9OGRXz/ml034OqIEmtOQA
+HD4bLKWak9FlZmvtKisClNpFUblWcHHCdEkw6gHNj+GEuLSREVDiXlyuPMiHIiM/
+NBS2NevXTCRtrWWYtLsy/8/9DIqp5wl+Tw4KhYzbnmAp1HXijhjQTlEU9so74g9M
+p1/I8t00rET4cbu2OgNnsnJsJ7eYlxs2/7r7ym92Brq94Cq+DqlVo6lAsnumtDFY
+pWS70X7hmXF+uwJn5EAqK6m4fQdJouyaQD1Eyosj5vYiQG02H8/+HE+FTthzgvq7
+DM8klPBfXg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://federation.utbm.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://federation.utbm.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://federation.utbm.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Technologie de Belfort-Montbeliard</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Technologie de Belfort-Montbeliard</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.utbm.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Arnaud Sinteff</md:SurName>
+	<md:EmailAddress>mailto:arnaud.sinteff@utbm.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Dominique Dal Ponte</md:SurName>
+	<md:EmailAddress>mailto:dominique.dalponte@utbm.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

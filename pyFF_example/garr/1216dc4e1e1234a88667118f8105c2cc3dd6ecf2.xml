@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fccn.pt/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.fccn.pt" registrationInstant="2011-12-16T16:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://rctsfederation.fccn.pt/rctsaai/metadata-registration-practice-statement-en</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="pt">http://rctsfederation.fccn.pt/rctsaai/metadata-registration-practice-statement-pt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fccn.pt</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">FCT|FCCN</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="pt">FCT|FCCN</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.fccn.pt/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="pt">https://www.fccn.pt</mdui:InformationURL>
+		<mdui:Logo height="55" width="300">https://rctsaai-rr.fccn.pt/rr/logos/FCT-FCCN_cmyk.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:38.7591742762959,-9.142287969589233</mdui:GeolocationHint>
+		<mdui:DomainHint>fccn.pt</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUGjtxtRHoicZCdPTxK6N9BrR1vZ8wDQYJKoZIhvcNAQEF
+BQAwFjEUMBIGA1UEAxMLaWRwLmZjY24ucHQwHhcNMTExMjE1MTUzOTExWhcNMzEx
+MjE1MTUzOTExWjAWMRQwEgYDVQQDEwtpZHAuZmNjbi5wdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMk7r9by+CMZzGA/003Hjz08jJ9JrtfEQYOLVeh3
+CaMM3vAfwg5BljE+c7/fBs0teQRcnkx8oEGwGuBUV91qN5CIwRRgraXg2Xl5NDd+
+E76ebKWuOYqsB07V99esvRWwGMhAJrjd2Lc3u/th+8PNBfeXJOt49ZkC27uZ8ikf
+QauE0s9H+4i4c3bldrSVSuDq45yWr0wIHdox6dN/TjMk4kxSxyADmb/Ebp8N5n9v
+2l7Q9HFoaU2LnPJYyrbLrSepoFwdXgEYiu1pnrvbqT0SJ3vREctngTJ8MaL9dTLK
+2QaLN3cJkUby8254idNi8zPUHkvp2IFjuCcLc1k+ezdbc6kCAwEAAaNdMFswOgYD
+VR0RBDMwMYILaWRwLmZjY24ucHSGImh0dHBzOi8vaWRwLmZjY24ucHQvaWRwL3No
+aWJib2xldGgwHQYDVR0OBBYEFAPVb6XSbR8AYJEn/xiLnVzx8KSoMA0GCSqGSIb3
+DQEBBQUAA4IBAQDF0YZ3v7xshyEUHIRxc8c2jM2cJOUBRj7aOqnJvOnK7FI/AaSG
+qtEMx9RJ+NHxr5sALx1/DBu1XPEdtuBfueL0C5ky4H8a78LRqH3x50oZto+Oq1DG
+hZr/kURJyAM9dzi8BYZx5K2wB9vvJO2DICmnla20DTlKPY8NMZwtFbwfMloQduMi
+bLam1wEq+9o8TKYrw4C0pBGa8nY9gDjB1yzbT04VAuqctQL0+Sw+cXFDEk2JLbCl
+Bo4JbRU3T37aRSPJmLSx/lEQMBKP3cqlq+eig/e6thk3SA494XDUFlO6V+0XQF+u
+G5N6VkL0FX4oQt/9e14FaHZtwfb5uf02x6oO
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.fccn.pt/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fccn.pt/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fccn.pt/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fccn.pt/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="pt">FCCN - Unidade da FCT I.P.</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">FCCN - Unidade da FCT I.P.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="pt">FCCN - Unidade da FCT I.P.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">FCCN - Unidade da FCT I.P.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="pt">https://www.fccn.pt</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.fccn.pt</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Esmeralda</md:GivenName>
+	<md:SurName>Pires</md:SurName>
+	<md:EmailAddress>mailto:rctsaai@fccn.pt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Equipa</md:GivenName>
+	<md:SurName>RCTSaai</md:SurName>
+	<md:EmailAddress>mailto:rctsaai@fccn.pt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

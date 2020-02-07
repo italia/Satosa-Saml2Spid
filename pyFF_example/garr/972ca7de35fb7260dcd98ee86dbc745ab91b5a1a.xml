@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.crous-lyon.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-02-10T09:22:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">crous-lyon.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CROUS Lyon-Personnels</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAACMuAAAjLgAAAAAAAAAAAAAAAAAAAAAAABMG4wATBuMHEwbjShMG46oTBuPmEwbj/BMG4/0TBuPmEwbjqxMG40sTBuMHEwbjAAAAAAAAAAAAEwbjABMG4wATBuMZEwbjlBMG4+8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuPwEwbjlRMG4xkTBuMAEwbjABMG4wATBuMZEwbjshMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuOzEwbjGhMG4wATBuMGEwbjkxMG4/8TBuP/Ewbj/xMG4/8TBuP/EgXj/xEE4/8SBeP/EgXj/xMG4/8TBuP/Ewbj/xMG45QTBuMGEwbjShMG4+4TBuP/Ewbj/xMG4/8TBuP/Ewbj/xwP5P81Kuf/KB3m/x4S5P8TBuP/Ewbj/xMG4/8TBuPuEwbjTBMG46gTBuP/Ewbj/xMG4/8TBuP/Ewbj/xIF4/8xJuf/WlLs/1xU7P9DOen/EQTj/xIF4/8QA+P/EQTj/xAD46oTBuPkEwbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/OC7n/zsw6P8rIOb/Ihbl/z406P8lGeX/PTPo/ywg5v9COOnlEwbj+xMG4/8TBuP/Ewbj/xMG4/8RBOP/LiLm/3Rt7/9RSOr/bmfu/2Rc7f+OifL/fHXv/4uG8f55cu//nJfz+xMG4/sTBuP/Ewbj/xMG4/8TBuP/EgTj/ywg5v91bu//VUzr/0k/6f9PRur/ZFvt/0pA6v9GPOn+TEPq/2tk7vwTBuPkEwbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/MSXn/zUq5/8TBuP/EgXj/xIF4/8RBOP/EgXj/xEE4/8SBePlEwbjqBMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xEE4/8RBOP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/EwbjqRMG40oTBuPtEwbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj7hMG40sTBuMGEwbjkhMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG45QTBuMGEwbjABMG4xgTBuOxEwbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj/xMG47ITBuMZEwbjABMG4wATBuMAEwbjGBMG45ITBuPvEwbj/xMG4/8TBuP/Ewbj/xMG4/8TBuP/Ewbj7xMG45MTBuMZEwbjABMG4wAAAAAAAAAAABMG4wATBuMHEwbjSRMG46gTBuPkEwbj/BMG4/wTBuPlEwbjqRMG40oTBuMHEwbjAAAAAAAAAAAA4AcAAMADAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA4AcAAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.crous-lyon.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Serveur IDP CROUS Lyon -- administratif</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CROUS Lyon-Personnels</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Serveur IDP CROUS Lyon -- administratif</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIUVu73Dz1W5W7PyE8NTc5qU5yZjS8wDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYXV0aC5jcm91cy1seW9uLmZyMB4XDTE3MDIxMDA4MDIy
+NFoXDTM3MDIxMDA4MDIyNFowHTEbMBkGA1UEAwwSYXV0aC5jcm91cy1seW9uLmZy
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgMZG3D9UOAZxdZd0blFg
+0nyqZrpMm1pkKSQwvBAr8fQQ+38CjpXN7epQ7s1YpDiDpn/cpo57401FvgeWwHdl
+7VQHMW9aeKLrVl2uG2XGKRtjpznOwvykx2ZYS1IfNYUQdEfwatU4Sudc5PHTOtYK
+N9/DDkb9ggWuM7YfJI5PQHB1pnRsQcPUP4ltLI0tOUWdag8rhSZuEdlKzzb3HODA
+ABLhwJxKzxJZzWOhtEaK9twAfurI9Zsm6D3GEfv+qXoZb6lLH7dXtnph0E358RXQ
+pU1k4oNM9i87m4J0PVwkjyqtkmT7rauVIUrD0HlU8vPr2kwDTyok9COoPFPthXxY
+MwIDAQABo0QwQjAdBgNVHQ4EFgQUXpTjw62Mp/TbhmUaKOUk1iVEIlEwIQYDVR0R
+BBowGIISYXV0aC5jcm91cy1seW9uLmZyhgI2OTANBgkqhkiG9w0BAQsFAAOCAQEA
+Mgcv2tVXcduuOHbs8r/0qXaYJPOuwqtC43/yu0vDgCQHe+3Qxyszuad806Jruz9A
+MzFXj4GZnzewBltOroK3pvKzrdnXC7YIESQohPL37B94L8jvFupuF/1wkhJgFBir
+TDSUNj1em2DfbdiW+VVBFtjLCeOjXzR0Ze3qpQDHLauEbeCIF5j/bJz01r9wGlfV
+sUa6azw3bhrA4/DDAEK15ytnfD+IBKdVguxzwfUOQ72bNlozxxa+mo58gnhUIoly
+QPX3+JORwhWVW4GNO/UoY+Q+phRxffmbk14CqyKYIbalQ2Yvj+yWun9VPSfJE3M7
+jO4s7Lk5H0yf8SxmLfGLWA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.crous-lyon.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.crous-lyon.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://auth.crous-lyon.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.crous-lyon.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.crous-lyon.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://auth.crous-lyon.fr/idp/shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">crous-lyon.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIUVu73Dz1W5W7PyE8NTc5qU5yZjS8wDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSYXV0aC5jcm91cy1seW9uLmZyMB4XDTE3MDIxMDA4MDIy
+NFoXDTM3MDIxMDA4MDIyNFowHTEbMBkGA1UEAwwSYXV0aC5jcm91cy1seW9uLmZy
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgMZG3D9UOAZxdZd0blFg
+0nyqZrpMm1pkKSQwvBAr8fQQ+38CjpXN7epQ7s1YpDiDpn/cpo57401FvgeWwHdl
+7VQHMW9aeKLrVl2uG2XGKRtjpznOwvykx2ZYS1IfNYUQdEfwatU4Sudc5PHTOtYK
+N9/DDkb9ggWuM7YfJI5PQHB1pnRsQcPUP4ltLI0tOUWdag8rhSZuEdlKzzb3HODA
+ABLhwJxKzxJZzWOhtEaK9twAfurI9Zsm6D3GEfv+qXoZb6lLH7dXtnph0E358RXQ
+pU1k4oNM9i87m4J0PVwkjyqtkmT7rauVIUrD0HlU8vPr2kwDTyok9COoPFPthXxY
+MwIDAQABo0QwQjAdBgNVHQ4EFgQUXpTjw62Mp/TbhmUaKOUk1iVEIlEwIQYDVR0R
+BBowGIISYXV0aC5jcm91cy1seW9uLmZyhgI2OTANBgkqhkiG9w0BAQsFAAOCAQEA
+Mgcv2tVXcduuOHbs8r/0qXaYJPOuwqtC43/yu0vDgCQHe+3Qxyszuad806Jruz9A
+MzFXj4GZnzewBltOroK3pvKzrdnXC7YIESQohPL37B94L8jvFupuF/1wkhJgFBir
+TDSUNj1em2DfbdiW+VVBFtjLCeOjXzR0Ze3qpQDHLauEbeCIF5j/bJz01r9wGlfV
+sUa6azw3bhrA4/DDAEK15ytnfD+IBKdVguxzwfUOQ72bNlozxxa+mo58gnhUIoly
+QPX3+JORwhWVW4GNO/UoY+Q+phRxffmbk14CqyKYIbalQ2Yvj+yWun9VPSfJE3M7
+jO4s7Lk5H0yf8SxmLfGLWA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://auth.crous-lyon.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CROUS de Lyon</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CROUS de Lyon</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.crous-lyon.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:jerome.machurez@crous-dijon.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

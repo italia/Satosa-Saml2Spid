@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.byu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">byu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brigham Young University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Brigham Young University IdP</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://byu.edu/about</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://registrar.byu.edu/records-privacy-ferpa</mdui:PrivacyStatementURL>
+		<mdui:Logo height="90" width="90" xml:lang="en">https://itmaintenance.byu.edu/BYU-logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAMdtkhNUKYuSdtVPTI46fURWKKoyMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDHNoaWIuYnl1LmVkdTAeFw0xNTAzMjYyMjI0NTdaFw0z
+NTAzMjYyMjI0NTdaMBcxFTATBgNVBAMTDHNoaWIuYnl1LmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAJE7Bi6W9Q828ZLW5wKkU6yvOLy6F+10UB8M
+2nQx8aD/7J3Qd5rhqYpMHxbePXXhjL0IwJvSHeyVkIS9nj09VjRMFDj7Py3PmNUY
+3EqHsQHGYfVP4SrpkImJzBHVDxzTppN2vMg4JdiR1V+tD9wI2aLgpzw60yezfzQt
+5aBxYmKbQo3INNgCMnd2Xhy7y4Kc89L90qEM2dpwzEunkbgTs8HFVK4Xh5H/e6Ht
+5PRG1WxqqHX/hcn2m+bpxjgPav/udwxBs4AwyE1/M+cWiUfQMz9ZcX7PDL3Xa9bk
+FxoyujWjZhfoMrucOI0J/3mr9vCze4dBsYkvI4PVMLmb+5+l8nsCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMc2hpYi5ieXUuZWR1hiNodHRwczovL3NoaWIuYnl1LmVkdS9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU1zJQjFI7ZL36TWulgBcYpYSA8cowDQYJ
+KoZIhvcNAQEFBQADggEBADP0+8gGWisnCSl/lRB/uSOffxdWGNp9243q5Q2wF+3f
+AHln1ndFRp9/pTZpTMYuhIfhj3nhBVSfbA82OIn4eq8Rn3iunj0KtxITjmsoUz55
+TwCG5KoQVVooC7SMbOabuYGCt6R/up83BdSCQR3hFraVgbcsiJXeSTYLiuiqtp0S
+CjKIp5uLbOun7i02xqPFWP98i/NYeeelpv8B9rjdPgXSUIoraJU0dmezG3WRVcEx
+geODhddBhA/9t4MPUhxE2NkerjOJ1kxuxzyTBtvo1kS7Hhe+BnwZceEfqZ3Ieb+k
+tAvdjb86Vcp7Qd6mgqHTsmU05bXWB4TCg0JngVfp4bo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.byu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.byu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Brigham Young University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Brigham Young University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.byu.edu/index.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Doug Walker</md:GivenName>
+	<md:EmailAddress>djw5@byu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan McNeece</md:GivenName>
+	<md:EmailAddress>dbm8@byu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>BYU IAM Team</md:GivenName>
+	<md:EmailAddress>valinda@byu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sam Lyons</md:GivenName>
+	<md:EmailAddress>samuel_lyons@byu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Identity Team</md:GivenName>
+	<md:EmailAddress>identityteamft@byu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

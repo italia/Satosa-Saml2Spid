@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.longroad.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">longroad.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Long Road Sixth Form College</mdui:DisplayName>
+		<mdui:Logo height="60" width="80">https://idp.longroad.ac.uk/idp/images/idp-logo-80x60.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.longroad.ac.uk/idp/images/idp-icon-16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUCy8kggY2RBllD2ewV21UpOU1mlkwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAxMSaWRwLmxvbmdyb2FkLmFjLnVrMB4XDTExMDUxMzA4MTI0
+M1oXDTMxMDUxMzA4MTI0M1owHTEbMBkGA1UEAxMSaWRwLmxvbmdyb2FkLmFjLnVr
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgcmsqS7ONbUBSlCFn4+5
+ndvJvVgknMjZVZZulScLs3K1R7cJifMh/njFVDxdZ2fFBFwstUmUljjiM/GgBPGj
+GMVEysJRzOiuTVaON3t/hE918o6DDZpkIcAC7JRuo9OL21K70WsJV9J1dqmx9t5n
+e+rj/s/w0HB3GOR/3J2B9xbkX16B7wXBBZILhRcFy4nd1wFOCmurSC20o6iUwBsH
+9lEVQlx/Es4o9sa8+U+5qtnQGDEiy2l9R7Em1lrpAnFpqM6n7C9kh4sMsIdGRFy5
+0Q/4hSMRGNWyExP29Ipa0A6r8bfSlnN4lMo1QZMjBXS1NNHnVEpnafmO+CwyWL20
+bwIDAQABo2swaTBIBgNVHREEQTA/ghJpZHAubG9uZ3JvYWQuYWMudWuGKWh0dHBz
+Oi8vaWRwLmxvbmdyb2FkLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQe
+dOgyl13wsMnik57R8aImPj76cjANBgkqhkiG9w0BAQUFAAOCAQEAEz5uJOOUmPsn
+7Mq0h2FY8mDrwmVFTNismazFxmCEykDZON1baS6wnKjQC22w/MWJ8gq0NEwY/If2
+fg3ZL7L6eEKWPHf10HNi1HdlgdQ6JWf5I/CLnccrQdwAfeeJ4O/1qtscXpylqp5y
+AesJcymZxwcqQ+rWxFvxXKhk4RNabImkitFqxngqOfEaML+hL0OMlsO9GJbUgUPn
+KrvGzcxIUT2L7hWBAIkM3rhBUkcEXLJzVcLPXW122Wcjr5gk6/il9cyveqANRbiB
+X/xSXhUkBYgRzeNd4EaiR4zZLepncxkcIZF+To/nrXNoghw9aQny7LYKL9dOeOIT
+gyi6viaAxA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.longroad.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.longroad.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.longroad.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.longroad.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.longroad.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.longroad.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">longroad.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUCy8kggY2RBllD2ewV21UpOU1mlkwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAxMSaWRwLmxvbmdyb2FkLmFjLnVrMB4XDTExMDUxMzA4MTI0
+M1oXDTMxMDUxMzA4MTI0M1owHTEbMBkGA1UEAxMSaWRwLmxvbmdyb2FkLmFjLnVr
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgcmsqS7ONbUBSlCFn4+5
+ndvJvVgknMjZVZZulScLs3K1R7cJifMh/njFVDxdZ2fFBFwstUmUljjiM/GgBPGj
+GMVEysJRzOiuTVaON3t/hE918o6DDZpkIcAC7JRuo9OL21K70WsJV9J1dqmx9t5n
+e+rj/s/w0HB3GOR/3J2B9xbkX16B7wXBBZILhRcFy4nd1wFOCmurSC20o6iUwBsH
+9lEVQlx/Es4o9sa8+U+5qtnQGDEiy2l9R7Em1lrpAnFpqM6n7C9kh4sMsIdGRFy5
+0Q/4hSMRGNWyExP29Ipa0A6r8bfSlnN4lMo1QZMjBXS1NNHnVEpnafmO+CwyWL20
+bwIDAQABo2swaTBIBgNVHREEQTA/ghJpZHAubG9uZ3JvYWQuYWMudWuGKWh0dHBz
+Oi8vaWRwLmxvbmdyb2FkLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQe
+dOgyl13wsMnik57R8aImPj76cjANBgkqhkiG9w0BAQUFAAOCAQEAEz5uJOOUmPsn
+7Mq0h2FY8mDrwmVFTNismazFxmCEykDZON1baS6wnKjQC22w/MWJ8gq0NEwY/If2
+fg3ZL7L6eEKWPHf10HNi1HdlgdQ6JWf5I/CLnccrQdwAfeeJ4O/1qtscXpylqp5y
+AesJcymZxwcqQ+rWxFvxXKhk4RNabImkitFqxngqOfEaML+hL0OMlsO9GJbUgUPn
+KrvGzcxIUT2L7hWBAIkM3rhBUkcEXLJzVcLPXW122Wcjr5gk6/il9cyveqANRbiB
+X/xSXhUkBYgRzeNd4EaiR4zZLepncxkcIZF+To/nrXNoghw9aQny7LYKL9dOeOIT
+gyi6viaAxA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.longroad.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.longroad.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Long Road Sixth Form College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Long Road Sixth Form College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.longroad.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>CSD Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@longroad.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>CSD Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@longroad.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.oh-tech.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">oh-tech.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ohio Technology Consortium (OH-TECH)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">InCommon Federation Identity Provider for the Ohio Technology Consortium, an activity of the Ohio Department of Higher Education</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://iamohio.net/content/oh_tech_web_identity_services</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://ohio.gov/policies/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80" xml:lang="en">https://idp.oh-tech.org/images/full_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUeQHPaaHy4ZWd3e+ol9Gl/PW3RDQwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLm9oLXRlY2gub3JnMB4XDTE4MDczMDA2NDgzMloX
+DTM4MDczMDA2NDgzMlowGjEYMBYGA1UEAwwPaWRwLm9oLXRlY2gub3JnMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhFlnIPPIbCNWhriyX6m4XAFJ+qTQ
+Yhrq42qR0TxrEkmPvxeM3K1/K2kibo0Vpr5dQV8InnaMZTEv2Uic32bzueZtFztZ
+BV35YS/x4dYDYs3XBhHEVL7lSdcCtrIRYMVD+dsoUcjbpk/Q/0p232+mq9b4+jve
+lgj5RbW2W3E2eGs9DoLm7zk5Rex50WqvIGc4BQiW//OTflzo3wo9W36Yt2hl6xpb
+yaMBrMfukrjHRHViyj118Ey12I1NNiD52Tdz1lKo2PdZYNIXRQ0P8ZDiwTIeDX1i
+USWBQnAzuXin6HShOs8BfQNGeDxcFpSwOo/jmR1KwADH+4k7xfoc8zEYuQIDAQAB
+o2UwYzAdBgNVHQ4EFgQUX5IesZXiL6kEXLsYfcaF6uOkwrQwQgYDVR0RBDswOYIP
+aWRwLm9oLXRlY2gub3JnhiZodHRwczovL2lkcC5vaC10ZWNoLm9yZy9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAZaillBghq+R+2FktykzWGVIJ1xvn
+R/8Cj2xzzLLftIoWMyeu3oyCRJ/pZjAmhwEgtVu/7/OwITa/dotfyh7xAdOo9awy
+EBe7Ja2/NSRchYnFx83/FDGWwY0iKZXjsL0bISQ9XiqMAD9CxsO4S+LD0GJCSqfG
+kG1yUBpU2JUNPM+0hsAJpyfkVbtwEyclMQTp+MR4g1WJB6emrnxxuAVBlamZltZA
++I0nyaihZYeovKyXhsvMtY2ONdrHZ4RBGkoXHMobuHdVev+LNVKWFBnxMjckog/s
+Zi/f6cPP3m9LDNUKDsz6qCNZUPfh3i2pQtrjulujRE/rHmGYPwCjvQlwWg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.oh-tech.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.oh-tech.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.oh-tech.org/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.oh-tech.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">oh-tech.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUNMdNM5lfQbRTj92PVabURudgg44wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLm9oLXRlY2gub3JnMB4XDTE4MDczMDA2NDgzM1oX
+DTM4MDczMDA2NDgzM1owGjEYMBYGA1UEAwwPaWRwLm9oLXRlY2gub3JnMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuT0jTHsoGFa+gu+8Aeln/sW476CY
+SIt0hQ2NvqgTT0r7QcWQ6CBzoA3uTNUChMUVK8c+lZHoQ439u46QgaSn+9CtlFrc
+8mfLEipY2Q6wyhYYCoXQQH0u1JQwp9+M4OJiRx4uMuL6afaVo6RuGXpx6t8X8KlB
+4UbXZhk8+mePcrHWtAf1QuK+CPxqPxZI/nuWGdmPQ78EelZO6g3gvT1KO0dIzUVX
+1duYjgL97VLyuNt1K8z9cBedk8h20Bim4PExMWiTmz2vI+lkSvagrKpCOjeIQjU9
+L2sfwk4ez8ySo4fOt4eWGq5F/Lo7kRvtRWZ8SsvniihELdYoBaGxe0Gb0wIDAQAB
+o2UwYzAdBgNVHQ4EFgQULsO8hA/D9kvvMNxcdcnrvxDVcv8wQgYDVR0RBDswOYIP
+aWRwLm9oLXRlY2gub3JnhiZodHRwczovL2lkcC5vaC10ZWNoLm9yZy9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAiLJs4BAAlx8qWlv/mDX9zNo+j6Tw
+NHaTKDS0g0sYTu9MjdvUQrLBhjBIQwhxk+CijhDEC8tn4mW92s/h7NRTY8ddvked
+vrSqed2ONRIPhQqZOEcZJenSiMa4Oq1eJa5kHhlpMyHU+ZxFon4V1D2ewra77lrU
+Z8zZmEGabo9pJvnYn+iZh5SAS4XUZ9YHy9M3n+BRtM6Mdo405BPuErXEOIwu3rYO
+CsQMi5lPwfOBw1mFQdm+aoh/BqCU7dj0Y5wZMJthiJQiSnlFSLkjT6TK2uTb+pME
+9vqS0cfmIEjZtGLO1MJ+JsTsRhE3vCkIdEdafpJY6zP+Xqi3xKCy09vx9g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.oh-tech.org:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ohio Technology Consortium ("OH-TECH")</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ohio Technology Consortium (OH-TECH)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://oh-tech.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Mark Beadles</md:GivenName>
+	<md:EmailAddress>mbeadles@oar.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alan Edmonds</md:GivenName>
+	<md:EmailAddress>edmonds@oh-tech.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>OARnet Support</md:GivenName>
+	<md:EmailAddress>support@oar.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>OARnet Support</md:GivenName>
+	<md:EmailAddress>support@oar.net</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fedurus.ru/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://arbicon.ru" registrationInstant="2016-11-29T13:39:41Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://fedurus.ru/doc/FEDURUS Identity Federation MRPS v0.0.2_en.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fedurus.ru</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">FEDURUS</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ru">ФЕДУРУС</mdui:DisplayName>
+		<mdui:Description xml:lang="en">FEDURUS Identity Federation</mdui:Description>
+		<mdui:Description xml:lang="ru">Федерация ФЕДУРУС</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAIAAABiEdh4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVChTY/iPA3x9/uL3799QDhJA1/D97bvLnd27tQy2MTDcDI2EiiIBFA1Pt+3YxcB2mo3vsqDEBV6RezGJUAkkgG7DCgnZiyLSF8Vkz7Hz3YtJgIoiARQNi/mFzwiIXxKTPcvOd8XC7qarF1QCCSA0LFdUPsEtfFlc7hQDw7sNm4Ei/x4/hEghA6iGdfqGhxjYgKrPsfO/mjsfKPL2w+d9J68vWLU3r2He63efIMqAAKrh958/Z82szzKwnePgP83A9mETyAa7iHoGxThOvQwgOX/NYYhKFD88njrjUV7x67kLPm3bARHRcS8QMs8Ts8xn4AvYcegyUARFAxqwDa5k10oUtypgUI7vmrMNIohdAwOvo3dKN4t6nLh1IYNaYmHbcqgEbg1Ogmb5QLN5DDLzmpdCRcEAhwYBZ3HrIn7jbKBjbCLbfvxEJCocGhiMGTVSHGI7F6w7AowPqCgYYNdw5eajP3/+QjnI4P9/ACtHOhNYlXTMAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.fedurus.ru</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="ru">http://www.fedurus.ru</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPkkQ09QICh0Pedr9baDn7h52+/pMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5mZWR1cnVzLnJ1MB4XDTE4MDYyNTEyMTMzNloX
+DTM3MDYyNTEyMTMzNlowGTEXMBUGA1UEAwwOaWRwLmZlZHVydXMucnUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDe5CUgequKiOwrsVYdK/8MqPt/s9Jb
+Pw+PA4Z8S2UmB9E9bI2TZW/KmX1QBWWIE4qjH1zDfHjadlqxr+WHXFi8fglntSWT
+kQ/X8qdfnpUPwbebpZOEZmSqod4HdGjThGlBGz/MKBiZekehcVi09faKuFUkYyjn
+gu917Du5YAaJZv3WOY807p3QGltPzzpjalrHTv07nG89p1YIec9A8u2TYw1d8GlJ
+il58LkEmWC3SbVDC0tHJeVDkVSsOTUMnVwpjOGVJYh5rGN38d6GzIVJbO+z7y581
+Aj/mMzjIP1TWvYEk+rH1HffIjXKOpHTXWvyshpOpZzADzr97WS8Gdig/AgMBAAGj
+YzBhMB0GA1UdDgQWBBSoP0rsR0QngzaMPrGz69Z9N5bvJzBABgNVHREEOTA3gg5p
+ZHAuZmVkdXJ1cy5ydYYlaHR0cHM6Ly9pZHAuZmVkdXJ1cy5ydS9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA0QCtFI+ZsL/QXwwNWel7F8kw9ktjGRqy
+V+GMiL2JTde41w2N4TzJH7ox+FInIUUzjdxxnTbo9rf7H41rko8gYrvU+Rk6r16H
+0nDUlhG+U5iG5qaB795nlujlWbb8Yz87zrS76YIcGLT9V80souX7+0zyjP/UMUZO
+PqjD+KbxNB5gaDQbBTUpr1ZiBBbn2FopM2ulwLKUAFLA4hKnkGqNjPvosJrwze4a
+IpTsbp8H1fHko0DpKq3xT1jMJaJDuF0+QhKXCCNpECmusHEzhibbfMJ5TEqd9ogZ
+/mM+a/fSt/XagPSbrs++dAM3KOS763N4qzRJlcMxgBvfnfIU+663Tg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fedurus.ru/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fedurus.ru/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fedurus.ru/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fedurus.ru/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fedurus.ru/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.fedurus.ru/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fedurus.ru/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fedurus.ru/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fedurus.ru/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fedurus.ru</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPkkQ09QICh0Pedr9baDn7h52+/pMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5mZWR1cnVzLnJ1MB4XDTE4MDYyNTEyMTMzNloX
+DTM3MDYyNTEyMTMzNlowGTEXMBUGA1UEAwwOaWRwLmZlZHVydXMucnUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDe5CUgequKiOwrsVYdK/8MqPt/s9Jb
+Pw+PA4Z8S2UmB9E9bI2TZW/KmX1QBWWIE4qjH1zDfHjadlqxr+WHXFi8fglntSWT
+kQ/X8qdfnpUPwbebpZOEZmSqod4HdGjThGlBGz/MKBiZekehcVi09faKuFUkYyjn
+gu917Du5YAaJZv3WOY807p3QGltPzzpjalrHTv07nG89p1YIec9A8u2TYw1d8GlJ
+il58LkEmWC3SbVDC0tHJeVDkVSsOTUMnVwpjOGVJYh5rGN38d6GzIVJbO+z7y581
+Aj/mMzjIP1TWvYEk+rH1HffIjXKOpHTXWvyshpOpZzADzr97WS8Gdig/AgMBAAGj
+YzBhMB0GA1UdDgQWBBSoP0rsR0QngzaMPrGz69Z9N5bvJzBABgNVHREEOTA3gg5p
+ZHAuZmVkdXJ1cy5ydYYlaHR0cHM6Ly9pZHAuZmVkdXJ1cy5ydS9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA0QCtFI+ZsL/QXwwNWel7F8kw9ktjGRqy
+V+GMiL2JTde41w2N4TzJH7ox+FInIUUzjdxxnTbo9rf7H41rko8gYrvU+Rk6r16H
+0nDUlhG+U5iG5qaB795nlujlWbb8Yz87zrS76YIcGLT9V80souX7+0zyjP/UMUZO
+PqjD+KbxNB5gaDQbBTUpr1ZiBBbn2FopM2ulwLKUAFLA4hKnkGqNjPvosJrwze4a
+IpTsbp8H1fHko0DpKq3xT1jMJaJDuF0+QhKXCCNpECmusHEzhibbfMJ5TEqd9ogZ
+/mM+a/fSt/XagPSbrs++dAM3KOS763N4qzRJlcMxgBvfnfIU+663Tg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fedurus.ru/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fedurus.ru/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">fedurus.ru</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">FEDURUS</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="ru">ФЕДУРУС</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.fedurus.ru/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>FEDURUS</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@fedurus.ru</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://rrzfilrshib.uni-regensburg.de/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2016-05-12T06:53:03Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://rrzfilrshib.uni-regensburg.de/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">MyFiles (Filr)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">MyFiles (Filr)</mdui:DisplayName>
+		<mdui:Description xml:lang="de">MyFiles (Filr) Anmeldung</mdui:Description>
+		<mdui:Description xml:lang="en">MyFiles (Filr) Registration</mdui:Description>
+		<mdui:Logo height="16" width="16">https://rrzfilrshib.uni-regensburg.de/myfiles16.png</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://rrzfilrshib.uni-regensburg.de/myfiles.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.uni-regensburg.de/rechenzentrum/it-services/dateidienste/zugang_ohne_novell/index.html#tab_0_4</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.uni-regensburg.de/computer-centre/it-services/index.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://rrzfilrshib.uni-regensburg.de/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://rrzfilrshib.uni-regensburg.de/privacy.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJpTCCCI2gAwIBAgIMIQ2dv8ebl7tuPgbMMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUyOTA2MDEyNFoXDTIxMDgzMDA2MDEyNFowgZUxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZCYXllcm4xEzARBgNVBAcMClJlZ2Vuc2J1cmcxIDAeBgNVBAoMF1VuaXZl
+cnNpdGFldCBSZWdlbnNidXJnMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMSYwJAYD
+VQQDDB1ycnpmaWxyc2hpYi51bmktcmVnZW5zYnVyZy5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMRG/22IY0Gguhf87md1/MQWr+8z8CfH6X2bQXEt
+RQd1ULMXhF/M4kWXM1QHVSEBJ//co3iHWn0YV9OWDW6GcFy0206zT/P1NzhMnkYQ
+tsC773dpMVzFTaqVe1wr9T6DcaBwrA9qEbTlLwq68G4Cvyx49Gym56e/oIS46ydX
+TGccoxcVK4aSoU9w1mGt4OoD9DR8NpC63dRyvHasRKBG3d5ih0PAGqzh5h4CvijP
+A+tJOLwi6r/QGreU0WqGaHa+LD8ho1ufEvHi5N4CHJ5ehWsoG19A7/36y3qf3gHP
+7LBwKgELs5Ss/xCrSyizpOnPutok6EN2g0bgAAf5xmaySQ8CAwEAAaOCBfkwggX1
+MFcGA1UdIARQME4wCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEAYOKwYBBAGBrSGCLAEBBAQwEAYOKwYBBAGBrSGCLAIBBAQwCQYDVR0T
+BAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
+BwMBMB0GA1UdDgQWBBSKYv2gj4rYXo6WStyS7NR09KJiBDAfBgNVHSMEGDAWgBRr
+OpiL+fJTidrgrbIyHgkf6Ko7dDBRBgNVHREESjBIghRycnpmaWxyc2hpYi51bmkt
+ci5kZYIdcnJ6ZmlscnNoaWIudW5pLXJlZ2Vuc2J1cmcuZGWCEXJyemZpbHJzaGli
+LnVyLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0
+cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2Fj
+cmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29j
+c3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRw
+Oi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9j
+YWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYBBAHW
+eQIEAgSCA00EggNJA0cAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZ
+EwAAAWsCLejXAAAEAwBHMEUCIA/IlW8ia7oSY39SNYXEXxo4ykK0gJkbKD+yrsAy
+avxyAiEAovIXuYwB4Nw0XvQ7zLr+xqF88edMwHC+8LeVZGuI/MAAdgCq5wt/PLjV
+ZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWsCLejQAAAEAwBHMEUCIQDZQQEI
+bBDTeUUDj5VAZkZsoeW4qX9RRHsdKUtQt4EOsAIgIRCfsREhfDR3Gqdgx1d7lHY0
+ylms8sSJWfgeWssG1rsAdQBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWsCLendAAAEAwBGMEQCIBPRCBFwqNvEV10ui3PKY5u6q/RJdgC1Sba9nOc/
+X/X6AiAfAhTrGFuw5mLXuCIHvlV42t1kdR3y170ZQwQQ0dbNBgB1AO5Lvbd1zmC6
+4UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABawIt6QcAAAQDAEYwRAIgfeN7t7a7
+tzRI/1ZrJ9hIl2rf6a6Y1fSe/eLcarJ3LBwCIESLEtcOPhcxsr6Z9al0f88kXxXJ
+jj+SNWbRohnPHAezAHcApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAA
+AAFrAi3pEAAABAMASDBGAiEAos8E+ENBqEjJ5LmyAV6Ow8F8K+PTAWrddU30/OkQ
+pEcCIQCd+roXRhtu3035R7YabZbRsv6nCghbEiPA+XDi6Fzj/wB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABawIt6QwAAAQDAEcwRQIhANoTo4XJ
+SA+XWQig6Nk7cojExJIuFt1zgKrgAVpPvWx9AiAueIHLgBMvLYRJtzf8DHcselI6
+gRqsVymrXx0Vx1PiFgB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGo
+AAABawIt7kEAAAQDAEcwRQIgbbB0ORtaxejib0y5+KhwywZ8wCUUCSxnTbLSHXoD
+gbUCIQDehYRL0pgAa7bTWh17RHnlqO98A3wHVfRjcrVPUrWyYDANBgkqhkiG9w0B
+AQsFAAOCAQEAASNSMCB+4pP9YNyetin88f3LgYV9+rZe3KfBhaVBbfAiQqr62dJc
+4VHfnoVod2qHQo8dpDR/ISmu++l+Us+e0mmf62Uo4N7jgBmowxRMUfyHrUyb7J2H
+3zhgEHmundkU7HaDPRwXF6sXlFi6EIOaTtnrnYmziw8flTajsk7MooZ6wQIJzXGD
+4iDnljRycjURhVCmx3Qpl3I8A4aaC/fG9JRxKUaRNrI+TxGaFJaiy3WsluoZRVEJ
+9U9b2vDE/1mVULb634DXaUsAxnHaVeleiG7dvdS8fNA0m7bAd3W3P5ayM+NRMutQ
+D67sPcjD/XbgeWyNE6S/8EbjvQt/1JXn9g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJpTCCCI2gAwIBAgIMIQ2dv8ebl7tuPgbMMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUyOTA2MDEyNFoXDTIxMDgzMDA2MDEyNFowgZUxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZCYXllcm4xEzARBgNVBAcMClJlZ2Vuc2J1cmcxIDAeBgNVBAoMF1VuaXZl
+cnNpdGFldCBSZWdlbnNidXJnMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMSYwJAYD
+VQQDDB1ycnpmaWxyc2hpYi51bmktcmVnZW5zYnVyZy5kZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMRG/22IY0Gguhf87md1/MQWr+8z8CfH6X2bQXEt
+RQd1ULMXhF/M4kWXM1QHVSEBJ//co3iHWn0YV9OWDW6GcFy0206zT/P1NzhMnkYQ
+tsC773dpMVzFTaqVe1wr9T6DcaBwrA9qEbTlLwq68G4Cvyx49Gym56e/oIS46ydX
+TGccoxcVK4aSoU9w1mGt4OoD9DR8NpC63dRyvHasRKBG3d5ih0PAGqzh5h4CvijP
+A+tJOLwi6r/QGreU0WqGaHa+LD8ho1ufEvHi5N4CHJ5ehWsoG19A7/36y3qf3gHP
+7LBwKgELs5Ss/xCrSyizpOnPutok6EN2g0bgAAf5xmaySQ8CAwEAAaOCBfkwggX1
+MFcGA1UdIARQME4wCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEAYOKwYBBAGBrSGCLAEBBAQwEAYOKwYBBAGBrSGCLAIBBAQwCQYDVR0T
+BAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
+BwMBMB0GA1UdDgQWBBSKYv2gj4rYXo6WStyS7NR09KJiBDAfBgNVHSMEGDAWgBRr
+OpiL+fJTidrgrbIyHgkf6Ko7dDBRBgNVHREESjBIghRycnpmaWxyc2hpYi51bmkt
+ci5kZYIdcnJ6ZmlscnNoaWIudW5pLXJlZ2Vuc2J1cmcuZGWCEXJyemZpbHJzaGli
+LnVyLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4u
+ZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0
+cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2Fj
+cmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29j
+c3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRw
+Oi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9j
+YWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MIIDXQYKKwYBBAHW
+eQIEAgSCA00EggNJA0cAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZ
+EwAAAWsCLejXAAAEAwBHMEUCIA/IlW8ia7oSY39SNYXEXxo4ykK0gJkbKD+yrsAy
+avxyAiEAovIXuYwB4Nw0XvQ7zLr+xqF88edMwHC+8LeVZGuI/MAAdgCq5wt/PLjV
+ZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWsCLejQAAAEAwBHMEUCIQDZQQEI
+bBDTeUUDj5VAZkZsoeW4qX9RRHsdKUtQt4EOsAIgIRCfsREhfDR3Gqdgx1d7lHY0
+ylms8sSJWfgeWssG1rsAdQBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPT
+DAAAAWsCLendAAAEAwBGMEQCIBPRCBFwqNvEV10ui3PKY5u6q/RJdgC1Sba9nOc/
+X/X6AiAfAhTrGFuw5mLXuCIHvlV42t1kdR3y170ZQwQQ0dbNBgB1AO5Lvbd1zmC6
+4UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABawIt6QcAAAQDAEYwRAIgfeN7t7a7
+tzRI/1ZrJ9hIl2rf6a6Y1fSe/eLcarJ3LBwCIESLEtcOPhcxsr6Z9al0f88kXxXJ
+jj+SNWbRohnPHAezAHcApLkJkLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAA
+AAFrAi3pEAAABAMASDBGAiEAos8E+ENBqEjJ5LmyAV6Ow8F8K+PTAWrddU30/OkQ
+pEcCIQCd+roXRhtu3035R7YabZbRsv6nCghbEiPA+XDi6Fzj/wB2ALvZ37wfinG1
+k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABawIt6QwAAAQDAEcwRQIhANoTo4XJ
+SA+XWQig6Nk7cojExJIuFt1zgKrgAVpPvWx9AiAueIHLgBMvLYRJtzf8DHcselI6
+gRqsVymrXx0Vx1PiFgB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGo
+AAABawIt7kEAAAQDAEcwRQIgbbB0ORtaxejib0y5+KhwywZ8wCUUCSxnTbLSHXoD
+gbUCIQDehYRL0pgAa7bTWh17RHnlqO98A3wHVfRjcrVPUrWyYDANBgkqhkiG9w0B
+AQsFAAOCAQEAASNSMCB+4pP9YNyetin88f3LgYV9+rZe3KfBhaVBbfAiQqr62dJc
+4VHfnoVod2qHQo8dpDR/ISmu++l+Us+e0mmf62Uo4N7jgBmowxRMUfyHrUyb7J2H
+3zhgEHmundkU7HaDPRwXF6sXlFi6EIOaTtnrnYmziw8flTajsk7MooZ6wQIJzXGD
+4iDnljRycjURhVCmx3Qpl3I8A4aaC/fG9JRxKUaRNrI+TxGaFJaiy3WsluoZRVEJ
+9U9b2vDE/1mVULb634DXaUsAxnHaVeleiG7dvdS8fNA0m7bAd3W3P5ayM+NRMutQ
+D67sPcjD/XbgeWyNE6S/8EbjvQt/1JXn9g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rrzfilrshib.uni-regensburg.de/Shibboleth.sso/SLO/POST"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rrzfilrshib.uni-regensburg.de/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">MyFiles (Filr)</md:ServiceName>
+		<md:ServiceName xml:lang="en">MyFiles (Filr)</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">MyFiles (Filr) Anmeldung</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">MyFiles (Filr) Registration</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e311</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e311</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Regensburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University Regensburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni-regensburg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni-regensburg.de/index.html.en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Edmund</md:GivenName>
+	<md:SurName>Weber</md:SurName>
+	<md:EmailAddress>mailto:edmund.weber@rz.uni-regensburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Edmund</md:GivenName>
+	<md:SurName>Weber</md:SurName>
+	<md:EmailAddress>mailto:edmund.weber@rz.uni-regensburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Matthias</md:GivenName>
+	<md:SurName>Böhm</md:SurName>
+	<md:EmailAddress>mailto:Matthias.Boehm@rz.uni-regensburg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

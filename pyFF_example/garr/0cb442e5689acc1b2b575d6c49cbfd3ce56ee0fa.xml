@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://id.viko.lt/auth/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://fedi.litnet.lt" registrationInstant="2016-12-09T18:36:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://fedi.litnet.lt/en/information/policy</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="lt">https://fedi.litnet.lt/lt/informacija/tvarka</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ad.viko.lt</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Vilnius University of Applied Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="lt">Vilniaus kolegija</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Vilnius University of Applied Sciences SSO</mdui:Description>
+		<mdui:Description xml:lang="lt">Vilniaus kolegijos vieningas prisijungimas</mdui:Description>
+		<mdui:Keywords xml:lang="en">Vilnius viko university applied sciences</mdui:Keywords>
+		<mdui:Keywords xml:lang="lt">Vilnius viko kolegija</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.viko.lt/en</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="lt">http://www.viko.lt</mdui:InformationURL>
+		<mdui:Logo height="124" width="165" xml:lang="en">https://www.viko.lt/media/uploads/sites/3/2014/10/featured_image-165x124.png</mdui:Logo>
+		<mdui:Logo height="124" width="165" xml:lang="lt">https://www.viko.lt/media/uploads/sites/3/2014/10/featured_image-165x124.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:54.696146,25.256919</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.729471,25.264848</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.731571,25.264467</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.727842,25.261876</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.708538,25.281402</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.676937,25.288160</mdui:GeolocationHint>
+		<mdui:IPHint>193.219.84.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.88.168/29</mdui:IPHint>
+		<mdui:DomainHint>viko.lt</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKjCCAhICCQDuBz9nQtdLSzANBgkqhkiG9w0BAQsFADBXMRswGQYDVQQDDBJ2
+aWtvLnNzby5saXRuZXQubHQxDTALBgNVBAoMBHZpa28xCzAJBgNVBAsMAklUMQsw
+CQYDVQQGEwJMVDEPMA0GA1UEBwwGS2F1bmFzMB4XDTE2MTAyNTEwNDA1MFoXDTI2
+MTAyNTEwNDA1MFowVzEbMBkGA1UEAwwSdmlrby5zc28ubGl0bmV0Lmx0MQ0wCwYD
+VQQKDAR2aWtvMQswCQYDVQQLDAJJVDELMAkGA1UEBhMCTFQxDzANBgNVBAcMBkth
+dW5hczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO4pMj97IgMgjNUw
+BOENzUo0TxLtpwwL6B7yaEeZVLMAwfKihxxni+qfYQpGYEan5t1CEqcRgYrjd6gp
+Bx7bPGnoN/cv7FUjVq8AoH9DTTRX0pdTnLp7oRgYK2QituZlEoMzSD7FAk3LmP9I
+EgR3KmcjzoZvnJjFLJN3R78vWP7cjyOWuyjGneQ9hVhVZhJnYNmGn6AaUp9dfV0Y
+5hQNJs13bwbL8ewIi4xuYPWbY4LKvLXzUYau15opJPNtFrMr6uBA2Sr4CYHaJEJ+
+jerBf7TIiQ6Ruh29r8+b9UjQqj0uCeAsPtQgdt3wLXjC69abys1FoDR51JDBxEO3
+wcV9pVcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAiUELnSrBcOA+WL0IsNalSQdt
+M3/n5paZfXbSxMToohrftIJmIXuHr+c5gKe2thViZc8Z4xfrr9iPm79AePOisdCx
+6a7ro/IIdaTDD2eTT5qqrvJpZne59U6KBH69L4cx75CpTyyjQxkOhaZeuWthaPpq
+vNl5czcal0WY0VBISK/aFwMv0slCoatg567XcIJjZuBCfII15MIXaS7ZknDqvOLQ
+3/+Lkfux/s80H8oISp4BH0C6+dU5Qb1NnJrjNgT41wmcGSJLTMYMAvJZVWwiorYu
+0XeN5g4ELKThKRmNDDWwIZcjWr+C2RQXwqm5BHKZ8RB+FkBMWVIZN9av5eEjGA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKjCCAhICCQDuBz9nQtdLSzANBgkqhkiG9w0BAQsFADBXMRswGQYDVQQDDBJ2
+aWtvLnNzby5saXRuZXQubHQxDTALBgNVBAoMBHZpa28xCzAJBgNVBAsMAklUMQsw
+CQYDVQQGEwJMVDEPMA0GA1UEBwwGS2F1bmFzMB4XDTE2MTAyNTEwNDA1MFoXDTI2
+MTAyNTEwNDA1MFowVzEbMBkGA1UEAwwSdmlrby5zc28ubGl0bmV0Lmx0MQ0wCwYD
+VQQKDAR2aWtvMQswCQYDVQQLDAJJVDELMAkGA1UEBhMCTFQxDzANBgNVBAcMBkth
+dW5hczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO4pMj97IgMgjNUw
+BOENzUo0TxLtpwwL6B7yaEeZVLMAwfKihxxni+qfYQpGYEan5t1CEqcRgYrjd6gp
+Bx7bPGnoN/cv7FUjVq8AoH9DTTRX0pdTnLp7oRgYK2QituZlEoMzSD7FAk3LmP9I
+EgR3KmcjzoZvnJjFLJN3R78vWP7cjyOWuyjGneQ9hVhVZhJnYNmGn6AaUp9dfV0Y
+5hQNJs13bwbL8ewIi4xuYPWbY4LKvLXzUYau15opJPNtFrMr6uBA2Sr4CYHaJEJ+
+jerBf7TIiQ6Ruh29r8+b9UjQqj0uCeAsPtQgdt3wLXjC69abys1FoDR51JDBxEO3
+wcV9pVcCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAiUELnSrBcOA+WL0IsNalSQdt
+M3/n5paZfXbSxMToohrftIJmIXuHr+c5gKe2thViZc8Z4xfrr9iPm79AePOisdCx
+6a7ro/IIdaTDD2eTT5qqrvJpZne59U6KBH69L4cx75CpTyyjQxkOhaZeuWthaPpq
+vNl5czcal0WY0VBISK/aFwMv0slCoatg567XcIJjZuBCfII15MIXaS7ZknDqvOLQ
+3/+Lkfux/s80H8oISp4BH0C6+dU5Qb1NnJrjNgT41wmcGSJLTMYMAvJZVWwiorYu
+0XeN5g4ELKThKRmNDDWwIZcjWr+C2RQXwqm5BHKZ8RB+FkBMWVIZN9av5eEjGA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://id.viko.lt/auth/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://id.viko.lt/auth/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="lt">Vilniaus kolegija</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Vilnius University of Applied Sciences</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="lt">Vilniaus kolegija</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Vilnius University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="lt">http://www.viko.lt</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.viko.lt/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ViKo SSO Admin</md:GivenName>
+	<md:EmailAddress>mailto:kc@viko.lt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Litnet</md:GivenName>
+	<md:SurName>CERT</md:SurName>
+	<md:EmailAddress>mailto:cert@litnet.lt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

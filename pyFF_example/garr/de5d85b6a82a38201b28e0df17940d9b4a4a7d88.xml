@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://proxy-kutztown.klnpa.org/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy-kutztown.klnpa.org/Shibboleth.sso/DS" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">KLN RPAS Kutztown EZP</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.passhe.edu/inside/HR/syshr/healthcare/Documents/Privacy_Practice.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="275" xml:lang="en">https://rpas.klnpa.org/rpas/images/KLNbanLOGO.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHVDCCBjygAwIBAgIQW8/pXW54PM+5RhJy/IC5pDANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0yMDAxMTMwMDAwMDBaFw0yMjAxMTIy
+MzU5NTlaMIHnMQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMTcyNTcxFTATBgNVBAgT
+DFBlbm5zeWx2YW5pYTEVMBMGA1UEBxMMU2hpcHBlbnNidXJnMRwwGgYDVQQJExMx
+ODcxIE9sZCBNYWluIERyaXZlMTAwLgYDVQQKEydTaGlwcGVuc2J1cmcgVW5pdmVy
+c2l0eSBvZiBQZW5uc3lsdmFuaWExJTAjBgNVBAsTHEtleXN0b25lIExpYnJhcnkg
+TmV0d29yayBIdWIxIzAhBgNVBAMMGioucHJveHkta3V0enRvd24ua2xucGEub3Jn
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA12y/vJQ1JLnx9HFaNAwu
+wnOyZ9DTQgVH9ytRKlnMn2vPuOlT0JiyPQzdlENyexgIGKMexQUhOExb0scbA4dc
+duVSkf2roBbeg0wmZhR2Udc67JOWoc+gNRtzawdkWqwxVfL28QLqVoH5Aq1vucKt
+O6PhrGjnSD9W2jZeZuq6jIRttiwy4gFndoFkY9Ap0sXpckAJt+Mcn03QSkslJPjB
+rqCawqIvuFaoEoXZ4RiBnX8/SjESssHoAxEL0cESG5p6yPcAn+95WWQaLQv46EkU
+p4e2lRihc+C467W6meRKehduHHIMsd/NBoS45lCD7fMoXzFOiLr6ocXaFqljnU8n
+RQIDAQABo4IDajCCA2YwHwYDVR0jBBgwFoAUHgWjd49sluJbh0umtIascQAM5zgw
+HQYDVR0OBBYEFOLP//EE6w+IAQJrnKw5t2Qfq2TbMA4GA1UdDwEB/wQEAwIFoDAM
+BgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBnBgNV
+HSAEYDBeMFIGDCsGAQQBriMBBAMBATBCMEAGCCsGAQUFBwIBFjRodHRwczovL3d3
+dy5pbmNvbW1vbi5vcmcvY2VydC9yZXBvc2l0b3J5L2Nwc19zc2wucGRmMAgGBmeB
+DAECAjBEBgNVHR8EPTA7MDmgN6A1hjNodHRwOi8vY3JsLmluY29tbW9uLXJzYS5v
+cmcvSW5Db21tb25SU0FTZXJ2ZXJDQS5jcmwwdQYIKwYBBQUHAQEEaTBnMD4GCCsG
+AQUFBzAChjJodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vSW5Db21tb25SU0FTZXJ2
+ZXJDQV8yLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRydXN0LmNv
+bTA/BgNVHREEODA2ghoqLnByb3h5LWt1dHp0b3duLmtsbnBhLm9yZ4IYcHJveHkt
+a3V0enRvd24ua2xucGEub3JnMIIBfgYKKwYBBAHWeQIEAgSCAW4EggFqAWgAdwBG
+pVXrdfqRIDC1oolp9PN9ESxBdL79SbiFq/L8cP5tRwAAAW+giHw2AAAEAwBIMEYC
+IQCIp8vm5Wcs5i7nfjUJcM3IZy+jeEGgkIXgCG6/fXDeKwIhANDaZ2IPBF6Qb9Vd
+KypWktg+6+SRnPfbvtzhrqNEP/3SAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQAp
+Bo2yCJo32RMAAAFvoIh9JAAABAMARzBFAiBAka55xyO3IzBIhnezn94m4LfLp3QX
+V3gPgpA12TRDowIhAM/Lpk82vDPCxFv4fVinJh5tKGdf7cVJzOnLPoXWyp3GAHUA
+IkVFB1lVJFaWP6Ev8fdthuAjJmOtwEt/XcaDXG7iDwIAAAFvoIh8VwAABAMARjBE
+AiBJNNQfAk7A4q72zK+g4W5tpKCRnaMgQXNmI7Gh1CgcjwIge/cC2ZMSrhwZ01qm
+m12tdRbCAC3vMD+cnq3tceTDDdswDQYJKoZIhvcNAQELBQADggEBACYioLpcT423
+mPLSQcCSYLmPVhUxYjn92EfhSTEncpI27SyQo4vTJMENL7wTlWCqiSJlDO1BkpfV
+ACpIgarDeMdC5nbKQqADd7QSBOoUJbcBOkLFk0XKf6aNLPraw4XQJ27yzQf351TB
+NvSuGF0zS4RXH4tiaKRdrk6aAHm9Ht58+nLvqg2ZS4iYDgGCISSmys6k1zKBXNH2
+nsyAFqGVGJQJRvqwnAitOLaPJQhWd+Ymb9JdysKE3ci3eYP0W5SSurGbsV8vl5yY
+mIt/fjIjpyMyyZ1AOTec4dPTVx/TEEtB61/jwiVGIlPB+dbhkiKmMy3o+lo2wOJQ
+J68iwiLcwDM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy-kutztown.klnpa.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://proxy-kutztown.klnpa.org/Shibboleth.sso/SAML2/POST-Si" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://proxy-kutztown.klnpa.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://proxy-kutztown.klnpa.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">KLN RPAS Kutztown EZP</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Pennsylvania State System of Higher Education (PASSHE) Office of the Chancellor</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Pennsylvania State System of Higher Education (PASSHE) Office of the Chancellor</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.passhe.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Keystone Library Network</md:GivenName>
+	<md:EmailAddress>kln@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Keystone Library Network</md:GivenName>
+	<md:EmailAddress>kln@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Keystone Library Network Hub</md:GivenName>
+	<md:EmailAddress>kln@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Keystone Library Network Hub</md:GivenName>
+	<md:EmailAddress>kln@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

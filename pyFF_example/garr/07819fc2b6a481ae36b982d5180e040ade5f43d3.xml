@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ifremer.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2012-03-09T11:38:30Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ifremer.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">French Research Institute for Exploitation of the Sea</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="fr">http://www.ifremer.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Ifremer members and partners</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">IFREMER</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels et partenaires Ifremer</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUOIqkPXAt3sQ6YTpkVpANOLD+UnwwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmlmcmVtZXIuZnIwHhcNMTUwMzI2MTI0NzI2WhcN
+MzUwMzI2MTE0NzI2WjAZMRcwFQYDVQQDEw5pZHAuaWZyZW1lci5mcjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJrYUW43U4Y3lQNIvuWa/eSgraToesPK
+uVlAZBRGjigr7RXQmFmO5f0RS+sYC6WSLQnVy2JAstZaK+0mU3acO5fP2efkGPex
+0exMrk7q8aniouqpf3GJGFr12oMIm4L7Q2kA3dt1uNrX6Pmi8qr9DuH7qI9v9w9M
+T3TSuw4ckOTHS0n90e4IyEBGHF2fNjPwz+HyGWitfO8z8EY3arRESC6d36waQiwb
+4ihX5AtK5m8xuUswfhnWGWxCr/950KtEdCCBdPGPDofJ6UJk6e3PqpccHKT2fcs0
+mvQOW9+jGVaUJ5DuFzaAB0WAbxCu1mdoF4LZlaA6qdno5Zogov3mgZkCAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLmlmcmVtZXIuZnKGJWh0dHBzOi8vaWRwLmlmcmVt
+ZXIuZnIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFIqQvkBVgoKquZTJ7uCj1N0k
+E93+MA0GCSqGSIb3DQEBBQUAA4IBAQAsmJ2glUzXy8KVzB1lnKtOnOvH2LbQOE0k
+p8rOVoXFOFPsL5pHY0pCB647ClImVn6DkdcWmrq2acAw1b8IG6CqedMdpqVhwT0n
+ulijMVTD987oah+xj1TPSW+U7VSHDw1cx0KAKC6QQAKq8qIju9Oy7Dgl/FxnSb3i
+uU4gKDT2h2ygqY9keROeWZaAhsCdz5begn6E4ZfVcntHZbYhSKwZ5VwKa87xOzap
+B0qW+1N+EhA//tGc4457hCnKN/YTj2tVgIiH5WDBLZDLjUWhyjX0e7hVg2NvpGPr
+HMX9vyZ286HenUWfR1k+S712csAxIJihzyf/h4hC3Nh48HmYnWe8
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ifremer.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ifremer.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ifremer.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IFREMER Centre de Brest</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">IFREMER Centre de Brest</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ifremer.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Grégory Rocher</md:SurName>
+	<md:EmailAddress>mailto:Gregory.Rocher@ifremer.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Patrick Bossard</md:SurName>
+	<md:EmailAddress>mailto:Patrick.Bossard@ifremer.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibint.webassign.net/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shibint.webassign.net/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Webassign - Integrations</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shibboleth Integrations</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.cengage.com/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="46" width="214" xml:lang="en">https://www.webassign.com/wp-content/themes/webassign/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGtDCCBZygAwIBAgIHBx3OYpjt3TANBgkqhkiG9w0BAQsFADCBjDELMAkGA1UE
+BhMCSUwxFjAUBgNVBAoTDVN0YXJ0Q29tIEx0ZC4xKzApBgNVBAsTIlNlY3VyZSBE
+aWdpdGFsIENlcnRpZmljYXRlIFNpZ25pbmcxODA2BgNVBAMTL1N0YXJ0Q29tIENs
+YXNzIDIgUHJpbWFyeSBJbnRlcm1lZGlhdGUgU2VydmVyIENBMB4XDTE1MDQxNjE3
+NDIxMFoXDTE3MDQxNjE2MjE0OVowgbYxCzAJBgNVBAYTAlVTMRcwFQYDVQQIEw5O
+b3J0aCBDYXJvbGluYTEQMA4GA1UEBxMHUmFsZWlnaDE5MDcGA1UEChMwV2ViQXNz
+aWduIChBZHZhbmNlZCBJbnN0cnVjdGlvbmFsIFN5c3RlbXMsIEluYy4pMRgwFgYD
+VQQDFA8qLndlYmFzc2lnbi5uZXQxJzAlBgkqhkiG9w0BCQEWGGhvc3RtYXN0ZXJA
+d2ViYXNzaWduLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANNE
+7Ne+VRMSh8ofCPMzyi2i1fbSEj7Vob4R5E5gHv0qWgbrPPkogArMfSWMXZjOQCMM
+KjjEtlU+og7ngOG1iqvpjQ1yRZ+0oQGCg/e0dGJHyZTeb6dd8C6uH/Qo41MsyGXH
+68wVYb57Jqu9d146uKBoKI/My3c8aMMayqUjmoB7YVQ9k102x6rO0bMj12Vm7M6N
+pvg+O/LBHtqS3bNLgK5/Y9FCeh3Vmr0SREZuTdJNozl8f0/TksVU7y18uV6jw330
+JVnKDeg89wdMHkviCPD77A4DUWJiJHycxvud1+sTNOkxjV7JLtqYxwOYIgDHjs9L
+cGSwvU3FL6M1EX1kgccCAwEAAaOCAu0wggLpMAkGA1UdEwQCMAAwCwYDVR0PBAQD
+AgOoMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNVHQ4EFgQU4DiG
+pTCQK/nV7v8ZUMEdBQTE0VYwHwYDVR0jBBgwFoAUEdsjRf1UzGpxb4SKA9e+9wEv
+JoYwKQYDVR0RBCIwIIIPKi53ZWJhc3NpZ24ubmV0gg13ZWJhc3NpZ24ubmV0MIIB
+VgYDVR0gBIIBTTCCAUkwCAYGZ4EMAQICMIIBOwYLKwYBBAGBtTcBAgMwggEqMC4G
+CCsGAQUFBwIBFiJodHRwOi8vd3d3LnN0YXJ0c3NsLmNvbS9wb2xpY3kucGRmMIH3
+BggrBgEFBQcCAjCB6jAnFiBTdGFydENvbSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0
+eTADAgEBGoG+VGhpcyBjZXJ0aWZpY2F0ZSB3YXMgaXNzdWVkIGFjY29yZGluZyB0
+byB0aGUgQ2xhc3MgMiBWYWxpZGF0aW9uIHJlcXVpcmVtZW50cyBvZiB0aGUgU3Rh
+cnRDb20gQ0EgcG9saWN5LCByZWxpYW5jZSBvbmx5IGZvciB0aGUgaW50ZW5kZWQg
+cHVycG9zZSBpbiBjb21wbGlhbmNlIG9mIHRoZSByZWx5aW5nIHBhcnR5IG9ibGln
+YXRpb25zLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLnN0YXJ0c3NsLmNv
+bS9jcnQyLWNybC5jcmwwgY4GCCsGAQUFBwEBBIGBMH8wOQYIKwYBBQUHMAGGLWh0
+dHA6Ly9vY3NwLnN0YXJ0c3NsLmNvbS9zdWIvY2xhc3MyL3NlcnZlci9jYTBCBggr
+BgEFBQcwAoY2aHR0cDovL2FpYS5zdGFydHNzbC5jb20vY2VydHMvc3ViLmNsYXNz
+Mi5zZXJ2ZXIuY2EuY3J0MCMGA1UdEgQcMBqGGGh0dHA6Ly93d3cuc3RhcnRzc2wu
+Y29tLzANBgkqhkiG9w0BAQsFAAOCAQEAm2zqtGHQpUTpocJaLjS6MDHFIioYYNhE
+Eg6qR8eoDeOCb6lJ7LlHMA/grVQ8rCQM+b7f5pp9NVB9icSmuijflQEYQNVxJdDD
+iKRw/5BNgitAqdzeIGUA3eA9kZDzBm+ZnXkb/gsTiHrAOIsAHpqIVmVkpNG5xLK3
+NZSZ8I6BpxYXuklpQiqYhix7j33BMx9WmXVbxBDyFFCWMEYhVJfhFyOhpUNyLljE
+L1w65SA7X1AgB2x3zTlL3EfrjTnJaAMzz2qCvlTMdmYT+XmgaBNq08un9JnNa8EQ
+3QhMBkpxpdG7DQxhEkDyZUArmdH011y94LJk3W5or4AQna2hVQSs8g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibint.webassign.net/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibint.webassign.net/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shibint.webassign.net/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shibint.webassign.net/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">WebAssign</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">WebAssign</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.webassign.net/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Brent Wells</md:GivenName>
+	<md:EmailAddress>bwells@webassign.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Brent Wells</md:GivenName>
+	<md:EmailAddress>bwells@webassign.net</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Brent Wells</md:GivenName>
+	<md:EmailAddress>brent.wells@cengage.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

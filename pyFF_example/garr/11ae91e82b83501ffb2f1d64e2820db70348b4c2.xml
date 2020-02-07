@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth2.uni-koblenz.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2016-10-12T05:50:49Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/rarp-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-koblenz.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">uni-landau.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">uni-koblenz-landau.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität Koblenz-Landau</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University Koblenz-Landau</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Mitarbeitende und Studierende der Universität Koblenz-Landau</mdui:Description>
+		<mdui:Description xml:lang="en">Staff and Students of the University Koblenz-Landau</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.uni-koblenz-landau.de/favicon.ico</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.uni-koblenz-landau.de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.uni-koblenz-landau.de/en</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJsTCCCJmgAwIBAgIMISwE9dInoLfklb2SMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDYyMTA3Mjk0NVoXDTIxMDkyMjA3Mjk0NVowgZQxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxEDAOBgNVBAcMB0tvYmxlbnoxJDAiBgNVBAoM
+G1VuaXZlcnNpdGFldCBLb2JsZW56LUxhbmRhdTEOMAwGA1UECwwFR0hSS08xIzAh
+BgNVBAMMGnNoaWJib2xldGgyLnVuaS1rb2JsZW56LmRlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEApQ1+kwVxAShfLCimAu08PIi7MN0ruehfOMeoXsJz
+TSsPEw4wNUqZNPA65xaNvKntuWO69OiVIhRPZH4Yhv1DEHRwCcvQmbURZ60Jf+H7
+JJVcZGoPR921yjQ75PMYUebtOs95MQDB3qeOyZawA/DMVVf5WIfltKflDkuo8UM8
+dZbA1tZvo84wCZxNeYCrzY5wN7eVxRJjSxfqlPP3ra7q7My3cmqMnX53fYuavx3C
+3OlpCUcO2ZXvXro94cTOpQ5Ng24GXjuw3mX4bWT4j5gfHrgOSpfPxBsiS0SKzKL5
+fUdrGfA4hi9DwZC97GHa40cSMv69hMgjtvdYfGIx3iuhUQIDAQABo4IGBjCCBgIw
+VwYDVR0gBFAwTjAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGC
+LAEBBDAQBg4rBgEEAYGtIYIsAQEEBDAQBg4rBgEEAYGtIYIsAgEEBDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFA5eWgE8DMPXHsvFoln1ejnl5XM1MB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MGAGA1UdEQRZMFeCGnNoaWJib2xldGgyLnVuaS1r
+b2JsZW56LmRlgh5zaGliYm9sZXRoMi1uZXcudW5pLWtvYmxlbnouZGWCGXNoaWJi
+b2xldGgudW5pLWtvYmxlbnouZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDov
+L2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2Fjcmwu
+Y3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwt
+ZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUF
+BzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYI
+KwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1n
+Mi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAy
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwggNbBgorBgEEAdZ5AgQCBIIDSwSCA0cDRQB1AG9Tdqwx8DEZ2JkApFEV/3cV
+HBHZAsEAKQaNsgiaN9kTAAABa3jxBAsAAAQDAEYwRAIgRd47Genk8jDdOS+AVFFj
+GYykLOXgpjTkufY1GciBUE4CIEEvl2yJ9/cKelN6bATfjfdD3R4eQ9EPyvu9+/Yh
+tFZpAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFrePEFCwAA
+BAMARzBFAiEAw5V2LPfmAKlQRZjMLFV0EsJ9vuh1IrAB4mjDUquZBGkCIEoY1GGY
+uGkxIzqIojnnrhNRrBD0ok1Pswi7OvsgJ4wdAHUAqucLfzy41WbIbC8Wl5yfRF9p
+qw60U1WJsvd6AwEE880AAAFrePEECgAABAMARjBEAiBQ7uUKTT5chbg7zca1vwKt
+zcC7XB5AZFBw5/BPlZ8vNQIgPU5u7bS8ub6dm+7J47hthPF4qN8XS9UBI0NQ4jV+
+LlIAdQDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWt48QRUAAAE
+AwBGMEQCIAuzEynKpSg3EJfr2ox+cKMWPsi/2wSrPipSXw0tOvHyAiAGRDZgyoyP
++Ef6uoinqB99auLYBPVSEsmojGJYphNLDAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABa3jxBE0AAAQDAEcwRQIhAO83TdRJCfCdVGw8TgvC5U7V
+ojBxcDHQmfd1vObFQfC2AiAW3GMIwAK/qYdu2Rxct6QFGHYxu8ho9hbQGUIMKOKm
+jAB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABa3jxBDUAAAQD
+AEcwRQIhANAoXNrTEloBslKv4JM2mM9JzeA/LyX2azya0l7Ydg7MAiAxtP6tr7Sp
+Ah17o7BMMFl0sj3/034WJkOS2BUJlCFpOwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABa3jxCkkAAAQDAEcwRQIhAOMMdZ+ald9qa8wribsGYtft
+7htBmhUEMo8AR9UH0x5WAiAMttv5qOYbYHl1vZPCtjQrSS7YzMiqapEcFsyJndNH
+ODANBgkqhkiG9w0BAQsFAAOCAQEAFhp8trjddNxb7mf32m/R9n56+tkvVhG4jqSw
+mIMM3JdMub4gwaKEeyof911hcAELt5FhPaT+AM5hOUkixFCdL1oX1QR5qAcXe2BA
+09Y6pGf75rTBDLoD1vF17RW7x82LrqsCQNwj4hidegP9VNwppzazkbSH7ZqSjIsi
+v28F57SmtaAmn8JPTkx4XpVUWafu6N3A0Ws1LnRQ85kxy5WzU4q1Wma6DyXA1oUm
+DWop7D4965oX5PNFlXuYi395zbCAqFQODdHTF8bTvD8YWw/28LCKz1x9tOsDfRB9
+bMLQe82J/SVeLNkl6tDL2w0eh3gFpRnaPh2QLNbWq8F1vwwwDQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth2.uni-koblenz.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth2.uni-koblenz.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/Post/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/Post-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth2.uni-koblenz.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth2.uni-koblenz.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-koblenz.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">uni-landau.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">uni-koblenz-landau.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJsTCCCJmgAwIBAgIMISwE9dInoLfklb2SMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDYyMTA3Mjk0NVoXDTIxMDkyMjA3Mjk0NVowgZQxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxEDAOBgNVBAcMB0tvYmxlbnoxJDAiBgNVBAoM
+G1VuaXZlcnNpdGFldCBLb2JsZW56LUxhbmRhdTEOMAwGA1UECwwFR0hSS08xIzAh
+BgNVBAMMGnNoaWJib2xldGgyLnVuaS1rb2JsZW56LmRlMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEApQ1+kwVxAShfLCimAu08PIi7MN0ruehfOMeoXsJz
+TSsPEw4wNUqZNPA65xaNvKntuWO69OiVIhRPZH4Yhv1DEHRwCcvQmbURZ60Jf+H7
+JJVcZGoPR921yjQ75PMYUebtOs95MQDB3qeOyZawA/DMVVf5WIfltKflDkuo8UM8
+dZbA1tZvo84wCZxNeYCrzY5wN7eVxRJjSxfqlPP3ra7q7My3cmqMnX53fYuavx3C
+3OlpCUcO2ZXvXro94cTOpQ5Ng24GXjuw3mX4bWT4j5gfHrgOSpfPxBsiS0SKzKL5
+fUdrGfA4hi9DwZC97GHa40cSMv69hMgjtvdYfGIx3iuhUQIDAQABo4IGBjCCBgIw
+VwYDVR0gBFAwTjAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGC
+LAEBBDAQBg4rBgEEAYGtIYIsAQEEBDAQBg4rBgEEAYGtIYIsAgEEBDAJBgNVHRME
+AjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUH
+AwEwHQYDVR0OBBYEFA5eWgE8DMPXHsvFoln1ejnl5XM1MB8GA1UdIwQYMBaAFGs6
+mIv58lOJ2uCtsjIeCR/oqjt0MGAGA1UdEQRZMFeCGnNoaWJib2xldGgyLnVuaS1r
+b2JsZW56LmRlgh5zaGliYm9sZXRoMi1uZXcudW5pLWtvYmxlbnouZGWCGXNoaWJi
+b2xldGgudW5pLWtvYmxlbnouZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDov
+L2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2Fjcmwu
+Y3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwt
+ZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUF
+BzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYI
+KwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1n
+Mi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAy
+LnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5j
+cnQwggNbBgorBgEEAdZ5AgQCBIIDSwSCA0cDRQB1AG9Tdqwx8DEZ2JkApFEV/3cV
+HBHZAsEAKQaNsgiaN9kTAAABa3jxBAsAAAQDAEYwRAIgRd47Genk8jDdOS+AVFFj
+GYykLOXgpjTkufY1GciBUE4CIEEvl2yJ9/cKelN6bATfjfdD3R4eQ9EPyvu9+/Yh
+tFZpAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFrePEFCwAA
+BAMARzBFAiEAw5V2LPfmAKlQRZjMLFV0EsJ9vuh1IrAB4mjDUquZBGkCIEoY1GGY
+uGkxIzqIojnnrhNRrBD0ok1Pswi7OvsgJ4wdAHUAqucLfzy41WbIbC8Wl5yfRF9p
+qw60U1WJsvd6AwEE880AAAFrePEECgAABAMARjBEAiBQ7uUKTT5chbg7zca1vwKt
+zcC7XB5AZFBw5/BPlZ8vNQIgPU5u7bS8ub6dm+7J47hthPF4qN8XS9UBI0NQ4jV+
+LlIAdQDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWt48QRUAAAE
+AwBGMEQCIAuzEynKpSg3EJfr2ox+cKMWPsi/2wSrPipSXw0tOvHyAiAGRDZgyoyP
++Ef6uoinqB99auLYBPVSEsmojGJYphNLDAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABa3jxBE0AAAQDAEcwRQIhAO83TdRJCfCdVGw8TgvC5U7V
+ojBxcDHQmfd1vObFQfC2AiAW3GMIwAK/qYdu2Rxct6QFGHYxu8ho9hbQGUIMKOKm
+jAB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABa3jxBDUAAAQD
+AEcwRQIhANAoXNrTEloBslKv4JM2mM9JzeA/LyX2azya0l7Ydg7MAiAxtP6tr7Sp
+Ah17o7BMMFl0sj3/034WJkOS2BUJlCFpOwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABa3jxCkkAAAQDAEcwRQIhAOMMdZ+ald9qa8wribsGYtft
+7htBmhUEMo8AR9UH0x5WAiAMttv5qOYbYHl1vZPCtjQrSS7YzMiqapEcFsyJndNH
+ODANBgkqhkiG9w0BAQsFAAOCAQEAFhp8trjddNxb7mf32m/R9n56+tkvVhG4jqSw
+mIMM3JdMub4gwaKEeyof911hcAELt5FhPaT+AM5hOUkixFCdL1oX1QR5qAcXe2BA
+09Y6pGf75rTBDLoD1vF17RW7x82LrqsCQNwj4hidegP9VNwppzazkbSH7ZqSjIsi
+v28F57SmtaAmn8JPTkx4XpVUWafu6N3A0Ws1LnRQ85kxy5WzU4q1Wma6DyXA1oUm
+DWop7D4965oX5PNFlXuYi395zbCAqFQODdHTF8bTvD8YWw/28LCKz1x9tOsDfRB9
+bMLQe82J/SVeLNkl6tDL2w0eh3gFpRnaPh2QLNbWq8F1vwwwDQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth2.uni-koblenz.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth2.uni-koblenz.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e52</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e52</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Koblenz-Landau</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University Koblenz-Landau</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni-koblenz-landau.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni-koblenz-landau.de/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Uwe</md:GivenName>
+	<md:SurName>Arndt</md:SurName>
+	<md:EmailAddress>mailto:arndt@uni-koblenz.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Uwe</md:GivenName>
+	<md:SurName>Arndt</md:SurName>
+	<md:EmailAddress>mailto:support@uni-koblenz.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Uwe</md:GivenName>
+	<md:SurName>Arndt</md:SurName>
+	<md:EmailAddress>mailto:support@uni-koblenz.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>GHRKO</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@uni-koblenz.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

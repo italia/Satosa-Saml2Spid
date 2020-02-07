@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.it.utsa.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.utsa.edu/oit/oitConnect.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">utsa.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Texas at San Antonio</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Use your myUTSA ID to login to services across the UT System federation, other Universities worldwide, and 3rd party applications affiliated with UTSA.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.utsa.edu/policies/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="54" width="338" xml:lang="en">https://sso.it.utsa.edu/images/utsa-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAM22PHlkUkZ7H2NuIyyIWIZjQU43MA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD3Nzby5pdC51dHNhLmVkdTAeFw0xMjA2MTgxOTQ5MjJa
+Fw0zMjA2MTgxOTQ5MjJaMBoxGDAWBgNVBAMTD3Nzby5pdC51dHNhLmVkdTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI5rIo2M+9aJDim1gChL/SwuXKCd
+S1L18jQ9m/ic2ym9/RBmPTpC3RKhSrXWWodP7zvB0QHTs6lCajS7jOI2ekEJzgw1
+nspJ35XPYMIC/o7779I3O6p8NyVPB4kX3PXkubLg+GmdYDwTlb3uyjWOWrXekqRm
+T/KrXFZTCrQClpKGA02tw/NvBVjhbhe0MoNZQ1m61RmwNAhsgSLsYttqKYZ2Wsd4
+cycSqepne4HScUaSUML0upV7JKqwHzmI2XCxVPmqH94wvpGTVciCJvhySHUC6wY4
+2KQ8JLCXAwjHWVLpUIBQqbKmRdKdsGPDj29lfZVJB1vC+DiQ1Vp4cB0lbWkCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPc3NvLml0LnV0c2EuZWR1hiZodHRwczovL3Nzby5p
+dC51dHNhLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUljPRLnL+kddcavGE
+aB+lDMkHJCowDQYJKoZIhvcNAQEFBQADggEBAIJSItYxCCiwhl+DZo3cS5SW3PZy
+rGK+gj2zz5sPLZmnxWZjuDhlLNgNUJUUDdj9cIXNnvNbDrI8Zc0qYU6pObZBuqCj
+0E/JwdqV5Eg+VvqF6JQNAq2P5SNchrYUMKHzP1L3jxlXktfaS4eMx2uHIVY8R68D
+iQ5fliYThKrJqgk6ednPEtrrPilgj6Uf3xDhgEUpwz3BnaD+wspgy8Q5bMopemQP
+e8g7uW6MNZsIkFmTB9uoLKl8uR1ZltQ5yUbsAGX/quNNp90GfSQ6+yGoCgzKB7Y+
+9VJ4X+72+6wE0PfyOB3MGALob67EhNvVLTo+NdYVUd87EYCbcRgbTdAsbes=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.it.utsa.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.it.utsa.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.it.utsa.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Texas at San Antonio</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Texas at San Antonio</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.utsa.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mark McCoy</md:GivenName>
+	<md:EmailAddress>mark.mccoy@utsa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support - OIT Connect</md:GivenName>
+	<md:EmailAddress>oitconnect@utsa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Dan Byrd</md:GivenName>
+	<md:EmailAddress>dan.byrd@utsa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mark McCoy</md:GivenName>
+	<md:EmailAddress>mark.mccoy@utsa.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

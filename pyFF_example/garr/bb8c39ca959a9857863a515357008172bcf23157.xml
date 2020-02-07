@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.nwhc.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-10-15T10:33:15Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nwhc.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">North Warwickshire &amp; South Leicestershire College</mdui:DisplayName>
+		<mdui:Logo height="60" width="80">https://www.nwhc.ac.uk/images/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.nwhc.ac.uk/images/logo-icon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAKUnamKmXgk/Lnzrnwf+feRMH4ddMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5ud2hjLmFjLnVrMB4XDTEzMDgwNTEwMDExOVoX
+DTMzMDgwNTEwMDExOVowGTEXMBUGA1UEAxMOaWRwLm53aGMuYWMudWswggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCiXdo51PeQig41pAibbuK8eFwjkmWH
+wwlJXw7EKABKtCmOpL00UEYy7qpKg8oHdX2VN9UssKX7PtFnDCMEcS1J7V5lbTCm
+xOsTc26qIqoPyPY3z5qKETdv9jkl6UezHanB+kG6OOZxYNsZQVmElLsTIbxiW6gT
+caGp6LotUxxNurn+kbX+EQas4B74IRrGtIhzG66xYFhQaBHqcsghcs4wQnxAz1hY
+aLJ+dns79/BE/MLV+rOcuqKQuRWp4qBEDEbuVA8mQVhtBZmTbxrUCv81cl0tKCGZ
+xlc1E3v6jAHGq6sVHJu342NRkW7FCICsKww3RqMUY90G/c1XaUfUAYsTAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5ud2hjLmFjLnVrhiVodHRwczovL2lkcC5ud2hj
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSa5qcFRjhigspQsL6d5yEN
+3Q9YEjANBgkqhkiG9w0BAQUFAAOCAQEAhQxixhw6sfaHJtRPtYZ9hfhQSi/p0O3h
+PllwONLp9zTaUDvPyu5XQ+Oh0//hT8xAiyEDEYBp04/a1HAPFNYMr3uAaYSiXi0P
+26zIPlALtOTtF8wpdd88zX4LS567vKihExhZgnJjyLhOlisw4q6PH0FTq1ope8oN
+SyWYSxSOjXt4S2+vEJMztj7NNicN1Doa1DA5hqrqIhdP5vrcNgWdRztruJ8YBbsC
+NiuA0dJ/7ViPa01B7CdxRahAGUIc3VFLS3IA8JExlHuwyAy2YCQs7+W0ftZa1DID
+myaovCB2VxASeOcSFk+AxnroXAhfkukp/5FM4lVI6rOAns40DaSHNw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nwhc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nwhc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nwhc.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nwhc.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nwhc.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.nwhc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nwhc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.nwhc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nwhc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nwhc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAKUnamKmXgk/Lnzrnwf+feRMH4ddMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5ud2hjLmFjLnVrMB4XDTEzMDgwNTEwMDExOVoX
+DTMzMDgwNTEwMDExOVowGTEXMBUGA1UEAxMOaWRwLm53aGMuYWMudWswggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCiXdo51PeQig41pAibbuK8eFwjkmWH
+wwlJXw7EKABKtCmOpL00UEYy7qpKg8oHdX2VN9UssKX7PtFnDCMEcS1J7V5lbTCm
+xOsTc26qIqoPyPY3z5qKETdv9jkl6UezHanB+kG6OOZxYNsZQVmElLsTIbxiW6gT
+caGp6LotUxxNurn+kbX+EQas4B74IRrGtIhzG66xYFhQaBHqcsghcs4wQnxAz1hY
+aLJ+dns79/BE/MLV+rOcuqKQuRWp4qBEDEbuVA8mQVhtBZmTbxrUCv81cl0tKCGZ
+xlc1E3v6jAHGq6sVHJu342NRkW7FCICsKww3RqMUY90G/c1XaUfUAYsTAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5ud2hjLmFjLnVrhiVodHRwczovL2lkcC5ud2hj
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSa5qcFRjhigspQsL6d5yEN
+3Q9YEjANBgkqhkiG9w0BAQUFAAOCAQEAhQxixhw6sfaHJtRPtYZ9hfhQSi/p0O3h
+PllwONLp9zTaUDvPyu5XQ+Oh0//hT8xAiyEDEYBp04/a1HAPFNYMr3uAaYSiXi0P
+26zIPlALtOTtF8wpdd88zX4LS567vKihExhZgnJjyLhOlisw4q6PH0FTq1ope8oN
+SyWYSxSOjXt4S2+vEJMztj7NNicN1Doa1DA5hqrqIhdP5vrcNgWdRztruJ8YBbsC
+NiuA0dJ/7ViPa01B7CdxRahAGUIc3VFLS3IA8JExlHuwyAy2YCQs7+W0ftZa1DID
+myaovCB2VxASeOcSFk+AxnroXAhfkukp/5FM4lVI6rOAns40DaSHNw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nwhc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nwhc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">North Warwickshire and Hinckley College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">North Warwickshire &amp; South Leicestershire College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nwhc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Overt Software Support</md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Garry</md:GivenName>
+	<md:SurName>Plowman</md:SurName>
+	<md:EmailAddress>mailto:garry.plowman@nwhc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

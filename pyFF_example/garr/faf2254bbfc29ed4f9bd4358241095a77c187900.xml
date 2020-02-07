@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.csudh.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csudh.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">California State University, Dominguez Hills</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.csudh.edu/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="180" xml:lang="en">https://www.csudh.edu/Assets/global/csudh-logos/csudh-logo-stacked-1line-4c-rgb-186x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANeY/RLkDO75ID8/y/KUDKMnPdByMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5jc3VkaC5lZHUwHhcNMDkwMzIzMTg1MTAzWhcN
+MjkwMzIzMTg1MTAzWjAYMRYwFAYDVQQDEw1pZHAuY3N1ZGguZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp8DJ+Nw+yT/t1rviV96XFRlnywdSxqSh
+V373hMtPnc7NKxmsLPQaAfUQLNhtiuiN+/ovd1mYELAnOyyYrSzOJRPKjE9PX8jC
+kbU1+adXtQoJlwNUHcUJSSN2OGn2CeZ9EccXcY6nY9sszbeACoolqwrIA8Gu8gTR
+gSvW+c3wo8jfqU+YORn6mhjvREYu3ihPvYTPO3ua69RCtNz8oQbgFuFQLNwl6BUh
+C8wsy7w+AfAHZBzauJRINSQvdlfMa6ccSx28YYuYEXUPJVrZPyUMB9bquEWp7BKj
+sjNZC01BuqwniNfx/sNJgYdumFxUuB3/k2sOvsp4yAEhQzCeuBE4GwIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAuY3N1ZGguZWR1hiRodHRwczovL2lkcC5jc3VkaC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMKmWnoi0r9gklCAWDR0usT0UpCF
+MA0GCSqGSIb3DQEBBQUAA4IBAQAEF+eHgLUR9GIYywmm8QELgZefShbL2NFmMdQD
+y8YYUgNihIfGQCNfKmwYza/IGcX+I0VRy1JJTl2I0Hh0lwlko5shlePusE3mfCFN
+PNXZUvqxz2P7sAXtACXeLMTDtHavLLRahAe5/5DrnvfnvOEcyvZauG9sbmuZynMB
+Vk3538+mFZYtzNCy8h1ktC/cuUb3ob8Z0FFnGb1fz85EelTR3f2IA8b9yd0E7gnm
+hXTR1kkUpNO7jUMAPq2Rrd0a/VddMYHrNI21N+wljDMzwLbSWnIS79Mz0ZWjbKLQ
+5VU76CVb2WjBzvjqvkAxQS8f314tfLV278aPl2XTF9lQwnxJ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.csudh.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.csudh.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.csudh.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.csudh.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.csudh.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csudh.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANeY/RLkDO75ID8/y/KUDKMnPdByMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5jc3VkaC5lZHUwHhcNMDkwMzIzMTg1MTAzWhcN
+MjkwMzIzMTg1MTAzWjAYMRYwFAYDVQQDEw1pZHAuY3N1ZGguZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp8DJ+Nw+yT/t1rviV96XFRlnywdSxqSh
+V373hMtPnc7NKxmsLPQaAfUQLNhtiuiN+/ovd1mYELAnOyyYrSzOJRPKjE9PX8jC
+kbU1+adXtQoJlwNUHcUJSSN2OGn2CeZ9EccXcY6nY9sszbeACoolqwrIA8Gu8gTR
+gSvW+c3wo8jfqU+YORn6mhjvREYu3ihPvYTPO3ua69RCtNz8oQbgFuFQLNwl6BUh
+C8wsy7w+AfAHZBzauJRINSQvdlfMa6ccSx28YYuYEXUPJVrZPyUMB9bquEWp7BKj
+sjNZC01BuqwniNfx/sNJgYdumFxUuB3/k2sOvsp4yAEhQzCeuBE4GwIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAuY3N1ZGguZWR1hiRodHRwczovL2lkcC5jc3VkaC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMKmWnoi0r9gklCAWDR0usT0UpCF
+MA0GCSqGSIb3DQEBBQUAA4IBAQAEF+eHgLUR9GIYywmm8QELgZefShbL2NFmMdQD
+y8YYUgNihIfGQCNfKmwYza/IGcX+I0VRy1JJTl2I0Hh0lwlko5shlePusE3mfCFN
+PNXZUvqxz2P7sAXtACXeLMTDtHavLLRahAe5/5DrnvfnvOEcyvZauG9sbmuZynMB
+Vk3538+mFZYtzNCy8h1ktC/cuUb3ob8Z0FFnGb1fz85EelTR3f2IA8b9yd0E7gnm
+hXTR1kkUpNO7jUMAPq2Rrd0a/VddMYHrNI21N+wljDMzwLbSWnIS79Mz0ZWjbKLQ
+5VU76CVb2WjBzvjqvkAxQS8f314tfLV278aPl2XTF9lQwnxJ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.csudh.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.csudh.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">California State University, Dominguez Hills</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">California State University, Dominguez Hills</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.csudh.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Mahabub Alam</md:GivenName>
+	<md:EmailAddress>malam@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Sara Hariri</md:GivenName>
+	<md:EmailAddress>shariri@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kerry Boyer</md:GivenName>
+	<md:EmailAddress>kboyer@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Yuki DeSoto</md:GivenName>
+	<md:EmailAddress>ydesoto@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kulong Cha</md:GivenName>
+	<md:EmailAddress>kcha@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Bill Chang</md:GivenName>
+	<md:EmailAddress>bchang@csudh.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

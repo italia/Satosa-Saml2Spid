@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://app.kortext.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-11-21T09:58:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://app.kortext.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://app.kortext.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kortext</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Kortext leads the UK's digital textbook market with an intuitive platform and analytics data.</mdui:Description>
+		<mdui:Logo height="82" width="350">https://app.kortext.com/images/kortextsp.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEBjCCAm6gAwIBAgIJAKuXvrtJ2gi/MA0GCSqGSIb3DQEBCwUAMCAxHjAcBgNV
+BAMTFWt0LXdlYjEua29ydGV4dC5sb2NhbDAeFw0xOTA4MjkxOTM3MzJaFw0yOTA4
+MjYxOTM3MzJaMCAxHjAcBgNVBAMTFWt0LXdlYjEua29ydGV4dC5sb2NhbDCCAaIw
+DQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALLk8fggDrL/CSpJVvIOIGQ8Tzjh
+ehbX4tnkJhNEf24WaZ0f3wkUSLS5qR3UlWmdZXVWNhNVs1BIDVTY0sFZXGlflhVV
+Vyzqbzj9TD2EoMEDtJhLARZkUVyvus0c7XmlNd8vAVr4r04amEX9FL05eRDRNV3d
+AGUqS1JGi2Zob78DYoUVKK9qrcJOGkKhOoGYH4HtnFIU/f/Ei9kJnSibnsWRx/V+
+G6uL4+RElx8hvx4Ei88XQHFxkGX0whQ8qh8RHiwxbsikCs/0ElHtbrZlHhzRcnnH
+4uGR+ExZESE7yqrjVliT9f+AzSzhERoiTjmc6zdfEnt0eEjI0r7iLOEqqLnRrSBi
+mLblpeO2Q3WzxLACRhVyVa13idCjbYEBBpMjKxkIgFX3qkIKAL4LbUszv8aOaxVj
+N5d+LBqcHWKaZ1SfXhZ5n71xElvQjP9IgngU9mjVBm+7YUeejsMxjgZViNAR7TBJ
+ACAB/OSosfktcXSuaZDvoLhQtI5N3MmtnMUdGwIDAQABo0MwQTAgBgNVHREEGTAX
+ghVrdC13ZWIxLmtvcnRleHQubG9jYWwwHQYDVR0OBBYEFDAYklejpBIfjrCXeppB
+7W54tPFOMA0GCSqGSIb3DQEBCwUAA4IBgQCAGSsTzNHLp1xWidvnB3oV8DlkKf/m
+Ex7v1/KY7ZRmuzQ+Bvxp5gMMq2D7xqDdyRWgOsKV1DWTGMUatZsJyBUd6yonz26E
+/9SC0DhQiFL2kYd3cBYyRnCAuI5RgdpTXKFfC69fBbpsvGjCnzMNwfZQRNCZ7kDs
+nujhE8v4eQQ25Co5KYYULu9XbK2OPnZXsnB4dO6lk+AROi2mcNJRP1Kr9b32Sz7S
+ZNg0BqMETHpblEGWhhKeJXdFzhX9yArocSCAEay5lw3hiHtbHByEIKip9amC1XXh
+NK8VpgCft7porEO6Ndl7QpUoEXBeWhpvEg4Ik8MAnzbXtNEHbL+Kxd01xUuH9XIr
+Piq45r2ooBecb7SMNgtBwY0y+z3s32XOKsF2FNIArtvWgPCNua6g9ZJ9Hcq8QoAJ
+1fQd3RX6eGYzfsH2ZIqlWEEbnlsOSs52ypOEeRdh4hOp9WWRCsf2wZqU0OnbN7GM
+uLWR574J0X+rZ1qukr6j5NAx8PAWeVTOiLI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://app.kortext.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://app.kortext.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://app.kortext.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://app.kortext.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://app.kortext.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://app.kortext.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://app.kortext.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://app.kortext.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://app.kortext.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://app.kortext.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://app.kortext.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kortext Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kortext</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kortext.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Kennedy</md:GivenName>
+	<md:SurName>Boudreau</md:SurName>
+	<md:EmailAddress>mailto:kennedyb@kortext.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kennedy</md:GivenName>
+	<md:SurName>Boudreau</md:SurName>
+	<md:EmailAddress>mailto:kennedyb@kortext.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

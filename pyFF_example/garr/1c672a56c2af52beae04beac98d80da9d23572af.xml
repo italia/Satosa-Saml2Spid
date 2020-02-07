@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.mic.ul.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2012-05-03T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mic.ul.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mary Immaculate College</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ga">Coláiste Mhuire gan Smál</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.mic.ul.ie/</mdui:InformationURL>
+		<mdui:Logo height="130" width="111">https://edugate.heanet.ie/rr3/logos/mic.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:52.6505454,-8.6402852</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAIm8XfsrXL+n3FjD8+FCAsrpZwqYMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5taWMudWwuaWUwHhcNMTIwNjI1MTM0OTMxWhcN
+MzIwNjI1MTM0OTMxWjAYMRYwFAYDVQQDEw1pZHAubWljLnVsLmllMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArd7puHeojmsokdqd6L8dYDagg59Rxp/W
++Mgs+D4gm23qDfExzpWaMDtevrmCdspAU0V7sUYF5xnuromTfOgrPB9kFFhRamMz
+gA9VyXxyCYoMaingzRqI1uw0hJ2Qy3BtjIHRVPpKs8R3Dh54UEzAFuFcgOvxNg7a
+y7+yZ7eCNoPaZZqD6+5b/WuXljq+AsIsemVOtKyVCj5rvQSZRw7QTp2s9mN6xnFU
+9aIBY3HJ0uFzKWViGiVEUu7XQKncJqcGuW4V0C6bAfOKqMGtK2ywx1I5Ov8ZGAb5
+o7UjnW1tr8q0KfhTsfUzuGZg2dVEzF/uJOeMNZCnK7rKTnBe3cFEjwIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAubWljLnVsLmllhiRodHRwczovL2lkcC5taWMudWwu
+aWUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFCMx/V213MoR8FSMT8NB2pSJJDkP
+MA0GCSqGSIb3DQEBBQUAA4IBAQBcPiduSlzgNM8GaczyCr5S2Lz6X3NXZgnExQV7
+EYB74Fh7A7isTv3u3AIaP/rq7YC7JpSOudh0nAQmsjguwBL4H+U4yQ1G8EJW57xX
+Ll/284h2Hz9jIkmeENc8ETBVuBe1QMlhOJ6yRBnV6TDdisPLD2fE+dz/J+zW93dq
+MXhwW3z4Tu/7hjJuQ6dJBN1vGSGS0KhkNmu+Z4uYVzd99Oz0coLrv50tpvpwm0SB
+2QoN+ZsgJIiaLp/+TGaKd9mNRkmbsw/WCW4u4h6gD9hsuXndRdIz+fR9MKmUbx6s
+otIlv/GxlW1INiKMfyASC5mCnkwuLrWXW+8oAgXfPTrtPVu1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mic.ul.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mic.ul.ie/idp/profile/SAML2/POST/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mic.ul.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mic.ul.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.mic.ul.ie/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mary Immaculate College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mary Immaculate College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mic.ul.ie/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Glenn</md:GivenName>
+	<md:SurName>Wearen</md:SurName>
+	<md:EmailAddress>mailto:gwearen@heanet.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>John</md:GivenName>
+	<md:SurName>Spencer</md:SurName>
+	<md:EmailAddress>mailto:john.spencer@mic.ul.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Kieran</md:GivenName>
+	<md:SurName>Pearse</md:SurName>
+	<md:EmailAddress>mailto:kieran.pearse@mic.ul.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

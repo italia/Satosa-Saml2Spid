@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.fh-kufstein.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2017-11-17T10:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fh-kufstein.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Fachhochschule Kufstein</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Applied Science Kufstein</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">FH+Kufstein</mdui:Keywords>
+		<mdui:Logo height="122" width="190">https://checkin.fh-kufstein.ac.at/FHKufstein-Theme/images/fh_kufstein_logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.fh-kufstein.ac.at/bundles/styleflasherfhkufstein/images/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>fh-kufstein.ac.at</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.58380,12.17366</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAMS90Ng2aIuzyu72JGqd+B4G68koMA0GCSqGSIb3DQEB
+CwUAMCExHzAdBgNVBAMMFmF1dGguZmgta3Vmc3RlaW4uYWMuYXQwHhcNMTcxMTEz
+MTMwNDI0WhcNMzcxMTEzMTMwNDI0WjAhMR8wHQYDVQQDDBZhdXRoLmZoLWt1ZnN0
+ZWluLmFjLmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqKsvlG8I
+7W8zJXpEXsZEchpN7fKc1UftY6ONtwNj142fFUMDbFe1tUO6eS7uMws5G9yOuKZ0
+Lo9qTe9E78XG3t5QuRTgSIWs9Nw4BXClleo1IddGvYIejh8YC3TqkxkMQeO0B7y5
+SSvVwAtIN9vo8pXG9NgtNtTJr4hW7xFnU2TCqfIP5FgJdTrfAZbRKnjI5diCYMsO
+iliawdt68Eb/AGd5lhtAm1+AOYmE67zV1QeaFffOZ4tOmxgT0y8NXOro/C0Rs5oH
+P+MSn3YMibCRHy7AOzymUufuICUpXolgi/vJtYwDvmByi63h8zzYc7xg5e0b/6yd
+MeFqBMh/ktAhKwIDAQABo3MwcTAdBgNVHQ4EFgQUKK3lqcLujA3uiJc6KjuvAGWk
++3YwUAYDVR0RBEkwR4IWYXV0aC5maC1rdWZzdGVpbi5hYy5hdIYtaHR0cHM6Ly9h
+dXRoLmZoLWt1ZnN0ZWluLmFjLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBAQAVIJcQTwBFu0KqPgJ0eigZhCSvfUcSoVpv3tPnuJjCmcjIe2owQtAd
+oPPNejLpT/3mGEx0lDQTo12QnQ5M8y6ghbQ6VI/UuriN8fT0wghVqdTIeSOKyOEn
+pPwKWjP7pkessQ/BwYfATOKb9FxM100ynTrygemcHNDKU/VNCeKEl5QfV9IY5Fxq
+VZu/ddopr1PLXejnmIu9W73Zq8lYbDpUt8/5msCuBdgNNsDCUwBed+aRKmR/rr31
+c23s4+SJ5mPOIryjkBAGIG7X/SoWYjaRGKqKBRdMtOhLvHpYAzXags8+9ZQymI7D
+2g/oKhKjgPEPBmhQp6Gro/au6n5Z/2Uz
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVANIha9ERPN+7TwG6vb9OmgzCCmTgMA0GCSqGSIb3DQEB
+CwUAMCExHzAdBgNVBAMMFmF1dGguZmgta3Vmc3RlaW4uYWMuYXQwHhcNMTcxMTEz
+MTMwNDI0WhcNMzcxMTEzMTMwNDI0WjAhMR8wHQYDVQQDDBZhdXRoLmZoLWt1ZnN0
+ZWluLmFjLmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6uRKgwRK
+SnLW+mog/OZIt3BPBM3Ii/aSoB6grbHByMTe2a4+gWDGFctF+641GFIcpuKRb8iD
+Vn62y1mt2eaBSEOG5zJQv2DeF6MKbhBj8SVPFa9iwaTSVCE3AaJ0b22WKsl3xQbL
++6zCWjBpCuuyhkBTghBRCd5cw3x9VisBGhJAA6LYPGu8dEKnagQQ48/YjsZZBbYX
++1vLtVunqzS+VfoEcZUZyySMM1gt0xBk+qKtS1UKikk+u0SLXugfNiUaX8wHyJJM
+1sYyJGxqV3E9hRuUnkaPcOJ/6p2fdFc3DWowfCwvFU6DR9oaszVCaK3y7B9p36ik
+Uxn/RZC5yjTEtwIDAQABo3MwcTAdBgNVHQ4EFgQUNtt6MlDduMzY0NGrETaSEP/F
+KH8wUAYDVR0RBEkwR4IWYXV0aC5maC1rdWZzdGVpbi5hYy5hdIYtaHR0cHM6Ly9h
+dXRoLmZoLWt1ZnN0ZWluLmFjLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBAQAdNIfnAyVu1UjotdBxbsErDG4rsWGY6KeC5aYTKBv3TaGL9F3WZIiy
+OrC8VRMDCoVuOVCS9nBEMxCaV66Qb7OFwt7gYYFK3JjDLoNAbOQg4rZr5kUrAVIt
+/30vmzEppJQglIRYh0DA6GVf/t05HZ9QWD2MyFQCCaKt6SyoScM+u/Qj/uSdMXBx
+2FHfWRHmTxErfPlHlkmmSkaTWyeSSm8YiIpdPwxB0SohienuGxFduoFsixxTY5KS
+s6cVvZdKls68mA1OjHxd8jZ3hSpFidUJrRqJU88tSTk4/aYHo5dI3/fXpUX0euCj
+v/hIKM5TOvHZ5bJV1JH89XlPmICyNqYl
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAMIuPbbw7VjhVTJuCoAF1fsEi373MA0GCSqGSIb3DQEB
+CwUAMCExHzAdBgNVBAMMFmF1dGguZmgta3Vmc3RlaW4uYWMuYXQwHhcNMTcxMTEz
+MTMwNDI0WhcNMzcxMTEzMTMwNDI0WjAhMR8wHQYDVQQDDBZhdXRoLmZoLWt1ZnN0
+ZWluLmFjLmF0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuLyWJKUt
+bjrgzbhldgZZz46CJxbaKED8ciYeYtV4hUN9d5C0ZIPCBG+VoFkTVuA4ipufmKIW
+zaG1iS4U2HXj9V6/onI+C7I1U5aco0m0JjuWUYHqFISotfqSrc07m4U2epJra2Ks
+vAiOLHy3VmFTelGDk+w9WZyX3CU7UD8QFFWaNxjmryecPExlUIYZriNfHm09QMkH
+D8tfzO4mMRVa/kibggUxpX/BCjVp9eDNATU7enPhzA2FcaFdSdBQuPGBjhyLt8pC
+S6vFaML9gQtkUFvMI3PCvU4tgDr7RlHXA/JLfTm8f+WLFQP0vk/auZYLBJVTbcmr
+nVSZrzvZczeWkwIDAQABo3MwcTAdBgNVHQ4EFgQUDWXo3Mi8RZv+u7e+5Hpxyw1M
+y9MwUAYDVR0RBEkwR4IWYXV0aC5maC1rdWZzdGVpbi5hYy5hdIYtaHR0cHM6Ly9h
+dXRoLmZoLWt1ZnN0ZWluLmFjLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBAQB5Nc1L5JrLCGK3J2mWtsXE9u/DvfkcpwQam+EsApA8czWAk6a1Jzhm
+Swqd2icuKMoigft3qNfrqJ612SL3Lp2Sjo4+iG8cW0gmEdg/886XQLnFr5e2L3J8
+2mJy1KEvLDh/BaRz6rXaf7hl+Fs5KTI83ohiOgFh2CttcmPAhGgU8PG49IxLZVY/
+Z78/JKHxTyKDF9Y+VyzBRXSVU399jY87VxT7lKBJxRTMBmoeCIBmTNyK6VXpk6Xl
+oZzQsoyzRPontXKYaUISzl3RhA/cMHttM86sr2zgpYvMg6euIOy6nxn8hnTOcS5N
+LhWyzTUwuTIBIqSnt/sWfEVgdL4IQmWF
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://auth.fh-kufstein.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.fh-kufstein.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://auth.fh-kufstein.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.fh-kufstein.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Fachhochschule Kufstein Tirol Bildungs GmbH</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Applied Science Kufstein Tirol GmbH</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Fachhochschule Kufstein</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Applied Science Kufstein</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.fh-kufstein.ac.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.fh-kufstein.ac.at/eng/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:itsupport@fh-kufstein.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:itsupport@fh-kufstein.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:itsupport@fh-kufstein.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

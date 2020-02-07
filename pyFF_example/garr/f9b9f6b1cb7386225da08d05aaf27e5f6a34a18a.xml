@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.hillcroft.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-07-09T10:50:01Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hillcroft.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Hillcroft College</mdui:DisplayName>
+		<mdui:Logo height="60" width="80">https://shibboleth.hillcroft.ac.uk/logo.jpg</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://shibboleth.hillcroft.ac.uk/icon.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUY+dzAdJP4F29WhYMkIYWVz7OXIkwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAwwac2hpYmJvbGV0aC5oaWxsY3JvZnQuYWMudWswHhcNMTUw
+NjMwMTQ0OTE2WhcNMzUwNjMwMTQ0OTE2WjAlMSMwIQYDVQQDDBpzaGliYm9sZXRo
+LmhpbGxjcm9mdC5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AKZsE6hMiiscNndGGJrMv0d77p+JYtgJcyChH/YklmL4W4YbJFubYposfFjRUOHL
+q9h/ZoKE1uNRMI0wCZ/43FX5uTeBoOWfldsDU5z0GPh6J/D/KM6d+ahoYHSQVkJT
+H3lQNTCizjEXs6LsMgQYiWeaNhsAvmBEz/2IotGzfQkS4wa8C+saWpog2p1Z+iqr
+4IZVcoKdIAZdrUBxAdBxITdoOsC3GPyIksqvLhfwa9CmYI6iI0NgDwUfsPJlKBJy
+urdHHsJonEn5iJnkgCVX8Qg3XFcdtn15Q7LDUUNDp9nwQ/2SUJMmMpjf7r+bIYx3
+gqQCIh53qERD8qCmE+LXrsMCAwEAAaN7MHkwHQYDVR0OBBYEFNYN0h/Zy2tW0tfR
+Sp7LfNDOOhckMFgGA1UdEQRRME+CGnNoaWJib2xldGguaGlsbGNyb2Z0LmFjLnVr
+hjFodHRwczovL3NoaWJib2xldGguaGlsbGNyb2Z0LmFjLnVrL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBBQUAA4IBAQButipjXmmT9bD6lP6yYyqqE3kCC87p6ub8
+QuwSjnHpAxSJlhdyS/o3rS5SauwqDs12gYgrx4zoJWNZfAfV0QzSR/mmX5+k0Vt6
+oSyhY0flaCi0np13AAJKQCVyiIfqBATXaGOV4fSoTIpC2ajEQA0QBMbW9tb10/uA
+4hTmxJ/AT5GADtMpe9iUknnsBQCXmojKtnILV9bGSgPi0bmHK68GIHe72TPfgXae
+EninOSrPVYCTYu2Ye0uNMjUJLcaWG/4Bg4KHjCcw0ElUB6gAAozzBGg4YWuYIX69
+khh8QXuVbtNdLDflq8uEmlwtw92SweSEsLZpZrF/dTPMjmy9XzP7
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.hillcroft.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.hillcroft.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.hillcroft.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.hillcroft.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hillcroft.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUY+dzAdJP4F29WhYMkIYWVz7OXIkwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAwwac2hpYmJvbGV0aC5oaWxsY3JvZnQuYWMudWswHhcNMTUw
+NjMwMTQ0OTE2WhcNMzUwNjMwMTQ0OTE2WjAlMSMwIQYDVQQDDBpzaGliYm9sZXRo
+LmhpbGxjcm9mdC5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AKZsE6hMiiscNndGGJrMv0d77p+JYtgJcyChH/YklmL4W4YbJFubYposfFjRUOHL
+q9h/ZoKE1uNRMI0wCZ/43FX5uTeBoOWfldsDU5z0GPh6J/D/KM6d+ahoYHSQVkJT
+H3lQNTCizjEXs6LsMgQYiWeaNhsAvmBEz/2IotGzfQkS4wa8C+saWpog2p1Z+iqr
+4IZVcoKdIAZdrUBxAdBxITdoOsC3GPyIksqvLhfwa9CmYI6iI0NgDwUfsPJlKBJy
+urdHHsJonEn5iJnkgCVX8Qg3XFcdtn15Q7LDUUNDp9nwQ/2SUJMmMpjf7r+bIYx3
+gqQCIh53qERD8qCmE+LXrsMCAwEAAaN7MHkwHQYDVR0OBBYEFNYN0h/Zy2tW0tfR
+Sp7LfNDOOhckMFgGA1UdEQRRME+CGnNoaWJib2xldGguaGlsbGNyb2Z0LmFjLnVr
+hjFodHRwczovL3NoaWJib2xldGguaGlsbGNyb2Z0LmFjLnVrL2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBBQUAA4IBAQButipjXmmT9bD6lP6yYyqqE3kCC87p6ub8
+QuwSjnHpAxSJlhdyS/o3rS5SauwqDs12gYgrx4zoJWNZfAfV0QzSR/mmX5+k0Vt6
+oSyhY0flaCi0np13AAJKQCVyiIfqBATXaGOV4fSoTIpC2ajEQA0QBMbW9tb10/uA
+4hTmxJ/AT5GADtMpe9iUknnsBQCXmojKtnILV9bGSgPi0bmHK68GIHe72TPfgXae
+EninOSrPVYCTYu2Ye0uNMjUJLcaWG/4Bg4KHjCcw0ElUB6gAAozzBGg4YWuYIX69
+khh8QXuVbtNdLDflq8uEmlwtw92SweSEsLZpZrF/dTPMjmy9XzP7
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.hillcroft.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.hillcroft.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Richmond and Hillcroft Adult and Community College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Hillcroft College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hillcroft.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Overt Software Solutions</md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Frary</md:SurName>
+	<md:EmailAddress>mailto:pfrary@hillcroft.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

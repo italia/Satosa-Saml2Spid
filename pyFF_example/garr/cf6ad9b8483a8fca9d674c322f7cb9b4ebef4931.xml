@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://id.tecnico.ulisboa.pt/saml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.fccn.pt" registrationInstant="2015-07-02T10:59:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://rctsfederation.fccn.pt/rctsaai/metadata-registration-practice-statement-en</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="pt">http://rctsfederation.fccn.pt/rctsaai/metadata-registration-practice-statement-pt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tecnico.ulisboa.pt</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ULisboa - Instituto Superior Técnico</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="pt">ULisboa - Instituto Superior Técnico</mdui:DisplayName>
+		<mdui:Description xml:lang="en">https://tecnico.ulisboa.pt/en/</mdui:Description>
+		<mdui:Description xml:lang="pt">https://tecnico.ulisboa.pt</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://dsi.tecnico.ulisboa.pt/en/servicos/autenticacao-e-acesso/autenticacao-saml/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="pt">http://dsi.tecnico.ulisboa.pt/servicos/autenticacao-e-acesso/autenticacao-saml/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="pt">https://tecnico.ulisboa.pt/pt/informacoes/termos-e-condicoes/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://tecnico.ulisboa.pt/en/informations/terms-conditions/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="47" width="200">https://static.tecnico.ulisboa.pt/projects/tecnico-id/logotipo-tecnico-c.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:38.736879,-9.138737</mdui:GeolocationHint>
+		<mdui:DomainHint>tecnico.ulisboa.pt</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIG/zCCBOegAwIBAgIIFKMd4Vs0HVQwDQYJKoZIhvcNAQELBQAwgZQxCzAJBgNV
+BAYTAlBUMSQwIgYDVQQKDBtJbnN0aXR1dG8gU3VwZXJpb3IgVMOpY25pY28xMDAu
+BgNVBAsMJ0RpcmVjw6fDo28gZGUgU2VydmnDp29zIGRlIEluZm9ybcOhdGljYTEt
+MCsGA1UEAwwkSVNUIEF1dG9yaWRhZGUgQ2VydGlmaWNhZG9yYSBkZSBSYWl6MB4X
+DTE1MDYyOTEyMDcwMFoXDTI1MDcwNjEyMDcwMFowgacxCzAJBgNVBAYTAlBUMQ8w
+DQYDVQQIDAZMaXNib2ExDzANBgNVBAcMBkxpc2JvYTEkMCIGA1UECgwbSW5zdGl0
+dXRvICBTdXBlcmlvciBUZWNuaWNvMQwwCgYDVQQLDANEU0kxEDAOBgNVBAMMB0lT
+VCBJZFAxMDAuBgkqhkiG9w0BCQEWIXNhbWwtYWRtaW5AZHNpLnRlY25pY28udWxp
+c2JvYS5wdDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALqKFqjvfNPK
+9IoWSS5HJ+unnOcZP9JMs5HPN1qaqGjkq/63AW37FPNr/BodUwX00zy4PUJd7/pc
+agMayyQ9wwCHXFd2f06AD2qLC7A4UTi98ogb2U0qsZiI1UKskn+vFZCbLt0wS1pH
+aTbVYx+l6sKa4Sbrx1hmaLAb/7K4lsK7qA5FeBzSW048G6R2Mv+jPsv+JSAV6DRg
+d9MNn8pbX94tkDVeYBpMzVCMW10RnuDph6n9f4DhFZ74xQhIHU3CZeRBz7RhE3Cs
+/29wPcuXENa3G2ecUzPzUMx2fxt57nj288K0Wy9pIAsACsm/qgrGezSsRVe9T/4W
+6QadVwU4wiOHuYeIJmXay6Aw+ga8F0ivcgDKWJCs8pvLI4tlkH+fLEj9E8Y66dsu
+AvU2EOV7oj3QQEE1bq0hrHfS+KaN7kgrGddt2LPH78MojXxWjCRh4A0MrpA/mJbA
+WCk9wYh6m4PovMhCvwyPfo+q/8MX5XnkqF74SnaFwbZAQwLZlpY5uvorinFVt1EC
+hqVEyGoInNoq6s+wWmthpug+zytn60JfTUilz70lFPzIgpMmVc3w80OhXUaVa7Mb
+Id7aHo6Mi54VNWlSXSNa8z746HL6gJtAfnWPlSpYCLPGaM18TdJYf+EjaOqiNYZD
+/HoVwol5jjIDNpqzSRqjcSkAKYR4Jp8hAgMBAAGjggE+MIIBOjATBgNVHSUEDDAK
+BggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBeAwCQYDVR0TBAIwADARBglghkgBhvhC
+AQEEBAMCBkAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRp
+ZmljYXRlMB0GA1UdDgQWBBSOQEyzKxRCL0U8L8pLn6hsIOriQTAfBgNVHSMEGDAW
+gBREgL/Ap9t8Cz6v25Z9QRfv7jGK4DA2BglghkgBhvhCAQQEKRYnaHR0cHM6Ly9j
+YS5pc3QudXRsLnB0L3B1Yi9jcmwvY2FjcmwuY3JsME8GA1UdEQRIMEaBIXNhbWwt
+YWRtaW5AZHNpLnRlY25pY28udWxpc2JvYS5wdIEhc2FtbC1hZG1pbkBkc2kudGVj
+bmljby51bGlzYm9hLnB0MA0GCSqGSIb3DQEBCwUAA4ICAQBZSlvwy/1xpbmYalr5
+boLdbXE7bHC/Hd7o8NfnxVLMqe7Y9b7ODZaoHIbxKXr0FslvQASM+khpXDr18e1u
+JsSSb8t3Ph1CO19rqlyxugHmNFxRR3EIsY4VMIkNSVKDBmaIJAsEn6u2rqldpM9F
+WVsP6LJxoiLs1yP8Axyp1W6ls3WMsxrwWwwUI/rV/SSwZA2jGjB2cmmSEejCLkrQ
+4QsoHyKcaj3mRiDrroWw1gpWCnMme1Bt6B1a/oXV5hDS7cPqrHehV3UZRFis2JZ3
+tSJ9NRycBuS8xl29FQSs7QfHnblPwzKX1u+zp2YFfzQpjugpE2l7ds9hM1RmKMMr
+wm+5d/Rf/Gs9LAesQ90hIF7+aaDbCgIShQionG+7apiXqomqQnHZuI0voE+7DzSF
+eveJO1QlABnjR5d3wkW8LaFtL0eC2KjY2gcZBzzDPhYHa+N2RHAvOZwHwoXuUh6Q
+mxlb5zzZAjoB460GQHS5eEKvGnSZ7ApoS8j77glG0LCzw6KYxxD1b1qyzuUJol9+
+lnUfUYANUYn2YSAiQtfhfGLYFRmyCVjhC6lvTKeBo0wSMw2alA3haoxbX6D3bQRc
+CmRv3+LkyjkdrwTc7wzu/mR8O/uYdV0vfkhti2EBhMK+RQqkYBxHILv52xHxxa86
+lOGv+wR2gqvF2y5ZMigT4rya8Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIG/zCCBOegAwIBAgIIFKMd4Vs0HVQwDQYJKoZIhvcNAQELBQAwgZQxCzAJBgNV
+BAYTAlBUMSQwIgYDVQQKDBtJbnN0aXR1dG8gU3VwZXJpb3IgVMOpY25pY28xMDAu
+BgNVBAsMJ0RpcmVjw6fDo28gZGUgU2VydmnDp29zIGRlIEluZm9ybcOhdGljYTEt
+MCsGA1UEAwwkSVNUIEF1dG9yaWRhZGUgQ2VydGlmaWNhZG9yYSBkZSBSYWl6MB4X
+DTE1MDYyOTEyMDcwMFoXDTI1MDcwNjEyMDcwMFowgacxCzAJBgNVBAYTAlBUMQ8w
+DQYDVQQIDAZMaXNib2ExDzANBgNVBAcMBkxpc2JvYTEkMCIGA1UECgwbSW5zdGl0
+dXRvICBTdXBlcmlvciBUZWNuaWNvMQwwCgYDVQQLDANEU0kxEDAOBgNVBAMMB0lT
+VCBJZFAxMDAuBgkqhkiG9w0BCQEWIXNhbWwtYWRtaW5AZHNpLnRlY25pY28udWxp
+c2JvYS5wdDCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBALqKFqjvfNPK
+9IoWSS5HJ+unnOcZP9JMs5HPN1qaqGjkq/63AW37FPNr/BodUwX00zy4PUJd7/pc
+agMayyQ9wwCHXFd2f06AD2qLC7A4UTi98ogb2U0qsZiI1UKskn+vFZCbLt0wS1pH
+aTbVYx+l6sKa4Sbrx1hmaLAb/7K4lsK7qA5FeBzSW048G6R2Mv+jPsv+JSAV6DRg
+d9MNn8pbX94tkDVeYBpMzVCMW10RnuDph6n9f4DhFZ74xQhIHU3CZeRBz7RhE3Cs
+/29wPcuXENa3G2ecUzPzUMx2fxt57nj288K0Wy9pIAsACsm/qgrGezSsRVe9T/4W
+6QadVwU4wiOHuYeIJmXay6Aw+ga8F0ivcgDKWJCs8pvLI4tlkH+fLEj9E8Y66dsu
+AvU2EOV7oj3QQEE1bq0hrHfS+KaN7kgrGddt2LPH78MojXxWjCRh4A0MrpA/mJbA
+WCk9wYh6m4PovMhCvwyPfo+q/8MX5XnkqF74SnaFwbZAQwLZlpY5uvorinFVt1EC
+hqVEyGoInNoq6s+wWmthpug+zytn60JfTUilz70lFPzIgpMmVc3w80OhXUaVa7Mb
+Id7aHo6Mi54VNWlSXSNa8z746HL6gJtAfnWPlSpYCLPGaM18TdJYf+EjaOqiNYZD
+/HoVwol5jjIDNpqzSRqjcSkAKYR4Jp8hAgMBAAGjggE+MIIBOjATBgNVHSUEDDAK
+BggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBeAwCQYDVR0TBAIwADARBglghkgBhvhC
+AQEEBAMCBkAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRp
+ZmljYXRlMB0GA1UdDgQWBBSOQEyzKxRCL0U8L8pLn6hsIOriQTAfBgNVHSMEGDAW
+gBREgL/Ap9t8Cz6v25Z9QRfv7jGK4DA2BglghkgBhvhCAQQEKRYnaHR0cHM6Ly9j
+YS5pc3QudXRsLnB0L3B1Yi9jcmwvY2FjcmwuY3JsME8GA1UdEQRIMEaBIXNhbWwt
+YWRtaW5AZHNpLnRlY25pY28udWxpc2JvYS5wdIEhc2FtbC1hZG1pbkBkc2kudGVj
+bmljby51bGlzYm9hLnB0MA0GCSqGSIb3DQEBCwUAA4ICAQBZSlvwy/1xpbmYalr5
+boLdbXE7bHC/Hd7o8NfnxVLMqe7Y9b7ODZaoHIbxKXr0FslvQASM+khpXDr18e1u
+JsSSb8t3Ph1CO19rqlyxugHmNFxRR3EIsY4VMIkNSVKDBmaIJAsEn6u2rqldpM9F
+WVsP6LJxoiLs1yP8Axyp1W6ls3WMsxrwWwwUI/rV/SSwZA2jGjB2cmmSEejCLkrQ
+4QsoHyKcaj3mRiDrroWw1gpWCnMme1Bt6B1a/oXV5hDS7cPqrHehV3UZRFis2JZ3
+tSJ9NRycBuS8xl29FQSs7QfHnblPwzKX1u+zp2YFfzQpjugpE2l7ds9hM1RmKMMr
+wm+5d/Rf/Gs9LAesQ90hIF7+aaDbCgIShQionG+7apiXqomqQnHZuI0voE+7DzSF
+eveJO1QlABnjR5d3wkW8LaFtL0eC2KjY2gcZBzzDPhYHa+N2RHAvOZwHwoXuUh6Q
+mxlb5zzZAjoB460GQHS5eEKvGnSZ7ApoS8j77glG0LCzw6KYxxD1b1qyzuUJol9+
+lnUfUYANUYn2YSAiQtfhfGLYFRmyCVjhC6lvTKeBo0wSMw2alA3haoxbX6D3bQRc
+CmRv3+LkyjkdrwTc7wzu/mR8O/uYdV0vfkhti2EBhMK+RQqkYBxHILv52xHxxa86
+lOGv+wR2gqvF2y5ZMigT4rya8Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://id.tecnico.ulisboa.pt/saml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://id.tecnico.ulisboa.pt/saml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="pt">ULisboa - Instituto Superior Técnico</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">ULisboa - Instituto Superior Técnico</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="pt">ULisboa - Instituto Superior Técnico</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">ULisboa - Instituto Superior Técnico</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="pt">https://tecnico.ulisboa.pt</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://tecnico.ulisboa.pt/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>DSI</md:GivenName>
+	<md:SurName>- Direcção de Serviços de Informática do IST</md:SurName>
+	<md:EmailAddress>mailto:dsi@tecnico.ulisboa.pt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>DSI</md:GivenName>
+	<md:SurName>- Direcção de Serviços de Informática do IST</md:SurName>
+	<md:EmailAddress>mailto:dsi@tecnico.ulisboa.pt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DSI Computer Security Incidents Response Team</md:GivenName>
+	<md:SurName>Computer Services Division</md:SurName>
+	<md:EmailAddress>mailto:csirt@tecnico.ulisboa.pt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

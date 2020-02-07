@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.fh-trier.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2009-06-24T15:48:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/rarp-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fh-trier.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">umwelt-campus.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hochschule-trier.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Trier</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Trier University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Dieser Id-Provider wird vom Rechenzentrum der Hochschule Trier betrieben. Alle Mitarbeitenden, Lehrenden und Studierenden der Hochschule Trier (inklusive Umweltcampus-Birkenfeld) gehören zur Nutzerschaft dieses Providers.</mdui:Description>
+		<mdui:Description xml:lang="en">This Id-Provider is operated by Computing Center at Trier University of Applied Sciences. Authenticated members are educational staff, non educational staff and students.</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.fh-trier.de/Logo_Hochschule_Trier_small-2.png</mdui:Logo>
+		<mdui:Logo height="56" width="240">https://idp.fh-trier.de/Logo_Hochschule_Trier.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hochschule-trier.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hochschule-trier.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ4DCCCMigAwIBAgIMINeYQc9BQHD6YxLnMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxODA2MzUzNFoXDTIxMDcyMDA2MzUzNFowgasxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxDjAMBgNVBAcMBVRyaWVyMUAwPgYDVQQKDDdI
+b2Noc2NodWxlIFRyaWVyIC0gVHJpZXIgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNj
+aWVuY2VzMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRgwFgYDVQQDDA9pZHAuZmgt
+dHJpZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRq/Rtc8HM
+Nl2v50oFprNMVGccamTpA8QswhGN3oMAJJQek1OZrZ48V26ygvDORvtIUUwI7mpL
+4UiNO+AjS7BQMmV2MZzQ+nM9+QEev4hmRX57hl0JayNa5UQ281GyzWlFuHWqH429
+srzp6MDVIyJ28krdS9WnT1KJwYN40vavXuiRNrylNCBqlp3AiE73nl4EDixeN8h9
+ON49J2JfZWmGwDzW1dYSK8752EnnmIK4Y8iezvzcaoF84Fl9U5bcx/SLf85dOqmy
+e8fywxyaGVm/dwl2nkPjpxkQIdTU5ogngyFKw6Y6mKsTkumn8L5fgAxz+m+ddj/g
+Hg0tK140g7rjAgMBAAGjggYeMIIGGjBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTAR
+Bg8rBgEEAYGtIYIsAgEEAwkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwEQYI
+KwYBBQUHARgEBTADAgEFMBMGA1UdJQQMMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBSe
+LHmO/V1jySVHI8KbTrPsDJU2rjAfBgNVHSMEGDAWgBRrOpiL+fJTidrgrbIyHgkf
+6Ko7dDBrBgNVHREEZDBigg9pZHAuZmgtdHJpZXIuZGWCFnNoaWJib2xldGguZmgt
+dHJpZXIuZGWCF2lkcC5ob2Noc2NodWxlLXRyaWVyLmRlgh5zaGliYm9sZXRoLmhv
+Y2hzY2h1bGUtdHJpZXIuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3Js
+MD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzAB
+hidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYB
+BQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+ggNdBgorBgEEAdZ5AgQCBIIDTQSCA0kDRwB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZ
+AsEAKQaNsgiaN9kTAAABai8obZIAAAQDAEcwRQIge5JD3fpHeiiEXxw0JmvXy/cc
+z2a8zgzLkkP2Vd7XYJYCIQCdZ2hLKqUHoVklXS7LjyA2o5osl2hGzAiy7JxB/qIC
+KwB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABai8obo8AAAQD
+AEYwRAIgIX3zK3hXsKqkdTCZb1TexMjOefY4VKGM3r2P+mXQqiYCIC/j6w7UbSSK
++BzI2m0KwokvgYlAdzD0RHPzhrCppMgDAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60
+U1WJsvd6AwEE880AAAFqLyhtOgAABAMASDBGAiEAsNh/wAzZ1FkamYxWV3OYs6EN
+/HnLWxstCdrtcj5aD6ACIQCDLjphz1zIoFu+yM+mpEjPP4mdhLRCrQYnB6mSnvzH
+5wB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABai8obWUAAAQD
+AEcwRQIgUdfQg3jqV2RZDo5Zic+y1hVgY21DWUzXGJ+LA9TZDMsCIQCE2PjTPgc2
+AfzHovmL4KWhUv1K/Si4uQaGZIodOf5EnAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABai8obWEAAAQDAEcwRQIgYP2vwTySUdjkdSHFEbiGsSYB
+bYst5NxwnedoqqZ7vTECIQCfEDAC71H8gRrZVltHY9dLYplk5Jp+Jp0dt6RkHM5H
+RQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABai8obWcAAAQD
+AEcwRQIhAI/jFfV8GKmuIF2p16pN/oZMV0m5ulnF/Qu9NtVnpbVCAiBYTO5TDHui
+JkOZGnVWsZeCqZ3z+x257QTSM6tBXz/DvQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABai8ockQAAAQDAEYwRAIgV2MhQ2GxpO4RPhuF38imDiOE
+fejzbxpAXk+LOXXJyQkCIH3bOmtPYZpwbjwqlzIeGBx2LagWh5LLY9mcXK9hdM8W
+MA0GCSqGSIb3DQEBCwUAA4IBAQB4CAGx2Tl52k3pjgX1o2qPdtLjymWLRxNfYQzy
+vbGNGiLK5D6S/ltYmVeGgCsxLZ8jGt6w+bq71koXK/voS6qiZ4lENuu+qJjKFp8E
+D+wXfrQmlNus+9BKJqsiw0PLAsJXbzo0niLwYgFwU3zvNEIsO/wiG9ZJQt/AjiG+
+1+ev07FPwuIQY8qfZCMXWk8gDb+UOX3Ly8e3wGqbb+EHpsApMWRa93XnnPwZw3Zf
+7zi3T2EramlPwqYtuyR8+480uOAahxS2JloL2Rytx3DfzfAR43Ht/RdpFlnpoPmO
+EKwfWT16p8cjzTImOQUWjqiqvIBAroVx8rVAXebnWbzjhWoH
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ4DCCCMigAwIBAgIMINeYQc9BQHD6YxLnMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxODA2MzUzNFoXDTIxMDcyMDA2MzUzNFowgasxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxDjAMBgNVBAcMBVRyaWVyMUAwPgYDVQQKDDdI
+b2Noc2NodWxlIFRyaWVyIC0gVHJpZXIgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNj
+aWVuY2VzMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRgwFgYDVQQDDA9pZHAuZmgt
+dHJpZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRq/Rtc8HM
+Nl2v50oFprNMVGccamTpA8QswhGN3oMAJJQek1OZrZ48V26ygvDORvtIUUwI7mpL
+4UiNO+AjS7BQMmV2MZzQ+nM9+QEev4hmRX57hl0JayNa5UQ281GyzWlFuHWqH429
+srzp6MDVIyJ28krdS9WnT1KJwYN40vavXuiRNrylNCBqlp3AiE73nl4EDixeN8h9
+ON49J2JfZWmGwDzW1dYSK8752EnnmIK4Y8iezvzcaoF84Fl9U5bcx/SLf85dOqmy
+e8fywxyaGVm/dwl2nkPjpxkQIdTU5ogngyFKw6Y6mKsTkumn8L5fgAxz+m+ddj/g
+Hg0tK140g7rjAgMBAAGjggYeMIIGGjBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTAR
+Bg8rBgEEAYGtIYIsAgEEAwkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwEQYI
+KwYBBQUHARgEBTADAgEFMBMGA1UdJQQMMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBSe
+LHmO/V1jySVHI8KbTrPsDJU2rjAfBgNVHSMEGDAWgBRrOpiL+fJTidrgrbIyHgkf
+6Ko7dDBrBgNVHREEZDBigg9pZHAuZmgtdHJpZXIuZGWCFnNoaWJib2xldGguZmgt
+dHJpZXIuZGWCF2lkcC5ob2Noc2NodWxlLXRyaWVyLmRlgh5zaGliYm9sZXRoLmhv
+Y2hzY2h1bGUtdHJpZXIuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3Js
+MD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzAB
+hidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYB
+BQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+ggNdBgorBgEEAdZ5AgQCBIIDTQSCA0kDRwB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZ
+AsEAKQaNsgiaN9kTAAABai8obZIAAAQDAEcwRQIge5JD3fpHeiiEXxw0JmvXy/cc
+z2a8zgzLkkP2Vd7XYJYCIQCdZ2hLKqUHoVklXS7LjyA2o5osl2hGzAiy7JxB/qIC
+KwB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABai8obo8AAAQD
+AEYwRAIgIX3zK3hXsKqkdTCZb1TexMjOefY4VKGM3r2P+mXQqiYCIC/j6w7UbSSK
++BzI2m0KwokvgYlAdzD0RHPzhrCppMgDAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60
+U1WJsvd6AwEE880AAAFqLyhtOgAABAMASDBGAiEAsNh/wAzZ1FkamYxWV3OYs6EN
+/HnLWxstCdrtcj5aD6ACIQCDLjphz1zIoFu+yM+mpEjPP4mdhLRCrQYnB6mSnvzH
+5wB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABai8obWUAAAQD
+AEcwRQIgUdfQg3jqV2RZDo5Zic+y1hVgY21DWUzXGJ+LA9TZDMsCIQCE2PjTPgc2
+AfzHovmL4KWhUv1K/Si4uQaGZIodOf5EnAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABai8obWEAAAQDAEcwRQIgYP2vwTySUdjkdSHFEbiGsSYB
+bYst5NxwnedoqqZ7vTECIQCfEDAC71H8gRrZVltHY9dLYplk5Jp+Jp0dt6RkHM5H
+RQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABai8obWcAAAQD
+AEcwRQIhAI/jFfV8GKmuIF2p16pN/oZMV0m5ulnF/Qu9NtVnpbVCAiBYTO5TDHui
+JkOZGnVWsZeCqZ3z+x257QTSM6tBXz/DvQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABai8ockQAAAQDAEYwRAIgV2MhQ2GxpO4RPhuF38imDiOE
+fejzbxpAXk+LOXXJyQkCIH3bOmtPYZpwbjwqlzIeGBx2LagWh5LLY9mcXK9hdM8W
+MA0GCSqGSIb3DQEBCwUAA4IBAQB4CAGx2Tl52k3pjgX1o2qPdtLjymWLRxNfYQzy
+vbGNGiLK5D6S/ltYmVeGgCsxLZ8jGt6w+bq71koXK/voS6qiZ4lENuu+qJjKFp8E
+D+wXfrQmlNus+9BKJqsiw0PLAsJXbzo0niLwYgFwU3zvNEIsO/wiG9ZJQt/AjiG+
+1+ev07FPwuIQY8qfZCMXWk8gDb+UOX3Ly8e3wGqbb+EHpsApMWRa93XnnPwZw3Zf
+7zi3T2EramlPwqYtuyR8+480uOAahxS2JloL2Rytx3DfzfAR43Ht/RdpFlnpoPmO
+EKwfWT16p8cjzTImOQUWjqiqvIBAroVx8rVAXebnWbzjhWoH
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fh-trier.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fh-trier.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fh-trier.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fh-trier.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fh-trier.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fh-trier.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.fh-trier.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.fh-trier.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.fh-trier.de/idp/profile/SAML2/POST-Simple-Sign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.fh-trier.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fh-trier.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">umwelt-campus.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hochschule-trier.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ4DCCCMigAwIBAgIMINeYQc9BQHD6YxLnMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxODA2MzUzNFoXDTIxMDcyMDA2MzUzNFowgasxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxDjAMBgNVBAcMBVRyaWVyMUAwPgYDVQQKDDdI
+b2Noc2NodWxlIFRyaWVyIC0gVHJpZXIgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNj
+aWVuY2VzMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRgwFgYDVQQDDA9pZHAuZmgt
+dHJpZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRq/Rtc8HM
+Nl2v50oFprNMVGccamTpA8QswhGN3oMAJJQek1OZrZ48V26ygvDORvtIUUwI7mpL
+4UiNO+AjS7BQMmV2MZzQ+nM9+QEev4hmRX57hl0JayNa5UQ281GyzWlFuHWqH429
+srzp6MDVIyJ28krdS9WnT1KJwYN40vavXuiRNrylNCBqlp3AiE73nl4EDixeN8h9
+ON49J2JfZWmGwDzW1dYSK8752EnnmIK4Y8iezvzcaoF84Fl9U5bcx/SLf85dOqmy
+e8fywxyaGVm/dwl2nkPjpxkQIdTU5ogngyFKw6Y6mKsTkumn8L5fgAxz+m+ddj/g
+Hg0tK140g7rjAgMBAAGjggYeMIIGGjBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTAR
+Bg8rBgEEAYGtIYIsAgEEAwkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwEQYI
+KwYBBQUHARgEBTADAgEFMBMGA1UdJQQMMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBSe
+LHmO/V1jySVHI8KbTrPsDJU2rjAfBgNVHSMEGDAWgBRrOpiL+fJTidrgrbIyHgkf
+6Ko7dDBrBgNVHREEZDBigg9pZHAuZmgtdHJpZXIuZGWCFnNoaWJib2xldGguZmgt
+dHJpZXIuZGWCF2lkcC5ob2Noc2NodWxlLXRyaWVyLmRlgh5zaGliYm9sZXRoLmhv
+Y2hzY2h1bGUtdHJpZXIuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3Js
+MD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzAB
+hidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYB
+BQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+ggNdBgorBgEEAdZ5AgQCBIIDTQSCA0kDRwB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZ
+AsEAKQaNsgiaN9kTAAABai8obZIAAAQDAEcwRQIge5JD3fpHeiiEXxw0JmvXy/cc
+z2a8zgzLkkP2Vd7XYJYCIQCdZ2hLKqUHoVklXS7LjyA2o5osl2hGzAiy7JxB/qIC
+KwB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABai8obo8AAAQD
+AEYwRAIgIX3zK3hXsKqkdTCZb1TexMjOefY4VKGM3r2P+mXQqiYCIC/j6w7UbSSK
++BzI2m0KwokvgYlAdzD0RHPzhrCppMgDAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60
+U1WJsvd6AwEE880AAAFqLyhtOgAABAMASDBGAiEAsNh/wAzZ1FkamYxWV3OYs6EN
+/HnLWxstCdrtcj5aD6ACIQCDLjphz1zIoFu+yM+mpEjPP4mdhLRCrQYnB6mSnvzH
+5wB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABai8obWUAAAQD
+AEcwRQIgUdfQg3jqV2RZDo5Zic+y1hVgY21DWUzXGJ+LA9TZDMsCIQCE2PjTPgc2
+AfzHovmL4KWhUv1K/Si4uQaGZIodOf5EnAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABai8obWEAAAQDAEcwRQIgYP2vwTySUdjkdSHFEbiGsSYB
+bYst5NxwnedoqqZ7vTECIQCfEDAC71H8gRrZVltHY9dLYplk5Jp+Jp0dt6RkHM5H
+RQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABai8obWcAAAQD
+AEcwRQIhAI/jFfV8GKmuIF2p16pN/oZMV0m5ulnF/Qu9NtVnpbVCAiBYTO5TDHui
+JkOZGnVWsZeCqZ3z+x257QTSM6tBXz/DvQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABai8ockQAAAQDAEYwRAIgV2MhQ2GxpO4RPhuF38imDiOE
+fejzbxpAXk+LOXXJyQkCIH3bOmtPYZpwbjwqlzIeGBx2LagWh5LLY9mcXK9hdM8W
+MA0GCSqGSIb3DQEBCwUAA4IBAQB4CAGx2Tl52k3pjgX1o2qPdtLjymWLRxNfYQzy
+vbGNGiLK5D6S/ltYmVeGgCsxLZ8jGt6w+bq71koXK/voS6qiZ4lENuu+qJjKFp8E
+D+wXfrQmlNus+9BKJqsiw0PLAsJXbzo0niLwYgFwU3zvNEIsO/wiG9ZJQt/AjiG+
+1+ev07FPwuIQY8qfZCMXWk8gDb+UOX3Ly8e3wGqbb+EHpsApMWRa93XnnPwZw3Zf
+7zi3T2EramlPwqYtuyR8+480uOAahxS2JloL2Rytx3DfzfAR43Ht/RdpFlnpoPmO
+EKwfWT16p8cjzTImOQUWjqiqvIBAroVx8rVAXebnWbzjhWoH
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJ4DCCCMigAwIBAgIMINeYQc9BQHD6YxLnMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxODA2MzUzNFoXDTIxMDcyMDA2MzUzNFowgasxCzAJBgNVBAYTAkRFMRgwFgYD
+VQQIDA9SaGVpbmxhbmQtUGZhbHoxDjAMBgNVBAcMBVRyaWVyMUAwPgYDVQQKDDdI
+b2Noc2NodWxlIFRyaWVyIC0gVHJpZXIgVW5pdmVyc2l0eSBvZiBBcHBsaWVkIFNj
+aWVuY2VzMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRgwFgYDVQQDDA9pZHAuZmgt
+dHJpZXIuZGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDRq/Rtc8HM
+Nl2v50oFprNMVGccamTpA8QswhGN3oMAJJQek1OZrZ48V26ygvDORvtIUUwI7mpL
+4UiNO+AjS7BQMmV2MZzQ+nM9+QEev4hmRX57hl0JayNa5UQ281GyzWlFuHWqH429
+srzp6MDVIyJ28krdS9WnT1KJwYN40vavXuiRNrylNCBqlp3AiE73nl4EDixeN8h9
+ON49J2JfZWmGwDzW1dYSK8752EnnmIK4Y8iezvzcaoF84Fl9U5bcx/SLf85dOqmy
+e8fywxyaGVm/dwl2nkPjpxkQIdTU5ogngyFKw6Y6mKsTkumn8L5fgAxz+m+ddj/g
+Hg0tK140g7rjAgMBAAGjggYeMIIGGjBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsr
+BgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTAR
+Bg8rBgEEAYGtIYIsAgEEAwkwCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwEQYI
+KwYBBQUHARgEBTADAgEFMBMGA1UdJQQMMAoGCCsGAQUFBwMBMB0GA1UdDgQWBBSe
+LHmO/V1jySVHI8KbTrPsDJU2rjAfBgNVHSMEGDAWgBRrOpiL+fJTidrgrbIyHgkf
+6Ko7dDBrBgNVHREEZDBigg9pZHAuZmgtdHJpZXIuZGWCFnNoaWJib2xldGguZmgt
+dHJpZXIuZGWCF2lkcC5ob2Noc2NodWxlLXRyaWVyLmRlgh5zaGliYm9sZXRoLmhv
+Y2hzY2h1bGUtdHJpZXIuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3Js
+MD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzAB
+hidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYB
+BQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+ggNdBgorBgEEAdZ5AgQCBIIDTQSCA0kDRwB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZ
+AsEAKQaNsgiaN9kTAAABai8obZIAAAQDAEcwRQIge5JD3fpHeiiEXxw0JmvXy/cc
+z2a8zgzLkkP2Vd7XYJYCIQCdZ2hLKqUHoVklXS7LjyA2o5osl2hGzAiy7JxB/qIC
+KwB1AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABai8obo8AAAQD
+AEYwRAIgIX3zK3hXsKqkdTCZb1TexMjOefY4VKGM3r2P+mXQqiYCIC/j6w7UbSSK
++BzI2m0KwokvgYlAdzD0RHPzhrCppMgDAHcAqucLfzy41WbIbC8Wl5yfRF9pqw60
+U1WJsvd6AwEE880AAAFqLyhtOgAABAMASDBGAiEAsNh/wAzZ1FkamYxWV3OYs6EN
+/HnLWxstCdrtcj5aD6ACIQCDLjphz1zIoFu+yM+mpEjPP4mdhLRCrQYnB6mSnvzH
+5wB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABai8obWUAAAQD
+AEcwRQIgUdfQg3jqV2RZDo5Zic+y1hVgY21DWUzXGJ+LA9TZDMsCIQCE2PjTPgc2
+AfzHovmL4KWhUv1K/Si4uQaGZIodOf5EnAB2ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABai8obWEAAAQDAEcwRQIgYP2vwTySUdjkdSHFEbiGsSYB
+bYst5NxwnedoqqZ7vTECIQCfEDAC71H8gRrZVltHY9dLYplk5Jp+Jp0dt6RkHM5H
+RQB2AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABai8obWcAAAQD
+AEcwRQIhAI/jFfV8GKmuIF2p16pN/oZMV0m5ulnF/Qu9NtVnpbVCAiBYTO5TDHui
+JkOZGnVWsZeCqZ3z+x257QTSM6tBXz/DvQB1AESUZS6w7s6vxEAH2Kj+KMDa5oK+
+2MsxtT/TM5a1toGoAAABai8ockQAAAQDAEYwRAIgV2MhQ2GxpO4RPhuF38imDiOE
+fejzbxpAXk+LOXXJyQkCIH3bOmtPYZpwbjwqlzIeGBx2LagWh5LLY9mcXK9hdM8W
+MA0GCSqGSIb3DQEBCwUAA4IBAQB4CAGx2Tl52k3pjgX1o2qPdtLjymWLRxNfYQzy
+vbGNGiLK5D6S/ltYmVeGgCsxLZ8jGt6w+bq71koXK/voS6qiZ4lENuu+qJjKFp8E
+D+wXfrQmlNus+9BKJqsiw0PLAsJXbzo0niLwYgFwU3zvNEIsO/wiG9ZJQt/AjiG+
+1+ev07FPwuIQY8qfZCMXWk8gDb+UOX3Ly8e3wGqbb+EHpsApMWRa93XnnPwZw3Zf
+7zi3T2EramlPwqYtuyR8+480uOAahxS2JloL2Rytx3DfzfAR43Ht/RdpFlnpoPmO
+EKwfWT16p8cjzTImOQUWjqiqvIBAroVx8rVAXebnWbzjhWoH
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.fh-trier.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.fh-trier.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e80</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e80</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Trier</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Trier University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hochschule-trier.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hochschule-trier.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ralf</md:GivenName>
+	<md:SurName>Becker</md:SurName>
+	<md:EmailAddress>mailto:beckerr@hochschule-trier.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ralf</md:GivenName>
+	<md:SurName>Becker</md:SurName>
+	<md:EmailAddress>mailto:beckerr@hochschule-trier.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Ralf</md:GivenName>
+	<md:SurName>Becker</md:SurName>
+	<md:EmailAddress>mailto:beckerr@help.hochschule-trier.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:EmailAddress>mailto:security@help.hochschule-trier.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

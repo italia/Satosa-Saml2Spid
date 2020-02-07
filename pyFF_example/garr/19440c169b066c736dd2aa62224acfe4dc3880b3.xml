@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-ifo.irccs.garr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2017-12-21T15:16:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">ifo.gov.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">IRCCS IFO - Rome</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">IRCCS IFO - Roma</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity provider for IRCCS IFO - Rome users</mdui:Description>
+<mdui:Description xml:lang="it">Identity provider per gli utenti di IRCCS IFO - Roma</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idp-ifo.irccs.garr.it/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idp-ifo.irccs.garr.it/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idp-ifo.irccs.garr.it/en/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp-ifo.irccs.garr.it/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idp-ifo.irccs.garr.it/en/logo.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idp-ifo.irccs.garr.it/it/logo.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idp-ifo.irccs.garr.it/en/favicon.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idp-ifo.irccs.garr.it/it/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAKDx0rUObIEVt9XqhO7ULAydlKJ1MA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdDAeFw0xNzExMDMw
+ODAxMTlaFw00NzExMDMwODAxMTlaMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL1R7NcGXny4
+C5XeE+U5blA3+pveauMk+PG3iHE3kFxCpYtk17YblBk+PT4kh+eM+XscWPizUjS/
+W9ZACme6eFu9qwrLKuDQB+Rd3fMF7wl58aSacvVFjeibn73S7/Ih6RSnMk0kvrbE
+RtHHG+1fHlIy336VdE50qv/naXdwOfWtVExRIaEsgAV4yDXVDoj+TuU83BiztE/e
+2RIkZmcrASjvqHBcn5QyNjeFW7c5LRRHViAn3ABLTtw+JxeAbLPe5B4sr4hRKp6l
+ADgj8Oxf4rHYr+9DbrFuvVyufqTA6Hf/vpWKkLwaabynQwaUwPF+O+lkip9EecI5
+/dDF3PkpTu8CAwEAAaNxMG8wHQYDVR0OBBYEFBafjdNLhyXxlGnjE0Yi5+Z+TbHH
+ME4GA1UdEQRHMEWCFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+aWZvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAESzIlXK6qLB6ay6Tn4bZZEgyGa/xYyqxobdEz0EaNt/J0rklRKdoMpdTcjB
+VPDmCvJfXkZT7EJlbZyeMTvDFcda5gGoVGyv8OwTVAFArrNzHd6FRrggjv8p/nUj
+xXrm4+PW8pt9lDSk3buWskHXvWlhIs5rn375GtwXByrB4OS1nqeMDBQeFepIN+Qm
+Cgkfi0MoHjaQMLIoUzea4RsY4zgYWbp9ahlLaps1kFSjRP5/P2z7S/obY/8Ltb6R
+Bxf2sAwgZH53lVIH6g8lDjmOuM+ZXQPMZwZMNLpFMYedd+A5O4KZefXMC/OeHgF9
+ZIC7wPkfULXJYuHp3FHUK/qJtLA=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAPNYIW3sR9HQR2yEVEiHE4jAaggYMA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdDAeFw0xNzExMDMw
+ODAxMjFaFw00NzExMDMwODAxMjFaMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIpY0LRWZZSR
+PV1s5v6f4g7r1RE/5sl1yeXsQqS6zGTbvMGQ4AjTwICNUSmyLGbSdqUrQCEGzSin
+anvgLDzhaALl0w0YEln7Dk8AXU5ObhK3cEBExgetXck1EpIyoRFaeQ3u62Cp18a/
+bJXX0RlmTB0/nNHWRvCp/DEkrskZoFc9CSrMDU9KVrB8iWKu26fLFwZ/2HvvXelS
+6NJcmvU/7KeC1GO6NOXYDtjr5eFrm0at9yqqkgDLCP5a14aBDn/rPpU4uY2Fugv5
+zzCo3Yd8Qxuy1x0nE1IM5T9LCoket9fDPu3wfjmg3CqEjO35whwroCp+Pg4P+P4m
+mQbrG/F0K1ECAwEAAaNxMG8wHQYDVR0OBBYEFJTPUTlx/nW8K6LQ3cK515Y5dJ0R
+ME4GA1UdEQRHMEWCFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+aWZvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAIhomQKpTmBf2eEUARTKj1CWom+5+/pkBmhFSEueGizW07QqBVKdfADu7YJr
+8V45b5v0fx61d4WttLP3r09SI1JLelFTSrtpEUt9a7HHQ6N6RIKmWne9fcrpA3iF
+f3uaUbMs6yP2dpJlkPJRn6rolKISmV0b7MVJ0KJGpetY3VLEKr75EaEtRwV28cau
+z0qEkrZybB1o5pdrsWlWWhF7kZOeqqn7kaPXwxwzJIjBuHQzEvc2QaLov4uqFHMi
+Cm3aujvQKGMfRgVXBSbKsoVfc/dQYEn/UtL1THHAwFDftkTkQu4UnZtWhzJUFpsB
+x0AXuLFqeHyfPgO77ZDldAL0I+M=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUOCzdpkM2rsP0I7W24WilAsdlZGUwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWlmby5pcmNjcy5nYXJyLml0MB4XDTE3MTEwMzA4
+MDEyM1oXDTQ3MTEwMzA4MDEyM1owIDEeMBwGA1UEAwwVaWRwLWlmby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgWI2lvu4WB5+
+YfXaQFEAY+P9FnPgIy5zNLJVgyoewOXAPiLgVhmRQAaS5dhqEnsey+ixDajCh7sZ
+2BJgptWOkaCmBzyX5Zfdq23/PnDmS8AXc2jeYoxz5tLuNXaZdmwkvX/ZeeIpCnGZ
+twOdAHIOXAGuPxIyPX/TZQPcERfVJT8ekInZ2TddJKhPwBMTLuFpsYgMo5kFQJuB
+ZxbosvrY5kc0uPOzMu+qr7x0nyGvhRajH5GZ9T9gA4Zmfc0TMRJKtqaTevQVOBVZ
+CxvR2ulHP+w4Cdozpdo0wu3WJb01GL6k14u5eBMsNTs1WSvA59mpYPlD7Qzv/QEo
+nKcvdJcXewIDAQABo3EwbzAdBgNVHQ4EFgQUfXb96IYy0J+tiVh9SLptWTL+sXYw
+TgYDVR0RBEcwRYIVaWRwLWlmby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1p
+Zm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAVnlNkTXv0AcudisDAsHqKRsFp7gUv+geidAnKwNXfWUemMZyx6yBSpiCnLNN
+QHCLdEzVtX9xvo7FDa8LejfTMlgyMP09xWhiLN0WgfTDhqrpexrIWtjoWl6n6osu
+fntyUfO6kAmy4xqTLwSYent3qNKdWpGRNVEG+OmEYptPCyXoYuS8nO5gdESwpEOt
+YAKMKKGKDpUAxn81vY++mS5QWaa3MiljFEqQJEPj9XLrjIJycC0dQlCTWCp40gkn
+xejWw62bc3O+kD2qaUHgTDtNh2OiAjnb6cDjr4tecDB5oeoHBKjvY6qNwh5Ntp9g
+RANL11FlQDHguqLzKNx9umIwnQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/POST/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">ifo.gov.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAKDx0rUObIEVt9XqhO7ULAydlKJ1MA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdDAeFw0xNzExMDMw
+ODAxMTlaFw00NzExMDMwODAxMTlaMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL1R7NcGXny4
+C5XeE+U5blA3+pveauMk+PG3iHE3kFxCpYtk17YblBk+PT4kh+eM+XscWPizUjS/
+W9ZACme6eFu9qwrLKuDQB+Rd3fMF7wl58aSacvVFjeibn73S7/Ih6RSnMk0kvrbE
+RtHHG+1fHlIy336VdE50qv/naXdwOfWtVExRIaEsgAV4yDXVDoj+TuU83BiztE/e
+2RIkZmcrASjvqHBcn5QyNjeFW7c5LRRHViAn3ABLTtw+JxeAbLPe5B4sr4hRKp6l
+ADgj8Oxf4rHYr+9DbrFuvVyufqTA6Hf/vpWKkLwaabynQwaUwPF+O+lkip9EecI5
+/dDF3PkpTu8CAwEAAaNxMG8wHQYDVR0OBBYEFBafjdNLhyXxlGnjE0Yi5+Z+TbHH
+ME4GA1UdEQRHMEWCFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+aWZvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAESzIlXK6qLB6ay6Tn4bZZEgyGa/xYyqxobdEz0EaNt/J0rklRKdoMpdTcjB
+VPDmCvJfXkZT7EJlbZyeMTvDFcda5gGoVGyv8OwTVAFArrNzHd6FRrggjv8p/nUj
+xXrm4+PW8pt9lDSk3buWskHXvWlhIs5rn375GtwXByrB4OS1nqeMDBQeFepIN+Qm
+Cgkfi0MoHjaQMLIoUzea4RsY4zgYWbp9ahlLaps1kFSjRP5/P2z7S/obY/8Ltb6R
+Bxf2sAwgZH53lVIH6g8lDjmOuM+ZXQPMZwZMNLpFMYedd+A5O4KZefXMC/OeHgF9
+ZIC7wPkfULXJYuHp3FHUK/qJtLA=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVAPNYIW3sR9HQR2yEVEiHE4jAaggYMA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdDAeFw0xNzExMDMw
+ODAxMjFaFw00NzExMDMwODAxMjFaMCAxHjAcBgNVBAMMFWlkcC1pZm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIpY0LRWZZSR
+PV1s5v6f4g7r1RE/5sl1yeXsQqS6zGTbvMGQ4AjTwICNUSmyLGbSdqUrQCEGzSin
+anvgLDzhaALl0w0YEln7Dk8AXU5ObhK3cEBExgetXck1EpIyoRFaeQ3u62Cp18a/
+bJXX0RlmTB0/nNHWRvCp/DEkrskZoFc9CSrMDU9KVrB8iWKu26fLFwZ/2HvvXelS
+6NJcmvU/7KeC1GO6NOXYDtjr5eFrm0at9yqqkgDLCP5a14aBDn/rPpU4uY2Fugv5
+zzCo3Yd8Qxuy1x0nE1IM5T9LCoket9fDPu3wfjmg3CqEjO35whwroCp+Pg4P+P4m
+mQbrG/F0K1ECAwEAAaNxMG8wHQYDVR0OBBYEFJTPUTlx/nW8K6LQ3cK515Y5dJ0R
+ME4GA1UdEQRHMEWCFWlkcC1pZm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+aWZvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAIhomQKpTmBf2eEUARTKj1CWom+5+/pkBmhFSEueGizW07QqBVKdfADu7YJr
+8V45b5v0fx61d4WttLP3r09SI1JLelFTSrtpEUt9a7HHQ6N6RIKmWne9fcrpA3iF
+f3uaUbMs6yP2dpJlkPJRn6rolKISmV0b7MVJ0KJGpetY3VLEKr75EaEtRwV28cau
+z0qEkrZybB1o5pdrsWlWWhF7kZOeqqn7kaPXwxwzJIjBuHQzEvc2QaLov4uqFHMi
+Cm3aujvQKGMfRgVXBSbKsoVfc/dQYEn/UtL1THHAwFDftkTkQu4UnZtWhzJUFpsB
+x0AXuLFqeHyfPgO77ZDldAL0I+M=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUOCzdpkM2rsP0I7W24WilAsdlZGUwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWlmby5pcmNjcy5nYXJyLml0MB4XDTE3MTEwMzA4
+MDEyM1oXDTQ3MTEwMzA4MDEyM1owIDEeMBwGA1UEAwwVaWRwLWlmby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgWI2lvu4WB5+
+YfXaQFEAY+P9FnPgIy5zNLJVgyoewOXAPiLgVhmRQAaS5dhqEnsey+ixDajCh7sZ
+2BJgptWOkaCmBzyX5Zfdq23/PnDmS8AXc2jeYoxz5tLuNXaZdmwkvX/ZeeIpCnGZ
+twOdAHIOXAGuPxIyPX/TZQPcERfVJT8ekInZ2TddJKhPwBMTLuFpsYgMo5kFQJuB
+ZxbosvrY5kc0uPOzMu+qr7x0nyGvhRajH5GZ9T9gA4Zmfc0TMRJKtqaTevQVOBVZ
+CxvR2ulHP+w4Cdozpdo0wu3WJb01GL6k14u5eBMsNTs1WSvA59mpYPlD7Qzv/QEo
+nKcvdJcXewIDAQABo3EwbzAdBgNVHQ4EFgQUfXb96IYy0J+tiVh9SLptWTL+sXYw
+TgYDVR0RBEcwRYIVaWRwLWlmby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1p
+Zm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAVnlNkTXv0AcudisDAsHqKRsFp7gUv+geidAnKwNXfWUemMZyx6yBSpiCnLNN
+QHCLdEzVtX9xvo7FDa8LejfTMlgyMP09xWhiLN0WgfTDhqrpexrIWtjoWl6n6osu
+fntyUfO6kAmy4xqTLwSYent3qNKdWpGRNVEG+OmEYptPCyXoYuS8nO5gdESwpEOt
+YAKMKKGKDpUAxn81vY++mS5QWaa3MiljFEqQJEPj9XLrjIJycC0dQlCTWCp40gkn
+xejWw62bc3O+kD2qaUHgTDtNh2OiAjnb6cDjr4tecDB5oeoHBKjvY6qNwh5Ntp9g
+RANL11FlQDHguqLzKNx9umIwnQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-ifo.irccs.garr.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">IRCCS IFO - Roma</md:OrganizationName>
+<md:OrganizationName xml:lang="en">IRCCS IFO - Rome</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">IRCCS IFO - Roma</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">IRCCS IFO - Rome</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.ifo.it/en/index.html</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.ifo.it/en/en/indexEn.html</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>IdP-in-the-Cloud</md:GivenName>
+<md:SurName>Service</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>IRCCS IFO - Roma</md:GivenName>
+<md:SurName>User Support</md:SurName>
+<md:EmailAddress>mailto:idem-support@ifo.gov.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

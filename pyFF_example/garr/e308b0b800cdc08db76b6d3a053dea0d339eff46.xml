@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://applications.colibrinet.it/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/"/>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://applications.colibrinet.it/Shibboleth.sso/DS"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://applications.colibrinet.it/Shibboleth.sso/DS" index="1"/><mdui:UIInfo><mdui:DisplayName xml:lang="it">Colibri - Insieme di immagini cerebrali pediatriche</mdui:DisplayName><mdui:DisplayName xml:lang="en">Colibri - Collection of pediatric brain images</mdui:DisplayName><mdui:Description xml:lang="it">Portale web dedicato al progetto Colibri per rendere accessibili i due database, contenenti le neuroimmagini e i dati clinici accessori relativi a malattie, sindromi rare o casi sporadici.</mdui:Description><mdui:Description xml:lang="en">Web portal dedicated to the Colibri project to make two databases accessible over the web. The databases contain brain images and accessory clinical data relative to rare diseases and syndroms or to sporadic cases.</mdui:Description><mdui:InformationURL xml:lang="it">http://www.colibrinet.it/it/</mdui:InformationURL><mdui:InformationURL xml:lang="en">http://www.colibrinet.it/en/</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="it">https://applications.colibrinet.it/privacy_it.html</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="en">https://applications.colibrinet.it/privacy_en.html</mdui:PrivacyStatementURL></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDFTCCAf2gAwIBAgIJAJnXHu9+jwR/MA0GCSqGSIb3DQEBBQUAMCUxIzAhBgNV
+BAMTGmFwcGxpY2F0aW9ucy5jb2xpYnJpbmV0Lml0MB4XDTE0MDIxODE2MDUyNloX
+DTI0MDIxNjE2MDUyNlowJTEjMCEGA1UEAxMaYXBwbGljYXRpb25zLmNvbGlicmlu
+ZXQuaXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDB3dN8xmixWS6q
+fMROGAJZQapHgGdCoVlmoV7P7BhQy2/CMCstK9YtmUuEdxqq7k+1N4yJmP5ZOzfZ
+nPE8JIU++qbzLhEpy2NPdg7VDQlXtTPyy2bd0ppUFt336YmkgmwoowPwYylIFsYW
+w85UPopYfKmHC6+uTUUO8b1xzze/p6eZUtGwfL9M+u7ivFgLcMGvTcN2KCUF2jho
+oI+aMBhcBB9kLtbHNjaT/hJ1mAe1UkSMdRE0RvQWpN9GY1kiyf8hnMTvzKvtVxaA
+/ND9w/QfZu4e63eJTqbYgtD3bmUmL+Z70B4SSeSnqFqSXm4DC89inzubL94/5sYP
+KdjsUfa/AgMBAAGjSDBGMCUGA1UdEQQeMByCGmFwcGxpY2F0aW9ucy5jb2xpYnJp
+bmV0Lml0MB0GA1UdDgQWBBR+0zAzM3bNwURwzdr3Tz4rohKpCjANBgkqhkiG9w0B
+AQUFAAOCAQEAiXpX5o40wnP9axXg8XjWemPyVBxidum7FRrtIK50dAymteNs9czc
+RnSIuQ9OcEVQxwGB/pskq6Tqv2A6bZ+tvQTx/dgVwaYbNBlXLZTMK0rkF3cD1cm5
+Nt4+726iVKneFHthaXZpRoa3JXRTHXOKJVoBrLuW18bSuhnuhQEGqfkDrSTDDK5h
+XK8KqC6BkBWAX+5Xz6+X8nsPkXExChfcP88SwAf+b6ZmaqTfA3OYurJgVSfeXDnG
+0VGFrsoADPGWrn+czCNZyf7Ne54xtusdlKXMbEYlgIdvMXpydKn4OE5W9152VoOB
+WTa0nv5vQUzCrsmRU1EbnBK4+fP+hHxVsg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://applications.colibrinet.it/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://applications.colibrinet.it/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://applications.colibrinet.it/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://applications.colibrinet.it/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://applications.colibrinet.it/Shibboleth.sso/SLO/Artifact"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML/POST" index="5"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://applications.colibrinet.it/Shibboleth.sso/SAML/Artifact" index="6"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="it">Colibri - Insieme di immagini cerebrali pediatriche</md:ServiceName>
+	<md:ServiceName xml:lang="en">Colibri - Collection of pediatric brain images</md:ServiceName>
+	<md:ServiceDescription xml:lang="it">Portale web dedicato al progetto Colibri per rendere accessibili i due database, contenenti le neuroimmagini e i dati clinici accessori relativi a malattie, sindromi rare o casi sporadici.</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="en">Web portal dedicated to the Colibri project to make two databases accessible over the web. The databases contain brain images and accessory clinical data relative to rare diseases and syndroms or to sporadic cases.</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Eugenio Medea - Associazione la Nostra Famiglia</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Eugenio Medea - La Nostra Famiglia association</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Progetto COLiBrI erogato da Istituto Eugenio Medea</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Progetto COLiBrI provided by Istituto Eugenio Medea</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.emedea.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.emedea.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="administrative">
+<md:GivenName>Gianluigi</md:GivenName>
+<md:SurName>Reni</md:SurName>
+<md:EmailAddress>mailto:gianluigi.reni@bp.lnf.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>System</md:GivenName>
+<md:SurName>Support</md:SurName>
+<md:EmailAddress>mailto:system.support@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

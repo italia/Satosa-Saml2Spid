@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uniurb.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2010-02-23T15:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">uniurb.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">Urbino University</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Università di Urbino</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for Urbino University users</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti dell'Università di Urbino</mdui:Description>
+<mdui:InformationURL xml:lang="it">http://www.uniurb.it/idem/</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">http://www.uniurb.it/it/portale/index.php?mist_id=12000&amp;lang=ENG&amp;tipo=ENG&amp;page=1069</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://www.uniurb.it/idem/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="150" width="200">https://idp.uniurb.it/images/logo-uniurb-200x150.png</mdui:Logo>
+<mdui:Logo height="16" width="16">https://idp.uniurb.it/images/favicon-16x16.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAPfr8HNJ+ZnHsOZPOHT6/ExkMj/TMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC51bml1cmIuaXQwHhcNMDkxMTA0MTIwNjM4WhcN
+MjkxMTA0MTIwNjM4WjAYMRYwFAYDVQQDEw1pZHAudW5pdXJiLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArCLO1a/dUZ8kXUwmWnFFQIZhqooWQS9E
+jL+MBLChM79Rjh0Ucga+iWKfrldYst6GyUsucTc409cd0k1WuSrcWhqbGsNUklux
+TF2RJOWdtc9o748/eybGFrymycmXnnGOinwmqvaRDQGQQ0oxi1CxhhJ/kkZRBiyH
+kJ0w5NjY+8KUPlTiPU6X71HGPhrrOgBteGcegt5gIycMdWAZhl/30yLNxIo8XdRH
+VmuHzifQqLxmsYRlHTQKVeKkQ39NcoKYpmmq84SQNximYDFy1l0QJErZ9din7q0T
+9tJG56/1C7Cd3cswdA7E7rg8/E1SEQTq63WUuIssA9cgvVYy0zEJ1QIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAudW5pdXJiLml0hiRodHRwczovL2lkcC51bml1cmIu
+aXQvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFEdlfuYSnAcQl8FMtl+bhsdev9SS
+MA0GCSqGSIb3DQEBBQUAA4IBAQBYopjNhRz1N1QjNZDClXH0UgTBHIyzYs1kkfid
+kySla/EpsunfgdhYyxewc0RmFkRbZsMbji5Sbu7ezVuTt+JO1DJvWvqGMUsvz3rP
+Fj/hx4kxR+D2fM+27LoyK3L7jvAq8FcBR7b/vV+6vEF2vI4cKNXQ8GEv0Aem0Ow2
+5l6w4DgJLa0/3BpfaktCHHtV9YMB8OdcmGi1LZLE89uDlBrh2wS7myGMU+3h6/GL
+40cg0YNou/KoAV5DM0cvNRef+K/IjlEILdppfjfmk4jD9Eqom1m6i8dffH7fK2ee
+T68a+KBYk1QOH0KR1wV5hojnDngV3n9JvzTHSBvVpbkOxvDi
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uniurb.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uniurb.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.uniurb.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uniurb.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">uniurb.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAPfr8HNJ+ZnHsOZPOHT6/ExkMj/TMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC51bml1cmIuaXQwHhcNMDkxMTA0MTIwNjM4WhcN
+MjkxMTA0MTIwNjM4WjAYMRYwFAYDVQQDEw1pZHAudW5pdXJiLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArCLO1a/dUZ8kXUwmWnFFQIZhqooWQS9E
+jL+MBLChM79Rjh0Ucga+iWKfrldYst6GyUsucTc409cd0k1WuSrcWhqbGsNUklux
+TF2RJOWdtc9o748/eybGFrymycmXnnGOinwmqvaRDQGQQ0oxi1CxhhJ/kkZRBiyH
+kJ0w5NjY+8KUPlTiPU6X71HGPhrrOgBteGcegt5gIycMdWAZhl/30yLNxIo8XdRH
+VmuHzifQqLxmsYRlHTQKVeKkQ39NcoKYpmmq84SQNximYDFy1l0QJErZ9din7q0T
+9tJG56/1C7Cd3cswdA7E7rg8/E1SEQTq63WUuIssA9cgvVYy0zEJ1QIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAudW5pdXJiLml0hiRodHRwczovL2lkcC51bml1cmIu
+aXQvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFEdlfuYSnAcQl8FMtl+bhsdev9SS
+MA0GCSqGSIb3DQEBBQUAA4IBAQBYopjNhRz1N1QjNZDClXH0UgTBHIyzYs1kkfid
+kySla/EpsunfgdhYyxewc0RmFkRbZsMbji5Sbu7ezVuTt+JO1DJvWvqGMUsvz3rP
+Fj/hx4kxR+D2fM+27LoyK3L7jvAq8FcBR7b/vV+6vEF2vI4cKNXQ8GEv0Aem0Ow2
+5l6w4DgJLa0/3BpfaktCHHtV9YMB8OdcmGi1LZLE89uDlBrh2wS7myGMU+3h6/GL
+40cg0YNou/KoAV5DM0cvNRef+K/IjlEILdppfjfmk4jD9Eqom1m6i8dffH7fK2ee
+T68a+KBYk1QOH0KR1wV5hojnDngV3n9JvzTHSBvVpbkOxvDi
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uniurb.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università di Urbino</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Urbino University</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università di Urbino</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Urbino University</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.uniurb.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.uniurb.it/it/portale/index.php?mist_id=12000&amp;lang=ENG&amp;tipo=ENG&amp;page=1069</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Alessia</md:GivenName>
+<md:SurName>Ventani</md:SurName>
+<md:EmailAddress>mailto:alessia.ventani@uniurb.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Marco</md:GivenName>
+<md:SurName>Cappellacci</md:SurName>
+<md:EmailAddress>mailto:marco.cappellacci@uniurb.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://eduspot.utc.fr/authsaml2/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2016-09-19T17:23:35Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://federation.renater.fr/category/wifi</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/national</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration=" urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">UTC - Eduspot</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="fr">https://eduspot.utc.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">UTC - Eduspot</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Eduspot UTC</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">UTC - Eduspot</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGtzCCBZ+gAwIBAgIQDQi01YmKCJQK/p3mEXSGpTANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xOTA2MDYwMDAwMDBaFw0yMTA2MTAxMjAwMDBaMH8xCzAJBgNVBAYT
+AkZSMRMwEQYDVQQHDApDb21wacOoZ25lMTEwLwYDVQQKDChVbml2ZXJzaXTDqSBk
+ZSBUZWNobm9sb2dpZSBkZSBDb21wacOoZ25lMQ8wDQYDVQQLEwZEU0ktU1IxFzAV
+BgNVBAMTDmVkdXNwb3QudXRjLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEAxQYpC1kMV3ZvQ5KUJehM2BtpRnxJAabtY74UzL0ZnC89/qJf23CJ3RFW
+gB5vzfzzHT4lqpVF9Z57mwe8tBf3e4EvGSCN1almOrGT62qcyqjR59kzODIh44WR
+4oO/zUk9O5iXinDoNOddBL/vtSec7TOUUPq2B8DshudC2cmgPhKHiCg3ngLoYq8g
+HB2YUIGlL1AYsMAx77VBiuWuRpAOxF+rTVYyN58qixPccFB+Jo6JWaHe9gM7bTEj
+SAV+AWHHEiNpgCOuQpcXl8z/HDIXa2avaR31a4PS7DQ6kL8VOQ41kjfvZor5mbAU
+UGE51IQ8AjscnrJ7sj0pdyRyiYM9/QIDAQABo4IDSDCCA0QwHwYDVR0jBBgwFoAU
+Z/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFIJpfsAVSIZ/NhNuGbKHXcHO
+t1LFMBkGA1UdEQQSMBCCDmVkdXNwb3QudXRjLmZyMA4GA1UdDwEB/wQEAwIFoDAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4Yp
+aHR0cDovL2NybDMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuG
+KWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1Ud
+IARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRp
+Z2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEF
+BQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRw
+Oi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMB
+Af8EAjAAMIIBfQYKKwYBBAHWeQIEAgSCAW0EggFpAWcAdQC72d+8H4pxtZOUI5eq
+kntHOFeVCqtS6BqQlmQ2jh7RhQAAAWstDQZ0AAAEAwBGMEQCIAgN2rwtwcxKPK7s
+oW9XHaGYYodvHPXmLSAyMNDqdepJAiA7HCpl/3eiblAz2/ANvxou1tapIKyKo2hV
+n+hIVxzgTwB2AId1v+dZfPiMQ5lfvfNu/1aNR1Y2/0q1YMG06v9eoIMPAAABay0N
+BzMAAAQDAEcwRQIhAIQqRVqYDbiW1ilJC9OfUGNPmtKhfwQAk97Fvgl4u7oSAiAU
+Gq4EogMGKq3SL+TwGHK2uWDBhv6u7frVsdXv5VVLOQB2AESUZS6w7s6vxEAH2Kj+
+KMDa5oK+2MsxtT/TM5a1toGoAAABay0NBb0AAAQDAEcwRQIgadOoZRfUYvdZka5a
+fgCTeMCFrG10lfsALgrRdgRiVnoCIQDhF/EDH2ylYNK6ZGOrqzqfL3ZISBT1LGoE
+mfXK+lNFyDANBgkqhkiG9w0BAQsFAAOCAQEAHDKmABRcKaOWo7sTWnMDSZueiDO0
+9txvV/1NyBRUMRZtJaKJGcYRlOTGqVvB/b2Tnp/u7nZMw/ydSskYbmIMrytmtzYp
+5WBjhR3a8Qmr9NJIhXtwRJC3fE9psF3SxX/+AARec5YLCMGjbDCitbN52qMH0qz3
+b4EukeAW93wZuDRN+CjYgJZF3TVMOSnuz8fQeddIgGD2brh7EWe/JsqFxsRUEWwk
+SjOrCvPPnmrz51kpGk7yQl+ovggWrt656jKAiJV0JHItF8ORH7GLhHOILV/Pc8iF
+jSxAm7JEvDVXLtsyMiVs7iXwz1WfKtSHlEVuKmSxuIpJj5iBlfH+LEdkLw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGtzCCBZ+gAwIBAgIQDQi01YmKCJQK/p3mEXSGpTANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xOTA2MDYwMDAwMDBaFw0yMTA2MTAxMjAwMDBaMH8xCzAJBgNVBAYT
+AkZSMRMwEQYDVQQHDApDb21wacOoZ25lMTEwLwYDVQQKDChVbml2ZXJzaXTDqSBk
+ZSBUZWNobm9sb2dpZSBkZSBDb21wacOoZ25lMQ8wDQYDVQQLEwZEU0ktU1IxFzAV
+BgNVBAMTDmVkdXNwb3QudXRjLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEAxQYpC1kMV3ZvQ5KUJehM2BtpRnxJAabtY74UzL0ZnC89/qJf23CJ3RFW
+gB5vzfzzHT4lqpVF9Z57mwe8tBf3e4EvGSCN1almOrGT62qcyqjR59kzODIh44WR
+4oO/zUk9O5iXinDoNOddBL/vtSec7TOUUPq2B8DshudC2cmgPhKHiCg3ngLoYq8g
+HB2YUIGlL1AYsMAx77VBiuWuRpAOxF+rTVYyN58qixPccFB+Jo6JWaHe9gM7bTEj
+SAV+AWHHEiNpgCOuQpcXl8z/HDIXa2avaR31a4PS7DQ6kL8VOQ41kjfvZor5mbAU
+UGE51IQ8AjscnrJ7sj0pdyRyiYM9/QIDAQABo4IDSDCCA0QwHwYDVR0jBBgwFoAU
+Z/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFIJpfsAVSIZ/NhNuGbKHXcHO
+t1LFMBkGA1UdEQQSMBCCDmVkdXNwb3QudXRjLmZyMA4GA1UdDwEB/wQEAwIFoDAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4Yp
+aHR0cDovL2NybDMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuG
+KWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1Ud
+IARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRp
+Z2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEF
+BQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRw
+Oi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMB
+Af8EAjAAMIIBfQYKKwYBBAHWeQIEAgSCAW0EggFpAWcAdQC72d+8H4pxtZOUI5eq
+kntHOFeVCqtS6BqQlmQ2jh7RhQAAAWstDQZ0AAAEAwBGMEQCIAgN2rwtwcxKPK7s
+oW9XHaGYYodvHPXmLSAyMNDqdepJAiA7HCpl/3eiblAz2/ANvxou1tapIKyKo2hV
+n+hIVxzgTwB2AId1v+dZfPiMQ5lfvfNu/1aNR1Y2/0q1YMG06v9eoIMPAAABay0N
+BzMAAAQDAEcwRQIhAIQqRVqYDbiW1ilJC9OfUGNPmtKhfwQAk97Fvgl4u7oSAiAU
+Gq4EogMGKq3SL+TwGHK2uWDBhv6u7frVsdXv5VVLOQB2AESUZS6w7s6vxEAH2Kj+
+KMDa5oK+2MsxtT/TM5a1toGoAAABay0NBb0AAAQDAEcwRQIgadOoZRfUYvdZka5a
+fgCTeMCFrG10lfsALgrRdgRiVnoCIQDhF/EDH2ylYNK6ZGOrqzqfL3ZISBT1LGoE
+mfXK+lNFyDANBgkqhkiG9w0BAQsFAAOCAQEAHDKmABRcKaOWo7sTWnMDSZueiDO0
+9txvV/1NyBRUMRZtJaKJGcYRlOTGqVvB/b2Tnp/u7nZMw/ydSskYbmIMrytmtzYp
+5WBjhR3a8Qmr9NJIhXtwRJC3fE9psF3SxX/+AARec5YLCMGjbDCitbN52qMH0qz3
+b4EukeAW93wZuDRN+CjYgJZF3TVMOSnuz8fQeddIgGD2brh7EWe/JsqFxsRUEWwk
+SjOrCvPPnmrz51kpGk7yQl+ovggWrt656jKAiJV0JHItF8ORH7GLhHOILV/Pc8iF
+jSxAm7JEvDVXLtsyMiVs7iXwz1WfKtSHlEVuKmSxuIpJj5iBlfH+LEdkLw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIE3DCCA8SgAwIBAgIBATANBgkqhkiG9w0BAQsFADCBmDELMAkGA1UEBhMCRlIx
+ETAPBgNVBAgTCFBpY2FyZGllMRIwEAYDVQQHEwlDb21waWVnbmUxLzAtBgNVBAoT
+JlVuaXZlcnNpdGUgZGUgVGVjaG5vbG9naWUgZGUgQ29tcGllZ25lMRwwGgYJKoZI
+hvcNAQkBFg1kc2ktc3JAdXRjLmZyMRMwEQYDVQQDEwplZHVzcG90LWNhMB4XDTE2
+MDkxOTE0MTQzOVoXDTI2MDkxNzE0MTQzOVowgZwxCzAJBgNVBAYTAkZSMREwDwYD
+VQQIEwhQaWNhcmRpZTESMBAGA1UEBxMJQ29tcGllZ25lMS8wLQYDVQQKEyZVbml2
+ZXJzaXRlIGRlIFRlY2hub2xvZ2llIGRlIENvbXBpZWduZTEcMBoGCSqGSIb3DQEJ
+ARYNZHNpLXNyQHV0Yy5mcjEXMBUGA1UEAxMOZWR1c3BvdC51dGMuZnIwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDnCqcl2qwnyhHzmdPkBTlL0eOTe4vx
+KByHOaurU7V11Zm+lC7MUi4vWa4qAAvcnNQ9JMA4SHREkIjb0b/q7yrnyRK3wXfr
+bCpA+S3+D84JFLxRXVQojtaY1X4IAkzuOit/rCMhZ4negcWMRhwFH3YuMkXnV9SC
+QY0M40unfqiAzHaQMI4GfdepjiQwwtJvYbk6r1OcLzAAjmhblDMnddltzi5MCZRZ
+CAgvanrvnJ03LgYcYJNIvHMb9ncEM/5tndP77wUnJ4DEzdRASEjOHCYXBXU5fuxZ
+KJBLeOrZUMByr2s9NULPDSHYY2MFpCivQTwaA0qwx+9IOCTsnXufhPCzAgMBAAGj
+ggEpMIIBJTAJBgNVHRMEAjAAMDEGCWCGSAGG+EIBDQQkFiJPcGVuU1NMIEdlbmVy
+YXRlZCBVc2VyIENlcnRpZmljYXRlMB0GA1UdDgQWBBQYfAMzzwKiRhwZRiggXauk
+F6UNCjCBxQYDVR0jBIG9MIG6gBQ+bKpK/87DRFRgD5osWdvP9bvN06GBnqSBmzCB
+mDELMAkGA1UEBhMCRlIxETAPBgNVBAgTCFBpY2FyZGllMRIwEAYDVQQHEwlDb21w
+aWVnbmUxLzAtBgNVBAoTJlVuaXZlcnNpdGUgZGUgVGVjaG5vbG9naWUgZGUgQ29t
+cGllZ25lMRwwGgYJKoZIhvcNAQkBFg1kc2ktc3JAdXRjLmZyMRMwEQYDVQQDEwpl
+ZHVzcG90LWNhggEAMA0GCSqGSIb3DQEBCwUAA4IBAQBwnHxFE3m2YccYLHOt4+QR
+/PtZTPbbt0F59iYmNA+pbtuqZEeKsSXcNxOyc+piLqkpzzPyv50II9yAMMLc2A6j
+w6mFdGr0d/9oMExYfo0VyYK2w2kM/uNelwIdn976whHDphoIk5xxTbwPdySSzhr7
+d6o6P98PWMzBbKZXUOdz6Nats9jLZCJgXQEtWWCu+rXf8xcopKaF8WIpzrPHr6BW
+29hlQMJ4Df18Va1sUEyvpaqv0VCGeTNVFFyXr/a5Vjs/igidNJU7pPerJsJWpWES
+Aw8ptiQeVPNXIMJE02e5eK53AaCLk1SDZgLvKftDn2wmTiXcTytwbUFpvI/vyjn9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eduspot.utc.fr/authsaml2/singleSignOnPost" index="0"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">Eduspot UTC</md:ServiceName>
+		<md:ServiceName xml:lang="en">UTC - Eduspot</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">UTC - Eduspot</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">UTC - Eduspot</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Technologie de Compiègne</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Technologie de Compiègne</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.utc.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsi-sr@utc.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

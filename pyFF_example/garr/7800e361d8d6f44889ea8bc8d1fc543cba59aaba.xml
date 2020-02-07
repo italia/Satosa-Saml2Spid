@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:cru.fr:federation:uhb.fr">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2009-04-23T13:48:41Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uhb.fr</shibmd:Scope>
+		<shibmd:Scope regexp="false">univ-haute-bretagne.fr</shibmd:Scope>
+		<shibmd:Scope regexp="false">univ-rennes2.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université Rennes 2</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAB6UlEQVQoz1WST0iUURTFf/fNlzCpWSA0EQYSYgz9cRUWNut2QdG+drWR2rizqFW0KGaVyZAGQVCGChVEm8wpgiJiQhTCFlIEYWU2g86/d1q870u7m/d4vHPPPeceY9wAJDMTGIhwAjJMiLgMcBbfTQgv+eSDMEtJoR0IvEARwpA81DmU6euI2ufK8z9WlmkBNQNjT2tPJr0zZe7F95dwF25zcfZCXTUltVRZ2veglwKMpSjwcG4ivDOCo8H57LkbAzcjtqDATdfWrvnTCwd39OGbQM1XExk46lzrv56osqAsqHh9oohjQ3MA7O3s3ha1g/40VoeKQ8ce56YXpwy8fGuq9dXxIuv/ATgyfTjMd+b5WUbhDoxw+e0lSfJe0uDsYOF9YUODNxeQ2c4sDWhCmivvrk59nsQMyA/kD2T2b6K4hyTvvaSZbzOPFiYowDiM8rXyRZLXPzJxC0eF0s+PYc25TO5k7ylqmCBi92T3mtbD7s0Udu1oof/Z0dX6b9vknMxwjlp9z/1dlWbFsCQsOMzWquWOse3Db4afLj0p/SqRAmTyuNRydaVtrC3/Ib9Y/hTnhXEMk0QTPBgWIbPEfwc+NsNjaYuSEVFkIZ7EmTUkzIMjEpFMJnDCUBzsgFCcVwVbTd4ww0Kbv2lsB+BFv9iTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjUwOjA1KzAyOjAwu5sZmwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo1MDowNSswMjowMMrGoScAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.uhb.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users of University of Rennes 2</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Rennes 2</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs Université Rennes 2</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUN1TTOPl4sgCyt2P8GnFSEqcJLsYwDQYJKoZIhvcNAQEL
+BQAwJTEjMCEGA1UEAwwac2hpYmJvbGV0aC51bml2LXJlbm5lczIuZnIwHhcNMTUx
+MjE2MTAwNjMwWhcNMzUxMjE2MTAwNjMwWjAlMSMwIQYDVQQDDBpzaGliYm9sZXRo
+LnVuaXYtcmVubmVzMi5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AIc9O9Uc1ocyQeZVnWbdvw+UblNoZd3h2l7+uSYeVlDh+w1hiwzyqJgkfSm4cnIh
+QuyDreblxUi4kWchq8CNl2h5iUuXvbx+9T5p5okrLVzVr5gTblr5Zbt0XKUwM2ij
+1CRtUJIKRDvulteDWpidBHHpKcQcCeqX+Sua1C/btdXogib8tK3jsnEMPLTpDgr1
+NaKPx0zDq42+lK6iNXKCpMrELsuY+8zhSpQ5MEfFGv3Mn/SJxazHZL4zeXfAsmWn
+kgU0tsb5laOKFPPDH/1w0oVXCBjMaiXNo9pN4vniKqNcKqdt3LScnXgx+6nRLUl7
+VoZnBD/wUox/H/WoaCZJG98CAwEAAaNrMGkwHQYDVR0OBBYEFJCVUOEA0sf43c8F
+tG9gw6OOIT13MEgGA1UdEQRBMD+CGnNoaWJib2xldGgudW5pdi1yZW5uZXMyLmZy
+hiF1cm46bWFjZTpjcnUuZnI6ZmVkZXJhdGlvbjp1aGIuZnIwDQYJKoZIhvcNAQEL
+BQADggEBAH9uybT+vMHuOwrR2CaLsaosmDUwnBW49igCi/MOIPHMfBEjxjwWTM6c
+uRZ54Ek7Z5kw6Z0xXS7o4FBLvh5cBXynmxIoYBEyEhCcEREuY0HkoXjHEtkQyEh8
+Fbiu42dnzjVPtsLiURycXoGWdN9eYdPkZT/x7b60utBFJ7Y1lCA2+6D0eMXJI/bu
+8NO/uK3WHCdPWA/p0orBLN8WkStgmHv+4coHn++h0KqBASF6zJNKd4HJz8ihfdi+
+CQJuCqQLnHVwpjJ0xEHustvaFv2zyxP6P/af8iLUK+9UciOk7Cp4LjrdlBmMrf5Q
+QisFJWc/MGN0ISKidXg5cRqLoBnSgnw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIElDCCA3ygAwIBAgIQLdnpFQuu69xl9z7dAWPZhzANBgkqhkiG9w0BAQUFADA2
+MQswCQYDVQQGEwJOTDEPMA0GA1UEChMGVEVSRU5BMRYwFAYDVQQDEw1URVJFTkEg
+U1NMIENBMB4XDTEzMDQwMjAwMDAwMFoXDTE2MDQwMTIzNTk1OVowSDEhMB8GA1UE
+CxMYRG9tYWluIENvbnRyb2wgVmFsaWRhdGVkMSMwIQYDVQQDExpzaGliYm9sZXRo
+LnVuaXYtcmVubmVzMi5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AKFFb2IxKCffcTQOFyEl2g99rJUdjkOchNMt7alge6/T4/wRxcl7G/2Q+DahU6s9
+i4lUCYFV9iKi7Ia2eYUfn69r3KjN9q+h2fbb/BMyKt6lZicqQkrU1Kk3NSzQWiCZ
+quB8hy8W8sW7qZ2kfgCR3AZ+0bHchCMwYTDI+MKe0NURzxf/PiqSWe8PvYo0fs6L
+RAqwLW6X6DOfF8CbOVlHf8MpUaFLXWn5XZ8iEMA4+EnaJ1uxMqVeLNqU1jTQqKni
+dQ+JFCZvMJqRtuXeVvBawkTsCh1JWAUU/2FcnD7RN340aLC5V3F3ZN3hZCjJiXv7
+boO5MMJpIJkbrtHJJw+Mo7kCAwEAAaOCAYowggGGMB8GA1UdIwQYMBaAFAy9k2gM
+896ro0lrKzdXR+qQ47ntMB0GA1UdDgQWBBSyIireJ6nPkGljLFuPuPxNpmdY7zAO
+BgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcD
+AQYIKwYBBQUHAwIwIgYDVR0gBBswGTANBgsrBgEEAbIxAQICHTAIBgZngQwBAgEw
+OgYDVR0fBDMwMTAvoC2gK4YpaHR0cDovL2NybC50Y3MudGVyZW5hLm9yZy9URVJF
+TkFTU0xDQS5jcmwwbQYIKwYBBQUHAQEEYTBfMDUGCCsGAQUFBzAChilodHRwOi8v
+Y3J0LnRjcy50ZXJlbmEub3JnL1RFUkVOQVNTTENBLmNydDAmBggrBgEFBQcwAYYa
+aHR0cDovL29jc3AudGNzLnRlcmVuYS5vcmcwOAYDVR0RBDEwL4Iac2hpYmJvbGV0
+aC51bml2LXJlbm5lczIuZnKCEXNoaWJib2xldGgudWhiLmZyMA0GCSqGSIb3DQEB
+BQUAA4IBAQCgvAbpw5E3Kf9+PokHstck4ysikCjOebRAFilM9lu8xRc4lyuMTlr9
+eMdckFM3kO7wa6iiNPieFCnCsok8ZZ1wGI1qUkKYKE2DtxbEiTVfPtwQhnGQPDp4
+rnneYYlTeIQawTxr9kf+uwiaTKm1AGU1gMcT2tM9dfnQ+5Zt1DukJUWLMxq5upmz
+fhb8GprtsM8qv0z2+6Fat+iIu0GfmOaDZ/gDsW++cOD9P6K25GrdmVk20rC3oyy1
+OABUhu/g7vs9SnH4R/DZfgZ3U2WrVo8n/P9zcmNwfefBBC267M8I7c73wxZza+fb
+/K7h56t2aaVkVbRdvi8tEncI1Fzw5lq5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.uhb.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uhb.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.uhb.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Rennes 2 - Haute Bretagne</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Rennes 2 - Haute Bretagne</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uhb.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:admin-unix@uhb.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Yann Richard</md:GivenName>
+	<md:EmailAddress>mailto:rssi@univ-rennes2.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uoa.gr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uoa.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="el">Εθνικό και Καποδιστριακό Πανεπιστημίο Αθηνών </mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">National and Kapodistrian University of Athens</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="el">http://www.uoa.gr/to-panepistimio.html</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://en.uoa.gr/the-university.html</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>uoa.gr</mdui:DomainHint>
+		<mdui:IPHint>195.134.64.0/18 </mdui:IPHint>
+		<mdui:IPHint>87.239.232.0/21</mdui:IPHint>
+		<mdui:IPHint>88.197.0.0/17 </mdui:IPHint>
+		<mdui:IPHint>2001:648:2010::/48 </mdui:IPHint>
+		<mdui:GeolocationHint>geo:38.0165,23.6661</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:37.9731,23.7612</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFATCCA+mgAwIBAgIIEms+5gN0OgUwDQYJKoZIhvcNAQEFBQAwgZIxCzAJBgNV
+BAYTAkdSMUQwQgYDVQQKEztIZWxsZW5pYyBBY2FkZW1pYyBhbmQgUmVzZWFyY2gg
+SW5zdGl0dXRpb25zIENlcnQuIEF1dGhvcml0eTE9MDsGA1UEAxM0TmF0aW9uYWwg
+YW5kIEthcG9kaXN0cmlhbiBVbml2ZXJzaXR5IG9mIEF0aGVucyBDQSBSMTAeFw0x
+NDA1MjcwMDAwMDBaFw0xNjA1MjYxMDUzNDlaMGAxCzAJBgNVBAYTAkdSMTcwNQYD
+VQQKEy5OYXRpb25hbCBhbmQgS2Fwb2Rpc3RyaWFuIFVuaXZlcnNpdHkgb2YgQXRo
+ZW5zMRgwFgYDVQQDEw9VT0EgaWRwIHNlcnZpY2UwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCpFnIjMy+Hp7ZBii7LIm+FqVlRiL9tGew8L2gmevWvDTkH
+yTnIvAfOr4hmaZ075R44FqEDL03tiZMsMyFbsDL1uYuJA1bJY4cM66I88+aIWwaL
+MKuI1voOvClbx08y4c+gI5+epurxju0NaVcVqgUJuLzAcnbIHmaSiC9NEuvlYo9Z
+tkFX8g1nFoUatPEoZseJfukdyufqyb59hGsNtlw9cHnY+gy+69Y4ZmxU7uXmm7oE
+0IRoQDBeCp7hiGJePYcQeJHNxWZiO3/SgP6p9G3qO9oSHu892DZ8uPP3CrvwgpW0
+6uVGR+7i8IGjjMOdFiTTWtlvfFJmJ/ETKYe3511JAgMBAAGjggGKMIIBhjALBgNV
+HQ8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1UdDgQW
+BBSt7IktXk4pgSt+ECuSqC4RSNQG1zAfBgNVHSMEGDAWgBTWQ2tZXkiPvrW/wHtw
+u/Sr8SNBizBrBggrBgEFBQcBAQRfMF0wIQYIKwYBBQUHMAGGFWh0dHA6Ly9vY3Nw
+LmhhcmljYS5ncjA4BggrBgEFBQcwAoYsaHR0cDovL3d3dy5oYXJpY2EuZ3IvY2Vy
+dHMvSGFyaWNhVW9hQ0FSMS5wZW0wQwYDVR0fBDwwOjA4oDagNIYyaHR0cDovL2Ny
+bHYxLmhhcmljYS5nci9IYXJpY2FVb2FDQVIxL2NybHYxLmRlci5jcmwwTwYDVR0g
+BEgwRjBEBgwrBgEEAYHPEQEAAgcwNDAyBggrBgEFBQcCARYmaHR0cDovL3d3dy5o
+YXJpY2EuZ3IvZG9jdW1lbnRzL0NQUy5waHAwFQYDVR0RBA4wDIIKaWRwLnVvYS5n
+cjANBgkqhkiG9w0BAQUFAAOCAQEAaSENditQfkHEUNah+TqAhJziq/UC6UMh11PR
+1MIHmmQ7rTEiusr1E2sKkYqJA3UPD9aWhre6aNVNqCuViEfTvbc3YwytTu0vPqMt
+h23lNL4RQQHLpPpeUUDoN0vV/PlFUNeHnh/o7JtrCOTcdS7mQgkJvxq6kWwdDuQx
+0ZLgZQfyCHUlUToinr5oNCG7FAy2LRjXrzyOKGurX3WSY2FPAvWe1KSqdUS8/ZgI
+Jo0dRg7bs242O3GkczYeCobJ57vAwmiOPpHWyLq0QNPOQpJteMRRbDyDPEJxmZqL
+fFv23NJu+qiTMvSS1Z89Vph7AOEvYlV+m/BDv+Md9K41XM8i1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uoa.gr:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uoa.gr:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uoa.gr/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uoa.gr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.uoa.gr/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uoa.gr/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uoa.gr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFATCCA+mgAwIBAgIIEms+5gN0OgUwDQYJKoZIhvcNAQEFBQAwgZIxCzAJBgNV
+BAYTAkdSMUQwQgYDVQQKEztIZWxsZW5pYyBBY2FkZW1pYyBhbmQgUmVzZWFyY2gg
+SW5zdGl0dXRpb25zIENlcnQuIEF1dGhvcml0eTE9MDsGA1UEAxM0TmF0aW9uYWwg
+YW5kIEthcG9kaXN0cmlhbiBVbml2ZXJzaXR5IG9mIEF0aGVucyBDQSBSMTAeFw0x
+NDA1MjcwMDAwMDBaFw0xNjA1MjYxMDUzNDlaMGAxCzAJBgNVBAYTAkdSMTcwNQYD
+VQQKEy5OYXRpb25hbCBhbmQgS2Fwb2Rpc3RyaWFuIFVuaXZlcnNpdHkgb2YgQXRo
+ZW5zMRgwFgYDVQQDEw9VT0EgaWRwIHNlcnZpY2UwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCpFnIjMy+Hp7ZBii7LIm+FqVlRiL9tGew8L2gmevWvDTkH
+yTnIvAfOr4hmaZ075R44FqEDL03tiZMsMyFbsDL1uYuJA1bJY4cM66I88+aIWwaL
+MKuI1voOvClbx08y4c+gI5+epurxju0NaVcVqgUJuLzAcnbIHmaSiC9NEuvlYo9Z
+tkFX8g1nFoUatPEoZseJfukdyufqyb59hGsNtlw9cHnY+gy+69Y4ZmxU7uXmm7oE
+0IRoQDBeCp7hiGJePYcQeJHNxWZiO3/SgP6p9G3qO9oSHu892DZ8uPP3CrvwgpW0
+6uVGR+7i8IGjjMOdFiTTWtlvfFJmJ/ETKYe3511JAgMBAAGjggGKMIIBhjALBgNV
+HQ8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1UdDgQW
+BBSt7IktXk4pgSt+ECuSqC4RSNQG1zAfBgNVHSMEGDAWgBTWQ2tZXkiPvrW/wHtw
+u/Sr8SNBizBrBggrBgEFBQcBAQRfMF0wIQYIKwYBBQUHMAGGFWh0dHA6Ly9vY3Nw
+LmhhcmljYS5ncjA4BggrBgEFBQcwAoYsaHR0cDovL3d3dy5oYXJpY2EuZ3IvY2Vy
+dHMvSGFyaWNhVW9hQ0FSMS5wZW0wQwYDVR0fBDwwOjA4oDagNIYyaHR0cDovL2Ny
+bHYxLmhhcmljYS5nci9IYXJpY2FVb2FDQVIxL2NybHYxLmRlci5jcmwwTwYDVR0g
+BEgwRjBEBgwrBgEEAYHPEQEAAgcwNDAyBggrBgEFBQcCARYmaHR0cDovL3d3dy5o
+YXJpY2EuZ3IvZG9jdW1lbnRzL0NQUy5waHAwFQYDVR0RBA4wDIIKaWRwLnVvYS5n
+cjANBgkqhkiG9w0BAQUFAAOCAQEAaSENditQfkHEUNah+TqAhJziq/UC6UMh11PR
+1MIHmmQ7rTEiusr1E2sKkYqJA3UPD9aWhre6aNVNqCuViEfTvbc3YwytTu0vPqMt
+h23lNL4RQQHLpPpeUUDoN0vV/PlFUNeHnh/o7JtrCOTcdS7mQgkJvxq6kWwdDuQx
+0ZLgZQfyCHUlUToinr5oNCG7FAy2LRjXrzyOKGurX3WSY2FPAvWe1KSqdUS8/ZgI
+Jo0dRg7bs242O3GkczYeCobJ57vAwmiOPpHWyLq0QNPOQpJteMRRbDyDPEJxmZqL
+fFv23NJu+qiTMvSS1Z89Vph7AOEvYlV+m/BDv+Md9K41XM8i1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uoa.gr:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uoa.gr:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">National and Kapodistrian University of Athens</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">Εθνικό Καποδιστριακό Πανεπιστήμιο Αθηνών</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">National and Kapodistrian University of Athens</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Εθνικό Καποδιστριακό Πανεπιστήμιο Αθηνών</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uoa.gr/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="el">http://www.uoa.gr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>University of Athens Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk.idp@noc.uoa.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>University of Athens Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk.idp@noc.uoa.gr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

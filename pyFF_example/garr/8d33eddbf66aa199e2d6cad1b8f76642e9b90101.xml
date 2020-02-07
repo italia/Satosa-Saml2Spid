@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ocvc.ac.uk/entity">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2010-11-19T17:55:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Activate Learning</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Activate Learning</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">ocvc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDaDCCAlCgAwIBAgIIJK53AJuGOYowDQYJKoZIhvcNAQEFBQAwSzEpMCcGA1UE
+CgwgT3hmb3JkICYgQ2hlcndlbGwgVmFsbGV5IENvbGxlZ2UxHjAcBgNVBAMMFW9w
+ZW5hdGhlbnMub2N2Yy5hYy51azAeFw0xMzEwMjgxNDM5NTVaFw0yMzEwMjgxMzM5
+NTVaMEsxKTAnBgNVBAoMIE94Zm9yZCAmIENoZXJ3ZWxsIFZhbGxleSBDb2xsZWdl
+MR4wHAYDVQQDDBVvcGVuYXRoZW5zLm9jdmMuYWMudWswggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCNnm5Z9gl6f4YR2HJAHY8ne53sVj4L+PL4orRT/cG/
+CcnldjJRFOEdeJhK53/Gxdgoxt0gtZulIfTofGOPskBu+rr1OWJWW2VeAP2elp2r
++Tl/aNjFiMhBriKhAZJJpm1kcZkjO7sYrVvMbreVS0/9y1GuoKKfO7MjIZ5Yxtnq
+XyimprbRsgNFxxE/B+BWFEsLwsJjhxM6puGOBl3x+3oyfBLDP4qPThG+isa1j/fj
+8Z3vG2XFfcYj+KvlSYm6IEI/M7V8Eq7tOCPk+4y1fuEMFB1f/M9FgmX4McwhSFMa
+sjcRrGeXZdPawGqcGv4rgvPcj0frRbMVqWl1JZtqc1Z3AgMBAAGjUDBOMB0GA1Ud
+DgQWBBSMitszDAvNeoGk0O7s/xrD8Eys9DAfBgNVHSMEGDAWgBSMitszDAvNeoGk
+0O7s/xrD8Eys9DAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQA0WOY/
+phQvI6UKEiIkjS2B9lDB29bR8LFB1AiotU9y3a1ynTzXWDwxHtEpR+kuSC1qgpOI
+HMqNSsUTvAKs36pPk4/esCCUzdbG2i+6oIEyIykpULBX0zR+XzXPhng8HQCStcGQ
+U5IsgVzitMO4UlmdF4GiVGb+OCd/pydtBpb2oRK53/x+dW5p49XPN8HjoqpF1tMV
+uQBLmqpPooVlHC3LZnFRJ9bo1seEpZwBzVdTWaGLRXQu3Hsa8vGZTtefRRPWlPdA
+8xu4ferryExDoB95D0cLivnE73eO8QlsbdDVjfYRwHDvx3VFWFOwuiDakNE5ZLj8
+fxjatX0mFmoxpNUu
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://openathens.ocvc.ac.uk/oala/sso"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://openathens.ocvc.ac.uk/oala/sso"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Activate Learning</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Activate Learning</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ocvc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Athens Support</md:GivenName>
+	<md:EmailAddress>mailto:athens@ocvc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Services</md:GivenName>
+	<md:EmailAddress>mailto:ithelpdesk@ocvc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

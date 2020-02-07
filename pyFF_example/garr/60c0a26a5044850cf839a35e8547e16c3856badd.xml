@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://katalog.svkos.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-01-08T16:18:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">svkos.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Moravian-Silesian Research Library in Ostrava</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Moravskoslezská vědecká knihovna v Ostravě</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for patrons and staff of Moravian-Silesian Research Library in Ostrava</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro čtenáře a zaměstance Moravskoslezské vědecké knihovny v Ostravě</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.svkos.cz/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.svkos.cz/</mdui:InformationURL>
+		<mdui:Logo height="40" width="42">https://katalog.svkos.cz/logo/logo_40.png</mdui:Logo>
+		<mdui:Logo height="90" width="94">https://katalog.svkos.cz/logo/logo_90.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUOaQEEERrbashpZa05w//pJQCTE0wDQYJKoZIhvcNAQEL
+BQAwGzEZMBcGA1UEAwwQa2F0YWxvZy5zdmtvcy5jejAeFw0xNTA4MTIyMTE4NTla
+Fw0yNTA4MTIyMTE4NTlaMBsxGTAXBgNVBAMMEGthdGFsb2cuc3Zrb3MuY3owggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClR0WK0cmbSWU8RArh2svrRpft
+S4nHdg41jsbx0uKJWmpjVpxzIO8t1fpvgQEdjSM2mIBBuSeCpBX+O1Hogk8H7d1Y
+h4LLEkGKiBLQNZRxKueDGc1Pc54+iYy6oMcl1fhaoqphSkW9CqJXGb8lGEnfa8+t
++MO62kESeTV/9L1fHb0exJgqzCrml/Byev7uXdaqRWqRVeXxy6eXlWhlLGwkPXMf
+9CbIyE5DyXHUupoJu8aiNh11JuR1VgZLUoOOS3yHE53HK200pISag+PIqc2g6hAw
+GHOjKJRcUrZSaqKKRvv39TLwqq9gPL3pSUVJ+G7GYc+mBFpclz/g+H/cCt0vAgMB
+AAGjZzBlMB0GA1UdDgQWBBQx4EEeJ3tf34XxGVnEpsE1hXAfTjBEBgNVHREEPTA7
+ghBrYXRhbG9nLnN2a29zLmN6hidodHRwczovL2thdGFsb2cuc3Zrb3MuY3ovaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBACPiFGXFPzxPH/eTQKbJT5lP
+yOcSE2rtal8W4QDrkE4hU220t/JjQVsRzKMnvsv/rgY6CzEYcMkPitPjJoJXmLWY
+JZaaTxx0LosXA0MU8wBj6JKTMSDJ/EEkJOQuak+2lxxwv6greAAe/Ye+6x1fqN1h
+JE6TMVker9+t4OjM0aTX5LeBvJs7ZKwbTDsnm9y9I8EPwtPnX96M3cd/D7H5h4mF
+UUObFs5lyLqvErUgn3FwKNMmi2FrTI0J1HQtLx87hfeUvriApTOW/apm+kqWE6P5
+iZxetNC82lCt7vGHOz5cXzYN2MEuqqCvAM2dTLO7rRhrSctONV0qrHlg1vZ4Vbw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://katalog.svkos.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://katalog.svkos.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://katalog.svkos.cz/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://katalog.svkos.cz/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://katalog.svkos.cz/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://katalog.svkos.cz:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://katalog.svkos.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://katalog.svkos.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://katalog.svkos.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://katalog.svkos.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">svkos.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUOaQEEERrbashpZa05w//pJQCTE0wDQYJKoZIhvcNAQEL
+BQAwGzEZMBcGA1UEAwwQa2F0YWxvZy5zdmtvcy5jejAeFw0xNTA4MTIyMTE4NTla
+Fw0yNTA4MTIyMTE4NTlaMBsxGTAXBgNVBAMMEGthdGFsb2cuc3Zrb3MuY3owggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQClR0WK0cmbSWU8RArh2svrRpft
+S4nHdg41jsbx0uKJWmpjVpxzIO8t1fpvgQEdjSM2mIBBuSeCpBX+O1Hogk8H7d1Y
+h4LLEkGKiBLQNZRxKueDGc1Pc54+iYy6oMcl1fhaoqphSkW9CqJXGb8lGEnfa8+t
++MO62kESeTV/9L1fHb0exJgqzCrml/Byev7uXdaqRWqRVeXxy6eXlWhlLGwkPXMf
+9CbIyE5DyXHUupoJu8aiNh11JuR1VgZLUoOOS3yHE53HK200pISag+PIqc2g6hAw
+GHOjKJRcUrZSaqKKRvv39TLwqq9gPL3pSUVJ+G7GYc+mBFpclz/g+H/cCt0vAgMB
+AAGjZzBlMB0GA1UdDgQWBBQx4EEeJ3tf34XxGVnEpsE1hXAfTjBEBgNVHREEPTA7
+ghBrYXRhbG9nLnN2a29zLmN6hidodHRwczovL2thdGFsb2cuc3Zrb3MuY3ovaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBACPiFGXFPzxPH/eTQKbJT5lP
+yOcSE2rtal8W4QDrkE4hU220t/JjQVsRzKMnvsv/rgY6CzEYcMkPitPjJoJXmLWY
+JZaaTxx0LosXA0MU8wBj6JKTMSDJ/EEkJOQuak+2lxxwv6greAAe/Ye+6x1fqN1h
+JE6TMVker9+t4OjM0aTX5LeBvJs7ZKwbTDsnm9y9I8EPwtPnX96M3cd/D7H5h4mF
+UUObFs5lyLqvErUgn3FwKNMmi2FrTI0J1HQtLx87hfeUvriApTOW/apm+kqWE6P5
+iZxetNC82lCt7vGHOz5cXzYN2MEuqqCvAM2dTLO7rRhrSctONV0qrHlg1vZ4Vbw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://katalog.svkos.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://katalog.svkos.cz:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="cs">Moravskoslezská vědecká knihovna v Ostravě</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Moravian-Silesian Research Library in Ostrava</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="cs">Moravskoslezská vědecká knihovna v Ostravě</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Moravian-Silesian Research Library in Ostrava</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.svkos.cz/en/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.svkos.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Matyáš Franciszek</md:GivenName>
+	<md:SurName>Bajger</md:SurName>
+	<md:EmailAddress>mailto:bajger@svkos.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

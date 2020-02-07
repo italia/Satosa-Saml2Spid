@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lit.ie/saml2">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2010-11-05T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://idp.lit.ie/saml2</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lit.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Limerick Institute of Technology</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://lit.ie</mdui:InformationURL>
+		<mdui:Logo height="68" width="224">https://edugate.heanet.ie/rr3/logos/lit.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:52.67518513199228,-8.64822506904602</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAK59k/q1uMH3/ug2R0Sas9bw35KeMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5saXQuaWUwHhcNMTAwMjA0MTEyOTQxWhcNMzAw
+MjA0MTEyOTQxWjAVMRMwEQYDVQQDEwppZHAubGl0LmllMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA495mH78CGgvQeZvKrOJ4woldl2dp7Ci4QbHLGgTp
+KKfjO76MZHmgHkModQoSBefWldbJlVfWACYl9VbY068M7G1lzK6Zm53YYjOd8Ofx
+ZvQGJKdNwovc3mJj3JIUbKgFYGJB5RelSBiit8THDuIUVbiOjNdEKY5j88FRE7bq
+eOs38te8Mb4M7CmodPNY49L17bKdj9HTDMMy+Eb7K8cXm0tI13u662dv6Eo25gHh
+yOfW+D7yN6M9QpxYiwdGsdyEI1L+3RC2wyeXyD+BPehGFIIS6E98FPrm8aEb5VYF
+LSv6HM7Svh/OYD5SUg0vVaWRq3Zk0Qnh4h3/CjN8IA/BxQIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAubGl0LmllhiFodHRwczovL2lkcC5saXQuaWUvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFHxvq0yuTJFQfC4suTA1dPy6/UlwMA0GCSqGSIb3DQEB
+BQUAA4IBAQASBDPS14vXHejZhfmJEXVmnV23Zxm0Log8KQz23JKlTETQenL2kmPJ
+FRT2sqYb96vJO+p1oK3NuVHIrqb3/c9GsvieODItogGjMSbZxIE+NEzw6unBUkmu
+ytleOJgoRQpzmV1RYSRUEFC9fqM+a6g/2OEj44k48xyxgsrf2inNGm5h8J3xg92z
+zJ1pOvbz5lQUhwFoXj6hK+Mbf2eMkRPBB2GWyHa+SQ7Od9OiGOXO3yq458Z56Epu
+4bU1gxeWc19hELfEjHGb2GcLShYI6WQMUbW8VYxJHHEko1zuS/Ubblk0L6r7pX01
+JoJbFT2leW55hVI25oEHL5f7LtG353O6
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lit.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lit.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lit.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lit.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.lit.ie/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Limerick Institute of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Limerick Institute of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://lit.ie</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Joe</md:GivenName>
+	<md:SurName>O'Gorman</md:SurName>
+	<md:EmailAddress>mailto:joe.ogorman@lit.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Tuohy</md:SurName>
+	<md:EmailAddress>mailto:mickt@lit.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Niall</md:GivenName>
+	<md:SurName>Corcoran</md:SurName>
+	<md:EmailAddress>mailto:Niall.Corcoran@lit.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

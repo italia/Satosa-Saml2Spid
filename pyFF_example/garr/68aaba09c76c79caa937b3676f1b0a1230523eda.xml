@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.renu.ac.ug/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.renu.ac.ug" registrationInstant="2017-10-02T08:15:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://rif.renu.ac.ug/docs/rifp.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.renu.ac.ug/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp.renu.ac.ug/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SP Test Service</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The SP Test Service</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://sp.renu.ac.ug/</mdui:InformationURL>
+		<mdui:Logo height="105" width="123" xml:lang="en">https://idp.renu.ac.ug/idp/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEDCCAfigAwIBAgIJALo7dNO65cQeMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDXNwLnJlbnUuYWMudWcwHhcNMTkwODEzMTQ0MDA0WhcNMjQwODExMTQ0MDA0
+WjAYMRYwFAYDVQQDEw1zcC5yZW51LmFjLnVnMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA+DX6ohw2soiHK6gnamA5wj3JjFBYAHxIAdsbyPZV4GlPnZow
+7MRDPaL+0Pn6gOa9WgXYGr5xu6GqGDgqoHgsg0UdVIpBxmcsQEbBiCppHeybiBTV
+IDIhsytxJghF4Rgg6ZkQWe1Fzeuyxmpuycl0cppWWtDBmqRV3mOiRn03xvGHaVjy
+M7queUpGyYY7RxCkUEgwf6TYgwYf0eDKCUQhA+vhLVs5/C28iiUUBsivg45ADsW6
+tfRVPe3awZkpoSci+0yYpy3p1F6Q3TqjbvRWhisuQ/zGGWZZLiSMCZ54RCnzJmpt
+dGD+At2Qin/iCq5r0iCK5n351NV5XMQa4v8EiQIDAQABo10wWzA6BgNVHREEMzAx
+gg1zcC5yZW51LmFjLnVnhiBodHRwczovL3NwLnJlbnUuYWMudWcvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUqcij9XTKHMgFv7VSHgjfYb1pGogwDQYJKoZIhvcNAQEFBQAD
+ggEBAKO1WcohgX5+6cwrl5zpPoZBOTcR6ucMVdizVxkt2Ez3Cs13SFNbw2d6j+A8
+qMb1jBPoZoaqdwaBZJMcFkaCw/t+TUnad5EsVF1ueS/5MtVD9xiLe8NFAmFYeXMc
+jrvd0+yTlv1JYZFpz5JNQ5ZaAwsLTBGk5I4mKqBUNqiQgA95MFHoNnA9aoxmv/2w
+kmO70UqWmv/lJ8cTQxnutQnhR9Hc2QhSDetbZ2xeDUMjP7UZkveHTNXa75jLKWXN
+4H5+7/7UlutWB00r1/FhfetWIqK6+o2CugytBGV7fnscFZ4vWih1/9t5h7Bp+I2k
+vamFeJeiHZoLo59cXaqOLM8Wjmo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp.renu.ac.ug/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp.renu.ac.ug/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp.renu.ac.ug/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.renu.ac.ug/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.renu.ac.ug/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.renu.ac.ug/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp.renu.ac.ug/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.renu.ac.ug/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp.renu.ac.ug/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">SP Test Service</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">The SP Test Service</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="transientId" Name="urn:oid:1.2.3.4.5.6.7.8.9.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Research and Education Network for Uganda</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Research and Education Network for Uganda (RENU)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.renu.ac.ug/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical</md:GivenName>
+	<md:SurName>Department</md:SurName>
+	<md:EmailAddress>mailto:technical@renu.ac.ug</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

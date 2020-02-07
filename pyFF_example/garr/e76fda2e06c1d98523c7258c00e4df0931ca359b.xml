@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sipuli.fmi.fi/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fmi.fi</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Finnish Meteorological Institute</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">Meteorologiska institutet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Ilmatieteen laitos</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="sv">http://www.fmi.fi/web/sv</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="fi">http://www.fmi.fi</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.fmi.fi/en</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>fmi.fi</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIISTCCBjGgAwIBAgISBwAAAWxhuMDq1v6Fr0/BQK8JMA0GCSqGSIb3DQEBCwUA
+MHgxCzAJBgNVBAYTAkZJMSEwHwYDVQQKExhWYWVzdG9yZWtpc3RlcmlrZXNrdXMg
+Q0ExGjAYBgNVBAsTEVBhbHZlbHV2YXJtZW50ZWV0MSowKAYDVQQDEyFWUksgQ0Eg
+Zm9yIFNlcnZpY2UgUHJvdmlkZXJzIC0gRzMwHhcNMTkwODE4MjEwMDAwWhcNMjEw
+ODE4MjA1OTU5WjB1MQswCQYDVQQGEwJGSTEQMA4GA1UECBMHVXVzaW1hYTERMA8G
+A1UEBxMISGVsc2lua2kxGzAZBgNVBAoTEklsbWF0aWV0ZWVuIGxhaXRvczEMMAoG
+A1UECxMDU1RVMRYwFAYDVQQDEw1zaXB1bGkuZm1pLmZpMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA5eiibxXLZBGJzTO+FXtTep6irBX+dEX2b7xk4m9c
+OXwrJevPAhoBLCmqKgQnikGurAHrbnaBc4Gpunrxzzf9ny+Foz8IulbFxlQqIWD2
+HRcDzx7e5fKEl3ePPTl1Lse+fwU9Pz/xv60GTNwx8Y3i62k3BgqA1o/r6uZwJAQk
+iHgVIB8o9tTyiCottVY3GkdquJlJIPjSv07Y1h+9bdg3F77mNx1bkLAkDLvM2YUx
+6uPL9Q/VZSKVReV2fbbmXCtSm87NkgfpR3/k1c+SYNu0UXdPcHsgA7CalAPInFrE
+R0XcVQrrjac1HnHmM9LbfPC8XUejl5r4Ym6B1gQerDOJmwIDAQABo4IDzjCCA8ow
+HwYDVR0jBBgwFoAUZQToLZLnyyqrVxWoZSqq+rcWdPYwHQYDVR0OBBYEFMjHhP3c
+hGpTGuN26P45rbzviFFtMA4GA1UdDwEB/wQEAwIEsDCB1wYDVR0gBIHPMIHMMAgG
+BgQAj3oBBzCBvwYJKoF2hAUBCiIBMIGxMCcGCCsGAQUFBwIBFhtodHRwOi8vd3d3
+LmZpbmVpZC5maS9jcHMzMy8wgYUGCCsGAQUFBwICMHkad1Zhcm1lbm5lcG9saXRp
+aWtrYSBvbiBzYWF0YXZpbGxhIC0gQ2VydGlmaWthdCBwb2xpY3kgZmlubnMgLSBD
+ZXJ0aWZpY2F0ZSBwb2xpY3kgaXMgYXZhaWxhYmxlIGh0dHA6Ly93d3cuZmluZWlk
+LmZpL2NwczMzMBgGA1UdEQQRMA+CDXNpcHVsaS5mbWkuZmkwDwYDVR0TAQH/BAUw
+AwEBADA3BgNVHR8EMDAuMCygKqAohiZodHRwOi8vcHJveHkuZmluZWlkLmZpL2Ny
+bC92cmtzcDNjLmNybDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwagYI
+KwYBBQUHAQEEXjBcMDAGCCsGAQUFBzAChiRodHRwOi8vcHJveHkuZmluZWlkLmZp
+L2NhL3Zya3NwMy5jcnQwKAYIKwYBBQUHMAGGHGh0dHA6Ly9vY3NwLmZpbmVpZC5m
+aS92cmtzcDMwLQYIKwYBBQUHAQMEITAfMAgGBgQAjkYBATATBgYEAI5GAQYwCQYH
+BACORgEGAzCCAX4GCisGAQQB1nkCBAIEggFuBIIBagFoAHYAVYHUwhaQNgFK6gub
+VzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFsYbjDvgAABAMARzBFAiEApxw8dIAdwLjQ
+ftDTMDWPXQhojUusYgUFnVPb7cuYuv4CIBPz5Exv0pICs4DWrimeoa2B4sZBODZZ
+kBARuOXt6TzkAHYAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFs
+YbjCVwAABAMARzBFAiB6K5pECoFqG/2JaZx1Xv+et3MMxy3t8IDu8wQOcU4+rgIh
+ALGecEayEqCS0WVVX0HbgBP5JwCWy9XHUDWFI4B+AtCHAHYA7ku9t3XOYLrhQmkf
+q+GeZqMPfl+wctiDAMR7iXqo/csAAAFsYbjCWgAABAMARzBFAiEAvmNtjoGgvXTk
+ziZFXB7TXL1Pav1xezfcQB7pm6du7qsCIEu8QN9mzHsdfYhQpaW20wDBF4VdBjAf
+yi+yjXvvW9/+MA0GCSqGSIb3DQEBCwUAA4ICAQCikJnZY0GlelRF2HO4YkCmdPtD
+iUx7PMbpw6RfWALirzZAUqVH+2E5ea5Whm5XHPbUfvaTdXdTaQ1uv6uxVEs1IkWA
+0AeXFRRdhRcowtGpijEraiGB1diDcjDuTOaUAlIKiCVzxGM17MqNN7ialLF6YOHg
+4h6V8gUpJ7gQbQCdngaKNy1VGsn2X4ONvBAlM9QOMdTdkk6HDro9PcWG5q1HaH/g
+NDIFOE3Y3s4RZ8E2lHxEdLDINMEDJo16uVGdjWU6VmPVdAqkTgFkTV7OFEnl2ZUE
+BKJPeKPTpXzu7RRT71DQj+OC/aPqLl8CJoI8FY037oU2kZOxKjrkXNY6GzPjfdi7
+umaD1TNXbOHIAYmD6G+CP5uuUWdAu3olC8x5UpHScH8t4+QiqjPiZi/dzlAXZbUT
+qbWwhex4pj/8Ig6mE/16VdQIvjxCqWzJyb4cLObMEzZ2mv8Klr78k7Y+JAOZ+Z/1
+csJ4pauUw1gbkupsw3Vv4DGbAjlBMt19m8e3toE4nxIYR7Eowj0q3Hpd+L2sXw7L
+sz8JkwH799+5zQTn2P03JFWV+2BBpTB/aCRMAomjoiaMEncM1laUdhqZUTqQ7GEI
+OLIiP7dLRgfxJde46iF6Rg2MdcpZHR1y5MFvMH7Nf8l+jk6AYAZxGcR1whCa+GHx
+vzIE0Yr9KcNR2FEvqg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sipuli.fmi.fi/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">Ilmatieteen laitos</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Finnish Meteorological Institute</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">Meteorologiska institutet</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">Ilmatieteen laitos</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Finnish Meteorological Institute</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">Meteorologiska institutet</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.ilmatieteenlaitos.fi/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ilmatieteenlaitos.fi/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.ilmatieteenlaitos.fi/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Matti</md:GivenName>
+	<md:SurName>Keranen</md:SurName>
+	<md:EmailAddress>mailto:matti.keranen@fmi.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Arto</md:GivenName>
+	<md:SurName>Keskinen</md:SurName>
+	<md:EmailAddress>mailto:arto.keskinen@fmi.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ship.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.ship.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ship.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Shippensburg University of Pennsylvania</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shippensburg, Pennsylvania</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ship.edu/technology</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.ship.edu/Technology/Policies/Computing_and_Information_Network_Usage_Policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="900" width="1200" xml:lang="en">https://www.ship.edu/Static/img/logo-stacked.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFgDCCBGigAwIBAgIQIIqv7avkn41Rrf4h3IiBujANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xNDEyMDkwMDAwMDBaFw0xNzEyMDgy
+MzU5NTlaMIG9MQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMTcyNTcxCzAJBgNVBAgT
+AlBBMRUwEwYDVQQHEwxTaGlwcGVuc2J1cmcxGTAXBgNVBAkTEDE4NzEgT2xkIE1h
+aW4gRHIxIDAeBgNVBAoTF1NoaXBwZW5zYnVyZyBVbml2ZXJzaXR5MSYwJAYDVQQL
+Ex1Db21wdXRpbmcgVGVjaG5vbG9naWVzIENlbnRlcjEVMBMGA1UEAxMMaWRwLnNo
+aXAuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7DSYzTNKxc/G
+TK8e+bCrtl/1BncZVNu4BOigHFeL3zWwgBjvVppVJtza/ipj33Yb3Svxw3E7y7Ql
+4ZBnnahQcAKaBZogfvfefDIhkllVz8vhtaa4BLcl1241BrDBi86kV0/T1J8WHuYc
+pCOFiSmzHdpZA67eMX2nIgZfOiNayNty1w8LNJadOZsy670SaV878UM4PU2I7Rnj
+ThKBEl0symd5n8gEUZA9BpcyhLTmIeDAvX7y+ho0LzrujYTbWF8l9e5l0f1ytd/D
+zO2i6JnAmRAmuwb9j26myFo1S/f2PhnITI+6N/leZt1Tzy0Zqbva1OY3IR6hrDHm
+bHj10cl30wIDAQABo4IBwDCCAbwwHwYDVR0jBBgwFoAUHgWjd49sluJbh0umtIas
+cQAM5zgwHQYDVR0OBBYEFMwl/1ZxqnDlJeQc5D40kklquGpZMA4GA1UdDwEB/wQE
+AwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcD
+AjBnBgNVHSAEYDBeMFIGDCsGAQQBriMBBAMBATBCMEAGCCsGAQUFBwIBFjRodHRw
+czovL3d3dy5pbmNvbW1vbi5vcmcvY2VydC9yZXBvc2l0b3J5L2Nwc19zc2wucGRm
+MAgGBmeBDAECAjBEBgNVHR8EPTA7MDmgN6A1hjNodHRwOi8vY3JsLmluY29tbW9u
+LXJzYS5vcmcvSW5Db21tb25SU0FTZXJ2ZXJDQS5jcmwwdQYIKwYBBQUHAQEEaTBn
+MD4GCCsGAQUFBzAChjJodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vSW5Db21tb25S
+U0FTZXJ2ZXJDQV8yLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRy
+dXN0LmNvbTAXBgNVHREEEDAOggxpZHAuc2hpcC5lZHUwDQYJKoZIhvcNAQELBQAD
+ggEBAAECWt1wp9jnH/7TlHwg9xJzaRO8UawTQiiTp8oHqLKiOxzFcCPzJEatUfwF
+QuTuAEdvv5jvlwLPtZqkaiVdTAxKjVgxCBKlSRqdRiHkXHeeKlN6/dE9SSKpS/3n
+/nnKpgwK0kfXkOTFbcFOaEEehY/oIHlEPONUn5dNDB5EMaNRKh9ATwLe6G2V1KT8
+wPwL6yo+Dk5PsGngpwy+ujQOhSJoCCbzoBFlDzpTHp8gl2hpScUQOLziW8M1BpRP
+LJQxOR1AvCp9E0gAFMTuOWaDR1Ybwllg3C7YizSUcK669Z4zjx/0+hcgDFbNpBov
+IvnQF4KSwZqAOukHhzVkzkfPjiI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFWzCCBEOgAwIBAgIQLtFaPUxl1dUdCLVgWbwNrDANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xNzEyMDkwMDAwMDBaFw0yMDEyMDgy
+MzU5NTlaMIGYMQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMTcyNTcxCzAJBgNVBAgT
+AlBBMRUwEwYDVQQHEwxTaGlwcGVuc2J1cmcxHDAaBgNVBAkTEzE4NzEgT2xkIE1h
+aW4gRHJpdmUxIDAeBgNVBAoTF1NoaXBwZW5zYnVyZyBVbml2ZXJzaXR5MRUwEwYD
+VQQDEwxpZHAuc2hpcC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQC40/uUZbIlC/K4wvHgdeKfJi9+NS9nHFT7etNwNnzHO2280Hi5DBzyKMNIm1JA
+TP8JZxnNCA+vuno/sb4nzCeHcRbxdEL9r/lBu7lqImcjRH28Uh9mQ8rekzx6n/Wd
+HG6U/B3/nj9Erg14BpzJPlNl26BWNjFvwuxEI6OeKzWHL9jvb+3gHYs7V+bL9bLY
+JYdtCr5cHeIET2FZRTLBukom+CVYkz+8I57suw4+wppj1ySd3iuES9v4x9h89fcj
+yBRxTTu8W8UzOdpNv0U3ab8c4zJlyvSwkL6UFS/5QcwD3tgM++6BEOB9lA8S1gAH
+bZmHVhIeBgrQgiTd/y3CHWFxAgMBAAGjggHAMIIBvDAfBgNVHSMEGDAWgBQeBaN3
+j2yW4luHS6a0hqxxAAznODAdBgNVHQ4EFgQUF932xOn/KljdAcwYXCfAlxEpANkw
+DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMGcGA1UdIARgMF4wUgYMKwYBBAGuIwEEAwEBMEIwQAYIKwYB
+BQUHAgEWNGh0dHBzOi8vd3d3LmluY29tbW9uLm9yZy9jZXJ0L3JlcG9zaXRvcnkv
+Y3BzX3NzbC5wZGYwCAYGZ4EMAQICMEQGA1UdHwQ9MDswOaA3oDWGM2h0dHA6Ly9j
+cmwuaW5jb21tb24tcnNhLm9yZy9JbkNvbW1vblJTQVNlcnZlckNBLmNybDB1Bggr
+BgEFBQcBAQRpMGcwPgYIKwYBBQUHMAKGMmh0dHA6Ly9jcnQudXNlcnRydXN0LmNv
+bS9JbkNvbW1vblJTQVNlcnZlckNBXzIuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8v
+b2NzcC51c2VydHJ1c3QuY29tMBcGA1UdEQQQMA6CDGlkcC5zaGlwLmVkdTANBgkq
+hkiG9w0BAQsFAAOCAQEAF6cE0BmLPLX2XZvhzMZcTcBF9+gfQ5majRnBfON/OuFi
+TI0LkF+UvQ4XhcRmbxHLrlxQsZXdwh5EGtlqsXC40Vm3xVqO97OnoOCabksQvqJN
+HQqGt4dqHaOBVRh/3SPqLqGq1kwjSR7BIGgGt2uLwZuvL1J8XPKBV3wAbZLoDXCp
+TOyh2kai/likjHj4ixr3dC0/aHgw3T22dqQG/OVMtqVMf7zfuQ9m6N3W+BduMjGQ
+jfQCWiGEikupMM+Ugx0spKHj+2ksrpUZElc/FY0CqFSGBn7fHIYiaRuR3nIihaV6
+EgTbrBkWyq/NRYlgZjBTWZ0EAR+6BL1y0fWWaKj/cw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ship.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ship.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ship.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ship.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ship.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ship.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFgDCCBGigAwIBAgIQIIqv7avkn41Rrf4h3IiBujANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xNDEyMDkwMDAwMDBaFw0xNzEyMDgy
+MzU5NTlaMIG9MQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMTcyNTcxCzAJBgNVBAgT
+AlBBMRUwEwYDVQQHEwxTaGlwcGVuc2J1cmcxGTAXBgNVBAkTEDE4NzEgT2xkIE1h
+aW4gRHIxIDAeBgNVBAoTF1NoaXBwZW5zYnVyZyBVbml2ZXJzaXR5MSYwJAYDVQQL
+Ex1Db21wdXRpbmcgVGVjaG5vbG9naWVzIENlbnRlcjEVMBMGA1UEAxMMaWRwLnNo
+aXAuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7DSYzTNKxc/G
+TK8e+bCrtl/1BncZVNu4BOigHFeL3zWwgBjvVppVJtza/ipj33Yb3Svxw3E7y7Ql
+4ZBnnahQcAKaBZogfvfefDIhkllVz8vhtaa4BLcl1241BrDBi86kV0/T1J8WHuYc
+pCOFiSmzHdpZA67eMX2nIgZfOiNayNty1w8LNJadOZsy670SaV878UM4PU2I7Rnj
+ThKBEl0symd5n8gEUZA9BpcyhLTmIeDAvX7y+ho0LzrujYTbWF8l9e5l0f1ytd/D
+zO2i6JnAmRAmuwb9j26myFo1S/f2PhnITI+6N/leZt1Tzy0Zqbva1OY3IR6hrDHm
+bHj10cl30wIDAQABo4IBwDCCAbwwHwYDVR0jBBgwFoAUHgWjd49sluJbh0umtIas
+cQAM5zgwHQYDVR0OBBYEFMwl/1ZxqnDlJeQc5D40kklquGpZMA4GA1UdDwEB/wQE
+AwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcD
+AjBnBgNVHSAEYDBeMFIGDCsGAQQBriMBBAMBATBCMEAGCCsGAQUFBwIBFjRodHRw
+czovL3d3dy5pbmNvbW1vbi5vcmcvY2VydC9yZXBvc2l0b3J5L2Nwc19zc2wucGRm
+MAgGBmeBDAECAjBEBgNVHR8EPTA7MDmgN6A1hjNodHRwOi8vY3JsLmluY29tbW9u
+LXJzYS5vcmcvSW5Db21tb25SU0FTZXJ2ZXJDQS5jcmwwdQYIKwYBBQUHAQEEaTBn
+MD4GCCsGAQUFBzAChjJodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vSW5Db21tb25S
+U0FTZXJ2ZXJDQV8yLmNydDAlBggrBgEFBQcwAYYZaHR0cDovL29jc3AudXNlcnRy
+dXN0LmNvbTAXBgNVHREEEDAOggxpZHAuc2hpcC5lZHUwDQYJKoZIhvcNAQELBQAD
+ggEBAAECWt1wp9jnH/7TlHwg9xJzaRO8UawTQiiTp8oHqLKiOxzFcCPzJEatUfwF
+QuTuAEdvv5jvlwLPtZqkaiVdTAxKjVgxCBKlSRqdRiHkXHeeKlN6/dE9SSKpS/3n
+/nnKpgwK0kfXkOTFbcFOaEEehY/oIHlEPONUn5dNDB5EMaNRKh9ATwLe6G2V1KT8
+wPwL6yo+Dk5PsGngpwy+ujQOhSJoCCbzoBFlDzpTHp8gl2hpScUQOLziW8M1BpRP
+LJQxOR1AvCp9E0gAFMTuOWaDR1Ybwllg3C7YizSUcK669Z4zjx/0+hcgDFbNpBov
+IvnQF4KSwZqAOukHhzVkzkfPjiI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFWzCCBEOgAwIBAgIQLtFaPUxl1dUdCLVgWbwNrDANBgkqhkiG9w0BAQsFADB2
+MQswCQYDVQQGEwJVUzELMAkGA1UECBMCTUkxEjAQBgNVBAcTCUFubiBBcmJvcjES
+MBAGA1UEChMJSW50ZXJuZXQyMREwDwYDVQQLEwhJbkNvbW1vbjEfMB0GA1UEAxMW
+SW5Db21tb24gUlNBIFNlcnZlciBDQTAeFw0xNzEyMDkwMDAwMDBaFw0yMDEyMDgy
+MzU5NTlaMIGYMQswCQYDVQQGEwJVUzEOMAwGA1UEERMFMTcyNTcxCzAJBgNVBAgT
+AlBBMRUwEwYDVQQHEwxTaGlwcGVuc2J1cmcxHDAaBgNVBAkTEzE4NzEgT2xkIE1h
+aW4gRHJpdmUxIDAeBgNVBAoTF1NoaXBwZW5zYnVyZyBVbml2ZXJzaXR5MRUwEwYD
+VQQDEwxpZHAuc2hpcC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQC40/uUZbIlC/K4wvHgdeKfJi9+NS9nHFT7etNwNnzHO2280Hi5DBzyKMNIm1JA
+TP8JZxnNCA+vuno/sb4nzCeHcRbxdEL9r/lBu7lqImcjRH28Uh9mQ8rekzx6n/Wd
+HG6U/B3/nj9Erg14BpzJPlNl26BWNjFvwuxEI6OeKzWHL9jvb+3gHYs7V+bL9bLY
+JYdtCr5cHeIET2FZRTLBukom+CVYkz+8I57suw4+wppj1ySd3iuES9v4x9h89fcj
+yBRxTTu8W8UzOdpNv0U3ab8c4zJlyvSwkL6UFS/5QcwD3tgM++6BEOB9lA8S1gAH
+bZmHVhIeBgrQgiTd/y3CHWFxAgMBAAGjggHAMIIBvDAfBgNVHSMEGDAWgBQeBaN3
+j2yW4luHS6a0hqxxAAznODAdBgNVHQ4EFgQUF932xOn/KljdAcwYXCfAlxEpANkw
+DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMGcGA1UdIARgMF4wUgYMKwYBBAGuIwEEAwEBMEIwQAYIKwYB
+BQUHAgEWNGh0dHBzOi8vd3d3LmluY29tbW9uLm9yZy9jZXJ0L3JlcG9zaXRvcnkv
+Y3BzX3NzbC5wZGYwCAYGZ4EMAQICMEQGA1UdHwQ9MDswOaA3oDWGM2h0dHA6Ly9j
+cmwuaW5jb21tb24tcnNhLm9yZy9JbkNvbW1vblJTQVNlcnZlckNBLmNybDB1Bggr
+BgEFBQcBAQRpMGcwPgYIKwYBBQUHMAKGMmh0dHA6Ly9jcnQudXNlcnRydXN0LmNv
+bS9JbkNvbW1vblJTQVNlcnZlckNBXzIuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8v
+b2NzcC51c2VydHJ1c3QuY29tMBcGA1UdEQQQMA6CDGlkcC5zaGlwLmVkdTANBgkq
+hkiG9w0BAQsFAAOCAQEAF6cE0BmLPLX2XZvhzMZcTcBF9+gfQ5majRnBfON/OuFi
+TI0LkF+UvQ4XhcRmbxHLrlxQsZXdwh5EGtlqsXC40Vm3xVqO97OnoOCabksQvqJN
+HQqGt4dqHaOBVRh/3SPqLqGq1kwjSR7BIGgGt2uLwZuvL1J8XPKBV3wAbZLoDXCp
+TOyh2kai/likjHj4ixr3dC0/aHgw3T22dqQG/OVMtqVMf7zfuQ9m6N3W+BduMjGQ
+jfQCWiGEikupMM+Ugx0spKHj+2ksrpUZElc/FY0CqFSGBn7fHIYiaRuR3nIihaV6
+EgTbrBkWyq/NRYlgZjBTWZ0EAR+6BL1y0fWWaKj/cw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ship.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Shippensburg University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Shippensburg University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://ship.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shippensburg University Computing Technologies Center</md:GivenName>
+	<md:EmailAddress>idp@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shippensburg University Computing Technologies Center</md:GivenName>
+	<md:EmailAddress>idp@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shippensburg University Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shippensburg Univeristy IDP</md:GivenName>
+	<md:EmailAddress>idp@ship.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

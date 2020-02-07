@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.harrow.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-02-10T12:08:18Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Harrow College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Harrow College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">harrow.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAIAV6r9T9UOFBwHmuFZHQ/Zrx7aPMA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC5oYXJyb3cuYWMudWswHhcNMTIwMjA4MDk0MjIw
+WhcNMzIwMjA4MDk0MjIwWjAbMRkwFwYDVQQDExBpZHAuaGFycm93LmFjLnVrMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlmctLybnvCCmJ/okx0YFhn03
+b/2PuyksfVZ0LI986BrnNSvYYlm69Z0Y+wO8FLzN7fW2ztz5Xyag3eakCiyKAfP0
+23OLkdjG42bVlpjhYzW9OyamNtd9MbvkF5vNU8QA5eyRm+jhuqgmRiwhdfbwDvdw
+eW6SmDHChmGr6YGfHMfvBjQNAO/x+VPdqcz7TREb4AtGLch8+pRMSslTaMZibdYe
+zKmOMKqywQBRYiUxP6Msys1kTkEAUQbN/ZQ5Eny1ys/cXiqCwraOfqrLeaCM3qaX
+D84w1/2OQCWlpzsmG5kBOg8EpuVLfUTMSRdYwPfV67J9r90r+8XNkyKAGzYb4wID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAuaGFycm93LmFjLnVrhidodHRwczovL2lk
+cC5oYXJyb3cuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFEE/B4YVPRZs
+hx5Gp1R7uhe+AMnTMA0GCSqGSIb3DQEBBQUAA4IBAQAep4beNMViVZQ7+v1Qu9WA
+LAzsaiBDj/jkcj+iQaCzxrfzi9tkA/eP87iuMVc9y8MXbmclSZoDl91x2EZ7ohmd
+lmuA6fTdWuZ3gTFVoVD1fssqnQ5yZusGlLRtoZDqIowhiy04IVwvCopNHwu111M4
+m74wYHqOLXRK/3w/0WA/KVItqlhUBpv3ClOZWnG//zTRkmyienu7sksiRZy79H40
+nzqETopxqXGh+VtCAGvaHN2sO9Td+s03xE8YO3DSIdt8ykhOQh/yYRhRrREHAqTg
+D6jRZoljE6KqZDICisJHSEinDErpP8g07mv2HH62e25QQikqxYKRNGb/7SpAIR9o
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.harrow.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.harrow.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.harrow.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.harrow.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.harrow.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.harrow.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">harrow.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAIAV6r9T9UOFBwHmuFZHQ/Zrx7aPMA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC5oYXJyb3cuYWMudWswHhcNMTIwMjA4MDk0MjIw
+WhcNMzIwMjA4MDk0MjIwWjAbMRkwFwYDVQQDExBpZHAuaGFycm93LmFjLnVrMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlmctLybnvCCmJ/okx0YFhn03
+b/2PuyksfVZ0LI986BrnNSvYYlm69Z0Y+wO8FLzN7fW2ztz5Xyag3eakCiyKAfP0
+23OLkdjG42bVlpjhYzW9OyamNtd9MbvkF5vNU8QA5eyRm+jhuqgmRiwhdfbwDvdw
+eW6SmDHChmGr6YGfHMfvBjQNAO/x+VPdqcz7TREb4AtGLch8+pRMSslTaMZibdYe
+zKmOMKqywQBRYiUxP6Msys1kTkEAUQbN/ZQ5Eny1ys/cXiqCwraOfqrLeaCM3qaX
+D84w1/2OQCWlpzsmG5kBOg8EpuVLfUTMSRdYwPfV67J9r90r+8XNkyKAGzYb4wID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAuaGFycm93LmFjLnVrhidodHRwczovL2lk
+cC5oYXJyb3cuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFEE/B4YVPRZs
+hx5Gp1R7uhe+AMnTMA0GCSqGSIb3DQEBBQUAA4IBAQAep4beNMViVZQ7+v1Qu9WA
+LAzsaiBDj/jkcj+iQaCzxrfzi9tkA/eP87iuMVc9y8MXbmclSZoDl91x2EZ7ohmd
+lmuA6fTdWuZ3gTFVoVD1fssqnQ5yZusGlLRtoZDqIowhiy04IVwvCopNHwu111M4
+m74wYHqOLXRK/3w/0WA/KVItqlhUBpv3ClOZWnG//zTRkmyienu7sksiRZy79H40
+nzqETopxqXGh+VtCAGvaHN2sO9Td+s03xE8YO3DSIdt8ykhOQh/yYRhRrREHAqTg
+D6jRZoljE6KqZDICisJHSEinDErpP8g07mv2HH62e25QQikqxYKRNGb/7SpAIR9o
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.harrow.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.harrow.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">HCUC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Harrow College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.harrow.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dan</md:GivenName>
+	<md:SurName>Biggs</md:SurName>
+	<md:EmailAddress>mailto:dbiggs@harrow.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan</md:GivenName>
+	<md:SurName>Biggs</md:SurName>
+	<md:EmailAddress>mailto:dbiggs@harrow.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

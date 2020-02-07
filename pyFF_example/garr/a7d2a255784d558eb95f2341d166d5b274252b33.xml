@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ensae.fr/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-02-26T15:32:08Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ensae.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ENSAE - École Nationale de la Statistique et de l'Administration Économique</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAD9SURBVHjarFKxDcIwEHRCCjqyARnBEgNAiUTjAiE6QGKAbEBGyAAUYQJCRxlKCqRQUCJ5BNiAf+lecmPFkXjp9Inte9/9W6mAuGaTsW8v8hBGlGbAB7klWEIzt49nV4ENpRSkDMQU0Chy8RZwCh1AZhUGuYYiS0VOUWAPpiAzSiAnFIkKD4NcgFyxkmS5WJ0dmRo+5RDn4kiy96+33MrRgGNih5Q73xqQNUV+v2iqcZpqY2c8pSzKzSBbQMJK0c4peN6HWKzFQnDAhqji99EmPW/n+W9hl3tRDnqQmTTkX8KaMym6R4HkDEihoiLyjfdDLMg4Gzzfnfpn/AQYAILyVhj6l7wfAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.groupe-genes.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Researchers, teachers, students and staffs</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">ENSAE - École Nationale de la Statistique et de l'Administration Économique</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Enseignant-chercheurs, élèves, personnels administratifs, techniques et scientifiques</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID8zCCAtugAwIBAgIJAKxtmmtIX/rsMA0GCSqGSIb3DQEBCwUAMIGPMQswCQYD
+VQQGEwJGUjEWMBQGA1UECAwNSWxlLWRlLUZyYW5jZTESMBAGA1UEBwwJUGFsYWlz
+ZWF1MQ4wDAYDVQQKDAVFTlNBRTENMAsGA1UECwwERFNJVDEOMAwGA1UEAwwFRU5T
+QUUxJTAjBgkqhkiG9w0BCQEWFnNyaS5zcmlrYW5kYW5AZW5zYWUuZnIwHhcNMTkw
+MjE5MTExNjI1WhcNMjkwMjE4MTExNjI1WjCBjzELMAkGA1UEBhMCRlIxFjAUBgNV
+BAgMDUlsZS1kZS1GcmFuY2UxEjAQBgNVBAcMCVBhbGFpc2VhdTEOMAwGA1UECgwF
+RU5TQUUxDTALBgNVBAsMBERTSVQxDjAMBgNVBAMMBUVOU0FFMSUwIwYJKoZIhvcN
+AQkBFhZzcmkuc3Jpa2FuZGFuQGVuc2FlLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA4CzX+Gk3b0e9Xb1S5hn2qyuVw0vgbx/Hzjp1FpoFsecjHnd+
+cQzsNV2vdZ5HMt6ItMw7UVPnqTt3/s+My0Ics054Ki9Sr8JviFlQCWRLM7cg2ibY
+l1Waai+GAv0M275Oixpxy7Gx0vpOUtOpfk+GqbUZxxM2GveZV7oSYaCVJgNlFThm
+h2uynmL+xj046MFtQTCveaRW4I6ll08AdKpMZtI9UUzLV0lkqhivoZjAibRbKMV2
+t24DqalAuGdfxJAofn0mQipRk9S+QR0A20kW1qvhGkhD4hxbeuERi+mx5O03o+pz
+zDaDxrolyDEk1UmnZ+vZsoWwuILZDCaI3qZiwQIDAQABo1AwTjAdBgNVHQ4EFgQU
+RxVmP750eji+cctZFNTCGXz/zvowHwYDVR0jBBgwFoAURxVmP750eji+cctZFNTC
+GXz/zvowDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAk6+aWdK5lXzq
+P5hNEuBr7H2YKp3A9zITjg28HxkIcvknHJXbuKd21I8uktgBUpgxYPADl1VGSvSg
+l1apk4b+ni3ocQGotrkK8hts6kvMZrL9n1cCKlgMir+9CCsltxJedy/+4Ic7fLUR
+Tjjot1n83V5WbBkPnWVHCJVCaIKA2dlWomoKUK0MJpE3BQQjjGIM7Tzbvh/We0UJ
+nammGH0o1Vzx7Yfhe7LA5kwYjFgQFk+oz+oqdqE/S6B8fRjB04p1LHCLmsJ/ArFd
+2Hh7NV3raBNJZLVBoX1aVVmapOz2Cnw18C226TQkgN0MAli/QBjikrbfxRhxpEpi
+vu4oJuOw1Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ensae.fr/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ensae.fr/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ensae.fr/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ensae.fr/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ensae.fr/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ensae.fr/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Groupe des Ecoles Nationale d&amp;#039;économie et de statistiques</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Groupe des Ecoles Nationale d&amp;#039;économie et de statistiques</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.groupe-genes.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:support@ensae.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://liberate-stats.jisc.ac.uk/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2018-06-20T15:20:42Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://liberate-stats.jisc.ac.uk/saml/login?disco=true" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Liberate Stats</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Usage statistics portal for the Jisc Liberate service</mdui:Description>
+		<mdui:Logo height="75" width="129">https://uwp-jb.jisc.ac.uk/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFoTCCA4mgAwIBAgIEOze5gzANBgkqhkiG9w0BAQsFADCBgDELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0VuZ2xhbmQxEDAOBgNVBAcTB0JyaXN0b2wxDTALBgNVBAoT
+BEppc2MxGjAYBgNVBAsTEUppc2MgVGVjaG5vbG9naWVzMSIwIAYDVQQDExlsaWJl
+cmF0ZS1zdGF0cy5qaXNjLmFjLnVrMB4XDTE4MDcwNDEyNDYyNloXDTM4MDYyOTEy
+NDYyNlowgYAxCzAJBgNVBAYTAkdCMRAwDgYDVQQIEwdFbmdsYW5kMRAwDgYDVQQH
+EwdCcmlzdG9sMQ0wCwYDVQQKEwRKaXNjMRowGAYDVQQLExFKaXNjIFRlY2hub2xv
+Z2llczEiMCAGA1UEAxMZbGliZXJhdGUtc3RhdHMuamlzYy5hYy51azCCAiIwDQYJ
+KoZIhvcNAQEBBQADggIPADCCAgoCggIBAPAbLn/2Zgwf6KXnBvdfa10pIpNAlliD
+gDM4/HLuSbCT+7BEBLms2DFfBkTE+9TwVz+4kV7AqAtk6CCKus3qPAkvDCtkBqed
+iW53yFtI8kRIXGemKUEQRQl8znyiDRNCkQiDAzLqjWjhFPq8oDdEhTVERYLF/5Tf
+fC5y/ZF1VH3IbxalS06Jh0ulmR/gGoGl4KWiUDb7A2BHY/vzXKIXhdyvYD3ma68R
+Ts1O3GpYeZM9qdKvy5y5n/2v12oSVDs/d2+Je1OENkx2GOTdcRtoPKDS17Oh89Pn
+rG1DJExceK7/JVp6cc5QTZ4h+ud5RujNze1O3KmEl+3Mfz+bz0sR/eypiL21FIHv
+qwrpyov9kELu2Zy0hnFw6pM0hntgu7ybArkzWn+DZK953EKwjMURT5Cf5I8EZs9V
+fb0qW0jCl5cIX4yZi998uOtT8rzva1iLoIzIjyjdS3UE4AqES18mynEmb1HX+6Y3
+vDc3u18OuUGmtKoXqpuST3fwa+QIb3xrVL+1VwynS4KzkEHmxnn94q5czH9ZMi11
+X0x4Je+KXmKHF+uF+resFZz31mGK7K568ut5p1y/Pm2ccESojkQEy7tXDe6c3Fkx
+6+IGEnu8OcWJjP10i4E3Axn0qKZ/DpgY3DPpWdbRiFp/dOgQHgUUnKBRI30ebPh8
+WQay1H4gguo7AgMBAAGjITAfMB0GA1UdDgQWBBSKyVTAB+VcXrO9iw099ZJSaogQ
+ajANBgkqhkiG9w0BAQsFAAOCAgEAsVozfM8Z9Navkk9uDEqVk4ojvSuVR3MZxFfU
+TiyYwMMxHIA1v2chkzgjaGO4loRbFa6/SjPeRqQyv6yj0LbyA14x6UU366oC7dn9
+35brttWstoNxSwWh0X2UMyTK6fbm83JPQSQDUy7TzyvU50f9rg990ogbaLxiaUBB
+ZTCLO5IUTCoUut3g8pBjaKQcNwIyr71Ed7r90YP0aRw5MD9X7YdHtqqSHlw6K+Vi
+5SI1qVDah+v59kwgszmm/ODmYfjECRK36Am8spW2QI3aL2Og6Fb4vzKSWX5Fzflg
+AVw78EnVLKERGyLvzzEjXZQfk+DTXS4EWatPPOT87jZVUjnRynpu7hXdJ0n3LpY+
+WX/88erqxqBe2k/CBYo7ALlCSrDwpv88W5i4N3a/cgValS7JhpqqNNpiLTQDzfGf
+vSUZguFPpAhwEQTM18WpxsLOppN0uW+0RyLlHr97hoXC5xgIpEXYouGZCfPTSPY/
+UmQn73eS29vCe/KwEa81KJ5WqO3OBRAcD+Q97tVJK/Ma4XXbm81Og3ni/h+QN3nu
+dYIoYdo3pVqewTCVj2oFmu+P0ZeaVKj1+Bi7UcSXNAyDjtFeVDBADKLif316T6cQ
+R6iSRX85iDQo18yGoh9W8Z4k+vs/qGvIieQuPzjsP0zMx1S9jyevX6VNhs0YhWBx
+w4AQ950=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFoTCCA4mgAwIBAgIEOze5gzANBgkqhkiG9w0BAQsFADCBgDELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0VuZ2xhbmQxEDAOBgNVBAcTB0JyaXN0b2wxDTALBgNVBAoT
+BEppc2MxGjAYBgNVBAsTEUppc2MgVGVjaG5vbG9naWVzMSIwIAYDVQQDExlsaWJl
+cmF0ZS1zdGF0cy5qaXNjLmFjLnVrMB4XDTE4MDcwNDEyNDYyNloXDTM4MDYyOTEy
+NDYyNlowgYAxCzAJBgNVBAYTAkdCMRAwDgYDVQQIEwdFbmdsYW5kMRAwDgYDVQQH
+EwdCcmlzdG9sMQ0wCwYDVQQKEwRKaXNjMRowGAYDVQQLExFKaXNjIFRlY2hub2xv
+Z2llczEiMCAGA1UEAxMZbGliZXJhdGUtc3RhdHMuamlzYy5hYy51azCCAiIwDQYJ
+KoZIhvcNAQEBBQADggIPADCCAgoCggIBAPAbLn/2Zgwf6KXnBvdfa10pIpNAlliD
+gDM4/HLuSbCT+7BEBLms2DFfBkTE+9TwVz+4kV7AqAtk6CCKus3qPAkvDCtkBqed
+iW53yFtI8kRIXGemKUEQRQl8znyiDRNCkQiDAzLqjWjhFPq8oDdEhTVERYLF/5Tf
+fC5y/ZF1VH3IbxalS06Jh0ulmR/gGoGl4KWiUDb7A2BHY/vzXKIXhdyvYD3ma68R
+Ts1O3GpYeZM9qdKvy5y5n/2v12oSVDs/d2+Je1OENkx2GOTdcRtoPKDS17Oh89Pn
+rG1DJExceK7/JVp6cc5QTZ4h+ud5RujNze1O3KmEl+3Mfz+bz0sR/eypiL21FIHv
+qwrpyov9kELu2Zy0hnFw6pM0hntgu7ybArkzWn+DZK953EKwjMURT5Cf5I8EZs9V
+fb0qW0jCl5cIX4yZi998uOtT8rzva1iLoIzIjyjdS3UE4AqES18mynEmb1HX+6Y3
+vDc3u18OuUGmtKoXqpuST3fwa+QIb3xrVL+1VwynS4KzkEHmxnn94q5czH9ZMi11
+X0x4Je+KXmKHF+uF+resFZz31mGK7K568ut5p1y/Pm2ccESojkQEy7tXDe6c3Fkx
+6+IGEnu8OcWJjP10i4E3Axn0qKZ/DpgY3DPpWdbRiFp/dOgQHgUUnKBRI30ebPh8
+WQay1H4gguo7AgMBAAGjITAfMB0GA1UdDgQWBBSKyVTAB+VcXrO9iw099ZJSaogQ
+ajANBgkqhkiG9w0BAQsFAAOCAgEAsVozfM8Z9Navkk9uDEqVk4ojvSuVR3MZxFfU
+TiyYwMMxHIA1v2chkzgjaGO4loRbFa6/SjPeRqQyv6yj0LbyA14x6UU366oC7dn9
+35brttWstoNxSwWh0X2UMyTK6fbm83JPQSQDUy7TzyvU50f9rg990ogbaLxiaUBB
+ZTCLO5IUTCoUut3g8pBjaKQcNwIyr71Ed7r90YP0aRw5MD9X7YdHtqqSHlw6K+Vi
+5SI1qVDah+v59kwgszmm/ODmYfjECRK36Am8spW2QI3aL2Og6Fb4vzKSWX5Fzflg
+AVw78EnVLKERGyLvzzEjXZQfk+DTXS4EWatPPOT87jZVUjnRynpu7hXdJ0n3LpY+
+WX/88erqxqBe2k/CBYo7ALlCSrDwpv88W5i4N3a/cgValS7JhpqqNNpiLTQDzfGf
+vSUZguFPpAhwEQTM18WpxsLOppN0uW+0RyLlHr97hoXC5xgIpEXYouGZCfPTSPY/
+UmQn73eS29vCe/KwEa81KJ5WqO3OBRAcD+Q97tVJK/Ma4XXbm81Og3ni/h+QN3nu
+dYIoYdo3pVqewTCVj2oFmu+P0ZeaVKj1+Bi7UcSXNAyDjtFeVDBADKLif316T6cQ
+R6iSRX85iDQo18yGoh9W8Z4k+vs/qGvIieQuPzjsP0zMx1S9jyevX6VNhs0YhWBx
+w4AQ950=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://liberate-stats.jisc.ac.uk/saml/SingleLogout"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://liberate-stats.jisc.ac.uk/saml/SingleLogout"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://liberate-stats.jisc.ac.uk/saml/SSO" index="0" isDefault="true"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://liberate-stats.jisc.ac.uk/saml/SSO" index="1"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">Liberate Stats</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Jisc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Liberate Stats</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.jisc.ac.uk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Jisc Liberate</md:GivenName>
+	<md:EmailAddress>mailto:liberate@jisc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jisc Liberate</md:GivenName>
+	<md:EmailAddress>mailto:liberate@jisc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jisc Liberate</md:GivenName>
+	<md:EmailAddress>mailto:liberate@jisc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

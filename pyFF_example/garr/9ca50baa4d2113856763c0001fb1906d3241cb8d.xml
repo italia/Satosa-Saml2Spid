@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://prisma.research.se/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/category/eu-adequate-protection</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/category/research-and-education</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://prisma.research.se/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://prisma.research.se/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Prisma - prisma.research.se</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Prisma - prisma.research.se</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">I Prisma kan du ansöka om forskningsmedel och hantera dina beviljade bidrag</mdui:Description>
+		<mdui:Description xml:lang="en">Prisma is a joint portal used by several research funders</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="sv">https://prisma.research.se/Localization/SelectLanguage?languageName=SV&amp;returnUrl=%2FSupport%3Ftitle%3DPersonuppgifter%26description%3D%255BSupport%255D%255BPersonalDetailsDescription%255D%26X-Requested-With%3DXMLHttpRequest</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://prisma.research.se/Support?title=Privacy%20information&amp;description=%5BSupport%5D%5BPersonalDetailsDescription%5D</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC/TCCAeWgAwIBAgIJAPU2IVw8AYQPMA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMTEnByaXNtYS5yZXNlYXJjaC5zZTAeFw0xNDA5MDMxNDIxMTlaFw0yNDA4MzEx
+NDIxMTlaMB0xGzAZBgNVBAMTEnByaXNtYS5yZXNlYXJjaC5zZTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALqrAUhqBgDhOW/hxr8dEk8nb8keS8ofEi1T
+Fsq8ZHCA7kmulScKBEehlNF/vt/sLNV5OW2VCpqU308nhzB84nJfXOgq5vDw86jP
+8GZYRAaLp/Urvs7FpFBdTm+iCZ0j6Z0CxBkoZEyJydIkqTjwXnBVb3OpvRgI81W6
+ga68vnzWxyFFsrfux/QQHTBaF+JD9a9Y6eQQks5eI1UwRbx5lh7PyEh+/+Ey5pnR
+psSBNfp7ooPtp0vO1No+7MG7XFZbkSxGBUvtzEBM/pTJaZwx1/PE46D1UgCDRetI
+ipBqzEvt7/MFTpXDdj6ddWJ6UMivvhRw09I6wYM/RZHMB79Bw8kCAwEAAaNAMD4w
+HQYDVR0RBBYwFIIScHJpc21hLnJlc2VhcmNoLnNlMB0GA1UdDgQWBBQ9F/GdaD71
+nq1AcWdMt0lqlzXKOzANBgkqhkiG9w0BAQUFAAOCAQEAbM5ixtyeRLBc74m5enMi
+P6rpQ9Ech6nEs5/59eQ82k06ysD1FxoTd9udfoMMeYmzJtlVoTwfhr3ISNHybLUz
+1du5VrX5fxYIIz2C0awtunMbRQGlBbu3PDjJYKe5BACVGGOR5qfsAY8JJGOzb2a7
+2jKsShfCzBOdxPr3lxBpGJmhe/N9i11g9qdDR3htDXa2aUw/qnwlrUFjMrcnDtDy
+q6rkibKrh2uDmQ+BKvnBfSjuXfDTm2yvdPfk/WAG9f+besVy76dwUWx0GAZXhPm5
+kmPkqx0M3z4YLufx99FWaMygNYUnnge7O348i/SW7UvVALhU4391vqGw+XcSAMh6
+Yw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://prisma.research.se/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://prisma.research.se/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://prisma.research.se/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://prisma.research.se/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://prisma.research.se/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://prisma.research.se/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://prisma.research.se/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://prisma.research.se/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://prisma.research.se/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://prisma.research.se/Shibboleth.sso/SAML/Artifact" index="5"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Prisma - prisma.research.se</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eppn" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Prisma - prisma.research.se</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Prisma - prisma.research.se</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://prisma.research.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Peter</md:GivenName>
+	<md:SurName>Borg</md:SurName>
+	<md:EmailAddress>mailto:peter.borg@vr.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Robert</md:GivenName>
+	<md:SurName>Chrudina</md:SurName>
+	<md:EmailAddress>mailto:robert.chrudina@tieto.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

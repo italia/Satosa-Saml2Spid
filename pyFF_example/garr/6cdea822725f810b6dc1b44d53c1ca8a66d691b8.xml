@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://eduid.fno.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-08T12:36:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/hospital</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fno.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="cs">Fakultní nemocnice Ostrava</mdui:DisplayName>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance Fakultní nemocnice Ostrava.</mdui:Description>
+		<mdui:InformationURL xml:lang="cs">http://www.fno.cz/</mdui:InformationURL>
+		<mdui:DisplayName xml:lang="en">University Hospital Ostrava</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for the University Hospital Ostrava employees.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://eng.fno.cz/</mdui:InformationURL>
+		<mdui:Logo height="100" width="210">https://eduid.fno.cz/fno-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUcFkEjmyN9NJy6NL67LLAeq/P56cwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExNFoXDTM1
+MTEyNDEzMjExNFowFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmaZ9HYNRXG6ctRZO0ghB7Sh8odocwRZbI0Bk
+l78I+VbBg2NHC4w1eBAvvuvuO+238y3sB6ZcwqP5OJ04Jir+ETe/xo650adkIZ/Q
+d+b64rD5JIfUqjFicoWIDCFdn5Zq/nhp/Us8GbMOJXi2uGleqtCh3JXJza8PZbj9
+gxWP95I9q3xTLbUOyKDCZUcHV/u20LYay2vD1yElL3BDr/tKJKIzQOjszTLf+STx
+f8ch+iR/UKX+7r0cTud2T3HCqx3e97lAh9ZuoOYSIlkDJDzHw2CqPX3quLRebU0m
+GeYVBll1TIBYdv2kY8LHlQ9OR3tI/ljP0C5VXpjoU2qGZAdoywIDAQABo18wXTAd
+BgNVHQ4EFgQUIFMo0B9e/Orp9f2Tv0D8SMsqjNQwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAJ3KIQd4TriD6pQQBHdXcYVBgIeRpu9YByIrYoOqlUnyA
+QeyVBqqHGn+4bZC9tHkZInKSpvrqEys3WbE4WAN9V7pG/es3Jb21tOtnWeepddYe
+H5RwTceaFxId5GfdFuYkTfTzEtGnr7FrPCJwhkAKw5OTz2cZS/pb4RB12dKdDgav
+8HVbQaGIWcPRsW2Pp88HU+gob+nHddCbN2xw/vNNEIWXs+wiyKj48JCV3l+dy4q6
+6yCGjpX9K8ySItLVqBsVyusj68KU+uyaFXyEiJUsj+uwVYh6UeP/RDVT8oWaZp3R
+HBcP6JYKMk8JThHRTh7nFs8EUCKjXt6jX9s5n8Tahg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUUXuKNV3N2fcSAs7aYKGRRV4AFSMwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExM1oXDTM1
+MTEyNDEzMjExM1owFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo0EP8jghwHhQNBR3ThVfHOHfDZahYq+3GtzU
+K6WdgzZ9eP+IiPXhRMMgcl1lxWs+nEf1iTwoMYWjobK2SHFYxUHBSWYprUx/4S87
+x7g6rLzNUj+iWKCc0M2P9IdGRzVjZ0s8nm1O34h1uztNM47RsQBJL915NYvTk0tb
+iB73q2TTO60dZTAG+83louzPB5JH+ToOji2pKeAPT3pA24UeoVN6nB1Y7yAHH3Qs
+GGQpH8gaNLP5ZKL9TzwF7NZZRJPH+4oL+qWwPn4GFh3TQqHsnJPhf6poynsk/PeN
+v8kG0C6nUSKbnjv8ilaKSJXgLXUJoiRenkDW8yB8ErECRKl4OQIDAQABo18wXTAd
+BgNVHQ4EFgQUsUXbhwzLCVwP0vHABXrCBBIysYIwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAY7NNDM9kNYWWQRocB2uciVUwWOp7veAYplQb3uAOU0v3
+11bHQHJlOmK9oiPn3KojX0wytfMoLpQZfOwCxwSguLsXZReyxg9zoRyeFpESm9Km
+K8ziJfDDLXj1IypcH4//s7eXHxRAziGnF8JAvkjqdtstogBBNl5CPuNifkdTJ1Mo
++GU4FWaDgHza03JjdfsVLh5I8RoWbnZuy2S8Po1CzGQyYGtHkmp2Wevfpq9QNQ0t
+G0Ul9bDWGEoUzbHOext0IZbkckvW21Bk3oKJJxBYQOoBvtEJl4zE6RcXzAyMJHOQ
+Bgn1O2CnrNCmvrrHmhdeGSpcUrM4c0Qd4rbFHklQNg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUfrYEql1Xzqsq9u6m75KiJAZnLRMwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExNFoXDTM1
+MTEyNDEzMjExNFowFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTX/cbNXStPaWYnAjgyFfjhzrsh+jSsXq8P8
+g+qvStTlLFIOng6EFu6K6ZI7cjBONlVuZFdj4i6TUAkxeTwl/DTUdLR5gQ89OpSb
+/K4hK+RE+MbiWavcM6ADA5NNAGsVbOKKQPi9EVCFyMjfP3E9tby6uwpoCLtM9ryQ
+l/yhRulgrThoPYlBjrLXuBLpFcquzw3KfHzl5eurDa7uKdnZUeT/lw8GeBSF+Rsr
+FHeVs0GMevN2JD4AGIf6LsdibXeV4iCULzxWf7k9zaA0G3XStXn+lcS9cMjilulV
+tpw+fe35Ge2XepCaAmpSTtdOWPFHkKEKHRBSVnGzOz0js5lOlQIDAQABo18wXTAd
+BgNVHQ4EFgQUiHp4uM9msrjaQlPONMXUIWd4UAQwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEALUcA8l/bUOkfgG9znteOA1IJpPU6m5JpzeMb7GN2CrBd
++N3vtwt//DebrfP26Fe5glWD+/w8EfyEl7NkTH2E5aLsJ7YQ50RVeNeqHuKyIzTW
+2fFkM+sSjUZ7KENoeDtwsY1dCzpioEJtK3JDyk4dGH63wmJEk56t/qlFkU1RGuZe
+ywtP6IhS0a5qR41GXPBoOyfIH9JaiGIcg3EqjNUStCgCl7GkaNRgkT4W7XzmYvK+
+MyocdjFDjbrBjWy8B01+l9xxSWLaBnCt+mpD0McR2mXWSbZWAfG6qbGWuhtxlSE4
+MQP0+VZA4CVDmQJt8ZawuZARmK6hPwGNNvY4WjDOyg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://eduid.fno.cz/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://eduid.fno.cz/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://eduid.fno.cz/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eduid.fno.cz/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://eduid.fno.cz/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://eduid.fno.cz/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://eduid.fno.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eduid.fno.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://eduid.fno.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://eduid.fno.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fno.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUcFkEjmyN9NJy6NL67LLAeq/P56cwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExNFoXDTM1
+MTEyNDEzMjExNFowFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmaZ9HYNRXG6ctRZO0ghB7Sh8odocwRZbI0Bk
+l78I+VbBg2NHC4w1eBAvvuvuO+238y3sB6ZcwqP5OJ04Jir+ETe/xo650adkIZ/Q
+d+b64rD5JIfUqjFicoWIDCFdn5Zq/nhp/Us8GbMOJXi2uGleqtCh3JXJza8PZbj9
+gxWP95I9q3xTLbUOyKDCZUcHV/u20LYay2vD1yElL3BDr/tKJKIzQOjszTLf+STx
+f8ch+iR/UKX+7r0cTud2T3HCqx3e97lAh9ZuoOYSIlkDJDzHw2CqPX3quLRebU0m
+GeYVBll1TIBYdv2kY8LHlQ9OR3tI/ljP0C5VXpjoU2qGZAdoywIDAQABo18wXTAd
+BgNVHQ4EFgQUIFMo0B9e/Orp9f2Tv0D8SMsqjNQwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAJ3KIQd4TriD6pQQBHdXcYVBgIeRpu9YByIrYoOqlUnyA
+QeyVBqqHGn+4bZC9tHkZInKSpvrqEys3WbE4WAN9V7pG/es3Jb21tOtnWeepddYe
+H5RwTceaFxId5GfdFuYkTfTzEtGnr7FrPCJwhkAKw5OTz2cZS/pb4RB12dKdDgav
+8HVbQaGIWcPRsW2Pp88HU+gob+nHddCbN2xw/vNNEIWXs+wiyKj48JCV3l+dy4q6
+6yCGjpX9K8ySItLVqBsVyusj68KU+uyaFXyEiJUsj+uwVYh6UeP/RDVT8oWaZp3R
+HBcP6JYKMk8JThHRTh7nFs8EUCKjXt6jX9s5n8Tahg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUUXuKNV3N2fcSAs7aYKGRRV4AFSMwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExM1oXDTM1
+MTEyNDEzMjExM1owFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo0EP8jghwHhQNBR3ThVfHOHfDZahYq+3GtzU
+K6WdgzZ9eP+IiPXhRMMgcl1lxWs+nEf1iTwoMYWjobK2SHFYxUHBSWYprUx/4S87
+x7g6rLzNUj+iWKCc0M2P9IdGRzVjZ0s8nm1O34h1uztNM47RsQBJL915NYvTk0tb
+iB73q2TTO60dZTAG+83louzPB5JH+ToOji2pKeAPT3pA24UeoVN6nB1Y7yAHH3Qs
+GGQpH8gaNLP5ZKL9TzwF7NZZRJPH+4oL+qWwPn4GFh3TQqHsnJPhf6poynsk/PeN
+v8kG0C6nUSKbnjv8ilaKSJXgLXUJoiRenkDW8yB8ErECRKl4OQIDAQABo18wXTAd
+BgNVHQ4EFgQUsUXbhwzLCVwP0vHABXrCBBIysYIwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAY7NNDM9kNYWWQRocB2uciVUwWOp7veAYplQb3uAOU0v3
+11bHQHJlOmK9oiPn3KojX0wytfMoLpQZfOwCxwSguLsXZReyxg9zoRyeFpESm9Km
+K8ziJfDDLXj1IypcH4//s7eXHxRAziGnF8JAvkjqdtstogBBNl5CPuNifkdTJ1Mo
++GU4FWaDgHza03JjdfsVLh5I8RoWbnZuy2S8Po1CzGQyYGtHkmp2Wevfpq9QNQ0t
+G0Ul9bDWGEoUzbHOext0IZbkckvW21Bk3oKJJxBYQOoBvtEJl4zE6RcXzAyMJHOQ
+Bgn1O2CnrNCmvrrHmhdeGSpcUrM4c0Qd4rbFHklQNg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUfrYEql1Xzqsq9u6m75KiJAZnLRMwDQYJKoZIhvcNAQEL
+BQAwFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MB4XDTE1MTEyNDEzMjExNFoXDTM1
+MTEyNDEzMjExNFowFzEVMBMGA1UEAwwMZWR1aWQuZm5vLmN6MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnTX/cbNXStPaWYnAjgyFfjhzrsh+jSsXq8P8
+g+qvStTlLFIOng6EFu6K6ZI7cjBONlVuZFdj4i6TUAkxeTwl/DTUdLR5gQ89OpSb
+/K4hK+RE+MbiWavcM6ADA5NNAGsVbOKKQPi9EVCFyMjfP3E9tby6uwpoCLtM9ryQ
+l/yhRulgrThoPYlBjrLXuBLpFcquzw3KfHzl5eurDa7uKdnZUeT/lw8GeBSF+Rsr
+FHeVs0GMevN2JD4AGIf6LsdibXeV4iCULzxWf7k9zaA0G3XStXn+lcS9cMjilulV
+tpw+fe35Ge2XepCaAmpSTtdOWPFHkKEKHRBSVnGzOz0js5lOlQIDAQABo18wXTAd
+BgNVHQ4EFgQUiHp4uM9msrjaQlPONMXUIWd4UAQwPAYDVR0RBDUwM4IMZWR1aWQu
+Zm5vLmN6hiNodHRwczovL2VkdWlkLmZuby5jei9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEALUcA8l/bUOkfgG9znteOA1IJpPU6m5JpzeMb7GN2CrBd
++N3vtwt//DebrfP26Fe5glWD+/w8EfyEl7NkTH2E5aLsJ7YQ50RVeNeqHuKyIzTW
+2fFkM+sSjUZ7KENoeDtwsY1dCzpioEJtK3JDyk4dGH63wmJEk56t/qlFkU1RGuZe
+ywtP6IhS0a5qR41GXPBoOyfIH9JaiGIcg3EqjNUStCgCl7GkaNRgkT4W7XzmYvK+
+MyocdjFDjbrBjWy8B01+l9xxSWLaBnCt+mpD0McR2mXWSbZWAfG6qbGWuhtxlSE4
+MQP0+VZA4CVDmQJt8ZawuZARmK6hPwGNNvY4WjDOyg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://eduid.fno.cz/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University Hospital Ostrava</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Fakultní nemocnice Ostrava</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University Hospital Ostrava</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Fakultní nemocnice Ostrava</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://eng.fno.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.fno.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Robert</md:GivenName>
+	<md:SurName>Janáček</md:SurName>
+	<md:EmailAddress>mailto:robert.janacek@fno.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.le.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Leicester (Shibboleth Test)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Leicester (Shibboleth Test)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">le.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEEjCCAvqgAwIBAgIJAKikJalhNqxJMA0GCSqGSIb3DQEBBQUAMIGJMQswCQYD
+VQQGEwJHQjEXMBUGA1UECBMOTGVpY2VzdGVyc2hpcmUxEjAQBgNVBAcTCUxlaWNl
+c3RlcjEgMB4GA1UEChMXVW5pdmVyc2l0eSBvZiBMZWljZXN0ZXIxFDASBgNVBAsT
+C0lUIFNlcnZpY2VzMRUwEwYDVQQDEwxpZHAubGUuYWMudWswHhcNMTMwMzIyMTY0
+MTI1WhcNMjMwMzIwMTY0MTI1WjCBiTELMAkGA1UEBhMCR0IxFzAVBgNVBAgTDkxl
+aWNlc3RlcnNoaXJlMRIwEAYDVQQHEwlMZWljZXN0ZXIxIDAeBgNVBAoTF1VuaXZl
+cnNpdHkgb2YgTGVpY2VzdGVyMRQwEgYDVQQLEwtJVCBTZXJ2aWNlczEVMBMGA1UE
+AxMMaWRwLmxlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+v48+1bJDraA824vOonzXfO8qI4tshOPN9ZfbQgSVQcC60FwZnpFYKxXSRsHNXS+g
+6XAmqTFHmZ3XNcnEubHlHhMIWa+h6Y9TGNbE9rYVmsWAsBU9sr8AjRWHVAdNSBOh
+p+TefRp8Ye5v03c3UlZjyIbx5Spm9QAYhYMUb0vpojyA66/z9wO/HB8aLBXHSG4y
+AS7L7eU4xLi+dHfKZNXvg+Wg/vQK751vdfCyQixrZ8avNs9XZuHfj1PLR08yeiHt
+y/U7Ucb1lPFS73qPC20bIYKVibA+Eq6lKLaM1pvZWXe6e8bEBr0pMopLijd0wY1E
+N5dykwNxRUSMfiYtJTTAlQIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIB
+DQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQU/2Jr
+YbAhODGffju6YFik2FQGaYowHwYDVR0jBBgwFoAU/2JrYbAhODGffju6YFik2FQG
+aYowDQYJKoZIhvcNAQEFBQADggEBACVXwHUVWxnN2S12pCKs6AskooTV6cOa7K8n
+LkJBPv3DG2hR6Na5rHfWepEJOFvW91KwWYonpxdwvyypDi1oiq8V3n+CO77Ub2zZ
+5CaZnxM2hRiLTU5HgsUtYoAYxoFLvKAdDsziGfPboF98fWNnuKQprxQJp42pFOuZ
+K/F3Kc+mrEHx768iQ+flVFeEV7zbzswJQzSQGVdT4PMggd201HHPB2QWAYUUD7r2
+Odbs8W//GG1PFnFYJUcWsQX9tKPPWOortXmq6hdMpCRacUBnLKkEbVPXAhwc3OCK
+9oOJu420TumzHCrOZ9nlTK+VFxzPCRiIZ5q/gbltmuFXP5G0pVE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.le.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.le.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.le.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.le.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.le.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.le.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">le.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEEjCCAvqgAwIBAgIJAKikJalhNqxJMA0GCSqGSIb3DQEBBQUAMIGJMQswCQYD
+VQQGEwJHQjEXMBUGA1UECBMOTGVpY2VzdGVyc2hpcmUxEjAQBgNVBAcTCUxlaWNl
+c3RlcjEgMB4GA1UEChMXVW5pdmVyc2l0eSBvZiBMZWljZXN0ZXIxFDASBgNVBAsT
+C0lUIFNlcnZpY2VzMRUwEwYDVQQDEwxpZHAubGUuYWMudWswHhcNMTMwMzIyMTY0
+MTI1WhcNMjMwMzIwMTY0MTI1WjCBiTELMAkGA1UEBhMCR0IxFzAVBgNVBAgTDkxl
+aWNlc3RlcnNoaXJlMRIwEAYDVQQHEwlMZWljZXN0ZXIxIDAeBgNVBAoTF1VuaXZl
+cnNpdHkgb2YgTGVpY2VzdGVyMRQwEgYDVQQLEwtJVCBTZXJ2aWNlczEVMBMGA1UE
+AxMMaWRwLmxlLmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+v48+1bJDraA824vOonzXfO8qI4tshOPN9ZfbQgSVQcC60FwZnpFYKxXSRsHNXS+g
+6XAmqTFHmZ3XNcnEubHlHhMIWa+h6Y9TGNbE9rYVmsWAsBU9sr8AjRWHVAdNSBOh
+p+TefRp8Ye5v03c3UlZjyIbx5Spm9QAYhYMUb0vpojyA66/z9wO/HB8aLBXHSG4y
+AS7L7eU4xLi+dHfKZNXvg+Wg/vQK751vdfCyQixrZ8avNs9XZuHfj1PLR08yeiHt
+y/U7Ucb1lPFS73qPC20bIYKVibA+Eq6lKLaM1pvZWXe6e8bEBr0pMopLijd0wY1E
+N5dykwNxRUSMfiYtJTTAlQIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIB
+DQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQU/2Jr
+YbAhODGffju6YFik2FQGaYowHwYDVR0jBBgwFoAU/2JrYbAhODGffju6YFik2FQG
+aYowDQYJKoZIhvcNAQEFBQADggEBACVXwHUVWxnN2S12pCKs6AskooTV6cOa7K8n
+LkJBPv3DG2hR6Na5rHfWepEJOFvW91KwWYonpxdwvyypDi1oiq8V3n+CO77Ub2zZ
+5CaZnxM2hRiLTU5HgsUtYoAYxoFLvKAdDsziGfPboF98fWNnuKQprxQJp42pFOuZ
+K/F3Kc+mrEHx768iQ+flVFeEV7zbzswJQzSQGVdT4PMggd201HHPB2QWAYUUD7r2
+Odbs8W//GG1PFnFYJUcWsQX9tKPPWOortXmq6hdMpCRacUBnLKkEbVPXAhwc3OCK
+9oOJu420TumzHCrOZ9nlTK+VFxzPCRiIZ5q/gbltmuFXP5G0pVE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.le.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.le.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Leicester</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Leicester (Shibboleth Test)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www2.le.ac.uk/offices/itservices/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Matthew</md:GivenName>
+	<md:SurName>Newton</md:SurName>
+	<md:EmailAddress>mailto:mcn4@leicester.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Matthew</md:GivenName>
+	<md:SurName>Newton</md:SurName>
+	<md:EmailAddress>mailto:mcn4@leicester.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

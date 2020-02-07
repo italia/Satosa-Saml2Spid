@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://osu.tk20.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://osu.tk20.com/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/Login" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TK20 SSO</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Single Sign-On provides users with access to multiple environments with a single, secure password. Most universities maintain their web portals; on-campus users would use single authentication information to log in. Once logged in, they can access various websites or services, such as Tk20. Typically, in this scenario, once the user is authenticated via the portal, a request forwards to Tk20. When the software receives the request, a secure handshake with the web portal ensures the request is legitimate. After the request is validated, information pertaining to the user attempting access to Tk20 is exchanged. The software ensures that the user trying to access Tk20 is a valid Tk20 user. After passing the checks, the user is immediately directed to the Tk20 account home page in the application. In this case, the user does not see the Tk20 login page because the authentication only happens once when the user logs in to the web portal on campus. Tk20 merely integrates with the web portal, ensures the proper authorization and allows the user into the Tk20 system. The Tk20 system is designed to allow access to users who do not have access to the campus portal, but do need access to Tk20. In such cases, the authentication information of such users is maintained locally in the Tk20 database
+</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www1.taskstream.com/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.watermarkinsights.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="1000" width="2000" xml:lang="en">https://www.watermarkinsights.com/wp-content/themes/taskstream/parts/svgs/watermark.php</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID0DCCAjigAwIBAgIJALUuzo3wihqYMA0GCSqGSIb3DQEBCwUAMA4xDDAKBgNV
+BAMTA29zdTAeFw0xNzA5MDcxMTI2MzdaFw0yNzA5MDUxMTI2MzdaMA4xDDAKBgNV
+BAMTA29zdTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBANVpqu8A+Ipd
+ESHxIz7nQthxZP5qOW1H/dMOx6Mq2Mh/ybW867MRnZl6FSqHvMDsGaVJ7AEa9UeN
+Ml06iGlVHjPRNgkAK0OfPU3QMdI5J8ZDcGqAWewsDcDApsCE0CAPiZjYyrINdxCy
+sChNtlU61EAKSUGi6xCZABHRxKbOfsMNhrbshHkK4p8v1nZASp/hKLE5NYLnjiMO
+tQYX2WhypTCQnM/DFwyGiaVWiigV8DomfCNjoi6eRPhRIRn2zKFsrPkLzW2RCdKR
+XQNwDtQRJDI5Oc6A5MBVxwT683nTOIfOjtC01cdckG+K0XiOWnshWVhrOPDQbm8P
+zDtn7Xjnhy/7Kd3WxxIztXgVeYt67rsBnP6Zmci/+gxAabexcDfMkTau9KcXUr8X
+5wjlYXcoO5K4XXaWLPOpHxBomudMFMEMbqRFGr8vTHYEPJA7A7tStIVlr2E6KdO2
+DE1lemU5qMPQqiElP9wBus+7toEIo6wEaxIkbTFdWUZ1bSkxBtSEHQIDAQABozEw
+LzAOBgNVHREEBzAFggNvc3UwHQYDVR0OBBYEFN/wn8jHVfee6GSdTACgg7tdaCl8
+MA0GCSqGSIb3DQEBCwUAA4IBgQA1iNEjhhW9vJmBU7pyel1fTcpDK5ndgZBW/OZf
+KmJ7tWYEFFlRDI9r87xAg4qDj8iDqwe71KeEhoN1W63Z4Zvmu5ZsiD6oIa/Ggpck
+z+JEdQBG4FFS9Pl5WlaveyqPn5Z/5h9ODzA3Wo2yH3nrYt3z6YwNxzUIM1KsWf5y
+fx1Or75Pm2JzBUutPdQ/M+HgpmOW+XMuNeEK39Wjs3UBR1Xp7Rqhn4fK11fO9HtA
+CzdHxKCg2CPLn9q5MwRa7PRg2IbBA3xKK88cKws3O+MzeHia9uzx0iyxhatjPPCa
+xiolahejpA3MTuBdkw9UGDiRyZm2WIAbhnjjKo32IMa0PFKTkbatAUF6yitdH5h/
+D9qc6M3RVnvPcH30N5rreESrWYqqDlXmwmHP0dFvrYMktVlZ6vXY5OjEODeS9YBE
+WneDyzA+P+xswLzwWQLw8ejyiRyZ6QX/T47KOdXp8v0q9DQEANkoAOvwTxpuL5of
+mG4+G+h1ap9g8hfWZBq6tA/TmK4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://osu.tk20.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://osu.tk20.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://osu.tk20.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SLO/SOAP"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://tk20.ehe.osu.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://osu.tk20.com/Shibboleth.sso/SAML2/POST" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://osu.tk20.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://osu.tk20.com/Shibboleth.sso/SAML2/Artifact" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://osu.tk20.com/Shibboleth.sso/SAML2/ECP" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://osu.tk20.com/Shibboleth.sso/SAML2/POST" index="10"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">TK20 SSO</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Single Sign-On provides users with access to multiple environments with a single, secure password. Most universities maintain their web portals; on-campus users would use single authentication information to log in. Once logged in, they can access various websites or services, such as Tk20. Typically, in this scenario, once the user is authenticated via the portal, a request forwards to Tk20. When the software receives the request, a secure handshake with the web portal ensures the request is legitimate. After the request is validated, information pertaining to the user attempting access to Tk20 is exchanged. The software ensures that the user trying to access Tk20 is a valid Tk20 user. After passing the checks, the user is immediately directed to the Tk20 account home page in the application. In this case, the user does not see the Tk20 login page because the authentication only happens once when the user logs in to the web portal on campus. Tk20 merely integrates with the web portal, ensures the proper authorization and allows the user into the Tk20 system. The Tk20 system is designed to allow access to users who do not have access to the campus portal, but do need access to Tk20. In such cases, the authentication information of such users is maintained locally in the Tk20 database
+</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Taskstream, LLC dba Taskstream-Tk20</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Taskstream, LLC dba Taskstream-Tk20</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://tk20.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Projects team</md:GivenName>
+	<md:EmailAddress>projects@tk20.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Charanjeev Shelly</md:GivenName>
+	<md:EmailAddress>cshelly@tk20.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Team alias</md:GivenName>
+	<md:EmailAddress>projects@tk20.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

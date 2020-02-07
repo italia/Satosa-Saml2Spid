@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.canarie.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2012-01-02T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">canarie.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CANARIE</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Identity Provider for CANARIE</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.canarie.ca/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.canarie.ca/about-us/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="fr">https://www.canarie.ca/fr/a-propos/protection-renseigments/</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJ3fH1HeYIxXxMXYbZ/Bx85j/JgKMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5jYW5hcmllLmNhMB4XDTExMDcwNjE0MzUxMloX
+DTMxMDcwNjE0MzUxMlowGTEXMBUGA1UEAxMOaWRwLmNhbmFyaWUuY2EwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcmyqTo01QVuqHI/ZXAdYP+iX6NjP2
+topfFsR4y8TVYFN4vMvb5ZSFWPPjJ8T3O2epI8Hy9q4FWyPn1Pa/CZoFi1EMhu7b
+QJpOmLzeX6FOvf1X/5De2JnWv7JWMpUMeVqupe2YeCtoaXfViHOB9pW0go2zr6R8
+ajvQKxNX46V/o1ND6YwnlKRNsh4hn46cPtl/DNeKYFz4Uj6OHBRSfMHTZCWVENJB
+ife66AS7X5hC6o7o2Sd5VHr0TgY+ZeKrl3/33war+RIGXr6cRW9iA9yEeW0Oi13Q
+3hkjPT7MNkvNJjWpERR7aBogQ3z5Id8Ygl+WASbyfoiXNCHPa3USAaynAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5jYW5hcmllLmNhhiVodHRwczovL2lkcC5jYW5h
+cmllLmNhL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRDEuTlL5Y/HfiEJ/wzCfCz
+otFdxjANBgkqhkiG9w0BAQUFAAOCAQEAD6WiCAdkGjA7Bza59pnn+/z5/Jhwn7Mf
++WS0WAPz686nIxYjblMBjIVITedkAFvwnEBn0Rs+XNXrc90uRFCNFf4VfSP9NLEf
+7cTPNxHiGt6TqOju2Rg6OBmNwRqAtFNqKG7VeKgoiZ4FcRVU2AdQ8fYnxxtwO4xJ
+8Md//Yp0lGQzj2FpSU7dnbVRGWAEE3g1Ghjrwe9Aj6e6lunZNaIdTZ6Yvnsa5qly
+DngkPipfHlmi56QMo9Iqa3nEKaCv2ykKzTIIUdgDI/M8sHXgitp5tFrAK8f96iBu
+zwZrSXVMnjQppB7E2l48gea/BPyFP4FBlxeN8E6aIXH09uN+HbcohQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.canarie.ca:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.canarie.ca:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.canarie.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.canarie.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.canarie.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.canarie.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">canarie.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJ3fH1HeYIxXxMXYbZ/Bx85j/JgKMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5jYW5hcmllLmNhMB4XDTExMDcwNjE0MzUxMloX
+DTMxMDcwNjE0MzUxMlowGTEXMBUGA1UEAxMOaWRwLmNhbmFyaWUuY2EwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCcmyqTo01QVuqHI/ZXAdYP+iX6NjP2
+topfFsR4y8TVYFN4vMvb5ZSFWPPjJ8T3O2epI8Hy9q4FWyPn1Pa/CZoFi1EMhu7b
+QJpOmLzeX6FOvf1X/5De2JnWv7JWMpUMeVqupe2YeCtoaXfViHOB9pW0go2zr6R8
+ajvQKxNX46V/o1ND6YwnlKRNsh4hn46cPtl/DNeKYFz4Uj6OHBRSfMHTZCWVENJB
+ife66AS7X5hC6o7o2Sd5VHr0TgY+ZeKrl3/33war+RIGXr6cRW9iA9yEeW0Oi13Q
+3hkjPT7MNkvNJjWpERR7aBogQ3z5Id8Ygl+WASbyfoiXNCHPa3USAaynAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5jYW5hcmllLmNhhiVodHRwczovL2lkcC5jYW5h
+cmllLmNhL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRDEuTlL5Y/HfiEJ/wzCfCz
+otFdxjANBgkqhkiG9w0BAQUFAAOCAQEAD6WiCAdkGjA7Bza59pnn+/z5/Jhwn7Mf
++WS0WAPz686nIxYjblMBjIVITedkAFvwnEBn0Rs+XNXrc90uRFCNFf4VfSP9NLEf
+7cTPNxHiGt6TqOju2Rg6OBmNwRqAtFNqKG7VeKgoiZ4FcRVU2AdQ8fYnxxtwO4xJ
+8Md//Yp0lGQzj2FpSU7dnbVRGWAEE3g1Ghjrwe9Aj6e6lunZNaIdTZ6Yvnsa5qly
+DngkPipfHlmi56QMo9Iqa3nEKaCv2ykKzTIIUdgDI/M8sHXgitp5tFrAK8f96iBu
+zwZrSXVMnjQppB7E2l48gea/BPyFP4FBlxeN8E6aIXH09uN+HbcohQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.canarie.ca:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.canarie.ca:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CANARIE</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CANARIE</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fr">https://www.canarie.ca/fr/a-propos/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.canarie.ca/about-us/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>CAF</md:GivenName>
+	<md:SurName>Admin</md:SurName>
+	<md:EmailAddress>mailto:CAF@canarie.ca</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Cyber</md:GivenName>
+	<md:SurName>Security</md:SurName>
+	<md:EmailAddress>mailto:cybersecurity@canarie.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

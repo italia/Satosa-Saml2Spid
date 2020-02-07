@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.pct.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pct.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Pennsylvania College of Technology</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.pct.edu/about/penn-college-privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="69" width="100" xml:lang="en">https://idp.pct.edu/idp/images/pctlogo-mobile.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAPXmOxKE87b9Gpy8v4ZkBQZyM5s7MA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC2lkcC5wY3QuZWR1MB4XDTEzMTExMzE0NDAxNFoXDTMz
+MTExMzE0NDAxNFowFjEUMBIGA1UEAxMLaWRwLnBjdC5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCN2mGb9Z9WEqbuUCnqfcBuI/GnafhX4G6X0/VR
+kL/LqeE8w8yI9le8K9XzSgX03x6gxwYgWQD1AjazDEj22TblQPWhMtSCGnc7NOwp
+1Rqdnjx/126lOZuBJgNrn8MNQicSGTHDERAVSDkRI35MZLgY9IP0RlQwZ3/qUNN8
+AMjt4SNdYsMCpxu7tJ544F5gogiQqXQMGJGd28j0g74XPjAvbL5uCJZXp4boYcsz
+IRV8tmzZS9VVEsjW/X6Uu7O9zuyLvsQw3CzgVF9bD2W0DI10MtyZFA7GAp1BvdZX
+nkHofviJ/nJ8EgY+t+ptpSSV+cBAOCq10EAvq77g+McjUWR1AgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC2lkcC5wY3QuZWR1hiJodHRwczovL2lkcC5wY3QuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQpWKgSLUBAg5gMotsUjTSITgXm+jANBgkqhkiG
+9w0BAQUFAAOCAQEAHy/IIAzOMJDen3jlxWATz3MnlouOdlHQRu2nFWnyOjSRzHY1
++yQjs557VN+gauVq3rh0Vsh/R3D/YhSHnsYmdw34TLPzF1NTb4/I96wxo84ls6Om
+MvJ43Hya/8HEsBfkcNIozAABsdmMBC3I6JOpdQekRO/oiaBQx9ckmpmf2VAvZ7hn
+pKpuJzdJRb15tTfBN9wL2vlohxJs9So5LyX/u3iTxe0f2HilfWP7prEwvvp5665W
+XZjl65JBgM51Vdxba40Gv6eyRaCM5SvD+3CD7CdAM/tBrFxYiLawxq0qJWr5G/DT
+Ywq4xGOo7ofdpFvfetqvGHrsBuQv2gyG/y7Aew==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.pct.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.pct.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.pct.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.pct.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.pct.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pct.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAPXmOxKE87b9Gpy8v4ZkBQZyM5s7MA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC2lkcC5wY3QuZWR1MB4XDTEzMTExMzE0NDAxNFoXDTMz
+MTExMzE0NDAxNFowFjEUMBIGA1UEAxMLaWRwLnBjdC5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCN2mGb9Z9WEqbuUCnqfcBuI/GnafhX4G6X0/VR
+kL/LqeE8w8yI9le8K9XzSgX03x6gxwYgWQD1AjazDEj22TblQPWhMtSCGnc7NOwp
+1Rqdnjx/126lOZuBJgNrn8MNQicSGTHDERAVSDkRI35MZLgY9IP0RlQwZ3/qUNN8
+AMjt4SNdYsMCpxu7tJ544F5gogiQqXQMGJGd28j0g74XPjAvbL5uCJZXp4boYcsz
+IRV8tmzZS9VVEsjW/X6Uu7O9zuyLvsQw3CzgVF9bD2W0DI10MtyZFA7GAp1BvdZX
+nkHofviJ/nJ8EgY+t+ptpSSV+cBAOCq10EAvq77g+McjUWR1AgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC2lkcC5wY3QuZWR1hiJodHRwczovL2lkcC5wY3QuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQpWKgSLUBAg5gMotsUjTSITgXm+jANBgkqhkiG
+9w0BAQUFAAOCAQEAHy/IIAzOMJDen3jlxWATz3MnlouOdlHQRu2nFWnyOjSRzHY1
++yQjs557VN+gauVq3rh0Vsh/R3D/YhSHnsYmdw34TLPzF1NTb4/I96wxo84ls6Om
+MvJ43Hya/8HEsBfkcNIozAABsdmMBC3I6JOpdQekRO/oiaBQx9ckmpmf2VAvZ7hn
+pKpuJzdJRb15tTfBN9wL2vlohxJs9So5LyX/u3iTxe0f2HilfWP7prEwvvp5665W
+XZjl65JBgM51Vdxba40Gv6eyRaCM5SvD+3CD7CdAM/tBrFxYiLawxq0qJWr5G/DT
+Ywq4xGOo7ofdpFvfetqvGHrsBuQv2gyG/y7Aew==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.pct.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Pennsylvania College of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Pennsylvania College of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.pct.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Mike Rae</md:GivenName>
+	<md:EmailAddress>mrae@pct.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Robert Belles</md:GivenName>
+	<md:EmailAddress>robert.belles@pct.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mike Rae</md:GivenName>
+	<md:EmailAddress>mrae@pct.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jim Williams Jr.</md:GivenName>
+	<md:EmailAddress>jim.williams@pct.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

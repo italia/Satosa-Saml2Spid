@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://wiki-cswarm.crc.nd.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CSWARM Wiki Instance</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Wiki server used by the C-SWARM project.  Developers use it for reporting on their progress of their tasks and to collaborate.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://policy.nd.edu</mdui:PrivacyStatementURL>
+		<mdui:Logo height="70" width="300" xml:lang="en">https://static.nd.edu/images/marks/blue/ndmark300.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDITCCAgmgAwIBAgIJANq01pu3iuXoMA0GCSqGSIb3DQEBBQUAMCkxJzAlBgNV
+BAMTHndpa2ktY3N3YXJtLnZpcnR1YWwuY3JjLm5kLmVkdTAeFw0xNTEwMjgxNjU5
+MzZaFw0yNTEwMjUxNjU5MzZaMCkxJzAlBgNVBAMTHndpa2ktY3N3YXJtLnZpcnR1
+YWwuY3JjLm5kLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKRp
+CuOp4pW8+1gPe/2SCZJ0Lx5HboS8QjVjSH9bj2SkDmB7MKGGNOIxioLUBXOKDfOu
+cdFydZmJwF0Lg+T/5Eu783JFeHgXEaLWjuJ1T20Gh8/VcKd6BF+GWP5HxHWwC/1i
+tQnNbxyyNNne7wS/I5woz7ocEZ80ujtmmwV7wc/C5bVI9NeaileFKE0OIQhl6qMr
+qmCJr/xMh4D0Ko1IUnVU7d8qM70VAYTJzjysYg9hqKzGkprd36q5Kij2K9GFQwOS
+nfFsaS5UVAxV/idMs8xeWwvL39AdT4V79uAglktpdPm2cFsRM3Lc8iWkUiCFXOlE
+UNO5lFO9ZtG/3UMFMT0CAwEAAaNMMEowKQYDVR0RBCIwIIIed2lraS1jc3dhcm0u
+dmlydHVhbC5jcmMubmQuZWR1MB0GA1UdDgQWBBQ+QtSY7u8Y/LGbT39AdOBgqFrH
+8TANBgkqhkiG9w0BAQUFAAOCAQEAJMtvrO94Q6aBOW/KPhYC7RaQ1KhnZZFmgNuA
+dWIe9Z/C5Ufe5ffv+7RF8YQksYmbnD1yg1XfXlQXnAoiEqnvqsIOyaBO+NGSq0QW
+xbYh9EM0OPCqgUNl/ea3zl8hUbr/Glf4pkB13176Q4d82cib1x09NRqZTT6sA/So
+ZGYxADLpdUyM2Hc2ShuG6EIWbrj+8+Spl7/0FhyXJneBVDCZ5utPedSF2kVU7LUi
+q20EjYgBqitT37jf7A+xGxQbWOLA8KCiqoeuJmf1yaCSVRKYHc1DviPtgpg4P1wL
+VLYCFWSF1zm/rknkR1j+w0KNisGpbK3TqeBCxNGPt1uT0TvxLw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://wiki-cswarm.crc.nd.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">CSWARM Wiki Instance</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">The Wiki server used by the C-SWARM project.  Developers use it for reporting on their progress of their tasks and to collaborate.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Notre Dame</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Notre Dame</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nd.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Antelmo Aguilar</md:GivenName>
+	<md:EmailAddress>aaguilar@nd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Scott Hampton</md:GivenName>
+	<md:EmailAddress>shampton@nd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>OIT Info Security</md:GivenName>
+	<md:EmailAddress>infosec@nd.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

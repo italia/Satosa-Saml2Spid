@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:richmond.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">richmond.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Richmond</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.richmond.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://is.richmond.edu/policies/technology/general/privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="184" width="151" xml:lang="en">https://idp.richmond.edu/idp/images/urlogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICsjCCAZoCCQCBYXtqVeqXXTANBgkqhkiG9w0BAQUFADAbMRkwFwYDVQQDExBp
+ZHAucmljaG1vbmQuZWR1MB4XDTEwMTExOTE4NDUyNloXDTMwMTExNDE4NDUyNlow
+GzEZMBcGA1UEAxMQaWRwLnJpY2htb25kLmVkdTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAJRI9L6ikF8FB4ySCsNWPNYsenurJOoARRywnTYONGCQlKwK
+ZWjQAdrYn6B2ydstAUroMmg8iS+CbwbxrA7gsK/aXtD/oCq5prYt5LKIb2cWV9Lg
+8YnkICntETLdISZk5JUOS0ZaSoSSOU06s39qPCKapMGdWLenEXrBJcDUIPSN1XYG
+cAKxs9UrqhWQ2xI1iSv92PFum5bzh6IFsRnD3EyVBlRzAZQwP3GR0z9bq4y7ul2a
+XzYVJmyga+NizM8GQQY4bGXoWXh15/jGjqpAd3R/DRjQUTkpLGyqNgGW0sH2diLa
+6hf84LBR7ogaRwRK+PWxau6DyAtUl2K+O7xJ+NcCAwEAATANBgkqhkiG9w0BAQUF
+AAOCAQEAayyiqqbJvJwBgJvSaPj3xVUzZ4wHcLrYutI7TiPIx6np6aDc7VaKeXsD
+tDeh+oE/9xkyIiQq8jfVVgTXddye2HDWV4Qr6zXpAtqZvzXlaOeg73wCAKbcuyos
+MvcapBFJ0ffWwVcoXo0s0au860SQHzcvSXONLPBM9U4tf9J6eWWKJjCUjP/R8TVe
+x56haExHiHdwJbDguNL2w3j6eKVNmnRDzBBhMDVnLGETHnY5XxQdrZ/BWSWvvbTR
+l+rZWtKVWKLKaigDqCiM9g/1B946PVG3jmnxel/RP5ICm363RzyALz8dxG/2ujZU
+M48hMJgWkMldrREsBWB/ZJm1BA0sAw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.richmond.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.richmond.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.richmond.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">richmond.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICsjCCAZoCCQCBYXtqVeqXXTANBgkqhkiG9w0BAQUFADAbMRkwFwYDVQQDExBp
+ZHAucmljaG1vbmQuZWR1MB4XDTEwMTExOTE4NDUyNloXDTMwMTExNDE4NDUyNlow
+GzEZMBcGA1UEAxMQaWRwLnJpY2htb25kLmVkdTCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAJRI9L6ikF8FB4ySCsNWPNYsenurJOoARRywnTYONGCQlKwK
+ZWjQAdrYn6B2ydstAUroMmg8iS+CbwbxrA7gsK/aXtD/oCq5prYt5LKIb2cWV9Lg
+8YnkICntETLdISZk5JUOS0ZaSoSSOU06s39qPCKapMGdWLenEXrBJcDUIPSN1XYG
+cAKxs9UrqhWQ2xI1iSv92PFum5bzh6IFsRnD3EyVBlRzAZQwP3GR0z9bq4y7ul2a
+XzYVJmyga+NizM8GQQY4bGXoWXh15/jGjqpAd3R/DRjQUTkpLGyqNgGW0sH2diLa
+6hf84LBR7ogaRwRK+PWxau6DyAtUl2K+O7xJ+NcCAwEAATANBgkqhkiG9w0BAQUF
+AAOCAQEAayyiqqbJvJwBgJvSaPj3xVUzZ4wHcLrYutI7TiPIx6np6aDc7VaKeXsD
+tDeh+oE/9xkyIiQq8jfVVgTXddye2HDWV4Qr6zXpAtqZvzXlaOeg73wCAKbcuyos
+MvcapBFJ0ffWwVcoXo0s0au860SQHzcvSXONLPBM9U4tf9J6eWWKJjCUjP/R8TVe
+x56haExHiHdwJbDguNL2w3j6eKVNmnRDzBBhMDVnLGETHnY5XxQdrZ/BWSWvvbTR
+l+rZWtKVWKLKaigDqCiM9g/1B946PVG3jmnxel/RP5ICm363RzyALz8dxG/2ujZU
+M48hMJgWkMldrREsBWB/ZJm1BA0sAw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.richmond.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Richmond</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Richmond</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.richmond.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Network Services</md:GivenName>
+	<md:EmailAddress>network@richmond.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@richmond.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security</md:GivenName>
+	<md:EmailAddress>infosec@richmond.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Troy Boroughs</md:GivenName>
+	<md:EmailAddress>tborough@richmond.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://wytham-genome.zoo.ox.ac.uk/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2019-11-14T08:10:07Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Oxford's Wytham Genome Project</mdui:DisplayName>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIETzCCAregAwIBAgIUBDbqRfbcL/K9NasiaTije0p05YAwDQYJKoZIhvcNAQEL
+BQAwJTEjMCEGA1UEAxMad3l0aGFtLWdlbm9tZS56b28ub3guYWMudWswHhcNMTkx
+MTEyMTUwOTU3WhcNMjkxMTA5MTUwOTU3WjAlMSMwIQYDVQQDExp3eXRoYW0tZ2Vu
+b21lLnpvby5veC5hYy51azCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGB
+AMVNa6N4bsZ2VNDz7kzmgTtWXUz96zPedJs/pW68LgwYpdDA4Yt8FB3PA3kng4Ws
+uMhaLG1SvWPQNMJS+5SQQhT2OUGQlebax2TObYkqTgOpuBxdNlHE6/6NeIRCnD23
+0NuvB/4/MYL3RgddwP/yJccnow1rXiy1TfU9KjdWvLV45dee2EenFOMdNM26q52H
+KdEWeFJ9VXaewj7bzGNMJpXNe87ZKdc++e1zSuXOhWt09DkBejRDcoyfFQo9Fwfb
+NzvMpp7EBCqHY29oPZrsY6dcDhCUmDjQSOZrGWhDUjiDAx3adLu/ShXnLAKTPN+q
+TkeD9wK0pOUL8LrkjFEw9HBK4GlROcxTeJoMj1k/IJNtDZlXO8KNrAi+SmJ6Vcq3
+gz5+LCYiNeTccqWdPtK2iuqQjOezonTORjStxw4c8zWjfiEzXXEQoHGMlpolMrLj
+JI+Lv+vg6UP6iezLkquwxTKi74BKr4g4HJ2acWyovQ1MRwLmr8PKlU+Gp5LJAyIL
+uwIDAQABo3cwdTBUBgNVHREETTBLghp3eXRoYW0tZ2Vub21lLnpvby5veC5hYy51
+a4YtaHR0cHM6Ly93eXRoYW0tZ2Vub21lLnpvby5veC5hYy51ay9zaGliYm9sZXRo
+MB0GA1UdDgQWBBTcEYkgBMn6bKW7two37EAqWrFpRjANBgkqhkiG9w0BAQsFAAOC
+AYEAf3d4cbrvEl/qqB5KwDxzlU3KIcyLM7kUDtjINpkhwgeD6KFJWh1tStLXR+Tk
+cJtsIfX3k6ipSLSPwXaCZdlNI/b7gqLVHuQXBHkNqLcBdz+aumb5PpoRvQkKgTFo
+KnI1Ob1AAIVKYOwK60jLnt9LtNFg9qLihOMmUlkJw3XFBkbK6yU/c8SJ0QoRtCea
+wRgrZKApPlG+kDsTtUOYYjOpEg10G18qu7IalyCSf1Em6ejymTqCGQxCKrCMxqzR
+2Ii/h8tyrBxM1pokDpiX4hqIQcM/dHh4YX4zFjkoOoSMz0vxaKdUVdUesF8Nyear
++shNMBrLgS6cm/aUMu42xuWopn7IpoAN5WAi23vIQlBa4i7vgy7ZE5LsZfu7nZaY
+VaM0CFUzUOUm9fF7kc0aIVwxgtaigzOADQcjqzjRX92cm/NrjazHcxBEodvl9BIg
+zik+I1wYyewsRsK91+q1aGrcpCtoEyEJ0WH7MJlJKNlAAHnVfRjxPWMfxFGBadE7
+58zt
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIETzCCAregAwIBAgIUTJw9SdMrcFzyNhb99zBXqxz/5rowDQYJKoZIhvcNAQEL
+BQAwJTEjMCEGA1UEAxMad3l0aGFtLWdlbm9tZS56b28ub3guYWMudWswHhcNMTkx
+MTEyMTUwOTU2WhcNMjkxMTA5MTUwOTU2WjAlMSMwIQYDVQQDExp3eXRoYW0tZ2Vu
+b21lLnpvby5veC5hYy51azCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGB
+AODioardNe8n5zOy9YqHJRyIYvC1lyLPL62ZGL3LMYZJgCwMvp69GJ0ITDYjsDtu
+htpPj+SLmja3IPn0u8Ivn0vwuhwltAOFRLeDmdfIwHfdLwmO7xueij1AKlg/C5oM
+DF+dSTNYGWqWv1DsWjY2L9w6Q0FN7cJWXHpKE10ZIw6filBFXJCWXZ/2kTyvWEjb
+Lf9V5NLh0nTJSFBQGWQRUTpL+DOZ3u8vFugg/hypuExHQgxPmvYdz8f2cKKr4dmx
+0j8z4DbQ1roytTVRhAA85SafkOkoz/63f3Dad9J73We+xwUGSGjmuchY7PGaYXxj
+XqZfGJ22k6siqE0fO4j9WlB9rxZK/FjtCZSXA0LzzpuKj8s1mnCBDQiIlFMXysxm
+ReVtFyM2cD3mDAhUnayiO7toYCjv9xEajSoEgEVY+BfuWzo8xTqXaGyFoyr+8s+t
+vwA+oIYfJMh11lFw8Vh5+l8Am0YEu2zPG/t3t4nwRQO/g9yzoCjEbTP7iznYAqx8
+JQIDAQABo3cwdTBUBgNVHREETTBLghp3eXRoYW0tZ2Vub21lLnpvby5veC5hYy51
+a4YtaHR0cHM6Ly93eXRoYW0tZ2Vub21lLnpvby5veC5hYy51ay9zaGliYm9sZXRo
+MB0GA1UdDgQWBBQkbRSOFCra8qFVfG1aCwwnmQDfYjANBgkqhkiG9w0BAQsFAAOC
+AYEAkQolGt7DpsXY5Y0glcqtIHMsFh24JSf0Ts4EWWSvHJVOmzoK1Ught2r/jm7b
+rPsqAW6v2EA1aDYJTtPZfnzqog0uIcOHBnFts8liI6Y3WCOqZ8HVoZtFgiZ5yalQ
+rgXdjed8lkQ0h1CWP4V6N2pp/csmmnZP5+rEk1SUrfNOr59yixvwwptsGGwjB3xK
++LtWQLrWGuygdGxUXOIXbEBJskxycDycnsDPU8JWOSzPhX6vzIAvbLgJDV81cuUH
+4lGOM7G1XwWOSBtgDnCxljHPqG022EDb3PA1wJ/OBodRZF+dNjY39OUcrIyjTS5Q
+ggUJdt8bbY2T5MsFfz8pwfh1AVBzxocO0zMAklxMgcWFpx4RrUF+uHm49nwap7nP
+Zz3gilHEirW5Mq1scXgMyNP6v7igyU1QYrJ147I2KRp2HG7/P40FhGqzmqgxqHPY
+GrE25Jp/oG5N61p6GAfLcYl7eajpr2qJdBzPlVRtlsXF9uXcn0Pp8WpyVLCZziem
+HBlB
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://wytham-genome.zoo.ox.ac.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Oxford</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Oxford</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.zoo.ox.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Zooology IT office</md:GivenName>
+	<md:EmailAddress>mailto:webmaster@zoo.ox.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Zooology IT office</md:GivenName>
+	<md:EmailAddress>mailto:webmaster@zoo.ox.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

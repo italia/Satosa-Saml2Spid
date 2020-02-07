@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ujf.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-04-09T14:17:34Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ujf.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Nuclear Physics Institute of the ASCR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav jaderné fyziky AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider NPI ASCR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance ÚJF AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ujf.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.ujf.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="24">https://gedeon.cas.cz/loga/logo-ujf-44.png</mdui:Logo>
+		<mdui:Logo height="201" width="108">https://gedeon.cas.cz/loga/logo-ujf-201.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIpFSBpuxGEF5Cr51OWtVMAdOgtnMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51amYuY2FzLmN6MB4XDTE2MTEwMTA4MDMyNFoX
+DTM2MTEwMTA4MDMyNFowGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7jhE81zGOcCKBWSxcCaHtOD9lLEZX
+G+8jFTMtaxcxjWQGHMhMyDAyT+hNvEKmw3hQmU0N9ySNgLWlF8jj5ZsEVnrQcGI7
+w6TER7TbIKx5UcIPSsHi0HuwQkaNtgGxJzJbHugXiaUpG8NLUXbjT/A394s5qnNL
+J2lgse/vhha/A4tiK8CiAWnLHWgT8eDtpuoi6AD4SWv1W2yftiOWHVVJHYObxDWC
+X+fVkmikscutKBgstYC5JQ0ENYoPIMmW1v3DEpq+GAt0R5zV907Y3Z1G62LfQa3T
+Mx9UFxnHl6/t5cswf3tDx/zVMTIqsaDF/y90If0B74cVoIJm9jcHwJXRAgMBAAGj
+YzBhMB0GA1UdDgQWBBR/rGBfgIhGHeEdZ5F3TzHJQ+/mlzBABgNVHREEOTA3gg5p
+ZHAudWpmLmNhcy5jeoYlaHR0cHM6Ly9pZHAudWpmLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAGCwr1VsnZw+YDf3DwXGG9t6e5BmbJ450
+v1xQd++/Qoo1e+bsFM0mMaW8arwzQs4RNFlzsZ6a+mz6XsZvtXuudFeaST65bskq
+kL5wj15hjOf/z/6YW5YcC3PW3IZx8BGGlUGZLhR3OFzY+9pxtQ8vzMSQMy0qEhNO
+0aULZKZYMrB6+/H7Yh3oHrruiK3/8cJZe10L1kI5rsz7kAfjqpO5qgRMSvKNYEX4
+gGZ7KOJBgUHxn7ciBt4QOt745wP5VpeTvEwd6kfb//mqRCkfkhcT9zK4GYF+chH3
+oEL+7ZUVm4zqZApxqQ26VAnHFGfs4ZpHkPLQ3HjMGKCmPOk9oXpn+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUL0RyZatdtnYUBmXg25Y/nRzMJgkwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owHhcNMTYxMTAxMDgwMzI0WhcN
+MzYxMTAxMDgwMzI0WjAZMRcwFQYDVQQDDA5pZHAudWpmLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3Yrk0T54xRr/F4kglfcKFmRaMZmXyi
+dIujf6UrrPgFuMKu5+sfXewesV0ieos+fOFDJXxk5c0MqD7H+SbNm4yQCFxmS9Tc
+iA1hXJecUSzkDCOb/PMNuEwdOBenfNnBQSTZRKC0fKIYZRUmgb6PYVhtieaFi9CK
+Rb7a1qFHjpSLpJ6rWnYr4fp57tPN8WFTQaqxf+txSHAw7MXQktfxwdbh4XVggr+w
+pRyPto4Nvddi0KLxcojvHTqadaL1N8CtQMIRQxYnsx7rwJDpBNLJ7fzRa0O1xkyy
+uaI8Sb9010dcSKMaNCEnWhWvffe6vKaRFjrA7VHPU6D9X2cwmvgaHY0CAwEAAaNj
+MGEwHQYDVR0OBBYEFCwAqpt0Nr7gr76rnULrekLl7LTTMEAGA1UdEQQ5MDeCDmlk
+cC51amYuY2FzLmN6hiVodHRwczovL2lkcC51amYuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCSjZ1PEsT1NAyY4jQ53wOmqxd6tmaa9Y07
+7f/meGdcWtcjpSp9d0q3PS19DelPzLpf/eI01s+2KF5rphzGEy7vcAb4ubUlRYLv
+XWs7KS3+s45cXlJ2ayiO/+oTPSk975cP2GFYXpo5gwowGMYEFRNYj90/gmo1iZ/M
+RnxmHsvPqYknk3F5LCjHYdA32cTwmy0CL/OCmQFc+7AKvoGAYepeQl/T11DDMhcd
+7yRFhZiUmpfv1AfWJzMYWCYmM/Ta1AVx9RUqO6U+GZFuIMxy5zCCK3uPqAMUyz6S
+mxGvolgqhW3L3ixPRkTEz5EVIHYCeGqGVEKFclgEgGE9U/7svt9d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUcJT6ZIbspOPiO8djUYzHEqBR7xQwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owHhcNMTYxMTAxMDgwMzI0WhcN
+MzYxMTAxMDgwMzI0WjAZMRcwFQYDVQQDDA5pZHAudWpmLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIVXeqOIR7l9v7ix9rpKjI9ZWVUTPdYY
+YYtcePiAG4w/2EMNCCe1kIc3upHuSVIGndQNz1f9XtREl/Fu4a3+Vdxj5qB1fjS5
+R9ojfGc7IoYBEFvUQVMG7ACIkbpbSIewHCdHzN5KhGobawC0nkWWWIbki1rPp2m7
+ax9uLlUm6VPLOStHU0iyUTuAmnAoUT8EViajt71w2nSuZiKGmVHY/y7uB8IWZd4i
+CMrKMG8grRy744ou6jl87UDZS3lPrKZj76ohSmDziwwLZk4eaQZ76ZQC9VYUrJ3Q
+19QvJ6nrRZavn5JsDqyZsfMYSGLfuQgykZj6JXX60hbLb3pCP7rwOE8CAwEAAaNj
+MGEwHQYDVR0OBBYEFMOeu6ozWzwlMX9HbxNvED3s1FP/MEAGA1UdEQQ5MDeCDmlk
+cC51amYuY2FzLmN6hiVodHRwczovL2lkcC51amYuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAOY7wVHDHj36xkK5JuOGI7QFlhvE5RtZhu
+6tuNjVIDKoBRc5Q5W5yupACqx+7HSJPpdrX311VIaJ0vgqiOe8KGC6XSNSDpkCfm
+ohCZr/f5t/rqbSafW0xU0wTXo4qDeAChNBnMpgFrfq49fHZAnhtGwIkh/itisqGG
+29rSTc8YAtldK+q3YfYq3dKVLJPyYprg0+Nwb8lqdjxw8Lv9j3kJM+3WH3qrAyhr
+hk4gDwa2SCqORZJ8MYCw78dLNfHR+BrM2U+KZtv5aBoJZOgZwIrnCo7HJ9bfa9os
+VWvF7Mq9vHA0BY9AoDSxPGXc8xANw7Pa7aMX1WOJYlgs7g05KBJ9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ujf.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ujf.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ujf.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ujf.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ujf.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ujf.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ujf.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIpFSBpuxGEF5Cr51OWtVMAdOgtnMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC51amYuY2FzLmN6MB4XDTE2MTEwMTA4MDMyNFoX
+DTM2MTEwMTA4MDMyNFowGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7jhE81zGOcCKBWSxcCaHtOD9lLEZX
+G+8jFTMtaxcxjWQGHMhMyDAyT+hNvEKmw3hQmU0N9ySNgLWlF8jj5ZsEVnrQcGI7
+w6TER7TbIKx5UcIPSsHi0HuwQkaNtgGxJzJbHugXiaUpG8NLUXbjT/A394s5qnNL
+J2lgse/vhha/A4tiK8CiAWnLHWgT8eDtpuoi6AD4SWv1W2yftiOWHVVJHYObxDWC
+X+fVkmikscutKBgstYC5JQ0ENYoPIMmW1v3DEpq+GAt0R5zV907Y3Z1G62LfQa3T
+Mx9UFxnHl6/t5cswf3tDx/zVMTIqsaDF/y90If0B74cVoIJm9jcHwJXRAgMBAAGj
+YzBhMB0GA1UdDgQWBBR/rGBfgIhGHeEdZ5F3TzHJQ+/mlzBABgNVHREEOTA3gg5p
+ZHAudWpmLmNhcy5jeoYlaHR0cHM6Ly9pZHAudWpmLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAGCwr1VsnZw+YDf3DwXGG9t6e5BmbJ450
+v1xQd++/Qoo1e+bsFM0mMaW8arwzQs4RNFlzsZ6a+mz6XsZvtXuudFeaST65bskq
+kL5wj15hjOf/z/6YW5YcC3PW3IZx8BGGlUGZLhR3OFzY+9pxtQ8vzMSQMy0qEhNO
+0aULZKZYMrB6+/H7Yh3oHrruiK3/8cJZe10L1kI5rsz7kAfjqpO5qgRMSvKNYEX4
+gGZ7KOJBgUHxn7ciBt4QOt745wP5VpeTvEwd6kfb//mqRCkfkhcT9zK4GYF+chH3
+oEL+7ZUVm4zqZApxqQ26VAnHFGfs4ZpHkPLQ3HjMGKCmPOk9oXpn+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUL0RyZatdtnYUBmXg25Y/nRzMJgkwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owHhcNMTYxMTAxMDgwMzI0WhcN
+MzYxMTAxMDgwMzI0WjAZMRcwFQYDVQQDDA5pZHAudWpmLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3Yrk0T54xRr/F4kglfcKFmRaMZmXyi
+dIujf6UrrPgFuMKu5+sfXewesV0ieos+fOFDJXxk5c0MqD7H+SbNm4yQCFxmS9Tc
+iA1hXJecUSzkDCOb/PMNuEwdOBenfNnBQSTZRKC0fKIYZRUmgb6PYVhtieaFi9CK
+Rb7a1qFHjpSLpJ6rWnYr4fp57tPN8WFTQaqxf+txSHAw7MXQktfxwdbh4XVggr+w
+pRyPto4Nvddi0KLxcojvHTqadaL1N8CtQMIRQxYnsx7rwJDpBNLJ7fzRa0O1xkyy
+uaI8Sb9010dcSKMaNCEnWhWvffe6vKaRFjrA7VHPU6D9X2cwmvgaHY0CAwEAAaNj
+MGEwHQYDVR0OBBYEFCwAqpt0Nr7gr76rnULrekLl7LTTMEAGA1UdEQQ5MDeCDmlk
+cC51amYuY2FzLmN6hiVodHRwczovL2lkcC51amYuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCSjZ1PEsT1NAyY4jQ53wOmqxd6tmaa9Y07
+7f/meGdcWtcjpSp9d0q3PS19DelPzLpf/eI01s+2KF5rphzGEy7vcAb4ubUlRYLv
+XWs7KS3+s45cXlJ2ayiO/+oTPSk975cP2GFYXpo5gwowGMYEFRNYj90/gmo1iZ/M
+RnxmHsvPqYknk3F5LCjHYdA32cTwmy0CL/OCmQFc+7AKvoGAYepeQl/T11DDMhcd
+7yRFhZiUmpfv1AfWJzMYWCYmM/Ta1AVx9RUqO6U+GZFuIMxy5zCCK3uPqAMUyz6S
+mxGvolgqhW3L3ixPRkTEz5EVIHYCeGqGVEKFclgEgGE9U/7svt9d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUcJT6ZIbspOPiO8djUYzHEqBR7xQwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLnVqZi5jYXMuY3owHhcNMTYxMTAxMDgwMzI0WhcN
+MzYxMTAxMDgwMzI0WjAZMRcwFQYDVQQDDA5pZHAudWpmLmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAIVXeqOIR7l9v7ix9rpKjI9ZWVUTPdYY
+YYtcePiAG4w/2EMNCCe1kIc3upHuSVIGndQNz1f9XtREl/Fu4a3+Vdxj5qB1fjS5
+R9ojfGc7IoYBEFvUQVMG7ACIkbpbSIewHCdHzN5KhGobawC0nkWWWIbki1rPp2m7
+ax9uLlUm6VPLOStHU0iyUTuAmnAoUT8EViajt71w2nSuZiKGmVHY/y7uB8IWZd4i
+CMrKMG8grRy744ou6jl87UDZS3lPrKZj76ohSmDziwwLZk4eaQZ76ZQC9VYUrJ3Q
+19QvJ6nrRZavn5JsDqyZsfMYSGLfuQgykZj6JXX60hbLb3pCP7rwOE8CAwEAAaNj
+MGEwHQYDVR0OBBYEFMOeu6ozWzwlMX9HbxNvED3s1FP/MEAGA1UdEQQ5MDeCDmlk
+cC51amYuY2FzLmN6hiVodHRwczovL2lkcC51amYuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAOY7wVHDHj36xkK5JuOGI7QFlhvE5RtZhu
+6tuNjVIDKoBRc5Q5W5yupACqx+7HSJPpdrX311VIaJ0vgqiOe8KGC6XSNSDpkCfm
+ohCZr/f5t/rqbSafW0xU0wTXo4qDeAChNBnMpgFrfq49fHZAnhtGwIkh/itisqGG
+29rSTc8YAtldK+q3YfYq3dKVLJPyYprg0+Nwb8lqdjxw8Lv9j3kJM+3WH3qrAyhr
+hk4gDwa2SCqORZJ8MYCw78dLNfHR+BrM2U+KZtv5aBoJZOgZwIrnCo7HJ9bfa9os
+VWvF7Mq9vHA0BY9AoDSxPGXc8xANw7Pa7aMX1WOJYlgs7g05KBJ9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ujf.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Nuclear Physics Institute of the ASCR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Ústav jaderné fyziky AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Nuclear Physics Institute of the ASCR</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav jaderné fyziky AV ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ujf.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.ujf.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

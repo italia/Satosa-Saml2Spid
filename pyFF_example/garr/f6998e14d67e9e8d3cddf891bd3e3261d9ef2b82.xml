@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ugc.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-06-12T13:03:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ugc.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University Grants Commission - Sri Lanka</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The staff of University Grants Commission - Sri Lanka</mdui:Description>
+		<mdui:Keywords xml:lang="en">ugc</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.ugc.ac.lk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ugc.ac.lk/en/policy/commission-circulars/113-circulars-published-in-2013-998-and-above-/1130-comm-circular-022013-it-governance-and-management-it-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">https://idp.ugc.ac.lk/Logo80x60.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.ugc.ac.lk/Logo16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALA05eLV9/yA83lZkrURCzTcPWcTMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlUD5u7Y35x9lWZC07MfnqggG95KYxpDe
+g8us2X1XSw5wgU+6Apoxf8WJpFqmleBBn8/S68cQQFYanc4zsa0GfrzLzsBPOuG6
+zVsjBoe8ahIdwIcxc0hCiDkrMZSJKOs3mv+UvV9/pAj40dq8bGp6zrrqoW3DxvS0
+T2f0eDetRKKWGB8J1G6XTj6OTqvrpGQKTe6vEVgszVF3KmyJzhMD9qvj+wQyivct
+v+uQ15joPtPIXn7Bolkvkm05TmWfWQIMM+MlZajjSElFEX7j6WNkPef71t7QKmVo
+k7c8r+XvUWSLWB0m96KG/3NQQG4ZXMFVCH4p8PUKsQNbif/O8tW8cwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUVAojKNy+hfCgi2Q9cXYWAfovbM8wPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCDXD//CYks6UFxHOm1GXTMgL3cgIrqivqmedCo
+uuHq99KPHRzcaOu149gU+CsXxQv6iFoxy996AraEGNAdFOblEQJBcqmXSgUm1wxY
+6k7CVP502UsrRCFHwIfzSpZac3yeTYFng+XBCrWApAaZdfJTfV7k30+45kYfMQf2
+0Z6GGvbqrRL0d20MI8RnkMh+RDzLtMFNvCCBYBpggicC94OODbTYshGmeYZzpBUm
+dFLKdbR2FSyQrRLg1zJrI68iDjmL/ECGDTCckcMh4RT0Ne7Vig5/gK+q24It0z8X
+8DugwPdgui3yCOPfn0LFtR/yzL6CBy07kKDvXaAowfvQJe3D
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAIXHBQnK7G+PUkWCypxjnyM4U9vHMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmLpDTjMTMpU3ND3Doqg6HY9XHFL/AgCz
+J4GaaaJ9hhnfMLq0U+Rn3o6JIpiw4pAtnorF0ylbx8vtU3mqPqOSyoNBqPqx+MPk
+H21FoTXiQU/jSwNJqX4Ksk+zX/cgXi7AskN8u3SWA8DxlNwAP+JhRKrcCvy+u27S
+4+SZpcwxJ9gd7FUTRkNgIitm+cU9P7mq4osl12j/csJgNZzW+IWk83KVPYKMp6gn
+AWFNFz2kjn7+ZWBRnKDzaGWMVf2prd5Bd13stOlfsuRhm1DFZUIcVl3Xkmjf6eLC
+Ws8ag9HPrO7TJwUX3RfM9hvLWmMo3iOGTTxsPbvt0GdXXEPVoRPNkwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUI73GOs/aTrv/taR/07NBDvArelEwPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCAl7fno4i/O/oOkUZABMt0Wi4fDiEHdrzZvpQp
+ICCqWRn0BhAmO6OAAtT3/5AdJnVQ0BbAfCV7csVoTCQcxDDR0ZFK3L7QLQarq67u
+k8jGV7QPEaGIIxWc1o405BtmhRrkSsW9USs7g88taBKgwTCj7Q2fYlyTRheaBb8S
+z7ZqrNjVqGIEAmS3YmZDt2SEOVc+PZ0JzL+7291csdZzoO0RK5Uj6aH4uFusLs1m
+v9V8Wxrp1vNyBm8tsoymzZTKQeHSqsAixEYHo3firu+W/ZVw/Kb2DaVNyIAbiqc8
+MlKr4zFZG3YG62fFkDlcLQsJLvMVANS3X+M3Qy/nc4Fcx2OT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJqvwtf9Id21XiT6ooSXg0+sgkiaMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6+k4BftbDxUs7pJUy4AUH2p/fcN1WkDQ
+c/BhRALuhmo/poV0JNUBwRIarohpdfsZQlQP06Oc/+KJDpRvhjG2MzfGYIa80JKs
+Zgc+/1wQD5IVuFMM8rne6sgcz9E05Z13udmPlXHoDnm3oxpd2kjjAEsn4hoFiNIy
+fHF9QxGFMKshud5Q0uL79NQoseOtE3PK9MTH9Hdk0IkjachKlHAAZ00otwR3wrE5
+t3xTgjDPBLS9ulmqiGHOoTS6ZOnd5NZ1eDlUb9cAJdHK8koD1catMcbuJqbyWWna
+zwxMSvQP5wPOusWvhzLpk88VfUUwFQlsu8jL78sZZw3vU0QluL6dwQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUPd5OZJjenj4G6snxHDBPGHYmBHwwPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBajEhJuu15YFPW4N97EyhmlqxLsccgbt1Zh7wh
+DerjGmbYOtT4q9gHCSPuFY/qBqE85q2OSoE/EIt6FhkQRV5ABJHpdLZ1R0VjjTkV
+XsTBJX06Vjw93/j/qrSnIyWIsSl8/n+j3I+EQBpuXdj+Gt8r+0jLnX+wlKd/RvnT
+wsEzqZ19DaPX47C2UwcjxCdUDF98v5z1c2q/N4VUFdQPl3+e4Jp7WNTeblI9bHqn
+bGwDZeYuytYoFJATPWfDHAXS5dC+5WFR2wlSOWLe3qHc5ybbP5CQDUKOJ/CFW8U/
+xd7AA5x8t0W/8PcMgvKGf0jp1rJQBe+YOKOSOxOPtqnxeMOG
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ugc.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALA05eLV9/yA83lZkrURCzTcPWcTMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlUD5u7Y35x9lWZC07MfnqggG95KYxpDe
+g8us2X1XSw5wgU+6Apoxf8WJpFqmleBBn8/S68cQQFYanc4zsa0GfrzLzsBPOuG6
+zVsjBoe8ahIdwIcxc0hCiDkrMZSJKOs3mv+UvV9/pAj40dq8bGp6zrrqoW3DxvS0
+T2f0eDetRKKWGB8J1G6XTj6OTqvrpGQKTe6vEVgszVF3KmyJzhMD9qvj+wQyivct
+v+uQ15joPtPIXn7Bolkvkm05TmWfWQIMM+MlZajjSElFEX7j6WNkPef71t7QKmVo
+k7c8r+XvUWSLWB0m96KG/3NQQG4ZXMFVCH4p8PUKsQNbif/O8tW8cwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUVAojKNy+hfCgi2Q9cXYWAfovbM8wPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCDXD//CYks6UFxHOm1GXTMgL3cgIrqivqmedCo
+uuHq99KPHRzcaOu149gU+CsXxQv6iFoxy996AraEGNAdFOblEQJBcqmXSgUm1wxY
+6k7CVP502UsrRCFHwIfzSpZac3yeTYFng+XBCrWApAaZdfJTfV7k30+45kYfMQf2
+0Z6GGvbqrRL0d20MI8RnkMh+RDzLtMFNvCCBYBpggicC94OODbTYshGmeYZzpBUm
+dFLKdbR2FSyQrRLg1zJrI68iDjmL/ECGDTCckcMh4RT0Ne7Vig5/gK+q24It0z8X
+8DugwPdgui3yCOPfn0LFtR/yzL6CBy07kKDvXaAowfvQJe3D
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAIXHBQnK7G+PUkWCypxjnyM4U9vHMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmLpDTjMTMpU3ND3Doqg6HY9XHFL/AgCz
+J4GaaaJ9hhnfMLq0U+Rn3o6JIpiw4pAtnorF0ylbx8vtU3mqPqOSyoNBqPqx+MPk
+H21FoTXiQU/jSwNJqX4Ksk+zX/cgXi7AskN8u3SWA8DxlNwAP+JhRKrcCvy+u27S
+4+SZpcwxJ9gd7FUTRkNgIitm+cU9P7mq4osl12j/csJgNZzW+IWk83KVPYKMp6gn
+AWFNFz2kjn7+ZWBRnKDzaGWMVf2prd5Bd13stOlfsuRhm1DFZUIcVl3Xkmjf6eLC
+Ws8ag9HPrO7TJwUX3RfM9hvLWmMo3iOGTTxsPbvt0GdXXEPVoRPNkwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUI73GOs/aTrv/taR/07NBDvArelEwPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCAl7fno4i/O/oOkUZABMt0Wi4fDiEHdrzZvpQp
+ICCqWRn0BhAmO6OAAtT3/5AdJnVQ0BbAfCV7csVoTCQcxDDR0ZFK3L7QLQarq67u
+k8jGV7QPEaGIIxWc1o405BtmhRrkSsW9USs7g88taBKgwTCj7Q2fYlyTRheaBb8S
+z7ZqrNjVqGIEAmS3YmZDt2SEOVc+PZ0JzL+7291csdZzoO0RK5Uj6aH4uFusLs1m
+v9V8Wxrp1vNyBm8tsoymzZTKQeHSqsAixEYHo3firu+W/ZVw/Kb2DaVNyIAbiqc8
+MlKr4zFZG3YG62fFkDlcLQsJLvMVANS3X+M3Qy/nc4Fcx2OT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJqvwtf9Id21XiT6ooSXg0+sgkiaMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51Z2MuYWMubGswHhcNMTkwNjExMDkxMjU3WhcN
+MzkwNjExMDkxMjU3WjAYMRYwFAYDVQQDDA1pZHAudWdjLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6+k4BftbDxUs7pJUy4AUH2p/fcN1WkDQ
+c/BhRALuhmo/poV0JNUBwRIarohpdfsZQlQP06Oc/+KJDpRvhjG2MzfGYIa80JKs
+Zgc+/1wQD5IVuFMM8rne6sgcz9E05Z13udmPlXHoDnm3oxpd2kjjAEsn4hoFiNIy
+fHF9QxGFMKshud5Q0uL79NQoseOtE3PK9MTH9Hdk0IkjachKlHAAZ00otwR3wrE5
+t3xTgjDPBLS9ulmqiGHOoTS6ZOnd5NZ1eDlUb9cAJdHK8koD1catMcbuJqbyWWna
+zwxMSvQP5wPOusWvhzLpk88VfUUwFQlsu8jL78sZZw3vU0QluL6dwQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUPd5OZJjenj4G6snxHDBPGHYmBHwwPgYDVR0RBDcwNYINaWRw
+LnVnYy5hYy5sa4YkaHR0cHM6Ly9pZHAudWdjLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBajEhJuu15YFPW4N97EyhmlqxLsccgbt1Zh7wh
+DerjGmbYOtT4q9gHCSPuFY/qBqE85q2OSoE/EIt6FhkQRV5ABJHpdLZ1R0VjjTkV
+XsTBJX06Vjw93/j/qrSnIyWIsSl8/n+j3I+EQBpuXdj+Gt8r+0jLnX+wlKd/RvnT
+wsEzqZ19DaPX47C2UwcjxCdUDF98v5z1c2q/N4VUFdQPl3+e4Jp7WNTeblI9bHqn
+bGwDZeYuytYoFJATPWfDHAXS5dC+5WFR2wlSOWLe3qHc5ybbP5CQDUKOJ/CFW8U/
+xd7AA5x8t0W/8PcMgvKGf0jp1rJQBe+YOKOSOxOPtqnxeMOG
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ugc.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University Grants Commission</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University Grants Commission</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.ugc.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Indika</md:GivenName>
+	<md:SurName>Perera</md:SurName>
+	<md:EmailAddress>mailto:indikar123@gmail.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Vindya</md:GivenName>
+	<md:SurName>Manamperi</md:SurName>
+	<md:EmailAddress>mailto:vindyamanamperi@ugc.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

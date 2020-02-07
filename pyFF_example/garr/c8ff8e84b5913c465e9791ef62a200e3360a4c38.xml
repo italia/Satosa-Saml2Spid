@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.metropolitan.hu/simplesaml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.hu" registrationInstant="2019-10-15T13:10:50Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://metadata.eduid.hu/eduid.hu-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.hu/category/registered-by-eduidhu</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">metu.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.bkf.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">metropolitan.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">instructor.bkf.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">local.bkf.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">bkf.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">hok.metropolitan.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.metropolitan.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">instructor.metropolitan.hu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Budapest Metropolitan University</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="hu">Budapesti Metropolitan Egyetem</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Budapest Metropolitan University</mdui:Description>
+		<mdui:Description xml:lang="hu">Budapesti Metropolitan Egyetem</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.metropolitan.hu/impresszum</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="hu">https://www.metropolitan.hu/impresszum</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.metropolitan.hu/adatkezeles-adatvedelem</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="hu">https://www.metropolitan.hu/adatkezeles-adatvedelem</mdui:PrivacyStatementURL>
+		<mdui:Logo height="73" width="300">https://www.metropolitan.hu/CustomGaleryImages/images/23f46941de1c326db16a77540c926e58.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.224.67.0/28</mdui:IPHint>
+		<mdui:DomainHint>metu.hu</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.506345,19.135244</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDwjCCAqqgAwIBAgIJAP7SK/CmIsP6MA0GCSqGSIb3DQEBCwUAMHYxCzAJBgNV
+BAYTAkhVMQ0wCwYDVQQIDARQZXN0MREwDwYDVQQHDAhCdWRhcGVzdDEnMCUGA1UE
+CgweQnVkYXBlc3RpIE1ldHJvcG9saXRhbiBFZ3lldGVtMRwwGgYDVQQDDBNpZHAu
+bWV0cm9wb2xpdGFuLmh1MB4XDTE5MTAxNDE3NDA1OFoXDTI5MTAxMzE3NDA1OFow
+djELMAkGA1UEBhMCSFUxDTALBgNVBAgMBFBlc3QxETAPBgNVBAcMCEJ1ZGFwZXN0
+MScwJQYDVQQKDB5CdWRhcGVzdGkgTWV0cm9wb2xpdGFuIEVneWV0ZW0xHDAaBgNV
+BAMME2lkcC5tZXRyb3BvbGl0YW4uaHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDOEbJmfgYRZ4BdTC+Og4jxyKiOuHIlS9dcW9Hl5cPWUQZ/5t2UldsG
+2NsE906o46eQ4Tefuj1rPceJv591mqEhTjnDvX/NrKobGLI51rVIAWSeyxqdv7wK
+T1ctATHFDxP9SOS3B5eWHwy+HMGkTU6jUOt92e+vRpGfcuwmJ+s8Q5NXv6C6X7xY
+p+ApKlsuaHGLGjnnuR30xhznyaxWytWpdChRt940a5FWvWdA6gMx3LVJeCM38JfE
+sSnT2WY8NoTa5uN8Mw7niDRcZVOv8Cjfw9Z+jDttWCZhzmhl16E5h0SHdCnpIOIF
+Jgl+4v9ejU//kCHrLJisBupA6hw7V4b7AgMBAAGjUzBRMB0GA1UdDgQWBBSRvMwH
+B5WS4CbyyCKh6pqAZWiyJDAfBgNVHSMEGDAWgBSRvMwHB5WS4CbyyCKh6pqAZWiy
+JDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCFb7XzNWZgO38p
+TDvcWm5v5vQRq7RIVyMIIQkOtJP5GKNaw9e/MO9HxKpo+psTReFwimArQgqeBVPl
+F8iCpdzzWbfojECYqq9LcmzeSi6oW0yQx7RO8lbQIAVyVWcdAivY8xImgRnec/O3
+XZr94iCJ4wTtaZo0G7RRReTrpj+DIQ//uyVazGjTrFMCj6/RNQyjejkgipKc7ozm
+rJqNgDe3xuERrB3LjRYEiHHS7kQ42nqDWY5fP3IO9SUdSvgx+CfmFTupuHOXaZ3F
+G+hpc/4xIrjZL5Qz13SjfPOqCVwlQhvxUEqsMTmveNr6Df7Qegu6aFzpLNwJbPRo
++RsXOU7r
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.metropolitan.hu/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.metropolitan.hu/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="hu">Budapesti Metropolitan Egyetem</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Budapest Metropolitan University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="hu">Budapesti Metropolitan Egyetem</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Budapest Metropolitan University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="hu">https://www.metropolitan.hu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.metubudapest.hu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Hrubeczky Ákos</md:GivenName>
+	<md:SurName>Hrubeczky Ákos</md:SurName>
+	<md:EmailAddress>mailto:ahrubeczky@metropolitan.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hrubeczky Ákos</md:GivenName>
+	<md:SurName>Hrubeczky Ákos</md:SurName>
+	<md:EmailAddress>mailto:ahrubeczky@metropolitan.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hrubeczky Ákos</md:GivenName>
+	<md:SurName>Hrubeczky Ákos</md:SurName>
+	<md:EmailAddress>mailto:ahrubeczky@metropolitan.hu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.iapg.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-08T12:18:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iapg.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Animal Physiology and Genetics AS CR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav živočišné fyziologie a genetiky AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IAPG AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance ÚŽFG AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.iapg.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.iapg.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="44" width="44">https://gedeon.cas.cz/loga/logo-iapg-44.png</mdui:Logo>
+		<mdui:Logo height="3809" width="3814">https://gedeon.cas.cz/loga/logo-iapg-3809.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAJgOOVNq7ZeDQ/A1Xi75q1QBnx3AMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejAeFw0xNjExMDgwNjU1MjNa
+Fw0zNjExMDgwNjU1MjNaMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKxb0Z4w/wUxbPgIpaOXfuOSLk7N
+cqxNBOPeItQ1OdBjYbyrtK+PjS9OuTRj8jgfqcCfjQvRYHndl2JhO7zDuuCcoTqV
+NmSamLLAw4YpM0KMNgn8t0h0j+mCr2wIXNqh54oID9drzGRdPA+q8qCBgS+Fyhcm
+zp1P1G4JtyFFMcm9icE7LjsYF7VqMpYkSDbd5bCQDA+rCsMlWcBw+0BnkbDQ0GWT
+3+OkTFEUItESd5MZLrRzIbh5ue9P2z41jB99Tf2beXi0z91Zi6qO2sHA/Fhk36nU
+b+uU+TDfJ4K8uHQ49UwVkIp2X5Yn5IFj32wrToAkDHVcmRlwyzen2W4Om4sCAwEA
+AaNlMGMwHQYDVR0OBBYEFPfdKnQ54MyKG9hqu1Pj1BaaVqVSMEIGA1UdEQQ7MDmC
+D2lkcC5pYXBnLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaWFwZy5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAG1SJy6XzpmZJ0X+mzSSA8r+d/QZ
+xIPsQ+Gt5PduEVdoHb7MhCslThlrjgrpUHYfGqbNt0azvR9TGlWygmjyKz7AymFw
+L6eqwh4ZMwpK+bYS9HvoBHih/SVY7qgfvxLlHHIGZBkpStexrYNmu8eCvGxLNXjo
+2G81Hesds51f/BucyRYCT+m/mUVKKOB9J9ChI9qL0vB9dRpD+TYlg3NUGP1UdO4P
+sgY8zjMgI3gVdSxaJWnTAgfeWhcs2Ys56cY4/vJN/ZC0/0bVaCI1GnC4f3tmKwjj
+1m+0KEWIDoVy7ui/HSmOy6yClYmrz7rh20cPei+ELp9RwvPsAfyFbUqZjJc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUcLYzhySbvRQQqv4WljnW9emgbrAwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmlhcGcuY2FzLmN6MB4XDTE2MTEwODA2NTUyMVoX
+DTM2MTEwODA2NTUyMVowGjEYMBYGA1UEAwwPaWRwLmlhcGcuY2FzLmN6MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApFY8LfedH+MUZsjs7Nfv7x7tKQqq
+OCxm/rCQPFpkjHBpO1G1nd+ahs4JfIi7AwyuqcRUBCv75A+XKAheNKarvUhyhuNL
+gZfcoB72E7Y3xEMA7Y6h5/F+E7UyaSG5ABVf4EWU8Bu7cdE/lFt6HnfmcPMHfhvz
+2rApvmdfab6pOUAuFG8sTm2+K3Ifmzv6TS+AEwXtXqh3cn/IoX56INilpUOTzCOD
+P9FbSL1V3EF9FL1U8IR1t8NFhWm3ZEi+hdcrvtnjC2tvvMTIZZOZF8AYcJZFEfAe
+1UKuUo4mFLiRzsUaO2hE2Ifkb9+Wuif7A7SFLPvtq7RUEAzIi3vOAmsEwwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUiBoebeXQyr6HRqUu0mmznG9YPSwwQgYDVR0RBDswOYIP
+aWRwLmlhcGcuY2FzLmN6hiZodHRwczovL2lkcC5pYXBnLmNhcy5jei9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAMCbLiM+hfd5XECDeh34LZVl4MnWx
+9BHefcwTcteUjSR5Bl/rKgoRxBzuUWQpH5p8zraQ7FQk5Zx9h2QHBjc1eY0N62qP
+kAHLMlQ1F/owjfaOPDExFDnVvXI/0bvQJGa9vwLx1Pmdckpam2p1/7rHmVQJtkLg
+aZ3OMlElTYAX8Ho3meEPcGY4lQE2sUNscCZERmXEoWW49PpYYtI9sXZwGvewc+f6
+yCbqnsJyTOCW2yNTrrMC8L0iHStzWJchFdk9Go1ifHSCgLWXxvCSL4bfxJpAOOPY
+rPJvJUhdANJFBnOIM/Wo3ZGNlqZ3KwIpLFNLu7L96jfWD1EfAl3q3AEoFg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVANR5sKBdONhdoof54cc1AeT1rFxRMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejAeFw0xNjExMDgwNjU1MjFa
+Fw0zNjExMDgwNjU1MjFaMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIXNQ+/HIZFjy7BfQtNRTVOqNMiN
+g5cE3AYDrKKBGo2aEU1f0OC3NBSW7mw1Rlm7/GxntQccHJ69Qc9VGUcjbRR5Ee4t
+jIAdMHPApaVQVHvQzuLO/RPrqum7/I/SpJ1c37ganRoPVvUTtecECCr97B82GtYE
++gluamSahMJDcF8KJI3g+DKsfn7u5uB5FsPjFkAX5/JO11sEgTMZtmpWxSJFkz9S
+WpXFd9qvXKyDfkhMXM6O/VUZg1X0JSFNTvEE+LVIFx4TTlQKBO6iJh285FVzEYLQ
+irRXQFRdNy5h0irFsGAgq6n70oJi6lXl+mBdn9J1hGHRb90CJNIWDQ/eGvMCAwEA
+AaNlMGMwHQYDVR0OBBYEFNxpjq46mv3yXLWgXRRIj9eaoWvNMEIGA1UdEQQ7MDmC
+D2lkcC5pYXBnLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaWFwZy5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEYTe11bIEQwTqo1Q8QbEXOIgmi5
+tYlgGliFdx0Fc3AAy/WbSs4PbQNNjRT7n7uv3bYwd8VK5aB5DfOd+xYdihu6EDUp
++POC0xrzVWnGWK/8pfxwhC05Asoo8a368Yl++B67kekjGXKoA9h9XQf0qopa26xU
+EFcZZRjgpntyhG7vH0P3LmUbBdXSXcl4jK5DSSz4t1nKVQMDydQ/FT11dB8sxqS1
+2IwP2Fv5R7NCUrYIWrRgXM8E286lWXcRf+3s95fB3fSCYrpSqpwVs+QzzFpIXbcV
+NOzxnRL7kbozeox6Fz2PtQkPrePHwHCcDMdtpfY9EzUjNfhgExPnVH9vqL0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.iapg.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.iapg.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.iapg.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iapg.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.iapg.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iapg.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iapg.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAJgOOVNq7ZeDQ/A1Xi75q1QBnx3AMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejAeFw0xNjExMDgwNjU1MjNa
+Fw0zNjExMDgwNjU1MjNaMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKxb0Z4w/wUxbPgIpaOXfuOSLk7N
+cqxNBOPeItQ1OdBjYbyrtK+PjS9OuTRj8jgfqcCfjQvRYHndl2JhO7zDuuCcoTqV
+NmSamLLAw4YpM0KMNgn8t0h0j+mCr2wIXNqh54oID9drzGRdPA+q8qCBgS+Fyhcm
+zp1P1G4JtyFFMcm9icE7LjsYF7VqMpYkSDbd5bCQDA+rCsMlWcBw+0BnkbDQ0GWT
+3+OkTFEUItESd5MZLrRzIbh5ue9P2z41jB99Tf2beXi0z91Zi6qO2sHA/Fhk36nU
+b+uU+TDfJ4K8uHQ49UwVkIp2X5Yn5IFj32wrToAkDHVcmRlwyzen2W4Om4sCAwEA
+AaNlMGMwHQYDVR0OBBYEFPfdKnQ54MyKG9hqu1Pj1BaaVqVSMEIGA1UdEQQ7MDmC
+D2lkcC5pYXBnLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaWFwZy5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAG1SJy6XzpmZJ0X+mzSSA8r+d/QZ
+xIPsQ+Gt5PduEVdoHb7MhCslThlrjgrpUHYfGqbNt0azvR9TGlWygmjyKz7AymFw
+L6eqwh4ZMwpK+bYS9HvoBHih/SVY7qgfvxLlHHIGZBkpStexrYNmu8eCvGxLNXjo
+2G81Hesds51f/BucyRYCT+m/mUVKKOB9J9ChI9qL0vB9dRpD+TYlg3NUGP1UdO4P
+sgY8zjMgI3gVdSxaJWnTAgfeWhcs2Ys56cY4/vJN/ZC0/0bVaCI1GnC4f3tmKwjj
+1m+0KEWIDoVy7ui/HSmOy6yClYmrz7rh20cPei+ELp9RwvPsAfyFbUqZjJc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUcLYzhySbvRQQqv4WljnW9emgbrAwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLmlhcGcuY2FzLmN6MB4XDTE2MTEwODA2NTUyMVoX
+DTM2MTEwODA2NTUyMVowGjEYMBYGA1UEAwwPaWRwLmlhcGcuY2FzLmN6MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApFY8LfedH+MUZsjs7Nfv7x7tKQqq
+OCxm/rCQPFpkjHBpO1G1nd+ahs4JfIi7AwyuqcRUBCv75A+XKAheNKarvUhyhuNL
+gZfcoB72E7Y3xEMA7Y6h5/F+E7UyaSG5ABVf4EWU8Bu7cdE/lFt6HnfmcPMHfhvz
+2rApvmdfab6pOUAuFG8sTm2+K3Ifmzv6TS+AEwXtXqh3cn/IoX56INilpUOTzCOD
+P9FbSL1V3EF9FL1U8IR1t8NFhWm3ZEi+hdcrvtnjC2tvvMTIZZOZF8AYcJZFEfAe
+1UKuUo4mFLiRzsUaO2hE2Ifkb9+Wuif7A7SFLPvtq7RUEAzIi3vOAmsEwwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUiBoebeXQyr6HRqUu0mmznG9YPSwwQgYDVR0RBDswOYIP
+aWRwLmlhcGcuY2FzLmN6hiZodHRwczovL2lkcC5pYXBnLmNhcy5jei9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAMCbLiM+hfd5XECDeh34LZVl4MnWx
+9BHefcwTcteUjSR5Bl/rKgoRxBzuUWQpH5p8zraQ7FQk5Zx9h2QHBjc1eY0N62qP
+kAHLMlQ1F/owjfaOPDExFDnVvXI/0bvQJGa9vwLx1Pmdckpam2p1/7rHmVQJtkLg
+aZ3OMlElTYAX8Ho3meEPcGY4lQE2sUNscCZERmXEoWW49PpYYtI9sXZwGvewc+f6
+yCbqnsJyTOCW2yNTrrMC8L0iHStzWJchFdk9Go1ifHSCgLWXxvCSL4bfxJpAOOPY
+rPJvJUhdANJFBnOIM/Wo3ZGNlqZ3KwIpLFNLu7L96jfWD1EfAl3q3AEoFg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVANR5sKBdONhdoof54cc1AeT1rFxRMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejAeFw0xNjExMDgwNjU1MjFa
+Fw0zNjExMDgwNjU1MjFaMBoxGDAWBgNVBAMMD2lkcC5pYXBnLmNhcy5jejCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIXNQ+/HIZFjy7BfQtNRTVOqNMiN
+g5cE3AYDrKKBGo2aEU1f0OC3NBSW7mw1Rlm7/GxntQccHJ69Qc9VGUcjbRR5Ee4t
+jIAdMHPApaVQVHvQzuLO/RPrqum7/I/SpJ1c37ganRoPVvUTtecECCr97B82GtYE
++gluamSahMJDcF8KJI3g+DKsfn7u5uB5FsPjFkAX5/JO11sEgTMZtmpWxSJFkz9S
+WpXFd9qvXKyDfkhMXM6O/VUZg1X0JSFNTvEE+LVIFx4TTlQKBO6iJh285FVzEYLQ
+irRXQFRdNy5h0irFsGAgq6n70oJi6lXl+mBdn9J1hGHRb90CJNIWDQ/eGvMCAwEA
+AaNlMGMwHQYDVR0OBBYEFNxpjq46mv3yXLWgXRRIj9eaoWvNMEIGA1UdEQQ7MDmC
+D2lkcC5pYXBnLmNhcy5jeoYmaHR0cHM6Ly9pZHAuaWFwZy5jYXMuY3ovaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEYTe11bIEQwTqo1Q8QbEXOIgmi5
+tYlgGliFdx0Fc3AAy/WbSs4PbQNNjRT7n7uv3bYwd8VK5aB5DfOd+xYdihu6EDUp
++POC0xrzVWnGWK/8pfxwhC05Asoo8a368Yl++B67kekjGXKoA9h9XQf0qopa26xU
+EFcZZRjgpntyhG7vH0P3LmUbBdXSXcl4jK5DSSz4t1nKVQMDydQ/FT11dB8sxqS1
+2IwP2Fv5R7NCUrYIWrRgXM8E286lWXcRf+3s95fB3fSCYrpSqpwVs+QzzFpIXbcV
+NOzxnRL7kbozeox6Fz2PtQkPrePHwHCcDMdtpfY9EzUjNfhgExPnVH9vqL0=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.iapg.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Animal Physiology and Genetics</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Ústav živočišné fyziologie a genetiky AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Animal Physiology and Genetics AS CR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav živočišné fyziologie a genetiky AV ČR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.iapg.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.iapg.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

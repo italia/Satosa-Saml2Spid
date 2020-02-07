@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hiu.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-08T12:18:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hiu.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of History of the ASCR</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Historický ústav AV ČR</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider IH AV CR employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance HÚ AV ČR</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.hiu.cas.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.hiu.cas.cz/cs/</mdui:InformationURL>
+		<mdui:Logo height="44" width="61">https://gedeon.cas.cz/loga/logo-hiu-44.png</mdui:Logo>
+		<mdui:Logo height="530" width="740">https://gedeon.cas.cz/loga/logo-hiu-530.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVALlNR2fZYGd7AEb5CrjzyXBoSLq3MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5oaXUuY2FzLmN6MB4XDTE2MTEwNzE0MjYzNFoX
+DTM2MTEwNzE0MjYzNFowGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCIGddBuAuu2hK61rQxo2MqJTrEp3IH
+0Dcr8fmXY/zJRBCcsS6fQIs+Uv7DU7Gccrz1wdt3+7xHbTaNK3LVPvlLpFVlBzHG
+clsHI4euJtqyhZmby4zKg5zIHIUts4YrTdogXKjYoIi/n1WCw0PMKMl5ybxoc7rH
+zwxBrys2MzDnC8rK/UyPCwi3Wg+KZKSMcWw+vStynYpn6QgZd84mqAdRwTTtiDKJ
+iJ/iyoA/Nrd8Tosg4XBoz27vz/8nxcQeLh6T6YEONOcJeOwT9uk3V/qQSIIllgNT
+u8RzedFCidMxRfzEfHonKQ7JK/dLldFeCKkZufrcVK5EqKm7smrV5XNbAgMBAAGj
+YzBhMB0GA1UdDgQWBBRIO5bjN13KNV5bWMc1IWkTHEcT/TBABgNVHREEOTA3gg5p
+ZHAuaGl1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaGl1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAFqEgT3nPBU2SyYXA2EP0KaLgdyIYnaXH
+EuCCPaJOfBF55jv33RWDFrJLNyu0aEKY/kvgMn2U8crNm7p2sCH2sIh90RKer4rZ
+Y+y6r247WzwWzg94z/ftkSGc6Xf4HrXXCQJU9z5fxF4UCX9skq3nD2jTM71U4mug
+NQxiuponHuJpTPx54lt1aNp7fHwelqwcywgmaNeDPABRRt2Y2NtVVJP9Yla2cZAa
+BckUaMS/lmOII+2WQm5o8O5IY4/TmqPiYG+XzrJxm0HOz1a3qfkdC1xD/8hZlors
+SMpB0XSH/q8jWEjDA36G+CCauL5OF/4w4/pLTGi0rv/V0bGIKnEgXQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUaNX+PQdKqwOssrKtTjwbqegfoeYwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owHhcNMTYxMTA3MTQyNjMyWhcN
+MzYxMTA3MTQyNjMyWjAZMRcwFQYDVQQDDA5pZHAuaGl1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKrwpPI2bEKX/yQnbJgRuT1Lgc9Srdfr
+f+V6pNF2gJF8ifO5omJIGCr3HtFdhrR0AmTenG9F1qz6GDUs2+I8QhrDf2KIe0f/
+YIvvlBrZ2DwpiAjKPoe9xm07XzMSN8xarbgtQHbeiSVRUSn7vnMD1xdkjRc2IKct
+MQesLpicxVfJR5dMLcI9ORvpu5f2d3yfs7wXFS/g6cmWnpfAx9K7pSD4fv88EC5k
+SpegjEg4TDDiPA/lNx8tcDsNEcYRoV9dKPe0RERZr40VW0tPi3CDNQ75MI8MeBtV
+e6law8xob/kh//GjXStGvsLVUJAT3t4VhEhh5PYW2fexsgdHPa9K9tsCAwEAAaNj
+MGEwHQYDVR0OBBYEFLtQk4ggvwEj2sltauLb2267yfEWMEAGA1UdEQQ5MDeCDmlk
+cC5oaXUuY2FzLmN6hiVodHRwczovL2lkcC5oaXUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCTeJLC5TkhM7YqfeGaOn9J5AckM8eVWIUf
+3B63nHhtUtY3lWA/nR2SB0R+LgKoNGrOP3eEhTBtajWyWdrSc06iXzcShbEs0fE1
+RWeX2N49ubcFja478zgmG3NjTpDmLO3xl9UC5JCqQm/vyeqfBqsokVmU5E2m784+
+Z3i6CwHbjp1CF5hyE+XOH+FVD8ioXLIGDh82EKjV5xkI3W6MSzSSwEiVdnN9EUwQ
+07+QlT9TiuSm6K0IzYQ62jjqbThAk9mJadNfvqmpTOjqhZw5LAxFjWhpP9sswKMK
+yBSccknCzTDBwVDiPTkSBBEbN3mm/N+g3wz7dQu71emHlSqtA1nD
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJB880J3XRhlu9x3eP1NkWPBei/eMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5oaXUuY2FzLmN6MB4XDTE2MTEwNzE0MjYzM1oX
+DTM2MTEwNzE0MjYzM1owGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYoz3Eithgtd+Zgbybs1lbrzUdahBM
+E14GO7UqRVbDUKsnwho5rKOPixtbHb5wjeTxXmWUGAwaCYWLgedtYFYHjf5VgLvM
+Z5gX6kfz4VTv/Umw7Nqtu5U+RUfyxqU6+F7vms5QhKMB3ZNqR0Ea7K6PVb9rn6ou
+f8NMxtLy0q3hUGU2+MFtsGRm2NB/0Y5yUssR7MHBYLz/mXiyH/QKkZq9+TPmaaSU
+nxCztUeo/obQU/UYxwKiwCbNq41J+zZAPf7GBin5xuVV0t0PCUVQM2a95XHFy1uu
+M4G8IzMu9+jEjjL9jRXT2K2KXULY5sc/VGtvBRjVeLGBvdTNf8GUc/LzAgMBAAGj
+YzBhMB0GA1UdDgQWBBSAk1OxowzUntZ6iTx190WCodFw/DBABgNVHREEOTA3gg5p
+ZHAuaGl1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaGl1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEALH9meWmN/iJbkFfCPn5JkkfVLZuUudJl
+xtGbaVx3zzLQzJHsFGqBKVX1wiETQ6HCub7W0Fbb0t1ARNbivjWII2l0/efoh1f+
+sS1/F0dpdiP+ct4eCrj7j99rQrKOx74Cr079LOkFj2Y9z3EbifFXDK1A6mHJcJ7X
+M0oOMTjaMugUOAsBWZtVRZ0F2fGQ8Q/7i42pn5f/yaSHs9KQpW5X6yWQAS3EINI5
+lFLLjsCWESYgfnE0FuXFThNvAX+sgdEo1Ysv52ILPg/sLaYDEx3z64HsNGAwinML
+sJjrL4Vuoh7bCXVgDfpIQJsgZm5vedeCDGwmAcbIJPKWMxdaDMe4Sw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hiu.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hiu.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hiu.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hiu.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hiu.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hiu.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hiu.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVALlNR2fZYGd7AEb5CrjzyXBoSLq3MA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5oaXUuY2FzLmN6MB4XDTE2MTEwNzE0MjYzNFoX
+DTM2MTEwNzE0MjYzNFowGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCIGddBuAuu2hK61rQxo2MqJTrEp3IH
+0Dcr8fmXY/zJRBCcsS6fQIs+Uv7DU7Gccrz1wdt3+7xHbTaNK3LVPvlLpFVlBzHG
+clsHI4euJtqyhZmby4zKg5zIHIUts4YrTdogXKjYoIi/n1WCw0PMKMl5ybxoc7rH
+zwxBrys2MzDnC8rK/UyPCwi3Wg+KZKSMcWw+vStynYpn6QgZd84mqAdRwTTtiDKJ
+iJ/iyoA/Nrd8Tosg4XBoz27vz/8nxcQeLh6T6YEONOcJeOwT9uk3V/qQSIIllgNT
+u8RzedFCidMxRfzEfHonKQ7JK/dLldFeCKkZufrcVK5EqKm7smrV5XNbAgMBAAGj
+YzBhMB0GA1UdDgQWBBRIO5bjN13KNV5bWMc1IWkTHEcT/TBABgNVHREEOTA3gg5p
+ZHAuaGl1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaGl1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAFqEgT3nPBU2SyYXA2EP0KaLgdyIYnaXH
+EuCCPaJOfBF55jv33RWDFrJLNyu0aEKY/kvgMn2U8crNm7p2sCH2sIh90RKer4rZ
+Y+y6r247WzwWzg94z/ftkSGc6Xf4HrXXCQJU9z5fxF4UCX9skq3nD2jTM71U4mug
+NQxiuponHuJpTPx54lt1aNp7fHwelqwcywgmaNeDPABRRt2Y2NtVVJP9Yla2cZAa
+BckUaMS/lmOII+2WQm5o8O5IY4/TmqPiYG+XzrJxm0HOz1a3qfkdC1xD/8hZlors
+SMpB0XSH/q8jWEjDA36G+CCauL5OF/4w4/pLTGi0rv/V0bGIKnEgXQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUaNX+PQdKqwOssrKtTjwbqegfoeYwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owHhcNMTYxMTA3MTQyNjMyWhcN
+MzYxMTA3MTQyNjMyWjAZMRcwFQYDVQQDDA5pZHAuaGl1LmNhcy5jejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKrwpPI2bEKX/yQnbJgRuT1Lgc9Srdfr
+f+V6pNF2gJF8ifO5omJIGCr3HtFdhrR0AmTenG9F1qz6GDUs2+I8QhrDf2KIe0f/
+YIvvlBrZ2DwpiAjKPoe9xm07XzMSN8xarbgtQHbeiSVRUSn7vnMD1xdkjRc2IKct
+MQesLpicxVfJR5dMLcI9ORvpu5f2d3yfs7wXFS/g6cmWnpfAx9K7pSD4fv88EC5k
+SpegjEg4TDDiPA/lNx8tcDsNEcYRoV9dKPe0RERZr40VW0tPi3CDNQ75MI8MeBtV
+e6law8xob/kh//GjXStGvsLVUJAT3t4VhEhh5PYW2fexsgdHPa9K9tsCAwEAAaNj
+MGEwHQYDVR0OBBYEFLtQk4ggvwEj2sltauLb2267yfEWMEAGA1UdEQQ5MDeCDmlk
+cC5oaXUuY2FzLmN6hiVodHRwczovL2lkcC5oaXUuY2FzLmN6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCTeJLC5TkhM7YqfeGaOn9J5AckM8eVWIUf
+3B63nHhtUtY3lWA/nR2SB0R+LgKoNGrOP3eEhTBtajWyWdrSc06iXzcShbEs0fE1
+RWeX2N49ubcFja478zgmG3NjTpDmLO3xl9UC5JCqQm/vyeqfBqsokVmU5E2m784+
+Z3i6CwHbjp1CF5hyE+XOH+FVD8ioXLIGDh82EKjV5xkI3W6MSzSSwEiVdnN9EUwQ
+07+QlT9TiuSm6K0IzYQ62jjqbThAk9mJadNfvqmpTOjqhZw5LAxFjWhpP9sswKMK
+yBSccknCzTDBwVDiPTkSBBEbN3mm/N+g3wz7dQu71emHlSqtA1nD
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJB880J3XRhlu9x3eP1NkWPBei/eMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5oaXUuY2FzLmN6MB4XDTE2MTEwNzE0MjYzM1oX
+DTM2MTEwNzE0MjYzM1owGTEXMBUGA1UEAwwOaWRwLmhpdS5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYoz3Eithgtd+Zgbybs1lbrzUdahBM
+E14GO7UqRVbDUKsnwho5rKOPixtbHb5wjeTxXmWUGAwaCYWLgedtYFYHjf5VgLvM
+Z5gX6kfz4VTv/Umw7Nqtu5U+RUfyxqU6+F7vms5QhKMB3ZNqR0Ea7K6PVb9rn6ou
+f8NMxtLy0q3hUGU2+MFtsGRm2NB/0Y5yUssR7MHBYLz/mXiyH/QKkZq9+TPmaaSU
+nxCztUeo/obQU/UYxwKiwCbNq41J+zZAPf7GBin5xuVV0t0PCUVQM2a95XHFy1uu
+M4G8IzMu9+jEjjL9jRXT2K2KXULY5sc/VGtvBRjVeLGBvdTNf8GUc/LzAgMBAAGj
+YzBhMB0GA1UdDgQWBBSAk1OxowzUntZ6iTx190WCodFw/DBABgNVHREEOTA3gg5p
+ZHAuaGl1LmNhcy5jeoYlaHR0cHM6Ly9pZHAuaGl1LmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEALH9meWmN/iJbkFfCPn5JkkfVLZuUudJl
+xtGbaVx3zzLQzJHsFGqBKVX1wiETQ6HCub7W0Fbb0t1ARNbivjWII2l0/efoh1f+
+sS1/F0dpdiP+ct4eCrj7j99rQrKOx74Cr079LOkFj2Y9z3EbifFXDK1A6mHJcJ7X
+M0oOMTjaMugUOAsBWZtVRZ0F2fGQ8Q/7i42pn5f/yaSHs9KQpW5X6yWQAS3EINI5
+lFLLjsCWESYgfnE0FuXFThNvAX+sgdEo1Ysv52ILPg/sLaYDEx3z64HsNGAwinML
+sJjrL4Vuoh7bCXVgDfpIQJsgZm5vedeCDGwmAcbIJPKWMxdaDMe4Sw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hiu.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of History of the ASCR</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Historický ústav AV ČR</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of History of the ASCR, Public Research Institution</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Historický ústav AV ČR, v.v.i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hiu.cas.cz/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.hiu.cas.cz/cs/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Vaníček</md:SurName>
+	<md:EmailAddress>mailto:vanicekp@utia.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

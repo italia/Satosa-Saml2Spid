@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.phlu.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2013-04-12T11:06:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://hotline.hslu.ch" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phlu.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PHLU - Pädagogische Hochschule Luzern</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">PHLU - University of Teacher Education Lucerne</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Pädagogische Hochschule Luzern</mdui:Description>
+		<mdui:Description xml:lang="en">University of Teacher Education Lucerne</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAB2SURBVDhPnczbCYAwDIXhLuebU/ngGkUXaUHco91CEIkcEPGStkl+OE8Jn0vB0zJ05rlj3yjHmT1K5ugqx4l9aO0GkAV5AUiL/ACkQVgASZEigCRIFUAtpAmgGiICUAkRA4hDVAD6ImoAPRETgICsY28HUAqeToLAQo/m8xMUAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="33" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAhCAYAAABObyzJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4BpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpCMTdBOUZEMDMxMUExMUU1OUY3QTkyN0RCRUJCRjc2NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5MkE4RkUwODQwMzIxMUU1OUI2NERCOEIxQUUyOTRCMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5MkE4RkUwNzQwMzIxMUU1OUI2NERCOEIxQUUyOTRCMSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpjMGM5NGQ0MS1hZGZlLTQzNDItYjkwMi04NzUyYjQ2ZDI0NDkiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpmNDk3NGYxZi0zNmFjLTExZTUtYWQxYS1lOTNm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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.phlu.ch/ph-lucerne/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="de">http://www.phlu.ch</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>phlu.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.051064,8.302218</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUFoFP5wjRJTtf+2N6UVROatdh5/AwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLnBobHUuY2gwHhcNMjAwMTI4MDkxOTM4WhcNMjMw
+MTI4MDkxOTM4WjAWMRQwEgYDVQQDDAtpZHAucGhsdS5jaDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBALaEAx0kFTAG51asv1Dduj8LnMNFLHAWAP5ogdOi
+jxdK/U/RPdgvhmJ5ymt0RXb1yLV9tLszdhp4gXESot8NoOD0Cq9s/ysqZZiIiMwN
+aTBSGMVnZ41SN1RYZtlkzlpp1vS1w2yEy8WlS1YIjLX69uMPlkOL1JcP+JSY3EJr
+PemAxz4i53kZYW0HTi0KkHFvMmVXZka5d1koLCXANJrG/EiDHs3tSqIbyl23U243
+x5FE9OkpWGpx8K0hhQClZMn8sKQoTk0xuwoR4ECX4BMZP8IVSEOK2/xSsX5HJDvs
+q1Olz+c2oez26mTpgAC9+r1quuzmO776rY+Xzwb+Bv+87IsCAwEAAaNdMFswHQYD
+VR0OBBYEFBFcOZa3p0DU45ythuevoaYEYpS+MDoGA1UdEQQzMDGCC2lkcC5waGx1
+LmNohiJodHRwczovL2lkcC5waGx1LmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCLM9XMdr8jX4vsJxj5OFQ5noR9P597PieJB7f78axooNPX2I5g
+SM2ynVRUvLxUu9gmBmGNbq5jgV8lvEOcKg9bUbzA6DRnLnxPc3x1QfbcQ9jMB2VT
+cKb3sBcX1NH/kosDR8STgwwNj+Rr743lcrdQSH6MZ0STCjGA1dX5+8ZU9lXRB6BF
+VykcghKkvIp8hW6k5hBnyYlHxRPzg9dUeaqEQpl0jLTJem8SIZsTSszf/MNgumyw
+sf4cG6sIKfuLUyU7sPY2ZRa2zGFjWOBwzRU74hrL1C0H/rInZWrjOfkrn+8L2NJf
+YY+QywKJWX0X1y3+Y8+dc/u567nx7phuQnta
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.phlu.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.phlu.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.phlu.ch/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phlu.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUFoFP5wjRJTtf+2N6UVROatdh5/AwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLnBobHUuY2gwHhcNMjAwMTI4MDkxOTM4WhcNMjMw
+MTI4MDkxOTM4WjAWMRQwEgYDVQQDDAtpZHAucGhsdS5jaDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBALaEAx0kFTAG51asv1Dduj8LnMNFLHAWAP5ogdOi
+jxdK/U/RPdgvhmJ5ymt0RXb1yLV9tLszdhp4gXESot8NoOD0Cq9s/ysqZZiIiMwN
+aTBSGMVnZ41SN1RYZtlkzlpp1vS1w2yEy8WlS1YIjLX69uMPlkOL1JcP+JSY3EJr
+PemAxz4i53kZYW0HTi0KkHFvMmVXZka5d1koLCXANJrG/EiDHs3tSqIbyl23U243
+x5FE9OkpWGpx8K0hhQClZMn8sKQoTk0xuwoR4ECX4BMZP8IVSEOK2/xSsX5HJDvs
+q1Olz+c2oez26mTpgAC9+r1quuzmO776rY+Xzwb+Bv+87IsCAwEAAaNdMFswHQYD
+VR0OBBYEFBFcOZa3p0DU45ythuevoaYEYpS+MDoGA1UdEQQzMDGCC2lkcC5waGx1
+LmNohiJodHRwczovL2lkcC5waGx1LmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCLM9XMdr8jX4vsJxj5OFQ5noR9P597PieJB7f78axooNPX2I5g
+SM2ynVRUvLxUu9gmBmGNbq5jgV8lvEOcKg9bUbzA6DRnLnxPc3x1QfbcQ9jMB2VT
+cKb3sBcX1NH/kosDR8STgwwNj+Rr743lcrdQSH6MZ0STCjGA1dX5+8ZU9lXRB6BF
+VykcghKkvIp8hW6k5hBnyYlHxRPzg9dUeaqEQpl0jLTJem8SIZsTSszf/MNgumyw
+sf4cG6sIKfuLUyU7sPY2ZRa2zGFjWOBwzRU74hrL1C0H/rInZWrjOfkrn+8L2NJf
+YY+QywKJWX0X1y3+Y8+dc/u567nx7phuQnta
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.phlu.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.phlu.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">phlu.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PHLU - Pädagogische Hochschule Luzern</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">PHLU - University of Teacher Education Lucerne</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.phlu.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.phlu.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hochschule Luzern - IT Services</md:GivenName>
+	<md:SurName>(Hotline)</md:SurName>
+	<md:EmailAddress>mailto:informatikhotline@hslu.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 41 228 2121</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hochschule Luzern - IT Services</md:GivenName>
+	<md:SurName>(AAI Technician)</md:SurName>
+	<md:EmailAddress>mailto:aai@hslu.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

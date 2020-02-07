@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://passport.pitt.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://passport.pitt.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pitt.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Pittsburgh</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Pittsburgh Passport Single Sign-On experience</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://technology.pitt.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://technology.pitt.edu/help-desk/how-to-documents/privacy-statement-identity-provider-users</mdui:PrivacyStatementURL>
+		<mdui:Logo height="400" width="400" xml:lang="en">https://www.pitt.edu/seal/seal-400x400-72rgb.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUZiByS7B062+ol+pZKrqkwBxrqLUwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRcGFzc3BvcnQucGl0dC5lZHUwHhcNMTUxMTEzMTczMDQ3
+WhcNMzUxMTEzMTczMDQ3WjAcMRowGAYDVQQDDBFwYXNzcG9ydC5waXR0LmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIXgP4IOEjINaJ9dePEzc5Wp
+J8+Ytw0Ojc/JlImfMlUf9yiwiQZQhYIv7C7KmSIgBBvzj/4e6x+tGioE3vIPq9Yz
+47zLOUjzsPgSXnmqSujVCF1zce5aXsjwNcZ5JFN037pgoNLpwtuzfLg9sPbTdQV4
+dRGE07eIXiil6+ER1diFrmGQYSrlfY8DX4sZzl7er6eNEkN5bb3sYK4W13g54Vwf
+BT9/nZe8dsVq7HSZeGdqtyU9Vm49BxpRJLi/X1xsoTCsa8jSRGhpfktR/UygnMWc
+oKfayjUC/3fjyBBEvb2EbIiAByYZeApM8zCynHpoHbNTCECIfmkQ6YYohEVave8C
+AwEAAaNpMGcwHQYDVR0OBBYEFAguZrxqsqNCg5KQhdAnsGrSFZEgMEYGA1UdEQQ/
+MD2CEXBhc3Nwb3J0LnBpdHQuZWR1hihodHRwczovL3Bhc3Nwb3J0LnBpdHQuZWR1
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBdX30sZVe9QfYYJydn
+x+nWdKeGT0FxqPHaLaa/NHREOetOG1DHYCi617zy0bXq9Vnm+bZpqIheBHwzGzpk
+U5MJrPjwnmy1YyjoFNKy9N5KTQ+nCv7fKfLv55LSNE685T144B2KcRcFg3cDd2jt
+keVXfOYIBWnyEPnFeTlVA5Y16kbly78ixjTRGXaSLtrwCOJ25kM2+RAyZwp6/lHC
+S6tSx6TluEVAaA9y/ByyF41xdJk6iqgtqR6NmUIZLZlJ5dAOoyddHFgzWnKCqvtF
+RtrlnjGNwrHyXGWJbgY7wixreqLbBKAQ+nbaesqlCii8lR/5LawpnSAZmGD2diwl
+133k
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://passport.pitt.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://passport.pitt.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://passport.pitt.edu/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://passport.pitt.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://passport.pitt.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://passport.pitt.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://passport.pitt.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://passport.pitt.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pitt.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUZiByS7B062+ol+pZKrqkwBxrqLUwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRcGFzc3BvcnQucGl0dC5lZHUwHhcNMTUxMTEzMTczMDQ3
+WhcNMzUxMTEzMTczMDQ3WjAcMRowGAYDVQQDDBFwYXNzcG9ydC5waXR0LmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIXgP4IOEjINaJ9dePEzc5Wp
+J8+Ytw0Ojc/JlImfMlUf9yiwiQZQhYIv7C7KmSIgBBvzj/4e6x+tGioE3vIPq9Yz
+47zLOUjzsPgSXnmqSujVCF1zce5aXsjwNcZ5JFN037pgoNLpwtuzfLg9sPbTdQV4
+dRGE07eIXiil6+ER1diFrmGQYSrlfY8DX4sZzl7er6eNEkN5bb3sYK4W13g54Vwf
+BT9/nZe8dsVq7HSZeGdqtyU9Vm49BxpRJLi/X1xsoTCsa8jSRGhpfktR/UygnMWc
+oKfayjUC/3fjyBBEvb2EbIiAByYZeApM8zCynHpoHbNTCECIfmkQ6YYohEVave8C
+AwEAAaNpMGcwHQYDVR0OBBYEFAguZrxqsqNCg5KQhdAnsGrSFZEgMEYGA1UdEQQ/
+MD2CEXBhc3Nwb3J0LnBpdHQuZWR1hihodHRwczovL3Bhc3Nwb3J0LnBpdHQuZWR1
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBdX30sZVe9QfYYJydn
+x+nWdKeGT0FxqPHaLaa/NHREOetOG1DHYCi617zy0bXq9Vnm+bZpqIheBHwzGzpk
+U5MJrPjwnmy1YyjoFNKy9N5KTQ+nCv7fKfLv55LSNE685T144B2KcRcFg3cDd2jt
+keVXfOYIBWnyEPnFeTlVA5Y16kbly78ixjTRGXaSLtrwCOJ25kM2+RAyZwp6/lHC
+S6tSx6TluEVAaA9y/ByyF41xdJk6iqgtqR6NmUIZLZlJ5dAOoyddHFgzWnKCqvtF
+RtrlnjGNwrHyXGWJbgY7wixreqLbBKAQ+nbaesqlCii8lR/5LawpnSAZmGD2diwl
+133k
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://passport.pitt.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://passport.pitt.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Pittsburgh</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Pittsburgh</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.pitt.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technology Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@pitt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Technology Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@pitt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technology Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@pitt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Technology Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@pitt.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

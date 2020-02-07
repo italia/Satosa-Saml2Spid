@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.unibas.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2010-07-14T06:11:22Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unibas.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität Basel</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Universität Basel</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr">Université de Bâle</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Universität Basel</mdui:Description>
+		<mdui:Description xml:lang="en">Universität Basel</mdui:Description>
+		<mdui:Description xml:lang="fr">Université de Bâle</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAgklEQVQ4EbVRQQ6AMAib/o/X8kANi90KG3GJ0wu0tJTMUv74ROSKe2ecaU4IMwHmXFMtBly5tyXAvND1JpiJMv5Y2uoiOlDV6u/M08W0iAcDCJzOlXvTAcPT/gKILdVSOCliDtn/iFlaxvM17YFwPpuYcyYACAxzvzqHrta3BU78Fdzl9FuPpzdbqAAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAIAAAB+RarbAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAfHSURBVHic7JvZTxVJFIf9n3zz2QffTFzBLSoxikiURFkcFBUUInpBFgUVVHAB9QIuIJlxA69xQUSGxRVUXABFVBQVQXu+3IqVovt2D/FWDeNynrqq6zb1dZ0653e6mwnWL2YTTP+Bpqam9PT0sYzMycm5cOGC4emYB25sbNywYcNYRm7fvv3s2bOm5/NfAG/cuHEsI38Y4FevXj148MDtrAp89+7dt2/fqmc/fPjQ3t4ujr2BHz9+3NvbG/5sNQA/e/YsMjKyoaEh5FkVuKamZvHixQMDA6L56dOnmJiY8vJy0fQA5qZERER0dHSEP1s9Lt3Z2Tlr1qzr1687T9lc+vjx41FRUf39/e/fv1+xYsW+ffvkKTdgaLl4W1ublqlq28MPHz4MyezcwzAfPnz4xIkT+/fvV/tDAuultfQGrZDMTuChoaHW1tbbt2+zyGq/ExjOmTNnyk2uxTRHaSezDZgotXTp0tOnT1+8eHHRokVv3ryRp2zA0OpdW2H605JgvnbtmmiqwNBGR0cfPHhQNKuqqlRmFVjQ6l1bYUby8KNHjySzBLbRChPMIldJYBxeuydL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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://www.unibas.ch/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="de">https://www.unibas.ch/de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="fr">https://www.unibas.ch</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>192.43.196.0/24</mdui:IPHint>
+		<mdui:IPHint>192.43.192.0/22</mdui:IPHint>
+		<mdui:IPHint>2001:620:200::/48</mdui:IPHint>
+		<mdui:IPHint>192.43.196.0/24</mdui:IPHint>
+		<mdui:IPHint>195.176.29.0/25</mdui:IPHint>
+		<mdui:IPHint>193.8.136.0/23</mdui:IPHint>
+		<mdui:IPHint>131.152.0.0/16</mdui:IPHint>
+		<mdui:IPHint>131.152.188.64/26</mdui:IPHint>
+		<mdui:IPHint>131.152.193.0/24</mdui:IPHint>
+		<mdui:IPHint>131.152.194.0/23</mdui:IPHint>
+		<mdui:IPHint>131.152.227.192/29</mdui:IPHint>
+		<mdui:IPHint>131.152.227.200/30</mdui:IPHint>
+		<mdui:IPHint>131.152.227.204/31</mdui:IPHint>
+		<mdui:IPHint>131.152.227.206/32</mdui:IPHint>
+		<mdui:DomainHint>unibas.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.55898,7.58352</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNzCCAh+gAwIBAgIUUeLPoFEiaSb9TfFnPZ2n78fuFTYwDQYJKoZIhvcNAQEL
+BQAwHjEcMBoGA1UEAwwTYWFpLWxvZ29uLnVuaWJhcy5jaDAeFw0xOTAyMjMwOTI2
+MzRaFw0yMjAyMjMwOTI2MzRaMB4xHDAaBgNVBAMME2FhaS1sb2dvbi51bmliYXMu
+Y2gwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCKPUjclPQv/oHtc7/F
+1pPPah8iSELFrJUUXbSivGt/ylLrlMmiGABmwaXtw8NvDik+PARqS1EoHyCE9u9H
+TgRpFyYrzqoWw1beQQOsROBvEkir9bFbhVtXWauoFW43swxqwcOFzsN+SY13q+zl
+gyMlXS3vF0r4wH1ht+/vRUljO5J9+iAYLN7+aAcFJwx9VNEsWJvzT1FX1eJcWwEJ
+xSvh/rW3aODsrzNfYx32V46yAQjT+R/AwojOyktR83TLJ/ukkxg9rypd8aBZxE5u
+rWjztHgeDXWgFwi9GctMDEjuRHVvu8of58faALWa6QCXTpljR5hLx90zEcjYXwln
+hs4NAgMBAAGjbTBrMB0GA1UdDgQWBBQF+hg7lHCnVi5X0yQfjwB7Te3/RzBKBgNV
+HREEQzBBghNhYWktbG9nb24udW5pYmFzLmNohipodHRwczovL2FhaS1sb2dvbi51
+bmliYXMuY2gvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEgGbk0H
+ILD3YUUUtn7JNUEC76yU6XDePwZZ6kHlGynDEi9z2nuiMcwbYgk84lTsrtIlhbL2
+zdBohSKjDTfjB4AB7gPmkBfyt5KIqvIa5tRriiOmfoDm+MWZsoAfqqjGcuVUR+ts
+U9+XmyK4KV/ERbOK/UTN7j+WPO+DWxaYlJ+Ire6Wc9Q6tk1auTDNSVKXxNAavvDg
+ngI4TxAFo9qqImmdhNiQ0q8tT1XAS7Xhjds2yzsrdmy46CTz1KOjjZ0M1qLhZJMS
+6gUb01zkR/yY1h8W1Bk+hyFQnL0YfssWLnCKx23/H6x+5DTUheLuUvKOR8LtuO/b
+NBH9CBL0/Fh8/1s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.unibas.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.unibas.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-logon.unibas.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-logon.unibas.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-logon.unibas.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-logon.unibas.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unibas.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNzCCAh+gAwIBAgIUUeLPoFEiaSb9TfFnPZ2n78fuFTYwDQYJKoZIhvcNAQEL
+BQAwHjEcMBoGA1UEAwwTYWFpLWxvZ29uLnVuaWJhcy5jaDAeFw0xOTAyMjMwOTI2
+MzRaFw0yMjAyMjMwOTI2MzRaMB4xHDAaBgNVBAMME2FhaS1sb2dvbi51bmliYXMu
+Y2gwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCKPUjclPQv/oHtc7/F
+1pPPah8iSELFrJUUXbSivGt/ylLrlMmiGABmwaXtw8NvDik+PARqS1EoHyCE9u9H
+TgRpFyYrzqoWw1beQQOsROBvEkir9bFbhVtXWauoFW43swxqwcOFzsN+SY13q+zl
+gyMlXS3vF0r4wH1ht+/vRUljO5J9+iAYLN7+aAcFJwx9VNEsWJvzT1FX1eJcWwEJ
+xSvh/rW3aODsrzNfYx32V46yAQjT+R/AwojOyktR83TLJ/ukkxg9rypd8aBZxE5u
+rWjztHgeDXWgFwi9GctMDEjuRHVvu8of58faALWa6QCXTpljR5hLx90zEcjYXwln
+hs4NAgMBAAGjbTBrMB0GA1UdDgQWBBQF+hg7lHCnVi5X0yQfjwB7Te3/RzBKBgNV
+HREEQzBBghNhYWktbG9nb24udW5pYmFzLmNohipodHRwczovL2FhaS1sb2dvbi51
+bmliYXMuY2gvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEgGbk0H
+ILD3YUUUtn7JNUEC76yU6XDePwZZ6kHlGynDEi9z2nuiMcwbYgk84lTsrtIlhbL2
+zdBohSKjDTfjB4AB7gPmkBfyt5KIqvIa5tRriiOmfoDm+MWZsoAfqqjGcuVUR+ts
+U9+XmyK4KV/ERbOK/UTN7j+WPO+DWxaYlJ+Ire6Wc9Q6tk1auTDNSVKXxNAavvDg
+ngI4TxAFo9qqImmdhNiQ0q8tT1XAS7Xhjds2yzsrdmy46CTz1KOjjZ0M1qLhZJMS
+6gUb01zkR/yY1h8W1Bk+hyFQnL0YfssWLnCKx23/H6x+5DTUheLuUvKOR8LtuO/b
+NBH9CBL0/Fh8/1s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.unibas.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.unibas.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">unibas.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Basel</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Universität Basel</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="fr">Université de Bâle</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.unibas.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.unibas.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="fr">http://www.unibas.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:SurName>ITS</md:SurName>
+	<md:EmailAddress>mailto:support-its@unibas.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hanspeter</md:GivenName>
+	<md:SurName>Spalinger</md:SurName>
+	<md:EmailAddress>mailto:h.spalinger@unibas.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stefan</md:GivenName>
+	<md:SurName>Keller</md:SurName>
+	<md:EmailAddress>mailto:stefan.keller@unibas.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:SurName>Team</md:SurName>
+	<md:EmailAddress>mailto:security@unibas.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

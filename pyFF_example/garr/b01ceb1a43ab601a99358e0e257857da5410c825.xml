@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aleph20.knihovna-pardubice.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-07-08T12:31:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">knihovna-pardubice.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Regional Library in Pardubice</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Krajská knihovna v Pardubicích</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for patrons and staff of the Regional Library in Pardubice</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro čtenáře a zaměstance Krajské knihovny v Pardubicích</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://kkpce.cz/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://kkpce.cz/cs/</mdui:InformationURL>
+		<mdui:Logo height="40" width="41">https://aleph.knihovna-pardubice.cz/idp/images/logo_40.png</mdui:Logo>
+		<mdui:Logo height="87" width="90">https://aleph.knihovna-pardubice.cz/idp/images/logo_90.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDazCCAlOgAwIBAgIVAK9Iyeg0cETODyIyjXqEljnjliyGMA0GCSqGSIb3DQEB
+CwUAMCsxKTAnBgNVBAMMIGFsZXBoLmtuaWhvdm5hLXBhcmR1YmljZS5jejo0NDQz
+MB4XDTE2MTIxOTIxMjMwNloXDTM2MTIxOTIxMjMwNlowKzEpMCcGA1UEAwwgYWxl
+cGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCO6jdzlg/hwCwi0z9PSLenTVi3ytrqeFrexrL2O/P2cKDX
+ApGLdgU+xLYj1z72PIY+hZIj9d8ZPUdD5Nhw82cERMWE93XEiT9llYjmhgl1e3bH
+1MD61Q5ZLLkYjZfE5mcrDuPKLjQFI9/2jlWzUd0K5X13FwLBP07kPoynY3mbWGOs
+RQyBL1B3ewHIJthh/gQ993dspeH3bP3i2zcea7HHQmvtl00JSB7+2Jlfj3aKGkOh
+xp2G0Xwl+d0GFZjX9xcUmHz9J6p8yXVWe+inKM7UWqYhDdniUPIIBbhbNQPqc5OD
+Kq4uJIf0sQq1GhV3d1fFx/h9cjVtMBf45/NlgEptAgMBAAGjgYUwgYIwHQYDVR0O
+BBYEFIN2GbLRCmSC3amk7WlF98zG9vUKMGEGA1UdEQRaMFiCIGFsZXBoLmtuaWhv
+dm5hLXBhcmR1YmljZS5jejo0NDQzhjRodHRwczovL2FsZXBoMjAua25paG92bmEt
+cGFyZHViaWNlLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQA8
+1BgmsDLuSlC8stnsUIqmUW9P4n4hibBEH5MpzI0Y/MSfPpsBLW6tEraaerWkFBWe
+fs5lwsKGXfSIZhi03M8MZ0QivnbZvisf2gSAUOcgBMG/jpKVxSmNY5g+nZvkA2Z7
+/DDb0atSEA9anreVP2V9TllV4nw9OqylpaxlETqks3Ru9UEXXldGLxaFYBo4pw2K
+Q70kQ7RDHrbuiOgaOGCF0dhK9yZKlO/LeVGJ/3d3SC/22mjn/n/PRhGgIjNpx1Ft
++kPi7hIwrgpRqBwphXuP4Lmw0eFLzVQL7l0VDjweRWfGhfYMpo+w/XIHtspRgCoh
+QQ5118/OqNXFwIhXyCQn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDajCCAlKgAwIBAgIUQ2GEWqK+F2hO7VnmXIdSzRTLZnIwDQYJKoZIhvcNAQEL
+BQAwKzEpMCcGA1UEAwwgYWxlcGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMw
+HhcNMTYxMjE5MjEyMzA1WhcNMzYxMjE5MjEyMzA1WjArMSkwJwYDVQQDDCBhbGVw
+aC5rbmlob3ZuYS1wYXJkdWJpY2UuY3o6NDQ0MzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAKFHK8PoqtQ1JNUHYycjtdwysreIHU3BvGT2a/oxz6M1GT2n
+d6Z662KVfVhdL8WDBEA1703QrfsTV6gsV7OqCw5CcRPIVUVpyFTu+/FicBUIXb1o
+9P462QjNtk01HacCrcCg+RtguSXLE0VEbSOvGiRRlOmNEFhGOqhLF6yiBE5iR+bQ
+q53lAgtPDGySGoR/dEbGDzuoHfh/8cNEvXZBtPgbqSIl0RzDu0pgeZ3YCLBVtG+c
+xfAEpYZqH+cp4OndPFyc803ph8jvxS7JdXSAJqbyxDl0Coi/pcmZxcvadm42zoMd
++s9ey5+5F+jdZ+V6qEKRCPWMB3FzbQtIG1acn1ECAwEAAaOBhTCBgjAdBgNVHQ4E
+FgQUXlTGVb/kQbBizBq1wWY/WUmdt5YwYQYDVR0RBFowWIIgYWxlcGgua25paG92
+bmEtcGFyZHViaWNlLmN6OjQ0NDOGNGh0dHBzOi8vYWxlcGgyMC5rbmlob3ZuYS1w
+YXJkdWJpY2UuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFFA
+eoQD74qiUX4U1Qn6e1tQuZ/jylEbTpy43ovAbVFS0lr1bKf1nLidLtrWLMnqxzg5
+0KEDwxHH4IblR3qsVVjNvIn21HWDHxj4COMdi1VGsgQwn60NpGBiPGFNuwGkiCQq
+2jUgyMERxdJ64mr2pooVtBI7BVVskfATdz/r0APT0fm/w16kaQTNVARS5WYRiHhR
+0DIe4hSnEth7UhQXUzDUlyDe0igs/1uuPNfTMgq+PIGOlfzKD9IRD/QVZ75s5APe
+Ny6VmK/CnuoH2Vzv1FublenYv+OHIqDL0Gjo2I1712oVork7Kd1hdzGB0JbHvege
+eZSKn0FtvxwXBeqFhLI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDajCCAlKgAwIBAgIUCEgaP1ny9uNU48LD6CSn4v7TkhEwDQYJKoZIhvcNAQEL
+BQAwKzEpMCcGA1UEAwwgYWxlcGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMw
+HhcNMTYxMjE5MjEyMzA1WhcNMzYxMjE5MjEyMzA1WjArMSkwJwYDVQQDDCBhbGVw
+aC5rbmlob3ZuYS1wYXJkdWJpY2UuY3o6NDQ0MzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAK0dTxsZjygxH5gAEDkBPFV/Ql3WQc9taRBUxObuS822x7h7
+oCaoO7IknE29RJGH+IlTfbAmXAfC5AmW8MyTe0xARMjKmYJeKKNL7/hwaEBQkB2v
+XK+X0JGx0UiXSEMevvlH8RoJNrwp5Q3N9+CefQxoKWPaHuexGZHuiLKsSav5WIhv
+UXYnQPnKti8fSRo5TC34Y8CKPT5XVXAjS+zQchZMjp0srr2yOhdGnqdH8BqJzGiC
+4w8TDyVjod/YY388fUpTPzNrCLr0+eHSOkcdtq6IlNt+dH+qKd7uR8ydobULMXD7
+MWTlWridNqyl8w5/n32nnUGg+Nej66bo1+ZyYJECAwEAAaOBhTCBgjAdBgNVHQ4E
+FgQU3BovNXQZwkCcQE40YfH+I6zvpoMwYQYDVR0RBFowWIIgYWxlcGgua25paG92
+bmEtcGFyZHViaWNlLmN6OjQ0NDOGNGh0dHBzOi8vYWxlcGgyMC5rbmlob3ZuYS1w
+YXJkdWJpY2UuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAGIS
+QvLYSZqcypv8Ld++b+tZZDQhAqS6eUTH7IvT68hfYcsAUKOFDOiVcHXCkimJbJDq
+e43Ll8Yhh3otOYWNwaTKsVOacoB11Yb1fd3l1o1hjZ4xt8UGTmbuD9/O0mzCPPRE
+lz7AeiVaI3XJE24cCLKsNU2vjgFL2QdUDBwRAH+yHux0p4G+Iaa5daFy1OQ+hrTR
+qkSzeqCEG+XWlnx8hLCR72HgWsxqvT2HjJz/RxB5iy3/Cvdi1ldnVN5goFDw0EVV
+gYvFP4KFnfYT5v6sId+QwTxRnv40xDOfxSyGXVKtJmZc0bNQHTj5hVqmcvGTRo39
+EbaMoBlj7UOn8jZmV80=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aleph.knihovna-pardubice.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aleph.knihovna-pardubice.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aleph.knihovna-pardubice.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aleph.knihovna-pardubice.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aleph.knihovna-pardubice.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aleph.knihovna-pardubice.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">knihovna-pardubice.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDazCCAlOgAwIBAgIVAK9Iyeg0cETODyIyjXqEljnjliyGMA0GCSqGSIb3DQEB
+CwUAMCsxKTAnBgNVBAMMIGFsZXBoLmtuaWhvdm5hLXBhcmR1YmljZS5jejo0NDQz
+MB4XDTE2MTIxOTIxMjMwNloXDTM2MTIxOTIxMjMwNlowKzEpMCcGA1UEAwwgYWxl
+cGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCO6jdzlg/hwCwi0z9PSLenTVi3ytrqeFrexrL2O/P2cKDX
+ApGLdgU+xLYj1z72PIY+hZIj9d8ZPUdD5Nhw82cERMWE93XEiT9llYjmhgl1e3bH
+1MD61Q5ZLLkYjZfE5mcrDuPKLjQFI9/2jlWzUd0K5X13FwLBP07kPoynY3mbWGOs
+RQyBL1B3ewHIJthh/gQ993dspeH3bP3i2zcea7HHQmvtl00JSB7+2Jlfj3aKGkOh
+xp2G0Xwl+d0GFZjX9xcUmHz9J6p8yXVWe+inKM7UWqYhDdniUPIIBbhbNQPqc5OD
+Kq4uJIf0sQq1GhV3d1fFx/h9cjVtMBf45/NlgEptAgMBAAGjgYUwgYIwHQYDVR0O
+BBYEFIN2GbLRCmSC3amk7WlF98zG9vUKMGEGA1UdEQRaMFiCIGFsZXBoLmtuaWhv
+dm5hLXBhcmR1YmljZS5jejo0NDQzhjRodHRwczovL2FsZXBoMjAua25paG92bmEt
+cGFyZHViaWNlLmN6L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQA8
+1BgmsDLuSlC8stnsUIqmUW9P4n4hibBEH5MpzI0Y/MSfPpsBLW6tEraaerWkFBWe
+fs5lwsKGXfSIZhi03M8MZ0QivnbZvisf2gSAUOcgBMG/jpKVxSmNY5g+nZvkA2Z7
+/DDb0atSEA9anreVP2V9TllV4nw9OqylpaxlETqks3Ru9UEXXldGLxaFYBo4pw2K
+Q70kQ7RDHrbuiOgaOGCF0dhK9yZKlO/LeVGJ/3d3SC/22mjn/n/PRhGgIjNpx1Ft
++kPi7hIwrgpRqBwphXuP4Lmw0eFLzVQL7l0VDjweRWfGhfYMpo+w/XIHtspRgCoh
+QQ5118/OqNXFwIhXyCQn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDajCCAlKgAwIBAgIUQ2GEWqK+F2hO7VnmXIdSzRTLZnIwDQYJKoZIhvcNAQEL
+BQAwKzEpMCcGA1UEAwwgYWxlcGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMw
+HhcNMTYxMjE5MjEyMzA1WhcNMzYxMjE5MjEyMzA1WjArMSkwJwYDVQQDDCBhbGVw
+aC5rbmlob3ZuYS1wYXJkdWJpY2UuY3o6NDQ0MzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAKFHK8PoqtQ1JNUHYycjtdwysreIHU3BvGT2a/oxz6M1GT2n
+d6Z662KVfVhdL8WDBEA1703QrfsTV6gsV7OqCw5CcRPIVUVpyFTu+/FicBUIXb1o
+9P462QjNtk01HacCrcCg+RtguSXLE0VEbSOvGiRRlOmNEFhGOqhLF6yiBE5iR+bQ
+q53lAgtPDGySGoR/dEbGDzuoHfh/8cNEvXZBtPgbqSIl0RzDu0pgeZ3YCLBVtG+c
+xfAEpYZqH+cp4OndPFyc803ph8jvxS7JdXSAJqbyxDl0Coi/pcmZxcvadm42zoMd
++s9ey5+5F+jdZ+V6qEKRCPWMB3FzbQtIG1acn1ECAwEAAaOBhTCBgjAdBgNVHQ4E
+FgQUXlTGVb/kQbBizBq1wWY/WUmdt5YwYQYDVR0RBFowWIIgYWxlcGgua25paG92
+bmEtcGFyZHViaWNlLmN6OjQ0NDOGNGh0dHBzOi8vYWxlcGgyMC5rbmlob3ZuYS1w
+YXJkdWJpY2UuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFFA
+eoQD74qiUX4U1Qn6e1tQuZ/jylEbTpy43ovAbVFS0lr1bKf1nLidLtrWLMnqxzg5
+0KEDwxHH4IblR3qsVVjNvIn21HWDHxj4COMdi1VGsgQwn60NpGBiPGFNuwGkiCQq
+2jUgyMERxdJ64mr2pooVtBI7BVVskfATdz/r0APT0fm/w16kaQTNVARS5WYRiHhR
+0DIe4hSnEth7UhQXUzDUlyDe0igs/1uuPNfTMgq+PIGOlfzKD9IRD/QVZ75s5APe
+Ny6VmK/CnuoH2Vzv1FublenYv+OHIqDL0Gjo2I1712oVork7Kd1hdzGB0JbHvege
+eZSKn0FtvxwXBeqFhLI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDajCCAlKgAwIBAgIUCEgaP1ny9uNU48LD6CSn4v7TkhEwDQYJKoZIhvcNAQEL
+BQAwKzEpMCcGA1UEAwwgYWxlcGgua25paG92bmEtcGFyZHViaWNlLmN6OjQ0NDMw
+HhcNMTYxMjE5MjEyMzA1WhcNMzYxMjE5MjEyMzA1WjArMSkwJwYDVQQDDCBhbGVw
+aC5rbmlob3ZuYS1wYXJkdWJpY2UuY3o6NDQ0MzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAK0dTxsZjygxH5gAEDkBPFV/Ql3WQc9taRBUxObuS822x7h7
+oCaoO7IknE29RJGH+IlTfbAmXAfC5AmW8MyTe0xARMjKmYJeKKNL7/hwaEBQkB2v
+XK+X0JGx0UiXSEMevvlH8RoJNrwp5Q3N9+CefQxoKWPaHuexGZHuiLKsSav5WIhv
+UXYnQPnKti8fSRo5TC34Y8CKPT5XVXAjS+zQchZMjp0srr2yOhdGnqdH8BqJzGiC
+4w8TDyVjod/YY388fUpTPzNrCLr0+eHSOkcdtq6IlNt+dH+qKd7uR8ydobULMXD7
+MWTlWridNqyl8w5/n32nnUGg+Nej66bo1+ZyYJECAwEAAaOBhTCBgjAdBgNVHQ4E
+FgQU3BovNXQZwkCcQE40YfH+I6zvpoMwYQYDVR0RBFowWIIgYWxlcGgua25paG92
+bmEtcGFyZHViaWNlLmN6OjQ0NDOGNGh0dHBzOi8vYWxlcGgyMC5rbmlob3ZuYS1w
+YXJkdWJpY2UuY3ovaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAGIS
+QvLYSZqcypv8Ld++b+tZZDQhAqS6eUTH7IvT68hfYcsAUKOFDOiVcHXCkimJbJDq
+e43Ll8Yhh3otOYWNwaTKsVOacoB11Yb1fd3l1o1hjZ4xt8UGTmbuD9/O0mzCPPRE
+lz7AeiVaI3XJE24cCLKsNU2vjgFL2QdUDBwRAH+yHux0p4G+Iaa5daFy1OQ+hrTR
+qkSzeqCEG+XWlnx8hLCR72HgWsxqvT2HjJz/RxB5iy3/Cvdi1ldnVN5goFDw0EVV
+gYvFP4KFnfYT5v6sId+QwTxRnv40xDOfxSyGXVKtJmZc0bNQHTj5hVqmcvGTRo39
+EbaMoBlj7UOn8jZmV80=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aleph.knihovna-pardubice.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aleph.knihovna-pardubice.cz:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="cs">Krajská knihovna v Pardubicích</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Regional Library in Pardubice</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="cs">Krajská knihovna v Pardubicích</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Regional Library in Pardubice</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://kkpce.cz/en/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://kkpce.cz/cs/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Radek</md:GivenName>
+	<md:SurName>Goláň</md:SurName>
+	<md:EmailAddress>mailto:r.golan@knihovna-pardubice.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

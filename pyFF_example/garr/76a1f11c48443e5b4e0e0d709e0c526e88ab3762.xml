@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.sbcc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sbcc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Santa Barbara City College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Santa Barbara City College Shibboleth </mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.sbcc.edu/boardoftrustees/files/policies/AP%203720%20Electronic%20Communication%20Procedures.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.sbcc.edu/images/sbcc-80-60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUMMHZfx7g7KGhvDSG44Watjbf8nAwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNiY2MuZWR1MB4XDTExMDMzMDIyMDY0MFoXDTMx
+MDMzMDIyMDY0MFowFzEVMBMGA1UEAxMMaWRwLnNiY2MuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnN6Qeae3fzGRYjbIsNuoubXFOkVBMxfmiMcJ
+uPqH7PD9/RIBXbma48lGpv3WeRCj9BBYP3hVwfiPWizfPDwyAO5PJo2zui8qy2Zl
+RdGOU2UI0JbrOVpEh+g/Xbr4P/EDdWVzMnUHvmIy6HW9i1rQ5qhLB5XXOjSM7Sv/
+/VisHiQ9+SyBhc7cayaWjcoLmSW+YDswLcy6GFQekEVyYXDwIUFiVXmT+uV98S3k
+DReV+SHQFPIR+vYofJqDYooYDFnLS0MAGtGzkO+VplZHo9AgEIK9QuqQ8LZ0nQ8J
+IyEUCqucCKcReLAY5DCNF+6pOwTFFGEV6Zpi8AtcYSdUriASWQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2JjYy5lZHWGI2h0dHBzOi8vaWRwLnNiY2MuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBQgNUz2RZi0aiVIoJRvVBRop3HLuzANBgkq
+hkiG9w0BAQUFAAOCAQEAXLqTc1GdORqZeoYeclmR+RniXnTpqOfcLoTqMVRH3bpU
+DJqLgRWRLL3lreQlfrOo414xm7ubNFLWklC8/vwFadaKSRXRNSm3xc/kTd/18SKc
+YMfdmVSVhIsaS+y9G+Z4JcrogXNp9VU9JRKog0t5cngrOTyNMn1C3Raw4H2L9WkL
+mKGlFTzgPur0sqyyd86chFfmtkTvOPsTBaGuBoz4L9Pnl+moxlzMhQBC2Mxmr/FG
+eOKM7YKGt4+pqKx5cp4GeYWHYS8d0/XRF2vyCLwdLLOTai0cRqx+LRNtpEAV6z74
+QnbddsPUWZfmg0tNJbc8OhZPVC6Z0dq++C4sZqhJjw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.sbcc.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sbcc.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.sbcc.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.sbcc.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sbcc.edu/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.sbcc.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.sbcc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.sbcc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">sbcc.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUMMHZfx7g7KGhvDSG44Watjbf8nAwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNiY2MuZWR1MB4XDTExMDMzMDIyMDY0MFoXDTMx
+MDMzMDIyMDY0MFowFzEVMBMGA1UEAxMMaWRwLnNiY2MuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnN6Qeae3fzGRYjbIsNuoubXFOkVBMxfmiMcJ
+uPqH7PD9/RIBXbma48lGpv3WeRCj9BBYP3hVwfiPWizfPDwyAO5PJo2zui8qy2Zl
+RdGOU2UI0JbrOVpEh+g/Xbr4P/EDdWVzMnUHvmIy6HW9i1rQ5qhLB5XXOjSM7Sv/
+/VisHiQ9+SyBhc7cayaWjcoLmSW+YDswLcy6GFQekEVyYXDwIUFiVXmT+uV98S3k
+DReV+SHQFPIR+vYofJqDYooYDFnLS0MAGtGzkO+VplZHo9AgEIK9QuqQ8LZ0nQ8J
+IyEUCqucCKcReLAY5DCNF+6pOwTFFGEV6Zpi8AtcYSdUriASWQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2JjYy5lZHWGI2h0dHBzOi8vaWRwLnNiY2MuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBQgNUz2RZi0aiVIoJRvVBRop3HLuzANBgkq
+hkiG9w0BAQUFAAOCAQEAXLqTc1GdORqZeoYeclmR+RniXnTpqOfcLoTqMVRH3bpU
+DJqLgRWRLL3lreQlfrOo414xm7ubNFLWklC8/vwFadaKSRXRNSm3xc/kTd/18SKc
+YMfdmVSVhIsaS+y9G+Z4JcrogXNp9VU9JRKog0t5cngrOTyNMn1C3Raw4H2L9WkL
+mKGlFTzgPur0sqyyd86chFfmtkTvOPsTBaGuBoz4L9Pnl+moxlzMhQBC2Mxmr/FG
+eOKM7YKGt4+pqKx5cp4GeYWHYS8d0/XRF2vyCLwdLLOTai0cRqx+LRNtpEAV6z74
+QnbddsPUWZfmg0tNJbc8OhZPVC6Z0dq++C4sZqhJjw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.sbcc.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Santa Barbara Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Santa Barbara Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.sbcc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael Ghens</md:GivenName>
+	<md:EmailAddress>mghens@sbcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michael Ghens</md:GivenName>
+	<md:EmailAddress>mghens@sbcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Brett Wutzke</md:GivenName>
+	<md:EmailAddress>tbwutzke@pipeline.sbcc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

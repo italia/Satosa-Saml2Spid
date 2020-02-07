@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:clemson.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.clemson.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">clemson.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Clemson University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Identity Provider for Clemson University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.clemson.edu/ccit/help_support/safe_computing/resources/best_practices.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.clemson.edu/ccit/about/policies/index.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="130" width="449" xml:lang="en">https://www.clemson.edu/images/wordmark.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMjCCAhqgAwIBAgIJAIWTbV26VuPeMA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNV
+BAMTD2lkcC5jbGVtc29uLmVkdTAeFw0xNDAxMjIxOTI0NTBaFw0yNDAxMjAxOTI0
+NTBaMBoxGDAWBgNVBAMTD2lkcC5jbGVtc29uLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAKh970CMYkhnBWn4flEVBZxZyx6OjF9Y5TzcsAQPEqb+
+J8e0f8+eoi/SjCH62J3wkycb637xVGcpOe8gxheqb/yAoO/1XkQcQqGGDFwe5i2C
+acfNy2GzEjXoTuwPZv1rBMeeTJ5GWeuO7kP0xJMUz6EwgnEPky/KO4jTLmQElD0O
+nr2LUe3r6RNh/iQdVuR7OU6aNIGoRB0TDoth7Gvb11Y/ztkVss9Be/9B7ILKVrF5
+EQqt6rXb1Uam0wNcFRt1UWnzwvWqTOD3ndsIP3/okWpKezk90gJmQ31jIUqPUWAB
+3Jq8rASoKBtm4v6m8/PVxqaiDVUP3pMoDn/kuC2tdgECAwEAAaN7MHkwHQYDVR0O
+BBYEFGRIag6EZ77qa33zp5/pHiGTYl15MEoGA1UdIwRDMEGAFGRIag6EZ77qa33z
+p5/pHiGTYl15oR6kHDAaMRgwFgYDVQQDEw9pZHAuY2xlbXNvbi5lZHWCCQCFk21d
+ulbj3jAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB/PeqBB+qaogdv
+7IqcXrz7mgftKI8mUFae76rzVGnIPIYMyManRceCRfVnvPFrNKOjoUuqQRg3dQsE
+SzUMzFWD4IHcbUP1xI+o8o1FtyM6KYMQE1DIV0GbsZ5FAlGEhWjrYGhJ/SqIeakg
+MiLtXO/Y+b8Ys4mAtdJS3Bx/qM+hfYWc8oJMaJZeHcEzqC/MaBxvkxz5VTkq9hN4
+EGUdMHmqx12yrMmweKwJ2thh2DOEebiJeJ8DBvj44kmSGMoEWw7HCC3wQOUsTrjv
+KmFS8uC55wmP9wsWXa8g5S7eim10poro2UW5dSOGYhET3GVG7rywL//9eP9bH6nG
+gf9X1kGw
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.clemson.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.clemson.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.clemson.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.clemson.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.clemson.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.clemson.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">clemson.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMjCCAhqgAwIBAgIJAIWTbV26VuPeMA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNV
+BAMTD2lkcC5jbGVtc29uLmVkdTAeFw0xNDAxMjIxOTI0NTBaFw0yNDAxMjAxOTI0
+NTBaMBoxGDAWBgNVBAMTD2lkcC5jbGVtc29uLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAKh970CMYkhnBWn4flEVBZxZyx6OjF9Y5TzcsAQPEqb+
+J8e0f8+eoi/SjCH62J3wkycb637xVGcpOe8gxheqb/yAoO/1XkQcQqGGDFwe5i2C
+acfNy2GzEjXoTuwPZv1rBMeeTJ5GWeuO7kP0xJMUz6EwgnEPky/KO4jTLmQElD0O
+nr2LUe3r6RNh/iQdVuR7OU6aNIGoRB0TDoth7Gvb11Y/ztkVss9Be/9B7ILKVrF5
+EQqt6rXb1Uam0wNcFRt1UWnzwvWqTOD3ndsIP3/okWpKezk90gJmQ31jIUqPUWAB
+3Jq8rASoKBtm4v6m8/PVxqaiDVUP3pMoDn/kuC2tdgECAwEAAaN7MHkwHQYDVR0O
+BBYEFGRIag6EZ77qa33zp5/pHiGTYl15MEoGA1UdIwRDMEGAFGRIag6EZ77qa33z
+p5/pHiGTYl15oR6kHDAaMRgwFgYDVQQDEw9pZHAuY2xlbXNvbi5lZHWCCQCFk21d
+ulbj3jAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQB/PeqBB+qaogdv
+7IqcXrz7mgftKI8mUFae76rzVGnIPIYMyManRceCRfVnvPFrNKOjoUuqQRg3dQsE
+SzUMzFWD4IHcbUP1xI+o8o1FtyM6KYMQE1DIV0GbsZ5FAlGEhWjrYGhJ/SqIeakg
+MiLtXO/Y+b8Ys4mAtdJS3Bx/qM+hfYWc8oJMaJZeHcEzqC/MaBxvkxz5VTkq9hN4
+EGUdMHmqx12yrMmweKwJ2thh2DOEebiJeJ8DBvj44kmSGMoEWw7HCC3wQOUsTrjv
+KmFS8uC55wmP9wsWXa8g5S7eim10poro2UW5dSOGYhET3GVG7rywL//9eP9bH6nG
+gf9X1kGw
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.clemson.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.clemson.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Clemson University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Clemson University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.clemson.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Barry Johnson</md:GivenName>
+	<md:EmailAddress>hbj@clemson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Craig Baker</md:GivenName>
+	<md:EmailAddress>craigb@clemson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kathy E. Wright</md:GivenName>
+	<md:EmailAddress>kewrig@clemson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Clemson ShibOps</md:GivenName>
+	<md:EmailAddress>shibbbolethOps@lists.clemson.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Clemson CSIO</md:GivenName>
+	<md:EmailAddress>security@clemson.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

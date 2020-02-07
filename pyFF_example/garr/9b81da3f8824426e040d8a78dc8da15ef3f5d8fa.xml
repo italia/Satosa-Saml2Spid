@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.stu.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2014-01-01T23:01:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="fr">https://www.canarie.ca/?wpdmdl=10723</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stu.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">St. Thomas University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">St. Thomas University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.stu.ca</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://w3.stu.ca/stu/administrative/hr/policies/default.aspx</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAOBY2dSPibYanS5orJ1vJjJfw73SMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5zdHUuY2EwHhcNMTQwOTI2MTQzNzM3WhcNMzQw
+OTI2MTQzNzM3WjAVMRMwEQYDVQQDEwppZHAuc3R1LmNhMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAi8nGjG3A3WJL2Ti/sxKzUQWdh49ZWeCoH+ZkspdG
+wubZxatlTf2mm7mEeS0ECReA4oddc4JIDuYAiPu8+c2+VUiVYMmlTrWibp+bcW7K
+05vC4fwRo9mO1/yln1ZSPCWZRjpkazndUuC4INJGOXTqVRVAHZr6J3BOHvZkIDOH
+/SnACoqOxq3f1naJ0MZfr7LWVsM+Vn4mGhUso0ideROayVDr3GwI+cNcHLzQWF0T
+3BqRYv+qBCh9tHs1JVQ0PWttLCLF9EW2JfgrcX52fej+Wj3h00gcH0Cl94FjjQCh
+hgZ5d5SvFn8dfuDK/g+YFrRJMktETWZmnenib1FIR2o8IQIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuc3R1LmNhhiFodHRwczovL2lkcC5zdHUuY2EvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFA0wvqDgjnlLMZoPIGGpyAq8/NV+MA0GCSqGSIb3DQEB
+BQUAA4IBAQBceq0rBpsSM0T6hHn2bvf1eQLK1BN3tX+UlHYbmirqAGhRfAKpRbga
+VX0qTaRloYoRh8EkO+FgrGzGdcd4F6dgOtWyAz/5OZsdciNaHfqV55xZBvvf2z1q
+VLym3EEzKDrb5yom51hwAGomhP9V+KZaChpk/l8i2SJYBPHUPQ46mDEfnLx2t0t1
+TBPN1u0SuOrQgoRYJ2Dt8XzkNNESJWBmOPAoL0PIrH5OwkPFstlk/PYMuO7F1LRA
+XsG5E18v07/K88L8k8qTBB0s04BHv15AYt+1W2PYd8KSOece6mUg7FF+Kn6NzhFG
+RCC1+XsJgdfNjC9y5WKfrPB0UzZm4/0t
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.stu.ca:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.stu.ca:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.stu.ca/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.stu.ca/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.stu.ca:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.stu.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.stu.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.stu.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.stu.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stu.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAOBY2dSPibYanS5orJ1vJjJfw73SMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5zdHUuY2EwHhcNMTQwOTI2MTQzNzM3WhcNMzQw
+OTI2MTQzNzM3WjAVMRMwEQYDVQQDEwppZHAuc3R1LmNhMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAi8nGjG3A3WJL2Ti/sxKzUQWdh49ZWeCoH+ZkspdG
+wubZxatlTf2mm7mEeS0ECReA4oddc4JIDuYAiPu8+c2+VUiVYMmlTrWibp+bcW7K
+05vC4fwRo9mO1/yln1ZSPCWZRjpkazndUuC4INJGOXTqVRVAHZr6J3BOHvZkIDOH
+/SnACoqOxq3f1naJ0MZfr7LWVsM+Vn4mGhUso0ideROayVDr3GwI+cNcHLzQWF0T
+3BqRYv+qBCh9tHs1JVQ0PWttLCLF9EW2JfgrcX52fej+Wj3h00gcH0Cl94FjjQCh
+hgZ5d5SvFn8dfuDK/g+YFrRJMktETWZmnenib1FIR2o8IQIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuc3R1LmNhhiFodHRwczovL2lkcC5zdHUuY2EvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFA0wvqDgjnlLMZoPIGGpyAq8/NV+MA0GCSqGSIb3DQEB
+BQUAA4IBAQBceq0rBpsSM0T6hHn2bvf1eQLK1BN3tX+UlHYbmirqAGhRfAKpRbga
+VX0qTaRloYoRh8EkO+FgrGzGdcd4F6dgOtWyAz/5OZsdciNaHfqV55xZBvvf2z1q
+VLym3EEzKDrb5yom51hwAGomhP9V+KZaChpk/l8i2SJYBPHUPQ46mDEfnLx2t0t1
+TBPN1u0SuOrQgoRYJ2Dt8XzkNNESJWBmOPAoL0PIrH5OwkPFstlk/PYMuO7F1LRA
+XsG5E18v07/K88L8k8qTBB0s04BHv15AYt+1W2PYd8KSOece6mUg7FF+Kn6NzhFG
+RCC1+XsJgdfNjC9y5WKfrPB0UzZm4/0t
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.stu.ca:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.stu.ca:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">St. Thomas University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">St. Thomas University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.stu.ca</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>STU</md:GivenName>
+	<md:SurName>Help Desk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@stu.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://weblicht.sfs.uni-tuebingen.de">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-06-16T14:52:39Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://clarin.eu/category/clarin-member</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://weblicht.sfs.uni-tuebingen.de/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">WebLicht</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">WebLicht</mdui:DisplayName>
+		<mdui:Description xml:lang="de">WebLicht ist eine Service-orientierte Architektur (SOA) zur Erstellung annotierter Textcorpora.</mdui:Description>
+		<mdui:Description xml:lang="en">WebLicht is a service orchestration and execution environment for automatic linguistic annotation.</mdui:Description>
+		<mdui:Logo height="50" width="190">https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/weblicht_button2.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://weblicht.sfs.uni-tuebingen.de/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://weblicht.sfs.uni-tuebingen.de/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://weblicht.sfs.uni-tuebingen.de/weblichtwiki/index.php/WebLicht_Privacy_Policy_Document</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIERTCCAq2gAwIBAgIJAPgwMmXyi4k0MA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNV
+BAMTHXdlYmxpY2h0LnNmcy51bmktdHVlYmluZ2VuLmRlMB4XDTE5MDEyMTE1MzY1
+NVoXDTIzMDEyMDE1MzY1NVowKDEmMCQGA1UEAxMdd2VibGljaHQuc2ZzLnVuaS10
+dWViaW5nZW4uZGUwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDiDX4J
+Kp7ShBLiedpbPsKpe7WZQ35TFSY4+X3ysL+X5jxU2vMUT/lTZaHxBM5iBTkqtSNC
+5gMRafIfaJl9Q1VNnRMAPgqvgOu/+GXqsXydk/Wg4wh9BFtC5uAa2NrzoDtxm7hT
+J4zMbcJ+uYM5AQLyK7t6VKCTZm5mL14UKwwVDH1L9rD3yn6SDS3qL6vCZPY3WmUb
+8j0zfrL8P1N2WaAzMweEgtotHR+8gwLbKdoItxXEYVwaUhSkixhHVNxOHDv1Lr5X
+BGh3qixrNK30HUAEtvvlAHNu6RbDqj7OR4ns3A0StOiEq8tZo+UTWoqMtmox1rTP
+B2MISmqt8q0M3sTzMBTzeurI1eOeW9H2+66qAc3FlDT5rCkgd5Wgpa7e1vkb+ZSu
+BBHFNeyOK7AT3Oyqefrnnt2NXmRsX5mcuD67V967fSgDQ1PZSYzCT2Bme5WuDC5v
+eaH0XybRtmhdZM9b5tKY5Ax9ighqk/iWHDW2s+Rph0EpXA7Vb7axq0zpS6UCAwEA
+AaNyMHAwTwYDVR0RBEgwRoIdd2VibGljaHQuc2ZzLnVuaS10dWViaW5nZW4uZGWG
+JWh0dHBzOi8vd2VibGljaHQuc2ZzLnVuaS10dWViaW5nZW4uZGUwHQYDVR0OBBYE
+FGyZ6f5yzVjuTe+rBdr70L07Z6/VMA0GCSqGSIb3DQEBCwUAA4IBgQCiE1lQCwCk
+Qvw8bFZxk96azYcficyGP4fOCAcIuqSzPqL4XHpBOmWrtRBhiORIc3+DSIDAqAoN
+OF1jqXXMMdSUkB7Cfldy6JWv409fYb5Md1EMx3DIH3ytDVNfLfBA401qrjpzL4O3
+iab8gvGE+53gwuGIF5CtGyJtOK3HgM9Zh3Oha+lracrSJD0de4rodvZ4YpXB2Aj3
+xj31r4PLC2MGUqMKJvm4XxN7DogWZeIPEZS7gKSGuNJ8c4QSu6GUm3X8jpJwytDV
+lXRK5MRKjaih35a8+QyWiCY3AOau2zHIrismifbvU+tPtQD4bP1P1khLlcfcJUyv
+p878CPFpzdGGb0MWlevmZL+pDwBk6x8y70GYAc68EpOdMLKebqpvVDfziAfJH/2y
+gZfUgJ07afi3g/pRL02z3VSBxJ9DfXk47G0NT3HbDekT9ejuG+wp737u909r6NP2
+1ZCMXKsfSkBbpe4B8D4jwn00L+pz8iDPkmTEi9d1HjqFtZMhdJZfgHA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://weblicht.sfs.uni-tuebingen.de/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://weblicht.sfs.uni-tuebingen.de/Shibboleth.sso/SAML/POST" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">WebLicht</md:ServiceName>
+		<md:ServiceName xml:lang="en">WebLicht</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">WebLicht ist eine Service-orientierte Architektur (SOA) zur Erstellung annotierter Textcorpora.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">WebLicht is a service orchestration and execution environment for automatic linguistic annotation.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonNickname" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.2" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e459</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e459</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://clarin.eu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://clarin.eu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Marie</md:GivenName>
+	<md:SurName>Hinrichs</md:SurName>
+	<md:EmailAddress>mailto:wladmin@sfs.uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Marie</md:GivenName>
+	<md:SurName>Hinrichs</md:SurName>
+	<md:EmailAddress>mailto:wladmin@sfs.uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Marie</md:GivenName>
+	<md:SurName>Hinrichs</md:SurName>
+	<md:EmailAddress>mailto:wladmin@sfs.uni-tuebingen.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

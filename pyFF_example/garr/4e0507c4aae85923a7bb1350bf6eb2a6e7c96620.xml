@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://eams-pf.llnl.gov">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LLNL EAMS Hub SP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Lawrence Livermore National Laboratory Enterprise Access Management System Hub Service Provider</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://partnergateway.llnl.gov/pg</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.llnl.gov/disclaimer</mdui:PrivacyStatementURL>
+		<mdui:Logo height="50" width="150" xml:lang="en">https://eams.llnl.gov/pg-hub/img/logos/llnl.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHmzCCBoOgAwIBAgIKTDsxiwAAAAAfpTANBgkqhkiG9w0BAQUFADCBtDELMAkG
+A1UEBhMCVVMxEzARBgoJkiaJk/IsZAEZFgNnb3YxFDASBgoJkiaJk/IsZAEZFgRs
+bG5sMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRIwEAYDVQQHEwlMaXZlcm1vcmUxLzAt
+BgNVBAoTJkxhd3JlbmNlIExpdmVybW9yZSBOYXRpb25hbCBMYWJvcmF0b3J5MSAw
+HgYDVQQDExdMTE5MLUFELUVudGVycHJpc2UtQ0EwODAeFw0xNTEyMDMyMTEwNDNa
+Fw0xNzEyMDIyMTEwNDNaMIGSMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZv
+cm5pYTESMBAGA1UEBxMJTGl2ZXJtb3JlMS8wLQYDVQQKEyZMYXdyZW5jZSBMaXZl
+cm1vcmUgTmF0aW9uYWwgTGFib3JhdG9yeTEOMAwGA1UECxMFTGl2SVQxGTAXBgNV
+BAMTEGVhbXMtcGYubGxubC5nb3YwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDGMIWUKiaJsogODfODzXxsmmrE/wzNaQrfWcmUUYIwM7lQXuycxRefVOzJ
+FNyOjS/2EyXsFPvul7JOttTZwCUQK5OAi6o/q1FKQCacX+d+UVBT4s5hCgVpg/k4
+Vt7ZY1QVDp1Pgoi28pNc4+4DF95BRMeGJ8yloh03fb0H4mR85YfndrhCYiIbJFAj
+YrsTxFTr9t9b3tX9fv0TchvK5n0AX32ux0scmF2LuzHgNfKQx83iHxo98Ghin8Iq
+4m82KAwcn4vof1zMigqZj5VAYM5IStt62RALejcQjamoOQgaAmFsPh1QJJSHb2SB
+ExoPk7mwIR3jgmTGMFcflMlfd9STAgMBAAGjggPNMIIDyTAdBgNVHQ4EFgQUtQcn
+7FhScfznsOmQuSZ4P5Re7u8wHwYDVR0jBBgwFoAUH/p8r7XTIX2lBxv3a44vcZ5/
+6yYwggFkBgNVHR8EggFbMIIBVzCCAVOgggFPoIIBS4Y1aHR0cDovL2FkcGtpY2Vy
+dC5sbG5sLmdvdi9MTE5MLUFELUVudGVycHJpc2UtQ0EwOC5jcmyGgclsZGFwOi8v
+L0NOPUxMTkwtQUQtRW50ZXJwcmlzZS1DQTA4LENOPUFEUEtJMDgsQ049Q0RQLENO
+PVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3Vy
+YXRpb24sREM9ZW1wdHktcm9vdCxEQz1sbG5sLERDPWdvdj9jZXJ0aWZpY2F0ZVJl
+dm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0aW9uUG9p
+bnSGRmh0dHA6Ly9hZHBraTA4LnRoZS1sYWIubGxubC5nb3YvQ2VydEVucm9sbC9M
+TE5MLUFELUVudGVycHJpc2UtQ0EwOC5jcmwwggGfBggrBgEFBQcBAQSCAZEwggGN
+MFoGCCsGAQUFBzAChk5odHRwOi8vYWRwa2ljZXJ0LmxsbmwuZ292L0FEUEtJMDgu
+dGhlLWxhYi5sbG5sLmdvdl9MTE5MLUFELUVudGVycHJpc2UtQ0EwOC5jcnQwgcEG
+CCsGAQUFBzAChoG0bGRhcDovLy9DTj1MTE5MLUFELUVudGVycHJpc2UtQ0EwOCxD
+Tj1BSUEsQ049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049
+Q29uZmlndXJhdGlvbixEQz1lbXB0eS1yb290LERDPWxsbmwsREM9Z292P2NBQ2Vy
+dGlmaWNhdGU/YmFzZT9vYmplY3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5
+MGsGCCsGAQUFBzAChl9odHRwOi8vYWRwa2kwOC50aGUtbGFiLmxsbmwuZ292L0Nl
+cnRFbnJvbGwvQURQS0kwOC50aGUtbGFiLmxsbmwuZ292X0xMTkwtQUQtRW50ZXJw
+cmlzZS1DQTA4LmNydDALBgNVHQ8EBAMCBaAwPQYJKwYBBAGCNxUHBDAwLgYmKwYB
+BAGCNxUIhcbwY4aGo3CC9Z0zl/BBhND0cIEbgvDpaYG5gU4CAWUCAQAwEwYDVR0l
+BAwwCgYIKwYBBQUHAwEwGwYJKwYBBAGCNxUKBA4wDDAKBggrBgEFBQcDATANBgkq
+hkiG9w0BAQUFAAOCAQEAOj52N9q5ORYxxDFkKpfyEcVxhInI0tQJ+yQOY8Di0EuQ
+kjmFnE5W+47O9dXzdWvkW1w9e0xWwPY/xTTPQXQHy1oE/aNMVeJYbBShpiWZ7wyR
+WM3aAvCobdW33n3Gh98O2j3h77a+RHanIKwYlP2l+fgrMdAWppzbOq7ERHRjqW8d
+qmqhm1KxupnsL0QeTdyjCVrWwIu66Lbomc88okelim6vfZpAa4h39876fUPmkr/3
+pqEqo7hN7QEo090A2X89pLHeDQoRcPPiEt8jvKYEeRTnmIJejCcnowCggtWwl70v
+CurA53CpGJ+Tb25Juazgf77FJQMLE6gnNDWHlL1Fuw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFpDCCA4ygAwIBAgIGAWAazldDMA0GCSqGSIb3DQEBDQUAMIGSMQswCQYDVQQG
+EwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTESMBAGA1UEBxMJTGl2ZXJtb3JlMQ4w
+DAYDVQQKEwVMaXZJVDEvMC0GA1UECxMmTGF3cmVuY2UgTGl2ZXJtb3JlIE5hdGlv
+bmFsIExhYm9yYXRvcnkxGTAXBgNVBAMTEGVhbXMtcGYubGxubC5nb3YwHhcNMTcx
+MjAzMDUxNjU4WhcNMjAxMjAyMDUxNjU4WjCBkjELMAkGA1UEBhMCVVMxEzARBgNV
+BAgTCkNhbGlmb3JuaWExEjAQBgNVBAcTCUxpdmVybW9yZTEOMAwGA1UEChMFTGl2
+SVQxLzAtBgNVBAsTJkxhd3JlbmNlIExpdmVybW9yZSBOYXRpb25hbCBMYWJvcmF0
+b3J5MRkwFwYDVQQDExBlYW1zLXBmLmxsbmwuZ292MIICIjANBgkqhkiG9w0BAQEF
+AAOCAg8AMIICCgKCAgEAjGZZTzROIrLx6VoSnbYCuQkBGtA6DofEMBfYaMhqAdzO
+W/lBoPBsMvyELw6W6Hmklozz6XhwQ0PD5n2T8NK0X+BlheCiDOvxxqeizIKX/seT
+e7YfLiRZj/2RzOMxKRtkj4LKFTTYfn7rlDPEOeBwwWbLho3Bd8IriEdJiGI4GfR9
+jLDQ812Vsd0+hxpn1+C5YyytRAAVVEcOMCdQnTS26p20qh6Ej4C3UcS3uSMzFA/s
+Zm0lY1Db9pKSAHxd7KSLM8il5WziYlAEhRGojxDILU4LoxjCSRxviaFW581HPnBa
+0NZ3Ss5Qr+HDC8Yv6jc45v6IhWpZbPXa+QlCJdG3/HxM+iYiDOqafuD29zOJxWlA
+YsJ6nlmCijE2+rblBa5Um5vp8Dz5crrvfzW1L2WsG5V2fSNPAL3CCXbwvMqumg98
+576dKBgQ5PE4onMHX4VDq4SH7x+tRQgwur1bvCXIFm8Gk3Iow2JABsg1AlG8UTNr
+J6jto78xRCC0GUgZODuAX+Cq4DF/tmfnY1StqVTNwdHmdnBQC1B8rVuZYBQ2Zio5
+E6R8vytHTUuK6c5mn6muIWIGSFOg/x81XwD1w4+V6zK6mfmC6zLXlLfMyTk6VG4I
+7AI0ZgCnhWUWakDgHmQTBcg5MDrlpcXCqQZQb7SnlvCGRP01FFZFksUoamOaPhkC
+AwEAATANBgkqhkiG9w0BAQ0FAAOCAgEAKaAFeuCxmUJUNRe+0b0kTYqwIlOOkOga
+LknWPIWoRQNGE+UAgopuV5jXcUy85ByFQsw8otVxKe/AnzjdPBy5a6+ddOP4uO/Q
+KYLNSIQT5jtD/2pDxjX5Uz42UAmY88sx3n46gNvXOAQZsU5owOcUfd+kuUJzGsSi
+BEc8FfzVkr4qCqZY+acX6Bzeuzqxu6fV4OW9l3ku7WC0KQiBySSyZF4eKbWhFSi4
+FOInbpsOpAwRIfZB8g4G88ENTbgS++FCR5lBabrhwFxcE2s3AzU+8uswq0ivobWf
+TMT+CB65mt3mTUaPA1jP/IHpKftd/o804UIv6e+u/d+vCZAnJbKrDwJKYBjrA9gr
+bLWZL7Zsnt0Y5H80EicVXdMA2WDf1n3s1FvFpeRRGFGa+aMgKpLv0bdrT2cZt6DO
+TozyD6x93ViqdJCxNZZahb3mkDV7kL53xIJdjH+TQ2k5hV2jbaxtC5OhvqXlkcl4
+8/KGmXv8M4NkUTLQTHBuw3vBuWi4Y7YfkeN3uLOsriz9vbg6eC8pLS6x1trkLcNV
+U0kW2ZwNeUH2NuRkSSSjExELzqAgXjKwiEzEIbx5JTrJYaiezVKDXv0O48SE51X+
+DKdFK1Tm3iZ3CRICooiN+/knNtiCrPUhd8/tHdUVFPqt1SriL4ZZL/N/wjuUhaJF
+aIyCwYNA3R4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eams-pf.llnl.gov/sp/SLO.saml2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eams-pf.llnl.gov/sp/ACS.saml2" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">LLNL EAMS Hub SP</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Lawrence Livermore National Laboratory Enterprise Access Management System Hub Service Provider</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lawrence Livermore National Security, LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lawrence Livermore National Laboratory</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://llnl.gov</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Partner Gateway Support</md:GivenName>
+	<md:EmailAddress>pg-support@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>LLNL PartnerGateway Administrator</md:GivenName>
+	<md:EmailAddress>pg-support@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LLNL PartnerGateway Adminstrator</md:GivenName>
+	<md:EmailAddress>pg-support@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

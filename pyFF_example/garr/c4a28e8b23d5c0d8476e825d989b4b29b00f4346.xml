@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idptest.gla.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gla.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Glasgow (test idp)</mdui:DisplayName>
+		<mdui:Logo height="60" width="80">https://milngavie.cent.gla.ac.uk/UoG_colour_80x60.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://milngavie.cent.gla.ac.uk/UoG_colour_16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>130.209.0.0/16</mdui:IPHint>
+		<mdui:DomainHint>gla.ac.uk</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:55.8719,-4.2875</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIJAMpwaiffXLvnMA0GCSqGSIb3DQEBBQUAMBkxFzAVBgNV
+BAMTDmlkcDIuZ2xhLmFjLnVrMB4XDTEzMDczMTA5NTIxM1oXDTIzMDcyOTA5NTIx
+M1owGTEXMBUGA1UEAxMOaWRwMi5nbGEuYWMudWswggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQD0RzBDqhDBJzPa0J3/n4WBPOpdr2/czEvRbJnQyNKoM2zz
+xNwB2Rig51I5rLNE+7m6vd19UyJg39w88POF7rTqiXCtaVEjOdkpDZEXxFyUXqau
+7qGFKctcCuNYzkQ9GzmMpOXHV6Dlx3Kzy7JlnnSHSaj05g6PfUjXUblYcbvRZsdB
+bgPQ9arnSBt0hvzBockIzxW6ZmOXkt0EZJxqAO94m2Uz1ii+NrB3IO1+HurVA087
+vXzsHNbmscT25LPsexVXf8k9AwgQOVN3Qv2mZHE/ZHl17bIFjC6LR73PrwmXJ3Xq
+pq88E5WrdvfTOvq8zfDnXMrMAre0AWqdBE90U5KHAgMBAAGjezB5MAkGA1UdEwQC
+MAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRl
+MB0GA1UdDgQWBBSARlmmJllZl4mMWFsE5OuyOq0NNzAfBgNVHSMEGDAWgBSARlmm
+JllZl4mMWFsE5OuyOq0NNzANBgkqhkiG9w0BAQUFAAOCAQEAq4QZ28h4xbnGneQA
+3o5uqmiYIPI5Zl6duDh6Ybv6EuugRAnhyOvMBi/Ws2ZUSUCysUbBNvnbVOFhnJPI
+GnAlT0B5a0lxUo+P2eCKWBlz7Mgjr/pRC9zaBPYIuT8z4K1OFUgxO3priwo7UdfP
+Db4rm84ukg7HfBl42JhgnrJWz7R9HBEhZlZUK0v6UfORdlvuUxSqcyOgg6/LKMHz
+LRpUlQOq3+XNwKzN7/SBVWwGhIplHLSNiq1hxw/gUIAd9egQXbbqZJwVO6klqLc8
+Y+WN9I8MHc2fP7w2koKhHc5bM0yKnmIQ9qlZfoliAWKLaCaoDkFJ0mQiYjtieiXf
+qP4p1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.gla.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.gla.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp2.gla.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp2.gla.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp2.gla.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp2.gla.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gla.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIJAMpwaiffXLvnMA0GCSqGSIb3DQEBBQUAMBkxFzAVBgNV
+BAMTDmlkcDIuZ2xhLmFjLnVrMB4XDTEzMDczMTA5NTIxM1oXDTIzMDcyOTA5NTIx
+M1owGTEXMBUGA1UEAxMOaWRwMi5nbGEuYWMudWswggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQD0RzBDqhDBJzPa0J3/n4WBPOpdr2/czEvRbJnQyNKoM2zz
+xNwB2Rig51I5rLNE+7m6vd19UyJg39w88POF7rTqiXCtaVEjOdkpDZEXxFyUXqau
+7qGFKctcCuNYzkQ9GzmMpOXHV6Dlx3Kzy7JlnnSHSaj05g6PfUjXUblYcbvRZsdB
+bgPQ9arnSBt0hvzBockIzxW6ZmOXkt0EZJxqAO94m2Uz1ii+NrB3IO1+HurVA087
+vXzsHNbmscT25LPsexVXf8k9AwgQOVN3Qv2mZHE/ZHl17bIFjC6LR73PrwmXJ3Xq
+pq88E5WrdvfTOvq8zfDnXMrMAre0AWqdBE90U5KHAgMBAAGjezB5MAkGA1UdEwQC
+MAAwLAYJYIZIAYb4QgENBB8WHU9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRl
+MB0GA1UdDgQWBBSARlmmJllZl4mMWFsE5OuyOq0NNzAfBgNVHSMEGDAWgBSARlmm
+JllZl4mMWFsE5OuyOq0NNzANBgkqhkiG9w0BAQUFAAOCAQEAq4QZ28h4xbnGneQA
+3o5uqmiYIPI5Zl6duDh6Ybv6EuugRAnhyOvMBi/Ws2ZUSUCysUbBNvnbVOFhnJPI
+GnAlT0B5a0lxUo+P2eCKWBlz7Mgjr/pRC9zaBPYIuT8z4K1OFUgxO3priwo7UdfP
+Db4rm84ukg7HfBl42JhgnrJWz7R9HBEhZlZUK0v6UfORdlvuUxSqcyOgg6/LKMHz
+LRpUlQOq3+XNwKzN7/SBVWwGhIplHLSNiq1hxw/gUIAd9egQXbbqZJwVO6klqLc8
+Y+WN9I8MHc2fP7w2koKhHc5bM0yKnmIQ9qlZfoliAWKLaCaoDkFJ0mQiYjtieiXf
+qP4p1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.gla.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.gla.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Glasgow</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Glasgow (test idp)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.gla.ac.uk/services/it/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>User Support</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@it.gla.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Anderson</md:SurName>
+	<md:EmailAddress>mailto:d.anderson@compserv.gla.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

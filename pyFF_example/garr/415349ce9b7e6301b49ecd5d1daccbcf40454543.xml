@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://webauth.cuc.claremont.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://services.claremont.edu/it/trouble-logging-in-to-cas/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cuc.claremont.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The Claremont Colleges Services</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://services.claremont.edu/it/appropriate-use-campus-and-network-resources/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="170" width="600" xml:lang="en">https://services.claremont.edu/wp-content/themes/cuc/images/tccs-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTzCCAjegAwIBAgIUBYpi8tw1FztjCeo5DAdq3fOliSIwDQYJKoZIhvcNAQEF
+BQAwJDEiMCAGA1UEAxMZd2ViYXV0aC5jdWMuY2xhcmVtb250LmVkdTAeFw0xNTA1
+MjkyMTE4MzhaFw0zNTA1MjkyMTE4MzhaMCQxIjAgBgNVBAMTGXdlYmF1dGguY3Vj
+LmNsYXJlbW9udC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCO
+u+BaCqumwipwNUAxXKi0t06NgeQUY6CMOgC91FJ/qNzfmy2XTMEmc70E/0lfpT85
+zbmKazDCJkGOSEFXUUIuyDE6B2nYU0XVFQ/xC0L7HDpTfA9a8Fcs5n41pRITx4R5
+RAIbXrrXOX2lWz9tJ23Bmbr0GcVlnIZm2S/vwP+E+yahLAlUlGvBhkVJKF5eKzrj
+WzAnleQMY3T9RKgIIm5qE4nVbGExtbepMyfVSUGFe6WH6+jqiW4gt8kctrMTMDQ3
+jzQ5m9ld6XtaBoU1nb7pO4lQBgYfvG/+34TyYTPq7gS+mdIpi/qSXXEvaafzvKRd
+vBfH1xFAkUjD5Kk0nU6rAgMBAAGjeTB3MFYGA1UdEQRPME2CGXdlYmF1dGguY3Vj
+LmNsYXJlbW9udC5lZHWGMGh0dHBzOi8vd2ViYXV0aC5jdWMuY2xhcmVtb250LmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQURCuaHV/ywElBDXuYOhcTH+JOeRQw
+DQYJKoZIhvcNAQEFBQADggEBAADo6WHQqY8kJKEn9Cq3x98ppof/GaV6YEGXWD6n
+5QXfQhD8o2dug45eCr2VFcEhCCsZJpjSTyLnID6uvNVKd1GcT5MdJbeuSzVSLUhZ
+DZKxubBGkqCTZciUw8gLOelgvRmx0UphKr747V/ezYrNni1lk0BOEazbKQVot3lU
+oH8hZsU80eGA/lEAG/kLd8d1pVQ9St6J3AWs9S8N21ysZeg4MRR00c3jO7oqR9g3
+FQnxwPyAw8czKusJBjJa3W6WmPmvsEmBquRAR5jcAouzURv6fyuy4MH1FDWnQ1qi
+s8PbdLdXwg5So72Vd5WrQnxKmacq1E0bwJ+TSG4FpRTcU1U=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://webauth.cuc.claremont.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://webauth.cuc.claremont.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The Claremont Colleges, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The Claremont Colleges, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://services.claremont.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jeremy Whaley</md:GivenName>
+	<md:EmailAddress>jeremy.whaley@claremont.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeremy Whaley</md:GivenName>
+	<md:EmailAddress>jeremy.whaley@claremont.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jeremy Whaley</md:GivenName>
+	<md:EmailAddress>jeremy.whaley@claremont.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>TCCS Help Desk</md:GivenName>
+	<md:EmailAddress>applications.helpdesk@services.claremont.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://nerckwshibba.nerc.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-05-14T15:50:25Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">NERC</mdui:DisplayName>
+		<mdui:Logo height="41" width="200">https://nerckwshibba.nerc.ac.uk/nerc-long-logo-200.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://nerckwshibba.nerc.ac.uk/favicon.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>bas.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>bgs.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>bodc.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>ceh.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>faam.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>nerc.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>nigl.nerc.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>noc.ac.uk</mdui:DomainHint>
+		<mdui:DomainHint>nerc.ukri.org</mdui:DomainHint>
+		</mdui:DiscoHints>
+		<shibmd:Scope regexp="false">nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">basnewpolarresearchvessel.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">birdisland.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cambridge.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">ernestshackleton.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">halley.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">jamesclarkross.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">rothera.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">southgeorgia.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">belfast.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cardiff.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">eskdalemuir.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">exhibitionroad.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">hartland.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">herstmonceuxnsgf.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworth.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworthmurchisonhouse.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworthwallingford.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">loanhead.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lyellcentre.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">murchisonhouse.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bangor.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">edinburgh.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lancaster.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lancasterwallingford.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingfordlancaster.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">liverpool.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">nationaloceanographycentre.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">southampton.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cambridge.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cranfieldfaam.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworth.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">polarishouse.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">seamammalresearchunit.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.so.idp.nerc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQDCCAyigAwIBAgIJAPRnCt9s8k0UMA0GCSqGSIb3DQEBBQUAMIGgMQswCQYD
+VQQGEwJHQjETMBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UEBwwKTm90dGluZ2hh
+bTENMAsGA1UECgwETkVSQzEMMAoGA1UECwwDSVNUMSAwHgYDVQQDDBduZXJja3dz
+aGliYmEubmVyYy5hYy51azEoMCYGCSqGSIb3DQEJARYZaXN0X2lkX3N1cHBvcnRA
+bmVyYy5hYy51azAeFw0xMzAyMTMxMTI4NTJaFw0yMzAyMTExMTI4NTJaMIGgMQsw
+CQYDVQQGEwJHQjETMBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UEBwwKTm90dGlu
+Z2hhbTENMAsGA1UECgwETkVSQzEMMAoGA1UECwwDSVNUMSAwHgYDVQQDDBduZXJj
+a3dzaGliYmEubmVyYy5hYy51azEoMCYGCSqGSIb3DQEJARYZaXN0X2lkX3N1cHBv
+cnRAbmVyYy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALBM
+zJ+uj+q3UWvsNeEmNq3/OYAxNMCxLaZWZbDtt2gQDBpB2GJBZHIl4GEMTda6w2j6
+34lhz0mZsOXSpE18Tdvp177L3k/h9b0sH2k43I3gq4+mFl6wxPQ8F/wR08dEaz6k
+wMfv3ntfF1Y7bLedyw5M94qRUv7rcI/9iFOfyhnpnwCIo2usiIrjkKFUc/gRvkXH
+A9PCkz0+PyPi5HrmrkMaRjxkx25PsKuxbxbplM0Z9wxsCpO6KM/kwxLroYLQh0oJ
+HngCvCuNmVPH4YjCQXh5KVNRx/Wc/F0C9qvFd4aZzgC9Ms8Wmj2FIfTABtyr0u9D
+Zhm3G9422dhg6EgZg+sCAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0E
+HxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFCGcQ2SN
+NR/KKBotn3XrDl2OH91cMB8GA1UdIwQYMBaAFCGcQ2SNNR/KKBotn3XrDl2OH91c
+MA0GCSqGSIb3DQEBBQUAA4IBAQArZkQSlvSTa9oSr1XJXdDrW3Inf0YlA6D6w9ZC
+HY9vG4FylgXNq/VRKzugFa/esvTNN0xaEciidPqvpaF/JyxCNWFui5X+GWGDt7zi
+vEP34+fzlmhMZu3Jjhu2O/YS9BOQWqCwD8J/KftAbPeSbwB1dWUOnwnlC8X2BfOA
+UTWhDsoVipIEPLnhvSVzDJvSzygzN2BnHMFyaaqHAthaLoyn7BV/SFtk7VaFK7OQ
+MNCj7q1pYJzzTNe0WDOQWGm2/4DpepjWguQSsSuxWieHjJGqkrEsM9HHjd+UtXed
+bvci5wxhP0WyevQbQynrHliiIuFQdbG3GK+/VGF4S2r5wA3I
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://nerckwshibba.nerc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nerckwshibba.nerc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://nerckwshibba.nerc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nerckwshibba.nerc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://nerckwshibba.nerc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://nerckwshibba.nerc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">basnewpolarresearchvessel.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">birdisland.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cambridge.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">ernestshackleton.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">halley.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">jamesclarkross.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">rothera.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">southgeorgia.bas.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">belfast.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cardiff.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">eskdalemuir.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">exhibitionroad.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">hartland.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">herstmonceuxnsgf.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworth.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworthmurchisonhouse.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworthwallingford.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">loanhead.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lyellcentre.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">murchisonhouse.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.bgs.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">bangor.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">edinburgh.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lancaster.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">lancasterwallingford.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingfordlancaster.ceh.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">liverpool.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">nationaloceanographycentre.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">southampton.noc.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cambridge.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">cranfieldfaam.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">keyworth.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">polarishouse.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">seamammalresearchunit.so.idp.nerc.ac.uk</shibmd:Scope>
+		<shibmd:Scope regexp="false">wallingford.so.idp.nerc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQDCCAyigAwIBAgIJAPRnCt9s8k0UMA0GCSqGSIb3DQEBBQUAMIGgMQswCQYD
+VQQGEwJHQjETMBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UEBwwKTm90dGluZ2hh
+bTENMAsGA1UECgwETkVSQzEMMAoGA1UECwwDSVNUMSAwHgYDVQQDDBduZXJja3dz
+aGliYmEubmVyYy5hYy51azEoMCYGCSqGSIb3DQEJARYZaXN0X2lkX3N1cHBvcnRA
+bmVyYy5hYy51azAeFw0xMzAyMTMxMTI4NTJaFw0yMzAyMTExMTI4NTJaMIGgMQsw
+CQYDVQQGEwJHQjETMBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UEBwwKTm90dGlu
+Z2hhbTENMAsGA1UECgwETkVSQzEMMAoGA1UECwwDSVNUMSAwHgYDVQQDDBduZXJj
+a3dzaGliYmEubmVyYy5hYy51azEoMCYGCSqGSIb3DQEJARYZaXN0X2lkX3N1cHBv
+cnRAbmVyYy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALBM
+zJ+uj+q3UWvsNeEmNq3/OYAxNMCxLaZWZbDtt2gQDBpB2GJBZHIl4GEMTda6w2j6
+34lhz0mZsOXSpE18Tdvp177L3k/h9b0sH2k43I3gq4+mFl6wxPQ8F/wR08dEaz6k
+wMfv3ntfF1Y7bLedyw5M94qRUv7rcI/9iFOfyhnpnwCIo2usiIrjkKFUc/gRvkXH
+A9PCkz0+PyPi5HrmrkMaRjxkx25PsKuxbxbplM0Z9wxsCpO6KM/kwxLroYLQh0oJ
+HngCvCuNmVPH4YjCQXh5KVNRx/Wc/F0C9qvFd4aZzgC9Ms8Wmj2FIfTABtyr0u9D
+Zhm3G9422dhg6EgZg+sCAwEAAaN7MHkwCQYDVR0TBAIwADAsBglghkgBhvhCAQ0E
+HxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFCGcQ2SN
+NR/KKBotn3XrDl2OH91cMB8GA1UdIwQYMBaAFCGcQ2SNNR/KKBotn3XrDl2OH91c
+MA0GCSqGSIb3DQEBBQUAA4IBAQArZkQSlvSTa9oSr1XJXdDrW3Inf0YlA6D6w9ZC
+HY9vG4FylgXNq/VRKzugFa/esvTNN0xaEciidPqvpaF/JyxCNWFui5X+GWGDt7zi
+vEP34+fzlmhMZu3Jjhu2O/YS9BOQWqCwD8J/KftAbPeSbwB1dWUOnwnlC8X2BfOA
+UTWhDsoVipIEPLnhvSVzDJvSzygzN2BnHMFyaaqHAthaLoyn7BV/SFtk7VaFK7OQ
+MNCj7q1pYJzzTNe0WDOQWGm2/4DpepjWguQSsSuxWieHjJGqkrEsM9HHjd+UtXed
+bvci5wxhP0WyevQbQynrHliiIuFQdbG3GK+/VGF4S2r5wA3I
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://nerckwshibba.nerc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nerckwshibba.nerc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Natural Environment Research Council</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">NERC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nerc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>RTS Service Desk</md:GivenName>
+	<md:EmailAddress>mailto:rtsservicedesk@nerc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IST ID Support</md:GivenName>
+	<md:EmailAddress>mailto:IST_ID_Support@nerc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>NERC Cyber Incident Response Team</md:GivenName>
+	<md:EmailAddress>mailto:cirt@nerc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

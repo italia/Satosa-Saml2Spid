@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://med-idp.arn.dz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.arn.dz/" registrationInstant="2016-07-22T15:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.arn.dz/documentation/mrps-20161117.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">arn.dz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">DZ e-Science MEDECINE IDP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for MEDECINE.</mdui:Description>
+		<mdui:Logo height="100" width="64" xml:lang="en">https://idp.grid.arn.dz/img/arn.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUPkUJcuy43LbzjZoX+zCLG/4yvAIwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU2WhcN
+MzcwNjEzMDg1MDU2WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJa7BOjzuFp47TIdX2BgoiDa5pkVVBtH
+UceeLvP/6CpZJXz+iXVef+N2KgkZ+AfAwqSswgOEFc9AV3ljFV/SncslfPiRlzMd
+eg4EWF+X6/HdUodxs+VaQ8mIzvBFauA4EPFGL47kCVLKDx0xXMud3k3cvbHgZ4Te
+UJ+YgKF/GfwdzA1FDXouuoEp/huGDCm0hJ7AGMAq7rrZPA7rYYFaynOzDXeKWeEP
+t624Htg2Xe5jnVKNLvz5+58hFlwq/T1AaropIXv8/0/5iD6LZdX+gJcZDyt4QTSn
+tkyKTgAzxgXSq9OpC8o+bpa/SUnDbjEgTno12nyeP3nYCRYYHWUcq8MCAwEAAaNj
+MGEwHQYDVR0OBBYEFIYSMwW782Zt7fWkoaMq8zjisRLKMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCJTCrKzKrvNQygvLIJYzZhBNkUWGbge0m7
+M7vg4Qb4zP+qZoFWh+4VxpSUzMnurhlwFCADqib/8PyhggCfzNFst5Hl99YnsaaO
+HTaobxJjCv+ni/CizZRlcXFAKw/QfpDNIbtKpodhBtjsYBSNoXqs1dyUOGOMcEap
+Mti47wbhXErtdLb71eT2YeT2oDKNvt8GMh+W3AzzsGkNLEvOgDGrBCOwYMa7uAe7
+GCtKmDZCPdeSkoUdplXnJdgll2WCGbrL7aBUdpRYpbckgv29y3ye/8ZJ7/Ypnq9/
+JCEYb7PqvmtoRYKu5L1ZFqnsuzcmxbW7TJLZCME219jRusyb9EVb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUaJKjHFjCUmx3C5cydCcevEnxqqkwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU0WhcN
+MzcwNjEzMDg1MDU0WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALs+Tersj+iYyhDpKfTT07zcFlCnOwEe
+PpZCAnNgsJxrfpY3YNB1u9cQm9O2nRaMqBLMhln9e1g97Kr+zqEXxOFFr8bFvF62
+D+e77BFVSs2tlTOg2bFa02Q3h9RZRKmIn0u2OLw44ixrPh9nN0TOBt+zd82YDuhb
+SFMQaESz5bTfuTry1VWgD5bVM4D3bs6QzcQA5b6zQC3ju1J5++u8B6a12fzu8E0I
+wqy/D11GE0Nre0jOsil2r0IbIdb18Xw0W5P2QSr3u74JAzJffFyxlaKCZPXW3tOj
+XgtnGkQ1oOB1dFcI/luKvZtfxEQREdI2eZWp+cvPNZZXRMOhQcO83BcCAwEAAaNj
+MGEwHQYDVR0OBBYEFBlA+HYYBOtXscZKK8TJ0Y3iz3RPMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBBV1kdVLkvL5cqqgYZWmMJxC7UFkCDLo3q
+GanDN3oFUZSs27kkqcw3bT7B2zaGEnmjnR5SldPIMlyvcsxbg4rekxy8ZyapdsZF
+2PYuBzgEzE2zutn99pXyf1NZAZSjUgZ4bL9+MEvLZjq78L+TscymujVdE6IZRccB
+Tnnc1sVhHFQRJCZtFTUsGDtCoJ2784BRuhfnsFC1vzBn0iVvW0J1x5A+RgdJgdfj
+IkJ2wlJVlQvRhpDN0DbkN3DJAB62XNGF/tQxXSnEthWyNZtmBhFyzaYXRU8PeK/X
+2s7NfOyMzw4HPUgyD378yU85O1kxkC76BWfwyxD7okTj/8EIox6s
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUBKBzIfeVA0eoKuAYU/GgzUU4Js4wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU1WhcN
+MzcwNjEzMDg1MDU1WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAI2wbBIc0ln6dx+VfERJHGG8fPD2dShU
+wDza2WcalX0mQwyzIZICjarQ6W2JYLrS+JPdpKtiJM6vB0mqy5XU572a5JLiLenb
+BM6tEnjA8JMZttv1IUvJ53kc10btuRNfADrUYBb5jKIqdOMrKNfKyvu2T60JSUGB
+NKxn55XQGEe6M0XXCvfAHW8Jfv/HonmtQeMJ5ul5OLcYJJNh8KCe1VoXr+BoWu9S
+2gpx1vxpcS6NeaeGJgFTGyM4FQT+79kw+fyFDNIBEd4htQgx6CgTsViNtCFevULq
+71fiqVbwFc+gBDlQM7DYCdFMcDxJlglPS6peC0Lj07u0BP8hcGZFEmECAwEAAaNj
+MGEwHQYDVR0OBBYEFM1IM8X7CJfnIsqFRPbZ1nZBzgtVMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBo3qs90iYpJqj1emFYRmw0ll5h8T+gFzIS
+nBOf/jD1VC8Ep+uB46H9a627RQNeTsy0qY6M44E2daCFuva2F66t8MS6Ornc30DX
+ew7YZvw0p3vITSXn+gmJlon2IpwrwXw9u/2ny3tUofsAKp34P+GZ3MPv5/O65gT0
+qmxIA5x9CWc5WJQhoICmlfm1WMw/9enWHCldHme3TWrbb25IwEMS/JW1vNzaBTc+
+Yrnt4KAhVoRypWQgOB064MOlc2t/6NKMH086Njhq/uTAgRVke1ReffVInrBOtl0g
+US4eSdCzGDK9II+A7BmE9ii92ttllEBcqY6leCD8c1gcJtYDi74B
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://med-idp.arn.dz/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://med-idp.arn.dz/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://med-idp.arn.dz/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://med-idp.arn.dz/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://med-idp.arn.dz/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://med-idp.arn.dz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://med-idp.arn.dz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://med-idp.arn.dz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://med-idp.arn.dz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">arn.dz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUPkUJcuy43LbzjZoX+zCLG/4yvAIwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU2WhcN
+MzcwNjEzMDg1MDU2WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJa7BOjzuFp47TIdX2BgoiDa5pkVVBtH
+UceeLvP/6CpZJXz+iXVef+N2KgkZ+AfAwqSswgOEFc9AV3ljFV/SncslfPiRlzMd
+eg4EWF+X6/HdUodxs+VaQ8mIzvBFauA4EPFGL47kCVLKDx0xXMud3k3cvbHgZ4Te
+UJ+YgKF/GfwdzA1FDXouuoEp/huGDCm0hJ7AGMAq7rrZPA7rYYFaynOzDXeKWeEP
+t624Htg2Xe5jnVKNLvz5+58hFlwq/T1AaropIXv8/0/5iD6LZdX+gJcZDyt4QTSn
+tkyKTgAzxgXSq9OpC8o+bpa/SUnDbjEgTno12nyeP3nYCRYYHWUcq8MCAwEAAaNj
+MGEwHQYDVR0OBBYEFIYSMwW782Zt7fWkoaMq8zjisRLKMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCJTCrKzKrvNQygvLIJYzZhBNkUWGbge0m7
+M7vg4Qb4zP+qZoFWh+4VxpSUzMnurhlwFCADqib/8PyhggCfzNFst5Hl99YnsaaO
+HTaobxJjCv+ni/CizZRlcXFAKw/QfpDNIbtKpodhBtjsYBSNoXqs1dyUOGOMcEap
+Mti47wbhXErtdLb71eT2YeT2oDKNvt8GMh+W3AzzsGkNLEvOgDGrBCOwYMa7uAe7
+GCtKmDZCPdeSkoUdplXnJdgll2WCGbrL7aBUdpRYpbckgv29y3ye/8ZJ7/Ypnq9/
+JCEYb7PqvmtoRYKu5L1ZFqnsuzcmxbW7TJLZCME219jRusyb9EVb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUaJKjHFjCUmx3C5cydCcevEnxqqkwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU0WhcN
+MzcwNjEzMDg1MDU0WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBALs+Tersj+iYyhDpKfTT07zcFlCnOwEe
+PpZCAnNgsJxrfpY3YNB1u9cQm9O2nRaMqBLMhln9e1g97Kr+zqEXxOFFr8bFvF62
+D+e77BFVSs2tlTOg2bFa02Q3h9RZRKmIn0u2OLw44ixrPh9nN0TOBt+zd82YDuhb
+SFMQaESz5bTfuTry1VWgD5bVM4D3bs6QzcQA5b6zQC3ju1J5++u8B6a12fzu8E0I
+wqy/D11GE0Nre0jOsil2r0IbIdb18Xw0W5P2QSr3u74JAzJffFyxlaKCZPXW3tOj
+XgtnGkQ1oOB1dFcI/luKvZtfxEQREdI2eZWp+cvPNZZXRMOhQcO83BcCAwEAAaNj
+MGEwHQYDVR0OBBYEFBlA+HYYBOtXscZKK8TJ0Y3iz3RPMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBBV1kdVLkvL5cqqgYZWmMJxC7UFkCDLo3q
+GanDN3oFUZSs27kkqcw3bT7B2zaGEnmjnR5SldPIMlyvcsxbg4rekxy8ZyapdsZF
+2PYuBzgEzE2zutn99pXyf1NZAZSjUgZ4bL9+MEvLZjq78L+TscymujVdE6IZRccB
+Tnnc1sVhHFQRJCZtFTUsGDtCoJ2784BRuhfnsFC1vzBn0iVvW0J1x5A+RgdJgdfj
+IkJ2wlJVlQvRhpDN0DbkN3DJAB62XNGF/tQxXSnEthWyNZtmBhFyzaYXRU8PeK/X
+2s7NfOyMzw4HPUgyD378yU85O1kxkC76BWfwyxD7okTj/8EIox6s
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUBKBzIfeVA0eoKuAYU/GgzUU4Js4wDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwObWVkLWlkcC5hcm4uZHowHhcNMTcwNjEzMDg1MDU1WhcN
+MzcwNjEzMDg1MDU1WjAZMRcwFQYDVQQDDA5tZWQtaWRwLmFybi5kejCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAI2wbBIc0ln6dx+VfERJHGG8fPD2dShU
+wDza2WcalX0mQwyzIZICjarQ6W2JYLrS+JPdpKtiJM6vB0mqy5XU572a5JLiLenb
+BM6tEnjA8JMZttv1IUvJ53kc10btuRNfADrUYBb5jKIqdOMrKNfKyvu2T60JSUGB
+NKxn55XQGEe6M0XXCvfAHW8Jfv/HonmtQeMJ5ul5OLcYJJNh8KCe1VoXr+BoWu9S
+2gpx1vxpcS6NeaeGJgFTGyM4FQT+79kw+fyFDNIBEd4htQgx6CgTsViNtCFevULq
+71fiqVbwFc+gBDlQM7DYCdFMcDxJlglPS6peC0Lj07u0BP8hcGZFEmECAwEAAaNj
+MGEwHQYDVR0OBBYEFM1IM8X7CJfnIsqFRPbZ1nZBzgtVMEAGA1UdEQQ5MDeCDm1l
+ZC1pZHAuYXJuLmR6hiVodHRwczovL21lZC1pZHAuYXJuLmR6L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBo3qs90iYpJqj1emFYRmw0ll5h8T+gFzIS
+nBOf/jD1VC8Ep+uB46H9a627RQNeTsy0qY6M44E2daCFuva2F66t8MS6Ornc30DX
+ew7YZvw0p3vITSXn+gmJlon2IpwrwXw9u/2ny3tUofsAKp34P+GZ3MPv5/O65gT0
+qmxIA5x9CWc5WJQhoICmlfm1WMw/9enWHCldHme3TWrbb25IwEMS/JW1vNzaBTc+
+Yrnt4KAhVoRypWQgOB064MOlc2t/6NKMH086Njhq/uTAgRVke1ReffVInrBOtl0g
+US4eSdCzGDK9II+A7BmE9ii92ttllEBcqY6leCD8c1gcJtYDi74B
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://med-idp.arn.dz/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en-US">DZ e-Science MEDECINE IDP</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en-US">DZ e-Science MEDECINE IDP</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en-US">http://www.arn.dz</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>opIDPTeam</md:GivenName>
+	<md:SurName>OpIDPTeam</md:SurName>
+	<md:EmailAddress>mailto:opidp@arn.dz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ARNaai-Security</md:GivenName>
+	<md:EmailAddress>mailto:abusaai@arn.dz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

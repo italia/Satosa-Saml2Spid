@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ism.sso.litnet.lt/auth/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://fedi.litnet.lt" registrationInstant="2017-05-04T10:41:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://fedi.litnet.lt/en/information/policy</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="lt">https://fedi.litnet.lt/lt/informacija/tvarka</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ism.lt</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ISM University of Management and Economics</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="lt">ISM Vadybos ir ekonomikos universitetas</mdui:DisplayName>
+		<mdui:Description xml:lang="en">ISM SSO</mdui:Description>
+		<mdui:Description xml:lang="lt">ISM vieningas prisijungimas</mdui:Description>
+		<mdui:Keywords xml:lang="en">Vilnius ism management economics university</mdui:Keywords>
+		<mdui:Keywords xml:lang="lt">Vilnius ism vadyba ekonomika universitetas</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.ism.lt/en</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="lt">http://www.ism.lt</mdui:InformationURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://ism.sso.litnet.lt/auth/ism_logo-150x150.jpg</mdui:Logo>
+		<mdui:Logo height="150" width="150" xml:lang="lt">https://ism.sso.litnet.lt/auth/ism_logo-150x150.jpg</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:54.675140,25.286099</mdui:GeolocationHint>
+		<mdui:IPHint>193.219.90.128/26</mdui:IPHint>
+		<mdui:DomainHint>ism.lt</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg4CCQDqSpfP0+yfZjANBgkqhkiG9w0BAQsFADBVMRowGAYDVQQDDBFp
+c20uc3NvLmxpdG5ldC5sdDEMMAoGA1UECgwDaXNtMQswCQYDVQQLDAJJVDELMAkG
+A1UEBhMCTFQxDzANBgNVBAcMBkthdW5hczAeFw0xNjA4MDMxMDU5MjRaFw0yNjA4
+MDMxMDU5MjRaMFUxGjAYBgNVBAMMEWlzbS5zc28ubGl0bmV0Lmx0MQwwCgYDVQQK
+DANpc20xCzAJBgNVBAsMAklUMQswCQYDVQQGEwJMVDEPMA0GA1UEBwwGS2F1bmFz
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1iAuKrzvXB9tmmcE8N1i
+heo7mhkLkJEnrYYRPZvM5Gyuv76ZMosl8MViQP8zuZdTieF9rjqr+F5IXMJtOwI4
+s6jYFCC0SnPkbccjlunqisKsv3G0fy41JJI7qvDMzr6PFOmmqoEZCSOVsNFHH3c/
+EcenNvpOGa9lSqOaMksLPzqLDRoYZd/vCJyWiym8YmvXMH7nERvLs1qxKrUtDYB7
+WRuGf8Ber7Jg2FAvqVZuON/lsDrTcCAQX7ytc3PVb/87vYWyL0syOPoFxJAeZ4PX
+gwjwoxbJNl+Ylw2iGrT572BOHbQMdimeMNSct66cb60qblmWvWkXOXJgtjgE+FY2
+5QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBmtIkCS60Ji3Gs6UeJ+rh5kccpyt9Z
+c4Sl37LMJZ6Bvwfhi7A53+ldcJbtHHYCgH9XeDfW9j2rl2PY62OkSwJt/LEuYolj
+wfrnIPKsAdzujL8eO15jVHg1j1BswjkkyDnjWVD87naa0ixRiiRx+rHFS2GO1RTl
+h6xN1SXE+eL3T0stZ3bG+FebGWbNV9JFf1z12y+ar18Sds2s1XUqSqGk1yrqExNW
++qvrTX7vR9dB5BWo8hApwHN6lqF1EbqK4wTnIT/y5Oay6Qtgn8QygQXUh5mfvEIY
+I3pTeuU6JlVFTBr4i2UO+pORkMc5gdVdlqsLrm72eBIJRba6e2a5cHtb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg4CCQDqSpfP0+yfZjANBgkqhkiG9w0BAQsFADBVMRowGAYDVQQDDBFp
+c20uc3NvLmxpdG5ldC5sdDEMMAoGA1UECgwDaXNtMQswCQYDVQQLDAJJVDELMAkG
+A1UEBhMCTFQxDzANBgNVBAcMBkthdW5hczAeFw0xNjA4MDMxMDU5MjRaFw0yNjA4
+MDMxMDU5MjRaMFUxGjAYBgNVBAMMEWlzbS5zc28ubGl0bmV0Lmx0MQwwCgYDVQQK
+DANpc20xCzAJBgNVBAsMAklUMQswCQYDVQQGEwJMVDEPMA0GA1UEBwwGS2F1bmFz
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1iAuKrzvXB9tmmcE8N1i
+heo7mhkLkJEnrYYRPZvM5Gyuv76ZMosl8MViQP8zuZdTieF9rjqr+F5IXMJtOwI4
+s6jYFCC0SnPkbccjlunqisKsv3G0fy41JJI7qvDMzr6PFOmmqoEZCSOVsNFHH3c/
+EcenNvpOGa9lSqOaMksLPzqLDRoYZd/vCJyWiym8YmvXMH7nERvLs1qxKrUtDYB7
+WRuGf8Ber7Jg2FAvqVZuON/lsDrTcCAQX7ytc3PVb/87vYWyL0syOPoFxJAeZ4PX
+gwjwoxbJNl+Ylw2iGrT572BOHbQMdimeMNSct66cb60qblmWvWkXOXJgtjgE+FY2
+5QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBmtIkCS60Ji3Gs6UeJ+rh5kccpyt9Z
+c4Sl37LMJZ6Bvwfhi7A53+ldcJbtHHYCgH9XeDfW9j2rl2PY62OkSwJt/LEuYolj
+wfrnIPKsAdzujL8eO15jVHg1j1BswjkkyDnjWVD87naa0ixRiiRx+rHFS2GO1RTl
+h6xN1SXE+eL3T0stZ3bG+FebGWbNV9JFf1z12y+ar18Sds2s1XUqSqGk1yrqExNW
++qvrTX7vR9dB5BWo8hApwHN6lqF1EbqK4wTnIT/y5Oay6Qtgn8QygQXUh5mfvEIY
+I3pTeuU6JlVFTBr4i2UO+pORkMc5gdVdlqsLrm72eBIJRba6e2a5cHtb
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ism.sso.litnet.lt/auth/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ism.sso.litnet.lt/auth/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="lt">ISM Vadybos ir ekonomikos universitetas</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">ISM University of Management and Economics</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="lt">ISM Vadybos ir ekonomikos universitetas</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">ISM University of Management and Economics</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="lt">http://www.ism.lt</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ism.lt/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ISM SSO Administrator</md:GivenName>
+	<md:EmailAddress>mailto:hd.it@ism.lt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Litnet</md:GivenName>
+	<md:SurName>CERT</md:SurName>
+	<md:EmailAddress>mailto:cert@litnet.lt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

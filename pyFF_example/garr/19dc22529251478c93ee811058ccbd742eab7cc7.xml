@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://grouper.idem.garr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2015-04-21T12:30:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/idem-metadata-registration-practice-statement</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">garr.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUYTvnXW3b3991IXgqQUMkP+nhKqkwDQYJKoZIhvcNAQEF
+BQAwHzEdMBsGA1UEAwwUZ3JvdXBlci5pZGVtLmdhcnIuaXQwHhcNMTUwMzMwMjIx
+MzAwWhcNMzUwMzMwMjIxMzAwWjAfMR0wGwYDVQQDDBRncm91cGVyLmlkZW0uZ2Fy
+ci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM7913BgHLAXXvsj
+37Sg8o8tjoXNo/C13zueCqiIJKsu2qhpwiy7KpgLADpCzLFArgT0r/aup0saMFfx
+tUa8et39E0TfPwNBLeI77TUt7QE/NHtVwDph8d0ocizAxqJC1yhUMSuwDzRU/U5H
+Y1qGJ6NrmzYqG4dKNr5CC+FUhDfdSn/UJ8o95PLV7xkqpDCcXf2WVSSmGAlR1jDP
+rdE9PcfNSvNzA71EaYTdlUXr/MadlNFf7H7rgEyZwqHrIQGjizpcWsPrZW1k0ZlB
+pgLjZFK5w0lzcS5Qt0gjdYJvdmTlyt2AZ4XurrKGMaAFNc/004DMnQYG1EYxr0kr
+LoCQV3kCAwEAAaNvMG0wHQYDVR0OBBYEFPnHU6MSgDLEwrBmW9dmMwBp/YStMEwG
+A1UdEQRFMEOCFGdyb3VwZXIuaWRlbS5nYXJyLml0hitodHRwczovL2dyb3VwZXIu
+aWRlbS5nYXJyLml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBBQUAA4IBAQB6
+X8cCYmz+iKywoiMIlXxMGRXtACODRIWh8jdUqyJwUdHqvmSPnaHSjW41By4wZcFx
+GRwURHaJfFqpG6JMFbIIlBmmdroQ02vWWalA9bhShgBhbGiHbKw4Clma9n7jDFtT
+UTEYR6Riveae/n9/PYBQrFnrMTsoV/0ig20VI70bTyY4wBkTTJgwYNon+MpMGp34
+N34CsdueAafyNMLr+BdNqmDpbLUncKxGU0z56M5r1xD/oYpWzm3asUHqPuojtFlb
+KwS+Xn3HU5Hd928ljFR+l+62LhqN8zb5SaNCJkfDkGlZU0RZEAYAWq7v5mk3A5oh
+KYJMKvnMhrAnlcxegh90
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://grouper.idem.garr.it:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Consortium GARR</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Consortium GARR</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Attribute Authority per IDEM by Consortium GARR</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Attribute Authority for IDEM by Consortium GARR</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.garr.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.garr.it/b/eng</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>IDEM</md:GivenName>
+<md:SurName>Help</md:SurName>
+<md:EmailAddress>mailto:idem-help@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

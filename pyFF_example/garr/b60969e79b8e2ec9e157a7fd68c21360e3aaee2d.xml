@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://connect.arc-ts.umich.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://connect.arc-ts.umich.edu/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://connect.arc-ts.umich.edu/Shibboleth.sso/TimeSyncTokenLogin" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ARC Connect</mdui:DisplayName>
+		<mdui:Description xml:lang="en">ARC Connect allows researchers to access the computing power of U-M High Performance Computing (HPC) resources interactively and graphically using a web browser or a Virtual Network Computing (VNC) client. This graphical user interface enables easy use of desktop versions of popular software programs like Matlab and R, backed by the high performance and large memory capabilities of the Univeristy of Michigan clusters.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://connect.arc-ts.umich.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://arc-ts.umich.edu/arc-connect/privacy-notice/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="128" width="128" xml:lang="en">https://pbs.twimg.com/profile_images/577486649929543680/6S1x2E-J_400x400.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFDzCCAvegAwIBAgIJANkRDY+YaKAYMA0GCSqGSIb3DQEBDQUAMCMxITAfBgNV
+BAMTGGNvbm5lY3QuYXJjLXRzLnVtaWNoLmVkdTAeFw0xNjA0MTIxOTQ5MjZaFw0y
+NjA0MTAxOTQ5MjZaMCMxITAfBgNVBAMTGGNvbm5lY3QuYXJjLXRzLnVtaWNoLmVk
+dTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANME4R8DbG8o9Z5pkcF4
+ECmjJOQOO8aarIyN5YSBZFgI8cxQ8iNAiWMVbTihfMHvzwRtsTXSmqzxxuWEzH/r
+kp4tr5uNmAg7VTzUEkZ3ebGlxPlKMeMu4Yag+6VJna3rxxHCR9rZ7WfWOzWt+ui+
+ewK0huzvBurIX4kFjkTi2pPUYNjQWMRzN2kWu7URT1+vgnOU9sjG1NvmVqFSN6Hb
+IY1CGaPDHnKrvvfFrYyz8VZimOUdcCFBHPpjQ1kKJo/m7A0K0cFQ62PCAPdM95nC
+McraTdNkZI2On67TMRodzCDgkKt7eUUnp7GbJmeaUs2UNpJtoKAdUMBLHJG58Hri
+E1RmCBia579XUSBKX7a9x5iaqgyWFSqKBgV5VHUjwcrneFy+7FlKl+NKjFkNJzsq
+CeINlni2SPsbGCO4Qae3DO4WhETY9SdXNadoASi2+xn23owCRSnC81TrEHtjy7p5
+fYHv2ceAtUvUrbfLGP1yG2EF7vg7MfxTGRdTwarAOSMGHA/S0+5IGAh+lqNq1/M2
+ixUJLn0PE3ujFRbfJbGvEp9QodHWqoM8hyUCPaufjvS2r0ssgfKy0k1Gh+/Yf8hz
+yYOi3lPwhGK0oXxUZPSmI/vFiInWUfodQRzP3PPbdhaQ5G32pGaDJPpvBCZxc3NI
+r5FsUE6UZcgCTquoB2OJGqtXAgMBAAGjRjBEMCMGA1UdEQQcMBqCGGNvbm5lY3Qu
+YXJjLXRzLnVtaWNoLmVkdTAdBgNVHQ4EFgQURa0jm/OTxOuv93zLe1vMvTUY2Tcw
+DQYJKoZIhvcNAQENBQADggIBAKYqbjqNwgdPwr/f283z1APSR+zA45+BL9NnoA6L
+p4DJhs5RnHkyg7l5EG8R6ZYtm1BxQI+9F1IyQgbjkrP3w8eYeq+sv6zV0XNWnlQm
+TpN6kRPuBZtZ+buQ8RxRhdbGOVJTSaMYG500naSWvQtRSkt7/YIBRo0qJqwQeNkP
+9y8c0de8BSm2ezMUDAV3hqRgKADY1z5we/PLeT07AZQNrjJPQKunIBqkXYaOYDHP
+HYcmwuaOmyFcLXGJ8Qdgf1YuLzc+Vl9xx7ey6l4+DxtIyetCba6PjiUFEJAcpC05
+8vkC2cw1xr1hvTBzngsEtZTH1zwZb53+3dBS62Y/k3l/dS9p3Dt1RO750da+Oxpt
+un9DWLuOlA8hXJFYMIGpC6UcFmM83kM+17KiH581/hlUdZnE4XjBD9twLKw/oVso
+mizNbDt55U5z2/A3hPDeddApTB5Fsbgqm0MKxIBLnQyPl+y/C9FP58IC17RhdUGz
+bRsI1ev4CqyemD6KTTpXxp47jqqmJ1Q+I/9CzbYDUp7d68PGKqKsar/3Zo3pZv1n
+ZvG7mffl2Hm44Qqrl5VJmdmMzzPhfi1ygJbQEHy3I08t/9IUWH+RQaLzlKRqVfjU
+Z2KR199zhtePC/7NmhQmzyFcibUzKaDnLV5RrqeRccpDx/RAl+Ae5oLG6QFi0DcE
+rT4A
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://connect.arc-ts.umich.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://connect.arc-ts.umich.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://connect.arc-ts.umich.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">ARC Connect</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">ARC Connect allows researchers to access the computing power of U-M High Performance Computing (HPC) resources interactively and graphically using a web browser or a Virtual Network Computing (VNC) client. This graphical user interface enables easy use of desktop versions of popular software programs like Matlab and R, backed by the high performance and large memory capabilities of the Univeristy of Michigan clusters.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Michigan</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Michigan</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.umich.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Flux Support Staff</md:GivenName>
+	<md:EmailAddress>flux-support-staff@umich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ARC-TS</md:GivenName>
+	<md:EmailAddress>hpc-support@umich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ITS Security</md:GivenName>
+	<md:EmailAddress>security@umich.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Flux Working Group</md:GivenName>
+	<md:EmailAddress>flux-support-wg@umich.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

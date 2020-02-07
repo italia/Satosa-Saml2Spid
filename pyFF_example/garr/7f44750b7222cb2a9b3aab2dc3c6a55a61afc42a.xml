@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://proxy.acc.eduteams.org/metadata/backend.xml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.surfconext.nl/" registrationInstant="2019-09-21T12:14:38.651Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wiki.surfnet.nl/display/eduGAIN/EduGAIN</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://proxy.acc.eduteams.org/saml2sp/disco" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">eduTEAMS Service (Acceptance environment)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">eduTEAMS Service (Acceptance environment)</mdui:Description>
+		<mdui:Logo height="200" width="200">https://www.eduteams.org/img/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.eduteams.org/img/logo_small.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://eduteams.org</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://wiki.geant.org/display/eduTEAMS/Privacy+Policy</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICtjCCAZ4CCQDwH+uSAMolMDANBgkqhkiG9w0BAQsFADAdMRswGQYDVQQDDBJQ
+cm94eSBTQU1MIEJhY2tlbmQwHhcNMTkwODMwMTQ1MDI3WhcNMjkwODI3MTQ1MDI3
+WjAdMRswGQYDVQQDDBJQcm94eSBTQU1MIEJhY2tlbmQwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCgTXJuhS0Qw1YRxZEnn8kvP+glbB7matkSI1HaVMXY
+IOIfWNzhY/XKDOlZLgikKfDeBol/QAkrxK3KKxOn85Ifx8wyqRg4lLNcQ6MLwNws
+biz673BdhMq2a9yDU1S+ShuQLIKUiGB4QPkVM+rWO5L1azMR4WTnwwsmO53Lhr5f
+dlhyaWO06JkhY/3PiLgbBJYx2MF7u4c9TX9fC8LkfuWgqkApLtfb5M4ZTRwN5rsD
+mJdOLFq6YeOOGHtSFbpi7142BGyCtvBZwwEG+PsQXbAE8FMGqri/WrIzqX4L0VlK
+mQQqz6Zi/KP3ahCDB3w+Iv+LSM25wudZScaI4YaFpejLAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBABL6oJRoopWPgciMQI/2Vn5XmnWacdB3jcOPpAoJUuXnyAX6E4uH
+HcJgUl7ZQTpeJypIvFM0BO67QxMIWgVXbUskKGpjUzKHLVLOdkLtS2OqSHDlLrWA
+a0SHMHg9hnQY/jaJauOhIetN6DG/s1Ekz/mOqosC08e0m5WCQNXRN6i0ovSKOanE
+XPOvZcA5PW6W7+mTPDiIulsWMnToSJX50YvB9LuJL0kKqjRUu12/nBxqk5PyaiOX
+M2X9Ihm7K2a56XZm2QO0XphAqk/EwR5zP4Zojk1/loW+Rf65BbNzyV7lsByL+2cW
+1RcsIGaAb+BzsRbAGq9t8tT9Z7PUTKrJsxk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIICtjCCAZ4CCQDwH+uSAMolMDANBgkqhkiG9w0BAQsFADAdMRswGQYDVQQDDBJQ
+cm94eSBTQU1MIEJhY2tlbmQwHhcNMTkwODMwMTQ1MDI3WhcNMjkwODI3MTQ1MDI3
+WjAdMRswGQYDVQQDDBJQcm94eSBTQU1MIEJhY2tlbmQwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCgTXJuhS0Qw1YRxZEnn8kvP+glbB7matkSI1HaVMXY
+IOIfWNzhY/XKDOlZLgikKfDeBol/QAkrxK3KKxOn85Ifx8wyqRg4lLNcQ6MLwNws
+biz673BdhMq2a9yDU1S+ShuQLIKUiGB4QPkVM+rWO5L1azMR4WTnwwsmO53Lhr5f
+dlhyaWO06JkhY/3PiLgbBJYx2MF7u4c9TX9fC8LkfuWgqkApLtfb5M4ZTRwN5rsD
+mJdOLFq6YeOOGHtSFbpi7142BGyCtvBZwwEG+PsQXbAE8FMGqri/WrIzqX4L0VlK
+mQQqz6Zi/KP3ahCDB3w+Iv+LSM25wudZScaI4YaFpejLAgMBAAEwDQYJKoZIhvcN
+AQELBQADggEBABL6oJRoopWPgciMQI/2Vn5XmnWacdB3jcOPpAoJUuXnyAX6E4uH
+HcJgUl7ZQTpeJypIvFM0BO67QxMIWgVXbUskKGpjUzKHLVLOdkLtS2OqSHDlLrWA
+a0SHMHg9hnQY/jaJauOhIetN6DG/s1Ekz/mOqosC08e0m5WCQNXRN6i0ovSKOanE
+XPOvZcA5PW6W7+mTPDiIulsWMnToSJX50YvB9LuJL0kKqjRUu12/nBxqk5PyaiOX
+M2X9Ihm7K2a56XZm2QO0XphAqk/EwR5zP4Zojk1/loW+Rf65BbNzyV7lsByL+2cW
+1RcsIGaAb+BzsRbAGq9t8tT9Z7PUTKrJsxk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy.acc.eduteams.org/saml2sp/acs/post" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">eduTEAMS Service (Acceptance environment)</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonOrcid" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.16" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">eduTEAMS Service (Acceptance environment)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">eduTEAMS Service (Acceptance environment)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://eduteams.org</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>eduTEAMS Support</md:GivenName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>eduTEAMS Service (Acceptance environment)</md:GivenName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>eduTEAMS Support</md:GivenName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>eduTEAMS Security Teams</md:GivenName>
+	<md:EmailAddress>mailto:security@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://sts1.vib.be/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://federation.belnet.be/" registrationInstant="2012-03-27T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://federation.belnet.be/files/Belnet-metadata-registration-practice-statement.txt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vib.be</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">VIB</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Vlaams instituut voor biotechnologie</mdui:Description>
+		<mdui:Logo height="16" width="16">https://komoptegenkanker.vib.be/image/VIB_16x16.png</mdui:Logo>
+		<mdui:Logo height="75" width="153">https://komoptegenkanker.vib.be/image/VIB_75x153.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.191.128.0/26</mdui:IPHint>
+		<mdui:DomainHint>vib.be</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:51.018053,3.694053</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC2DCCAcCgAwIBAgIQKsE9Ifa5B5tBuRSnAYHvsjANBgkqhkiG9w0BAQsFADAo
+MSYwJAYDVQQDEx1BREZTIEVuY3J5cHRpb24gLSBzdHMxLnZpYi5iZTAeFw0xODA1
+MDcxMjQ3MjlaFw0yMTA1MDYxMjQ3MjlaMCgxJjAkBgNVBAMTHUFERlMgRW5jcnlw
+dGlvbiAtIHN0czEudmliLmJlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAtp5j0wX+uVrp4seXjKPCVn7eJ1b8t94DW2DHdY14LsS3Z51DXD1BHMQODvt5
+gmcp46H2Hg1vbgXLOJaoTi1+IS3WvnTWnRzelhV13sp+cFkexT1XD1Az+9hkkq1/
+/Z+YNR6Wj0si+CFgCPQlwQFGgfOenJgi080HsLEskCwIK1WLt/qulPaFi/H2jThO
+qTaNYTD7aAaDQXScLJpEYvs2rJijA6hXaHyDp7Sx9u0Kj+KUDvSx0lEUaEIkzar6
+zR2cS8JkBWXXhub+wmi8VemyYUvBn88s7oL6/xF/d8dm6LYgS3WDgNQ+YQw6QR6r
+KrdWnWmlum1zvbINwE1tIou33QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAq37jo
+AC3Bf3yOetaA64glVwtV+k8IZ46KKIq9af0KnI386Bx5dnvI8XcejjI6HbxcxHHe
+yqPvIzEHdre6asovs2BDH9gNMKkxaD3s70yJV7mv+OGvMRwXJj9SB0vxfxnyqQCo
+S16uQ3Z1PTw5H6exyJOBC952NE/vL7X99ymsai9oWoNthkVE1FbDyDCYHlKewjvY
+O4LFlO5EXrAApsrIq19Mk/i2PBp2ZjURXj3yO4ygc/KvcDfQaTljKWMrnSoZbEGe
+hNs3TzDLJ6K5xilFqS0WN6mZSczenfVubbb6wU6SLwSYd0GNN8vwB6KkEQOpFxeB
+Az9FuJ11dKxzmgd9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC0jCCAbqgAwIBAgIQYeaYrAguV6xGf+G9MQaJRTANBgkqhkiG9w0BAQsFADAl
+MSMwIQYDVQQDExpBREZTIFNpZ25pbmcgLSBzdHMxLnZpYi5iZTAeFw0xODA1MDcx
+MjQ3MzJaFw0yMTA1MDYxMjQ3MzJaMCUxIzAhBgNVBAMTGkFERlMgU2lnbmluZyAt
+IHN0czEudmliLmJlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2GUq
+6qcITYPC4We12nT1WX0j1mggLOWX66ulIahOvz2b/AdZhwmQ7FkUeyavokvn6VZs
+mU7YJHgmUpsNav8kx48Ca06ghq5CXUm1Z1MF0mTyFZxFLuWu+LGvOiUfBB71GZsl
+piFZzFh05QUcPkMoG/h1zzlWePOFb/ep/aZuChQvBtXNYYQ8pJNAD/OK6zCLGuMe
+7NtZmzUnS3iYTQHXZmBwDo0X6Uanbz5az0vF1RHeGPg2v75zjxV8Ir1atVFQvu2T
+9UbRs8wxUlIBDd3sIknIgq30MnNuyeQlUqYAgZiRSSNbdXf7haModFGfGcmntFdl
+4KadQqIUpb5bLKfmywIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA3dJ53eGRcvfJL
+Ll3PwYKboJoNjfFNInOVA7FrSIL8E40iugF7sDF3mQoyDQ7nVLeLgvNvqAxoCFMJ
+v7WSvF77VjcCrpB2PLwwnBwi+eo4xQXyF7WLLYb1RtuAcFZavgnqfFpLR4sqGEXJ
+L5P696yncAOXm32HOJKL8WOwFsFYav5a0ubIiiMrozrH0ll3yiWn3F2bXPNOF7rB
+XPnPtoeOwsHlDHXfNcMc+3pdNITRnX1b14L6A1nn0mTPcfEhlIs09O1dMK05vjB7
+n1oHyoJuV+HOGHMjk8TizxuBsR1QnMkSG122AlWG2T9KwACUk7CrJBgmfIDCMNOy
+hBh0SWMC
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sts1.vib.be/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sts1.vib.be/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sts1.vib.be/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sts1.vib.be/adfs/ls/"/>
+	<saml:Attribute FriendlyName="E-Mail Address" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Given Name" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Name" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="UPN" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Common Name" Name="http://schemas.xmlsoap.org/claims/CommonName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="AD FS 1.x E-Mail Address" Name="http://schemas.xmlsoap.org/claims/EmailAddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Group" Name="http://schemas.xmlsoap.org/claims/Group" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="AD FS 1.x UPN" Name="http://schemas.xmlsoap.org/claims/UPN" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Role" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Surname" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="PPID" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Name ID" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Authentication time stamp" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationinstant" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Authentication method" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Deny only group SID" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/denyonlysid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Deny only primary SID" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/denyonlyprimarysid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Deny only primary group SID" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/denyonlyprimarygroupsid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Group SID" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Primary group SID" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/primarygroupsid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Primary SID" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Windows account name" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Is Registered User" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Device Identifier" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/identifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Device Registration Identifier" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Device Registration DisplayName" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/displayname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Device OS type" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/ostype" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Device OS Version" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/osversion" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Is Managed Device" Name="http://schemas.microsoft.com/2012/01/devicecontext/claims/ismanaged" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Forwarded Client IP" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Client Application" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Client User Agent" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Client IP" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-ip" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Endpoint Path" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Proxy" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Application Identifier" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/relyingpartytrustid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Application policies" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/applicationpolicy" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Authority Key Identifier" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/authoritykeyidentifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Basic Constraint" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/basicconstraints" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Enhanced Key Usage" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/eku" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Issuer" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/issuer" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Issuer Name" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/issuername" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Key Usage" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/keyusage" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Not After" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/notafter" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Not Before" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/notbefore" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Certificate Policies" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/certificatepolicy" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Public Key" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Certificate Raw Data" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/rawdata" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Subject Alternative Name" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/san" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Serial Number" Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/serialnumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Signature Algorithm" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/signaturealgorithm" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Subject" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/subject" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Subject Key Identifier" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/subjectkeyidentifier" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Subject Name" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/subjectname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="V2 Template Name" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/certificatetemplateinformation" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="V1 Template Name" Name="http://schemas.microsoft.com/2012/12/certificatecontext/extension/certificatetemplatename" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Thumbprint" Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="X.509 Version" Name="http://schemas.microsoft.com/2012/12/certificatecontext/field/x509version" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Inside Corporate Network" Name="http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Password Expiration Time" Name="http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Password Expiration Days" Name="http://schemas.microsoft.com/ws/2012/01/passwordexpirationdays" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Update Password URL" Name="http://schemas.microsoft.com/ws/2012/01/passwordchangeurl" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Authentication Methods References" Name="http://schemas.microsoft.com/claims/authnmethodsreferences" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Client Request ID" Name="http://schemas.microsoft.com/2012/01/requestcontext/claims/client-request-id" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="Alternate Login ID" Name="http://schemas.microsoft.com/ws/2013/11/alternateloginid" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">VIB</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">VIB</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.vib.be/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:Company>VIB</md:Company>
+	<md:GivenName>Jasper</md:GivenName>
+	<md:SurName>Minnaert</md:SurName>
+	<md:EmailAddress>mailto:it.servicedesk@vib.be</md:EmailAddress>
+	<md:TelephoneNumber>+32 9 244 66 11</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>VIB</md:Company>
+	<md:GivenName>Jasper</md:GivenName>
+	<md:SurName>Minnaert</md:SurName>
+	<md:EmailAddress>mailto:it.servicedesk@vib.be</md:EmailAddress>
+	<md:TelephoneNumber>+32 9 244 66 11</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

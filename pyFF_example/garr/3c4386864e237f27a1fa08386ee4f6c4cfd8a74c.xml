@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://my.atsu.edu/swPublicSSO/SAML/incommon">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://my.atsu.edu/errors/401.jsp" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">atsu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">A. T. Still University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">A.T. Still University of Health Sciences serves as a learning-centered university dedicated to preparing highly competent professionals through innovative academic programs with a commitment to continue its osteopathic heritage and focus on whole person healthcare, scholarship, community health, interprofessional education, diversity, and underserved populations</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.atsu.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.atsu.edu/policies/privacy_policy.htm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="42" width="375" xml:lang="en">https://www.atsu.edu/themes/atsu/images/logo_atsu.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDzzCCAregAwIBAgIFAMr+ur4wDQYJKoZIhvcNAQELBQAwdjERMA8GA1UEAwwI
+SW5jb21tb24xHjAcBgNVBAoMFUEuVC4gU3RpbGwgVW5pdmVyc2l0eTEMMAoGA1UE
+CwwDSVRTMRMwEQYDVQQHDApLaXJrc3ZpbGxlMREwDwYDVQQIDAhNaXNzb3VyaTEL
+MAkGA1UEBhMCVVMwHhcNMTgwMzE1MTQxNDI2WhcNMjMwMzE0MTQxNDI2WjB2MREw
+DwYDVQQDDAhJbmNvbW1vbjEeMBwGA1UECgwVQS5ULiBTdGlsbCBVbml2ZXJzaXR5
+MQwwCgYDVQQLDANJVFMxEzARBgNVBAcMCktpcmtzdmlsbGUxETAPBgNVBAgMCE1p
+c3NvdXJpMQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAIRxPMAckVeaXrQr+BBHbGw7pJCtNj4PLx2FFgaCYM8wE7i8jnjgDfzOUldv
+wHPEh8zlfrQyvkHb0UEIGynytYDJbIzXl6nlsxY+i2haa7fs7pfJRXxbP3lQ9Erx
+Sl3lSA7oBjr07UmAq/njERXhYfGrWlbh/hDpaZKCAdcwryNpDEJdtbXrskVGyTX/
+HOkGnUdSm6CFGcdkj/WiMTDurKbIal9RhMgEsfMijsvnkJhkyS91n9KBj4r36kQ1
+soGPAfviBlg6js2tTtWpbAFUqoUeHIrv+6fpGl/j4gWliYDKba3oJgEIokJAZ1TI
+shiGil6j+ZfgUma7mch+AXYBlk8CAwEAAaNkMGIwCwYDVR0PBAQDAgWgMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMBMB8GA1UdIwQYMBaAFF+2sVVIzfV85/gd3C0L/tO5xYOj
+MB0GA1UdDgQWBBRftrFVSM31fOf4HdwtC/7TucWDozANBgkqhkiG9w0BAQsFAAOC
+AQEAfSzgIIq9UV9KqkVobysE/CRJBuajxz4uMFiOUbQT6mZ0rrzKgPqQnMGRg6bi
+7LOp72bc1/+CU8Qg0563yyQEbZ+P/dUWwwluVi4yvdP3yagI8RdhR/rRc9kerDrZ
+bZWSzEjWFqTfKffAK/3opmtzJHMk2dbzyEbgnTNU7Z1JdWXGZMMEnwE+VNYSKM4/
+xowniISiCHOs7klOn42yySkdfUvcRlOueGozQsqSJ0+5FTHuhml5rouG421fF/yL
+xniCRctJyklEWw89xz5XXXLYnljCeERe/F4+rg2WcXXsumXiyncuceJWgn16X5dl
+I1AHrxlMjDlMzE3XcvX5S67Drg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://my.atsu.edu/doLogout.jsp"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://my.atsu.edu/doLogout.jsp"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://my.atsu.edu/swPublicSSO/SAML/incommon"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://my.atsu.edu/swPublicSSO/SAML/incommon"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">A. T. Still University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">A. T. Still University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.atsu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Bryan Krusniak</md:GivenName>
+	<md:EmailAddress>bkrusniak@atsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Timothy Johnson</md:GivenName>
+	<md:EmailAddress>tjohnson@atsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dustin Usher</md:GivenName>
+	<md:EmailAddress>dusher@atsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Tammy Weidenbenner</md:GivenName>
+	<md:EmailAddress>tweidenbenner@atsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

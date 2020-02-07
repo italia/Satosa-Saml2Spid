@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://saml.sys.kth.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kth.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Kungliga Tekniska högskolan (KTH)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">KTH Royal Institute of Technology</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för KTH</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for KTH</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">https://www.kth.se/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.kth.se/en</mdui:InformationURL>
+		<mdui:Logo height="225" width="225">https://saml-5.sys.kth.se/idp/images/logo.png</mdui:Logo>
+		<mdui:PrivacyStatementURL xml:lang="sv">https://intra.kth.se/it/natverk/regler-policys/policy-for-hantering-av-personuppgifter-inom-ramen-for-identitetsutgivaren-identity-provider-idp-som-faststallts-av-kungliga-tekniska-hogskolan</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://intra.kth.se/en/it/natverk/regler-policys/policy-for-hantering-av-personuppgifter-inom-ramen-for-identitetsutgivaren-identity-provider-idp-som-faststallts-av-kungliga-tekniska-hogskolan</mdui:PrivacyStatementURL>
+		<mdui:Keywords xml:lang="sv">stockholm</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">stockholm</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>kth.se</mdui:DomainHint>
+		<mdui:IPHint>130.237.0.0/18</mdui:IPHint>
+		<mdui:IPHint>130.237.64.0/20</mdui:IPHint>
+		<mdui:IPHint>130.237.80.0/22</mdui:IPHint>
+		<mdui:IPHint>130.237.84.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.202.0/23</mdui:IPHint>
+		<mdui:IPHint>130.237.206.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.209.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.210.0/23</mdui:IPHint>
+		<mdui:IPHint>130.237.212.0/22</mdui:IPHint>
+		<mdui:IPHint>130.237.216.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.218.0/23</mdui:IPHint>
+		<mdui:IPHint>130.237.220.0/22</mdui:IPHint>
+		<mdui:IPHint>130.237.224.0/22</mdui:IPHint>
+		<mdui:IPHint>130.237.228.0/22</mdui:IPHint>
+		<mdui:IPHint>130.237.232.0/21</mdui:IPHint>
+		<mdui:IPHint>130.237.249.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.250.0/23</mdui:IPHint>
+		<mdui:IPHint>130.237.255.0/24</mdui:IPHint>
+		<mdui:IPHint>130.229.128.0/18</mdui:IPHint>
+		<mdui:IPHint>193.10.37.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.38.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.39.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:6b0:1::/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:59.34698,18.07213</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAOmaIGGXK/JbzXedtKY0l3Vp34hRMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEXNhbWwtNS5zeXMua3RoLnNlMB4XDTE3MTAwMjE0MDIw
+M1oXDTM3MTAwMjE0MDIwM1owHDEaMBgGA1UEAwwRc2FtbC01LnN5cy5rdGguc2Uw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCMHtOcs0ZEBqSTA0AqMyyc
+1Hhjq41rLAF+xk9LJVTVmiEzKZqbFbnFXeh4A50R0qXdWg+ZRS+57D3tIJbM4sNk
+IeOS7IDFdkk3h/t7lqWrIyxrK6dHN5awqquchyjzQVZ/+tSge5iA04WYf1YqqYBl
+Cdn38JoyRIIS5bS5Xo4iyrh0RE1NpNBVwL3+m6XQyDZwy/9uilAZChydlZeKkTXW
+wUBPNksose/M1cbWlw3e43EC4/WViayErTijXZmp3ZFlJCL1EKPURVjeEX1AXkpM
+6OaL5S7PwdrAqg9qPhEDdYYRHxEDuM8iRoAmzPCwStOo1gS6mWQqBrXvQE2ojwdH
+AgMBAAGjaTBnMB0GA1UdDgQWBBTZyigFF2hva2NdXhtibyWmqToY8TBGBgNVHREE
+PzA9ghFzYW1sLTUuc3lzLmt0aC5zZYYoaHR0cHM6Ly9zYW1sLTUuc3lzLmt0aC5z
+ZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAGtvAY2a6PpljlGHO
+J60hymreWhvUEwq1XA3IX3+ox85mnNiDGbyIM6kCQMuMXeK/wectNMDRxqPTmsLY
+s7LrnP0IESqU0fJh8csy6h1bS9m5CbN1D3Frv2JS28jCUjousUrH6DDV75w2xbWb
+U2trtXVk5XyBas4JdnxBSTgIRe9C26ALN2IJ4YdGwLaZbA74y0Ehcf09NSNiwrvl
+O0Q8q5FCN5Zuog/y6Q8PSFLgXEo/lx2JufAFeQrLaKyJRy0sXLlXdVtdOfm6DLcW
+/xpqhC24xIistMSyj3WcnUt8yWezp4xKuxzAg/A7QHJWWsmxwX5+YHYdmL9bCPYW
+sIsQIQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUH2oX7WISLlGweMWZtSzUAdE7fT0wDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRc2FtbC01LnN5cy5rdGguc2UwHhcNMTcxMDAyMTQwMjAz
+WhcNMzcxMDAyMTQwMjAzWjAcMRowGAYDVQQDDBFzYW1sLTUuc3lzLmt0aC5zZTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK8fvkm0hukgNA45Ct1EqkA1
+Qfl9+yYMawO7XuKUdWXfsHFUEwi2fMaLBQbDlGzugyAqs+VL44Ladq6jNmU0ICGv
+dABuqQ1/mikC93yCn2Fyr+L8Pb6ooQva5sG1FxiSo5ODgKxUw/NJOPO3jD8oafXZ
+KMe7bziyEsdK6FJQvnSKTEi/uKgoyggQaPQKhN/n9+8S7xfbKt6SElhqndNDLJO2
++rLznWzDDiVq4cYSrmvkTrOdEXge9IRw0C/fAS45pbfrrrv5p3uhoSrnGqgbmUnO
+zzxtyaTMgtr8ymUg8Sg3lM1vugxMjV2iQXrcTUEpS88SJZSSZ55CKmCnbLFlT9kC
+AwEAAaNpMGcwHQYDVR0OBBYEFC64tqUGgzV0tBPjchpcAKIANSurMEYGA1UdEQQ/
+MD2CEXNhbWwtNS5zeXMua3RoLnNlhihodHRwczovL3NhbWwtNS5zeXMua3RoLnNl
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBoSSeExvS4jh469mls
+f4+oXwOx8pimcxp4qjuuikdmMF+WiiCOto+36ZkG8X6cx6SRZYavetLMXoQdwkHn
+3OiaJmK/kvG+0KlaSYq68p9u6ddKQgjWPy9JbZlW0uZQaFPg2/5O4acukImkHR/q
+v7uPLS6CRVWMflLpTxZjFBnkafsw3bGjqCAh8zh7afGgmAVZjrRfcmuj6GeEc+0R
+6+X1G5kC1FdSnzY6CTSxf2M4Imgy0iU1QNnby7Pqm+pxWhvPW9+x4DDCOQiZquyw
+EoqFRoJQqVekIFRBNnL10DpDCIogHXd7I49hPQf35/LkZmcqvEJuGSaSVOvmFTR6
+OmTq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVANDcvLv9oyCzfWKoZ4qwITR137mFMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEXNhbWwtNS5zeXMua3RoLnNlMB4XDTE3MTAwMjE0MDIw
+M1oXDTM3MTAwMjE0MDIwM1owHDEaMBgGA1UEAwwRc2FtbC01LnN5cy5rdGguc2Uw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDMnoOf28PBhne05cuoe0hk
+qVkDPgIur8K4R1zvGJZXrl6xBQ8Cf5x2/71OoOh/toRtGRR5mx/0D6zTiHqwZCXF
+alo0URcej5C2S4Cjit5bcG/M9WimsC34whCwHxvYWXzN7S6GcGuh3NFPH+kxllSh
+2oZ+uEACggBAHFuUQBXBsj060376EB7ZaGivXfmVYWYJzEMvAQLHq3QbtxMwAUu5
+ZcjX226/HuV53O8mpueWEb7dNDiufFU+TFe+nSqFAZss0fGYos1szfXXkDwn7l82
+PVGc1TsGTZKlRtWfhfxe+9AYebeLDsci0o5NkR86AsDBOMxbeB1+/kyu3i1KabMT
+AgMBAAGjaTBnMB0GA1UdDgQWBBQVSJgAJOeU3VlroaBurkCV9L9tVjBGBgNVHREE
+PzA9ghFzYW1sLTUuc3lzLmt0aC5zZYYoaHR0cHM6Ly9zYW1sLTUuc3lzLmt0aC5z
+ZS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAfUOEEkcQ32GF3BBB
+g1qjGfqgC3/wVzOkqR3OpklHLZ8CAn0rdD18kH3FBbs0u3Xn+Si6aVdVCgECuu9l
+UZhenuGVLwBlLUO5wyfhZcmu9obqj/Kng8gBVJ0c+qcDQyPjj13vAPxdmrUaZegL
+rlQAkWXnxjp+EZs2LOhALLTYSFVnxsecS3jdDNQv5eg3TVn1y47c84mKqTVblYbr
+d+sCpD2C/PTTwyGJ+dlImbq5mucUT8skolnF6oZiLRnNEU0dOQbW+p0yDzqBLujT
+/PP9U1EgkVs4BHeaAQYOlQNBh+DwA3Ak9bVRW+A6DWv3bD5/slnfcy+yhjeRjCKc
+jmufPg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://saml-5.sys.kth.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saml-5.sys.kth.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://saml-5.sys.kth.se/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml-5.sys.kth.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">KTH</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Kungliga Tekniska högskolan (KTH)</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">KTH Royal Institute of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kth.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>KTH Royal Institute of Technology</md:Company>
+	<md:SurName>UF/ITA Infra (Alexander Boström, Mikael Bengtsson)</md:SurName>
+	<md:EmailAddress>mailto:ita-infra-saml-contact@kth.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 790 6000</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>KTH Royal Institute of Technology</md:Company>
+	<md:SurName>UF/ITA Infra (Alexander Boström, Mikael Bengtsson)</md:SurName>
+	<md:EmailAddress>mailto:ita-infra-saml-contact@kth.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 790 6000</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>KTH Royal Institute of Technology</md:Company>
+	<md:SurName>KTH IT-Support</md:SurName>
+	<md:EmailAddress>mailto:it-support@kth.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 790 6600</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:EmailAddress>mailto:abuse@kth.se</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.bionimbus.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://login.bionimbus.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bionimbus Portal</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Single Sign on Portal for the Bionimbus family of projects.  Bionimbus is a commons supporting various bioinformatic projects and research.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://gen3.org/products/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://bionimbus-pdc.opensciencedatacloud.org/misc/privacy.txt</mdui:PrivacyStatementURL>
+		<mdui:Logo height="35" width="205" xml:lang="en">https://bionimbus-pdc.opensciencedatacloud.org/misc/logo_sm.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFyzCCA7MCCQCicdy6qcU4cjANBgkqhkiG9w0BAQsFADCBoTELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAklMMRAwDgYDVQQHDAdDaGljYWdvMSAwHgYDVQQKDBdPcGVu
+IFNjaWVuY2UgRGF0YSBDbG91ZDEqMCgGA1UECwwhTGFib3JhdG9yeSBmb3IgQWR2
+YW5jZWQgQ29tcHV0aW5nMSUwIwYDVQQDDBxjYS5vcGVuc2NpZW5jZWRhdGFjbG91
+ZC5vcmcgMB4XDTE3MDYxMjE0NTQwOVoXDTI3MDYxMDE0NTQwOVowgawxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJJTDEQMA4GA1UEBwwHQ2hpY2FnbzEqMCgGA1UECgwh
+Q2VudGVyIGZvciBEYXRhIEludGVuc2l2ZSBTY2llbmNlMQ4wDAYDVQQLDAVQbGFu
+WDEcMBoGA1UEAwwTbG9naW4uYmlvbmltYnVzLm9yZzEkMCIGCSqGSIb3DQEJARYV
+c3VwcG9ydEBiaW9uaW1idXMub3JnMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIIC
+CgKCAgEA2wQk55Gpv4ydZFhlyPFHeQOU1K1+DXb+MM0sq4HoM3Fb1yLYUMc2e+XH
+iagS00/uC8hHClsSsF0HkceBwtLEV4MjXQ0/Cu8VeUorrpNfI3faCf53MxbNMRzb
+FNSCs2YVRbuPAQZJPA1WOPm0TSsVn/aOvM5J+8vXfSluRpEqkzq7ZXEn5TRrOiFP
++RI8rAkaUrMmm9rT8XKSIjn8egR8qosfh1RWdEUDBKxngaPpThZ3tcWPysI62wY4
+UmeQ3a6w9H5XMk7HNcJAlzjqYQVaOWp4+EQWf7JnnJPKke1buw62IfNGyv4cEcTG
+ZLE+I7DtyJOjhrYnKE7QP4Q/0yE4cOGYhFMciOWyT2fTTpWNxCL0NJfeDGErKuot
+XWYGSfP0caWhDid9URIolMVl1X9QS31NS3nEbTDhw8CPqoJlZxeRUD9v+MKwbqdB
+VAt2fLuKXwbUi/g2zHIn6amEbZIlklyC8etwgAAzQxFDasbWALSNqLaVfErTvYN2
+BkoXWN/kQhINRxlnxVWfGpWMDn+9u6ynK1Z2kCKvzZHeQWyICovRuekBJm6H0vrI
+YQAfPMOPSnu1iJkos5jAlagJL1z07pGjcrOObfst62PjUJyfgcidxVCWHG/ipdLQ
+m8oOcvJg71TwLQPUpoZCNx5z80Oi9UrewVy3WmVKEBn/kSF0cZ8CAwEAATANBgkq
+hkiG9w0BAQsFAAOCAgEAJ8mzKvXPTQtpReXLlM617W7VNsJ4YDeyK03g/oh48/7G
+7OIOsBr4Yu/Xo0tT25q2AjPoeKkhvUzsjLoAb0ZxISduMlBaFMPsU52d+9gtnO99
+IlK7UVPcbYo57pe4ugLlKJVieFR1K8UA4NHsW2UvzF5nFhK8mDXG0+lNHTtWTWBv
+ZEeDTdFl4bOQv0dOc34BPv45Ui5XqZ5Rybk/FuF83mpVPomPKEgrPSAIMbpYwgjn
+0Wgc63l+T8FK3u2NgwJVpJy8mcD0IlMrC4/GeDErNBM5bhh3OXuZ10VKUmNx5wd3
+bngTPI2nPVHxDC/zFMNcsbryLm9ScoCcnJbCLKoz6YMll8hZPsgmueFZ4tL8gqxW
+/Qi4j68kQqEDLik9iAKwFiK6wnTETNZMbuKm0PBmQ1Vkb65gyuxJvh3BNwju9439
+igAk7Dtby1JctJ2Cbl3Ki7iJatrPtmoQ7FojuEMLA4BU7R9jhfY21IzMmUHpb1oK
+onkKwFgb6FOYRNGMLkPAaqQi+SyDDNVMRgq48ZG4g5ZJTNf7SpX98fBbt5xepEcG
++oDTceGYz7JlZnTXAoNodpM243uX4QU6UaKMwZLqsOWLqJIym4dk3g7wm3xIsQ/9
+ReVdQDw04xGNSjj8fuRf4XmSpYTW7j29AwTj4jsj/Gi9m5FcRDZeH64RbeREhMg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.bionimbus.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.bionimbus.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://login.bionimbus.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://login.bionimbus.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://login.bionimbus.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://login.bionimbus.org/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Bionimbus Portal</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Single Sign on Portal for the Bionimbus family of projects.  Bionimbus is a commons supporting various bioinformatic projects and research.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Open Commons Consortium (OCC)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Open Commons Consortium (OCC)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://occ-data.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ray Powell</md:GivenName>
+	<md:EmailAddress>support@bionimbus.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Phillis Tang</md:GivenName>
+	<md:EmailAddress>support@bionimbus.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lily Ko</md:GivenName>
+	<md:EmailAddress>support@bionimbus.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Ray Powell</md:GivenName>
+	<md:EmailAddress>support@bionimbus.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

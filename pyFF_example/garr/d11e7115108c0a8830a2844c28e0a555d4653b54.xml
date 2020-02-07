@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://filesender.garr.it/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2019-09-19T08:16:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://filesender.garr.it/Shibboleth.sso/Login"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://filesender.garr.it/Shibboleth.sso/Login" index="1"/><mdui:UIInfo><mdui:DisplayName xml:lang="en">GARR Filesender</mdui:DisplayName><mdui:DisplayName xml:lang="it">GARR Filesender</mdui:DisplayName><mdui:Description xml:lang="en">Application that permits you to send big file across internet in a simple and secure way</mdui:Description><mdui:Description xml:lang="it">Applicazione che consente di inviare file di grandi dimensioni su Internet in modo semplice e sicuro</mdui:Description><mdui:InformationURL xml:lang="en">https://filesender.garr.it/?s=about</mdui:InformationURL><mdui:InformationURL xml:lang="it">https://filesender.garr.it/?s=about</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">https://filesender.garr.it/privacy_en.html</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">https://filesender.garr.it/privacy_it.html</mdui:PrivacyStatementURL><mdui:Logo height="60" width="80">https://filesender.garr.it/images/filesender_80x60.png</mdui:Logo><mdui:Logo height="16" width="16">https://filesender.garr.it/images/filesender_16x16.png</mdui:Logo></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIELzCCApegAwIBAgIUU94tx9QyhPNQ7Kq+6SCJ6tI8fP0wDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAxMSZmlsZXNlbmRlci5nYXJyLml0MB4XDTE5MDkxNzEyMjMw
+NVoXDTI5MDkxNDEyMjMwNVowHTEbMBkGA1UEAxMSZmlsZXNlbmRlci5nYXJyLml0
+MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA6Yc94z9LAyy4c24VcV3c
+RknLlkI4qa00VtAa51pGZ85wW6p8cQ5yNXpH/plnI1yTnq3oFes0Tcl0XKgktLsO
+iw1p9OXhYVeg3x+e4l9W37vUIu2YwoRLG4Uwnu0cVt0Jsxx2fr9j2s/dt2qaLoIQ
+FAvpf25BktKgu9dXbYQTjFyEu9AOCSUMBFtNfRuxQu/LAeU6KTdooAKKjOx+ja+V
+/LFoKMXaMLpyJ3mLbEYiK0rosoeOnJ4Hdtwo5iFxJc83MrxW/JLFze9kee4zsoyI
+EuXALx/K2eO6MbaW68oWgj0yMFofLm2Rbid/EZgBECgD32l5Skeimsa2gWyC/s8L
+sN6+NKx4plp2WaOIZj0wfibSk0EdN+nv+xUhEU6uVumUVkNb1blecH4Ww3w43uhF
+5SEI9p7R2P0CCX8hJOKK79v7tHaSW/MOy7x8wIVJBsUD1jOZQJsUVOm1fw5rrpdK
++Lk5q6vkRwGoHS6z6dvOG5P6AUJWp1JcwQV3gIl5CYPBAgMBAAGjZzBlMEQGA1Ud
+EQQ9MDuCEmZpbGVzZW5kZXIuZ2Fyci5pdIYlaHR0cHM6Ly9maWxlc2VuZGVyLmdh
+cnIuaXQvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUYwr8VO/rERwOIHXBChHL2wejeC0w
+DQYJKoZIhvcNAQELBQADggGBAG4Lo34kmn7v4t/gVTueXnYYMpO+sJkjQEfyOMbT
+COdwVgg9o5+xJ6NwEI+ma4pblV5qMQfxrjAzVsnFx3e4V+ND6Uj53FZKoTJN35bd
+goZ+5MJBGl/Kg/mNsi1tD/Yk73SKED5fZ2eqhKs8OTox4MBbCcoTzppEawprpQxS
+CE8424b1WdnmPJ8LuWxel7U85VD34wjxBHWqYtI6MRzJG6Kov4YjSAnzN7GYYldx
+CkacumOZJh/LDH+nBXedMiNx+K+mDviXk21x22oUdZA+6V8iTpCVFYZqZwLC66gC
+GHDeQs1VPle7iW+M/C8/9gp/KPplk1tn7r7Sa7DPgX5XfKuTj1QE7gRj1+sdadxL
+DI+acToPscb3nQb7GAzGabK86tnFaA06nIqs91JDYIuQnztAK5DLlm5m81G6KJrV
+xs6vG8SBJLOF+WaHvY1JsNOshsdNxaRFV/QmbvGygLaUMg782g8WY9daAyO6dpfZ
+FFbMazjY8vRwv6HB7pePXfUDcw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIELzCCApegAwIBAgIUYj9Xz88wbIn5b0civuVy/kO7gvMwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAxMSZmlsZXNlbmRlci5nYXJyLml0MB4XDTE5MDkxNzEyMjAx
+M1oXDTI5MDkxNDEyMjAxM1owHTEbMBkGA1UEAxMSZmlsZXNlbmRlci5nYXJyLml0
+MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAxYCrKx2SyixtD0vbUWqL
+k0x9VGNR4P7HTwFWrT55xFO2LjruxIc3KparH7SB50g8xZUV/st3P9crN/bStEhv
+dqxu2MWUtYOYIOVKB1CuUFBsE/fHEoEd2LVyNkwxmmTWcRNS4V9GdYMjfPtvJwOI
+G5Ap7zSI08uEH3XvDnT0eI0hQm1Nbv2VQlFcqp/ikecHIt2ZDM0TpNEOJF2eG5AT
+Yt6cqCq9ZYwGDJ3zGKQv/cUhJ81rUJWMET39MPa54M38QA/CjWbNjlC3xTv/vDnS
+VbFo+1FKmwAE2QFnIyL18iu3mlLPZf8EDKd4JveFkeVikbTGt5m3/SVohsarXIi5
+S9VDA7DWItWr719aMyNUmIIzokRKr005ZlByZC9KA2UGw3QbSD6StI5S+wBR8TBg
+o9J5t54Q5lBBJzmuC0CdztdGFNgl9cFw7Mj+fciB2g9qdglSgrdlSuaeTkNuHHI+
+TU0UdJHXOQvkR2TN3spEAFlyH0DXpjrceBiM7DYJsbF9AgMBAAGjZzBlMEQGA1Ud
+EQQ9MDuCEmZpbGVzZW5kZXIuZ2Fyci5pdIYlaHR0cHM6Ly9maWxlc2VuZGVyLmdh
+cnIuaXQvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUALGkBN1BiYlRsVgB61CMJg162I4w
+DQYJKoZIhvcNAQELBQADggGBAD/gSC8k6Oy1oBywDHm/H7TJRwMtBOdmOTUEmcsK
+9xdKSZ99Fmvg+Jq3tUiWpK9bq7iObKVmV4UcvQP9IPGLdjb+KjP6aj15DSTGYeXF
+hQJ2xMMpbbOcZzdsqORIG5pmH0OKYhILCo66MOCzwA2RJV/k3daoLK2CC4sC9hmY
+TZqt4TX3xzaZo+3PIWEoiOpPuFwpZdyTeuGz6x0BKCD3QEQWv0/3MZEZ5kMS7Nuh
+UBXlbO72B8rR0GtGUq8OinIpJ/t7wKgWH+LYbWaRDdTScwhiwqHJGYZVM65THLtI
+CRSD33Gxpk51oO1hGhkzRiowacTgCwE4hNd42pLXvQMm0HzLrCkrNvTucuZENuRa
+Df5ktM+7jnG5nKF7ZVhi6c1rZdLY7+MEliFio4fE0spubdda5QfcR+RBz/I9GZx8
+cUgcnZYXixIXMQvzTG/HZT5J7l2V2J476PWBQEhhigHIRB7aV9r3+MX7DXOMXqSq
+OT8eE2T/a++aT1zIeRq3AZjtvQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+	<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://filesender.garr.it/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://filesender.garr.it/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://filesender.garr.it/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender.garr.it/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender.garr.it/Shibboleth.sso/SLO/Artifact"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender.garr.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://filesender.garr.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender.garr.it/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://filesender.garr.it/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">GARR Filesender</md:ServiceName>
+	<md:ServiceName xml:lang="it">GARR Filesender</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">Application that permits you to send big file across internet in a simple and secure way</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">Applicazione che consente di inviare file di grandi dimensioni su Internet in modo semplice e sicuro</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Consortium GARR</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Consortium GARR</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Filesender erogato da GARR</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">Filesender provided by GARR</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.garr.it/it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.garr.it/en</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>GARR</md:GivenName>
+<md:SurName>Filesender Service</md:SurName>
+<md:EmailAddress>mailto:filesender-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

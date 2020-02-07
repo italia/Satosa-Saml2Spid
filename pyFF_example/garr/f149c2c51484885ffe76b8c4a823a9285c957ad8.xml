@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://clarino.uib.no/">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://feide.no/" registrationInstant="2013-08-20T06:55:04Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.feide.no/files/feide/metadata-registration-practice-statement.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://clarino.uib.no/feide/single-login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://clarino.uib.no/feide/single-login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Clarino, UiB</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="no">Clarino, UiB</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="de">Clarino, UiB</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Clarino, UiB</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Norwegian research infrastructure for language data and services, linked to the CLARIN initiative.</mdui:Description>
+		<mdui:Description xml:lang="no">Norsk forskningsinfrastruktur for språkdata og -tjenester, knyttet til CLARIN-initiativet.</mdui:Description>
+		<mdui:Description xml:lang="de">Norwegische Forschungsinfrastruktur für Sprachdaten und Dienste im Rahmen der CLARIN-Initiative.</mdui:Description>
+		<mdui:Description xml:lang="fi">Norja tutkimusinfrastruktuurin kielen tietojen ja palvelujen, jotka liittyvät CLARIN aloitetta.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://clarino.uib.no/iness/page?page-id=refeds_info</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://clarino.uib.no/iness/page?page-id=privacy_policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="180">https://clarino.uib.no/images/clarino_duo-180.png</mdui:Logo>
+		<mdui:Logo height="106" width="296">https://clarino.uib.no/images/clarino_duo-296.png</mdui:Logo>
+		<mdui:Logo height="165" width="460">https://clarino.uib.no/images/clarino_duo-460.png</mdui:Logo>
+		<mdui:Logo height="231" width="740">https://clarino.uib.no/images/clarino_duo-740.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBTCCAe2gAwIBAgIJAMIPQt0aWk61MA0GCSqGSIb3DQEBCwUAMBkxFzAVBgNV
+BAMMDmNsYXJpbm8udWliLm5vMB4XDTE2MDQyOTEwNTYzNFoXDTIxMDQyODEwNTYz
+NFowGTEXMBUGA1UEAwwOY2xhcmluby51aWIubm8wggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDQaV8AuM08Rjr+ENWQ6jzDnYTU3T4zxK5KubpCT/vTqGB4
+7ybNZTNdfSinA4fUVtzMSDhz5aNqFqB9n/2IPV6JjkhZwolR3BVrHhA6Eg4d8j6V
+Mr7NIF9ZLK47uE5jX2vxNh2y98up843m50J+uUlJ1ucCxouFv/6D+TNWGp85d96u
+vYsvIgLtgxoD7gnajcJhPjhzuANZfv1fuVHAWG6M2vBWidvXVhgQEZXyEbeZ8n+U
++o9XiNx22RR+TADcNKFU6yrrSMPVoSw0m5lTFV2Xt0MiC7GmW8G1YMc1gcchx0KS
+EcBVM50vRcIflDhSt6/jzq0TQugrcS1HvjCLceEvAgMBAAGjUDBOMB0GA1UdDgQW
+BBR/rbOCQqrTPMsZN7JT7PmrUqk2ezAfBgNVHSMEGDAWgBR/rbOCQqrTPMsZN7JT
+7PmrUqk2ezAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCG040tFSoX
+q5+CEliWXh8XmmTt6shmOSCqfmy5jt+nExyMSecFAtQL/f+8i3MszjWGmfE7JsMi
+c8+U7sybyM/Ws8lmkXfW84TzqLWO1ODNu6Jz1718qQyM2XgLkPbG1aTWRw+XBycg
+yGXBViPopYQbTRAAY+XzccV4N2V+lBD7Z0/JU3d0hruf0lTZlmqyQ3wbMnvw1E2r
+aAMs/8dp5p0Lz2AZEDNvWj88dmVdnWAt5FbH+oMO6XpzTgBZaU1HhgPXXDNQPbxb
+eP2rq6Afo70UIhDccaQ9Jex+K2V3mqbyaWF/jDfdPLcO5TE9dT4G+ka8Yq8j0n+D
+tnB2XWDk7tce
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://clarino.uib.no/feide/single-logout"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://clarino.uib.no/feide/assertion-consumer" index="0"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">Clarino, UiB</md:ServiceName>
+		<md:ServiceName xml:lang="no">Clarino, UiB</md:ServiceName>
+		<md:ServiceName xml:lang="de">Clarino, UiB</md:ServiceName>
+		<md:ServiceName xml:lang="fi">Clarino, UiB</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Norwegian research infrastructure for language data and services, linked to the CLARIN initiative.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="no">Norsk forskningsinfrastruktur for språkdata og -tjenester, knyttet til CLARIN-initiativet.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="de">Norwegische Forschungsinfrastruktur für Sprachdaten und Dienste im Rahmen der CLARIN-Initiative.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="fi">Norja tutkimusinfrastruktuurin kielen tietojen ja palvelujen, jotka liittyvät CLARIN aloitetta.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="o" Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="no">Universitetet i Bergen</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Bergen</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="no">Universitetet i Bergen</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Bergen</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="no">http://www.uib.no</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uib.no</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Meurer</md:SurName>
+	<md:EmailAddress>mailto:clarino-tech@uib.no</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Koenraad</md:GivenName>
+	<md:SurName>de Smedt</md:SurName>
+	<md:EmailAddress>mailto:clarino@uib.no</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Paul</md:GivenName>
+	<md:SurName>Meurer</md:SurName>
+	<md:EmailAddress>mailto:clarino-tech@uib.no</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

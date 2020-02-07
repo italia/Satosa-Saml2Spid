@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp2.jacobs-university.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2011-07-12T14:05:30Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">jacobs-university.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Jacobs University Bremen gGmbH</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Jacobs University Bremen gGmbH</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Jacobs University Bremen gGmbH</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of Jacobs University Bremen gGmbH</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp2.jacobs-university.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="114" width="114">https://idp2.jacobs-university.de/JACOBS_logo_square.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKYjCCCUqgAwIBAgIMINZVtscXSoNekxKEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA3MzkyMloXDTIxMDcxOTA3MzkyMlowfDELMAkGA1UEBhMCREUxDzANBgNV
+BAgMBkJyZW1lbjEPMA0GA1UEBwwGQnJlbWVuMScwJQYDVQQKDB5KYWNvYnMgVW5p
+dmVyc2l0eSBCcmVtZW4gZ0dtYkgxIjAgBgNVBAMMGWlkcDIuamFjb2JzLXVuaXZl
+cnNpdHkuZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCf1xM9JII0
+zSIbI0YIXZPoWMCajvAP0OUcdZijz7jwfP2XxNeEFY75PN6MVP8YyKQaq/2yefq8
+9Mm8TUJwM2rjN3FgGuWZMKtrX6Wl2+ruBp3anJYVm0DKGt5qQSthi8M2dJyw+83t
+F/3x1wbamqo1hCRWpET0jxhPp5HMUtJzA3HTOTqeCrOQvdnyAaQD2xyuJPDhXe/4
+KJdND/7rMd6LVmgkuePEHC+lcw7b/liRov7DQS75IiPy8xyG3pBVlDGjAx6CEKz2
+4ZyOHbRjORLGpsKqFYv7dwNs8smLMLvH3hIJKWpmVnWfmUnvCxeyGy+2y8YR+/Ir
+ULrzdiiumrKsCGVmFRFQuzZ0Aau1S5PWJ+bRXBvdlVLjW2ioZuGB7wFm1zvfYcqs
+XLXRxYDeJlwQB9yau/ouGLOj+uSfKe7dVaTnsGBZXuP6aYWBAsU7A12SggPk+Kp1
+TbG59sIni84mlwc+Eml1Vi5mSVogK0fdMPZ8BIsLrkp2skkzK/Iq5rPk9bz8RSog
+SWHTKVv9Hi1W9OxT2UmSuKEVIQudFxclCudpmfDZ7mL2sH5EiUywqBG2f4FdTxT3
+K4ozrK8RbMveH3npLLZMJHb++26gVON/vJfy+0/qDtxw99Gbln/oETzzsCCVl0nB
+ywzmcbcpGmIWu9T6NLvAIwEgRubtY0CfOwIDAQABo4IF0DCCBcwwWQYDVR0gBFIw
+UDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8r
+BgEEAYGtIYIsAQEEAwkwEQYPKwYBBAGBrSGCLAIBBAMJMAkGA1UdEwQCMAAwDgYD
+VR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNV
+HQ4EFgQU1huPaU+bn4l6iiXuLUs1LBZrbEswHwYDVR0jBBgwFoAUazqYi/nyU4na
+4K2yMh4JH+iqO3QwJAYDVR0RBB0wG4IZaWRwMi5qYWNvYnMtdW5pdmVyc2l0eS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA18GCisGAQQB1nkCBAIE
+ggNPBIIDSwNJAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFq
+Kjx5vgAABAMARzBFAiEAvoIqSAZjLLK+J73WQW6611KSEDNRYIko3GGH2uOmoU0C
+IBHNjWIqmtx6b3hdzj9IdrqHxsyP4JU2eWzysaxFWiuSAHUAu9nfvB+KcbWTlCOX
+qpJ7RzhXlQqrUugakJZkNo4e0YUAAAFqKjx5yQAABAMARjBEAiBHtiJ7rct6XsvO
+33z2AqR2llx2CHej3KkM4PXmHVhBTQIgISf0boWKvJJlQ/+RNKfeq4y0Acyq7kQ9
+DETtfbz1zxwAdwBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWoq
+PHrFAAAEAwBIMEYCIQDDTFmJE21RtcO+R0HQyzvg4qMTMHrHvGL/PImKcIwZ7QIh
+AIz+wxMpF87t1+OVaoFAOurSOYkma55Gd2cg24loo0jNAHcAqucLfzy41WbIbC8W
+l5yfRF9pqw60U1WJsvd6AwEE880AAAFqKjx5pgAABAMASDBGAiEA7kiUhC5LKrc0
+n2xH4+JEv7Paes8jkl8hDuVzawn+gxMCIQCBBz779wDIFZiQP9NnYPk66iYcR6++
+CbYKdRp6q/eO0AB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAAB
+aio8edAAAAQDAEcwRQIgMjJiHn3O9x+jCedYGrOrUvoZx34GD00YtK6+nSVlEIEC
+IQClUFbQyKTjomSU9K+j+2/Vl5crTMcyYJhCdoRS/w2IPwB3AKS5CZC0GFgUh7sT
+osxncAo8NZgE+RvfuON3zQ7IDdwQAAABaio8edgAAAQDAEgwRgIhAL5cbZpEFKKW
+L1u9NDXekSYviv7zDUhZfCujVYyXn2Y8AiEAtbrqm/qFc3J0LBdhdlBxzqE7N5B0
+OM8BOlztrRG38gsAdQBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAA
+AWoqPH9BAAAEAwBGMEQCIHrhSKGPztalKP7pcilWqI1HCftfgPPY5ipU524bDRvQ
+AiAzmCFTO9+EIvfviXn2wOLpYUXqGBfOYSC6P5McFphFdDANBgkqhkiG9w0BAQsF
+AAOCAQEAWpSns3SEgo6lPaRRkerCd4Ihm0sua0ZJ7LOSPJMR0pLk88hSXNhlHjMw
+1LTBtFbaZ3amxnXN5BjVaDJcD/Nsh6wYRQOZ3+n9dkBLitAAVkcHp58Wfzd/kJnx
+mOuXlZwqYMk70Qzrxp/2RD9E61TyM+FUP75eW4j3a3WlXMx3wCdZkR5KgQk/ydiA
+q7Vvoe7kdEruy9aqGoNiqyOLljES9jZlChzvm/Chi9KBtAdG0FP30jOMz26fKcGg
+Ia6ZVu2yfEkyktM44MqCBLT7eDzw+cbCfR/YPnb4/kaObjUoC5MYzQs7EjpE69VY
+nyQYYNLL7r66zlimZ5itZXPOrp1e5Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.jacobs-university.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.jacobs-university.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.jacobs-university.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp2.jacobs-university.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp2.jacobs-university.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">jacobs-university.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKYjCCCUqgAwIBAgIMINZVtscXSoNekxKEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQxNzA3MzkyMloXDTIxMDcxOTA3MzkyMlowfDELMAkGA1UEBhMCREUxDzANBgNV
+BAgMBkJyZW1lbjEPMA0GA1UEBwwGQnJlbWVuMScwJQYDVQQKDB5KYWNvYnMgVW5p
+dmVyc2l0eSBCcmVtZW4gZ0dtYkgxIjAgBgNVBAMMGWlkcDIuamFjb2JzLXVuaXZl
+cnNpdHkuZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCf1xM9JII0
+zSIbI0YIXZPoWMCajvAP0OUcdZijz7jwfP2XxNeEFY75PN6MVP8YyKQaq/2yefq8
+9Mm8TUJwM2rjN3FgGuWZMKtrX6Wl2+ruBp3anJYVm0DKGt5qQSthi8M2dJyw+83t
+F/3x1wbamqo1hCRWpET0jxhPp5HMUtJzA3HTOTqeCrOQvdnyAaQD2xyuJPDhXe/4
+KJdND/7rMd6LVmgkuePEHC+lcw7b/liRov7DQS75IiPy8xyG3pBVlDGjAx6CEKz2
+4ZyOHbRjORLGpsKqFYv7dwNs8smLMLvH3hIJKWpmVnWfmUnvCxeyGy+2y8YR+/Ir
+ULrzdiiumrKsCGVmFRFQuzZ0Aau1S5PWJ+bRXBvdlVLjW2ioZuGB7wFm1zvfYcqs
+XLXRxYDeJlwQB9yau/ouGLOj+uSfKe7dVaTnsGBZXuP6aYWBAsU7A12SggPk+Kp1
+TbG59sIni84mlwc+Eml1Vi5mSVogK0fdMPZ8BIsLrkp2skkzK/Iq5rPk9bz8RSog
+SWHTKVv9Hi1W9OxT2UmSuKEVIQudFxclCudpmfDZ7mL2sH5EiUywqBG2f4FdTxT3
+K4ozrK8RbMveH3npLLZMJHb++26gVON/vJfy+0/qDtxw99Gbln/oETzzsCCVl0nB
+ywzmcbcpGmIWu9T6NLvAIwEgRubtY0CfOwIDAQABo4IF0DCCBcwwWQYDVR0gBFIw
+UDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDARBg8r
+BgEEAYGtIYIsAQEEAwkwEQYPKwYBBAGBrSGCLAIBBAMJMAkGA1UdEwQCMAAwDgYD
+VR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAdBgNV
+HQ4EFgQU1huPaU+bn4l6iiXuLUs1LBZrbEswHwYDVR0jBBgwFoAUazqYi/nyU4na
+4K2yMh4JH+iqO3QwJAYDVR0RBB0wG4IZaWRwMi5qYWNvYnMtdW5pdmVyc2l0eS5k
+ZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rm
+bi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9j
+ZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNy
+bDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBj
+YS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2Nk
+cDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0
+LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA18GCisGAQQB1nkCBAIE
+ggNPBIIDSwNJAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2yCJo32RMAAAFq
+Kjx5vgAABAMARzBFAiEAvoIqSAZjLLK+J73WQW6611KSEDNRYIko3GGH2uOmoU0C
+IBHNjWIqmtx6b3hdzj9IdrqHxsyP4JU2eWzysaxFWiuSAHUAu9nfvB+KcbWTlCOX
+qpJ7RzhXlQqrUugakJZkNo4e0YUAAAFqKjx5yQAABAMARjBEAiBHtiJ7rct6XsvO
+33z2AqR2llx2CHej3KkM4PXmHVhBTQIgISf0boWKvJJlQ/+RNKfeq4y0Acyq7kQ9
+DETtfbz1zxwAdwBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWoq
+PHrFAAAEAwBIMEYCIQDDTFmJE21RtcO+R0HQyzvg4qMTMHrHvGL/PImKcIwZ7QIh
+AIz+wxMpF87t1+OVaoFAOurSOYkma55Gd2cg24loo0jNAHcAqucLfzy41WbIbC8W
+l5yfRF9pqw60U1WJsvd6AwEE880AAAFqKjx5pgAABAMASDBGAiEA7kiUhC5LKrc0
+n2xH4+JEv7Paes8jkl8hDuVzawn+gxMCIQCBBz779wDIFZiQP9NnYPk66iYcR6++
+CbYKdRp6q/eO0AB2AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAAB
+aio8edAAAAQDAEcwRQIgMjJiHn3O9x+jCedYGrOrUvoZx34GD00YtK6+nSVlEIEC
+IQClUFbQyKTjomSU9K+j+2/Vl5crTMcyYJhCdoRS/w2IPwB3AKS5CZC0GFgUh7sT
+osxncAo8NZgE+RvfuON3zQ7IDdwQAAABaio8edgAAAQDAEgwRgIhAL5cbZpEFKKW
+L1u9NDXekSYviv7zDUhZfCujVYyXn2Y8AiEAtbrqm/qFc3J0LBdhdlBxzqE7N5B0
+OM8BOlztrRG38gsAdQBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAA
+AWoqPH9BAAAEAwBGMEQCIHrhSKGPztalKP7pcilWqI1HCftfgPPY5ipU524bDRvQ
+AiAzmCFTO9+EIvfviXn2wOLpYUXqGBfOYSC6P5McFphFdDANBgkqhkiG9w0BAQsF
+AAOCAQEAWpSns3SEgo6lPaRRkerCd4Ihm0sua0ZJ7LOSPJMR0pLk88hSXNhlHjMw
+1LTBtFbaZ3amxnXN5BjVaDJcD/Nsh6wYRQOZ3+n9dkBLitAAVkcHp58Wfzd/kJnx
+mOuXlZwqYMk70Qzrxp/2RD9E61TyM+FUP75eW4j3a3WlXMx3wCdZkR5KgQk/ydiA
+q7Vvoe7kdEruy9aqGoNiqyOLljES9jZlChzvm/Chi9KBtAdG0FP30jOMz26fKcGg
+Ia6ZVu2yfEkyktM44MqCBLT7eDzw+cbCfR/YPnb4/kaObjUoC5MYzQs7EjpE69VY
+nyQYYNLL7r66zlimZ5itZXPOrp1e5Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.jacobs-university.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.jacobs-university.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e283</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e283</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Jacobs University Bremen gGmbH</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Jacobs University Bremen gGmbH</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.jacobs-university.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.jacobs-university.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stefan</md:GivenName>
+	<md:SurName>Botter</md:SurName>
+	<md:EmailAddress>mailto:itsupport@jacobs-university.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Torge</md:GivenName>
+	<md:SurName>Schmidt</md:SurName>
+	<md:EmailAddress>mailto:t.schmidt@jacobs-university.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Stefan</md:GivenName>
+	<md:SurName>Botter</md:SurName>
+	<md:EmailAddress>mailto:itsupport@jacobs-university.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:itsupport@jacobs-university.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.seu.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-08-23T12:49:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">seu.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">South Eastern University of Sri Lanka</mdui:DisplayName>
+		<mdui:Description xml:lang="en">IDP for South Eastern University of Sri Lanka</mdui:Description>
+		<mdui:Keywords xml:lang="en">seu, oluvil</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.seu.ac.lk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.seu.ac.lk</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">https://idp.seu.ac.lk/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.seu.ac.lk/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJa+OmRnXn3Lr26+5oVnRamYc5fIMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswHhcNMTkwODIyMTA1MzE2WhcN
+MzkwODIyMTA1MzE2WjAYMRYwFAYDVQQDDA1pZHAuc2V1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhUwFZljk3Z2bs8vQ9WBubemNeq6XB39R
+8SmfHusjQg187wgLKRwQl1EG5NUUyfcOXP0NarP6J1SmQvhN9zY9w1aB9Qhi3Fdr
+j4pTiJTdnKHezN5nLQF/PLjj5s+KzipfYMRYwiRmQwm3piAyEcOrVv8XKzrMpPUq
+xunfaKg+HAbOVcEBgvK1c1hdV65skrL+IdeTkg7lBx2wl8xqwqJs30/LyH6CQSDV
+xatruslfjOehcYYtfo8lXT5fYFrXRBj4EHs9GG7Hwr5lBPN2qD98aggxitsoOYA/
+rMtWpDQ5HVf7p6nk/nfy4OwZ16RtB1kb3dYDkG3jY+Uet9ZTQKENBQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUifIhyOJ0xHEVP9VImUWMeWcznv4wPgYDVR0RBDcwNYINaWRw
+LnNldS5hYy5sa4YkaHR0cHM6Ly9pZHAuc2V1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBSGzjMy14VxDjFcme48QZgqy0Jrcs2lp4BJ/H8
+saKtOU59WNeKwm6tboP6ADllI1y7//wTzYqGxfF6Z+YeLziAwDqr3y9qqVUQkaX7
+gSUh/esrtHjVRuxaNI8Loon4BhjlmFvRPK7b1JeTy9pxx/9r6YYfC8aTPwEWNwyr
+Fk2Odf5Ni8TgahCc7QNpNgNBOBjkSDc80B+1RJFWTsbqjNj29InNSelpX/JmARl2
+YAndqNO/3aBcUw2xquOysMXTNdeTXoiy4GFDCiQXElSx0mIi45iOqiDfRoaXuQ0B
+IYUSL58fp7RndLJBwkA8pVLK1cKMYPFZTsdUFHMgiqx7MTwz
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUctecLxAOS6dfSdioC3dGdLAWFeUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnNldS5hYy5sazAeFw0xOTA4MjIxMDUzMTZaFw0z
+OTA4MjIxMDUzMTZaMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCArvRgr/kDDSH6K8ufVX1HPb30GDCQ+3Wg
+RJpHOwxdvrxbXYcFS3chZ3DxsG/w37UpG2NxmmEUVR0mwGelcL7QP6P/0xgxgikp
+7Xtkzey4Npv8XNSHTBcVfn0sqvdCVBpB2fVaUF9m9IAN7sfGVHAS8AXWhQZHobPr
+/KxTancW9+QAe3kW0dJVp8mZZMIyBedFQeX2aCS+JegAJxHc515jWHP/963kgEj1
+R6FAD5RLxrGM6EAQM5fEfRiPhZRCu4B08LXNdMH5MhrJWbDfDcVkPgbwvAQWwFgl
+I2S2dKL73nFz0v6pVGsHUsCPCt0U5xv36gQBzMWLy7WOZyk4kgKZAgMBAAGjYTBf
+MB0GA1UdDgQWBBT939zQiYEXmmMXp1GKruSDinhuyzA+BgNVHREENzA1gg1pZHAu
+c2V1LmFjLmxrhiRodHRwczovL2lkcC5zZXUuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHmyy4vl9vz25Ev0trEiDuvLtKUNsJzplMjBqlhH
+37wMllbmdqUYHXHR9b4m3dfkIbJMK32CFRFCOiP3WWpDPRDzMkqGdh8axs08AAnC
+Klp3UxLknnfvDkWVFT3DkOzqqOVxjsnOly8tzl5V1Obb/0mtYqLXbd9WZS/J6XPq
+ouP0yG8fuQyjnIwPd66iS4uOSz4eHQSOTkVZ9hFC/pRZzPfaV9pl6KH34HJbzPtV
+gCAGXFiX8U+xGrxf2YmajJ4bv8KA7eIxRg9o5v7B0Ysma8CUUuFKz7U1wjmjRV+E
+AcSmgK+osmPusFYQEjo6hamZ7YaEyfYggk1fqH/FnRpI2/c=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUYDy8ZnNQBGnkhiniqC0fW+tPpeYwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnNldS5hYy5sazAeFw0xOTA4MjIxMDUzMTZaFw0z
+OTA4MjIxMDUzMTZaMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDVrl3XVBtLmx+GODT4CQYCNg8v4UG7+zux
+wxwwEu2u055pyxEZrIOjS3gIF3pqoImgqPhBkxF+h++DivUpDOaabqIs8R9BDq0L
+c8tWPx6VRBg5Dbj1ulSptwNnku3luDZ9s97Bv/2GNvwTzih4m+lV7EHxNQ7x1jnT
+OGs3MzWbrHWXYU08/UI6b447DFKtrjZnNG5s1UGuj5mGZIzrHoO4yiBPtX6twXUb
+72KsjonC3YNo5NqcHxmVhtRE1cRjrmVOxFeF4UvQ1kZ0Q9UXdlnpeB4M2f0Jyg0t
+U9xgzzCGVh4e0z2qD3zA5hjg9TBnHG74DC1UmTXYw7EsyaMNqNuhAgMBAAGjYTBf
+MB0GA1UdDgQWBBTrfWNbcCDXRgcE2aCdOGHVMvtGRDA+BgNVHREENzA1gg1pZHAu
+c2V1LmFjLmxrhiRodHRwczovL2lkcC5zZXUuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHrmvEwnpQuvysfbEHQFu/fnL4DoAkA0FZ8sva3J
+XVDZc9UE6R9QUGXNOOTIkITL+g4LvoanqsKUNCnqCRtUXhrGIJXO53uKH46Iu8y1
+qCeoKw1DntGJCmeVR2PwkszqTPXQreSF5Jf3BXzCAF8uXe/CMQnLYaItOGuo/J8m
+ycM49T0GyQwUIXA/9jtCLxAEmkv6ZmilJinb5VRKaj1+Q3+ARaR2Rba8KkgWZsZo
+cqz5JWzrhDB59NaYeI/pD8nx8lBXkRTw+hHSonjxKm2BEb1CzH55Q+5erWtZ0c16
+mFODyNwdtBTzYr012MwFgv+shPXUhBwbt0R122vCtavvgSA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.seu.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.seu.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.seu.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.seu.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.seu.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.seu.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.seu.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">seu.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJa+OmRnXn3Lr26+5oVnRamYc5fIMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswHhcNMTkwODIyMTA1MzE2WhcN
+MzkwODIyMTA1MzE2WjAYMRYwFAYDVQQDDA1pZHAuc2V1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhUwFZljk3Z2bs8vQ9WBubemNeq6XB39R
+8SmfHusjQg187wgLKRwQl1EG5NUUyfcOXP0NarP6J1SmQvhN9zY9w1aB9Qhi3Fdr
+j4pTiJTdnKHezN5nLQF/PLjj5s+KzipfYMRYwiRmQwm3piAyEcOrVv8XKzrMpPUq
+xunfaKg+HAbOVcEBgvK1c1hdV65skrL+IdeTkg7lBx2wl8xqwqJs30/LyH6CQSDV
+xatruslfjOehcYYtfo8lXT5fYFrXRBj4EHs9GG7Hwr5lBPN2qD98aggxitsoOYA/
+rMtWpDQ5HVf7p6nk/nfy4OwZ16RtB1kb3dYDkG3jY+Uet9ZTQKENBQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUifIhyOJ0xHEVP9VImUWMeWcznv4wPgYDVR0RBDcwNYINaWRw
+LnNldS5hYy5sa4YkaHR0cHM6Ly9pZHAuc2V1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBSGzjMy14VxDjFcme48QZgqy0Jrcs2lp4BJ/H8
+saKtOU59WNeKwm6tboP6ADllI1y7//wTzYqGxfF6Z+YeLziAwDqr3y9qqVUQkaX7
+gSUh/esrtHjVRuxaNI8Loon4BhjlmFvRPK7b1JeTy9pxx/9r6YYfC8aTPwEWNwyr
+Fk2Odf5Ni8TgahCc7QNpNgNBOBjkSDc80B+1RJFWTsbqjNj29InNSelpX/JmARl2
+YAndqNO/3aBcUw2xquOysMXTNdeTXoiy4GFDCiQXElSx0mIi45iOqiDfRoaXuQ0B
+IYUSL58fp7RndLJBwkA8pVLK1cKMYPFZTsdUFHMgiqx7MTwz
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUctecLxAOS6dfSdioC3dGdLAWFeUwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnNldS5hYy5sazAeFw0xOTA4MjIxMDUzMTZaFw0z
+OTA4MjIxMDUzMTZaMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCArvRgr/kDDSH6K8ufVX1HPb30GDCQ+3Wg
+RJpHOwxdvrxbXYcFS3chZ3DxsG/w37UpG2NxmmEUVR0mwGelcL7QP6P/0xgxgikp
+7Xtkzey4Npv8XNSHTBcVfn0sqvdCVBpB2fVaUF9m9IAN7sfGVHAS8AXWhQZHobPr
+/KxTancW9+QAe3kW0dJVp8mZZMIyBedFQeX2aCS+JegAJxHc515jWHP/963kgEj1
+R6FAD5RLxrGM6EAQM5fEfRiPhZRCu4B08LXNdMH5MhrJWbDfDcVkPgbwvAQWwFgl
+I2S2dKL73nFz0v6pVGsHUsCPCt0U5xv36gQBzMWLy7WOZyk4kgKZAgMBAAGjYTBf
+MB0GA1UdDgQWBBT939zQiYEXmmMXp1GKruSDinhuyzA+BgNVHREENzA1gg1pZHAu
+c2V1LmFjLmxrhiRodHRwczovL2lkcC5zZXUuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHmyy4vl9vz25Ev0trEiDuvLtKUNsJzplMjBqlhH
+37wMllbmdqUYHXHR9b4m3dfkIbJMK32CFRFCOiP3WWpDPRDzMkqGdh8axs08AAnC
+Klp3UxLknnfvDkWVFT3DkOzqqOVxjsnOly8tzl5V1Obb/0mtYqLXbd9WZS/J6XPq
+ouP0yG8fuQyjnIwPd66iS4uOSz4eHQSOTkVZ9hFC/pRZzPfaV9pl6KH34HJbzPtV
+gCAGXFiX8U+xGrxf2YmajJ4bv8KA7eIxRg9o5v7B0Ysma8CUUuFKz7U1wjmjRV+E
+AcSmgK+osmPusFYQEjo6hamZ7YaEyfYggk1fqH/FnRpI2/c=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUYDy8ZnNQBGnkhiniqC0fW+tPpeYwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnNldS5hYy5sazAeFw0xOTA4MjIxMDUzMTZaFw0z
+OTA4MjIxMDUzMTZaMBgxFjAUBgNVBAMMDWlkcC5zZXUuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDVrl3XVBtLmx+GODT4CQYCNg8v4UG7+zux
+wxwwEu2u055pyxEZrIOjS3gIF3pqoImgqPhBkxF+h++DivUpDOaabqIs8R9BDq0L
+c8tWPx6VRBg5Dbj1ulSptwNnku3luDZ9s97Bv/2GNvwTzih4m+lV7EHxNQ7x1jnT
+OGs3MzWbrHWXYU08/UI6b447DFKtrjZnNG5s1UGuj5mGZIzrHoO4yiBPtX6twXUb
+72KsjonC3YNo5NqcHxmVhtRE1cRjrmVOxFeF4UvQ1kZ0Q9UXdlnpeB4M2f0Jyg0t
+U9xgzzCGVh4e0z2qD3zA5hjg9TBnHG74DC1UmTXYw7EsyaMNqNuhAgMBAAGjYTBf
+MB0GA1UdDgQWBBTrfWNbcCDXRgcE2aCdOGHVMvtGRDA+BgNVHREENzA1gg1pZHAu
+c2V1LmFjLmxrhiRodHRwczovL2lkcC5zZXUuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAHrmvEwnpQuvysfbEHQFu/fnL4DoAkA0FZ8sva3J
+XVDZc9UE6R9QUGXNOOTIkITL+g4LvoanqsKUNCnqCRtUXhrGIJXO53uKH46Iu8y1
+qCeoKw1DntGJCmeVR2PwkszqTPXQreSF5Jf3BXzCAF8uXe/CMQnLYaItOGuo/J8m
+ycM49T0GyQwUIXA/9jtCLxAEmkv6ZmilJinb5VRKaj1+Q3+ARaR2Rba8KkgWZsZo
+cqz5JWzrhDB59NaYeI/pD8nx8lBXkRTw+hHSonjxKm2BEb1CzH55Q+5erWtZ0c16
+mFODyNwdtBTzYr012MwFgv+shPXUhBwbt0R122vCtavvgSA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.seu.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">South Eastern University of Sri Lanka</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">South Eastern University of Sri Lanka</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.seu.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mohamed Arshad</md:GivenName>
+	<md:SurName>Arshad</md:SurName>
+	<md:EmailAddress>mailto:arshadmmm@seu.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mohamed Irshad</md:GivenName>
+	<md:SurName>Irshad</md:SurName>
+	<md:EmailAddress>mailto:mbmirshad@seu.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

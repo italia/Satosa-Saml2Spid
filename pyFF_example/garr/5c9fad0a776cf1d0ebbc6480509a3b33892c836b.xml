@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.ou.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://ouitservices.service-now.com/ess_portal/" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ou.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Oklahoma</mdui:DisplayName>
+		<mdui:Description xml:lang="en">
+Founded in 1890, the University of Oklahoma is a public research university located in Norman, Oklahoma just 20 mins. south of Oklahoma City. OU’s Norman undergraduate population is just over 20,000, giving students a major university experience in a private college atmosphere. With three campuses in Oklahoma, OU also offers study abroad opportunities at several locations and OU campuses overseas.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.ou.edu/ouit/shared-services.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.ou.edu/content/publicaffairs/webpolicies/privacypolicy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="124" width="94" xml:lang="en">https://shib.ou.edu/oxauth/img/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAigCCQDc5lzkFlIc/jANBgkqhkiG9w0BAQUFADBiMRQwEgYDVQQDEwtz
+aGliLm91LmVkdTEfMB0GA1UEChMWVW5pdmVyc2l0eSBvZiBPa2xhaG9tYTELMAkG
+A1UEBhMCVVMxCzAJBgNVBAgTAk9LMQ8wDQYDVQQHEwZOb3JtYW4wHhcNMTExMjA5
+MTMwMzM3WhcNMTIxMjA4MTMwMzM3WjBiMRQwEgYDVQQDEwtzaGliLm91LmVkdTEf
+MB0GA1UEChMWVW5pdmVyc2l0eSBvZiBPa2xhaG9tYTELMAkGA1UEBhMCVVMxCzAJ
+BgNVBAgTAk9LMQ8wDQYDVQQHEwZOb3JtYW4wggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDWSD/N2sPHJ2Sg//K+mVAi6Oep5tXdxsmVIC6jegFaQVHSYpL8
+GPULb89CyxekyjMIkNfXOnh9Ycfw+PgOVIspVejmdFyM9O9Lp7XYgG4xi9RwL406
+sbIbVUx74HPGAbp/z6XQqus4TemAeJlfzvlRsmwQkiC4IU2iUc0vM8X2OnXGcQ1M
+1nf/lRDYjxFeeSFFKv/SSZQgApXiORb8BgOxJTP2huppWiq+JAX5dSLArlZPfZTE
+A81ULTd0D9HFsViThTb426UHR1CvuUbfb+saA65WWk9s1jLFD5omksXGP0qkglPV
++rrc+MbQltnM3arxyFSEfm2nvNqdVStbt+M7AgMBAAEwDQYJKoZIhvcNAQEFBQAD
+ggEBAJJsqc/AA4p+CPPKnQnQoU0uIUt6V9IBuk6z3JjXPjy5gFYtLJ7RBslMui8x
+whi6eTdUdHpASv7T7WKBBKFSA/NeiZ3TCpYMmdQsPdznzsVS/wsD+pU4PALCfqd6
+jJ9ntDEDOezYSTxAdbU8KmPxb5VZr7QseHAtf5OwZQI5131bVjkIjcM8pH4Sx2gk
+gyHNLf2byp1u1gSTRBbC8m1bESeQRTphQtsM+o3m6JUR3k9bV2tfgXLV8zaFWWuM
+aQgoBThl3ubE6tZmNvkC76OAzv+E+bRNfLV9lm+5Y66Ar9rSQHKur9xGm59GtmI/
+Ghy0tfpx50Ku5N+Baf2OZmHjuv4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.ou.edu:9443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ou.edu:9443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.ou.edu:443/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.ou.edu:443/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.ou.edu:443/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.ou.edu:443/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ou.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQDCCAigCCQDc5lzkFlIc/jANBgkqhkiG9w0BAQUFADBiMRQwEgYDVQQDEwtz
+aGliLm91LmVkdTEfMB0GA1UEChMWVW5pdmVyc2l0eSBvZiBPa2xhaG9tYTELMAkG
+A1UEBhMCVVMxCzAJBgNVBAgTAk9LMQ8wDQYDVQQHEwZOb3JtYW4wHhcNMTExMjA5
+MTMwMzM3WhcNMTIxMjA4MTMwMzM3WjBiMRQwEgYDVQQDEwtzaGliLm91LmVkdTEf
+MB0GA1UEChMWVW5pdmVyc2l0eSBvZiBPa2xhaG9tYTELMAkGA1UEBhMCVVMxCzAJ
+BgNVBAgTAk9LMQ8wDQYDVQQHEwZOb3JtYW4wggEiMA0GCSqGSIb3DQEBAQUAA4IB
+DwAwggEKAoIBAQDWSD/N2sPHJ2Sg//K+mVAi6Oep5tXdxsmVIC6jegFaQVHSYpL8
+GPULb89CyxekyjMIkNfXOnh9Ycfw+PgOVIspVejmdFyM9O9Lp7XYgG4xi9RwL406
+sbIbVUx74HPGAbp/z6XQqus4TemAeJlfzvlRsmwQkiC4IU2iUc0vM8X2OnXGcQ1M
+1nf/lRDYjxFeeSFFKv/SSZQgApXiORb8BgOxJTP2huppWiq+JAX5dSLArlZPfZTE
+A81ULTd0D9HFsViThTb426UHR1CvuUbfb+saA65WWk9s1jLFD5omksXGP0qkglPV
++rrc+MbQltnM3arxyFSEfm2nvNqdVStbt+M7AgMBAAEwDQYJKoZIhvcNAQEFBQAD
+ggEBAJJsqc/AA4p+CPPKnQnQoU0uIUt6V9IBuk6z3JjXPjy5gFYtLJ7RBslMui8x
+whi6eTdUdHpASv7T7WKBBKFSA/NeiZ3TCpYMmdQsPdznzsVS/wsD+pU4PALCfqd6
+jJ9ntDEDOezYSTxAdbU8KmPxb5VZr7QseHAtf5OwZQI5131bVjkIjcM8pH4Sx2gk
+gyHNLf2byp1u1gSTRBbC8m1bESeQRTphQtsM+o3m6JUR3k9bV2tfgXLV8zaFWWuM
+aQgoBThl3ubE6tZmNvkC76OAzv+E+bRNfLV9lm+5Y66Ar9rSQHKur9xGm59GtmI/
+Ghy0tfpx50Ku5N+Baf2OZmHjuv4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.ou.edu:9443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.ou.edu:9443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Oklahoma</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Oklahoma</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ou.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David Horton</md:GivenName>
+	<md:EmailAddress>david-horton@ouhsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Pat Amburn</md:GivenName>
+	<md:EmailAddress>pat-amburn@ouhsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mark McClellan</md:GivenName>
+	<md:EmailAddress>mmcclellan@ou.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Christoper Melton</md:GivenName>
+	<md:EmailAddress>christopher-melton@ouhsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

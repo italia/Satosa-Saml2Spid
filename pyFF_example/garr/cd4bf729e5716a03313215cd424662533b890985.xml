@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.uoregon.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://service.uoregon.edu/TDClient/KB/ArticleDet?ID=52631" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uoregon.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Oregon</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Oregon's Shibboleth Identity Provider</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://uoregon.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://policies.uoregon.edu/content/z-index-uo-policy-statements</mdui:PrivacyStatementURL>
+		<mdui:Logo height="239" width="200" xml:lang="en">https://shibboleth.uoregon.edu/images/Large_UO_Logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQjCCAiqgAwIBAgITFP1Rwp3clPykVwEUThiy/rAHejANBgkqhkiG9w0BAQUF
+ADAhMR8wHQYDVQQDExZzaGliYm9sZXRoLnVvcmVnb24uZWR1MB4XDTA4MDgyMTE3
+MDc1OFoXDTI4MDgyMTE3MDc1OFowITEfMB0GA1UEAxMWc2hpYmJvbGV0aC51b3Jl
+Z29uLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMteVz2c/MiM
+sfGzE40vUED14ud3FeW9GI3cP57J2zBqAqjYhpNj30MV1BysTOJOGJj2tw8AA1pS
+V/FCMEqq6jrQxVtb8gcBML2gQMhJoiy6EHB5hXZSXBzfizrjoz7/DaaB3ECpMecH
+9ZzUmG84ZCiSXKoc4unTuJW+pMGbwTbG6gikxdUuQo3Aq03zJU0shOl7jK32NgPK
+smQ8cQomcKVwYuep2i8JvEL/N7NH4ERJafEYA7/kVS4Qe4UmjLG3aJ9XjVagnjnR
+S+8sTNk2MGJZLubY1C8atcQLxVhO4oqkTe32ogiv/lloPHD2Mi7aztE94wLpNcjs
+ycupoUurNIcCAwEAAaNzMHEwUAYDVR0RBEkwR4IWc2hpYmJvbGV0aC51b3JlZ29u
+LmVkdYYtaHR0cHM6Ly9zaGliYm9sZXRoLnVvcmVnb24uZWR1L2lkcC9zaGliYm9s
+ZXRoMB0GA1UdDgQWBBQColYoD3sV0YAk4Ir4jFYkYOBITjANBgkqhkiG9w0BAQUF
+AAOCAQEAl31lJSmErQH4KnFZbukNAhYesZc8M/M0vNi4fLrJm1SlKunYof6fykpB
+LdvlamuJd1eoV0ltCeR52meq+ej1BdFj/hyZcM66hglH5UY4LaeejG31zJplw5o7
+7ohjKy09RmIaiMX0rlutX14IYgEtRXrFGuYFJYiXpK6qiwC/ikjBU3Yjj0Y9B5/K
+5k29STlxFRsKiE511gGeO0Xkcxj4c7Dy3KfwW5wooNiBcL6hCIu+FUUC649WpkNG
+N5GXH191Krz58J6/VJJBsz6T3anUiK6NxxX+/T3fb1FDmR+isSsAJfbFwSpXA1sM
+gVS2dGCBxZlwSzi9cmvk13sneid0+Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uoregon.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.uoregon.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.uoregon.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uoregon.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.uoregon.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.uoregon.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uoregon.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQjCCAiqgAwIBAgITFP1Rwp3clPykVwEUThiy/rAHejANBgkqhkiG9w0BAQUF
+ADAhMR8wHQYDVQQDExZzaGliYm9sZXRoLnVvcmVnb24uZWR1MB4XDTA4MDgyMTE3
+MDc1OFoXDTI4MDgyMTE3MDc1OFowITEfMB0GA1UEAxMWc2hpYmJvbGV0aC51b3Jl
+Z29uLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMteVz2c/MiM
+sfGzE40vUED14ud3FeW9GI3cP57J2zBqAqjYhpNj30MV1BysTOJOGJj2tw8AA1pS
+V/FCMEqq6jrQxVtb8gcBML2gQMhJoiy6EHB5hXZSXBzfizrjoz7/DaaB3ECpMecH
+9ZzUmG84ZCiSXKoc4unTuJW+pMGbwTbG6gikxdUuQo3Aq03zJU0shOl7jK32NgPK
+smQ8cQomcKVwYuep2i8JvEL/N7NH4ERJafEYA7/kVS4Qe4UmjLG3aJ9XjVagnjnR
+S+8sTNk2MGJZLubY1C8atcQLxVhO4oqkTe32ogiv/lloPHD2Mi7aztE94wLpNcjs
+ycupoUurNIcCAwEAAaNzMHEwUAYDVR0RBEkwR4IWc2hpYmJvbGV0aC51b3JlZ29u
+LmVkdYYtaHR0cHM6Ly9zaGliYm9sZXRoLnVvcmVnb24uZWR1L2lkcC9zaGliYm9s
+ZXRoMB0GA1UdDgQWBBQColYoD3sV0YAk4Ir4jFYkYOBITjANBgkqhkiG9w0BAQUF
+AAOCAQEAl31lJSmErQH4KnFZbukNAhYesZc8M/M0vNi4fLrJm1SlKunYof6fykpB
+LdvlamuJd1eoV0ltCeR52meq+ej1BdFj/hyZcM66hglH5UY4LaeejG31zJplw5o7
+7ohjKy09RmIaiMX0rlutX14IYgEtRXrFGuYFJYiXpK6qiwC/ikjBU3Yjj0Y9B5/K
+5k29STlxFRsKiE511gGeO0Xkcxj4c7Dy3KfwW5wooNiBcL6hCIu+FUUC649WpkNG
+N5GXH191Krz58J6/VJJBsz6T3anUiK6NxxX+/T3fb1FDmR+isSsAJfbFwSpXA1sM
+gVS2dGCBxZlwSzi9cmvk13sneid0+Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uoregon.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.uoregon.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Oregon</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Oregon</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uoregon.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IDM Administrative Support</md:GivenName>
+	<md:EmailAddress>idmsupport@uoregon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IDM Technical Support</md:GivenName>
+	<md:EmailAddress>idmsupport@uoregon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IDM Support</md:GivenName>
+	<md:EmailAddress>idmsupport@uoregon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security</md:GivenName>
+	<md:EmailAddress>infosec@uoregon.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

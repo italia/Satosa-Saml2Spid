@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.irstea.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2013-09-17T15:52:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">irstea.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">IRSTEA - National Research Institute of Science and Technology for Environment and Agriculture</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACPUlEQVQozzXSv06TYRgF8HOe96UttIgFWygINIiRIIbFP6OJxgtQZxdHL0EXR2/ATRPvwMSIgxegxkENOhgVI2rAlGolYi3t9z7H4dPlOcOTM50fpQQY4AAAAyCAAgARdIgCCSUyAKAkCGB+HDJBpPKyIxkIJ4yCExbzAADgw7d77V9PhX1DABDBjMm9pGAL45emqucBRMAggE6g1Vnb/PHAopiZ038PTjGghNdgqISpyeoFApFwmAlIA/vamf+8d227t9jqzm0NDn0aHFgebl9pnlMqdbNvBOCKkN15uH537fnG+1b77MWJw+PInAxlyuXb/bFs0GT8AkQBNEUgvd9qP3uzheT1OBgzT2ZkJoVItrLir3TkYNg0JsAFMyCcWZ5qVEeg5DCiINIJwBNtN/V/9k8EEABkFAz0lWZ9cf6QQfswKSX5XrIBmeQlhJ1e04Mo5K3o4FxjYnVhcjnpkVKZrIRw+XDpTaf/sct1/9NNi0FIdAqgRxNLEaeO1tdbuzdXxouztTJtOGbjxaFr05WNne5spVEr3+r6FxGEmQhJK8dmauXyTo+v2r3KaNjsqR8KoYDawUoYHonFBXGPSsp3EK3ZqD5++W7/7aYVS99HR153uvWh8HJ0aKPTWywXb1w/vTpzEgz0FHMZ1Urhxb7/3G4B9mpkeGF6dGJ2cnVp+uqxxtL8ZL1aAAIAWKBLEEjcvv/kx252cmn6+Fxtpj4WYi5GMlIQ/5Gju5MEHDIIyTzAcpG5X8n+/53AX9H3FvIIb+2KAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjQ5OjA1KzAyOjAwhgDtkQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo0OTowNSswMjowMPddVS0AAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.irstea.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Members and associated persons of Irstea</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">IRSTEA - Institut national de recherche en sciences et technologies pour l'environnement et l'agriculture</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels et membres associés à l'Irstea</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAINKG8UKonnXc9QRha4KV5urgO0WMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5pcnN0ZWEuZnIwHhcNMTMwNDExMDkxMDE3WhcN
+MzMwNDExMDkxMDE3WjAYMRYwFAYDVQQDEw1pZHAuaXJzdGVhLmZyMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjoVm6ET1G+LU/Bs+d24QZXmBDqxgmcmb
+j4TtylC1j9nsS6eo3hiiMewADQqRCeilde/NB2lO4WNtEwSopYDVN+qQBJXLeyIH
+nxMSDhjofcuYOLrvKEC68r5wksj4ASgdNZH26w682vmyCQK1BXM+BnDgK+8JVQYM
+fxaEhUZVqK+mKeFlKuIloGX8vqMYSR+9933ZaBgg6tRy7x1f8HXGKlJOHqfyonni
+NFLrODFiQ7iYzCO3Re+tMW7fGYT0vWBvI3ONlPWZOCcLD1T1+uVk6s4gyAm1loPS
+kUCQ4U8AyR7ai3BiQ2FJo9nL0M1dk4wa3ww/mq7M9z5A9YD32dS18QIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAuaXJzdGVhLmZyhiRodHRwczovL2lkcC5pcnN0ZWEu
+ZnIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFMZx2MPfMr2fV2uFJRTLZdgetgkN
+MA0GCSqGSIb3DQEBBQUAA4IBAQAmUhJ+9NVBiJS/bTle1Kbq3FU2JgpaCiTMu/Hi
+M1tKHcXGleAryzUX/yHazsFYGtGQ0XyWWdbbkc0J194/6tDxHqm6nEblm2kdGEoc
+5owRFCbVwCaTMt7NflbYQJC1EPdsMycyEw39WMx/Pk9bEAxItQaogAA9y+V0n/Mp
+zs1YMK99JgGR3A7GKIoZGi5pOgWL10ugmSPEYG7wQZwcX+S9px4BGzxJ1sgMqxyU
+ekqCqNunsUWxdTSksZHzVPhHOoRpnOvy2B8CI6XDJo7D7iHhGki66kUsGuHMd/1I
+7CnuMGR/VZ7zf1lkTbIVv4J+xugV9IYQOb/hnoai7lHX658a
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUD2po9himzl20qm1Q2TLiH6OMNU0wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLmlyc3RlYS5mcjAeFw0xODA1MDQxMjUxMTZaFw0z
+ODA1MDQxMjUxMTZaMBgxFjAUBgNVBAMMDWlkcC5pcnN0ZWEuZnIwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCLvxbw1WjC/cb1e8oAK6Jnji9ry6SlvfZ4
+sF9JRZRTYzZ2hDnQbpdH9cSfGTv87b2bn6OC6x+DXRSC6FPo2qxKzaEZ6kyTOUDd
+fVjCe99fphC437to6DPyyYo6EJOYCtDgqh/3u/cfzNmGGC90fjXu/ZQ6FFOzrAI8
+zxgRtglyxlKgGEOCN0z58UQFaxfxTCzVP+4vhW7FMDTI0MEXiZhLOsk7t6bRwHwF
+CUbTRYdtWhSam5q2dOLBL1RUkTR/2Kx4z+1umLk7lQlYmL7yUgBFxD7X4wRlMBKr
+JoEUv7657BqNEi0Shzay9wvGpHnJoTAXOlm808tjb/t9BBnkduwvAgMBAAGjYTBf
+MB0GA1UdDgQWBBTLxx8Pq0NKcxINY47Zjd9flP/HfDA+BgNVHREENzA1gg1pZHAu
+aXJzdGVhLmZyhiRodHRwczovL2lkcC5pcnN0ZWEuZnIvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAAmFnRXXmCgUVDvCElp7tmVqkem7Kd24sqpqUn9y
+u38vUUvoYylH9uBz/az4Kt6Gpff/XOiylgLQ6/jQMyCn9H8osQfN/YnHN8ro3pKS
+oMKQyft8YiZNo/MOhZGOwYyHY/zBBT/tbX1+xM+6crxbHqM8u/e3Qk8S24uQ8/73
+fFVMTvwiS2E7QXPJeGd8wgzKAauigFwvYih4GDG80E1HfX6QIONJxtU+gv9z9D0i
+RKo4OwxyABlTHThQODoEt2b2n59RhGuGcD3FaK2Ufk/sL/qbfWNxlmtrK4tu82EJ
+mszUhsKGWOPv4QqPL5Ml0hrBE0abTFiPFRUR8pXtdYcXakU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.irstea.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.irstea.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.irstea.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institut national de recherche en sciences et technologies pour l'environnement et l'agriculture</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institut national de recherche en sciences et technologies pour l'environnement et l'agriculture</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.irstea.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:federation.contact@lists.irstea.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

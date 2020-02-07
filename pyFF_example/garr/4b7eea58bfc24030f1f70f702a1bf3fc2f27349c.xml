@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.figsh.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-03-26T09:14:18Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">figshare - stage</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Cloud based repository for citable and discoverable research outputs</mdui:Description>
+		</mdui:UIInfo>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://login.figsh.com/Shibboleth.sso/Login"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://login.figsh.com/Shibboleth.sso/DS-Tuakiri"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://login.figsh.com/Shibboleth.sso/DS-Tuakiri" index="1"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://login.figsh.com/Shibboleth.sso/DS-AAF"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://login.figsh.com/Shibboleth.sso/DS-AAF" index="2"/>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://login.figsh.com/Shibboleth.sso/DS-UKF"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://login.figsh.com/Shibboleth.sso/DS-UKF" index="3"/>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9DCCAdygAwIBAgIJAINH4QeRdG4MMA0GCSqGSIb3DQEBBQUAMBoxGDAWBgNV
+BAMTD2xvZ2luLmZpZ3NoLmNvbTAeFw0xNTAyMjIxNDU2NDBaFw0yNTAyMTkxNDU2
+NDBaMBoxGDAWBgNVBAMTD2xvZ2luLmZpZ3NoLmNvbTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAN4JujY6Et1TBjl+Gs1z+3BxD5cgVnAO/o6DtunEQOob
+iPIjcjNPdh4zl6t1Z3J0aEFZBXGh9RJHXiGNzEFVFSldEqrczeRTKoC11yq4bFjl
+f/j+XUSafGgeQ5QslogIWzJ9saMisxdjFA/BUdQuMjleP+1sSQuVtScRU8KuIMN3
+j7RLgBLWqZjelCno33PBPeRGxShiPay7YbKrWXuYssqIvxQMlxqlFOlI/2sIdEWT
+6Y3UsPJIDDg+SrdZU1x7QMqyMrFmcJVzpu5pjvYp9zm1ywsk0A6rwWhUaqMG7Rtu
+oDoKrVHiGs5QbY0bA4nduceY46GPZt5QLhKKLgPrdNkCAwEAAaM9MDswGgYDVR0R
+BBMwEYIPbG9naW4uZmlnc2guY29tMB0GA1UdDgQWBBTNUtGl6wNFgCRqbBJqQKeT
+EA79fTANBgkqhkiG9w0BAQUFAAOCAQEAYTfYrBPburtuPTubqjRRtOGkDu1cvFbs
+FtNK3COaBxomvaZOat/wpzKCvJYV1mZoANfjFsvudtrrwCRMxycO+qkB6B5iKk6i
+eSuOrsAn4aOWw10NKrWn42t9sFg+MquYT0kE78U1nacmux8h+tcn+58Ng7oXZ5ZM
+wkFx+mODdCJRsFtPTFcjMZsh9kKOKn39vmE+gir7H1Uq7sNKiyyOhJcseE6JmoHn
+X1Qnl4KpMY0bpGcnwMCRsptHxx/+dRKnli92HoZu814RTjBDYocFLfig8+i6tN3h
+j9He1kO/aRDrQ+eJ+ussgNgbgO1BeUoZURlifrW5ofHXTs3DIpNF9g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIJAMTyefj3w6+oMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMTD2xvZ2luLmZpZ3NoLmNvbTAeFw0xNzA0MDcxMTQ2MTFaFw0yNzA0MDUxMTQ2
+MTFaMBoxGDAWBgNVBAMTD2xvZ2luLmZpZ3NoLmNvbTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBALs6uEB7rU42tzB/7rKouRSZf27odEWQNQ4QFB0jGf9b
+6AYsBgC/EmLR1WOu9+Gdncg9bsMoaMhyR5iIecAQ6EPPRYEpWuYoqNsFqaBq257v
+PLB2FMXReENLBmKVszvUt6sXYk9xTfML7tkdJ6uCgG6wgHfnZYOSphHl44Bqa6PF
+spxNxfCIDMkphY0F5RDGRsaCOCLISEZtJNRSt2bq9BvmN1sqCsJrLR6gI15v3wu2
+M8emImnrewT40AcpxrsZjNe1+xID/3HQ2MCWCRR5qDb+6H0SY2cQ6vRz4FLZ+7BY
+t+HIaf0wL4uzJEjeDTX/FSKnLkK1TQpv4WejRzxxYS8CAwEAAaNhMF8wPgYDVR0R
+BDcwNYIPbG9naW4uZmlnc2guY29thiJodHRwczovL2xvZ2luLmZpZ3NoLmNvbS9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQPsA7q1zZYQ05X1CqVn8n1x8IOXjANBgkqhkiG
+9w0BAQsFAAOCAQEAeXqtFTQ7v7qTi19gijqFE8xQb6MW46NDBVq+nh+spciBU2LU
+FSBKBLHWOUd4natNEnRrmpGJ0200wfpvrdNbB+LgUif9lbP9lLQHYa0GWfIAOOlS
+RqDkQ17UNv6tdYMDcXL8f5wF0KEHO/O/wfeZK18rG+a6fJN/3mHpRzqgEgg42mfk
+W2BykwOuDL3TFp3fb9Nt8FfPi+1fVvrb7LsIuaOIpXGkT17AZb41lxuBTOPOEeoX
+YlPHDYRtzriEA6RMDQKIqF2PdKu36HpwSnnJ8m7enp2A8+nw38byUHfWNbXAqnv4
+WwTIodeCLYOYB+J77C+Qg/mzJzu8fgZwHjgDKg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.figsh.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.figsh.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.figsh.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.figsh.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://login.figsh.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.figsh.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.figsh.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://login.figsh.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://login.figsh.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://login.figsh.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://login.figsh.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">figshare stage SP</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Figshare LLP</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Figshare LLP</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://figshare.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Daniel</md:GivenName>
+	<md:SurName>Gavrila</md:SurName>
+	<md:EmailAddress>mailto:danielduduta@figshare.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Daniel</md:GivenName>
+	<md:SurName>Gavrila</md:SurName>
+	<md:EmailAddress>mailto:danielduduta@figshare.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

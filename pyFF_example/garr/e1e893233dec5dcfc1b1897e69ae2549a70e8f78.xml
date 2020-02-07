@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.mcmaster.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2017-10-27T14:50:46Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="fr">https://www.canarie.ca/?wpdmdl=10723</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mcmaster.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">McMaster University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">McMaster University Users</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.mcmaster.ca</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.mcmaster.ca/opr/html/footer/main/terms_of_use.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUKHCaxFvHjIH9K5hbulK6yxPlYrkwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPc3NvLm1jbWFzdGVyLmNhMB4XDTEyMDIwMTE3MDkyN1oX
+DTMyMDIwMTE3MDkyN1owGjEYMBYGA1UEAxMPc3NvLm1jbWFzdGVyLmNhMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqxsQP//IcmmvVWg0zhzeW8LCjrqu
+N1w5nWwNgv56L8vd3mUsS6a4iTO7g9lRuwrHSKPZvj8G3S5zanz8q6c+27u99d+J
+SAxHcdo39PFPhO/tjhG51gdhS7htYMsqmdLY4DZh9QvAH0tjcziVNqBNq8gCyRGt
+jFX1BvEHx/06vkw3FO0xtiDORPhGEYdtQJn2ndmipx/n4ZMkJ6R+UFYwks/I/xdl
+J028Xr5oGhaoge4Vp3ES40y6Bko8m9uL53gTv+P7U/R0XDHEn5w+rPaj+XzSpdF2
+CCU4wG3bzCAiEpukY2OrzN5cO+0NIdfuAGTqAc+GEVPFBh96vy6gqKgbAwIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9zc28ubWNtYXN0ZXIuY2GGJmh0dHBzOi8vc3NvLm1j
+bWFzdGVyLmNhL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRIT/Y3h8cVcFUf3IJR
+fCAcMJpJcTANBgkqhkiG9w0BAQUFAAOCAQEAAOa7tjYMmA+VE56OGSOmwV4n1aiY
+YNOIc6pG4iA0uizeduuLD8CcYm3IZIQMQpKLV9cZxUlFIBkUazWoVOGhogSI3Rnl
+IMr86ZuAgzIJ+T1sXafPNGb1E1X44wJQ981jWhEMBa5VzWJgjXERMA3meNDEKAmO
+5tEq8Fls4IJfQ71yLSZOUcuZYT4EeRW6eT3/bwjBP5WJRNZ0SXcEcRM9sGIDVqX8
+TDQZvhLBWDhr8htIGhTNubjvStRQMW715rAMEyuUaiEgcRkWiHnAbfQarx26QQS8
+Ea5ax7YTlLMiVANdhTDPpbsZEOCRjrWgAS4ubgT+YWdSn5y8KDFIK7WNBQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.mcmaster.ca/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.mcmaster.ca/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.mcmaster.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.mcmaster.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.mcmaster.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.mcmaster.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mcmaster.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUKHCaxFvHjIH9K5hbulK6yxPlYrkwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPc3NvLm1jbWFzdGVyLmNhMB4XDTEyMDIwMTE3MDkyN1oX
+DTMyMDIwMTE3MDkyN1owGjEYMBYGA1UEAxMPc3NvLm1jbWFzdGVyLmNhMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqxsQP//IcmmvVWg0zhzeW8LCjrqu
+N1w5nWwNgv56L8vd3mUsS6a4iTO7g9lRuwrHSKPZvj8G3S5zanz8q6c+27u99d+J
+SAxHcdo39PFPhO/tjhG51gdhS7htYMsqmdLY4DZh9QvAH0tjcziVNqBNq8gCyRGt
+jFX1BvEHx/06vkw3FO0xtiDORPhGEYdtQJn2ndmipx/n4ZMkJ6R+UFYwks/I/xdl
+J028Xr5oGhaoge4Vp3ES40y6Bko8m9uL53gTv+P7U/R0XDHEn5w+rPaj+XzSpdF2
+CCU4wG3bzCAiEpukY2OrzN5cO+0NIdfuAGTqAc+GEVPFBh96vy6gqKgbAwIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9zc28ubWNtYXN0ZXIuY2GGJmh0dHBzOi8vc3NvLm1j
+bWFzdGVyLmNhL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRIT/Y3h8cVcFUf3IJR
+fCAcMJpJcTANBgkqhkiG9w0BAQUFAAOCAQEAAOa7tjYMmA+VE56OGSOmwV4n1aiY
+YNOIc6pG4iA0uizeduuLD8CcYm3IZIQMQpKLV9cZxUlFIBkUazWoVOGhogSI3Rnl
+IMr86ZuAgzIJ+T1sXafPNGb1E1X44wJQ981jWhEMBa5VzWJgjXERMA3meNDEKAmO
+5tEq8Fls4IJfQ71yLSZOUcuZYT4EeRW6eT3/bwjBP5WJRNZ0SXcEcRM9sGIDVqX8
+TDQZvhLBWDhr8htIGhTNubjvStRQMW715rAMEyuUaiEgcRkWiHnAbfQarx26QQS8
+Ea5ax7YTlLMiVANdhTDPpbsZEOCRjrWgAS4ubgT+YWdSn5y8KDFIK7WNBQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.mcmaster.ca/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.mcmaster.ca/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">McMaster University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">McMaster University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.mcmaster.ca</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Arnold</md:SurName>
+	<md:EmailAddress>mailto:arnoldd@mcmaster.ca</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Arnold</md:SurName>
+	<md:EmailAddress>mailto:arnoldd@mcmaster.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

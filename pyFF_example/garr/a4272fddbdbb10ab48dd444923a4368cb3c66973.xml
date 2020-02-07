@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://eduid.campus02.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2017-09-20T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">campus02.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">FH CAMPUS 02</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">FH CAMPUS 02</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">Fachhochschule Campus+02 Graz</mdui:Keywords>
+		<mdui:Logo height="70" width="214">https://www.campus02.at/wp-content/themes/campus02/assets/img/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.campus02.at/wp-content/themes/campus02/assets/img/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>campus02.at</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAJXf9cXp7aXBZG7dgVknuJGFOw1bMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWVkdWlkLmNhbXB1czAyLmF0MB4XDTE3MDkwNTEyNDg0
+MFoXDTM3MDkwNTEyNDg0MFowHDEaMBgGA1UEAwwRZWR1aWQuY2FtcHVzMDIuYXQw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCROBo75DM5+V5rCGPUkyRg
+TGTDAd77Mgh/4fpYVgELFBlLRwWuao2xWGslAjQGGPdOjUuRWzZhs9VFLcjdgxfM
+zZeL4zhV/+0zA/QBDintJD4GiMsNlD5Ib2vGv9obnVsPk817TrKl787iA6DR9ckW
+49ZLqHJqo9FpjXCcxMlDsA1h9p3+MIpnNqc2l81AM5vXLUZkZr6tFJup5cdPsruv
+/dmCZqpdsJwbEuO1p0GuCHPp/q5nC7rEyYzR8c/MisxfVsseAWMfASjWIt2DcOvL
+Ek+LzPTaSsk603S4+KXCu8jEyYJIxek8rOJA7G84s5vYTYwG3RkPKqCVyrmN2lh5
+AgMBAAGjaTBnMB0GA1UdDgQWBBQ+CaJFR87R+ecsfIxyGFJukVg92TBGBgNVHREE
+PzA9ghFlZHVpZC5jYW1wdXMwMi5hdIYoaHR0cHM6Ly9lZHVpZC5jYW1wdXMwMi5h
+dC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAA2EbD1B4XC8VbFxL
+NSTH9nsavtAcYIxPn3YSIvpDCkAjB8rAMCUcXAhrvpUp+pGl44EhyBl+ENTBUb3L
+G82IZkwLzJK0vtwZIsqSDoBBIf9mMDq9tzrQoH++Jul/pRSi7km69ISHvNxSi5G9
+P5ufXD0HWBjXZK7SaUhUbVwJDhGIE9wwE9kLIOhQA3buuRCXIFweuco+rP2KBKom
+cOxKrrcJZeqbcLtPQwzKPZ6Zi6EZaRPhrMhYqrdVTpAfJcUlJxZGeaRboUIfwy3w
+wxqkSVlmOvCJ9rK8LBEFFMFataQvHXdyWlyLiIqk1p2lGV6ydOn1atnDSycyhvkJ
+XnUR6Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAN9j+bwyXuo1I0d67tQwMEkmGe3lMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWVkdWlkLmNhbXB1czAyLmF0MB4XDTE3MDkwNTEyNDgz
+OVoXDTM3MDkwNTEyNDgzOVowHDEaMBgGA1UEAwwRZWR1aWQuY2FtcHVzMDIuYXQw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUqDsemSWllOz86SSrLHH9
+8ptoXrVckBf6tKzPOpWwGoiHqdvWNDtgMuRwu0Zxu2nHHSqj7cIW9+8LXq9igvHw
+52kfp/+0VbYARE80mdVo0XBWX5ZJLN6QK6NytPB25M8J6yr0L+nEs6bDD6tgODuS
+pTdfl+HQi8rL7JO38SBG+UtFtI2Pmwc+F0ulrilsJ6W9XptVThr1UWdegJmtNv/A
+xgFe3iZgw95AREpog6SIuOQkjRgoR6wAhOjpC9XZmFzNo+UykoYR/QKXZApjMoBl
+spvusDzr0x2jCskasbRF7FpOQ9vjGpDn+tGRsQM8tgJmRGWVyfOYTO8u9Mrxib6j
+AgMBAAGjaTBnMB0GA1UdDgQWBBTiizaUzhoJP9jgTKQp4y2za28mojBGBgNVHREE
+PzA9ghFlZHVpZC5jYW1wdXMwMi5hdIYoaHR0cHM6Ly9lZHVpZC5jYW1wdXMwMi5h
+dC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAMN2akCyySdyL1h1g
+PCWietELHyeX00hftnfJjI0z2TLMQvWnEZHpx0mBTg8Ie6jSZuKU2r9sLDzbdKED
+VPCsshvdAVxkL4EJ6dtc+F8wtb6yuroJCNQfaELwctKik7Bmwu02PlmDz0F3E5W1
+uZn3wcC9dKjmyNOnrcEesEmCadV5BcsrTcb0FuQZ8SjGftjPo7mBAAKS9f1o8ySB
+sw2UAFLGwIRMKq7AIQZzDuuUfFZ8Vcn/Eae/5dtto3K4bNM2oHGevVKtIclE1/nR
+RfUSJEHYJUO2Kwy8I4gJHImKbOAhsxt5jJpqEni8+C8knqDTddnMc8NYT4puxV1y
+8KVFlw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAPpg1NRH/6rUSsnRQAW3S2V7rrPLMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWVkdWlkLmNhbXB1czAyLmF0MB4XDTE3MDkwNTEyNDgz
+OVoXDTM3MDkwNTEyNDgzOVowHDEaMBgGA1UEAwwRZWR1aWQuY2FtcHVzMDIuYXQw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkzdB2hhfobOyXRWJP9gw5
+KgIubM83AdJASHElXhyvnho61Nf39sZXuSlvGXF9abDczyg5LnfpFs9PbjykxwhV
+vsibzBd9MA3uzlnH+KGDI8DxBrZZbmgX3ra4tZjUkAC2DQqn8xRr6juaXWKtW6qX
+2MH6WTySUZdhufh8gR3usAFR5UwW6oNIwl2AWHvNtbzUPNen1s16o5maiDFqVOoU
+BV8YoSTzgXrcgOhyFt00YJwV+sf9IKQHV4oazCUAUfobDSAzthLX8YBous7rj5H4
+gmP/De7mgN0rKHiTynVyhoBul5CLy5JhurPJtTSzwhY1qMNYOouRJ6K7XnK0Wrf7
+AgMBAAGjaTBnMB0GA1UdDgQWBBT7Ze8w4F2vi/iNU+UnTwBLnOcSojBGBgNVHREE
+PzA9ghFlZHVpZC5jYW1wdXMwMi5hdIYoaHR0cHM6Ly9lZHVpZC5jYW1wdXMwMi5h
+dC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAHnXP8OVbh5Bd0P7J
+2W7sQvBGUA/5IS1RCt1Bh9NFESM1Ze5j+QmzCEprHnZUtssXgVM3itqzsCgn7Rqn
+ty2gXptlxuFAa5eZmDUJA4SHNx80+u5hAndc3zI7NzjcUmQFYVKz+Y4tLSemGGJw
+2FUdrjTpr50t9aIi5iAFgJNLed1iyXeX1/iIuSR7evfCCE4A8PbEFTwkNy/Idi7A
+ogl+NUeD1zijT6kViX9Mr3MjbcXoifKm4OQfRlsc7d0AkqiLr7/lwu6BzLrwi3wo
+OwKhYXBgAtgUOZovUCyYpZUwU/CnQ8bz/nNOUB9TVjaT6Tjc4BrrzTRMYtVAkjp7
+1NQluA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://eduid.campus02.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eduid.campus02.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://eduid.campus02.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://eduid.campus02.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">CAMPUS 02 Fachhochschule der Wirtschaft GmbH</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">CAMPUS 02 Fachhochschule der Wirtschaft GmbH</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">CAMPUS 02 Fachhochschule der Wirtschaft</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CAMPUS 02 University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.campus02.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://en.campus02.at/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:SurName>Contact</md:SurName>
+	<md:EmailAddress>mailto:eduid@campus02.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical</md:GivenName>
+	<md:SurName>Contact</md:SurName>
+	<md:EmailAddress>mailto:eduid@campus02.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

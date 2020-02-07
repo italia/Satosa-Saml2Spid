@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.icm-institute.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-07-31T14:59:43Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">icm-institute.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University Hospitals Institute - ICM</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABPlBMVEX//vz//v3///7///3+9/L87eP46eHj3+Dt7vD74tX1wqf64NH53c3ruJ7DtLLo6ez0spD407/////4yK/eqpHEydH40Lr1v6L++/f76d744dW5vcbw8PD++/j2xav53Mz88On+9/Pz9PWrr7r98+32x63//Pnj5Oe4u8THydD30b3/9O3Nz9bY2d78/Pv52sjo4d7i4+ba29/X2Nzm5+no6evn6Or++fX849SnqrWXnap5gJK3usOOlKN2fpF8hJaMkqH/+/ajqLRudoqLkaH6+viAh5hNV29TXHT8+/m1ucJ+hZaan6yWm6mRl6aWnKqVm6n19PTv7+/k5Off4OPb3ODk5Obm5ujn5+n08/P+/vzo6OrNz9XR0tfOz9XNz9TP0NbMztTe3uLx8PHr6+zt7e7q6evn6Onq6uzy8fJiSSakAAAAAWJLR0QSe7xsAAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+MHHwwDJPhqFiMAAACuSURBVBjTY2BgYGBkYmJmZkAAZhZWNnYOJD4nFzcPLx8/XA2zgKCQkLCIKFyASUxcQpJLSloGLiIrJ6+gqKSMEGBWUVVT19BEsodZS1tHV4+ZmZkRJqJvYGhkbGJiagZVZW5haWVtY2tn78AENdXRydnF1c3dw9oTqkXIS9nbx9fPPyAQZkhQcEhoWHhEZBTMmuiY2Lj4hMSkZJiKwJTUtPSM9OhMmAAjMwQAHQIAiGMYGCJUfIAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDctMzFUMTI6MDM6MzYrMDI6MDAy7Ek9AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA3LTMxVDEyOjAzOjM2KzAyOjAwQ7HxgQAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://icm-institute.org</mdui:InformationURL>
+		<mdui:Description xml:lang="en">This identity provider is valid for ICM users.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Institut Hospitalo Universitaire - ICM</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Ce fournisseur d'identité est valide pour les utilisateurs de l'ICM</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDYTCCAkmgAwIBAgIVANbJS1BotR6NcMLHW5QnoZgxcxoCMA0GCSqGSIb3DQEB
+CwUAMCgxJjAkBgNVBAMMHWRzaS1iYWNrLXNoaWJib2xldGgtZXcxLWIwMS1hMB4X
+DTE5MDcyNjEzMjQzMloXDTM5MDcyNjEzMjQzMlowKDEmMCQGA1UEAwwdZHNpLWJh
+Y2stc2hpYmJvbGV0aC1ldzEtYjAxLWEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCVeRPJLfdDeHPHyBqOzHdB17dtYJWgAmONcVxEshbqJjY7tClVOr8p
+A0RgpQkvIe2D4tUZ5c+z2d4cbnFORlcBN1ytwmbHPxE+elVrLXzcSwiyKoH3IZ2J
++tZrKN7YYlj69SVlUtsVGuvvCTAMcMysEhilxIq9LhD3JPnPAUajWcNPQy+GKk3e
+werYdSTAFBBjQElfFxvXaFLbubx7EjFRJY9sCIYEY51lKF9k4uCECExRECN1KMax
+hXsZpbnwxL7XzC9Ow9fHayvA4maLJG+mqxW9bOeVcO8mN34Z5M9OGXWr5IiNVofI
+8vaDmt1Uv9omf8+w7ro7N6hGZjam++5rAgMBAAGjgYEwfzAdBgNVHQ4EFgQUNi9N
+0wDsy+a4kv7WUFNF+8/WevAwXgYDVR0RBFcwVYIdZHNpLWJhY2stc2hpYmJvbGV0
+aC1ldzEtYjAxLWGGNGh0dHBzOi8vZHNpLWJhY2stc2hpYmJvbGV0aC1ldzEtYjAx
+LWEvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAIT1vEeJLERZg+oi
+bUeAWNuc43tRcrG5zi2IRkReJFMiz0+OQvKVYrLU7RiNOXoMnFMbjmmEokYs9Wg/
+yhNQUxjOj488C8eZf7NcoNmPuMhiSetMmnXCGdefVhgR7hxzk9MTbMr8+wnkHiR7
+qLlHqUQXwt82J1xS3tlu1roVli3VPjEBeHyg1CXLe+MybGWlWktbvYVw56zWbL0M
+jOYQjuQFeYidrpsHmVkuDdL/DDrBSeR83WuoJuI2FLwZ7uL/lCBip8zeVI6xvrMo
+qf+n+LhEICgT79SE34tgAal8WiM7FUphn4zTo7m4iUICs8nbhBp28OcYMFepklYJ
+z7L4w/g=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.icm-institute.org/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.icm-institute.org/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.icm-institute.org/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.icm-institute.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.icm-institute.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.icm-institute.org/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">icm-institute.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDYTCCAkmgAwIBAgIVANbJS1BotR6NcMLHW5QnoZgxcxoCMA0GCSqGSIb3DQEB
+CwUAMCgxJjAkBgNVBAMMHWRzaS1iYWNrLXNoaWJib2xldGgtZXcxLWIwMS1hMB4X
+DTE5MDcyNjEzMjQzMloXDTM5MDcyNjEzMjQzMlowKDEmMCQGA1UEAwwdZHNpLWJh
+Y2stc2hpYmJvbGV0aC1ldzEtYjAxLWEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCVeRPJLfdDeHPHyBqOzHdB17dtYJWgAmONcVxEshbqJjY7tClVOr8p
+A0RgpQkvIe2D4tUZ5c+z2d4cbnFORlcBN1ytwmbHPxE+elVrLXzcSwiyKoH3IZ2J
++tZrKN7YYlj69SVlUtsVGuvvCTAMcMysEhilxIq9LhD3JPnPAUajWcNPQy+GKk3e
+werYdSTAFBBjQElfFxvXaFLbubx7EjFRJY9sCIYEY51lKF9k4uCECExRECN1KMax
+hXsZpbnwxL7XzC9Ow9fHayvA4maLJG+mqxW9bOeVcO8mN34Z5M9OGXWr5IiNVofI
+8vaDmt1Uv9omf8+w7ro7N6hGZjam++5rAgMBAAGjgYEwfzAdBgNVHQ4EFgQUNi9N
+0wDsy+a4kv7WUFNF+8/WevAwXgYDVR0RBFcwVYIdZHNpLWJhY2stc2hpYmJvbGV0
+aC1ldzEtYjAxLWGGNGh0dHBzOi8vZHNpLWJhY2stc2hpYmJvbGV0aC1ldzEtYjAx
+LWEvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAIT1vEeJLERZg+oi
+bUeAWNuc43tRcrG5zi2IRkReJFMiz0+OQvKVYrLU7RiNOXoMnFMbjmmEokYs9Wg/
+yhNQUxjOj488C8eZf7NcoNmPuMhiSetMmnXCGdefVhgR7hxzk9MTbMr8+wnkHiR7
+qLlHqUQXwt82J1xS3tlu1roVli3VPjEBeHyg1CXLe+MybGWlWktbvYVw56zWbL0M
+jOYQjuQFeYidrpsHmVkuDdL/DDrBSeR83WuoJuI2FLwZ7uL/lCBip8zeVI6xvrMo
+qf+n+LhEICgT79SE34tgAal8WiM7FUphn4zTo7m4iUICs8nbhBp28OcYMFepklYJ
+z7L4w/g=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.icm-institute.org/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institut Hospitalo Universitaire - ICM</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institut Hospitalo Universitaire - ICM</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://icm-institute.org</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:reanter@icm-institute.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

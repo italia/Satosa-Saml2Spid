@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.yc.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">yc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Yavapai College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.yc.edu/v5content/policies/online-privacy-policy.htm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="74" width="250" xml:lang="en">https://idp.yc.edu/idp/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEJzCCAw+gAwIBAgIJAKnXz8+Xd71qMA0GCSqGSIb3DQEBCwUAMIGpMQswCQYD
+VQQGEwJVUzEQMA4GA1UECAwHQXJpem9uYTERMA8GA1UEBwwIUHJlc2NvdHQxGDAW
+BgNVBAoMD1lhdmFwYWkgQ29sbGVnZTEMMAoGA1UECwwDSVRTMSowKAYDVQQDDCFZ
+YXZhcGFpIENvbGxlZ2UgSWRlbnRpdHkgU2VydmljZXMxITAfBgkqhkiG9w0BCQEW
+EndlYnNlcnZpY2VzQHljLmVkdTAeFw0xNzA4MTEyMTQ0MzFaFw0yNzA4MDkyMTQ0
+MzFaMIGpMQswCQYDVQQGEwJVUzEQMA4GA1UECAwHQXJpem9uYTERMA8GA1UEBwwI
+UHJlc2NvdHQxGDAWBgNVBAoMD1lhdmFwYWkgQ29sbGVnZTEMMAoGA1UECwwDSVRT
+MSowKAYDVQQDDCFZYXZhcGFpIENvbGxlZ2UgSWRlbnRpdHkgU2VydmljZXMxITAf
+BgkqhkiG9w0BCQEWEndlYnNlcnZpY2VzQHljLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBALMBwcGJqbHcTGGQNrjsu6cg9iACOg0AQVe+P83KDaAw
+oESMSJHdKnWBTwXsgbOJ8y9Yc6P2RpNzHGb1/x4et3wNyFsYDITskzahDGcC4f+G
+WXxSKGsnkc0AwZztn+97AIhmCw0OwX9TeSuItIX+BwQhIhWNWzN5vYXi8DA47dMZ
+Uf6CCjFLpuOrJSX9ieeQ83bKrRJlj5UxYdntbMh5nfV4dQ2nYFPM2gy5dEsqgOAr
+qiNp/jYA3ggx4JxMUcLIPxXFSFcChVFprDE5O6vuEO+grSyQbUuMOEBU4Hjnotxw
+xi1rSkDbps831Kv9Q/Vd94mtkBZAuczv6HvtG3ItomMCAwEAAaNQME4wHQYDVR0O
+BBYEFEqshJSB1gFsYUhP7MvV3IFal+4IMB8GA1UdIwQYMBaAFEqshJSB1gFsYUhP
+7MvV3IFal+4IMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAEqW8oGw
+ZoX/b7ALN1Nur52+2MKMxV9BC+lHmVfafE9snVdbJOWFxasFtqKEp5jYvgXMJDl3
+XH6CtM4jenBMpP0rN6xvNYgNkp8L77flrrgjWrM9RjxQbqFeYKwIhMuGbjU/ji7x
+Kh8TCCkALvy6pT6lKaw3TKXcIOLh7ho7AQRxuHjkrxg4p0MpM2uoaCfxGjC8FkG5
+hW0ze5ilwZ3LKCUTUv0c6FuJler/IN6pLmvjJc79eRsNEABsAtKlaMelVxu+7oSO
+fqrh9bKin8kj2R8BDKirgW/Tw3IRAiYFnlE1kXWbFH48uSCcbsrzpKDj24w9Zv2l
+FQVAoh+WUQEgi7s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.yc.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.yc.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.yc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.yc.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Yavapai College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Yavapai College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.yc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Patrick Burns</md:GivenName>
+	<md:EmailAddress>patrick.burns@yc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Matt Borja</md:GivenName>
+	<md:EmailAddress>matt.borja@yc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Sean Hagan</md:GivenName>
+	<md:EmailAddress>sean.hagan@yc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:cru.fr:federation:univ-angers.fr">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2009-06-23T11:48:50Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-angers.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Angers</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALCSURBVDhPdVNJTBNhFP7/6bQzLRIbuuiBpYGDhMQU02hsjF4waQKoB5ADF9ImDY3hAEhvVD2QEA4uVCSeiBcjhsQogbAchKRRD0hMD0QaSrx4aAlWhZZhprP4TR1cAnzJ68x785bvLSXHIfBxt+b8h50r99KCwzAdCWo8D+Hc+51QqqDcP8Opt6NfF55TSonJZNI6Ojokw+V4pNNp6k3kwrbF3D4Xii1wHPeS5/nXkBdut/vWwMCA23A9jJGREWt9fX3LybvPntgWvonsjfBPmLV/RAWTlMvl8uP9L/SqjY2Nlaj2EHRzpsvX5/hHc5/YS835srIyzW637zkcjn2z2azCXWNZ9guYVJaCZVmmoVDIV15e/hbBstVq1VizRWI4fq+59ZoUj8eFtrY2sbu7W5ycnJSQqKgnAYvHpcrBYPBiKpVKIolqsViUsbGxQl9f3y6qKcPDw8WhoSGBYRhV16empgo9PT0lFpAMg2DP/Pz8A0mSzlZXV4MAJXjKtbW1qqIoZHBwkEUSXlVVqgHZbFZxOp0H2zvFbmxsRPL5/AUoFFMmNpuNoJruoFcg6FVDQqmhoYFDET0xu729rX/SoTGZTCaIF5OuhcNhsrS0xPj9/hO6Dsqkv79fiUajlvX1dZJIJLitrS2r/s1AlsWPSxRFMjExQaqqqn6bwWZ1dZUHGxqJREyxWIyura0RDJdg0IYL0bDORZ3uZ105ShCgrqysFJFcQ99aU1OTury8rIyOjopY9w+01kq9Xu/VZDL5CgF/Uv8Lj8dT7OrqYgVBoDMzMzLmyGClMlqPBwKBO2R2dpZWVFS0gMkm/A/Wc5yo2NIOzvmpz+f7/5zb29udOJAoNvEOveVgKkD2IQIkD8oZ3Miburq6m+Pj4zbYSjj0b5yenubAyo7bqMEWTsNEcQM5zGCzt7f3e2dnp57QACG/AGP9IP63ZIPgAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-angers.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Employees and students from the University of Angers</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université d'Angers</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Les personnels et étudiants de l'Université d'Angers</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVAMabeXzhOvplUR9r4t9fsuUrWixGMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXNoaWJib2xldGgudW5pdi1hbmdlcnMuZnIwHhcNMTQw
+NDE4MDY1MzI1WhcNMzQwNDE4MDY1MzI1WjAkMSIwIAYDVQQDExlzaGliYm9sZXRo
+LnVuaXYtYW5nZXJzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+njrHW1QuXFlucp6z9Q5qwHBNer+ZquJPEs1detiZARHyigMJILaslGc8b6FwA+xC
+pam+vAnnhFVXLI7iR4G7chrAl0cpiuBLifK3uMFKo+a7NTOBT4N9UNSyWPuVoF23
+kq+cPptIw01BV4jp4A4QoZbfqr4ueeY3oujYi4HhAZS3Twh+EByeJb208XZJjE78
+pokPWU//uWpLdVWm+fq8X9HOBhyMaFqsbBV0pRI72rYiSUifPrws5EI6aWonLt9R
+59HcvN0bx+k3dlMgEBOx9y1B2189/8bLVAg1wM2zaKlyGMbmzlJ5PwzjVUAs5G/J
+EMaRfdVHCNiX3r33XO4ZYQIDAQABo3kwdzBWBgNVHREETzBNghlzaGliYm9sZXRo
+LnVuaXYtYW5nZXJzLmZyhjBodHRwczovL3NoaWJib2xldGgudW5pdi1hbmdlcnMu
+ZnIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFAKn+28vOVV2v3JY1xRWVCTpRbI6
+MA0GCSqGSIb3DQEBBQUAA4IBAQB+45tSXigpVOHs6oJCae7LyB97FXb2w2TTkYsI
+XD1hgEszYlaxjEF1Y1+GYX9eC7EX+al9pil/3buaFHcd5hi7NeY8HBsNqTjXI8kr
+4/vaJqT/RhnWHb9ylDweiCtIDu6W2NjUw1zEehgtG1WbxeERvggVZw6p4B5U3WQ5
+EW8UH2uweFDWwfDBLnYAiX2IYiHzvR1+N1CHFXs1x7JeatpsHtOJeoaYfWDtBHVu
+R2mmF7L5xU2Vz6xEp0X4OUPKsBXAaRBFHs+2LIY+wAdwM3tjjUxCYgwp5uOoX2dk
+SIWEfxyrSc9yevZKOFUP04Oi4b6WcQbgRl5bIy6PHi2kYiRe
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAMHj2Cu/7KEX13/aTUHqdXfb3tFgMA0GCSqGSIb3DQEB
+BQUAMCExHzAdBgNVBAMTFmZyb250YWwudW5pdi1hbmdlcnMuZnIwHhcNMTAwOTA5
+MTAzMjQyWhcNMzAwOTA5MTAzMjQyWjAhMR8wHQYDVQQDExZmcm9udGFsLnVuaXYt
+YW5nZXJzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIh2qi8D
+qFiSERXM4uugvV8s4OBCMbosII48TW6O0zG5KMtaLDnTDatBTchVONzQ7M5IEg/7
+nM90aocij3FZxWqDnV/o5A/MMuBoB8/J9oWgMVPnB+sBlixpQiWc5L/31HQgVPtL
+7AOuyC9xxldTx1e5kDBpW0QDyqZdtbApqAI0N4pCtrIKm8lYTYJ28eZQDUF7nu/h
+hw6HgSRY3qtCWnpkahaRziIFfsxyt1PJQSmaEdkHheFJWuoW8ptt3DwVn+ywBkX4
+EkZnBkuHZ3E5CMWXMz8WzfSqeJj+epi1vCDr80R6v7wKez7CWLt+uit7ZFyjjv+l
+zKa9OHlDCG52qQIDAQABo3MwcTBQBgNVHREESTBHghZmcm9udGFsLnVuaXYtYW5n
+ZXJzLmZyhi1odHRwczovL2Zyb250YWwudW5pdi1hbmdlcnMuZnIvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFJC10iOKAVjMBWfVlXG7viH4rneDMA0GCSqGSIb3DQEB
+BQUAA4IBAQBXoZx/uNmrVDdvRMUZL0ZVPP0XtHRngakIEi0ADSAh2zHAhvMgybDE
+W2EprWWG3CEltjt59/ugMV7y7/VkAuw2CMcFiKWGNYrlyXqx+u045lFxaB1VEkyH
+NFCBhYR00KhKcsyLZFGRhjJsRF8BrPPk4APrhMzKMm7yyysWgK8zaIx1G1vWG5FD
+e2SaH84F6OdHlwY/DFR+h6JFkH7FrBoJxKcnlCTL8NGhH2Kc15JweNdb7aTthrqb
+85iK6ee+lD481XBORDuJ9IueWi+kuDTSoTCP403vuFXe3SCMDi5ifHnw+7CH/jd8
++2aam5wgFGGrA1qTjyQEFHulpuQ6mnIK
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.univ-angers.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.univ-angers.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.univ-angers.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-angers.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVAMabeXzhOvplUR9r4t9fsuUrWixGMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXNoaWJib2xldGgudW5pdi1hbmdlcnMuZnIwHhcNMTQw
+NDE4MDY1MzI1WhcNMzQwNDE4MDY1MzI1WjAkMSIwIAYDVQQDExlzaGliYm9sZXRo
+LnVuaXYtYW5nZXJzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+njrHW1QuXFlucp6z9Q5qwHBNer+ZquJPEs1detiZARHyigMJILaslGc8b6FwA+xC
+pam+vAnnhFVXLI7iR4G7chrAl0cpiuBLifK3uMFKo+a7NTOBT4N9UNSyWPuVoF23
+kq+cPptIw01BV4jp4A4QoZbfqr4ueeY3oujYi4HhAZS3Twh+EByeJb208XZJjE78
+pokPWU//uWpLdVWm+fq8X9HOBhyMaFqsbBV0pRI72rYiSUifPrws5EI6aWonLt9R
+59HcvN0bx+k3dlMgEBOx9y1B2189/8bLVAg1wM2zaKlyGMbmzlJ5PwzjVUAs5G/J
+EMaRfdVHCNiX3r33XO4ZYQIDAQABo3kwdzBWBgNVHREETzBNghlzaGliYm9sZXRo
+LnVuaXYtYW5nZXJzLmZyhjBodHRwczovL3NoaWJib2xldGgudW5pdi1hbmdlcnMu
+ZnIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFAKn+28vOVV2v3JY1xRWVCTpRbI6
+MA0GCSqGSIb3DQEBBQUAA4IBAQB+45tSXigpVOHs6oJCae7LyB97FXb2w2TTkYsI
+XD1hgEszYlaxjEF1Y1+GYX9eC7EX+al9pil/3buaFHcd5hi7NeY8HBsNqTjXI8kr
+4/vaJqT/RhnWHb9ylDweiCtIDu6W2NjUw1zEehgtG1WbxeERvggVZw6p4B5U3WQ5
+EW8UH2uweFDWwfDBLnYAiX2IYiHzvR1+N1CHFXs1x7JeatpsHtOJeoaYfWDtBHVu
+R2mmF7L5xU2Vz6xEp0X4OUPKsBXAaRBFHs+2LIY+wAdwM3tjjUxCYgwp5uOoX2dk
+SIWEfxyrSc9yevZKOFUP04Oi4b6WcQbgRl5bIy6PHi2kYiRe
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAMHj2Cu/7KEX13/aTUHqdXfb3tFgMA0GCSqGSIb3DQEB
+BQUAMCExHzAdBgNVBAMTFmZyb250YWwudW5pdi1hbmdlcnMuZnIwHhcNMTAwOTA5
+MTAzMjQyWhcNMzAwOTA5MTAzMjQyWjAhMR8wHQYDVQQDExZmcm9udGFsLnVuaXYt
+YW5nZXJzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjIh2qi8D
+qFiSERXM4uugvV8s4OBCMbosII48TW6O0zG5KMtaLDnTDatBTchVONzQ7M5IEg/7
+nM90aocij3FZxWqDnV/o5A/MMuBoB8/J9oWgMVPnB+sBlixpQiWc5L/31HQgVPtL
+7AOuyC9xxldTx1e5kDBpW0QDyqZdtbApqAI0N4pCtrIKm8lYTYJ28eZQDUF7nu/h
+hw6HgSRY3qtCWnpkahaRziIFfsxyt1PJQSmaEdkHheFJWuoW8ptt3DwVn+ywBkX4
+EkZnBkuHZ3E5CMWXMz8WzfSqeJj+epi1vCDr80R6v7wKez7CWLt+uit7ZFyjjv+l
+zKa9OHlDCG52qQIDAQABo3MwcTBQBgNVHREESTBHghZmcm9udGFsLnVuaXYtYW5n
+ZXJzLmZyhi1odHRwczovL2Zyb250YWwudW5pdi1hbmdlcnMuZnIvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFJC10iOKAVjMBWfVlXG7viH4rneDMA0GCSqGSIb3DQEB
+BQUAA4IBAQBXoZx/uNmrVDdvRMUZL0ZVPP0XtHRngakIEi0ADSAh2zHAhvMgybDE
+W2EprWWG3CEltjt59/ugMV7y7/VkAuw2CMcFiKWGNYrlyXqx+u045lFxaB1VEkyH
+NFCBhYR00KhKcsyLZFGRhjJsRF8BrPPk4APrhMzKMm7yyysWgK8zaIx1G1vWG5FD
+e2SaH84F6OdHlwY/DFR+h6JFkH7FrBoJxKcnlCTL8NGhH2Kc15JweNdb7aTthrqb
+85iK6ee+lD481XBORDuJ9IueWi+kuDTSoTCP403vuFXe3SCMDi5ifHnw+7CH/jd8
++2aam5wgFGGrA1qTjyQEFHulpuQ6mnIK
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.univ-angers.fr/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université d'Angers</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université d'Angers</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-angers.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:shibboleth@listes.univ-angers.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

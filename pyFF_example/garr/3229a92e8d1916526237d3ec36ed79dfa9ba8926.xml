@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://scbhvidp1.wncc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wncc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Western Nebraska Community College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">WNCC Identity Service</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.wncc.edu/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="52" width="324" xml:lang="en">https://scbhvidp1.wncc.edu/idp/images/wncc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVAJSMSPaqt9oclpQsNKYu8RleQ4xiMA0GCSqGSIb3DQEB
+BQUAMB0xGzAZBgNVBAMTEnNjYmh2aWRwMS53bmNjLmVkdTAeFw0xNDA2MjAxNjA0
+MjhaFw0zNDA2MjAxNjA0MjhaMB0xGzAZBgNVBAMTEnNjYmh2aWRwMS53bmNjLmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJZu00APwCayQBVv2Fm6
+7C2hps6WisPGLybOJ+NVIcmSVOym0Cju4oYkS6pocEJTBcEUhHPLewt5KztVwkAA
+f7DfRhEJKcth7P/rJbENmfagjZR3NVNGiwh3/L3/6D/+r8v33FrghlEE0xSqDVrG
+7+VYKhFchttlFuw8f9osYFu5FM9m2F/FOY1scDZ9qi2JXrU3Zrc+fwGcn6pa1m0O
+8f77HI/yGRXJfcJsTUagPHFrdOor8rJO6tl5VTaYVcNbtTVpol4SYPV44FlpcCWu
+QjOAcG4kUZpv4edH6JWkPLY6w806EEmorZwwPw3+kL/vS5Q02JNnFUCQLuuVhzxn
+bdECAwEAAaNrMGkwSAYDVR0RBEEwP4ISc2NiaHZpZHAxLnduY2MuZWR1hilodHRw
+czovL3NjYmh2aWRwMS53bmNjLmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU
+W2jH8jNEMz9rOp6ZmRuediIykEEwDQYJKoZIhvcNAQEFBQADggEBAAGtdG+JLgHp
+2dcsTVYRwOa4gQqoXeTUai9z51zSHYRHWw2tXsWeTvqlGuxxuPyb0vIvy8/aRQtD
+gk7tYVgq1NUhSVTdmom9HZEm4Zr2YQ0vCLzAKeyYFtYZYSUOQh0Zb/cVp7s135mG
+cXu2XS7mjpN1bqpVFJGh1QyDM0hkhMSvDlyV2pzZELkZ9uWIWfewIvzqWQfk1nhQ
+E/1ilLakkSwSDL8nVowUVQkrnZA1SRfnzQYpi2EqVk2Ep0GQ2b2rDRqgODN2gyow
+e48ojz4UAIQL/1APvFj2htMcTg/CNgCL3SHdLOBuMPtAV4qVm3TFB22iUl7qMN13
+hFs903Bz31s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://scbhvidp1.wncc.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://scbhvidp1.wncc.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://scbhvidp1.wncc.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://scbhvidp1.wncc.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://scbhvidp1.wncc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://scbhvidp1.wncc.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://scbhvidp1.wncc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Western Nebraska Community College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Western Nebraska Community College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.wncc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Joe Deer</md:GivenName>
+	<md:EmailAddress>deerj234@wncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Loren Moench</md:GivenName>
+	<md:EmailAddress>moenchl1@wncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mark Davis</md:GivenName>
+	<md:EmailAddress>davism29@wncc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://tiaa.org/development">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TIAA</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.tiaa.org/public/support/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="29" width="100" xml:lang="en">https://www.tiaa.org/public/images/765/2123/50000007652123/logo_1000_1x.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFYzCCBEugAwIBAgITMwAWUKY/Gacm3cHC5wABABZQpjANBgkqhkiG9w0BAQsF
+ADBmMRMwEQYKCZImiZPyLGQBGRYDb3JnMRkwFwYKCZImiZPyLGQBGRYJdGlhYS1j
+cmVmMRIwEAYKCZImiZPyLGQBGRYCYWQxIDAeBgNVBAMTF1RJQUEtQ1JFRi1BRElz
+c3VpbmdDQTAxMB4XDTE3MDYyMDE1MzQzMVoXDTE5MDYyMDE1MzQzMVowgZcxCzAJ
+BgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTESMBAGA1UEBxMJQ2hh
+cmxvdHRlMQ0wCwYDVQQKEwRUSUFBMSEwHwYDVQQLExhUZWNobm9sb2d5IEFuZCBP
+cGVyYXRpb24xKTAnBgNVBAMTIGZlZGVyYXRpb24tZGV2Lm9wcy50aWFhLWNyZWYu
+b3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9r247SF1b5Zw4cb2
+ffXRh6QGha7bYlKwgxGsyX5n3FFas0ozW19h3BuZMv6ACsd3VY+zotcqgSHxhZ2l
+m2EgzjLJaXKsj2OdSBHZiinWmwocm9sFCNCkGH9IOYYzJUK+GpuNoD3VViH6pckv
+IP1xyvUowYTfH5NUL075UiBfcfnGvmnLHKqLPnAyZ47hGVpUsg4zi9aJhSbTcZo3
+LyhT985As08RW0TdNzXDyfYxu1ovqN8RbU3Bf1+sw4gvUxsC0sE+wwI/lPUHB+Gx
+5Blds3hB2Gf8Sw7KbqzEBkd0nTW7iusQXwF6LKyk4NPbmzRM3Gpepzr9oCRsUH9L
+OsQLPwIDAQABo4IB1jCCAdIwCwYDVR0PBAQDAgWgMD0GCSsGAQQBgjcVBwQwMC4G
+JisGAQQBgjcVCIT/zjKEqJhThIWVBIa1/FGD0fdggQqf5mSFv+4eAgFkAgEFMB0G
+A1UdDgQWBBRR0X3x6D0mRugf5wSBq/Pk8KOPOzAfBgNVHSMEGDAWgBSAhzWQ0tn9
+M9AJtLVqNO5BoZGKIzBRBgNVHR8ESjBIMEagRKBChkBodHRwOi8vcGtpLm9wcy50
+aWFhLWNyZWYub3JnL1BLSURpc3QvVElBQS1DUkVGLUFESXNzdWluZ0NBMDEuY3Js
+MIG+BggrBgEFBQcBAQSBsTCBrjB8BggrBgEFBQcwAoZwaHR0cDovL0NIQVBEQzNQ
+S0lDQTAyLmFkLnRpYWEtY3JlZi5vcmcvQ2VydEVucm9sbC9DSEFQREMzUEtJQ0Ew
+Mi5hZC50aWFhLWNyZWYub3JnX1RJQUEtQ1JFRi1BRElzc3VpbmdDQTAxKDEpLmNy
+dDAuBggrBgEFBQcwAYYiaHR0cDovL29jc3Aub3BzLnRpYWEtY3JlZi5vcmcvb2Nz
+cDATBgNVHSUEDDAKBggrBgEFBQcDATAbBgkrBgEEAYI3FQoEDjAMMAoGCCsGAQUF
+BwMBMA0GCSqGSIb3DQEBCwUAA4IBAQAzOTcM0el2ept4/5qaCjs52Yc1ExXd3JI8
+ve0WibpaFwC4g3ehoCZNRxSKSEQF4+eU9KGnHydlMw1BnxdkwQrPTJb3TltjL6Bt
+iNOgXDTliuveWldVMNyP2+F0yEDdYH2Dn7pITGqO7rri8fITNsgzwSi2XcoEsyJ2
+41chw1nOk9WWu60IV9FQTsE2Uf86Ori27kTv4eS3SnxARzXztVfxFIHlWPei5DyM
+smCacxI9qKd7FrdEI0vGzGG5xe//12D4ENHYfz0nmJdunbIt/lJOREXU0o+aiKhv
+htUMIPP1GqQ/x9oWFoc3TqS7ofnyNXAQUEbrBwHf2O/nSSGvUKc1
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://origin-auth-st2.test.tiaa.org/sp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://origin-auth-st2.test.tiaa.org/sp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://origin-auth-st2.test.tiaa.org/sp/SLO.saml2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://origin-auth-st2.test.tiaa.org/sp/ACS.saml2" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">TIAA</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">TIAA</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">TIAA</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.tiaa.org/public/index.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mohamed Saleh</md:GivenName>
+	<md:EmailAddress>msaleh@tiaa.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Rob Davis</md:GivenName>
+	<md:EmailAddress>rcdavis@tiaa.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Paresh Birla</md:GivenName>
+	<md:EmailAddress>pbirla@tiaa.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Mohamed Saleh</md:GivenName>
+	<md:EmailAddress>msaleh@tiaa.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

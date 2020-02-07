@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.mimas.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2010-10-08T15:51:06Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Jisc: Digital Resources (Mimas IdP)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Jisc: Digital Resources (Mimas IdP)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">mimas.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUExVE+BsgxiwDLoOHU9bL+UpPdVEwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPaWRwLm1pbWFzLmFjLnVrMB4XDTEwMTAwNDE3MDczOFoX
+DTMwMTAwNDE3MDczOFowGjEYMBYGA1UEAxMPaWRwLm1pbWFzLmFjLnVrMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4w7U5gd6/ifZvu0vwr4rK9zY08DO
+uxfZDkOAoXnfL6w31loHJQaM1ezLKs9RxVgHk++2vzFUn5Y70Bj7vOEOtaevjsKU
+VrnJZGpj7pwRtRZinpVUjlT/a8sQUhjDjnag1RceLYthPG8BTd5whlWGLl0+aQHD
+QbwdPcRqEml+6TZG8sxTZIukWqtdTCzVMl+EYfdclCqDKUFMXm3Uz15OzUje53Bv
+WIaX2ThmUyqiDPHPGCfknwtcsKYcc3ztyokCamTH7U5FuxJMkTlzrieXJvHGTRjZ
+uDHQhN6ulvr7/5Zt1v9OngZxptFc5ICUe8YqLelBgpWfeekXwLgP2AOzVQIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9pZHAubWltYXMuYWMudWuGJmh0dHBzOi8vaWRwLm1p
+bWFzLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRoLGk6jr37RIvGJJ9m
+Nu2cx/xIRDANBgkqhkiG9w0BAQUFAAOCAQEAxv3qV8i0hLx/UCzgEerrDs0mrMQi
+2ZZYQQAAfrZmMSAryZu2yBc87Ibku5dbKps89fA47KYG+Fro/ixdx1DTrkod2Gwz
+28MMRa3WTp3KxOq7NMCSrsk7OEEwyeYo3Ozw1Evmm4LRh3i0MpMNo9SunlU9Xfjk
+UO2RBp6YWrNL3uOWrdskey+qbXzhnQNGnLqpsL1MDI/tmrWxsyxcjnEyG4F7FSku
+fvrpFwCGZkEH+4xIDCEGFTxBWBy7Ex/MJ7ltPBeOwej+omCGkJxJcAbzaBsM+5AM
+fRhXAFKoBmWmKAGSKfZDAIj7HXfN/kBwjy0PyOt8kPDXrvqGmveft0zUvg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mimas.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mimas.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.mimas.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mimas.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.mimas.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mimas.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mimas.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUExVE+BsgxiwDLoOHU9bL+UpPdVEwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPaWRwLm1pbWFzLmFjLnVrMB4XDTEwMTAwNDE3MDczOFoX
+DTMwMTAwNDE3MDczOFowGjEYMBYGA1UEAxMPaWRwLm1pbWFzLmFjLnVrMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4w7U5gd6/ifZvu0vwr4rK9zY08DO
+uxfZDkOAoXnfL6w31loHJQaM1ezLKs9RxVgHk++2vzFUn5Y70Bj7vOEOtaevjsKU
+VrnJZGpj7pwRtRZinpVUjlT/a8sQUhjDjnag1RceLYthPG8BTd5whlWGLl0+aQHD
+QbwdPcRqEml+6TZG8sxTZIukWqtdTCzVMl+EYfdclCqDKUFMXm3Uz15OzUje53Bv
+WIaX2ThmUyqiDPHPGCfknwtcsKYcc3ztyokCamTH7U5FuxJMkTlzrieXJvHGTRjZ
+uDHQhN6ulvr7/5Zt1v9OngZxptFc5ICUe8YqLelBgpWfeekXwLgP2AOzVQIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9pZHAubWltYXMuYWMudWuGJmh0dHBzOi8vaWRwLm1p
+bWFzLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRoLGk6jr37RIvGJJ9m
+Nu2cx/xIRDANBgkqhkiG9w0BAQUFAAOCAQEAxv3qV8i0hLx/UCzgEerrDs0mrMQi
+2ZZYQQAAfrZmMSAryZu2yBc87Ibku5dbKps89fA47KYG+Fro/ixdx1DTrkod2Gwz
+28MMRa3WTp3KxOq7NMCSrsk7OEEwyeYo3Ozw1Evmm4LRh3i0MpMNo9SunlU9Xfjk
+UO2RBp6YWrNL3uOWrdskey+qbXzhnQNGnLqpsL1MDI/tmrWxsyxcjnEyG4F7FSku
+fvrpFwCGZkEH+4xIDCEGFTxBWBy7Ex/MJ7ltPBeOwej+omCGkJxJcAbzaBsM+5AM
+fRhXAFKoBmWmKAGSKfZDAIj7HXfN/kBwjy0PyOt8kPDXrvqGmveft0zUvg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mimas.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mimas.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Jisc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Jisc: Digital Resources (Mimas IdP)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://mimas.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mimas helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:info@mimas.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Digital Resources IT</md:GivenName>
+	<md:EmailAddress>mailto:drit@jisc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://maui.inkcloud.me/sso">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://maui.inkcloud.me/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ink Portal for University of Hawaii in MAUI</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Ink Portal for University of Hawaii in MAUI</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.iubenda.com/privacy-policy/13433083</mdui:PrivacyStatementURL>
+		<mdui:Logo height="51" width="110" xml:lang="en">https://ink.me/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGFTCCA/2gAwIBAgIJAKjUODeOhcOOMA0GCSqGSIb3DQEBBQUAMGQxCzAJBgNV
+BAYTAlVTMREwDwYDVQQIEwhOZWJyYXNrYTEQMA4GA1UEBxMHTGluY29sbjEVMBMG
+A1UEChMMSW5rIExhYnMgTExDMRkwFwYDVQQDExBtYXVpLmlua2Nsb3VkLm1lMB4X
+DTE3MDcxOTE0MDExNFoXDTIyMDcxODE0MDExNFowZDELMAkGA1UEBhMCVVMxETAP
+BgNVBAgTCE5lYnJhc2thMRAwDgYDVQQHEwdMaW5jb2xuMRUwEwYDVQQKEwxJbmsg
+TGFicyBMTEMxGTAXBgNVBAMTEG1hdWkuaW5rY2xvdWQubWUwggIiMA0GCSqGSIb3
+DQEBAQUAA4ICDwAwggIKAoICAQDtrCYUhUb8KMKv+6kLjuMOLSuKvT9fzwwEdmBl
+T1IkhUM0E1ug/171zyuWn1TPzEkJxaBRbSyxeB/lLijmY0gjevOFB8ZHjhdTXcFN
+kFxlnvfuqgbJxQrxI/xK1/BUrDTWfffYSgyWJXmke9eaA83LGAT8cqXRfyJfCYpX
+8hcT1+tU+L/SR7I9VSdOca/dTc7zJ3oB9ZWiBlEPpOramVDGKY27o/mfAJBjzh/l
+4Y9vR2Rd8mIXvGE6crrUPgzm0UFm4w1a1gU+eeCcVGoVSfRrZGVfLH/hnN5WMLp5
+Vvt/kNowI61peZCQG4euCTvYrLqFWVXTnUzrYvgqEqKi2umDakHbWpq6pmD3Y9ov
+qLP4AEpL5/LFcCgc7waOWEnZii5gYHrLakvhsSVQxoYAdQQY68XG817DWM4i7raJ
+i8wp+MIq0A1LPX/7ECAUxt/cxQDkMRV5xt86ciO5L5SUAkqN6VHjzCWcuXA2Itcr
+3HP3T540LBBu2ySNsUFyC6smDsdPq0TKrFHsjwj0ijfyl3R69hwkfMud6NzZtYXT
+JzTOq1iQs7el4YylhHJRvHHH9e7HWa9X9KcY3B05kpbNMfGYZ2JOoa702b9vg8px
+zKYqWlF4V6SiJ5OmGdRgEJcOOTJhG5NS9CqB37aN/aE3muP2u6Lz18rzRHzxUxrF
+s50vmwIDAQABo4HJMIHGMB0GA1UdDgQWBBRH6eyoN8reM3ban4gLZoVhkfrhDjCB
+lgYDVR0jBIGOMIGLgBRH6eyoN8reM3ban4gLZoVhkfrhDqFopGYwZDELMAkGA1UE
+BhMCVVMxETAPBgNVBAgTCE5lYnJhc2thMRAwDgYDVQQHEwdMaW5jb2xuMRUwEwYD
+VQQKEwxJbmsgTGFicyBMTEMxGTAXBgNVBAMTEG1hdWkuaW5rY2xvdWQubWWCCQCo
+1Dg3joXDjjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4ICAQBLEOMAE9ta
+Di8JPNf6n/XYSt6L1cHhIN+5NAMgxKxnGvI4CjSw0LhVZtUO6pDRsqwEDrtD4LQW
+ra3DWh8gYQedKhOeDu0fdjV3mLsPV7O2FOEz7BcVQ49lOAGMC+wL72JpsvlsIGol
+hf7HLU30zGyqkeg2FGN/C6zGzPberrtIOhvqmJF1QZ0/kREAHcMmjl4G7aIOdIRt
+YKKmA7qsuNjZzcdj1H/HVrhU282y+k7PiVtWH++qFGVWH41ZB5mWW6vhXaIBhb3z
+Fr1oEGdaDqGZSu4u5vHJLcCZGgTMrWqgykhm5bW7vTLEWmcQ2Gf55XuXVI+BRNIv
+8UESNrd9cY6Hr2Mhm6YncH81R0SBuXGXKLBTnH9DrjPwVfjwKqH07F7aXNh3KGS+
+sIwXbP/WD/ZEPofX6FcD9UoveRCknxH2fZHB8aqVkxazm2KSfjwg3INHN8JqtcI0
+nn9BxlCuF866LfiyidPYt10PLzMhXPG71QEOELXo/ut32TH7lfWXptuauY/9ch5g
+e+fHTHkSJHF+O4y0VEMelffHhMmLBYEEYTmzNtaxxx2DVnzT7JSmLImfSSET8wwx
+slTNzfAuYsU6w0nePftadauHxSqrKe1iyZthLGvwh+qE2vpulqXPlOr5rNrU+ovE
+yqfGTHDovfsifpavnkvJQy8RDQHV9/+lNQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://maui.inkcloud.me/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://maui.inkcloud.me/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://maui.inkcloud.me/Shibboleth.sso/SLO/SOAP"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://maui.inkcloud.me/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Ink Portal for University of Hawaii in MAUI</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Ink Portal for University of Hawaii in MAUI</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ink Labs Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ink Labs Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://inkcloud.me/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical Support</md:GivenName>
+	<md:EmailAddress>admin@inkcloud.me</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Admin</md:GivenName>
+	<md:EmailAddress>admin@inkcloud.me</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Admin</md:GivenName>
+	<md:EmailAddress>admin@inkcloud.me</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

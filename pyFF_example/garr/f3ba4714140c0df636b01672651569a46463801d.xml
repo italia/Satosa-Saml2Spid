@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.scu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.scu.edu" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">scu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Santa Clara University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://login.scu.edu/idp/shibboleth</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.scu.edu/contact/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="815" width="614" xml:lang="en">https://www.scu.edu/media/offices/umc/scu-brand-guidelines/visual-identity-amp-photography/visual-identity-toolkit/logos-amp-seals/Seal-50WhiteOnDuotone.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJQaLJI8uR0LUzT+wHAZy5N9+60GMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWxvZ2luLnNjdS5lZHUwHhcNMTcwNDA3MDU1MTE5WhcN
+MzcwNDA3MDU1MTE5WjAYMRYwFAYDVQQDDA1sb2dpbi5zY3UuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzMRTRWri8IzgRwbcX3PMHxvFX7AciFiz
+CAHgJZxTthstA0CT+U0T9lYfB88AX56NCHwtwtQC3JOwjU5/ii1H6T5xInIqwVl6
+7kj/Ebe6Ivw0VaW88bVSTsu/D77xa/7QPGKzvd4rpC0jp/kJc7d5Q1gE6n3Saeqn
+g32iS/pHs/nM7vgT5FRhyZC6BLzPp48rmbDFhKhHIQSOx4l0TDFQEOpDeRc2sH+e
+2pRZqcl2lUlCA/+ik3jAz6EwlNGrg4PZ7jMeSs4A3RceNwdSaxmdqU4iRRVPWzQ7
+wL+V0KsXVviQXmhnug23G8il6ypk4VUYcdvUWsP4vuCHV2zgTH0koQIDAQABo2Ew
+XzAdBgNVHQ4EFgQU2CxBeCB1K+zm3qYVXNeUPlzQ3XswPgYDVR0RBDcwNYINbG9n
+aW4uc2N1LmVkdYYkaHR0cHM6Ly9sb2dpbi5zY3UuZWR1L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQCZCCIkkiXwErEMt/hjivXK9TP5T6sFzMyTi/4A
++vCuRjYWy42e1Q2v1yI+wrZzOD0uxbQTBIOhzcPdaWdYkunjvRZDMpeiQcM9u04z
+gBWbI6+gxKfGvaoR7SqLqLHQTIzf4saLc/VjhiUHzgtYLTRryXxYLEOrC6YWCmxO
+SiluSNxFNGQef9FIX7V08AVIC05K3sqWM0QwQ2i3S0X3ygoPLIoM3sWi0MrzKkFw
+P18Q8QGrFsCIfZybHrY56bTEr9ZTqCCrfL29EqktE0DioBbSAH3+E7526frlUBsK
+wzERpNF22D1QyJO2KyD/Ilros7sUIJV7C8EE1EGrAkAQlWEx
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.scu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.scu.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Santa Clara University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Santa Clara University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://scu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SCU NetAdmin</md:GivenName>
+	<md:EmailAddress>net-admin@scu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Geoffrey Battad</md:GivenName>
+	<md:EmailAddress>gbattad@scu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Bryan McClenahan</md:GivenName>
+	<md:EmailAddress>iso@scu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

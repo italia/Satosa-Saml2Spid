@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai.egi.eu/proxy/module.php/saml/sp/metadata.php/sso">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="el">Πληρεξούσιος Παροχέας Υπηρεσιών Υποδομής Ομόσπονδης Πιστοποίησης και Εξουσιοδότησης EGI</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">EGI AAI Service Provider Proxy</mdui:DisplayName>
+		<mdui:Description xml:lang="el">Πληρεξούσιος παροχέας υπηρεσιών για τις συνδεδεμένες με την ομοσπονδία υπηρεσίες του EGI</mdui:Description>
+		<mdui:Description xml:lang="en">Service provider proxy for all federated EGI services</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://wiki.egi.eu/wiki/AAI</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://aai.egi.eu/privacy/en</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4gcTDx0vODUiMAAAC/xJREFUeNrtmn94VfV9x1+fc28SIKQmlEkuo9oxnGWbTEuVFp5SKd3crPyScYd7CqOSnHOSIJ0oa7Varq5bpaxRAyQ5NwlBnTqjFhIq4Or0qc+sVqbdJoLStTJhEH9A+FGBJPd8P/sj54aTS3zaEBKiz33/c+/3x/l+P+d9Pt/Pr3MgiyyyyCKLLLLI4iMJGSqCJBIJa+zYsZN83z9QVlb2buZ4dXV1UTQavaqzs3NXRUXFvqEitzUUhPA8LxaLxXaq6s8ty9rneV5JxvhlkUhkj6puj0ajb3me9zdZAnviFmBi8D8XuLexsXFYaPx2YHTwPwKsyVygqakpt6am5sLBFjw6WBvV1tZOF5HvAcUiUmPb9j+FhkdlTM8/fvx4LnAqaI/IGB+uqiIiCpBMJuNtbW0NlmWNrK2tfdb3/TkVFRW//thoYGNjY6GINANTgfGquiaZTP5FelxVNwKd3YZZ5F+WL19+LDS+LjwOVKXJq6qqylPVBmBkcO2Xo9HoNz5WR7i9vX0iUBjuU9Up6f+u6z4vItNU9XsiYhcWFi4Jz3Vd98eWZX1ORFaq6ldt274jPRaJRIrS5IVw0ceKwJycnJ3A4QwCXwi3bdve0dHRcY+qfurIkSO3VFVV5YWcyAxVvcUY8yvXdbemtQ+goqKiFXi+59La9JENYzzPmwFMF5GXbNt+Ot2fTCanGmPuEZELRMSzbbu6FzuZFJHS4Ciusm377oaGhoJUKtUa2EFjWdaE0tLStwAqKyuHFxUV6fHjx3Pz8vJuBi4SkUdt234mtO9CVb1VRHxVvdNxnH8dsk6ktrb268CGQA3wPG+F4zj3Bhr2U2B6iOgE4IjI5gMHDlQkEgkDXBBSo08ApFIpK/C8AFZnZ2duQMw8Vf3njo4OPzc39zrHce7q5WF+VlUfBixVBdjU0NBwydKlSw8MySMsIuUZXTf1Nm/dunWfBL4DFKuqG4vFrgQwxtwGtACPG2O+D+A4zlFV/WsR2Soidnl5+ZvB3BsDrSywLGvxh4g0NeMeR/i+/9mhHMYc/Q1tAN5///2jsVjsbeBi4LhlWXsBysvLfwXMyZzf2trakkgkftjjyVvWNlW9rotLs73bPVdVfaK4uPiDeDzuG2NetizLhEg8JSL/OWRtoOd5U4CngE8Cx0Rkvm3bzySTyctVtRp4zxhTWlZW9m5DQ8PYVCp1ne/7P0lrVZqAvLy8nwOtRUVF0w8dOjTZsqxngAcdx1mWmaH4vt+Rvt7zvH8Igu43Ozs7py1btuxQMplcoqorgQ4RudO27R8NWQ10HOdnVVVV43Nyci7LycnZXVJScjiwZ2uALwSasxP4dmCHkoE9+4aqLlPVG3zf3w+MDexhJBKJFKtqARALSLof+LqIzLRte0eGCCuC30tzcnKuAR6xbXsjsHFIZiKe501R1atE5AXHcV4FCALgFzJClv0i3cq+P3MdVZ0OTAA+V1FR8R+e510ajUZT8Xi8A2iprq7+TCqV2hvMvVREClT1wl7W2SYi84CjlmW9+GFy19XVfdEYUwnkq+oDruuuHvQj7HnezUBl0PRVdb7rus29zV2/fv3IaDRaJiKHCgsLH4jH477ned8GvmpZVlxETqRSqc+PGjXq6Xg87gfrV6pqjYhcDoxyHMdLJBLR8ePH5504ceJi13V3eZ63HFitqotc132iqakpcvjw4Wm+7+8J4sMzEIRF+8IeX0Rmne3R7o8G/m3of0REVgDNofjrOlWdZFnWg6Wlpft7KQDEgUm+71/huu4WYGtNTc0VnudtAv4wyFxyRCQCRGpra2eKSNOiRYtGi8iuQOPGi8iwdOYRkP98ujxWXFy8WkT+DFjrOE49QEdHx0TLsi7IkGUKMOgEtme0T4XI+5KqtgBijFkAXNHLcftLEbm8tbX1qfXr1xdHIpFvicgqVf2m67ongBuDqbvSQXNBQcECz/Mmep53Z1FR0dfa2tpWWpb1UElJyauqeqFlWe2O4xwFiMViU4Fb04fA87xHHMc5kZ+f//rJkycPZxQw/n3QbaCq3i4ijwZrfAD8fWh4TMg8jEl31tTU/G5gm15yHCcO/AKgvr4+z/f9Me3t7aeWL1/+WG/7rVix4iTwbH19/cW+77+9YMECIyI+8AowzrKsPcB7iUTi9xKJhIlEIq2+73cCOcA7Bw8e7ABYvHjxB57nXauqa0SkSFXXO47z9HkJYzzPu0hV/0RVfxauIjc1NeW2tbWtBS4TkX9M25cgnHkV+B/Hcf4gWGOtiLxs2/ZDfdk7mUw+YIz5heu6392wYcPvdHZ2vgYcsG17cqjMNRX4kqo2OY7zSz4OqKurm1RXVzcmlP7dEMSPfUJNTc00z/M+E35oTU1NkbMWrLxp5KBoYPBuYmxpaemucFUkRMifAzmtra1PBflt+ob/2LKsOe3t7WvTtb5kMllqjPk/13W3nuUJuFtV33JdtzHYe6aI3CYit4VjxKCQ8Z3A+XzTcZzTtUV78xTgMUQuBl7AZz71c94ZkFy4trZ2aSQSOaCqO5PJ5I4gpw3f0DIR2SYiLbFY7LaM1Os+4Lt5eXmLQna0SEQK+6HQb4jI3lA4sgCYaYyJZ9jrh0TkGuBmEZmfkcA3BOQBTCPC3QPiRCorK4eLyP1A+l3F5Gg0ekuQOqVv4PKg6oGqTs64iftF5B1jzOZQ5vL9fmY+j2Q8pFXGmF2pVOrhjKnHQv9DpX4VaBmf4R5/f0AIzM/Pz898N2FZVo9swBizVkSmB/PWZFSVtwBbBtK+lpaWvgNUZfZHIpEFqVRqmYjs7hkwi0LzZuCG0/yxacBsoOd5LcCsoJlS1Zmu6z7/kfZq9pYRiH8ryGUg2/FmbegidmAIHKGqSy3L+rQx5gnXdV8kiyyyOI84BwVVFZwfTQATw2hu3641b1N3/Z7fevpNW/PoNJegOgbj90/2Ybkvs/baY9zYPJYcJp0WSfZRN/v1gS8mLNlUyDBZibYsBsZ1ueW+3lMEnObXMVJB3eyffOi0suZLMdxBR+ccoODs9sosfaSuAnYQ5U97FFwtbQBKBiSQPn1DLZ8nz9qNyu3d5J09/ghLf4y7+ZrevWRzGYbXgK91kzeE0HcCyzZNxui/AcXnUI4cVOq5aWtej163eRlCdVBRGZLo2xFe8twwzLEnOONjHzkM+l8Ifh9MZxT0i5x+5zuOU6kvA9uCYzsJw729XPkWQv8rK1E9NvgE5h61QT4dpgGhklMFd7Bxxqm+52LNSaD09HMwl3QTaLg7Q75joDfhzX3wo6uBIjdkqNEPqJ27EnvLaNyWr2B0eB/WiqI6o0ccIBzpdlBwbcYVf4U3dzvlzRPwmYTSh9KVdRTTsYv6+fvPH4GJ56IcPHZlqMcnau7p8pDmRZSivgVFmhlEpfD9ZwHIi04GE7J78gre7O24LYvwtRGI9G0vA5EoOM1PI8aldt7ewXci754YHbJXAAdZf/0hfBYCRedAlnXdGqL+mJ7aqjuDkk5phgx9xTWo9VNKnhw3+ASmTKbRLSTxXBRLdp6DYHwj2vp3oaN8PENZRwf952AvYkSiPxj8I5ycdQKneR/wqaBnJK1HZ1E790mclhJUv4LVB+1QFGEfaj2JN6tnUcKYN7F6LDWD8qeKOR5dyYj29xCd2Lfno+NAvhDqmUt500iq478ePAK70AJUhEKRauwtu/FmNQAN58wy112/B6f5DSD9zmMEvv8ow80CvNmrzirdtFv2IExIxxP4uRcRvDIdPALV3ItYpXR9SQ9QjJhXcJobgZfQM94V99WivEZy1huBl16NamNo86sR3YmzuRqRPZg+xJyypZjMz37Vbxv8MCY575fYm1fR9bU93drRpZUV/S9NmNuBrrWLX32Qg1csBMIp3hiQu9C+lkE0s/nfJOcfPD+pXHLOauC+AY9QEwlDu1lIP74a+HDrK986f7kwonhzbgZdiOr/DiiJG+cd4XD7TIS76Pr6ob84iapN3ext5ycTCcOb+xi290MovhrRq1EZhzC8fyfY2n1G3+PxDiDBkk33kSvXInIlIheC/vYFBqOnEOt1/M6Hz8hGVPZi6eOhjh1kkUUWWWSRRRZZZJHFb8D/A3HlEwcXh27VAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="50" width="50">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC/TCCAeWgAwIBAgIJANhZGzZHY+RiMA0GCSqGSIb3DQEBCwUAMBUxEzARBgNV
+BAMMCmFhaS5lZ2kuZXUwHhcNMTYwMjE4MTEyMDMzWhcNMjYwMjE3MTEyMDMzWjAV
+MRMwEQYDVQQDDAphYWkuZWdpLmV1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA1PlLlew3eIq/BH1RDmSiYitLv9p5K6rfs0u+wCoiPmh3uDr9x/jbRnv/
+DVz8zzR5lQ19TgROZZUHTkVXaTmfE4VogEUjJhgOk57NPEoOQePGiouhoAgZyJ0j
+GHDZB0VMFXBP7hon4bKt7XJ7G97fDkH74o+VT/rjjMD7t/9aQDpeZRMEa0xFB5+v
+o6QPOroCOAJLKaqChrQhWkkqWUffPQZqbV5ViBKY9IoTfC4JRYWxIJG+PiHd4o3A
+zMD7aVk2icHlT61pb6qPsC8mnxq0HeWUPyiBPsi7s3xC+goH9E5hRfilaQzreF5g
+PFaUySp5nQedzrRMdYhfNb4tRCjvewIDAQABo1AwTjAdBgNVHQ4EFgQUeltebHiI
+8hcr8cu3CdyuQkpR5zcwHwYDVR0jBBgwFoAUeltebHiI8hcr8cu3CdyuQkpR5zcw
+DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAhiJ/+c0kU8pojUf/ZNIB
+IdnSfE4nQUTZdFGJbFcYCVXSahIBYyC15bVge8QeJ/84lMNAKWN/5Rqk3XVsYy4s
+6o53MUMjphSZfDJLlkeC+6efqSYb4RYKHe56SGFG7YIa6eeelooliBXdPU/00DA5
+bb8wydcQ+AKck3AjxUMEjXaVRnVqRXUL14Me/3djbTjTE/I/mEaNVKrwYf/z2ymO
+1Q5cclBGcn+W7/+ERLV1iQVNPGCVGVukWGZZUBfKf/nNQi8RIzG/SnfB7A5P460a
+Y7r+BeLSWhGA7mKQ4J5Hbn9r88VnCOZpYd4byB20ll2Cq/Hrcggl9NxYxH8fQbrJ
+cg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC/TCCAeWgAwIBAgIJANhZGzZHY+RiMA0GCSqGSIb3DQEBCwUAMBUxEzARBgNV
+BAMMCmFhaS5lZ2kuZXUwHhcNMTYwMjE4MTEyMDMzWhcNMjYwMjE3MTEyMDMzWjAV
+MRMwEQYDVQQDDAphYWkuZWdpLmV1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA1PlLlew3eIq/BH1RDmSiYitLv9p5K6rfs0u+wCoiPmh3uDr9x/jbRnv/
+DVz8zzR5lQ19TgROZZUHTkVXaTmfE4VogEUjJhgOk57NPEoOQePGiouhoAgZyJ0j
+GHDZB0VMFXBP7hon4bKt7XJ7G97fDkH74o+VT/rjjMD7t/9aQDpeZRMEa0xFB5+v
+o6QPOroCOAJLKaqChrQhWkkqWUffPQZqbV5ViBKY9IoTfC4JRYWxIJG+PiHd4o3A
+zMD7aVk2icHlT61pb6qPsC8mnxq0HeWUPyiBPsi7s3xC+goH9E5hRfilaQzreF5g
+PFaUySp5nQedzrRMdYhfNb4tRCjvewIDAQABo1AwTjAdBgNVHQ4EFgQUeltebHiI
+8hcr8cu3CdyuQkpR5zcwHwYDVR0jBBgwFoAUeltebHiI8hcr8cu3CdyuQkpR5zcw
+DAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAhiJ/+c0kU8pojUf/ZNIB
+IdnSfE4nQUTZdFGJbFcYCVXSahIBYyC15bVge8QeJ/84lMNAKWN/5Rqk3XVsYy4s
+6o53MUMjphSZfDJLlkeC+6efqSYb4RYKHe56SGFG7YIa6eeelooliBXdPU/00DA5
+bb8wydcQ+AKck3AjxUMEjXaVRnVqRXUL14Me/3djbTjTE/I/mEaNVKrwYf/z2ymO
+1Q5cclBGcn+W7/+ERLV1iQVNPGCVGVukWGZZUBfKf/nNQi8RIzG/SnfB7A5P460a
+Y7r+BeLSWhGA7mKQ4J5Hbn9r88VnCOZpYd4byB20ll2Cq/Hrcggl9NxYxH8fQbrJ
+cg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai.egi.eu/proxy/module.php/saml/sp/saml2-logout.php/sso"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai.egi.eu/proxy/module.php/saml/sp/saml2-acs.php/sso" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://aai.egi.eu/proxy/module.php/saml/sp/saml1-acs.php/sso" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://aai.egi.eu/proxy/module.php/saml/sp/saml2-acs.php/sso" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://aai.egi.eu/proxy/module.php/saml/sp/saml1-acs.php/sso/artifact" index="3"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="el">Πληρεξούσιος Παροχέας Υπηρεσιών Υποδομής Ομόσπονδης Πιστοποίησης και Εξουσιοδότησης EGI</md:ServiceName>
+		<md:ServiceName xml:lang="en">EGI AAI Service Provider Proxy</md:ServiceName>
+		<md:ServiceDescription xml:lang="el">Πληρεξούσιος παροχέας υπηρεσιών για τις συνδεδεμένες με την ομοσπονδία υπηρεσίες του EGI</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Service provider proxy for all federated EGI services</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonUniqueId" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.13" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">EGI Foundation</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">EGI Foundation</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.egi.eu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:SurName>EGI Check-in AAI Service</md:SurName>
+	<md:EmailAddress>mailto:checkin-support@mailman.egi.eu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>EGI Foundation</md:Company>
+	<md:GivenName>EGI Computer Security and Incident Response Team</md:GivenName>
+	<md:EmailAddress>mailto:abuse@egi.eu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nicolas</md:GivenName>
+	<md:SurName>Liampotis</md:SurName>
+	<md:EmailAddress>mailto:nliam@grnet.gr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>EGI Check-in AAI Service</md:SurName>
+	<md:EmailAddress>mailto:checkin-support@mailman.egi.eu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

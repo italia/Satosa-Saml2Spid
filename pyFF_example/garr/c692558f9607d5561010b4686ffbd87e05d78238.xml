@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uwf.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://confluence.uwf.edu/x/w4EeAw" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uwf.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of West Florida</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://confluence.uwf.edu/x/wIEeAw</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://uwf.edu/offices/general-counsel/uwf-policies-procedures-notices-regulations/privacy-statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="130" width="260" xml:lang="en">https://idp.uwf.edu/idp/images/shib_logo_uwf.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAPWEoMIc9MgjL3fLMSOKivnmI4soMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2lkcC51d2YuZWR1MB4XDTE1MTAwODEyMzc1OVoXDTM1
+MTAwODEyMzc1OVowFjEUMBIGA1UEAwwLaWRwLnV3Zi5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCIBUPbpiv3h2s2JEUUxdfxMFYvu5lvoPdggHb9
+BhWT53BgJVV7cH1XcrtWn/7/NwMGOYGLzMzvpMJOCXUatVpJybhtM9sffy6hjjKS
+3+vAKFEAI38vfTdoZoM17UEM+22Y1Bim4AkdyCdSLMLDNH2edt7WocgB1gnandJI
+aKWP/ZI3Fu+4KA5GTbGsd3DJsJIV3NeHuGIUhRCaDPbR08Hc7u7RopgmmohV0tOp
+4NvWhbqy5c2M50cg4h+PAhesyk3id3P/ZZ+5e2PLxBB2kGuHK2qrs1+OI6rzwNE6
+8R0Ij9BUiDSeY6L0ST5p1kA//t22UZOFlE4DwNFi9mz3E85/AgMBAAGjXTBbMB0G
+A1UdDgQWBBScj7YiheZwUBxNvWg6KUtfw37yGTA6BgNVHREEMzAxggtpZHAudXdm
+LmVkdYYiaHR0cHM6Ly9pZHAudXdmLmVkdS9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEAQWq+qgyNF5aIMd72d4l2EFvVo0MS0y60OhqbFFMh1zAodjgG
+j2S1bDSkagWZnkReopf5vt+7/oUeaav0b1bR5/C/cn3y4j2VgMMVNolCVMDuGhJu
+KMDFH3A9LmFUxiI/EBehP2miYOGxo8cg3cfxR4LvveJPuwl0lEzpOHa7ITNcuY4i
+NkrSXk8BPkxKbOfkPY/03cxGCVAbDDtAFbrpc+Dl7oWzZyWEPGBOPO1+FwOnouhg
+gwO2WaSZ5oSRh89lFWWjxnXcLM0qysDrlr7ZypdE4sa0l49XmWSHIUqmlB4N6v1R
+Qn1Arbqr1KlWplK7ZKwCVb3qIEuvCtarRGT3ow==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uwf.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uwf.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of West Florida</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of West Florida</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://uwf.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Melanie Haveard</md:GivenName>
+	<md:EmailAddress>mhaveard@uwf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Geissler Golding</md:GivenName>
+	<md:EmailAddress>ggolding@uwf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Justin Andrews</md:GivenName>
+	<md:EmailAddress>jandrews@uwf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UWF ITS Helpdesk</md:GivenName>
+	<md:EmailAddress>helpdesk@uwf.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.cmu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.cmu.edu/error" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">andrew.cmu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Carnegie Mellon University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Carnegie Mellon University Identity Provider</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.cmu.edu/policies/information-technology/computing.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="125" width="181" xml:lang="en">https://login.cmu.edu/images/cmu-181x125.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIJAO1Zt6Sg0xhmMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDWxvZ2luLmNtdS5lZHUwHhcNMTQwMTIyMTkzMDM2WhcNMzAwNjI5MTkzMDM2
+WjAYMRYwFAYDVQQDEw1sb2dpbi5jbXUuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA4yIV5lVs9/7jdmRTi23AINTzGQTrL+p8EXmV1iL48YAZ36T+
+xnDpTXt2RDaioI34/P9vHYpSKY6C5gDNyXGQZYTrgJQHQRgJAGTsXshYoDeBboZZ
+9ax+7m86rKqmHZAprHALONubY0UtPDEGQKdMeeetAUAOh8kIKpGvKp96I+4pIT6S
+/p5VtBB80veOK6woqbzU0Qr9q1FbcZfJ6AjG8as9lBa9Si6vc/fGvFrjsJL3+cpv
+ECuyG/yHp9obdwXLgxlQNPtXNeBgclgiaJJE8zWcZBUxWPboVeuC2Jfv7spIOcCy
+KPKTGUlobBoANGHqGMqbK+/7YzQ+J/s/4n0tvwIDAQABo3kwdzAdBgNVHQ4EFgQU
+oZye8kn1Hznd+tCaxJ3elowNIbYwSAYDVR0jBEEwP4AUoZye8kn1Hznd+tCaxJ3e
+lowNIbahHKQaMBgxFjAUBgNVBAMTDWxvZ2luLmNtdS5lZHWCCQDtWbekoNMYZjAM
+BgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQCp51hb/WPVfRtdQNZm6OQj
+8I6HwDGWmu5PzUycJAkD/VYd3wCM1zLwd32LMbxbA2ArKWBstErEsUog94zvMBWy
+AeT3Q5Gyghji0emF0nbZpNjPjE9bXavMbUppXF2/VHbuBtzEMBxIKV53X2et2MMc
+9mnNzZN1rofuIB//W9Fg9IWV5PLVbsvEYI98IkJ5t4JP92/V5p497O8jMj6oLhy7
+mI4FNx0pQnirAvrQxxgFTwVV5SEm87DBYRblUb4ba0yYVSBQg0EVbIb7QEDxHFWb
+zt4+NLolAQAMSQW+SJKf9V7+6+4uhMwpJxQwezzn41u9kGTIg9F8/s0IrgsTlAm3
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.cmu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.cmu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.cmu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.cmu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Carnegie Mellon University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Carnegie Mellon University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cmu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Identity Services</md:GivenName>
+	<md:EmailAddress>identity-services@andrew.cmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Computing Services Help Center</md:GivenName>
+	<md:EmailAddress>it-help@cmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jeffrey Eaton</md:GivenName>
+	<md:EmailAddress>jeaton@andrew.cmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Garrettt King</md:GivenName>
+	<md:EmailAddress>garrettk@andrew.cmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ISO Incident Response</md:GivenName>
+	<md:EmailAddress>iso-ir@andrew.cmu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

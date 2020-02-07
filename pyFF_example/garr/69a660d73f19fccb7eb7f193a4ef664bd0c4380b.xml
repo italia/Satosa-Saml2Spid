@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://stage.mahara.qmul.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-07-13T09:07:23Z"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAMZqbUlmc/4pMA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTF3N0YWdlLm1haGFyYS5xbXVsLmFjLnVrMB4XDTEyMDYwNzE0NTU0N1oXDTIy
+MDYwNTE0NTU0N1owIjEgMB4GA1UEAxMXc3RhZ2UubWFoYXJhLnFtdWwuYWMudWsw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDZvKm8ggjSAsLt7kGFZ2t
+bGdbkDjwkTYPeCFNFRIy+Fi904W2Ff89/ryb56iyA8N9USlj1VUv3QMlvKQNrhbw
+xad6u6/9F2PjL78zkoYc+uJ8U8z23CaMWFBi53nLQfXmVqby7grEd/ZPmBbXFmen
+uZfPVB4pb2s7JG1yRKwxdAvq/Du8srEQMOnKLX0A0kFumhabL+lri/VXiWGnbYcm
+lYrv/Hmh/e/ZoYFwPXajrLwmlAcA+adOqz0exzuZ1G91qAV2/buSXbS5gq+C/Y3H
+oy5JYDmrpXjW3USSpueih9CCXINGjEHlAnaqaa0TCNYGFIQOVO7il0QonGIVeCuB
+AgMBAAGjRTBDMCIGA1UdEQQbMBmCF3N0YWdlLm1haGFyYS5xbXVsLmFjLnVrMB0G
+A1UdDgQWBBTbCH9ZyI7zqpqMbWKMMIDVxkc5DjANBgkqhkiG9w0BAQUFAAOCAQEA
+ouDXbFLxN9s6JB+FMZXoH8ColtAmWTnial/A+tlDqp4QjbMOXBUP/dlNx55XYYyz
+eiQwTf347Ap6ZhcC1t6o46VC247AKfBlGwe73ASTJujDiK3RmqAXjg1/tkAMzWrz
+5GKNeLoTPP5TyuJ3614gZmZB6uLb8bfAVyXRmSH/IfxO616yF/LBzFtnTdERiHgX
+5YYc1q/rFFhZW5VYzmdIUsY4SuZ6qwzfhzgJAhYz7s0bkwoBz6xZk1vMGtyqUXUh
+TO8QG6ljEC4VQMB4AzASlawzv7IGaLbVJqIfypibgAuTMIio35JNpt+h92ySdMX5
+Mp+1A9Jpnpwe7nn45pBkBA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://stage.mahara.qmul.ac.uk/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Queen Mary and Westfield College, University of London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Queen Mary and Westfield College, University of London: Staging Mahara</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.qmul.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Services helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:its-helpdesk@qmul.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Moodle Support</md:GivenName>
+	<md:EmailAddress>mailto:moodle-support@ulcc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

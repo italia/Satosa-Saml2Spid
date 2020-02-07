@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.shh.fi/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hanken.fi</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Hanken School of Economics</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">Hanken Svenska handelshögskolan</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Hanken Svenska handelshögskolan</mdui:DisplayName>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIUc66Rn7yZuNyqjac2JffMblddE70wDQYJKoZIhvcNAQEL
+BQAwFTETMBEGA1UEAwwKaWRwLnNoaC5maTAeFw0xNjExMDkxMDM5MDdaFw0yMTEx
+MDkxMDM5MDdaMBUxEzARBgNVBAMMCmlkcC5zaGguZmkwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQD2TNxFthy+PF9ZRJSknV5k/tfGLVD48+GQrRYa0tzI
+sjavElVEaGa4+vHwGWqyaHaDNmScB/S9swmgekZ4Ffz33prLwaK/W4K1Mp0z16pG
+TFDMcEHUYpwgOszUNCCS5XOFJPCwMFLTLMeDGqM041BTGhuJf+9GGeMt4u/SOT9i
+Fo0CGpc2z44WZEaSsqJimUGPr8o58oLl2WHusTM1aUf1mmHmqZt1Osc4QwmG1+ap
+ohcy7MCcn2nsPkCeOsU+OF1veYR32XWITTnoEvnAZ+AA/LO8dqCLwOwY4XcKnk0+
+QL70y6ezcGGBfIfH5xv2quMidKuy+fLNdMMRogn+AZSlAgMBAAGjWzBZMB0GA1Ud
+DgQWBBTs4QMJpWoSTFeicsp5LMXUA+19kjA4BgNVHREEMTAvggppZHAuc2hoLmZp
+hiFodHRwczovL2lkcC5zaGguZmkvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBALtew5hVHVrngKG+ANMv9oYb5TsoVfaOmcMhV/zQG3JFi+LK4qwZJWcq
+IOlJwzB0ywB+UXbrArSr2Uv6VrA2titZVE51naOHQrRE1HjcxpPx7nSVpcehZde7
+fP3GKQBD4kuBrYecJdaYbOk8/lqliZ9T6u/s3DBgaDpHWoulKRBzqosPZcvRtFVn
+shlg5aH2g3Vk/7RKOH0sPCuFYRYKXlcg02OREN9EHWv2qRLZduM5mb7pm5TYLNEI
+Ex4U3mUhe/aoRY7zsk0W9LjY27LP3cnNY7ozxFbepQnCAL+jHoN9iRHgorBJw/o+
+vxlD0V2d0gMl/Znpcdbc7+0yBUImT+s=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.shh.fi/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">Hanken Svenska handelshögskolan</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Hanken School of Economics</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">Hanken Svenska handelshögskolan</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">Hanken Svenska handelshögskolan</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Hanken School of Economics</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">Hanken Svenska handelshögskolan</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.hanken.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hanken.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.hanken.fi</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Kuno</md:GivenName>
+	<md:SurName>Ohrman</md:SurName>
+	<md:EmailAddress>mailto:shibboservice@hanken.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Johan</md:GivenName>
+	<md:SurName>Isaksson</md:SurName>
+	<md:EmailAddress>mailto:shibboservice@hanken.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hanken</md:GivenName>
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:help@hanken.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

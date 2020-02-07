@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.tu-bs.de">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-12-14T05:43:41Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tu-bs.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">TU Braunschweig</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">TU Braunschweig</mdui:DisplayName>
+		<mdui:Description xml:lang="de">TU Braunschweig</mdui:Description>
+		<mdui:Description xml:lang="en">TU Braunschweig</mdui:Description>
+		<mdui:Logo height="16" width="16">https://sso.tu-bs.de/simplesaml/module.php/tu_bs_theme/resources/favicon-16x16.png</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://sso.tu-bs.de/simplesaml/module.php/tu_bs_theme/resources/siegelband.gif</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.tu-braunschweig.de/it</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.tu-braunschweig.de/it</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.tu-braunschweig.de/datenschutz</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.tu-braunschweig.de/datenschutz</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIK/zCCCeegAwIBAgIMH4DH7c3QJGfBRvMVMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgwMTA1NTEyOFoXDTIwMTEwMjA1NTEyOFowga4xCzAJBgNVBAYTAkRFMRYwFAYD
+VQQIDA1OaWVkZXJzYWNoc2VuMRUwEwYDVQQHDAxCcmF1bnNjaHdlaWcxLTArBgNV
+BAoMJFRlY2huaXNjaGUgVW5pdmVyc2l0YWV0IEJyYXVuc2Nod2VpZzEZMBcGA1UE
+CwwQR2F1c3MtSVQtWmVudHJ1bTEPMA0GA1UECwwGU2VydmVyMRUwEwYDVQQDDAxz
+c28udHUtYnMuZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDnTLXN
+okyrEdz41D2ylfNobGb7Sh6qXAtxiB2qqtPs1/rwD+Pa2RdZwwxbiNBzDqqd87Nz
+8lxQwyPGLen4dK2RJwh3ObWPuWbwa8ounZl+911nAPshgU5YJhNJv0+YXa9cYL0V
+bHnFYUiGVWoWa60lzevQijuyIA9f2AgME7BxL9NyGy6rQz8YN5A62w0j5Fal7qKa
+lJPSoTuEfQf/tPnB2aq2G7FvG5sgIln/NN/CgyHbSrJTJr3G+jDHX3RdK0TyPY5O
+bOE6F0ZG2RfwvCBz0r/puOv1Y0SJIYXpxrEpxVkH9gEekViIo7+Aj02PCKGrgEmE
+XUi88UpO9kFks2bddGHPab7R+PCKSLUoFG0HVmwdUQvRs1v0rcFWVYjdhCl7xBjZ
+prY9xMFWwbH8D1dYwXoa4TrbT/BU3MHFw0Muu6+joSDj05OSGAKnkKB5p/yTA6P9
+p9DeQdWhXVh5jdW53xqkS4d3vIfhwGsn662cynbGuGfLNgK7bnqisXJYVmp1c+wU
+l7xA4i7JFc+cpOejOxSe0SyZP0gz6bhIx6PALOiO15fEsfGtvGDovIHVm1rfLMUJ
+cfmKhT+/ye6fO8pfavvxblxs9NjLbMvqFj3RCRzKyQBVUXdNAHo69a2YhfkaHG2M
+RqpCk4K7wQErvN9WV0axLO4Fh6kJFyp66fa85wIDAQABo4IGOjCCBjYwWQYDVR0g
+BFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDAR
+Bg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAw
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAd
+BgNVHQ4EFgQUd2CmkrEStbaEfS+tit5c+pW1yv8wHwYDVR0jBBgwFoAUazqYi/ny
+U4na4K2yMh4JH+iqO3QwFwYDVR0RBBAwDoIMc3NvLnR1LWJzLmRlMIGNBgNVHR8E
+gYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRm
+bi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEF
+BQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9P
+Q1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsG
+AQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NhY2VydC9jYWNlcnQuY3J0MIID1gYKKwYBBAHWeQIEAgSCA8YEggPCA8AA
+dgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWT0CphJAAAEAwBH
+MEUCICnfX/RsfLGDDkYFhWEtZXUb0sdO4waJk3PU6d0GCelrAiEAtRm1+QXFWEwd
+f+kFidYjFzHhQZ5bNH6cof7VO9fPe5MAdQDuS723dc5guuFCaR+r4Z5mow9+X7By
+2IMAxHuJeqj9ywAAAWT0CpgrAAAEAwBGMEQCIC2Sg6YWF/QRR8z6DlJL/pHKfjJT
++5JOCwmpiKshWkEkAiACyPYhBFYxmtH15f88kGPt2Y559bI5XkTYne/wOqBHLgB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZPQKmB0AAAQDAEcw
+RQIhAN127LXsyB6/cJ0J1z6fVzH21/Lv6w3Y5ppJpDy5g9PtAiAJZ5f407YBDBqu
+h/ZsePGqMoHXVlkLD1R7+95VMvp9vgB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZPQKmWsAAAQDAEcwRQIhANdti0ChiTGzQFEzMVsx8Sv3PETm
+dMh/PZBXWe8teulBAiBYxYrSwF+U9e8PrRQpwC441mHRf7z9rtMQezDAesVJ0wB2
+AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVYAAABZPQKmrkAAAQDAEcw
+RQIgY4ltE1n28DTX4L6lOYFfj+VmqLEHulZa6/J3MbbfUfICIQDOx5lY6z+wU/f+
+2v1uzsnem9WliM3eCuh/qCAWD0rAVgB2AKS5CZC0GFgUh7sTosxncAo8NZgE+Rvf
+uON3zQ7IDdwQAAABZPQKmpMAAAQDAEcwRQIhAMbfYmgx3n2TQL4fCEeKClJDQon0
+RZ10mXmSn+M3KOMKAiAGA7iYTpJ0i62gTnUzxBhh15HubFc5tEnuuwJhmtVeJQB2
+ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZPQKmnoAAAQDAEcw
+RQIhALMC0Q1zS4I7xMFJ5ZnGc2bL6nrrjDj7GcibRlyvasMJAiAzZj7pcbYYG2fB
+dEkfj5gTkpf8RTnH8WjBhjea9fbLRQB3ALIeBcyLos2KIE6HZvkruYolIGdr2vpw
+57JJUy3vi5BeAAABZPQKmYsAAAQDAEgwRgIhAPRjnNdDijPpq6WI8ku+6ElhmiCz
+GfYA73sUrqWHGrxNAiEA6glwfb+aZjUrBkkKuZ8V99YhDBFvx2jx49Ogsrs15XYw
+DQYJKoZIhvcNAQELBQADggEBAAkuyRs1cX4C8m1uhozpZnqWUN/U4De3SvDqcUY2
+99ygbhySwbFZLzOrsejJspJk2YLRJOw7IK48nQ3zaQ3lOVlWNgoSHK1H1Ooex4g+
+kUxF1Cpgq7Trpy5MgmJq86Z6yxr85mJIJOnGMNqgaPLCWpv3t3oV42zDP0aAphMN
+DRUeoguevH1SX8BQTTwspagJRarGs3cm+1/LHvsS3wG1RCHByKu6+U7NKlT8MMhd
+oKGBjxFlmD13rkuFeeEZNBzingO+BafqSQSmfjN2jcG8P6BWW5i1XL5d6K06cfKA
+k1dvCRUjIQImY5q+kRTU6cXrmWqvFn/pN1B6qUZWqjOM2uw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIK/zCCCeegAwIBAgIMH4DH7c3QJGfBRvMVMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgwMTA1NTEyOFoXDTIwMTEwMjA1NTEyOFowga4xCzAJBgNVBAYTAkRFMRYwFAYD
+VQQIDA1OaWVkZXJzYWNoc2VuMRUwEwYDVQQHDAxCcmF1bnNjaHdlaWcxLTArBgNV
+BAoMJFRlY2huaXNjaGUgVW5pdmVyc2l0YWV0IEJyYXVuc2Nod2VpZzEZMBcGA1UE
+CwwQR2F1c3MtSVQtWmVudHJ1bTEPMA0GA1UECwwGU2VydmVyMRUwEwYDVQQDDAxz
+c28udHUtYnMuZGUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDnTLXN
+okyrEdz41D2ylfNobGb7Sh6qXAtxiB2qqtPs1/rwD+Pa2RdZwwxbiNBzDqqd87Nz
+8lxQwyPGLen4dK2RJwh3ObWPuWbwa8ounZl+911nAPshgU5YJhNJv0+YXa9cYL0V
+bHnFYUiGVWoWa60lzevQijuyIA9f2AgME7BxL9NyGy6rQz8YN5A62w0j5Fal7qKa
+lJPSoTuEfQf/tPnB2aq2G7FvG5sgIln/NN/CgyHbSrJTJr3G+jDHX3RdK0TyPY5O
+bOE6F0ZG2RfwvCBz0r/puOv1Y0SJIYXpxrEpxVkH9gEekViIo7+Aj02PCKGrgEmE
+XUi88UpO9kFks2bddGHPab7R+PCKSLUoFG0HVmwdUQvRs1v0rcFWVYjdhCl7xBjZ
+prY9xMFWwbH8D1dYwXoa4TrbT/BU3MHFw0Muu6+joSDj05OSGAKnkKB5p/yTA6P9
+p9DeQdWhXVh5jdW53xqkS4d3vIfhwGsn662cynbGuGfLNgK7bnqisXJYVmp1c+wU
+l7xA4i7JFc+cpOejOxSe0SyZP0gz6bhIx6PALOiO15fEsfGtvGDovIHVm1rfLMUJ
+cfmKhT+/ye6fO8pfavvxblxs9NjLbMvqFj3RCRzKyQBVUXdNAHo69a2YhfkaHG2M
+RqpCk4K7wQErvN9WV0axLO4Fh6kJFyp66fa85wIDAQABo4IGOjCCBjYwWQYDVR0g
+BFIwUDAIBgZngQwBAgIwDQYLKwYBBAGBrSGCLB4wDwYNKwYBBAGBrSGCLAEBBDAR
+Bg8rBgEEAYGtIYIsAQEEAwgwEQYPKwYBBAGBrSGCLAIBBAMIMAkGA1UdEwQCMAAw
+DgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAd
+BgNVHQ4EFgQUd2CmkrEStbaEfS+tit5c+pW1yv8wHwYDVR0jBBgwFoAUazqYi/ny
+U4na4K2yMh4JH+iqO3QwFwYDVR0RBBAwDoIMc3NvLnR1LWJzLmRlMIGNBgNVHR8E
+gYUwgYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRm
+bi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEF
+BQcBAQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9P
+Q1NQLVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZu
+LmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsG
+AQUFBzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIv
+cHViL2NhY2VydC9jYWNlcnQuY3J0MIID1gYKKwYBBAHWeQIEAgSCA8YEggPCA8AA
+dgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWT0CphJAAAEAwBH
+MEUCICnfX/RsfLGDDkYFhWEtZXUb0sdO4waJk3PU6d0GCelrAiEAtRm1+QXFWEwd
+f+kFidYjFzHhQZ5bNH6cof7VO9fPe5MAdQDuS723dc5guuFCaR+r4Z5mow9+X7By
+2IMAxHuJeqj9ywAAAWT0CpgrAAAEAwBGMEQCIC2Sg6YWF/QRR8z6DlJL/pHKfjJT
++5JOCwmpiKshWkEkAiACyPYhBFYxmtH15f88kGPt2Y559bI5XkTYne/wOqBHLgB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZPQKmB0AAAQDAEcw
+RQIhAN127LXsyB6/cJ0J1z6fVzH21/Lv6w3Y5ppJpDy5g9PtAiAJZ5f407YBDBqu
+h/ZsePGqMoHXVlkLD1R7+95VMvp9vgB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZPQKmWsAAAQDAEcwRQIhANdti0ChiTGzQFEzMVsx8Sv3PETm
+dMh/PZBXWe8teulBAiBYxYrSwF+U9e8PrRQpwC441mHRf7z9rtMQezDAesVJ0wB2
+AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVYAAABZPQKmrkAAAQDAEcw
+RQIgY4ltE1n28DTX4L6lOYFfj+VmqLEHulZa6/J3MbbfUfICIQDOx5lY6z+wU/f+
+2v1uzsnem9WliM3eCuh/qCAWD0rAVgB2AKS5CZC0GFgUh7sTosxncAo8NZgE+Rvf
+uON3zQ7IDdwQAAABZPQKmpMAAAQDAEcwRQIhAMbfYmgx3n2TQL4fCEeKClJDQon0
+RZ10mXmSn+M3KOMKAiAGA7iYTpJ0i62gTnUzxBhh15HubFc5tEnuuwJhmtVeJQB2
+ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZPQKmnoAAAQDAEcw
+RQIhALMC0Q1zS4I7xMFJ5ZnGc2bL6nrrjDj7GcibRlyvasMJAiAzZj7pcbYYG2fB
+dEkfj5gTkpf8RTnH8WjBhjea9fbLRQB3ALIeBcyLos2KIE6HZvkruYolIGdr2vpw
+57JJUy3vi5BeAAABZPQKmYsAAAQDAEgwRgIhAPRjnNdDijPpq6WI8ku+6ElhmiCz
+GfYA73sUrqWHGrxNAiEA6glwfb+aZjUrBkkKuZ8V99YhDBFvx2jx49Ogsrs15XYw
+DQYJKoZIhvcNAQELBQADggEBAAkuyRs1cX4C8m1uhozpZnqWUN/U4De3SvDqcUY2
+99ygbhySwbFZLzOrsejJspJk2YLRJOw7IK48nQ3zaQ3lOVlWNgoSHK1H1Ooex4g+
+kUxF1Cpgq7Trpy5MgmJq86Z6yxr85mJIJOnGMNqgaPLCWpv3t3oV42zDP0aAphMN
+DRUeoguevH1SX8BQTTwspagJRarGs3cm+1/LHvsS3wG1RCHByKu6+U7NKlT8MMhd
+oKGBjxFlmD13rkuFeeEZNBzingO+BafqSQSmfjN2jcG8P6BWW5i1XL5d6K06cfKA
+k1dvCRUjIQImY5q+kRTU6cXrmWqvFn/pN1B6qUZWqjOM2uw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.tu-bs.de/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.tu-bs.de/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e550</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e550</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Technische Universität Braunschweig</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Technische Universität Braunschweig</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.tu-braunschweig.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.tu-braunschweig.de/index.html?lang=en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Joachim</md:GivenName>
+	<md:SurName>Steinmetz</md:SurName>
+	<md:EmailAddress>mailto:idp-support@tu-braunschweig.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Joachim</md:GivenName>
+	<md:SurName>Steinmetz</md:SurName>
+	<md:EmailAddress>mailto:idp-support@tu-braunschweig.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

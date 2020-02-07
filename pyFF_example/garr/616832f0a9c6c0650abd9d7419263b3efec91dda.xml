@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://authentication.clariah.nl/Saml2/proxy_saml2_backend.xml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2019-03-28T07:47:57Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://clarin.eu/category/clarin-member</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://authentication.clariah.nl/Saml2/disco?workaround=true" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">CLARIAH NL IdP</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">CLARIAH NL IdP</mdui:DisplayName>
+		<mdui:Description xml:lang="de">CLARIAH proxy Identity Provider</mdui:Description>
+		<mdui:Description xml:lang="en">CLARIAH proxy Identity Provider</mdui:Description>
+		<mdui:Logo height="83" width="300">https://www.clariah.nl/images/logo/clariah/CLARIAH_logoT.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://clariah.nl/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://authentication.clariah.nl/privacy-statement</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDaDCCAlCgAwIBAgIJAL3v7eafm2d/MA0GCSqGSIb3DQEBCwUAMF0xCzAJBgNV
+BAYTAk5MMRUwEwYDVQQKDAxzYXRvc2FfcHJveHkxFTATBgNVBAMMDHNhdG9zYV9w
+cm94eTEgMB4GCSqGSIb3DQEJARYRaW5mb0BzYXRvc2FfcHJveHkwHhcNMTkwMjAx
+MTA1NzQ0WhcNMjkwMTI5MTA1NzQ0WjBdMQswCQYDVQQGEwJOTDEVMBMGA1UECgwM
+c2F0b3NhX3Byb3h5MRUwEwYDVQQDDAxzYXRvc2FfcHJveHkxIDAeBgkqhkiG9w0B
+CQEWEWluZm9Ac2F0b3NhX3Byb3h5MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+CgKCAQEA64Aqjpp25auuL0Sh5vYc0RrqQ/kpLqfcjo6gpzIE/GI3xiJrxygvXvKg
+ADXgRN03PEQFAIDDH+C/STgYXcOPFvrC6Hh48Cd0t21ScLemfx/PJzHPKj94nisl
+YhlMN5v9X/Ol3lKL1uab6UrbPXPyudKiniviiq03H9eJMXeekoD/W+dT8MNxSb9A
+j3sjJ0KWHIW6oFcChSaG+EnWrsvi/DO0cpasgtuB6BiR3HMm4CUdj2SM8jq2oLfp
+T8yWN4KsjYmMBAXQW8xh3fDwzq5DJ789cSwdPYX1Yp+LMxAq1TJM0oJhtrq81h9Y
+Fyue6ILvyGvrDALL50T1OxKXNTsEaQIDAQABoyswKTAnBgNVHREEIDAeggxzYXRv
+c2FfcHJveHmCDiouc2F0b3NhX3Byb3h5MA0GCSqGSIb3DQEBCwUAA4IBAQCI+JXI
+Sj6Mf952RGh1uKqN+iOs4BcNW8jj7j7D8137w1seFOsI+0fB8xIgLzPLfh73vXPE
+qmSvggAXKs1fVtOd+dg2ACbZrm1Vp4dv3LkHYpePGzw7Zu/D/xWM8aePgM/LvEdv
+IaCUKfugi+jRD1c+fAYc72FJ7M/C7P+MDcAn6k84nQpldhx6hHKBlsYn5178lpG9
+w2ZZ9yVqJzUBRYfQ9QauqPMTNOZhGO1BOYO4ipyonif1lxSKs3Co9bH0qFULrDf9
+OYSIi1eUuz0X3foVRGo1iOJPjflIptl/+F4sGG52Um1Fb29CMjSltECiZoNq0Jq2
+5SVK/GQXb7xtudKZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authentication.clariah.nl/Saml2/acs/post" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">CLARIAH NL IdP</md:ServiceName>
+		<md:ServiceName xml:lang="en">CLARIAH NL IdP</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">CLARIAH proxy Identity Provider</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">CLARIAH proxy Identity Provider</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="schacHomeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e459</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e459</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://clarin.eu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://clarin.eu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Clariah Support</md:GivenName>
+	<md:EmailAddress>mailto:concern-infrastructure@di.huc.knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Clariah Support</md:GivenName>
+	<md:EmailAddress>mailto:concern-infrastructure@di.huc.knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Clariah Support</md:GivenName>
+	<md:EmailAddress>mailto:concern-infrastructure@di.huc.knaw.nl</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://blblogin.blb-karlsruhe.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2009-05-26T08:35:30Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">blblogin.blb-karlsruhe.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Badische Landesbibliothek</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Badische Landesbibliothek</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Die Badische Landesbibliothek bietet mit BLBlogin einen zentrale Authentifizierung- und Autorisierungsdienst über Shibboleth an.</mdui:Description>
+		<mdui:Description xml:lang="en">Die Badische Landesbibliothek bietet mit BLBlogin einen zentrale Authentifizierung- und Autorisierungsdienst über Shibboleth an.</mdui:Description>
+		<mdui:InformationURL xml:lang="de">http://www.blb-karlsruhe.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.blb-karlsruhe.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJbzCCCFegAwIBAgIMIN41J/mgt3bhFwaEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQyMzA2NTgzNVoXDTIxMDcyNTA2NTgzNVowgYYxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUthcmxzcnVoZTEiMCAG
+A1UECgwZQmFkaXNjaGUgTGFuZGVzYmlibGlvdGhlazEiMCAGA1UEAwwZYmxibG9n
+aW4uYmxiLWthcmxzcnVoZS5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALDKZbDlISPFqp14/EuBOCmWOYNJ1iB55R6N71eW1IKj9o0oZtYTmA9oCxWv
+epCtB8ryJrXfO+qsrXbRbqLW8EgecwVNYj49DZBpKCXhN9dfB0AoNyBoSxu+bqwS
+rJJGeMs5Mh4iRZDtXitWwBfMMgkt6NArRk6D5yab8NkoAsCuBt4MksfRPmg3tDnH
+XcBCD2AP2iray936yohSQeMmxFpf/rC01dw6gR1US2cHrS4D6K4RwQePGGyRKz21
+nQSbKSighMoqEZeCv01sTe9dsZavYKPQA+i/osiMeWWVmyKWYULaW/kiT7Ho/iyc
+owspT8d3v2zH2CHiCTWG1ZBlCfECAwEAAaOCBdIwggXOMFkGA1UdIARSMFAwCAYG
+Z4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGB
+rSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNVHRMEAjAAMA4GA1UdDwEB
+/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYE
+FBCcsKw1ri+rGzwccS3ueNJG8bysMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIe
+CR/oqjt0MCQGA1UdEQQdMBuCGWJsYmxvZ2luLmJsYi1rYXJsc3J1aGUuZGUwgY0G
+A1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5w
+Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsG
+CCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZu
+LmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+SQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNhBgorBgEEAdZ5AgQCBIIDUQSC
+A00DSwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABakj9RQgA
+AAQDAEgwRgIhAM2mHRs6GMylnbysl4Iq3a8k1M5w+XN4Iv2xMVqiShu4AiEA+Jja
+wyZzlUbkVbNeQBWNzT3Apc80T3zz6d6m2Fhc8ncAdgCq5wt/PLjVZshsLxaXnJ9E
+X2mrDrRTVYmy93oDAQTzzQAAAWpI/UT0AAAEAwBHMEUCIQCqUgr+XQJEf2N9Q+ld
+uG2wP93mVMBL1g1/htTuWMdT1AIgEThLSW0TbwwuwNqmWOUVAAmJRbeLvVMrOECY
+2ReOkwMAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWpI/UYQ
+AAAEAwBHMEUCIQDDl4+i3+hNCbqY4VuA2sIyp3d3pVbEwqsvaxBOROAlzwIgYTeL
+syLKanZBY1Nj4gd5kGmA8xG+WIf7agGJ5n58scMAdgC72d+8H4pxtZOUI5eqkntH
+OFeVCqtS6BqQlmQ2jh7RhQAAAWpI/UUOAAAEAwBHMEUCIQDUZHJQ4UIqiVtvJRPT
+Y6exAtZ+mSgtU5rQyABJ3kODJwIgOx57Q0i3SgNmjq9TX0oQXEwKIR9xgNZfv0RO
+bWaNUzUAdwCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWpI/UUP
+AAAEAwBIMEYCIQD+1s4JXwnpgUbzwEHKmZwZM1htqpGGPXr8CLcoHvXAuAIhAN09
+AR1ug5W7Swq4pWnw5BTiapxUP5eX2Yz6V+CZu1jjAHcA7ku9t3XOYLrhQmkfq+Ge
+ZqMPfl+wctiDAMR7iXqo/csAAAFqSP1FHgAABAMASDBGAiEA7AQjmlB0jZyGRunP
+tFA+Lccpm5+1TbJIvr7jyU1OVMICIQCElOoL4+iPukz4I/7GUq0EpCAj/IENfNjY
+DpKrMP3EvwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABakj9
+SmIAAAQDAEcwRQIhANxnosskv3eWUIn41Y+/TRZqkSbfJooq3NGvya0kZbJ+AiAq
+dgg7haz9R2jOMFbjGJuhEmwxf5Le1jv7LbQgH2yvVzANBgkqhkiG9w0BAQsFAAOC
+AQEAekcLriQhBUJpjzowWUrFXzfyUf2FQjIaG50nbAbHeCn5ZQPRrWdVlU545E2K
+BC9mNf+1k4gL+2b1Bc/9v8jRA41w8m9abVDuErBc32HYEtbQUJlyvpkgiowMJpjx
+0BUZKZh5O5LD9D68nx8/Aggf3pXlAsOmCie8I60McXERE1mOTajPewXya98crfgu
+X2XjCHUJKK1SB9I8xyJVw0WZG0uhj6wLchfqgdk40Kh4IVG1lLVl855T8kazvWW4
+suZml2Io4Q4GE1rmmT9SvW6NCmhsE6X+pcXqjMp27uSkMD06D4Dncw+EjOvrNf2G
+AJZ9QrwF1dgKWdFR1vDjcG9Leg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJbzCCCFegAwIBAgIMIN41J/mgt3bhFwaEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQyMzA2NTgzNVoXDTIxMDcyNTA2NTgzNVowgYYxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUthcmxzcnVoZTEiMCAG
+A1UECgwZQmFkaXNjaGUgTGFuZGVzYmlibGlvdGhlazEiMCAGA1UEAwwZYmxibG9n
+aW4uYmxiLWthcmxzcnVoZS5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALDKZbDlISPFqp14/EuBOCmWOYNJ1iB55R6N71eW1IKj9o0oZtYTmA9oCxWv
+epCtB8ryJrXfO+qsrXbRbqLW8EgecwVNYj49DZBpKCXhN9dfB0AoNyBoSxu+bqwS
+rJJGeMs5Mh4iRZDtXitWwBfMMgkt6NArRk6D5yab8NkoAsCuBt4MksfRPmg3tDnH
+XcBCD2AP2iray936yohSQeMmxFpf/rC01dw6gR1US2cHrS4D6K4RwQePGGyRKz21
+nQSbKSighMoqEZeCv01sTe9dsZavYKPQA+i/osiMeWWVmyKWYULaW/kiT7Ho/iyc
+owspT8d3v2zH2CHiCTWG1ZBlCfECAwEAAaOCBdIwggXOMFkGA1UdIARSMFAwCAYG
+Z4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGB
+rSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNVHRMEAjAAMA4GA1UdDwEB
+/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYE
+FBCcsKw1ri+rGzwccS3ueNJG8bysMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIe
+CR/oqjt0MCQGA1UdEQQdMBuCGWJsYmxvZ2luLmJsYi1rYXJsc3J1aGUuZGUwgY0G
+A1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5w
+Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsG
+CCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZu
+LmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+SQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNhBgorBgEEAdZ5AgQCBIIDUQSC
+A00DSwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABakj9RQgA
+AAQDAEgwRgIhAM2mHRs6GMylnbysl4Iq3a8k1M5w+XN4Iv2xMVqiShu4AiEA+Jja
+wyZzlUbkVbNeQBWNzT3Apc80T3zz6d6m2Fhc8ncAdgCq5wt/PLjVZshsLxaXnJ9E
+X2mrDrRTVYmy93oDAQTzzQAAAWpI/UT0AAAEAwBHMEUCIQCqUgr+XQJEf2N9Q+ld
+uG2wP93mVMBL1g1/htTuWMdT1AIgEThLSW0TbwwuwNqmWOUVAAmJRbeLvVMrOECY
+2ReOkwMAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWpI/UYQ
+AAAEAwBHMEUCIQDDl4+i3+hNCbqY4VuA2sIyp3d3pVbEwqsvaxBOROAlzwIgYTeL
+syLKanZBY1Nj4gd5kGmA8xG+WIf7agGJ5n58scMAdgC72d+8H4pxtZOUI5eqkntH
+OFeVCqtS6BqQlmQ2jh7RhQAAAWpI/UUOAAAEAwBHMEUCIQDUZHJQ4UIqiVtvJRPT
+Y6exAtZ+mSgtU5rQyABJ3kODJwIgOx57Q0i3SgNmjq9TX0oQXEwKIR9xgNZfv0RO
+bWaNUzUAdwCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWpI/UUP
+AAAEAwBIMEYCIQD+1s4JXwnpgUbzwEHKmZwZM1htqpGGPXr8CLcoHvXAuAIhAN09
+AR1ug5W7Swq4pWnw5BTiapxUP5eX2Yz6V+CZu1jjAHcA7ku9t3XOYLrhQmkfq+Ge
+ZqMPfl+wctiDAMR7iXqo/csAAAFqSP1FHgAABAMASDBGAiEA7AQjmlB0jZyGRunP
+tFA+Lccpm5+1TbJIvr7jyU1OVMICIQCElOoL4+iPukz4I/7GUq0EpCAj/IENfNjY
+DpKrMP3EvwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABakj9
+SmIAAAQDAEcwRQIhANxnosskv3eWUIn41Y+/TRZqkSbfJooq3NGvya0kZbJ+AiAq
+dgg7haz9R2jOMFbjGJuhEmwxf5Le1jv7LbQgH2yvVzANBgkqhkiG9w0BAQsFAAOC
+AQEAekcLriQhBUJpjzowWUrFXzfyUf2FQjIaG50nbAbHeCn5ZQPRrWdVlU545E2K
+BC9mNf+1k4gL+2b1Bc/9v8jRA41w8m9abVDuErBc32HYEtbQUJlyvpkgiowMJpjx
+0BUZKZh5O5LD9D68nx8/Aggf3pXlAsOmCie8I60McXERE1mOTajPewXya98crfgu
+X2XjCHUJKK1SB9I8xyJVw0WZG0uhj6wLchfqgdk40Kh4IVG1lLVl855T8kazvWW4
+suZml2Io4Q4GE1rmmT9SvW6NCmhsE6X+pcXqjMp27uSkMD06D4Dncw+EjOvrNf2G
+AJZ9QrwF1dgKWdFR1vDjcG9Leg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://blblogin.blb-karlsruhe.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://blblogin.blb-karlsruhe.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://blblogin.blb-karlsruhe.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://blblogin.blb-karlsruhe.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://blblogin.blb-karlsruhe.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://blblogin.blb-karlsruhe.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://blblogin.blb-karlsruhe.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">blblogin.blb-karlsruhe.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJbzCCCFegAwIBAgIMIN41J/mgt3bhFwaEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQyMzA2NTgzNVoXDTIxMDcyNTA2NTgzNVowgYYxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUthcmxzcnVoZTEiMCAG
+A1UECgwZQmFkaXNjaGUgTGFuZGVzYmlibGlvdGhlazEiMCAGA1UEAwwZYmxibG9n
+aW4uYmxiLWthcmxzcnVoZS5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALDKZbDlISPFqp14/EuBOCmWOYNJ1iB55R6N71eW1IKj9o0oZtYTmA9oCxWv
+epCtB8ryJrXfO+qsrXbRbqLW8EgecwVNYj49DZBpKCXhN9dfB0AoNyBoSxu+bqwS
+rJJGeMs5Mh4iRZDtXitWwBfMMgkt6NArRk6D5yab8NkoAsCuBt4MksfRPmg3tDnH
+XcBCD2AP2iray936yohSQeMmxFpf/rC01dw6gR1US2cHrS4D6K4RwQePGGyRKz21
+nQSbKSighMoqEZeCv01sTe9dsZavYKPQA+i/osiMeWWVmyKWYULaW/kiT7Ho/iyc
+owspT8d3v2zH2CHiCTWG1ZBlCfECAwEAAaOCBdIwggXOMFkGA1UdIARSMFAwCAYG
+Z4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGB
+rSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNVHRMEAjAAMA4GA1UdDwEB
+/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYE
+FBCcsKw1ri+rGzwccS3ueNJG8bysMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIe
+CR/oqjt0MCQGA1UdEQQdMBuCGWJsYmxvZ2luLmJsYi1rYXJsc3J1aGUuZGUwgY0G
+A1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5w
+Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsG
+CCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZu
+LmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+SQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNhBgorBgEEAdZ5AgQCBIIDUQSC
+A00DSwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABakj9RQgA
+AAQDAEgwRgIhAM2mHRs6GMylnbysl4Iq3a8k1M5w+XN4Iv2xMVqiShu4AiEA+Jja
+wyZzlUbkVbNeQBWNzT3Apc80T3zz6d6m2Fhc8ncAdgCq5wt/PLjVZshsLxaXnJ9E
+X2mrDrRTVYmy93oDAQTzzQAAAWpI/UT0AAAEAwBHMEUCIQCqUgr+XQJEf2N9Q+ld
+uG2wP93mVMBL1g1/htTuWMdT1AIgEThLSW0TbwwuwNqmWOUVAAmJRbeLvVMrOECY
+2ReOkwMAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWpI/UYQ
+AAAEAwBHMEUCIQDDl4+i3+hNCbqY4VuA2sIyp3d3pVbEwqsvaxBOROAlzwIgYTeL
+syLKanZBY1Nj4gd5kGmA8xG+WIf7agGJ5n58scMAdgC72d+8H4pxtZOUI5eqkntH
+OFeVCqtS6BqQlmQ2jh7RhQAAAWpI/UUOAAAEAwBHMEUCIQDUZHJQ4UIqiVtvJRPT
+Y6exAtZ+mSgtU5rQyABJ3kODJwIgOx57Q0i3SgNmjq9TX0oQXEwKIR9xgNZfv0RO
+bWaNUzUAdwCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWpI/UUP
+AAAEAwBIMEYCIQD+1s4JXwnpgUbzwEHKmZwZM1htqpGGPXr8CLcoHvXAuAIhAN09
+AR1ug5W7Swq4pWnw5BTiapxUP5eX2Yz6V+CZu1jjAHcA7ku9t3XOYLrhQmkfq+Ge
+ZqMPfl+wctiDAMR7iXqo/csAAAFqSP1FHgAABAMASDBGAiEA7AQjmlB0jZyGRunP
+tFA+Lccpm5+1TbJIvr7jyU1OVMICIQCElOoL4+iPukz4I/7GUq0EpCAj/IENfNjY
+DpKrMP3EvwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABakj9
+SmIAAAQDAEcwRQIhANxnosskv3eWUIn41Y+/TRZqkSbfJooq3NGvya0kZbJ+AiAq
+dgg7haz9R2jOMFbjGJuhEmwxf5Le1jv7LbQgH2yvVzANBgkqhkiG9w0BAQsFAAOC
+AQEAekcLriQhBUJpjzowWUrFXzfyUf2FQjIaG50nbAbHeCn5ZQPRrWdVlU545E2K
+BC9mNf+1k4gL+2b1Bc/9v8jRA41w8m9abVDuErBc32HYEtbQUJlyvpkgiowMJpjx
+0BUZKZh5O5LD9D68nx8/Aggf3pXlAsOmCie8I60McXERE1mOTajPewXya98crfgu
+X2XjCHUJKK1SB9I8xyJVw0WZG0uhj6wLchfqgdk40Kh4IVG1lLVl855T8kazvWW4
+suZml2Io4Q4GE1rmmT9SvW6NCmhsE6X+pcXqjMp27uSkMD06D4Dncw+EjOvrNf2G
+AJZ9QrwF1dgKWdFR1vDjcG9Leg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJbzCCCFegAwIBAgIMIN41J/mgt3bhFwaEMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDQyMzA2NTgzNVoXDTIxMDcyNTA2NTgzNVowgYYxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUthcmxzcnVoZTEiMCAG
+A1UECgwZQmFkaXNjaGUgTGFuZGVzYmlibGlvdGhlazEiMCAGA1UEAwwZYmxibG9n
+aW4uYmxiLWthcmxzcnVoZS5kZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBALDKZbDlISPFqp14/EuBOCmWOYNJ1iB55R6N71eW1IKj9o0oZtYTmA9oCxWv
+epCtB8ryJrXfO+qsrXbRbqLW8EgecwVNYj49DZBpKCXhN9dfB0AoNyBoSxu+bqwS
+rJJGeMs5Mh4iRZDtXitWwBfMMgkt6NArRk6D5yab8NkoAsCuBt4MksfRPmg3tDnH
+XcBCD2AP2iray936yohSQeMmxFpf/rC01dw6gR1US2cHrS4D6K4RwQePGGyRKz21
+nQSbKSighMoqEZeCv01sTe9dsZavYKPQA+i/osiMeWWVmyKWYULaW/kiT7Ho/iyc
+owspT8d3v2zH2CHiCTWG1ZBlCfECAwEAAaOCBdIwggXOMFkGA1UdIARSMFAwCAYG
+Z4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGB
+rSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQDCTAJBgNVHRMEAjAAMA4GA1UdDwEB
+/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYE
+FBCcsKw1ri+rGzwccS3ueNJG8bysMB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIe
+CR/oqjt0MCQGA1UdEQQdMBuCGWJsYmxvZ2luLmJsYi1rYXJsc3J1aGUuZGUwgY0G
+A1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2Et
+Z2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5w
+Y2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsG
+CCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZu
+LmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQw
+SQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2Jh
+bC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNhBgorBgEEAdZ5AgQCBIIDUQSC
+A00DSwB3AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABakj9RQgA
+AAQDAEgwRgIhAM2mHRs6GMylnbysl4Iq3a8k1M5w+XN4Iv2xMVqiShu4AiEA+Jja
+wyZzlUbkVbNeQBWNzT3Apc80T3zz6d6m2Fhc8ncAdgCq5wt/PLjVZshsLxaXnJ9E
+X2mrDrRTVYmy93oDAQTzzQAAAWpI/UT0AAAEAwBHMEUCIQCqUgr+XQJEf2N9Q+ld
+uG2wP93mVMBL1g1/htTuWMdT1AIgEThLSW0TbwwuwNqmWOUVAAmJRbeLvVMrOECY
+2ReOkwMAdgBVgdTCFpA2AUrqC5tXPFPwwOQ4eHAlCBcvo6odBxPTDAAAAWpI/UYQ
+AAAEAwBHMEUCIQDDl4+i3+hNCbqY4VuA2sIyp3d3pVbEwqsvaxBOROAlzwIgYTeL
+syLKanZBY1Nj4gd5kGmA8xG+WIf7agGJ5n58scMAdgC72d+8H4pxtZOUI5eqkntH
+OFeVCqtS6BqQlmQ2jh7RhQAAAWpI/UUOAAAEAwBHMEUCIQDUZHJQ4UIqiVtvJRPT
+Y6exAtZ+mSgtU5rQyABJ3kODJwIgOx57Q0i3SgNmjq9TX0oQXEwKIR9xgNZfv0RO
+bWaNUzUAdwCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWpI/UUP
+AAAEAwBIMEYCIQD+1s4JXwnpgUbzwEHKmZwZM1htqpGGPXr8CLcoHvXAuAIhAN09
+AR1ug5W7Swq4pWnw5BTiapxUP5eX2Yz6V+CZu1jjAHcA7ku9t3XOYLrhQmkfq+Ge
+ZqMPfl+wctiDAMR7iXqo/csAAAFqSP1FHgAABAMASDBGAiEA7AQjmlB0jZyGRunP
+tFA+Lccpm5+1TbJIvr7jyU1OVMICIQCElOoL4+iPukz4I/7GUq0EpCAj/IENfNjY
+DpKrMP3EvwB2AESUZS6w7s6vxEAH2Kj+KMDa5oK+2MsxtT/TM5a1toGoAAABakj9
+SmIAAAQDAEcwRQIhANxnosskv3eWUIn41Y+/TRZqkSbfJooq3NGvya0kZbJ+AiAq
+dgg7haz9R2jOMFbjGJuhEmwxf5Le1jv7LbQgH2yvVzANBgkqhkiG9w0BAQsFAAOC
+AQEAekcLriQhBUJpjzowWUrFXzfyUf2FQjIaG50nbAbHeCn5ZQPRrWdVlU545E2K
+BC9mNf+1k4gL+2b1Bc/9v8jRA41w8m9abVDuErBc32HYEtbQUJlyvpkgiowMJpjx
+0BUZKZh5O5LD9D68nx8/Aggf3pXlAsOmCie8I60McXERE1mOTajPewXya98crfgu
+X2XjCHUJKK1SB9I8xyJVw0WZG0uhj6wLchfqgdk40Kh4IVG1lLVl855T8kazvWW4
+suZml2Io4Q4GE1rmmT9SvW6NCmhsE6X+pcXqjMp27uSkMD06D4Dncw+EjOvrNf2G
+AJZ9QrwF1dgKWdFR1vDjcG9Leg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://blblogin.blb-karlsruhe.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://blblogin.blb-karlsruhe.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e63</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e63</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Badische Landesbibliothek Karlsruhe</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Badische Landesbibliothek Karlsruhe</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.blb-karlsruhe.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.blb-karlsruhe.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Uli</md:GivenName>
+	<md:SurName>Fietz</md:SurName>
+	<md:EmailAddress>mailto:fietz@blb-karlsruhe.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Uli</md:GivenName>
+	<md:SurName>Fietz</md:SurName>
+	<md:EmailAddress>mailto:fietz@blb-karlsruhe.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Uli</md:GivenName>
+	<md:SurName>Fietz</md:SurName>
+	<md:EmailAddress>mailto:fietz@blb-karlsruhe.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Uli</md:GivenName>
+	<md:SurName>Fietz</md:SurName>
+	<md:EmailAddress>mailto:fietz@blb-karlsruhe.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

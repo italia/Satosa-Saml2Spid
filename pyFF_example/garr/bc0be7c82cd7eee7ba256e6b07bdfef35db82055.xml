@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.unlv.edu/FIM/sps/MyShib/saml20">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.it.unlv.edu/incommon/error" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unlv.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Nevada-Las Vegas</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.it.unlv.edu/incommon/information</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.it.unlv.edu/incommon/oit-web-privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="360" width="1228" xml:lang="en">https://www.unlv.edu/sites/default/files/assets/identity/images/logos/UNLV-186.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUjCCAjqgAwIBAgIEVD3EHjANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
+UzELMAkGA1UECBMCTlYxEjAQBgNVBAcTCUxhcyBWZWdhczENMAsGA1UEChMEVU5M
+VjEMMAoGA1UECxMDT0lUMR4wHAYDVQQDExVzc28tZmltLXNoaWIudW5sdi5lZHUw
+HhcNMTQxMDE1MDA0NzI2WhcNMjMwMTAxMDE0NzI2WjBrMQswCQYDVQQGEwJVUzEL
+MAkGA1UECBMCTlYxEjAQBgNVBAcTCUxhcyBWZWdhczENMAsGA1UEChMEVU5MVjEM
+MAoGA1UECxMDT0lUMR4wHAYDVQQDExVzc28tZmltLXNoaWIudW5sdi5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCbkmPqD2c1WXNNFPdSo8UPPJjb
+4n7HhKBni8mvzzXMr/GQwsxaJM3pEek+aSQgwN59Oh3/odoQR2LAUMyhTZEWEtZX
+fksgNvEv5lpM3CbNdmnMxowDo+RZv7wxjr2HpswHJxGcCNAvKHeUJeFlW3BYq3st
+qY0Ix42DSgRXgXQpE9mAJzoRtdMXyhqLbN+rawZkV2/5+WU2batVV/u0TITD6Rhd
+oylUqppmJSSsjXpoR7u16VRb6x9LZIU21eyPJjvdnPA6L33br9yQ0bCINUgjXugN
+rIs5YefKK2soBsU5AovnXRAnAiIaZhHuPlOxO1RELZn7UANA8DBRLhzH9j8NAgMB
+AAEwDQYJKoZIhvcNAQEFBQADggEBADGw+IvIW0Pm8Bqvf3WTmpszhNDyP4jD+K5V
+t+zOuEpSKrxb+HN2vO2hQ9SSFi6gxmkVWg1eK7c/JPh36vmX6dlGuhUBPnsr4wgp
+fC/ZFOGEAo1Vwpu77+p8JbHn1Y21QcSGPOdxzMRJOUzN7IeQtYwVOLnrXXLHlFqf
+0RjcB22vfyPANc6yAIWFBTC5pc/2HVfcwNXQRj8KQswTahjDFSbPulp97SLNa5aM
+w3f1PRtnGGvb8HB7CSjGfzHouNqxTEPf3A0nqpdx9ec1L21OjIC/MXHxLYUfFJOl
+dQNNCr5jHELdJU2xsuv3t7G8dNw/dwIjL3ItJgEYFeQNDUTIl78=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.unlv.edu/FIM/sps/MyShib/saml20/slo"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.unlv.edu/FIM/sps/MyShib/saml20/soap"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.unlv.edu/FIM/sps/MyShib/saml20/login"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.unlv.edu/FIM/sps/MyShib/saml20/login"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unlv.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDUjCCAjqgAwIBAgIEVD3EHjANBgkqhkiG9w0BAQUFADBrMQswCQYDVQQGEwJV
+UzELMAkGA1UECBMCTlYxEjAQBgNVBAcTCUxhcyBWZWdhczENMAsGA1UEChMEVU5M
+VjEMMAoGA1UECxMDT0lUMR4wHAYDVQQDExVzc28tZmltLXNoaWIudW5sdi5lZHUw
+HhcNMTQxMDE1MDA0NzI2WhcNMjMwMTAxMDE0NzI2WjBrMQswCQYDVQQGEwJVUzEL
+MAkGA1UECBMCTlYxEjAQBgNVBAcTCUxhcyBWZWdhczENMAsGA1UEChMEVU5MVjEM
+MAoGA1UECxMDT0lUMR4wHAYDVQQDExVzc28tZmltLXNoaWIudW5sdi5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCbkmPqD2c1WXNNFPdSo8UPPJjb
+4n7HhKBni8mvzzXMr/GQwsxaJM3pEek+aSQgwN59Oh3/odoQR2LAUMyhTZEWEtZX
+fksgNvEv5lpM3CbNdmnMxowDo+RZv7wxjr2HpswHJxGcCNAvKHeUJeFlW3BYq3st
+qY0Ix42DSgRXgXQpE9mAJzoRtdMXyhqLbN+rawZkV2/5+WU2batVV/u0TITD6Rhd
+oylUqppmJSSsjXpoR7u16VRb6x9LZIU21eyPJjvdnPA6L33br9yQ0bCINUgjXugN
+rIs5YefKK2soBsU5AovnXRAnAiIaZhHuPlOxO1RELZn7UANA8DBRLhzH9j8NAgMB
+AAEwDQYJKoZIhvcNAQEFBQADggEBADGw+IvIW0Pm8Bqvf3WTmpszhNDyP4jD+K5V
+t+zOuEpSKrxb+HN2vO2hQ9SSFi6gxmkVWg1eK7c/JPh36vmX6dlGuhUBPnsr4wgp
+fC/ZFOGEAo1Vwpu77+p8JbHn1Y21QcSGPOdxzMRJOUzN7IeQtYwVOLnrXXLHlFqf
+0RjcB22vfyPANc6yAIWFBTC5pc/2HVfcwNXQRj8KQswTahjDFSbPulp97SLNa5aM
+w3f1PRtnGGvb8HB7CSjGfzHouNqxTEPf3A0nqpdx9ec1L21OjIC/MXHxLYUfFJOl
+dQNNCr5jHELdJU2xsuv3t7G8dNw/dwIjL3ItJgEYFeQNDUTIl78=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.unlv.edu/FIM/sps/MyShib/saml20/soap"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Nevada, Las Vegas</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Nevada, Las Vegas</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unlv.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Don Diener</md:GivenName>
+	<md:EmailAddress>don.diener@unlv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Bob Fournier</md:GivenName>
+	<md:EmailAddress>bob.fournier@unlv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT  Help Desk</md:GivenName>
+	<md:EmailAddress>ithelp@unlv.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security Office</md:GivenName>
+	<md:EmailAddress>informationsecurityoffice@unlv.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

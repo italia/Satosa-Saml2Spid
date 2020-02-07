@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.delval.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.delval.edu/offices-services/help-desk-technology" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">delval.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Delaware Valley University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.delval.edu/offices-services/marketing-communications/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="900" xml:lang="en">https://sso.delval.edu/assets/images/dvu_logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDYjCCAkqgAwIBAgIGAVzkxyD3MA0GCSqGSIb3DQEBCwUAMHIxCzAJBgNVBAYT
+AlVTMQswCQYDVQQIEwJQQTETMBEGA1UEBxMKRG95bGVzdG93bjEjMCEGA1UEChMa
+RGVsYXdhcmUgVmFsbGV5IFVuaXZlcnNpdHkxHDAaBgNVBAMTE2luY29tbW9uLmRl
+bHZhbC5lZHUwHhcNMTcwNjI2MTQyMTE0WhcNMjcwNjI0MTQyMTE0WjByMQswCQYD
+VQQGEwJVUzELMAkGA1UECBMCUEExEzARBgNVBAcTCkRveWxlc3Rvd24xIzAhBgNV
+BAoTGkRlbGF3YXJlIFZhbGxleSBVbml2ZXJzaXR5MRwwGgYDVQQDExNpbmNvbW1v
+bi5kZWx2YWwuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAilKO
+W1C8b3m7wRUmFKPkC7fw38cWWeWjtq8QZEo6nH/n+2qq+7jsjlILTTyKUyjlH+xj
+bqohRsG02kE2c/3AzbHvdrx070C8zA+vsnrkX03hA6cnbs6da22YXHBhSlP2gv5A
+uCWI3Zbs3Tb1RS0E6toJqk3sDAm/r66ktRfLDHW/oXaeIxspZeeVZfWaPM52D4B/
+tzB8Q5ZshxzIyY1+k1nAk5OAaDJem5a4EA9iFRLiouLKRzotxHiwRR/Cs+vh7vfL
+iBU8BINb55WR6QEmTkc+GanuLrFIQyqDSdSTpkl0Q70IjeJXWwSpej3tIq9TjItD
+jBtLM8MwqscWCOi6ywIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAhzXLmq8AnncZ9
+Bc7rf626tsYz+Om8+n/wqpNxGhwM43s856KYpvXJ+FnlQqE64FPKrexiVrXNGKrv
+8qBhJiUnkdlhlSRk+IPRxfOSaMRIIprBjZPoS4o6pUil9lDiI51mxgfQtdhGZmXM
+Rzp9mZoRkjJe5PRW0AZwW+WEgI8uQ8mAtSoPAyts8lrD69bC9yQKn9uu4RXdrqPA
+ypugIYBWPGOgqYwN4Ku4f0annMMpOZcXyjYy+/qRDqEiBb8ADEFSX+4QGGiCEmz8
+Lt3lww5MqlUiGpAxwlie330nSLTtGmBZ6usGXI9ldsCJCowGoGzKDw45eQVysVvl
+Sukuj1zt
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.delval.edu/idp/SSO.saml2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.delval.edu/idp/SSO.saml2"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Delaware Valley University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Delaware Valley University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.delval.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michael Davis</md:GivenName>
+	<md:EmailAddress>michael.davis@delval.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Michael Davis</md:GivenName>
+	<md:EmailAddress>michael.davis@delval.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tim Konopka</md:GivenName>
+	<md:EmailAddress>tim.konopka@delval.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

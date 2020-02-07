@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://adfs.msoe.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://helpdesk.msoe.edu/support/solutions/articles/1000035651" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">msoe.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Milwaukee School of Engineering</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.msoe.edu/about-msoe/who-we-are/consumer-information-and-policies/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="288" width="236" xml:lang="en">https://www.msoe.edu/msoeassets/images/msoe-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC1jCCAb6gAwIBAgIQOA+N1qJDEJNL935UJojvkjANBgkqhkiG9w0BAQsFADAn
+MSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBhZGZzLm1zb2UuZWR1MB4XDTE2MDUz
+MTE4NTY0OVoXDTIxMDUzMDE4NTY0OVowJzElMCMGA1UEAxMcQURGUyBTaWduaW5n
+IC0gYWRmcy5tc29lLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AMYpqMHVAtfgk/3uHleX8kFv9PYY+Fjy3z4ZB+YQA7xErW6vmPPsvP6Lb3W2/O8s
+k1ZF/IS41ZIH/fee8sJhlGqdlwPpjtJsh9+L64ogM33nj/UNNJEHEFbowCJSUAC7
+fYtZFIw1+H0trQhzMnMqb0IhETxj4s4S39CELI9TmMc80PAXDC6klj0wsiw5tXKW
+xnYdGiFIyCGkR4Iy/6PjYMEArqKtoMeFk3oUMc85hDSf89scTQYiXIpwUBveiw+G
+lEZvXjyvay868jgRELUA744N8QR0eoNRAFxlhPSi6AcDj9Rup+M/xj7Zu0SR/8C2
+NH601BJlaeyx6zWw/vHZb7sCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAcgDzTG1G
+96eK7sRjpOKhvyrzOT1qT1xRG7StpejGXYKiFAVsPzKy9zA/9lN3L9IVSKOPEIuR
+9m0yWLSHstltx3HwA/74uFR4a7SFE3o9eT3+uNQqOLzulJiyFdnIvqHRoFj0aTzT
+Y/xpHxeP+9Jk6MuHLuQFwWED55BfLWwgZYrOO5FF28V60jgO7IHSFhgoWndaXVV6
+quiNlO1D1OEg54qZd3Po21pVHSgXB5nebigqlX6kKMLHDCx3N2QeVc3M3pRDLPHH
+iM7byaTQdK9UHvs6Vy7jpLmVEHfZI/KUPtUBUM444TdihwcfLwJJV8VtP6pp5ISp
+CgSOmblew37e1w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.msoe.edu/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.msoe.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://adfs.msoe.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://adfs.msoe.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Milwaukee School of Engineering</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Milwaukee School of Engineering</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.msoe.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sysadmin</md:GivenName>
+	<md:EmailAddress>sysadmin@msoe.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Network Applications</md:GivenName>
+	<md:EmailAddress>netapps@msoe.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Help Desk</md:GivenName>
+	<md:EmailAddress>helpdesk@msoe.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Sysadmin</md:GivenName>
+	<md:EmailAddress>sysadmin@msoe.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.montana.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">montana.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">msubillings.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">msun.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">gfcmsu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Montana State University - Bozeman</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Montana State University InCommon Identity provider.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.montana.edu/uit/security/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="163" width="648" xml:lang="en">https://login.montana.edu/idp/images/MSU.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAOfP2IewNMJIbSjlEL1iQlgWdmoLMA0GCSqGSIb3DQEB
+BQUAMBwxGjAYBgNVBAMTEWxvZ2luLm1vbnRhbmEuZWR1MB4XDTEyMTAyNTIxMjU0
+MVoXDTMyMTAyNTIxMjU0MVowHDEaMBgGA1UEAxMRbG9naW4ubW9udGFuYS5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJbeGVsOWY+Ii1zzNkJZMs
+uzZQQMpWobWgJAmfk7qy1qS+bBXNAKC+8U3ilHsRS/CCUZAKBf9aXXL1/BAuLwU3
+TBICswpfwJ0TKjjrvYuCEwoVI6nmnzc3oo17CacvjkuOKq2vAPw9t9/7mVNs7IxK
+TYK3Z02LD/KnrFM98HHy4jGYROsDRqPKb/znz3ZkwcV9AV4BoAxnaAmbr6xMS2di
+cRYqZnT38rsoAD9JXopPtC6ipWCVX6fhIVFVPA/nIULZ3z+PKwZVYxWlyy7pCsu5
+qLGP77EcE1FJvVrRasN+G9gLm6pJmehYxmn3WQWtXqHa6Wv91HdTCDQ7S4rnf5d9
+AgMBAAGjaTBnMEYGA1UdEQQ/MD2CEWxvZ2luLm1vbnRhbmEuZWR1hihodHRwczov
+L2xvZ2luLm1vbnRhbmEuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQCwE0i
+mErFyh6Mep7z5gF7aQWKqjANBgkqhkiG9w0BAQUFAAOCAQEATPtND9wTPCuh8iXW
+Y8/BkwHpRdqX6klfxIzIa8vj+SgX5/O0DBU232qUIrb11il274iCPRXIwjucjmaJ
+F/qx1G+9yvhx94kzymEYKqSTI9qrdGTgDigA8zAZ4LJY4O4Nyxzh6t7shD/buro5
+Zot2coe9Rhr6UaZ4uIp/m+DUI+4yzbVPdXKc7uXObkLQ3214DvhBMVvLnX5i9CC9
+Sq2w5CreEH+cZsLdMWuLWC/NFkRVK2AcQXnmJIwoZBpAhY4Kn1Teq0YdT7JjUZZY
+MNukIl90N4nc/ghjESnGMHNVPlUL6z+11zc/02Uy9It+hLlylZrWbwnaAxZgyTSz
+8my2pg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.montana.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.montana.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.montana.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.montana.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.montana.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">montana.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">msubillings.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">msun.edu</shibmd:Scope>
+		<shibmd:Scope regexp="false">gfcmsu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAOfP2IewNMJIbSjlEL1iQlgWdmoLMA0GCSqGSIb3DQEB
+BQUAMBwxGjAYBgNVBAMTEWxvZ2luLm1vbnRhbmEuZWR1MB4XDTEyMTAyNTIxMjU0
+MVoXDTMyMTAyNTIxMjU0MVowHDEaMBgGA1UEAxMRbG9naW4ubW9udGFuYS5lZHUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJbeGVsOWY+Ii1zzNkJZMs
+uzZQQMpWobWgJAmfk7qy1qS+bBXNAKC+8U3ilHsRS/CCUZAKBf9aXXL1/BAuLwU3
+TBICswpfwJ0TKjjrvYuCEwoVI6nmnzc3oo17CacvjkuOKq2vAPw9t9/7mVNs7IxK
+TYK3Z02LD/KnrFM98HHy4jGYROsDRqPKb/znz3ZkwcV9AV4BoAxnaAmbr6xMS2di
+cRYqZnT38rsoAD9JXopPtC6ipWCVX6fhIVFVPA/nIULZ3z+PKwZVYxWlyy7pCsu5
+qLGP77EcE1FJvVrRasN+G9gLm6pJmehYxmn3WQWtXqHa6Wv91HdTCDQ7S4rnf5d9
+AgMBAAGjaTBnMEYGA1UdEQQ/MD2CEWxvZ2luLm1vbnRhbmEuZWR1hihodHRwczov
+L2xvZ2luLm1vbnRhbmEuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQCwE0i
+mErFyh6Mep7z5gF7aQWKqjANBgkqhkiG9w0BAQUFAAOCAQEATPtND9wTPCuh8iXW
+Y8/BkwHpRdqX6klfxIzIa8vj+SgX5/O0DBU232qUIrb11il274iCPRXIwjucjmaJ
+F/qx1G+9yvhx94kzymEYKqSTI9qrdGTgDigA8zAZ4LJY4O4Nyxzh6t7shD/buro5
+Zot2coe9Rhr6UaZ4uIp/m+DUI+4yzbVPdXKc7uXObkLQ3214DvhBMVvLnX5i9CC9
+Sq2w5CreEH+cZsLdMWuLWC/NFkRVK2AcQXnmJIwoZBpAhY4Kn1Teq0YdT7JjUZZY
+MNukIl90N4nc/ghjESnGMHNVPlUL6z+11zc/02Uy9It+hLlylZrWbwnaAxZgyTSz
+8my2pg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.montana.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Montana State University - Bozeman</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Montana State University - Bozeman</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.montana.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michael Trotter</md:GivenName>
+	<md:EmailAddress>michael.trotter@montana.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IdP Support</md:GivenName>
+	<md:EmailAddress>idp@montana.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IdP Support</md:GivenName>
+	<md:EmailAddress>idp@montana.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UIT Security</md:GivenName>
+	<md:EmailAddress>itsecurity@montana.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

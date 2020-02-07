@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ruh.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-08-27T22:53:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ruh.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Ruhuna</mdui:DisplayName>
+		<mdui:Description xml:lang="en">IdP at University of Ruhuna Wellamadama Site</mdui:Description>
+		<mdui:Keywords xml:lang="en">university</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.ruh.ac.lk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.ruh.ac.lk</mdui:PrivacyStatementURL>
+		<mdui:Logo height="16" width="16">https://idp.ruh/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:5.938094,80.576134</mdui:GeolocationHint>
+		<mdui:IPHint>192.248.48.0/24</mdui:IPHint>
+		<mdui:DomainHint>ruh.ac.lk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUOX9Moktfzb/NfyTrQ4kf26HuXFQwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnJ1aC5hYy5sazAeFw0xOTA4MTkwNTAzNTJaFw0z
+OTA4MTkwNTAzNTJaMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDQem/DJa6WKIfSUANY+YBHiVZ6A7Vq3c7G
+xccUQiwp6onypt6SPNH+q07CYaa+ceRNiK7vKZS0DIee77bdv09yEEyFKZ8ZS9C6
+NBhS3+C+UFGvdsT4FPJNSNzT3UPagPnYrlQRZ6kv/XsRpWcQBLkx/qxRwTjDLzaU
+YQ0gMvku+TzRvRGJr8dvQJ92PFbQ4csTYh3MZixqDbS7IvEPBcytz6N6b+UjuKBs
+QzdcXDpJ3HV+dlY+Jd+J8lMgQ11jewTxstZ/ZBgMGkNMv3mhlsVWZbpKOfPYi3FL
+5tBLByvlXOfVazPc0GykBauvRE0otHiEzuzWno/iRj8rt3WAF9nhAgMBAAGjYTBf
+MB0GA1UdDgQWBBRdIhA2TRAKbS8+1q8s+5pSxWeQ7TA+BgNVHREENzA1gg1pZHAu
+cnVoLmFjLmxrhiRodHRwczovL2lkcC5ydWguYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAFnwVRHxb4UHI7EM/5bipqptpf84ikhwXvotN3QB
+tjMFGUo7oWvbrpzz9x4HRL+EsYHy2J/4138T63T88JSVOHMBeXaLoAkWOPEEeygu
+02iZ6lR9HbGyjq7D9R/llQm7LKqPRXP190YOmQsVNAm5QnTluLwjG0Nk/mw8rBYP
+IZWJDP4h9VM6P+DQUNQOAQ9x+TOgyqlCIvAUahsHDHK5hmdO8nb5Uw9cVsIW17uo
+6rTZkx0+04twpYfofpMnz79dBA2tny3KVLqJk6Z3M3xHqnDA5w32LIWYY4uXoVGE
+st1wOWsfXlDn3rfxKmGxhDl/IN3F7mdZDpy5O84qLpyRevg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUQ22sNqmYN4JWg8+58VqPqUrO6tMwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnJ1aC5hYy5sazAeFw0xOTA4MTkwNTAzNTJaFw0z
+OTA4MTkwNTAzNTJaMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJtnv34WTq8wgvEmpTThwxEziK6fVpdxUS
+QOdA6k+BRfj0iR9qkLlgztHH91J4rjEq5jgUPL4KqGA11PvASo3nO/VmPYYev6gN
+/CH4r2pO37/UTWSL1OGQuoNyts93VvihJ0VohAkqapjoBAqOUF8HxAWNrCVgirPL
+mE3DGT1QVfoMOBvjjC1TCIBDyhnA09Pda2c+Vcq3nk2szY2kFap/YzdA+fra7QVv
+qdoGAUDn5v9iA/99qvwUPCNX7w1FGCUw0cY4Ilx9pu1AwU93dWHVQMZMLNFG63jg
+cbAyyMsJu6NaeCtI7uj5DKTfCCVUJXJjic90IebFLxiYGzxZFQlHAgMBAAGjYTBf
+MB0GA1UdDgQWBBQceMT6RWjuJiuU39N1FzmEOZ0iTDA+BgNVHREENzA1gg1pZHAu
+cnVoLmFjLmxrhiRodHRwczovL2lkcC5ydWguYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAENEqZ32Tmh5KVrQZMZ/fSFTcY1iyGlodidO4I2A
+f8nB8QQX+dibcEjoJyVxeMDlK+YWMBc8I3ib7zgZlhJLOS6M1OsmM2lPqoaCUjZc
+8io3ClbvEVyN1hT5hccaGn6L0TPuqPy+ab+Xh2oWE2qizmU5LslUMNYk78whWeu3
+on01zDo4UcCz0k/MJ2Bk2e+AU3zi2jTx+2o539Nd4zoCBkUmZ/7ECQ5OClgQ0o5u
++FRf/O1q+HCjJlMqXC/GzeqaT6YfBmQTTODLSncAPaP3EibSrCetqWY0qc2CoByn
++CfcUkRyyLZJJw/z1RJZTT5ZUy2UpjEdAUpRuG45Wr4XSjE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALgaMyuRWOcCWnB24yDaPLuog8i9MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswHhcNMTkwODE5MDUwMzUyWhcN
+MzkwODE5MDUwMzUyWjAYMRYwFAYDVQQDDA1pZHAucnVoLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2bfEy1mGlRchvhoMWqdCRdwO+n7qLhQW
+xlEKk1gbeS/pT/Y2RV/3a/VTkwLLgyvatuW8zvvTxDffNwb575KtMfH/lD/BM2XU
+B0kf2ViUTscmkquBdLGB0sSGKEAB9OXSgOTwRZfcmdQbwPzn0/BMBPoXTcny07Qi
+D8ARPWXGEVLGH5qiAL75LVTJCwL3FAWl9tl5PDxmK3d3CKenm/7vcJsp87MbW+KM
+ZCOHi1mMgv9WMxJda6eE4gSgeT9k/RIi00kTnfafHuIZ2VxLgtTlKApVLvnFmo2d
+yAgLoPpMi8RPrmHA3q9vg3AN16EUGjDxaCB41NkIZoZpgkOuxcPAzQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUVK1mxjXrCilI5YzartlfGh8Y22UwPgYDVR0RBDcwNYINaWRw
+LnJ1aC5hYy5sa4YkaHR0cHM6Ly9pZHAucnVoLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBjRU8WkQIOOaK3Wu5QmvqlyVHsVxJXTYWo+Mcb
+iYqJNzgmIECwBjhSvtxj7ctd1gTpJZLjQxQtimgXc4hGy/WRT+dOG4W5+EnJY5ac
+UdJtpyrlyPyR7QKVVSlFwF96etFL3qxTaR7UTbuiFCB47RjBODQSPkTejcOKo1XC
+AvKfdR7SDlTl5GzIxhn9EX1jDTpqGVLMyKtSY4reg4hGBvUlOU1WzMICEyNPicPD
+8MgiKEZZAjWE3ueC+1CqLOP2dCbBTsdLQ7brQzq8C2oobcKbmOW9wvEOPW3Uo7si
+yzMiIJUyjr6x8ezUnnR3nyhGzJTnwFaZM2tH7xK+kHb6hUOY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ruh.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUOX9Moktfzb/NfyTrQ4kf26HuXFQwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnJ1aC5hYy5sazAeFw0xOTA4MTkwNTAzNTJaFw0z
+OTA4MTkwNTAzNTJaMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDQem/DJa6WKIfSUANY+YBHiVZ6A7Vq3c7G
+xccUQiwp6onypt6SPNH+q07CYaa+ceRNiK7vKZS0DIee77bdv09yEEyFKZ8ZS9C6
+NBhS3+C+UFGvdsT4FPJNSNzT3UPagPnYrlQRZ6kv/XsRpWcQBLkx/qxRwTjDLzaU
+YQ0gMvku+TzRvRGJr8dvQJ92PFbQ4csTYh3MZixqDbS7IvEPBcytz6N6b+UjuKBs
+QzdcXDpJ3HV+dlY+Jd+J8lMgQ11jewTxstZ/ZBgMGkNMv3mhlsVWZbpKOfPYi3FL
+5tBLByvlXOfVazPc0GykBauvRE0otHiEzuzWno/iRj8rt3WAF9nhAgMBAAGjYTBf
+MB0GA1UdDgQWBBRdIhA2TRAKbS8+1q8s+5pSxWeQ7TA+BgNVHREENzA1gg1pZHAu
+cnVoLmFjLmxrhiRodHRwczovL2lkcC5ydWguYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAFnwVRHxb4UHI7EM/5bipqptpf84ikhwXvotN3QB
+tjMFGUo7oWvbrpzz9x4HRL+EsYHy2J/4138T63T88JSVOHMBeXaLoAkWOPEEeygu
+02iZ6lR9HbGyjq7D9R/llQm7LKqPRXP190YOmQsVNAm5QnTluLwjG0Nk/mw8rBYP
+IZWJDP4h9VM6P+DQUNQOAQ9x+TOgyqlCIvAUahsHDHK5hmdO8nb5Uw9cVsIW17uo
+6rTZkx0+04twpYfofpMnz79dBA2tny3KVLqJk6Z3M3xHqnDA5w32LIWYY4uXoVGE
+st1wOWsfXlDn3rfxKmGxhDl/IN3F7mdZDpy5O84qLpyRevg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUQ22sNqmYN4JWg8+58VqPqUrO6tMwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnJ1aC5hYy5sazAeFw0xOTA4MTkwNTAzNTJaFw0z
+OTA4MTkwNTAzNTJaMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJtnv34WTq8wgvEmpTThwxEziK6fVpdxUS
+QOdA6k+BRfj0iR9qkLlgztHH91J4rjEq5jgUPL4KqGA11PvASo3nO/VmPYYev6gN
+/CH4r2pO37/UTWSL1OGQuoNyts93VvihJ0VohAkqapjoBAqOUF8HxAWNrCVgirPL
+mE3DGT1QVfoMOBvjjC1TCIBDyhnA09Pda2c+Vcq3nk2szY2kFap/YzdA+fra7QVv
+qdoGAUDn5v9iA/99qvwUPCNX7w1FGCUw0cY4Ilx9pu1AwU93dWHVQMZMLNFG63jg
+cbAyyMsJu6NaeCtI7uj5DKTfCCVUJXJjic90IebFLxiYGzxZFQlHAgMBAAGjYTBf
+MB0GA1UdDgQWBBQceMT6RWjuJiuU39N1FzmEOZ0iTDA+BgNVHREENzA1gg1pZHAu
+cnVoLmFjLmxrhiRodHRwczovL2lkcC5ydWguYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAENEqZ32Tmh5KVrQZMZ/fSFTcY1iyGlodidO4I2A
+f8nB8QQX+dibcEjoJyVxeMDlK+YWMBc8I3ib7zgZlhJLOS6M1OsmM2lPqoaCUjZc
+8io3ClbvEVyN1hT5hccaGn6L0TPuqPy+ab+Xh2oWE2qizmU5LslUMNYk78whWeu3
+on01zDo4UcCz0k/MJ2Bk2e+AU3zi2jTx+2o539Nd4zoCBkUmZ/7ECQ5OClgQ0o5u
++FRf/O1q+HCjJlMqXC/GzeqaT6YfBmQTTODLSncAPaP3EibSrCetqWY0qc2CoByn
++CfcUkRyyLZJJw/z1RJZTT5ZUy2UpjEdAUpRuG45Wr4XSjE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALgaMyuRWOcCWnB24yDaPLuog8i9MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5ydWguYWMubGswHhcNMTkwODE5MDUwMzUyWhcN
+MzkwODE5MDUwMzUyWjAYMRYwFAYDVQQDDA1pZHAucnVoLmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2bfEy1mGlRchvhoMWqdCRdwO+n7qLhQW
+xlEKk1gbeS/pT/Y2RV/3a/VTkwLLgyvatuW8zvvTxDffNwb575KtMfH/lD/BM2XU
+B0kf2ViUTscmkquBdLGB0sSGKEAB9OXSgOTwRZfcmdQbwPzn0/BMBPoXTcny07Qi
+D8ARPWXGEVLGH5qiAL75LVTJCwL3FAWl9tl5PDxmK3d3CKenm/7vcJsp87MbW+KM
+ZCOHi1mMgv9WMxJda6eE4gSgeT9k/RIi00kTnfafHuIZ2VxLgtTlKApVLvnFmo2d
+yAgLoPpMi8RPrmHA3q9vg3AN16EUGjDxaCB41NkIZoZpgkOuxcPAzQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUVK1mxjXrCilI5YzartlfGh8Y22UwPgYDVR0RBDcwNYINaWRw
+LnJ1aC5hYy5sa4YkaHR0cHM6Ly9pZHAucnVoLmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBjRU8WkQIOOaK3Wu5QmvqlyVHsVxJXTYWo+Mcb
+iYqJNzgmIECwBjhSvtxj7ctd1gTpJZLjQxQtimgXc4hGy/WRT+dOG4W5+EnJY5ac
+UdJtpyrlyPyR7QKVVSlFwF96etFL3qxTaR7UTbuiFCB47RjBODQSPkTejcOKo1XC
+AvKfdR7SDlTl5GzIxhn9EX1jDTpqGVLMyKtSY4reg4hGBvUlOU1WzMICEyNPicPD
+8MgiKEZZAjWE3ueC+1CqLOP2dCbBTsdLQ7brQzq8C2oobcKbmOW9wvEOPW3Uo7si
+yzMiIJUyjr6x8ezUnnR3nyhGzJTnwFaZM2tH7xK+kHb6hUOY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ruh.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Ruhuna (Wellamadama Site)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Ruhuna (Wellamadama Site)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ruh.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>B. H.</md:GivenName>
+	<md:SurName>Saranapala</md:SurName>
+	<md:EmailAddress>mailto:spal@dcs.ruh.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chandana</md:GivenName>
+	<md:SurName>Wimalarathne</md:SurName>
+	<md:EmailAddress>mailto:chandana@dcs.ruh.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

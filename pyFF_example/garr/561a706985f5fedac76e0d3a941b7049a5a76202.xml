@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idpro.fleming.gr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fleming.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Alexander Fleming Biomedical Sciences Research Center</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="el">Ε.ΚΕ.Β.Ε. Αλέξανδρος Φλέμινγκ</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.fleming.gr/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="el">http://www.fleming.gr/el/</mdui:InformationURL>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAA3NCSVQICAjb4U/gAAAAMFBMVEX///9ycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnKWM6BMAAAAEHRSTlMAESIzRFVmd4iZqrvM3e7/dpUBFQAAAAlwSFlzAAAhrgAAIa4BqbLpogAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAJJJREFUCJljYGBgmf/bgQEIWPbdv3UmAMjoX5i/gPUlAwPbn/T7CzrXFzDI7ZhxfoLW2kcM+TMX+TewzvrOsH5WQnwDQ+VvhnMVCvYTGKJ/MpzfKSC/gIHjO0P9MQYgg/MLg94CBvkNDLwXGNifMPBdYJgPtOT8JLmHPl+BVkj+////jwHIVtH1P8A0A4PfASABAHUYM6MFg7sRAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="50" width="50">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAA3NCSVQICAjb4U/gAAAAMFBMVEX///9ycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnJycnKWM6BMAAAAEHRSTlMAESIzRFVmd4iZqrvM3e7/dpUBFQAAAAlwSFlzAAAhrgAAIa4BqbLpogAAAB50RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNS4xqx9I6wAAAodJREFUOI1tlDtoU2EUx89NYy1R4VbRTUjRxUVDFdFFgmBx8bFkEWy7FBehgkNDByNYrfEVV/FRXRTiI0q2VqmD6KByrUsdWqOWglLNhdomUZP8Pd/5vntzY/wv9/G7532+S+Rrl4PavRi1aOcNF6yFM/+8Dx2Hp1fRIGi7hYb+HA5YjKkXDlDZMVwAqnGf9DL4Fk0By2x+BfjlgQ4GX23KASV+sk4BTwyZZDc2kSM27DuHms4iwp5VGRxhSV60A1NykwFO8yUMIRvOp68DvxVYwSb7EonkI00cnXo/k42BUn5K0O9ZF5+ZpAJkkZ0OdKsAZQlcGRo4NpR8wOSLcj888cxFjSsDTDe4EcrHGm0ep5XAueT91yNEg8A7JquA+lOVbsSEuKoCKkI9iagFPFapzbydLRZPKJvnusHb96ta96CinrqI+gxplxHO0UGUe9LZu9Qg3GBm8zIBli1E4tDmvWtz3HaO+6M4+4FfHPIIT2KMbTIodXbK4zavxeGH4i2DT2R1kS5ReqBrneNJVt98rMf1nBZ11hfSLt6rGZumd0ivNSuw4wxq17IjZpSGWJOqgEGUN3WTGaFnw+Q2VwpTYYCEHO6jjFSyDTfIRZcjc9NHz0YNWTJx+OOYymgi78VZNjYp1G1ZpnmPlAzJyFo5mLI9UtGgTfvt87yH/VVfrUaqLnW9IiE+KZpwX6L6U+3EclGVm4gXkAu+I6SgMpIyuU6lrUAtpok46fXjcU4o2+KN94+2QJ8NJV4nTNvyRT/tZl42QLWffwSj6phM3/SmpXUATcr7gKzLQfCCArKOuD54Sc1af0mzhZPUonXqR5K3W4FsL0//f+LT769vs47OjI8HflN/AfTnGOwIwPZvAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAMAAADG+c2+AAAAA3NCSVQICAjb4U/gAAAA7VBMVEX///+Dg4NjhH96enp1dXVycnKtPUulPkqdPkqfPkqpMkFNQkRCQkIvREEsLCx2dnZtd3ZycnKtPUudPkqjOkemNkSpMkFCQkI2REIzMzN4eHh2dnZycnKpPUufPkqLP0lNQkRCQkI8Q0I1REIvREFycnKtPUurPUujOkdCQkI2REJycnKfPkqgPUlCQkI4REI6REJycnKpPUutPUurPUulPkqfPkpCQkI4REJycnKjPkqfPkpCQkI6Q0JycnKfPkpCQkI8Q0JycnKfPkqgPkpCQkJycnJCQkJycnKfPkpycnKfPkpycnJycnJycnLJKssFAAAAT3RSTlMAEREREREREREREREREREiIiIiIiIiIiIiIjMzMzMzMzMzMzMzREREREREVVVVVVVVZmZmZmZmZmZ3d3d3d4iIiIiZmZmZqqq7u8zM3e7/sKHXcQAAAAlwSFlzAAAK6wAACusBgosNWgAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOS8yNS8xM0ZJYRoAAAAedEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzUuMasfSOsAAAMiSURBVFiF7VZtm9wkFL1OpVt1ukq1xlpajUoVGalo3ZROSiPtImYT/v/P8TCZfemun5J9fPwwZ54kcEPOPVwulyE64IAD/q/gbsi59/x22JhOY95hjPIW+CzEDT3onMd90EvlJZA4spCHHvc5h2WEEOXxCCBkpS/GHJfwRfBxLvWwI7TDgEa28/lkvsRApFP0Ou61zhQYhRBSWkSyL4aQ+nGBRDbmPqYeyaInQoaO6+dHUeQcfQjJFsK0M0mLHB/mEso8OhBig1wQxiEN84NYJtqnJHar0082JsJ8QpsHxkVp8XNCNkwLPpewwJXmReC47OcTYsrOTfXgksWO+3DOAFZ5HNM1QiicvZ0ZIhf5nvB8JdySvZdKpdkT5n159RetGUAi8nPqLPamRQUs5XGqqCg7u9WRI1JpASE/T5swRa4U2mUnCzIn95pz5HPgtpwBS0+qUluvIC6Z7wRWiuEe6TZOPSrbLU4zvx26ghLK2Rvu38AE58ujtwTaLQ03s/bqFKyXZCVJQcJZLRlOEU0Cd7hyjDknJJ7FsZacShujnWCaHAlBFnq8vxYTHgM5DPCShR5XxEqIwKKwnifJvPb4CxEt9xrfSkqRjY4HGiHA4c/ATc0uJAG3NsD1SDpGrV2MLDAWeYKjVHI6eAExLhRBwYOQeZ9EEPJmwkOKDjbAm7ZBxChlsFqMVGw8auFlCXNg5AO0oi8GHkAIjVJEnW4SQjRnQnzw9WPBiH9KtFqtiNMdxIyELEmDxqpkkGC7PkbRh7jYij6TV6Z8snnw1RXiR8fH5XFc0Zc/PSSqjt9z+/CXz9/XUeH6YvPxrr2eTGfb336oTF03TV01lWpVrWr0DW23R98p9FTdVLXCu6aik+0f35uqWddmbSqlTN0ZOtre+8SUQR0+Uw39vfn9eWPwa1TbGKBp1qZTij7avHq5Vqbb2dZtq1pDm7dPXmOc6hoFuwKtuX93e/TtKYYYpToFp2dvfvy5PoUkBUPVdapuTXuqysfPnkNvZ4pGEFRtQ5unL35tq654/8uY6hTv1nTy7ps/y9fwU6v1zfw54IAD/gP8A4upt91ZqgoNAAAAAElFTkSuQmCC</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>fleming.gr</mdui:DomainHint>
+		<mdui:IPHint>195.251.21.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:648:2250::/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:37.824528,23.793911</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANoFA+VknTZnt7SXPgbqAH2QIz43MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcHJvLmZsZW1pbmcuZ3IwHhcNMTMwOTI0MDkzODE3
+WhcNMzMwOTI0MDkzODE3WjAbMRkwFwYDVQQDExBpZHByby5mbGVtaW5nLmdyMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhPfxMPQAjAKG0mgVEnvsLMJ7
+gSrR/j21jnl+l2DXAZfBFZHvggo+Sqx+zjRdvqfK+JcNtIBYiaHXjGdQ95fXs+P2
+DVCgqY+2yAyfFZQ+dbtW35WvTfN1mnU1+Bipp0kDTkEFxFWCK3GgriadO+s508p/
+75JIi/7bc/BR1xVeVMc48/kXXMpoDxbAD5eYUL1B8j4XRm7/3srhV2cx4WVUeCPP
+sWamyUB0HpIIoqJ+4gxITI9AqbUuvJGJyqTefepXt6aIqEMF9pt3wJ6iBtGp57Ea
+0HVuwSPuVEIqzlB2lcb5lsb0SCHVUlAaSNegLq0NXTFWqNJdc2SoB4BK60ddYwID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHByby5mbGVtaW5nLmdyhidodHRwczovL2lk
+cHJvLmZsZW1pbmcuZ3IvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFHCRkdRmLfWX
+5kC0ZPIuCLdtqH67MA0GCSqGSIb3DQEBBQUAA4IBAQAeMsT0Mq6n9qUMXUjIj8v4
+6wwES9zhViquM90Dafv+zMM+jgKJUzA8oNtkh71b//P//jrOQQxhDcVijFQco9Hq
+SxfxyGwZodSEDEiy+Vq3jo3CBrvtHin5fOIKgiitSJBaWIMz3gEwttJ0iNS+0CcL
+iD4310vbRJbevCZX3C3FBOIdn/9JwneXSMx1MHCTikp7PJDVwDS0Zzj1HwT8LgBM
+f5tHINyy/rFPGPshB8tDVQVy3JZZ+MmFd5j/R50u1rNnoIChieAc7bpTl7R8oLIi
+WWLv08lE/zgR6vnj8mlz2NLtjl8AlGfBPxDjhI4RrOHAdUagkYtl0x8U+RtsvFx0
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idpro.fleming.gr:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpro.fleming.gr:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idpro.fleming.gr/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpro.fleming.gr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idpro.fleming.gr/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpro.fleming.gr/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fleming.gr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANoFA+VknTZnt7SXPgbqAH2QIz43MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcHJvLmZsZW1pbmcuZ3IwHhcNMTMwOTI0MDkzODE3
+WhcNMzMwOTI0MDkzODE3WjAbMRkwFwYDVQQDExBpZHByby5mbGVtaW5nLmdyMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhPfxMPQAjAKG0mgVEnvsLMJ7
+gSrR/j21jnl+l2DXAZfBFZHvggo+Sqx+zjRdvqfK+JcNtIBYiaHXjGdQ95fXs+P2
+DVCgqY+2yAyfFZQ+dbtW35WvTfN1mnU1+Bipp0kDTkEFxFWCK3GgriadO+s508p/
+75JIi/7bc/BR1xVeVMc48/kXXMpoDxbAD5eYUL1B8j4XRm7/3srhV2cx4WVUeCPP
+sWamyUB0HpIIoqJ+4gxITI9AqbUuvJGJyqTefepXt6aIqEMF9pt3wJ6iBtGp57Ea
+0HVuwSPuVEIqzlB2lcb5lsb0SCHVUlAaSNegLq0NXTFWqNJdc2SoB4BK60ddYwID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHByby5mbGVtaW5nLmdyhidodHRwczovL2lk
+cHJvLmZsZW1pbmcuZ3IvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFHCRkdRmLfWX
+5kC0ZPIuCLdtqH67MA0GCSqGSIb3DQEBBQUAA4IBAQAeMsT0Mq6n9qUMXUjIj8v4
+6wwES9zhViquM90Dafv+zMM+jgKJUzA8oNtkh71b//P//jrOQQxhDcVijFQco9Hq
+SxfxyGwZodSEDEiy+Vq3jo3CBrvtHin5fOIKgiitSJBaWIMz3gEwttJ0iNS+0CcL
+iD4310vbRJbevCZX3C3FBOIdn/9JwneXSMx1MHCTikp7PJDVwDS0Zzj1HwT8LgBM
+f5tHINyy/rFPGPshB8tDVQVy3JZZ+MmFd5j/R50u1rNnoIChieAc7bpTl7R8oLIi
+WWLv08lE/zgR6vnj8mlz2NLtjl8AlGfBPxDjhI4RrOHAdUagkYtl0x8U+RtsvFx0
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idpro.fleming.gr:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpro.fleming.gr:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Alexander Fleming Biomedical Sciences Research Center</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">Ε.ΚΕ.Β.Ε. Αλέξανδρος Φλέμινγκ</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Alexander Fleming Biomedical Sciences Research Center</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Ε.ΚΕ.Β.Ε. Αλέξανδρος Φλέμινγκ</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.fleming.gr/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="el">http://www.fleming.gr/el/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Konstantinos Tzovelekis</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@fleming.gr</md:EmailAddress>
+	<md:TelephoneNumber>+302109656310 ext. 123</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Konstantinos Tzovelekis</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@fleming.gr</md:EmailAddress>
+	<md:TelephoneNumber>+302109656310 ext. 123</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

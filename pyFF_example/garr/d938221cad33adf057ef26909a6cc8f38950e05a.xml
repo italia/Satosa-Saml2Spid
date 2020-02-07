@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hadlow.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-08-19T15:03:35Z"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Hadlow College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Hadlow College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">hadlow.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUUn7bQ0XDWcr3Co/oK0CMHoqS5fowDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAxMQaWRwLmhhZGxvdy5hYy51azAeFw0xMzA4MTkwODU3MTBa
+Fw0zMzA4MTkwODU3MTBaMBsxGTAXBgNVBAMTEGlkcC5oYWRsb3cuYWMudWswggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCQaykOHXOVF0pQE7TXZnKVRhY0
++JJeP3kvp64iwEL9NeyYP133uHLZC+NjUkbTpUehkMJP1se48RF9zxTElCsCZD0C
+PU53UcSawLVB0LdthbndIoXpJspSldbXYsFCSgJ0y4ET488L+DXrdXs+URLrtwlJ
+u1/VyCDabGiKbwMhie44kjmraPh5Saw2Q8zmI/BLlePkDbxgUjS9VVdlDcntLxVv
+wmgOwe7UyJ8GoXQTea4n2gozK/1joIQT+QS1UDoq71fSzbU9wVLLAp17ayS0vdZ2
+vszXsoNMJ82dpyh/SxGscdsN0ES+yxmRxoCC80ZO9WhZr4yKNALXgwjisuN5AgMB
+AAGjZzBlMEQGA1UdEQQ9MDuCEGlkcC5oYWRsb3cuYWMudWuGJ2h0dHBzOi8vaWRw
+LmhhZGxvdy5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU0wtjFNb5tSCT
+jngzlq6ZqphRzh0wDQYJKoZIhvcNAQEFBQADggEBAI693mT576C3fcOKTsEW8yoQ
+E6g3O73nq4tNlk5JIXrTLELjqj6rJJWHFS81MNlXPBWa2wOEZuFxufHJdsMQuKq4
+5RZw0e/pSvH/IdyoHwq0lI5tBFVme/KezBkFIrfsRg7U6+1bkEHC6RnHq7Z99QIH
+rEHDp4jdvsKe93mv2iGFY/9Og/LTDSJHMS/qAdQ6wBrl8z5slZgjMBocRm5P3jHg
++RrN+5fIqWtyTCU3m5GS6DWkMniRDCH6GyvScizqAKlmO+T/YHI4HbXCv16kdoh2
+U0KM6sPHjZWhRj2/g5+7WpHT5b8olPEUoWArqU3fl/u5A2obzw7p2fOEt7adcak=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hadlow.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hadlow.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hadlow.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hadlow.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hadlow.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hadlow.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hadlow.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hadlow.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hadlow.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hadlow.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUUn7bQ0XDWcr3Co/oK0CMHoqS5fowDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAxMQaWRwLmhhZGxvdy5hYy51azAeFw0xMzA4MTkwODU3MTBa
+Fw0zMzA4MTkwODU3MTBaMBsxGTAXBgNVBAMTEGlkcC5oYWRsb3cuYWMudWswggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCQaykOHXOVF0pQE7TXZnKVRhY0
++JJeP3kvp64iwEL9NeyYP133uHLZC+NjUkbTpUehkMJP1se48RF9zxTElCsCZD0C
+PU53UcSawLVB0LdthbndIoXpJspSldbXYsFCSgJ0y4ET488L+DXrdXs+URLrtwlJ
+u1/VyCDabGiKbwMhie44kjmraPh5Saw2Q8zmI/BLlePkDbxgUjS9VVdlDcntLxVv
+wmgOwe7UyJ8GoXQTea4n2gozK/1joIQT+QS1UDoq71fSzbU9wVLLAp17ayS0vdZ2
+vszXsoNMJ82dpyh/SxGscdsN0ES+yxmRxoCC80ZO9WhZr4yKNALXgwjisuN5AgMB
+AAGjZzBlMEQGA1UdEQQ9MDuCEGlkcC5oYWRsb3cuYWMudWuGJ2h0dHBzOi8vaWRw
+LmhhZGxvdy5hYy51ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU0wtjFNb5tSCT
+jngzlq6ZqphRzh0wDQYJKoZIhvcNAQEFBQADggEBAI693mT576C3fcOKTsEW8yoQ
+E6g3O73nq4tNlk5JIXrTLELjqj6rJJWHFS81MNlXPBWa2wOEZuFxufHJdsMQuKq4
+5RZw0e/pSvH/IdyoHwq0lI5tBFVme/KezBkFIrfsRg7U6+1bkEHC6RnHq7Z99QIH
+rEHDp4jdvsKe93mv2iGFY/9Og/LTDSJHMS/qAdQ6wBrl8z5slZgjMBocRm5P3jHg
++RrN+5fIqWtyTCU3m5GS6DWkMniRDCH6GyvScizqAKlmO+T/YHI4HbXCv16kdoh2
+U0KM6sPHjZWhRj2/g5+7WpHT5b8olPEUoWArqU3fl/u5A2obzw7p2fOEt7adcak=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hadlow.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hadlow.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Hadlow College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Hadlow College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://hadlow.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Overt Software Solutions Ltd</md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hadlow College Computer Services</md:GivenName>
+	<md:EmailAddress>mailto:IT.support@hadlow.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

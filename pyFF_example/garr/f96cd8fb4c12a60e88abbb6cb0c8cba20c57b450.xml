@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uni-pannon.hu/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.hu" registrationInstant="2015-06-22T14:52:03Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://metadata.eduid.hu/eduid.hu-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.hu/category/registered-by-eduidhu</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">eduid.uni-pannon.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">uni-pannon.hu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Pannonia</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="hu">Pannon Egyetem</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Pannonia</mdui:Description>
+		<mdui:Description xml:lang="hu">Pannon Egyetem</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://uni-pannon.hu/informatika</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="hu">http://uni-pannon.hu/informatika</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.uni-pannon.hu/index.php/dokumentum/alapdok/2017/15052-170912-k-alapdok-adatvedelmi/file</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="hu">http://www.uni-pannon.hu/index.php/dokumentum/alapdok/2017/15052-170912-k-alapdok-adatvedelmi/file</mdui:PrivacyStatementURL>
+		<mdui:Logo height="156" width="156">https://cdn.uni-pannon.hu/v3/unipannon/images/pannon-egyetem-cimer.svg</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.6.32.0/20</mdui:IPHint>
+		<mdui:IPHint>2001:738:4801::/48</mdui:IPHint>
+		<mdui:IPHint>193.6.19.0/24</mdui:IPHint>
+		<mdui:DomainHint>uni-pannon.hu</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.088154,17.908043</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEETCCAvmgAwIBAgIJAN9/nBC4wusBMA0GCSqGSIb3DQEBCwUAMIGeMQswCQYD
+VQQGEwJIVTERMA8GA1UECAwIVmVzenByZW0xETAPBgNVBAcMCFZlc3pwcmVtMRcw
+FQYDVQQKDA5QYW5ub24gRWd5ZXRlbTEOMAwGA1UECwwFUEUtSVQxGjAYBgNVBAMM
+EWlkcC51bmktcGFubm9uLmh1MSQwIgYJKoZIhvcNAQkBFhVoYWxvemF0QHVuaS1w
+YW5ub24uaHUwHhcNMTcxMTI3MTQzNDQxWhcNMjcxMTI3MTQzNDQxWjCBnjELMAkG
+A1UEBhMCSFUxETAPBgNVBAgMCFZlc3pwcmVtMREwDwYDVQQHDAhWZXN6cHJlbTEX
+MBUGA1UECgwOUGFubm9uIEVneWV0ZW0xDjAMBgNVBAsMBVBFLUlUMRowGAYDVQQD
+DBFpZHAudW5pLXBhbm5vbi5odTEkMCIGCSqGSIb3DQEJARYVaGFsb3phdEB1bmkt
+cGFubm9uLmh1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv3zUvc8e
+FIuB4/kongmZVGnaVnnQYTlzdgiv0QAGK7+zwa9ZxRVTYKtkNewgro7DTrF8y80b
+JYoVCprfssD3RFsrQfdIgUHTm0ntheg6O3g7G0A5NV7stao8QjyeR468mvXGgsV6
+dt0a1sgioehBzdqdjAP91MoZOL1JZbLjmMyRGtZTL8Niftt7DToFPpClrUDsaw10
+TkLEd7Rizd1pwHx2cIuXKZS9DZXORmVIOMpEyk5TZFhgiM6CVgVX+Upo2aJOGLiU
+h7LW+eNk9HuzADce7qN8rgTIWX8JkpyNCKjoA6FWKPfclAb1gSiBqS8uwirpnBTL
+yCxTRo/nUIY8twIDAQABo1AwTjAdBgNVHQ4EFgQU/8wa0fFLFRqxZfIUkZN0bhY5
+HQkwHwYDVR0jBBgwFoAU/8wa0fFLFRqxZfIUkZN0bhY5HQkwDAYDVR0TBAUwAwEB
+/zANBgkqhkiG9w0BAQsFAAOCAQEATp58uLoPYFbXfAXZ0VE4Quw65ldyTxmMHmAb
+tSMWlnlDXju7kuNMU8RXjXhEyRoOHFdh1CmQedkZtI5qjxvQ9NBqd6mH8N22/Ctk
+lOWdA+aDClktmi+yNqiQb0q6GhdI2BMAIBVueralys4gsZ/sqXZ1CcP1REK1Xqb1
+e00G3AUsbcozwqhI4n2aFrdM3ybEveAWrb6AFanAQCV4rUi3CUiQbfNaKWjofdPj
+JPY3lCmINxaI32BOszE63mNN3URBI6D+LKiW+AZ2Jw6eYt2WY9LZpuHPJVRQUzIb
+YLzcaPN01182yFoC6qAovlF+YC4hK22vK5CW7eVzVhl8NYDVmA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uni-pannon.hu/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uni-pannon.hu/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uni-pannon.hu/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uni-pannon.hu/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="hu">Pannon Egyetem</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Pannonia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="hu">Pannon Egyetem</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Pannonia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="hu">http://www.uni-pannon.hu/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://englishweb.uni-pannon.hu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>PE-IT Hálózati csoport</md:GivenName>
+	<md:SurName>PE-IT Hálózati csoport</md:SurName>
+	<md:EmailAddress>mailto:halozat@uni-pannon.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>PE-IT Hálózati csoport</md:GivenName>
+	<md:SurName>PE-IT Hálózati csoport</md:SurName>
+	<md:EmailAddress>mailto:halozat@uni-pannon.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>PE-IT Hálózati csoport</md:GivenName>
+	<md:SurName>PE-IT Hálózati csoport</md:SurName>
+	<md:EmailAddress>mailto:halozat@uni-pannon.hu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

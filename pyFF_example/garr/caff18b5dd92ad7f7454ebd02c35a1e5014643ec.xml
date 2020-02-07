@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.inp-toulouse.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2013-09-27T14:12:08Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">inp-toulouse.fr</shibmd:Scope>
+		<shibmd:Scope regexp="false">toulouse-inp.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">INPT - Institut National Polytechnique de Toulouse</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACJ0lEQVQoz5VSS09TYRA9833fvb29jX1YLRFu0YILwcSAqKQrYxdiWKtrY/xRBBBfIYZI2GnciHFFFHCvFE1/gUjbe2/7PcZFSX3snExmMedMMnPm0NLT51PvPtRebDkEBAMYgiUYINY4HZ+vJrUojka6hUK3WOhWzigAUmuHTnuiFk9G3epoJ5/vlkqdSlnnQgDE/FeurK4xs/Z9IvoHAzMAZoBAOAkBQEpZkFL1epSm0hhhLTmn+33nHAAhIIjSNLXWAlBam0bjpqe8fr/farUOv333fV9rvbh45/jncbFYjKKxOE5yuXB7+/1B81AAsMYaY6y1Cwu3L09P93o9AMxsjGF2e3v7yyuP19dfNhq3jDECw+WEaDab9fp8vT6fJMmwzwDAlZHK4B41BIjIGLO0vPro4YNsEOh+H4Cx9sb1azMzVzrtzubmlu97vwcGM0qptSfP7t+7W6mc3dv/rKT8tLu7s/PR8zyllBBCABBSSCmFFEJIAoIg2Nh41Wq1fM8TUvqen8lkfN8fkJWU4uuXA2ZWShlrpJQAsmH29Zu35XK5WCx02u0BlZmJSBHRj6MjrXWQyXS63Xz+VBInJEQYhnEcx3HMzLkwTNI0CII0TQUzR9GYtXZubjbMZq/OzkqlxkbPjVej8fHqRO1CqVSamrokiC5OTjjnaGV1zTknhDDGSCmttVJKZh5qSkTs3BBSgw8AUEoNKxH9qR6kHDjoxEv/Fb8AE5wH89h/eZ0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NDk6MDMrMDI6MDDl0NirAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjQ5OjAzKzAyOjAwlI1gFwAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.inp-toulouse.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">All users belonging to Toulouse INP</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">INPT - Institut National Polytechnique de Toulouse</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Tous les utlisateurs de de Toulouse INP</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUXP5c8px13UiWySuQHbPr5l/wse4wDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRwMy5pbnAtdG91bG91c2UuZnIwHhcNMTgwNDA2MDg1
+ODQyWhcNMzgwNDA2MDg1ODQyWjAfMR0wGwYDVQQDDBRpZHAzLmlucC10b3Vsb3Vz
+ZS5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJLyxFdQA3B22rBf
++VPQ/sZb+mYZyvd/rpD98x5B0m3fjlqtSB0iRFsDTkIETmdXr/ZT2h0qSrjpfVsX
+pN7ZvrUUu++uSWyO+vXwsu4EJGevN9eKbhsbLraX9cBw0Moq9t17TUkQxkNQuK3K
+Dygm2aFc8AVMGiUEg30IMGtn9h9OW3SPcfuhpR7DRJJlnaqADLQJVlnKNw2j6Uwm
+vMCZjZFl16oRk7luzob7b0LEe4fxy6hwZ0HJb2t3HNGgfg02btwIVYZvFUff0WD9
+rby8O9JfCU9EAqCPmUEHF3MBUhN/58IslJu+FVUPJqO1pUOcXupJKL/iUC7YBhGb
+KzvtxUUCAwEAAaNvMG0wHQYDVR0OBBYEFPW7w6cqGJTDGT02/0hmRO/+khIIMEwG
+A1UdEQRFMEOCFGlkcDMuaW5wLXRvdWxvdXNlLmZyhitodHRwczovL2lkcDMuaW5w
+LXRvdWxvdXNlLmZyL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBj
+vPSBYRlOr9GQ8KM73FOcxGHhzfk9Y7PqaCDGjAAt171ZymiTsVxT/623GyrBXgMO
+sd5yRgexklkIW/1QHJMfJ7AzPy+ESbTafjjeOy7wMGdl+odPXb/BW8A1bsTQG+Ba
+gfQbi6ak3ui1DOTBhBno9K2c2VOMvewujRNdIgyl7BOFqNMQhHj7V3Bj5dh734JW
+SbvC7l3FlTAdAiFaf0YAAMCQsDwtVEwgpevLTK+9dU7kYyivDQbjQeZzZDiKzhZF
+RTMKCpDedp0aLie0tkGnjWsILrWe8+xuGro6NNsXqzmdtn22LEw/tQHB7JzRhQxp
+FX3i2bGMtlrsRzdyhAQK
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNzCCAh+gAwIBAgIUT/ZV7f3Lusa+9lbOZVbS0YCpfgwwDQYJKoZIhvcNAQEF
+BQAwHjEcMBoGA1UEAxMTaWRwLmlucC10b3Vsb3VzZS5mcjAeFw0xMzA5MjcwOTA1
+MzJaFw0zMzA5MjcwOTA1MzJaMB4xHDAaBgNVBAMTE2lkcC5pbnAtdG91bG91c2Uu
+ZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCjHZkvuctwIDMU/L1
+5Ob1BjzGWbbGwan/PZ3bilttwf37Ve/ZsFHBfI7YF6tFw8guYRRl1dmAkHxxZCIB
+zo4PGcFQFUkb8K1+hi1ev6f71LP2BOEJWsQ9NsO4HDbpTzqGrCrXgG7LlTGpBhOT
+CRevT5z7hd9qTk6pW+nbG3mY2NnKTm2WpjFaycYZiF07yFJGBWIh5ndkhfyBF21R
+N2D7sHRqByVLBzU4vZfRuo8cG6Ufx76whxZGRqZq8kmTWuU1sBPhore83Y1NuYIs
+cM/BhndXVwdN0GSE3eeJpIHJ3txhPtk8HbU8jz6y7qOHPMgLmnxkpFdMn47hmGCF
+t+lvAgMBAAGjbTBrMEoGA1UdEQRDMEGCE2lkcC5pbnAtdG91bG91c2UuZnKGKmh0
+dHBzOi8vaWRwLmlucC10b3Vsb3VzZS5mci9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4E
+FgQUTWqwiYs7axsJyzXQr+TFjSLuKLEwDQYJKoZIhvcNAQEFBQADggEBAB3fpoVO
+bwmHRurLoU76J1fK/eoaNGL6+TRUW6DlV8nw1qDI+staKmlmbiKlzHCYCXGw8+hX
+NnaHlYPj/89d9A9XnA9UgsTio3p2SxaL+Z2XQg7mmrG4zNGrSDByNRsmG43H0W3U
+I/1OI5Pc27jS97gnIrbgdh7c9W0EuzBMYB1X2n+FXC4IJVRbRap4w5okGxztKYdv
+nJWM2NmnEkHvKTR2q49aCZGjI//t6qrUyOpt03XVabmbBfhYrNbv1ox9cYDWQ6zK
+6ry/CkIwbFwR9jLRuE67WIfLURxILClIr1NlUymiFsuPB4NV90s9HNf1bYPQdJ2C
+lr6eMsR0+Pc7BjU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.inp-toulouse.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.inp-toulouse.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.inp-toulouse.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institut National Polytechnique de Toulouse</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institut National Polytechnique de Toulouse</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.inp-toulouse.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:shibboleth@listes-diff.inp-toulouse.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

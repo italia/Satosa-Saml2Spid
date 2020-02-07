@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://myid.vsc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vsc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Vermont State Colleges</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.vsc.edu/web-privacy-statement/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="62" width="301" xml:lang="en">https://images.vsc.edu/logos/vscs-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUD6kNBlkvLeU+Ol2757c+7bZtM+owDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMbXlpZC52c2MuZWR1MB4XDTExMDMwODE4Mzk0NFoXDTMx
+MDMwODE4Mzk0NFowFzEVMBMGA1UEAxMMbXlpZC52c2MuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjh2UuMgWBZd1oChzFEAL9rnhrNGkCkFLfd/t
+oXVdsfB3/lDMohSlVQx03w5NU6bBVdp5r2/1g9lLt/HjV5iWmseBHcYDNKWwZJPH
+8wyQcVhdE5l+lK96WT6NhLja3IF80FnnSAS4W5HzJZ/oDbmzOptFQ44FpW3Cc1+D
+4+/amvGi/X2ZskbKEJps72w5kwwdX+nkmVNS8yHxl1piaH9EpCDOC1Q6dvpLKW+5
+bP+ma9VCknf4DczevKwl9D34VjEwqhgzUzj1XT9epFt5TwS7twZ4ah+KRLJY0+TS
+Lod76ZIBXYWYUBzIY8ApGxSQdwe39caDCvQPT5FC2hdG4wNSkQIDAQABo18wXTA8
+BgNVHREENTAzggxteWlkLnZzYy5lZHWGI2h0dHBzOi8vbXlpZC52c2MuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBS5IqaDTgcD2zkQ/40nLl8VXF949TANBgkq
+hkiG9w0BAQUFAAOCAQEAEge54ojY4avoyKVObeH4W4rz1WnaZCnJTQZBg5L+HDFm
+kvCp5ZpDMX0SvhxSfzImkP1EJuIlFszenvOpre5yzAmKLOCQKlaZYVxmMUVluB3c
+jC2Adkr9u5/y7vPDSH2padWGJP93Lk47t4/Wm0jHiBfEbzyx1F7UyLBaHm8Loqg9
+5dxdgKh8HQyuYqZNVlQezI5yIpQ+WLS1+Sa3eL8d34W1BM9pH+KNFwStDGTz61ns
+RyWSF4HaRliCJYEx5UlVZInGVkbyfqqZ0CSuABmOQ9qRwMnChkZEmIDZXqKk+N3f
+zaSlyhw6JsSB9BNAjScXmtSxUEZPmEmocxbfadzWAw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://myid.vsc.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://myid.vsc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://myid.vsc.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://myid.vsc.edu/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Vermont State Colleges</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Vermont State Colleges</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.vsc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Kevin Conroy</md:GivenName>
+	<md:EmailAddress>Kevin.Conroy@vsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael Martel</md:GivenName>
+	<md:EmailAddress>michael.martel@vsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Michael Martel</md:GivenName>
+	<md:EmailAddress>michael.martel@vsc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

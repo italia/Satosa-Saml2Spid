@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ssofed.naz.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">naz.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Nazareth College of Rochester</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Nazareth College</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www2.naz.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www2.naz.edu/web-policies/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="148" width="480" xml:lang="en">https://www2.naz.edu/files/7613/9990/6239/nazareth-college_shield_web.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIUCbFOotD2tQMxSc+my0nBFukWJ4gwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNc3NvLWQubmF6LmVkdTAeFw0xNzA1MDQxODU0MzlaFw0z
+NzA1MDQxODU0MzlaMBgxFjAUBgNVBAMMDXNzby1kLm5hei5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC6rvHA/FvlmXyVGF9ydmK12ZDyjTG3mD8E
+v57VRxbTHT1k+mrdGfC5fKyuhFflgfbKMHNsSgy8O7e09VED0ZUv3ZybYB8RrKCl
+IHseeyEfdafUHKwXrL08FjbKNnlPodZICuXifn/gr1EX0EC2j9SGFIib4f7TuUyf
+QW+gUBkS7sMSbusOp9aARWzwyhqt9gLDVcU4JRRo8YMqXWoh1AVaDMmC6SkM+4wn
+K7SXsC58BUKSwMrUaUTo9ADEEAVe+CgIOHEk50ysj+XkEgb5uSfMXuCZ3iOzrbCX
+yoB9lOarkhrA/ESmdTRooz7dN2fGUxR3pIbfePsbjvsLvMmni01LAgMBAAGjVjBU
+MB0GA1UdDgQWBBRAzB0utUVt4QamjKz091GV0xCOajAzBgNVHREELDAqgg1zc28t
+ZC5uYXouZWR1hhlodHRwczovL3Nzby1kLm5hei5lZHUvaWRwMA0GCSqGSIb3DQEB
+CwUAA4IBAQCo+g3jGWizChmcdCgQHLGzZWzPebsaRZ/gEu853dS1Qo970LqNmOzS
+LF6M6eA7osmMuY36EnkLhKXC1gk3IMU8auoSWMiUFZnlV5oSTiqzD4TIxA0PqUY+
+0IdV0LQXbGSkIgBE/F9iu8wLPYrSpEgHU3jsK8MQVqFFQVr1w9ISpk8j4Mxcc1bU
+kX6OMpiIEUJ7V9hVFSI1kNJ9k478S0ipIkynOtHL8JuM6H908Vuqqr2p3aA8vH1I
+tY/Itt1f4ojhnnMFQvFSvEtgyrfYMIFQeaGmbA/w7BdVNKN23y3ZIVMPfoxNaPK+
+SMGhBak20ijRGJASOrtMQMDqEztmZSaS
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ssofed.naz.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ssofed.naz.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Nazareth College of Rochester</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Nazareth College of Rochester</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.naz.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>its_tech</md:GivenName>
+	<md:EmailAddress>its_tech@naz.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>its_tech</md:GivenName>
+	<md:EmailAddress>its_tech@naz.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>its_tech</md:GivenName>
+	<md:EmailAddress>its_tech@naz.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>its_tech</md:GivenName>
+	<md:EmailAddress>its_tech@naz.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

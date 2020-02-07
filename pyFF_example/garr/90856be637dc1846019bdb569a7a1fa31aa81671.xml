@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unicam.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2017-05-23T14:41:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unicam.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">University of Camerino</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Università di Camerino</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for users of University of Camerino</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti dell'Università di Camerino</mdui:Description>
+<mdui:InformationURL xml:lang="it">https://idp.cs.unicam.it/idp/idem.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp.cs.unicam.it/idp/idem.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="16" width="16">https://idp.unicam.it/idp/images/logo_favicon_unicam.png</mdui:Logo>
+<mdui:Logo height="60" width="80">https://idp.unicam.it/idp/images/logo_unicam.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMs2tPncRj8LVMIPBz0+GyLy78TMMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMxWhcN
+MzYwNzA2MTQxNzMxWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlzcYJpOGUYbEDJXw0hVPtJYbXEtXudQU
+dypJLv54FixsAeCUeGKfXVJ1od0OnNSdvThDPG/U8cLG1rIVrxsWOSiFlGJJxVtn
+42hGQZvcLKqnJ/kYvWnuejyhMhurv4uWKEvCLX0PyDg58yrtG9X/mOHMuNQlxv4D
+DRxslkxBk8BOWJUzvXwnV7x8AlIbpmQMK3o9Xr47DJwhK5ypgmgSjqnXn5BMVDmM
+5ZgBEoZCeYi6wFgPGyJPa454eWf4pOUeZ3N18MC/v8IrGzcq67Groct+BT1YbKcJ
+Jf+FrfsxMoVkknBrZPr5TWfENRsr6cyOj1oXIt9XJG76sDFDDnQPTwIDAQABo2Ew
+XzAdBgNVHQ4EFgQU5sL43dBj204hw+LB8lT5mlDWUEAwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQB1xBdrm1wlwrhk4Ar9hCOB7/PyRd1cD8GbP7JQ
+5wxsOWQbeMV+fYVAOFk6M78+NNOVN8u9dKKrQnbMr8votZorq0eDeJOCUTQ0iXB1
+PYZRnGXkkiJ/IqJoODg1aEmTTHS+OQX7DOkc8vZ8RDni50t8hb7cTsar9GOW1U0g
+73X6GIIRohE5RVzSocHCDUF8FFdl+b89s+bh5zc17i0i/gP+DCoGnUQZaThKm9Sc
+k1mxjZC5QY5vZWP3149m6xBG5Oue2FMT7EA4wdAdzrsgkz4cSk1hk6OcNZc9vLN/
+LeprPdLrcUk7sYyzXRIjgsSRMr0cF1uArAfBi1jfj56X9TJF
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAK7ZcY9twdi3H9buJBWQejP31UZFMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMwWhcN
+MzYwNzA2MTQxNzMwWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgydAWqpBuM4sXfUsHg3KGloP1Dv+vp4N
+TowywzrB8FBfYAbNuhovEV2AxLe9YRS4XcP9WNTzbgtka7xTodSNSrqF09ZdcVWs
+vkKD+Q+PgyC7d5N7RUxH0X/FiHswu4edJHEKSz0gQW7zzmv2EZZ5YUVPvwv0CPqq
+asAup9APZwQtCSwKMKcQHPP4LQ474dQZE47SjqZrVosw6FGWJix9np1SQPJiUQgC
+A4yK7tcdqlAFPB23vf2ywp2QRnPCX14n/9YnBc6UiOib7EQXL1LTgUNYPCxm5It4
+9XdIpc1wM60oUN3Aw3IVWKRSJ3eKuoCnM+KniF8ECOOUZRBZw0RObQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUP/gHjGUpNdLE54Y3DKfeIbXUlNUwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQAc+Wevyut1sXEqeaPgVB25+imrSAcYDGQEbc4s
+UxoIdCkqGV8dDnWq14jfd6cDEMDeHWJyfrMrM7Od5wh6gadoQsNTOZ8pXS/BXqDJ
+qCphhO54/u+kowLkPV/YjnhP9G0Z0H9nGvgsJ5tFusjcXEqTZmp3U7eXSf0wXi2F
+jI3qp3utjOkWShDzMz/QZR1OEw6yo4L3YOfOSK2KIvnxEmsJB1uo1pBbw/1yqugZ
+8V6ndNjgmkE29fW/wGNkJK9kfP3zY6lrUtTHHXofYktKZSmC9DbMVkkRj3mNOQzf
+idemBw/UfPrcR4xxiqBG35Y8RqPfCzwPMnY827Ta+hnmFKJ9
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAIg6K1XrSesAf+TqHbqhrgMYDf6+MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMxWhcN
+MzYwNzA2MTQxNzMxWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArmlKQDjTLE+wYnpinnupZp6zqav3U65X
+GqFElGN02W1bQybqX8DY8T/gpUTYnYh5+lOFrGBYk+fHfGd7PRzeaCKdtJfTC89F
+HiZT9VlIBHXwN//oiWQCbaporBN9gPUX/m0vzVnjSX+UoDEjWnZUms74GUp/VzEJ
+jDcWzN3dvQ2yajN7x1yFRTHl6Fl1yPcPoWykcqaQzaxuZt7L3ftCsWOld+pBsgLo
+Z1YExjG/3z9iXv1iGg3hdDyOW2NuW4rQK8oZnZap2jjrxGiXN3uYBaV8CEFTT6WZ
+d0ghslwnyFvSFbFa0n/w/P2fPa7LMw3mRfrAvt8/xl1hXopkDPmufQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUN9uyhZFKoupAS28NZ8AvjCiPX1IwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBSkfT5VWjVnS9qsyDXZMn3Xeths2MVVq0k9IvO
+DTqEwXQq+wfeE2me8Z58kdZf7M8Ew/nydGNe1TnWOSUp38ZskFtY7m5Uh2A+/MxU
+IwpIVqzQFC05vcT2PGZMwnj7Vn9P7Q9bmYEoFOaOu2vTcxG9uIyqq/l8AGu/S6jh
+Wx2KwVga3gwW2EhsESRj+d4in6ALqxQ2MQGVZqNcSdFChulC0aAum5Wi9xF5Mb+t
+4oBE5AfrQTt3b6TM8KmQQnY0MKCheUDo7EDAfoTU2itIZcn000vhWQMyBtaM1PAv
+3aDvLExZSbTUcKZwVijxe8nW3j4HI39EhwhP7SJb3BqAg15E
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unicam.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unicam.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.unicam.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unicam.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unicam.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMs2tPncRj8LVMIPBz0+GyLy78TMMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMxWhcN
+MzYwNzA2MTQxNzMxWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlzcYJpOGUYbEDJXw0hVPtJYbXEtXudQU
+dypJLv54FixsAeCUeGKfXVJ1od0OnNSdvThDPG/U8cLG1rIVrxsWOSiFlGJJxVtn
+42hGQZvcLKqnJ/kYvWnuejyhMhurv4uWKEvCLX0PyDg58yrtG9X/mOHMuNQlxv4D
+DRxslkxBk8BOWJUzvXwnV7x8AlIbpmQMK3o9Xr47DJwhK5ypgmgSjqnXn5BMVDmM
+5ZgBEoZCeYi6wFgPGyJPa454eWf4pOUeZ3N18MC/v8IrGzcq67Groct+BT1YbKcJ
+Jf+FrfsxMoVkknBrZPr5TWfENRsr6cyOj1oXIt9XJG76sDFDDnQPTwIDAQABo2Ew
+XzAdBgNVHQ4EFgQU5sL43dBj204hw+LB8lT5mlDWUEAwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQB1xBdrm1wlwrhk4Ar9hCOB7/PyRd1cD8GbP7JQ
+5wxsOWQbeMV+fYVAOFk6M78+NNOVN8u9dKKrQnbMr8votZorq0eDeJOCUTQ0iXB1
+PYZRnGXkkiJ/IqJoODg1aEmTTHS+OQX7DOkc8vZ8RDni50t8hb7cTsar9GOW1U0g
+73X6GIIRohE5RVzSocHCDUF8FFdl+b89s+bh5zc17i0i/gP+DCoGnUQZaThKm9Sc
+k1mxjZC5QY5vZWP3149m6xBG5Oue2FMT7EA4wdAdzrsgkz4cSk1hk6OcNZc9vLN/
+LeprPdLrcUk7sYyzXRIjgsSRMr0cF1uArAfBi1jfj56X9TJF
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAK7ZcY9twdi3H9buJBWQejP31UZFMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMwWhcN
+MzYwNzA2MTQxNzMwWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgydAWqpBuM4sXfUsHg3KGloP1Dv+vp4N
+TowywzrB8FBfYAbNuhovEV2AxLe9YRS4XcP9WNTzbgtka7xTodSNSrqF09ZdcVWs
+vkKD+Q+PgyC7d5N7RUxH0X/FiHswu4edJHEKSz0gQW7zzmv2EZZ5YUVPvwv0CPqq
+asAup9APZwQtCSwKMKcQHPP4LQ474dQZE47SjqZrVosw6FGWJix9np1SQPJiUQgC
+A4yK7tcdqlAFPB23vf2ywp2QRnPCX14n/9YnBc6UiOib7EQXL1LTgUNYPCxm5It4
+9XdIpc1wM60oUN3Aw3IVWKRSJ3eKuoCnM+KniF8ECOOUZRBZw0RObQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUP/gHjGUpNdLE54Y3DKfeIbXUlNUwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQAc+Wevyut1sXEqeaPgVB25+imrSAcYDGQEbc4s
+UxoIdCkqGV8dDnWq14jfd6cDEMDeHWJyfrMrM7Od5wh6gadoQsNTOZ8pXS/BXqDJ
+qCphhO54/u+kowLkPV/YjnhP9G0Z0H9nGvgsJ5tFusjcXEqTZmp3U7eXSf0wXi2F
+jI3qp3utjOkWShDzMz/QZR1OEw6yo4L3YOfOSK2KIvnxEmsJB1uo1pBbw/1yqugZ
+8V6ndNjgmkE29fW/wGNkJK9kfP3zY6lrUtTHHXofYktKZSmC9DbMVkkRj3mNOQzf
+idemBw/UfPrcR4xxiqBG35Y8RqPfCzwPMnY827Ta+hnmFKJ9
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAIg6K1XrSesAf+TqHbqhrgMYDf6+MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51bmljYW0uaXQwHhcNMTYwNzA2MTQxNzMxWhcN
+MzYwNzA2MTQxNzMxWjAYMRYwFAYDVQQDDA1pZHAudW5pY2FtLml0MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArmlKQDjTLE+wYnpinnupZp6zqav3U65X
+GqFElGN02W1bQybqX8DY8T/gpUTYnYh5+lOFrGBYk+fHfGd7PRzeaCKdtJfTC89F
+HiZT9VlIBHXwN//oiWQCbaporBN9gPUX/m0vzVnjSX+UoDEjWnZUms74GUp/VzEJ
+jDcWzN3dvQ2yajN7x1yFRTHl6Fl1yPcPoWykcqaQzaxuZt7L3ftCsWOld+pBsgLo
+Z1YExjG/3z9iXv1iGg3hdDyOW2NuW4rQK8oZnZap2jjrxGiXN3uYBaV8CEFTT6WZ
+d0ghslwnyFvSFbFa0n/w/P2fPa7LMw3mRfrAvt8/xl1hXopkDPmufQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUN9uyhZFKoupAS28NZ8AvjCiPX1IwPgYDVR0RBDcwNYINaWRw
+LnVuaWNhbS5pdIYkaHR0cHM6Ly9pZHAudW5pY2FtLml0L2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBSkfT5VWjVnS9qsyDXZMn3Xeths2MVVq0k9IvO
+DTqEwXQq+wfeE2me8Z58kdZf7M8Ew/nydGNe1TnWOSUp38ZskFtY7m5Uh2A+/MxU
+IwpIVqzQFC05vcT2PGZMwnj7Vn9P7Q9bmYEoFOaOu2vTcxG9uIyqq/l8AGu/S6jh
+Wx2KwVga3gwW2EhsESRj+d4in6ALqxQ2MQGVZqNcSdFChulC0aAum5Wi9xF5Mb+t
+4oBE5AfrQTt3b6TM8KmQQnY0MKCheUDo7EDAfoTU2itIZcn000vhWQMyBtaM1PAv
+3aDvLExZSbTUcKZwVijxe8nW3j4HI39EhwhP7SJb3BqAg15E
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unicam.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università degli studi di Camerino</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Camerino</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università di Camerino</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Camerino</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.unicam.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://international.unicam.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:marco.maccari@unicam.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:support_idem@unicam.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

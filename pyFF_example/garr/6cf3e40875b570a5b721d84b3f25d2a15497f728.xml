@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.csus.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.csus.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csus.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">California State University, Sacramento</mdui:DisplayName>
+		<mdui:Description xml:lang="en">California State University, Sacramento Central Shibboleth Identity Provider</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.calstate.edu/icsuam/documents/Section8000.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="102" width="516" xml:lang="en">https://irt-cdn.webhost.csus.edu/cascade/responsive-3.0/assets/app/img/logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFiTCCBHGgAwIBAgICAp8wDQYJKoZIhvcNAQEFBQAwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA5MTAxMzE3NTkwOFoXDTExMTAx
+NDE3NTkwOFowFzEVMBMGA1UEAxMMaWRwLmNzdXMuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAsK3s8yjwINisx1tBv8/BaXvdawmKEnpOzAkz5G8H
+cca8nP1Rlp+tSXFTcnm8fdMj10TO1XLNbF6xOYtFXZ2pZykRz6tBeM4cxNUPLafP
+YQTCkKRZ7OXXqhacnZ7X2nUl+6JZYZpNAAjAl5pX0jznXCltQzHUx0DCE4z0CTny
+mVQ+6Q9Ou2w4giJEVEtgFvtUZFccxBM7ifV376GeRQKz83OMwWcvQZNvbHthbxc/
+1+Xhv4XgJhYMqXHYNG5Fkg4rX/dAsQHff4Ncdh+cCjGSzCQvxvKZNENFIwPPV2Cw
+1LXJEGy5R8dnG5KTZ9pmoF6whN7+70GUBxUJ3ENsiBqvvQIDAQABo4ICnjCCApow
+DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQA+XJi1NGtvakAmNAlHsMDqC2G7jB+BgNV
+HSMEdzB1gBSTLchhGK1j45tls53djZO658pjRaFapFgwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5ggEAMIGyBggrBgEFBQcBAQSBpTCBojBP
+BggrBgEFBQcwAoZDaHR0cDovL2luY29tbW9uY2ExLmluY29tbW9uZmVkZXJhdGlv
+bi5vcmcvYnJpZGdlL2NlcnRzL2NhLWNlcnRzLnA3YjBPBggrBgEFBQcwAoZDaHR0
+cDovL2luY29tbW9uY2EyLmluY29tbW9uZmVkZXJhdGlvbi5vcmcvYnJpZGdlL2Nl
+cnRzL2NhLWNlcnRzLnA3YjCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vaW5j
+b21tb25jcmwxLmluY29tbW9uZmVkZXJhdGlvbi5vcmcvY3JsL2VlY3Jscy5jcmww
+P6A9oDuGOWh0dHA6Ly9pbmNvbW1vbmNybDIuaW5jb21tb25mZWRlcmF0aW9uLm9y
+Zy9jcmwvZWVjcmxzLmNybDBeBgNVHSAEVzBVMFMGCysGAQQBriMBBAEBMEQwQgYI
+KwYBBQUHAgEWNmh0dHA6Ly9pbmNvbW1vbmNhLmluY29tbW9uZmVkZXJhdGlvbi5v
+cmcvcHJhY3RpY2VzLnBkZjAXBgNVHREEEDAOggxpZHAuY3N1cy5lZHUwDQYJKoZI
+hvcNAQEFBQADggEBAFglriksNFsyek2Q8Cmtkr98MAVA7Hw9IcNkoZ8d886nPcud
+ATOziI1uHF/eavbd0n7voFgk3zOTnNTPpGKdiFvhqCx4PvsRm4UFuKcrU1Pl1OoY
+KivxKK2xGYlmJDEqbLu+k8Puta1AGfMNJq54xdv8bTKJMkxlR8ATJA7DlJd2YYy1
+0KLNf6rTBgNvL4EndNGD7sUHXyGsNea7ERSdYhP1VbC703V6dn6Qinhm2qwthgm3
+ehMZ8k1NjYWDUUWO3GzrWr0L7ay9XgMSr6/5A3L2IVBaaPbhC2/XAVAl+YLpqaDw
+ZGqHp4D/LP3T5x1Tr5iE1zNrNAVeaetMeqA2PGI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKTCCAhGgAwIBAgIJAIrcLAZd2tlUMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGlkcC5jc3VzLmVkdTAeFw0xMTEwMTExNTU1MzBaFw0yMTEwMDgxNTU1MzBa
+MBcxFTATBgNVBAMTDGlkcC5jc3VzLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAM62rDQa6qRVEXoqEm+kWeFInc5oACzU5pJqkKxEmKizZ8P/Y8aB
+/w2vWzFoWWefNPb/zrg6wijOb6FAbTJe/zBexa+JibUg1uk4BlfOmebWvCIoOhRx
+U7GfR5czHcsiGyzIiwGCchBOIIAsUYtVdT1VNzybetbaKSTTEe/N2+otM76EBGl0
+N95X5LdUxRYydteqIl8hmLrCP06WjGjIukIjQcMgNomRckFedyGHgywYU30Mo9Tm
+CYz/pbiQDQbJPgFjDmbOd4iYsyzdJpE8pbsaEJZ1XcNgxe5Y9BOoexLp0+/Bvebm
+uanwRiy+/THhIqQ38mMKaNjRbzyNJgDl3KsCAwEAAaN4MHYwHQYDVR0OBBYEFPYi
+UhafxN4O1ADU9mFoKPAep57OMEcGA1UdIwRAMD6AFPYiUhafxN4O1ADU9mFoKPAe
+p57OoRukGTAXMRUwEwYDVQQDEwxpZHAuY3N1cy5lZHWCCQCK3CwGXdrZVDAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAgV3TIJrLbxLn7Df0pWdX3ODHq
+3xLyeurA/QtVE9Xp+x98wi6HfTljnSYRlL3PrQdSpELh7D0T18BUgzBhGATQ7g5m
+H8nxcCMsKC75SYnQSBspuosDBSrcpfV8wfHpcEOiqUIYPg/9kzbu79YzQr/2W61N
+fIctPqr43IlDuZqDDWbbCOPti49oTcMGDeVHJPfR6o2kGeM8qo+uQlHpU030mjtR
+Lgbeue9s2vlzQoPbAW2ZIjMtxkSztb4dXEiDz6jBf788NVKCfeKrL52TMF1kT/NM
+A4DxizdeC1TEfLUgq0gDwe8XIYYldlIDI2XAwlm69GmSAVWtw91I4TbeJGJT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.csus.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.csus.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.csus.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.csus.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.csus.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.csus.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csus.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFiTCCBHGgAwIBAgICAp8wDQYJKoZIhvcNAQEFBQAwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTA5MTAxMzE3NTkwOFoXDTExMTAx
+NDE3NTkwOFowFzEVMBMGA1UEAxMMaWRwLmNzdXMuZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAsK3s8yjwINisx1tBv8/BaXvdawmKEnpOzAkz5G8H
+cca8nP1Rlp+tSXFTcnm8fdMj10TO1XLNbF6xOYtFXZ2pZykRz6tBeM4cxNUPLafP
+YQTCkKRZ7OXXqhacnZ7X2nUl+6JZYZpNAAjAl5pX0jznXCltQzHUx0DCE4z0CTny
+mVQ+6Q9Ou2w4giJEVEtgFvtUZFccxBM7ifV376GeRQKz83OMwWcvQZNvbHthbxc/
+1+Xhv4XgJhYMqXHYNG5Fkg4rX/dAsQHff4Ncdh+cCjGSzCQvxvKZNENFIwPPV2Cw
+1LXJEGy5R8dnG5KTZ9pmoF6whN7+70GUBxUJ3ENsiBqvvQIDAQABo4ICnjCCApow
+DgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUH
+AwEGCCsGAQUFBwMCMB0GA1UdDgQWBBQA+XJi1NGtvakAmNAlHsMDqC2G7jB+BgNV
+HSMEdzB1gBSTLchhGK1j45tls53djZO658pjRaFapFgwVjELMAkGA1UEBhMCVVMx
+HDAaBgNVBAoTE0luQ29tbW9uIEZlZGVyYXRpb24xKTAnBgNVBAMTIEluQ29tbW9u
+IENlcnRpZmljYXRpb24gQXV0aG9yaXR5ggEAMIGyBggrBgEFBQcBAQSBpTCBojBP
+BggrBgEFBQcwAoZDaHR0cDovL2luY29tbW9uY2ExLmluY29tbW9uZmVkZXJhdGlv
+bi5vcmcvYnJpZGdlL2NlcnRzL2NhLWNlcnRzLnA3YjBPBggrBgEFBQcwAoZDaHR0
+cDovL2luY29tbW9uY2EyLmluY29tbW9uZmVkZXJhdGlvbi5vcmcvYnJpZGdlL2Nl
+cnRzL2NhLWNlcnRzLnA3YjCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vaW5j
+b21tb25jcmwxLmluY29tbW9uZmVkZXJhdGlvbi5vcmcvY3JsL2VlY3Jscy5jcmww
+P6A9oDuGOWh0dHA6Ly9pbmNvbW1vbmNybDIuaW5jb21tb25mZWRlcmF0aW9uLm9y
+Zy9jcmwvZWVjcmxzLmNybDBeBgNVHSAEVzBVMFMGCysGAQQBriMBBAEBMEQwQgYI
+KwYBBQUHAgEWNmh0dHA6Ly9pbmNvbW1vbmNhLmluY29tbW9uZmVkZXJhdGlvbi5v
+cmcvcHJhY3RpY2VzLnBkZjAXBgNVHREEEDAOggxpZHAuY3N1cy5lZHUwDQYJKoZI
+hvcNAQEFBQADggEBAFglriksNFsyek2Q8Cmtkr98MAVA7Hw9IcNkoZ8d886nPcud
+ATOziI1uHF/eavbd0n7voFgk3zOTnNTPpGKdiFvhqCx4PvsRm4UFuKcrU1Pl1OoY
+KivxKK2xGYlmJDEqbLu+k8Puta1AGfMNJq54xdv8bTKJMkxlR8ATJA7DlJd2YYy1
+0KLNf6rTBgNvL4EndNGD7sUHXyGsNea7ERSdYhP1VbC703V6dn6Qinhm2qwthgm3
+ehMZ8k1NjYWDUUWO3GzrWr0L7ay9XgMSr6/5A3L2IVBaaPbhC2/XAVAl+YLpqaDw
+ZGqHp4D/LP3T5x1Tr5iE1zNrNAVeaetMeqA2PGI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKTCCAhGgAwIBAgIJAIrcLAZd2tlUMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGlkcC5jc3VzLmVkdTAeFw0xMTEwMTExNTU1MzBaFw0yMTEwMDgxNTU1MzBa
+MBcxFTATBgNVBAMTDGlkcC5jc3VzLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAM62rDQa6qRVEXoqEm+kWeFInc5oACzU5pJqkKxEmKizZ8P/Y8aB
+/w2vWzFoWWefNPb/zrg6wijOb6FAbTJe/zBexa+JibUg1uk4BlfOmebWvCIoOhRx
+U7GfR5czHcsiGyzIiwGCchBOIIAsUYtVdT1VNzybetbaKSTTEe/N2+otM76EBGl0
+N95X5LdUxRYydteqIl8hmLrCP06WjGjIukIjQcMgNomRckFedyGHgywYU30Mo9Tm
+CYz/pbiQDQbJPgFjDmbOd4iYsyzdJpE8pbsaEJZ1XcNgxe5Y9BOoexLp0+/Bvebm
+uanwRiy+/THhIqQ38mMKaNjRbzyNJgDl3KsCAwEAAaN4MHYwHQYDVR0OBBYEFPYi
+UhafxN4O1ADU9mFoKPAep57OMEcGA1UdIwRAMD6AFPYiUhafxN4O1ADU9mFoKPAe
+p57OoRukGTAXMRUwEwYDVQQDEwxpZHAuY3N1cy5lZHWCCQCK3CwGXdrZVDAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQAgV3TIJrLbxLn7Df0pWdX3ODHq
+3xLyeurA/QtVE9Xp+x98wi6HfTljnSYRlL3PrQdSpELh7D0T18BUgzBhGATQ7g5m
+H8nxcCMsKC75SYnQSBspuosDBSrcpfV8wfHpcEOiqUIYPg/9kzbu79YzQr/2W61N
+fIctPqr43IlDuZqDDWbbCOPti49oTcMGDeVHJPfR6o2kGeM8qo+uQlHpU030mjtR
+Lgbeue9s2vlzQoPbAW2ZIjMtxkSztb4dXEiDz6jBf788NVKCfeKrL52TMF1kT/NM
+A4DxizdeC1TEfLUgq0gDwe8XIYYldlIDI2XAwlm69GmSAVWtw91I4TbeJGJT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.csus.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.csus.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">California State University, Sacramento</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">California State University, Sacramento</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.csus.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Brennan Pike</md:GivenName>
+	<md:EmailAddress>idm@csus.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ISO Group</md:GivenName>
+	<md:EmailAddress>iso@csus.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IDM Group</md:GivenName>
+	<md:EmailAddress>idm@csus.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://jagger.testbed.tier.internet2.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://jagger.testbed.tier.internet2.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TIER Testbed Jagger</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://jagger.testbed.tier.internet2.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.internet2.edu/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="91" width="122" xml:lang="en">https://www.internet2.edu/media/medialibrary/2013/10/15/internet2_logo_200pxtrans.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDhDCCAmwCCQD5CkO4lN0mOTANBgkqhkiG9w0BAQUFADCBgzELMAkGA1UEBhMC
+VVMxETAPBgNVBAgMCE1pY2hpZ2FuMRIwEAYDVQQHDAlBbm4gQXJib3IxEjAQBgNV
+BAoMCUludGVybmV0MjENMAsGA1UECwwEVElFUjEqMCgGA1UEAwwhamFnZ2VyLnRl
+c3RiZWQudGllci5pbnRlcm5ldDIuZWR1MB4XDTE2MTIwNjE4MTU1MVoXDTI2MTIw
+NDE4MTU1MVowgYMxCzAJBgNVBAYTAlVTMREwDwYDVQQIDAhNaWNoaWdhbjESMBAG
+A1UEBwwJQW5uIEFyYm9yMRIwEAYDVQQKDAlJbnRlcm5ldDIxDTALBgNVBAsMBFRJ
+RVIxKjAoBgNVBAMMIWphZ2dlci50ZXN0YmVkLnRpZXIuaW50ZXJuZXQyLmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALTnN6bjBnE6wTUeMJyg59OB
+gV4U3RzYKno7yQIlEX0pPEjIyT1TMeEQxWZtLrUes9cVEfb/na2nxUs9hKpR9AZb
+yac+MGXXfeP+H8r1+dg3d06geZQfNq/Sj9lOkbfyvEkFX92uxdEYVRrHkl397hnw
+dFuiYZD1te84IRTAe8/vYJc3inb50jy/4Io7+AwRDY0DTM10T+2sgmr6lG/5njlb
+G4y9JKuV2KcXMCNcO0wBMuKuFjapNXy2+oKwAIqFDxbPMbkA8YgyHiiXHyESZQLv
++O4KL7FqWtFvgKoGUt8gr+/6dq0N5kBG2SKBJso2/2S4zRVyBjEQqlU9y/m3DLEC
+AwEAATANBgkqhkiG9w0BAQUFAAOCAQEAKn8YV9nC1B3DrIFhEoVeuo9J/Qj8OD2q
+Po1uiwZGfufe4cwwmXnA2yhNfuekuAKGVUlA1GSXvPJ2hn/pj2iQyFO297i31aEX
+SFp3JQnfK664/SIf76ZRvG7EbBGqSPLnXWlydBEMVm8t1Z9IDcLVLwG3Ry3K7GMH
+X/P3EXo/HuwE1AAb1C0h7rozCyeu4Weny4RPRZxjOLVFe0PkL76C88Oiy5lrdoaV
+G41wOwUgwqx9FpE70VbB8q1WRj9T0D/rm406En+KIXd/hGsDzVU36Eq1UaHS4SSk
+I6dh4YPA+qUVZYpXQAUrBnVyWgR5GWTz2rmCjiclQt6cE2jHb9PWJw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://jagger.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://jagger.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://jagger.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://jagger.testbed.tier.internet2.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">TIER Testbed Jagger</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="o" Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Internet2</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Internet2</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.internet2.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Christopher Hubing</md:GivenName>
+	<md:EmailAddress>chubing@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Paul Caskey</md:GivenName>
+	<md:EmailAddress>pcaskey@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Nick Roy</md:GivenName>
+	<md:EmailAddress>nroy@internet2.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

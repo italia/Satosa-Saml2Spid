@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ipa.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2011-11-28T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ipa.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Public Administration</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ga">An Foras Riarachaín</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.ipa.ie</mdui:InformationURL>
+		<mdui:Logo height="120" width="130">https://edugate.heanet.ie/rr3/logos/ipa.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.3337363,-6.2300127</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAI3sMWxFvjpe4FwTUUSZvm2vGfvVMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5pcGEuaWUwHhcNMTExMTI1MTczNTQxWhcNMzEx
+MTI1MTczNTQxWjAVMRMwEQYDVQQDEwppZHAuaXBhLmllMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAtRddMdHqEdiL5NPjnqqt4VZZtuNNq1xslTEzOoKW
+4fJ7uKbxw0TOnUVgeqoBJEIVhxDvilQXkonb+jDCFZCbyrNsh/ENr0bbqtOwvMYP
+Q4ODxnxK4D+Qjbf/Ld0ki0jjUvZ8v9J6aO2AKk6IPVlvwXi1GoEGy2Ds46DVq3Gl
+V54v/cu6A8vatOpRgF3keOkL1nLW37mjiy9Xu7+8/C5uK+UBzjb/bX5qzjbHbVOG
+hnamqwgRN0QyzQPU1OyNK4b88DIw+gqUi0qo2tlcc+Hn6He3O56uSsTprNwoNKrr
+MvlkEL1pY0lfgAcadJGGrQ9FEi0Ty+GeeyoT0agvHlq0jwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAuaXBhLmllhiFodHRwczovL2lkcC5pcGEuaWUvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFJhKeTQ7ebYvmIRcYtOY8b9L1zhaMA0GCSqGSIb3DQEB
+BQUAA4IBAQANi1lNeUhqvdVK7q7dotF3EPg6C2PJLYUXjInHfHKLHbDDfYGEVf19
+nz2pasKmdfo0bv9kssbuwVfn7tUro8Igdt661gq/0/eriKaMg83qeo5MOoJa0I5t
+94y8/mZAhz3SUReGR3zEhbZIXEx+zdbbz992k6FjMCi4MQpfoN1LD6uqIHqjAu0P
+A2dPT+rM2JRZ/li0YmTLUcvE0IP1q7VuihtEXBKbndKPe4sEIy4LVfpPDs2oYjg6
+0VDwE1ENoiu+3TYEkP/ZZpu2Z68FG7Ygpedl96CjXFm5qufuU8UUpz7SRMf2gEv/
+NkaVXN/aXmq6gSQ+gfVeKU+eqHo2TR51
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ipa.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ipa.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ipa.ie/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Institute of Public Administration</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Public Administration</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ipa.ie</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Peter</md:GivenName>
+	<md:SurName>Sisk</md:SurName>
+	<md:EmailAddress>mailto:psisk@ipa.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Peter</md:GivenName>
+	<md:SurName>Sisk</md:SurName>
+	<md:EmailAddress>mailto:psisk@ipa.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

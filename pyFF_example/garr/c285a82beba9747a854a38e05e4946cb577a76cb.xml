@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ulb.ac.be/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://federation.belnet.be/" registrationInstant="2012-03-27T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://federation.belnet.be/files/Belnet-metadata-registration-practice-statement.txt</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ulb.ac.be</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">IDP - ULB (Universite libre de Bruxelles)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Universite libre de Bruxelles</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www2.ulb.ac.be/dre/com/docs/logo3lpbp.jpg</mdui:Logo>
+		<mdui:Logo height="75" width="153">https://www2.ulb.ac.be/dre/com/docs/logo3lg.jpg</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>164.15.0.0/16</mdui:IPHint>
+		<mdui:IPHint>2001:06a8:11a0::/48</mdui:IPHint>
+		<mdui:DomainHint>ulb.ac.be</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:50.8119483,4.38261690</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAOFlRfMBCI2hQEbN/RDTA99gxN6WMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwHhcNMTgwMzEzMTAyNzI2
+WhcNMzgwMzEzMTAyNzI2WjAbMRkwFwYDVQQDDBBpZHB1bGIudWxiLmFjLmJlMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidHyYf23yJ3OtaHH6ZxLRhOP
+ZptZRtRFlvnwLeUB49C9gyTM0kw7h4ntvvqMPjhBZoEcVaqanUPnXZgCbHKMreTJ
+bzrACFqJ1VyycXn4947HP94UR1JXcUvjkyaL0i6FCQtx0IhAijDd2ekO7Gq7jvKn
+cmB6YWNRQgoLwxN7b/3eyGIAw52B+WBs+x9Ru3w96X+kl4i6lkfdOj0zAItbfk+9
+RfyqQIOHXxVeEogeii9rfRixQll3gmLyn+STi3Wym+NQAZBqHCfJeS/cpsR5Ot1X
+WV5SkfFmLqfCHW09DPO10gjnpkHHDErKSPPe5LzhPzsqtiE1z4VZU2rq7+KBpwID
+AQABo2cwZTAdBgNVHQ4EFgQUvQ89bfDgdJxcMrljo+ePmNwgHGMwRAYDVR0RBD0w
+O4IQaWRwdWxiLnVsYi5hYy5iZYYnaHR0cHM6Ly9pZHB1bGIudWxiLmFjLmJlL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBVdO4ONTE1dkDnxMIOIT//
+y0gXVyg9P/GCpIxSsRDg9sZR5Z87J0VBfBxi4Dk4f0+S1GX+MPHVUMACRQxVmc8T
+Bw3QHkbsjnY8vGCdyUgv/ji194iumEEyJQr7ILMyLKZzXOSmZIod3YyHf/bh+vFw
+Z1Te6+GBWXUFmgB6sxww0yhsyC/d5+RIENVDot8ipOpagvRxHVqRJoAzaSiQvi3T
+78bBzhII6GTGYtVLWdhX4/c4iz3ilyC+pAlOUAh3xon0VDIs8pn3UmUGAZdVwbZA
+arFBmaTBpJoawjWqwfuizbaTF5U4teNxfTmgCqo/3/EoWdfvntgfjYzefYqqc25S
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAOFlRfMBCI2hQEbN/RDTA99gxN6WMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwHhcNMTgwMzEzMTAyNzI2
+WhcNMzgwMzEzMTAyNzI2WjAbMRkwFwYDVQQDDBBpZHB1bGIudWxiLmFjLmJlMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidHyYf23yJ3OtaHH6ZxLRhOP
+ZptZRtRFlvnwLeUB49C9gyTM0kw7h4ntvvqMPjhBZoEcVaqanUPnXZgCbHKMreTJ
+bzrACFqJ1VyycXn4947HP94UR1JXcUvjkyaL0i6FCQtx0IhAijDd2ekO7Gq7jvKn
+cmB6YWNRQgoLwxN7b/3eyGIAw52B+WBs+x9Ru3w96X+kl4i6lkfdOj0zAItbfk+9
+RfyqQIOHXxVeEogeii9rfRixQll3gmLyn+STi3Wym+NQAZBqHCfJeS/cpsR5Ot1X
+WV5SkfFmLqfCHW09DPO10gjnpkHHDErKSPPe5LzhPzsqtiE1z4VZU2rq7+KBpwID
+AQABo2cwZTAdBgNVHQ4EFgQUvQ89bfDgdJxcMrljo+ePmNwgHGMwRAYDVR0RBD0w
+O4IQaWRwdWxiLnVsYi5hYy5iZYYnaHR0cHM6Ly9pZHB1bGIudWxiLmFjLmJlL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBVdO4ONTE1dkDnxMIOIT//
+y0gXVyg9P/GCpIxSsRDg9sZR5Z87J0VBfBxi4Dk4f0+S1GX+MPHVUMACRQxVmc8T
+Bw3QHkbsjnY8vGCdyUgv/ji194iumEEyJQr7ILMyLKZzXOSmZIod3YyHf/bh+vFw
+Z1Te6+GBWXUFmgB6sxww0yhsyC/d5+RIENVDot8ipOpagvRxHVqRJoAzaSiQvi3T
+78bBzhII6GTGYtVLWdhX4/c4iz3ilyC+pAlOUAh3xon0VDIs8pn3UmUGAZdVwbZA
+arFBmaTBpJoawjWqwfuizbaTF5U4teNxfTmgCqo/3/EoWdfvntgfjYzefYqqc25S
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUWmfz/ogdx4SQBb46HmjAQqJ4SwowDQYJKoZIhvcNAQEL
+BQAwGzEZMBcGA1UEAwwQaWRwdWxiLnVsYi5hYy5iZTAeFw0xODAzMTMxMDI3MjZa
+Fw0zODAzMTMxMDI3MjZaMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCA5QCi9Q1OjM9QVDqEHoukJt/c
+Kx+EG0unk0hOZaEILrcj8YR//50HAZ3pnQFqHGs2y8oSxfFRjWTPoV5nsaMWmtoT
+ecVPsc3oFuGK7IGepMFAJ+89QN7vJQBiLe1S5XoCWjspPmx8P/hojw+CPMzkxZXz
+OGYdk2hMGnmQ6Z949cDRJFSbrDgFioHt0aC2pOEwZdZK4ZdYeYsyasP6OfnkCviS
+3vXbVbwhEaqYty4opQJTonBvlu5SbMopBETmiVQeQhA1ypoV6WYykT9DQXuiDe6i
+rPtsveZk68gyv/0zmB2NqP1VlCXb1qqdK7uYCEwSKSWWBjOCBVbAFeRg6s9VAgMB
+AAGjZzBlMB0GA1UdDgQWBBSEaRYQf7m9JY8gK9ro9M4kQ9guJjBEBgNVHREEPTA7
+ghBpZHB1bGIudWxiLmFjLmJlhidodHRwczovL2lkcHVsYi51bGIuYWMuYmUvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEluTM6kcgV2iYOqFH1ED6fQ
+H7XbVjNVZeLNjDcW591LphMmphBEg3NtFYKNbWldlbAXUWmL01zXvKvI18UpM/4N
+XstLbjoyPw+MIFQMnnpt0usZTUH6dmRuf5XErOhJOHZ/UZeZ30t1pp7MEKpCBE+v
+iLZ4j5Z4Hs0imHcpXtNAm9mF4EsrKlTpjsHWaTazhqTAoYQy9Jcr97VINDST0o0m
+vznda8EGzYf7mc9gcyKp3LKf8wvwYAZrr22QoztCgAFvsqCVeNmbbbfSpcvSXnHB
+V+te7JMHGbkGOX/2GMN0onVVD5iTPIROFtANSzNxHicOJZOCclhGZVioZ/aAPRk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ulb.ac.be/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ulb.ac.be/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ulb.ac.be/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ulb.ac.be/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ulb.ac.be/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ulb.ac.be/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ulb.ac.be/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ulb.ac.be/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ulb.ac.be/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ulb.ac.be/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ulb.ac.be</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAOFlRfMBCI2hQEbN/RDTA99gxN6WMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwHhcNMTgwMzEzMTAyNzI2
+WhcNMzgwMzEzMTAyNzI2WjAbMRkwFwYDVQQDDBBpZHB1bGIudWxiLmFjLmJlMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidHyYf23yJ3OtaHH6ZxLRhOP
+ZptZRtRFlvnwLeUB49C9gyTM0kw7h4ntvvqMPjhBZoEcVaqanUPnXZgCbHKMreTJ
+bzrACFqJ1VyycXn4947HP94UR1JXcUvjkyaL0i6FCQtx0IhAijDd2ekO7Gq7jvKn
+cmB6YWNRQgoLwxN7b/3eyGIAw52B+WBs+x9Ru3w96X+kl4i6lkfdOj0zAItbfk+9
+RfyqQIOHXxVeEogeii9rfRixQll3gmLyn+STi3Wym+NQAZBqHCfJeS/cpsR5Ot1X
+WV5SkfFmLqfCHW09DPO10gjnpkHHDErKSPPe5LzhPzsqtiE1z4VZU2rq7+KBpwID
+AQABo2cwZTAdBgNVHQ4EFgQUvQ89bfDgdJxcMrljo+ePmNwgHGMwRAYDVR0RBD0w
+O4IQaWRwdWxiLnVsYi5hYy5iZYYnaHR0cHM6Ly9pZHB1bGIudWxiLmFjLmJlL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBVdO4ONTE1dkDnxMIOIT//
+y0gXVyg9P/GCpIxSsRDg9sZR5Z87J0VBfBxi4Dk4f0+S1GX+MPHVUMACRQxVmc8T
+Bw3QHkbsjnY8vGCdyUgv/ji194iumEEyJQr7ILMyLKZzXOSmZIod3YyHf/bh+vFw
+Z1Te6+GBWXUFmgB6sxww0yhsyC/d5+RIENVDot8ipOpagvRxHVqRJoAzaSiQvi3T
+78bBzhII6GTGYtVLWdhX4/c4iz3ilyC+pAlOUAh3xon0VDIs8pn3UmUGAZdVwbZA
+arFBmaTBpJoawjWqwfuizbaTF5U4teNxfTmgCqo/3/EoWdfvntgfjYzefYqqc25S
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAOFlRfMBCI2hQEbN/RDTA99gxN6WMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwHhcNMTgwMzEzMTAyNzI2
+WhcNMzgwMzEzMTAyNzI2WjAbMRkwFwYDVQQDDBBpZHB1bGIudWxiLmFjLmJlMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidHyYf23yJ3OtaHH6ZxLRhOP
+ZptZRtRFlvnwLeUB49C9gyTM0kw7h4ntvvqMPjhBZoEcVaqanUPnXZgCbHKMreTJ
+bzrACFqJ1VyycXn4947HP94UR1JXcUvjkyaL0i6FCQtx0IhAijDd2ekO7Gq7jvKn
+cmB6YWNRQgoLwxN7b/3eyGIAw52B+WBs+x9Ru3w96X+kl4i6lkfdOj0zAItbfk+9
+RfyqQIOHXxVeEogeii9rfRixQll3gmLyn+STi3Wym+NQAZBqHCfJeS/cpsR5Ot1X
+WV5SkfFmLqfCHW09DPO10gjnpkHHDErKSPPe5LzhPzsqtiE1z4VZU2rq7+KBpwID
+AQABo2cwZTAdBgNVHQ4EFgQUvQ89bfDgdJxcMrljo+ePmNwgHGMwRAYDVR0RBD0w
+O4IQaWRwdWxiLnVsYi5hYy5iZYYnaHR0cHM6Ly9pZHB1bGIudWxiLmFjLmJlL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBVdO4ONTE1dkDnxMIOIT//
+y0gXVyg9P/GCpIxSsRDg9sZR5Z87J0VBfBxi4Dk4f0+S1GX+MPHVUMACRQxVmc8T
+Bw3QHkbsjnY8vGCdyUgv/ji194iumEEyJQr7ILMyLKZzXOSmZIod3YyHf/bh+vFw
+Z1Te6+GBWXUFmgB6sxww0yhsyC/d5+RIENVDot8ipOpagvRxHVqRJoAzaSiQvi3T
+78bBzhII6GTGYtVLWdhX4/c4iz3ilyC+pAlOUAh3xon0VDIs8pn3UmUGAZdVwbZA
+arFBmaTBpJoawjWqwfuizbaTF5U4teNxfTmgCqo/3/EoWdfvntgfjYzefYqqc25S
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUWmfz/ogdx4SQBb46HmjAQqJ4SwowDQYJKoZIhvcNAQEL
+BQAwGzEZMBcGA1UEAwwQaWRwdWxiLnVsYi5hYy5iZTAeFw0xODAzMTMxMDI3MjZa
+Fw0zODAzMTMxMDI3MjZaMBsxGTAXBgNVBAMMEGlkcHVsYi51bGIuYWMuYmUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCA5QCi9Q1OjM9QVDqEHoukJt/c
+Kx+EG0unk0hOZaEILrcj8YR//50HAZ3pnQFqHGs2y8oSxfFRjWTPoV5nsaMWmtoT
+ecVPsc3oFuGK7IGepMFAJ+89QN7vJQBiLe1S5XoCWjspPmx8P/hojw+CPMzkxZXz
+OGYdk2hMGnmQ6Z949cDRJFSbrDgFioHt0aC2pOEwZdZK4ZdYeYsyasP6OfnkCviS
+3vXbVbwhEaqYty4opQJTonBvlu5SbMopBETmiVQeQhA1ypoV6WYykT9DQXuiDe6i
+rPtsveZk68gyv/0zmB2NqP1VlCXb1qqdK7uYCEwSKSWWBjOCBVbAFeRg6s9VAgMB
+AAGjZzBlMB0GA1UdDgQWBBSEaRYQf7m9JY8gK9ro9M4kQ9guJjBEBgNVHREEPTA7
+ghBpZHB1bGIudWxiLmFjLmJlhidodHRwczovL2lkcHVsYi51bGIuYWMuYmUvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEluTM6kcgV2iYOqFH1ED6fQ
+H7XbVjNVZeLNjDcW591LphMmphBEg3NtFYKNbWldlbAXUWmL01zXvKvI18UpM/4N
+XstLbjoyPw+MIFQMnnpt0usZTUH6dmRuf5XErOhJOHZ/UZeZ30t1pp7MEKpCBE+v
+iLZ4j5Z4Hs0imHcpXtNAm9mF4EsrKlTpjsHWaTazhqTAoYQy9Jcr97VINDST0o0m
+vznda8EGzYf7mc9gcyKp3LKf8wvwYAZrr22QoztCgAFvsqCVeNmbbbfSpcvSXnHB
+V+te7JMHGbkGOX/2GMN0onVVD5iTPIROFtANSzNxHicOJZOCclhGZVioZ/aAPRk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ulb.ac.be/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ulb.ac.be/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">
+			Universite libre de Bruxelles
+		</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">ULB - IDP (Universite libre de Bruxelles)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ulb.ac.be</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:EmailAddress>mailto:support@ulb.ac.be</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>support</md:GivenName>
+	<md:EmailAddress>mailto:support@ulb.ac.be</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uca.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-06-27T13:48:24Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uca.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université Clermont Auvergne</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACw0lEQVQ4y12TTWhcZRSGn/Pd707uZJLJTJs4lUlb7I8WSnVTfxClgqA1tHRTulEorisuRFy5EFy5Ltl007SoBW0QW2NThKZgF6IgRUuaH9tGUStJZvI3k7lz537fcXHTavrC2Rxeznk5532F4REVQIFCaKkWujEiLLRa1OIEASBjKJshgEEVTR3EbfrCkMQ58J5tUZ5QBFVQ7zJOu51VkoL3KIotBIaT+5/itR1VtkZdTC4t8+nUHRbimECh00mIcjlO7t/D4R3b6Q4tNxdrjEzOcnu+hqx3Opq3dpO0+VaLl74YY7a+zNHdO7l45FVyxvAozk7OgG7g70ZT/1hdU1XVa7//pYNnPtejX13V/+Of5rpO11c29WzHO17/coyJe3+yq79MOZdjJenQEwR8NvQKAKrK0OgVxmfugvf0l/r49vgbPLvtMcyx0XEmZuYAoQtothPEeQ5VK/TmcgCc+Po7xm9Nc+TJXbz34kEWG02ePzfKajvBXpm+ByYA78B5RIWOSzlYGQAgTh0Xf53iuZ1VLh8fAuBAf5m3L1xidOoOFudADIKiziMiuNQxkI8AWIqzt3Wb/w5dDENwsNhsYfeW+phdqEMgiFdAsV55YbACwNzSMqSO67N3eeebCQ5UtvD+1RsQZEvt2FvHeOb0eVqNJo1CTGAMnxx+mUqhAMCZH3/JbIow/P1P4D3kQnAO8R67d2uZ+oenuDT5Gx449MQgj/f2AHB7vsbIDzchCCD1YAyIAQ84DwoWILKWE0/v22SSufoKb164jIig3m+YXx+qwSlxkhJcH9jzUbXUSzGKcN4zV19h+MbPfDB2Dec8xaiL5fU4k+4fDFAQ4db9eYR3P1ZSB9YCnv5iD6V8ntAYNqKI9577qw3W4iTLpII1hlIhjxURNLQPA1pbW6ecj8himHUNwva+Ir6opN6DQGgMgvAvQ1lgYxylh5kAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.uca.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Université Clermont Auvergne</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Clermont Auvergne</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Université Clermont Auvergne</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVALlgGT7OiOkwEogM5PNXPN7GHr63MA0GCSqGSIb3DQEB
+CwUAMBUxEzARBgNVBAMMCmlkcC51Y2EuZnIwHhcNMTcwNjI3MDcxNTQ4WhcNMzcw
+NjI3MDcxNTQ4WjAVMRMwEQYDVQQDDAppZHAudWNhLmZyMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAmp0PgqU5ZLeyp07lTzuQfaKQIvBmI37LwRY0cnja
+K1zb8RK0LQj8U0kOHwORZ67lKyc4CX9rWGKde2GTYV6nUCaSNz/LlHGouoOE10K8
+JXXsA6EvCDWvjck99r4CqKnTx3ZhRVPXxdmoKD00rVAAIs8DMy/OaNSDokitFUdl
+Kz5a62ypH3Ym6xxZtltaNUGODl0pof2Ud4xA9jDG5oE+zmp+C9UtpGdLVLEaJynt
+ZNCK3/NR72R1EB2VOUUkjp3E1ib+2BS5Nm2NQSr7CF3qonSya8yAa8R3V2ACSR5V
+ftxcF/L49WMH2P5nbzXCkjblnAbwj4KsIARzU8JyU4QtMQIDAQABo1swWTAdBgNV
+HQ4EFgQUL/yY051Sn38fRZAWq/faIjpTLwgwOAYDVR0RBDEwL4IKaWRwLnVjYS5m
+coYhaHR0cHM6Ly9pZHAudWNhLmZyL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEB
+CwUAA4IBAQAqguE5RDvvzyvDYW0o9MN5XXnxUx0VinVFEA0645xYdS5dJ5BxWHCn
+AyORkQSZRENasB7SzlcZ9+kAIIwrIvcPfimMiLtGgyLBfko2MnOZOISFlon2/YkW
+pndynm6JCUzSTj1wu3qldBnZH73dZN9mHGFY5vjQzi0NrkvYJ5pbV/MKlSCEmtGm
+Whb0/8iVd74D0FgcZjwpwIZOnD/ahq5YAQB7phEqFEgScFlPM1idfIWcmeJrexPH
+rO0ca/QBz78k3sME4mAmj4djoe0PI3NsTsLPnTGO2wqNrmZY6WLqIyBUnU2IrK1U
+nyvICGQnsKMyNv8dZtK8uaLI4r4WXSAT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uca.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uca.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uca.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uca.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uca.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uca.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université Clermont Auvergne</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université Clermont Auvergne</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uca.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>TOURAILLE Eric</md:SurName>
+	<md:EmailAddress>mailto:Eric.TOURAILLE@uca.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ubalt.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ubalt.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Baltimore</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.ubalt.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.ubalt.edu/privacy-statement.cfm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="41" width="167" xml:lang="en">https://www.ubalt.edu/images/ots/idp-ub-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALNBED/cJIrxyBgo57wvukY6HoaMMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC51YmFsdC5lZHUwHhcNMTAwNDE0MTQxMDE0WhcN
+MzAwNDE0MTQxMDE0WjAYMRYwFAYDVQQDEw1pZHAudWJhbHQuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQQUyShLGEpGTZP5yXSVrvzSqb12zVFl
+i8lgmI3B11Djae9CB2MYvCxVPR45UbECwABRglgg0J3DbqF7sHJdx8e6wlQKtL3x
+j4lCNaQ3RuQTqiDFQjPN/pB9ZmCGNe0Xg/IGsdQMSyaAByvg704svGFGNV4w2+jX
+AZjn5uT0Ie2nzH7Ld5viKuuAg69qL3tCeViLGdLi968lyP88cDsoY3XVmhaWwvKa
+QEo4Ux4cps8T8AMSrM4WjL6utDB54QW2GO33c6UZdWRV1emGzko98wWM44Vdi2BW
+y+RioI1CeHK1N14WaoAbU3NNbNn3QmZIW/Wh25H94Q5svbpMmUm5oQIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAudWJhbHQuZWR1hiRodHRwczovL2lkcC51YmFsdC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFNvNBX8NadYpqWmsgeMXG0GQNHo7
+MA0GCSqGSIb3DQEBBQUAA4IBAQAIbKuLg8lZhoSRwTj28WIdnGMK0rEJrt1LXAiO
+YNGxXgeMjZx0p6ztoOFFdjo9TVgEuxXx2ycmKz5eJ7SBAXRkt3NwX1YizRcyLRsC
+TnYa0K8gnnk14AGIqfVd0VaCfXLa7RE7+uVngWgHqkZrwkwGlesvAysdDG9RrXM4
+5aw9kh43lKx0nuGSCygLpWJJYtm9GW9XmRaNcnAOPiIHsICAeHFYbW+ZpBsd70BZ
+UW70RjR8T0DfLVxDaVoxG38lSnjyhJvNsFoapErardKKtSfjgAPEB9VJ01s73u3w
+8jympr7hYBlzGEVpM1EYCsSsULuEXTgFVg4RZnbigygJHpKA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ubalt.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ubalt.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ubalt.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ubalt.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ubalt.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ubalt.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVALNBED/cJIrxyBgo57wvukY6HoaMMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC51YmFsdC5lZHUwHhcNMTAwNDE0MTQxMDE0WhcN
+MzAwNDE0MTQxMDE0WjAYMRYwFAYDVQQDEw1pZHAudWJhbHQuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQQUyShLGEpGTZP5yXSVrvzSqb12zVFl
+i8lgmI3B11Djae9CB2MYvCxVPR45UbECwABRglgg0J3DbqF7sHJdx8e6wlQKtL3x
+j4lCNaQ3RuQTqiDFQjPN/pB9ZmCGNe0Xg/IGsdQMSyaAByvg704svGFGNV4w2+jX
+AZjn5uT0Ie2nzH7Ld5viKuuAg69qL3tCeViLGdLi968lyP88cDsoY3XVmhaWwvKa
+QEo4Ux4cps8T8AMSrM4WjL6utDB54QW2GO33c6UZdWRV1emGzko98wWM44Vdi2BW
+y+RioI1CeHK1N14WaoAbU3NNbNn3QmZIW/Wh25H94Q5svbpMmUm5oQIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAudWJhbHQuZWR1hiRodHRwczovL2lkcC51YmFsdC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFNvNBX8NadYpqWmsgeMXG0GQNHo7
+MA0GCSqGSIb3DQEBBQUAA4IBAQAIbKuLg8lZhoSRwTj28WIdnGMK0rEJrt1LXAiO
+YNGxXgeMjZx0p6ztoOFFdjo9TVgEuxXx2ycmKz5eJ7SBAXRkt3NwX1YizRcyLRsC
+TnYa0K8gnnk14AGIqfVd0VaCfXLa7RE7+uVngWgHqkZrwkwGlesvAysdDG9RrXM4
+5aw9kh43lKx0nuGSCygLpWJJYtm9GW9XmRaNcnAOPiIHsICAeHFYbW+ZpBsd70BZ
+UW70RjR8T0DfLVxDaVoxG38lSnjyhJvNsFoapErardKKtSfjgAPEB9VJ01s73u3w
+8jympr7hYBlzGEVpM1EYCsSsULuEXTgFVg4RZnbigygJHpKA
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ubalt.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Baltimore</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Baltimore</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ubalt.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>George Weitzel</md:GivenName>
+	<md:EmailAddress>gweitzel@ubalt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>George Weitzel</md:GivenName>
+	<md:EmailAddress>gweitzel@ubalt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>George Weitzel</md:GivenName>
+	<md:EmailAddress>gweitzel@ubalt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>George Weitzel</md:GivenName>
+	<md:EmailAddress>gweitzel@ubalt.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

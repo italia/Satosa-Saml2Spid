@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lsco.edu/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lsco.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lamar State College - Orange</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for LSC-O</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.lsco.edu/privacypolicy/privacypolicy.asp</mdui:PrivacyStatementURL>
+		<mdui:Logo height="225" width="225" xml:lang="en">https://www.lsco.edu/images/lsco-small.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFnjCCA4YCCQCW7lJahmsvkTANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMC
+VVMxEzARBgNVBAgMCkNhbGlmb3JuaWExEDAOBgNVBAcMB09ha2xhbmQxGDAWBgNV
+BAoMD0NpcnJ1cyBJZGVudGl0eTEVMBMGA1UEAwwMaWRwLmxzY28uZWR1MSkwJwYJ
+KoZIhvcNAQkBFhpzdXBwb3J0QGNpcnJ1c2lkZW50aXR5LmNvbTAeFw0xODA0MjQy
+MTEyMTlaFw0yODA0MjMyMTEyMTlaMIGQMQswCQYDVQQGEwJVUzETMBEGA1UECAwK
+Q2FsaWZvcm5pYTEQMA4GA1UEBwwHT2FrbGFuZDEYMBYGA1UECgwPQ2lycnVzIElk
+ZW50aXR5MRUwEwYDVQQDDAxpZHAubHNjby5lZHUxKTAnBgkqhkiG9w0BCQEWGnN1
+cHBvcnRAY2lycnVzaWRlbnRpdHkuY29tMIICIjANBgkqhkiG9w0BAQEFAAOCAg8A
+MIICCgKCAgEAx69hzpTnpjOXSg7XSjqMCa0FXNUM+EiH4l01U3XjTpoALrEfchzV
+soeh3fMpDM5UJEcfN559SUmt87LJ9id5CzwuUgoET16m4UrXiRfUuSqfa3Rz2Lnr
+huz5gyzWzFlJnw06ijcUjIO5EvfG4UqZnp//0HfP+bIJKqPrSxrip8/WpHFiWqTI
+rb5r1Zs9i9JT/+5hLVVdhP6iV/La9UNSYhkGvfdY2xBpJ0R0jFFEv64fsColhNTA
+Q7OyN5ZonDoT1KfBE2txehqg60ik0TEeXkV0YeHNEFTBvyIa0q4d3FC/dTN8o2a/
+zghO9TPyXhrnfMetTmU85oLrR9hlnyn4SY3u4chu5UQpZtL335FGoCQmpFaF3kav
+DaI0MzGOVPv9P0N00PjNJqLLSZ5NT9wzHcVcKu3W84AcqoQ4wg3TzMcA8z9yXoYF
+sVZ2CFW13frd5tg61M2YeUc3G0/6pQJNYIUxvk3h/Fmvf2F2lpWS3CpCPztnnUNx
+RRwuZxFz8SQmBy9tgni8GXduLi5wpyUqflrXa75M7xnE/aIF43qIPIRM17X8opDS
+InQ21pLXVQIKoqhsC6NUnKUzFZ8UdJdqh7R1p71RRNEbuA21GF43r3vnwKw/rWDs
+x5+wdFdcl5IkHItggtjUSFbpm2FrTgE/Am+thstPw8W7jt7CO3ur66kCAwEAATAN
+BgkqhkiG9w0BAQsFAAOCAgEAPotvVeQtI+HlebFvHGb3kJvG1Z7d6moPDyt2Prce
+EnCooP8j5YagARMC1kztLiEoAhFgzhVsErK9VvvhRZ1ALocl+M7rh0TAoq0pB5Xe
+Sa6M1Klz/TEUiT23yQk0l//Y6Ax7JSO/aSShLIJcUHGrGwvWdE7Xo/c8yk/3xRhN
+WrxcneXO6ggVxezpAd3Vcxw2rbHdoPfOH+yBWa2PWQaG0vEOxujZ8zLKSfcD8go8
+S08HvTMWfFTe+Z0WvZ8tpWxzF9MFPMXNKr+gGNftvoy5HxwZnMPxApCrA/0R8zNk
+QtDEo7fY0KsGSWHHdpCxCsOtOp00F8UwYcrtwLalcvJuw0YtYK2ffzvIKrRIoOIE
+zhhuzPwtTsoEdK4FDrtX/b77RRT36EopYljNBPPBiuoMFDY7MHrKnJfUTPf3o+m6
+aIaO/tcL6u/wgYxexfnjuL7Cj80DlegS5laUNdxrypPVJAZYvK0pCl6/ln6ztUSJ
+lCDs0bPPyyngYX/EHVja/VX0vl6LZXKVHUaFegZ4bC1op4lgQvgzbE/AnBRqvGQy
+P/bKgsez+TkhaAGBnbCi/rJYwQsAZJVLhyKyhvXvOJz48huVhRFnAN4/5eUbmruM
+9AGo6Wbd/deJUSpo9KVrhAkp4alj85qiH/1IcQxiOjl2zCW6dMWSy5LQxQ035Fy0
++cM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://lsco-bridge.proxy.cirrusidentity.com/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://lsco-bridge.proxy.cirrusidentity.com/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lamar State College - Orange</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lamar State College - Orange</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://lsco.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Linda Burnett</md:GivenName>
+	<md:EmailAddress>linda.burnett@lsco.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dave Johnson</md:GivenName>
+	<md:EmailAddress>djohnson@lsco.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dave Johnson</md:GivenName>
+	<md:EmailAddress>djohnson@lsco.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

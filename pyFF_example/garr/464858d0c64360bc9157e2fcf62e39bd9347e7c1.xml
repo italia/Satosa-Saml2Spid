@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.mta.ca/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.canarie.ca" registrationInstant="2013-10-12T09:01:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.canarie.ca/?wpdmdl=10721</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="fr">https://www.canarie.ca/?wpdmdl=10723</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mta.ca</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mount Allison University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Mount Allison University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.mta.ca</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://csd.mta.ca/csdinfo.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAJfN+daPg/eu6QNutrhR9kCIgGgDMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5tdGEuY2EwHhcNMTQxMDA4MTkxMDUzWhcNMzQx
+MDA4MTkxMDUzWjAVMRMwEQYDVQQDEwppZHAubXRhLmNhMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAs+TzeV6RQ89WtM5ouy+4M6d7onoVlo9L3ojTiLIA
+z6/VZlgFnBxhF3EeRhFVlAxq97p0TBZa1cqNcT7+/lQgzj9OBwpXORw0NE9jR9DL
+5o9XV45YZjqy9OGfuxkPZmjM6IUaTCr4jwFPJxaanu7N8z/M9haIkUCfw0aFv8tA
+pHJmujquiKjss+TikEmJfYyCat+elJw6M04LiJt8kKICda1heHi6veLWutJC9e3/
+ZdAnXkpHgtkLL71pmsCB6SLIvdMw0Bjvre87tAPC+R55ZNzR39hiHUblzWzWXh3N
+eE/QkVH6qVmSyVUAQha6bI9myRUIZUwv8wDDfVKOp5u3UwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAubXRhLmNhhiFodHRwczovL2lkcC5tdGEuY2EvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFPLazJuXDxG9T53Kn17QKVLQYWJnMA0GCSqGSIb3DQEB
+BQUAA4IBAQAshtAnTHqYc5grFk8mNrG2Ly+yyjsZFctoirN+0fPADLONazS5DxNQ
+iyH2TvN1hTNBolWFGDEU6EHUAmbuv1xyHK9FKXOSpusvEKBLwkBtkpYHfeaWccIn
+YDCnF4+oKlpsy3JLLQIEreQ352L9xe4uv3TDZld+YgdQzbacQYr68iH5c/uL8qIJ
+EOFDjgLDFvaF3X/QQxxl5vbdej0MGmex4EhdSEOFBUnJMqDi/zWGT6cSU2UhMITE
+g2jnpRqXEF5NIwsTF972Gyo39MEkx6NhUTqqFbKqzPJNcHn62d2KUaHrpzvI1HTY
+u6RcrmYDdkytItT3JparGaxkOLij8yZI
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mta.ca:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mta.ca:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mta.ca/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mta.ca/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mta.ca:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.mta.ca/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mta.ca/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.mta.ca/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mta.ca/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">mta.ca</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAJfN+daPg/eu6QNutrhR9kCIgGgDMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC5tdGEuY2EwHhcNMTQxMDA4MTkxMDUzWhcNMzQx
+MDA4MTkxMDUzWjAVMRMwEQYDVQQDEwppZHAubXRhLmNhMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAs+TzeV6RQ89WtM5ouy+4M6d7onoVlo9L3ojTiLIA
+z6/VZlgFnBxhF3EeRhFVlAxq97p0TBZa1cqNcT7+/lQgzj9OBwpXORw0NE9jR9DL
+5o9XV45YZjqy9OGfuxkPZmjM6IUaTCr4jwFPJxaanu7N8z/M9haIkUCfw0aFv8tA
+pHJmujquiKjss+TikEmJfYyCat+elJw6M04LiJt8kKICda1heHi6veLWutJC9e3/
+ZdAnXkpHgtkLL71pmsCB6SLIvdMw0Bjvre87tAPC+R55ZNzR39hiHUblzWzWXh3N
+eE/QkVH6qVmSyVUAQha6bI9myRUIZUwv8wDDfVKOp5u3UwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAubXRhLmNhhiFodHRwczovL2lkcC5tdGEuY2EvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFPLazJuXDxG9T53Kn17QKVLQYWJnMA0GCSqGSIb3DQEB
+BQUAA4IBAQAshtAnTHqYc5grFk8mNrG2Ly+yyjsZFctoirN+0fPADLONazS5DxNQ
+iyH2TvN1hTNBolWFGDEU6EHUAmbuv1xyHK9FKXOSpusvEKBLwkBtkpYHfeaWccIn
+YDCnF4+oKlpsy3JLLQIEreQ352L9xe4uv3TDZld+YgdQzbacQYr68iH5c/uL8qIJ
+EOFDjgLDFvaF3X/QQxxl5vbdej0MGmex4EhdSEOFBUnJMqDi/zWGT6cSU2UhMITE
+g2jnpRqXEF5NIwsTF972Gyo39MEkx6NhUTqqFbKqzPJNcHn62d2KUaHrpzvI1HTY
+u6RcrmYDdkytItT3JparGaxkOLij8yZI
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.mta.ca:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mta.ca:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mount Allison University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mount Allison University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mta.ca/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Computing</md:GivenName>
+	<md:SurName>Services Help Desk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@mta.ca</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

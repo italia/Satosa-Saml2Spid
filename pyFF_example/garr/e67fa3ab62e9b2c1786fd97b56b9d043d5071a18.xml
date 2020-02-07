@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unimib.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2010-08-06T10:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unimib.it</shibmd:Scope>
+<shibmd:Scope regexp="false">campus.unimib.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">University of Milano-Bicocca</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Università di Milano-Bicocca</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity Provider for University of Milano-Bicocca users</mdui:Description>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti di Università di Milano-Bicocca</mdui:Description>
+<mdui:Keywords xml:lang="it">unimib università bicocca milano</mdui:Keywords>
+<mdui:Keywords xml:lang="en">unimib university bicocca milan</mdui:Keywords>
+<mdui:InformationURL xml:lang="en">http://www.si.unimib.it/idem-en/</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">http://www.si.unimib.it/idem/</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://www.si.unimib.it/idem-en/</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://www.si.unimib.it/idem/</mdui:PrivacyStatementURL>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idp.unimib.it/unimib_16x16.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idp.unimib.it/unimib_16x16.png</mdui:Logo>
+<mdui:Logo height="50" width="50" xml:lang="en">https://idp.unimib.it/unimib_50x50.png</mdui:Logo>
+<mdui:Logo height="50" width="50" xml:lang="it">https://idp.unimib.it/unimib_50x50.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idp.unimib.it/unimib_80x60.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idp.unimib.it/unimib_80x60.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:GeolocationHint>geo:45.518965,9.214319</mdui:GeolocationHint>
+<mdui:GeolocationHint>geo:45.602745,9.254773</mdui:GeolocationHint>
+<mdui:GeolocationHint>geo:46.160489,9.910843</mdui:GeolocationHint>
+<mdui:GeolocationHint>geo:45.558355,9.214384</mdui:GeolocationHint>
+<mdui:GeolocationHint>geo:45.528174,9.243695</mdui:GeolocationHint>
+<mdui:IPHint>149.132.0.0/16</mdui:IPHint>
+<mdui:DomainHint>unimib.it</mdui:DomainHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIID8jCCAtoCCQDRtfiml6XVzDANBgkqhkiG9w0BAQUFADCBujELMAkGA1UEBhMC
+SVQxDzANBgNVBAgMBk1pbGFubzEPMA0GA1UEBwwGTWlsYW5vMTQwMgYDVQQKDCtV
+bml2ZXJzaXTDg8KgIGRlZ2xpIFN0dWRpIGRpIE1pbGFuby1CaWNvY2NhMRwwGgYD
+VQQLDBNTaXN0ZW1pIEluZm9ybWF0aXZpMRYwFAYDVQQDDA1pZHAudW5pbWliLml0
+MR0wGwYJKoZIhvcNAQkBFg5pZGVtQHVuaW1pYi5pdDAeFw0xMzA4MjgxMzA0Mjla
+Fw0yMzA4MjYxMzA0MjlaMIG6MQswCQYDVQQGEwJJVDEPMA0GA1UECAwGTWlsYW5v
+MQ8wDQYDVQQHDAZNaWxhbm8xNDAyBgNVBAoMK1VuaXZlcnNpdMODwqAgZGVnbGkg
+U3R1ZGkgZGkgTWlsYW5vLUJpY29jY2ExHDAaBgNVBAsME1Npc3RlbWkgSW5mb3Jt
+YXRpdmkxFjAUBgNVBAMMDWlkcC51bmltaWIuaXQxHTAbBgkqhkiG9w0BCQEWDmlk
+ZW1AdW5pbWliLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzb96
+/j8SpXJ/QCu3HVZcdcSPUZTXkc3YJniHnPEm+J+R0YJaUui3sq3m7rG7HeOr0QMe
++dSJQcAiUNWDLXlOq91rZvTmiXYreS3TqEpsEpNJOLbLdzfbD7NLwy9YNYqYXx+t
+ITIhEhccMzGcYEBNuxKPRasvOC7QOKJWaed2IPP8ptBdFQ9XyggBL0Q+9ADDzGHl
+m+HYAocXZjQvN8demGDXALBx2SANliVftQQvouv/93q34u8gOJCCCfMA/PacrvtX
+gn29U3q5izvMmwLZmMNyJ5Lckpl/LcgStCT488bJJbLZrpGxMDSPTQamy/j3hQs/
+mz114w1omnc0OfmaqQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQAQIxQMg9qVYHGu
+fapH4AiFzwnqSNpjqewrdr/kOQv1RsnzNY5Xu8iyioe3jMIH2Nc1YYcUzfKYr9mV
+7S0DUhpu2GBSC3z9mhRlULkOmJvU+4GAaFCr4jt5fjRMl440toXDJLgGYpoWQmG8
+cvvl3Ysg9sYGbzmWXLFjZyrImJ6F5ZboiGZoTkG3HcXOAUExZA5gRzFk5Gdy65SQ
+CmLcMEs2lw9ZDHDbMwNHqvXrqiljRNowHzZ5v800zjMvoyVHmsVmRzyfqdbmLCnX
+SI8F0ix2bVu35o8sDuqmPkq/l2DwNvPr26l94ohEE6Fh1ZsnGG8ehJ9MuGbSUwf7
+fjKYky96
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unimib.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.unimib.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unimib.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università di Milano-Bicocca</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Milano-Bicocca</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università di Milano-Bicocca</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Milano-Bicocca</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.unimib.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.unimib.it/unimib-international</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:idem@unimib.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

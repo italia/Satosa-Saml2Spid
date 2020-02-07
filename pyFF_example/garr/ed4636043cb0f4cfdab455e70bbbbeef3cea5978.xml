@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.shibstats.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-11-03T09:17:33Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.shibstats.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.shibstats.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ShibStats service</mdui:DisplayName>
+		<mdui:Description xml:lang="en">ShibStats lets you quickly and easily analyse your Shibboleth Identity provider usage statistics</mdui:Description>
+		<mdui:Logo height="104" width="341">https://www.shibstats.com/assets/images/logo2.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID+jCCAmKgAwIBAgIJAO9JQHft8K5eMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
+BAMTEXd3dy5zaGlic3RhdHMuY29tMB4XDTE2MTEwMjEyMjkxNloXDTI2MTAzMTEy
+MjkxNlowHDEaMBgGA1UEAxMRd3d3LnNoaWJzdGF0cy5jb20wggGiMA0GCSqGSIb3
+DQEBAQUAA4IBjwAwggGKAoIBgQCdrU4AIxoCylnc+YHMjOsgGInOQPn5noQkDmJm
+1kM8UsNQ3uXL7lV4RGq+Ig+auiKN4fRTpE85Va9jGrIhuiorS+Ni4nDLLKIGP4Mi
+kYAdpXAdAD7/YrQIfV/KQHF6kEjJyEm49DgsY/utX7S08vobeqetvnMnEVs0tP51
+e+UlXKs5YIHtqJwHTGav1i61nGHc63TQiBTxShpovFw8dxZAnTRSRVP6OwxTdvDb
+gDlQTM0aFBsfLZpg1F8P8LKUq21DJdk04uXfF2/FOmXA0zbBsaPe1nWUnj7qhexy
+ILKwUQX0TTFSTyr0JPANn3o1nVjXiYciOKTJvvXFQJYeYHDZs8wIDSrhdd5rLJxY
+C1hh0VaUIIyX7YniZazapRkRCeo7N6d6lEcPNShPl+OCL87f6p0diZp5vl8qlrwP
+zhF7/duMB4iLpsIs2Imy9GmwwQrLiQfVURbdUiFZ+8JXhDDz+m9Udp+Enf5OYMeL
+1xbteujJTqK9iSEuatxrTG7nPtUCAwEAAaM/MD0wHAYDVR0RBBUwE4IRd3d3LnNo
+aWJzdGF0cy5jb20wHQYDVR0OBBYEFBZT7XDfmN6UhfgnVOWUehMEhKgWMA0GCSqG
+SIb3DQEBCwUAA4IBgQCAUQN/+LE2q2Bd0gcYwDLDQ6JOegAJ/MLB5q9foTE56g+N
+GG+VMh23abXMBsy9RYiiZAa0AQ83eSWsHlmXWaz1/JIpkXbzVbT3yhzd+yGSF7rS
+Zlm5y9iUWhkmCiFdrZRM/8DHkd2sPL1pxR2U0dpxqoJSfPfM2YtBXiyz9PSJZHFw
+FH8BEYwPkk5WvI4fpecZV1nKLTyg4uZGvdwTkPVhcQ4oJVDwH9QaWsWgC60SGnaF
+LtMPXzawKVdnSXRMYVt3xgSl4tqXIsUwyYoQSNDK4Fb8ffG5Yo5Drsx9kYC3cIXK
+UUiKaSs34leeDlDdbuSfpTV1NfKqTx2f/4R0WwJP73OJdZdPmV23lWgCkVI2Hxva
+8YKa+V4ij2zxAfWxfv2071A7MGkTGoDx2MwdA8Vr5bOq43pbezWiDDMoLisII0yc
+PojUx+pkGWb/TV4HoHyJFqTJSvACH1Gev2KtBGyaISW5TpwEZa29xnXw+n7jjy87
+A+a+SGjnGY9KNgxa3Eg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.shibstats.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.shibstats.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.shibstats.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.shibstats.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.shibstats.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.shibstats.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.shibstats.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.shibstats.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.shibstats.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.shibstats.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.shibstats.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Overt Software Solutions Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Overt Software Solutions Ltd</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.shibstats.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Hirst</md:SurName>
+	<md:EmailAddress>mailto:ahirst@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Adam</md:GivenName>
+	<md:SurName>Hirst</md:SurName>
+	<md:EmailAddress>mailto:ahirst@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

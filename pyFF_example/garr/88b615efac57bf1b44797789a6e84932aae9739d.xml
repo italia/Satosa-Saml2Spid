@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp3.univ-lorraine.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-02-22T10:03:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-lorraine.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université de Lorraine</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACaUlEQVQ4y5VTS09TURD+zrl90EJsS++9UNryMIEYQ1JJqIlbdUH0BxgTw4qFO1cu1AUbjTt2JuqOhy/QkCjR4MIaFurCsCImGiDSphAwYHn0cVvu+VxcWiuBhV8yOcnMmW9mznwHOIRkInmmI9Y12d3VU9SDOsMBnb2nelW8reNlf6K/D8chxRRikfY3RsikHjAYDujUgwb1oMHmE2HqAYNGyGQsEp+Z5GQtTwAAmUKbee27ZZV6lFIQENBcGgBAKceEADTHBbfHvbi2nu2GEA5BrDU+UygULmtSgyYlIASssgUhNEgJuIRTyqr8JfH5GmYza5kB9CcSZ42gSQAcHxtnFQAINHP0QYTcj1FtxgjoDAecsYyQyWRf8pzMbeeHFRUAwLbtg7ZVbUbbBrBPVGwCDqtzksiurt6UJM5XLxPH4IgASXi93gGZy+UahBD4XwghsLO945P1ydJ5U7CuZDVM1q2tjkS2tJql6sybv7cAAJrUAHgAbGFnzwYE4G100je3ActyRmgOh/dkoVCcEkLArzVh+tV0jT2TWcbH1BzGJzYAFwEFpBc8+DTrRu9piXIZyO/uTmHo6lCLETKpBw0C4PNnL1iPkZFHnHgI0o6SpSjJGC9daGGjx+Tg4GBUm1+Yz+thw6yUK0m/rxFjT0ax+GMJShHplTR+bWRx/cZ7LH3zgxawvkK8fqeQL/oef/4y97TWcjwSf1vVvoD7QEiOOT6DgE5Apx5qn/3nL1TRGe+8m98r3KaiwOHNEpCaoL+p6f7P9PKdIwmcdX3Fyc4rt/bL5YvFYil6oPusy+X5sJxevHdYM38As6AfdxYzj+0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDctMjBUMTA6NTA6MDMrMDI6MDDYSyyhAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE1LTA3LTIwVDEwOjUwOjAzKzAyOjAwqRaUHQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-lorraine.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Staff, teachers and students of the university of Lorraine</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de Lorraine</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnel et étudiants université de Lorraine</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUSor3hAdz5wii35oTWn8yhdlSX/4wDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwMy51bml2LWxvcnJhaW5lLmZyMB4XDTE3MDIyMTEz
+NDc0MloXDTM3MDIyMTEzNDc0MlowIDEeMBwGA1UEAwwVaWRwMy51bml2LWxvcnJh
+aW5lLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhVZPl/SkJFM6
+7mndSaaBrDu1fwHma2I17QA/1IDdxLiKtTu3kmuU6gPMAd1iNYrD3AC54z3VB2kH
+ctz5JzfZ5sgj6PLD8QQFTaAUdjZl/79ZS5z6xDVoSBzfN8DGqnCBh/qL31zjurf6
+jni6XgXsqiniEg2cO+tcHn//V0YzD53FwBHiYFIyK2FgSiLY37CzfxsnwG0qf7rG
+L6FtgiwWuvGqlE7LimG2lj9pHA+T0IZqPulu6Ld7duWWf3u1H7skci637wXMrEkR
+FQYRUDqOVjy6GrB+FUTUU6SKg0Jx3jj4Pg4UK2MaedZMhxzKugY7yo8rrXvSdiNw
+2ZfKiuGdWwIDAQABo3EwbzAdBgNVHQ4EFgQUiLpypi7X2AMPt5y7OcG7apkjZg4w
+TgYDVR0RBEcwRYIVaWRwMy51bml2LWxvcnJhaW5lLmZyhixodHRwczovL2lkcDMu
+dW5pdi1sb3JyYWluZS5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAITQTmn2yGxpjzZnNxhwAq0vyLDEMZZQTiVbsCI+ztP01setPhgraUxO4EV+N
+4eIvDLt1CZMhvDN0s+Oc9Q61ewGZ6/eX66jc2Rcln3o5DaqrRMCySgB0wikkXmIM
+MenZzJfNSF2OfaoFbmVvOJEaRyCH8xKMkbwsRwylLcnocHafe1GZGbT8iy+Gp0o7
+HKwHfcNMq44jUouXeLllneHvpQyXfWObkgf/p5x/III6GTTjFCnurv16GDo4CaPG
+Xvi/8fDb+F6jcMiaPJfsdXvwJldBJKJpQ19B03PQDw0lG7j+LI/ni09MnJLRuqVf
+r4RUIrBzTv8WSUPf8vehotYcyw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp3.univ-lorraine.fr/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp3.univ-lorraine.fr/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp3.univ-lorraine.fr/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">univ-lorraine.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUSor3hAdz5wii35oTWn8yhdlSX/4wDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwMy51bml2LWxvcnJhaW5lLmZyMB4XDTE3MDIyMTEz
+NDc0MloXDTM3MDIyMTEzNDc0MlowIDEeMBwGA1UEAwwVaWRwMy51bml2LWxvcnJh
+aW5lLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhVZPl/SkJFM6
+7mndSaaBrDu1fwHma2I17QA/1IDdxLiKtTu3kmuU6gPMAd1iNYrD3AC54z3VB2kH
+ctz5JzfZ5sgj6PLD8QQFTaAUdjZl/79ZS5z6xDVoSBzfN8DGqnCBh/qL31zjurf6
+jni6XgXsqiniEg2cO+tcHn//V0YzD53FwBHiYFIyK2FgSiLY37CzfxsnwG0qf7rG
+L6FtgiwWuvGqlE7LimG2lj9pHA+T0IZqPulu6Ld7duWWf3u1H7skci637wXMrEkR
+FQYRUDqOVjy6GrB+FUTUU6SKg0Jx3jj4Pg4UK2MaedZMhxzKugY7yo8rrXvSdiNw
+2ZfKiuGdWwIDAQABo3EwbzAdBgNVHQ4EFgQUiLpypi7X2AMPt5y7OcG7apkjZg4w
+TgYDVR0RBEcwRYIVaWRwMy51bml2LWxvcnJhaW5lLmZyhixodHRwczovL2lkcDMu
+dW5pdi1sb3JyYWluZS5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAITQTmn2yGxpjzZnNxhwAq0vyLDEMZZQTiVbsCI+ztP01setPhgraUxO4EV+N
+4eIvDLt1CZMhvDN0s+Oc9Q61ewGZ6/eX66jc2Rcln3o5DaqrRMCySgB0wikkXmIM
+MenZzJfNSF2OfaoFbmVvOJEaRyCH8xKMkbwsRwylLcnocHafe1GZGbT8iy+Gp0o7
+HKwHfcNMq44jUouXeLllneHvpQyXfWObkgf/p5x/III6GTTjFCnurv16GDo4CaPG
+Xvi/8fDb+F6jcMiaPJfsdXvwJldBJKJpQ19B03PQDw0lG7j+LI/ni09MnJLRuqVf
+r4RUIrBzTv8WSUPf8vehotYcyw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp3.univ-lorraine.fr/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Lorraine</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Lorraine</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-lorraine.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:shibboleth-contact@univ-lorraine.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

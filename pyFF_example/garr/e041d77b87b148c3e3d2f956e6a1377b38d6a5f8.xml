@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://filesender.cesnet.cz/saml/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2011-11-04T10:27:36Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/sp-group/aa.cesnet.cz</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">FileSender</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">FileSender</mdui:DisplayName>
+		<mdui:Description xml:lang="en">CESNETs servis for sending files.</mdui:Description>
+		<mdui:Description xml:lang="cs">Cesnetí služba pro posílání souborů.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://filesender.cesnet.cz/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://filesender.cesnet.cz/</mdui:InformationURL>
+		<mdui:Logo height="40" width="99">https://whoami.cesnet.cz/idp/images/cesnet-logo-40.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9jCCAd4CCQDdhtc4WQjM2jANBgkqhkiG9w0BAQsFADA9MQswCQYDVQQGEwJD
+WjEPMA0GA1UEChMGQ2VzbmV0MR0wGwYDVQQDExRmaWxlc2VuZGVyLmNlc25ldC5j
+ejAeFw0xNTA0MDMwNTU1MjdaFw0zNTA0MDIwNTU1MjdaMD0xCzAJBgNVBAYTAkNa
+MQ8wDQYDVQQKEwZDZXNuZXQxHTAbBgNVBAMTFGZpbGVzZW5kZXIuY2VzbmV0LmN6
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv1WBCUZpXFxBpJ0AxFKG
+uJtdm3MY0PlKNELuzUvVTfiOMqHt19dmuixMzlbk8oPliCI69E6TndBMYnTucueF
+OgaPi/W7eWEN1p74liVgQQXTypBt8JiIhiHUf4b5AShmNPaWh+IrGtzQ9oFPBdVg
+U542pT5oLje84ZbfiXMQAwkJ/1lgW0UDVFQTyRrge+aPN89V9Sq5MaHxjzzLvCX0
+i3BTtUInYUqXOb3E15zTnHiiNtZZOcc9p3QNcEiBpUMyrD/SfGgfAME6wZga4v02
+9vxLDyYCvlArkSCocEgWRISwr4uXK1GiDJ7VKsbO6rSnc//yLz2vt6RYSGrNBimH
+XQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQChn/lKZGjGsWUav7wlYjAcXND6D8kn
+afWr7LkB/YP819UQJyj+V+Spi+crr/UGQp3anPvh7ZE5Z+/YwuwuuL7r8a9OnKPE
+Z9jt1XMK7QLNegQcypv0ZhGEprWFPR+B0myu4HaTvqEDZN1Dp4JVbhv5AH+wJUDB
+JmjnQQYY+ipthydPcXJkiT7S6zlNrSnPEtd1ZigIA5aOpJqQY9OzKZJtH8L30ydG
+NHCpqu97MxTSyNsP55yQRl+cR8BxOPHvqZQy1lxOhvdciI73pSvhOGz4QWOQ4UJr
+6BYn4pSRSSeHeySL3iBD1xYFvai+yTeAgEOOYO4SSq9h6Dq8D4THqU4Y
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9jCCAd4CCQDdhtc4WQjM2jANBgkqhkiG9w0BAQsFADA9MQswCQYDVQQGEwJD
+WjEPMA0GA1UEChMGQ2VzbmV0MR0wGwYDVQQDExRmaWxlc2VuZGVyLmNlc25ldC5j
+ejAeFw0xNTA0MDMwNTU1MjdaFw0zNTA0MDIwNTU1MjdaMD0xCzAJBgNVBAYTAkNa
+MQ8wDQYDVQQKEwZDZXNuZXQxHTAbBgNVBAMTFGZpbGVzZW5kZXIuY2VzbmV0LmN6
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv1WBCUZpXFxBpJ0AxFKG
+uJtdm3MY0PlKNELuzUvVTfiOMqHt19dmuixMzlbk8oPliCI69E6TndBMYnTucueF
+OgaPi/W7eWEN1p74liVgQQXTypBt8JiIhiHUf4b5AShmNPaWh+IrGtzQ9oFPBdVg
+U542pT5oLje84ZbfiXMQAwkJ/1lgW0UDVFQTyRrge+aPN89V9Sq5MaHxjzzLvCX0
+i3BTtUInYUqXOb3E15zTnHiiNtZZOcc9p3QNcEiBpUMyrD/SfGgfAME6wZga4v02
+9vxLDyYCvlArkSCocEgWRISwr4uXK1GiDJ7VKsbO6rSnc//yLz2vt6RYSGrNBimH
+XQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQChn/lKZGjGsWUav7wlYjAcXND6D8kn
+afWr7LkB/YP819UQJyj+V+Spi+crr/UGQp3anPvh7ZE5Z+/YwuwuuL7r8a9OnKPE
+Z9jt1XMK7QLNegQcypv0ZhGEprWFPR+B0myu4HaTvqEDZN1Dp4JVbhv5AH+wJUDB
+JmjnQQYY+ipthydPcXJkiT7S6zlNrSnPEtd1ZigIA5aOpJqQY9OzKZJtH8L30ydG
+NHCpqu97MxTSyNsP55yQRl+cR8BxOPHvqZQy1lxOhvdciI73pSvhOGz4QWOQ4UJr
+6BYn4pSRSSeHeySL3iBD1xYFvai+yTeAgEOOYO4SSq9h6Dq8D4THqU4Y
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://filesender.cesnet.cz/simplesaml/module.php/saml/sp/saml2-logout.php/filesender.cesnet.cz"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://filesender.du1.cesnet.cz/simplesaml/module.php/saml/sp/saml2-logout.php/filesender.cesnet.cz"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://filesender4elixir.cesnet.cz/simplesaml/module.php/saml/sp/saml2-logout.php/filesender.cesnet.cz"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://filesender6.cesnet.cz/simplesaml/module.php/saml/sp/saml2-logout.php/filesender.cesnet.cz"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://filesender.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://filesender.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz/artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender.du1.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://filesender.du1.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender.du1.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://filesender.du1.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz/artifact" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender4elixir.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://filesender4elixir.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender4elixir.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://filesender4elixir.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz/artifact" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://filesender6.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://filesender6.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://filesender6.cesnet.cz/simplesaml/module.php/saml/sp/saml2-acs.php/filesender.cesnet.cz" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://filesender6.cesnet.cz/simplesaml/module.php/saml/sp/saml1-acs.php/filesender.cesnet.cz/artifact" index="15"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CESNET, a. l. e.</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">CESNET, z. s. p. o.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CESNET</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">CESNET</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ces.net/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.cesnet.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Lubos</md:GivenName>
+	<md:SurName>Kopecky - administrator</md:SurName>
+	<md:EmailAddress>mailto:du-support@cesnet.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

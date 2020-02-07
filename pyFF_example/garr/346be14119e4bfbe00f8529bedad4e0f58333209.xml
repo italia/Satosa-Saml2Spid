@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://zdapi.appointlink.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://zdapi.appointlink.com/SAML/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ZD API</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://trymylaw.com/wp-content/uploads/AppointLink-Terms-of-Service-clean-copyrev3.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="63" width="225" xml:lang="en">https://www.seatgen.com/wp-content/uploads/2018/04/SeatGen-Logo-x2-1.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIECzCCAnOgAwIBAgIUJRqTUJR5wU3FKgYuk/nRk5HSZPEwDQYJKoZIhvcNAQEL
+BQAwHjEcMBoGA1UEAxMTemRob3N0MS5teWxhdy5sb2NhbDAeFw0xOTExMjAyMTIy
+MjVaFw0yOTExMTcyMTIyMjVaMB4xHDAaBgNVBAMTE3pkaG9zdDEubXlsYXcubG9j
+YWwwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDS6u2utUER8PGGIGTN
+bdnQdxpMMjxwafzyYluyR+tWNI452aNXaJtOXmbA8cCnymWAzohOFXA4iMwNLVlp
+iFRGTbsu3o5i2G3RGRfdWvokglnYwQ+b26VSpKKT3LFwRw/T7r1aL07Mzle/jgW9
+z5qMte62CaP+0R4OMUX1O+uunJyHy/X1D4ym6Mzp+7yLYnSXTKYwBUE1foPCFlX4
+KzGw653XRHBNz+eWP9V/EMm/fImyRHQ1O05OmhmR4AHtX/DTFB3AaMxXPnQIoNT4
+FwBRoevFpi/78fNyUQ2215Igevp37HjDNlZJXu5F/iNvPrkL3wEO/O+/lqjM83ry
+jCc74OQKpEdSu8lO4CBakI88ZD/BpsFYMz0Aav5RmcgXKQkfPJjHqoLvvX77gb6T
+xWqTmHyhzBKEddJztyMyU+p359d7tJHNNKC4p4cHuX8zzfYei3IcxPXsM5q7jU4Y
+4EWFZkbfKRDE4UzO4gcfroQDW1a3WgmtdgOCQyp6nueCBCUCAwEAAaNBMD8wHgYD
+VR0RBBcwFYITemRob3N0MS5teWxhdy5sb2NhbDAdBgNVHQ4EFgQUwhjb5NTwMP25
+4zDuHqZvIDXOQ28wDQYJKoZIhvcNAQELBQADggGBAABFn+t/uJ7yOsPZDeLBVyo4
+1OCUzMqQ7suVwkChkTswXG1BplqDZYdaa8apd20hNZLU4vlNbkRTCvdivtd5HsG6
+q0umSHCbWyu40xbOe54LxUr+ma8dRfniLZoJFCnwrbj0LzWqLeRKg7FMLh8q2Ax2
+DCIDE8+KQMlPPdCfzBkZzRrsRKyxDyz7TXEJDWNbMVVnqnwonOIhvlYb6u9p8n8h
+YbKVPbwbw7t9JuLmDy94RISJW7gEgp4LW1wZe/JSlgiJo4bXB+xpQ6rFCgf8zVDX
++/28RC7b4LXqnQh/Ljdb86OfmdE7T/RCIUviTwO3zDwn+8pdi+C4HRssroyrvMOe
+Jhuc7sc6g8gM48gJrFPebPlz7ykDW6XQlBOTVi6qEuilitJqL+kpZNl2ZaTK5ZtA
+94sct5G9WXxvesaibEK+hhZDAdTK9eiaSqCem13M7zzzkWvPluBS/fe7Rl/iuxJD
+/I+mA+DJqGhvmeUzU3sSLi3L5ImegfTMTwGZI5uzqw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://zdapi.appointlink.com/SAML/SingleLogoutService"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://zdapi.appointlink.com/SAML/AssertionConsumerService" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">ZD API</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">AppointLink Portal Solutions, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">AppointLink Portal Solutions, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://appointlink.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Peter Zdrodowski</md:GivenName>
+	<md:EmailAddress>peterz@appointlink.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Peter Zdrodowski</md:GivenName>
+	<md:EmailAddress>peterz@appointlink.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Peter Zdrodowski</md:GivenName>
+	<md:EmailAddress>peterz@appointlink.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

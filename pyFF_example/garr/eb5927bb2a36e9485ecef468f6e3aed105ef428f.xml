@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib2.its.rochester.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://shib2.its.rochester.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">rochester.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Rochester</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The University of Rochester is one of the country's top-tier research universities. Our 158 buildings house more than 200 academic majors, more than 2,000 faculty and instructional staff, and some 11,300 students—approximately half of whom are women.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.rochester.edu/aboutus/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://tech.rochester.edu/policies/information-technology-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="102" width="104" xml:lang="en">https://shib2.its.rochester.edu/idp/images/ur_logo2.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAM8nPCRk50aihh9jR5hpm0QebIz8MA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1MB4XDTEwMDUw
+MzE3Mzk0NloXDTMwMDUwMzE3Mzk0NlowIjEgMB4GA1UEAxMXc2hpYjIuaXRzLnJv
+Y2hlc3Rlci5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSsvAF
+IHstqZI+DowfRTvgPn7cQ2CFWX24RmJCR5X5hYTfI2AMrN9JE+7PY9F2JHPKj/PV
+7uXt3oiN7jDexGtDQojywAsEz86GKTEgHKEGQ8YzwLnI1/6ZDrvykH8aCrgoQm7O
+M8U3suUb6pFo2/ZZ3jmzMbd4k8NJa7QXjtqA0XM1I+3F41dIaC5/s8XIcg7Ahjd/
+nm6sohuGVHJx+HZog1VaTqFuVuR3cWyqQ6dC55XIAMq9NiA3JtU69JKMTB34Ux7b
+KTmgVmsKi3JLapcDF1pzCcQoVuEy0PSbLz+R+02RRbGs3QeJqZbLOSUR9KraW0qD
+rERHsLgJcdbFguAzAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3NoaWIyLml0cy5yb2No
+ZXN0ZXIuZWR1hi5odHRwczovL3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBR8nYpQTgEI/aYKmVXqfgmstZVmpDANBgkqhkiG
+9w0BAQUFAAOCAQEAr6si4Z4y/1kCtAGjUpEB0JooKlMZ0SuKJlFPmXhPZXZSbgXo
+N9MAHMnjlhzjCdde39FAtlYPuryGiP0Rtk8C3T+aZg/Whzp1iY7aDuj0MG5XvRrY
+WClnuYqRa7ImEOP1X/L3/5j67fBOvIuYVKAfE28HJFLgnMscd+BLwFwg4MUP51OJ
+XfUt2z0ezqr2o+rDRnkBZLiizpHQcaIycAEoOsQpjg1tQE7Uc/uk4pah/eHu1f1C
+bkmTAMBCJrx8UG038vZR+ylLz1i+I2UI7AmhvNfuh84TdMZH85Sf5G8mPz+Krwib
+5iANvMct2zX06MsOylywfcDKALrij57mN3ZP+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib2.its.rochester.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">rochester.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIVAM8nPCRk50aihh9jR5hpm0QebIz8MA0GCSqGSIb3DQEB
+BQUAMCIxIDAeBgNVBAMTF3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1MB4XDTEwMDUw
+MzE3Mzk0NloXDTMwMDUwMzE3Mzk0NlowIjEgMB4GA1UEAxMXc2hpYjIuaXRzLnJv
+Y2hlc3Rlci5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSsvAF
+IHstqZI+DowfRTvgPn7cQ2CFWX24RmJCR5X5hYTfI2AMrN9JE+7PY9F2JHPKj/PV
+7uXt3oiN7jDexGtDQojywAsEz86GKTEgHKEGQ8YzwLnI1/6ZDrvykH8aCrgoQm7O
+M8U3suUb6pFo2/ZZ3jmzMbd4k8NJa7QXjtqA0XM1I+3F41dIaC5/s8XIcg7Ahjd/
+nm6sohuGVHJx+HZog1VaTqFuVuR3cWyqQ6dC55XIAMq9NiA3JtU69JKMTB34Ux7b
+KTmgVmsKi3JLapcDF1pzCcQoVuEy0PSbLz+R+02RRbGs3QeJqZbLOSUR9KraW0qD
+rERHsLgJcdbFguAzAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3NoaWIyLml0cy5yb2No
+ZXN0ZXIuZWR1hi5odHRwczovL3NoaWIyLml0cy5yb2NoZXN0ZXIuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBR8nYpQTgEI/aYKmVXqfgmstZVmpDANBgkqhkiG
+9w0BAQUFAAOCAQEAr6si4Z4y/1kCtAGjUpEB0JooKlMZ0SuKJlFPmXhPZXZSbgXo
+N9MAHMnjlhzjCdde39FAtlYPuryGiP0Rtk8C3T+aZg/Whzp1iY7aDuj0MG5XvRrY
+WClnuYqRa7ImEOP1X/L3/5j67fBOvIuYVKAfE28HJFLgnMscd+BLwFwg4MUP51OJ
+XfUt2z0ezqr2o+rDRnkBZLiizpHQcaIycAEoOsQpjg1tQE7Uc/uk4pah/eHu1f1C
+bkmTAMBCJrx8UG038vZR+ylLz1i+I2UI7AmhvNfuh84TdMZH85Sf5G8mPz+Krwib
+5iANvMct2zX06MsOylywfcDKALrij57mN3ZP+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib2.its.rochester.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib2.its.rochester.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Rochester</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Rochester</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.rochester.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sean Singh</md:GivenName>
+	<md:EmailAddress>sean.singh@rochester.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Sean Singh</md:GivenName>
+	<md:EmailAddress>sean.singh@rochester.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lisa Sprague</md:GivenName>
+	<md:EmailAddress>lisa.sprague@rochester.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Incident Response</md:GivenName>
+	<md:EmailAddress>abuse@rochester.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

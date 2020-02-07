@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://nnm.fm.tul.cz/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2020-01-22T16:00:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">NNM portal</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">NNM portál</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Neisse Network Mechatronics portal of projects.</mdui:Description>
+		<mdui:Description xml:lang="cs">Neisse Network Mechatronics portál projektů.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://nnm.fm.tul.cz/pages/about</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">https://nnm.fm.tul.cz/pages/about</mdui:InformationURL>
+		<mdui:Logo height="40" width="40">https://liane.tul.cz/img/znak-tul.png</mdui:Logo>
+		</mdui:UIInfo>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://nnm.fm.tul.cz/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://nnm.fm.tul.cz/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIUbpuphXJdyNZTY5G6Udwn0eSH5s8wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAxMNbm5tLmZtLnR1bC5jejAeFw0xOTA5MTIwOTQwMTNaFw0y
+OTA5MDkwOTQwMTNaMBgxFjAUBgNVBAMTDW5ubS5mbS50dWwuY3owggGiMA0GCSqG
+SIb3DQEBAQUAA4IBjwAwggGKAoIBgQDIhzC4ohxmTo0gEYTwfqX/dtVJzsDzdz1t
+oIvMLZy4HG0MiLpZdroataxmV6jSxr5GyjM5TQ89swAWQoXhl2b+VZYvSj8pkE8s
+AcBLaXSpk4Zvvu2N4GjepRnbmvIgNW6tUNBYbFWZZSbJI9xpVYimFsvbyMjq+/Op
+jaut1efdaSq0t8OYY+rGjda99OZPm7URUqFHrEapLJg3pUCQ2mn+S3ADA37GGGZM
+dx6FSm1vkat4zKWJ6TcbRLYMB8WRHiaNYwofHZn1S8UzmgJP38hzcT8P4rJsGx+F
++vw85/zcV9bAnhRXkxZQ3ADJJ/CuQMuV9AJ2GOnKwByep1bn9eWVRE/4KHx2gzcB
+/h2NjCfjLND5SD+kYSX6FL/uPgWz3iGZOTa73hr48UMpJ/LAZYaTQ/LhVuL8bXQ1
+RDvU+osaNr9GjilyEA+iPtmbbAQkgHrMw8dW6axyTy9lIe+RZd0XxrPqHwH75Esd
+iQLD7I9m3F5ulnMBtPbzCK7BU8XxyWcCAwEAAaNdMFswOgYDVR0RBDMwMYINbm5t
+LmZtLnR1bC5jeoYgaHR0cHM6Ly9ubm0uZm0udHVsLmN6L3NoaWJib2xldGgwHQYD
+VR0OBBYEFI5ENnUevYLdalFYx+Jxe+XfBPKtMA0GCSqGSIb3DQEBCwUAA4IBgQAw
+AM1+Z2s7zmUGcH77TQJBOUHAN/EgfQIDrm3iPELFM9xwlRqW0FAHMAcHde5rZ8Zm
+zorlf7BW7wjiVTRVpKcKDF2gOjuXrMU7L8tY2R6J7wbdGrvwrDC52yV/D8BXpgkR
+et9BY/UFI1R9J+PZH8+uRLUfSZNOMyaj5DoVx4nE2c+lWqwCT1arQM/idEPHTItg
+y4POI3mW2mf+YjsJAJrmeTiF2o7LPMTSk1EBZ/UxvmcFLvRDjNv41nECHhjqiBNJ
+pvGWGJb/UhaAfOgBIRCogyOzbHbv5DgOybozQoMV6WpTrRxehM4NE3stUd1CXt1J
+5mXKytT0ozZATwibU5wmFU8HswgA7d3BnRPk3aJn4nQpTs3yl1vR4weplZama0DL
+SymjBaaO60rPLiRtdSBBvFxg7c3uRMlFYXZTZ4iX1XyKjPUavwD0NQT/IKJ8jOm+
+oKSdrs31Tp3m3C07FSzr+PfUABt7QyuQVTnrc/AZDeWVPOhrMwxJhQR3tjQNygw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nnm.fm.tul.cz/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://nnm.fm.tul.cz/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="en">NNM portal</md:ServiceName>
+		<md:ServiceName xml:lang="cs">NNM portál</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Neisse Network Mechatronics portal of projects.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="cs">Neisse Network Mechatronics portál projektů.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eppn" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonOrgUnitDN" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Technical University of Liberec</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Technická univerzita v Liberci</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">TUL</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">TUL</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.tul.cz/en</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">https://www.tul.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jana</md:GivenName>
+	<md:SurName>Vitvarová</md:SurName>
+	<md:EmailAddress>mailto:jana.vitvarova@tul.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

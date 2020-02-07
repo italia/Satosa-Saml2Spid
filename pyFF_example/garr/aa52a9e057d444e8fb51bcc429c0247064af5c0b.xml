@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.it.liu.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">liu.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Linköpings Universitet - old</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Linköping University - old</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identitsutgivare för anställda och studenter vid Linköpings universitet.</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for employees and students at Linköping University.</mdui:Description>
+		<mdui:Logo height="68" width="350">https://login.it.liu.se/images/logo/logo-350x68-sv.png</mdui:Logo>
+		<mdui:Logo height="68" width="350" xml:lang="sv">https://login.it.liu.se/images/logo/logo-350x68-sv.png</mdui:Logo>
+		<mdui:Logo height="68" width="350" xml:lang="en">https://login.it.liu.se/images/logo/logo-350x68-en.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>liu.se</mdui:DomainHint>
+		<mdui:IPHint>130.236.0.0/16</mdui:IPHint>
+		<mdui:IPHint>192.36.54.0/24</mdui:IPHint>
+		<mdui:IPHint>192.36.93.0/24</mdui:IPHint>
+		<mdui:IPHint>192.36.94.0/24</mdui:IPHint>
+		<mdui:IPHint>192.12.235.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.86.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:6b0:17::/48</mdui:IPHint>
+		<mdui:IPHint>2001:6b0:4c::/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:58.397836,15.576008</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:58.403479,15.622827</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:58.589874,16.176439</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:59.350824,18.143391</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUHcc+HFeluG9u/Vu5nkuV1Y6IFhAwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPbG9naW4uaXQubGl1LnNlMB4XDTE3MDMxNTE1MjY1MVoX
+DTM3MDMxNTE1MjY1MVowGjEYMBYGA1UEAwwPbG9naW4uaXQubGl1LnNlMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvy/nXnEFMt1jK0yEL6LgvrGuVdc
+3oULKcfmcvw4PvgVl2/+RmQWsaDLPmhTixGIq1yJVhTNmmtCL37hxPSClvYUd91+
+H/csc9SJSi74chhfzt6zCBWeFM8F/mG7lSy/7eNPz8Ik6u0iNkuD5c1998zI6HGr
+wYN8aaH540jBSdbLlqBkuOsk2oU/Du/j3cVIM9349zI09yxcJ68Gr3vebI+bcVEk
+Kf3AVZr04/n8m7sN7VHr9IDvW5kJv/fMttzXwu2BTl7eQgUBTzdLBECYBkolYUVt
+pIV/JmS6DMlfjI8ax6r5WszSImzfFYRJj8xibXPunK3d5pfszxmwMSqPpQIDAQAB
+o2UwYzAdBgNVHQ4EFgQUl8PX8gvOt+qFhbwtZ6QT1MpMN54wQgYDVR0RBDswOYIP
+bG9naW4uaXQubGl1LnNlhiZodHRwczovL2xvZ2luLml0LmxpdS5zZS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAQyaKq6SShk5VgJg+Mc0cOySVKful
+dErocA36zzVcPdZ7D+BYBMkQAQHfuuHs+MPvC2jMysqFXW1I1aW3fBZ+xDeUZrK/
+4D/AcNDfmmeQE2wCgjsniNW67NEAUuMmUa/S+rlL0cDn1Pia/2yBfubTbhHEvWxA
+FY69CDg0bywMnqA7PBfSON5H3WdevD3zs313Mag9Zy+eoAITv8Q5Gv2EHYLbYaIa
+tKMiJ3vl+XqigygtUir/UsLnHE7dXQwBmLVxN/mWhpU4ot79woW5Al5oKdvdfHy0
+CqAGwzHRYPQVtblIYJC5W9BhZ1l5PcIkobdhCQYT1iGibMTiEyjdEVa0pw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAK4ZRjYBPQC0lBL2HMorIwHx4Zm/MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTAeFw0xNzAzMTUxNTI2NDla
+Fw0zNzAzMTUxNTI2NDlaMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKYukue0LoJYjbLSzvhG2rEkl4WB
+0BexAgaLOegD+4sZ8uMu/iqVU/CY5oyNmtNWpgK4PKWgOWAVXn61s30H80wqUarZ
+xuvzsQWoHcZDoJlcEfMcol7SU3IMY1HuslWkprsDcxrEQBh32zKb2QVz+VIHldeb
+JHOuiSTF6U2S/FZbL85HBFEJ/D2bLf2dn+Txs/dChMTmGkoq14Fvx6U0iaTXGSsP
+pCVyHPXvmhy19YgOh0NxUa3dmejJawSLAg7mvCWJNw9oMrh1nLvTCMzKa8mT5jY9
+KGMHbC/OROa/iVMjUWDcSenUclN8sQzKMSUZq0nBvtyQ+QkfCRIa0dTt0W0CAwEA
+AaNlMGMwHQYDVR0OBBYEFKOByX3ixO5csXU1uL/3+DfCO6SmMEIGA1UdEQQ7MDmC
+D2xvZ2luLml0LmxpdS5zZYYmaHR0cHM6Ly9sb2dpbi5pdC5saXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAH28tjQc9K6+XGkrEIngOAJYFooJ
+BXWPcOjcBktzCpBQEkwsBQUm49CyXmh/iUD19lBDaLeiHZfTCqc9ngfUbEoa6eZc
+882sounMumAd26GUouRo0NPOycXqjy60/lLYI8YnEg5QNiZhg+3DelIaZbMBPGF/
+pOI7/v5bNfrwAYq2/z2+AIffaaEElfxL29Af7LiFlyaD1POq2x7usHWejWzC0q+P
+dIIc188IIlVfFQJxJ0wl9wIb0Jkz7vwmWyo/KRre7YJTBXo5ig4i7qRuL5ZTHrTp
+iKFAgcegluwZn0xVjNzrTm7fD4zRUJ8SuHo+B42F3JvwrPKpEueEZSXpkZo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAM5tJLVR6quocWTQDzeuBTjcbIjgMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTAeFw0xNzAzMTUxNTI2NTBa
+Fw0zNzAzMTUxNTI2NTBaMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIYAhztRzpt3nvtV2ohqShSMu7zP
+AkV5EfgRf8jYT0AKbkts5WJh5OyaS2kZiRPlXM5uEh4OvoZrhQ/3ZgaeHibzx9/t
+8MO4zNpR/qth0xDtJcYDtqZtMSrXEeaYgAIX+UoqQlSMpQO8CWCkmqHWyWMcmld/
+LLC5K5AMUGx/ATE5dys/+QnuVAGjuAS1KGE8zarn0rUGBHMCmgsMflONqHYhW/L1
+++o9UzptvxrvJuJuF/r5f8rQU6dztlKGJeqkuf3HP9PEcAFseog9d1v/2MNic+R6
+66P3IgM+Yp3jzEeXgwAkA5FpGyHMLz4/O7dmz7rqbRTo4VB8WeF1/Mmosv8CAwEA
+AaNlMGMwHQYDVR0OBBYEFATiAWTWv1fBJuYIO0v7DJmM6C73MEIGA1UdEQQ7MDmC
+D2xvZ2luLml0LmxpdS5zZYYmaHR0cHM6Ly9sb2dpbi5pdC5saXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEMw6+CAAxRIxbGtebdkOTRQ2eQf
+hhrkRckGjuE4H3j1MrpkQzSaRqpowXaB9zqO1EZGA+AB8s2zbfMs0GXzD8rtmnKi
+YG7XvkoNPM9n5sTWyu64bEAZ+gTPgETDHCSwKIhHW+krZgkFFM1dZvQlcB0/FPG7
+yrnXkTsFVKk01ixFDyFizKc2fOryHuiKwRbmkdJvn0BIlpY/EXSz0VCrWmEyfYb5
+7NrUVEgiSfLs+HCyjIl5riIMiiucGo8jRZECpY+neVE6vP4pQWI1tCg4QfjwQAFf
+RZPA+Q2niYC920FIv6uscwfFJR4PEFBA83wLSZ39FDm79HM3TNQ9KFtgLY8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.it.liu.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.it.liu.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.it.liu.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.it.liu.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.it.liu.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">liu.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUHcc+HFeluG9u/Vu5nkuV1Y6IFhAwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPbG9naW4uaXQubGl1LnNlMB4XDTE3MDMxNTE1MjY1MVoX
+DTM3MDMxNTE1MjY1MVowGjEYMBYGA1UEAwwPbG9naW4uaXQubGl1LnNlMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmvy/nXnEFMt1jK0yEL6LgvrGuVdc
+3oULKcfmcvw4PvgVl2/+RmQWsaDLPmhTixGIq1yJVhTNmmtCL37hxPSClvYUd91+
+H/csc9SJSi74chhfzt6zCBWeFM8F/mG7lSy/7eNPz8Ik6u0iNkuD5c1998zI6HGr
+wYN8aaH540jBSdbLlqBkuOsk2oU/Du/j3cVIM9349zI09yxcJ68Gr3vebI+bcVEk
+Kf3AVZr04/n8m7sN7VHr9IDvW5kJv/fMttzXwu2BTl7eQgUBTzdLBECYBkolYUVt
+pIV/JmS6DMlfjI8ax6r5WszSImzfFYRJj8xibXPunK3d5pfszxmwMSqPpQIDAQAB
+o2UwYzAdBgNVHQ4EFgQUl8PX8gvOt+qFhbwtZ6QT1MpMN54wQgYDVR0RBDswOYIP
+bG9naW4uaXQubGl1LnNlhiZodHRwczovL2xvZ2luLml0LmxpdS5zZS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAQyaKq6SShk5VgJg+Mc0cOySVKful
+dErocA36zzVcPdZ7D+BYBMkQAQHfuuHs+MPvC2jMysqFXW1I1aW3fBZ+xDeUZrK/
+4D/AcNDfmmeQE2wCgjsniNW67NEAUuMmUa/S+rlL0cDn1Pia/2yBfubTbhHEvWxA
+FY69CDg0bywMnqA7PBfSON5H3WdevD3zs313Mag9Zy+eoAITv8Q5Gv2EHYLbYaIa
+tKMiJ3vl+XqigygtUir/UsLnHE7dXQwBmLVxN/mWhpU4ot79woW5Al5oKdvdfHy0
+CqAGwzHRYPQVtblIYJC5W9BhZ1l5PcIkobdhCQYT1iGibMTiEyjdEVa0pw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAK4ZRjYBPQC0lBL2HMorIwHx4Zm/MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTAeFw0xNzAzMTUxNTI2NDla
+Fw0zNzAzMTUxNTI2NDlaMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKYukue0LoJYjbLSzvhG2rEkl4WB
+0BexAgaLOegD+4sZ8uMu/iqVU/CY5oyNmtNWpgK4PKWgOWAVXn61s30H80wqUarZ
+xuvzsQWoHcZDoJlcEfMcol7SU3IMY1HuslWkprsDcxrEQBh32zKb2QVz+VIHldeb
+JHOuiSTF6U2S/FZbL85HBFEJ/D2bLf2dn+Txs/dChMTmGkoq14Fvx6U0iaTXGSsP
+pCVyHPXvmhy19YgOh0NxUa3dmejJawSLAg7mvCWJNw9oMrh1nLvTCMzKa8mT5jY9
+KGMHbC/OROa/iVMjUWDcSenUclN8sQzKMSUZq0nBvtyQ+QkfCRIa0dTt0W0CAwEA
+AaNlMGMwHQYDVR0OBBYEFKOByX3ixO5csXU1uL/3+DfCO6SmMEIGA1UdEQQ7MDmC
+D2xvZ2luLml0LmxpdS5zZYYmaHR0cHM6Ly9sb2dpbi5pdC5saXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAH28tjQc9K6+XGkrEIngOAJYFooJ
+BXWPcOjcBktzCpBQEkwsBQUm49CyXmh/iUD19lBDaLeiHZfTCqc9ngfUbEoa6eZc
+882sounMumAd26GUouRo0NPOycXqjy60/lLYI8YnEg5QNiZhg+3DelIaZbMBPGF/
+pOI7/v5bNfrwAYq2/z2+AIffaaEElfxL29Af7LiFlyaD1POq2x7usHWejWzC0q+P
+dIIc188IIlVfFQJxJ0wl9wIb0Jkz7vwmWyo/KRre7YJTBXo5ig4i7qRuL5ZTHrTp
+iKFAgcegluwZn0xVjNzrTm7fD4zRUJ8SuHo+B42F3JvwrPKpEueEZSXpkZo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAM5tJLVR6quocWTQDzeuBTjcbIjgMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTAeFw0xNzAzMTUxNTI2NTBa
+Fw0zNzAzMTUxNTI2NTBaMBoxGDAWBgNVBAMMD2xvZ2luLml0LmxpdS5zZTCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIYAhztRzpt3nvtV2ohqShSMu7zP
+AkV5EfgRf8jYT0AKbkts5WJh5OyaS2kZiRPlXM5uEh4OvoZrhQ/3ZgaeHibzx9/t
+8MO4zNpR/qth0xDtJcYDtqZtMSrXEeaYgAIX+UoqQlSMpQO8CWCkmqHWyWMcmld/
+LLC5K5AMUGx/ATE5dys/+QnuVAGjuAS1KGE8zarn0rUGBHMCmgsMflONqHYhW/L1
+++o9UzptvxrvJuJuF/r5f8rQU6dztlKGJeqkuf3HP9PEcAFseog9d1v/2MNic+R6
+66P3IgM+Yp3jzEeXgwAkA5FpGyHMLz4/O7dmz7rqbRTo4VB8WeF1/Mmosv8CAwEA
+AaNlMGMwHQYDVR0OBBYEFATiAWTWv1fBJuYIO0v7DJmM6C73MEIGA1UdEQQ7MDmC
+D2xvZ2luLml0LmxpdS5zZYYmaHR0cHM6Ly9sb2dpbi5pdC5saXUuc2UvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAEMw6+CAAxRIxbGtebdkOTRQ2eQf
+hhrkRckGjuE4H3j1MrpkQzSaRqpowXaB9zqO1EZGA+AB8s2zbfMs0GXzD8rtmnKi
+YG7XvkoNPM9n5sTWyu64bEAZ+gTPgETDHCSwKIhHW+krZgkFFM1dZvQlcB0/FPG7
+yrnXkTsFVKk01ixFDyFizKc2fOryHuiKwRbmkdJvn0BIlpY/EXSz0VCrWmEyfYb5
+7NrUVEgiSfLs+HCyjIl5riIMiiucGo8jRZECpY+neVE6vP4pQWI1tCg4QfjwQAFf
+RZPA+Q2niYC920FIv6uscwfFJR4PEFBA83wLSZ39FDm79HM3TNQ9KFtgLY8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.it.liu.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.it.liu.se:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="sv">LiU</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">LiU</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Linköpings Universitet - old</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Linköping University - old</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="sv">http://liu.se</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://liu.se/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Linköping University</md:Company>
+	<md:SurName>LiU-IT SAML admins</md:SurName>
+	<md:EmailAddress>mailto:saml-admins@it.liu.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Linköping University</md:Company>
+	<md:SurName>LiU-IT SAML admins</md:SurName>
+	<md:EmailAddress>mailto:saml-admins@it.liu.se</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Linköping University</md:Company>
+	<md:SurName>LiU-IT Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@liu.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 13 282828</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LiU Incident Response Team</md:GivenName>
+	<md:EmailAddress>mailto:abuse@liu.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 13 281744</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

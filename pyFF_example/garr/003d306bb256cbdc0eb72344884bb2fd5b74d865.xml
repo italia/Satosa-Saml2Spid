@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.american.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">american.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">American University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.american.edu/oit/policies/Web-Copyright.cfm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="182" width="222" xml:lang="en">https://www.american.edu/ucm/images/au_logo_v_1.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAJDrEjwuZf7tKwar/iJcnJUpBaD3MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC5hbWVyaWNhbi5lZHUwHhcNMTEwNzA2MTc1NDA1
+WhcNMzEwNzA2MTc1NDA1WjAbMRkwFwYDVQQDExBpZHAuYW1lcmljYW4uZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMec/brVKO//Y6LSzqHWBOtO
+9HvX5R49417xn/3gXnC8OIFyJpZLFDITOPfze8FC8fzgNw7HIDkR9Qvb/sqZ6yys
+rH00gblENowjF7L6b+GnDfjZdGtTSxh72JxkY/Gc/zc1hsA0VwBir12YZxgKX4ta
+ftC1lAeq5qgHDgkitQB8sbXyCdnj+iC1ZYQB2voNvX943W0Zoz9vtAzAYsmsxV3S
+LDvyN8MHBqipXWGWunloRke/JmugBOzYIZ4lGRWY0Upu24GqAhCOcS/tii3FwFZ1
+lxZ/w/wXrNyley32KoIPfY9awbZEMxQZvSWbZ78QXpvMj0m8a10Gloy7AL1n0QID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAuYW1lcmljYW4uZWR1hidodHRwczovL2lk
+cC5hbWVyaWNhbi5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFIX7x6u7hEbE
+QV3quLr2nrucZDXxMA0GCSqGSIb3DQEBBQUAA4IBAQB3sqVb/IQToX7s/0xMxzEV
+BBG/IQtOiJla3BfOQrcLtakPNX5svAQusE7r2m5YrZlmjuznGg+riNFUYBm0u089
+zTtMuRrRCaxg3NUU2JuqTo17lFNguUB7+uzfop//nu+u7PyT6325o/Bla1iP4HNc
+0Y+NWgqsewCcbwAg9QHGrHef6SAFVkeEwevEEJRB7B3I0TQBPirj9BoZjUVwDwV1
+Qld5H3yair/rrHPwpk3aH+torcKqdV/VlyPcgwXZ1LhqmgBIbQ6jGWZsniwh+xfs
+GSfLlV8bGtUawXlz2hsCK4EGIzVMeGanIBE/kozBqy3Ul6SVPZzxsU2nJCRuIHS5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.american.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.american.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.american.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.american.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.american.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">american.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAJDrEjwuZf7tKwar/iJcnJUpBaD3MA0GCSqGSIb3DQEB
+BQUAMBsxGTAXBgNVBAMTEGlkcC5hbWVyaWNhbi5lZHUwHhcNMTEwNzA2MTc1NDA1
+WhcNMzEwNzA2MTc1NDA1WjAbMRkwFwYDVQQDExBpZHAuYW1lcmljYW4uZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlMec/brVKO//Y6LSzqHWBOtO
+9HvX5R49417xn/3gXnC8OIFyJpZLFDITOPfze8FC8fzgNw7HIDkR9Qvb/sqZ6yys
+rH00gblENowjF7L6b+GnDfjZdGtTSxh72JxkY/Gc/zc1hsA0VwBir12YZxgKX4ta
+ftC1lAeq5qgHDgkitQB8sbXyCdnj+iC1ZYQB2voNvX943W0Zoz9vtAzAYsmsxV3S
+LDvyN8MHBqipXWGWunloRke/JmugBOzYIZ4lGRWY0Upu24GqAhCOcS/tii3FwFZ1
+lxZ/w/wXrNyley32KoIPfY9awbZEMxQZvSWbZ78QXpvMj0m8a10Gloy7AL1n0QID
+AQABo2cwZTBEBgNVHREEPTA7ghBpZHAuYW1lcmljYW4uZWR1hidodHRwczovL2lk
+cC5hbWVyaWNhbi5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFIX7x6u7hEbE
+QV3quLr2nrucZDXxMA0GCSqGSIb3DQEBBQUAA4IBAQB3sqVb/IQToX7s/0xMxzEV
+BBG/IQtOiJla3BfOQrcLtakPNX5svAQusE7r2m5YrZlmjuznGg+riNFUYBm0u089
+zTtMuRrRCaxg3NUU2JuqTo17lFNguUB7+uzfop//nu+u7PyT6325o/Bla1iP4HNc
+0Y+NWgqsewCcbwAg9QHGrHef6SAFVkeEwevEEJRB7B3I0TQBPirj9BoZjUVwDwV1
+Qld5H3yair/rrHPwpk3aH+torcKqdV/VlyPcgwXZ1LhqmgBIbQ6jGWZsniwh+xfs
+GSfLlV8bGtUawXlz2hsCK4EGIzVMeGanIBE/kozBqy3Ul6SVPZzxsU2nJCRuIHS5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.american.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">American University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">American University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.american.edu/index1.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Eric Weakland</md:GivenName>
+	<md:EmailAddress>eric@american.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Evgeny Bisk</md:GivenName>
+	<md:EmailAddress>ebisk@american.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Eric Weakland</md:GivenName>
+	<md:EmailAddress>eric@american.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

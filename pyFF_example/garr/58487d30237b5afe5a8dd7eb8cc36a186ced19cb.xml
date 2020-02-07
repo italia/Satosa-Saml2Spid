@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth-usagers.auf.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-06-11T11:55:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/category/metier</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/community</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Agence universitaire de la Francophonie (AUF) — Users access</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">https://media-static.auf.org/images/icone-auf.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">https://auth-usagers.auf.org</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Authentication proxy combining the  Federated Identity and the Single Sign-On (SSO) authentification  to give AUF users different ways to access applications:
+- With the account of their university institution,
+- By creating a local account,
+- With an account of one of their social networks (eg Facebook),
+- With AUF professional account, for AUF staff.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Agence universitaire de la Francophonie (AUF) — Accès usagers</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Proxy d’authentification combinant l’identité fédérée et l’authentification unique pour permettre aux usagers de l'AUF d'utiliser différentes possibilités de se connecter pour accéder aux applications :
+- Avec le compte de leur établissement universitaire,
+- Via la création d’un compte local,
+- Avec un compte d’un de leurs réseaux sociaux (ex. Facebook), 
+- Avec son compte professionnel AUF, pour les personnels AUF.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.auf.org/accueil/mentions-legales/</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENzCCAp+gAwIBAgIUG0zE3WUPBZvKhd5AUogSEn2r6ZYwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAxMUYXV0aC11c2FnZXJzLmF1Zi5vcmcwHhcNMTkwNjExMDgy
+ODQ4WhcNMjIwNjEwMDgyODQ4WjAfMR0wGwYDVQQDExRhdXRoLXVzYWdlcnMuYXVm
+Lm9yZzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAL0hsbGu9grIsoOX
+FuVCqrAOZrHinW+uJL6o8WkzghiYiJdIQpzmG1gxeJdy1B6qlqCWStoMxJb9zCmQ
+vYPQjhcyDgOJp4Kf8NzzLulfAieGd15v2fqYFKJGCSj6hYmnggMztBMy45J2xlqz
+k27IqB/2y6EEKUBmQSmNVgz43+DvOTvGz0SfiQiPhX2slco2bv5QM92evCsl1QJP
+8ghs9y2w+DhPzTpkN3wlYF8hn8EiZcRqlXmftqc/FEaOYK25b9sPznLRuwrkGq5d
+vb+jtdwzJYs3jgV8edNz5V/2sBYJ4YklODiEb82Hcyuoa7d4B6JoFYZT83mZBt8u
+Vwc/D3FEYhE6cg0RkKGrzLqdpJCDlz72kgCsGIw/lVUXrZj6YraZlCLKsiSEUeGx
+OgCwl2G/vJFBdrhyYo/p9tHAf+x4sa6wHXSGlJAu9zIdTQsr+qc1ML58apW/YQSS
+v3ILAwF2yvlKdOJwX2QXDNgz2y/yBH6aWbhFhKd7qom9/L3A8QIDAQABo2swaTBI
+BgNVHREEQTA/ghRhdXRoLXVzYWdlcnMuYXVmLm9yZ4YnaHR0cHM6Ly9hdXRoLXVz
+YWdlcnMuYXVmLm9yZy9zaGliYm9sZXRoMB0GA1UdDgQWBBSfdKVjNgNFsonJYee1
+eFX6rVMfUjANBgkqhkiG9w0BAQsFAAOCAYEAq6zMUyGhBYaI6Wv6JjcbWKItYk1e
+KH8MSiwWkQCLvxM9iqfX6jvIam+3/9ZqlAkz7DdgU18o4K4rTzKwAgsIcSz25YC6
+VbTwgZuHK3VoRj0dvGrz080xAWJNWhQ6hyU3nyWqVWFGBVpfTNdlcadkA8z/dLc6
+NYYTg5sq8A9GfZscNVvHuaj3prbQZ4uO5VgukNTpJiiJDrTavpxCWpNREWN1Rji2
+V9akuoQPcPkl/cs8Lc6AWAbwvo/rebxXoaLdImcNlSv9pmdRSbu2svQjk76xvg73
+sLV4KTTzia7omIUeQr9bpynuby56mExPoWJ1wr6owsy9Po/zH6jg1xmU0XIddhcl
+02X1UR1v44SErLHWl8JOKwGBeOtX44q+ToobLsmqnwAcbliTAOKhhJnNx224O8Xu
+Ja1DJ8AXogGn+7QeKAZTA+++KZaDoQNeKz+2oqst4UzFGOnY2zB/Qd95ATSDYdeD
+S3Wi80XF8Jo3VzUiwjOb0U+7jlUyhvU7lc4C
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENzCCAp+gAwIBAgIUG0zE3WUPBZvKhd5AUogSEn2r6ZYwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAxMUYXV0aC11c2FnZXJzLmF1Zi5vcmcwHhcNMTkwNjExMDgy
+ODQ4WhcNMjIwNjEwMDgyODQ4WjAfMR0wGwYDVQQDExRhdXRoLXVzYWdlcnMuYXVm
+Lm9yZzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAL0hsbGu9grIsoOX
+FuVCqrAOZrHinW+uJL6o8WkzghiYiJdIQpzmG1gxeJdy1B6qlqCWStoMxJb9zCmQ
+vYPQjhcyDgOJp4Kf8NzzLulfAieGd15v2fqYFKJGCSj6hYmnggMztBMy45J2xlqz
+k27IqB/2y6EEKUBmQSmNVgz43+DvOTvGz0SfiQiPhX2slco2bv5QM92evCsl1QJP
+8ghs9y2w+DhPzTpkN3wlYF8hn8EiZcRqlXmftqc/FEaOYK25b9sPznLRuwrkGq5d
+vb+jtdwzJYs3jgV8edNz5V/2sBYJ4YklODiEb82Hcyuoa7d4B6JoFYZT83mZBt8u
+Vwc/D3FEYhE6cg0RkKGrzLqdpJCDlz72kgCsGIw/lVUXrZj6YraZlCLKsiSEUeGx
+OgCwl2G/vJFBdrhyYo/p9tHAf+x4sa6wHXSGlJAu9zIdTQsr+qc1ML58apW/YQSS
+v3ILAwF2yvlKdOJwX2QXDNgz2y/yBH6aWbhFhKd7qom9/L3A8QIDAQABo2swaTBI
+BgNVHREEQTA/ghRhdXRoLXVzYWdlcnMuYXVmLm9yZ4YnaHR0cHM6Ly9hdXRoLXVz
+YWdlcnMuYXVmLm9yZy9zaGliYm9sZXRoMB0GA1UdDgQWBBSfdKVjNgNFsonJYee1
+eFX6rVMfUjANBgkqhkiG9w0BAQsFAAOCAYEAq6zMUyGhBYaI6Wv6JjcbWKItYk1e
+KH8MSiwWkQCLvxM9iqfX6jvIam+3/9ZqlAkz7DdgU18o4K4rTzKwAgsIcSz25YC6
+VbTwgZuHK3VoRj0dvGrz080xAWJNWhQ6hyU3nyWqVWFGBVpfTNdlcadkA8z/dLc6
+NYYTg5sq8A9GfZscNVvHuaj3prbQZ4uO5VgukNTpJiiJDrTavpxCWpNREWN1Rji2
+V9akuoQPcPkl/cs8Lc6AWAbwvo/rebxXoaLdImcNlSv9pmdRSbu2svQjk76xvg73
+sLV4KTTzia7omIUeQr9bpynuby56mExPoWJ1wr6owsy9Po/zH6jg1xmU0XIddhcl
+02X1UR1v44SErLHWl8JOKwGBeOtX44q+ToobLsmqnwAcbliTAOKhhJnNx224O8Xu
+Ja1DJ8AXogGn+7QeKAZTA+++KZaDoQNeKz+2oqst4UzFGOnY2zB/Qd95ATSDYdeD
+S3Wi80XF8Jo3VzUiwjOb0U+7jlUyhvU7lc4C
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth-usagers.auf.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://auth-usagers.auf.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">Agence universitaire de la Francophonie (AUF) — Accès usagers</md:ServiceName>
+		<md:ServiceName xml:lang="en">Agence universitaire de la Francophonie (AUF) — Users access</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">Proxy d’authentification combinant l’identité fédérée et l’authentification unique pour permettre aux usagers de l'AUF d'utiliser différentes possibilités de se connecter pour accéder aux applications :
+- Avec le compte de leur établissement universitaire,
+- Via la création d’un compte local,
+- Avec un compte d’un de leurs réseaux sociaux (ex. Facebook), 
+- Avec son compte professionnel AUF, pour les personnels AUF.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Authentication proxy combining the  Federated Identity and the Single Sign-On (SSO) authentification  to give AUF users different ways to access applications:
+- With the account of their university institution,
+- By creating a local account,
+- With an account of one of their social networks (eg Facebook),
+- With AUF professional account, for AUF staff.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrimaryAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="supannEtablissement" Name="urn:oid:1.3.6.1.4.1.7135.1.2.1.14" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">AUF Agence universitaire de la Francophonie</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">AUF Agence universitaire de la Francophonie</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.auf.org</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:bneuf@auf.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

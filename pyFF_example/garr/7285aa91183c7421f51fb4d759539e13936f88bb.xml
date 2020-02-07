@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.smc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">smc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Santa Monica Community College District</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.smc.edu/ACG/AcademicSenate/Pages/Privacy-Policy.aspx</mdui:PrivacyStatementURL>
+		<mdui:Logo height="130" width="150" xml:lang="en">https://www.smc.edu/style%20library/SMC/Images/smc-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUar8IjH/UU1ugbEEgtk8yDpgVNzQwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLnNtYy5lZHUwHhcNMTYwMjI1MTI1NzU0WhcNMzYw
+MjI1MTI1NzU0WjAWMRQwEgYDVQQDDAtpZHAuc21jLmVkdTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAL5I3puOipd4NPONpC0ygPS7lbtEqH2YgEl45dz/
+mlhmsyHx6UCVD7Ny1BJL1CjqA7yC2vRPhS64dNwxPFIMWrVmfuFRSvxCkPDnCcG9
+30hsGVVbOIDeIOWeFv+UPIExYf3HD86eMhFUoQ4rv5H5iLbFK/leT3jmX2OruDsP
+6mhznvom48dOHTnRHC4iXCIUweEm0pI+SKIwhjUXMvxlLuCdUGcbW6OpzjW1w94H
+U/DD9FNPo5lZV4DG3qmDWRkTMtgCBOqP6mAKSTGo5LV+OCz4/4QVTqSpx8K0H5aJ
+ivTKhXGQoCH46dVpLLv7k9OR8ufoY45VqDQGeuZ9sS/EGcECAwEAAaNdMFswHQYD
+VR0OBBYEFM186DG2384Y9gmslHy/OcwpsBRGMDoGA1UdEQQzMDGCC2lkcC5zbWMu
+ZWR1hiJodHRwczovL2lkcC5zbWMuZWR1L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQAhmFMh+gexUkR/403mpXTd9uAzYsRuHCb0kqQATTJq9bObQ0yq
+ecPuauQoetuj++7M0rc+6VCVKoTOHc+omGjRaDZ7bnDpkpkwXatmgrhl773GGe4u
+If2sNiynKhJMp5u+HZR59+IyXaxsDLRJNFeo51nj/Mx/0GDpFIVhu48VCxAcxRNy
+diYL6qJsLnkRnRVBOkvzOXsGk4hMG5pzVWAPnOyEjH7Y/MkLs+asCHo5runopve0
+Ew5HUZ02OSR2UQYXIhwghM/QqOGcxx7fm5gZgl35SWXzDLeyiwMxrmiFCt6i0Vyk
+Y+eQo7xWPwVhU/cwC7LFwqnDEo1ZYtvlyfQd
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.smc.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.smc.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Santa Monica Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Santa Monica Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.smc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan Rojas</md:GivenName>
+	<md:EmailAddress>rojas_dan@smc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Chris Bonvenuto</md:GivenName>
+	<md:EmailAddress>bonvenuto_chris@smc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dan Rojas</md:GivenName>
+	<md:EmailAddress>rojas_dan@smc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

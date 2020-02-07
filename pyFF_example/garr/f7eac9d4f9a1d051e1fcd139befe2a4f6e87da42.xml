@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.hfwu.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2014-09-01T06:18:17Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hfwu.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">HfWU Nürtingen-Geislingen</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">HfWU Nuertingen-Geislingen</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of Nuertingen-Geislingen University</mdui:Description>
+		<mdui:Logo height="16" width="16">https://login.hfwu.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://login.hfwu.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hfwu.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hfwu.de/en/eng/meta/home.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKDTCCCPWgAwIBAgIMIFKshpZRgCEGwCeRMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDEwNzEwNTAzNFoXDTIxMDQxMDEwNTAzNFowgaoxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEzARBgNVBAcMCk51ZXJ0aW5nZW4xRDBC
+BgNVBAoMO0hvY2hzY2h1bGUgZnVlciBXaXJ0c2NoYWZ0IHVuZCBVbXdlbHQgTnVl
+cnRpbmdlbi1HZWlzbGluZ2VuMQswCQYDVQQLDAJJVDEWMBQGA1UEAwwNbG9naW4u
+aGZ3dS5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANCkYgH6o17S
+NaNcayBQDYN/xIhQLK5Lt6xIunwbCap+Cd6Iq3DAmzW4NHIBoXQ5kNE0c//wB8wv
+6+DJ2W+FSk4uOIZPz2pqIOatWoaNrznmp8Cv2EkItm0UAeykmq3IAgGiTR0hpxhI
+CzACWpItO2og4Ws+0j37aMdXKc3VaYnWR8Na1cUf58m8kA/QBqSmLiAdEP2yRti8
+cfiW1sW+u0J+xNpZaY2aWHneNvpNCEErw+w8GC5P4hT/iw9lf5a3A7T2loyYztCl
+jzRo9mSXn6bDHeUsWb7Z1L9XDm7e0UDsbgB4nWExIjaet5ndu90KXgOnnOxRkq9j
+9vMQb3OU5gri4k7gee5t33TUqShzISjxuem+nA59mYVkI4FXoT1GoLtN+ukN4kdG
+cwJ9MDvI1i4DeSgJessW7GtI1o8J1YOh5pjJO47tYDPt1IHLYFVjf4Haqa3cUUcn
+bZxP6m0+PtjGZjTvuvjKgLdELR3bLo9TsLgaZ5aCePCfuUnLWuDtnAekNfeDQ28u
+5M3+BZ0ihBk5Bq1zSOD9jFglaW8rEjSbT6DMlvXAITnHY5ADtM1eL96kshi/aCiN
+hml0GW4hNiAFfG8jgD79v+4eGYmKnMzOQDmY+G3XNjaJgdNcYLNbTbm022lejDB9
+3svA6V5cW6Oy/d9pdULTFpK8+CCILICdAgMBAAGjggVMMIIFSDBZBgNVHSAEUjBQ
+MAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysG
+AQQBga0hgiwBAQQDCDARBg8rBgEEAYGtIYIsAgEEAwgwCQYDVR0TBAIwADAOBgNV
+HQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1Ud
+DgQWBBRV8Si3/w+A/1sUMgtE7xoWR6Zw2jAfBgNVHSMEGDAWgBRrOpiL+fJTidrg
+rbIyHgkf6Ko7dDAYBgNVHREEETAPgg1sb2dpbi5oZnd1LmRlMIGNBgNVHR8EgYUw
+gYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1n
+Mi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcB
+AQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQ
+LVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUF
+BzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NhY2VydC9jYWNlcnQuY3J0MIIC5wYKKwYBBAHWeQIEAgSCAtcEggLTAtEAdwBv
+U3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWgn75PEAAAEAwBIMEYC
+IQD59EZ8tKpDzLQ/Ty1EQy5wMkjU+jwX9bfdlbq2EqkVsgIhAJff9Ao6tRpYp5tH
+ljJbj7xp0MVkkjRZu/zVLCv770YdAHUAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJ
+svd6AwEE880AAAFoJ++TxwAABAMARjBEAiAEEmsgUm+jehBeL2RuKEUkrKuFV3rR
+QIUkPwfSWCxJBAIgN1rBpRE7Z2cSSrrnhqKigvlA4xfDCNbEbLVBgD2R558AdgDu
+S723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWgn75QQAAAEAwBHMEUC
+IQDNfARe3BxqI4bdaJ4/Gj2GpKLpE5edz5ekcH0+VlHM+QIgTXjrQQV1SW8FTRO/
+uZANl+NZS0ICYnjSQlcn5lfNN3kAdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQ
+lmQ2jh7RhQAAAWgn75QRAAAEAwBGMEQCIE8Qq9h8GFQ7sk7QJj6z03xU4kAZqiKf
+YlhKxDv8YLmSAiBjqFf+Tc0PKiGMcg887GVwlKiM+4H/SqAliSwutG9EFgB3AKS5
+CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaCfvlBQAAAQDAEgwRgIh
+AOSQaTCccJAYFmgM8ktZkcDqBZMvlXzlCKrKYj8Qcj/XAiEA6n2HgxuoLhOdaY35
+hD0BVIzJ7MQjv91FDV0tB57YVvMAdwBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/
+0zOWtbaBqAAAAWgn75mbAAAEAwBIMEYCIQCcHqdydKR5tl8shP4BdX+V3qdSnwbr
+Xqu590JSZxsIlQIhANVQh+JnXvLG/HYnUpAd4IHbuCkQ2xBO0mMJRbRKol3/MA0G
+CSqGSIb3DQEBCwUAA4IBAQCbZvd63FLgsp5EmEanZ604xp//nwAeaK+mulN9TMt2
+F15u7EbcFDjh29JFiQUdi6U7xE5dUAs7BC1d7lKcCuS2674Fgcsg+Wfuf4Uf1X9H
+yajKAW2SQcvwWpv5jD9jwLjAXqZN17pY8vNpgwGpPy71qII88kjWzzGGi1PQuCmO
+Aw64SXb5oxQsrGrEeYplez9+cBjHHWSn6bCfH1ROUcU0VK42zCiiZZxrYGMuTgTD
+adlv2KYIFKniU9e8qWAn42edHD9tjgXVApP1JEAzZdpTCepy5FlWqjiXdMk1sCqE
+xWBzo7p/OzkiAtALFCib2ovx0dBMQQe3KQapzItkPZ/a
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hfwu.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hfwu.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hfwu.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hfwu.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hfwu.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.hfwu.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hfwu.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.hfwu.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hfwu.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hfwu.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hfwu.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKDTCCCPWgAwIBAgIMIFKshpZRgCEGwCeRMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDEwNzEwNTAzNFoXDTIxMDQxMDEwNTAzNFowgaoxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEzARBgNVBAcMCk51ZXJ0aW5nZW4xRDBC
+BgNVBAoMO0hvY2hzY2h1bGUgZnVlciBXaXJ0c2NoYWZ0IHVuZCBVbXdlbHQgTnVl
+cnRpbmdlbi1HZWlzbGluZ2VuMQswCQYDVQQLDAJJVDEWMBQGA1UEAwwNbG9naW4u
+aGZ3dS5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBANCkYgH6o17S
+NaNcayBQDYN/xIhQLK5Lt6xIunwbCap+Cd6Iq3DAmzW4NHIBoXQ5kNE0c//wB8wv
+6+DJ2W+FSk4uOIZPz2pqIOatWoaNrznmp8Cv2EkItm0UAeykmq3IAgGiTR0hpxhI
+CzACWpItO2og4Ws+0j37aMdXKc3VaYnWR8Na1cUf58m8kA/QBqSmLiAdEP2yRti8
+cfiW1sW+u0J+xNpZaY2aWHneNvpNCEErw+w8GC5P4hT/iw9lf5a3A7T2loyYztCl
+jzRo9mSXn6bDHeUsWb7Z1L9XDm7e0UDsbgB4nWExIjaet5ndu90KXgOnnOxRkq9j
+9vMQb3OU5gri4k7gee5t33TUqShzISjxuem+nA59mYVkI4FXoT1GoLtN+ukN4kdG
+cwJ9MDvI1i4DeSgJessW7GtI1o8J1YOh5pjJO47tYDPt1IHLYFVjf4Haqa3cUUcn
+bZxP6m0+PtjGZjTvuvjKgLdELR3bLo9TsLgaZ5aCePCfuUnLWuDtnAekNfeDQ28u
+5M3+BZ0ihBk5Bq1zSOD9jFglaW8rEjSbT6DMlvXAITnHY5ADtM1eL96kshi/aCiN
+hml0GW4hNiAFfG8jgD79v+4eGYmKnMzOQDmY+G3XNjaJgdNcYLNbTbm022lejDB9
+3svA6V5cW6Oy/d9pdULTFpK8+CCILICdAgMBAAGjggVMMIIFSDBZBgNVHSAEUjBQ
+MAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEEAYGtIYIsAQEEMBEGDysG
+AQQBga0hgiwBAQQDCDARBg8rBgEEAYGtIYIsAgEEAwgwCQYDVR0TBAIwADAOBgNV
+HQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMB0GA1Ud
+DgQWBBRV8Si3/w+A/1sUMgtE7xoWR6Zw2jAfBgNVHSMEGDAWgBRrOpiL+fJTidrg
+rbIyHgkf6Ko7dDAYBgNVHREEETAPgg1sb2dpbi5oZnd1LmRlMIGNBgNVHR8EgYUw
+gYIwP6A9oDuGOWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1n
+Mi9wdWIvY3JsL2NhY3JsLmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcB
+AQSBzjCByzAzBggrBgEFBQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQ
+LVNlcnZlci9PQ1NQMEkGCCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRl
+L2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUF
+BzAChj1odHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NhY2VydC9jYWNlcnQuY3J0MIIC5wYKKwYBBAHWeQIEAgSCAtcEggLTAtEAdwBv
+U3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWgn75PEAAAEAwBIMEYC
+IQD59EZ8tKpDzLQ/Ty1EQy5wMkjU+jwX9bfdlbq2EqkVsgIhAJff9Ao6tRpYp5tH
+ljJbj7xp0MVkkjRZu/zVLCv770YdAHUAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJ
+svd6AwEE880AAAFoJ++TxwAABAMARjBEAiAEEmsgUm+jehBeL2RuKEUkrKuFV3rR
+QIUkPwfSWCxJBAIgN1rBpRE7Z2cSSrrnhqKigvlA4xfDCNbEbLVBgD2R558AdgDu
+S723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWgn75QQAAAEAwBHMEUC
+IQDNfARe3BxqI4bdaJ4/Gj2GpKLpE5edz5ekcH0+VlHM+QIgTXjrQQV1SW8FTRO/
+uZANl+NZS0ICYnjSQlcn5lfNN3kAdQC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQ
+lmQ2jh7RhQAAAWgn75QRAAAEAwBGMEQCIE8Qq9h8GFQ7sk7QJj6z03xU4kAZqiKf
+YlhKxDv8YLmSAiBjqFf+Tc0PKiGMcg887GVwlKiM+4H/SqAliSwutG9EFgB3AKS5
+CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABaCfvlBQAAAQDAEgwRgIh
+AOSQaTCccJAYFmgM8ktZkcDqBZMvlXzlCKrKYj8Qcj/XAiEA6n2HgxuoLhOdaY35
+hD0BVIzJ7MQjv91FDV0tB57YVvMAdwBElGUusO7Or8RAB9io/ijA2uaCvtjLMbU/
+0zOWtbaBqAAAAWgn75mbAAAEAwBIMEYCIQCcHqdydKR5tl8shP4BdX+V3qdSnwbr
+Xqu590JSZxsIlQIhANVQh+JnXvLG/HYnUpAd4IHbuCkQ2xBO0mMJRbRKol3/MA0G
+CSqGSIb3DQEBCwUAA4IBAQCbZvd63FLgsp5EmEanZ604xp//nwAeaK+mulN9TMt2
+F15u7EbcFDjh29JFiQUdi6U7xE5dUAs7BC1d7lKcCuS2674Fgcsg+Wfuf4Uf1X9H
+yajKAW2SQcvwWpv5jD9jwLjAXqZN17pY8vNpgwGpPy71qII88kjWzzGGi1PQuCmO
+Aw64SXb5oxQsrGrEeYplez9+cBjHHWSn6bCfH1ROUcU0VK42zCiiZZxrYGMuTgTD
+adlv2KYIFKniU9e8qWAn42edHD9tjgXVApP1JEAzZdpTCepy5FlWqjiXdMk1sCqE
+xWBzo7p/OzkiAtALFCib2ovx0dBMQQe3KQapzItkPZ/a
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hfwu.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hfwu.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e223</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e223</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Hochschule für Wirtschaft und Umwelt Nürtingen-Geislingen</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hfwu.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hfwu.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>HfWU</md:GivenName>
+	<md:SurName>IT-Dienste</md:SurName>
+	<md:EmailAddress>mailto:it-dienste-nt@hfwu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>HfWU</md:GivenName>
+	<md:SurName>IT-Dienste</md:SurName>
+	<md:EmailAddress>mailto:it-dienste-nt@hfwu.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

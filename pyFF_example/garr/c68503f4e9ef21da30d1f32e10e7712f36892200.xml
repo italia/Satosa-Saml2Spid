@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://saas1.kuali.co/auth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://saml1.kuali.co/auth/saml/meta.xml" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kuali SaaS</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Kuali Software as a Service</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://kuali.co/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.kuali.co/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="188" xml:lang="en">https://www.kuali.co/wp-content/uploads/2017/05/Kuali-Logo-64.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFeDCCBGCgAwIBAgIQBJoR3riTEvtuh7B80BaO4TANBgkqhkiG9w0BAQUFADBi
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+d3cuZGlnaWNlcnQuY29tMSEwHwYDVQQDExhEaWdpQ2VydCBBc3N1cmVkIElEIENB
+LTEwHhcNMTYwMzA4MDAwMDAwWhcNMTkwMzA4MTIwMDAwWjCBoDELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgTAlVUMQ0wCwYDVQQHEwRMZWhpMRMwEQYDVQQKEwpLdWFsaSwg
+SW5jMRcwFQYDVQQLEw5rdWFsaS1jb3ItYXV0aDEYMBYGA1UEAxMPS3VhbGkgQ29y
+ZSBBdXRoMS0wKwYJKoZIhvcNAQkBFh5jZXJ0cytrdWFsaS1jb3JlLWF1dGhAa3Vh
+bGkuY28wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCymDSUU3CQXiYS
+lz810l4Mfqhj0KT/plV2X4Dmzt4Q/GXbArpg4qWF04Nwp5Cx6IxjOA/7RXPgQZHY
+oFT+E9wmebU3o6CTSe/Fh7lJ3dd+ntTPwv4dLzdqDJQpZnz+4MNwsz7LgUbl59eF
+5OUOIG3aKl7m/fIe/0xypqi2bP6LiqSpGeeNnY3FnAHwq2WDn5aLE0p8Nl/Y3UXV
+y3PGdF9ihZsk9GgCmiZuP2arQ3m7LKzy4hvEkaEXgABolOoL2JmeLoPYR0KI/jpv
+63QNd+aGEKcGEYOUpDfJd98k1zKpiR8A5PG0fBNqp3+UvSHViLjygMolwvvp+lIU
+QfWtObd7AgMBAAGjggHpMIIB5TAfBgNVHSMEGDAWgBQVABIrE5iymQftHt+ivlcN
+K2cCzTAdBgNVHQ4EFgQUjmm9dgy8z968gL3HaxG3HZb0u0YwDAYDVR0TAQH/BAIw
+ADApBgNVHREEIjAggR5jZXJ0cytrdWFsaS1jb3JlLWF1dGhAa3VhbGkuY28wDgYD
+VR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDBDBDBgNV
+HSAEPDA6MDgGCmCGSAGG/WwEAQIwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cu
+ZGlnaWNlcnQuY29tL0NQUzB9BgNVHR8EdjB0MDigNqA0hjJodHRwOi8vY3JsMy5k
+aWdpY2VydC5jb20vRGlnaUNlcnRBc3N1cmVkSURDQS0xLmNybDA4oDagNIYyaHR0
+cDovL2NybDQuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0QXNzdXJlZElEQ0EtMS5jcmww
+dwYIKwYBBQUHAQEEazBpMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2Vy
+dC5jb20wQQYIKwYBBQUHMAKGNWh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9E
+aWdpQ2VydEFzc3VyZWRJRENBLTEuY3J0MA0GCSqGSIb3DQEBBQUAA4IBAQAyv2d5
+lDJTHyajgj8woVL+jFMy/2fNFWQzO0rq6OBTDPVoI0AWyBvWcMbHgaUGSaxNQq+8
+YjpOD49FP1lPyDaMv8ega99C/ybJ1I4OPLPyzUQ7EnZywCatn2iH4Sz4rHIgpCHL
+RvQdW2Sw76UJa2GJwVDyNsv3IyZrDxtop0XkMFDK1nhY2bW7G0r8q/JhxjEawWRN
+uDuzfB0jPHLWXz31biUf0Dk7WPGA7yqLkM2SvNfiZ4EAdORFpw1Rz6ZoL6D7Xzro
+9I7TEQa8tZ4nnZiRRl4dfMtL2Yw119jFOteUOz3GlPMNMzH3KJE/9BtR88ZtpGu2
+h93Ee/A43W4/JjPR
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+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
+8Uz01IaSO8sVPM0NXOVK63yXXEg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas1.kuali.co/auth/saml/consume" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas1.kuali.co/auth/saml/consume" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas2.kuali.co/auth/saml/consume" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas2.kuali.co/auth/saml/consume" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saml1.kuali.co/auth/saml/consume" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saml1.kuali.co/auth/saml/consume" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saml1-stg.kuali.co/auth/saml/consume" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saml1-stg.kuali.co/auth/saml/consume" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saml1-tst.kuali.co/auth/saml/consume" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas1-sbx.kuali.co/auth/saml/consume" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas2-sbx.kuali.co/auth/saml/consume" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas1-tst.kuali.co/auth/saml/consume" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas2-stg.kuali.co/auth/saml/consume" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas1-stg.kuali.co/auth/saml/consume" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas1-sbx.kuali.co/auth/saml/consume" index="15"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas2-sbx.kuali.co/auth/saml/consume" index="16"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas1-tst.kuali.co/auth/saml/consume" index="17"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas1-stg.kuali.co/auth/saml/consume" index="18"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas2-stg.kuali.co/auth/saml/consume" index="19"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas1.kuali-cor-verify.com/auth/saml/consume" index="20"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas1.kuali-cor-verify.com/auth/saml/consume" index="21"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas3.kuali.co/auth/saml/consume" index="22"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas3.kuali.co/auth/saml/consume" index="23"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas3-sbx.kuali.co/auth/saml/consume" index="24"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas3-sbx.kuali.co/auth/saml/consume" index="25"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://saas3-stg.kuali.co/auth/saml/consume" index="26"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://saas3-stg.kuali.co/auth/saml/consume" index="27"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Kuali SaaS</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Kuali Software as a Service</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kuali, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kuali, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.kuali.co/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Kuali Support</md:GivenName>
+	<md:EmailAddress>support@kuali.co</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Kuali Support</md:GivenName>
+	<md:EmailAddress>support@kuali.co</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Kuali Support</md:GivenName>
+	<md:EmailAddress>support@kuali.co</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kuali Support</md:GivenName>
+	<md:EmailAddress>support@kuali.co</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

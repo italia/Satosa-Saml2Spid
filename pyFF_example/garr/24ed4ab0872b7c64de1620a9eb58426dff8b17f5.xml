@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idptest.iuav.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2016-09-19T08:31:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/idem-metadata-registration-practice-statement</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+<md:Extensions>
+<shibmd:Scope regexp="false">iuav.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAPTNR4jpAZRucZqpAzpEfF4lkddeMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD2lkcHRlc3QuaXVhdi5pdDAeFw0xMDAxMDgxNTA3MzRa
+Fw0zMDAxMDgxNTA3MzRaMBoxGDAWBgNVBAMTD2lkcHRlc3QuaXVhdi5pdDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKGJ56+U8jz5327AvkTI9fU4hFL2
+SyRTrp1ZD5kgxUDqZCQmIeOeS+XEsoD/cTdLcU47hZDznrpLadS2zyEe1C9ZVMVW
+q7vae1Eoy5ntV5Q9XGGbOW3a6mKy7OT9i2dyEWLuCXuF2QSNnyiamoqM1ooyl/3G
+y7EAn7x+xBOa0yzaKZ4m4A56tbWrz2jbzD1f94EfE/oR3i1kDs0sgeiu6lM6n3Z/
+ucE98LHg0hx06VvTg4S1NNxsgeXwqdkQIi3kQjMyzYwsPibpP7kp5jQ1ysMlYs64
+l2yv7NAUWVLxE3rzR0WgwsnDCvvBjuKIN2OygFertkXjEVdzYCjEuuO4LasCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPaWRwdGVzdC5pdWF2Lml0hiZodHRwczovL2lkcHRl
+c3QuaXVhdi5pdC9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU/RVKY7NX4a10NJiG
+5xf5snn7uQ4wDQYJKoZIhvcNAQEFBQADggEBAAq+evUyVsdOhFzLrL53eAnSJ5MY
+Cv6ebcmY9gTrXSqnVdqCupFoj9yBdiocQmDO3CJidGSF5QcaBaDncwAB88ZrRbJN
+pvnXC6guRwVyFXAWtfJpaim3/HcDtVkjjwBnEGWqvMRSLGmbjnIR4JD5XX6SDK5t
+QY3/sTZEp6MTF6zsXJxWiRbUDLY00vnzkX6B15F+j/i5QjZfZST17ao6sZvzjUwc
+5ABnpZVxfqFQ/3F8EFL/AkP2/PZt6qMYuSgQZ77B7Ld3chNzMnL8DmVnAU1KYSzz
+eceIzsvmX749GkRGx5V/LnbZMiQKKZ5fu0G23NgWbPEUuEHCRXNq7jH+xyY=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idptest.iuav.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idptest.iuav.it/idp/profile/SAML2/POST/SLO"/>
+<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idptest.iuav.it/idp/profile/Shibboleth/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idptest.iuav.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idptest.iuav.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idptest.iuav.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="en">Università  IUAV di Venezia</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="en">Università  IUAV di Venezia</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="en">http://www.iuav.it/</md:OrganizationURL>
+</md:Organization>
+</md:EntityDescriptor>
+

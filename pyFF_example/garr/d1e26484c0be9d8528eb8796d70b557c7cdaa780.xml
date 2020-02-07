@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lshtm.ac.uk/shibboleth-xfr">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">London School of Hygiene and Tropical Medicine (test)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">London School of Hygiene and Tropical Medicine (test)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">lshtm.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGMjCCBBqgAwIBAgIJAMDPoGjJOgX6MA0GCSqGSIb3DQEBBQUAMIGZMQswCQYD
+VQQGEwJHQjEPMA0GA1UECBMGTG9uZG9uMQ8wDQYDVQQHEwZMb25kb24xNzA1BgNV
+BAoTLkxvbmRvbiBTY2hvb2wgb2YgSHlnaWVuZSBhbmQgVHJvcGljYWwgTWVkaWNp
+bmUxFDASBgNVBAsTC0lUIFNlcnZpY2VzMRkwFwYDVQQDExBpZHAyLmxzaHRtLmFj
+LnVrMB4XDTEyMTEyMTEwMDQ0N1oXDTIyMTExOTEwMDQ0N1owgZkxCzAJBgNVBAYT
+AkdCMQ8wDQYDVQQIEwZMb25kb24xDzANBgNVBAcTBkxvbmRvbjE3MDUGA1UEChMu
+TG9uZG9uIFNjaG9vbCBvZiBIeWdpZW5lIGFuZCBUcm9waWNhbCBNZWRpY2luZTEU
+MBIGA1UECxMLSVQgU2VydmljZXMxGTAXBgNVBAMTEGlkcDIubHNodG0uYWMudWsw
+ggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC5wsziZNYSjQ6zZruTNpCa
+Tg/mA8we3vEAMzb8oNoqfoevqwMop2biprlaJk7E9kVmu1ZO2t6vTPucBfb/Oqyo
+GzRnKlyVGxfCe/yrQ557z3y99xS5jGzu7kOoInpAp9q6tqrqns1A3OEeJSuJ1MJ8
+ED053xEiSeL0+jSzkXkZVMCXu2p6kJsW5nT3qhqVrXiaGiB02TAOQMs0mmA8aS1h
+j0bU5gFxKxazt1WYpFW82bSlSd2fz9pOmGklmW5JZxb4Zw8MFbiRfQ1LPwFgZH6E
++WJqdPb5fehXkklll9o4xO64bXlGfaRl0+5QGtbnqpix37QaDuQRi+NLUkA2wR2L
+/rFJvo6uKsAdTuixfU/gNs0CCqVGi2C0/sQaTsE2Ct8H7BYEmrhqHs4VDzvcDq1L
+2LqMvc4KEEd/Cp6EavaRKI7Edtu4OFUgAgECfbv0C7oouqSHR6X4ciDFfSWk7i92
+3h5tMHX3wfUHJR/YI/mvguDo61wjnpbwgeAV4rNLsdBUOs5AQTCPUDAuyMepm81t
+IQRT/XsNuKv4f9y4ORSpBZ/KspE9P5TklIMDuSvZKS8FZQ5ve4UQeUoer7Bn55ot
+vFTxRrioFUBsmR/5yAsZLJnSU7z09wv3SG1Lj6O79Q9HoJ5M7rKap3+yFkfFqxSP
+KH7JJd9yDiYVaA0f1R1VfQIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIB
+DQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUJTj9
+QFp335nQW77uAnSfAmeytCowHwYDVR0jBBgwFoAUJTj9QFp335nQW77uAnSfAmey
+tCowDQYJKoZIhvcNAQEFBQADggIBALR0fEhYAGrXCqw9r2IjsXG0h4Kqv298t7Wd
+fV5Qal71yD2vqVgZBjyoUt6FwQ0GPKhMc/q7Ooy8lfo8NSvZV983MSyWe519xTJ4
+vtPJtKHd2WKYacrdRFPZJYjtTR4CwMXtwxsB2xJrpaJa/sSyRHvE4+PuUBYOj42t
+k6MOk3t1GKfaoYOmJBd2teVym9K5bRqGk6WgnKg+jzPDXJy3+kKvZMZKsv7aYafu
+m2PFoRJu1Nm+6jjTy33SVH3ZS4oydL+uZWfwKvQEqbLOGdRJTZYlDJR2mz6zISbf
+1+LjnK1aqDETq+loatD4gntbpwoMTBMceoDVyRmlPkuFDF31lzkwyAlE5yFmhC9q
+mUNMvsbtYJe546ftf+fyRW/PnZaBRqY1Hkk5lBU4BIgt+gk9jqiAae+DvQ4dikLP
+DWDef3bPLitQA/e/F5YmYq61L7TeIdIiDtD42y5qUW7x+pMTd042EpmoWL9XbdMe
+tvHx33GTkXDFqg88t/lPD8nN9evHWcPvUL1YS3AvJJ9u1Ttiq+agvGDxClgqa2i/
+VZd/+nl8pnTI4n7VsiMMSFnBra1FQFoTwvaAHBotttYutz+jPAo/jQRaD+AqAqj3
+C+Ar+eubE63of1BjM7tWtOldASsG/Kwoq5dNqCWjqmoL3EbLr1hx65qAaRR0XbtB
+rDHM7cXn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.lshtm.ac.uk:8443/shibboleth-idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.lshtm.ac.uk:8443/shibboleth-idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp2.lshtm.ac.uk/shibboleth-idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp2.lshtm.ac.uk/shibboleth-idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp2.lshtm.ac.uk/shibboleth-idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp2.lshtm.ac.uk/shibboleth-idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lshtm.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGMjCCBBqgAwIBAgIJAMDPoGjJOgX6MA0GCSqGSIb3DQEBBQUAMIGZMQswCQYD
+VQQGEwJHQjEPMA0GA1UECBMGTG9uZG9uMQ8wDQYDVQQHEwZMb25kb24xNzA1BgNV
+BAoTLkxvbmRvbiBTY2hvb2wgb2YgSHlnaWVuZSBhbmQgVHJvcGljYWwgTWVkaWNp
+bmUxFDASBgNVBAsTC0lUIFNlcnZpY2VzMRkwFwYDVQQDExBpZHAyLmxzaHRtLmFj
+LnVrMB4XDTEyMTEyMTEwMDQ0N1oXDTIyMTExOTEwMDQ0N1owgZkxCzAJBgNVBAYT
+AkdCMQ8wDQYDVQQIEwZMb25kb24xDzANBgNVBAcTBkxvbmRvbjE3MDUGA1UEChMu
+TG9uZG9uIFNjaG9vbCBvZiBIeWdpZW5lIGFuZCBUcm9waWNhbCBNZWRpY2luZTEU
+MBIGA1UECxMLSVQgU2VydmljZXMxGTAXBgNVBAMTEGlkcDIubHNodG0uYWMudWsw
+ggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQC5wsziZNYSjQ6zZruTNpCa
+Tg/mA8we3vEAMzb8oNoqfoevqwMop2biprlaJk7E9kVmu1ZO2t6vTPucBfb/Oqyo
+GzRnKlyVGxfCe/yrQ557z3y99xS5jGzu7kOoInpAp9q6tqrqns1A3OEeJSuJ1MJ8
+ED053xEiSeL0+jSzkXkZVMCXu2p6kJsW5nT3qhqVrXiaGiB02TAOQMs0mmA8aS1h
+j0bU5gFxKxazt1WYpFW82bSlSd2fz9pOmGklmW5JZxb4Zw8MFbiRfQ1LPwFgZH6E
++WJqdPb5fehXkklll9o4xO64bXlGfaRl0+5QGtbnqpix37QaDuQRi+NLUkA2wR2L
+/rFJvo6uKsAdTuixfU/gNs0CCqVGi2C0/sQaTsE2Ct8H7BYEmrhqHs4VDzvcDq1L
+2LqMvc4KEEd/Cp6EavaRKI7Edtu4OFUgAgECfbv0C7oouqSHR6X4ciDFfSWk7i92
+3h5tMHX3wfUHJR/YI/mvguDo61wjnpbwgeAV4rNLsdBUOs5AQTCPUDAuyMepm81t
+IQRT/XsNuKv4f9y4ORSpBZ/KspE9P5TklIMDuSvZKS8FZQ5ve4UQeUoer7Bn55ot
+vFTxRrioFUBsmR/5yAsZLJnSU7z09wv3SG1Lj6O79Q9HoJ5M7rKap3+yFkfFqxSP
+KH7JJd9yDiYVaA0f1R1VfQIDAQABo3sweTAJBgNVHRMEAjAAMCwGCWCGSAGG+EIB
+DQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4EFgQUJTj9
+QFp335nQW77uAnSfAmeytCowHwYDVR0jBBgwFoAUJTj9QFp335nQW77uAnSfAmey
+tCowDQYJKoZIhvcNAQEFBQADggIBALR0fEhYAGrXCqw9r2IjsXG0h4Kqv298t7Wd
+fV5Qal71yD2vqVgZBjyoUt6FwQ0GPKhMc/q7Ooy8lfo8NSvZV983MSyWe519xTJ4
+vtPJtKHd2WKYacrdRFPZJYjtTR4CwMXtwxsB2xJrpaJa/sSyRHvE4+PuUBYOj42t
+k6MOk3t1GKfaoYOmJBd2teVym9K5bRqGk6WgnKg+jzPDXJy3+kKvZMZKsv7aYafu
+m2PFoRJu1Nm+6jjTy33SVH3ZS4oydL+uZWfwKvQEqbLOGdRJTZYlDJR2mz6zISbf
+1+LjnK1aqDETq+loatD4gntbpwoMTBMceoDVyRmlPkuFDF31lzkwyAlE5yFmhC9q
+mUNMvsbtYJe546ftf+fyRW/PnZaBRqY1Hkk5lBU4BIgt+gk9jqiAae+DvQ4dikLP
+DWDef3bPLitQA/e/F5YmYq61L7TeIdIiDtD42y5qUW7x+pMTd042EpmoWL9XbdMe
+tvHx33GTkXDFqg88t/lPD8nN9evHWcPvUL1YS3AvJJ9u1Ttiq+agvGDxClgqa2i/
+VZd/+nl8pnTI4n7VsiMMSFnBra1FQFoTwvaAHBotttYutz+jPAo/jQRaD+AqAqj3
+C+Ar+eubE63of1BjM7tWtOldASsG/Kwoq5dNqCWjqmoL3EbLr1hx65qAaRR0XbtB
+rDHM7cXn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp2.lshtm.ac.uk:8443/shibboleth-idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp2.lshtm.ac.uk:8443/shibboleth-idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">London School of Hygiene and Tropical Medicine</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">London School of Hygiene and Tropical Medicine (test)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lshtm.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Christopher</md:GivenName>
+	<md:SurName>Manning</md:SurName>
+	<md:EmailAddress>mailto:christopher.manning@lshtm.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steven</md:GivenName>
+	<md:SurName>Whitbread</md:SurName>
+	<md:EmailAddress>mailto:steven.whitbread@lshtm.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://weblogin.albany.edu/shibboleth/idp2">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://wiki.albany.edu/x/A4ZvAg" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">albany.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University At Albany, State University of New York</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.albany.edu/its/policies_security_and_privacy.htm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="203" xml:lang="en">https://maenad.csc.albany.edu/incommon/logo_A1_pms269-InCommon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDODCCAiCgAwIBAgIVAKWha+CKTeinjttEcaqLm7fQSZLLMA0GCSqGSIb3DQEB
+BQUAMB4xHDAaBgNVBAMTE3dlYmxvZ2luLmFsYmFueS5lZHUwHhcNMDkwMjExMTk1
+NDE0WhcNMjkwMjExMTk1NDE0WjAeMRwwGgYDVQQDExN3ZWJsb2dpbi5hbGJhbnku
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjAY1R6LqpUcsbpn3
+8AcJW/KtQTyVcdcHmkEeCdW3UNzd6ibmhRFcPVhXwY9Z8jAuHQLjIkPj4QuiaGXI
+lfRJBQkTnkWeGLrHCzZA7/eZ0uJxL+SBf84OiK2jSmLqw6xGAADE8GmcyBpTQe2d
+HDFDbLvsLc3UNs0U/WzIGEE5iPBd33UntVEYezO8vszjdKZr8r4ZRVTeSUe+qkgW
+19ncHiqrbPBT+5qK2j8PaCiFrOjc0ScnsqHkgxr5krBM//SGoFPc+2bClUtbF/ci
+wuNZ3RHxhkyxlwEwkhLyuhr9gpZDYH6mi/SKUXMcXdLBKev13ddXN3Is6JZxagXn
+qZv/cwIDAQABo20wazBKBgNVHREEQzBBghN3ZWJsb2dpbi5hbGJhbnkuZWR1hipo
+dHRwczovL3dlYmxvZ2luLmFsYmFueS5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0O
+BBYEFC5IsCUVHd9dT/Q7onCX7ItOnehlMA0GCSqGSIb3DQEBBQUAA4IBAQBy+8+Q
+vnDnS010CWPNF76wHA24ka7cX4FsV/+nsUbxCtL9lundZdBfzqTquy5GuF3j96ej
+foXg0Vz9GOn/KtRDDCFz8Gym+8hZdvPQ/XOdxHW1kjb7EbbL/K8dLilUYR9B/IOZ
+AXr4j4M4Qrh3jyxoFP+a4QTkUj/9+bcDPmqwftxaRoUIGcmyRzUvwU5pl227UkNy
+nftVP/rsZZ6nr0wJBZfPbhiBDAuzamzI05QHB+sFskVXB6Z8h2KawwNSrjgc2poj
+QWzZNOuth932vN8p2Lc6iI5v5bC/QSDDBlZ7tl+Uj/ejZC9b9WG/y83RrM333twp
+Kq1D/QWBwg4oa9Zq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.albany.edu:8444/idp2/profile/Artifact" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://weblogin.albany.edu:8444/idp2/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://weblogin.albany.edu/idp2/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://weblogin.albany.edu/idp2/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://weblogin.albany.edu/idp2/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">albany.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDODCCAiCgAwIBAgIVAKWha+CKTeinjttEcaqLm7fQSZLLMA0GCSqGSIb3DQEB
+BQUAMB4xHDAaBgNVBAMTE3dlYmxvZ2luLmFsYmFueS5lZHUwHhcNMDkwMjExMTk1
+NDE0WhcNMjkwMjExMTk1NDE0WjAeMRwwGgYDVQQDExN3ZWJsb2dpbi5hbGJhbnku
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjAY1R6LqpUcsbpn3
+8AcJW/KtQTyVcdcHmkEeCdW3UNzd6ibmhRFcPVhXwY9Z8jAuHQLjIkPj4QuiaGXI
+lfRJBQkTnkWeGLrHCzZA7/eZ0uJxL+SBf84OiK2jSmLqw6xGAADE8GmcyBpTQe2d
+HDFDbLvsLc3UNs0U/WzIGEE5iPBd33UntVEYezO8vszjdKZr8r4ZRVTeSUe+qkgW
+19ncHiqrbPBT+5qK2j8PaCiFrOjc0ScnsqHkgxr5krBM//SGoFPc+2bClUtbF/ci
+wuNZ3RHxhkyxlwEwkhLyuhr9gpZDYH6mi/SKUXMcXdLBKev13ddXN3Is6JZxagXn
+qZv/cwIDAQABo20wazBKBgNVHREEQzBBghN3ZWJsb2dpbi5hbGJhbnkuZWR1hipo
+dHRwczovL3dlYmxvZ2luLmFsYmFueS5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0O
+BBYEFC5IsCUVHd9dT/Q7onCX7ItOnehlMA0GCSqGSIb3DQEBBQUAA4IBAQBy+8+Q
+vnDnS010CWPNF76wHA24ka7cX4FsV/+nsUbxCtL9lundZdBfzqTquy5GuF3j96ej
+foXg0Vz9GOn/KtRDDCFz8Gym+8hZdvPQ/XOdxHW1kjb7EbbL/K8dLilUYR9B/IOZ
+AXr4j4M4Qrh3jyxoFP+a4QTkUj/9+bcDPmqwftxaRoUIGcmyRzUvwU5pl227UkNy
+nftVP/rsZZ6nr0wJBZfPbhiBDAuzamzI05QHB+sFskVXB6Z8h2KawwNSrjgc2poj
+QWzZNOuth932vN8p2Lc6iI5v5bC/QSDDBlZ7tl+Uj/ejZC9b9WG/y83RrM333twp
+Kq1D/QWBwg4oa9Zq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.albany.edu:8444/idp2/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.albany.edu:8444/idp2/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University At Albany, State University of New York</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University At Albany, State University of New York</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.albany.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Rod Grau</md:GivenName>
+	<md:EmailAddress>usg@albany.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Martin Manjak</md:GivenName>
+	<md:EmailAddress>infosec@albany.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Identity and Access Management</md:GivenName>
+	<md:EmailAddress>iamsteam@albany.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Identity and Access Management</md:GivenName>
+	<md:EmailAddress>iamsteam@albany.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

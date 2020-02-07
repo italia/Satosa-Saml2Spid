@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://id.istat.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2009-12-31T14:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">istat.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">ISTAT - Italian National Institute of Statistics</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">ISTAT - Istituto Nazionale di Statistica</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity provider for ISTAT users</mdui:Description>
+<mdui:Description xml:lang="it">Identity provider per gli utenti ISTAT</mdui:Description>
+<mdui:InformationURL xml:lang="en">http://www.istat.it/en/information/researchers</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">http://www.istat.it/it/informazioni/per-i-ricercatori/accesso-ai-servizi-web</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://www.istat.it/it/informazioni/per-i-ricercatori/accesso-alla-rete-wifi/acceptable-use-policy</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://www.istat.it/it/informazioni/per-i-ricercatori/accesso-alla-rete-wifi/acceptable-use-policy</mdui:PrivacyStatementURL>
+<mdui:Logo height="23" width="80" xml:lang="en">https://id.istat.it/istat80.png</mdui:Logo>
+<mdui:Logo height="23" width="80" xml:lang="it">https://id.istat.it/istat80.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUE5pyCL89WeStj8MKq+7T3HycBAYwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwHhcNMTYwNjIyMDc0MDQ0WhcNMzYw
+NjIyMDc0MDQ0WjAWMRQwEgYDVQQDDAtpZC5pc3RhdC5pdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMoJanadELMdIBoSXyF98o2RFF72lTKxX6ZFNH0v
+JpzhNmdAS75Y+vt8kGVfBZNsuJbsqJ0EU7FdaQ4aTVn6oy/nlAbhR7qZhPCkFv71
+uXZqeQ11dQS8MMGTxaqdvqwAEjDEu5GAWpHK+BKECZ38D/b3mTOJzEUAEvwSuiSI
+3+92CXjC69H+mL8akzb0u3IxYAatehdqn/q29seNk0cZStVCPV2VyxJG2/qiPqWy
+I3WwxSRV1fwEH/IlzoTqSe2cz5/9RyRL+MAHMt1QBF9hDEPutdl6IBwmg0cSdpKA
+U26zw1rr4SvzuJtOUh2rPnZjyItUz+ST8TgfQFAfz3p1EycCAwEAAaNdMFswHQYD
+VR0OBBYEFGtCzoOQEyw2isDc9mJ4DQXME0xDMDoGA1UdEQQzMDGCC2lkLmlzdGF0
+Lml0hiJodHRwczovL2lkLmlzdGF0Lml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBP6CCMFmeei1OjJDgvnwVM6asRje07cl0sG892aVvIAq+XI94o
+kaXSA7X7fRZoDA4z13ZYe/j1crfXA3MgJ0bH4bm+Ry7KGG+2WZzhpnhXslouer5b
+DGw62NgMrEsnwI7SB25uEa2UOhX93juhcp0WVFiGSvgikfGEsZUvdT8rR0fZl9cm
+Lze6K5EFX6Oi51FNp2IEh+fF4EcrMf3jMQ0u6t8SAURY61n8pnaSX524pAzw+8p3
+Sww8eo6UpV8b+DlLg6/86er5TkEA9hp4AlmpDsvQNifOceVjp/DUdXLxBCNt0xPh
+sK7/t4Hudy22eLw4lS6zcCg1o2Toj4cHt7L5
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUWvQbivpkbGTBq+AESUtHBROAwmAwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwHhcNMTYwNjIyMDc0MDQzWhcNMzYw
+NjIyMDc0MDQzWjAWMRQwEgYDVQQDDAtpZC5pc3RhdC5pdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAML0BnsfcVAUNtLF8Z7L3hVi+Gqk9ZfH70+iwmZq
+N7Q3Ck+lwgjx0X19i6ApYb6Ln8m2sVjCQWcKNM84z05b3tw4ShNzXFY85UTGCXda
+sbAFl3TyaF9BQIVGoaxRoguFUuxHu4Tj8DtXqSjUSKdOl3eFiIFSsa+dtXFjW/Uj
+Rci5jpRuQL0HUAIxEmCo5CiJNlfpXMr6k3pbo0Uy5RpuLXjHEYWCDcGkA/XY4EVg
+2i2YVVvZRhzd1VXFFf8bEvPDR1BHIvtKWxQXAaJ+//i3a7yMi8xnuTPOObY0rgQY
+zQmkoXFtDOtBzGTiDJNXNNmWQkUq6LyoY7yGO80jYqrp4LkCAwEAAaNdMFswHQYD
+VR0OBBYEFKYDhD9ThhbaAIo21nxKLB3EpOfEMDoGA1UdEQQzMDGCC2lkLmlzdGF0
+Lml0hiJodHRwczovL2lkLmlzdGF0Lml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCAXO/fo50TPy7eVAFueu51R8fKJtLuh34XoNth6Ytbs3JRtVs9
+ste6ohUSz2fny9v7edVVS7pr+apuBM0zV1nOVKbhDBsnT2dcwsX4yXF0W4hAmAXr
+fvrwIiBYXCYgMiu/voXgZePeqDoHm7+PdnbHlWAg6qdtoqtL7VpwBWK6HPk8b+c8
+7z+IGoB6mudVQN87M9m/xXrSe2OJp1i9km8xN+19yPKKeojZnau/gL0iyswCW1FL
+qONpN9pC48q7ivtOne8X+QNlQvHqDpko1TIy+aWVTBDR/LYgljHpErGrybe78+FU
+baFhXtaKkBlTNoVCvgJireOwOlxNecqzKyc8
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVANpWEXRR/rMD3jfFJoYHTqAU4fOiMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2lkLmlzdGF0Lml0MB4XDTE2MDYyMjA3NDA0NFoXDTM2
+MDYyMjA3NDA0NFowFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCqdwaDoSTCo56aW2cjvaG5j81pd/LJ9KpVK+TP
+A3idv5XGHETRD2BEPY1Pc/Vg8mP0Cev/9DcG0owZAcnQ7YdMe/MgoMHTaxwakFtf
+8diHjnn7JpF2qPoDiWtE0MVTi77B5rCSCQ/1/xGE3GqmQbHcxFFOOhvisb9N1RaJ
+U5myX/vc9Y3n0B/h3qxT5VJAK88TDvXrPzl1YFpy650H9N21vovlaJnBKfImNmw+
+Z2feDhC1YyERuW3yaACHoWYjAY4eCKAz4+J5IjuSs3AVXVxF3dDC3zJNCiHDsKAe
+BIbfIielrUMRv0ly9b+Pr9NJvr6AqTv3oFzcmyja5y2wcw//AgMBAAGjXTBbMB0G
+A1UdDgQWBBRwCy63XoWxb4GsfDlCfWdcke/RajA6BgNVHREEMzAxggtpZC5pc3Rh
+dC5pdIYiaHR0cHM6Ly9pZC5pc3RhdC5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEALTk9E+Qi06CUelHNVwBghBpMJ67t4sRyLiTyJ4bpqPzzVCmj
+F475AAMkImpv2Ayu4GGFUuxK6jjDeU1ksTK+ry+Xf1C+K1fUbTUKFIPYf2x/Fjs6
+9wHCBAgBNzcSRDqD7uKfZPZuLnAXpmgmfnDMa0KQ6NqInNMm1HvoWctl5UeUMfdj
+LVa6ixisbuN0b2XMslqoApph/eZR3l8vmxgFM4jZEBZTouq2enD8Cy6WClPFONny
+OvNfmlxGZ10bTMvME3fw9+Un5/6z1NQmF5Tl5aI1DBUMptzTj47FKVexUym8b1wp
+5eoK19Ii6ZkLuohlLhsF+axFAWkvHayShtMOMQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://id.istat.it:443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://id.istat.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://id.istat.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://id.istat.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">istat.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUE5pyCL89WeStj8MKq+7T3HycBAYwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwHhcNMTYwNjIyMDc0MDQ0WhcNMzYw
+NjIyMDc0MDQ0WjAWMRQwEgYDVQQDDAtpZC5pc3RhdC5pdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMoJanadELMdIBoSXyF98o2RFF72lTKxX6ZFNH0v
+JpzhNmdAS75Y+vt8kGVfBZNsuJbsqJ0EU7FdaQ4aTVn6oy/nlAbhR7qZhPCkFv71
+uXZqeQ11dQS8MMGTxaqdvqwAEjDEu5GAWpHK+BKECZ38D/b3mTOJzEUAEvwSuiSI
+3+92CXjC69H+mL8akzb0u3IxYAatehdqn/q29seNk0cZStVCPV2VyxJG2/qiPqWy
+I3WwxSRV1fwEH/IlzoTqSe2cz5/9RyRL+MAHMt1QBF9hDEPutdl6IBwmg0cSdpKA
+U26zw1rr4SvzuJtOUh2rPnZjyItUz+ST8TgfQFAfz3p1EycCAwEAAaNdMFswHQYD
+VR0OBBYEFGtCzoOQEyw2isDc9mJ4DQXME0xDMDoGA1UdEQQzMDGCC2lkLmlzdGF0
+Lml0hiJodHRwczovL2lkLmlzdGF0Lml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBP6CCMFmeei1OjJDgvnwVM6asRje07cl0sG892aVvIAq+XI94o
+kaXSA7X7fRZoDA4z13ZYe/j1crfXA3MgJ0bH4bm+Ry7KGG+2WZzhpnhXslouer5b
+DGw62NgMrEsnwI7SB25uEa2UOhX93juhcp0WVFiGSvgikfGEsZUvdT8rR0fZl9cm
+Lze6K5EFX6Oi51FNp2IEh+fF4EcrMf3jMQ0u6t8SAURY61n8pnaSX524pAzw+8p3
+Sww8eo6UpV8b+DlLg6/86er5TkEA9hp4AlmpDsvQNifOceVjp/DUdXLxBCNt0xPh
+sK7/t4Hudy22eLw4lS6zcCg1o2Toj4cHt7L5
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUWvQbivpkbGTBq+AESUtHBROAwmAwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwHhcNMTYwNjIyMDc0MDQzWhcNMzYw
+NjIyMDc0MDQzWjAWMRQwEgYDVQQDDAtpZC5pc3RhdC5pdDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAML0BnsfcVAUNtLF8Z7L3hVi+Gqk9ZfH70+iwmZq
+N7Q3Ck+lwgjx0X19i6ApYb6Ln8m2sVjCQWcKNM84z05b3tw4ShNzXFY85UTGCXda
+sbAFl3TyaF9BQIVGoaxRoguFUuxHu4Tj8DtXqSjUSKdOl3eFiIFSsa+dtXFjW/Uj
+Rci5jpRuQL0HUAIxEmCo5CiJNlfpXMr6k3pbo0Uy5RpuLXjHEYWCDcGkA/XY4EVg
+2i2YVVvZRhzd1VXFFf8bEvPDR1BHIvtKWxQXAaJ+//i3a7yMi8xnuTPOObY0rgQY
+zQmkoXFtDOtBzGTiDJNXNNmWQkUq6LyoY7yGO80jYqrp4LkCAwEAAaNdMFswHQYD
+VR0OBBYEFKYDhD9ThhbaAIo21nxKLB3EpOfEMDoGA1UdEQQzMDGCC2lkLmlzdGF0
+Lml0hiJodHRwczovL2lkLmlzdGF0Lml0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQCAXO/fo50TPy7eVAFueu51R8fKJtLuh34XoNth6Ytbs3JRtVs9
+ste6ohUSz2fny9v7edVVS7pr+apuBM0zV1nOVKbhDBsnT2dcwsX4yXF0W4hAmAXr
+fvrwIiBYXCYgMiu/voXgZePeqDoHm7+PdnbHlWAg6qdtoqtL7VpwBWK6HPk8b+c8
+7z+IGoB6mudVQN87M9m/xXrSe2OJp1i9km8xN+19yPKKeojZnau/gL0iyswCW1FL
+qONpN9pC48q7ivtOne8X+QNlQvHqDpko1TIy+aWVTBDR/LYgljHpErGrybe78+FU
+baFhXtaKkBlTNoVCvgJireOwOlxNecqzKyc8
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVANpWEXRR/rMD3jfFJoYHTqAU4fOiMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2lkLmlzdGF0Lml0MB4XDTE2MDYyMjA3NDA0NFoXDTM2
+MDYyMjA3NDA0NFowFjEUMBIGA1UEAwwLaWQuaXN0YXQuaXQwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCqdwaDoSTCo56aW2cjvaG5j81pd/LJ9KpVK+TP
+A3idv5XGHETRD2BEPY1Pc/Vg8mP0Cev/9DcG0owZAcnQ7YdMe/MgoMHTaxwakFtf
+8diHjnn7JpF2qPoDiWtE0MVTi77B5rCSCQ/1/xGE3GqmQbHcxFFOOhvisb9N1RaJ
+U5myX/vc9Y3n0B/h3qxT5VJAK88TDvXrPzl1YFpy650H9N21vovlaJnBKfImNmw+
+Z2feDhC1YyERuW3yaACHoWYjAY4eCKAz4+J5IjuSs3AVXVxF3dDC3zJNCiHDsKAe
+BIbfIielrUMRv0ly9b+Pr9NJvr6AqTv3oFzcmyja5y2wcw//AgMBAAGjXTBbMB0G
+A1UdDgQWBBRwCy63XoWxb4GsfDlCfWdcke/RajA6BgNVHREEMzAxggtpZC5pc3Rh
+dC5pdIYiaHR0cHM6Ly9pZC5pc3RhdC5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEALTk9E+Qi06CUelHNVwBghBpMJ67t4sRyLiTyJ4bpqPzzVCmj
+F475AAMkImpv2Ayu4GGFUuxK6jjDeU1ksTK+ry+Xf1C+K1fUbTUKFIPYf2x/Fjs6
+9wHCBAgBNzcSRDqD7uKfZPZuLnAXpmgmfnDMa0KQ6NqInNMm1HvoWctl5UeUMfdj
+LVa6ixisbuN0b2XMslqoApph/eZR3l8vmxgFM4jZEBZTouq2enD8Cy6WClPFONny
+OvNfmlxGZ10bTMvME3fw9+Un5/6z1NQmF5Tl5aI1DBUMptzTj47FKVexUym8b1wp
+5eoK19Ii6ZkLuohlLhsF+axFAWkvHayShtMOMQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://id.istat.it:443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Istat</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Istat</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">ISTAT - Istituto Nazionale di Statistica</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">ISTAT - Italian National Institute of Statistics</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.istat.it/it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.istat.it/en/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:idem@istat.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth-test.unifi.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/"/>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unifi.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIJAJetSb/K6wCIMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGHNoaWJib2xldGgtdGVzdC51bmlmaS5pdDAeFw0xMTA0MTkwOTM0MzBaFw0z
+MTA0MTkwOTM0MzBaMCMxITAfBgNVBAMTGHNoaWJib2xldGgtdGVzdC51bmlmaS5p
+dDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJU2KZVUGiA4Di44WOlt
+MrFJ3lTrAIXQ95yji2QujTtQhZRQfICDTtovkpE1ZIUNoxQI6vV12/VgbKsdk2uL
+JK6MjNSNN/Uesx1RQJrYm+BGvLKRl4YPOzp8Yj2l4oyfNXepGtwLfoNFUGCecO4w
+v3LkWk+LJN7HHHokJVYi59ZHXFGMl0KOeILcAYxKDb5T3xf0vZY3cqP8lO/6M+Ek
+Kw7mE4alfsVwjOGU0bdIFnBAHXfnd5qX6ITaxLhqbW1aA+oKQZBvcrZf1FZyqZHd
+9iQ1i8XgwzTkMx/j1gNSm40dmjP//O7u66vVgYI7n48GM00+J7pW85fzLq/nslBR
+fNECAwEAAaN3MHUwVAYDVR0RBE0wS4IYc2hpYmJvbGV0aC10ZXN0LnVuaWZpLml0
+hi9odHRwczovL3NoaWJib2xldGgtdGVzdC51bmlmaS5pdC9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUecRUt/NFb5ij8z8w6+07dL6ScHcwDQYJKoZIhvcNAQEFBQAD
+ggEBAG9IbsMFA1ecZAS2IiZ3YBwpSxx8mDBKdjtKLmuNJc46uXIZXkbNPCr8kJGg
+7gOciWlH+r4WKOh1tJnU6f2ggmL+Lns5lVAXieU1hRnrAwKSJGHlyQwhSxknDDsq
+mu20TzR/TX+MtrkBKR6Gz5VfA+5l9F32YHIe8KEE7P8tOdUpKboJkLYweomfCXG4
+g5hJo1AC0JoEpr7j6rwqHf8GAGtlXiKPcQzp2ZbLCRJabzuSKGyEaix7zbC7ShS0
+j9yXuEQZpjL4Zc1Q+SSlCBtcn+XTDAFqzDWEI/4XN9aXeeWHXzOj4JriWVJEQVN4
+5JxMJri9LmMi8dsCWRz3uyKVOVQ=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth-test.unifi.it:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth-test.unifi.it:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth-test.unifi.it/idp/profile/Shibboleth/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth-test.unifi.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth-test.unifi.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth-test.unifi.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unifi.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIJAJetSb/K6wCIMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGHNoaWJib2xldGgtdGVzdC51bmlmaS5pdDAeFw0xMTA0MTkwOTM0MzBaFw0z
+MTA0MTkwOTM0MzBaMCMxITAfBgNVBAMTGHNoaWJib2xldGgtdGVzdC51bmlmaS5p
+dDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJU2KZVUGiA4Di44WOlt
+MrFJ3lTrAIXQ95yji2QujTtQhZRQfICDTtovkpE1ZIUNoxQI6vV12/VgbKsdk2uL
+JK6MjNSNN/Uesx1RQJrYm+BGvLKRl4YPOzp8Yj2l4oyfNXepGtwLfoNFUGCecO4w
+v3LkWk+LJN7HHHokJVYi59ZHXFGMl0KOeILcAYxKDb5T3xf0vZY3cqP8lO/6M+Ek
+Kw7mE4alfsVwjOGU0bdIFnBAHXfnd5qX6ITaxLhqbW1aA+oKQZBvcrZf1FZyqZHd
+9iQ1i8XgwzTkMx/j1gNSm40dmjP//O7u66vVgYI7n48GM00+J7pW85fzLq/nslBR
+fNECAwEAAaN3MHUwVAYDVR0RBE0wS4IYc2hpYmJvbGV0aC10ZXN0LnVuaWZpLml0
+hi9odHRwczovL3NoaWJib2xldGgtdGVzdC51bmlmaS5pdC9pZHAvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUecRUt/NFb5ij8z8w6+07dL6ScHcwDQYJKoZIhvcNAQEFBQAD
+ggEBAG9IbsMFA1ecZAS2IiZ3YBwpSxx8mDBKdjtKLmuNJc46uXIZXkbNPCr8kJGg
+7gOciWlH+r4WKOh1tJnU6f2ggmL+Lns5lVAXieU1hRnrAwKSJGHlyQwhSxknDDsq
+mu20TzR/TX+MtrkBKR6Gz5VfA+5l9F32YHIe8KEE7P8tOdUpKboJkLYweomfCXG4
+g5hJo1AC0JoEpr7j6rwqHf8GAGtlXiKPcQzp2ZbLCRJabzuSKGyEaix7zbC7ShS0
+j9yXuEQZpjL4Zc1Q+SSlCBtcn+XTDAFqzDWEI/4XN9aXeeWHXzOj4JriWVJEQVN4
+5JxMJri9LmMi8dsCWRz3uyKVOVQ=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth-test.unifi.it:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth-test.unifi.it:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Universita' degli studi di Firenze (UNIFI)</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Universita' di Firenze - Test</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.unifi.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Sonia</md:GivenName>
+<md:SurName>Rosella</md:SurName>
+<md:EmailAddress>mailto:sonia.rosella@unifi.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Sauro</md:GivenName>
+<md:SurName>Chellini</md:SurName>
+<md:EmailAddress>mailto:sauro.chellini@unifi.it.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

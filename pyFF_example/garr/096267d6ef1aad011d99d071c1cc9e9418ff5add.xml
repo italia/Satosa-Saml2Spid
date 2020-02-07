@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://logon.erasmusmc.nl/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.surfconext.nl/" registrationInstant="2017-04-24T16:09:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wiki.surfnet.nl/display/eduGAIN/EduGAIN</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">erasmusmc.nl</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="nl">Erasmus MC</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Erasmus MC</mdui:DisplayName>
+		<mdui:Description xml:lang="nl">Erasmus MC</mdui:Description>
+		<mdui:Description xml:lang="en">Erasmus MC</mdui:Description>
+		<mdui:Logo height="160" width="200">https://static.surfconext.nl/logos/idp/erasmusmc.png</mdui:Logo>
+		<mdui:Keywords xml:lang="en">Erasmus MC University Medical Center Rotterdam</mdui:Keywords>
+		<mdui:Keywords xml:lang="nl">Erasmus Medisch Centrum Rotterdam</mdui:Keywords>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID7DCCAtSgAwIBAgIJAIgMqnMYZ+t6MA0GCSqGSIb3DQEBCwUAMIGFMQswCQYD
+VQQGEwJOTDEQMA4GA1UECAwHVXRyZWNodDEQMA4GA1UEBwwHVXRyZWNodDEVMBMG
+A1UECgwMU1VSRm5ldCBCLlYuMRMwEQYDVQQLDApTVVJGY29uZXh0MSYwJAYDVQQD
+DB1lbmdpbmUuc3VyZmNvbmV4dC5ubCAyMDE4MTIxMzAeFw0xODEyMTMxNTI5MjBa
+Fw0yMzEyMTMxNTI5MjBaMIGFMQswCQYDVQQGEwJOTDEQMA4GA1UECAwHVXRyZWNo
+dDEQMA4GA1UEBwwHVXRyZWNodDEVMBMGA1UECgwMU1VSRm5ldCBCLlYuMRMwEQYD
+VQQLDApTVVJGY29uZXh0MSYwJAYDVQQDDB1lbmdpbmUuc3VyZmNvbmV4dC5ubCAy
+MDE4MTIxMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALPOGS+fBERf
+mWiV8aV85z45QsuFw3gkq0HbWR1JGz7cjqhjV6YZHFXyRt4ikG//9BIHS0xc/cW1
+sOMnSuCjDhY8Oh/dOk01zfgFXUcv+0iNlkEKGMlT/xJpIDIy/N4WjpGvkJO2oJHf
+rQUY115Du56MSMqd0gPvo1OsDvXroYivqxYpTTHzaf5TYQYPf6n/3rEfsu3u6L3p
+zE3/q38jnEyxfQ1UoZ9VF2Fy6oe/StlwhPUJhVwHlKDMqQ+T+tljDt26Ok9QL3zz
+W9JtBo+pnydMT/rg5h7NW8A9HASLnRLK8rFD9nBEdAPkK+elTE6QddRiTh9H84KC
+s0fQiiT6YFsCAwEAAaNdMFswHQYDVR0OBBYEFAJuZa7u0f0o2kB9uRPoB/ekx04s
+MB8GA1UdIwQYMBaAFAJuZa7u0f0o2kB9uRPoB/ekx04sMAsGA1UdDwQEAwIHgDAM
+BgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBXh5l8u+ncPXkMyDqDuikN
+Le/X5j0KNjvqUtQ6QPRSt8MMvjRYWZdVC0gMOtKEAY1/cYnA2y+0yrGqmy9I/zBd
+LV73BBLnVlV2WYATYOZLWNW36kjBtdSbH0oXBp7HOu/I4lP+Sv69eRN6p2/9CmDy
+Kc5JUpXU3PEftv5Lwsqco8MMqqENhwzYlxRb96LFq08Un2QQoV60HqX4Ks79qUrn
+jRL5pKtoP4ujLmPqQIieHpTgsvHSqSa+9tZMnyEaJEvl7vpNn1M7v1bWOWwjQvMl
+YnSq5b0U5gHXgpdBYSfWnCwwpq4h8KHZ7/XVvOVsdYpjHap+907OGhqXGBsIqf9U
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://engine.surfconext.nl/authentication/idp/single-sign-on/key:20181213/05cfa4aab2342d9e9b338f3e881db78e"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Erasmus MC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Erasmus MC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.erasmusmc.nl/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>SURFconext support</md:GivenName>
+	<md:EmailAddress>mailto:support@surfconext.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SURFconext support</md:GivenName>
+	<md:EmailAddress>mailto:support@surfconext.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SURFconext support</md:GivenName>
+	<md:EmailAddress>mailto:help@surfconext.nl</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>SURFcert</md:GivenName>
+	<md:EmailAddress>mailto:cert@surfnet.nl</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

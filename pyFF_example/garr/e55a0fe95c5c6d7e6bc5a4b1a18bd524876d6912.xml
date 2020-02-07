@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://dev.pf.adidas.com">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-09-25T13:35:45Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDdjCCAl6gAwIBAgIGAUAaKOiMMA0GCSqGSIb3DQEBBQUAMHwxCzAJBgNVBAYT
+AkRFMQ8wDQYDVQQIEwZCYXllcm4xFzAVBgNVBAcTDkhlcnpvZ2VuYXVyYWNoMQ8w
+DQYDVQQKEwZhZGlkYXMxHzAdBgNVBAsTFkNDIE1hcmtldGluZyBHbG9iYWwgSVQx
+ETAPBgNVBAMMCHBpbmdfZGV2MB4XDTEzMDcyNjA4NDcwM1oXDTIzMDcyNDA4NDcw
+M1owfDELMAkGA1UEBhMCREUxDzANBgNVBAgTBkJheWVybjEXMBUGA1UEBxMOSGVy
+em9nZW5hdXJhY2gxDzANBgNVBAoTBmFkaWRhczEfMB0GA1UECxMWQ0MgTWFya2V0
+aW5nIEdsb2JhbCBJVDERMA8GA1UEAwwIcGluZ19kZXYwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCCDhQHa7AiG64TEr9I+GCjnBq3dUybpS7R8JI3JkHO
+xaWXCDxOvuPcoi9xA9PW4TooQgD5QXz+eIyQ2Arb5tyOBmKekWPq4f5KkqYa6qyt
+pJJTqUuoVbqjQjNP1NVHZmwFsL3Kadnes+87LsgbVtQnpiqYHz3s2WT7YfmlSqXR
+mMrQt5iVSTX0Tdm5m7wA6Xyzq21faqb6CDYCFZXUe0f/G9WrbJTITN5yc4p8T7NW
+yeRFVj2v0PFXdv+aAiqkv1W5781M8F5OfBNripwXfT12RONbYvgY8sUFDY6BDlNh
+vDDKKBQRvTILTKL1QIsRPWvUti5vW9ySDXjFgLvS5DsvAgMBAAEwDQYJKoZIhvcN
+AQEFBQADggEBAGMrOehUiULVhakwr/l9gIiKaw1txHUYlsVZ740an0vt6y+A2O8L
+bzPaI2my/y0aV6ddk78ERK2bRkSKVgkLevu/SKTdrE+ClTccCsZquUPK8C/Rbqvd
+G3trHaSjO91LKgbcA/IQZc3rojZShIsLp0CQ05HBOtB5EzSeLK67gEFiOOTXj49i
+UOWl9vrHP5khiXkqjhYK2PwoM+wOGDm2PepftBEKb6fCv0IJH6+057xDOhE+rWHN
+Sn9dCpFe0yTtmyASrOPeHHUbS8wqDEQQjWiA8UO+PKkFESfXduO7eqT/wve5Toj5
+dkrEwvqRvyw71CgkUBhrKtFp+tc8WVA3MXw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dev.pf.adidas.com/sp/ARS.ssaml2" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://dev.pf.adidas.com/sp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dev.pf.adidas.com/sp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dev.pf.adidas.com/sp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dev.pf.adidas.com/sp/SLO.ssaml2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://dev.pf.adidas.com/sp/acs.saml1" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://dev.pf.adidas.com/sp/acs.saml1" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dev.pf.adidas.com/sp/ACS.saml2" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dev.pf.adidas.com/sp/ACS.saml2" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://dev.pf.adidas.com/sp/ACS.saml2" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Adidas International Trading B.V.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">adidas UK</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.adidas.co.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>CRM-Support</md:GivenName>
+	<md:EmailAddress>mailto:CRM-Support@adidas-group.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>CRM-Support</md:GivenName>
+	<md:EmailAddress>mailto:CRM-Support@adidas-group.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Deborah</md:GivenName>
+	<md:SurName>Olivo</md:SurName>
+	<md:EmailAddress>mailto:Deborah.Olivo@externals.adidas-group.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

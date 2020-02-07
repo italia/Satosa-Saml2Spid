@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibbsrv1.gsa.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Glasgow School of Art (MyGSA)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Glasgow School of Art (MyGSA)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">gsa.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWjCCAkICCQCivWPQEvRbljANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJH
+QjEQMA4GA1UECBMHR2xhc2dvdzEXMBUGA1UEBxMOUmVuZnJldyBTdHJlZXQxFzAV
+BgNVBAoTDlJlbmZyZXcgU3RyZWV0MRwwGgYDVQQDExNzaGliYnNydjEuZ3NhLmFj
+LnVrMB4XDTEzMDQxMDE0Mjc1MloXDTMzMDQwNTE0Mjc1MlowbzELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0dsYXNnb3cxFzAVBgNVBAcTDlJlbmZyZXcgU3RyZWV0MRcw
+FQYDVQQKEw5SZW5mcmV3IFN0cmVldDEcMBoGA1UEAxMTc2hpYmJzcnYxLmdzYS5h
+Yy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMyvtXXL1ZjqGV45
+QRqdOrqXaX+trM2srXsh74k8UfivA5QxDAho548YVlcdmnm/d1kSTYSIHzD1IZu0
+1HD2X3RehRORQTiejQQl+KfZa3HNwVc96PqkQ3UDmsTLwkzCnKToto3SVqEmflGG
+ibj1SUA8kr/4kYmO/EZEIyhDq0dWYlx4iMQGHoUUHUp1FBDFRfOffBjUVyoDGzbM
+cZesKVyJLIMuwZdWYm8diYnQggNHw17N0t/FsgKbUnPA1Wj2w5bE2sObR/eGCRv1
+/QgiPvuW0qawibwgfdNYr+u6x8ZB9D1CA5xwSAmLhxDxAG8Vn34e/j51doS1ET5U
+rR071ccCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAzBfS3T2zWUe+nCXopLOASUxv
+Jzx4WHXsLbuR5I9dA/l1GXdQkgswDwMvSBh+eP6bLe2qncKOys/2QLx2R1g/ata2
+dxACjh5t68Aca5xKfxD4Axnyzu2j0aW3CojrR0SlzIAiXEWzQAOwUM9FtEYfrcDc
+SauS3ziuUbHzzLufHrnuKOvzyTv/6acMNnlL4JZQPTUtMluzdNxApbsndvYuOty+
+yhnJqONwsMlgVqghAmHILD54ZgEsBUX+drhMVu7+Vk0tocvfr5SDmp5yfB2zl2RV
+ZAsbj5IQmyAuMRF3AnM7837HCnvjO/89bCjODt286HBAvPgyRFbHiUpruf3F+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibbsrv1.gsa.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibbsrv1.gsa.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibbsrv1.gsa.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibbsrv1.gsa.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibbsrv1.gsa.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibbsrv1.gsa.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gsa.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDWjCCAkICCQCivWPQEvRbljANBgkqhkiG9w0BAQUFADBvMQswCQYDVQQGEwJH
+QjEQMA4GA1UECBMHR2xhc2dvdzEXMBUGA1UEBxMOUmVuZnJldyBTdHJlZXQxFzAV
+BgNVBAoTDlJlbmZyZXcgU3RyZWV0MRwwGgYDVQQDExNzaGliYnNydjEuZ3NhLmFj
+LnVrMB4XDTEzMDQxMDE0Mjc1MloXDTMzMDQwNTE0Mjc1MlowbzELMAkGA1UEBhMC
+R0IxEDAOBgNVBAgTB0dsYXNnb3cxFzAVBgNVBAcTDlJlbmZyZXcgU3RyZWV0MRcw
+FQYDVQQKEw5SZW5mcmV3IFN0cmVldDEcMBoGA1UEAxMTc2hpYmJzcnYxLmdzYS5h
+Yy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMyvtXXL1ZjqGV45
+QRqdOrqXaX+trM2srXsh74k8UfivA5QxDAho548YVlcdmnm/d1kSTYSIHzD1IZu0
+1HD2X3RehRORQTiejQQl+KfZa3HNwVc96PqkQ3UDmsTLwkzCnKToto3SVqEmflGG
+ibj1SUA8kr/4kYmO/EZEIyhDq0dWYlx4iMQGHoUUHUp1FBDFRfOffBjUVyoDGzbM
+cZesKVyJLIMuwZdWYm8diYnQggNHw17N0t/FsgKbUnPA1Wj2w5bE2sObR/eGCRv1
+/QgiPvuW0qawibwgfdNYr+u6x8ZB9D1CA5xwSAmLhxDxAG8Vn34e/j51doS1ET5U
+rR071ccCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAzBfS3T2zWUe+nCXopLOASUxv
+Jzx4WHXsLbuR5I9dA/l1GXdQkgswDwMvSBh+eP6bLe2qncKOys/2QLx2R1g/ata2
+dxACjh5t68Aca5xKfxD4Axnyzu2j0aW3CojrR0SlzIAiXEWzQAOwUM9FtEYfrcDc
+SauS3ziuUbHzzLufHrnuKOvzyTv/6acMNnlL4JZQPTUtMluzdNxApbsndvYuOty+
+yhnJqONwsMlgVqghAmHILD54ZgEsBUX+drhMVu7+Vk0tocvfr5SDmp5yfB2zl2RV
+ZAsbj5IQmyAuMRF3AnM7837HCnvjO/89bCjODt286HBAvPgyRFbHiUpruf3F+A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibbsrv1.gsa.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibbsrv1.gsa.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Glasgow School of Art</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Glasgow School of Art (MyGSA)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.gsa.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Sid</md:GivenName>
+	<md:SurName>Meldrum</md:SurName>
+	<md:EmailAddress>mailto:s.meldrum@gsa.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sid</md:GivenName>
+	<md:SurName>Meldrum</md:SurName>
+	<md:EmailAddress>mailto:s.meldrum@gsa.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

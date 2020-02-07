@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.img.cas.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2014-06-09T12:29:04Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/avcr</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">img.cas.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Institute of Molecular Genetics of the Czech Academy of Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Ústav molekulární genetiky AV ČR, v. v. i.</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity provider for IMG employees.</mdui:Description>
+		<mdui:Description xml:lang="cs">Poskytovatel identity pro zaměstnance ÚMG AV ČR.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.img.cas.cz/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">https://www.img.cas.cz/</mdui:InformationURL>
+		<mdui:Logo height="40" width="104">https://idp.img.cas.cz/images/img_logo_small.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPH1jffpoY1P09PSPn2C5FEqRR0aMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDb6SeFAqC2Md+NNMRmby1KHpMEM6l+
+YEwSb3EoK/SzHhXvBJMeGRGqRBJ2DbPuMzG/7z2aThdxGPFSpmi1GVShz1eS8iFU
+8EOeDm/LjcUGNuEPKBVnJli8rByzt/WXB/Diu1Otkucond+FjTbVP7M0qd+4nECD
+i5NLDRl6HccksU2x8NL9R3km/ot/vI6c55OFUJHkm6TUhj6/coNJiHHccKrI5SwA
+uaROLSU73kAIYleS9/XiliRWwUHiHJXR1kHtU1Tup2i3VBs20Mflcz67bnZkoznb
+m7Syt+QPlUNEqlJEbTsp29xM/W93DfTZ5Ucm7fiWu9QeAu9oN8l4M8oLAgMBAAGj
+YzBhMB0GA1UdDgQWBBRjsLlNRicstFKjWlcteE9Xj6XvSTBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIlwjoPX/D4Xry/0oNXUEJIylqfPIUfTz
+EqFbEfwp3zH03lZrJ/dscjTkS5h921f6dTUh2jLjx6TJORSHtCv+XY3SNDYNlkY/
+pGVOF0uL/IMiiqcnO8SLyPnlu1vd+RPtrfvFXof9cRmT+jkn0OUyfxrBABMtDz/q
+tOMzFdtQpHjcvBg4E+boy9D2ouYtEMriUUkXwA8/6xo/tCxZ2yrrRARKJ6k1XuYQ
+OjUAFH7HUxuAasYo2VtlT0zFzN9v7+js0TRzIYFtr96d9O/TxiMbmPymwMMw3lcn
+s3BGFyiU3PuUOF/0edoSgNgbTYAfKlr6zMkfRwawvwug2ZLplWcCJw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIOCNOvl2AO6vqxEbpoyEwFrR9RfMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmdpSrqFw4iW3M6Wm7SzmSGj/0P0p+
+RbMNJhuJZuwH3GahCD9O2AX9nvo8DMxrQsWAacV74SRt47XABBa1ouI5nFmN/sWN
+7XA3cSRk9QFfKfKPnHJD/7ULulOdmHqbrjv++YpSO51ShnjofEu9o1v+FhX9lE3w
+HE7QQZhd1ZxLqSVV1urlbmtjEeo2essDbd6BZWEgsScSguGxRqQLBtY4aQPPrNtC
+hcIF9yMLvJfZvdI++DFLf1lOEZ/55wi8obaIWPZexnO1l3xaaw1S+Oqoveon88+j
+PVn1gjOR4Ygbjk47hmhsA5XWP6G7LLkRYBAAlEbTcmVNyg2wSP2ksPqPAgMBAAGj
+YzBhMB0GA1UdDgQWBBSfccIQC2plGjGzNYowaMIUg+yrojBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJXrsY+vBVBj9Zh+m81Cbqb+0h0NZcYCE
+YslVQtxylRadPXXUZoaymaA4qfIQ975hbGAuL73jbfz9D+i1r7P9gMMDuxeCyVqb
+FewfvPl3+F0aY6v96dnz52s+777M2UbdiVNvnEIFvMQpmcXQA6Ya4quKdk4pcyEK
+n0YUu/NzcRU+OjQTQmJ5+tVfVPaW2+UColH2n/iyjfLj15FUUK/CxPiBXwlarpVp
+LXu3SILGjAvAWaxNE5BbdkeSGwLjgyBnRO2U9m2T4hBW3AwIWwivK00QsnxRJc8D
+RPOCRujFQFIDaowMdBOOlBmUKqKYAvxj6KaXlX+Bkh4rglUd6DYh0Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAO8xd776uz+lDpWqdZ9Gm3yEmHLSMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCQgLrDRorm63Om9NWvLq6DPkmAxcBA
+CaHA+uU6J++ZPvGxLl9QH4XhC71ZYTYgKd2Go2t8Y/ZpA2FunjQVR2O1Wy9Jj7za
+9C9cd4OvdEG+PhAv8+gq3cxuVhNACd6h+4V86/8Ays1sXAjzuaU9trww//CEE7++
+0Ayv8qVDUmwbuLb/CDA3/HAmytcKW2QdCAhcVotzJIqtVaoSjox1aVtxbFbwESVG
+2x3C+w32XRkePYA5lvQPhJ8Du4R75h/GIWH8YiRmypvQ76NTPIDxcjm2ZviW2xxW
+Nv3CpYLPxSWAHBIifqiIelzOsPxC9Pq1+ykawz6MR2NH7uUs+Zc/4AA3AgMBAAGj
+YzBhMB0GA1UdDgQWBBRXDGUHOv3g3JcheLc4VBMHE7bqGDBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAhbwJeR1iE3RVDfyOCCY7HlNaCDWjnZ6R
+HUW/sRko+lNOogVN5CVEZVBq45f5OBHwwFGkdUwARlPz4WWdtk9DwSejoHcEg3Wj
+SAEaQKtFtIaPcliq94Zr0BzKDPztBEyn0RIGCG3LPRAoLd/huN1xMqK06kgcnnvu
+E0n6bhk2C8v9z9ptP3VxfDIsbNMitjFJymfJF0LHgblE37ZCsnVLqEubkv3WeL/S
+U0bC68hJxCujEIqHe3k+LPtsmn2hE4CtNUfeOjgDjPinOPnKcwzF9wlLn2TN8GT4
+BTkORnRLbNxaeD5lxF3nKFucq/Hfs2uYBn+TcIhyWUq6nPn6DAZM/g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.img.cas.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.img.cas.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.img.cas.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.img.cas.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.img.cas.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.img.cas.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">img.cas.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAPH1jffpoY1P09PSPn2C5FEqRR0aMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDb6SeFAqC2Md+NNMRmby1KHpMEM6l+
+YEwSb3EoK/SzHhXvBJMeGRGqRBJ2DbPuMzG/7z2aThdxGPFSpmi1GVShz1eS8iFU
+8EOeDm/LjcUGNuEPKBVnJli8rByzt/WXB/Diu1Otkucond+FjTbVP7M0qd+4nECD
+i5NLDRl6HccksU2x8NL9R3km/ot/vI6c55OFUJHkm6TUhj6/coNJiHHccKrI5SwA
+uaROLSU73kAIYleS9/XiliRWwUHiHJXR1kHtU1Tup2i3VBs20Mflcz67bnZkoznb
+m7Syt+QPlUNEqlJEbTsp29xM/W93DfTZ5Ucm7fiWu9QeAu9oN8l4M8oLAgMBAAGj
+YzBhMB0GA1UdDgQWBBRjsLlNRicstFKjWlcteE9Xj6XvSTBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIlwjoPX/D4Xry/0oNXUEJIylqfPIUfTz
+EqFbEfwp3zH03lZrJ/dscjTkS5h921f6dTUh2jLjx6TJORSHtCv+XY3SNDYNlkY/
+pGVOF0uL/IMiiqcnO8SLyPnlu1vd+RPtrfvFXof9cRmT+jkn0OUyfxrBABMtDz/q
+tOMzFdtQpHjcvBg4E+boy9D2ouYtEMriUUkXwA8/6xo/tCxZ2yrrRARKJ6k1XuYQ
+OjUAFH7HUxuAasYo2VtlT0zFzN9v7+js0TRzIYFtr96d9O/TxiMbmPymwMMw3lcn
+s3BGFyiU3PuUOF/0edoSgNgbTYAfKlr6zMkfRwawvwug2ZLplWcCJw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAIOCNOvl2AO6vqxEbpoyEwFrR9RfMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCmdpSrqFw4iW3M6Wm7SzmSGj/0P0p+
+RbMNJhuJZuwH3GahCD9O2AX9nvo8DMxrQsWAacV74SRt47XABBa1ouI5nFmN/sWN
+7XA3cSRk9QFfKfKPnHJD/7ULulOdmHqbrjv++YpSO51ShnjofEu9o1v+FhX9lE3w
+HE7QQZhd1ZxLqSVV1urlbmtjEeo2essDbd6BZWEgsScSguGxRqQLBtY4aQPPrNtC
+hcIF9yMLvJfZvdI++DFLf1lOEZ/55wi8obaIWPZexnO1l3xaaw1S+Oqoveon88+j
+PVn1gjOR4Ygbjk47hmhsA5XWP6G7LLkRYBAAlEbTcmVNyg2wSP2ksPqPAgMBAAGj
+YzBhMB0GA1UdDgQWBBSfccIQC2plGjGzNYowaMIUg+yrojBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAJXrsY+vBVBj9Zh+m81Cbqb+0h0NZcYCE
+YslVQtxylRadPXXUZoaymaA4qfIQ975hbGAuL73jbfz9D+i1r7P9gMMDuxeCyVqb
+FewfvPl3+F0aY6v96dnz52s+777M2UbdiVNvnEIFvMQpmcXQA6Ya4quKdk4pcyEK
+n0YUu/NzcRU+OjQTQmJ5+tVfVPaW2+UColH2n/iyjfLj15FUUK/CxPiBXwlarpVp
+LXu3SILGjAvAWaxNE5BbdkeSGwLjgyBnRO2U9m2T4hBW3AwIWwivK00QsnxRJc8D
+RPOCRujFQFIDaowMdBOOlBmUKqKYAvxj6KaXlX+Bkh4rglUd6DYh0Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAO8xd776uz+lDpWqdZ9Gm3yEmHLSMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmlkcC5pbWcuY2FzLmN6MB4XDTE2MDUwMzA5NDg0MloX
+DTM2MDUwMzA5NDg0MlowGTEXMBUGA1UEAwwOaWRwLmltZy5jYXMuY3owggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCQgLrDRorm63Om9NWvLq6DPkmAxcBA
+CaHA+uU6J++ZPvGxLl9QH4XhC71ZYTYgKd2Go2t8Y/ZpA2FunjQVR2O1Wy9Jj7za
+9C9cd4OvdEG+PhAv8+gq3cxuVhNACd6h+4V86/8Ays1sXAjzuaU9trww//CEE7++
+0Ayv8qVDUmwbuLb/CDA3/HAmytcKW2QdCAhcVotzJIqtVaoSjox1aVtxbFbwESVG
+2x3C+w32XRkePYA5lvQPhJ8Du4R75h/GIWH8YiRmypvQ76NTPIDxcjm2ZviW2xxW
+Nv3CpYLPxSWAHBIifqiIelzOsPxC9Pq1+ykawz6MR2NH7uUs+Zc/4AA3AgMBAAGj
+YzBhMB0GA1UdDgQWBBRXDGUHOv3g3JcheLc4VBMHE7bqGDBABgNVHREEOTA3gg5p
+ZHAuaW1nLmNhcy5jeoYlaHR0cHM6Ly9pZHAuaW1nLmNhcy5jei9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAhbwJeR1iE3RVDfyOCCY7HlNaCDWjnZ6R
+HUW/sRko+lNOogVN5CVEZVBq45f5OBHwwFGkdUwARlPz4WWdtk9DwSejoHcEg3Wj
+SAEaQKtFtIaPcliq94Zr0BzKDPztBEyn0RIGCG3LPRAoLd/huN1xMqK06kgcnnvu
+E0n6bhk2C8v9z9ptP3VxfDIsbNMitjFJymfJF0LHgblE37ZCsnVLqEubkv3WeL/S
+U0bC68hJxCujEIqHe3k+LPtsmn2hE4CtNUfeOjgDjPinOPnKcwzF9wlLn2TN8GT4
+BTkORnRLbNxaeD5lxF3nKFucq/Hfs2uYBn+TcIhyWUq6nPn6DAZM/g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.img.cas.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">IMG</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">ÚMG</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Institute of Molecular Genetics of the Czech Academy of Sciences</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Ústav molekulární genetiky AV ČR, v. v. i.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.img.cas.cz/en/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">https://www.img.cas.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michal</md:GivenName>
+	<md:SurName>Novotny</md:SurName>
+	<md:EmailAddress>mailto:michal.novotny@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Divina</md:SurName>
+	<md:EmailAddress>mailto:petr.divina@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michal</md:GivenName>
+	<md:SurName>Novotny</md:SurName>
+	<md:EmailAddress>mailto:michal.novotny@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michal</md:GivenName>
+	<md:SurName>Zacek</md:SurName>
+	<md:EmailAddress>mailto:michal.zacek@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jiri</md:GivenName>
+	<md:SurName>Ruzicka</md:SurName>
+	<md:EmailAddress>mailto:jiri.ruzicka@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Divina</md:SurName>
+	<md:EmailAddress>mailto:petr.divina@img.cas.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

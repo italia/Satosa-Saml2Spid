@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://edugain.tpu.ru/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://runnet.ru/" registrationInstant="2018-10-10T10:01:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.runnet.ru/en/documents/runnetaai-mrps-3</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="ru">https://www.runnet.ru/documents-ru/policy</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tpu.ru</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TPU IdP</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ru">ТПУ IdP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">TPU IdP Service</mdui:Description>
+		<mdui:Description xml:lang="ru">Служба IdP ТПУ</mdui:Description>
+		<mdui:Keywords xml:lang="en">communication federated+session</mdui:Keywords>
+		<mdui:Keywords xml:lang="ru">коммуникации федерация федеративная+аутентификация</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://www.tpu.ru/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="ru">http://www.tpu.ru/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="ru">http://web.tpu.ru/webcenter/content/conn/WebCenterSpaces-ucm/path/WebCenterSpaces-Root/iau/doc/order_62od_30.07.2018.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="32" width="100">https://edugain.tpu.ru/tpu-logo-small.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>tpu.ru</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVALv4hcm7ZkTv93pLS/kWvdy4OE3EMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDmVkdWdhaW4udHB1LnJ1MB4XDTE4MDcxMjE0NDIzOFoX
+DTM4MDcxMjE0NDIzOFowGTEXMBUGA1UEAwwOZWR1Z2Fpbi50cHUucnUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCjUj1okmyYqzJdLCVxO3ZrI06IpakZ
+4ej2di/HGGBMV8zw7Ugd+gFZrRd7fOHQzo3vslWK6Jlasafo7PG60CBDUokIgd00
+TenrtGyCsQg1kO7jcJ/W89BGFoV8H4bZ+jKuJk+K/P+h5bNRZ8iOg2gQWwxqoCTA
+PkvxqLA0cHbaVU0QwsKAsEFNtnhMYfGuDg6/JR5D5DCRW3EzasRm3K8LWbrCUiQr
+zYgIkp1rSvscs2ZGtcSCQatQjgnwGz5emlWD/saw67uJLCHs9SmzJzFF2JQFt+Lt
+5G4YbZHDi3ZMF4GDBICyyki8DiUg5g1fOmDN5ZnT0SyLeq8ZOcCVhrwdAgMBAAGj
+YzBhMB0GA1UdDgQWBBTeUIpLOO8fD1IozoExBJYjI77e3TBABgNVHREEOTA3gg5l
+ZHVnYWluLnRwdS5ydYYlaHR0cHM6Ly9lZHVnYWluLnRwdS5ydS9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAlo/WwMrUyTccTfkSURw6w/oXQrV7h+GV
+xxfUH0J6NpA+iUDClK6gC3imxoRxTv70W3gi4WJpsDxAkuA2GwpFX/G4Y8A6BM1V
+W0leB01606vLFnBKjlxhxuCaRT0Qr8X1baPulgzEkdH3um2an1sCRUbXDSt5GcLe
+AmO3BJ2Xsni+zQbtTo2qCgI4hmGftc3Jn4EXsZk+O3um1Awrvt/hiRkfAdbRc+eJ
+TZWkMeq8n4MQY8CE2F0WaheAh5JhPL3WoCP3JPIxfKFgcXBgo5st9s0P+LyKJELL
+7rZDv1qxzi9Zr0ehNTuQgrbyBum/3m7GSFXvHyFRx3oSBbGalBWj5A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIUW+3ZKnhsYOOpn1vX3p+fhAaRcCAwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOZWR1Z2Fpbi50cHUucnUwHhcNMTgwNzEyMTQ0MjM4WhcN
+MzgwNzEyMTQ0MjM4WjAZMRcwFQYDVQQDDA5lZHVnYWluLnRwdS5ydTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKDRu2PYb5w7CJRiioFtojVKBlNeiIn8
+wWorZXFVhiC7M+YgRuaKOxvFE0xXikJ4UQgU0MLCF3FoLV2Me8eiiGOhmI33Bylh
+Wa7bqAz9YX2R2BRP0kVTKy78zgJe7Lv9/0h44fCK4H+ltZgcJ+ZzqNyjs8xvKgm6
+XqjZ05NU42dV6LSDX9/sQVb2mxet6uYR2Hk+cgJwcb56P3rw8ybOzafOR/8dqN3L
+MsKGe61udPedqulVFot8UxxuMlSlTt0Gf3UrbZmddABVXe2bBH+xMtp8QAcK0oQM
+H2BfRxTDuyntz6T4HysX+feEA5Zj1NJwNpVFnP/WGMT77RvQJLdQyb0CAwEAAaNj
+MGEwHQYDVR0OBBYEFGy4sG6eknOx7SZExDBsUCOabUAUMEAGA1UdEQQ5MDeCDmVk
+dWdhaW4udHB1LnJ1hiVodHRwczovL2VkdWdhaW4udHB1LnJ1L2lkcC9zaGliYm9s
+ZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBLSnoPAeOcmpUqw4xyZ3JLM/WTw/PNzCQx
+x4p8sT2ZfDtyM/rWySL9HT74TOIvEVT+V3GJ8DTMb1rrRIXOlv68KXtdSZ8PgbeO
+vMcDYBSCfv+JVMnOMU0VP8nlBG62zG4H/hVbpHTCDWRClR6vBNRnOL7X9rfBwjWa
+4gYx8ZVAE6hxBeicWX5/zZQORyPE1JclGUun+b0zPn/6oWuPjKrdVeSag07m6FDH
+7FG3sXmNRPNpSFYeXVEYZPccy9hKpoICR93eWDnPNRvZWciQ47pyOOgg04xhAOqJ
+ZnjUXn92gcO7ZtUSagK23t0uHAdHLRtlwQHiKdVrWyP14+TOJ5Gl
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://edugain.tpu.ru/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://edugain.tpu.ru/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://edugain.tpu.ru/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://edugain.tpu.ru/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://edugain.tpu.ru/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="ru">Национальный исследовательский Томский политехнический университет</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">National Research Tomsk Polytechnic University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="ru">Томский политехнический университет</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Tomsk Polytechnic University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="ru">https://tpu.ru</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://tpu.ru/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Oleg</md:GivenName>
+	<md:SurName>Silishhev</md:SurName>
+	<md:EmailAddress>mailto:edugain-tech@tpu.ru</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Konstantin</md:GivenName>
+	<md:SurName>Kvasnikov</md:SurName>
+	<md:EmailAddress>mailto:edugain-adm@tpu.ru</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

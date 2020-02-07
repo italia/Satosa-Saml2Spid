@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://helium.jcu.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/university</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2010-09-15T12:40:35Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">jcu.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of South Bohemia in Ceske Budejovice</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Jihočeská univerzita v Českých Budějovicích</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for SBU in Ceské Budejovice</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro JČU v Českých Budějovicích</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.jcu.cz/?set_language=en</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">http://www.jcu.cz</mdui:InformationURL>
+		<mdui:Logo height="38" width="40">https://helium.jcu.cz/logo-ju-40.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://helium.jcu.cz:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://helium.jcu.cz:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://helium.jcu.cz/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://helium.jcu.cz/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://helium.jcu.cz/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://helium.jcu.cz:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://helium.jcu.cz/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://helium.jcu.cz/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://helium.jcu.cz/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://helium.jcu.cz/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">jcu.cz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUT352/cuSCyIoBXXvytfYj0l2xeAwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaGVsaXVtLmpjdS5jejAeFw0xMDA1MDMwOTQ1MDZaFw0z
+MDA1MDMwOTQ1MDZaMBgxFjAUBgNVBAMTDWhlbGl1bS5qY3UuY3owggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCVeR3QqDjqBUa8PvQHUCAYk16vc/tCuGH0
+330jNRPCXp4/OBBH8Z/jNe1ikVgzYXnN8qgf8ZqVXMDhdZD4T2Ewhhg1ZoqasCIV
+8lGFGCdGkQlTfM1NZWLcXtC/aB99EtV9yXowIHWZiggW5PLB2ggGxn4hk7EMEywa
+IKJ+rUSzx0cXgxNQMrHTcYtCVOlwKWbAk8l9ZlKllSgekwyhXknx9kXAIkr12N3h
+wHixnVqaMNAHkb4Ghcx66HTByRQhvh5g5mDcGV9ZhwSTPrXsfRyD06P7fVzCZjV8
+FiuNxgdNQ9Q+PvZcy/sH5Gxdu1i4VaJvPK9Gk3jCnDaXmBTT/UwlAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWhlbGl1bS5qY3UuY3qGJGh0dHBzOi8vaGVsaXVtLmpjdS5j
+ei9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUl6GU8/XvLl9I4+OaJjqAEW22yY8w
+DQYJKoZIhvcNAQEFBQADggEBAC5Rgn6IZByCrNOSqggl7j1T254ZzUKauG7joWW8
+HvrPcYWQsl4OU+FHErx4GAwOq9YpKpoJzcLGX3XBCJyo+Pw9ohbqWAgyBCYyBTQh
+mWV8+7BTWEZ6RCnGKcWfNRGg8mEMB6y+7YNdm+60YdCrbVasOstlDKoqTOa1gwD8
+fKpd1AzFldX7PwxwagGWYycYkSDXoS7nADEFzgn3cGlU9QnW4YtBBp30sOJjGgTj
+Qm2JkTDk/UKsYKYDrHoZ4vk71XTFLAgsCfBE2/2VJpIkOutXtqz78E07C4y2+4O3
+FcCuzEOMSqDr2DwNtwLU1t+o7IUndlfTGRBD+LfXQBWxuEo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://helium.jcu.cz:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of South Bohemia</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Jihočeská univerzita v Českých Budějovicích</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of South Bohemia</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Jihočeská univerzita v Českých Budějovicích</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.jcu.cz/?set_language=en</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">http://www.jcu.cz/?set_language=cs</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jan</md:GivenName>
+	<md:SurName>Marek</md:SurName>
+	<md:EmailAddress>mailto:jmarek@jcu.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://endo-test.literatumonline.com/action/samlACS/shibboleth/testshib/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-11-19T12:45:11Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Endocrine Society Test SP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Endocrine Society Test SP</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://endo-test.literatumonline.com/</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIJAIDfY9h2oTCVMA0GCSqGSIb3DQEBBQUAMB4xHDAaBgNV
+BAMTE3ByZXNzLmVuZG9jcmluZS5vcmcwHhcNMTMxMjExMDUzOTQ2WhcNMjMxMjA5
+MDUzOTQ2WjAeMRwwGgYDVQQDExNwcmVzcy5lbmRvY3JpbmUub3JnMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw2Hn+r9tAA0W/oAXm9ShLD2wvy+YKkeV
+yrmUJbzdU8DeJ0mQ0SS6/Y3yKZEAT6vsh4j4xso51qtly0HHh459F8y8n3vd829B
+vhxRwdE5PMZixPbWyltRPbx3XogpswBust9PXIWW4Unmo37NZhxrZQrt7GHvVvIX
+kuUAEoTkLkSurvgkLuUrPs/wm179D50kbx4E50Uz7nvJYVyEWqHdf3TGaD8gMM1E
+6DR2w0j4pKHBAjkLDy9mHGV6c91qFVNnWrhACmX35JjBiCvc1+JTVRpapM1/JgzP
+HNTCJogvQNn5SDU3cZsZV0T1Bu23Pb8MlXoZPmWJy2djNPzw1JtO6QIDAQABo2kw
+ZzBGBgNVHREEPzA9ghNwcmVzcy5lbmRvY3JpbmUub3JnhiZodHRwczovL3ByZXNz
+LmVuZG9jcmluZS5vcmcvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUG3/mbZR4LTuD9+bU
+dU0k7Li0WNkwDQYJKoZIhvcNAQEFBQADggEBAC4Sz/Os31gGbtIPklQ8SJHBs0ji
+MgbcKx15S3OkM06S75oDVI2qIrWXnAuWidexconSD35izsAscXlGI4EJgOflRJIB
+1kD9LOsHiz9kqUS2q7MNxWVloiQzxYCX14HGwPMtmKVTeTg5Vjo2BAuCRAhdxdFH
+seE5nYMbC4i31u1taTsM1Ydifr3UzmWTI5AZ884SYR9TfPh07rcW5m26Pmr3LLOa
+wDROxGmfeBQHWTnOJkbhLdE2Rv1MqCWP4XzA1a8PsuBxyboLCQUYxsn4J8hOP3ZN
+b3NsdouxzxBdj+PJxciM9yTP1Ju8l1QfVXC68KZ2WeEowX3e84BW8jaZ0OM=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://endo-test.literatumonline.com/action/samlACS" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://endo-test.literatumonline.com/action/saml2post" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://endo-test.literatumonline.com/action/saml2artifact" index="3"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Atypon Systems, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Endocrine Society Test SP</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://endo-test.literatumonline.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SSO-Support</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Support@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SSO-Tech</md:GivenName>
+	<md:EmailAddress>mailto:SSO-Tech@atypon.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

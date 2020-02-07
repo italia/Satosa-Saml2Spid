@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uxbridge.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-02-15T15:33:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Uxbridge College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Uxbridge College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">uxbridge.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUZwOkMlPz3cSvnZG/flZHZc+acwkwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAwwSaWRwLnV4YnJpZGdlLmFjLnVrMB4XDTE1MDEyNjA5MTYw
+OVoXDTM1MDEyNjA5MTYwOVowHTEbMBkGA1UEAwwSaWRwLnV4YnJpZGdlLmFjLnVr
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnsE3nHinfWPqK7JfCUdq
+q4o5aiqFt6lXkXVsFQLbSHfIz3Cf2kgndwqULQnSyBlyELbUVktdFQuHfve+qKJb
+hnYGFMbOpIqAHnlvc2LfhsZ1+H/C/B9gnzhjRVdgSEsG71R6GtidFmuRQeFvqTkg
+x+rtlgva2Iz2ZFE2n3dN9Fw+gNaqHfL3GEFewIECHuTdhbn/dJTXnogBZR+RQ/u1
+xTyuOM2IYyULmwiDb5X6koX0O/5yC/Pgj/vQ+7A4ZSKmpFYtF1d3PXLJ5x5pPlm1
+tw6MNivuAe8V+6IZeEOdZsM3NosiBLFiA0YsFdqXzPNFqVt7hFURH3KbqciMur5T
++QIDAQABo2swaTAdBgNVHQ4EFgQUiUoY92tgFoq4JqVfu9gSJmdlXS4wSAYDVR0R
+BEEwP4ISaWRwLnV4YnJpZGdlLmFjLnVrhilodHRwczovL2lkcC51eGJyaWRnZS5h
+Yy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEAA7+wTS76kWJq
+XgjsoyeCqrxQrSIwx6eL4QKQvgAVv8QuvXbAf4LeX+70pMY5iZ67ZEN8U/Hukq/J
+gya6DSiAFPViTJnACZMXFRogS1EkC+kLG1dcPPmqY2tweg6SDsMTwHOB9WbaAt+Q
+iNwQfBjlaEFHfPE6lo+C3rWEScABiHn0V6FWODuUxTqPaFwPIvM2insjUAWGM62U
+Aa488QsFI+qKCnntrvZcoEAyWmG/d5i/jK8MohytrC1khQ56VlYVFlXG2/05m3Bq
+aZniFfgK4PHqWDyOTMlF9wG5JNuzVb4CP04ptQZXiKBtMgnfpmlTyfimiGM/Jn2E
+ldckhs6TCQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uxbridge.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uxbridge.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.uxbridge.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uxbridge.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.uxbridge.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uxbridge.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uxbridge.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUZwOkMlPz3cSvnZG/flZHZc+acwkwDQYJKoZIhvcNAQEF
+BQAwHTEbMBkGA1UEAwwSaWRwLnV4YnJpZGdlLmFjLnVrMB4XDTE1MDEyNjA5MTYw
+OVoXDTM1MDEyNjA5MTYwOVowHTEbMBkGA1UEAwwSaWRwLnV4YnJpZGdlLmFjLnVr
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnsE3nHinfWPqK7JfCUdq
+q4o5aiqFt6lXkXVsFQLbSHfIz3Cf2kgndwqULQnSyBlyELbUVktdFQuHfve+qKJb
+hnYGFMbOpIqAHnlvc2LfhsZ1+H/C/B9gnzhjRVdgSEsG71R6GtidFmuRQeFvqTkg
+x+rtlgva2Iz2ZFE2n3dN9Fw+gNaqHfL3GEFewIECHuTdhbn/dJTXnogBZR+RQ/u1
+xTyuOM2IYyULmwiDb5X6koX0O/5yC/Pgj/vQ+7A4ZSKmpFYtF1d3PXLJ5x5pPlm1
+tw6MNivuAe8V+6IZeEOdZsM3NosiBLFiA0YsFdqXzPNFqVt7hFURH3KbqciMur5T
++QIDAQABo2swaTAdBgNVHQ4EFgQUiUoY92tgFoq4JqVfu9gSJmdlXS4wSAYDVR0R
+BEEwP4ISaWRwLnV4YnJpZGdlLmFjLnVrhilodHRwczovL2lkcC51eGJyaWRnZS5h
+Yy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEAA7+wTS76kWJq
+XgjsoyeCqrxQrSIwx6eL4QKQvgAVv8QuvXbAf4LeX+70pMY5iZ67ZEN8U/Hukq/J
+gya6DSiAFPViTJnACZMXFRogS1EkC+kLG1dcPPmqY2tweg6SDsMTwHOB9WbaAt+Q
+iNwQfBjlaEFHfPE6lo+C3rWEScABiHn0V6FWODuUxTqPaFwPIvM2insjUAWGM62U
+Aa488QsFI+qKCnntrvZcoEAyWmG/d5i/jK8MohytrC1khQ56VlYVFlXG2/05m3Bq
+aZniFfgK4PHqWDyOTMlF9wG5JNuzVb4CP04ptQZXiKBtMgnfpmlTyfimiGM/Jn2E
+ldckhs6TCQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.uxbridge.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uxbridge.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">HCUC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Uxbridge College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uxbridge.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@overtsoftware.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mohammed</md:GivenName>
+	<md:SurName>Abdulaziz</md:SurName>
+	<md:EmailAddress>mailto:MAbdulaz@uxbridgecollege.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

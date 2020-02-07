@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://svkul.cz/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.cz/uri/idp-group/library</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.eduid.cz/" registrationInstant="2019-05-24T13:21:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.eduid.cz/wiki/_media/en/eduid/policy/policy_eduid_en-1_1.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="cs">http://www.eduid.cz/wiki/_media/eduid/policy/policy_eduid_cz-1_1-3.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">svkul.cz</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The North Bohemian Research Library</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="cs">Severočeská vědecká knihovna v Ústí nad Labem</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Identity Provider for employees and readers of the The North Bohemian Research Library</mdui:Description>
+		<mdui:Description xml:lang="cs">Identity Provider pro zaměstnance a čtenáře Severočeské vědecké knihovny v Ústí nad Labem</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.svkul.cz/en/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="cs">https://www.svkul.cz/</mdui:InformationURL>
+		<mdui:Logo height="128" width="128">https://svkul.knihovny.cz/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6zCCAtOgAwIBAgIJAKpmDApZEEPwMA0GCSqGSIb3DQEBCwUAMIGLMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGjAYBgNVBAMMEXN2a3VsLmtuaWhv
+dm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xNjA3MDYx
+MjEyMThaFw0yNjA3MDcxMjEyMThaMIGLMQswCQYDVQQGEwJDWjEXMBUGA1UECAwO
+Q3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2aWFu
+IExpYnJhcnkxGjAYBgNVBAMMEXN2a3VsLmtuaWhvdm55LmN6MR0wGwYJKoZIhvcN
+AQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMtTidfVLguIUogeplKr206MLSLN/ZNMli2Pkbe5YwCXTnvVAjJ5PJzlyDSS
+3AsU1QaipWNZhcBdIj35BZ0xZbPBxVYATgDS7t3jgbNQdD7KkEheuTG/zrJv1zEd
+HxYhS+XUH6UjNq5u2NFdgnQ+z3/z2eTzOdolhBIeiKX9nbsQ3OX7TPq+wedcmytj
+U+4OCAmYzl8lmYYC3jKEXl+eIvoYx+ia8UkxoaskIC+eGeAAKUGWOahsbLg8IfdZ
+1JEt4MUNbhRTceQH+xx4d8GG8TDh5Wsru2qOHvSb3gYcR5Z5puDdC3uzT3J1V5eX
+G7REVhScVG2pUpGNA9d6d0dP9dMCAwEAAaNQME4wHQYDVR0OBBYEFOfBTkB5mY/d
+6agPNDOoHO0zUoETMB8GA1UdIwQYMBaAFOfBTkB5mY/d6agPNDOoHO0zUoETMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAL0ilHwrIJMa+f4VE1/7MgwI
+X/M1hV8HpG0jQW0eQmeB3QU/lI5HV4BXlV/WDOvqdvXFwocti/1+84C11uPwe4C4
+ogrGHfuVPCx2losf4g5AhmmiJKdBJeq66wSkBkSOrwt+0s5uKC7kr92XoKVSHGyg
+qCPNhzqheUKrJXNXULPbfOaxM/jh/4wqFq3YWpdXmHf56Sg62iCPjrSRRrJSsbgP
+PardMJlECR7ryyT8h9ZB0ZijTMUtrrLmV1x4OXbyMqcDzrGHoZxAukcL1vY40WON
+3/fNxvyoxOMArvgUJ0T+9Fzi1ZXGTqOh9zy8Dda+d6DP6mit7lnifP4yuiqQPMA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID6zCCAtOgAwIBAgIJAKpmDApZEEPwMA0GCSqGSIb3DQEBCwUAMIGLMQswCQYD
+VQQGEwJDWjEXMBUGA1UECAwOQ3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8x
+GTAXBgNVBAoMEE1vcmF2aWFuIExpYnJhcnkxGjAYBgNVBAMMEXN2a3VsLmtuaWhv
+dm55LmN6MR0wGwYJKoZIhvcNAQkBFg5jcGstaWRwQG16ay5jejAeFw0xNjA3MDYx
+MjEyMThaFw0yNjA3MDcxMjEyMThaMIGLMQswCQYDVQQGEwJDWjEXMBUGA1UECAwO
+Q3plY2ggUmVwdWJsaWMxDTALBgNVBAcMBEJybm8xGTAXBgNVBAoMEE1vcmF2aWFu
+IExpYnJhcnkxGjAYBgNVBAMMEXN2a3VsLmtuaWhvdm55LmN6MR0wGwYJKoZIhvcN
+AQkBFg5jcGstaWRwQG16ay5jejCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMtTidfVLguIUogeplKr206MLSLN/ZNMli2Pkbe5YwCXTnvVAjJ5PJzlyDSS
+3AsU1QaipWNZhcBdIj35BZ0xZbPBxVYATgDS7t3jgbNQdD7KkEheuTG/zrJv1zEd
+HxYhS+XUH6UjNq5u2NFdgnQ+z3/z2eTzOdolhBIeiKX9nbsQ3OX7TPq+wedcmytj
+U+4OCAmYzl8lmYYC3jKEXl+eIvoYx+ia8UkxoaskIC+eGeAAKUGWOahsbLg8IfdZ
+1JEt4MUNbhRTceQH+xx4d8GG8TDh5Wsru2qOHvSb3gYcR5Z5puDdC3uzT3J1V5eX
+G7REVhScVG2pUpGNA9d6d0dP9dMCAwEAAaNQME4wHQYDVR0OBBYEFOfBTkB5mY/d
+6agPNDOoHO0zUoETMB8GA1UdIwQYMBaAFOfBTkB5mY/d6agPNDOoHO0zUoETMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAL0ilHwrIJMa+f4VE1/7MgwI
+X/M1hV8HpG0jQW0eQmeB3QU/lI5HV4BXlV/WDOvqdvXFwocti/1+84C11uPwe4C4
+ogrGHfuVPCx2losf4g5AhmmiJKdBJeq66wSkBkSOrwt+0s5uKC7kr92XoKVSHGyg
+qCPNhzqheUKrJXNXULPbfOaxM/jh/4wqFq3YWpdXmHf56Sg62iCPjrSRRrJSsbgP
+PardMJlECR7ryyT8h9ZB0ZijTMUtrrLmV1x4OXbyMqcDzrGHoZxAukcL1vY40WON
+3/fNxvyoxOMArvgUJ0T+9Fzi1ZXGTqOh9zy8Dda+d6DP6mit7lnifP4yuiqQPMA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://svkul.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://svkul.knihovny.cz/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://svkul.knihovny.cz/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://svkul.knihovny.cz/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The North Bohemian Research Library</md:OrganizationName>
+	<md:OrganizationName xml:lang="cs">Severočeská vědecká knihovna v Ústí nad Labem</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The North Bohemian Research Library</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="cs">Severočeská vědecká knihovna v Ústí nad Labem</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.svkul.cz/en/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="cs">https://www.svkul.cz/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Petr</md:GivenName>
+	<md:SurName>Žabička</md:SurName>
+	<md:EmailAddress>mailto:zabak@mzk.cz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.allegheny.edu/openathens">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">allegheny.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Allegheny College (OA)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Allegheny College</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.allegheny.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://sites.allegheny.edu/resources/privacy-and-security-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="121" width="461" xml:lang="en">https://allegheny.edu/wp-content/themes/achome-2/img/logo-header.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDvjCCAqagAwIBAgIEVOxCIjANBgkqhkiG9w0BAQsFADCBoDEoMCYGCSqGSIb3
+DQEJARYZYXRoZW5zaGVscEBlZHVzZXJ2Lm9yZy51azELMAkGA1UEBhMCR0IxETAP
+BgNVBAgMCFNvbWVyc2V0MQ0wCwYDVQQHDARCYXRoMRAwDgYDVQQKDAdFZHVzZXJ2
+MRMwEQYDVQQLDApPcGVuQXRoZW5zMR4wHAYDVQQDDBVnYXRld2F5LmF0aGVuc2Ft
+cy5uZXQwHhcNMTUwMjI0MDkyMDA2WhcNMjUwMjI0MDkyMDA2WjCBoDEoMCYGCSqG
+SIb3DQEJARYZYXRoZW5zaGVscEBlZHVzZXJ2Lm9yZy51azELMAkGA1UEBhMCR0Ix
+ETAPBgNVBAgMCFNvbWVyc2V0MQ0wCwYDVQQHDARCYXRoMRAwDgYDVQQKDAdFZHVz
+ZXJ2MRMwEQYDVQQLDApPcGVuQXRoZW5zMR4wHAYDVQQDDBVnYXRld2F5LmF0aGVu
+c2Ftcy5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCandpa4o0N
+jtw1DqbrrNTfOVe1PqyXIIVmDrJ6VUR/mokXXu+m5Gm+1f+3lyN5IA2YMn9Z8Yo3
+7JQjIHs+xVS3q4nT1ewS7S3en1pdXKsH1WnUnVWUmpl9WJZrUwi5i8X80LNyr7Pm
+udhuKNEATGUXkA/xWCkk2d8jf91hy7Qu+HA8LOKtdbbNigErh2IY/YuNWUVUqgGb
+MH5BGr7ZEhPrz+Vwcf9lhPW+tKpKpZEzJfQiq8EoPaeMXEpKWBEErm67gkWFCA5V
+hfcJLqFjQEC3pWOxt5rZVS8gl/Z33VSJZVzY5jWcQzmGaLXPHXyiKPmixl6+DjGl
+UM0ylNF7GvtDAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFhmhujLZueiJ6F7mQCp
+fB0Hj4Y8FyFUUc8NMAt5Set7H4DKSSl4shcqisZBa5yTdyenYwkmBszvCWs6Yeep
++zJmCR62cb/f1M32oMzLm02OlznWMkE8/IajGmdxTnB6Z/XcdMMIiCeok4kqe5KM
+d5oRAyNskHYZ+8kzhs2zTveR+rqCtYxa/AYpwf7n0VQR9clBSNCIT4BCRi10aPE5
+31VIxl4ljY3CwNoZ4lQTU/0aj8O4j68V2neiQb8lewAii0b2xoyOGYP4okd7T2tl
+4gl2noVbCvYNjd6GYze/w4lgwiemkby7wu5sN1lEudgKDV+H54wU29ZIyDEFM6DD
+NE4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.openathens.net/saml/2/sso/allegheny.edu/c/incommon"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.openathens.net/saml/1/sso/allegheny.edu/c/incommon"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Allegheny College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Allegheny College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.allegheny.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Doug Tomer</md:GivenName>
+	<md:EmailAddress>dtomer@allegheny.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Doug Tomer</md:GivenName>
+	<md:EmailAddress>dtomer@allegheny.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Doug Tomer</md:GivenName>
+	<md:EmailAddress>dtomer@allegheny.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Doug Tomer</md:GivenName>
+	<md:EmailAddress>dtomer@allegheny.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

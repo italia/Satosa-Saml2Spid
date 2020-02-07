@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.ethz.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2009-10-19T07:50:03Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.id.ethz.ch/servicedesk" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ethz.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">ETH Zürich</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">ETH Zurich</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fr">ETH Zurich</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="it">ETH Zurich</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Eidgenössische Technische Hochschule Zürich</mdui:Description>
+		<mdui:Description xml:lang="en">Swiss Federal Institute of Technology Zurich</mdui:Description>
+		<mdui:Description xml:lang="fr">Ecole Polytechnique Fédérale de Zurich</mdui:Description>
+		<mdui:Description xml:lang="it">Politecnico federale di Zurigo</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAASBQTFRFAD59Aj9+AT9+AD19ADh5ADd4ADp6AD18A0F/HleOJ12SJl2SJVuRIVmPIFiPJFuRIlmQFlCJBEF/H1iOBkOAA0B+ADV3OWub9vr80N7p0+Dq3ujw7vT48/f62+bv////bpG0MF+T9vv8ADl6ADF0apG09/r8YomvU3+oBESBuczcu83dD0yG+v39gaG/iqjE3ObuADt6mbPM5ezypr3SADN11uHreZq7F0yG/f7+wNHg+vz9o7vRAT99ADl50t/pzNrlc5i5N2maD0qFP2+dUn6o9Pn6Aj582ePsgKG/AC9zADx8CEWBl7TLsMbYx9fjTHmlFVCIrcXWEUuFVIGpjqzGBUOAor3RNmmZADZ4AkB+ADZ3ADR2AD99A0B/AT595RKpMgAAAAFiS0dEHwUNEL0AAAAJcEhZcwAADsMAAA7DAcdvqGQAAACjSURBVBjTY2AgCzBCARMDI5jPzMLKysrCwsrCxsDCDuJzcHJx8/Dy8QsICgmLsDOIiolLSEpJy8jKySsoKgkqMwipqKqpa2hqaevo6ukbGDIABYyMTfRNzcwtLK2sbUw5GGzt7B0cnZzlXVzd3D08vYQYvH18/fwDAoOCQ0LDwiMio4DWRJuqsDDHsLOJMcSwxYLcIRoXx8QQF88kyiDKRJbHADKiFN5zQY3pAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTExLTExVDE1OjM4OjQ2KzAxOjAw/4hh9gAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0xMS0xMVQxNDo0MTowNyswMTowMKRQO8gAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="64" width="64">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.ethz.ch/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.ethz.ch/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="fr">https://www.ethz.ch/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="it">https://www.ethz.ch/</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>195.176.0.48/28</mdui:IPHint>
+		<mdui:IPHint>195.176.96.0/19</mdui:IPHint>
+		<mdui:IPHint>82.130.64.0/18</mdui:IPHint>
+		<mdui:IPHint>129.132.0.0/16</mdui:IPHint>
+		<mdui:IPHint>129.132.40.0/24</mdui:IPHint>
+		<mdui:IPHint>193.134.200.0/21</mdui:IPHint>
+		<mdui:IPHint>192.33.87.0/24</mdui:IPHint>
+		<mdui:IPHint>192.33.88.0/23</mdui:IPHint>
+		<mdui:IPHint>192.33.91.0/24</mdui:IPHint>
+		<mdui:IPHint>192.33.92.0/22</mdui:IPHint>
+		<mdui:IPHint>192.33.88.0/21</mdui:IPHint>
+		<mdui:IPHint>192.33.96.0/21</mdui:IPHint>
+		<mdui:IPHint>192.33.104.0/22</mdui:IPHint>
+		<mdui:IPHint>192.33.108.0/23</mdui:IPHint>
+		<mdui:IPHint>192.33.110.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:620:8::/48</mdui:IPHint>
+		<mdui:IPHint>2001:620:1a0::/48</mdui:IPHint>
+		<mdui:DomainHint>ethz.ch</mdui:DomainHint>
+		<mdui:DomainHint>cscs.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.37646,8.54792</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.41039,8.50902</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.566087,7.602298</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.022244,8.916146</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIJAIpyyADGEaSGMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
+BAMMEWFhaS1sb2dvbi5ldGh6LmNoMB4XDTE4MDExMjExNTcxOVoXDTIxMDExMTEx
+NTcxOVowHDEaMBgGA1UEAwwRYWFpLWxvZ29uLmV0aHouY2gwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCZR7cmPZyZo6zGdf8yyfgaXKuvXI+7y/ZnbNnV
+ib/ykqYCvoDyRJjLxGi7gVya4veQR0eeD60dY2JHJqJbkcAWLQb+0N1TxqxW8XX0
+knnIC2FkK/HZ3+kKG/P2cL0SyafzzF7eOH2vwj4vvvNUAWWXyhJdOeREiKs0JtzQ
+6+8U1pqrEeWqh72H/y7Wso61yJUe+JVriqk+o0HFAwlkqTm0prA58rbcu4XCBoRi
+VgozgDg5EcRF0EJjT6tLS8qPwgUzQUef9ebgSFfiS14gSZkK8MnChSNyWKzXDoBi
+CBk7TxSWWVIkUyWVY7OLvu+BbCy3FpWDObEVj/iRCFddSqYLAgMBAAGjaTBnMB0G
+A1UdDgQWBBS0UBmKeQOYdu1O4NsGSmD5nKdeMTBGBgNVHREEPzA9ghFhYWktbG9n
+b24uZXRoei5jaIYoaHR0cHM6Ly9hYWktbG9nb24uZXRoei5jaC9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIxgY8UtG9GowaYOKoUqDFU0Korzhqom9
+RRP3iqUIcq4IUyhZSdByYkm0xOwsyTnv2o8SgXSPkRPFVbNPWCyQPJS6NcaKynJF
+W29SODbKO+q0pI4MjiRODKLWgA2i/MnoKKrC5b3WwV2rQadEKFJ4BGtkmlItemmE
+2V/iGhcN7q/M69Al3cSpOydVEHW4hyYHJdn+Krh/PaPr66a7GOjTvgqoth5OsHRV
+v0o6GgNAshcafH76DiqhBUt0OrLCknG3Sv9Eaoptv0cZZLhtDuhMLpSQlkkqzBkK
+AvY5AjaC68nZ1kjR6+9MvBXpCBu9LmaDcsGpfjtf4eYMZe3ITRfefA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.ethz.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.ethz.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-logon.ethz.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-logon.ethz.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-logon.ethz.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-logon.ethz.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ethz.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIJAIpyyADGEaSGMA0GCSqGSIb3DQEBCwUAMBwxGjAYBgNV
+BAMMEWFhaS1sb2dvbi5ldGh6LmNoMB4XDTE4MDExMjExNTcxOVoXDTIxMDExMTEx
+NTcxOVowHDEaMBgGA1UEAwwRYWFpLWxvZ29uLmV0aHouY2gwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCZR7cmPZyZo6zGdf8yyfgaXKuvXI+7y/ZnbNnV
+ib/ykqYCvoDyRJjLxGi7gVya4veQR0eeD60dY2JHJqJbkcAWLQb+0N1TxqxW8XX0
+knnIC2FkK/HZ3+kKG/P2cL0SyafzzF7eOH2vwj4vvvNUAWWXyhJdOeREiKs0JtzQ
+6+8U1pqrEeWqh72H/y7Wso61yJUe+JVriqk+o0HFAwlkqTm0prA58rbcu4XCBoRi
+VgozgDg5EcRF0EJjT6tLS8qPwgUzQUef9ebgSFfiS14gSZkK8MnChSNyWKzXDoBi
+CBk7TxSWWVIkUyWVY7OLvu+BbCy3FpWDObEVj/iRCFddSqYLAgMBAAGjaTBnMB0G
+A1UdDgQWBBS0UBmKeQOYdu1O4NsGSmD5nKdeMTBGBgNVHREEPzA9ghFhYWktbG9n
+b24uZXRoei5jaIYoaHR0cHM6Ly9hYWktbG9nb24uZXRoei5jaC9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAIxgY8UtG9GowaYOKoUqDFU0Korzhqom9
+RRP3iqUIcq4IUyhZSdByYkm0xOwsyTnv2o8SgXSPkRPFVbNPWCyQPJS6NcaKynJF
+W29SODbKO+q0pI4MjiRODKLWgA2i/MnoKKrC5b3WwV2rQadEKFJ4BGtkmlItemmE
+2V/iGhcN7q/M69Al3cSpOydVEHW4hyYHJdn+Krh/PaPr66a7GOjTvgqoth5OsHRV
+v0o6GgNAshcafH76DiqhBUt0OrLCknG3Sv9Eaoptv0cZZLhtDuhMLpSQlkkqzBkK
+AvY5AjaC68nZ1kjR6+9MvBXpCBu9LmaDcsGpfjtf4eYMZe3ITRfefA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.ethz.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.ethz.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">ethz.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">ETH Zürich</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">ETH Zurich</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="fr">ETH Zurich</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="it">ETH Zurich</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.ethz.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.ethz.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="fr">http://www.ethz.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="it">http://www.ethz.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ETH</md:GivenName>
+	<md:SurName>ID Service Desk</md:SurName>
+	<md:EmailAddress>mailto:servicedesk@id.ethz.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 44 632 7777</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Cristian</md:GivenName>
+	<md:SurName>Scurtescu</md:SurName>
+	<md:EmailAddress>mailto:cristian.scurtescu@id.ethz.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Cristian</md:GivenName>
+	<md:SurName>Tuduce</md:SurName>
+	<md:EmailAddress>mailto:cristian.tuduce@id.ethz.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Markus</md:GivenName>
+	<md:SurName>Borzechowski</md:SurName>
+	<md:EmailAddress>mailto:markus.borzechowski@id.ethz.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ETH</md:GivenName>
+	<md:SurName>AAI IdP Team</md:SurName>
+	<md:EmailAddress>mailto:aai-idp@id.ethz.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ETH</md:GivenName>
+	<md:SurName>ID Service Desk</md:SurName>
+	<md:EmailAddress>mailto:servicedesk@id.ethz.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 44 632 7777</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

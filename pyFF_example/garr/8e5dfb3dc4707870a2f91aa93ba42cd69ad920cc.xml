@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://auth.owens.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">owens.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Owens Community College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.owens.edu/records/ferpa/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="120" width="83" xml:lang="en">https://auth.owens.edu/idp/images/logo.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIUaBjme+9uYSktu65yjYhoSWe/uBAwDQYJKoZIhvcNAQEL
+BQAwGTEXMBUGA1UEAwwOYXV0aC5vd2Vucy5lZHUwHhcNMTgwNTAzMDQyMTQ3WhcN
+MzgwNTAzMDQyMTQ3WjAZMRcwFQYDVQQDDA5hdXRoLm93ZW5zLmVkdTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAJk/cr7vYvridIlUlqEG/A0phcALLnVD
+ABWrtfYxZIc54mF6tHqhe003xUZ1evCUfGJ5aHYKjgiDnFYV8cjAsFOCyM9loh3S
+xIRdPWswMM/KDJf0e1wLauY7wGBkW7W6rErPkD8NYw3mdGyLULs+DmDmzEIX3ZAt
+6Dcr9FYlnZCqJz2zxZSLxzisq1pFx7SBaMCw6PvQXY+sjW5wqVqyWx1EYRemunon
+JmMD7mtzpIo/QBS4WuOoWlLYtehzWY9g3cIF69+SUIp7WpmEtl+gEr2si0vvA4q+
+ZhLUhcdN2mWrske50hQBfCMItQ8iTAHZsGswQ7Qj/Tgd6mA71TVU5nUCAwEAAaNU
+MFIwHQYDVR0OBBYEFGrDngVbR2fgWrSG7ovdgZIGhcG0MDEGA1UdEQQqMCiCDmF1
+dGgub3dlbnMuZWR1hhZodHRwczovL2F1dGgub3dlbnMuZWR1MA0GCSqGSIb3DQEB
+CwUAA4IBAQA5lwI0S68TB4gBXWnCRsNBXwxkrN/xjwda3b5ISLnPy6M1b+cmRd7m
+rWIrWMHGikCLFQPbXVX1hksK2cXof2KEbe/7pv1CcTbnZhCLzGp2wg9/tdRWdnFZ
+Hgm4aNb7QNlLpxQAvcP5fuqVFDLPM2mmmr7WPkecdqJXMiLPy91cyeppOq4mbyHu
+AmDyP23AUOosvc/NnUjDip72VkjIZ8CR9vBN45sTdCXzrZSHvoB/uZZIxALytsM3
+xdvEeooTDgeM+5v44dFMMp+TduB9hw5/O8YY5DkW/OkaloFah9jWaH8mgziWJnXZ
+sc94D7Ch3CMme3mCGrmYGQIUXQpfjwFm
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://auth.owens.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://auth.owens.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Owens Community College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Owens Community College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.owens.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>System Admins</md:GivenName>
+	<md:EmailAddress>sysadmins@owens.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>System Admins</md:GivenName>
+	<md:EmailAddress>sysadmins@owens.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>System Admins</md:GivenName>
+	<md:EmailAddress>sysadmins@owens.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

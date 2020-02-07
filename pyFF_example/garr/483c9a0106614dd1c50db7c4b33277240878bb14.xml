@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.nss.udel.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.nss.udel.edu/idp/shibboleth/error" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">udel.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Delaware</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Delaware Shibboleth Single Sign-on Service</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.udel.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.udel.edu/home/legal-notices/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="52" width="399" xml:lang="en">https://cas.nss.udel.edu/themes/secureheader/headerbluetext.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUEIBsQXCv84WSa00nVDkqsIYHoN4wDQYJKoZIhvcNAQEL
+BQAwGzEZMBcGA1UEAwwQaWRwLm5zcy51ZGVsLmVkdTAeFw0xNjA1MjYxNTAyMzNa
+Fw0zNjA1MjYxNTAyMzNaMBsxGTAXBgNVBAMMEGlkcC5uc3MudWRlbC5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkXbFw061lBgAaDxK3SJwNocwx
+ldFThv4yI9iO1R/OSfCUitLNtOjm5gR4WiYkjNhnT2irqmitTB/fi5x4JY7bE7rb
+Q3TABL98Lr5yTDR+c3AIOvCJY4THTJqOlfjQGGVHk7Dtiq+GL0uP7JQ/uyS6tH0W
+KfEkw3zc1HGhOZG+vj4EQnlFRb9biOT8MAFJYj9f0iU3NEVj/vPmoZGKnZQLkM4V
+Ll4e1ixwHvJTrqEZNQHNQJsFAVF5ImMy5bA2TD93x6ov8P56QjYiZSQvhXV1yT3a
+AijNUyJDYBCJ62hsz0HswopFafzi41GeKa6l8f1kb6k+hieP4zE8cIAu7hrhAgMB
+AAGjZzBlMB0GA1UdDgQWBBSmyFqGjsr9KzkFgdLVjmGSrotxYDBEBgNVHREEPTA7
+ghBpZHAubnNzLnVkZWwuZWR1hidodHRwczovL2lkcC5uc3MudWRlbC5lZHUvaWRw
+L3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAC15mlkKvyu4rHxkmGS1+zvM
+QA79WrVOEhdNDNd+Xb0ugp8IOEcYIFjXIZxzXO3wbsuhBtOZQYQHN9U+WC0bW2Kn
+Nlwr+iRwEGRAsMGZsDLZNF/FWe/092XiJWbAut8zoksQo9CCczMrpr5k93QbTFvO
+OJVICZd+/bmr8n9tlj29qCIGCsj3L4xNiuhRuvwl211Z+iqDtKcu4v5b/q+0Tppx
+CuGuOUZKO8yTMeQuVvD9UHuYomW7Y+Mu2tHFGHqpOSo4E5S8hL9ojlO5YBO7SMxN
+xeUgbFNmZS6T+sVqSPnABKZnA9GsIQo8Bu+K8rWHS4SLbcXxVcg09+22d4w4fic=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nss.udel.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nss.udel.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nss.udel.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nss.udel.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.nss.udel.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.nss.udel.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">udel.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAPphCkvaUJ4yChST74hanwncvuaKMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC5uc3MudWRlbC5lZHUwHhcNMTYwNTI2MTUwMjMz
+WhcNMzYwNTI2MTUwMjMzWjAbMRkwFwYDVQQDDBBpZHAubnNzLnVkZWwuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApCaf76CTTqDuTm4IUHsHFHwH
+rLKTUSQ9RO85J6jsPW3B+lyGfxpUgifNIyrFzPRx3dd48bg+CAnYb/tqMJXUd/2Y
+JpTi/gHVw5UDt/2EGRpPcvnKEgBOCpOEagOS8rOOImXOQZhvlJkBP/G5YrYLOgVx
+wwSDoZnCjTiplDvxD6L4u6UsVe57AvwMsAWSf/2n437FNqLaV7+3nvV/IQGeXZDZ
+chCvAhv0KVo+GCmzksb1TgEcJnHEXQe2jKXAOILdrsH3G0Ru2bzQiTL2nSjr9yIh
+EuoQKguoZyNMSRZfIkAagppo7Jm6kdQyMw30fRf5PzaUOVWqPdwEAUQ7XBRXAwID
+AQABo2cwZTAdBgNVHQ4EFgQUF0hTN495PLHSpWl1YqWXNZmWSKAwRAYDVR0RBD0w
+O4IQaWRwLm5zcy51ZGVsLmVkdYYnaHR0cHM6Ly9pZHAubnNzLnVkZWwuZWR1L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAIZ1H1p/M7tne61CP6crKU
+cNU/rbDX4tKfcEnkBb5X6m3lznc1GeFU7pa41Tw3Qc80suI10gFYpSen7tR4bP1g
+TjWYHZGIAhXRdDF0RPUmnM+A1O+I1cXeH6eQbmqYC/E4Euvh+80eUH/0Jp/Z9/mr
+l55PIYfbErJa3YpUkWZyCPwnS9m/P5Cz2CcBnhzdzunI5NwVofz2TP3WtrK2wK82
+kvENlUUeMAdNQCeB9wdLbbhJY4QuphIp8a6ECXrTb7ToF36vTGifMojj24JA0d4f
+XZXfBYh8iS/r3ZPRAglnnzxoPviePFA9xtKhSHq3hNYUpn8grl8+OlvWit2N3AQo
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.nss.udel.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Delaware</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Delaware</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.udel.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT-WebDev</md:GivenName>
+	<md:EmailAddress>itwd-auth@udel.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT-WebDev</md:GivenName>
+	<md:EmailAddress>itwd-auth@udel.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IT-WebDev</md:GivenName>
+	<md:EmailAddress>itwd-auth@udel.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UD IT Security</md:GivenName>
+	<md:EmailAddress>secadmin@udel.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

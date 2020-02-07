@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:humboldt.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">humboldt.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Humboldt State University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.calstate.edu/icsuam/documents/Section8000.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="1200" width="1200" xml:lang="en">https://brand.humboldt.edu/sites/default/files/styles/panopoly_image_full/public/general/spirith_0.png?itok=bi_vSO_K</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDyjCCArICCQDSIlwe73ERBTANBgkqhkiG9w0BAQUFADCBpjELMAkGA1UEBhMC
+VVMxEzARBgNVBAgTCkNhbGlmb3JuaWExDzANBgNVBAcTBkFyY2F0YTEiMCAGA1UE
+ChMZSHVtYm9sZHQgU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMDSVRTMRkwFwYD
+VQQDExBpZHAuaHVtYm9sZHQuZWR1MSQwIgYJKoZIhvcNAQkBFhVzeXNhZG1pbkBo
+dW1ib2xkdC5lZHUwHhcNMTEwNTEwMjIzNzA2WhcNMjEwNTA3MjIzNzA2WjCBpjEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExDzANBgNVBAcTBkFyY2F0
+YTEiMCAGA1UEChMZSHVtYm9sZHQgU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMD
+SVRTMRkwFwYDVQQDExBpZHAuaHVtYm9sZHQuZWR1MSQwIgYJKoZIhvcNAQkBFhVz
+eXNhZG1pbkBodW1ib2xkdC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDXea3ZM6XJ8f2CRd6bisEol8JsGCwXPwPYLWqbiSF7rBcrxztVRbUofTXe
+5/f3+KR4w4cpvqm2OGun9xpa357mzgW2aMc/AIE6fPErHDSI20K1P3DUIIHIbxOz
+Zb12oaeMDUgqI0PQso32oRCT0hQ9dFegPQ6ICegk5e57Azctpn7ovdkNYurfRVx1
+sQoS0STHPW8b5xNSv6IGoEOjkVUpzKtv9VO+5KIesq/9y5r9nPXISSzHUei/7iAa
+7G3MpNgWHcdYjfE+ZTgtUu2Mb60OKq9oxhwzRF8RrG+R4/+0xkcCJX5Vk3hHrUMs
+9XTdGGo98dm5lwBfS2FFVByNKqRXAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAHNX
+1zbqSKjgwJa8Bt0Kx7bNBm9ukHfERqfrT1I4c+O0OshH0N0PVLF+m2/eH8NrNz52
+FOfgNBtJrFu9BxI8tc0yp1ptjYVgeCaFrIurNPKShMQSqJRg/BSYYykm26wrPmUs
+ZVagnI+OIJPWNpqDt56xRgzpDrLKf7zHLSLyEmrfK8f2R+DExzGWUGN5StA1G+tg
+JfaZDtwYHOUR9XrHbx+czHTqGcEo1Jpfg8p/KiuacKMb8n99HG9p2bUggLQOangC
+KU/1My9HTkHF8T8QLLSlqA4jb0eXnz9lxfJl2i2Y+imP77X7sWoPoL32jcoAWYoZ
+AR85Z5Jw0RxR+tbYexg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.humboldt.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.humboldt.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.humboldt.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.humboldt.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.humboldt.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">humboldt.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDyjCCArICCQDSIlwe73ERBTANBgkqhkiG9w0BAQUFADCBpjELMAkGA1UEBhMC
+VVMxEzARBgNVBAgTCkNhbGlmb3JuaWExDzANBgNVBAcTBkFyY2F0YTEiMCAGA1UE
+ChMZSHVtYm9sZHQgU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMDSVRTMRkwFwYD
+VQQDExBpZHAuaHVtYm9sZHQuZWR1MSQwIgYJKoZIhvcNAQkBFhVzeXNhZG1pbkBo
+dW1ib2xkdC5lZHUwHhcNMTEwNTEwMjIzNzA2WhcNMjEwNTA3MjIzNzA2WjCBpjEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExDzANBgNVBAcTBkFyY2F0
+YTEiMCAGA1UEChMZSHVtYm9sZHQgU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMD
+SVRTMRkwFwYDVQQDExBpZHAuaHVtYm9sZHQuZWR1MSQwIgYJKoZIhvcNAQkBFhVz
+eXNhZG1pbkBodW1ib2xkdC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQDXea3ZM6XJ8f2CRd6bisEol8JsGCwXPwPYLWqbiSF7rBcrxztVRbUofTXe
+5/f3+KR4w4cpvqm2OGun9xpa357mzgW2aMc/AIE6fPErHDSI20K1P3DUIIHIbxOz
+Zb12oaeMDUgqI0PQso32oRCT0hQ9dFegPQ6ICegk5e57Azctpn7ovdkNYurfRVx1
+sQoS0STHPW8b5xNSv6IGoEOjkVUpzKtv9VO+5KIesq/9y5r9nPXISSzHUei/7iAa
+7G3MpNgWHcdYjfE+ZTgtUu2Mb60OKq9oxhwzRF8RrG+R4/+0xkcCJX5Vk3hHrUMs
+9XTdGGo98dm5lwBfS2FFVByNKqRXAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAHNX
+1zbqSKjgwJa8Bt0Kx7bNBm9ukHfERqfrT1I4c+O0OshH0N0PVLF+m2/eH8NrNz52
+FOfgNBtJrFu9BxI8tc0yp1ptjYVgeCaFrIurNPKShMQSqJRg/BSYYykm26wrPmUs
+ZVagnI+OIJPWNpqDt56xRgzpDrLKf7zHLSLyEmrfK8f2R+DExzGWUGN5StA1G+tg
+JfaZDtwYHOUR9XrHbx+czHTqGcEo1Jpfg8p/KiuacKMb8n99HG9p2bUggLQOangC
+KU/1My9HTkHF8T8QLLSlqA4jb0eXnz9lxfJl2i2Y+imP77X7sWoPoL32jcoAWYoZ
+AR85Z5Jw0RxR+tbYexg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.humboldt.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.humboldt.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Humboldt State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Humboldt State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.humboldt.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Systems Group</md:GivenName>
+	<md:EmailAddress>sysadmin@humboldt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Josh Callahan</md:GivenName>
+	<md:EmailAddress>josh.callahan@humboldt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Troy Butolph</md:GivenName>
+	<md:EmailAddress>troy.butolph@humboldt.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security Office</md:GivenName>
+	<md:EmailAddress>iso-staff@humboldt.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

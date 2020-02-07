@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://papi.kfki.hu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.hu" registrationInstant="2009-01-01T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://metadata.eduid.hu/eduid.hu-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://eduid.hu/category/registered-by-eduidhu</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">mail.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">sunserv.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">rmki.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">aeki.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">iki.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">mfa.kfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">szfki.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">wigner.mta.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">energia.mta.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">ttk.mta.hu</shibmd:Scope>
+		<shibmd:Scope regexp="false">wigner.hu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Wigner Research Centre for Physics</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="hu">Wigner Fizikai Kutatóközpont</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Wigner Research Centre for Physics</mdui:Description>
+		<mdui:Description xml:lang="hu">Wigner Fizikai Kutatóközpont</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://wigner.mta.hu/en</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="hu">https://wigner.mta.hu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://wigner.mta.hu/szhk/az-mta-wigner-fk-eduid-adatkezelesi-szabalyzata</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="hu">https://wigner.mta.hu/szhk/az-mta-wigner-fk-eduid-adatkezelesi-szabalyzata</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="223">https://wigner.mta.hu/sites/default/files/header_logo_1.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>148.6.0.0/16</mdui:IPHint>
+		<mdui:IPHint>2001:738:5001::/48</mdui:IPHint>
+		<mdui:GeolocationHint>geo:47.48945,18.9497</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUdn3t4i5i7MiVMJB07lC7yL4IAoowDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMcGFwaS5rZmtpLmh1MB4XDTA5MDgxMDE2MDEyMloXDTI5
+MDgxMDE2MDEyMlowFzEVMBMGA1UEAxMMcGFwaS5rZmtpLmh1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEApGGAG9GWNsCJZ6JayutI95u4FmGvsfza6uSK
+UX3XuZp1uUViY6eH4h4gCNgCzufvJ4GNSdxYhohFEgzB0MM23MrDl9DzS4NX+g7e
+YFCmmD1zPcui4YzIYJWmCSXAqXDqaLox4aVxtQrOr4sBcy/0jzlXXC3IHSS2GKuC
+j8tlXf9TLoZTZgZaNcyphelUa/y2DsmNSMIcfZXmYbZCqD/VErNBwfPD5mAr+M+1
+C5JxRY+6XIPs7jh2eibWZsiafsgDYV2Px2M5NoPfwaJDyBLVA57t34p2G9xCeCak
++5cPgu3sZ+sdGC1OZ5uLr+32l9KUu+mR/Q/j2m06dlK4wF8rzwIDAQABo18wXTA8
+BgNVHREENTAzggxwYXBpLmtma2kuaHWGI2h0dHBzOi8vcGFwaS5rZmtpLmh1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBS0zg53E13omfWDQUJAKMLs2TKjgDANBgkq
+hkiG9w0BAQUFAAOCAQEASowJqpasNKCiw9UvgdaYs98wdI5xKFNIngJdJUKqlYIR
+1EgibCKFSap6dQkjkuVyMoUfd13WNcruCKHm+TYR+A77/xQB8mr07LAKhcMCYXVR
+3JuHLewzEbKrXhifaP9Qj5isuiLTFPpsYHtOra9HkEhpRRxM9UO0F1tBXZwV9XtT
+fbSk/vqQUID4MufOnlLGcfoL551wEa8lQWTcj8+alUaizeIp66M3tFIB317xM7gM
+tAPdkp5FOyEO25ko6DuIXXFA4vIbGhJSPNmb9GjmKF4i2LlEZpFzW8FCrHS12cVt
+mDBUE8rw993QIE38s8Bi64wgMQPCG9dgeIUvHKn/zw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://papi.kfki.hu/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://papi.kfki.hu/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="hu">Wigner Fizikai Kutatóközpont</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Wigner Research Centre for Physics</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="hu">Wigner Fizikai Kutatóközpont</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Wigner Research Centre for Physics</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="hu">https://wigner.mta.hu/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://wigner.mta.hu/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>KFKI AAI</md:GivenName>
+	<md:SurName>KFKI AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@kfki.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>KFKI AAI</md:GivenName>
+	<md:SurName>KFKI AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@kfki.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>KFKI AAI</md:GivenName>
+	<md:SurName>KFKI AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@kfki.hu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>KFKI AAI</md:GivenName>
+	<md:SurName>KFKI AAI</md:SurName>
+	<md:EmailAddress>mailto:aai@kfki.hu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibidp.luc.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">luc.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Loyola University of Chicago</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.luc.edu/gdpr/policies/gdprprivacynotice/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="330" width="450" xml:lang="en">https://www.luc.edu/media/lucedu/universitymarketingcommunication/vertical-3color.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBzCCAe+gAwIBAgIJAISlScpXyXjXMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMMD3NoaWJpZHAubHVjLmVkdTAeFw0xODA1MTUxOTM4MzRaFw0zNjA1MTAxOTM4
+MzRaMBoxGDAWBgNVBAMMD3NoaWJpZHAubHVjLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBALDfw0PIitM8GhYsWpJdPsjpsQ4qD2bsQlci1uXM35GF
+7TDqbg94KcVtz4iJHVpdrzN3OEEta1mDWNW1OopRwI9i4Jt3naQnBC5teOixEgvG
+zfQjeLJUVdGzQP+vFCCel/6yTy79fnoZLOViXZDfzs4O88FbdK0eZLw9aK3/y2B5
+4Jc07fT7niu8RtmzSUQDA39MNJVECPK55wLmkbfA8+vmjssbbdPYJXUpzr2Hjclw
+Hg1+f6Lfw42TS0bBN5ZDrwKVPbJR8szMRk9jtp4Of+tnMgID5ygvqoFiaZ2lWgBx
+bF/nIbwyyI+D2nAODQZiN+KyuHWC5KA9yRtlBOm/9K8CAwEAAaNQME4wHQYDVR0O
+BBYEFBYEUpK1xIxp5bF4HPWZ6/OACzo4MB8GA1UdIwQYMBaAFBYEUpK1xIxp5bF4
+HPWZ6/OACzo4MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAzqn+SD
+iTxbd7hudO2Ru3sE078aG6wl2dlZpX1V3x1I9b+a4/xp/BhDXjC/0iiLmWKLQmpQ
+nQCIadDkM5a66+jMbUSK5GnAFNrBYk0v7ACwnvYDnydpAXArCUIsDfPdlYAhGYgf
+sGd3dEZYRzQGLyIDswe/VOIvXi5sbmQeUPPAX5szjBneEZ68IJHLBUBeNKnWfadT
+LF+cltZuv9LDh7FJ3dYSTEapxDfWWKlD557EBGTRBkIDVBNYeWEdqIMSoGpjmjYd
+YXAkQ/YjGe5ha865QKY6jQi3ZWaen0em2kdQaQnuJnUvVd5U3mKTbtDQchuuStLN
+XdUi9o0glrHBDWc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibidp.luc.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibidp.luc.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibidp.luc.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibidp.luc.edu/idp/profile/Shibboleth/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibidp.luc.edu/idp/profile/Shibboleth/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">luc.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBzCCAe+gAwIBAgIJAISlScpXyXjXMA0GCSqGSIb3DQEBCwUAMBoxGDAWBgNV
+BAMMD3NoaWJpZHAubHVjLmVkdTAeFw0xODA1MTUxOTM4MzRaFw0zNjA1MTAxOTM4
+MzRaMBoxGDAWBgNVBAMMD3NoaWJpZHAubHVjLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBALDfw0PIitM8GhYsWpJdPsjpsQ4qD2bsQlci1uXM35GF
+7TDqbg94KcVtz4iJHVpdrzN3OEEta1mDWNW1OopRwI9i4Jt3naQnBC5teOixEgvG
+zfQjeLJUVdGzQP+vFCCel/6yTy79fnoZLOViXZDfzs4O88FbdK0eZLw9aK3/y2B5
+4Jc07fT7niu8RtmzSUQDA39MNJVECPK55wLmkbfA8+vmjssbbdPYJXUpzr2Hjclw
+Hg1+f6Lfw42TS0bBN5ZDrwKVPbJR8szMRk9jtp4Of+tnMgID5ygvqoFiaZ2lWgBx
+bF/nIbwyyI+D2nAODQZiN+KyuHWC5KA9yRtlBOm/9K8CAwEAAaNQME4wHQYDVR0O
+BBYEFBYEUpK1xIxp5bF4HPWZ6/OACzo4MB8GA1UdIwQYMBaAFBYEUpK1xIxp5bF4
+HPWZ6/OACzo4MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAAzqn+SD
+iTxbd7hudO2Ru3sE078aG6wl2dlZpX1V3x1I9b+a4/xp/BhDXjC/0iiLmWKLQmpQ
+nQCIadDkM5a66+jMbUSK5GnAFNrBYk0v7ACwnvYDnydpAXArCUIsDfPdlYAhGYgf
+sGd3dEZYRzQGLyIDswe/VOIvXi5sbmQeUPPAX5szjBneEZ68IJHLBUBeNKnWfadT
+LF+cltZuv9LDh7FJ3dYSTEapxDfWWKlD557EBGTRBkIDVBNYeWEdqIMSoGpjmjYd
+YXAkQ/YjGe5ha865QKY6jQi3ZWaen0em2kdQaQnuJnUvVd5U3mKTbtDQchuuStLN
+XdUi9o0glrHBDWc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibidp.luc.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibidp.luc.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Loyola University of Chicago</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Loyola University of Chicago</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.luc.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ITS</md:GivenName>
+	<md:EmailAddress>dns-admin@luc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>ITS</md:GivenName>
+	<md:EmailAddress>dns-admin@luc.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ITS</md:GivenName>
+	<md:EmailAddress>dns-admin@luc.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

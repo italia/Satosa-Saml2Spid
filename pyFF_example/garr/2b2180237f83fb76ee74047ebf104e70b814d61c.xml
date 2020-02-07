@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://citaviweb.citavi.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2016-06-02T08:34:11Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Citavi Account</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Citavi Account is where you can find your license key.</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB/ElEQVR4nGJgQAVWl71cFl13tXn0sCT3/7P2RhB+AGQvuO5iY3HZ240BF+C7lJS45LqHw/83C2b///v1y/9///6h4D9fPv1/PW/GIqAanktp6RiaT9wO8fn/4/5duIa/Xz7//37t8v/f796iGPTj7q1jt4K9eS6lpsINWHLd0wFF86f9u/9fN9H8f1VD7v9VHcX/L3paUQ25c3MB0CVgLzNc9nQBOnsWioK7wZ7/r2rKoeD3G9egqHk9Z5oJUO8CBmCAgZ2LLPkgKQKiUQOKgewHKTGoYfLp46xrjpaPGB6W5mEE2M+H9/8/ykv7fz8+7P8tNxuwIXf8XNDV3XlYmPWf4VlHI4YByPjz0YNgF9yPDUGX+/O0rZ4IA44dAhvwoq8diwEN2L2AjJ811/y/qqsE9NY9bF5YBAxEW6wJB4S/nD4O1vxqaj9mwvr8cc41ZysbYDQ6/3+zaA6Ggg/bNv6/bqwBdEH1/39//2LIv547w+yylys4Ia244eUEDnm45MxJ/2/YGv1/v2kNVpf9uHcbmKTtkZJyQvyZ2+F+cEP+ANPF3x/fsWu+fweU7HkupSSj5YfYmFU3vIHeWTLv/99vXzE0gsLpzcLZy657OoLyDs5caXfZw2nJDTfbZ4/KC/4/62gC4SePyvKXXHe3swEmXQwNAAAAAP//AwCyr9lZeFMHkgAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAXEgAAFxIBZ5/SUgAACfhJREFUeJzsWXlUVNcZH1RQ41oXorZNWuuxzTE5TYxxwy0uWahLTEibxvSkMaZRq0maGNeealREcGdfBEUFlE2NIKhRFmVTQAEXUAQUZBv2ff/1++4wIwMzIxh7nu/UP37MMO++d3/39333W+5TAFA8w+NDcgJyh+QE5A7JCcgdkhOQOyQnIHdITkDukJyA3CE5AblDcgJyh+QE5A7JCcgdkhOQOyQnIHdITkDukJyA3CE5gacd9Xl5yLW1Q9a69aiIisYzAbuAhkIlkqdMRfRzfRHTbwBiBw1BjrWNloiSk3yaUR4RiZi+/RFnOkyFIaaIe344qpOTNSJKTvLfrhfhdyEVUnLQh4bCQuGBMX36I2bAIMQOHioEzXfb/3QI6H4qGYrXt2Gn9+WnUkAhYkEBik+eRElQMFJmzER0z97IdXCUXkCHgET0nrELijeswN+lFqozyFqzFlHGPVESfPrRAmYXVOBw6A2s2HUOFhtOYP7qQHy+LQRWh2IReS0bzc0t4iFllXWIu5GLGxlF4HsKSqqhLKtBfnEVMvPKcPV2AZLuFKK5RTU+ITUfizaeQjezHTCeuhPdJtng0y3BCE+8j4ir2YT74vkV1fUdRC2n30JiMmDpGYOvdv8k+KyyC4Pz8WvIzC0T43me4Oi7OBRyHafpM4yeeyk5R+BC/D34nLsFrzM3UVnTIMYnpxfiYFAyTkbeEfNG0bifrmTB8/R1eASloL6hScPj1vsWiB81Gg3KIv0CpueUYqnNWQycsw/D5jpgtUO4mPB7+zAoaLHsMT2m7ID5d/7IVVYi5a4Sc74+hj98tB+D37HFiPmO+NUCJ3Gv6Z/s8dqnB7F851k0NjWL55i+ayfEM5m2Cz2nP8QgulfgbVsxNy9CzammrhE7vC5j5PvOGEvPcz2ZhKCou1i0KUiEAMX47RhGc4WT+GzYfb7xmPd9ALoTT7WhehB60Tzv/MsP65wjUUqG52eHxmbic8vTmE1rMJlGBjWzQb/Ze/HRf37EnqNXUNcqYHlEBGL6D0SuvYOWYbXE8z2fihHzHKB4bSumLPVCVl651mB7/0QYTbYREynGWmLzgYd1URF5HQupmGgtyPLnbp8rqK1v1IwpLq9FxoNSbHKPghFdZ+H4c51ThPBeNXIKK4XgfA9/n/XVMTHfS391Fx6ufh576W9IVDEfGfZvm4O1+HKCUrTOw8af8U8fg6Fi1spjMKb1nbqUrjWuIiYG8SNHIX3pMrQ0Nmpd03xhlxfC0IS/s3ClRVTonGz5znPC4kyYt3Pba+vJsooJ2wVhtjpvbV3P2P9jkmYcf9r5JegcxwLxosV8xOvY+Y7Zeuoyb2FUvm6x/oTWdTbqiwudxY5hjKR1lVTU6hVx4heH8ckPQZrrLQ0NyN5qKcS7v3kL0NLc4V7xJzEtX2wbnsRokjXcaIH6JqmubcDCtccxgMZzfNOyuMtFIYgJCcNbNFaPgC4nrmkJuPdYvP5xf9wCxTgrscV4K7cf8+aKo1C0CvjhhpMdrrN3a+aiMZz5dc11I7MIgym8XKN4rf6tubYWD/buQ1WiKsmlZZfiTFymtgdy0F2wJlCz9V5Y6ISi8hqDrs7bkmNl+9+ftICcMD4gbtZH4vR6zsyVhgVMu1+MgW/tgzHtLvZUsy+90NDY0ZNWUlJ6jxxD35q9z93EcHM7vPWNr7aA1zOU6DNzj1iwgrxv7qoAg+IZglpAsYWJcOz1nydgZ2BGsdrIgICMRZtOaWKhMe2y85SN217nODtiniMuJeVo/c4h5ARlZ0483SkZKcZbieSkJeCB4BStxXxpfeaJCMihgMuL/5WAvNglVqFUS+5WGd+AgFwicUw2ad3GnGHbXt/gEikSlarSUv3GJdXoP7sJ0TgBqRKRdUcBxy0+JGKfOkZwbfWkPHDAnL2YucJH1F5PQsDKmnocovrMnDxiweoAOB2/KsTgWtKQgJzRpy/3EZ6q4rUPqfeKxVhONC+85yTqy7b3cMi4SHXh13vOP9RHl4AfUObqNlmlME8wbbm3liUeR0Cuv9hqYxa5Yw3VkVxk/xwBuRZzCryKl/7ihtEfulIN+LDM2OwRJZ5hSEAGNwWakobGr6Xkwr/bUHzl7NvU1DEuMvKoIRhCyYU9WKeAAWFpmgebtHpNalbxYwm43ilSZM1RtEjOdlX1TTqf0xUBc6hYf5sCN5dNv6BkcKsdt41ulzolYHlVPX5PxX73NiVNBnUvo8kovjrKIzXYQ7kx6KFPQC5ch5rbC4XV23jZjrOPJSBX7hbrjoMXzf83FSlFE95Sr92WdVZA9jwO4Ko4ZC26n/ZjuNXsjICMrQdjNPMyplBGnrDksKbb0AXlowTkP9/sPS9I9mwtP3qSJ3qfvdllEduWB0pfPyS+/AruLF4CrqfajnNuJ+AP1Jnoeh5nS27F1PHn3W/9tMZVUT875mN3VcjohID3qLMaam730FnIq7nnNXRPpwQsLK3Gq9RjqrcyD+47a4/oEOr1WIfJbKVWTlfTn21ljbihzyPfw0Pnvf5twgbHXw7wbWPQHSpYucfmgp67EHVnY0qLVxfvvHO4duvVGnqMqIed9I8j4lo1FdwXEu5RLG/pMP8X20NVcZoM8/InHppDBX1ov4Xn6hKQkXa/BK//3VMQZrIMTiqTiRSf13EFzqTYYp9R8z2Y4tHHG091EFh59Ciie/fVOnRsj/ziatHDMiG1wdiyfMrCzx5DPS/PFUZgodUHDxy7+IBi3Gee1Hf7ihMcbifZk7hE6TVjF7iwZq/kra0rGV6+mas6RiMRubd/1K5iY6oLcd4Nb1DV0tYw2mpTB/KdbZhwcxFXJlgLcuLEgz+ppeKm/pfzHcWJR2O7zNVUUYGrr45FstnUDk13e5y7nCWSDYso5qI5eCvOXeWPpHRVO1VHSUicuExUjWGD/ppKDs7s6kMF3sZ81CbGEPhEaBsZQle3weDOaxaJPHyeg8G+mI+3ltmcxSvkpeq5RcdDfLk//9b2gnAqnTfzKQwH+sWWIZhNBSY37Bx/2KqcsfRNzO8Qons9h7srVj7SsmqDMVFnKlGOUq2oK/uzEKGxGXChmo/P9zgmtR/DQnMdFxh+Gw9aE5ghcGz1DDEc+3idlgejsZ+qicCI2+KMkcsnfv3gSHw5fAWEpz16kV1B4REvIWDK9DdR5OePQm9v1GVnd0pMueKJPqzIP0D1+o9fvvQfKF4HXhs3HvxuVeqFykLA2sxMXHnxt0JA9atAfotVFh7xTMDOIs/FVZQw0X36CQ9MnjYdDUrlMwG7gsqEBOTa2aPA4wD4taDUi5SdgP9PkJyA3CE5AblDcgJyh+QE5A7JCcgdkhOQOyQnIHdITkDukJyA3CE5AblDcgJyh+QE5A7JCcgdkhOQOyQnIHf8FwAA//8DAEbwyVrVo9ytAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://www.citavi.com/en/research</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.citavi.com/en/data-privacy-statement</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFJTCCAw2gAwIBAgIQQpE2zPaqAYxGXSil6WhOlTANBgkqhkiG9w0BAQ0FADAi
+MSAwHgYDVQQDExdDaXRhdmkgV2ViIFNoaWJib2xldGggMjAeFw0xOTEyMTEwOTEy
+MjRaFw0yMjEyMzAyMzAwMDBaMCIxIDAeBgNVBAMTF0NpdGF2aSBXZWIgU2hpYmJv
+bGV0aCAyMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA8J8b4xEFnq1f
+5YwP2Jxx/xSGyDDcC/hGCPHuT6bwq5hyioGFMEyd3s9ZW2Q8EEBlzwUM7G++koG4
+lZSMWAGRfvcWsDIVNQ50qIQoIOMtao0LCK90jtUVexbEz22/D9rDjhmbTqyyJEaa
+BS2uMh4wYe+mAsSGnoyTVrgip1qS1iup8BT4Ccfwc6HsS7DdfQu7WtHVFlBLcALP
+igVVkTSy/SnG1H738+db82R0bDAwFYrfVDQZCaU5+qTcJyfNtKUH1SD0jRf9zcVR
+6qjxVf1f7EUNZhABhwFvQR7whLAiRKQbPnQcq52gKKmpqms/BMW2okijj7UoEbzF
+7KyiKG0uOfohCI70Sxpu3L9Uh9h2twIimg+OGzE4Wa5lgzvsy3dxadXiX33LsdfR
+b6ReGxHjYjFO2YVtxDHGmFF1ecesejJ53Vs2Gs1s0pczqQn1s/pJgw8LUsO0auhN
+SCdGiDOSXZ32JTNIfVP2E8r1AYtdIeEmg1APcpm3UL/7xW3NPi7ykLYIWkSp0iOU
+/7Z/JltPIBem766I5fVWDGmfoggZGSU3VexmVOtMIlkUq5IAQxec9oy8RqWSwMUq
+xHcCslEYVDdsmKh6DdbdCTm2BhgrssIf3ZynYudnf4glRasBf1MVSz2XvnZAFUlW
+cxGxobSUxyc9NuojvI8TO9g+XFSRA60CAwEAAaNXMFUwUwYDVR0BBEwwSoAQALcD
+cYSLAlLVe8LnjRPvvqEkMCIxIDAeBgNVBAMTF0NpdGF2aSBXZWIgU2hpYmJvbGV0
+aCAyghBCkTbM9qoBjEZdKKXpaE6VMA0GCSqGSIb3DQEBDQUAA4ICAQDhLN0t7kS+
+MwyH7EJrQB599o+mv7Ixs12/yrfZogVeHKiWNXqw0LH7fgX1x0WGLlGNdZalG4fO
+ffO4ePJZzgEIhdQtTs0jBtkAmDmisXMUcBtn8xSvzPegjs5x4GQQ5STVpoONyRxX
+K2144RbepZ95/Fs+vMViOBaYSfU1yyfQQKqrY+tr0dGtx//3MQUAHY9iiVBbilpk
+CM0mA1ehXon3t/Ofp01OwOpCB5GOCQpQBeFbsnOq4WteehvXQci0w7HKNBJiaJNf
+sPMQn3BcV69gL4KQ91GT7EhEFucFi9TXXu4CDXUPdGwfcRvwv0MNqiel9woUxMVM
+pGAw3LoOtck1QHsWrYYXdeilh5YetXU0i3/sVXS5N/DFt4/fpgvXlywku4bSJQFa
+el0bFtcm8M54BwSlxskautWI6akeAbx9aNTZNjS9VfclBDjuthpk9hX5XLcQT9m0
+dZs9Zqe9pO/OxC7Xmkb5Zb21kXVer1QAhp8di40BwCyNbnp38ASuqDsqSseI6nlc
+xUDuYeNsRQDhwa47A6Ve69qWJSZ0Cst7dO94IaR7xcjoscVtBes5r9XbDqywm7Kk
+D5y/+HtPuUQF8fhOIQYRsiCkSntwEdXXiwePRfWFiQB/5QRCzyGJ96t7CBHPfWJP
+EjmeC+D/M4s591y9xUBGOjz1Bo4X5dJbcg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://citaviweb.citavi.com/identity/AuthServices/Acs" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://citaviweb2.citavi.com/identity/AuthServices/Acs" index="2"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Citavi Account</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Citavi Account is where you can find your license key.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">citavi.com</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Swiss Academic Software GmbH</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.citavi.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Peter</md:GivenName>
+	<md:SurName>Meurer</md:SurName>
+	<md:EmailAddress>mailto:support@citavi.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Marc</md:GivenName>
+	<md:SurName>Eichenberger</md:SurName>
+	<md:EmailAddress>mailto:support@citavi.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

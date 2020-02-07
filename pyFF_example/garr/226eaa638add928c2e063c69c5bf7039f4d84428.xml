@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lnu.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lnu.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Linnéuniversitetet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Linnaeus University</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för anställda och studenter vid Linnéuniversitetet.</mdui:Description>
+		<mdui:Description xml:lang="en">The Linnaeus University Identity Provider is used by employees and students at the university.</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">https://lnu.se</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://lnu.se/en</mdui:InformationURL>
+		<mdui:Logo height="55" width="361">https://idp.lnu.se/logo_swamid.png</mdui:Logo>
+		<mdui:Logo height="55" width="361" xml:lang="sv">https://idp.lnu.se/logo_swamid.png</mdui:Logo>
+		<mdui:Logo height="55" width="361" xml:lang="en">https://idp.lnu.se/logo_swamid_en.png</mdui:Logo>
+		<mdui:Keywords xml:lang="sv">lnu linné linnæus linne linnaeus linneuniversitetet linnéuniversitetet linnaeus+university</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">lnu linné linnæus linne linnaeus linneuniversitetet linnéuniversitetet linnaeus+university</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>lnu.se</mdui:DomainHint>
+		<mdui:IPHint>194.47.64.0/18</mdui:IPHint>
+		<mdui:IPHint>194.47.160.0/19</mdui:IPHint>
+		<mdui:IPHint>194.47.192.0/20</mdui:IPHint>
+		<mdui:GeolocationHint>geo:56.6661,16.3484</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:56.8546,14.8304</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIUPyRiBxYXDJxcWSxls8FwS7Y60b8wDQYJKoZIhvcNAQEL
+BQAwFTETMBEGA1UEAwwKaWRwLmxudS5zZTAeFw0xNjA1MTcwODQ0MTdaFw0zNjA1
+MTcwODQ0MTdaMBUxEzARBgNVBAMMCmlkcC5sbnUuc2UwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCr3zNT4mSKsxAUxFgSEcUS+EWnItyKj+PZ9xr+Rgju
+UPbr+B4Fal4tjY1d6tGpCiE838TkF4wNd9FafRYgIyfNHbdVieDw9jUgBBkQJHt8
+a/57sdEAF8fQ60PWQ1MJIbeh5vN/NZbEqLNt2UDnAv47wFQI07tOaW76OV14pmZc
+JzdLCLcSaCreFnJwskZUmTHqf9lzm/rvB3LHyK9uwljdEDz8FFvPpDTbKvBq76t0
+nMzF9fQQ/SS/P2ZiP9m0PzhNu+Thb1kjWH6g86eX8qQMLyEOXrJtdCXYsyq+Y6bU
+BtVFdUHJ2HBlIWl9jFwK03Nh2vGezrN0eYHiPEMxwmfFAgMBAAGjWzBZMB0GA1Ud
+DgQWBBTEHMKpTdUijjgkKa0w49SeqB7nzDA4BgNVHREEMTAvggppZHAubG51LnNl
+hiFodHRwczovL2lkcC5sbnUuc2UvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBAHP3dOOl/fq06A+llRic1LAz8ha5g5z2Me9B0VVfRkEToPilas4Wx/jC
+cbddICIZDaQfKTeUgmqK5p7M8SE2wZ31AUH3TOXGGkic7K/9ZCGJ81Dna8kdKCVM
+RhJOpvcknw2vU+DhGA+/Dwo0oS2b9lTy8Q4VfMCYfIuQR6DHEqLfFOTGXb4t1zLP
+fn5Nc9bRLUOsN/YmL2AjvrpTD1bmcALplE8J2mkeUdPbhd5tKT09yFMQCDuD4qCk
+frSh63D1pqPEY32zwWj3WdE0RWH1PZ2KFvZBri26KXH2LE3D0gZUa3TaFczRHQbc
+iQDES2ptc24O88TxSDQnHG1WzY+REMo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lnu.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lnu.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.lnu.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lnu.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.lnu.se/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lnu.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lnu.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEzCCAfugAwIBAgIUPyRiBxYXDJxcWSxls8FwS7Y60b8wDQYJKoZIhvcNAQEL
+BQAwFTETMBEGA1UEAwwKaWRwLmxudS5zZTAeFw0xNjA1MTcwODQ0MTdaFw0zNjA1
+MTcwODQ0MTdaMBUxEzARBgNVBAMMCmlkcC5sbnUuc2UwggEiMA0GCSqGSIb3DQEB
+AQUAA4IBDwAwggEKAoIBAQCr3zNT4mSKsxAUxFgSEcUS+EWnItyKj+PZ9xr+Rgju
+UPbr+B4Fal4tjY1d6tGpCiE838TkF4wNd9FafRYgIyfNHbdVieDw9jUgBBkQJHt8
+a/57sdEAF8fQ60PWQ1MJIbeh5vN/NZbEqLNt2UDnAv47wFQI07tOaW76OV14pmZc
+JzdLCLcSaCreFnJwskZUmTHqf9lzm/rvB3LHyK9uwljdEDz8FFvPpDTbKvBq76t0
+nMzF9fQQ/SS/P2ZiP9m0PzhNu+Thb1kjWH6g86eX8qQMLyEOXrJtdCXYsyq+Y6bU
+BtVFdUHJ2HBlIWl9jFwK03Nh2vGezrN0eYHiPEMxwmfFAgMBAAGjWzBZMB0GA1Ud
+DgQWBBTEHMKpTdUijjgkKa0w49SeqB7nzDA4BgNVHREEMTAvggppZHAubG51LnNl
+hiFodHRwczovL2lkcC5sbnUuc2UvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQEL
+BQADggEBAHP3dOOl/fq06A+llRic1LAz8ha5g5z2Me9B0VVfRkEToPilas4Wx/jC
+cbddICIZDaQfKTeUgmqK5p7M8SE2wZ31AUH3TOXGGkic7K/9ZCGJ81Dna8kdKCVM
+RhJOpvcknw2vU+DhGA+/Dwo0oS2b9lTy8Q4VfMCYfIuQR6DHEqLfFOTGXb4t1zLP
+fn5Nc9bRLUOsN/YmL2AjvrpTD1bmcALplE8J2mkeUdPbhd5tKT09yFMQCDuD4qCk
+frSh63D1pqPEY32zwWj3WdE0RWH1PZ2KFvZBri26KXH2LE3D0gZUa3TaFczRHQbc
+iQDES2ptc24O88TxSDQnHG1WzY+REMo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lnu.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lnu.se:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LNU</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Linnéuniversitetet</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Linnaeus University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://lnu.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Linnæus University</md:Company>
+	<md:EmailAddress>mailto:it-idp@list.lnu.se</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

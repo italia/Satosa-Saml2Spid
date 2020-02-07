@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.hope.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Liverpool Hope University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Liverpool Hope University</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">hope.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUF9LBjyyNarRHVF85JrS8jx1eFDIwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPc2hpYi5ob3BlLmFjLnVrMB4XDTEzMDcxNjA4NDgyMloX
+DTMzMDcxNjA4NDgyMlowGjEYMBYGA1UEAxMPc2hpYi5ob3BlLmFjLnVrMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzmHDbw1UxozQxVsCj8D1elIGXe1j
+lUMlT8KADqpY0N1K5R2G1j2cXXGXxx764LMpBm7Ln1WruGU0c+pSN+4m/5/hc1Ub
+q1PKjnVuhj+kBJjx6GilX4UaeCJVpxTsPvev9Nd8Wxg+FFBVppJXPvJvAlZxACjX
+i93rokFJXieWQx3R4OGiJxsouCbfJsyjKxS+DOMtQqQ229NrcGNNfBwjKtLopaYI
+oo8ofxZLY6Y1aOhpepMTczZqFND/gtHVcUfhXGHNUDG+sN/cbe6W6VEzDIKlge5w
+vjEJWn9IRfdo2RYGoBdc561L1RnXiTNekmsmrBOGO3MXUJSkplzepr08XwIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9zaGliLmhvcGUuYWMudWuGJmh0dHBzOi8vc2hpYi5o
+b3BlLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTS/UZaSWqRgi54sLx4
+HaDi1fGhizANBgkqhkiG9w0BAQUFAAOCAQEAQMiFtqFds58lE3wT/UqQqFSxpz6t
+eFvNR90R1jJ1en7YGFKFtVqL6gEOh/O4Y5et+VASZ9OJalRpmlO14l3NrG5+h8Nx
+K4NUH/9lOBrMPvwgWWuiSYxigmWIgfsTTQIWbnc8m/koGuAzHkhmki/LE0DcEeeW
+c4OxCwaN4AHpdet/nYzSAU7dO1RunbPGSx57N97B8hDELyYW722iSbUHrUceve4L
+rGFF1QHnMhz7uidDubpoJ6ZJtPhXIr+eFPw15Y0P4Rw9rTFGKofJ5lbX7FleuQJv
+wMyh37KZ3ivrQ8dpKTnnMnKyckECdFT0jqYAZHMeHLWiRYfxAAXi3mqDzQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.hope.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.hope.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib.hope.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.hope.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib.hope.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.hope.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hope.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUF9LBjyyNarRHVF85JrS8jx1eFDIwDQYJKoZIhvcNAQEF
+BQAwGjEYMBYGA1UEAxMPc2hpYi5ob3BlLmFjLnVrMB4XDTEzMDcxNjA4NDgyMloX
+DTMzMDcxNjA4NDgyMlowGjEYMBYGA1UEAxMPc2hpYi5ob3BlLmFjLnVrMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzmHDbw1UxozQxVsCj8D1elIGXe1j
+lUMlT8KADqpY0N1K5R2G1j2cXXGXxx764LMpBm7Ln1WruGU0c+pSN+4m/5/hc1Ub
+q1PKjnVuhj+kBJjx6GilX4UaeCJVpxTsPvev9Nd8Wxg+FFBVppJXPvJvAlZxACjX
+i93rokFJXieWQx3R4OGiJxsouCbfJsyjKxS+DOMtQqQ229NrcGNNfBwjKtLopaYI
+oo8ofxZLY6Y1aOhpepMTczZqFND/gtHVcUfhXGHNUDG+sN/cbe6W6VEzDIKlge5w
+vjEJWn9IRfdo2RYGoBdc561L1RnXiTNekmsmrBOGO3MXUJSkplzepr08XwIDAQAB
+o2UwYzBCBgNVHREEOzA5gg9zaGliLmhvcGUuYWMudWuGJmh0dHBzOi8vc2hpYi5o
+b3BlLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTS/UZaSWqRgi54sLx4
+HaDi1fGhizANBgkqhkiG9w0BAQUFAAOCAQEAQMiFtqFds58lE3wT/UqQqFSxpz6t
+eFvNR90R1jJ1en7YGFKFtVqL6gEOh/O4Y5et+VASZ9OJalRpmlO14l3NrG5+h8Nx
+K4NUH/9lOBrMPvwgWWuiSYxigmWIgfsTTQIWbnc8m/koGuAzHkhmki/LE0DcEeeW
+c4OxCwaN4AHpdet/nYzSAU7dO1RunbPGSx57N97B8hDELyYW722iSbUHrUceve4L
+rGFF1QHnMhz7uidDubpoJ6ZJtPhXIr+eFPw15Y0P4Rw9rTFGKofJ5lbX7FleuQJv
+wMyh37KZ3ivrQ8dpKTnnMnKyckECdFT0jqYAZHMeHLWiRYfxAAXi3mqDzQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shib.hope.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.hope.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Liverpool Hope University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Liverpool Hope University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hope.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Mike</md:GivenName>
+	<md:SurName>Beecroft</md:SurName>
+	<md:EmailAddress>mailto:beecrom@hope.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeff</md:GivenName>
+	<md:SurName>Stone</md:SurName>
+	<md:EmailAddress>mailto:stonej@hope.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

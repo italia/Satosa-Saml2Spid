@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai.empa.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2011-02-10T11:53:21Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://www.empa.ch/web/s601/support" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">empa.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Empa</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Empa</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Empa - Eidgenössische Materialprüfungs- und Forschungsanstalt</mdui:Description>
+		<mdui:Description xml:lang="en">Empa - Swiss Federal Laboratories for Materials Science and Technology</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAnZJREFUeJyMU89rE1EQnuxumh+bEG139+2mJy2IBcGrF+/+C94UjxWKelAURS9VEepFSn5qxUNptURtE02aWNNGom2IIqGkxJImbeJFpIJWKbXjvCVJLZLgwMdb3rxvvm/m7QPoEGVgx1bBKK6CfrXTuT2xAvs9y6AdrYAeJvJWFby4TqiCEcmB1lcGsLdRA3sZjMEKGJ8/WowvBcEwiRxFwYuzXTq+F4yvVGhxBZRDLeISsCNl8F4npfWqqeTFGmHZ4sW3km4SP4gGfrI0nfDV2CSxoSz09ENK1E8vCHqt0iDWCUukngA3xkDGl+CiYrtuao38c5u2NepQb0KU7MQlFnlDaiU6GLcxnBT2YensRfx2/gZuXLmFi129mBd43otRO8OQS0W/S/kdkJVhmAAQE5J2IWnVMULJmFXFuucw7qzVkcd2vkCuenFeZDju0NDnVs0CQRPKiDmHNLADc6K+OUXqz6hAUenH73eDuHFyANcGLuG00I2PZA2fOBgGqADHmEP7NeZUh1rDzIj61Dy5GKdDKVHDHM3gNSEoyOgnwkNZNQvw9R21m5HYj6d25VqrQEJilzOUSFORFGGGwK02wS1nKZ+l/Ri1GnAp2z63cqdVICmpxznxRRfDWVo5uO2meorv05WG+QBpj69Bp3pvz8+UlNhwjOYQJeTp7h/T0PitLJByhL4nCNwNJ4dkpRCQe07980cmrCw4SRbniJSTDEyT6gMi8OnzW7gvqz9DLsV3GxR32/cwbVXPvKIW4kT2u3fnMOpU836bp6/za2rEjJWdizd6Jrs7XHXE5jn4X+S/2hkMu5RSSO4+0e7MHwAAAP//AwBrBUXaeN5sTQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAqSSURBVHic7FkJUFTZFW1oFgEVlLUhKmpccBe3wlDlglZZuMUUxF0p1wmWWxKVOFWDSjkqM2FGo6MiDCDgKI4LQVE2QVQQEBdwiYg02NKIIMgmYgs35zXdPb/btuhxUvnza7Dq1Oe/d999951/t9eKiEjUiU8H7wYIHbwbIHTwboDQwbsBQgfvBggdvBsgdPBugNDBuwFCB+8GCB28GyB08G6A0MG7AUIH7wYIHbwbIHTwboDQwbsBQgfvBvyKMA/wBbp1EvjzMON9ZVVQ3deHpG+v5bzFe2AngYbBo/Vl9Za6L/dfK+/l/r5MZE0yK1fCe0tby7tDmF/XSeCH6A+Et9a8PlK/918Py/uMoTJRD5KJHAEXQELP8F7l5UOKB0WPIRsCBHQSSGTf1tAY3XA4Kq963goq8VlZ+1DUjZ5riGtHueqZD2/MHv4Hql711+aG7yLrqK0tATo2/CYJbGtsCmsIjc6qGDoJ3tUTsKUSEJcrltA9Y4mGOIZCjKWYO1KmqRMVQ6Zd3o6q5i4nRVHJQ+hb0BGB4v+R4WY6uvTpFXPwMT3ij6zvcG1r05vgxmOxpRXD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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>2001:620:d::/48</mdui:IPHint>
+		<mdui:DomainHint>empa.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.402149,8.611331</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.413295,9.340250</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.762518,7.600496</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAPubYhMOtKNoMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2FhaS5lbXBhLmNoMB4XDTE3MDIwNzA5MzkwMVoXDTIwMDIwNzA5MzkwMVow
+FjEUMBIGA1UEAxMLYWFpLmVtcGEuY2gwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDUgOibDn+/1QyYhUyFB6WngJ/ABbtMsSei2IqKaqofeCB6Wb3AQQv/
+TdGXlkqD/IYMfz2e2jLX3Q4PFQ/7Z3rD4hVjZVVkRlecYnD0LllEn8rgCWhW1spT
+mt0q3AE/FQ2p9F4QaYTT/Z2ZlhURfJKA4FfqNxffyVTE0TA7nYM7mKk+Ex3JPeKQ
+lyGoudhmEpfeav9egTrWWnHmfyCzMb5rs7CaL7cGmRe4b3SaJr8UD33DwAk6gS/s
+HWuD1mlXVGYzOJD9E2O28Mv7oed4RaIHWhVLTGuzuDLJVbQb0ZFdClA9YdEJX1sX
+UnUVb/vexh6BLdzic4WBj+f+Dn2nmrdTAgMBAAGjXTBbMDoGA1UdEQQzMDGCC2Fh
+aS5lbXBhLmNohiJodHRwczovL2FhaS5lbXBhLmNoL2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBQNYAufQfb3V3FmkuzewMA0ta7mSjANBgkqhkiG9w0BAQUFAAOCAQEA
+bZP9ofs0QfWOc8koqrDv++VFgcqXRzc5LGgeoowU1RH+JHUlEYNbnOrwpEi2YcC/
+neuSGzG+MKIJ3dF0jt98baB2/qAGlNsoyJyELPlgaCPBFI8npcXbxwfnb3v///Uh
+JejQAhbZjq7ikvX8XCY0Ubrqy4Oe89VW/3Z2Qxklt35DO9gBqkDmG5ufcOdZLw+a
+hhfIKP5WMk2194Rvai7X/renC0M6aIHo6XyjHBp1eR8IX8HrQSqGye+MsEWPmb1l
+m0x6+j5HAtb+TW7+EHenfTEiv0vplzjKbIuNxqlcz5MxKvrAUjra3QpwV2XYgW6H
+iCrXomG/+RctwZ/ZptgqGA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVANqU/t+kOR5TWaR32IxPlxyzduIRMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2FhaS5lbXBhLmNoMB4XDTIwMDEyODA5MjY1NloXDTIz
+MDEyODA5MjY1NlowFjEUMBIGA1UEAwwLYWFpLmVtcGEuY2gwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCmEIXN1WicFey9tgCXjQ5sgglhMY/dR6xNSeuJ
+JQ3B39yKS6NRlS+gTZN+hEAnvKUveDHEyibK75pxNxhuFs5ln1L1BF6cPnVD28a/
+DaupMuk53X5iMEVIQZqjkxmhTSXEtf6jznrNEM25w7sy743HTsWifdvUSdj8ghrB
+ApLoIY+xPYgbGa5GWZe7Cn/+n4LgVmqr2vcHRP6/bDq6aCG+apHdT+n7mGtQ2/Dh
+q8+t7XjaDSt7RPJl0cfl32vq7fHOK8wQCsIaYYQ+dR5GVK3L+dOE1mBIxYZbfhwR
+2O4xlvDx+WgqnJ/iUFnmmLAeqlUNUOaaM50u7lHh4CermFZbAgMBAAGjXTBbMB0G
+A1UdDgQWBBS5xBHIkfQ0iCahJiZ5YNATh4daGTA6BgNVHREEMzAxggthYWkuZW1w
+YS5jaIYiaHR0cHM6Ly9hYWkuZW1wYS5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEAHJ1zt+fjrRhgcI3TrSFKwznRxSPCzl93UJzpGBoBP4GnWXRC
+jX3VaI6awIcGh+8qzdDRXM8a1SLMvwtdLjqb3505slxAio3cfYVnFit0a5XZ+dYk
+NI9kB87yy/ywtk87rljIqOIQ1EOuDkb1xM16bpzlpYekb3exoKUxPrRj0sm1F0DA
+UuMMGiBpbQWDGb+0OqI7OQ1R8rF70tbGKW+4mnALdUAspSXokB/igRWtLxQQ6b+F
+8K3yN5MMt54oPCORRsRtV4NlU7JIJ8sWnmaeeYQad0qzWHy4c68Igu6xvouOkCAy
+YK/rkeuQkKEXqIeqwfn7v1tZ3+1F8BVl7NftHQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-gw.empa.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-gw.empa.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-gw.empa.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-gw.empa.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-gw.empa.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-gw.empa.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">empa.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAPubYhMOtKNoMA0GCSqGSIb3DQEBBQUAMBYxFDASBgNV
+BAMTC2FhaS5lbXBhLmNoMB4XDTE3MDIwNzA5MzkwMVoXDTIwMDIwNzA5MzkwMVow
+FjEUMBIGA1UEAxMLYWFpLmVtcGEuY2gwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDUgOibDn+/1QyYhUyFB6WngJ/ABbtMsSei2IqKaqofeCB6Wb3AQQv/
+TdGXlkqD/IYMfz2e2jLX3Q4PFQ/7Z3rD4hVjZVVkRlecYnD0LllEn8rgCWhW1spT
+mt0q3AE/FQ2p9F4QaYTT/Z2ZlhURfJKA4FfqNxffyVTE0TA7nYM7mKk+Ex3JPeKQ
+lyGoudhmEpfeav9egTrWWnHmfyCzMb5rs7CaL7cGmRe4b3SaJr8UD33DwAk6gS/s
+HWuD1mlXVGYzOJD9E2O28Mv7oed4RaIHWhVLTGuzuDLJVbQb0ZFdClA9YdEJX1sX
+UnUVb/vexh6BLdzic4WBj+f+Dn2nmrdTAgMBAAGjXTBbMDoGA1UdEQQzMDGCC2Fh
+aS5lbXBhLmNohiJodHRwczovL2FhaS5lbXBhLmNoL2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBQNYAufQfb3V3FmkuzewMA0ta7mSjANBgkqhkiG9w0BAQUFAAOCAQEA
+bZP9ofs0QfWOc8koqrDv++VFgcqXRzc5LGgeoowU1RH+JHUlEYNbnOrwpEi2YcC/
+neuSGzG+MKIJ3dF0jt98baB2/qAGlNsoyJyELPlgaCPBFI8npcXbxwfnb3v///Uh
+JejQAhbZjq7ikvX8XCY0Ubrqy4Oe89VW/3Z2Qxklt35DO9gBqkDmG5ufcOdZLw+a
+hhfIKP5WMk2194Rvai7X/renC0M6aIHo6XyjHBp1eR8IX8HrQSqGye+MsEWPmb1l
+m0x6+j5HAtb+TW7+EHenfTEiv0vplzjKbIuNxqlcz5MxKvrAUjra3QpwV2XYgW6H
+iCrXomG/+RctwZ/ZptgqGA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVANqU/t+kOR5TWaR32IxPlxyzduIRMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC2FhaS5lbXBhLmNoMB4XDTIwMDEyODA5MjY1NloXDTIz
+MDEyODA5MjY1NlowFjEUMBIGA1UEAwwLYWFpLmVtcGEuY2gwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCmEIXN1WicFey9tgCXjQ5sgglhMY/dR6xNSeuJ
+JQ3B39yKS6NRlS+gTZN+hEAnvKUveDHEyibK75pxNxhuFs5ln1L1BF6cPnVD28a/
+DaupMuk53X5iMEVIQZqjkxmhTSXEtf6jznrNEM25w7sy743HTsWifdvUSdj8ghrB
+ApLoIY+xPYgbGa5GWZe7Cn/+n4LgVmqr2vcHRP6/bDq6aCG+apHdT+n7mGtQ2/Dh
+q8+t7XjaDSt7RPJl0cfl32vq7fHOK8wQCsIaYYQ+dR5GVK3L+dOE1mBIxYZbfhwR
+2O4xlvDx+WgqnJ/iUFnmmLAeqlUNUOaaM50u7lHh4CermFZbAgMBAAGjXTBbMB0G
+A1UdDgQWBBS5xBHIkfQ0iCahJiZ5YNATh4daGTA6BgNVHREEMzAxggthYWkuZW1w
+YS5jaIYiaHR0cHM6Ly9hYWkuZW1wYS5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG
+9w0BAQsFAAOCAQEAHJ1zt+fjrRhgcI3TrSFKwznRxSPCzl93UJzpGBoBP4GnWXRC
+jX3VaI6awIcGh+8qzdDRXM8a1SLMvwtdLjqb3505slxAio3cfYVnFit0a5XZ+dYk
+NI9kB87yy/ywtk87rljIqOIQ1EOuDkb1xM16bpzlpYekb3exoKUxPrRj0sm1F0DA
+UuMMGiBpbQWDGb+0OqI7OQ1R8rF70tbGKW+4mnALdUAspSXokB/igRWtLxQQ6b+F
+8K3yN5MMt54oPCORRsRtV4NlU7JIJ8sWnmaeeYQad0qzWHy4c68Igu6xvouOkCAy
+YK/rkeuQkKEXqIeqwfn7v1tZ3+1F8BVl7NftHQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-gw.empa.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-gw.empa.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">empa.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Empa</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Empa</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.empa.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.empa.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Burkhalter</md:GivenName>
+	<md:SurName>Patrik</md:SurName>
+	<md:EmailAddress>mailto:patrik.burkhalter@empa.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Burkhalter</md:GivenName>
+	<md:SurName>Patrik</md:SurName>
+	<md:EmailAddress>mailto:patrik.burkhalter@empa.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Burkhalter</md:GivenName>
+	<md:SurName>Patrik</md:SurName>
+	<md:EmailAddress>mailto:patrik.burkhalter@empa.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

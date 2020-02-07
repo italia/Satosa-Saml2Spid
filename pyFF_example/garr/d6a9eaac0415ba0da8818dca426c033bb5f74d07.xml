@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://1010se17fam-v03.famerp.br/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://cafe.rnp.br" registrationInstant="2010-01-01T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="pt-br">
+								http://www.rnp.br/_arquivo/servicos/Politica_CAFe_IDP_final.pdf
+							</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">famerp.br</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">FAMERP - Faculdade de Medicina de Rio Preto</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="pt-br">FAMERP - Faculdade de Medicina de Rio Preto</mdui:DisplayName>
+		<mdui:Description xml:lang="en">FAMERP - Faculdade de Medicina de Rio Preto</mdui:Description>
+		<mdui:Description xml:lang="pt-br">FAMERP - Faculdade de Medicina de Rio Preto</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.famerp.br/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="pt-br">http://www.famerp.br/</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC8DCCAdgCAQAwDQYJKoZIhvcNAQEFBQAwPjELMAkGA1UECxMCVEkxCzAJBgNV
+BAYTAkJSMSIwIAYDVQQDExkxMDEwc2UxN2ZhbS12MDMuZmFtZXJwLmJyMB4XDTE5
+MDUxNTE0Mzc1OVoXDTIyMDUxNDE0Mzc1OVowPjELMAkGA1UECxMCVEkxCzAJBgNV
+BAYTAkJSMSIwIAYDVQQDExkxMDEwc2UxN2ZhbS12MDMuZmFtZXJwLmJyMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx/SGU9r4DwGttSGqeP2lWacbMYQP
+Enf2a4w2nctstlnxwHbi45WcgvRaF3qr3R95ziOMKJcLjsDIg0kvWq9PtYI+HXTf
+HaCEAQ0YRy2AyXUi8MrTPZzM0jHf1GurplzQnmaiDTEgJjPTgVcnpaSh5fKBxM/c
+EssxovqcQDVIefn+fY8tB34HSDqH1ucNKoHRp7ulZa/GK+nFQTl+pEdhf/Trx8DM
+t8hTABscJDegXoP+1DDGEb+6k+eji/TtF/O+oIoGKZOTQGfW4VTeoND77whal2I8
+JgHRrJ8nmDpVUeMzmI3Zpz0yZfKe0/x9qYpsOxDFp7ui/1ya/vG+VaQb0QIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQC2HTfXnXus3Ike3HMrurHcoDv24wLf1zUHw0wY
+tfmCS65GqQu/UGgnC8129i4SVZaGzGC4GQChTVKcsVNcmPZJpJ2QAb5EhTFcWw4N
+JNHgTZp7vCpPAsy6enAXyYObBCuFCq0h024ISbJ8rchxXnMP3uHdhgtBZXCCBRYQ
+KZcK4vut6Vz2xgWAG3nmP8od/+Pgc6Z5ifJAleijtOL+KiihvXelnAIjZjj3Drem
+6EYQIAbW5MlesPY6Bx09KJ/dXglFFe0FnklwNMP4+UJ6HylChLgz/8aBSZJsepaf
+kdHUYVQxLbjL71tjwKDgfbeq0zWIaMGBAiBtGQ0NeFdRYCNM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://1010se17fam-v03.famerp.br:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://1010se17fam-v03.famerp.br:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://1010se17fam-v03.famerp.br/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://1010se17fam-v03.famerp.br/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://1010se17fam-v03.famerp.br/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://1010se17fam-v03.famerp.br/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">famerp.br</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC8DCCAdgCAQAwDQYJKoZIhvcNAQEFBQAwPjELMAkGA1UECxMCVEkxCzAJBgNV
+BAYTAkJSMSIwIAYDVQQDExkxMDEwc2UxN2ZhbS12MDMuZmFtZXJwLmJyMB4XDTE5
+MDUxNTE0Mzc1OVoXDTIyMDUxNDE0Mzc1OVowPjELMAkGA1UECxMCVEkxCzAJBgNV
+BAYTAkJSMSIwIAYDVQQDExkxMDEwc2UxN2ZhbS12MDMuZmFtZXJwLmJyMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx/SGU9r4DwGttSGqeP2lWacbMYQP
+Enf2a4w2nctstlnxwHbi45WcgvRaF3qr3R95ziOMKJcLjsDIg0kvWq9PtYI+HXTf
+HaCEAQ0YRy2AyXUi8MrTPZzM0jHf1GurplzQnmaiDTEgJjPTgVcnpaSh5fKBxM/c
+EssxovqcQDVIefn+fY8tB34HSDqH1ucNKoHRp7ulZa/GK+nFQTl+pEdhf/Trx8DM
+t8hTABscJDegXoP+1DDGEb+6k+eji/TtF/O+oIoGKZOTQGfW4VTeoND77whal2I8
+JgHRrJ8nmDpVUeMzmI3Zpz0yZfKe0/x9qYpsOxDFp7ui/1ya/vG+VaQb0QIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQC2HTfXnXus3Ike3HMrurHcoDv24wLf1zUHw0wY
+tfmCS65GqQu/UGgnC8129i4SVZaGzGC4GQChTVKcsVNcmPZJpJ2QAb5EhTFcWw4N
+JNHgTZp7vCpPAsy6enAXyYObBCuFCq0h024ISbJ8rchxXnMP3uHdhgtBZXCCBRYQ
+KZcK4vut6Vz2xgWAG3nmP8od/+Pgc6Z5ifJAleijtOL+KiihvXelnAIjZjj3Drem
+6EYQIAbW5MlesPY6Bx09KJ/dXglFFe0FnklwNMP4+UJ6HylChLgz/8aBSZJsepaf
+kdHUYVQxLbjL71tjwKDgfbeq0zWIaMGBAiBtGQ0NeFdRYCNM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://1010se17fam-v03.famerp.br:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://1010se17fam-v03.famerp.br:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">FAMERP - Faculdade de Medicina de Rio Preto</md:OrganizationName>
+	<md:OrganizationName xml:lang="pt-br">FAMERP - Faculdade de Medicina de Rio Preto</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">FAMERP - Faculdade de Medicina de Rio Preto</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="pt-br">FAMERP - Faculdade de Medicina de Rio Preto</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.famerp.br/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="pt-br">http://www.famerp.br/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Joao Marcelo</md:SurName>
+	<md:EmailAddress>joaomarcelo@famerp.br</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

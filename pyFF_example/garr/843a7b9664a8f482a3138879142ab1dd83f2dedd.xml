@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://ordertool.uat.unizin.org/secure">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Unizin Order Tool (UAT)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The Unizin Order Tool service provider for the UAT environment</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://resources.unizin.org/display/OT</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://resources.unizin.org/pages/viewpage.action?pageId=7635133</mdui:PrivacyStatementURL>
+		<mdui:Logo height="120" width="420" xml:lang="en">https://unizin.org/wp-content/uploads/2017/05/Unizin-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIENjCCAp6gAwIBAgIJAOA50Sr2saUiMA0GCSqGSIb3DQEBCwUAMDAxLjAsBgNV
+BAMTJW9yZGVydG9vbC1kZXBsb3ltZW50LTM4NTk4MDQzNzctZDRxd3YwHhcNMTcx
+MTMwMDA0MTQ3WhcNMjcxMTI4MDA0MTQ3WjAwMS4wLAYDVQQDEyVvcmRlcnRvb2wt
+ZGVwbG95bWVudC0zODU5ODA0Mzc3LWQ0cXd2MIIBojANBgkqhkiG9w0BAQEFAAOC
+AY8AMIIBigKCAYEAq5yKzCAHmAoebkiT1CisCk10vleq//D2yzfCtFwvPuneLxz/
+BF83RL6iMZB6E/uuGaES5887iwnyzeSe+oSEyD2/0j+cXUzJYiPflqfXh7pr9nFJ
+eE2t0YOXCQHQ2ZTEA1V6maKZIBYbxx3pDn8/QYdNLQhJWQfOwerWAJm8SiE9hBXS
+VV/ww73WJicYirtDhFK3A85Z03PMjfV+fRcyB9xkLq8NkMqhDkG/Nvvdy7q6BtJ4
+gx8TEKW1ArHiifkI6HF3I8XkhiygS325prhHM3Ts+iXzeh1g5yuD5Ubb8UOzweTE
+Cc1bhnPKX7MesshrTVKuJcBfAX6PH0KDFGUE+DshTLMaP/aumDqR6SP1q5PFshLT
+BF4wzr0vjeGh1ZxJ1OZQDmwFqYmXioOL0ApUmGL8Czqso71n5pEqe7gaNhZo0YxO
+V8b2Oi6Mf90DiRSw6tkasCIDWpC/mJlv5YWT/J/hGN0tu0Hu+w4OgaBE2aQiihJV
+MwOnMnuM3pVevoCTAgMBAAGjUzBRMDAGA1UdEQQpMCeCJW9yZGVydG9vbC1kZXBs
+b3ltZW50LTM4NTk4MDQzNzctZDRxd3YwHQYDVR0OBBYEFEe3IZGsODKt27teVcxY
+9baaS1WKMA0GCSqGSIb3DQEBCwUAA4IBgQA1dvhDY8oOCAGnCD4tDyrKDkJbsxIn
+dyZWlwrlD34/caROxj5N9EMhMNCxB/8kTLUVPgD3gPldadrkVATOHAYcEds43u5E
+yUAVI6PoseRHc4p5byK6I+L5q9t14W6/F7S/4P97kVkNhHJWrAixnxBh25uXtzk0
+R+jXwZBgYRd+HTFLqy/8NfQhlycUYQqLSa6GDfxZsdkbFtmJznW25Yth6izAKKOp
+occL5fZxuXNRn6U+YOpX267GHQjCeOJZJQTGRV+RHE7NfEnBYpCgBNKjQIOeQkJa
+Jxm9YmW8S0TQBbGatSg/NXl7x6R6EbEKxBXinq/VYvpqVXA99kURmo/DocU3udvx
+EFAntKXSYZDCKYs6WDFhFSAE/2VEN505mzhSrN7KPaY1EcbSeElcg3gQa6kt05Zr
+YbkVbS60P36Q/W+c596zpAS8+mSXtoZx7/Kj07qdCepEXv7/lxO80Qhr2LFMc8xN
+ctaFa/jSDcLpSSERJ16wA4Z4DkV3NuLnBYA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uiowa.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://uiowa.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://uiowa.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://uiowa.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://iu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://iu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://iu.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://uhowie.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wisc.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://wisc.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://wisc.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://wisc.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://colostate.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://colostate.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="15"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://colostate.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="16"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://colostate.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="17"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://demo.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="18"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://demo.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="19"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://demo.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="20"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://demo.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="21"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://osu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="22"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://osu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="23"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://osu.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="24"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://osu.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="25"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://umn.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="26"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://umn.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="27"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://umn.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="28"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://umn.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="29"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://miamioh.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST" index="30"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://miamioh.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="31"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://miamioh.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="32"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://miamioh.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="33"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://unl.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="34"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://unl.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="35"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://unl.ordertool.uat.unizin.org/Shibboleth.sso/SAML2/ECP" index="36"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://unl.ordertool.uat.unizin.org/Shibboleth.sso/SAML/POST" index="37"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Unizin Order Tool (UAT)</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">The Unizin Order Tool service provider for the UAT environment</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Unizin</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Unizin</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://unizin.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Team</md:GivenName>
+	<md:EmailAddress>etienne.pelaprat@unizin.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk Team</md:GivenName>
+	<md:EmailAddress>etienne.pelaprat@unizin.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Community Team</md:GivenName>
+	<md:EmailAddress>etienne.pelaprat@unizin.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support Team</md:GivenName>
+	<md:EmailAddress>etienne.pelaprat@unizin.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Etienne Pelaprat</md:GivenName>
+	<md:EmailAddress>etienne.pelaprat@unizin.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

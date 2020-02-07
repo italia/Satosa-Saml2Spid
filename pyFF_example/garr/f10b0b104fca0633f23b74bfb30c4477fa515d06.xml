@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.kenyon.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://lbis.kenyon.edu/facilities-technology/help" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kenyon.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kenyon College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.kenyon.edu/contact-us/information-request/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="368" width="1200" xml:lang="en">https://www.kenyon.edu/kenyonSSOLogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAKh5Jzh1FnqrN8RCEbmOwhRu1fwZMA0GCSqGSIb3DQEB
+CwUAMBkxFzAVBgNVBAMMDnNzby5rZW55b24uZWR1MB4XDTE1MTAyMjIwMzk0OVoX
+DTM1MTAyMjIwMzk0OVowGTEXMBUGA1UEAwwOc3NvLmtlbnlvbi5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDCnDS4gR4UUICN60zJEpzRB5PPM7ro
+nahB+w0JygC6TczMhGUYISuPCFzI6RmM1gCNxcK84EBysKt9CpRE9yUmCJLo/cmf
+bVyOWpP3KFJyZscS6wr9kv2ZbbSZuka0E9bjS15h0duWQ644kx8ujfhnr8smwEQr
+Jcc/7v/gCstdbr994p1/94rmO0HRdez1RgFhlBA2Vodz0Jhj6YKqttYEP19WX8C8
+vwfGenjtny2DeXCzbNgJA79kdLMG4NH/BqF/IgEyh8r6cugJ0eV/YLK3RDKDa1xm
+GIMjOLZQFPZ4S7lqNFUV87gK4o+yVDiMiWIQaDMOXLn00FY+9Kkysw2XAgMBAAGj
+YzBhMB0GA1UdDgQWBBRgAnH54F6pj/xxhxn/s4Jz0L9D+zBABgNVHREEOTA3gg5z
+c28ua2VueW9uLmVkdYYlaHR0cHM6Ly9zc28ua2VueW9uLmVkdS9pZHAvc2hpYmJv
+bGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAe3zZXvo/Pql6kmOORt1fWJwxXrchUfCe
+EuPl8JI75kBX2OrB0pBkSG9oXEwAjNIHs4lLpIRMtti531czVWeZ6vuek2dddv4w
+efnPBJ6bU12geroCPRri6dtE57PxfaR6PLxUZQzkR4z2Nkj1injgyl/+pAQrbbre
+79MHLnG2jy5eVUl7FmYQClrzQgKApRaN3sdAlO1/S3mAAWGU0pElbj6jYwjYnQU6
+tAyR/K8zodgqRQTLQ8SNVIFBGGwfxfknwsQAfnPGV5f53HQGfTxtoJnn/xzkZsI+
+KIV7jeKH4X9c2EWe5OCrzq1lK8pTN5rdICjsVTE1ULAWyQsBKmjlzA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.kenyon.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.kenyon.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.kenyon.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kenyon College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kenyon College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kenyon.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jared Hoffman</md:GivenName>
+	<md:EmailAddress>hoffmanj@kenyon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Weylin Burgett</md:GivenName>
+	<md:EmailAddress>burgettw@kenyon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Niranjan Davray</md:GivenName>
+	<md:EmailAddress>davrayn@kenyon.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security Team</md:GivenName>
+	<md:EmailAddress>lbis-insect@kenyon.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

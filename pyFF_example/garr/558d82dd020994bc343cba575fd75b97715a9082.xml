@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.esigelec.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2018-02-05T14:24:58Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">esigelec.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Esigelec</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsSAAALEgHS3X78AAAA+klEQVQoz2P8//8/AymAiYFEwAKhfhw5hhCSk2WRk2VgYPjz6PGfR4/h4hw2VgwMDIw/L13+vm0Hu7UVRPT35Su/rlz5dfosIwcHq642m44Oq64OROrn0WOcXh4s/z5+gqj7tm07AwMDm64Om44Ob0YaAwPDzyPH/jx+DBHnsLFmYGD49/ETI9zTHzt7Pnb2YHU3f3kJf3kJPk+zKCmyqKrg8zQaEJrQy8DA8MoviArBSg0NTHx8hCMOGbDqan/ftp2BgYFFVubP4yeEbfj/8+e/jx//ffzIJC6GzwYWWVl2a0tI3HFHhjMwMHxdvpKRnR0iBVfGSPPUCgByv1SzOSEx4wAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.esigelec.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">idp test esigelec</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Esigelec</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">idp test esigelec</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVALFp8q/fQgaBQx+Gkvq3Pt9MrEw1MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5lc2lnZWxlYy5mcjAeFw0xODAxMjUxNjIxMjBa
+Fw0zODAxMjUxNjIxMjBaMBoxGDAWBgNVBAMMD2lkcC5lc2lnZWxlYy5mcjCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJlCEYtkv1Ihpi6hbGX6j2bBujcV
+6kEuG2X97aQi5mBnu/++us8vzirhYfR+XSjPi2vZLWE25Xo5ZX2Sbgu2gbVCzMkZ
+bpD755DB5r6jk5nwbFt35CK9DYQXPJKB2ZllHSjp2bwY4SAPheaXok501r2zjURB
+q6KXKcZN3kM4UWirpvN30YnFTvlEiQBrWETEIJZNn9Oz6qaoL1fGnGpE58i3GMJk
+qw5cH4Om+XKUQMwMk/uPOwiE+3iGwO73jnrzP48uI9eUt+6IEloEbHJriRMiDUQR
+ge6vxo6Pgga5OV2ByFFMNnpO44lYq8M9IYlLMXIMm6wfIPuLten/0OYaGKkCAwEA
+AaNlMGMwHQYDVR0OBBYEFL8R/CqqFrxBz/PMUJiDWeID2g46MEIGA1UdEQQ7MDmC
+D2lkcC5lc2lnZWxlYy5mcoYmaHR0cHM6Ly9pZHAuZXNpZ2VsZWMuZnIvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAICgQqZLDa1qNFdhckWr90pnLud8
+RgOvtwBbx1r8N0yd5AI5TwIxE42J5Snpfu+mfFrlJilbftegwx+rXzPzuPgTugNY
+mTSg6QfjP6OwkXde9ccMCTMUo8QOcSoRcaSQtuaAW5jrW3KtE2KQZE1WCk4P7DSs
+6RKgSe7jIcjUNGVitzTcW1PjacXS5mFWOqjIhJttTGCkDXZdqesuOZbunpdkNpD0
+36QbTiSB0gKHQUDse7GS3oEIjncdmyznt3grgpBCjxa7hXghADPc7ghNVlVoAyGt
+0/D+6umq64//qwdjXnGiOCKkcyBUlNsP8YLW2Qw6Tr1GEcG8B7Ux3ecFwIQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.esigelec.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.esigelec.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.esigelec.fr/idp/profile/SAML2/SOAP/ArtifactResolution"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.esigelec.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.esigelec.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.esigelec.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">ESIGELEC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">ESIGELEC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.esigelec.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:tech@esigelec.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Berquez Christophe</md:GivenName>
+	<md:EmailAddress>mailto:christophe.berquez@esigelec.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

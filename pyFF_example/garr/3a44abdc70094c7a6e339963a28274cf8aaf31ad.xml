@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.zhdk.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2010-02-25T15:46:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://service.itz.zhdk.ch/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zhdk.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">ZHdK - Zürcher Hochschule der Künste</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">ZHdK - Zürcher Hochschule der Künste</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Zürcher Hochschule der Künste</mdui:Description>
+		<mdui:Description xml:lang="en">Zürcher Hochschule der Künste</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAARtJREFUeJzMks2qRlAUhrefSAYyQElhhiQKGREuwW9ugDKU8b40l7bP3p36Tg6f+kbnrHpn+3nXu9ZegKIoUJYlAgB8JNu2EWHBnxmYpvljUFUVEgThIp7nyaNbA8dxvg1ItW0Lp2mC4zi+NAwD3Pf9UFX1Nj5OUICnMgyjcF0X0TR9giVJQtj0GcZgkWXZ7dye58FHOAzDoq7rC6woCuq67sAJ3sO+7xdN01xgWZYRXvSBF/seZhgG6Lp+sCx7gkVRREEQHBzHvYcxBCzLIo9OMPlGTdOOx5lJLNKBdPodPc9ztG0bnOcZLsvy0rqusO97iBsAkKYpjOP49ljIOMT4TnjZCO8MgiRJYBRFH58yucT/YfAFAAD//wMA+xjb82E7H5YAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAIAAAB+RarbAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAYnSURBVHic7NjZb05bGAZwF1yQuJHIieEPwIW4Enfi2o1EoonEveAPkBDRmEIQQ2tWNdQ8VM1DDFVO0dY8z3M5FJ8aW+35Ze9ynPakJzlWfTm7+7lo9rf22u9az7ve93nf1Q6N7Qwdsr2BX42UcNKREk46UsJJR0o46UgJJx0p4aQjJOEPHz6UlZWVRnjx4kVAywERknBdXV11dfWzCB8/fgxoOSDaa0jfuHFjx44dxT/AzxMnTmR3c22BJsK5ubkdWmDgwIHZ3VxboInw8uXL+/bt269fv/79+3fu3DkmPGzYsOxuri3QRLi+vv7z588NDQ3r1q3r0qULtn369Ll7927YxTKZzIEDB1qOnz9//urVq/7evHkz7Iot8TfR2r9/f9euXbHt3bv3pUuXgi/28OHD0aNH19TUvH79Oh759OkTSV+yZMn69ev93bZtm8Ha2lquD756jL8Ik6hu3bph27179/Ly8rZYTNEaMmTIhAkTRowYUVFRcf/+/VGjRo0fP37w4ME0csWKFc5/y5Ytc+fOFXFtsYHG74SPHz/es2dPbCXwmjVr3r59+/LlS0cR1tNPnjwZPnw4m05ywYIFU6ZM2bp1q/GJEydu2rTJukOHDh05cuSXL18CLtoMTYQ7duwYC1WnTp169er1W4QBAwZgHnCxR48ejRs3zsPOnTsXLlzobE+ePOmnYN64caMTHjNmDMLXrl0LuGgzNBFuWZOgR48eb968CbgYwmPHjm2MCM+bNw/bnJycwsLCQYMGOWqEDx8+LJtwbrtGrYlw+T+hqqoqbC4pBPfu3fMgWYR3Y6TPyF+8eFEGab9fvXpl8PLly9rygOv+iPbaWrYfhCQs/v/4BgU2oOWACEmY0pw+ffr3CHIyoOWASEP6J/D161ddobahIUIrM+O3wfvH+gitzwkc0nv27CkoKLhy5YprgM75wYMHd+7c2b17twqs5ChFjx8/VnJOnTrl1dGjR815/vz506dPzS8pKfGg31S03FsUp3379qlV79+/V8wqKyv9tQS3njt37tixY2wSC4OqnVuAGq5jOXPmDCOu9/Gr0tJSS7D23REhCVu4uLj4+vXr1tZIuHK6e+HmoaioaPr06bNnz160aBHCWssNGzbMmjXLNA5avXq1Tt40V4j58+cvW7aMHWz1JAZxM56Xlzdp0iS9Cm9u3rxZvz116tSZM2du376dCzSnK1eu9BZDPZy+zYe6VxvQz/jwe/cWkrBDs6p2RS9hH84WDeRdvOxy165de/fuvXDhgpk6DU2r3garQ4cOOR+nHd8QSyKIFFu/ffs2FeQUEzhOv20JR2fENcN9g/G4gWFWRBjkR6YcKTeZzwV+clDc0gQm/L9A4BxWkOL7QIy4ONXV1UndxkilZNS7d+/if+Ka77mlHbdliS1Qfxx0kpJTPrs/N+vwhWsmk4mXa/ZVS4QkjM+RI0ekn+CkMW62QlHQGnRVOHjwIOUQh8ivXbtWmglIoUuBqJokl9i+NS6YZbIPz549yyOi2gSZSYqYkuHy03121apVwhhDyWwhc6wim6zbygUzJGGHQEuIlt278dmcvCU8HmxIgiFsNx6olEBwATa+ePFi0jJnzhwEKioqKBl3kAC5R6h84lnSmiPtMWTBNFI3bdo0AXXr1i128vPzOYgXEKZk8vxXEFaEyQzapMUxiliCLA6FsVD0tjG6Jzl/P70SmebEf31SG0EtEZ+iuiqCT0wgQuYjr2MV7eaz4BM/Y7OZbxDwClsrgR1YtOzj52+UUkPac02QLTVDSMK8K7pkKR+rSU5ANVIPBLlzlrFKixElxCmZUF1dLUSNeOVzI05SCshblUlKq1tChllB4YFZ9UwE+avmZ5+waFR4JZI2QCLJq/hfc1oO/YZnWVoYQYbn5ubKWx2F0i3xRKxnVdRbASlv8ZwxY8bkyZPJlY7Fq6VLlzLCLI3gqewTlngUhcbq76gRqpRTX2F/BhGgXjRGF0mZnWFZWRkfOXBqLBHM1C2QYqa8otg6Fr5gDU9+JOlcQPMEQtxvZJlwM7Qilf8NsoOM/WulbR1pp5V0pISTjpRw0pESTjpSwklHSjjpSAknHX8CAAD//wMArxsLkgYmGW0AAAAASUVORK5CYII=</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>195.176.0.192/27</mdui:IPHint>
+		<mdui:IPHint>2001:620:120::/48</mdui:IPHint>
+		<mdui:IPHint>195.176.254.0/24</mdui:IPHint>
+		<mdui:DomainHint>zhdk.ch</mdui:DomainHint>
+		<mdui:DomainHint>hgka.ch</mdui:DomainHint>
+		<mdui:DomainHint>hgkz.ch</mdui:DomainHint>
+		<mdui:DomainHint>netzhdk.ch</mdui:DomainHint>
+		<mdui:DomainHint>zfh.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.383205,8.535540</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:47.38321,8.53554</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAONKEUSI5QRU6JkFSLFBcCiAHb3LMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWFhaS1sb2dvbi56aGRrLmNoMB4XDTE3MDQxMDA3Mzcx
+MFoXDTIwMDQxMDA3MzcxMFowHDEaMBgGA1UEAwwRYWFpLWxvZ29uLnpoZGsuY2gw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCU/6CzwC648hs4wxna8fze
+wfYgA4bkQNoHnx+EnH86z0y6r/MF7yFitLzjNY4+O8l4dmmqDiNWbscb2faHb3/P
+zcxKymTJQ/JdyURGaNVuzhG4+AGJmfVx6vD4fcRbFCzUd3vi0MJMa5rSrwkHWjeh
+VG0taMwskU6EbeatHXIOfGquBG84KP4suuNVPgsGCtJqPK8jd/WA/1o5iE6V8rOX
+7fwLVtDqu9olOvCUAIMa6yp2zrHCII3HXAlxyUatY82ZXlb2VftrH4F5gnsOLE1g
+pMeZgvjwimXmYnHoryuNDnVa7ZO932ROeuVzREsifHjQDe7PjwpplPDZ7TXrOWGH
+AgMBAAGjaTBnMB0GA1UdDgQWBBTIIDUUkx8zJygRTINgp3Y2PYzpLzBGBgNVHREE
+PzA9ghFhYWktbG9nb24uemhkay5jaIYoaHR0cHM6Ly9hYWktbG9nb24uemhkay5j
+aC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAMNC/zKLa0Vogj+00
+c2Ww1MOufbpnU1VPDEQ2ut177q6fNI0Rmrx3i1IC49nzaaRaJJhSv0hYTVhcaN60
+6K2ibeew41VwobwoNOCMhRjl+iMfORZdc/QoKAXWoJSfZRacSY0iZA5W7HA0Za0y
+Fbf0biFREoXuvrZrXS91LD4P4zOJnvy9ToYgyA5Krma7EUAruiY1E02tlOTnogDZ
+vsjJK/LiQlWYKVQkpgnvjnMR7cA6jWBeM86Mzyo3/7hNj5LJ2i6n5nlYrkKRhTg0
+C7hOuVU4FVi1K8bdAum+9tLMnNjjeMoGR/mTF3cU23fs1gb1BHMIB35TQbLbVUU1
+uctmjg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://zhdk.login.eduid.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.eduid.ch/idp/profile/SAML2/Redirect/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://zhdk.login.eduid.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://zhdk.login.eduid.ch/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zhdk.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVAONKEUSI5QRU6JkFSLFBcCiAHb3LMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWFhaS1sb2dvbi56aGRrLmNoMB4XDTE3MDQxMDA3Mzcx
+MFoXDTIwMDQxMDA3MzcxMFowHDEaMBgGA1UEAwwRYWFpLWxvZ29uLnpoZGsuY2gw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCU/6CzwC648hs4wxna8fze
+wfYgA4bkQNoHnx+EnH86z0y6r/MF7yFitLzjNY4+O8l4dmmqDiNWbscb2faHb3/P
+zcxKymTJQ/JdyURGaNVuzhG4+AGJmfVx6vD4fcRbFCzUd3vi0MJMa5rSrwkHWjeh
+VG0taMwskU6EbeatHXIOfGquBG84KP4suuNVPgsGCtJqPK8jd/WA/1o5iE6V8rOX
+7fwLVtDqu9olOvCUAIMa6yp2zrHCII3HXAlxyUatY82ZXlb2VftrH4F5gnsOLE1g
+pMeZgvjwimXmYnHoryuNDnVa7ZO932ROeuVzREsifHjQDe7PjwpplPDZ7TXrOWGH
+AgMBAAGjaTBnMB0GA1UdDgQWBBTIIDUUkx8zJygRTINgp3Y2PYzpLzBGBgNVHREE
+PzA9ghFhYWktbG9nb24uemhkay5jaIYoaHR0cHM6Ly9hYWktbG9nb24uemhkay5j
+aC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAMNC/zKLa0Vogj+00
+c2Ww1MOufbpnU1VPDEQ2ut177q6fNI0Rmrx3i1IC49nzaaRaJJhSv0hYTVhcaN60
+6K2ibeew41VwobwoNOCMhRjl+iMfORZdc/QoKAXWoJSfZRacSY0iZA5W7HA0Za0y
+Fbf0biFREoXuvrZrXS91LD4P4zOJnvy9ToYgyA5Krma7EUAruiY1E02tlOTnogDZ
+vsjJK/LiQlWYKVQkpgnvjnMR7cA6jWBeM86Mzyo3/7hNj5LJ2i6n5nlYrkKRhTg0
+C7hOuVU4FVi1K8bdAum+9tLMnNjjeMoGR/mTF3cU23fs1gb1BHMIB35TQbLbVUU1
+uctmjg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://zhdk.login.eduid.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">zhdk.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">ZHdK - Zürcher Hochschule der Künste</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">ZHdK - Zürcher Hochschule der Künste</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.zhdk.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.zhdk.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service</md:GivenName>
+	<md:SurName>ITZ</md:SurName>
+	<md:EmailAddress>mailto:service.itz@zhdk.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Service</md:GivenName>
+	<md:SurName>ITZ</md:SurName>
+	<md:EmailAddress>mailto:service.itz@zhdk.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Service</md:GivenName>
+	<md:SurName>ITZ</md:SurName>
+	<md:EmailAddress>mailto:service.itz@zhdk.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

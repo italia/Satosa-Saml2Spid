@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sou.nupark.com/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">NuPark Inc</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.nupark.com/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="69" width="195" xml:lang="en">https://www.nupark.com/images/default-source/logos/nupark/nuparkbypassport195.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIHMTCCBhmgAwIBAgIQPat3dxJtUM76im9iuZ/dIDANBgkqhkiG9w0BAQsFADCB
+ljELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G
+A1UEBxMHU2FsZm9yZDEaMBgGA1UEChMRQ09NT0RPIENBIExpbWl0ZWQxPDA6BgNV
+BAMTM0NPTU9ETyBSU0EgT3JnYW5pemF0aW9uIFZhbGlkYXRpb24gU2VjdXJlIFNl
+cnZlciBDQTAeFw0xODEwMjkwMDAwMDBaFw0yMDEwMjgyMzU5NTlaMIGoMQswCQYD
+VQQGEwJVUzEOMAwGA1UEERMFNzk0MDkxCzAJBgNVBAgTAlRYMRAwDgYDVQQHEwdM
+dWJib2NrMR8wHQYDVQQJExYzOTExIDR0aCBTdCwgU3VpdGUgMTQwMRQwEgYDVQQK
+EwtOVVBBUkssIElOQzEcMBoGA1UECxMTUHJlbWl1bVNTTCBXaWxkY2FyZDEVMBMG
+A1UEAwwMKi5udXBhcmsuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEA4jzAu58jtFrnV1jOq/CVEUU0xEwG/kLSQWX3Ffdk8YYabNnW0wPCSDW7xeSN
+ojxheLPA+xTd/aOBmNauzm+ruza0qsxgdSiJxXL4FmS35lguuAHsATWigP7BTgM0
+bd6IvTlj1iUMeVVDDl8IApfc9GQXiMk5y0fD4CHIlx+mzq0xPKY0zHWKKLyBtDcA
+MBe4pmh7Kths8yhRQUsKLx7Ib9OmR8jsJkA17+NY4/Bs9tfirMF9P7cuRq6/VwaQ
+d7iAOGJc6KGgw6t+Sx/5y7MrO9Kf87TkHIfYbKAvY65eOMxHJkZ7ICtqEcFopTMw
+v/Qad0iZnEawshQX8Bta7szoywIDAQABo4IDZTCCA2EwHwYDVR0jBBgwFoAUmvMr
+2s+tT7YvuypISCoStxtCwSQwHQYDVR0OBBYEFDSH1J/RiPZKDR+747R4DAlqVp5M
+MA4GA1UdDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUF
+BwMBBggrBgEFBQcDAjBQBgNVHSAESTBHMDsGDCsGAQQBsjEBAgEDBDArMCkGCCsG
+AQUFBwIBFh1odHRwczovL3NlY3VyZS5jb21vZG8uY29tL0NQUzAIBgZngQwBAgIw
+WgYDVR0fBFMwUTBPoE2gS4ZJaHR0cDovL2NybC5jb21vZG9jYS5jb20vQ09NT0RP
+UlNBT3JnYW5pemF0aW9uVmFsaWRhdGlvblNlY3VyZVNlcnZlckNBLmNybDCBiwYI
+KwYBBQUHAQEEfzB9MFUGCCsGAQUFBzAChklodHRwOi8vY3J0LmNvbW9kb2NhLmNv
+bS9DT01PRE9SU0FPcmdhbml6YXRpb25WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0Eu
+Y3J0MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5jb21vZG9jYS5jb20wIwYDVR0R
+BBwwGoIMKi5udXBhcmsuY29tggpudXBhcmsuY29tMIIBfwYKKwYBBAHWeQIEAgSC
+AW8EggFrAWkAdQDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAAAWbC
+Of9TAAAEAwBGMEQCIBoTMkwRz/HYE6jN3+QbVx8u5k1w6v+uUHXIxInSozF5AiAd
+txRNPnOMhLAFKNL4xvYZFVtMUNN8dkxQyXBcZjrlkwB3AF6nc/nfVsDntTZIfdBJ
+4DJ6kZoMhKESEoQYdZaBcUVYAAABZsI5/y0AAAQDAEgwRgIhAPVpKkwhwGQaBIsM
+gmPasDeEDNP+mbOhcRhU1zxyRUdbAiEAzHy8M7wznvbpTIacz1GXVF+rfTsB9bnL
+i7wxoSWco90AdwDwlaRZ8gDRgkAQLS+TiI6tS/4dR+OZ4dA0prCoqo6ycwAAAWbC
+Of8lAAAEAwBIMEYCIQCxpwIFztYE1TqdMQ8SkmCf3wOVUnUtW/gMkdvDjBibswIh
+AJ7QdvtAxLzeYE9vKEhI6XlkpJ4QD29dcNrNn/HXYG8VMA0GCSqGSIb3DQEBCwUA
+A4IBAQA9JWmfxnoSRBDGROAO3hmsXgJyhrEkvFBTaTKCVYnX3Dagn6TXCC6aVLSC
+ThqiWnRNm2/F5N7aTCBiQYWUJ/zVJzAwTlJwh9+Ni8If1NF0JkVXkOvlqhTTVbRD
+PpHfMI9kOKmGvaSCL/Vjtu1OSoyoUIe18jV9l7rRCCrcaNlRb5iWZPvUMhN0Z+Y3
+m8utgpqsEgivh/rbaRC8NmFFChvZmlFyEMPtGoOyzYKqAD2qokUnGW49Vga1YwvZ
+UmlkZdenLtR+AwbWJPYJHN1Fhy4tIwRwXI5HClWQS3IkfklCVdUD4iL7JRn0WDGp
+wkz5a2wtGSPzWriaVWIW6FjUqWdT
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sou.nupark.com/portal/authservices/acs" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sou.nupark.com/portal/authservices/acs" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sou.nupark.com/portal/authservices/acs" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sou.nupark.com/portal/authservices/acs" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sou.nupark.com/portal/authservices/acs" index="5"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">NuPark Inc</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">NuPark LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">NuPark LLC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nupark.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stephen Lambert</md:GivenName>
+	<md:EmailAddress>stephen.lambert@nupark.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Stephen Lambert</md:GivenName>
+	<md:EmailAddress>stephen.lambert@nupark.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>NuPark Support</md:GivenName>
+	<md:EmailAddress>support@nupark.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Stephen Lambert</md:GivenName>
+	<md:EmailAddress>stephen.lambert@nupark.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

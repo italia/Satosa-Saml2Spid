@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://arc.missouri.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://arc-binders.missouri.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Missouri ARC IT</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.umsystem.edu/ums/rules/collected_rules/facilities/ch110/110.005_acceptable_use_policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="144" width="144" xml:lang="en">https://www.umsystem.edu/media/images/um-seal_incommon.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEGzCCAoOgAwIBAgIJAIaFlyYx/A+qMA0GCSqGSIb3DQEBCwUAMCcxJTAjBgNV
+BAMTHGFyYy1wcmR3ZWIxLmNvbC5taXNzb3VyaS5lZHUwHhcNMTgwNzI0MTYwMzAw
+WhcNMjgwNzIxMTYwMzAwWjAnMSUwIwYDVQQDExxhcmMtcHJkd2ViMS5jb2wubWlz
+c291cmkuZWR1MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAv99k0eJX
+PYvmMMsvuWkoEeZ6m3iKrYgbUNZszrr0aLB9re3IYvI9T8rch6yZEgFdI/HTxYKD
+PkAvKg3bzh8/Ws58ncEtu2jI/YiWryZ4gdcQ41kIxZw5C1Dn0NUsO+64ziJB2RAl
+DrYnrFLgiR/h7vKNEIO3OXmSS6lpJtADDyatWRxtKOd01BvHdMcfOjj1gr9ITdZM
+lBoyaVScZ4ZYB2cpsf63artTFiUlUus7rC2WtfssWQaqa5S0PDQR3p1kFGeMrZSN
+C63JCVmeI+Bx5j76q42Zs6p9OKoxhf3s4J2p6n0mAdM+6+9HZXpbJ7qpSSXLNDmS
+6cBPFAZiWsvErzualCdqn622/OXXEXumzoqGSyVL/u4Uwhc/u24AWm+qJjW6S2gg
+u/dgu1yRIaUFZNiCeEBXUAwZFfqVm6Ia22yJ3yZOYbscgzFncpRFCDbo4oy0hRFk
+1Dq9VlstLZRkPuypLZyKS+0HtczWM842AsZ2ZCbMsGLJRFRhXHjjZZHBAgMBAAGj
+SjBIMCcGA1UdEQQgMB6CHGFyYy1wcmR3ZWIxLmNvbC5taXNzb3VyaS5lZHUwHQYD
+VR0OBBYEFP/kUiRI4wOF/7EeNwv86G/vjgAVMA0GCSqGSIb3DQEBCwUAA4IBgQBE
+XMkVeeG1nMaQ/R6JmckifyL7J2K/QjSObp1/da+kAGh+YUqd0snzMnbSA2BaEntk
+Y2hdLK+IGG2/jwh9LcCigy/n/0ALoWfQNdJLjwZs2txuqafUIcI7WtoVYk5jJAUC
+nwBl9oHqWNbihXX1O2f2rUK76bAIGlmgnjbT4tFFSt5vkyacoBmF7bSQsN8y591g
+HKzrYWKCMwVLCa5XM/nNAZmq5prSIbykkyhQyMHo/6WtyNt3CwlNuUkT3dXwFkeS
+jbkPSso1mWGur0Dtv2hHM0tqB7imiVEJ0ug7O8ORkjop/V5uHA5QufaND86vcYk2
+dJaVyzDW1clAeIS+21/LyZdwxTWGhSozgtjBFoXm9/zyHycCrv/iNAEkW9oU9Vcy
+IvYS43WtUIrsbFlSsY+m3b5p/FoD8UCzvtc81dN14SLhGurXPulKNuHAyMM6ySCQ
+/0URZKtujOnJCklQBtbTkFte8shU5MxpEUiW5ZCSqNix2Z6cmo/Q1ErzhnJNNZA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SLO/POST"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/Artifact" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML2/ECP" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML/POST" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://arc-binders.missouri.edu/Shibboleth.sso/SAML/Artifact" index="11"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">University of Missouri ARC IT</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Missouri System</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Missouri System</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://umsystem.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>MU ARC IT</md:GivenName>
+	<md:EmailAddress>arcit@missouri.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>MU ARC IT</md:GivenName>
+	<md:EmailAddress>arcit@missouri.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>MU ARC IT</md:GivenName>
+	<md:EmailAddress>arcit@missouri.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>MU ARC IT</md:GivenName>
+	<md:EmailAddress>arcit@missouri.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

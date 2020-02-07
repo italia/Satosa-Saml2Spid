@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.cc.uga.edu/cas/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://sso.uga.edu/cas/error/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uga.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Georgia SSO</mdui:DisplayName>
+		<mdui:Description xml:lang="en">University of Georgia Single Sign On</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.uga.edu/about.php</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="96" width="125" xml:lang="en">https://sso.uga.edu/cas/images/Screen-GEORGIA-V-FC.png/</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDjCCAfagAwIBAgIVAMt/qh8G0bnGaqrwRiPHOtc1jQdwMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC3Nzby51Z2EuZWR1MB4XDTE5MDcxMjE4MzUyM1oXDTM5
+MDcxMjE4MzUyM1owFjEUMBIGA1UEAwwLc3NvLnVnYS5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCSfz29ikeUQLNwj+WzU9ACHi9bgQbj263deOhy
+526yjzd9czM03+chYJum8wZ3JnakQXXOpkaBkIbTo0cauv/afruwsNzjSHNTfHfh
+TQwBzEwAFUyW92VFM1CCZu9wTVA/GaKfUdZyaCbR6x7vQclyjqFp9KOrTCwXRehZ
+42BnTCKvIbN+NhxVVs8cwHA56a0Pb6FAdXspDLjj2BYK0WVkgrTA0qg24ICgGEx+
+DH26yRUycsBWPIc3ngIiBvROE6KEO6n3NvjWr4c9+81V058CFSHQ10tek8R7BJly
+6LeVP5iQbhZWN+7hMcIub7qGY1pV9RCbK/4rAZq32bGojcM7AgMBAAGjUzBRMB0G
+A1UdDgQWBBSYm2uXR2hRmC9FbVlH/QrqaZUK4zAwBgNVHREEKTAnggtzc28udWdh
+LmVkdYYYc3NvLnVnYS5lZHUvaWRwL21ldGFkYXRhMA0GCSqGSIb3DQEBCwUAA4IB
+AQADGA0vZW3GElpldgH8LGFuRu6vJWiSGNex/WiJKQaLwIHBzEREd7d1BBEEU7AD
+iYrMto31u8i6KB/YIL+bg/mr1ycdjQF7e4BG50rr1Pf3W2spfYPTx11JCfKPJLAP
+jSoOQfENBHIjVOArGV9/9Afrt0u/ny3yWfWGpgrX8AGWpTUloT5c9nm3hs/ermtK
+dqN1r6pLivUeaFOwhH+gFCNY3JIdVhs2fPQj0fBEcmqR/DnF4OslwKbyjzLXuqZY
+ZJqY0ynq9efgK6CYnQmdFrDm7LsrOP4mxdzVAfpJGecu5cBrDgwpZqPfs2C28tnD
+xKTM4JtUDTeoz1okSgwUe/YY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.uga.edu/cas/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.uga.edu/cas/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.uga.edu/cas/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.uga.edu/cas/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.uga.edu/cas/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.uga.edu/cas/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uga.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDjCCAfagAwIBAgIVAMt/qh8G0bnGaqrwRiPHOtc1jQdwMA0GCSqGSIb3DQEB
+CwUAMBYxFDASBgNVBAMMC3Nzby51Z2EuZWR1MB4XDTE5MDcxMjE4MzUyM1oXDTM5
+MDcxMjE4MzUyM1owFjEUMBIGA1UEAwwLc3NvLnVnYS5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCSfz29ikeUQLNwj+WzU9ACHi9bgQbj263deOhy
+526yjzd9czM03+chYJum8wZ3JnakQXXOpkaBkIbTo0cauv/afruwsNzjSHNTfHfh
+TQwBzEwAFUyW92VFM1CCZu9wTVA/GaKfUdZyaCbR6x7vQclyjqFp9KOrTCwXRehZ
+42BnTCKvIbN+NhxVVs8cwHA56a0Pb6FAdXspDLjj2BYK0WVkgrTA0qg24ICgGEx+
+DH26yRUycsBWPIc3ngIiBvROE6KEO6n3NvjWr4c9+81V058CFSHQ10tek8R7BJly
+6LeVP5iQbhZWN+7hMcIub7qGY1pV9RCbK/4rAZq32bGojcM7AgMBAAGjUzBRMB0G
+A1UdDgQWBBSYm2uXR2hRmC9FbVlH/QrqaZUK4zAwBgNVHREEKTAnggtzc28udWdh
+LmVkdYYYc3NvLnVnYS5lZHUvaWRwL21ldGFkYXRhMA0GCSqGSIb3DQEBCwUAA4IB
+AQADGA0vZW3GElpldgH8LGFuRu6vJWiSGNex/WiJKQaLwIHBzEREd7d1BBEEU7AD
+iYrMto31u8i6KB/YIL+bg/mr1ycdjQF7e4BG50rr1Pf3W2spfYPTx11JCfKPJLAP
+jSoOQfENBHIjVOArGV9/9Afrt0u/ny3yWfWGpgrX8AGWpTUloT5c9nm3hs/ermtK
+dqN1r6pLivUeaFOwhH+gFCNY3JIdVhs2fPQj0fBEcmqR/DnF4OslwKbyjzLXuqZY
+ZJqY0ynq9efgK6CYnQmdFrDm7LsrOP4mxdzVAfpJGecu5cBrDgwpZqPfs2C28tnD
+xKTM4JtUDTeoz1okSgwUe/YY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.uga.edu/cas/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.uga.edu/cas/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Georgia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Georgia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uga.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Identity Management Team</md:GivenName>
+	<md:EmailAddress>idm@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Identity Management Team</md:GivenName>
+	<md:EmailAddress>idm@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UGA InfoSec</md:GivenName>
+	<md:EmailAddress>soc@uga.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

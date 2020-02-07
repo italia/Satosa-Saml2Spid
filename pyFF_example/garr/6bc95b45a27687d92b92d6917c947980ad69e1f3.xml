@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://services01.hobsons.co.uk/shibboleth/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-02-23T10:17:09Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Hobsons SP</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Hobsons SP for Shibboleth authentication in Hobsons Connect CRM and related products.</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgKgAwIBAgIJAOzxPZ7/e0OEMA0GCSqGSIb3DQEBBQUAMBIxEDAOBgNV
+BAMTB0hvYnNvbnMwHhcNMTMwNDAzMjEwNzA2WhcNMjMwNDAxMjEwNzA2WjASMRAw
+DgYDVQQDEwdIb2Jzb25zMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+s/hMjBqcuNBYh71NYWGiTwknP5QXOXMrDGuEKTtCTIWojg53qixWe/OUwreEs81D
+oty1qCXnAy1iWTSJRagK6E2QJNOX/wNia1SAaqD0PYEDQ7PGJ7EietfTg1uz/y6O
+oRzZ6ScST6JY1D++rgu+eJOn45WqqU9Nx+IfcIO1hoQkz1TwnoCXMwhOqYCKBUIt
+Shx2WVRVuIdGU4+CTSyR/v4nyJ2mGqnXJBSZP8gugl/xosrsCCPP5jy9rhRyfxxL
+BQZymTJ8Z/BK0C2WysRJRhv14cwgARhmDKiJiMw/F0J7qKKe1y/PRElfLdAE3KnH
+fbQgR1FPrUdFEBtLSCVoOwIDAQABo3MwcTAdBgNVHQ4EFgQU+qkP1xSjpCIaqM5L
+60tJTkyevlYwQgYDVR0jBDswOYAU+qkP1xSjpCIaqM5L60tJTkyevlahFqQUMBIx
+EDAOBgNVBAMTB0hvYnNvbnOCCQDs8T2e/3tDhDAMBgNVHRMEBTADAQH/MA0GCSqG
+SIb3DQEBBQUAA4IBAQAjTnaIXTzizEUhYX6wErSWYghEIi43N1a+3Lszwj2gXT2f
++v8ppGrEvetrbffQGfmJ7DSvjT2ZRzG2pSnrYTr2jvzV9Ob1+Uo2D+FwgYRdjuil
+bcFL+IIa+hpFDK7NexQ/7Yclc2GTkkSfMqp9VaiVco2IMuqJz4Rs/QClIfS3tGe6
+j4H6i3wg7/ie5nCcuvmNfn3F1SER941JIa81g/UBrM8kzMq4ZlcPxpi+yeJ1h+gU
+072m4d3brpF/841Cbx2TTN95Y9ttchhguxGf6ehkWihH3T7PPAT84Y2wSY0ueHeP
+x5K99xWnliNamHVTeURTuRL3Hnx6tOCiKROUC9yI
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://services01.hobsons.co.uk/shibboleth/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">QS Enrolment Solutions Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Hobsons</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hobsons.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Ivett</md:SurName>
+	<md:EmailAddress>mailto:david.ivett@hobsons.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Noel</md:GivenName>
+	<md:SurName>Thomas</md:SurName>
+	<md:EmailAddress>mailto:noel.thomas@hobsons.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

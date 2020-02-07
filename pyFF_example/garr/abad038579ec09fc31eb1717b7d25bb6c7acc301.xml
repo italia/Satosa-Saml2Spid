@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.zhbluzern.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2012-02-15T15:00:29Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zhbluzern.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Zentral- und Hochschulbibliothek Luzern</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Zentral- und Hochschulbibliothek Luzern</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Zentral- und Hochschulbibliothek Luzern</mdui:Description>
+		<mdui:Description xml:lang="en">Zentral- und Hochschulbibliothek Luzern</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAJVJREFUeJxi+P//PwMlmCLNw92Ao0fnryZGDKcBPT32D4kRAxMrV+YfA0nCMEisqUn/9cyZaZenTvW/8ejR+X5cYiimbdpUvxfmzPx8/r9v3txvAymEGQoSA/GRxVD8BzIdm3NhbGxiWDXjUlxZKf8FRH/9+r4WxQCQ09DDAJcBIDYoLM6fX79wkCckuhkAAAAA//8DAKOs4fjmqG7eAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAIAAAB+RarbAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAaHSURBVHic7Fj5VxNXFO5f2J/aHm0RPVTLLsGwE5AlmSxk30ggIRAgZE/IMolsCpkkZAOLbPbI4QQXFIuCBwVE296ZSVKgakFb8Yxzz3fm3Hnvu/e9j/fy3h2++fMrs2/OegKf22jBVDdaMNWNFkx1owVT3WjBVDdaMNWNFkx1owVT3b5WwY4w9/1AHGG+I8wB346Bz3VhGThJkLQIzw4EAtDiImlhjhPDkeOTBOA7s+GZ12yLK8xzEeFODCGRmwl04QQMyWTLzRDjujEe2fsBnFAwMhwVemNiAhLPNEDsnRbl4AHExMPTomHSz4LoBaaEgNh7tDeX5DA/6+BRnmguFh/UG5OSIZ4oQYviwAeNZcb1ngAnEYy4IvzxX/WeiNQVkvhi8pGZzhsp9Y3MU036/oTSl1D4k8pAShVIqqA9CEip4IkmFWhCAT6aUAI5SETBM5BUQi/pQ4ZAQhVMqoI4Ac/gjyugC40r/DE5OAHIH5MHs+EQS6TC88O4aEoFE0DjymBSTSaBhPgzy8fzJ1WQ5F8EExuG544KbqQ0prGWGt55lYXZh7L60Ca9p05sLNfYq/rQRmgR95f3oc2uKM800WKeaNF7G3SeOvNEu8RYoXM3iPrK9MONSFehwcsaHGkGfperlqcrGhi53uOtHxpr03vrZIPXhH2lg2Mt1km2YojZKLrYaa3p9Te2qy9r7LVKc6V0gGEMsIAv6ClBtEUwHKTSD7P4+uKh8Xa9p146UOGY4pjH2wZHrnc5avr8TQZfgxGfar3WWWOZaHNgyHsF2zC2barNMcWGFQbBY7PdamsVv7tE0F1a35FfjeR1GMprBXkscYGw52otN4/Rdk5uYlgm22Hekr5KRtv3Al1ZnSCf31WqNFdztEWSfkZZ03f8rvJGYT6iKZL2M9jq4mbppWpOXh3/gmygsl1ZyNWWNoovqsxVTPY5Jvu82FBRw8urQn4S9pbXIBfq+fnXJT9ztSU1SB7SWdwiL6ho+aFJWPBL9beKwaoeT4PIeFXnrhcaKni6klb5ZZboUqOwgMn+kd1ZyNEWio0Vw7GOdwsGtcGUNrJkvzVndMIxEOWPzna2q6/ITZUq6zWJ8So8jYEmSX+FYqhS567jdRdzuwqHRltdEV6Pj8XWXJEMMGBxZKZKga7E4Gd1uWttkxylhSkbZCiHYK0qlOZrBh9LZWUKDeWQEG8ZutaLslS2Kn5PKU9XLDKUigzlsLAdvaWiXnCYChNDYWJKTQwgw6BaZ62wt0w2wIBN1+2uhc0COjWOKoGhiKMpEuiKNY5q2IMQCJsRxgIObMBjgnmg1hpqjy8799/s7h68PHi7n35yxxURjt/Wowm5Py5HEzJwAklwpPAMJOFVBk4wpfDHpb6YhHw9RABHTsRKcXKS7JXlAnE/pSB9MgQlsmVp8kBKno2Sk714SyLTlR1C5o/jE0PjmckQg8qyaWUkfDHpccFw5VhDbRtb6eU1bDjacfO2cWd/a3xWPzrbDWxfXHbmgD864ETMWAaHG48ItmN8V6RjOCK59yhxJ33THkFA6sbWqg9fUpUjxIG7zv4RCCMZfFz4O0Bmy+HdtL8v+UPMI4ItobbpZffewe7rg5fw+mpv++0fr1/sbfpiMjjrHXg98IHK5LOB9ynhx1aYCys5veTAFs3YgiWyaIvM20LzJndMCPebPYQQJRHniwB2aIVPE3hEsBP/DXMsUy3js4YHm4u/b6893U4/2LwLKzwx1ws3O1z3aFJ11lAHUp2BFNQzSvT08zki2BUWwIaxhtjrz+5tvni4kA4trYXnVkehphud6fJEhGQ1d8bIlaIfFf6PexhDbFPtK49mUr/5Bm81mSdbrZOtrigXCjQHXsF/ScC4BE4XdfQ3HGKHFy3Pdh69eLW5/3bv2c7D5zuP15+vwBVHHFoQwHOeNYhDi/SJr6tThh9d4RACBcby/ehC+tbc6vjCWmjpfmh+dcITEwWTncRX4SedkF8Cjh1a+KE3NNk8sxKcX500T7U4IvzVx0lfXEFNwcQux0vL9MY8vKafzAcTnbCrAwk1fi1RUXCmlk4/ub2yntrefbq9swHwJyi7whnBaxvz8btuKFm3Xq7vv3kFNzBVBeNNICw4owG18BXhi8mxJQt8LbmjHWc+1/9LMKGZY8/+38wWYpNfUWc+1/9e8NdjtGCqGy2Y6kYLprrRgqlutGCqGy2Y6kYLprrRgqlutGCq218AAAD//wMA2Px6TqaOev4AAAAASUVORK5CYII=</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>zhbluzern.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.048326,8.307462</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQzCCAqugAwIBAgIUTDvS4vMvS79V1siwRDThJEUHfTgwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWYWFpLWxvZ29uLnpoYmx1emVybi5jaDAeFw0xOTA1Mjgx
+NDQ5MTdaFw0yMjA1MjgxNDQ5MTdaMCExHzAdBgNVBAMMFmFhaS1sb2dvbi56aGJs
+dXplcm4uY2gwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCIJL6cbB1s
+fOk3IRksdchHOzLTOFKU91lmGcP/hoMu1eDRiQP4WEL4eYCUqJE/T8w3Pp6f/oNx
+NFIm47lp6kQIfndl3uRAJrHAnd3ZCzwAzhsCbwkzNwABlP0/0vA5/9eluKWy6GWw
+btoA8baS8aaBxWcSf5N6AXES9YOopcAR3T3MB2hisGhQTarNSNWO7QJyuYneC3oy
+P3sf7ye3zsZx5xS5OmDLYNI8NOgamAU2kfL/JJqTT6YcFyIrVKUciiQehUzWiIB9
+Tlacx4SEsr6g4GyN0N3JYfarPQmWNwm4yMGkkxpSuyf2pCMEaiiHyQpl3UmW7g3t
+wNHjmmfdAj+lh/k8fubj8+GAbmRprKZm/T+3cLdzpY1FLb2KLdX1Hwg4Qb75Mvvb
+wTMDLZT3lb4zYIlvfUCjX226z57SS6VxfiPRrTP238GCcdB6NSaN5y0+3A/uH9bH
+Ky2SLds3zTrc3VHxsmm5yHjFXicEO6E46T5eEs05OWOfucnNlrVTapUCAwEAAaNz
+MHEwHQYDVR0OBBYEFAGR+bb/zCMOTJfl0bShCoHNRNENMFAGA1UdEQRJMEeCFmFh
+aS1sb2dvbi56aGJsdXplcm4uY2iGLWh0dHBzOi8vYWFpLWxvZ29uLnpoYmx1emVy
+bi5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEAYeit1eVmgfOn
+F406FPi6vQohDC9bDyUBCUGxC/ncRl/xmDCXkNrUQif4B7MCdkXO7hBPun4r9vFH
+3lNJiKYhe8GMagOfZYxN2Ppkd6zbRt/Pdbi7P5bz8Zlq+wkY8FLqvPtxkBeQWAkK
+lYTJGNGH2cu1fncZsZEeBs98CwX73npme/vjF9DIY9uwAU2vOVVZf3WcgvIqqOu0
+1KnUMK+zSER2kzHfNoxixmCOAnu6CIG0GfPy39vQoalHH1YUeaWJSx+Dhbnf5V43
+k7SfM9ZOreACFJ0OGv1eQBXlkCmeQIy4eK5LtjkRi3LQvJH3TshRExPHMpV/0amJ
+jes7lp8cN9DxdfuxaUvcIgZw9F91pJnYcKYNYJzOcBah1Fo4rxWMEU6nzc2o5wtK
+okJ+Ulbjw1gQwwP2J3WwzPFVCTFGPkGXh13FkzCaJQ3AXHnumehW/qGksqq9RC1n
+2YezsFHpamd3GBsBoK4tbqZ6QRSm4o8LMIli2GIcXR7RvhOlO1JN
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.zhbluzern.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-logon.zhbluzern.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-logon.zhbluzern.ch/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">zhbluzern.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQzCCAqugAwIBAgIUTDvS4vMvS79V1siwRDThJEUHfTgwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAwwWYWFpLWxvZ29uLnpoYmx1emVybi5jaDAeFw0xOTA1Mjgx
+NDQ5MTdaFw0yMjA1MjgxNDQ5MTdaMCExHzAdBgNVBAMMFmFhaS1sb2dvbi56aGJs
+dXplcm4uY2gwggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCIJL6cbB1s
+fOk3IRksdchHOzLTOFKU91lmGcP/hoMu1eDRiQP4WEL4eYCUqJE/T8w3Pp6f/oNx
+NFIm47lp6kQIfndl3uRAJrHAnd3ZCzwAzhsCbwkzNwABlP0/0vA5/9eluKWy6GWw
+btoA8baS8aaBxWcSf5N6AXES9YOopcAR3T3MB2hisGhQTarNSNWO7QJyuYneC3oy
+P3sf7ye3zsZx5xS5OmDLYNI8NOgamAU2kfL/JJqTT6YcFyIrVKUciiQehUzWiIB9
+Tlacx4SEsr6g4GyN0N3JYfarPQmWNwm4yMGkkxpSuyf2pCMEaiiHyQpl3UmW7g3t
+wNHjmmfdAj+lh/k8fubj8+GAbmRprKZm/T+3cLdzpY1FLb2KLdX1Hwg4Qb75Mvvb
+wTMDLZT3lb4zYIlvfUCjX226z57SS6VxfiPRrTP238GCcdB6NSaN5y0+3A/uH9bH
+Ky2SLds3zTrc3VHxsmm5yHjFXicEO6E46T5eEs05OWOfucnNlrVTapUCAwEAAaNz
+MHEwHQYDVR0OBBYEFAGR+bb/zCMOTJfl0bShCoHNRNENMFAGA1UdEQRJMEeCFmFh
+aS1sb2dvbi56aGJsdXplcm4uY2iGLWh0dHBzOi8vYWFpLWxvZ29uLnpoYmx1emVy
+bi5jaC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEAYeit1eVmgfOn
+F406FPi6vQohDC9bDyUBCUGxC/ncRl/xmDCXkNrUQif4B7MCdkXO7hBPun4r9vFH
+3lNJiKYhe8GMagOfZYxN2Ppkd6zbRt/Pdbi7P5bz8Zlq+wkY8FLqvPtxkBeQWAkK
+lYTJGNGH2cu1fncZsZEeBs98CwX73npme/vjF9DIY9uwAU2vOVVZf3WcgvIqqOu0
+1KnUMK+zSER2kzHfNoxixmCOAnu6CIG0GfPy39vQoalHH1YUeaWJSx+Dhbnf5V43
+k7SfM9ZOreACFJ0OGv1eQBXlkCmeQIy4eK5LtjkRi3LQvJH3TshRExPHMpV/0amJ
+jes7lp8cN9DxdfuxaUvcIgZw9F91pJnYcKYNYJzOcBah1Fo4rxWMEU6nzc2o5wtK
+okJ+Ulbjw1gQwwP2J3WwzPFVCTFGPkGXh13FkzCaJQ3AXHnumehW/qGksqq9RC1n
+2YezsFHpamd3GBsBoK4tbqZ6QRSm4o8LMIli2GIcXR7RvhOlO1JN
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.zhbluzern.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">zhbluzern.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Zentral- und Hochschulbibliothek Luzern</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Zentral- und Hochschulbibliothek Luzern</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.zhbluzern.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.zhbluzern.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:SurName>Universität Luzern</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@unilu.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>SWITCHaai IdP Hosting</md:GivenName>
+	<md:SurName>Team</md:SurName>
+	<md:EmailAddress>mailto:idphosting@switch.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 44 268 1505</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

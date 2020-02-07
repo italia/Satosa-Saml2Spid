@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://kent.simitive.com">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2016-01-13T14:10:29Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://kent.simitive.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://kent.simitive.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKjCCAhKgAwIBAgIJAKASu6FhhCKNMA0GCSqGSIb3DQEBBQUAMCMxITAfBgNV
+BAMTGGxpdmUtbm9kZS0xLnNpbWl0aXZlLmNvbTAeFw0xNjAxMTExMzIxNDVaFw0y
+NjAxMDgxMzIxNDVaMCMxITAfBgNVBAMTGGxpdmUtbm9kZS0xLnNpbWl0aXZlLmNv
+bTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsUZdEDLpWFrBNDxCMO
+WWpKWHuDqZpw9WPDZlq9bhxbdTPdksL3Omf/e9UOXm+BX9BRtZvASTuDjg5PSOd0
+xYWxIxjMduxstHgzdKLYLv0O+ZnlhbDtnyou7co03qOk2zxx79DaJoHZECLy+5M0
+4rk9GW6Q6/FFP5pL2x44k/VqEuNNLnWisbEjW3PIKGhSuxeBBQWOIyRAmh1qTiyN
+H3BTZchzQdW2aE47UOhWnA2AAV4MncAak+l9LEIRDLcvGepVSM4kVOfilVCGfe06
+ZEyJ23XoMiq/W55zPbOevv8jNJrpJKOkK9zcaBvRiRQOKasKekLyp8190MM+D3Ea
+vmUCAwEAAaNhMF8wPgYDVR0RBDcwNYIYbGl2ZS1ub2RlLTEuc2ltaXRpdmUuY29t
+hhlodHRwczovL2tlbnQuc2ltaXRpdmUuY29tMB0GA1UdDgQWBBRzXVs0Ysuuio3J
+dW6WZvknq/loaTANBgkqhkiG9w0BAQUFAAOCAQEAZQrpvyimRS7nKeAkmcdSyqdR
+T3/mVyfkOshajVua25OpHBuBSVen6VDTeR+sUkwvcckRurS+N2T04twiggeAjsAm
+n6OAUHTwiZG7b4ySisNjNjrQnnS5wCdO4gzqXJv9GCrU5jqtPafU+CVBcVedQ0sh
+AmCO/naNO1VD7YFBpjEBMbzCwz9EhEhohZOwrc4GrCh4e7Nj9HFRe1C7mnq/v1dG
+sHkhIdbrNOFUKPuD9FlcoPrSh27rp8k/pwVMD7sAupkTqzKTZ8SIS0HXFXkGZ/cX
+Ay3Sgf//TmFLuD+hZ3pcLObCW6r+1w/0THCU2CkNgy7N+YK4Fw+BkPDUqLgdjQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://kent.simitive.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://kent.simitive.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kent.simitive.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kent.simitive.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://kent.simitive.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kent.simitive.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://kent.simitive.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://kent.simitive.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://kent.simitive.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://kent.simitive.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://kent.simitive.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Simitive Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Simitive</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.simitive.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Nick</md:GivenName>
+	<md:SurName>Stilwell</md:SurName>
+	<md:EmailAddress>mailto:nick.stilwell@simitive.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nick</md:GivenName>
+	<md:SurName>Stilwell</md:SurName>
+	<md:EmailAddress>mailto:nick.stilwell@simitive.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://haka.saimia.fi/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.csc.fi/haka">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://www.csc.fi/english/institutions/haka/instructions/join/eduGAINRegistrationStatement/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">saimia.fi</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Saimaa University of Applied Sciences</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="sv">Yrkehögskola Saimaa</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="fi">Saimaan ammattikorkeakoulu</mdui:DisplayName>
+		<mdui:Logo height="115" width="100">https://idp.saimia.fi/idp/images/saimaa_uas_logo_100x115px.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.saimia.fi/idp/images/saimaa_uas_logo_16x16px.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="fi">http://www.saimia.fi</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.saimia.fi</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>157.24.192.0/19</mdui:IPHint>
+		<mdui:DomainHint>saimia.fi</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAJM2XabBahqh+GJlO/MtV85nxJyXMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC5zYWltaWEuZmkwHhcNMTYwNTA2MDY1MjU4WhcN
+MzYwNTA2MDY1MjU4WjAYMRYwFAYDVQQDDA1pZHAuc2FpbWlhLmZpMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmsho87hpGMeukfjA2l9UVhii0QnHfp+y
+QjEO2KUSz8cfHDAbCXtvQ86eh3U2wqVC9rrNPOx3+rrQXSBUJZAVTDOhG079/RML
++CzIMzGT2JmhPR/U8Inn2eCtKUE+wM3DaZ9Q8+wS/7Ne2ve+0aA/HlQLRBNQBD2t
+0FVkBxUTLTEFY9DTn/HdK9JQPHUutAsA3SCEidXfRKsQEnGsqz1diLxfVoJVoIgn
+gWtklC9pz3W2Pdds4X9IFF40drV6wL/zT99fuVFFgXth+9S9t3mqbr/WNDOojE9E
+NASaOfZFAvHoRpB//Izdg5UP03QE2fBZknqgFjU902AEtN208WsGlQIDAQABo2Ew
+XzAdBgNVHQ4EFgQUxnIFmoaljcLOrNVzoR5bMEGvVI4wPgYDVR0RBDcwNYINaWRw
+LnNhaW1pYS5maYYkaHR0cHM6Ly9pZHAuc2FpbWlhLmZpL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBXq3ThcmPvH9eCXI20WK/N98kBRlcuO1v7E0KT
+tohTpH/gDsxJdAL308KA3CgggNJz4LRVMmOLKH5Ph8c5eAgVNnizO3t7Et5HBtZx
+ityiG+z8oH6TrricAU6QT79PBhJ9SGcUzN9vVORMGPwtLyI1jKYTs2N1vq7V8LXA
+NYaWWqig79ClQiXsbkCJNkz21OD3b2IvkKXGfH+prWF9Ug0gF7WdcwTZQDZTAQbM
+M6kujhH3Sb7AOvqQAl54MTOjiL/KNUWrolPyJEWWwGOulztBeuZL2mQjW9BaEr2W
+vjQ/53OUFOfNVVp2kcmdXGPUDjf4WXEDneyzZSnB5lJeNPp3
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.saimia.fi/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.saimia.fi/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="fi">Saimaan ammattikorkeakoulu</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Saimaa University of Applied Sciences</md:OrganizationName>
+	<md:OrganizationName xml:lang="sv">Yrkehögskola Saimaa</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="fi">Saimaan ammattikorkeakoulu</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Saimaa University of Applied Sciences</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="sv">Yrkehögskola Saimaa</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="fi">http://www.saimia.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.saimia.fi</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="sv">http://www.saimia.fi</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ilpo</md:GivenName>
+	<md:SurName>Olkkonen</md:SurName>
+	<md:EmailAddress>mailto:ilpo.olkkonen@saimia.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Saimaan amk</md:GivenName>
+	<md:SurName>IT-palvelut</md:SurName>
+	<md:EmailAddress>mailto:haka@saimia.fi</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Saimaan amk</md:GivenName>
+	<md:SurName>IT-palvelut</md:SurName>
+	<md:EmailAddress>mailto:haka@saimia.fi</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

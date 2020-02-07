@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cas.conncoll.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">conncoll.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Connecticut College</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.conncoll.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.conncoll.edu/web-privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="143" xml:lang="en">https://www.conncoll.edu/media/website-media/visualidentity/images/2Line-LogoSig-Color.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDODCCAiCgAwIBAgIVAPUEeM0abFXGCIdEOlAW+9wmzXf4MA0GCSqGSIb3DQEB
+BQUAMB4xHDAaBgNVBAMTE2Nhc3RzdC5jb25uY29sbC5lZHUwHhcNMTMxMDI4MTYw
+NzU1WhcNMzMxMDI4MTYwNzU1WjAeMRwwGgYDVQQDExNjYXN0c3QuY29ubmNvbGwu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoIFDuBMCiM4YbPZC
+m3ezj4xircODZvGjqjy06237XEsGT8oKZBbciJKyuNzASg6FropxbyX3i+4/6+E3
+lgxgs1hqqzHGiS6B5R0ilQBkIZHdCNhNXFp65380XwTQswn+9FrmZsrOVGcxWfnu
+QbS28Tp69D3mq8CFjQ+L3LUt3CgzX3SlvdeH8WCX7fsJisN6VkAg/LuNPO/wIUhW
+maInVIPBfMLgmT2pWSAXVanmGhbpmriOa/PMvw57VQX1jPAktbfNQvwcVmwkOS+e
+qLP4zmKDx09AQui5X+tAShB/Fu0GhcsrSBiK5MbtjuQcOSH1R8uZV/9/Ku2le3oK
+Ui7jfQIDAQABo20wazBKBgNVHREEQzBBghNjYXN0c3QuY29ubmNvbGwuZWR1hipo
+dHRwczovL2Nhc3RzdC5jb25uY29sbC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0O
+BBYEFM0pR2d0wY/alMsBiZDCxRt34lzpMA0GCSqGSIb3DQEBBQUAA4IBAQBVfUXC
+cNA6+xYP28WbWxZmrIvWZvDRyHWU/GiM4fOj+pSV1SfuQ/CBUI/3BDTOe+kxjMM5
+A5gbTLSemQz0hg435PNUfqfbjjfWyBeNmEnyIWgbH+onJJfxfclDRPsmkfNpzZfq
++NGIlWBQqg4TiqP6eWteaLpR6JTrZvNHByQayM+5gc3BbFCEAbp5mxy5ZTARYRed
+x6203y+SNmiQJbanlMD+Zc7Dy5XmEMoGZjxNqa+9hj1O7oD2wyU4aGciOIkX6txH
+4e/vvoM57//T3rGxWRAUJwD5uYM0Dmkj2UhVU9xPPTsHIEoN38w2FWQi1UhTM2mN
+Zw7lDmCUxzGbtrzP
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://cas.conncoll.edu:443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://cas.conncoll.edu:443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://cas.conncoll.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cas.conncoll.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cas.conncoll.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">conncoll.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDODCCAiCgAwIBAgIVAPUEeM0abFXGCIdEOlAW+9wmzXf4MA0GCSqGSIb3DQEB
+BQUAMB4xHDAaBgNVBAMTE2Nhc3RzdC5jb25uY29sbC5lZHUwHhcNMTMxMDI4MTYw
+NzU1WhcNMzMxMDI4MTYwNzU1WjAeMRwwGgYDVQQDExNjYXN0c3QuY29ubmNvbGwu
+ZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoIFDuBMCiM4YbPZC
+m3ezj4xircODZvGjqjy06237XEsGT8oKZBbciJKyuNzASg6FropxbyX3i+4/6+E3
+lgxgs1hqqzHGiS6B5R0ilQBkIZHdCNhNXFp65380XwTQswn+9FrmZsrOVGcxWfnu
+QbS28Tp69D3mq8CFjQ+L3LUt3CgzX3SlvdeH8WCX7fsJisN6VkAg/LuNPO/wIUhW
+maInVIPBfMLgmT2pWSAXVanmGhbpmriOa/PMvw57VQX1jPAktbfNQvwcVmwkOS+e
+qLP4zmKDx09AQui5X+tAShB/Fu0GhcsrSBiK5MbtjuQcOSH1R8uZV/9/Ku2le3oK
+Ui7jfQIDAQABo20wazBKBgNVHREEQzBBghNjYXN0c3QuY29ubmNvbGwuZWR1hipo
+dHRwczovL2Nhc3RzdC5jb25uY29sbC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0O
+BBYEFM0pR2d0wY/alMsBiZDCxRt34lzpMA0GCSqGSIb3DQEBBQUAA4IBAQBVfUXC
+cNA6+xYP28WbWxZmrIvWZvDRyHWU/GiM4fOj+pSV1SfuQ/CBUI/3BDTOe+kxjMM5
+A5gbTLSemQz0hg435PNUfqfbjjfWyBeNmEnyIWgbH+onJJfxfclDRPsmkfNpzZfq
++NGIlWBQqg4TiqP6eWteaLpR6JTrZvNHByQayM+5gc3BbFCEAbp5mxy5ZTARYRed
+x6203y+SNmiQJbanlMD+Zc7Dy5XmEMoGZjxNqa+9hj1O7oD2wyU4aGciOIkX6txH
+4e/vvoM57//T3rGxWRAUJwD5uYM0Dmkj2UhVU9xPPTsHIEoN38w2FWQi1UhTM2mN
+Zw7lDmCUxzGbtrzP
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://cas.conncoll.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Connecticut College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Connecticut College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.conncoll.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andrew Tillinghast</md:GivenName>
+	<md:EmailAddress>atilling@conncoll.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Jean Dailey</md:GivenName>
+	<md:EmailAddress>jdailey@conncoll.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Laurie Schaeffer</md:GivenName>
+	<md:EmailAddress>lbsch@conncoll.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>John Schaeffer</md:GivenName>
+	<md:EmailAddress>jsch@conncoll.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

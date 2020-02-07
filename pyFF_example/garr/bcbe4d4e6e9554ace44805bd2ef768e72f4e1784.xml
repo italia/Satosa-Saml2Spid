@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.nerdc.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-12-04T13:04:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nerdc.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">NERD Centre</mdui:DisplayName>
+		<mdui:Description xml:lang="en">NERD Centre Identity Provider</mdui:Description>
+		<mdui:Keywords xml:lang="en">engineering, research and development</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://nerdc.lk/en/sub_pgs/8_about.html</mdui:InformationURL>
+		<mdui:Logo height="60" width="80">https://idp.nerdc.lk/Path/To/Logo.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:7.098614,79.898801</mdui:GeolocationHint>
+		<mdui:DomainHint>nerdc.lk</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAMyPLl/FX+wz2IM7kBSqy131Rl1DMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTlaFw0z
+OTExMjkwNDM5NTlaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAJIZUj/QN9LzL5dCEC6/r3P5UQpFN9YLi5Dy
+J6d2O765mqOVlEjPzn+NMSLY0YQE5VSmB1D2YDvMd/Kj4bOHROuWgPd//3rG9aNt
+Qt9+5BVXnrF4xbBOIByiGbdMVM0Rz/XbQTIDh9uDaYzLioiBa0U2oqdX7aj8fSFb
+hMh6mLSs8OjDS3btqRpEGcRAcn8dozaxxh7Lq+qOb0wbdwIMRLPe56vfoqLRqxIt
+tve1F6IZfE9L1o3Ee4eE33Y8IzkCl89xLa33uDjlPWDndG86FsUMDC6LrhtfYzTW
+CjJoI9xOqFCzdIropOAXWwM5OhOEEEohQLJh2rUCW2yoeHnqkqDxcepvhCuCaGQx
+nvm/l2VX6ubATarko7BM00zWv/i7R3rUKIHUEJYGtpYOEsCSpyqV6ECxs0vhBWsp
+hWj4t6qTwlfHlpZlP66rWQbx8ktc83Ta5oE6IIxeAkFm4v5+7isM/qOHhjG1XRJJ
+ZvPYohjN4IBBxuoviFj+sTTfufJHeQIDAQABo18wXTAdBgNVHQ4EFgQUk81lJbJ9
+4a29UQJc5E0z7NK3B7kwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+Sd8YYtBZII+ZcOK9+0LAoRnjTu0II6vSBWj3KmPbziZ4rR2crCgXhkNETQEHP71S
+ByMiWEc5kaocQmTMbAZvmjJzakhjiOmQJq5xOo3pN0iimU2510xWbIOcynJ63oRJ
+AXcbTNIZT+DpyJJFLRzS+w2l0UleD7PYEIhSy0Ef3+sS+CVOl36L9CpL0JjuqACs
+nVEhJiy4dNL1b8tEWw8ekEYWaQGFlA4WZO+udMWqmYCN09tZJOI/lyvpeq5Nmjuz
+Bjl2iWFHlhngkxxT5JB1PtUcXetr8n6fvUmLqd5vvXMiVttJ3taNkT3KPrmu7zgT
+xBfqbYYez5uysy8IJsMSiVzFJH8jPSAdtKaTv626SZZeQPQYbpnTCVcodEB+29+F
+W8BwdGBccQkywyIQQMuQm0ITPPxIBO9vm3yLAE8+YoQq+zByUXhgzVo2SNPwIB/E
+PPMZLlGUPhbMCmseupDNyAQWF6T1vutUrI5kFImkZ+HDWU0dh9gWXFcGHhxAVP6s
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAIvP6hVEyjcj/3E+lbVIWuKbsoyOMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTVaFw0z
+OTExMjkwNDM5NTVaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAKnKcTNIfmQ5Kmjr7y2UK2oY2kOH8fEi3kdG
+S0A7FkuIw73Yxlczqc3d3sipZ0N22Cu/8Qc/JwLyr4jmYAxYVvBKwhRG+z9/JSUR
+21GOzTve9ZxFuVLa4riETwlryz41UuMfaZqh4sXMGP2vvd3S7S0jhyKbEFHP/y+1
+RtnssqDNlI3HdUJISjknY96Bu2GLZmUUImMB6OY3iWR2/2/bKGkmnN/C+hxjUpn+
+jREMj449DYNzFeOopbS2B12+pb2sEctfR5levHaPlGYlVW0NOW1Vy6r4/Nxnboor
+GvML+Ae3k6ZGRZ6fNiZCr5AJf58rMUIsTFgXizzjd9YpGneYS7l4algUKTK6oiyG
+QfSAEKwQhNcVYJNukJ4Gdsyfp4fgTYca89H6RsiV2LQEBNmAef08kpHEceAs/rL9
+JtRIxqnhf9F8NZTp1UkZdyC0S8C8qtriGhcV0FvGCSYDVJzxam8fhAwPd1IpeTAR
+2NQQxNuxQMMBaDs/JIep8I9SnyFP2wIDAQABo18wXTAdBgNVHQ4EFgQUE7wrwvg0
+yJwlprby31owJqfvm1wwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+lyTP1J/+Ish+1bQZNm/a4La6M0j+iEDBwqdSI/bRXzN0wEXfvNHlEyvXakDn8+Sg
+NiWIUDt5KgUVNN1PZ1+oo/upH9UUhSOtI5y15Lnf76r7oLy5gNqUpdWIRtG7fKIu
+luS8NGkOBp5bo8MfV2j2b3S+m0RdNxuuT4saOlPZxIGeNbbX63SKX9gHDG/o1cIy
+wMxcI0DX86wWwx5NHvy4B80cP7E4fFHcCrzqW8T3m+KcDSDbw6LuMp8Q0wuH60AM
+v95QQ8Kec1QDEBG6UqQ9K1Mznd1jh7koXUjNBozzrMvH6kBXPjvvRAahcoukmRZf
+XZPpDRpVR4zBubwvmVxG/rymcbM8rAkSyeUj+WcoS5pvVy2sKObrk7f3/MbbAZKo
+iMN8ZCX6Q0rNcJjxbYRXsGaMBW/Ejnn+brcHDsI1t5Y/PMKUCmaU9dnHfSK1nqfA
+XwjwHJgZesZmeoMuF69ffuz/5jvNBGq3COWPwAqWqb21EcGNtL97JCk8iFeHEWz3
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAJxdJqk4XC5pYQTMY6/fNj+aJP4KMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTZaFw0z
+OTExMjkwNDM5NTZaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAIbjxey4568hLdmJJSseyP7lDhiicy7isrDA
+RUiCkgltaivDzoKXd2j/5F3l6m3XbVbjzZ+1/qDVoExUWqC2yyewVrI15p1Ll8fD
+LdBN1Wx8hPdlYhv/MfMqjc8B2g0rHn+v6zAyvzcUQiNItgp/yvRKZJ6gi/eDVrCx
+4GcBeQeV/fpku8eL+I3qwEUY0q+OaweubBfvoZyargSWcIF4tuEc0tQvLN2lsJPm
+64KdBd+f4xJXRs2+jvOL9pFrB205WfkRIf+S3Qe/OYZ3CHUm9vjQ2tO5Gm1IKewC
+rnv00mRFEx5Ep/h7kNFe9tKcUiEBrjwI3NQ8HpTUkoCSx31ylQq42aMSIsF6WfQM
+p5BO7vW/Me5ImSf8QmcYzu4yj7g/Yyi35oE9ZjtM5sO5jRgvQF5yeksQSDyVHDXE
+Dsbbn6u5MpneG7nArmRFZKSd6UAU7kHSzaq2e9v82+lzHoxTLnRx8T+3cF+4ViHs
+xp60QgyxL787bXk6N3lJUxIEQTHPtwIDAQABo18wXTAdBgNVHQ4EFgQUqLpYturd
+5v3UrNqU7nIkC9b385cwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+OAX5tJqiQuIxDwPPHHCbSId5ME0W9PhB7wQL7Sot4QRq5QEQCJie7+GHixU2kzEH
+0vK2Isq9Ul8t7BMYSef8v6WnnFD7wQlJxAQzvhdfBCJTPe4MQTSP5LO77c1ReN6R
+ECO4AC6nTU70N3LP+ehj6Hgxy0uliyObKFOZQV9PmcLY/3W6Uele3oR6cO7leShp
+2PiCrwvsMqVIr2aXWXLKd8dSSq4X4jBnrHYS/wIfhc843JYO0FYqXCt/dEdVCrv2
+wZK43AXcQD2xX0scmaUAUD2zgKzTENw2dk0B4E7eAzyQVhHXJ2qubXbPUSxrcy2/
+EwUYLYhosJa5Gmfql5mtRwm23A7BnbzDPSSxhGAA198nJ97nuHcCR65ZbZphlVNi
+DmUmMhKu4YZRJlo/q3wKVwlC90RRgovFLz+3qNx5nUmgDhr6QDo7KT4JnNoe1Re/
+Sr+pRblyErRzyfwuBHOaXGAT7zL3ho5rRecgrns5B3pm28erO0+uW/jA07KXGq1n
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nerdc.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nerdc.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nerdc.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nerdc.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.nerdc.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.nerdc.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.nerdc.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nerdc.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAMyPLl/FX+wz2IM7kBSqy131Rl1DMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTlaFw0z
+OTExMjkwNDM5NTlaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAJIZUj/QN9LzL5dCEC6/r3P5UQpFN9YLi5Dy
+J6d2O765mqOVlEjPzn+NMSLY0YQE5VSmB1D2YDvMd/Kj4bOHROuWgPd//3rG9aNt
+Qt9+5BVXnrF4xbBOIByiGbdMVM0Rz/XbQTIDh9uDaYzLioiBa0U2oqdX7aj8fSFb
+hMh6mLSs8OjDS3btqRpEGcRAcn8dozaxxh7Lq+qOb0wbdwIMRLPe56vfoqLRqxIt
+tve1F6IZfE9L1o3Ee4eE33Y8IzkCl89xLa33uDjlPWDndG86FsUMDC6LrhtfYzTW
+CjJoI9xOqFCzdIropOAXWwM5OhOEEEohQLJh2rUCW2yoeHnqkqDxcepvhCuCaGQx
+nvm/l2VX6ubATarko7BM00zWv/i7R3rUKIHUEJYGtpYOEsCSpyqV6ECxs0vhBWsp
+hWj4t6qTwlfHlpZlP66rWQbx8ktc83Ta5oE6IIxeAkFm4v5+7isM/qOHhjG1XRJJ
+ZvPYohjN4IBBxuoviFj+sTTfufJHeQIDAQABo18wXTAdBgNVHQ4EFgQUk81lJbJ9
+4a29UQJc5E0z7NK3B7kwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+Sd8YYtBZII+ZcOK9+0LAoRnjTu0II6vSBWj3KmPbziZ4rR2crCgXhkNETQEHP71S
+ByMiWEc5kaocQmTMbAZvmjJzakhjiOmQJq5xOo3pN0iimU2510xWbIOcynJ63oRJ
+AXcbTNIZT+DpyJJFLRzS+w2l0UleD7PYEIhSy0Ef3+sS+CVOl36L9CpL0JjuqACs
+nVEhJiy4dNL1b8tEWw8ekEYWaQGFlA4WZO+udMWqmYCN09tZJOI/lyvpeq5Nmjuz
+Bjl2iWFHlhngkxxT5JB1PtUcXetr8n6fvUmLqd5vvXMiVttJ3taNkT3KPrmu7zgT
+xBfqbYYez5uysy8IJsMSiVzFJH8jPSAdtKaTv626SZZeQPQYbpnTCVcodEB+29+F
+W8BwdGBccQkywyIQQMuQm0ITPPxIBO9vm3yLAE8+YoQq+zByUXhgzVo2SNPwIB/E
+PPMZLlGUPhbMCmseupDNyAQWF6T1vutUrI5kFImkZ+HDWU0dh9gWXFcGHhxAVP6s
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAIvP6hVEyjcj/3E+lbVIWuKbsoyOMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTVaFw0z
+OTExMjkwNDM5NTVaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAKnKcTNIfmQ5Kmjr7y2UK2oY2kOH8fEi3kdG
+S0A7FkuIw73Yxlczqc3d3sipZ0N22Cu/8Qc/JwLyr4jmYAxYVvBKwhRG+z9/JSUR
+21GOzTve9ZxFuVLa4riETwlryz41UuMfaZqh4sXMGP2vvd3S7S0jhyKbEFHP/y+1
+RtnssqDNlI3HdUJISjknY96Bu2GLZmUUImMB6OY3iWR2/2/bKGkmnN/C+hxjUpn+
+jREMj449DYNzFeOopbS2B12+pb2sEctfR5levHaPlGYlVW0NOW1Vy6r4/Nxnboor
+GvML+Ae3k6ZGRZ6fNiZCr5AJf58rMUIsTFgXizzjd9YpGneYS7l4algUKTK6oiyG
+QfSAEKwQhNcVYJNukJ4Gdsyfp4fgTYca89H6RsiV2LQEBNmAef08kpHEceAs/rL9
+JtRIxqnhf9F8NZTp1UkZdyC0S8C8qtriGhcV0FvGCSYDVJzxam8fhAwPd1IpeTAR
+2NQQxNuxQMMBaDs/JIep8I9SnyFP2wIDAQABo18wXTAdBgNVHQ4EFgQUE7wrwvg0
+yJwlprby31owJqfvm1wwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+lyTP1J/+Ish+1bQZNm/a4La6M0j+iEDBwqdSI/bRXzN0wEXfvNHlEyvXakDn8+Sg
+NiWIUDt5KgUVNN1PZ1+oo/upH9UUhSOtI5y15Lnf76r7oLy5gNqUpdWIRtG7fKIu
+luS8NGkOBp5bo8MfV2j2b3S+m0RdNxuuT4saOlPZxIGeNbbX63SKX9gHDG/o1cIy
+wMxcI0DX86wWwx5NHvy4B80cP7E4fFHcCrzqW8T3m+KcDSDbw6LuMp8Q0wuH60AM
+v95QQ8Kec1QDEBG6UqQ9K1Mznd1jh7koXUjNBozzrMvH6kBXPjvvRAahcoukmRZf
+XZPpDRpVR4zBubwvmVxG/rymcbM8rAkSyeUj+WcoS5pvVy2sKObrk7f3/MbbAZKo
+iMN8ZCX6Q0rNcJjxbYRXsGaMBW/Ejnn+brcHDsI1t5Y/PMKUCmaU9dnHfSK1nqfA
+XwjwHJgZesZmeoMuF69ffuz/5jvNBGq3COWPwAqWqb21EcGNtL97JCk8iFeHEWz3
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAJxdJqk4XC5pYQTMY6/fNj+aJP4KMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazAeFw0xOTExMjkwNDM5NTZaFw0z
+OTExMjkwNDM5NTZaMBcxFTATBgNVBAMMDGlkcC5uZXJkYy5sazCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBAIbjxey4568hLdmJJSseyP7lDhiicy7isrDA
+RUiCkgltaivDzoKXd2j/5F3l6m3XbVbjzZ+1/qDVoExUWqC2yyewVrI15p1Ll8fD
+LdBN1Wx8hPdlYhv/MfMqjc8B2g0rHn+v6zAyvzcUQiNItgp/yvRKZJ6gi/eDVrCx
+4GcBeQeV/fpku8eL+I3qwEUY0q+OaweubBfvoZyargSWcIF4tuEc0tQvLN2lsJPm
+64KdBd+f4xJXRs2+jvOL9pFrB205WfkRIf+S3Qe/OYZ3CHUm9vjQ2tO5Gm1IKewC
+rnv00mRFEx5Ep/h7kNFe9tKcUiEBrjwI3NQ8HpTUkoCSx31ylQq42aMSIsF6WfQM
+p5BO7vW/Me5ImSf8QmcYzu4yj7g/Yyi35oE9ZjtM5sO5jRgvQF5yeksQSDyVHDXE
+Dsbbn6u5MpneG7nArmRFZKSd6UAU7kHSzaq2e9v82+lzHoxTLnRx8T+3cF+4ViHs
+xp60QgyxL787bXk6N3lJUxIEQTHPtwIDAQABo18wXTAdBgNVHQ4EFgQUqLpYturd
+5v3UrNqU7nIkC9b385cwPAYDVR0RBDUwM4IMaWRwLm5lcmRjLmxrhiNodHRwczov
+L2lkcC5uZXJkYy5say9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+OAX5tJqiQuIxDwPPHHCbSId5ME0W9PhB7wQL7Sot4QRq5QEQCJie7+GHixU2kzEH
+0vK2Isq9Ul8t7BMYSef8v6WnnFD7wQlJxAQzvhdfBCJTPe4MQTSP5LO77c1ReN6R
+ECO4AC6nTU70N3LP+ehj6Hgxy0uliyObKFOZQV9PmcLY/3W6Uele3oR6cO7leShp
+2PiCrwvsMqVIr2aXWXLKd8dSSq4X4jBnrHYS/wIfhc843JYO0FYqXCt/dEdVCrv2
+wZK43AXcQD2xX0scmaUAUD2zgKzTENw2dk0B4E7eAzyQVhHXJ2qubXbPUSxrcy2/
+EwUYLYhosJa5Gmfql5mtRwm23A7BnbzDPSSxhGAA198nJ97nuHcCR65ZbZphlVNi
+DmUmMhKu4YZRJlo/q3wKVwlC90RRgovFLz+3qNx5nUmgDhr6QDo7KT4JnNoe1Re/
+Sr+pRblyErRzyfwuBHOaXGAT7zL3ho5rRecgrns5B3pm28erO0+uW/jA07KXGq1n
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.nerdc.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">National Engineering Research and Development Centre</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">NERD Centre</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://idp.nerdc.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Buddhi</md:GivenName>
+	<md:SurName>Wickramasooriya</md:SurName>
+	<md:EmailAddress>mailto:buddhi@nerdc.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Janaka</md:GivenName>
+	<md:SurName>Kumara</md:SurName>
+	<md:EmailAddress>mailto:janaka@nerdc.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

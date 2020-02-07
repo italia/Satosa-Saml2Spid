@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.kingston-college.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kingston College (Shibboleth)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Kingston College (Shibboleth)</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">kingston-college.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVDCCAjygAwIBAgIVAMdUWtt4ktwl67ApElUJmzacgr80MA0GCSqGSIb3DQEB
+BQUAMCUxIzAhBgNVBAMTGmlkcC5raW5nc3Rvbi1jb2xsZWdlLmFjLnVrMB4XDTEz
+MDQxNzE1MDg0NFoXDTMzMDQxNzE1MDg0NFowJTEjMCEGA1UEAxMaaWRwLmtpbmdz
+dG9uLWNvbGxlZ2UuYWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCmDI0iBMmMG2bc5ALSjviEDGlHjgr3taE907rW6ArPCH5xUMBFw9Nwge0mNS3D
+naqk9WhKANREU5kppNAoWtp65P7jqStN1dgsUpK9ruIpYp2VymgMNnXtqv+EEE12
+iZW0bZBVhmFVlJBXHIt879+jRXiR3ALSqRuE8MasJIJhwgqMU18qr9lgm3jhwDTt
+MJdc+N255WStJdWD2Q6OGJUVF2bcoFQcQ8cgxEsGjQIQ3qQ232/Cp8clHzcEBc8V
+pKtTU4jkmu+OQMsbImeY0OguIpVG1QYsgG8Vz7L9GIwx8ed52QuoJMXW4QaeNenk
+oEJP2Rq3WTym/Pys1pGcXpynAgMBAAGjezB5MFgGA1UdEQRRME+CGmlkcC5raW5n
+c3Rvbi1jb2xsZWdlLmFjLnVrhjFodHRwczovL2lkcC5raW5nc3Rvbi1jb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRp8Hn8YhPsXqx9UpL1LtVm
+4c6hVTANBgkqhkiG9w0BAQUFAAOCAQEAHRjHFTvBHVK1NJXYoKAgunVmG4c/pqbv
+99OrLj2TNrUK/LD4395qpXoBtXAkw+76ZqbF5aBs+3IYLha5MyRZqFfa6KBXEwwj
+Zej8Bdx809xIBfbkl25uUWGzg+77oaMMog1AzpCAcV0L6wHNnrLBJ6xxOzq/3wNE
+XwYLU2H+KZ6oA5nV2x7/OVH5uxkrVJpNpTpM/D2TzDvfaO3m4rotmCaKYDWqU+/v
+g22QCNGnQBNm+23uTa1K4sR+WSZ2SOwwzIdgfATd5XdnnY28BMKy4uNME+XJklhY
+4O5uQkWDV+eFTekWMLQ1esZs27Pvp0NECx1IgTb2IjoXF8X16uNqDA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.kingston-college.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.kingston-college.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.kingston-college.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.kingston-college.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.kingston-college.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.kingston-college.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kingston-college.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVDCCAjygAwIBAgIVAMdUWtt4ktwl67ApElUJmzacgr80MA0GCSqGSIb3DQEB
+BQUAMCUxIzAhBgNVBAMTGmlkcC5raW5nc3Rvbi1jb2xsZWdlLmFjLnVrMB4XDTEz
+MDQxNzE1MDg0NFoXDTMzMDQxNzE1MDg0NFowJTEjMCEGA1UEAxMaaWRwLmtpbmdz
+dG9uLWNvbGxlZ2UuYWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCmDI0iBMmMG2bc5ALSjviEDGlHjgr3taE907rW6ArPCH5xUMBFw9Nwge0mNS3D
+naqk9WhKANREU5kppNAoWtp65P7jqStN1dgsUpK9ruIpYp2VymgMNnXtqv+EEE12
+iZW0bZBVhmFVlJBXHIt879+jRXiR3ALSqRuE8MasJIJhwgqMU18qr9lgm3jhwDTt
+MJdc+N255WStJdWD2Q6OGJUVF2bcoFQcQ8cgxEsGjQIQ3qQ232/Cp8clHzcEBc8V
+pKtTU4jkmu+OQMsbImeY0OguIpVG1QYsgG8Vz7L9GIwx8ed52QuoJMXW4QaeNenk
+oEJP2Rq3WTym/Pys1pGcXpynAgMBAAGjezB5MFgGA1UdEQRRME+CGmlkcC5raW5n
+c3Rvbi1jb2xsZWdlLmFjLnVrhjFodHRwczovL2lkcC5raW5nc3Rvbi1jb2xsZWdl
+LmFjLnVrL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBRp8Hn8YhPsXqx9UpL1LtVm
+4c6hVTANBgkqhkiG9w0BAQUFAAOCAQEAHRjHFTvBHVK1NJXYoKAgunVmG4c/pqbv
+99OrLj2TNrUK/LD4395qpXoBtXAkw+76ZqbF5aBs+3IYLha5MyRZqFfa6KBXEwwj
+Zej8Bdx809xIBfbkl25uUWGzg+77oaMMog1AzpCAcV0L6wHNnrLBJ6xxOzq/3wNE
+XwYLU2H+KZ6oA5nV2x7/OVH5uxkrVJpNpTpM/D2TzDvfaO3m4rotmCaKYDWqU+/v
+g22QCNGnQBNm+23uTa1K4sR+WSZ2SOwwzIdgfATd5XdnnY28BMKy4uNME+XJklhY
+4O5uQkWDV+eFTekWMLQ1esZs27Pvp0NECx1IgTb2IjoXF8X16uNqDA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.kingston-college.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.kingston-college.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kingston College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kingston College (Shibboleth)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kingston-college.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Support</md:GivenName>
+	<md:EmailAddress>mailto:itsupport@kingston-college.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Support</md:GivenName>
+	<md:EmailAddress>mailto:itsupport@kingston-college.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

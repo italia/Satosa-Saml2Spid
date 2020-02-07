@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.rrz.uni-koeln.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2011-01-14T13:33:15Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-koeln.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität zu Köln</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Universität zu Köln</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Universität zu Köln</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider der Universität zu Köln</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.rrz.uni-koeln.de/idp/images/UzK-favicon.png</mdui:Logo>
+		<mdui:Logo height="100" width="100">https://idp.rrz.uni-koeln.de/idp/images/siegel.gif</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.uni-koeln.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.uni-koeln.de</mdui:InformationURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKaTCCCVGgAwIBAgIMIPJb/Wwfj5mFZjMdMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUwODEzNDk0NVoXDTIxMDgwOTEzNDk0NVowgYkxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ4wDAYDVQQHDAVLb2VsbjEeMBwGA1UE
+CgwVVW5pdmVyc2l0YWV0IHp1IEtvZWxuMQ0wCwYDVQQLDARSUlpLMR0wGwYDVQQD
+DBRpZHAucnJ6LnVuaS1rb2Vsbi5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAMsY8d6KJbqp0IB1w+Iw6Pod/2MKKSjyhe9DUFmFBfRNspuZ0ILhomwl
+XaLXCrQ1HBCQbBu8QZy8CjoxnkBw8PTCNBvD8kGoqbC65ITx+RNOcc4+vAqWttW1
+TPU/ViFSTXt6Ooi0qiGzNzfFHJlcofx/cEY3MEce06eKFAvc5CIWMyxGvTwn48rG
+5bMoORxKzt+jszxSF89x7m5P8aGvhocxLQjK25y3E4EBVuXsESsgUNaV4ZdQfgkj
+lJyhUnOyxPaJ3ps1IiPbuqlPCH8NXu50gEw1tLxMLPFtPVk3Wa924H6zHQP1CuCa
+Gh19sRxt4H1+Un02LVIq9YRIe16NuOX6rH+U2NjMXSq5mjVUqAM7EiiF321HdGMX
+i/x9bLfUuk5zV/0gYvAU0pblRfjMbqL08LK5CiAQdGorLZu63DOe0WtxWAAYQNN/
+LxfQX4wjlrazw3X0jwJdu+LuVYdVgIatColTtQlUMHL2OVNBOfaCBRG7MrFT37h+
+QBhyFt/M6yOkRmpj4nDEWiWvTCNbYsfm+cm+RkfMl1h3XXeyO1moV4M2fpaLIsPO
+G/SV5shsqdVLFuBBFJAbIN2/6HT4HDL1oz06+2gfTRNSaC4AGjZZCOC4a8KcYzii
+g8mwWes7VWpJSSY8LFqHiCUGQ50nJcCY+Ye7aAVVi9C3oyqXvLLtAgMBAAGjggXJ
+MIIFxTBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEE
+AYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTARBg8rBgEEAYGtIYIsAgEEAwkw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBSEii4R1csdBellZcdL+9o1S2PN6jAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAfBgNVHREEGDAWghRpZHAucnJ6LnVu
+aS1rb2Vsbi5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2Eu
+ZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuG
+OWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3Js
+L2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6
+Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9
+aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNl
+cnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisG
+AQQB1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2y
+CJo32RMAAAFql7UlEAAABAMARzBFAiALOPpxeyz64JH15PPxm8Rf0qDyFwsZvGtK
+9/N3wMajwgIhAJlMLTToowof+c5nJGF6pmRfcE67Qjv/VKAV38tVZgMUAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFql7UlHQAABAMARzBFAiEA
+8IN/AtiB9DA1UhCDHMbBFDoy/24kyk8D1zzg1si7lp8CID5oNFuzJUrTKM4JslOO
+kpc8WysPvslV8bXAlDJFRbAOAHYAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6
+AwEE880AAAFql7UlDwAABAMARzBFAiBipeLnCQ7u/iRqa9YPFg9E6QNsFhw64EQL
++i4zRpI8kgIhAM492IjkOd+/QoAhiWX1x7UQQ1W422md8wlwYUhAqTxHAHYAVYHU
+whaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFql7UmEgAABAMARzBFAiEA
+nX5nPprVoWMErYmy+iRbPkibwtK6ymmqGZxLXIy8uMMCIBS4MMklztI4/1rln6Cd
+SwuyHIGsu+0AMIYftVzMQzIAAHYAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZk
+No4e0YUAAAFql7UlHAAABAMARzBFAiBGsdkxJXjy5FXBpmlwmvAjDyXYnn9EFpfT
+dQyS3b7fvwIhANmj2tp648Uitk7YPTMyEp58S05g3IpJzg4pzNk3erQUAHYApLkJ
+kLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFql7UlKQAABAMARzBFAiEA
+qb9f/OFWqNC8C4e8q95w32izAgzWznFA3jtGSPG08HgCIBFnQBSKrAEG25Xz6U1+
+TR55BkiZIJoCmJfVV01D0I8CAHUARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9Mz
+lrW2gagAAAFql7Uq3QAABAMARjBEAiBKh4EDSKxxCwlnnmtW+fRHMQ4S9+hNrwzr
+hY1UIl/zDQIgUQaJQOER8Yq9mRN5srQokJyangJktIpkPPzD1LcB/fowDQYJKoZI
+hvcNAQELBQADggEBACfc2x6EEe5Mu3hFR2IF0BXemjqkIgO3R4RD/FlHimMul/TY
+/iPbHodWmEpnpu+htaPvyYesJJkyjzw2inQZ0PDx+12ft1tJHVWAaqVkqUEx2Oi0
+unz/t+JeWznwiA97gnc6QIICCksEaQYyuSImVHmkt5RPtkCq+L6vn+os1FKQ5wuk
+20VjMiAYpLX3VQ7350InCnyCINnuUAKtSjd6JbQjgQ+d5sRtjPOrSEB6WMwu0weA
+iOJeTyQbKlDr983QKLZc+UAX7P1jW8M9JS/tm+wlOGZG0Cu1yKz5jcRzEB5B9LCZ
+O3bk08VIqp5vMA8ykOwU//RpWCBod8SPG+MBE0o=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.rrz.uni-koeln.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rrz.uni-koeln.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rrz.uni-koeln.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.rrz.uni-koeln.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rrz.uni-koeln.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-koeln.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKaTCCCVGgAwIBAgIMIPJb/Wwfj5mFZjMdMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDUwODEzNDk0NVoXDTIxMDgwOTEzNDk0NVowgYkxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ4wDAYDVQQHDAVLb2VsbjEeMBwGA1UE
+CgwVVW5pdmVyc2l0YWV0IHp1IEtvZWxuMQ0wCwYDVQQLDARSUlpLMR0wGwYDVQQD
+DBRpZHAucnJ6LnVuaS1rb2Vsbi5kZTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCC
+AgoCggIBAMsY8d6KJbqp0IB1w+Iw6Pod/2MKKSjyhe9DUFmFBfRNspuZ0ILhomwl
+XaLXCrQ1HBCQbBu8QZy8CjoxnkBw8PTCNBvD8kGoqbC65ITx+RNOcc4+vAqWttW1
+TPU/ViFSTXt6Ooi0qiGzNzfFHJlcofx/cEY3MEce06eKFAvc5CIWMyxGvTwn48rG
+5bMoORxKzt+jszxSF89x7m5P8aGvhocxLQjK25y3E4EBVuXsESsgUNaV4ZdQfgkj
+lJyhUnOyxPaJ3ps1IiPbuqlPCH8NXu50gEw1tLxMLPFtPVk3Wa924H6zHQP1CuCa
+Gh19sRxt4H1+Un02LVIq9YRIe16NuOX6rH+U2NjMXSq5mjVUqAM7EiiF321HdGMX
+i/x9bLfUuk5zV/0gYvAU0pblRfjMbqL08LK5CiAQdGorLZu63DOe0WtxWAAYQNN/
+LxfQX4wjlrazw3X0jwJdu+LuVYdVgIatColTtQlUMHL2OVNBOfaCBRG7MrFT37h+
+QBhyFt/M6yOkRmpj4nDEWiWvTCNbYsfm+cm+RkfMl1h3XXeyO1moV4M2fpaLIsPO
+G/SV5shsqdVLFuBBFJAbIN2/6HT4HDL1oz06+2gfTRNSaC4AGjZZCOC4a8KcYzii
+g8mwWes7VWpJSSY8LFqHiCUGQ50nJcCY+Ye7aAVVi9C3oyqXvLLtAgMBAAGjggXJ
+MIIFxTBZBgNVHSAEUjBQMAgGBmeBDAECAjANBgsrBgEEAYGtIYIsHjAPBg0rBgEE
+AYGtIYIsAQEEMBEGDysGAQQBga0hgiwBAQQDCTARBg8rBgEEAYGtIYIsAgEEAwkw
+CQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYwFAYIKwYBBQUHAwIG
+CCsGAQUFBwMBMB0GA1UdDgQWBBSEii4R1csdBellZcdL+9o1S2PN6jAfBgNVHSME
+GDAWgBRrOpiL+fJTidrgrbIyHgkf6Ko7dDAfBgNVHREEGDAWghRpZHAucnJ6LnVu
+aS1rb2Vsbi5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2Eu
+ZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuG
+OWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3Js
+L2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6
+Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9
+aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNl
+cnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5k
+ZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA10GCisG
+AQQB1nkCBAIEggNNBIIDSQNHAHYAb1N2rDHwMRnYmQCkURX/dxUcEdkCwQApBo2y
+CJo32RMAAAFql7UlEAAABAMARzBFAiALOPpxeyz64JH15PPxm8Rf0qDyFwsZvGtK
+9/N3wMajwgIhAJlMLTToowof+c5nJGF6pmRfcE67Qjv/VKAV38tVZgMUAHYA7ku9
+t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFql7UlHQAABAMARzBFAiEA
+8IN/AtiB9DA1UhCDHMbBFDoy/24kyk8D1zzg1si7lp8CID5oNFuzJUrTKM4JslOO
+kpc8WysPvslV8bXAlDJFRbAOAHYAqucLfzy41WbIbC8Wl5yfRF9pqw60U1WJsvd6
+AwEE880AAAFql7UlDwAABAMARzBFAiBipeLnCQ7u/iRqa9YPFg9E6QNsFhw64EQL
++i4zRpI8kgIhAM492IjkOd+/QoAhiWX1x7UQQ1W422md8wlwYUhAqTxHAHYAVYHU
+whaQNgFK6gubVzxT8MDkOHhwJQgXL6OqHQcT0wwAAAFql7UmEgAABAMARzBFAiEA
+nX5nPprVoWMErYmy+iRbPkibwtK6ymmqGZxLXIy8uMMCIBS4MMklztI4/1rln6Cd
+SwuyHIGsu+0AMIYftVzMQzIAAHYAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZk
+No4e0YUAAAFql7UlHAAABAMARzBFAiBGsdkxJXjy5FXBpmlwmvAjDyXYnn9EFpfT
+dQyS3b7fvwIhANmj2tp648Uitk7YPTMyEp58S05g3IpJzg4pzNk3erQUAHYApLkJ
+kLQYWBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFql7UlKQAABAMARzBFAiEA
+qb9f/OFWqNC8C4e8q95w32izAgzWznFA3jtGSPG08HgCIBFnQBSKrAEG25Xz6U1+
+TR55BkiZIJoCmJfVV01D0I8CAHUARJRlLrDuzq/EQAfYqP4owNrmgr7YyzG1P9Mz
+lrW2gagAAAFql7Uq3QAABAMARjBEAiBKh4EDSKxxCwlnnmtW+fRHMQ4S9+hNrwzr
+hY1UIl/zDQIgUQaJQOER8Yq9mRN5srQokJyangJktIpkPPzD1LcB/fowDQYJKoZI
+hvcNAQELBQADggEBACfc2x6EEe5Mu3hFR2IF0BXemjqkIgO3R4RD/FlHimMul/TY
+/iPbHodWmEpnpu+htaPvyYesJJkyjzw2inQZ0PDx+12ft1tJHVWAaqVkqUEx2Oi0
+unz/t+JeWznwiA97gnc6QIICCksEaQYyuSImVHmkt5RPtkCq+L6vn+os1FKQ5wuk
+20VjMiAYpLX3VQ7350InCnyCINnuUAKtSjd6JbQjgQ+d5sRtjPOrSEB6WMwu0weA
+iOJeTyQbKlDr983QKLZc+UAX7P1jW8M9JS/tm+wlOGZG0Cu1yKz5jcRzEB5B9LCZ
+O3bk08VIqp5vMA8ykOwU//RpWCBod8SPG+MBE0o=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.rrz.uni-koeln.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.rrz.uni-koeln.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e36</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e36</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität zu Köln</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Cologne</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni-koeln.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni-koeln.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Beate</md:GivenName>
+	<md:SurName>Schlesiona</md:SurName>
+	<md:EmailAddress>mailto:beate.schlesiona@uni-koeln.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Beate</md:GivenName>
+	<md:SurName>Schlesiona</md:SurName>
+	<md:EmailAddress>mailto:beate.schlesiona@uni-koeln.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Beate</md:GivenName>
+	<md:SurName>Schlesiona</md:SurName>
+	<md:EmailAddress>mailto:beate.schlesiona@uni-koeln.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Beate</md:GivenName>
+	<md:SurName>Schlesiona</md:SurName>
+	<md:EmailAddress>mailto:rrzk-unikim@uni-koeln.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

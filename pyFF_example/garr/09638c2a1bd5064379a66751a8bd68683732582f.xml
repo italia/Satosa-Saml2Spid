@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://federation.ac-strasbourg.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2015-05-19T17:24:01Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ac-strasbourg.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Rectorat de Strasbourg</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACRElEQVQoz12SS0hUARSGvztzc0rT0RIZ0KDXxkUtRNCwCMpUEh/JaERNJQoJmVGiYCgOJgmFLRRsF8FEFhRaYVGU0ULC3uIYRZYmg+ZzKh/N6L33tBjN0cPZnf/nP//5j2KIxspSUOYXjKTUi6qqOPJ3lZWkC/ry2BBtVYvI7XtdkLcns05EZOVUWaWgYAZedvWNT0zYc/aCCEYwQA2CmkB50tnT/qDbM/on1LJmZHT2cN7umOiI4JUWFRTMQ57JlIxLnr4BYmPt+7dNeec6H7rB19hceL40a5ljiCZijE54oZCoEvdnjyyVZkh1/R3IuVB3S0QCHgIESUp1QpF/Qa+pbwUHnIDjkO2b1y833YfcNx/6AxyTgrn7/UD3s97WuydDVJMCYC4uTa5ypp0uz/L5/BVnsgmJaWp57F/QFBQTcKXpEVjSUxMC3gFr+NrNcRt3xMdZw9cBTuc+V6u71/0DFBXoH5oENcoaCiCwQW1seAE+4FRRBmCLsTIzOz3zl4BCSuIW8HuGvYsKU762jrM/x65/G2wxRAc+fRlmU1R0dCQIIvrIyG+wNzS2iUhVrQsccBQKIH3SOzPnmwdHVe3NwOVUQWy2iIqa3Kpy18G0BHtucqwt0mJRFZPJ0HSrNSzfcRX858qyQSSQg27ohkh8UiXkNTa3e3/NBXJ41/N9e2IlHOp4+lZENH0pB03XRHRDpKLaBflQAMVwBOxhW8s+ugf/p7bi+RQUMI2NT1+78fzV669RkeuPFaRkHtgpQNAv/QPZiFp8RlnKfQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo0OTozNCswMjowMK744cYAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NDk6MzQrMDI6MDDfpVl6AAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.ac-strasbourg.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Rectorat de Strasbourg - federation.ac-strasbourg.fr</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Rectorat de Strasbourg</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Rectorat de Strasbourg - federation.ac-strasbourg.fr</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVzCCAj+gAwIBAgIULlCyoAcZI1HxSV9f9eQvrbmdBYswDQYJKoZIhvcNAQEF
+BQAwJjEkMCIGA1UEAwwbZmVkZXJhdGlvbi5hYy1zdHJhc2JvdXJnLmZyMB4XDTE1
+MDUyMDA5MjA1MloXDTM1MDUyMDA5MjA1MlowJjEkMCIGA1UEAwwbZmVkZXJhdGlv
+bi5hYy1zdHJhc2JvdXJnLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAhcao293f12SLrge+tM0jp4KWGfpR8PpGFcqgtyIO+o14cmrvCzXaCnMxIZrW
+XELpU6cg0NVYSkW3ECab3TQwCOLjRe/rQjFy/DrOXSMTZv1gv+H5f6bItEfsQXLF
+60gG/P+xvQVZeUMONq96DZdiUO5q81vQQE9li7Vc/DB11aTUFFcc8IVWe4MAmtBw
+boVb24xv/J9T9N5rsXHLfvUwqIKB87ULl4LEja6eNnKBCi1VR/kD1asZCip7r6SJ
+RFYDUni3NNJB6Lt+eGjxQxmXTR8CiEW80UyrvfkNI+mkuza1RzGugDD6yuRE9Sxc
+N6WkBC72JO2o6L0FK2p4Xmg97wIDAQABo30wezAdBgNVHQ4EFgQUrFJ5ZGA8dmDW
+BM9QyEUPnSFehaowWgYDVR0RBFMwUYIbZmVkZXJhdGlvbi5hYy1zdHJhc2JvdXJn
+LmZyhjJodHRwczovL2ZlZGVyYXRpb24uYWMtc3RyYXNib3VyZy5mci9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEANKeYwcZkLwQdMoI+N1HGbjaveP3e
+c125LM3ld8vBUvLOjFEz2g+MbF+jMWAWY5DXoppOc0at6/TZYgfGvee3bPh2yp9j
+cNeHOhnl5DbC7R2cmnKmNkjWHQQzTMWPNWk6aTkHvAnkNK1CzznG8E2mYxcvFIMC
+DWZztDybb/yrC7h+ZnOueklkpS++ukQ4aRmZn+4ubt0JsykFC4HEwJIXCunR1+Dn
+t+li2DFtfZBGRZT0sHiadFDVzKX6Cau/wbgJpqg1nVj0pzaYjm2aeagbgTOq7Huf
+IPwBlW0WM1jfpoYm5KZjJgGBEzQL19k+CM8uBkdlCzgbjvMx+aNDdnMmvA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://federation.ac-strasbourg.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://federation.ac-strasbourg.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://federation.ac-strasbourg.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Académie de Strasbourg</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Académie de Strasbourg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ac-strasbourg.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Equipe Infrastructures</md:SurName>
+	<md:EmailAddress>mailto:idp@ac-strasbourg.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

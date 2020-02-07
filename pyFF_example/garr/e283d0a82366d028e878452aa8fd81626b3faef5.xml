@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.wm.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wm.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">William &amp; Mary</mdui:DisplayName>
+		<mdui:Description xml:lang="en">SSO for William &amp; Mary.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.wm.edu/offices/it/security/securitypolicy/index.php</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="220" xml:lang="en">https://static.wm.edu/it/iam/wm_incommon_wayf.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFDCCAfygAwIBAgIVAMp2BzquGFXmISEolT3i+yenY4MrMA0GCSqGSIb3DQEB
+BQUAMBUxEzARBgNVBAMTCmlkcC53bS5lZHUwHhcNMTAwMzMwMTM0MTM5WhcNMzAw
+MzMwMTM0MTM5WjAVMRMwEQYDVQQDEwppZHAud20uZWR1MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAgHTuDpXR5FygeQhXnlQGd39kAgOSs+DCT7twJ39T
+7kuKNd0XAlChg3LSPUMFIPwGWg7xfS9s/bodGuHgLpfpL/m7NW++rDwjoPnhfCYc
+0lXUBNHahowMENdbdQGFpDwX/fS80UHenIiwLnG9z5DpjiiSZTlvRPpZ5wZF8ixj
+eIKuCbSIz8Z9Bi0AOXRwV5L5OPLqiphPN65PFy0HYC/cOL6mxvbGkzUVjxFQXACC
+tQ//C7vkO9ftqP+jolPE/tZsQBcIVsAL7FRJHAOfmpN3/09mpFVu6en/9bqd20nK
+DYsK2FAu97mrGWpfYFk/nWMMIwdL2KinVhzLNcwr5g8DvwIDAQABo1swWTA4BgNV
+HREEMTAvggppZHAud20uZWR1hiFodHRwczovL2lkcC53bS5lZHUvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFOxc2i6eoVNj767TtoVMNQlnIjXbMA0GCSqGSIb3DQEB
+BQUAA4IBAQAvfO9Y0q3AQ7+Zf74Oq7okfZOuWPH8Pnrdnia+U8KiG7HSPkes7g1/
+iv0tmzMTJWxc1OVq727xBV6IxNdFz0I25MEwPWYbOEAAc+MfLR13h7lvZ60QSJQc
+MRNuRN37kDjfWkWxSHVGLodEU/Y5i72C03aH6bUDNEurVk63lqWm2hxAAvegTyoH
+EeZaazkU17D9zucq5RlcsDxCpPCD8nnB+59J8cpyX0GHOdiwWptZQvXx/VQpqlJT
+DX2ljKn2p2dgvW3kdPGTKp09DtjpRc8nLRqbwakIsa/Q9Ufr1emzm1RLun0hKIS8
+306VYkYFpdyAxtQI164I/aiuurKKJQxG
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.wm.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.wm.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.wm.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">William and Mary</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">William and Mary</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.wm.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Authentication Systems</md:GivenName>
+	<md:EmailAddress>it-authentication@wm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IT Accounts Management</md:GivenName>
+	<md:EmailAddress>accounts@wm.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Security Office</md:GivenName>
+	<md:EmailAddress>abuse@wm.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

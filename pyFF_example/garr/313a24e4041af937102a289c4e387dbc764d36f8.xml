@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://igc-qa.ucop.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://igc-qa.ucop.edu/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://metadataqa.ucop.edu/Shibboleth.sso/Login" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">UCOP InfoSphere Information Governance(IGC)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">UCOP SSO implementation to access IBM InfoSphere Information Governance Catalog application</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ucop.edu/ethics-compliance-audit-services/_files/compliance/privacy/statement-of-privacy-for-web-based-applications.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.ucop.edu/_common/_images/sso/uc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID3DCCAkSgAwIBAgIJAOYZ0BoSz4C7MA0GCSqGSIb3DQEBCwUAMBIxEDAOBgNV
+BAMTB2lnYy1kZXYwHhcNMTkxMDI4MjE0NDIyWhcNMjkxMDI1MjE0NDIyWjASMRAw
+DgYDVQQDEwdpZ2MtZGV2MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA
+0+PL4w9jdVbksdH+/96d1aOr3d64GLRrzSjNKW3bAgWpF+hwVWc+IUx3dfRJYC3n
+qMKkmxWVSrkc9yN8kEMdn3XI5VHP1K4T2ad3WrqzKrqvF8/CbrCU2MTGEkXB+QZO
+YDMKx3k6tuDGHDpw9un7V32qSVqEUbt1fgiek15K8kcEzjGkimFDt+SyPf9FQbV5
+w+zVQC9cmyUXOU67LBSpRv9pmbd7BTYDpz2M/a9U/dmMoyiMIbp5sHR58efmhuFa
+8/sKj7O+MFOVXWpP0WNaAN29kih/mQnf7X0FhVWtz/JJYty1ysdElJHLJ0weiIek
+hpYqZiV5jHjyFaRZ/dnisyn50b7Ch6WLzHq5AMevMDRJKeylY128ahO2TlT0BhKD
+1Le8OhY7nNOcNWvzHTaS/M3WU/88uTuogYmIGHDRO+Am9DOCenGt4Eo4/I0/lsjh
+hk4WdjwNTNnPtW89Jv95mvYp9j8D23A0EDdAi4c8AqVDXQrMAqhei/voWe4Au9G7
+AgMBAAGjNTAzMBIGA1UdEQQLMAmCB2lnYy1kZXYwHQYDVR0OBBYEFKrFwmIbd8Gg
+veVNBfbkFQuNqTa/MA0GCSqGSIb3DQEBCwUAA4IBgQBVsha/x2li6cqLyx+KAkse
+lue3YaDqKIFswuNlwCqMIrrVFCwm7fh0wOw7nWbSto287VopXbYa1lOwTlVp5d4+
++AOmHe3w7qdhGTFv5YYQuVezd5piiPT/1YG5fBylr0CIRQirs5o1cC1Y3hyg3496
+07QT7ndA4UW7imEVLif0xjfM8ulaqNdP5tYGDViEvBTIR8w4i0hWFpuIOl5vaT94
+8WpwvxSujx3uUZD5034fM7P+G82Xcpg8WYj6es12dmLUySjm0BZ+lVSqOHUteEc5
+kngmyLDc6U0NiPviupWzSF+za0OYpXBA7kGaMSGZ13XGGy8lfuGzjaGU+MvV9i6T
+yN1+VfZa0xH5DDh9DO2fcSD1Qr7aHLRs7wNnPQyA2yFbqozW/GogpXYz30dB1msx
+Dxu7q9Jd19HrObXpsHcXVEKpN+f60LFIj0k5JV7TgLWnrfoZumib6xbWRFPr/HGU
+2E3A+QUb7Y3dTqercgJnah7NRr521igwQwOYdXD45gs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://igc-qa.ucop.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://igc-qa.ucop.edu/Shibboleth.sso/SAML/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://metadataqa.ucop.edu/Shibboleth.sso/SAML2/POST" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://metadataqa.ucop.edu/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">UCOP InfoSphere Information Governance(IGC)</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">UCOP SSO implementation to access IBM InfoSphere Information Governance Catalog application</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California - Office of the President</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California - Office of the President</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucop.edu/welcome.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>UCOP IAM</md:GivenName>
+	<md:EmailAddress>iamGrp@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UCOP IAM</md:GivenName>
+	<md:EmailAddress>iamGrp@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Operations</md:GivenName>
+	<md:EmailAddress>soc@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

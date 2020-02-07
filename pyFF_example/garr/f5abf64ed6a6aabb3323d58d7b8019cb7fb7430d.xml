@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://checkin.thga.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2018-11-16T08:21:55Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>basic</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">thga.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">dmt-lb.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">THGA Bochum</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">THGA Bochum</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Technische Hochschule Georg Agricola Bochum</mdui:Description>
+		<mdui:Description xml:lang="en">TH Georg Agricola University of Applied Sciences Bochum</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.thga.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="120" width="240">https://checkin.thga.de/idp/images/THGA-Logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKbzCCCVegAwIBAgIMH97CtLzX3GKM/VraMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTAxMTEyNDIyMVoXDTIxMDExMjEyNDIyMVowgYUxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ8wDQYDVQQHDAZCb2NodW0xLTArBgNV
+BAoMJFRlY2huaXNjaGUgSG9jaHNjaHVsZSBHZW9yZyBBZ3JpY29sYTEYMBYGA1UE
+AwwPY2hlY2tpbi50aGdhLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC
+AgEAu1SnpBjbUMSHyEFBroN3Ads7TORBgHEeWYFXaAflIgLZhyDw5OuAbOyfQ0d6
+MymO4fQqiKUucd+63enJE6N1Llse3/PJPg3Qq4NnmwxK/+yarZdbDta2w1fnzk8O
+eQHoz2znwryvLi/IgwMNApDqQ9B2TgnzS4h9oN09jELqb+awJJKW8mKVoJUPrbqI
+XEJP+eBfkvDcwDZwS6BeC4tJS7UgcMCuOkpHS6TkliMAz65G39j0MFdwabk0pAW5
+4me9BiF+idp71YeT+9GAE+z+qjTGatcIV48PQaDVHMf3bEKyQUXSE43GoUyWWz7G
+KL/0hz9CKCCSN6QsIgufZxbgI5nnoRbjfhybB95vx1Y8epJfr6CScV3oJ2Sull6i
+Z/v+Vrr5ywIyNb4662FL/fBBVUMGSjiAUoCu3s47My3q9kqNI5/OxPY5PiwLFesi
+o4PjwEPFSrs1kNarS1uaksjVC5sV/AOF+jKq1jQR3NnMF0hTxgYbv4iGxpZLA8mB
+82UFHcHy/Ri/bFddEXcUYW3CiB79a9Fa6QPUhXdgs82kdtE0E636KnALhXKFy+CJ
+2oUqQK0bcMsyu+D61mBmngOKLgJVIrHUZloZxkvu+ZTy5hmY8mGnVZOqzcJC02s4
+aQ2brubReX3Qt3uBi+ApitvSQnGmiUqOi1CyiPCtGybRSIsCAwEAAaOCBdMwggXP
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFCaxkS0iAJr+Tv3LNtudqPig6rcvMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCcGA1UdEQQgMB6CD2NoZWNraW4udGhnYS5k
+ZYILY2FzLnRoZ2EuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEu
+cGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+g
+PaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhido
+dHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUH
+MAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNf
+BgorBgEEAdZ5AgQCBIIDTwSCA0sDSQB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEA
+KQaNsgiaN9kTAAABZmMmRpYAAAQDAEcwRQIhAOhlJNzPXRfmC2AQ1Mw81LmTQy7y
+14w16W8PBgXxofzTAiAg2qHqvT2DnH/ckof+cVRBtXTPJ6+f88q6HuMazI4EfQB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZmMmRpcAAAQDAEcw
+RQIgaz9FEsZqzlTkCPOY/9p8OejovzU+kU3sOzf/KL7dAU8CIQC+iKCjIyfQi4E1
++cRMBW5MuBSRXuvLoz2/rsh3hFY46AB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZmMmR44AAAQDAEcwRQIhAN/buX+XP6i8I+FMsRMuACKrA90S
+8SCnmgUutulxm2zaAiAwZyJZSIKyXlQ1PCaPf2OX3AqT7aDfvVIs49Z9h09uMwB3
+AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABZmMmRq0AAAQDAEgw
+RgIhAIj07ENejPUsZTJP6yB8CT+qvBQmi+AfTOlmfPt5Z922AiEAl5y6rJ9tNj8Z
+fxszTOcrAtZ6Pa88r3WKObcNXLIVrW8AdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb
+37jjd80OyA3cEAAAAWZjJkjxAAAEAwBHMEUCIDt2w68vF+iNYXUTFrCoeVjT/gi5
+GJzhOXxsYiwfB5FWAiEAqQFsC2I1Nwj8bEYP31AKNl0ZEq+azjCHkN3DvN4iLYgA
+dgC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAAAWZjJkjhAAAEAwBH
+MEUCIQCXBaozi+6e6PiVaPq9pBIoQW6JlRkiTuLiutp/r0oS1wIgBmn5XRQFnNca
+0eSQ4yMxU10ylgbR07POu1HBt+qgIT0AdgBElGUusO7Or8RAB9io/ijA2uaCvtjL
+MbU/0zOWtbaBqAAAAWZjJkp1AAAEAwBHMEUCIQCaFoNM08OW9XfU+PSSNCacxE4J
+VJF9b0V/bXceOQWoQQIgJ02I+LY6OObe2s4XxSJMmyekWexwN2a2siyRNLvgW6ww
+DQYJKoZIhvcNAQELBQADggEBABovKEhxblcY78Y1tRb5KbLgsbApa2FAipLgFEYz
+I2eWoSn7fPX10tuu4HO3pGQ59TJnVgV5MtC17sgrlgE3CXwT4cs8XUpMnYcWofvV
+qXkNNpe0UXIndA+WH3U+3OuRJd+EngPsemSYGOfe8uCqlZegfqBts2tWCBAZIObc
+1M4VxbTMu/0Z33otiVVrVzMmSe1lzlNcMYKcc1gyO+qkVnhG322svhaakaJGaFgU
+hggjb7e5umStX0snbpaEIV2hwiOR2MBA0ML7kMIzaPBfV6AkofIJFie/D6/zDRcy
++JT4NfKivfaXJvjLVmHBfciJ9ibwLzyOxPdpR28UWKLKv0U=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://checkin.thga.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://checkin.thga.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://checkin.thga.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://checkin.thga.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://checkin.thga.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://checkin.thga.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">thga.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">dmt-lb.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKbzCCCVegAwIBAgIMH97CtLzX3GKM/VraMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MTAxMTEyNDIyMVoXDTIxMDExMjEyNDIyMVowgYUxCzAJBgNVBAYTAkRFMRwwGgYD
+VQQIDBNOb3JkcmhlaW4tV2VzdGZhbGVuMQ8wDQYDVQQHDAZCb2NodW0xLTArBgNV
+BAoMJFRlY2huaXNjaGUgSG9jaHNjaHVsZSBHZW9yZyBBZ3JpY29sYTEYMBYGA1UE
+AwwPY2hlY2tpbi50aGdhLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC
+AgEAu1SnpBjbUMSHyEFBroN3Ads7TORBgHEeWYFXaAflIgLZhyDw5OuAbOyfQ0d6
+MymO4fQqiKUucd+63enJE6N1Llse3/PJPg3Qq4NnmwxK/+yarZdbDta2w1fnzk8O
+eQHoz2znwryvLi/IgwMNApDqQ9B2TgnzS4h9oN09jELqb+awJJKW8mKVoJUPrbqI
+XEJP+eBfkvDcwDZwS6BeC4tJS7UgcMCuOkpHS6TkliMAz65G39j0MFdwabk0pAW5
+4me9BiF+idp71YeT+9GAE+z+qjTGatcIV48PQaDVHMf3bEKyQUXSE43GoUyWWz7G
+KL/0hz9CKCCSN6QsIgufZxbgI5nnoRbjfhybB95vx1Y8epJfr6CScV3oJ2Sull6i
+Z/v+Vrr5ywIyNb4662FL/fBBVUMGSjiAUoCu3s47My3q9kqNI5/OxPY5PiwLFesi
+o4PjwEPFSrs1kNarS1uaksjVC5sV/AOF+jKq1jQR3NnMF0hTxgYbv4iGxpZLA8mB
+82UFHcHy/Ri/bFddEXcUYW3CiB79a9Fa6QPUhXdgs82kdtE0E636KnALhXKFy+CJ
+2oUqQK0bcMsyu+D61mBmngOKLgJVIrHUZloZxkvu+ZTy5hmY8mGnVZOqzcJC02s4
+aQ2brubReX3Qt3uBi+ApitvSQnGmiUqOi1CyiPCtGybRSIsCAwEAAaOCBdMwggXP
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYB
+BQUHAwEwHQYDVR0OBBYEFCaxkS0iAJr+Tv3LNtudqPig6rcvMB8GA1UdIwQYMBaA
+FGs6mIv58lOJ2uCtsjIeCR/oqjt0MCcGA1UdEQQgMB6CD2NoZWNraW4udGhnYS5k
+ZYILY2FzLnRoZ2EuZGUwgY0GA1UdHwSBhTCBgjA/oD2gO4Y5aHR0cDovL2NkcDEu
+cGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jcmwvY2FjcmwuY3JsMD+g
+PaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHVi
+L2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHLMDMGCCsGAQUFBzABhido
+dHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVyL09DU1AwSQYIKwYBBQUH
+MAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIv
+Y2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAyLnBjYS5k
+Zm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwggNf
+BgorBgEEAdZ5AgQCBIIDTwSCA0sDSQB2AG9Tdqwx8DEZ2JkApFEV/3cVHBHZAsEA
+KQaNsgiaN9kTAAABZmMmRpYAAAQDAEcwRQIhAOhlJNzPXRfmC2AQ1Mw81LmTQy7y
+14w16W8PBgXxofzTAiAg2qHqvT2DnH/ckof+cVRBtXTPJ6+f88q6HuMazI4EfQB2
+AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPNAAABZmMmRpcAAAQDAEcw
+RQIgaz9FEsZqzlTkCPOY/9p8OejovzU+kU3sOzf/KL7dAU8CIQC+iKCjIyfQi4E1
++cRMBW5MuBSRXuvLoz2/rsh3hFY46AB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUI
+Fy+jqh0HE9MMAAABZmMmR44AAAQDAEcwRQIhAN/buX+XP6i8I+FMsRMuACKrA90S
+8SCnmgUutulxm2zaAiAwZyJZSIKyXlQ1PCaPf2OX3AqT7aDfvVIs49Z9h09uMwB3
+AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABZmMmRq0AAAQDAEgw
+RgIhAIj07ENejPUsZTJP6yB8CT+qvBQmi+AfTOlmfPt5Z922AiEAl5y6rJ9tNj8Z
+fxszTOcrAtZ6Pa88r3WKObcNXLIVrW8AdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb
+37jjd80OyA3cEAAAAWZjJkjxAAAEAwBHMEUCIDt2w68vF+iNYXUTFrCoeVjT/gi5
+GJzhOXxsYiwfB5FWAiEAqQFsC2I1Nwj8bEYP31AKNl0ZEq+azjCHkN3DvN4iLYgA
+dgC72d+8H4pxtZOUI5eqkntHOFeVCqtS6BqQlmQ2jh7RhQAAAWZjJkjhAAAEAwBH
+MEUCIQCXBaozi+6e6PiVaPq9pBIoQW6JlRkiTuLiutp/r0oS1wIgBmn5XRQFnNca
+0eSQ4yMxU10ylgbR07POu1HBt+qgIT0AdgBElGUusO7Or8RAB9io/ijA2uaCvtjL
+MbU/0zOWtbaBqAAAAWZjJkp1AAAEAwBHMEUCIQCaFoNM08OW9XfU+PSSNCacxE4J
+VJF9b0V/bXceOQWoQQIgJ02I+LY6OObe2s4XxSJMmyekWexwN2a2siyRNLvgW6ww
+DQYJKoZIhvcNAQELBQADggEBABovKEhxblcY78Y1tRb5KbLgsbApa2FAipLgFEYz
+I2eWoSn7fPX10tuu4HO3pGQ59TJnVgV5MtC17sgrlgE3CXwT4cs8XUpMnYcWofvV
+qXkNNpe0UXIndA+WH3U+3OuRJd+EngPsemSYGOfe8uCqlZegfqBts2tWCBAZIObc
+1M4VxbTMu/0Z33otiVVrVzMmSe1lzlNcMYKcc1gyO+qkVnhG322svhaakaJGaFgU
+hggjb7e5umStX0snbpaEIV2hwiOR2MBA0ML7kMIzaPBfV6AkofIJFie/D6/zDRcy
++JT4NfKivfaXJvjLVmHBfciJ9ibwLzyOxPdpR28UWKLKv0U=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://checkin.thga.de/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e610</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e610</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Technische Hochschule Georg Agricola</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Technische Hochschule Georg Agricola</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.thga.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.thga.de/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>DAASI</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@daasi.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>THGA Support</md:GivenName>
+	<md:EmailAddress>mailto:support@thga.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>THGA Support</md:GivenName>
+	<md:EmailAddress>mailto:support@thga.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

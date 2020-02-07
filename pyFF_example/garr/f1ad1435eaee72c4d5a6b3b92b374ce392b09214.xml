@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:federation.org.au:testfed:mq.edu.au">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://aaf.edu.au" registrationInstant="2018-08-24T00:27:51Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://aaf.edu.au/media/metadata/aaf-mdrps-v1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Macquarie University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Macquarie University IdP</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">mq.edu.au</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUBGeJL5qVyVg4rJzxFX3hMkbjmOEwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLm1xLmVkdS5hdTAeFw0xOTA4MjcyMzIzMjlaFw00
+OTA4MjcyMzIzMjlaMBgxFjAUBgNVBAMMDWlkcC5tcS5lZHUuYXUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDFU9oGg1a+7yCZ7sRR0s0R+XfUZ8qQXl8j
+sGAT2Ly5yQYKqtt2LeGPqBakNn1MgOfm4ywXjbh2UP0UVPds9s3Pz/z5+1d29+oR
+W42Z7lvXsX19z0Ge+zPwWPezxTEMlZV9gIEYNX8J27QFP1Y2pxK4PTjFvJ3Mz+b5
+F4GIVqArMe5/6z01d2w3o1X1sMhWcZnRrrGFsHEWiKz1YsYgzhHgDXiVJAvXyxA6
+zjnj6foCw6n4ireQm7GNJ02ArxdcIWDZr40jYigZZrbByZpOZetnIz/3h7IOoCIl
+1mKbKTHICOiRQc5v+w+UyW2IpdK5jwZfsDZmZbJUU/jXGt2zFXRXAgMBAAGjaTBn
+MB0GA1UdDgQWBBR64y6LXNnb1IS178ULvDY+d1KJyjBGBgNVHREEPzA9gg1pZHAu
+bXEuZWR1LmF1hix1cm46bWFjZTpmZWRlcmF0aW9uLm9yZy5hdTp0ZXN0ZmVkOm1x
+LmVkdS5hdTANBgkqhkiG9w0BAQsFAAOCAQEABjuOHAKE2GpLgYouelSyDNRERDRC
+wrMLwhCUfWAq4u04//BxHk2yhu8LfH9zjEiB0TyG6Wbx/mJ6Jubtqlholk/e2VSs
+/7pVfcw7rgimq2aTHpbCAbaqLGAHos8+LH6zZ7/NwJJ/wd3VdpVocdyBwhh6bvAN
+Q50FauqRAkfNN4WE+ypmAE5F3gdJTMLM4a/jYygVwOx0sFh5YJmpNv9I2AEfC1ls
+c/ZiwH2jr8VWsQ3kpqlpvfR4Np19bCpKh1q5gFfjnUlO+vHQgiRQFmPd/2DImsxB
+Zm5yLg3GUPnFp0OBP25+sTd1iVcj5L2SvoA3SPM2HCiKgC7WRcOe2DwtRQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUbGI93gHHK4ZV1udsJIdYSil5CiMwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLm1xLmVkdS5hdTAeFw0xODEwMjUwMDA5NTZaFw00
+ODEwMjUwMDA5NTZaMBgxFjAUBgNVBAMMDWlkcC5tcS5lZHUuYXUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDprgZvUlytWOKCdvjeQT4aiaxvDQaKKfYy
+StrFSO7keqzTNq9e4ENQrxk942b1MJuD9hs9RBvY3+Oq7HwnH24drBaCBfvCCqKl
+WqL/1rsZQ8mJVRmAeKDr+6fhsSG/fIeV4nXc6QhcPVLyceuR3dnn6xfgor6uYCvT
+l3ZVD1IaNMv9zlmCoxc486M3UJ9lFdURKtHb5tEX7rFydc/gMcVsJlizJgmXlLqP
+nqZYYhzbPwX4VkhvlxgdFN5n6i2b12E3MKUSSNMwspdmPwOEwob1IyvxlqyNxx8X
+ge3brwNmC8hpgs622Xuq2Q0r1MSCZIqgVrDdKhDUq9EmTdPtZRsjAgMBAAGjaTBn
+MB0GA1UdDgQWBBRamfOQzVwAdDcF2hfc68i/zMGtsDBGBgNVHREEPzA9gg1pZHAu
+bXEuZWR1LmF1hix1cm46bWFjZTpmZWRlcmF0aW9uLm9yZy5hdTp0ZXN0ZmVkOm1x
+LmVkdS5hdTANBgkqhkiG9w0BAQsFAAOCAQEAU9/KZD+Kvg2iSidfbp5wVMfc+osd
+hB2pEF09YcZ7ES3VpJ4EKHZIlRTpdzw5hUGikjPwIrNp6ytfJ9J7ZHPPHxgja1cT
+uDohF9BoNmNvjTksVFz24zzt4qTZSB3fFCKQMmIuxL8BxPkZvIcZvfjmphRAm8Vm
+QIxQGQb6zaQRVa8nAouWtpZKAOpg2gVL6J7UybCE/72fZCsgjLksb/kUwnKwWThz
+YaRBH6FtMjf5Q6O4Oiez0cMq9mt5zNcdYHY8WAAaqi+VMv/Pum/PoILVDWj4oWPr
+5AIcoBate/X1anz/urRrtdi9xWvXHwEOUzAozC9XhxlxlYA0HHPGMsqTLQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.mq.edu.au/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.mq.edu.au/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.mq.edu.au/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.mq.edu.au/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.mq.edu.au/idp/profile/SAML2/SOAP/ECP"/>
+	<saml:Attribute FriendlyName="homeOrganizationType" Name="urn:oid:1.3.6.1.4.1.25178.1.2.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="telephoneNumber" Name="urn:oid:2.5.4.20" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="organizationalUnit" Name="urn:oid:2.5.4.11" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonAssurance" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.11" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonPrimaryAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="auEduPersonSharedToken" Name="urn:oid:1.3.6.1.4.1.27856.1.2.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="auEduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.27856.1.2.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="homeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="mobileNumber" Name="urn:oid:0.9.2342.19200300.100.1.41" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="auEduPersonLegalName" Name="urn:oid:1.3.6.1.4.1.27856.1.2.2" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="organizationName" Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="postalAddress" Name="urn:oid:2.5.4.16" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Macquarie University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Macquarie University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://mq.edu.au</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Australian Access Federation</md:Company>
+	<md:GivenName>AAF</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@aaf.edu.au</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Australian Access Federation</md:Company>
+	<md:GivenName>AAF</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:support@aaf.edu.au</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>Australian Access Federation</md:Company>
+	<md:GivenName>AAF</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:security@aaf.edu.au</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

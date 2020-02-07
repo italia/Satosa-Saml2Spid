@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.ligo.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.ligo.org/support.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ligo.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LIGO Scientific Collaboration</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Laser Interferometer Gravitational-Wave Observatory (LIGO)</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=89286</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=89243</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://login.ligo.org/SAML2/metadata/ui/ligologo80x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEljCCA36gAwIBAgICAJwwDQYJKoZIhvcNAQEFBQAwgYcxEzARBgoJkiaJk/Is
+ZAEZFgNvcmcxFDASBgoJkiaJk/IsZAEZFgRsaWdvMQ0wCwYDVQQKEwRMSUdPMSAw
+HgYDVQQLExdDZXJ0aWZpY2F0ZSBBdXRob3JpdGllczEVMBMGA1UECxMMV2ViIFNl
+cnZpY2VzMRIwEAYDVQQDEwlMSUdPIENBIDEwHhcNMTMxMTEyMjEzNjI3WhcNMjMx
+MTEyMjEzNjI3WjBzMRMwEQYKCZImiZPyLGQBGRYDb3JnMRQwEgYKCZImiZPyLGQB
+GRYEbGlnbzENMAsGA1UEChMETElHTzEVMBMGA1UECxMMV2ViIFNlcnZpY2VzMSAw
+HgYDVQQDExdsaWdvLWxvZ2luLnBoeXMudXdtLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAMQHAdPnOmQc9Wa++z1KJUY8wNdX+NsGa7VdFwBcgrnr
+U6qY0OrUpKKGP1q9+3rbdhw+26D3NtCeydn5MQEr2bwrFQOPZqhFNsgGRmXtJc7T
+4uJOJN9cllEZN1hqU0EqXD9Gi+SQ07BTLO1HG0t70DkydQxXI2M4OQ0sDP/7SSab
+nSvztjXeAj98pVyqLj44JTOETFQTceJ0KcMnaAjlZKTFvU1l2lW8uPyQEgQP5cLM
+QS7ZuYtkp6M2vwViQMMksKqSzx0MXjjWH5Hs8ozfHF84tyJUq/2BtmqHhWoWCq+3
+EYEbS4GULfWbyK4oOIl/F3pNgR8WixtUXPz6dy1+Q7ECAwEAAaOCAR0wggEZMAwG
+A1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAZBgNVHSAEEjAQMA4GDCsGAQQBgfpGAgECATA5BgNVHR8EMjAw
+MC6gLKAqhihodHRwOi8vY2EubGlnby5vcmcvNTQxNDA0YzMvNTQxNDA0YzMuY3Js
+MB8GA1UdIwQYMBaAFFJu3Xuqb4VcCCLTl5+tfyNWHmrRMGMGA1UdEQRcMFqCF2xp
+Z28tbG9naW4ucGh5cy51d20uZWR1gg5sb2dpbi5saWdvLm9yZ4IPbG9naW4xLmxp
+Z28ub3JnggxpZHAubGlnby5vcmeBEHJ0LWF1dGhAbGlnby5vcmcwDQYJKoZIhvcN
+AQEFBQADggEBAF5M6bIShQM33qnNK6/WmtzNP/+x/tW+OKKzdp6Aynl5fGm0QmdK
+0qeI2T3fYHqT7KTVJqA6NFcXbQUrHmJwEAtIlD8gklHMI3LVcy460SBfkRXwEIXt
+rQ+vktmJxzU725XT8VLzkt5i8c+xibVTJVrpYXYWXEDLP/tkMRqMtWO72aek2RV0
+pFApwEgu91iPFEL5DU31dbf+tUFQglt1lofm2EiLAq6auTphsTs6nu5b8k+eh26y
+4f7CtSOMPJoOvBC7ZZj5spPMYP1nWcDsQIF6LylwyNI2XxBIll/FuM9mSBAZ6fSL
+QSLgCeM9S63LSKOHx0cXPde6ccFKoDtcNiY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEaTCCA1GgAwIBAgIBKTANBgkqhkiG9w0BAQUFADCBhzETMBEGCgmSJomT8ixk
+ARkWA29yZzEUMBIGCgmSJomT8ixkARkWBGxpZ28xDTALBgNVBAoTBExJR08xIDAe
+BgNVBAsTF0NlcnRpZmljYXRlIEF1dGhvcml0aWVzMRUwEwYDVQQLEwxXZWIgU2Vy
+dmljZXMxEjAQBgNVBAMTCUxJR08gQ0EgMTAeFw0xMDEyMjAxOTQzMjFaFw0yMDEy
+MTkxOTQzMjFaMHMxEzARBgoJkiaJk/IsZAEZFgNvcmcxFDASBgoJkiaJk/IsZAEZ
+FgRsaWdvMQ0wCwYDVQQKEwRMSUdPMRUwEwYDVQQLEwxXZWIgU2VydmljZXMxIDAe
+BgNVBAMTF2xpZ28tbG9naW4ucGh5cy51d20uZWR1MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA5aWnGpOBykQtq5ybHIORdGTB+2VZ/2btQDb28/c3ClCI
+XmDte4OSxxon33EVPZcdWWAts03dWvvR3EZCsIqUADwAsG97pyCPqJ5A44/Cp3XN
+Yc2sGnnn8/iKdjaTuiD0huf075a/QcqO6qhE6RQ0Zybw9UmV//iYCb1CqG0NbuTZ
+sBm+SK/9MkkLYaKYXP5dR1qxiHRDcH1WRn/lcTG3Ln6WOrwJn+e7dVRObGMAIDzi
+NJH/2B4PcgEW4Gc/FwghkcZ61Qj15NpuTg0Y9NwsCrpuXaTkuwVKU8w8rS7gOgdl
+OCa+aMeU6sKVvjDxmQC5FboZUwlGIAwAHkT2pVCv9wIDAQABo4HyMIHvMAwGA1Ud
+EwEB/wQCMAAwDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr
+BgEFBQcDAjAZBgNVHSAEEjAQMA4GDCsGAQQBgfpGAgECATA5BgNVHR8EMjAwMC6g
+LKAqhihodHRwOi8vY2EubGlnby5vcmcvNTQxNDA0YzMvNTQxNDA0YzMuY3JsMB8G
+A1UdIwQYMBaAFFJu3Xuqb4VcCCLTl5+tfyNWHmrRMDkGA1UdEQQyMDCCLmxpZ28t
+bG9naW4ucGh5cy51d20uZWR1OnNjb3R0LmtvcmFuZGFAbGlnby5vcmcwDQYJKoZI
+hvcNAQEFBQADggEBADd3Vkq5UNNf0q0Tm4tM19o8Zo5vSA9qA09qOHH270MKakVh
+NXeikHm4FMJKE731D8vwqUDFX0PqN9ndkWLqI9+vtPstqbl7xEbhXfFAjvAj6ieP
+AlKinu+VwG8lqcSRzrgDl40DGZbxYwcqaLqkY3DvJQphcL9+cMVNwixR+2ceACVU
+9nJhBjNdtVo5HiayNy1qIHoVnyxfRJcET5Z9fl9WoTGBkQgd2+XNBxe3ECLpe4gw
+GKBexp0LpbBvqRLMito7jIbPE5NzCjw69NpcIE+COkQc+ifV8FbD0OQOin06/qDi
+0+fCAYmI2uE8jfuGOhKWTsSUWe35LFWIOuaIPZo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login1.ligo.org:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.ligo.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.ligo.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.ligo.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.ligo.org/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ligo.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEljCCA36gAwIBAgICAJwwDQYJKoZIhvcNAQEFBQAwgYcxEzARBgoJkiaJk/Is
+ZAEZFgNvcmcxFDASBgoJkiaJk/IsZAEZFgRsaWdvMQ0wCwYDVQQKEwRMSUdPMSAw
+HgYDVQQLExdDZXJ0aWZpY2F0ZSBBdXRob3JpdGllczEVMBMGA1UECxMMV2ViIFNl
+cnZpY2VzMRIwEAYDVQQDEwlMSUdPIENBIDEwHhcNMTMxMTEyMjEzNjI3WhcNMjMx
+MTEyMjEzNjI3WjBzMRMwEQYKCZImiZPyLGQBGRYDb3JnMRQwEgYKCZImiZPyLGQB
+GRYEbGlnbzENMAsGA1UEChMETElHTzEVMBMGA1UECxMMV2ViIFNlcnZpY2VzMSAw
+HgYDVQQDExdsaWdvLWxvZ2luLnBoeXMudXdtLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAMQHAdPnOmQc9Wa++z1KJUY8wNdX+NsGa7VdFwBcgrnr
+U6qY0OrUpKKGP1q9+3rbdhw+26D3NtCeydn5MQEr2bwrFQOPZqhFNsgGRmXtJc7T
+4uJOJN9cllEZN1hqU0EqXD9Gi+SQ07BTLO1HG0t70DkydQxXI2M4OQ0sDP/7SSab
+nSvztjXeAj98pVyqLj44JTOETFQTceJ0KcMnaAjlZKTFvU1l2lW8uPyQEgQP5cLM
+QS7ZuYtkp6M2vwViQMMksKqSzx0MXjjWH5Hs8ozfHF84tyJUq/2BtmqHhWoWCq+3
+EYEbS4GULfWbyK4oOIl/F3pNgR8WixtUXPz6dy1+Q7ECAwEAAaOCAR0wggEZMAwG
+A1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAZBgNVHSAEEjAQMA4GDCsGAQQBgfpGAgECATA5BgNVHR8EMjAw
+MC6gLKAqhihodHRwOi8vY2EubGlnby5vcmcvNTQxNDA0YzMvNTQxNDA0YzMuY3Js
+MB8GA1UdIwQYMBaAFFJu3Xuqb4VcCCLTl5+tfyNWHmrRMGMGA1UdEQRcMFqCF2xp
+Z28tbG9naW4ucGh5cy51d20uZWR1gg5sb2dpbi5saWdvLm9yZ4IPbG9naW4xLmxp
+Z28ub3JnggxpZHAubGlnby5vcmeBEHJ0LWF1dGhAbGlnby5vcmcwDQYJKoZIhvcN
+AQEFBQADggEBAF5M6bIShQM33qnNK6/WmtzNP/+x/tW+OKKzdp6Aynl5fGm0QmdK
+0qeI2T3fYHqT7KTVJqA6NFcXbQUrHmJwEAtIlD8gklHMI3LVcy460SBfkRXwEIXt
+rQ+vktmJxzU725XT8VLzkt5i8c+xibVTJVrpYXYWXEDLP/tkMRqMtWO72aek2RV0
+pFApwEgu91iPFEL5DU31dbf+tUFQglt1lofm2EiLAq6auTphsTs6nu5b8k+eh26y
+4f7CtSOMPJoOvBC7ZZj5spPMYP1nWcDsQIF6LylwyNI2XxBIll/FuM9mSBAZ6fSL
+QSLgCeM9S63LSKOHx0cXPde6ccFKoDtcNiY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEaTCCA1GgAwIBAgIBKTANBgkqhkiG9w0BAQUFADCBhzETMBEGCgmSJomT8ixk
+ARkWA29yZzEUMBIGCgmSJomT8ixkARkWBGxpZ28xDTALBgNVBAoTBExJR08xIDAe
+BgNVBAsTF0NlcnRpZmljYXRlIEF1dGhvcml0aWVzMRUwEwYDVQQLEwxXZWIgU2Vy
+dmljZXMxEjAQBgNVBAMTCUxJR08gQ0EgMTAeFw0xMDEyMjAxOTQzMjFaFw0yMDEy
+MTkxOTQzMjFaMHMxEzARBgoJkiaJk/IsZAEZFgNvcmcxFDASBgoJkiaJk/IsZAEZ
+FgRsaWdvMQ0wCwYDVQQKEwRMSUdPMRUwEwYDVQQLEwxXZWIgU2VydmljZXMxIDAe
+BgNVBAMTF2xpZ28tbG9naW4ucGh5cy51d20uZWR1MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA5aWnGpOBykQtq5ybHIORdGTB+2VZ/2btQDb28/c3ClCI
+XmDte4OSxxon33EVPZcdWWAts03dWvvR3EZCsIqUADwAsG97pyCPqJ5A44/Cp3XN
+Yc2sGnnn8/iKdjaTuiD0huf075a/QcqO6qhE6RQ0Zybw9UmV//iYCb1CqG0NbuTZ
+sBm+SK/9MkkLYaKYXP5dR1qxiHRDcH1WRn/lcTG3Ln6WOrwJn+e7dVRObGMAIDzi
+NJH/2B4PcgEW4Gc/FwghkcZ61Qj15NpuTg0Y9NwsCrpuXaTkuwVKU8w8rS7gOgdl
+OCa+aMeU6sKVvjDxmQC5FboZUwlGIAwAHkT2pVCv9wIDAQABo4HyMIHvMAwGA1Ud
+EwEB/wQCMAAwDgYDVR0PAQH/BAQDAgSwMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr
+BgEFBQcDAjAZBgNVHSAEEjAQMA4GDCsGAQQBgfpGAgECATA5BgNVHR8EMjAwMC6g
+LKAqhihodHRwOi8vY2EubGlnby5vcmcvNTQxNDA0YzMvNTQxNDA0YzMuY3JsMB8G
+A1UdIwQYMBaAFFJu3Xuqb4VcCCLTl5+tfyNWHmrRMDkGA1UdEQQyMDCCLmxpZ28t
+bG9naW4ucGh5cy51d20uZWR1OnNjb3R0LmtvcmFuZGFAbGlnby5vcmcwDQYJKoZI
+hvcNAQEFBQADggEBADd3Vkq5UNNf0q0Tm4tM19o8Zo5vSA9qA09qOHH270MKakVh
+NXeikHm4FMJKE731D8vwqUDFX0PqN9ndkWLqI9+vtPstqbl7xEbhXfFAjvAj6ieP
+AlKinu+VwG8lqcSRzrgDl40DGZbxYwcqaLqkY3DvJQphcL9+cMVNwixR+2ceACVU
+9nJhBjNdtVo5HiayNy1qIHoVnyxfRJcET5Z9fl9WoTGBkQgd2+XNBxe3ECLpe4gw
+GKBexp0LpbBvqRLMito7jIbPE5NzCjw69NpcIE+COkQc+ifV8FbD0OQOin06/qDi
+0+fCAYmI2uE8jfuGOhKWTsSUWe35LFWIOuaIPZo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login1.ligo.org:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ligo.caltech.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Scott Koranda</md:GivenName>
+	<md:EmailAddress>scott.koranda@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Warren Anderson</md:GivenName>
+	<md:EmailAddress>warren.anderson@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LIGO Identity Management Help Desk</md:GivenName>
+	<md:EmailAddress>rt-auth@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LIGO Security Committee</md:GivenName>
+	<md:EmailAddress>lsc-seccomm@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

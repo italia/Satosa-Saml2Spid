@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.src.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2009-01-11T11:20:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Southern Regional College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Southern Regional College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">src.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDbDCCAlQCCQCKPT5imLa/BjANBgkqhkiG9w0BAQUFADB4MQswCQYDVQQGEwJH
+QjEZMBcGA1UECBMQTm9ydGhlcm4gSXJlbGFuZDESMBAGA1UEBxMJUG9ydGFkb3du
+MSIwIAYDVQQKExlTb3V0aGVybiBSZWdpb25hbCBDb2xsZWdlMRYwFAYDVQQDEw1p
+ZHAuc3JjLmFjLnVrMB4XDTE0MDkxMDExMDIzMFoXDTM0MDkwNTExMDIzMFoweDEL
+MAkGA1UEBhMCR0IxGTAXBgNVBAgTEE5vcnRoZXJuIElyZWxhbmQxEjAQBgNVBAcT
+CVBvcnRhZG93bjEiMCAGA1UEChMZU291dGhlcm4gUmVnaW9uYWwgQ29sbGVnZTEW
+MBQGA1UEAxMNaWRwLnNyYy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAOTHbpykc5COQnnxrJLFexezdUga4EoB8mdakirFuwIG97l3AjMJBuAP
+Biu1FU8HbINhprwJvpWFBsmN+x4GCkLVdBGqSa0jiPopvKfOH3cgHZISxpsrAzan
+AXK1jTwRl7OpqnaN4u2lxltlfxyMy9UJnoroxF1VUDN87ewRVC6dxC+plOM8oC/A
+7U9KFySYKKXbZJlKjwPzWImWe8kueRotr0H4k23DChphMXkzSu+m96F7VYzQu2tB
+N+OHNfIs1ZwOxqLByFE2TZDLyaTCHV3MxrmNF9sLlmKz7ZAq0XlD8+swnBglYJ3F
+vit11nDDCtOZNINOSCTFZrGWoy1qkkcCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEA
+hz9L58a6+yQg4CInU/6LwccJ19vAZAej0oKyqguO6aU5dWICo4fhMKvExFrOVFPt
+wnwH/K/SAEbxfy/uDA/Tb13mAtYKHKYaCxujRrhQB/5mEoXQKN0Iqg4bBMXyjhyv
+HoFmqjXdk7l5ATbJwd4fZBX4/eXnpp2MJkgC4xw2WxwTewRnKTNfUPvF7t0WIUZj
+oivnlWGoK16H0kyZhnf+2MOtUV1FjEsDV8knoOrG20XyHUJiaThAnZibnWj+3eqz
+bKQM8n3dmoAEec+lEpstACCdtI6QGLtrNhTau3o+iLlvMHU6DCoduw/oYp06jkkP
+AumZKaDE5XZJXS0yDbD+PQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.src.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.src.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.src.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.src.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.src.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.src.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">src.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDbDCCAlQCCQCKPT5imLa/BjANBgkqhkiG9w0BAQUFADB4MQswCQYDVQQGEwJH
+QjEZMBcGA1UECBMQTm9ydGhlcm4gSXJlbGFuZDESMBAGA1UEBxMJUG9ydGFkb3du
+MSIwIAYDVQQKExlTb3V0aGVybiBSZWdpb25hbCBDb2xsZWdlMRYwFAYDVQQDEw1p
+ZHAuc3JjLmFjLnVrMB4XDTE0MDkxMDExMDIzMFoXDTM0MDkwNTExMDIzMFoweDEL
+MAkGA1UEBhMCR0IxGTAXBgNVBAgTEE5vcnRoZXJuIElyZWxhbmQxEjAQBgNVBAcT
+CVBvcnRhZG93bjEiMCAGA1UEChMZU291dGhlcm4gUmVnaW9uYWwgQ29sbGVnZTEW
+MBQGA1UEAxMNaWRwLnNyYy5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAOTHbpykc5COQnnxrJLFexezdUga4EoB8mdakirFuwIG97l3AjMJBuAP
+Biu1FU8HbINhprwJvpWFBsmN+x4GCkLVdBGqSa0jiPopvKfOH3cgHZISxpsrAzan
+AXK1jTwRl7OpqnaN4u2lxltlfxyMy9UJnoroxF1VUDN87ewRVC6dxC+plOM8oC/A
+7U9KFySYKKXbZJlKjwPzWImWe8kueRotr0H4k23DChphMXkzSu+m96F7VYzQu2tB
+N+OHNfIs1ZwOxqLByFE2TZDLyaTCHV3MxrmNF9sLlmKz7ZAq0XlD8+swnBglYJ3F
+vit11nDDCtOZNINOSCTFZrGWoy1qkkcCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEA
+hz9L58a6+yQg4CInU/6LwccJ19vAZAej0oKyqguO6aU5dWICo4fhMKvExFrOVFPt
+wnwH/K/SAEbxfy/uDA/Tb13mAtYKHKYaCxujRrhQB/5mEoXQKN0Iqg4bBMXyjhyv
+HoFmqjXdk7l5ATbJwd4fZBX4/eXnpp2MJkgC4xw2WxwTewRnKTNfUPvF7t0WIUZj
+oivnlWGoK16H0kyZhnf+2MOtUV1FjEsDV8knoOrG20XyHUJiaThAnZibnWj+3eqz
+bKQM8n3dmoAEec+lEpstACCdtI6QGLtrNhTau3o+iLlvMHU6DCoduw/oYp06jkkP
+AumZKaDE5XZJXS0yDbD+PQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.src.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.src.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Southern Regional College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Southern Regional College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.src.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Purcell</md:SurName>
+	<md:EmailAddress>mailto:purcellm@src.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Thomas</md:GivenName>
+	<md:SurName>Shirley</md:SurName>
+	<md:EmailAddress>mailto:shirleyt@src.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Purcell</md:SurName>
+	<md:EmailAddress>mailto:purcellm@src.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Thomas</md:GivenName>
+	<md:SurName>Shirley</md:SurName>
+	<md:EmailAddress>mailto:shirleyt@src.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.sissa.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2013-07-03T13:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+	<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">sissa.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">SISSA</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">SISSA</mdui:DisplayName>
+<mdui:Description xml:lang="en">Scuola Internazionale Superiore di Studi Avanzati</mdui:Description>
+<mdui:Description xml:lang="it">Scuola Internazionale Superiore di Studi Avanzati</mdui:Description>
+<mdui:InformationURL xml:lang="en">http://www.itcs.sissa.it/services/idem</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://www.itcs.sissa.it/services/idem</mdui:PrivacyStatementURL>
+<mdui:Logo height="16" width="16">https://idp.sissa.it/idp/images/logo16x16.png</mdui:Logo>
+<mdui:Logo height="60" width="80">https://idp.sissa.it/idp/images/logo80x60.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUBDNUKHsGJPdh6XQWcjVI7QsO2fUwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNpc3NhLml0MB4XDTEwMTExMTEyMTAyNVoXDTMw
+MTExMTEyMTAyNVowFzEVMBMGA1UEAxMMaWRwLnNpc3NhLml0MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAijIA8AmcGKkBom6g4javpNcollJH9oq+13Fd
+wvNPUJTXPNDRrmNO9jhgY7Jcx2+I8jkOryP7ifpKtlmEt3k3W0o08Om/jKbdayKx
+I8phZMe2/fKiUVtUJz1zQ9cE02Cmd0vTb8421Y7JnmKcf7uwNLQnU4elT079Clak
+3gwk2VJJja+yzrB9DMLhHs+rRZp4cqgJaH1LqcLtrp435xcFEr+NL15Ei2dFWtym
+pGgf/wLASEgqws2RSdvEu2Kz+m2vDIox6N9mZN/FW2chyjSJ/scv9pkYXeZAyaOB
+PtmGF50A7HOZDFUnQQ62EEQ74QmE/mhgSyPSGUjs/i+utY96PQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2lzc2EuaXSGI2h0dHBzOi8vaWRwLnNpc3NhLml0L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBRVL7DD1CdWBVf38sDt3Plq+UeOzzANBgkq
+hkiG9w0BAQUFAAOCAQEADshw70QDPxPI3c9iJReHPp9xpkTrCV4i+oqK2ChSp3UT
+P2guauh6zdXbOMCBD1Zs+rMP5/LinkJpT7P9dM0jQgmD8uXbi6livyB4Brf49P0r
+jtKgeiplWeXSXzKnAwELHEDa5ixsvMT/WfBWVCNfrnTE/fR0YjGw35SqYgYiUfpE
+j/oS9mPKY09i92fgmfmVjtGvhY5ZD+nWpzdO+quvwKsYUyU9gfrB2EwW5eh+G1oF
+NWYprJEp7gYuge/L84Gq90zXkCvRlN+pYFDOHwQqPkaQZ8B1anEoH/5/wpI5CGlI
+Dqa9SIiHIzb6oiTRzBRED+zbqd+EzvCwEdoMBnarPQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sissa.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.sissa.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.sissa.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.sissa.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">sissa.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor>
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUBDNUKHsGJPdh6XQWcjVI7QsO2fUwDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLnNpc3NhLml0MB4XDTEwMTExMTEyMTAyNVoXDTMw
+MTExMTEyMTAyNVowFzEVMBMGA1UEAxMMaWRwLnNpc3NhLml0MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAijIA8AmcGKkBom6g4javpNcollJH9oq+13Fd
+wvNPUJTXPNDRrmNO9jhgY7Jcx2+I8jkOryP7ifpKtlmEt3k3W0o08Om/jKbdayKx
+I8phZMe2/fKiUVtUJz1zQ9cE02Cmd0vTb8421Y7JnmKcf7uwNLQnU4elT079Clak
+3gwk2VJJja+yzrB9DMLhHs+rRZp4cqgJaH1LqcLtrp435xcFEr+NL15Ei2dFWtym
+pGgf/wLASEgqws2RSdvEu2Kz+m2vDIox6N9mZN/FW2chyjSJ/scv9pkYXeZAyaOB
+PtmGF50A7HOZDFUnQQ62EEQ74QmE/mhgSyPSGUjs/i+utY96PQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuc2lzc2EuaXSGI2h0dHBzOi8vaWRwLnNpc3NhLml0L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBRVL7DD1CdWBVf38sDt3Plq+UeOzzANBgkq
+hkiG9w0BAQUFAAOCAQEADshw70QDPxPI3c9iJReHPp9xpkTrCV4i+oqK2ChSp3UT
+P2guauh6zdXbOMCBD1Zs+rMP5/LinkJpT7P9dM0jQgmD8uXbi6livyB4Brf49P0r
+jtKgeiplWeXSXzKnAwELHEDa5ixsvMT/WfBWVCNfrnTE/fR0YjGw35SqYgYiUfpE
+j/oS9mPKY09i92fgmfmVjtGvhY5ZD+nWpzdO+quvwKsYUyU9gfrB2EwW5eh+G1oF
+NWYprJEp7gYuge/L84Gq90zXkCvRlN+pYFDOHwQqPkaQZ8B1anEoH/5/wpI5CGlI
+Dqa9SIiHIzb6oiTRzBRED+zbqd+EzvCwEdoMBnarPQ==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.sissa.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Scuola Internazionale Superiore di Studi Avanzati</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Scuola Internazionale Superiore di Studi Avanzati</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">SISSA - Scuola Internazionale Superiore di Studi Avanzati</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">SISSA - Scuola Internazionale Superiore di Studi Avanzati</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.sissa.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.sissa.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Massimiliano</md:GivenName>
+<md:SurName>Ritossa</md:SurName>
+<md:EmailAddress>mailto:ritossa@sissa.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:EmailAddress>mailto:helpdesk@sissa.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+<md:GivenName>GARR-CERT</md:GivenName>
+<md:EmailAddress>mailto:cert@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

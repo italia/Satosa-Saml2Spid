@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.radford.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">radford.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Radford University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.radford.edu/content/radfordcore/home/about/privacy-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="68" width="333" xml:lang="en">https://www.radford.edu/myru/RadfordUniversity_Horiz_OnLight.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDpTCCAo2gAwIBAgIJANeIL5N/K7s2MA0GCSqGSIb3DQEBBQUAMGkxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJWQTEQMA4GA1UEBwwHUmFkZm9yZDEUMBIGA1UECgwL
+cmFkZm9yZC5lZHUxCzAJBgNVBAsMAklUMRgwFgYDVQQDDA9zc28ucmFkZm9yZC5l
+ZHUwHhcNMTQwNTI4MTczMzA4WhcNMzQwNTI4MTczMzA4WjBpMQswCQYDVQQGEwJV
+UzELMAkGA1UECAwCVkExEDAOBgNVBAcMB1JhZGZvcmQxFDASBgNVBAoMC3JhZGZv
+cmQuZWR1MQswCQYDVQQLDAJJVDEYMBYGA1UEAwwPc3NvLnJhZGZvcmQuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1TGYutWcsJGFBi3p23QrfDKy
+fPMTemhzbpwf2WoyaMqKOogc/NqqdBpQXji0jU05y0yjxGv6Jx7Ey88EnHGVNOJp
+3CeiElOqBJ/hRl+S4l6zmHfofgQWHEhtR2SawRv90Pj/Za5+TiIvfsifvjFWdFSJ
+sOaQ9Z7/SSuXn1Ft9iH844OBcrpYQPYsA0Xk5EgMvv7cXxJjerq5UHdlZlglN96M
+lMD8U6gzAi7rmyhcBTZ50zD01FMZzOyWLjf1zfvwyj6JvRE2e3FGwY6RQt/Y7mXy
+xu7RCtxVKiA+40YM+HN6A9p9A/+srf9tOgNLyjZ0ogNCWp+cFD1mLIzcKNuWqwID
+AQABo1AwTjAdBgNVHQ4EFgQUlzH3pb2TBuySahzZbUNiEFuNT7EwHwYDVR0jBBgw
+FoAUlzH3pb2TBuySahzZbUNiEFuNT7EwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0B
+AQUFAAOCAQEAaq6hZya9JWF5HPxy+PvAkr6XQQLzVs9j00FxAICKrPlgXW3CFvqj
+IbkzsRG0eKtotoQRO3GakOhO2gzyiVCI/6aR/6MX/c9OFwt0qe5HUNsiTiMGOq4V
+tb8i7csaCB49cfwD5tewWQdeIidg7OhPqO5S2FNrdM6jVpEg5kDuI0UIHazdmBOZ
+FDELTQ+nBfCrIa9letM+SoIU4znIvOfd4Z6k4uU11aDaZKej6/9rwMuo4EfgUFTR
+16SeaJX8wNydS4+68Ch9U5Z3saWWuC3aU4pNnMQW1VUt0bqVhtgPkcTaS7uZeYhC
+5ZxW63cQCq8Tt4xwbP8uzhoMCBiAWn+H1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.radford.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.radford.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.radford.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.radford.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.radford.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.radford.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.radford.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.radford.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">radford.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDpTCCAo2gAwIBAgIJANeIL5N/K7s2MA0GCSqGSIb3DQEBBQUAMGkxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJWQTEQMA4GA1UEBwwHUmFkZm9yZDEUMBIGA1UECgwL
+cmFkZm9yZC5lZHUxCzAJBgNVBAsMAklUMRgwFgYDVQQDDA9zc28ucmFkZm9yZC5l
+ZHUwHhcNMTQwNTI4MTczMzA4WhcNMzQwNTI4MTczMzA4WjBpMQswCQYDVQQGEwJV
+UzELMAkGA1UECAwCVkExEDAOBgNVBAcMB1JhZGZvcmQxFDASBgNVBAoMC3JhZGZv
+cmQuZWR1MQswCQYDVQQLDAJJVDEYMBYGA1UEAwwPc3NvLnJhZGZvcmQuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1TGYutWcsJGFBi3p23QrfDKy
+fPMTemhzbpwf2WoyaMqKOogc/NqqdBpQXji0jU05y0yjxGv6Jx7Ey88EnHGVNOJp
+3CeiElOqBJ/hRl+S4l6zmHfofgQWHEhtR2SawRv90Pj/Za5+TiIvfsifvjFWdFSJ
+sOaQ9Z7/SSuXn1Ft9iH844OBcrpYQPYsA0Xk5EgMvv7cXxJjerq5UHdlZlglN96M
+lMD8U6gzAi7rmyhcBTZ50zD01FMZzOyWLjf1zfvwyj6JvRE2e3FGwY6RQt/Y7mXy
+xu7RCtxVKiA+40YM+HN6A9p9A/+srf9tOgNLyjZ0ogNCWp+cFD1mLIzcKNuWqwID
+AQABo1AwTjAdBgNVHQ4EFgQUlzH3pb2TBuySahzZbUNiEFuNT7EwHwYDVR0jBBgw
+FoAUlzH3pb2TBuySahzZbUNiEFuNT7EwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0B
+AQUFAAOCAQEAaq6hZya9JWF5HPxy+PvAkr6XQQLzVs9j00FxAICKrPlgXW3CFvqj
+IbkzsRG0eKtotoQRO3GakOhO2gzyiVCI/6aR/6MX/c9OFwt0qe5HUNsiTiMGOq4V
+tb8i7csaCB49cfwD5tewWQdeIidg7OhPqO5S2FNrdM6jVpEg5kDuI0UIHazdmBOZ
+FDELTQ+nBfCrIa9letM+SoIU4znIvOfd4Z6k4uU11aDaZKej6/9rwMuo4EfgUFTR
+16SeaJX8wNydS4+68Ch9U5Z3saWWuC3aU4pNnMQW1VUt0bqVhtgPkcTaS7uZeYhC
+5ZxW63cQCq8Tt4xwbP8uzhoMCBiAWn+H1g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.radford.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Radford University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Radford University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.radford.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Todd Joyce</md:GivenName>
+	<md:EmailAddress>tjoyce@radford.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>David Bailey</md:GivenName>
+	<md:EmailAddress>ssoadmin@radford.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ISO</md:GivenName>
+	<md:EmailAddress>itsecurity@radford.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

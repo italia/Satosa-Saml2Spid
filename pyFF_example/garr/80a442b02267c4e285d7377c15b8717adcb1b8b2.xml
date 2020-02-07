@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ekt.gr/idp/shibboleth">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<mdrpi:RegistrationInfo registrationAuthority="http://aai.grnet.gr/">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://aai.grnet.gr/static/policy/policy-en-1.1.0.pdf</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="el">http://aai.grnet.gr/static/policy/policy-el-1.1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ekt.gr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">National Documentation Centre</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="el">Εθνικό Κέντρο Τεκμηρίωσης</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.ekt.gr/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="el">http://www.ekt.gr/</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>ekt.gr</mdui:DomainHint>
+		<mdui:IPHint>194.177.214.0/24</mdui:IPHint>
+		<mdui:GeolocationHint>geo:37.973263,23.745396</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDaTCCAlGgAwIBAgIJAOl2Jy9xU/JcMA0GCSqGSIb3DQEBCwUAMEsxCzAJBgNV
+BAYTAkdSMQ8wDQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczEMMAoGA1UE
+CgwDRUtUMQwwCgYDVQQLDANOT0MwHhcNMTkxMTE5MTQxMjIyWhcNMjkxMTE2MTQx
+MjIyWjBLMQswCQYDVQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQHDAZB
+dGhlbnMxDDAKBgNVBAoMA0VLVDEMMAoGA1UECwwDTk9DMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA1BtYETfyOUMDlW9XGcFZCwJ3J66+73qDyLvqhrj2
+Khx+yOiat5iWbxZZ9IL8tH6wGxk1FeQAOI/5ou2rMqN9pmU7EjdO2I7PA+tvi5Kj
+vEKHfcS1NFsw5Dc+5/U266UsMuiotayqi3Kib250nh925MXyuNl9KS0pa43v1hRc
+7mdKaUrqI1KHoxnP6OG6vBuzNDJIaw7nptb+hn/ujELJhtcNXNp5AAoURyxCkYEk
+rGih8Lc/VX5r0nm6MWEfNNxUJJF98WS6D8lZLPtQIzCDOxW8i8FHbAtMXwp/Za1d
+dVSzc87kxBiCPeP/eAzufh+QrVi6zlzK+sF7+RnokK5TQwIDAQABo1AwTjAdBgNV
+HQ4EFgQUtZ45X9Tn+/vRAFi7NY+QwBmFGpMwHwYDVR0jBBgwFoAUtZ45X9Tn+/vR
+AFi7NY+QwBmFGpMwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAxs8f
+FphtBEiN67LpXVlWq1Vs4Y6Jpovh98uvGT/f+PhUsd63WuO9hZWAuGEnq1IkbaB8
+xLbcsQmSKrZFLIc+oxyeTJ6lSqnem9zsd3FgRBOOhhHwYolyFWcq2HySGjLEMjuB
+89PRTcKYw0ULL333Oa1ygrYGfg3kafklQP92ivFvjD125p2OKqAeyaALGuLVojTv
+KuuJN9+CHAUnY31igCGK+zRHtAPxXoxEeUhRXK21mBaL/xODNthokE0XVOgXeKxs
+hcqsgXJ4Qtb+8ROMev+hXEAkn+//w6C+6EiTyVUJGRKi0r1r6jKEAomFZA3D+J8+
+qMSsHeTJ3+02mgbG3w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ekt.gr:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ekt.gr:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ekt.gr/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ekt.gr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.ekt.gr/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ekt.gr/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ekt.gr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDaTCCAlGgAwIBAgIJAOl2Jy9xU/JcMA0GCSqGSIb3DQEBCwUAMEsxCzAJBgNV
+BAYTAkdSMQ8wDQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczEMMAoGA1UE
+CgwDRUtUMQwwCgYDVQQLDANOT0MwHhcNMTkxMTE5MTQxMjIyWhcNMjkxMTE2MTQx
+MjIyWjBLMQswCQYDVQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQHDAZB
+dGhlbnMxDDAKBgNVBAoMA0VLVDEMMAoGA1UECwwDTk9DMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEA1BtYETfyOUMDlW9XGcFZCwJ3J66+73qDyLvqhrj2
+Khx+yOiat5iWbxZZ9IL8tH6wGxk1FeQAOI/5ou2rMqN9pmU7EjdO2I7PA+tvi5Kj
+vEKHfcS1NFsw5Dc+5/U266UsMuiotayqi3Kib250nh925MXyuNl9KS0pa43v1hRc
+7mdKaUrqI1KHoxnP6OG6vBuzNDJIaw7nptb+hn/ujELJhtcNXNp5AAoURyxCkYEk
+rGih8Lc/VX5r0nm6MWEfNNxUJJF98WS6D8lZLPtQIzCDOxW8i8FHbAtMXwp/Za1d
+dVSzc87kxBiCPeP/eAzufh+QrVi6zlzK+sF7+RnokK5TQwIDAQABo1AwTjAdBgNV
+HQ4EFgQUtZ45X9Tn+/vRAFi7NY+QwBmFGpMwHwYDVR0jBBgwFoAUtZ45X9Tn+/vR
+AFi7NY+QwBmFGpMwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAxs8f
+FphtBEiN67LpXVlWq1Vs4Y6Jpovh98uvGT/f+PhUsd63WuO9hZWAuGEnq1IkbaB8
+xLbcsQmSKrZFLIc+oxyeTJ6lSqnem9zsd3FgRBOOhhHwYolyFWcq2HySGjLEMjuB
+89PRTcKYw0ULL333Oa1ygrYGfg3kafklQP92ivFvjD125p2OKqAeyaALGuLVojTv
+KuuJN9+CHAUnY31igCGK+zRHtAPxXoxEeUhRXK21mBaL/xODNthokE0XVOgXeKxs
+hcqsgXJ4Qtb+8ROMev+hXEAkn+//w6C+6EiTyVUJGRKi0r1r6jKEAomFZA3D+J8+
+qMSsHeTJ3+02mgbG3w==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.ekt.gr:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.ekt.gr:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">National Documentation Centre</md:OrganizationName>
+	<md:OrganizationName xml:lang="el">Εθνικό Κέντρο Τεκμηρίωσης</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">National Documentation Centre</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="el">Εθνικό Κέντρο Τεκμηρίωσης</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ekt.gr/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="el">http://www.ekt.gr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>National Documentation Centre NOC</md:SurName>
+	<md:EmailAddress>mailto:noc@ekt.gr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.pacificu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://sso.pacificu.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pacificu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Pacific University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Pacific University's Identity Provider for production environments.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.pacificu.edu/legal-disclaimers/internet-privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="118" width="175" xml:lang="en">https://sso.pacificu.edu/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUP7F3C0Cew/N7b1z2Pd6yhr7hr/UwDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAxMQc3NvLnBhY2lmaWN1LmVkdTAeFw0xMzEyMTYxNjEyNDFa
+Fw0zMzEyMTYxNjEyNDFaMBsxGTAXBgNVBAMTEHNzby5wYWNpZmljdS5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCSSdfK8ZMpijnRX2riAMzk10yl
+I37/L94Mxc2r3V91Hvt5N2jLh6vugUha/UaMOibe6eQY267D7p81NYNg7a98GNhb
+vp3YI2h08fqsgtUnJx3mZFzeTp/rPk/rDu6X0CcsStWq1ecfAsaj6ylt2rnFVH8N
+TLe43ZC7C6OisxSIYcufIrI3yl++q/2I9elluCFlRurzyRbcnJfK7swRej4cnFAG
+l6/g/qzBnMJNwqLmqXXFkDV9nEJrMxiGHjnHZZx997I/8ZzDurJQGHjIgXDAVFCA
+QLV3l8MUcNePw23NMc/bGh7l6/Negf4Gugzvb7mbsQbNODoXEpTubh+VfWMdAgMB
+AAGjZzBlMEQGA1UdEQQ9MDuCEHNzby5wYWNpZmljdS5lZHWGJ2h0dHBzOi8vc3Nv
+LnBhY2lmaWN1LmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU3vevDEryJzMi
+HQZKXiX1n8chCoIwDQYJKoZIhvcNAQEFBQADggEBAE6Oidx+dNVD4Nh5//RIeJo6
+zAjzurEJrjK762N1ni4QqBsPIMSpb8Ux9DUiVes+ld0iJDUlDgasNWS0pL4f6pXA
+zeLppydpYB31PQomzIOcPEBrupQz4OaCwZzTdND9XBFbSGkNNZsXTzNZmOgPuIQM
+0b17TTau32Op/JN6KGuNZXemm977V5UwHDMAr6t3VM4AMX692xN4/q3UUYjuUzBE
+ZmC7WJamw/WUg0AV+Z0oM9i99MQhQImUvFyCMumUABHkMACV3WGfuB+RaNOtZEFB
++eMN5ZdK6JGDq7/xNBcEhmyV/NznXH52ymuyXDLkAamIbyYSDmz8CYZui1Bty1E=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.pacificu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.pacificu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.pacificu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.pacificu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pacificu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKzCCAhOgAwIBAgIUP7F3C0Cew/N7b1z2Pd6yhr7hr/UwDQYJKoZIhvcNAQEF
+BQAwGzEZMBcGA1UEAxMQc3NvLnBhY2lmaWN1LmVkdTAeFw0xMzEyMTYxNjEyNDFa
+Fw0zMzEyMTYxNjEyNDFaMBsxGTAXBgNVBAMTEHNzby5wYWNpZmljdS5lZHUwggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCSSdfK8ZMpijnRX2riAMzk10yl
+I37/L94Mxc2r3V91Hvt5N2jLh6vugUha/UaMOibe6eQY267D7p81NYNg7a98GNhb
+vp3YI2h08fqsgtUnJx3mZFzeTp/rPk/rDu6X0CcsStWq1ecfAsaj6ylt2rnFVH8N
+TLe43ZC7C6OisxSIYcufIrI3yl++q/2I9elluCFlRurzyRbcnJfK7swRej4cnFAG
+l6/g/qzBnMJNwqLmqXXFkDV9nEJrMxiGHjnHZZx997I/8ZzDurJQGHjIgXDAVFCA
+QLV3l8MUcNePw23NMc/bGh7l6/Negf4Gugzvb7mbsQbNODoXEpTubh+VfWMdAgMB
+AAGjZzBlMEQGA1UdEQQ9MDuCEHNzby5wYWNpZmljdS5lZHWGJ2h0dHBzOi8vc3Nv
+LnBhY2lmaWN1LmVkdS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU3vevDEryJzMi
+HQZKXiX1n8chCoIwDQYJKoZIhvcNAQEFBQADggEBAE6Oidx+dNVD4Nh5//RIeJo6
+zAjzurEJrjK762N1ni4QqBsPIMSpb8Ux9DUiVes+ld0iJDUlDgasNWS0pL4f6pXA
+zeLppydpYB31PQomzIOcPEBrupQz4OaCwZzTdND9XBFbSGkNNZsXTzNZmOgPuIQM
+0b17TTau32Op/JN6KGuNZXemm977V5UwHDMAr6t3VM4AMX692xN4/q3UUYjuUzBE
+ZmC7WJamw/WUg0AV+Z0oM9i99MQhQImUvFyCMumUABHkMACV3WGfuB+RaNOtZEFB
++eMN5ZdK6JGDq7/xNBcEhmyV/NznXH52ymuyXDLkAamIbyYSDmz8CYZui1Bty1E=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.pacificu.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.pacificu.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Pacific University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Pacific University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.pacificu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Brandon M. Browning</md:GivenName>
+	<md:EmailAddress>browning@pacificu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ted Krupicka</md:GivenName>
+	<md:EmailAddress>tedk@pacificu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technology Information Center</md:GivenName>
+	<md:EmailAddress>help@pacificu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Chief Information Security Officer</md:GivenName>
+	<md:EmailAddress>ciso@pacificu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

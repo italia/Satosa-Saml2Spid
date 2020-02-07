@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://nhm-eduid.nhm-wien.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2019-12-06T12:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nhm-wien.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Naturhistorisches Museum Wien (NHM)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Natural History Museum Vienna (NHM)</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">nhm+wien nhm+vienna</mdui:Keywords>
+		<mdui:Logo height="136" width="200">https://www2.nhm-wien.ac.at/NHM200.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www2.nhm-wien.ac.at/NHM16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>nhm-wien.ac.at</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:48.20526,16.35975</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:48.21857,16.35314</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIESzCCArOgAwIBAgIUCXNvoT93KjghkTm+CKvhExJs9ewwDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYbmhtLWVkdWlkLm5obS13aWVuLmFjLmF0MB4XDTE5MTEy
+MTE2MjIyOFoXDTM5MTEyMTE2MjIyOFowIzEhMB8GA1UEAwwYbmhtLWVkdWlkLm5o
+bS13aWVuLmFjLmF0MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAmGwo
+qI/7xKi/djpdOlHUPhLLeM64r69Omss7e5fmOYNj52R069CwWT24gMKFVg25WJR9
+60HH99zN0HlCfJIvctmP8R/GQKf/JNInTAxSrMFWd1OHHNuXOON9uys/Go/UGr4W
+rCt96kRGuVjqkpWwa6OZRz/pUViUwC0r2egisL7tMNH/bma/u+sSnewq3/8L/upy
+g3UxW/FoPdj796TQVezcq97m0NdKnHblEcNlXtTzS9kRClQ5xBqkGXej36ApbNuH
+El2IV31v/yFkc3YS1SQpImtPB+gueAR4RHbAvfeMohrB9BEbsE+pId1GeEetlDvs
+WSqwbWGq/rDIHPmjWf9U6id9lDPwoj6n033IUJasAr8yVm9v2Z3Wo+KUHtOxs7Uw
+l5xe5ESyWUymU4Vr7b9agLvyodYpBPAJmRctQoJ79x/I/UZcCK9CKyqzm9GkqoBg
+K83ydzrSlKJO8gR6Kbz4PjuBrXYhobm9HdOeMb5Uk48wVEIzhx8NX+AubGw7AgMB
+AAGjdzB1MB0GA1UdDgQWBBQFnu75aTxZ/7vNUSr2xaA+VABlNzBUBgNVHREETTBL
+ghhuaG0tZWR1aWQubmhtLXdpZW4uYWMuYXSGL2h0dHBzOi8vbmhtLWVkdWlkLm5o
+bS13aWVuLmFjLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQBi
+pftldd18R2ArVMfb9cPbgY4uJUzAgMLalNwJttu/YIjamngjl6kTjtIvS5Z3ml/S
+yp2cBUPhaeXlJUsD9GUimf5j8L9Es6xSjWHljcjZNEp1xjoO2yw7YYQVx7rlMTIG
+az1Ow/dMMBlhLyRUj2vKl37xGsgTsB57FWf0qjIbXWcawSJINDXoJlYOMMSsm5UH
+4RnM4o/YiflZvGCOY9ohNbYT4iJVKoBuFLe5+wLKp3578d0WhjIXI/Te20Mc1McM
+zxJ/94S4QqaDK6Sh/pOXNKUYCRKP1pqpBV7wLzjvuQhrpOA053FSuMdeWANyjxyy
+Flg42+xO5Ar4B6ugWjAWz3Rd3/1cc69bZwvIwlcR7aSFNoxtRa2RL+VrDDaLVsMH
+83NkNpl3lJ0EiaqbyNMQnF/ftDpAjvBXxMAFy5ZSToJ9GIeQyMQGNJjCjKxbapnn
+/1+x3DzoOCQFWR/EXWxjxIm7NdPO7zQLN2mioKvSCZYM5yOViiAFI57yH2uXJvg=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIESzCCArOgAwIBAgIUaJ8UyNIg75zdkrhyKaLmnny4FHIwDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYbmhtLWVkdWlkLm5obS13aWVuLmFjLmF0MB4XDTE5MTEy
+MTE2MjIyOVoXDTM5MTEyMTE2MjIyOVowIzEhMB8GA1UEAwwYbmhtLWVkdWlkLm5o
+bS13aWVuLmFjLmF0MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAhzlx
+VAGA2kxngu4mHDrHbNYyK8KuiF4Kwhs++QeYdyZxwwVAWawW0a953p/Wbk2W7o9E
+fyrSqZR2z8JdSSlcLEn2w99XZP392PctTurpjtx/mrUmO/NFd6sC5c+8GWcXrfnc
+uIOlTlk8CpeBh0hbtegXIB63xXnZjt/Z2IMR6dQt7kf4a8h01r9l2wtf9AnrLYY4
+Pd86+SwGUmoKZjRY592+wFLieTdgBPirNr/ND9aWYK1ldJZxjzESReeBDVTJQGnS
+rLSXPo78Y9rNUD5Tg2t6cDyndGXYYe+EPge99FtOY9cchE89BnHQ/MLAacNeMs19
+BGrxyLDkuteTcpI2L3ILa30X8Qid/YR/KbYpxnoQZFK8KyObNptX402izQwgObVR
+OywlZopgSQBB8xU53zzcxNPV6V4CfKD43NRiVAg4mDbxZxjVdz8oAVJZtLKsr4Fd
+K8x52xYGweHA9KhJIiNU74xEDeuZ10VgdD3zX86gc+82A/Gs/QxeSVt/Vn6LAgMB
+AAGjdzB1MB0GA1UdDgQWBBQYX/9dhBiJVKL0BN0DmG+4Q3pRNjBUBgNVHREETTBL
+ghhuaG0tZWR1aWQubmhtLXdpZW4uYWMuYXSGL2h0dHBzOi8vbmhtLWVkdWlkLm5o
+bS13aWVuLmFjLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBgQBg
+hkTb8HPTBv2BoXdzt8mTQRjq8zU2cCsWURksmH5/qWbCCchB1W0YNhgqwNwQpyi9
+ngjtKT/cjRh62vFYUQLxy+XXHIRDIzrfWZtT5vWb3vlGfYb9RUEFJp3VY7fn0AJw
+5+3JrxoygnqLcJS9LX/1jmcK7OT7EoxhdVruxb44XWcGbln98HAZawShc7DJWYxA
+i/489niTd7a373V+SEYIv5oiFbm5V3H4o1o5Mu12zcBghJRkPmYhTt1npDO9Rzn6
+7xH2Wc4dKokQf1imqo13k8HHg7NDh/jvb7L2bGwVjZ1NABVn7OqY6qq3yKGXbQvZ
+YMOqTa74RvtOgoDa2a2Aju4t8iOULy42euLvCS8YbuC7EtGdXcTBFwrpJWxggNL6
+ziZJZec7Fip0WVl/9KtuQ3N/2ZnOm/udajFdYAzCl7k5FYH+ZNydv6CMzwCujB3E
+DUI0YXSYtEm7LHL2Gk1tz/TQkjjsuqOH1UFF/j/QWppYlmxEadZ9Njyzkc7HfOQ=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://nhm-eduid.nhm-wien.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://nhm-eduid.nhm-wien.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://nhm-eduid.nhm-wien.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://nhm-eduid.nhm-wien.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Naturhistorische Museum Wien</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Natural History Museum Vienna</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Naturhistorische Museum Wien</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Natural History Museum Vienna</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://nhm-wien.ac.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://nhm-wien.ac.at/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>NHM</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:eduid.support@nhm-wien.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>NHM</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:eduid.support@nhm-wien.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:SurName>Contact</md:SurName>
+	<md:EmailAddress>mailto:eduid.support@nhm-wien.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

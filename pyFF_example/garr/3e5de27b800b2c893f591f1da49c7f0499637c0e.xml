@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idpass.postech.ac.kr/idp/simplesamlphp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://kafe.kreonet.net" registrationInstant="2017-06-23T09:24:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.kafe.or.kr/e_join</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">postech.ac.kr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Pohang University of Science and Technology</mdui:DisplayName>
+		<mdui:Description xml:lang="en">POSTECH Home Organization</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://postech.ac.kr/eng/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://postech.ac.kr/eng/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="19" width="60" xml:lang="en">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:36.014378,129.322452</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIJAPOtYcP66X1tMA0GCSqGSIb3DQEBCwUAME8xCzAJBgNV
+BAYTAktSMQ8wDQYDVQQHDAZQb2hhbmcxEDAOBgNVBAoMB1BPU1RFQ0gxHTAbBgNV
+BAMMFGlkcGFzcy5wb3N0ZWNoLmFjLmtyMB4XDTE3MDcyMTAyMjQ1M1oXDTI3MDcy
+MTAyMjQ1M1owTzELMAkGA1UEBhMCS1IxDzANBgNVBAcMBlBvaGFuZzEQMA4GA1UE
+CgwHUE9TVEVDSDEdMBsGA1UEAwwUaWRwYXNzLnBvc3RlY2guYWMua3IwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOWNYnHWhUmrqgytI9sxzlUx5hcnom
+785MiZS2FrFAeK/6Mj/MnNcXTSVNgJPn4it6/7/4bl+WC+RPW4hp/BoVRTwZX1pA
+03jb1CwWehTJgAr598fAMm1XtA0nUuDbBru694eMFJO6sIeOF67vc3HJVwJuBNM8
+q+eeDxRkMzN3iSIGUzdh2jA2CBoLgt97T4dLxsN9Hj58F9aZHWtkzghWJPX2Jc0k
+RMyq+Wf+G2EIUP+C5/xsaF1ezM031DhbhzJlFUuCoXMT9SobOoyCuzmO8rz221cx
+5YXp4RamuafJG+o5E9QWaUTlmEhh7hkJrP9tSkII1ySVHoJReRWoKCj9AgMBAAGj
+UDBOMB0GA1UdDgQWBBQPdAK+vAAg6ckFJxrNOvhp7ZgFfjAfBgNVHSMEGDAWgBQP
+dAK+vAAg6ckFJxrNOvhp7ZgFfjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUA
+A4IBAQAHqzetsw18epebBTqjeY1ZOAJvULX5VFsuX257sMcqg+TdToctoku5BV2q
+I9rG2DNbTZJhTZGmQUT4FMJIdVpI6fSetrgGWFznbYti00gbky4+qEjlmC4/qkB3
+3XA+NI0eZWiXoi93POGyknIQkNn4ceQkPF8ZBXmGQc+UDM3thZ7gNgBRLUyqhazh
+ncyaWhDTU6iSDD2aGD84aSPgp9p594jRCfMBfvhe+lwzRKT3E8PY9epo6gyi5VOk
+hyOb8wM4q823LtiA2K2x1ez5l8UHP0vfHRoZKI83tnDE7F5VzlRMrrdrHvL8YyJW
+wElH0hy33YxsysdC+48VOMa+Or6v
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDcTCCAlmgAwIBAgIJAPOtYcP66X1tMA0GCSqGSIb3DQEBCwUAME8xCzAJBgNV
+BAYTAktSMQ8wDQYDVQQHDAZQb2hhbmcxEDAOBgNVBAoMB1BPU1RFQ0gxHTAbBgNV
+BAMMFGlkcGFzcy5wb3N0ZWNoLmFjLmtyMB4XDTE3MDcyMTAyMjQ1M1oXDTI3MDcy
+MTAyMjQ1M1owTzELMAkGA1UEBhMCS1IxDzANBgNVBAcMBlBvaGFuZzEQMA4GA1UE
+CgwHUE9TVEVDSDEdMBsGA1UEAwwUaWRwYXNzLnBvc3RlY2guYWMua3IwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDOWNYnHWhUmrqgytI9sxzlUx5hcnom
+785MiZS2FrFAeK/6Mj/MnNcXTSVNgJPn4it6/7/4bl+WC+RPW4hp/BoVRTwZX1pA
+03jb1CwWehTJgAr598fAMm1XtA0nUuDbBru694eMFJO6sIeOF67vc3HJVwJuBNM8
+q+eeDxRkMzN3iSIGUzdh2jA2CBoLgt97T4dLxsN9Hj58F9aZHWtkzghWJPX2Jc0k
+RMyq+Wf+G2EIUP+C5/xsaF1ezM031DhbhzJlFUuCoXMT9SobOoyCuzmO8rz221cx
+5YXp4RamuafJG+o5E9QWaUTlmEhh7hkJrP9tSkII1ySVHoJReRWoKCj9AgMBAAGj
+UDBOMB0GA1UdDgQWBBQPdAK+vAAg6ckFJxrNOvhp7ZgFfjAfBgNVHSMEGDAWgBQP
+dAK+vAAg6ckFJxrNOvhp7ZgFfjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUA
+A4IBAQAHqzetsw18epebBTqjeY1ZOAJvULX5VFsuX257sMcqg+TdToctoku5BV2q
+I9rG2DNbTZJhTZGmQUT4FMJIdVpI6fSetrgGWFznbYti00gbky4+qEjlmC4/qkB3
+3XA+NI0eZWiXoi93POGyknIQkNn4ceQkPF8ZBXmGQc+UDM3thZ7gNgBRLUyqhazh
+ncyaWhDTU6iSDD2aGD84aSPgp9p594jRCfMBfvhe+lwzRKT3E8PY9epo6gyi5VOk
+hyOb8wM4q823LtiA2K2x1ez5l8UHP0vfHRoZKI83tnDE7F5VzlRMrrdrHvL8YyJW
+wElH0hy33YxsysdC+48VOMa+Or6v
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpass.postech.ac.kr/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpass.postech.ac.kr/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpass.postech.ac.kr/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpass.postech.ac.kr/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Pohang University of Science and Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Pohang University of Science and Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.postech.ac.kr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:hemos@postech.ac.kr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>mailto:hemos@postech.ac.kr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

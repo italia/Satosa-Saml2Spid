@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cardiffmet.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2015-01-26T17:02:53Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cardiffmet.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cardiff Metropolitan University</mdui:DisplayName>
+		<mdui:Logo height="60" width="80">https://idplogos.cardiffmet.ac.uk/cmet80x60.gif</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idplogos.cardiffmet.ac.uk/cmet_16x16_crest.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAM/WrHuhoD12UZd9duSVXiTcAQKqMA0GCSqGSIb3DQEB
+BQUAMB8xHTAbBgNVBAMMFGlkcC5jYXJkaWZmbWV0LmFjLnVrMB4XDTE0MTEyODE0
+NTA1OFoXDTM0MTEyODE0NTA1OFowHzEdMBsGA1UEAwwUaWRwLmNhcmRpZmZtZXQu
+YWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCibib8LKS+kWc/
+4jFZaF5lJlCYKGc2M3h7Dzx7En9rOaP/4BnyRXmIfX0XQQ43Zl/M3TZ1V3lfOMl0
+mS7qxiNP9tRR44Imj4tAlPGTL0/G6wKrRgZwT5Ya5Situ4uGSjRqlEXKp0WPX9DB
+rV40f+n3amXbG6968QkBgMTVQoYSfPYPDeYvMkJgIBJ7fFEfoiUEMLbmApFvKAOF
+fh3AyRIgIvNZGuhCmOurAxrK83NQf8GxYCrxWVYBDxy2zM+ieqIQfXq7vKPwRj0i
+I93TqeH3tW+NNXxp3L2Vhqp6QjNwTJuQoq8CyeFAppZ3R7I76gS0a/G65BnDexXr
+s35piiX3AgMBAAGjbzBtMB0GA1UdDgQWBBRhlIKvVhsJq55eRmziUxsfKVzMkjBM
+BgNVHREERTBDghRpZHAuY2FyZGlmZm1ldC5hYy51a4YraHR0cHM6Ly9pZHAuY2Fy
+ZGlmZm1ldC5hYy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEA
+V2tNA0SAzHCAXhPCbT2SAMgB4bSGM51OLwKn+tJNC5gasFq62kERnXcRbl/Ii5VZ
+Iu1t8ml0jTLBjiFYCFtq4uGEMeDPPxKNUNEPkWfIqCq693CrSHc1M5Lso4CmhiCK
+CAnz0V1oVkgyBW9e7WnDzRGvVN12hTGmS33ZINOamwmQErUbeEdRnlB7fa3BZHB9
+kdW3SZRhb7CynWQoB6byYyBBWKfTuD1qScRQlIFhOscGX3qxBYBIqwzsJkd4qXPK
+3qrSFwHAyC6nXz1MLyanluHTBD+41hABSHxu5pwWhD8xXbFS0dA+8qJwagPvuO8q
+JA5KMQm1uzCs13HbQj79Nw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cardiffmet.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cardiffmet.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cardiffmet.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cardiffmet.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cardiffmet.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cardiffmet.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cardiffmet.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cardiffmet.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cardiffmet.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cardiffmet.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAM/WrHuhoD12UZd9duSVXiTcAQKqMA0GCSqGSIb3DQEB
+BQUAMB8xHTAbBgNVBAMMFGlkcC5jYXJkaWZmbWV0LmFjLnVrMB4XDTE0MTEyODE0
+NTA1OFoXDTM0MTEyODE0NTA1OFowHzEdMBsGA1UEAwwUaWRwLmNhcmRpZmZtZXQu
+YWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCibib8LKS+kWc/
+4jFZaF5lJlCYKGc2M3h7Dzx7En9rOaP/4BnyRXmIfX0XQQ43Zl/M3TZ1V3lfOMl0
+mS7qxiNP9tRR44Imj4tAlPGTL0/G6wKrRgZwT5Ya5Situ4uGSjRqlEXKp0WPX9DB
+rV40f+n3amXbG6968QkBgMTVQoYSfPYPDeYvMkJgIBJ7fFEfoiUEMLbmApFvKAOF
+fh3AyRIgIvNZGuhCmOurAxrK83NQf8GxYCrxWVYBDxy2zM+ieqIQfXq7vKPwRj0i
+I93TqeH3tW+NNXxp3L2Vhqp6QjNwTJuQoq8CyeFAppZ3R7I76gS0a/G65BnDexXr
+s35piiX3AgMBAAGjbzBtMB0GA1UdDgQWBBRhlIKvVhsJq55eRmziUxsfKVzMkjBM
+BgNVHREERTBDghRpZHAuY2FyZGlmZm1ldC5hYy51a4YraHR0cHM6Ly9pZHAuY2Fy
+ZGlmZm1ldC5hYy51ay9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEA
+V2tNA0SAzHCAXhPCbT2SAMgB4bSGM51OLwKn+tJNC5gasFq62kERnXcRbl/Ii5VZ
+Iu1t8ml0jTLBjiFYCFtq4uGEMeDPPxKNUNEPkWfIqCq693CrSHc1M5Lso4CmhiCK
+CAnz0V1oVkgyBW9e7WnDzRGvVN12hTGmS33ZINOamwmQErUbeEdRnlB7fa3BZHB9
+kdW3SZRhb7CynWQoB6byYyBBWKfTuD1qScRQlIFhOscGX3qxBYBIqwzsJkd4qXPK
+3qrSFwHAyC6nXz1MLyanluHTBD+41hABSHxu5pwWhD8xXbFS0dA+8qJwagPvuO8q
+JA5KMQm1uzCs13HbQj79Nw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cardiffmet.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cardiffmet.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Cardiff Metropolitan University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Cardiff Metropolitan University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cardiffmet.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:ithelpdesk@cardiffmet.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Andi</md:GivenName>
+	<md:SurName>Morris</md:SurName>
+	<md:EmailAddress>mailto:amorris@cardiffmet.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

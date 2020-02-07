@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://whitney.accessiblelearning.com/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://whitney.accessiblelearning.com/Shibboleth.sso/DS" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Accessible Information Management, LLC</mdui:DisplayName>
+		<mdui:Description xml:lang="en">AIM LLC provides software and support, systems implementation and integration, strategic consulting, and technology management services to help colleges and universities build, unify, and manage their disability services accommodations. Enterprise solutions for administration and recordkeeping. Portal solutions to enhance Web-based experiences and support community building Technology management services to better manage technology resources and provide metrics on demand. Bringing together people, processes, and technology, AIM LLC works with colleges and universities to help them strengthen performance and services through improved data accuracy and integrity, increased accountability, and enhanced educational experiences.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.accessiblelearning.com</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.accessiblelearning.com/Policies.aspx</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="350" xml:lang="en">https://common.accessiblelearning.com/Shibboleth/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIG6jCCBdKgAwIBAgIJALvOO+8K0DfoMA0GCSqGSIb3DQEBCwUAMIG0MQswCQYD
+VQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEa
+MBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xLTArBgNVBAsTJGh0dHA6Ly9jZXJ0
+cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzEzMDEGA1UEAxMqR28gRGFkZHkgU2Vj
+dXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTE5MDMyOTIyMDAzNVoX
+DTIwMDcwOTA2NTAzMFowTDEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRh
+dGVkMScwJQYDVQQDEx53aGl0bmV5LmFjY2Vzc2libGVsZWFybmluZy5jb20wggEi
+MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC0oVkBpmVyZ+BAOzJyxllhUgzN
+AtCOjd8BHcgSZEGXylWQNSc1L327dmYuj15j8hEmGdFnMUA+U/MHdh17IpTsdGM3
+wsX6bU0Mfg5oOpcQSepSlckjGneYRrzSo+/AWpEbMvGSoS+Ph893quhzK7NYJQNB
+YgUNylPTHKjuAadGpniAbULaH5DQu3KeX4yghNybvrGfOBrEy0n1voTGJB5YjKN8
+Zc23ntQcjn1QkTvo91xjM7eEsllCF5lPx6GtD9KPsF9v0ACTqHIf/dzsT7jZZ/7a
+AVoY5XL6iMaDjLnoOZdUYuzeHdwcvSK2DD5wDB/MOh/+B1b3FdZ4tu+SYRUtAgMB
+AAGjggNkMIIDYDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr
+BgEFBQcDAjAOBgNVHQ8BAf8EBAMCBaAwOAYDVR0fBDEwLzAtoCugKYYnaHR0cDov
+L2NybC5nb2RhZGR5LmNvbS9nZGlnMnMxLTEwMjEuY3JsMF0GA1UdIARWMFQwSAYL
+YIZIAYb9bQEHFwEwOTA3BggrBgEFBQcCARYraHR0cDovL2NlcnRpZmljYXRlcy5n
+b2RhZGR5LmNvbS9yZXBvc2l0b3J5LzAIBgZngQwBAgEwdgYIKwYBBQUHAQEEajBo
+MCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5nb2RhZGR5LmNvbS8wQAYIKwYBBQUH
+MAKGNGh0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS9n
+ZGlnMi5jcnQwHwYDVR0jBBgwFoAUQMK9J47MNIMwojPX+2yz8LQsgM4wTQYDVR0R
+BEYwRIIed2hpdG5leS5hY2Nlc3NpYmxlbGVhcm5pbmcuY29tgiJ3d3cud2hpdG5l
+eS5hY2Nlc3NpYmxlbGVhcm5pbmcuY29tMB0GA1UdDgQWBBSuPbCdMUjaLwzKaXBB
+JZyKaVhzpTCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHcApLkJkLQYWBSHuxOi
+zGdwCjw1mAT5G9+443fNDsgN3BAAAAFpy3gNqAAABAMASDBGAiEAz1Yl1FfHQkKX
+fjihoyrlHNFkYDg6+UAQYBCY5FPB700CIQDqkPOom3YOMJAotgZ2PDNvgVwArOia
+c8qSUJozQ0pB8AB3AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAAB
+act4EasAAAQDAEgwRgIhAOgr3SqHmfsqZH+DvrnTZJUk0pjLouRdmvrXYe7pwOZG
+AiEAjJLgUKkQeedKrXLi+o1sbhjRgxy+wnFaf3+YT2rzj7gAdQBep3P531bA57U2
+SH3QSeAyepGaDIShEhKEGHWWgXFFWAAAAWnLeBemAAAEAwBGMEQCICLLEaNGW0iX
+2tkW47ku++RCh33qFTqjS7sEujcNBoPIAiAZVUQi7yyx7Y+aaDauTLOv0S5rcCoX
+FJNLcDppy/+TMzANBgkqhkiG9w0BAQsFAAOCAQEATdED5Fq8trlKQsI/tQPSBbtc
+QY1eKQovv2PIuZgI6jkCbf7R4DNUGW9nkWTIu1lL135v9XXW09nzjxENtX8UzZvn
+g2BdrEyXZ2dCvdPndev6QUwTiN4XSchNdvXGqE+gMEMhTsp27j5tSbh/6yq9/eGV
+FAj/tRUhqXXQEPjduiKmBibilu2xfe13SEi5NaXdcHGICa09NBGy+dEOrtDpcWb4
+ytgbwDalnKmDQSvRgbhXnh33/feV54hFsV72hpwRmc5DPZntnKVMrY0SgRo/2dq9
+eo7oJs9bSmBFmF21RAc8GWkffH00skFWPaky5esRivG3hNYnQVsl9Yv07AXGCg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://whitney.accessiblelearning.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://whitney.accessiblelearning.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://whitney.accessiblelearning.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://whitney.accessiblelearning.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Accessible Information Management, LLC</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">AIM LLC provides software and support, systems implementation and integration, strategic consulting, and technology management services to help colleges and universities build, unify, and manage their disability services accommodations. Enterprise solutions for administration and recordkeeping. Portal solutions to enhance Web-based experiences and support community building Technology management services to better manage technology resources and provide metrics on demand. Bringing together people, processes, and technology, AIM LLC works with colleges and universities to help them strengthen performance and services through improved data accuracy and integrity, increased accountability, and enhanced educational experiences.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Accessible Information Management, LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Accessible Information Management, LLC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://accessiblelearning.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Robert Armas</md:GivenName>
+	<md:EmailAddress>rob.armas@dsaim.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Haris Gunadi</md:GivenName>
+	<md:EmailAddress>haris.gunadi@dsaim.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Haris Gunadi</md:GivenName>
+	<md:EmailAddress>haris.gunadi@dsaim.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Robert Armas</md:GivenName>
+	<md:EmailAddress>rob.armas@dsaim.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

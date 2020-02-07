@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.xsede.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.xsede.org/error" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">xsede.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">XSEDE</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Extreme Science and Engineering Discovery Environment (XSEDE)</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://idp.xsede.org/policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="70" width="194" xml:lang="en">https://idp.xsede.org/images/logo-blue.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUUZn22ZceS/roL9z9Q7Rcm341uM8wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnhzZWRlLm9yZzAeFw0xNjA5MjExNDA2MTFaFw0z
+NjA5MjExNDA2MTFaMBgxFjAUBgNVBAMMDWlkcC54c2VkZS5vcmcwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCgGjMrfzCewlFLJ/WZfgJ2EBFBiviXQ7/G
+cOZ0CtT5drztZHuB9LKg6TNkkzsj0iIsfcUjlh+d3Hsj1B0nYTVETqThjp2dfFLc
+K7ovQyDJaREwDY8mNiIAkYYKf4KIltoGXxJ/RkTjWZF7sg/1RvUXKl7PecOJZP4J
+OE5spqp5Ow/+ebmM2ArK3vrm+1Xf7Os2v/0uUJRs99Xfa/OjmzThfuW8yeAmerHB
+UJRer47bc19rNcPDFqamu+nnY+vy7A7FvxFxtw307R4WPSmjSRof8zCZGKWXALD5
+jfuepqOhwtIL6/MEr8fIBaF1cTj9/IX3oSNvyl4s0OHyqC3lrYcjAgMBAAGjYTBf
+MB0GA1UdDgQWBBTiANCDGFDUWKg+MfjFMHq5KL0mSzA+BgNVHREENzA1gg1pZHAu
+eHNlZGUub3JnhiRodHRwczovL2lkcC54c2VkZS5vcmcvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBABjxXRc+IqLVWGoc73D6rE7Oy6BweHlLUhH42HnC
+24COIW4ZBl9FuvnzcIuU99rd/RtdiGKUjT0EvZ0RHG/G5PUQOohBwzBKa4yasQ4X
+F8vC+FqKTKYfyuPG23E4pyGd3opjQ3P9671Wi5QN33yMQeEOUmi2jZA+LxrWCsZG
+HlgszHiMJPLAwWM1nW/Hh0Z156ONabgbTyjRHfOTRYlGgrTZ1ElFxVCUl05HIY5s
+asZ+wKOPxxE+tJOt2mV9+syNkHRssXGlGHh99+JWIlm4vPDveJQDL0NN+haE/NRB
+BgRgYGCf6LQuE/evnHRVnExZAWhUWRec+orIreHi/tRbJbk=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.xsede.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.xsede.org/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">XSEDE of the University of Illinois Urbana Champaign</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">XSEDE</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.xsede.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>XSEDE Help Desk</md:GivenName>
+	<md:EmailAddress>help@xsede.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>XSEDE Help Desk</md:GivenName>
+	<md:EmailAddress>help@xsede.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>XSEDE Help Desk</md:GivenName>
+	<md:EmailAddress>help@xsede.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>XSEDE Help Desk</md:GivenName>
+	<md:EmailAddress>help@xsede.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

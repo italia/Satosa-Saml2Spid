@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.ehess.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2012-07-12T16:19:22Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ehess.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">EHESS</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACjklEQVQoz1XPy3LTSBhA4b9bre7WxbrYSIlsgicZLguGJyFF1dTwejxHii3FgkuxwXGoOMSETHAcJzK2ZKlbslrNgs3MWZ/Nh8bjEzIcyOll4PtxHH09n9qW5bru/ObG97z1ep0kiQYdR9G79x8Ggz5Wqn3seEophFFdb4PAPzjYZ4yGQTAcPoii6C5NdasBQCllWzYGAACglO7dv885E0JqrctS5JsNAGRZZtv27yfw/V6vi05PJ3EcCSm39TaK7mVZXpblYNBfrddlUVq21el05tfznd2d+fzGJAQzzvN8Qwximublv1er9Xp//48PHz8JIRhnQsijo9eNUm/evAWA8+k3DFozRj3PQwhms+vx+CTP89lsJoSsZEUM48mTx45je14nz/NuNyRKqU1R5pvC9zqu61gWn13PszyvqgpjZFLzN2A4HBLDOJ1MMKXU97zA97WGnZ243084Yy//+fter3d2dh5HUTcMHdv5PBpprU3TNJ4fHtZ1/Xl0TCk1DNy27c1icXHxnVFalIWQ8u4uZZy1qj2dTIhh4O22SZKk3+8/++vpYnG7WNy2rU6SZPrt4tGjh8vlMuyGUsjR8RgBiuOYcM4sy4L/16oWGxgj/OfBwfF4vLe39+LwuQZ9dfWDNI06n07DMACAoijCMKzr7eL2NtndHZ98GfQT1+0slz/TNNUapJTox2zmOk7TKEIMKSulFOe8bVuMUdM0GBuU0lEjjrMVAPQoI0qp1Wrtuk5V1VmWOY6TLlPOuG3bWZ7HUXSXpkfV6tXlVwB42vExaKCU1vUWADjnTdMEvs84a1vFGStL4brOf3kYIbQpNoyzuq4JIVprIaQQQsqqqmrHsVc/VwQhhg2GDRPjX3KEWNzfIhepAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA3LTIwVDEwOjQ4OjMzKzAyOjAwhJ20dgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNy0yMFQxMDo0ODozMyswMjowMPXADMoAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.ehess.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Condorcet Campus members</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">EHESS</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Etablissements du Campus Condorcet</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVALeCOqpROd3E1etW0cL7TxFT+Z3rMA0GCSqGSIb3DQEB
+BQUAMBcxFTATBgNVBAMTDGlkcC5laGVzcy5mcjAeFw0xMTA3MjUxMDMxNThaFw0z
+MTA3MjUxMDMxNThaMBcxFTATBgNVBAMTDGlkcC5laGVzcy5mcjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBALomrxhDCkuM+MNokRhVvEkg095vk1wsvflA
+wYfTuhsVSW13bZVHcOHTjILhWiHOVz8RZVXy6vOmEEWXl2KWn9Tvovh/Sey2rRe/
+/svsSpIUKgnU2tC3rC41XJ5V/mIJUoSPhcQCKCx5t4CV4xG5eNa4rYJxsJDDUviA
+Pd+jKkiVMUEvDJ4Qt4o/scjjuUGUrKJ1/EmMqZfG2HO7Xqkg5j8z6n1U6KpOXUb0
+kMhL9SKCiWZX9iYt810mkOlx7TNJlAENOqlGybAnMjEY85rJ/LbEnpgTyWEmNEPc
+1BCN84l4VVEJc7F2WxDjtFMG7YQwjWdUIJbVz/dHHvJQgxIoSrUCAwEAAaNfMF0w
+PAYDVR0RBDUwM4IMaWRwLmVoZXNzLmZyhiNodHRwczovL2lkcC5laGVzcy5mci9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUL5PgjhSfsllLhl0wF9vbNDc9PpgwDQYJ
+KoZIhvcNAQEFBQADggEBAKARW3uivnFto2JRaKGtnqcaDO5dS3RKj7uf/eIaU/Uq
+Fm3PADZE5gVTUcwlILrDmci0202/Boo03srZ0RCvSZ6HxjZM5gsPGZ0D2SiMf8b3
+UVSLt38rXXyd6Xm0kXvBP2ZsFlRkzanI0G8pa3wOslVGEZccBKY4dmRToIm7cQeB
+OQdqKV2rfZSK5DN7cE5VeUlRfPOqcsYagK5PT0+JiKdBuJTnBFUub+SPLIW+pygx
+ftIG5eTG0zs+8JFROXmVnoVTk6dKHOcL4Ze1HNgC/RQGLQCyY5HY7IjlllWsTteF
+uq8R4YH10wMLWAk+39fV4VIZwj+rc6KKXaPjcpXt+RE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.ehess.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.ehess.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.ehess.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ecole des Hautes Etudes en Sciences Sociales Paris</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ecole des Hautes Etudes en Sciences Sociales Paris</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ehess.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:admin@ehess.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

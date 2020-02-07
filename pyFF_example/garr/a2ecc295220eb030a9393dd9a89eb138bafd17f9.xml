@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.ewu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ewu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Eastern Washington University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://access.ewu.edu/OIT/Services/Accounts-Passwords.xml</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ewu.edu/Privacy-Policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="180" xml:lang="en">https://sso.ewu.edu/idp/images/dummylogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDDDCCAfSgAwIBAgIJAK9rbI0xVIX5MA0GCSqGSIb3DQEBCwUAMBYxFDASBgNV
+BAMMC3Nzby5ld3UuZWR1MB4XDTE4MDgwMTIxNTExMVoXDTIzMDczMTIxNTExMVow
+FjEUMBIGA1UEAwwLc3NvLmV3dS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQC6xsbZ9B/ZrPTHQTZD7ywSmCpLZ3RIJSEk/2GyN2gdxz2ouSoupN8a
+IKFfsu7fVRlDIHEslzgNDOaDghsxhxJyG7nhTmc1jSHO3TWdv8KQhDw/PJJtc5Dl
+K2RK1Zv2KE4tspBHuW330IOxFLra29CtgrSVf5MXnCqvQ+/+k/Zsd4Yos75uFpoX
+aouCp2cg2I5nCicgAiV3AaBsvYWGP82PloOVAvqoON44N+4YluzXb8oJzBtDFQhx
+XcuLwsoVhDFxPDd0R+PkbX4fJ3lnGQHZTKfFFJvVGEDcnfNGrmUrYWf4HkMhnUNw
+OliNhsh250vK4CxdivSz+RsOkNuvnRLpAgMBAAGjXTBbMDoGA1UdEQQzMDGCC3Nz
+by5ld3UuZWR1hiJodHRwczovL3Nzby5ld3UuZWR1L2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBRtdwy+jFLgEQuRdEfkeDTwkiFR7jANBgkqhkiG9w0BAQsFAAOCAQEA
+CSXgLrPonEN7sKPNrvSlCSxpuVqxELj9DTIyyK3bDViJdDppIj/KIp2E+o4KTyet
+I8uZsW2CmFClisuSlPhRtbsnLR6OZ1ccXcKc9owM5+IXeZN9SnPG34NvboaTfJ36
+LmI7DfB2wDqbRi/tljdpUW2RbX+EBgwzR2TjwDVKv4fetiVlFpCn/oDLPlwYHtof
+z+biRCpxbP7qWZ9rtrJU9kzbMd2/7/HBBcQHwN/UIRT4Z5s7beNduRChD2Mn1+Tp
+HfGjibgv6AU912JZvDsAc+qhXBVSPafQ6+Ec7cu6/BipUzJggcbHTWYCj6WULsNi
+15INWZP9LOTa2hnhdm6RaQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.ewu.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ewu.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.ewu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ewu.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Eastern Washington University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Eastern Washington University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ewu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Scott Green</md:GivenName>
+	<md:EmailAddress>sgreen25@ewu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Scott Green</md:GivenName>
+	<md:EmailAddress>sgreen25@ewu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Colin Turnbull</md:GivenName>
+	<md:EmailAddress>cturnbull@ewu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

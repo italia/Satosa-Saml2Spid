@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://saml.adu.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">adu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">AdventHealth University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://my.ahu.edu/university-services/information-technology/incommon-pop</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ahu.edu/campus/policies-and-campus-safety/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="204" width="600" xml:lang="en">https://saml.ahu.edu/simplesaml/module.php/themeADU/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGDTCCA/WgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBjjEwMC4GA1UEChMnQWR2
+ZW50aXN0IFVuaXZlcnNpdHkgb2YgSGVhbHRoIFNjaWVuY2VzMR8wHQYDVQQLExZJ
+bmZvcm1hdGlvbiBUZWNobm9sb2d5MRMwEQYDVQQDEwpteS5hZHUuZWR1MSQwIgYJ
+KoZIhvcNAQkBFhVUcmF2aXMuV29vbGV5QGFkdS5lZHUwIBcNMTMwNDI2MTkyODAw
+WhgPOTk5OTEyMzEyMzU5NTlaMIGOMTAwLgYDVQQKEydBZHZlbnRpc3QgVW5pdmVy
+c2l0eSBvZiBIZWFsdGggU2NpZW5jZXMxHzAdBgNVBAsTFkluZm9ybWF0aW9uIFRl
+Y2hub2xvZ3kxEzARBgNVBAMTCm15LmFkdS5lZHUxJDAiBgkqhkiG9w0BCQEWFVRy
+YXZpcy5Xb29sZXlAYWR1LmVkdTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoC
+ggIBALsumguggo/U3tw1APweGbt11OzPYU3313EQRo98PsXau0iFWngNxyugRijR
+qcs4fcrZwSwF5x+FW3h/IkBGwluX7Tt3fPxAZ6qLv2MAhO5RuCvABG8X45sGn8wX
+os3nRLSDELDzvCeGTIWan1brMgA+DouM/2ubjt209ONT3Cdl5JdcHx+P6D+5jwQU
+ac2F8CAH9z1sAl4KFdWKOnIW16JH4ulL0l6uX6DZfUvYXJyAenh5kpQv+BjryD1d
+JKy5TFF2golwABwgXBh52+/0F4fc4riowzWDo3hwN5mjl5LsbIckmRDFTeOB7Q69
+70O1dNyuoPY6JoODaUprD/w0IFqMKIiOuQWT9ta/bhuKaXr+0sUDCxTMsXPb/Cwc
+GDtkJKU34k7rn+dAzzXrCtIxElrptkB2BgLdMlfumAIKozkMTiQkXTAonPyx3gBa
+NbiDOfT7/lnGDo+ezQNprK9TlgePBVGHa3i4sMCHhT9aVnLZ3QFQCweM5wSflc60
+GvxpHNzjnrgTSI5czdbzv0WmwRFmwT6Z7d9CZu0AXjCdG8FKOmY9DLd1JB38I0Df
+TzYIYNLksWMawxmxeRQJiTPskbYqFab9A3YyZq55qiDUdbUujqAW/ZIsStGULR2P
+Rf64oF8fQLrK8krPshxj10IpsM/bmqd3EwGhWHeLvRHifEBrAgMBAAGjcjBwMA8G
+A1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFCjKM5x5QjrVDYppR2EwDP1KBN7xMAsG
+A1UdDwQEAwIBBjARBglghkgBhvhCAQEEBAMCAAcwHgYJYIZIAYb4QgENBBEWD3hj
+YSBjZXJ0aWZpY2F0ZTANBgkqhkiG9w0BAQUFAAOCAgEAkDasbLNaUg1BdZAGIRAS
+jK3A2yo0WoDvovEVRXps65aMQ1wzouKn3ZacF3jbbCWgeYeJHqUrDCs75ulR8nQH
+8EM6Z7w27AZmx44CCsMcx1VGhi9pBBZmmhJoZqqnHUryC5Yyraj8GHnmGzap1o7B
+3dptYJr0SChO+2sazHvwPpOTWeaVQSYL7AM80Ca/to/N/3N+LzxsiXcDibObYBD0
+p0ETiObdhWb4zg+12CRXlB6L6lLDb6H8GUXhMlUANOnuL/PW0d9KsqLYOgvvHhXD
+SczaJ6UOx8cQM4QyYsLRRGOErmEAd35e0Huiwa3WV+We66aIzF+FKfztDmehcQE3
+xV6R1d5ttBywgU+PQSzfpfmjV2xxhJyDPoO6rEP/g5hsUeGforuqkmawHk+YxNCu
+ZBQ4VAaQbKvYNvd1q590xIY//jlzOy419IZ4+u3ex0fJaUnRQFReqJjxUD2JcvqL
+AqDzO58FB1Tg+8JLfpTMtLXlFreg/Cm7LlI7TS4466P7TDSxaz+cS6nfLfM+iTtU
+Lo4rpxt3p3jugXN6mz0GFv+3XppUJecuZCGBAJQEiSR/R0l7qcjDfOy/poCdeeF2
+5bJhvZCLcJ3mFZrYriXzACi2qpHgNTEFPiaXZGhPk7tRQjV2flwIV9tjTNb7nFF2
+v37iXkv+oRVPop1y3YlvtgI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.ahu.edu/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://saml.ahu.edu/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">AdventHealth University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">AdventHealth University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.ahu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical Support</md:GivenName>
+	<md:EmailAddress>saml.tech@my.adu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Administrative Support</md:GivenName>
+	<md:EmailAddress>saml.admin@my.adu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Information Technology</md:GivenName>
+	<md:EmailAddress>webmaster@adu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Technology</md:GivenName>
+	<md:EmailAddress>webmaster@adu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

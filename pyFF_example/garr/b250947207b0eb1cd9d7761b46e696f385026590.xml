@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.trinity.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">trinity.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Trinity University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Trinity University</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://inside.trinity.edu/information-technology-services/it-policies</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://policies.trinity.edu/a8376318-ebd6-421f-be63-acf8c88376a1_4a404b66-1e20-431b-9514-c7c6bfeaed85.html?v=50113</mdui:PrivacyStatementURL>
+		<mdui:Logo height="128" width="128" xml:lang="en">https://dag.trinity.edu/dag/module.php/duosecurity/resources/images/logo/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUDFBQRqdoiokzNl6RioP3Q52+p8kwDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPc3NvLnRyaW5pdHkuZWR1MB4XDTE4MDkwNjE5NTkzMVoX
+DTM4MDkwNjE5NTkzMVowGjEYMBYGA1UEAwwPc3NvLnRyaW5pdHkuZWR1MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgTPIAIiRLlHjr89bGSuR0eNSZCUM
+Kuekyc+PUq9Q9N+x+5+k1tOzHFUKluvtb4mbpT7ENYN7xLEK/3Uxzik4gNLEkHAf
+r1/bRYQ+bLPY9GH6RAN/dIxr++TET2EGCvTz25JHQr2llqLEc6hgTAMla4enZBki
+YCd1MEpluP4mH+Pue7iBNvvOcqbPhNu7HiJvlSPrq9GZa2+nXqIpFNaCD9b3Nr+g
+JcLxZbavL0s8ku5RJJhArqd4tbHmjJc2b/YIN+NgyYjOtUk7sBRgEFp5UV8pCs3q
+sMJYi2EviUazgcoj8q1tm1JFrtBjiK/us8GQ/LD0qFsy3CqsspEUVhhDwwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUuKZeitzn1kxV8kN6ji5oj4m10GYwQgYDVR0RBDswOYIP
+c3NvLnRyaW5pdHkuZWR1hiZodHRwczovL3Nzby50cmluaXR5LmVkdS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAFNX5oL1LP6cPTOKU0ieRAJ+OK2rM
+Gw5mk8Raep74mL68aDs95IaRTyQUz5uqgTA5gUPO9/VsF5oCe/u9ndSRJj77yWTM
+kOgVrjO+1bAJjlzkqQHd2u7cm8qDnSOKgvRm1fTLbOsfEt4vzSm5/oc767KaCLs/
+J08FgoDbe6nwp3NbY2Jv7+k2aGriGjxomonF6WDh8vx/Q6YOQtyc9mikTqxwsfJv
+ShMHqW2p7DQF4G55icr8pUFJ6jXD2L6+Ka6evJkyCYfTovQRDxBYVwtkp2rIplCY
+xjj7Djtwe1FmARznMZmXxyB2Owd0U8RWjns1DXIFCjuYIuykdGSn9VInDw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.trinity.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.trinity.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.trinity.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.trinity.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.trinity.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.trinity.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Trinity University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Trinity University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.trinity.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Technical Services</md:GivenName>
+	<md:EmailAddress>Technical.Services@Trinity.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical Services</md:GivenName>
+	<md:EmailAddress>Technical.Services@Trinity.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Technical Services</md:GivenName>
+	<md:EmailAddress>Technical.Services@Trinity.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Technical Services</md:GivenName>
+	<md:EmailAddress>Technical.Services@Trinity.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

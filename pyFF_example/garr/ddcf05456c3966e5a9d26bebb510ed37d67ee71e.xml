@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.csustan.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csustan.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">California State University, Stanislaus</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.csustan.edu/oit/icsuam-policy-80250-privacy-personal-information</mdui:PrivacyStatementURL>
+		<mdui:Logo height="64" width="64" xml:lang="en">https://shibboleth.csustan.edu/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUGMBL/KES+CItQJGiZd2xZSh8rJkwDQYJKoZIhvcNAQEF
+BQAwITEfMB0GA1UEAxMWc2hpYmJvbGV0aC5jc3VzdGFuLmVkdTAeFw0wOTA5MDEy
+MTExMDlaFw0yOTA5MDEyMTExMDlaMCExHzAdBgNVBAMTFnNoaWJib2xldGguY3N1
+c3Rhbi5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCjiFi9hRTI
+uF6n0w82/XQHlhhj34q59TzPvf9vPh9pjgxd6sju/hCY1tx/hmAf5Woa2ilegpVt
+iy+G3tZCKgaJdVLq49zgEmKU0VYXCliGaLW1gtpwKdUYLY3M47oReql3lGlb0ml9
+zC4f8yeg7tCP1+OpnSt2EGR38SqNKqGSpdtsNVP007G4FYOZ5I/bDwCGbdyMrEuH
+G8hmXVSZOtt36Z8uXnVZb8ZWMruEvwm4Ch4SYp1ArSXF7eqyWI5juNQA8orzBjCe
+C/vpF08H/iZsAJ5ZtRYU77046cJwvzsRuFyfl74A6p4iFUl9botcIAE6O+kix2z/
+4QnLRK7kpLTzAgMBAAGjczBxMFAGA1UdEQRJMEeCFnNoaWJib2xldGguY3N1c3Rh
+bi5lZHWGLWh0dHBzOi8vc2hpYmJvbGV0aC5jc3VzdGFuLmVkdS9pZHAvc2hpYmJv
+bGV0aDAdBgNVHQ4EFgQU0+lADdpb6oUYg9Oc96Zjx/cFThswDQYJKoZIhvcNAQEF
+BQADggEBAFqASbOPNSUo4KijkXfQv9yemFmjX5g0FBO3quSUtmX0XFHMkJrAfkUQ
+34KIwGE1NKEnR5DE2CMhi+CMLM3UwsV/AH54PfMnFZYxKOeya1h5ou99rliwYfE/
+oERIMqkMdqfZI2eVOmjKMfgZMpjhSAjqkvuZ0lJSrHM6GhJTZGVF1qHHxAniNJuL
+EiG0dCIfR86g8fLLIKB2T6NExYY6yYJHobC9h8G9IiR+2QAf/UxuC6hEGAQAnUWj
+NqWgMu7TiZy0oedXYZYYaAHmWQDJWXt2SGC11bB8qtEU2tcccppV75MWjC7SYqko
++1hpIr+zlLqhBIi73qZPIVggyEH8HpE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.csustan.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.csustan.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.csustan.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.csustan.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.csustan.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.csustan.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.csustan.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.csustan.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">csustan.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDQzCCAiugAwIBAgIUGMBL/KES+CItQJGiZd2xZSh8rJkwDQYJKoZIhvcNAQEF
+BQAwITEfMB0GA1UEAxMWc2hpYmJvbGV0aC5jc3VzdGFuLmVkdTAeFw0wOTA5MDEy
+MTExMDlaFw0yOTA5MDEyMTExMDlaMCExHzAdBgNVBAMTFnNoaWJib2xldGguY3N1
+c3Rhbi5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCjiFi9hRTI
+uF6n0w82/XQHlhhj34q59TzPvf9vPh9pjgxd6sju/hCY1tx/hmAf5Woa2ilegpVt
+iy+G3tZCKgaJdVLq49zgEmKU0VYXCliGaLW1gtpwKdUYLY3M47oReql3lGlb0ml9
+zC4f8yeg7tCP1+OpnSt2EGR38SqNKqGSpdtsNVP007G4FYOZ5I/bDwCGbdyMrEuH
+G8hmXVSZOtt36Z8uXnVZb8ZWMruEvwm4Ch4SYp1ArSXF7eqyWI5juNQA8orzBjCe
+C/vpF08H/iZsAJ5ZtRYU77046cJwvzsRuFyfl74A6p4iFUl9botcIAE6O+kix2z/
+4QnLRK7kpLTzAgMBAAGjczBxMFAGA1UdEQRJMEeCFnNoaWJib2xldGguY3N1c3Rh
+bi5lZHWGLWh0dHBzOi8vc2hpYmJvbGV0aC5jc3VzdGFuLmVkdS9pZHAvc2hpYmJv
+bGV0aDAdBgNVHQ4EFgQU0+lADdpb6oUYg9Oc96Zjx/cFThswDQYJKoZIhvcNAQEF
+BQADggEBAFqASbOPNSUo4KijkXfQv9yemFmjX5g0FBO3quSUtmX0XFHMkJrAfkUQ
+34KIwGE1NKEnR5DE2CMhi+CMLM3UwsV/AH54PfMnFZYxKOeya1h5ou99rliwYfE/
+oERIMqkMdqfZI2eVOmjKMfgZMpjhSAjqkvuZ0lJSrHM6GhJTZGVF1qHHxAniNJuL
+EiG0dCIfR86g8fLLIKB2T6NExYY6yYJHobC9h8G9IiR+2QAf/UxuC6hEGAQAnUWj
+NqWgMu7TiZy0oedXYZYYaAHmWQDJWXt2SGC11bB8qtEU2tcccppV75MWjC7SYqko
++1hpIr+zlLqhBIi73qZPIVggyEH8HpE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.csustan.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.csustan.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">California State University, Stanislaus</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">California State University, Stanislaus</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.csustan.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Corey Cardoza</md:GivenName>
+	<md:EmailAddress>CCardoza@csustan.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steven Teixeira</md:GivenName>
+	<md:EmailAddress>steixeira@csustan.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Nathan Zierfuss-Hubbard</md:GivenName>
+	<md:EmailAddress>nzierfuss@csustan.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

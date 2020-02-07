@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibb.its.appstate.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">appstate.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Appalachian State University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://sso.appstate.edu/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.appstate.edu/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="381" xml:lang="en">https://shibb.its.appstate.edu/local/appstate.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID4DCCAsgCCQCAKdbbAE2uwDANBgkqhkiG9w0BAQUFADCBsTELMAkGA1UEBhMC
+VVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ4wDAYDVQQHEwVCb29uZTElMCMG
+A1UEChMcQXBwYWxhY2hpYW4gU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMDSVRT
+MR8wHQYDVQQDExZzaGliYi5pdHMuYXBwc3RhdGUuZWR1MSMwIQYJKoZIhvcNAQkB
+FhRsaDU5MjgxQGFwcHN0YXRlLmVkdTAeFw0xMjExMDUxOTU3MjJaFw0yMjExMDMx
+OTU3MjJaMIGxMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmEx
+DjAMBgNVBAcTBUJvb25lMSUwIwYDVQQKExxBcHBhbGFjaGlhbiBTdGF0ZSBVbml2
+ZXJzaXR5MQwwCgYDVQQLEwNJVFMxHzAdBgNVBAMTFnNoaWJiLml0cy5hcHBzdGF0
+ZS5lZHUxIzAhBgkqhkiG9w0BCQEWFGxoNTkyODFAYXBwc3RhdGUuZWR1MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyhzA7Ufsa9JqOpmC0i+ySNjFKEHA
+X23nGERZeoHgwoEQkzwkcLV4d4iHMY7PGSUJa258/9E+Z+jjKAdsx9n1r9cfyvPe
+l5KdBy2sJgZ3FNl/iEBrP2s7Keet8ANerv4RCV+GJZEllspfrwfxd7yoS7LO5Ls/
+nblOKWOp4FYCW14XiIfJH27zzbkOV5XBmh+SopuAfjpC2l0kvf5L2ul4uJYMpalP
+dv1ZOOb6xtCU7U1ZwfqOYMdYV4/EKrX4/+OI+ERvoiWZa8KlvQm6B8cLsORUpUso
+U/d+Gdnz8TeVnP115zhH4QvP6Ocp5qXFCWBy6vqc+uyUuBTc5PsinbdF+QIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQAgAkcPTrS7j7qcjATBPbxl9BsQZIIn51lV3Lav
+Ob9NXq5l+j62AS/Qd794jfIYZq8dy7HpPhgrDKZ4ZBHyVkLLYhPDO1wxhdQTVH3i
+QYNiR6HSBF6e8Jzdh9lNhSGyzRohkmvrkO7Y4n+EC5MNmyWUs78AEqqUfZy0jbzB
+t847AUlBftiSCqVx2dz+6GRZqOwXZQQn0zw0vM9HCZku/NLLYDTsOtxT/sogiPnc
+d6420VbHMqyuLiNAuoFzT3xCA0ANls9TVYizRccBRnd8i7CKYXqTrR2JBIcO7Icx
+bbma3DYA/3eOGDyA2hFxWewRjdmU4K/O+GZjWGyhw/tpvSNQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibb.its.appstate.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">appstate.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIID4DCCAsgCCQCAKdbbAE2uwDANBgkqhkiG9w0BAQUFADCBsTELMAkGA1UEBhMC
+VVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ4wDAYDVQQHEwVCb29uZTElMCMG
+A1UEChMcQXBwYWxhY2hpYW4gU3RhdGUgVW5pdmVyc2l0eTEMMAoGA1UECxMDSVRT
+MR8wHQYDVQQDExZzaGliYi5pdHMuYXBwc3RhdGUuZWR1MSMwIQYJKoZIhvcNAQkB
+FhRsaDU5MjgxQGFwcHN0YXRlLmVkdTAeFw0xMjExMDUxOTU3MjJaFw0yMjExMDMx
+OTU3MjJaMIGxMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmEx
+DjAMBgNVBAcTBUJvb25lMSUwIwYDVQQKExxBcHBhbGFjaGlhbiBTdGF0ZSBVbml2
+ZXJzaXR5MQwwCgYDVQQLEwNJVFMxHzAdBgNVBAMTFnNoaWJiLml0cy5hcHBzdGF0
+ZS5lZHUxIzAhBgkqhkiG9w0BCQEWFGxoNTkyODFAYXBwc3RhdGUuZWR1MIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyhzA7Ufsa9JqOpmC0i+ySNjFKEHA
+X23nGERZeoHgwoEQkzwkcLV4d4iHMY7PGSUJa258/9E+Z+jjKAdsx9n1r9cfyvPe
+l5KdBy2sJgZ3FNl/iEBrP2s7Keet8ANerv4RCV+GJZEllspfrwfxd7yoS7LO5Ls/
+nblOKWOp4FYCW14XiIfJH27zzbkOV5XBmh+SopuAfjpC2l0kvf5L2ul4uJYMpalP
+dv1ZOOb6xtCU7U1ZwfqOYMdYV4/EKrX4/+OI+ERvoiWZa8KlvQm6B8cLsORUpUso
+U/d+Gdnz8TeVnP115zhH4QvP6Ocp5qXFCWBy6vqc+uyUuBTc5PsinbdF+QIDAQAB
+MA0GCSqGSIb3DQEBBQUAA4IBAQAgAkcPTrS7j7qcjATBPbxl9BsQZIIn51lV3Lav
+Ob9NXq5l+j62AS/Qd794jfIYZq8dy7HpPhgrDKZ4ZBHyVkLLYhPDO1wxhdQTVH3i
+QYNiR6HSBF6e8Jzdh9lNhSGyzRohkmvrkO7Y4n+EC5MNmyWUs78AEqqUfZy0jbzB
+t847AUlBftiSCqVx2dz+6GRZqOwXZQQn0zw0vM9HCZku/NLLYDTsOtxT/sogiPnc
+d6420VbHMqyuLiNAuoFzT3xCA0ANls9TVYizRccBRnd8i7CKYXqTrR2JBIcO7Icx
+bbma3DYA/3eOGDyA2hFxWewRjdmU4K/O+GZjWGyhw/tpvSNQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibb.its.appstate.edu/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibb.its.appstate.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Appalachian State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Appalachian State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.appstate.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Dave Hayler</md:GivenName>
+	<md:EmailAddress>haylerd@appstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeffrey Tickle</md:GivenName>
+	<md:EmailAddress>ticklejw@appstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jim Webb</md:GivenName>
+	<md:EmailAddress>webbjt@appstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support at Appstate.edu</md:GivenName>
+	<md:EmailAddress>support@appstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

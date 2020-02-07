@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://primo.abdn.ac.uk/shib">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://primo.abdn.ac.uk/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://primo.abdn.ac.uk/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC1jCCAb6gAwIBAgIJAMK+qzxsAVY1MA0GCSqGSIb3DQEBBQUAMBAxDjAMBgNV
+BAMTBXByaW1vMB4XDTExMDcxMjExMTY0MloXDTIxMDcwOTExMTY0MlowEDEOMAwG
+A1UEAxMFcHJpbW8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDfZEZ7
+3ADkE4F3laV8ke0QGpgfucFdPwG0lOTLi4MKafPLILMNDqluOcTXxFuS5yUsBuPW
+O4tZ7bph8eV4CbTtbiibrUmjJBO+ilEq5yfNzhvvo89jNgY9A9SunBVKWO1FP9qY
+Z9cNgFN6PYesvXEvZR34hioeuVWVhE1Y/xVcUFIROHTkQnSHK7rtotCQqa/9HoDV
+6kajTr9j2B1jAMGgT8DEwA+xSVjsFNYdyCR/eehpd4DDvMEH4ohRO+sv2mMEQN5V
+42nI3Ry9T+ruhDafQwuYENxbgSvPWeemIIRfbBS9x08BKpcd5URH+B3CXOh8NZdR
+T9tgvlBacHrI76cjAgMBAAGjMzAxMBAGA1UdEQQJMAeCBXByaW1vMB0GA1UdDgQW
+BBSLotg/CQq8b92d1niWksO6U2D+XzANBgkqhkiG9w0BAQUFAAOCAQEARyX+nTKW
+HTzqsYGh1z9iznrcFQt6lJKEeuXbtb/L7WFCo3Fbd3s7nhg0Ejeuu2w9c1qV9OeV
+LihlrjrSd9kBDjRX5JcugGZIhqU/8VGldl0dtMJElkgp5rk8avXuReDl7kCASy5E
+aleRz39Q9X/S2nLHvoHWscNqE87goeIUjz0w+YKA225anc3bm2pRGTyUJbBHiUhS
+jn/3FReyjv9Dt5ub2TcmU14Fy+gT7WbL5z+JC2wNWtURDjVnHKcFaYA7YLNdvS2q
+VJF/Sd68b9N+z5cSyYeNYFdy/dy29I/GNgAdVL4SuKXRTjn4oJCZQP9v7S8vSJYE
+heKgkUPSXP4Lww==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://primo.abdn.ac.uk/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://primo.abdn.ac.uk/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Aberdeen</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Aberdeen: Primo Resource Discovery</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.abdn.ac.uk/library/about.shtml</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Chrissie</md:GivenName>
+	<md:SurName>Macarthur</md:SurName>
+	<md:EmailAddress>mailto:c.macarthur@abdn.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chrissie</md:GivenName>
+	<md:SurName>Macarthur</md:SurName>
+	<md:EmailAddress>mailto:c.macarthur@abdn.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

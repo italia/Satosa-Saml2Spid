@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-logon.wsl.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2008-09-10T14:49:18Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://helpdesk.wsl.ch" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wsl.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">WSL - Eidg. Forschungsanstalt für Wald, Schnee und Landschaft</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">WSL - Swiss Federal Institute for Forest, Snow and Landscape Research</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Eidgenössische Forschungsanstalt für Wald, Schnee und Landschaft</mdui:Description>
+		<mdui:Description xml:lang="en">Swiss Federal Institute for Forest, Snow and Landscape Research</mdui:Description>
+		<mdui:Keywords xml:lang="en">forest+snow+landscape</mdui:Keywords>
+		<mdui:Keywords xml:lang="de">wald+schnee+landschaft</mdui:Keywords>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAC4gQAAuIEBxcbWvAAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAolJREFUeJxsk91Lk2EUwE8QQQTRTTfeFHgjEWlEdNNfULeyu4z20dyHbtOWOt3XO7fpNPuYZCbejUhNJWLW1JQsE+tiBGldJahD+gJRc+6hOJ3nPEPa2sV53+e8zzm/8/kCIkKxxOYXtir7HuKBgIbg1fDk7XvofJESP3azWrFtgeJIvRRguI5gNCM0tSIE2hE0Eo8PodbO56r+QSwJqOgfUMaNzeQYpnNU6UEJIT0YQQiF89/CWACoHh0X8uJgNIbHunoQ6huVoS+kHLV8JgHlDBY76p6MCQZ83dnRZMrFtUXmXot9R85GZkHAtgBCcxtCixd/CQFQPTzKpJnV1Vkw2ZgOHi/G371P/9zLwtm+fGk3W7A8fh8PRzoRWr3UExtOr6zMwuZuDl6trSW5cUQFb1A1zVDL+ptMJjm0tJwGWz1BPDi3tp4EpxvBZMX2+bdCNUJGbvVT5ym1OifTWfeQ6E2oGx4T27kc23789j0BljqUUj85JWBxfSMBJorm9uDxW3e4F4PpD5/BRiAzGYaofruLS7j8aIjqpyx9tB9X9Ph46VMaJr9QHWYrSkhsYXHr30ZW9D5QEJmZdHK5VSNdNwjq4GCwuZcDTpkg+mdJUTyN4WWq3+FWIDPZ1RgQrplwY3s3vr8HPFujBcspYqnVlrKYySSaUlOieXqmIAg/7M9TAvQ0hToXAy50xjD35zfoBgYwS7PWJxJ4LhzG89Eo31+K9xZuIh/8ND69WqiL3d38Pko/kwRU9txFaHDzN6mf6ej4H8CKlTpfY8SGkRE8okV4XeXWhSYmcvK+LBxRGXZ1lQZIuTr+lGusyhuV0RbK9wm/H0/FVGaHvD48HQzy+S8AAAD//wMAwcp34AlJRawAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAA+FSURBVHic5Fx5UFXXGf9AxIiKgsQF9w1kUwQUERQREBFkk8ciS9j3fRcBFVGzTtqk0ySTaSdpp2nTdPqHxkwTp7E2yUyadFKTdCadOJqamqY1TbOYuMvrd855595zz733gSYXcXqcO4977r1n+d3f932/s1zBbrfDaI7/tzRqXO4YgC4uRrkeeITB/IU54LeyHkJCd8OaiAEIDu2B5f61MHdeOl4PwWPSKMu77TROAcROTpggZsyDJctKYXPCM2Ar+BAq6m5CY4cd2nvt0Nlvh+69dujZx37JedtuOzS026Gs5hpk5f4FomOfQFBzsZzpSona8m87jS8ACTvc3PjZdJi3oAqSUk9CRf0wdPTZYc8BO/QfZEffEJ4PsTz5INfIwe/tHWSgllRdgbjEF2GaZx6WP5HWotZ3W2n8AKh2xB38A9oht/AL2mkOBAeHgEEPDtigNl+574D2PrGc5i47pNvOwLz5xVgfo+KE2wPyzgPo6sr/coG5vsVooueoGSosE8EZVEHrHTQBcFDKE0Ef1ILZii9oR9YprHsTe4kTb9lH3lkAVdYtg7itx6GlW2WJCIjm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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.wsl.ch/index_EN</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="de">http://www.wsl.ch/index_DE</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.134.200.0/22</mdui:IPHint>
+		<mdui:IPHint>193.134.206.0/24</mdui:IPHint>
+		<mdui:DomainHint>wsl.ch</mdui:DomainHint>
+		<mdui:DomainHint>slf.ch</mdui:DomainHint>
+		<mdui:DomainHint>lfi.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.360644,8.454924</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAL40z1EYoGMccFx7tC4spPTLZCFrMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGFhaS1sb2dvbi53c2wuY2gwHhcNMTkxMTA2MDYyMjQy
+WhcNMjIxMTA2MDYyMjQyWjAbMRkwFwYDVQQDDBBhYWktbG9nb24ud3NsLmNoMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkcmEGzKv3Ri0GWIwjSDfIs+C
+DVWXoqo9fwO/aoNqN6GhlcvoVyFk6FD5xd+H4j1X6Kv7HuN60Zn+K2uA8UV5xkhH
+234haE5PP3qaHKsedQt9veIcpnohKj4GhyNP2a1rO1hSp+0ARe3Xnsdoo9/euwyA
+FZSumIOjHbWp60+j6t8psvQD2pi9ZTEeq6iTv7d6r65MaNV+zzT3LpsmxG5aRxCa
+iw14BvFlN8JWEO05G0HvVuJHGXmTfVw7BUoEgKL5rqc8X4RVDaQDukE7KW+82oVB
+NAii52G0STevJ5/WeyyvtGTm5aKNppZls8P8z/s4dIfvQwpFq02A/Ra2hDSkFQID
+AQABo2cwZTAdBgNVHQ4EFgQULbULNm8ckdC5AXdo1d64O7YjYgYwRAYDVR0RBD0w
+O4IQYWFpLWxvZ29uLndzbC5jaIYnaHR0cHM6Ly9hYWktbG9nb24ud3NsLmNoL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBOyIrTHagvPTEyB0LsxmLb
+5j9Sn5e0F+MLGEGUmU1tEAEBI0HT+St2vrbV0JN2t0IOc0qTYB9rvXn3yBvZgflU
+MoxN61Dm0Ws4Ppc4VI+xHvTWcQ53UKk8P3G1L4j8g2kPjW9te8Gts4Wsv1DYADTS
+XnAI5VmB6VGzMZF+j2sCqGwE2mxHh4zJK9UdBFzzqLiHq8My0bP8dKK2ppyC9NX6
+1cwGMlLSy0ZQde7HjvIslKoq+DGLOr2MgC7eIN0hctrjyvvrp5eX6bhOLK/8wELn
+gRb1N7Ab9OF1pG3+7/f+sG7RqNCgLBkcpATPPdweSPMPFdQGHvsNdFhEortQqxIi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.wsl.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.wsl.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai-logon.wsl.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-logon.wsl.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-logon.wsl.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai-logon.wsl.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wsl.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAL40z1EYoGMccFx7tC4spPTLZCFrMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGFhaS1sb2dvbi53c2wuY2gwHhcNMTkxMTA2MDYyMjQy
+WhcNMjIxMTA2MDYyMjQyWjAbMRkwFwYDVQQDDBBhYWktbG9nb24ud3NsLmNoMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkcmEGzKv3Ri0GWIwjSDfIs+C
+DVWXoqo9fwO/aoNqN6GhlcvoVyFk6FD5xd+H4j1X6Kv7HuN60Zn+K2uA8UV5xkhH
+234haE5PP3qaHKsedQt9veIcpnohKj4GhyNP2a1rO1hSp+0ARe3Xnsdoo9/euwyA
+FZSumIOjHbWp60+j6t8psvQD2pi9ZTEeq6iTv7d6r65MaNV+zzT3LpsmxG5aRxCa
+iw14BvFlN8JWEO05G0HvVuJHGXmTfVw7BUoEgKL5rqc8X4RVDaQDukE7KW+82oVB
+NAii52G0STevJ5/WeyyvtGTm5aKNppZls8P8z/s4dIfvQwpFq02A/Ra2hDSkFQID
+AQABo2cwZTAdBgNVHQ4EFgQULbULNm8ckdC5AXdo1d64O7YjYgYwRAYDVR0RBD0w
+O4IQYWFpLWxvZ29uLndzbC5jaIYnaHR0cHM6Ly9hYWktbG9nb24ud3NsLmNoL2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBOyIrTHagvPTEyB0LsxmLb
+5j9Sn5e0F+MLGEGUmU1tEAEBI0HT+St2vrbV0JN2t0IOc0qTYB9rvXn3yBvZgflU
+MoxN61Dm0Ws4Ppc4VI+xHvTWcQ53UKk8P3G1L4j8g2kPjW9te8Gts4Wsv1DYADTS
+XnAI5VmB6VGzMZF+j2sCqGwE2mxHh4zJK9UdBFzzqLiHq8My0bP8dKK2ppyC9NX6
+1cwGMlLSy0ZQde7HjvIslKoq+DGLOr2MgC7eIN0hctrjyvvrp5eX6bhOLK/8wELn
+gRb1N7Ab9OF1pG3+7/f+sG7RqNCgLBkcpATPPdweSPMPFdQGHvsNdFhEortQqxIi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai-logon.wsl.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-logon.wsl.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">wsl.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">WSL - Eidg. Forschungsanstalt für Wald, Schnee und Landschaft</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">WSL - Swiss Federal Institute for Forest, Snow and Landscape Research</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.wsl.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.wsl.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:SurName>Support Contact</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@wsl.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>AAI</md:GivenName>
+	<md:SurName>WSL</md:SurName>
+	<md:EmailAddress>mailto:aai@wsl.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://wiki.ligo.org/shibboleth-sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://wiki.ligo.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LIGO Wiki</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Primary LIGO Scientific Collaboration wiki</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://wiki.ligo.org/Main/SPInformationURL</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://dcc.ligo.org/cgi-bin/DocDB/ShowDocument?docid=89243</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://login.ligo.org/SAML2/metadata/ui/ligologo80x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEVjCCAz6gAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhzETMBEGCgmSJomT8ixk
+ARkWA29yZzEUMBIGCgmSJomT8ixkARkWBGxpZ28xDTALBgNVBAoTBExJR08xIDAe
+BgNVBAsTF0NlcnRpZmljYXRlIEF1dGhvcml0aWVzMRUwEwYDVQQLEwxXZWIgU2Vy
+dmljZXMxEjAQBgNVBAMTCUxJR08gQ0EgMTAeFw0xMDAyMDMyMDAyMTBaFw0yMDAy
+MDMyMDAyMTBaMGkxEzARBgoJkiaJk/IsZAEZFgNvcmcxFDASBgoJkiaJk/IsZAEZ
+FgRsaWdvMQ0wCwYDVQQKEwRMSUdPMRUwEwYDVQQLEwxXZWIgU2VydmljZXMxFjAU
+BgNVBAMTDXdpa2kubGlnby5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+AoIBAQCsizfsa9/YZeLqX0vLLrPxFG0M1cRzSOGOpfxwo3iYPbsw08uFuYjufCaT
+fDQr9T+ZimAlpBP4+yETnYa9R/A65Zmv7ydyge8SfKIdMRY2U23PSBQKMRTp/EdC
++LFAVZQWlKNmfb9ajrFo776dWU1ZU9NHFkX3dMTeH+BI+kRIMZnlPp7urSutuLMj
+DhoT41XufOUeJUwFm+7g1lf+cbCSPmgRGEa46gHBI+572mOCck7GN0+Zj0H74o5i
+esZrMDf08E6qsH6KnahuMuZH22L25KHULq4P9ByNFGDScvgj34HlLo91J4SzHTjS
+wx/JNBwg4V1bV4o9SGvCrRLBrSr/AgMBAAGjgekwgeYwDAYDVR0TAQH/BAIwADAO
+BgNVHQ8BAf8EBAMCBLAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBkG
+A1UdIAQSMBAwDgYMKwYBBAGB+kYCAQIBMDkGA1UdHwQyMDAwLqAsoCqGKGh0dHA6
+Ly9jYS5saWdvLm9yZy81NDE0MDRjMy81NDE0MDRjMy5jcmwwHwYDVR0jBBgwFoAU
+Um7de6pvhVwIItOXn61/I1YeatEwMAYDVR0RBCkwJ4INd2lraS5saWdvLm9yZ4EW
+c2NvdHQua29yYW5kYUBMSUdPLk9SRzANBgkqhkiG9w0BAQUFAAOCAQEAnrDCVAKE
+sv/StHC2c6VwYtrW14rgn/gmOYTWvfioYmteCuS5bqADuCN1qdNxi5nHsgXhX7UE
+aaLeOKBqhNbqu+YiS/va0Kk3Azq7BS+KC0iBhHMM+ZZ86jl93ItV/xsuBc5v/AWx
+jqqsEN8CN35bvZaNwm0mBARfhVll2b2T3r80mdmVbekcJKEry4H0ogGgYWNkcBt3
+rlVaEUap5FC3UzyTmKCkL65y0emhsR+6CEnmyTq5qOlMeyrgKlIJ8YXf/xj6oUaD
+6Zqf7DNzVW6gez9VkUlhivSgXaAfAZ9aJJn/aOsK3BUjJTmUCvps1F6THRr4tc0+
+fMO5DI9dhv07eg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wiki.ligo.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://wiki.ligo.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wiki.ligo.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://wiki.ligo.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">LIGO Wiki</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Primary LIGO Scientific Collaboration wiki</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LIGO Scientific Collaboration</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ligo.caltech.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Warren Anderson</md:GivenName>
+	<md:EmailAddress>warren.anderson@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Scott Koranda</md:GivenName>
+	<md:EmailAddress>scott.koranda@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LIGO Identity Management Help Desk</md:GivenName>
+	<md:EmailAddress>rt-auth@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LIGO Security Committee</md:GivenName>
+	<md:EmailAddress>lsc-seccomm@ligo.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

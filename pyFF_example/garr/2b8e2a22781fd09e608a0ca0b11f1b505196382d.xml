@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:alaska.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.alaska.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">alaska.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Alaska Statewide System</mdui:DisplayName>
+		<mdui:Description xml:lang="en">InCommon federated IdP (identity provider) for all students, faculty, &amp; staff at all campuses of the University of Alaska.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://iam.alaska.edu/trac/wiki/UAInCPOP.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://iam.alaska.edu/trac/wiki/IamUaArp</mdui:PrivacyStatementURL>
+		<mdui:Logo height="632" width="860" xml:lang="en">https://www.alaska.edu/files/opa/color.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMN6E6Kx9SACb2AMDLfMzBz7UbvtMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5hbGFza2EuZWR1MB4XDTE0MDYxMzIxNTkyMFoX
+DTM0MDYxMzIxNTkyMFowGTEXMBUGA1UEAxMOaWRwLmFsYXNrYS5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCdI7JodYCEjG/v98W2vVFokOU6LtNb
+I1n24JGeTDtrx4dcJ27/rBJ80oniTKOu2bwF1j6k9D5ow5qIQ2JVD0RbSCyCXIlP
+uKuvGDrL9+HDdx/TTVJe0/tvWdTAEQj4O8ax3H4fXGUeAzXl01v+VMBZorLsSu6I
+/C10araiaoJGMqi32apVz/4UclGATAufG6l5ueuCSVvlZWe9v0Tyo3iEWbYz9wEI
+zjzF6gLi9lxy02RYbOqaCy0r8IrD7q8GJhltlz44F4WdaNedntjpjIW8BdK9fSkW
+JkDCH0TT+kd1mI8ZBZwf4OIX1eNMfXAaxhrxgTT0qqwLCjTgMRVlCfU/AgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5hbGFza2EuZWR1hiVodHRwczovL2lkcC5hbGFz
+a2EuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSXTxXBFiKPCSyFK0VmHghD
+Y/MDhzANBgkqhkiG9w0BAQUFAAOCAQEAlrgm8dHq0NpU4JuCrvCz2gBMBolvoZEM
+9YkaQMeMYsvHGQX0kvQzCWPV+Im4rCxNU1aZIfkJNJaSgp4kdyRvG2Sa6N3jPjOu
+CYPLJtm3wBGkMjoDBQb12Upl2RjtSCCRVFIWSv1D0ycfCel2iqddsSCziKHiN3RX
+pp25mLVA1KlcLQOGhdnxa1EkHR5zekUukapNGaQGOSTHdwvi+xxDpVfZ1xj9jjt+
+Qc8E7z0BxqW2QRaU1D7Jqc4QQbOD+wDnIWHtj2LzdyJknBeG+i9L0IKogsUgDDJr
+qkYa6vIOo4URe5e3Z1bGmENzaoHt2usblOWLGu2AV+CNwkbX65c9wg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.alaska.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.alaska.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.alaska.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.alaska.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.alaska.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">alaska.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMN6E6Kx9SACb2AMDLfMzBz7UbvtMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC5hbGFza2EuZWR1MB4XDTE0MDYxMzIxNTkyMFoX
+DTM0MDYxMzIxNTkyMFowGTEXMBUGA1UEAxMOaWRwLmFsYXNrYS5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCdI7JodYCEjG/v98W2vVFokOU6LtNb
+I1n24JGeTDtrx4dcJ27/rBJ80oniTKOu2bwF1j6k9D5ow5qIQ2JVD0RbSCyCXIlP
+uKuvGDrL9+HDdx/TTVJe0/tvWdTAEQj4O8ax3H4fXGUeAzXl01v+VMBZorLsSu6I
+/C10araiaoJGMqi32apVz/4UclGATAufG6l5ueuCSVvlZWe9v0Tyo3iEWbYz9wEI
+zjzF6gLi9lxy02RYbOqaCy0r8IrD7q8GJhltlz44F4WdaNedntjpjIW8BdK9fSkW
+JkDCH0TT+kd1mI8ZBZwf4OIX1eNMfXAaxhrxgTT0qqwLCjTgMRVlCfU/AgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC5hbGFza2EuZWR1hiVodHRwczovL2lkcC5hbGFz
+a2EuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSXTxXBFiKPCSyFK0VmHghD
+Y/MDhzANBgkqhkiG9w0BAQUFAAOCAQEAlrgm8dHq0NpU4JuCrvCz2gBMBolvoZEM
+9YkaQMeMYsvHGQX0kvQzCWPV+Im4rCxNU1aZIfkJNJaSgp4kdyRvG2Sa6N3jPjOu
+CYPLJtm3wBGkMjoDBQb12Upl2RjtSCCRVFIWSv1D0ycfCel2iqddsSCziKHiN3RX
+pp25mLVA1KlcLQOGhdnxa1EkHR5zekUukapNGaQGOSTHdwvi+xxDpVfZ1xj9jjt+
+Qc8E7z0BxqW2QRaU1D7Jqc4QQbOD+wDnIWHtj2LzdyJknBeG+i9L0IKogsUgDDJr
+qkYa6vIOo4URe5e3Z1bGmENzaoHt2usblOWLGu2AV+CNwkbX65c9wg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.alaska.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.alaska.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Alaska Statewide System</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Alaska Statewide System</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.alaska.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David Bantz</md:GivenName>
+	<md:EmailAddress>Q@Alaska.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support Center</md:GivenName>
+	<md:EmailAddress>helpdesk@alaska.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Identity &amp; Access Management</md:GivenName>
+	<md:EmailAddress>IAM@Alaska.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>U Alaska IT Security</md:GivenName>
+	<md:EmailAddress>ua-oit-security@alaska.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

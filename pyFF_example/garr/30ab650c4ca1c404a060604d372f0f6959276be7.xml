@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib-sp.mediacore.tv">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-07-23T09:25:15Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDITCCAgmgAwIBAgIJAKfy0phoffhNMA0GCSqGSIb3DQEBBQUAMB8xHTAbBgNV
+BAMTFHNoaWItc3AubWVkaWFjb3JlLnR2MB4XDTE1MDMyNTAwNTQxN1oXDTM1MDMy
+MDAwNTQxN1owHzEdMBsGA1UEAxMUc2hpYi1zcC5tZWRpYWNvcmUudHYwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeswwiTpucsYIEakeHwJSr1FnqOOiV
+2nwT2WqoB/cKyJrxzc0I1v1CftJ7dTCr3WLlqy7Sc3KE9+w3nl2t1TiyQlZTXHBQ
+WVrK4qJ7/4N9pqEpuTEBusaQXnxSxEoIyeTBGytNjZpnupEGkte6opS+2IhUiKNk
+YnicB79+CDLPyoAPzGUeHaJignnRvsXGjzUgCaI2n4pVXWv99iRyeB6osbA+uZo1
+6dMv18n+XbnaMjJ2QujakfaffYKGvptWLExwHVEPhbAT5+pzFpZn/cwk7U38Fs8s
+JBaqTlua0ffk3VckVSaxlJ8cdRPJ0aYZrDZRTzsqfEjwh7hRyFXP6gIdAgMBAAGj
+YDBeMD0GA1UdEQQ2MDSCFHNoaWItc3AubWVkaWFjb3JlLnR2hhxodHRwczovL3No
+aWItc3AubWVkaWFjb3JlLnR2MB0GA1UdDgQWBBSGpfJo72jI4LNnm4nlmaanNFH3
+ezANBgkqhkiG9w0BAQUFAAOCAQEAm4VWgi/YuI+w8azykybKTarvUMr2ZUE/j0XH
+XphbG6j+dpsUbIO5TcaULlRTZE5oVESfLalasQlX7ZwlZDYfQlEOpA1K3Y5bpPeR
+IJbsFvgvVIpto4DhlBnkSk/GrhTQ3l5IIQQ2Yk79rw7wG6FkdxGGE6YIQudAC+nf
+jPcSUn0+5pvGtGTxcQIH9JflDqI6hK8YfsDm4n5GVx0DCSSZLd/RsjjHRJKJsQzO
+xlVZV+KkIj289EpGS6soJhh1Fq7yUmXpeXW9rZ5AMBIqiIHzauoIVIDnxZ/594eJ
+ImZdG1OeHzR4UnAhWvd4uMM5Raah+XPIvd6mFHE+KETjsMohIw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://shib-sp.mediacore.tv/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mediacore (EMEA) Ltd</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">MediaCore Video Learning Platform</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://mediacore.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Maddy</md:GivenName>
+	<md:SurName>Bentley</md:SurName>
+	<md:EmailAddress>mailto:support@mediacore.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>James</md:GivenName>
+	<md:SurName>Cross</md:SurName>
+	<md:EmailAddress>mailto:james@mediacore.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Matthew</md:GivenName>
+	<md:SurName>Vliet</md:SurName>
+	<md:EmailAddress>mailto:matthew@mediacore.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

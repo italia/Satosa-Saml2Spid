@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.hs-albsig.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2013-06-21T08:18:02Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-albsig.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Albstadt-Sigmaringen</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Albstadt-Sigmaringen University of Applied Sciences</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule Albstadt-Sigmaringen</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider of Albstadt-Sigmaringen University of Applied Sciences</mdui:Description>
+		<mdui:Logo height="16" width="16">https://login.hs-albsig.de/idp/images/favicon.ico</mdui:Logo>
+		<mdui:Logo height="64" width="80">https://login.hs-albsig.de/idp/images/logo.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.hs-albsig.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.hs-albsig.de</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://www.aai.dfn.de/fileadmin/documents/datenschutz/ausgelagerter_idp.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKcTCCCVmgAwIBAgIMIGepyn+s3cCa+/v2MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDEyMzA4NTYyOVoXDTIxMDQyNjA4NTYyOVowgZExCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxETAPBgNVBAcMCEFsYnN0YWR0MSgwJgYD
+VQQKDB9Ib2Noc2NodWxlIEFsYnN0YWR0LVNpZ21hcmluZ2VuMQswCQYDVQQLDAJJ
+VDEbMBkGA1UEAwwSbG9naW4uaHMtYWxic2lnLmRlMIICIjANBgkqhkiG9w0BAQEF
+AAOCAg8AMIICCgKCAgEAxnKAwBVgFDcNVxyt3ois+8P/T/QfMVW0kCUfFdkIoSeG
+UsqeywN2KBQ8/Taw7KYsptPgaByPRxkaY9JJTXlYZ3h7atT2GKfDQWlDhLzl2Xnt
+dYh+7X1lB3EDec2H4kcYI/7zhCgRh5N4XY9dFBIWWYnEFHU1rWia5MrWsy00kBiV
+8GbT0qyaI5antVYD8tyVTI4gxclKLPnY3bzEzBOHa46Muw93Vgk4UjeJCnRXUD11
+EJ3mtvUIbz8s3IXfdYNrIBWJ6TxrHEdLI1STazF6AQY6kkyCJ/9LsiNREV3H6i44
+36UDlP8hZ/rTRrcysTn1WlfoieuEYQmrDx6FxpTJb47GP9TJmHglusfsFnrNAqSr
+baEyf6NbUpExyO6ZY9vnU177gw7xSLsgXwPCtc0HBwfg6sYW8RPC7Gcw2dDb9+op
+eEwnfyLjZ7TlKzLkoVI0gX13jI51ToSgM+1RbQPMFTi4xzhVVuybnKHHFM+Sxkjg
+TAWMCZBPfRAYmSRWmXtrW7l6eDaVISddEKPeRlj2rHdcWPiHy1nSyIpJZSYfT948
+1cCXZXx8fHtRNylRcn0uh+hE3wau09XyGTdafeG9+9uOMo693PVAg1eDFtLwdBK9
+V4TI7xEeo1zlc2A3sE0VGu36zwuPTMUWvbrZv6xWet1p9Y8NLCl++aFuNNeStAkC
+AwEAAaOCBckwggXFMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiwe
+MA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0h
+giwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+BgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFHgbP1JG1RY+TkLyFQ2XM4kV67jJ
+MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MB0GA1UdEQQWMBSCEmxv
+Z2luLmhzLWFsYnNpZy5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2Rw
+MS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+P6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGG
+J2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEF
+BQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCC
+A18GCisGAQQB1nkCBAIEggNPBIIDSwNJAHUAb1N2rDHwMRnYmQCkURX/dxUcEdkC
+wQApBo2yCJo32RMAAAFoeezimgAABAMARjBEAiBtnBnbp5T1JOAIoNkyWOxI4xsz
+D2k8LPiYeBSjrWJgqQIgYdYejZH2oEiBDAdYsd3R9uM/Q0daq9qggV0rRXVlNW8A
+dwCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWh57OIPAAAEAwBI
+MEYCIQDULdnCNTKP46d6OaXaHad3i4wpxn6qpinDlwr6dV74hQIhALkECre33wfD
+1uulz2Y3Fo8JBECYrqh/tueMsxeanNkFAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhw
+JQgXL6OqHQcT0wwAAAFoeezjpwAABAMARzBFAiBZKaWPdlRKUuGPfeT00U75fTVD
+wuC0RD7Pjqvim3AkFwIhAO1okYvZ0cGrs+mPgJtXJu/sAIE1snfLyAw3F2YyL4ga
+AHcA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFoeezi3QAABAMA
+SDBGAiEAzdnWa0GXLOY0PJ/rc59RQTCsPi/IHaXQvpXIQa+aKLYCIQCyfYDIW1cP
+6QpbIf2inn7SXXJpH/xs54t50hMoL95NRQB3ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABaHns4uEAAAQDAEgwRgIhAPaZ1/ewkboCPog0IIYvcQUf
+LaE+BaMIoZnGrJyPGGzRAiEAg09B+f/3ZA5X3g990HDdYjbUMXhZBe4qT5QcoLoI
+9ycAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWh57OLZAAAE
+AwBHMEUCIQCnk3TJ+l+Qeup0fw5yDu/MF9L4Zpy3Ly4NmhzwU1Ax5wIgOVyiaxT5
+bMzxa9Z6A7r46jdN49kRl38GbaeyGQlg+SQAdQBElGUusO7Or8RAB9io/ijA2uaC
+vtjLMbU/0zOWtbaBqAAAAWh57OomAAAEAwBGMEQCIEfjf+d15e4S2e9rnAoXDIfp
+iUWmTYbVdy4yEDSMnj+TAiBGtcql5yF1DiipM4EuivwHNzAjDWHIJb8uZmg0mMPe
+sjANBgkqhkiG9w0BAQsFAAOCAQEAlLmf7XWRS6ufsLfEzu+d1eceNKQJb2bZH0TB
+kfI6jHzuZRT3tk150dhuor8W6amiD+NNWpyAz+fbVg+S1l3yGg2JZKFgHXjvPuwE
+Zw10l1d3hjwhdOn1ddmfQ8IeLOrXArd/op/po8zWn8Gl9xL0l1T/TU9DjVX49a1q
+/0q5KZJbGWWUZnReONCDL7ob/dCAeZe87ft6JYOUk2mnDjRLjxOdrIkFv4Ksdb0Q
+KGgqVbS175d9VsaVIy6PbcyUWpB4ncdM+O/lauUvPtYcypaP+LZKnymjzl4kAlWI
+GwbHl7aCkH/iYScAiZv6vFoLahaokY9n+4zjc885Kho6k67u6g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hs-albsig.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-albsig.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hs-albsig.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hs-albsig.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.hs-albsig.de/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login-dev.hs-albsig.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.hs-albsig.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.hs-albsig.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.hs-albsig.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.hs-albsig.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-albsig.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-albsig.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIKcTCCCVmgAwIBAgIMIGepyn+s3cCa+/v2MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDEyMzA4NTYyOVoXDTIxMDQyNjA4NTYyOVowgZExCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxETAPBgNVBAcMCEFsYnN0YWR0MSgwJgYD
+VQQKDB9Ib2Noc2NodWxlIEFsYnN0YWR0LVNpZ21hcmluZ2VuMQswCQYDVQQLDAJJ
+VDEbMBkGA1UEAwwSbG9naW4uaHMtYWxic2lnLmRlMIICIjANBgkqhkiG9w0BAQEF
+AAOCAg8AMIICCgKCAgEAxnKAwBVgFDcNVxyt3ois+8P/T/QfMVW0kCUfFdkIoSeG
+UsqeywN2KBQ8/Taw7KYsptPgaByPRxkaY9JJTXlYZ3h7atT2GKfDQWlDhLzl2Xnt
+dYh+7X1lB3EDec2H4kcYI/7zhCgRh5N4XY9dFBIWWYnEFHU1rWia5MrWsy00kBiV
+8GbT0qyaI5antVYD8tyVTI4gxclKLPnY3bzEzBOHa46Muw93Vgk4UjeJCnRXUD11
+EJ3mtvUIbz8s3IXfdYNrIBWJ6TxrHEdLI1STazF6AQY6kkyCJ/9LsiNREV3H6i44
+36UDlP8hZ/rTRrcysTn1WlfoieuEYQmrDx6FxpTJb47GP9TJmHglusfsFnrNAqSr
+baEyf6NbUpExyO6ZY9vnU177gw7xSLsgXwPCtc0HBwfg6sYW8RPC7Gcw2dDb9+op
+eEwnfyLjZ7TlKzLkoVI0gX13jI51ToSgM+1RbQPMFTi4xzhVVuybnKHHFM+Sxkjg
+TAWMCZBPfRAYmSRWmXtrW7l6eDaVISddEKPeRlj2rHdcWPiHy1nSyIpJZSYfT948
+1cCXZXx8fHtRNylRcn0uh+hE3wau09XyGTdafeG9+9uOMo693PVAg1eDFtLwdBK9
+V4TI7xEeo1zlc2A3sE0VGu36zwuPTMUWvbrZv6xWet1p9Y8NLCl++aFuNNeStAkC
+AwEAAaOCBckwggXFMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiwe
+MA8GDSsGAQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0h
+giwCAQQDCDAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggr
+BgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYEFHgbP1JG1RY+TkLyFQ2XM4kV67jJ
+MB8GA1UdIwQYMBaAFGs6mIv58lOJ2uCtsjIeCR/oqjt0MB0GA1UdEQQWMBSCEmxv
+Z2luLmhzLWFsYnNpZy5kZTCBjQYDVR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2Rw
+MS5wY2EuZGZuLmRlL2Rmbi1jYS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmww
+P6A9oDuGOWh0dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9w
+dWIvY3JsL2NhY3JsLmNybDCB2wYIKwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGG
+J2h0dHA6Ly9vY3NwLnBjYS5kZm4uZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEF
+BQcwAoY9aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1
+Yi9jYWNlcnQvY2FjZXJ0LmNydDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCC
+A18GCisGAQQB1nkCBAIEggNPBIIDSwNJAHUAb1N2rDHwMRnYmQCkURX/dxUcEdkC
+wQApBo2yCJo32RMAAAFoeezimgAABAMARjBEAiBtnBnbp5T1JOAIoNkyWOxI4xsz
+D2k8LPiYeBSjrWJgqQIgYdYejZH2oEiBDAdYsd3R9uM/Q0daq9qggV0rRXVlNW8A
+dwCq5wt/PLjVZshsLxaXnJ9EX2mrDrRTVYmy93oDAQTzzQAAAWh57OIPAAAEAwBI
+MEYCIQDULdnCNTKP46d6OaXaHad3i4wpxn6qpinDlwr6dV74hQIhALkECre33wfD
+1uulz2Y3Fo8JBECYrqh/tueMsxeanNkFAHYAVYHUwhaQNgFK6gubVzxT8MDkOHhw
+JQgXL6OqHQcT0wwAAAFoeezjpwAABAMARzBFAiBZKaWPdlRKUuGPfeT00U75fTVD
+wuC0RD7Pjqvim3AkFwIhAO1okYvZ0cGrs+mPgJtXJu/sAIE1snfLyAw3F2YyL4ga
+AHcA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFoeezi3QAABAMA
+SDBGAiEAzdnWa0GXLOY0PJ/rc59RQTCsPi/IHaXQvpXIQa+aKLYCIQCyfYDIW1cP
+6QpbIf2inn7SXXJpH/xs54t50hMoL95NRQB3ALvZ37wfinG1k5Qjl6qSe0c4V5UK
+q1LoGpCWZDaOHtGFAAABaHns4uEAAAQDAEgwRgIhAPaZ1/ewkboCPog0IIYvcQUf
+LaE+BaMIoZnGrJyPGGzRAiEAg09B+f/3ZA5X3g990HDdYjbUMXhZBe4qT5QcoLoI
+9ycAdgCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWh57OLZAAAE
+AwBHMEUCIQCnk3TJ+l+Qeup0fw5yDu/MF9L4Zpy3Ly4NmhzwU1Ax5wIgOVyiaxT5
+bMzxa9Z6A7r46jdN49kRl38GbaeyGQlg+SQAdQBElGUusO7Or8RAB9io/ijA2uaC
+vtjLMbU/0zOWtbaBqAAAAWh57OomAAAEAwBGMEQCIEfjf+d15e4S2e9rnAoXDIfp
+iUWmTYbVdy4yEDSMnj+TAiBGtcql5yF1DiipM4EuivwHNzAjDWHIJb8uZmg0mMPe
+sjANBgkqhkiG9w0BAQsFAAOCAQEAlLmf7XWRS6ufsLfEzu+d1eceNKQJb2bZH0TB
+kfI6jHzuZRT3tk150dhuor8W6amiD+NNWpyAz+fbVg+S1l3yGg2JZKFgHXjvPuwE
+Zw10l1d3hjwhdOn1ddmfQ8IeLOrXArd/op/po8zWn8Gl9xL0l1T/TU9DjVX49a1q
+/0q5KZJbGWWUZnReONCDL7ob/dCAeZe87ft6JYOUk2mnDjRLjxOdrIkFv4Ksdb0Q
+KGgqVbS175d9VsaVIy6PbcyUWpB4ncdM+O/lauUvPtYcypaP+LZKnymjzl4kAlWI
+GwbHl7aCkH/iYScAiZv6vFoLahaokY9n+4zjc885Kho6k67u6g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.hs-albsig.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.hs-albsig.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e322</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e322</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Albstadt-Sigmaringen</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University Albstadt-Sigmaringen</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.hs-albsig.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.hs-albsig.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:dfn-pki@hs-albsig.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:dfn-pki@hs-albsig.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>DFN-AAI</md:GivenName>
+	<md:SurName>Hotline</md:SurName>
+	<md:EmailAddress>mailto:hotline@aai.dfn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

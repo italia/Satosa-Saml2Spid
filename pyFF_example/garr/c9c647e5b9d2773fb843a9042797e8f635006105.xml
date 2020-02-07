@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://portal.mcnc.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://portal.mcnc.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">MCNC Customer Portal</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.mcnc.org/policies/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="206" width="785" xml:lang="en">https://shib.mcnc.org/images/MyLogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEDDCCAnSgAwIBAgIJAOHmnkieagKmMA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNV
+BAMTF3BvcnRhbC1wcm9kLTAxLm1jbmMub3JnMB4XDTIwMDExNjIwNDAyM1oXDTMw
+MDExMzIwNDAyM1owIjEgMB4GA1UEAxMXcG9ydGFsLXByb2QtMDEubWNuYy5vcmcw
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQC/hzD9G+DbZ0O902TXey+C
+pyyugbyOwmHvwFhVPW5o4g7CSyxRdzaFhsk3rmKK5HCQWMLN41BE/MzPR6oGAiuN
+egzNh1ctnSp1xr03obTc1WvJLBPxH/vjKObhUrFRLB1qcRUuYwc7I7GMd3O06AJT
+ff6KM1hyjpv7cSK+uVdLpGmoDS/SucERC8l9GXgN1S9QLhFPRNdBhYn1k2nLDWbZ
+rcXa5xkaOmu5HL6PrkcV5WXNNrBaJ4PMVPe85W1q0ST03Nc7QJ9nnXwMIP7qnQbw
+sN3SStwjOdBQq2xtx73X2nbUinBusMGVuANa14W/q8y5b4tDeGccO/Y5e+Gq8yA2
+vaGGRRi6XK+fNHm/3B4uo1a3hAkOCvS6TAtjv24W111wzrvKx+RuUDltCvHwjqmv
+Oqt0chBmBALoNKhIQeOhzW0GZ5VW7sJKBWpVgV1XHIp1/kHrwK52JD65ejB35/6c
+QNRzVdXv3lsdN0gjIcUPs4paQMYJo8pvWnaHHNJsxcsCAwEAAaNFMEMwIgYDVR0R
+BBswGYIXcG9ydGFsLXByb2QtMDEubWNuYy5vcmcwHQYDVR0OBBYEFIVncjDZVx94
+C1CtU4mSEsBadryTMA0GCSqGSIb3DQEBCwUAA4IBgQA8ggtTfYb62R6ntTF2EZp2
+avWnZPJVuFzpCjS/aF3PLx2YHgdN9h+YgiVTtP4WGQocLBjc7AZoURYiH4m2ut46
+Bej08tLZqPCfEZTglTG0t6I/jF3TRRCXAIcjJ1TCDM3E18kX3LIoVKunfFgWEBIW
+mEUPKX5x+kEgAU/rWEMd3nSQCpZE9CyzsRnL+oIV4Vg3BWWGDNtaJIbiKYDN5M5X
+az1qk9XXqzJvWs2/m1rKtg2vXw/lL5sABDDCb600kAbxYXcGkA5TGG73WPajVPUo
+5K72e57Eu2PU+224AeHctqo41sQw4zPS4M5B0e7YpGaoYMCgeFU17LRSisdLLjc7
+DUVaFDG8h8HcQtEfZXMzHDKL6N9RvFnnmu0bKBir6BtBWLDYbD/LqxJK2+DxeljQ
+ZbV95froksg8Z6ZxykvSu5APLubvlTUuxjidEE2+XOIxTlPZDZvoJEPSRCW+aAEq
+wiJkCTpjHc4JKHzGj2usf7WKqtjKi2sEKFlmWqqZaNs=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portal.mcnc.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://portal.mcnc.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://portal.mcnc.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://portal.mcnc.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">MCNC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">MCNC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.mcnc.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>MCNC Support</md:GivenName>
+	<md:EmailAddress>support@mcnc.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>MCNC Support</md:GivenName>
+	<md:EmailAddress>support@mcnc.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>MCNC Support</md:GivenName>
+	<md:EmailAddress>support@mcnc.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

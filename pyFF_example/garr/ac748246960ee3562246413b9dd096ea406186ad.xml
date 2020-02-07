@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://coreen-idp.kreonet.net/idp/simplesamlphp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://kafe.kreonet.net" registrationInstant="2015-07-01T01:52:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.kafe.or.kr/e_join</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">coreen.or.kr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">COREEN set.ID by KAFE</mdui:DisplayName>
+		<mdui:Description xml:lang="en">COREEN/KREONET VHO service</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://coreen-idp.kreonet.net</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="ko">https://coreen.kreonet.net/privacy_policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="19" width="60">data:image/png;base64,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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:36.365736,127.359376</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDuTCCAqGgAwIBAgIJAOCuO0jK2GcAMA0GCSqGSIb3DQEBCwUAMHMxCzAJBgNV
+BAYTAktSMRAwDgYDVQQHDAdEYWVqZW9uMQ4wDAYDVQQKDAVLSVNUSTEfMB0GA1UE
+AwwWY29yZWVuLWlkcC5rcmVvbmV0Lm5ldDEhMB8GCSqGSIb3DQEJARYSY29yZWVu
+QGtyZW9uZXQubmV0MB4XDTE3MDcxOTA0MDIzN1oXDTI3MDcxOTA0MDIzN1owczEL
+MAkGA1UEBhMCS1IxEDAOBgNVBAcMB0RhZWplb24xDjAMBgNVBAoMBUtJU1RJMR8w
+HQYDVQQDDBZjb3JlZW4taWRwLmtyZW9uZXQubmV0MSEwHwYJKoZIhvcNAQkBFhJj
+b3JlZW5Aa3Jlb25ldC5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDXiQiD3clEc/tNfqzheoBIk1qF3V+bTeCsfWF/g8rHaAykTI2MwUA1ew7/DuDc
+ioVdMWPNEdoi9QHYjjfhRcxEszljwSnT/bueXOaSWnuSfPFgsITsLASDYSqhU2fp
+3NbCYldJgdpAljHdaT+KoBtIZA2pe1TdlFa0n0zcXjDi3Xoo/MXa2rN2tx0HH6tE
+gbGTlM1HtdCLvzHDs8eoK3P6O7QbrjxwUaxPTTVZjyLzDHQnvStBIYrFjlJdA4Wd
+Gk9VymjvU88wSaDhCW/ufqi5V6JIoszb41ZR3+4YVAbVehtqG5IT1acx0F/KDv3k
++QtDBn9ujN1oGjEX97UkrfZ/AgMBAAGjUDBOMB0GA1UdDgQWBBSspkYOLQwRO5Z2
+ENAv1ixRmkJJBjAfBgNVHSMEGDAWgBSspkYOLQwRO5Z2ENAv1ixRmkJJBjAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAiKfzJcJn/iN/7wgKgDSjSbDm3
+zZKESaKJU7YLkFgbRBfYF3HO5F9qG2187apTo1/RVkRR2tVJbR0hxSPAQrF+OIkU
+q8HItqlma/eDqrwGcRuXFuqqhxf/285diencfd8HvIQsgZz+Ntpn4yu8cZRLqgSd
+wICmQyoHdrRBF2qjKx2ujD00fdvVI7i0d8DyGYtcKa51U09tfkCShY63u7O6xn5o
+dHk6Yhq3yCaTBrnsdBGRe+cvsyguvclN5TS5sscVYBdFn73wZOecAtu17ousbClW
+g7QSNgKYkENFPM7RGC28rvfU5y9eVajaGDwiiC6QEIDJpF+QoPkTLhmHzkuu
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDuTCCAqGgAwIBAgIJAOCuO0jK2GcAMA0GCSqGSIb3DQEBCwUAMHMxCzAJBgNV
+BAYTAktSMRAwDgYDVQQHDAdEYWVqZW9uMQ4wDAYDVQQKDAVLSVNUSTEfMB0GA1UE
+AwwWY29yZWVuLWlkcC5rcmVvbmV0Lm5ldDEhMB8GCSqGSIb3DQEJARYSY29yZWVu
+QGtyZW9uZXQubmV0MB4XDTE3MDcxOTA0MDIzN1oXDTI3MDcxOTA0MDIzN1owczEL
+MAkGA1UEBhMCS1IxEDAOBgNVBAcMB0RhZWplb24xDjAMBgNVBAoMBUtJU1RJMR8w
+HQYDVQQDDBZjb3JlZW4taWRwLmtyZW9uZXQubmV0MSEwHwYJKoZIhvcNAQkBFhJj
+b3JlZW5Aa3Jlb25ldC5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQDXiQiD3clEc/tNfqzheoBIk1qF3V+bTeCsfWF/g8rHaAykTI2MwUA1ew7/DuDc
+ioVdMWPNEdoi9QHYjjfhRcxEszljwSnT/bueXOaSWnuSfPFgsITsLASDYSqhU2fp
+3NbCYldJgdpAljHdaT+KoBtIZA2pe1TdlFa0n0zcXjDi3Xoo/MXa2rN2tx0HH6tE
+gbGTlM1HtdCLvzHDs8eoK3P6O7QbrjxwUaxPTTVZjyLzDHQnvStBIYrFjlJdA4Wd
+Gk9VymjvU88wSaDhCW/ufqi5V6JIoszb41ZR3+4YVAbVehtqG5IT1acx0F/KDv3k
++QtDBn9ujN1oGjEX97UkrfZ/AgMBAAGjUDBOMB0GA1UdDgQWBBSspkYOLQwRO5Z2
+ENAv1ixRmkJJBjAfBgNVHSMEGDAWgBSspkYOLQwRO5Z2ENAv1ixRmkJJBjAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAiKfzJcJn/iN/7wgKgDSjSbDm3
+zZKESaKJU7YLkFgbRBfYF3HO5F9qG2187apTo1/RVkRR2tVJbR0hxSPAQrF+OIkU
+q8HItqlma/eDqrwGcRuXFuqqhxf/285diencfd8HvIQsgZz+Ntpn4yu8cZRLqgSd
+wICmQyoHdrRBF2qjKx2ujD00fdvVI7i0d8DyGYtcKa51U09tfkCShY63u7O6xn5o
+dHk6Yhq3yCaTBrnsdBGRe+cvsyguvclN5TS5sscVYBdFn73wZOecAtu17ousbClW
+g7QSNgKYkENFPM7RGC28rvfU5y9eVajaGDwiiC6QEIDJpF+QoPkTLhmHzkuu
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://coreen-idp.kreonet.net/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://coreen-idp.kreonet.net/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://coreen-idp.kreonet.net/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://coreen-idp.kreonet.net/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Korean Access Federation</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Korean Access Federation</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.kisti.re.kr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>System Administration</md:GivenName>
+	<md:EmailAddress>mailto:support@kafe.or.kr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Administration</md:GivenName>
+	<md:EmailAddress>mailto:support@kafe.or.kr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

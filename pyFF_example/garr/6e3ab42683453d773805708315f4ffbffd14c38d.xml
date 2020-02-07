@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unistra.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2010-11-30T02:21:54Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unistra.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Strasbourg</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAABMLAAATCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhdADCoXQC/qF0AgKhdADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoXQCAqF0A/6hdAP+oXQD/qF0A36hdAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqF0AMKhdAICoXQC/qF0A/6hdAP+oXQD/qF0AnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhdACCoXQCvqF0A/6hdAP+oXQBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhdAJ+oXQD/qF0A3wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoXQAgqF0AgKhdAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGxcagBsXGp8bFxqfGxcacBsXGmAbFxpQGxcajxsXGoAbFxpQqF0Aj6hdAHCoXQCPqF0An6hdAJ+oXQC/qF0AjxsXGmAbFxpQGxcacBsXGnAbFxqAGxcaMBsXGnAbFxpQGxcaQKhdAFCoXQCAqF0AgKhdAFCoXQBQqF0AcKhdAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqF0AYKhdAL+oXQCvqF0AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKhdACCoXQDvqF0A/6hdAN+oXQBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAqF0AUKhdAO+oXQD/qF0A/6hdAO+oXQCvqF0AYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoXQAgqF0An6hdAP+oXQD/qF0A/6hdAJ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACoXQAQqF0AUKhdAICoXQBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.unistra.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">students and employee of university of Strasbourg</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de Strasbourg</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">étudiants et personnels de l'université de Strasbourg</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAJL1uSgdsDY7/9L6gFGKRCNK7RlQMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmlkcC51bmlzdHJhLmZyMB4XDTEwMTEzMDAxMDc0NFoX
+DTMwMTEzMDAxMDc0NFowGTEXMBUGA1UEAxMOaWRwLnVuaXN0cmEuZnIwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCfZvr54LdhidtcpIinb+VVc0nvNi7G
+RzVhLGmaWBEe2l/imU0NK+p8Sci4O06Dl17fSfEYh/ymT/X8fzs0ZBL67kmRjKW/
+4LrdaKPISuuBdAQu1ecMw6o5nHvPm8lChQs7+FPuKyHEOdGXU6YJdYcGVZWHGvm3
+YK0qZ5HocND7LYGhcTob083wQPtUm8TVisZSBBw/aY4uxQ3aPHqp20vLVlIWpyQH
+GBVusUsL30y4phRpvGMOhbBUjowba3Ig6cLGxhjmx2z42FoG95nF6NDRyPImp6cP
+dY3MFGFGOHb7o0eTkp2VpaCNwLDKUZq7IxxEg51BjAISYr4RlclDRlC1AgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmlkcC51bmlzdHJhLmZyhiVodHRwczovL2lkcC51bmlz
+dHJhLmZyL2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBTwSTX+NtpwVFWBJtPaXA23
+OEBp1jANBgkqhkiG9w0BAQUFAAOCAQEAhb+7SoxpdMH42J5nFMEXwNAxpPWKVjPq
+W5zgM3a3W3NSrL6R4j149IMn8YC+WrrfUnWiPYMO0+tEzTxvmL/SQRnV2kQumXN9
+Q32B6gTG1pinL1lcxrkO0FI1zcj/adE+2LkrTy3krQu2hkpO2CRYqE+ddzRNWdXd
+Z6Ym1zSD1ELYVcd6rOjyMA4yXW+8EM9K3P83Xy+o3SkIKd9tZzGv0qfy3CPW+v7V
+2Onsdu1A6uvdXVKl8r10oLIRXNp3LzhqFwhyiFzcRmgfOStZPHXzxSM/N9T8d+We
+gN8WbEdGuWT0j11MYdJkWDRArMdtVtI8aHXkmMCvAuttFvJib8Nzog==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unistra.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unistra.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.unistra.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Strasbourg</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Strasbourg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unistra.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Jean Benoit</md:SurName>
+	<md:EmailAddress>mailto:jean@unistra.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Pascal Geoffroy</md:SurName>
+	<md:EmailAddress>mailto:pascal.geoffroy@unistra.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

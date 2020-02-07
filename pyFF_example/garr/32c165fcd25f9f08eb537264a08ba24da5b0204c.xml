@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:nih.gov">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nih.gov</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">National Institutes of Health (NIH)</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.nih.gov/web-policies-notices</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://auth.nih.gov/images/nih-logo-thumbnail.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGCjCCBPKgAwIBAgIEW6hWmzANBgkqhkiG9w0BAQsFADB/MQswCQYDVQQGEwJV
+UzEYMBYGA1UEChMPVS5TLiBHb3Zlcm5tZW50MQwwCgYDVQQLEwNISFMxIjAgBgNV
+BAsTGUNlcnRpZmljYXRpb24gQXV0aG9yaXRpZXMxJDAiBgNVBAMTG0hIUy1GUEtJ
+LUludGVybWVkaWF0ZS1DQS1FMTAeFw0xOTAyMjAxNjAxNDJaFw0yMTA1MjAxNjMx
+NDJaMHwxCzAJBgNVBAYTAlVTMRgwFgYDVQQKEw9VLlMuIEdvdmVybm1lbnQxDDAK
+BgNVBAsTA0hIUzEMMAoGA1UECxMDTklIMRAwDgYDVQQLEwdEZXZpY2VzMSUwIwYD
+VQQDExx3YW1zaWduaW5nZmVkZXJhdGlvbi5uaWguZ292MIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAvjzq4yyTRDdbBxloBt/gxdV2Kl62xW+9srOhw1D1
+NrkqkBVQkl/p73pB9fFczAU2y20cy09kWcLitTN88r+G5R0oHhX4AQVfxahalJku
+X67LHUmQwO/enbi5xLVuq/Dr+KTROh+BEJE2FNUE6FHe5ESPoxXEBi6/wQg717tf
+1xLr2xU68mMW8c+jxIn7HGP6oyccYREZXYwFiHR1NLBMDLeSC3Nyzga1DGo4LtqD
+SNU+HraiyIWzyhotFwAjHgdSNtQN7RTUpAxq46LQKYpQm99K/4CO1NFNOoCLsd4Y
+h/Fbo5f6bqj1Skw3lTwBYNhjOr27eKfmvzWyMhN9IffAZQIDAQABo4ICjzCCAosw
+DgYDVR0PAQH/BAQDAgWgMBcGA1UdIAQQMA4wDAYKYIZIAWUDAgEDCDCBywYIKwYB
+BQUHAQEEgb4wgbswUgYIKwYBBQUHMAKGRmh0dHA6Ly9oaHNwa2ljcmwubWFuYWdl
+ZC5lbnRydXN0LmNvbS9BSUEvQ2VydHNJc3N1ZWRUb0hIU0VudHJ1c3RDQS5wN2Mw
+IAYIKwYBBQUHMAGGFGh0dHA6Ly9vY3NwLmRoaHMuZ292MEMGCCsGAQUFBzABhjdo
+dHRwOi8vaGhzcGtpb2NzcC5tYW5hZ2VkLmVudHJ1c3QuY29tL09DU1AvSEhTRW50
+cnVzdENBMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAnBgNVHREEIDAe
+ghx3YW1zaWduaW5nZmVkZXJhdGlvbi5uaWguZ292MIHuBgNVHR8EgeYwgeMwQaA/
+oD2GO2h0dHA6Ly9oaHNwa2ljcmwubWFuYWdlZC5lbnRydXN0LmNvbS9DUkxzL0hI
+U0VudHJ1c3RDQTEuY3JsMIGdoIGaoIGXpIGUMIGRMQswCQYDVQQGEwJVUzEYMBYG
+A1UEChMPVS5TLiBHb3Zlcm5tZW50MQwwCgYDVQQLEwNISFMxIjAgBgNVBAsTGUNl
+cnRpZmljYXRpb24gQXV0aG9yaXRpZXMxJDAiBgNVBAMTG0hIUy1GUEtJLUludGVy
+bWVkaWF0ZS1DQS1FMTEQMA4GA1UEAxMHQ1JMMzA0MzAfBgNVHSMEGDAWgBTliRnk
++aK86E2hKVQWUYHH1cKOnDAdBgNVHQ4EFgQUX9c+3VJsScqp7eBD9N9hCFrsuVgw
+GQYJKoZIhvZ9B0EABAwwChsEVjguMgMCA6gwDQYJKoZIhvcNAQELBQADggEBAMi8
+QdgWZmwOQoR8j1G6iaLXNXX7agalz+2b6h/b8Xu5CtF3tq4jjkZPHRqyjuWyy13t
+wqbsy4at4muO8uhQmXGaAXQ5aasAGxX2CMi/6QcuGvFlQ6jH1V00XOfGNqLpIafY
+WNQWeT/l965oSGJ0uCbo3jtLpu5ImpL97m57qc9fVc1vgK/HlfiOlkzr1epCW91w
+hBIjd4izzJX0c/YoPRLCdhzhEi7QmOPjgGoCEWwUD4wnZ/qKdT91CHTTukReIzDQ
+jIHARXH90txxL2FqHuLLSIpU0kVBbOxUYv9JCO4GMttR9KhafUsIcnlsG/E6kW43
+wRSfMoNRIuKT4pg16x8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEITCCAomgAwIBAgIVAOd9CUueWryy2/JNkBzJ11T6vJb2MA0GCSqGSIb3DQEB
+CwUAMB4xHDAaBgNVBAMME25paHdhbXNoaWIxLm5paC5nb3YwHhcNMTkwMzE5MjAy
+NTE3WhcNMzkwMzE5MjAyNTE3WjAeMRwwGgYDVQQDDBNuaWh3YW1zaGliMS5uaWgu
+Z292MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAq7PEqo+GLw9b5Ti7
+YtKsFA1sarJHpN+/0WEMOpEvdd0699nLFe1wa5TyWJXGB07PwQEirsPCmGPbx/A6
+AM174f/VHhtsEwwVkf/ruZW+vO4Gw04qGM8JtrCoI6XywJ5Ozg2IqmvIlInVljHw
+8nel26pLs7CR5SWMVsjAGu+L7TR1w4V4vd1Qkydx5WNfVUaKxL5RrDNNflay/iCj
+V5IU1tcjwb5HnKmobfAX0yLbMBXGFRdhQopxnfaOBK6Nm7vA21uKmWNfoeZW5atr
+Q67h5OdQlckNtlzdvbaoqPYn8hcW38fyFM5FBMmJzWoAIhUp9gR34AG7556qczz6
+1vsx4oS4H+tWwGVtiqAWL9bXlnTUG5nAlJ0IooZBqmhGSzLr37ELyqaPolQiiAsd
+7S2JXOA8PZf5v2urZdJNgw7UdPJZlCockXMsqX1Vc0K/oPXqobRZWOL6DYaJIUkO
+vnQmuqar4JTLuNhURSI8xMR+DS9FNpemheNi3MmrvHA5S+0lAgMBAAGjVjBUMB0G
+A1UdDgQWBBTe82YTHCYaH4rZ4hihBZFPpZi8+DAzBgNVHREELDAqghNuaWh3YW1z
+aGliMS5uaWguZ292hhNodHRwczovL25paC5nb3YvaWRwMA0GCSqGSIb3DQEBCwUA
+A4IBgQCQDm3BCPjUjH9K9A0TO1P4kilviHb7P/5HljEw9nJ9nOqoZZSC/S+Nkjef
+g9XkvOPxxZ6TICZxntxhouCDvwl2v5Z3wwxItqh1ShdaJJE+QsPDYJiLFz7iReM8
+BmGM4pHAAM5F/VKR+7jgGDcU8TL7nS9Ylmtkx8PXWNQKo4qCVL0ajVgbF3tGbttX
+MP1doixN9JTCCNeVL6fs48rlJJjVkS1BVi/hSTa32umozY5+oFDVP/AaknMs54o7
+3tsZ59OEZy4ruTbZGsT+UhsmZBoULLsiksmGFP3+X0HCRrw5b4/2fwkc0d3qnqoA
+zf3gYemrDM4bJDjIw6sgoHMarVwfXFSA20X2EctoM3b0xFtb0RyH/G0/M+LJxrzc
+DuXBJwxG+me5sQha06Rs95OozEn2Qbye8eXH+NioiHki8YccXv3B0J7YL7IEE5s8
+f1paSpI4RQSMWJxHFYrgXh0ihSCcg5rkh9JbEfSz43CZf3huaU/OF5OWlQDiwdDc
+2OSxvaA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://authproxy.nih.gov/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://authproxy.nih.gov/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">National Institutes of Health</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">National Institutes of Health</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nih.gov/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>NIH Login Team</md:GivenName>
+	<md:EmailAddress>CITIAMNIHLoginTeam@mail.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>NIH Login Support</md:GivenName>
+	<md:EmailAddress>NIHLoginSupport@mail.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>NIH Login Support</md:GivenName>
+	<md:EmailAddress>NIHLoginSupport@mail.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>CIT OPS TOC</md:GivenName>
+	<md:EmailAddress>CITOPSTOC@mail.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>NIH Login Support</md:GivenName>
+	<md:EmailAddress>NIHLoginSupport@mail.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

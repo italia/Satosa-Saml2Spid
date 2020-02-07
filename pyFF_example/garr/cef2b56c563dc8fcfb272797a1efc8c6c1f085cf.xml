@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://edulidp01.hants.gov.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Hampshire County Council</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Hampshire County Council</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">hants.gov.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAItvDndSZma37nVve6iWg0pw8KVmMA0GCSqGSIb3DQEB
+BQUAMCExHzAdBgNVBAMTFmVkdWxpZHAwMS5oYW50cy5nb3YudWswHhcNMTEwNjAz
+MDgwNzIzWhcNMzEwNjAzMDgwNzIzWjAhMR8wHQYDVQQDExZlZHVsaWRwMDEuaGFu
+dHMuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArR3KsSDW
+b06i0KYMDPvX86rGjYAdZ8Fk7KEb+Chx71umaIEZMZ+C0nXWNq5xO0+6XVDe0f2I
+z5WVzoQjIlEnx84C+zxGFLHyB/1JXKslo3EZQjAcl37AROndH0ONdKgvmRS5ZM4u
+EVo0NlWG1p2P7pz+kMfFb+mT+Bi+bcyO5UtyMZbvXD6iVax1kb1m1+r1BgHLvDP0
+rFJCK2mzyuSJuiMxwu9WTc3jMqltnmGwWe1AyLQCaSvch1Xg3PerBFO0rPWEDWdz
+j9We9SXGXoVlVMdx5ttrUOYQIo/p0sbqNSKslB4MaWaFZ7SwR+DdKagtAxW2catQ
+LelvYpERLNeXNQIDAQABo3MwcTBQBgNVHREESTBHghZlZHVsaWRwMDEuaGFudHMu
+Z292LnVrhi1odHRwczovL2VkdWxpZHAwMS5oYW50cy5nb3YudWsvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFFHhnpqMIOC7wc8J37OSqa7W/LJZMA0GCSqGSIb3DQEB
+BQUAA4IBAQBnwvEGRoWUVFjl3zntI4LUY7/PVNe0JSklGtE44sBSl5AwWSROkt3U
+Q5gv2d/Cjp7Y1adDF9fF1KjrjCsv188xGXqv96C+qcED9nV9/mE25GfMAWBAn+94
+yTsvBdA7JsVHRPBWhXzkLZkA0/9nGmn2dQx7dwTnVaDW58SgOml+WO0j5bn4hk9b
+uxD/Qa526RvMoHEBk1cmy15UVfCvZXRewVPeKDSHy5x13rnIK7rejXRzEaWNyQDi
+iTIi5utX40Mu6owRgH2ITRxgHg+TkWgZ09jsvvP+mPH0OwySBmEP1KShjREYY8xc
+KVCAwfy+2kJgcyZ1eZjwKeZlIzZRW6C+
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://edulidp01.hants.gov.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://edulidp01.hants.gov.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://edulidp01.hants.gov.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://edulidp01.hants.gov.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://edulidp01.hants.gov.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://edulidp01.hants.gov.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hants.gov.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDRDCCAiygAwIBAgIVAItvDndSZma37nVve6iWg0pw8KVmMA0GCSqGSIb3DQEB
+BQUAMCExHzAdBgNVBAMTFmVkdWxpZHAwMS5oYW50cy5nb3YudWswHhcNMTEwNjAz
+MDgwNzIzWhcNMzEwNjAzMDgwNzIzWjAhMR8wHQYDVQQDExZlZHVsaWRwMDEuaGFu
+dHMuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArR3KsSDW
+b06i0KYMDPvX86rGjYAdZ8Fk7KEb+Chx71umaIEZMZ+C0nXWNq5xO0+6XVDe0f2I
+z5WVzoQjIlEnx84C+zxGFLHyB/1JXKslo3EZQjAcl37AROndH0ONdKgvmRS5ZM4u
+EVo0NlWG1p2P7pz+kMfFb+mT+Bi+bcyO5UtyMZbvXD6iVax1kb1m1+r1BgHLvDP0
+rFJCK2mzyuSJuiMxwu9WTc3jMqltnmGwWe1AyLQCaSvch1Xg3PerBFO0rPWEDWdz
+j9We9SXGXoVlVMdx5ttrUOYQIo/p0sbqNSKslB4MaWaFZ7SwR+DdKagtAxW2catQ
+LelvYpERLNeXNQIDAQABo3MwcTBQBgNVHREESTBHghZlZHVsaWRwMDEuaGFudHMu
+Z292LnVrhi1odHRwczovL2VkdWxpZHAwMS5oYW50cy5nb3YudWsvaWRwL3NoaWJi
+b2xldGgwHQYDVR0OBBYEFFHhnpqMIOC7wc8J37OSqa7W/LJZMA0GCSqGSIb3DQEB
+BQUAA4IBAQBnwvEGRoWUVFjl3zntI4LUY7/PVNe0JSklGtE44sBSl5AwWSROkt3U
+Q5gv2d/Cjp7Y1adDF9fF1KjrjCsv188xGXqv96C+qcED9nV9/mE25GfMAWBAn+94
+yTsvBdA7JsVHRPBWhXzkLZkA0/9nGmn2dQx7dwTnVaDW58SgOml+WO0j5bn4hk9b
+uxD/Qa526RvMoHEBk1cmy15UVfCvZXRewVPeKDSHy5x13rnIK7rejXRzEaWNyQDi
+iTIi5utX40Mu6owRgH2ITRxgHg+TkWgZ09jsvvP+mPH0OwySBmEP1KShjREYY8xc
+KVCAwfy+2kJgcyZ1eZjwKeZlIzZRW6C+
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://edulidp01.hants.gov.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://edulidp01.hants.gov.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Hampshire County Council</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Hampshire County Council</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.hants.gov.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Andy</md:GivenName>
+	<md:SurName>Reynolds</md:SurName>
+	<md:EmailAddress>mailto:Andy.Reynolds@hants.gov.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Wigley</md:SurName>
+	<md:EmailAddress>mailto:David.Wigley@hants.gov.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

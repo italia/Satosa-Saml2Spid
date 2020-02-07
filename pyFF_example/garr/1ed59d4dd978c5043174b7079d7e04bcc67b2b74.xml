@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.ktu.lt/simplesaml/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://fedi.litnet.lt" registrationInstant="2010-07-13T07:33:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://fedi.litnet.lt/en/information/policy</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="lt">https://fedi.litnet.lt/lt/informacija/tvarka</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ktu.lt</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kaunas University of Technology</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="lt">Kauno technologijos universitetas</mdui:DisplayName>
+		<mdui:Description xml:lang="en">KTU Single Sign On</mdui:Description>
+		<mdui:Description xml:lang="lt">KTU vieningas prisijungimas</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://ktu.edu</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="lt">http://ktu.edu</mdui:InformationURL>
+		<mdui:Logo height="88" width="80">https://tinklas.ktu.lt/images/logo/ktu_80x88.png</mdui:Logo>
+		<mdui:Logo height="88" width="80">https://tinklas.ktu.lt/images/logo/ktu_80x88.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://tinklas.ktu.lt/images/logo/ktu_16x16.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://tinklas.ktu.lt/images/logo/ktu_16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>158.129.0.0/19</mdui:IPHint>
+		<mdui:IPHint>158.129.32.0/21</mdui:IPHint>
+		<mdui:IPHint>83.171.8.0/22</mdui:IPHint>
+		<mdui:IPHint>83.171.15.0/24</mdui:IPHint>
+		<mdui:IPHint>83.171.18.0/23</mdui:IPHint>
+		<mdui:IPHint>83.171.20.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.32.0/22</mdui:IPHint>
+		<mdui:IPHint>193.219.36.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.61.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.63.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.66.0/23</mdui:IPHint>
+		<mdui:IPHint>193.219.68.0/22</mdui:IPHint>
+		<mdui:IPHint>193.219.74.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.154.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.156.0/22</mdui:IPHint>
+		<mdui:IPHint>193.219.160.0/24</mdui:IPHint>
+		<mdui:IPHint>193.219.170.0/23</mdui:IPHint>
+		<mdui:IPHint>193.219.174.0/23</mdui:IPHint>
+		<mdui:IPHint>193.219.176.0/25</mdui:IPHint>
+		<mdui:IPHint>193.219.184.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:778:200::/48</mdui:IPHint>
+		<mdui:DomainHint>ktu.lt</mdui:DomainHint>
+		<mdui:DomainHint>ktu.edu</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:54.898986,23.912564</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.899057,23.917424</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.898912,23.921925</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.905337,23.951043</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.905435,23.956579</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:54.901102,23.960211</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIElTCCA32gAwIBAgIJALYznSATuns+MA0GCSqGSIb3DQEBBQUAMIGNMQswCQYD
+VQQGEwJMVDEPMA0GA1UECBMGS2F1bmFzMQ8wDQYDVQQHEwZLYXVuYXMxKjAoBgNV
+BAoTIUthdW5vIHRlY2hub2xvZ2lqb3MgdW5pdmVyc2l0ZXRhczEVMBMGA1UEAxMM
+bG9naW4ua3R1Lmx0MRkwFwYJKoZIhvcNAQkBFgpzc29Aa3R1Lmx0MB4XDTE0MDgw
+NDEzMDY0MFoXDTI0MDgwMzEzMDY0MFowgY0xCzAJBgNVBAYTAkxUMQ8wDQYDVQQI
+EwZLYXVuYXMxDzANBgNVBAcTBkthdW5hczEqMCgGA1UEChMhS2F1bm8gdGVjaG5v
+bG9naWpvcyB1bml2ZXJzaXRldGFzMRUwEwYDVQQDEwxsb2dpbi5rdHUubHQxGTAX
+BgkqhkiG9w0BCQEWCnNzb0BrdHUubHQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCr3YT9UZdS87hoUW2O+nElhco6e1mSJnCVfDXliqaOAv421+khPEqJ
+uKeL1pCeDNHpSlcbVlmdNiwb3SZGUxaXoenTFxaqCZPV09Ggny5f9YBkEzaDOJpB
+3yGfvbhyrmoRM6zeziATUJiHcns395XuJwd2nwbkNGwY4u4BO7ennVZeQR2r9GOy
+L+yz3Kly+q8YhIEw0DBXYoPXKhfHBr+otszV9CRXCgnDgVQ7lqqMbxJiK/n7skd1
+WLRjxxIuTBh3UfTSKmmy3RqwA/NlUYl5Uh42GFE/D0UlKYwzNoBjsV7QXkkmMf8v
+Uiy/x7Tj6PM4zsg716AOafJCPESSuKQJAgMBAAGjgfUwgfIwHQYDVR0OBBYEFMCp
+68JzkZdFKWHkjPn0XTCo98WhMIHCBgNVHSMEgbowgbeAFMCp68JzkZdFKWHkjPn0
+XTCo98WhoYGTpIGQMIGNMQswCQYDVQQGEwJMVDEPMA0GA1UECBMGS2F1bmFzMQ8w
+DQYDVQQHEwZLYXVuYXMxKjAoBgNVBAoTIUthdW5vIHRlY2hub2xvZ2lqb3MgdW5p
+dmVyc2l0ZXRhczEVMBMGA1UEAxMMbG9naW4ua3R1Lmx0MRkwFwYJKoZIhvcNAQkB
+Fgpzc29Aa3R1Lmx0ggkAtjOdIBO6ez4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0B
+AQUFAAOCAQEAdpZ936wIu3ArrlB0/+RL5FreCZnnXhvxSOGWUZzrzq143BXnClnd
+/i9oZMMz5C4apRk6f7USWQZFeYrzSb8dpSjgJUYXPcCT5REf+u2aMOoPtmwGGg+z
+kQKY18WZYC3BW4LPwzNocH3YYBhPrxTkKX/d+xjGM9/b0yOCwdJjj0BlwXq5unq0
+LIK49aSIyuHwA23d+drva9TON936JL4SEqchA2hbnws1elOJNIiykHUJfKqYy/dY
+9rqRSx+Hf8gsa2TNLU3sl57neVdLF6p6w/3g4mjB111B4U382kXULKO7Y+J1uffk
+J71sGBdRWsvH09i0ReJWzbWxAtF2jtzfkw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIElTCCA32gAwIBAgIJALYznSATuns+MA0GCSqGSIb3DQEBBQUAMIGNMQswCQYD
+VQQGEwJMVDEPMA0GA1UECBMGS2F1bmFzMQ8wDQYDVQQHEwZLYXVuYXMxKjAoBgNV
+BAoTIUthdW5vIHRlY2hub2xvZ2lqb3MgdW5pdmVyc2l0ZXRhczEVMBMGA1UEAxMM
+bG9naW4ua3R1Lmx0MRkwFwYJKoZIhvcNAQkBFgpzc29Aa3R1Lmx0MB4XDTE0MDgw
+NDEzMDY0MFoXDTI0MDgwMzEzMDY0MFowgY0xCzAJBgNVBAYTAkxUMQ8wDQYDVQQI
+EwZLYXVuYXMxDzANBgNVBAcTBkthdW5hczEqMCgGA1UEChMhS2F1bm8gdGVjaG5v
+bG9naWpvcyB1bml2ZXJzaXRldGFzMRUwEwYDVQQDEwxsb2dpbi5rdHUubHQxGTAX
+BgkqhkiG9w0BCQEWCnNzb0BrdHUubHQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCr3YT9UZdS87hoUW2O+nElhco6e1mSJnCVfDXliqaOAv421+khPEqJ
+uKeL1pCeDNHpSlcbVlmdNiwb3SZGUxaXoenTFxaqCZPV09Ggny5f9YBkEzaDOJpB
+3yGfvbhyrmoRM6zeziATUJiHcns395XuJwd2nwbkNGwY4u4BO7ennVZeQR2r9GOy
+L+yz3Kly+q8YhIEw0DBXYoPXKhfHBr+otszV9CRXCgnDgVQ7lqqMbxJiK/n7skd1
+WLRjxxIuTBh3UfTSKmmy3RqwA/NlUYl5Uh42GFE/D0UlKYwzNoBjsV7QXkkmMf8v
+Uiy/x7Tj6PM4zsg716AOafJCPESSuKQJAgMBAAGjgfUwgfIwHQYDVR0OBBYEFMCp
+68JzkZdFKWHkjPn0XTCo98WhMIHCBgNVHSMEgbowgbeAFMCp68JzkZdFKWHkjPn0
+XTCo98WhoYGTpIGQMIGNMQswCQYDVQQGEwJMVDEPMA0GA1UECBMGS2F1bmFzMQ8w
+DQYDVQQHEwZLYXVuYXMxKjAoBgNVBAoTIUthdW5vIHRlY2hub2xvZ2lqb3MgdW5p
+dmVyc2l0ZXRhczEVMBMGA1UEAxMMbG9naW4ua3R1Lmx0MRkwFwYJKoZIhvcNAQkB
+Fgpzc29Aa3R1Lmx0ggkAtjOdIBO6ez4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0B
+AQUFAAOCAQEAdpZ936wIu3ArrlB0/+RL5FreCZnnXhvxSOGWUZzrzq143BXnClnd
+/i9oZMMz5C4apRk6f7USWQZFeYrzSb8dpSjgJUYXPcCT5REf+u2aMOoPtmwGGg+z
+kQKY18WZYC3BW4LPwzNocH3YYBhPrxTkKX/d+xjGM9/b0yOCwdJjj0BlwXq5unq0
+LIK49aSIyuHwA23d+drva9TON936JL4SEqchA2hbnws1elOJNIiykHUJfKqYy/dY
+9rqRSx+Hf8gsa2TNLU3sl57neVdLF6p6w/3g4mjB111B4U382kXULKO7Y+J1uffk
+J71sGBdRWsvH09i0ReJWzbWxAtF2jtzfkw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.ktu.lt/simplesaml/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.ktu.lt/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.ktu.lt/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="lt">Kauno technologijos universitetas</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Kaunas University of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="lt">Kauno technologijos universitetas</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Kaunas University of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="lt">http://ktu.edu/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://ktu.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>KTU</md:GivenName>
+	<md:SurName>SSO</md:SurName>
+	<md:EmailAddress>mailto:sso@ktu.lt</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Litnet</md:GivenName>
+	<md:SurName>CERT</md:SurName>
+	<md:EmailAddress>mailto:cert@litnet.lt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

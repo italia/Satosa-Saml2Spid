@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.rcsi.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2010-12-16T02:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">rcsi.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Royal College of Surgeons in Ireland</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.rcsi.ie/</mdui:InformationURL>
+		<mdui:Logo height="300" width="234">https://edugate.heanet.ie/rr3/logos/rcsi.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.3388897,-6.2615682</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIULe0Zpdp2BKld9aAEDY9zG1iOMW0wDQYJKoZIhvcNAQEF
+BQAwFjEUMBIGA1UEAxMLaWRwLnJjc2kuaWUwHhcNMTEwMTE3MTQwMTM4WhcNMzEw
+MTE3MTQwMTM4WjAWMRQwEgYDVQQDEwtpZHAucmNzaS5pZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBANz8fbiqIKylx30j3FoieGEEA3NJ60GSKpKyrtdg
+5pZl1ytZNiv7x+sIassPareugCEdgyIMtauDG9wTk/JGeVxE3cxzVk4P/eLs28Yt
+9esMxnKKcLVNmSB0cnGg8AYNKeTtlpXm3svt2yhm+amPzPVs/KouLGBHZJBjTEu7
+CWybJfXGaF3VvuCA37EGQ+r4c1SUiX2cpFF7dwg9QXGUqJoixpIL8X3MUtnz3nwF
+ylbRyvRmTjRQXdqj0VmrJcBwG8b7m/IOgd6YzeFkC6hNnNubMsC+IIcwZkqBA+mo
+935u0snGwXYTFl6Yzmu5g62CcIWK1igRv0i44yerXnWmIfsCAwEAAaNdMFswOgYD
+VR0RBDMwMYILaWRwLnJjc2kuaWWGImh0dHBzOi8vaWRwLnJjc2kuaWUvaWRwL3No
+aWJib2xldGgwHQYDVR0OBBYEFIZIAcMDW/dNIf1LB766KOrTAXnTMA0GCSqGSIb3
+DQEBBQUAA4IBAQAu5blWzoP/noyJUFGwfScajImjNgAE0DyN6GsCzqzSge3hgkI3
+yuhunKfZEcpg8yM2h5MrlFBy97Q4hkgnesFNbPToKNClIDKtIcFZLa6wCkLRKxKZ
+N/5glxvGQ9YTljpAOb8PWBKGb/ltmm5PeKDDu16WGwbECWjDyoPWInivkGQsMYqU
+wk50fYlcVK3tkiBszFKoALGWPKGhasa0Xn+TKFkjwdMX1zJ+tCEZSrufON5l/qgp
+KgEE0I/LH4bhUjQnqi2CLKHHhp70V3Dcs8+hOjdpFH+f2a7jz84AdJq/hEiQOWV6
+dchGI5O5GDg/zdxev837ilMJnOSp+LSJF9iz
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rcsi.com/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rcsi.com/idp/profile/SAML2/Post/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.rcsi.com/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.rcsi.com/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.rcsi.com/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.rcsi.com/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Royal College of Surgeons in Ireland</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Royal College of Surgeons in Ireland</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.rcsi.ie/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Neeraj</md:GivenName>
+	<md:SurName>Kumar</md:SurName>
+	<md:EmailAddress>mailto:neerajkumar@rcsi.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IT</md:GivenName>
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@rcsi.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

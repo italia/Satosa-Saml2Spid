@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sdp.meshs.fr">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2013-07-12T14:32:33Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/category/logiciel</saml:AttributeValue>
+		<saml:AttributeValue>https://federation.renater.fr/scope/national</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">MESHS - tools - centralized authentication</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="fr">https://sdp.meshs.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">The website offer a suite of web service with restricted access to manage and support MESHS's research project.</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">MESHS - gestion administrative et financière des projets</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Le site est une suite de services internet à accès restreint permettant la gestion et le support des projets de recherche soutenus par la MESHS.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://sdp.meshs.fr/coc.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGijCCBXKgAwIBAgIQD0/g9eAkl4SMlfzmFc1jITANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xODEwMDgwMDAwMDBaFw0yMDEwMTUxMjAwMDBaMFIxCzAJBgNVBAYT
+AkZSMQ4wDAYDVQQHEwVMSUxMRTEcMBoGA1UEChMTVU5JVkVSU0lURSBERSBMSUxM
+RTEVMBMGA1UEAxMMc2RwLm1lc2hzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAxjYuPjFc7ElC+cba9suwDrwh2QGR6gtSU25Sfjv3UWxybs8YQ8Fa
+bg5KYgCBugAgRPe49h42nAyh5jTND6VSChorg2yLOb/X+lZBTgBk3vNvtC4L8AlW
+qKrw3Fgjd9REaZBbi3B0nHIB0EmsIm6ShuXHyr1o/5jmjneZ2wnTgwyKSbRJ0aHT
+3EmEWxWZWYFwMXXbLspaiFPIJKT8EW5k18QZBqBXqso6sxUtyWUzooHwzo9BCp1S
+CO4AyXS8kgey1Xsj8bZbI7mHP+KfGAnCOCjLKwNlyrx0VaeF12W9hvhjb/fuNzFl
+fDm4RYSj4fwKdDYcOebuQLxQE4tvtL0N3wIDAQABo4IDSDCCA0QwHwYDVR0jBBgw
+FoAUZ/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFNVNVDfCwtY7crIId4wM
+PC7ZKRACMBcGA1UdEQQQMA6CDHNkcC5tZXNocy5mcjAOBgNVHQ8BAf8EBAMCBaAw
+HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuG
+KWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMC+gLaAr
+hilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDBMBgNV
+HSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k
+aWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEFBQcBAQRiMGAwJAYIKwYB
+BQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0
+cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcnQwDAYDVR0T
+AQH/BAIwADCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHYApLkJkLQYWBSHuxOi
+zGdwCjw1mAT5G9+443fNDsgN3BAAAAFmU5t3pwAABAMARzBFAiA35bGI6zDDO21T
+CXsLNXPcADrpYoRQ1faFRxSyEDJ4oAIhAK/15R2WCBltSPNAVrHgCZrOqIPHXJua
+DKhPK03ydNlpAHcAh3W/51l8+IxDmV+9827/Vo1HVjb/SrVgwbTq/16ggw8AAAFm
+U5t4fQAABAMASDBGAiEAg0i+cotSPvPC6H3enYyFGyc8tKeye2ob5I/dyVoZ8EwC
+IQD8VhsnAhcH88rveu2qt45JaRwgo0DVwlv2HYWjF18JHgB2ALvZ37wfinG1k5Qj
+l6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZlObd7MAAAQDAEcwRQIhAOIgtJrj3zBY
+SDLobio4oeW+RDYzQDunahP6Kp0HnWAxAiAigrOexgF0VZDVKy+Xa8cIApCPEPwJ
+jQUFLV4dj6vkKDANBgkqhkiG9w0BAQsFAAOCAQEAFyPqBYSXviv3FRcYOjfGOoA4
+ukULmGyAhhEBqU6xPEQ9hdFM+HbnpjUdzQPRF65/Gt2UcWTIYMltMH7v0HXOCrhc
+oP1LIOZg/HAnb/4puxOdrKOIlJHyLkp21vIQDsW4YmV72rYbNzaeObKQfQW+MmOP
+7HIq7e2M+4FRILyOP3/RK/yZXldMTbvga3tfk0GrJIsP3FPyLnUCwH86fzMhwYbr
+PhBnDDmGNMkiMezvJ6f0R3Ap0YPh9IP8kc6OUuSaUvcPOjLde7yAREyUQBGMYQKo
+xBwneysHBrAAF1GFI+pdezmBZG/dIQgXr8BZEg6TsTNXIDyqd7ZRIj+mD3DwTA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGijCCBXKgAwIBAgIQD0/g9eAkl4SMlfzmFc1jITANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xODEwMDgwMDAwMDBaFw0yMDEwMTUxMjAwMDBaMFIxCzAJBgNVBAYT
+AkZSMQ4wDAYDVQQHEwVMSUxMRTEcMBoGA1UEChMTVU5JVkVSU0lURSBERSBMSUxM
+RTEVMBMGA1UEAxMMc2RwLm1lc2hzLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEAxjYuPjFc7ElC+cba9suwDrwh2QGR6gtSU25Sfjv3UWxybs8YQ8Fa
+bg5KYgCBugAgRPe49h42nAyh5jTND6VSChorg2yLOb/X+lZBTgBk3vNvtC4L8AlW
+qKrw3Fgjd9REaZBbi3B0nHIB0EmsIm6ShuXHyr1o/5jmjneZ2wnTgwyKSbRJ0aHT
+3EmEWxWZWYFwMXXbLspaiFPIJKT8EW5k18QZBqBXqso6sxUtyWUzooHwzo9BCp1S
+CO4AyXS8kgey1Xsj8bZbI7mHP+KfGAnCOCjLKwNlyrx0VaeF12W9hvhjb/fuNzFl
+fDm4RYSj4fwKdDYcOebuQLxQE4tvtL0N3wIDAQABo4IDSDCCA0QwHwYDVR0jBBgw
+FoAUZ/2IIBQnmMcJ0iUZu+lREWN1UGIwHQYDVR0OBBYEFNVNVDfCwtY7crIId4wM
+PC7ZKRACMBcGA1UdEQQQMA6CDHNkcC5tZXNocy5mcjAOBgNVHQ8BAf8EBAMCBaAw
+HQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMGsGA1UdHwRkMGIwL6AtoCuG
+KWh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMC+gLaAr
+hilodHRwOi8vY3JsNC5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNybDBMBgNV
+HSAERTBDMDcGCWCGSAGG/WwBATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5k
+aWdpY2VydC5jb20vQ1BTMAgGBmeBDAECAjBuBggrBgEFBQcBAQRiMGAwJAYIKwYB
+BQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTA4BggrBgEFBQcwAoYsaHR0
+cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcnQwDAYDVR0T
+AQH/BAIwADCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHYApLkJkLQYWBSHuxOi
+zGdwCjw1mAT5G9+443fNDsgN3BAAAAFmU5t3pwAABAMARzBFAiA35bGI6zDDO21T
+CXsLNXPcADrpYoRQ1faFRxSyEDJ4oAIhAK/15R2WCBltSPNAVrHgCZrOqIPHXJua
+DKhPK03ydNlpAHcAh3W/51l8+IxDmV+9827/Vo1HVjb/SrVgwbTq/16ggw8AAAFm
+U5t4fQAABAMASDBGAiEAg0i+cotSPvPC6H3enYyFGyc8tKeye2ob5I/dyVoZ8EwC
+IQD8VhsnAhcH88rveu2qt45JaRwgo0DVwlv2HYWjF18JHgB2ALvZ37wfinG1k5Qj
+l6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZlObd7MAAAQDAEcwRQIhAOIgtJrj3zBY
+SDLobio4oeW+RDYzQDunahP6Kp0HnWAxAiAigrOexgF0VZDVKy+Xa8cIApCPEPwJ
+jQUFLV4dj6vkKDANBgkqhkiG9w0BAQsFAAOCAQEAFyPqBYSXviv3FRcYOjfGOoA4
+ukULmGyAhhEBqU6xPEQ9hdFM+HbnpjUdzQPRF65/Gt2UcWTIYMltMH7v0HXOCrhc
+oP1LIOZg/HAnb/4puxOdrKOIlJHyLkp21vIQDsW4YmV72rYbNzaeObKQfQW+MmOP
+7HIq7e2M+4FRILyOP3/RK/yZXldMTbvga3tfk0GrJIsP3FPyLnUCwH86fzMhwYbr
+PhBnDDmGNMkiMezvJ6f0R3Ap0YPh9IP8kc6OUuSaUvcPOjLde7yAREyUQBGMYQKo
+xBwneysHBrAAF1GFI+pdezmBZG/dIQgXr8BZEg6TsTNXIDyqd7ZRIj+mD3DwTA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFNjCCBB6gAwIBAgIQA+0szeS2OBChIlCw6E95VjANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMzAeFw0xNTEwMTQwMDAwMDBaFw0xODEwMTgxMjAwMDBaMIGAMQswCQYDVQQG
+EwJGUjENMAsGA1UECBMETk9SRDEaMBgGA1UEBxMRVmlsbGVuZXV2ZSBkJ0FzY3Ex
+LzAtBgNVBAoTJlVOSVZFUlNJVEUgU0NJRU5DRVMgVEVDSE5PTE9HSUVTIExJTExF
+MRUwEwYDVQQDEwxzZHAubWVzaHMuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDzdYwZea2u5aSjL8gb853RhsfGuIEp0cSuWFkKfmtqVa/EhXpa+BUi
+nxuCeLrxkU0YrLTSDW12Uuq+qCJPAy+8ZkuZMUVk/KcG4mn3xv5VH/eKlAXore6d
+d9qipegtMUy3solGkUeNQR45TzNir+rJc/faKvzEapYLc1BtsU6gq9N+VlAtyREr
+ILhwQFsn3FPRbasGmGC2NKf7rm1/667LUDpXTJGIIV+xL8MovWB45e9VXApomUem
+4R/XNybWdDh+2UB9jP58bBOeAZGZwh/LSka/7sxFzrTpbDAjLUG6ciK4MWga8IXw
+DVl+4hKFBso8kb/uFMhKK0HhGdnR0c87AgMBAAGjggHFMIIBwTAfBgNVHSMEGDAW
+gBRn/YggFCeYxwnSJRm76VERY3VQYjAdBgNVHQ4EFgQUBThSBlqEZYy9DqrepSO0
+eOKT/RQwFwYDVR0RBBAwDoIMc2RwLm1lc2hzLmZyMA4GA1UdDwEB/wQEAwIFoDAd
+BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4Yp
+aHR0cDovL2NybDMuZGlnaWNlcnQuY29tL1RFUkVOQVNTTENBMy5jcmwwL6AtoCuG
+KWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9URVJFTkFTU0xDQTMuY3JsMEwGA1Ud
+IARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRp
+Z2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMG4GCCsGAQUFBwEBBGIwYDAkBggrBgEF
+BQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMDgGCCsGAQUFBzAChixodHRw
+Oi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vVEVSRU5BU1NMQ0EzLmNydDAMBgNVHRMB
+Af8EAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQB/gRnoI6SPoMmdVhZMHLYANRW4Hh3T
+0ArWtoHBXhjaRYLL3uJwvuaj81AjnCinkqSgDQiGYhQRxwUK32Dob7hxqR/jjcA+
+8mEs/3h1fmw7zzxbOtniLNCrLbRgMDZmI8yPB7KQwH5qj6RsxnGPs1nVuCNDKFaJ
+z8yxvQO8aKUnx8yQ3IYisLE9tymZ2OfTHX7kw+SrLfQUMsDUVTVNXnCIzKgFJxYA
+S6kqXpGvLjnCYQWP9KrLJXAmAvCvqKIkkImYnAKwp2dZ/7bI8+ADFACB4pXuafbi
+mWu+e2UzeGrkga3VDefRombhpDJowAFTxonI2PISR6ShqAC+q+EXpGej
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sdp.meshs.fr/Shibboleth.sso/SAML/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sdp.meshs.fr/Shibboleth.sso/SAML2/POST" index="3"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="fr">MESHS - gestion administrative et financière des projets</md:ServiceName>
+		<md:ServiceName xml:lang="en">MESHS - tools - centralized authentication</md:ServiceName>
+		<md:ServiceDescription xml:lang="fr">Le site est une suite de services internet à accès restreint permettant la gestion et le support des projets de recherche soutenus par la MESHS.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">The website offer a suite of web service with restricted access to manage and support MESHS's research project.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="supannEntiteAffectation" Name="urn:oid:1.3.6.1.4.1.7135.1.2.1.8" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="preferredLanguage" Name="urn:oid:2.16.840.1.113730.3.1.39" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true">
+			</md:RequestedAttribute>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+			</md:RequestedAttribute>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Lille</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Lille</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://univ-lille.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:service-info@meshs.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://weblogin.uni-marburg.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-07-09T13:53:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">students.uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">staff.uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hrz.uni-marburg.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Philipps-Universität Marburg</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Philipps-Universität Marburg</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Zugang für Mitglieder und Angehörige der Philipps-Universität Marburg.</mdui:Description>
+		<mdui:Description xml:lang="en">Zugang für Mitglieder und Angehörige der Philipps-Universität Marburg.</mdui:Description>
+		<mdui:Logo height="16" width="16">https://www.uni-marburg.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="93" width="260">https://weblogin.uni-marburg.de/cms/unilogo260.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.uni-marburg.de/hrz</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.uni-marburg.de/hrz</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://weblogin.uni-marburg.de/nutzung/</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://weblogin.uni-marburg.de/nutzung/#touenglish</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMIKCsS+TP1vcu6PHjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDMwNzE0NDYyNVoXDTIxMDYwODE0NDYyNVowgZsxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xEDAOBgNVBAcMB01hcmJ1cmcxJjAkBgNVBAoMHVBoaWxpcHBz
+LVVuaXZlcnNpdGFldCBNYXJidXJnMR8wHQYDVQQLDBZIb2Noc2NodWxyZWNoZW56
+ZW50cnVtMSAwHgYDVQQDDBd3ZWJsb2dpbi51bmktbWFyYnVyZy5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKonTsu6vPpMr6giLjKKF4PI4qgkfqo6
+h4OT+EoKqndDjPiunP+LKnWNMmfTxyKm4q8lsa++tL4BTcqrrS3/Zf9Tm7c9Thud
+S0ktrW8MIXcX/oSPuVXRj3WpGKMFMyC+tlJ21r6uptpE6Ey8HMs2rZ/RRcvpkrNj
+t2p+VCaPjkVbJDbufnEc0lBhEDMVQ/KY5SmZoQko6QDv06AkO1uW0dMVZUppThYx
+FdMB1dKa2VBEysmJiZRrRreehW0DkxMYMblpVYUrunOUNZuMKUoher4gS6etpkNH
+wJm6+GPS0h38IJjqtHXZVjQ+3TAI4AD6knAErMVFo1Vg+ouYVRqqKiUCAwEAAaOC
+Bd8wggXbMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQD
+CTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcD
+ATAdBgNVHQ4EFgQUGrcCSzUZM0GcurmikjZ9EGlPMh0wHwYDVR0jBBgwFoAUazqY
+i/nyU4na4K2yMh4JH+iqO3QwOgYDVR0RBDMwMYIXd2VibG9naW4udW5pLW1hcmJ1
+cmcuZGWCFmlkcC5ocnoudW5pLW1hcmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/oD2g
+O4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+cmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHL
+MDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVy
+L09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNh
+LWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0
+L2NhY2VydC5jcnQwggNiBgorBgEEAdZ5AgQCBIIDUgSCA04DTAB2AG9Tdqwx8DEZ
+2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABaVievUcAAAQDAEcwRQIgREm8hJ5e
+gArk1qL83fvUl8PYGw0jv5Q0iIq9A0t0hGgCIQCCNN+SU4sNi7p4MGjCySkkHCwU
+iGrN2H22tiA6Snm1IgB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABaVievOAAAAQDAEcwRQIhAPjsoanjQ3k1YQuicHX5enn2DaaDg8b5sA3SlolU
+cJ34AiBAgAR+AF0SeokchR89gGu3R0jKzaAb7ijL0vCKbH/o1gB3AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaVievkUAAAQDAEgwRgIhAPicZiw0
+O+pAJRkg0mWDlIPQlmnBftXB0iPqayhzWqoKAiEAxZvGpIPdg/F8HZ7LnjuIVnlm
+kkhaL36VvbREcMuSS9QAdwDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9
+ywAAAWlYnr1fAAAEAwBIMEYCIQCIVo9fiYlzJSRXRu6Ag64FzfbDaHLviJjKafd8
+93j+wQIhANbEzFfLwoX8f+hU92Dg7h0mb3TiIogE76T2fzg4DHISAHcApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFpWJ69VQAABAMASDBGAiEA/O1B
+rPsfJmHkiDjKjYdbxv7Mqs+l+cHqeByVq3ermK4CIQDLTaFnXwLHvEsx4hpg2a5w
+G/4fIsFqriNmwatif6ovCgB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaO
+HtGFAAABaVievVcAAAQDAEgwRgIhAPj4AVRZ3V1wousnvBd/E/4hrRpdYXb3KK//
+WHAAR3PIAiEA4qnlVs6Wkca74fu6RNw7bglBWS7uF5ZiX4q3nEOWx8gAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWlYnsUHAAAEAwBHMEUCIH8h
+uKsSqq0pRDctaa3Z7Nwg1UTLnwFZEwYqkyKLS5EJAiEAsJ2hN3D9onI5aggvOY5y
+y+AbuwvrRyFy4CfIaDKhVKIwDQYJKoZIhvcNAQELBQADggEBAGI3bKvnXAMiIDCJ
+RMgXcS6us35CLsa7f2OMBDmFxS821sNQeIPCPboSjQbO5pTWfMbfGm6TXVhiLHIm
+IlZ2fS9+FfMmeZnPWFFM6GwfvNxfgAM8TK3+zyWRHHnNAFNiplxLDI2adFYuCYOM
+E8g23eFRTyECsV+gNRbQIn7OAe/Gt+6jQOR9pKurF1T2n03T+7IJGl7o76u/2cC3
+6ma/WwJqJsm3agJPJwEnmZRf6rrpc5UaCttL6iibwrDUB+Eeo0MgXNiaAKkHOVpt
+6g/LUaMFPCQvktdp8/AEUywEYikbTeIycJDqnS3GDbTGFr88//VJisbv+EBnK9jj
+yjdvvks=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMIKCsS+TP1vcu6PHjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDMwNzE0NDYyNVoXDTIxMDYwODE0NDYyNVowgZsxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xEDAOBgNVBAcMB01hcmJ1cmcxJjAkBgNVBAoMHVBoaWxpcHBz
+LVVuaXZlcnNpdGFldCBNYXJidXJnMR8wHQYDVQQLDBZIb2Noc2NodWxyZWNoZW56
+ZW50cnVtMSAwHgYDVQQDDBd3ZWJsb2dpbi51bmktbWFyYnVyZy5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKonTsu6vPpMr6giLjKKF4PI4qgkfqo6
+h4OT+EoKqndDjPiunP+LKnWNMmfTxyKm4q8lsa++tL4BTcqrrS3/Zf9Tm7c9Thud
+S0ktrW8MIXcX/oSPuVXRj3WpGKMFMyC+tlJ21r6uptpE6Ey8HMs2rZ/RRcvpkrNj
+t2p+VCaPjkVbJDbufnEc0lBhEDMVQ/KY5SmZoQko6QDv06AkO1uW0dMVZUppThYx
+FdMB1dKa2VBEysmJiZRrRreehW0DkxMYMblpVYUrunOUNZuMKUoher4gS6etpkNH
+wJm6+GPS0h38IJjqtHXZVjQ+3TAI4AD6knAErMVFo1Vg+ouYVRqqKiUCAwEAAaOC
+Bd8wggXbMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQD
+CTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcD
+ATAdBgNVHQ4EFgQUGrcCSzUZM0GcurmikjZ9EGlPMh0wHwYDVR0jBBgwFoAUazqY
+i/nyU4na4K2yMh4JH+iqO3QwOgYDVR0RBDMwMYIXd2VibG9naW4udW5pLW1hcmJ1
+cmcuZGWCFmlkcC5ocnoudW5pLW1hcmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/oD2g
+O4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+cmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHL
+MDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVy
+L09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNh
+LWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0
+L2NhY2VydC5jcnQwggNiBgorBgEEAdZ5AgQCBIIDUgSCA04DTAB2AG9Tdqwx8DEZ
+2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABaVievUcAAAQDAEcwRQIgREm8hJ5e
+gArk1qL83fvUl8PYGw0jv5Q0iIq9A0t0hGgCIQCCNN+SU4sNi7p4MGjCySkkHCwU
+iGrN2H22tiA6Snm1IgB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABaVievOAAAAQDAEcwRQIhAPjsoanjQ3k1YQuicHX5enn2DaaDg8b5sA3SlolU
+cJ34AiBAgAR+AF0SeokchR89gGu3R0jKzaAb7ijL0vCKbH/o1gB3AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaVievkUAAAQDAEgwRgIhAPicZiw0
+O+pAJRkg0mWDlIPQlmnBftXB0iPqayhzWqoKAiEAxZvGpIPdg/F8HZ7LnjuIVnlm
+kkhaL36VvbREcMuSS9QAdwDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9
+ywAAAWlYnr1fAAAEAwBIMEYCIQCIVo9fiYlzJSRXRu6Ag64FzfbDaHLviJjKafd8
+93j+wQIhANbEzFfLwoX8f+hU92Dg7h0mb3TiIogE76T2fzg4DHISAHcApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFpWJ69VQAABAMASDBGAiEA/O1B
+rPsfJmHkiDjKjYdbxv7Mqs+l+cHqeByVq3ermK4CIQDLTaFnXwLHvEsx4hpg2a5w
+G/4fIsFqriNmwatif6ovCgB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaO
+HtGFAAABaVievVcAAAQDAEgwRgIhAPj4AVRZ3V1wousnvBd/E/4hrRpdYXb3KK//
+WHAAR3PIAiEA4qnlVs6Wkca74fu6RNw7bglBWS7uF5ZiX4q3nEOWx8gAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWlYnsUHAAAEAwBHMEUCIH8h
+uKsSqq0pRDctaa3Z7Nwg1UTLnwFZEwYqkyKLS5EJAiEAsJ2hN3D9onI5aggvOY5y
+y+AbuwvrRyFy4CfIaDKhVKIwDQYJKoZIhvcNAQELBQADggEBAGI3bKvnXAMiIDCJ
+RMgXcS6us35CLsa7f2OMBDmFxS821sNQeIPCPboSjQbO5pTWfMbfGm6TXVhiLHIm
+IlZ2fS9+FfMmeZnPWFFM6GwfvNxfgAM8TK3+zyWRHHnNAFNiplxLDI2adFYuCYOM
+E8g23eFRTyECsV+gNRbQIn7OAe/Gt+6jQOR9pKurF1T2n03T+7IJGl7o76u/2cC3
+6ma/WwJqJsm3agJPJwEnmZRf6rrpc5UaCttL6iibwrDUB+Eeo0MgXNiaAKkHOVpt
+6g/LUaMFPCQvktdp8/AEUywEYikbTeIycJDqnS3GDbTGFr88//VJisbv+EBnK9jj
+yjdvvks=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.uni-marburg.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://weblogin.uni-marburg.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://weblogin.uni-marburg.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://weblogin.uni-marburg.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://weblogin.uni-marburg.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://weblogin.uni-marburg.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://weblogin.uni-marburg.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://weblogin.uni-marburg.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://weblogin.uni-marburg.de/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">students.uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">staff.uni-marburg.de</shibmd:Scope>
+		<shibmd:Scope regexp="false">hrz.uni-marburg.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMIKCsS+TP1vcu6PHjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDMwNzE0NDYyNVoXDTIxMDYwODE0NDYyNVowgZsxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xEDAOBgNVBAcMB01hcmJ1cmcxJjAkBgNVBAoMHVBoaWxpcHBz
+LVVuaXZlcnNpdGFldCBNYXJidXJnMR8wHQYDVQQLDBZIb2Noc2NodWxyZWNoZW56
+ZW50cnVtMSAwHgYDVQQDDBd3ZWJsb2dpbi51bmktbWFyYnVyZy5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKonTsu6vPpMr6giLjKKF4PI4qgkfqo6
+h4OT+EoKqndDjPiunP+LKnWNMmfTxyKm4q8lsa++tL4BTcqrrS3/Zf9Tm7c9Thud
+S0ktrW8MIXcX/oSPuVXRj3WpGKMFMyC+tlJ21r6uptpE6Ey8HMs2rZ/RRcvpkrNj
+t2p+VCaPjkVbJDbufnEc0lBhEDMVQ/KY5SmZoQko6QDv06AkO1uW0dMVZUppThYx
+FdMB1dKa2VBEysmJiZRrRreehW0DkxMYMblpVYUrunOUNZuMKUoher4gS6etpkNH
+wJm6+GPS0h38IJjqtHXZVjQ+3TAI4AD6knAErMVFo1Vg+ouYVRqqKiUCAwEAAaOC
+Bd8wggXbMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQD
+CTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcD
+ATAdBgNVHQ4EFgQUGrcCSzUZM0GcurmikjZ9EGlPMh0wHwYDVR0jBBgwFoAUazqY
+i/nyU4na4K2yMh4JH+iqO3QwOgYDVR0RBDMwMYIXd2VibG9naW4udW5pLW1hcmJ1
+cmcuZGWCFmlkcC5ocnoudW5pLW1hcmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/oD2g
+O4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+cmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHL
+MDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVy
+L09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNh
+LWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0
+L2NhY2VydC5jcnQwggNiBgorBgEEAdZ5AgQCBIIDUgSCA04DTAB2AG9Tdqwx8DEZ
+2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABaVievUcAAAQDAEcwRQIgREm8hJ5e
+gArk1qL83fvUl8PYGw0jv5Q0iIq9A0t0hGgCIQCCNN+SU4sNi7p4MGjCySkkHCwU
+iGrN2H22tiA6Snm1IgB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABaVievOAAAAQDAEcwRQIhAPjsoanjQ3k1YQuicHX5enn2DaaDg8b5sA3SlolU
+cJ34AiBAgAR+AF0SeokchR89gGu3R0jKzaAb7ijL0vCKbH/o1gB3AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaVievkUAAAQDAEgwRgIhAPicZiw0
+O+pAJRkg0mWDlIPQlmnBftXB0iPqayhzWqoKAiEAxZvGpIPdg/F8HZ7LnjuIVnlm
+kkhaL36VvbREcMuSS9QAdwDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9
+ywAAAWlYnr1fAAAEAwBIMEYCIQCIVo9fiYlzJSRXRu6Ag64FzfbDaHLviJjKafd8
+93j+wQIhANbEzFfLwoX8f+hU92Dg7h0mb3TiIogE76T2fzg4DHISAHcApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFpWJ69VQAABAMASDBGAiEA/O1B
+rPsfJmHkiDjKjYdbxv7Mqs+l+cHqeByVq3ermK4CIQDLTaFnXwLHvEsx4hpg2a5w
+G/4fIsFqriNmwatif6ovCgB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaO
+HtGFAAABaVievVcAAAQDAEgwRgIhAPj4AVRZ3V1wousnvBd/E/4hrRpdYXb3KK//
+WHAAR3PIAiEA4qnlVs6Wkca74fu6RNw7bglBWS7uF5ZiX4q3nEOWx8gAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWlYnsUHAAAEAwBHMEUCIH8h
+uKsSqq0pRDctaa3Z7Nwg1UTLnwFZEwYqkyKLS5EJAiEAsJ2hN3D9onI5aggvOY5y
+y+AbuwvrRyFy4CfIaDKhVKIwDQYJKoZIhvcNAQELBQADggEBAGI3bKvnXAMiIDCJ
+RMgXcS6us35CLsa7f2OMBDmFxS821sNQeIPCPboSjQbO5pTWfMbfGm6TXVhiLHIm
+IlZ2fS9+FfMmeZnPWFFM6GwfvNxfgAM8TK3+zyWRHHnNAFNiplxLDI2adFYuCYOM
+E8g23eFRTyECsV+gNRbQIn7OAe/Gt+6jQOR9pKurF1T2n03T+7IJGl7o76u/2cC3
+6ma/WwJqJsm3agJPJwEnmZRf6rrpc5UaCttL6iibwrDUB+Eeo0MgXNiaAKkHOVpt
+6g/LUaMFPCQvktdp8/AEUywEYikbTeIycJDqnS3GDbTGFr88//VJisbv+EBnK9jj
+yjdvvks=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJkTCCCHmgAwIBAgIMIKCsS+TP1vcu6PHjMA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE5
+MDMwNzE0NDYyNVoXDTIxMDYwODE0NDYyNVowgZsxCzAJBgNVBAYTAkRFMQ8wDQYD
+VQQIDAZIZXNzZW4xEDAOBgNVBAcMB01hcmJ1cmcxJjAkBgNVBAoMHVBoaWxpcHBz
+LVVuaXZlcnNpdGFldCBNYXJidXJnMR8wHQYDVQQLDBZIb2Noc2NodWxyZWNoZW56
+ZW50cnVtMSAwHgYDVQQDDBd3ZWJsb2dpbi51bmktbWFyYnVyZy5kZTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKonTsu6vPpMr6giLjKKF4PI4qgkfqo6
+h4OT+EoKqndDjPiunP+LKnWNMmfTxyKm4q8lsa++tL4BTcqrrS3/Zf9Tm7c9Thud
+S0ktrW8MIXcX/oSPuVXRj3WpGKMFMyC+tlJ21r6uptpE6Ey8HMs2rZ/RRcvpkrNj
+t2p+VCaPjkVbJDbufnEc0lBhEDMVQ/KY5SmZoQko6QDv06AkO1uW0dMVZUppThYx
+FdMB1dKa2VBEysmJiZRrRreehW0DkxMYMblpVYUrunOUNZuMKUoher4gS6etpkNH
+wJm6+GPS0h38IJjqtHXZVjQ+3TAI4AD6knAErMVFo1Vg+ouYVRqqKiUCAwEAAaOC
+Bd8wggXbMFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsG
+AQQBga0hgiwBAQQwEQYPKwYBBAGBrSGCLAEBBAMJMBEGDysGAQQBga0hgiwCAQQD
+CTAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcD
+ATAdBgNVHQ4EFgQUGrcCSzUZM0GcurmikjZ9EGlPMh0wHwYDVR0jBBgwFoAUazqY
+i/nyU4na4K2yMh4JH+iqO3QwOgYDVR0RBDMwMYIXd2VibG9naW4udW5pLW1hcmJ1
+cmcuZGWCFmlkcC5ocnoudW5pLW1hcmJ1cmcuZGUwgY0GA1UdHwSBhTCBgjA/oD2g
+O4Y5aHR0cDovL2NkcDEucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9j
+cmwvY2FjcmwuY3JsMD+gPaA7hjlodHRwOi8vY2RwMi5wY2EuZGZuLmRlL2Rmbi1j
+YS1nbG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwgdsGCCsGAQUFBwEBBIHOMIHL
+MDMGCCsGAQUFBzABhidodHRwOi8vb2NzcC5wY2EuZGZuLmRlL09DU1AtU2VydmVy
+L09DU1AwSQYIKwYBBQUHMAKGPWh0dHA6Ly9jZHAxLnBjYS5kZm4uZGUvZGZuLWNh
+LWdsb2JhbC1nMi9wdWIvY2FjZXJ0L2NhY2VydC5jcnQwSQYIKwYBBQUHMAKGPWh0
+dHA6Ly9jZHAyLnBjYS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY2FjZXJ0
+L2NhY2VydC5jcnQwggNiBgorBgEEAdZ5AgQCBIIDUgSCA04DTAB2AG9Tdqwx8DEZ
+2JkApFEV/3cVHBHZAsEAKQaNsgiaN9kTAAABaVievUcAAAQDAEcwRQIgREm8hJ5e
+gArk1qL83fvUl8PYGw0jv5Q0iIq9A0t0hGgCIQCCNN+SU4sNi7p4MGjCySkkHCwU
+iGrN2H22tiA6Snm1IgB2AKrnC388uNVmyGwvFpecn0RfaasOtFNVibL3egMBBPPN
+AAABaVievOAAAAQDAEcwRQIhAPjsoanjQ3k1YQuicHX5enn2DaaDg8b5sA3SlolU
+cJ34AiBAgAR+AF0SeokchR89gGu3R0jKzaAb7ijL0vCKbH/o1gB3AFWB1MIWkDYB
+SuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABaVievkUAAAQDAEgwRgIhAPicZiw0
+O+pAJRkg0mWDlIPQlmnBftXB0iPqayhzWqoKAiEAxZvGpIPdg/F8HZ7LnjuIVnlm
+kkhaL36VvbREcMuSS9QAdwDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9
+ywAAAWlYnr1fAAAEAwBIMEYCIQCIVo9fiYlzJSRXRu6Ag64FzfbDaHLviJjKafd8
+93j+wQIhANbEzFfLwoX8f+hU92Dg7h0mb3TiIogE76T2fzg4DHISAHcApLkJkLQY
+WBSHuxOizGdwCjw1mAT5G9+443fNDsgN3BAAAAFpWJ69VQAABAMASDBGAiEA/O1B
+rPsfJmHkiDjKjYdbxv7Mqs+l+cHqeByVq3ermK4CIQDLTaFnXwLHvEsx4hpg2a5w
+G/4fIsFqriNmwatif6ovCgB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaO
+HtGFAAABaVievVcAAAQDAEgwRgIhAPj4AVRZ3V1wousnvBd/E/4hrRpdYXb3KK//
+WHAAR3PIAiEA4qnlVs6Wkca74fu6RNw7bglBWS7uF5ZiX4q3nEOWx8gAdgBElGUu
+sO7Or8RAB9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWlYnsUHAAAEAwBHMEUCIH8h
+uKsSqq0pRDctaa3Z7Nwg1UTLnwFZEwYqkyKLS5EJAiEAsJ2hN3D9onI5aggvOY5y
+y+AbuwvrRyFy4CfIaDKhVKIwDQYJKoZIhvcNAQELBQADggEBAGI3bKvnXAMiIDCJ
+RMgXcS6us35CLsa7f2OMBDmFxS821sNQeIPCPboSjQbO5pTWfMbfGm6TXVhiLHIm
+IlZ2fS9+FfMmeZnPWFFM6GwfvNxfgAM8TK3+zyWRHHnNAFNiplxLDI2adFYuCYOM
+E8g23eFRTyECsV+gNRbQIn7OAe/Gt+6jQOR9pKurF1T2n03T+7IJGl7o76u/2cC3
+6ma/WwJqJsm3agJPJwEnmZRf6rrpc5UaCttL6iibwrDUB+Eeo0MgXNiaAKkHOVpt
+6g/LUaMFPCQvktdp8/AEUywEYikbTeIycJDqnS3GDbTGFr88//VJisbv+EBnK9jj
+yjdvvks=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://weblogin.uni-marburg.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://weblogin.uni-marburg.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e261</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e261</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Philipps-Universität Marburg</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Philipps-University Marburg</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni-marburg.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni-marburg.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Manuel</md:GivenName>
+	<md:SurName>Haim</md:SurName>
+	<md:EmailAddress>mailto:shibboleth@uni-marburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Manuel</md:GivenName>
+	<md:SurName>Haim</md:SurName>
+	<md:EmailAddress>mailto:shibboleth@uni-marburg.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Thomas</md:GivenName>
+	<md:SurName>Gebhardt</md:SurName>
+	<md:EmailAddress>mailto:abuse@uni-marburg.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

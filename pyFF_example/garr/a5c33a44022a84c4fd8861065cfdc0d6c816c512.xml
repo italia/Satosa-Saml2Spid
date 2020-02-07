@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://qa.orcid.org/saml2/sp/1">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.surfconext.nl/" registrationInstant="2015-09-29T17:18:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wiki.surfnet.nl/display/eduGAIN/EduGAIN</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://qa.orcid.org/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://qa.orcid.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ORCID</mdui:DisplayName>
+		<mdui:Description xml:lang="en">ORCID provides an identifier for individuals to use with their name as they engage in research, scholarship, and innovation activities. We provide open tools that enable transparent and trustworthy connections between researchers, their contributions, and affiliations. We provide this service to help people find information and to simplify reporting and analysis.</mdui:Description>
+		<mdui:Description xml:lang="pt">A ORCID fornece um identificador para indivíduos usarem com seu nome enquanto se engajam em atividades de pesquisa, bolsas de estudos e inovação. Fornecemos ferramentas de código livre que permitem conexões transparentes e confiáveis entre pesquisadores, suas contribuições e afiliações. Fornecemos este serviço para ajudar as pessoas a encontrarem informações e para simplificar o reporte e análise.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://orcid.org</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://orcid.org/content/orcid-privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="128" width="128">https://orcid.org/saml2/provider/orcid_128x128.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC8TCCAdmgAwIBAgIJAIMmpxj+1tBTMA0GCSqGSIb3DQEBBQUAMBkxFzAVBgNV
+BAMTDnFhLTUub3JjaWQub3JnMB4XDTE1MDgxMDIxMzAwOVoXDTI1MDgwNzIxMzAw
+OVowGTEXMBUGA1UEAxMOcWEtNS5vcmNpZC5vcmcwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDO9lEJ+if6LyQ+d21wG3FgFliK0gNFQqNJvJRl8DapFeGU
+l8G3SYdeUOWSu8ad6/4GA2r96GnSnhQ9dGjE7cltTXjuVxSvnNBNP2oJr2gEJOmq
+TgPnkJ0FVi53rv+NaC8aIKDpwSQQIqW6zwrm7Jl7u6GOxMRMVh6yCevn6kk7+KBU
+qV9AKVY7ouNPZUkVL0k1h8SjrcuXxg8MdR8uLhVwuZvob358XAeCu6t3oQTsQBED
+wRK33oT2Lv9v46NjSK2+0dQEsyDU7y9wKUwFF+hn5EQsFaIxk2T+mc0mKPLS8JXI
+UXyrceZzSVWBEMAoQRYWk3+0o2cXA3FpPTg3M1T/AgMBAAGjPDA6MBkGA1UdEQQS
+MBCCDnFhLTUub3JjaWQub3JnMB0GA1UdDgQWBBTorKMQxOr5SZFCGOMgkJN8Bqfp
+FjANBgkqhkiG9w0BAQUFAAOCAQEAPJucAP8RZFmK6uapDHiNL+4RPcdYGTMO64mX
+tdc6XZKpPKPi3WUEoravSLt+TiuZKDqV7dieAUi0RGIiOd33O49Jg6cXl4dbC6cf
+K84axxqpP8t/NiHf/Y+MZeEoDbqEjzLHAzZoKEeVEvmnwUwlW2trugbZGsnAWq2p
+sBnnmQ9jau0qrrgsPydvAGRLp2ddTQh8ttoP5bIKhIAHAKHVzBfSPIC/OrIHPHIb
+b+sEjCg6jstuDhL9bWQZ7XZW8DMI7FPewGS6yXRiIBOng2Wp8U3XxqKGWHgUPHhy
+UXHHgh/dgmalPjdWLxfwdf31RumfOmINO5Y7/CmCe4MddvsU6g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://qa.orcid.org/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://qa.orcid.org/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://qa.orcid.org/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://qa.orcid.org/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://qa.orcid.org/Shibboleth.sso/SLO/Artifact"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://qa.orcid.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://qa.orcid.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://qa.orcid.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://qa.orcid.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">ORCID QA (test) SP</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">ORCID’s vision is a world where all who participate in research, scholarship, and innovation are uniquely identified and connected to their contributions and affiliations across disciplines, borders, and time. We provide an identifier for these individuals to use with their name, and open tools that enable transparent and trustworthy connections between researchers, their contributions, and affiliations.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonUniqueId" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.13" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">ORCID, Inc</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">ORCID</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://orcid.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ORCID Support</md:GivenName>
+	<md:EmailAddress>mailto:support@orcid.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>ORCID Team</md:GivenName>
+	<md:EmailAddress>mailto:info@orcid.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ORCID Development Team</md:GivenName>
+	<md:EmailAddress>mailto:support@orcid.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ORCID Security Response Team</md:GivenName>
+	<md:EmailAddress>mailto:security@orcid.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

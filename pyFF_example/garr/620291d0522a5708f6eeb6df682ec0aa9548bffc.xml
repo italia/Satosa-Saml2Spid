@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.kug.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2014-06-10T15:01:24Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kug.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Universität für Musik und darstellende Kunst Graz</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">University of Music and Performing Arts Graz</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">Kunstuni+Graz kug</mdui:Keywords>
+		<mdui:Logo height="99" width="101">https://zid.kug.ac.at/fileadmin/framework/images/nl_logo.gif</mdui:Logo>
+		<mdui:Logo height="25" width="25">https://online.kug.ac.at/kug/img/co_favicon_kugprod.ico</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.kug.ac.at/fileadmin/framework/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>kug.ac.at</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.07216,15.45018</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAL17oQZhWkC4mWlxbdMpSqyYckqvMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD2xvZ2luLmt1Zy5hYy5hdDAeFw0xNDA2MTAxMDQ1MzVa
+Fw0zNDA2MTAxMDQ1MzVaMBoxGDAWBgNVBAMTD2xvZ2luLmt1Zy5hYy5hdDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMZ/Sws1AtXqmcmIlaqkYZorvb1S
+AgxNCcQIi1ftBfGd/eH4xs3iDN8TbMaOgqI02ISNwwWOEajaSTcqIKPX2ZxdRev8
+orfErUNgCjgFn5UFKh0z4G64IZNFB5FiL5UT28Beas5TFVxn11bdqSzmoJdGCSXu
+/FI4dCu4xdTyqcsk9XHT8cXVYkMFsMfBwgYxd1Tv+0ap/WHtqssS9T++Iz75GBD2
+KsvGNTx3+oWRJ1m/9pcnPBOM497Vi9rG34RGiCA4wY/AveBbVW0zL6SJLjJo79vJ
+XEsA/WCZ3VZU9kdae4+EyVUOtktJrFNe1tnRWcLmaL8BMpAHfaq/1TcIamUCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPbG9naW4ua3VnLmFjLmF0hiZodHRwczovL2xvZ2lu
+Lmt1Zy5hYy5hdC9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUCfYNkNaD6+cq2BbI
+om867hcFJ3gwDQYJKoZIhvcNAQEFBQADggEBAH4j5vMh/yg9S2BrdrmW7AnINlXh
+SnyMxSwV8iKiQoDpiOGZ+bEShSA18DLRDt6oEwbz3ULwwTdSpwfoGA7DPl7zUEdv
+UtPn/8vlpcI4Jmz0ZtElhqIvNPfMvjxVv9onr+jDGZttFOVXT/uz2HjKXIaPiBqK
+FaKQ2MfRLufbgIQIOAOcyP7yjIkykFU+12kVlAq+Eh0kCBi93y/7lWBRFi2JGwsu
+SWSof0JQZG5OprhUHw8H211fAByd+WE7hIFBxmYo9i8zVVd9eJlT9nKb3j2vxcBG
+H52COnlRMy5Q3lDVqm12Ex//9DPZpLGVsfnvMsOLBRRKwLUPx62E+a5dlK4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.kug.ac.at:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.kug.ac.at:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.kug.ac.at/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.kug.ac.at/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.kug.ac.at:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.kug.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.kug.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.kug.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.kug.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">kug.ac.at</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVAL17oQZhWkC4mWlxbdMpSqyYckqvMA0GCSqGSIb3DQEB
+BQUAMBoxGDAWBgNVBAMTD2xvZ2luLmt1Zy5hYy5hdDAeFw0xNDA2MTAxMDQ1MzVa
+Fw0zNDA2MTAxMDQ1MzVaMBoxGDAWBgNVBAMTD2xvZ2luLmt1Zy5hYy5hdDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMZ/Sws1AtXqmcmIlaqkYZorvb1S
+AgxNCcQIi1ftBfGd/eH4xs3iDN8TbMaOgqI02ISNwwWOEajaSTcqIKPX2ZxdRev8
+orfErUNgCjgFn5UFKh0z4G64IZNFB5FiL5UT28Beas5TFVxn11bdqSzmoJdGCSXu
+/FI4dCu4xdTyqcsk9XHT8cXVYkMFsMfBwgYxd1Tv+0ap/WHtqssS9T++Iz75GBD2
+KsvGNTx3+oWRJ1m/9pcnPBOM497Vi9rG34RGiCA4wY/AveBbVW0zL6SJLjJo79vJ
+XEsA/WCZ3VZU9kdae4+EyVUOtktJrFNe1tnRWcLmaL8BMpAHfaq/1TcIamUCAwEA
+AaNlMGMwQgYDVR0RBDswOYIPbG9naW4ua3VnLmFjLmF0hiZodHRwczovL2xvZ2lu
+Lmt1Zy5hYy5hdC9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUCfYNkNaD6+cq2BbI
+om867hcFJ3gwDQYJKoZIhvcNAQEFBQADggEBAH4j5vMh/yg9S2BrdrmW7AnINlXh
+SnyMxSwV8iKiQoDpiOGZ+bEShSA18DLRDt6oEwbz3ULwwTdSpwfoGA7DPl7zUEdv
+UtPn/8vlpcI4Jmz0ZtElhqIvNPfMvjxVv9onr+jDGZttFOVXT/uz2HjKXIaPiBqK
+FaKQ2MfRLufbgIQIOAOcyP7yjIkykFU+12kVlAq+Eh0kCBi93y/7lWBRFi2JGwsu
+SWSof0JQZG5OprhUHw8H211fAByd+WE7hIFBxmYo9i8zVVd9eJlT9nKb3j2vxcBG
+H52COnlRMy5Q3lDVqm12Ex//9DPZpLGVsfnvMsOLBRRKwLUPx62E+a5dlK4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.kug.ac.at:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.kug.ac.at:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Universität für Musik und darstellende Kunst Graz</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">University of Music and Performing Arts Graz</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität für Musik und darstellende Kunst Graz</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">University of Music and Performing Arts Graz</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.kug.ac.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.kug.ac.at/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth</md:GivenName>
+	<md:SurName>Technical Contact</md:SurName>
+	<md:EmailAddress>mailto:shibboleth-technical-contacts@kug.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

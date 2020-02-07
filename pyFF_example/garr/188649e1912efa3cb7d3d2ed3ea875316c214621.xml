@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.juilliard.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.juilliard.edu/juilliards-incommon-federated-id-system" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">juilliard.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The Juilliard School</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The identity provider for InCommon operations.</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.juilliard.edu/juilliard-website-privacy-policy-your-privacy-rights</mdui:PrivacyStatementURL>
+		<mdui:Logo height="109" width="300" xml:lang="en">https://idp.juilliard.edu/idp/images/jlogo2011.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUd4dtEwhlfYyB4HH7Ogd0EyU2elIwDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRaWRwLmp1aWxsaWFyZC5lZHUwHhcNMTIwMzAxMjAxNDA5
+WhcNMzIwMzAxMjAxNDA5WjAcMRowGAYDVQQDExFpZHAuanVpbGxpYXJkLmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKjC0qHg4m+AvA1GoEIJ/jX6
+KQxKJNEm4UrcRXbZ3oncAXIYVC/HUmWP6/jcrKhYyxvQoADMi7KLkZsFQ1IiZz7G
+q0KicuR6/DIduO/xhBTRc2gjTtF+f+XuPBx5PMRiZAhDgOwvGGZgKnlgRYihQ0in
+BuU2aEijI67C03n6ohTYM86DLLQUmkIB9YDOrz53glNOCvBxm4NTyYz3G9i6kNaz
+R7ADUTR3sUolhlnO+KKN70Zo2RVfOvKJfuv0w/4d8JUL18ly/+cQyrhf9nsjSHpa
+F//8J0e31VI4wzsRHCrKc2zny5o1D+FGTaoV3y6oF30u1ek6Sy2OsUVI9O/zoyEC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRaWRwLmp1aWxsaWFyZC5lZHWGKGh0dHBzOi8v
+aWRwLmp1aWxsaWFyZC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFN3rKo1I
+RY3WwTMF9W/xgty5B5wlMA0GCSqGSIb3DQEBBQUAA4IBAQCVwQkjs3pzOCFOCt4n
+qRuBLtc9UK8Ut9Ridd9DooFiN0NMAe2+e4yVdE7R04oNSlF0k9dQYkFisM5rEOGr
+CRioWvGAmCweetpmDjHwuoo9N93KfJOq9MmnjIfQax/AqdraW8crsKkTJnjD9TnD
+4Wkr7bLv0TuA3FzVRhGzTsnaBLUHQz6tOxJZlZPImhw6GUn+jmbXP9ZehN5RMWgR
+3u3lvuhNYYJ++Wz5qn2TEOjzPOaN78gqrdDQJGrzyupyoQozGPabm54G3TY3j7LN
+wbbE50o+AHJCe0UX6qPQgV/B79j6Z0uAL93NiL+v7e2tJYZj1ePR7gzqBX1YK5zs
+NIEi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.juilliard.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.juilliard.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.juilliard.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.juilliard.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.juilliard.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">juilliard.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUd4dtEwhlfYyB4HH7Ogd0EyU2elIwDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRaWRwLmp1aWxsaWFyZC5lZHUwHhcNMTIwMzAxMjAxNDA5
+WhcNMzIwMzAxMjAxNDA5WjAcMRowGAYDVQQDExFpZHAuanVpbGxpYXJkLmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKjC0qHg4m+AvA1GoEIJ/jX6
+KQxKJNEm4UrcRXbZ3oncAXIYVC/HUmWP6/jcrKhYyxvQoADMi7KLkZsFQ1IiZz7G
+q0KicuR6/DIduO/xhBTRc2gjTtF+f+XuPBx5PMRiZAhDgOwvGGZgKnlgRYihQ0in
+BuU2aEijI67C03n6ohTYM86DLLQUmkIB9YDOrz53glNOCvBxm4NTyYz3G9i6kNaz
+R7ADUTR3sUolhlnO+KKN70Zo2RVfOvKJfuv0w/4d8JUL18ly/+cQyrhf9nsjSHpa
+F//8J0e31VI4wzsRHCrKc2zny5o1D+FGTaoV3y6oF30u1ek6Sy2OsUVI9O/zoyEC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRaWRwLmp1aWxsaWFyZC5lZHWGKGh0dHBzOi8v
+aWRwLmp1aWxsaWFyZC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFN3rKo1I
+RY3WwTMF9W/xgty5B5wlMA0GCSqGSIb3DQEBBQUAA4IBAQCVwQkjs3pzOCFOCt4n
+qRuBLtc9UK8Ut9Ridd9DooFiN0NMAe2+e4yVdE7R04oNSlF0k9dQYkFisM5rEOGr
+CRioWvGAmCweetpmDjHwuoo9N93KfJOq9MmnjIfQax/AqdraW8crsKkTJnjD9TnD
+4Wkr7bLv0TuA3FzVRhGzTsnaBLUHQz6tOxJZlZPImhw6GUn+jmbXP9ZehN5RMWgR
+3u3lvuhNYYJ++Wz5qn2TEOjzPOaN78gqrdDQJGrzyupyoQozGPabm54G3TY3j7LN
+wbbE50o+AHJCe0UX6qPQgV/B79j6Z0uAL93NiL+v7e2tJYZj1ePR7gzqBX1YK5zs
+NIEi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.juilliard.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">The Juilliard School</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The Juilliard School</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.juilliard.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeremy Pinquist</md:GivenName>
+	<md:EmailAddress>jpinquist@juilliard.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Steve Doty</md:GivenName>
+	<md:EmailAddress>sdoty@juilliard.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dmitriy Aminov</md:GivenName>
+	<md:EmailAddress>daminov@juilliard.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dmitriy Aminov</md:GivenName>
+	<md:EmailAddress>daminov@juilliard.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

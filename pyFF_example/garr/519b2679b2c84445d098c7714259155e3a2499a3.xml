@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/metadata.php/saml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://aaf.edu.au" registrationInstant="2014-09-02T11:20:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://aaf.edu.au/media/metadata/aaf-mdrps-v1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cloudstor Realm Services (User Acceptance)</mdui:DisplayName>
+		<mdui:Description xml:lang="en">User acceptance for realm specific functionality - Anycast node for closest network node access</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.aarnet.edu.au/network-and-services/cloud-services-applications/cloudstor</mdui:InformationURL>
+		</mdui:UIInfo>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/metadata.php/saml" index="0" isDefault="true"/>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIJAKuWKwdi+qV0MA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTF2Nsb3Vkc3Rvci5hYXJuZXQuZWR1LmF1MB4XDTEwMTAxODA0MzMwNFoXDTIw
+MTAxNTA0MzMwNFowIjEgMB4GA1UEAxMXY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDM/yo3a0gBvDk8XiYUL/wY
+YwfxT5kTvZGdvVtl6Cpj50OYk1yGlFgpR+RkOiwO5cDVtwKSm4bedtPySpvCh0uD
+6xKhfZf/qzJj7GQmvwST8bh7stD18D4s6XUsQFa+CVseuK3wyIMY2jwCGeeMm+k+
+P++KO7KkEaw9YhMAtlqnn0JwH5ajImr8pcgqJmV8UB8u3J0jtz7VYOJFfpz9VQEN
+soQnT4awWCYXZYGo8qqqTV0zf6vETWedgqOIJ4ak/9oEu5tIasKGjaq3mvh1/DiH
+PbmfNdMtc5NOI+KyFJdJsipXjT0WfPQs8FmpOdwH7Lte2cOnFRUX62o//glztLOX
+AgMBAAGjgZ0wgZoweQYDVR0RBHIwcIIXY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXWG
+VWh0dHBzOi8vY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXUvc2ltcGxlc2FtbC9tb2R1
+bGUucGhwL3NhbWwvc3AvbWV0YWRhdGEucGhwL2RlZmF1bHQtc3AwHQYDVR0OBBYE
+FDMe7OZFxUVX4NM7IGEitFOWUKw9MA0GCSqGSIb3DQEBBQUAA4IBAQC4T+KjlcTb
+do9CY7hWhF+FBB7piw8oWhWcCcLddniS6foPiHpodd29PcG3NrWAsl1HIun/PP7p
+JUtJ3aLvKxTSicGwfod13U4hZZ0MekhXEKYi261HiIeWrNm9CN8F8SXT0XQ2mDQc
+BMmB7jkovXcSrCu8RL2CjNuXtetQuE5QAqK0JfyL+JCYn726lQ1UCxHqtgdcD9Bj
+j0C08+VN06bTZUSF7UMbP8hwFu5T2Uk6NJlScDAKYKd9XTBPjsNCviLlTZfyBk+q
+PIkdr//ndx1xcmO+VsGqXoNAztpz9c25W55R2lFitR6pV04WqRrC09ImF11FU4K3
+8mKKbRaPOZnq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIJAKuWKwdi+qV0MA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNV
+BAMTF2Nsb3Vkc3Rvci5hYXJuZXQuZWR1LmF1MB4XDTEwMTAxODA0MzMwNFoXDTIw
+MTAxNTA0MzMwNFowIjEgMB4GA1UEAxMXY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXUw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDM/yo3a0gBvDk8XiYUL/wY
+YwfxT5kTvZGdvVtl6Cpj50OYk1yGlFgpR+RkOiwO5cDVtwKSm4bedtPySpvCh0uD
+6xKhfZf/qzJj7GQmvwST8bh7stD18D4s6XUsQFa+CVseuK3wyIMY2jwCGeeMm+k+
+P++KO7KkEaw9YhMAtlqnn0JwH5ajImr8pcgqJmV8UB8u3J0jtz7VYOJFfpz9VQEN
+soQnT4awWCYXZYGo8qqqTV0zf6vETWedgqOIJ4ak/9oEu5tIasKGjaq3mvh1/DiH
+PbmfNdMtc5NOI+KyFJdJsipXjT0WfPQs8FmpOdwH7Lte2cOnFRUX62o//glztLOX
+AgMBAAGjgZ0wgZoweQYDVR0RBHIwcIIXY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXWG
+VWh0dHBzOi8vY2xvdWRzdG9yLmFhcm5ldC5lZHUuYXUvc2ltcGxlc2FtbC9tb2R1
+bGUucGhwL3NhbWwvc3AvbWV0YWRhdGEucGhwL2RlZmF1bHQtc3AwHQYDVR0OBBYE
+FDMe7OZFxUVX4NM7IGEitFOWUKw9MA0GCSqGSIb3DQEBBQUAA4IBAQC4T+KjlcTb
+do9CY7hWhF+FBB7piw8oWhWcCcLddniS6foPiHpodd29PcG3NrWAsl1HIun/PP7p
+JUtJ3aLvKxTSicGwfod13U4hZZ0MekhXEKYi261HiIeWrNm9CN8F8SXT0XQ2mDQc
+BMmB7jkovXcSrCu8RL2CjNuXtetQuE5QAqK0JfyL+JCYn726lQ1UCxHqtgdcD9Bj
+j0C08+VN06bTZUSF7UMbP8hwFu5T2Uk6NJlScDAKYKd9XTBPjsNCviLlTZfyBk+q
+PIkdr//ndx1xcmO+VsGqXoNAztpz9c25W55R2lFitR6pV04WqRrC09ImF11FU4K3
+8mKKbRaPOZnq
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/saml2-logout.php/saml"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/saml2-acs.php/saml"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/saml2-acs.php/saml"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/saml2-acs.php/saml" index="1" isDefault="true"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cloudstor-uat.aarnet.edu.au/simplesaml/module.php/saml/sp/saml2-acs.php/saml" index="2" isDefault="false"/>
+	<md:AttributeConsumingService index="1" isDefault="false">
+		<md:ServiceName xml:lang="en">Cloudstor Realm Services (User Acceptance)</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">aarnet.edu.au</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">AARNet</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.aarnet.edu.au/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:Company>AARNet</md:Company>
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Jericho</md:SurName>
+	<md:EmailAddress>mailto:david.jericho@aarnet.edu.au</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>AARNet</md:Company>
+	<md:GivenName>Chris</md:GivenName>
+	<md:SurName>Myers</md:SurName>
+	<md:EmailAddress>mailto:chris.myers@aarnet.edu.au</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.silverchair.com/rup/production/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Silverchair Production: Rockefeller University Press</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://rupress.org/pages/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="235" width="235" xml:lang="en">https://rup.silverchair-cdn.com/UI/app/svg/umbrella/logo-alternate.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDBjCCAe6gAwIBAgIJAIaS+otac2UcMA0GCSqGSIb3DQEBBQUAMCAxHjAcBgNV
+BAMTFXNjbS1wcm9kd2ViMDIuc2lzLmxhbjAeFw0xOTA3MzExODUyMzhaFw0yOTA3
+MjgxODUyMzhaMCAxHjAcBgNVBAMTFXNjbS1wcm9kd2ViMDIuc2lzLmxhbjCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKpDn8zrIO3hXIKei/BQH+xjVZqs
+Y8n2/pOR8hyptSSLhuzKQt8aIM2Jo7c0tCIyUmjcOGtb2du2l+eHKuaw9WMOIaSm
+E8i5w68MlKZj5gpwHkYxunxVY5tsIOBYdflaPhyW15o6tBGgidgMd3+q2rBpsA5y
+wsWbLrJ5FrsZL5jEuQp+Wo2G/YYHUWY/DnpVcW3jSmwPZohcjD1UY37h8u1dGxo8
+K21i9vz3cKgyMV1bq/d1P02FaoLN1rQib8OgiglBTd2xOiIhhXU9QwW1efJoeIjT
+IaYGa+hu8m34pp3dJS14oHXzvaxMKZqST0TEANwjTsAdOm5RD0ObHC9JkOkCAwEA
+AaNDMEEwIAYDVR0RBBkwF4IVc2NtLXByb2R3ZWIwMi5zaXMubGFuMB0GA1UdDgQW
+BBSbJXnzhqDy92J1VwUkcMIugmcL0DANBgkqhkiG9w0BAQUFAAOCAQEAU10KR7ju
+K9fjRNoX4QopBDZvNCv0JOuSMJDlBd3VcOFH8Dby+qoGhg0rXzcVy406XH8bZg2a
+Cb7P6BwocBOuHBV6ZtaLt7SOcCUIKgJEGto1+aK3AVu5hg5ZwzLn2qOrsUHXjS7I
+eLNIR4KUrK3nNL3GQ6MF6YGQ8dIl278dCLSoI9FbIQtdag8TRO2ZNAyy3hx7s9C5
+J0oXbN6YKx+J/th7Wi/y5mvqnHXX8EB10rWHM1hXdP+SEbxr53TmbgSW1p64Ot8A
+Y179hS4Cam7IrYobYM5rcRyleMlDq4RDF7XWG/G/1ApBCKFxCkYjSlRw8Rf0GlNT
+8Qjlg9l000PtZQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rupress.org/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://rupress.org/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://rupress.org/Shibboleth.sso/SLO/SOAP"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rupress.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://rupress.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rupress.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://rupress.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://rupress.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://rupress.org/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Silverchair Information Systems</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Silverchair Information Systems</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.silverchair.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shibboleth Admin</md:GivenName>
+	<md:EmailAddress>ShibbolethAdmin@silverchair.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

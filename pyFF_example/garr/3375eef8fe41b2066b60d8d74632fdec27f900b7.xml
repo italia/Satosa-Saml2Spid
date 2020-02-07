@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://brill.com/saml/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.surfconext.nl/" registrationInstant="2018-10-03T08:04:31.875Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wiki.surfnet.nl/display/eduGAIN/EduGAIN</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://brill.com/saml/sp"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Brill</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Academic Publisher</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://brill.com/page/Edugain</mdui:PrivacyStatementURL>
+		<mdui:DisplayName xml:lang="nl">Brill</mdui:DisplayName>
+		<mdui:Description xml:lang="nl">Academische uitgever</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="nl">https://brill.com/page/Edugain</mdui:PrivacyStatementURL>
+		<mdui:Logo height="116" width="260" xml:lang="en">https://brill.com/fileasset/brill-mobile.png</mdui:Logo>
+		<mdui:Logo height="116" width="260" xml:lang="nl">https://brill.com/fileasset/brill-mobile.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9DCCAdygAwIBAgIEWqAPcjANBgkqhkiG9w0BAQsFADA8MSIwIAYDVQQKDBlC
+cmlsbCBBY2FkZW1pYyBQdWJsaXNoZXJzMRYwFAYDVQQDDA13d3cuYnJpbGwuY29t
+MB4XDTE4MDMwNzE2MTIzNFoXDTI4MDMwNzE2MTIzNFowPDEiMCAGA1UECgwZQnJp
+bGwgQWNhZGVtaWMgUHVibGlzaGVyczEWMBQGA1UEAwwNd3d3LmJyaWxsLmNvbTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOeVFqAGYCYkyq11wyQp3pSP
+Bxqi72NZxEZNsAOhRUol+UBJrM3kDRp6BXL9EklHliVCt+5WX+ldhAerwsBt9xHL
+yc8gZFYGk8WNy2WhJPLfiXNM8Y83TAJLKkpShTeOKP1et88ItDWkbc15LPEoR4PA
+zPF2cxNShyFgqo8SuhwPgkbSD7Uq00LRtkgPPXZuY0Eh/Scpb+oaQHz1ZeFKvo7k
+BXsvQZuU1sWMPIVDZpgKywT7nvTWUVj6UfYpd7sY/ppv4aVdhxRTBlsvi0rF1aPT
+e6c4dB8W6SSwdYjhJ+73kvjnVkS5B2Ysvon/P6yQuM4CTgJgrO3a6QEQW5iWr8EC
+AwEAATANBgkqhkiG9w0BAQsFAAOCAQEAXp30FYB69b2//tHhsKYjLJnlwGb7KixE
+sIZn5JXkPgNwoq6ED63Z3lA8JY2MbHNmfuY0feYY0SzqibQvWZPWzAVv8/yLaBBP
+DHGqTiF7ahVCP1l6d8t6wJoqjApRXRtDP++WlN4dTn4qgp5xU05a/yED+rOqr/Py
+MruJ29VPKq9GzE89E/4VyOPfNLAvhwwCHSGLsdR55Nuvq3CHhRAegUH8ICESXNWG
+fX1bXRlVbILIb3dKbv6v11yJXFcNASWD/QfpDSBV+SL9J5RWfW08am9NAiNuD92h
+dJde+vNTruM5mH/HFG0ND8RaucOz085GuoLH4H39lPoDjooMTwzU0A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC9DCCAdygAwIBAgIEWqAPcjANBgkqhkiG9w0BAQsFADA8MSIwIAYDVQQKDBlC
+cmlsbCBBY2FkZW1pYyBQdWJsaXNoZXJzMRYwFAYDVQQDDA13d3cuYnJpbGwuY29t
+MB4XDTE4MDMwNzE2MTIzNFoXDTI4MDMwNzE2MTIzNFowPDEiMCAGA1UECgwZQnJp
+bGwgQWNhZGVtaWMgUHVibGlzaGVyczEWMBQGA1UEAwwNd3d3LmJyaWxsLmNvbTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOeVFqAGYCYkyq11wyQp3pSP
+Bxqi72NZxEZNsAOhRUol+UBJrM3kDRp6BXL9EklHliVCt+5WX+ldhAerwsBt9xHL
+yc8gZFYGk8WNy2WhJPLfiXNM8Y83TAJLKkpShTeOKP1et88ItDWkbc15LPEoR4PA
+zPF2cxNShyFgqo8SuhwPgkbSD7Uq00LRtkgPPXZuY0Eh/Scpb+oaQHz1ZeFKvo7k
+BXsvQZuU1sWMPIVDZpgKywT7nvTWUVj6UfYpd7sY/ppv4aVdhxRTBlsvi0rF1aPT
+e6c4dB8W6SSwdYjhJ+73kvjnVkS5B2Ysvon/P6yQuM4CTgJgrO3a6QEQW5iWr8EC
+AwEAATANBgkqhkiG9w0BAQsFAAOCAQEAXp30FYB69b2//tHhsKYjLJnlwGb7KixE
+sIZn5JXkPgNwoq6ED63Z3lA8JY2MbHNmfuY0feYY0SzqibQvWZPWzAVv8/yLaBBP
+DHGqTiF7ahVCP1l6d8t6wJoqjApRXRtDP++WlN4dTn4qgp5xU05a/yED+rOqr/Py
+MruJ29VPKq9GzE89E/4VyOPfNLAvhwwCHSGLsdR55Nuvq3CHhRAegUH8ICESXNWG
+fX1bXRlVbILIb3dKbv6v11yJXFcNASWD/QfpDSBV+SL9J5RWfW08am9NAiNuD92h
+dJde+vNTruM5mH/HFG0ND8RaucOz085GuoLH4H39lPoDjooMTwzU0A==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://brill.com/saml/sp" index="0"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Brill</md:OrganizationName>
+	<md:OrganizationName xml:lang="nl">Brill</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Brill</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="nl">Brill</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://brill.com</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="nl">https://brill.com</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Keaton</md:GivenName>
+	<md:SurName>Babb</md:SurName>
+	<md:EmailAddress>mailto:keaton.babb@sheridan.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Albert</md:GivenName>
+	<md:SurName>Schoenmaker</md:SurName>
+	<md:EmailAddress>mailto:schoenmaker@brill.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael</md:GivenName>
+	<md:SurName>Istratov</md:SurName>
+	<md:EmailAddress>mailto:michael.istratov@sheridan.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://sts.clackamas.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://webportal1.clackamas.edu/InCommonError/error.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">clackamas.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Clackamas Community College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Clackamas Community College Federated Identity Manager</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.clackamas.edu/about-us/accreditation-policies/internet-privacy-commitment</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.clackamas.edu/about-us/accreditation-policies/internet-privacy-commitment</mdui:PrivacyStatementURL>
+		<mdui:Logo height="85" width="350" xml:lang="en">https://sts.clackamas.edu/adfs/portal/logo/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3jCCAcagAwIBAgIQJTQmZziI6pxGxqMWUi7TGzANBgkqhkiG9w0BAQsFADAr
+MSkwJwYDVQQDEyBBREZTIFNpZ25pbmcgLSBzdHMuY2xhY2thbWFzLmVkdTAeFw0x
+OTA1MDUwMDQxNTJaFw0yMDA1MDQwMDQxNTJaMCsxKTAnBgNVBAMTIEFERlMgU2ln
+bmluZyAtIHN0cy5jbGFja2FtYXMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA3XnJ88rfuMn5cl56ye+VsaWukeSf1df7sJvKry1tIr4j2LPvm+lS
+ffnxGfmJwH93AR40CV5ofkEZ3p5Ujb2+t4sKQLBOp9K34vWF8zshRFjGqy+ej3P/
+qTmI4oLOKf7CGELfyTcbKlJNXeOwaz18dgHNXgV1V709yRC26B6VHy+pH9PhDTJ+
+PCirlKu3jiJ1svjb+qVlhDFtylzWltG4ALnp8iMihutpkg8BYFcNRzVk5hHSBZtg
+4ISrMwEPLIiBIeWW9HTbiSP1/dBZZ7C5zmc+dVpubBoe1D4nIsRXCngXgPwjSUU4
+4Q/F938kdfjTQnLypa2vMXCyDqgdwog2pwIDAQABMA0GCSqGSIb3DQEBCwUAA4IB
+AQCkwuImPZ226iin5UuXBX8F1O5pFdIn/0jwB9Jm19lURYzoo+liJj9ZuNzP0i6D
+xzxEFTJRUsb3aLNerhM3iC1Hc/95WErPm9pdiKiPPksEGcgBvbotnne98XNbnCgk
+K8Z5r4O+f+xw72FEKc9ny/VZDotYu5CxSdvxvopwsIAEWJ1d7UkCQBRbMKnEgFHz
+z1np1gcAGY1cEsLuSuvO9aaE+cjgJRugt6jePXOuAdUoJ6sukCwkEuS9+5+xTPSM
+AeOFbNOvFPszw6dkoD+gVmRMRxT3XaPWWNAt8cfIfub4+JbUH/WYP1uD/GmFiXll
+N5uzkngtwhNAb47hMnq1DltG
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sts.clackamas.edu/adfs/ls/" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sts.clackamas.edu/adfs/ls/?wa=wsignout1.0"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sts.clackamas.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sts.clackamas.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Clackamas Community College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Clackamas Community College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.clackamas.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Seth Allums</md:GivenName>
+	<md:EmailAddress>seth.allums@clackamas.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Seth Allums</md:GivenName>
+	<md:EmailAddress>seth.allums@clackamas.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Seth Allums</md:GivenName>
+	<md:EmailAddress>seth.allums@clackamas.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shawn Swanner</md:GivenName>
+	<md:EmailAddress>shawns@clackamas.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

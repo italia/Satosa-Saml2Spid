@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sfb205.zih.tu-dresden.de/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2019-09-05T12:05:19Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/fileadmin/documents/mrps_dfn-aai_1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/Login" index="2"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">REDCap SFB/TRR 205</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">REDCap SFB/TRR 205</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Forschungsdatenverwaltung des SFB/TRR 205 mit REDCap</mdui:Description>
+		<mdui:Description xml:lang="en">CRC/TRR 205 data management using REDCap</mdui:Description>
+		<mdui:Logo height="146" width="144">https://sfb205.zih.tu-dresden.de/logo_trr205_grosz.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">https://www.adrenal-research.de</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://www.adrenal-research.de</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="de">https://redcap.zih.tu-dresden.de/imprint.html</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://redcap.zih.tu-dresden.de/imprint.html</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIJCTCCB/GgAwIBAgIMIX8r5VOlwVBUXma+MA0GCSqGSIb3DQEBCwUAMHMxCzAJ
+BgNVBAYTAkRFMRAwDgYDVQQIDAdTYWNoc2VuMRAwDgYDVQQHDAdEcmVzZGVuMSgw
+JgYDVQQKDB9UZWNobmlzY2hlIFVuaXZlcnNpdGFldCBEcmVzZGVuMRYwFAYDVQQD
+DA1UVSBEcmVzZGVuIENBMB4XDTE5MDgyMzA5MTM1OFoXDTIxMTEyNDA5MTM1OFow
+gYwxCzAJBgNVBAYTAkRFMRAwDgYDVQQIDAdTYWNoc2VuMRAwDgYDVQQHDAdEcmVz
+ZGVuMSgwJgYDVQQKDB9UZWNobmlzY2hlIFVuaXZlcnNpdGFldCBEcmVzZGVuMQww
+CgYDVQQLDANaSUgxITAfBgNVBAMMGHJlZGNhcC56aWgudHUtZHJlc2Rlbi5kZTCC
+AiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMkHP7dTnJ71z9ZCmMLFL/Vh
+NTYpZCoPJST6XuSCtHfPWGxYPUBI1Cx1Qenxh0cbwd9RaeJPIf9PmCJpe097ZUvp
+687zXXZNTCdogPOixgPnWa2egLTdaYhjgY9nzBysJzCebWdEOupVggZRBc0959BB
+Jp+wna4LC87wSA9uiAP3bhUGRva6OcxKXXm5PsLb3GGqindcI0n0L2yOUW4Uqbid
+jk2fzkX9mBpYigSuuuiEG2logGsmOs+tKkyrfMZ6IxgCtbWlDhCv0zryS4VdIRKR
+P34db67OSr2fgyvtgS4rGMjcpe2LCTcrJMvFxlAiFWZmKV5kpa9ltxdn5vXex6d4
+cBI3j1ozOhafQYg5S8O+Q2EgJrVGoWJpZKC4CRnvENjMRM40n2h5JgmVl9+Sj1e7
+MLMzt5SNWtmDOCD0qXHwmiM+C6D/uw0fgX2JRIDw2GG6d/73bN4Y5X43Xe0EjZAV
+ayPOgsnG77Wo7TrGRS4+IcaaeiJ/YRTa0NwDeh1YJJKobEUQY3kYU2OWGVhZNCX3
+AFQXd5d6DEf1yVbW4cSsRb/BwOYUuUnc+b34xM/7GrxJywthYfayASHBOeopKxhc
+My6xFm8kKf74twFwGQ1EtHjYKNC95C/aoXc9NK/W8OzW2sLVsz0m5JRc8u/W79vA
+PSYuiD6fxOUi5XJ2EixjAgMBAAGjggSBMIIEfTAJBgNVHRMEAjAAMA4GA1UdDwEB
+/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwHQYDVR0OBBYE
+FMJXON0jG098HPTdAVrr8o89Rb+UMB8GA1UdIwQYMBaAFFL+vrckwhsKHUZSjkQk
+KvRIQD0BMD0GA1UdEQQ2MDSCGHJlZGNhcC56aWgudHUtZHJlc2Rlbi5kZYIYc2Zi
+MjA1LnppaC50dS1kcmVzZGVuLmRlMIGNBgNVHR8EgYUwgYIwP6A9oDuGOWh0dHA6
+Ly9jZHAxLnBjYS5kZm4uZGUvdHUtZHJlc2Rlbi1nMi1jYS9wdWIvY3JsL2NhY3Js
+LmNybDA/oD2gO4Y5aHR0cDovL2NkcDIucGNhLmRmbi5kZS90dS1kcmVzZGVuLWcy
+LWNhL3B1Yi9jcmwvY2FjcmwuY3JsMIHbBggrBgEFBQcBAQSBzjCByzAzBggrBgEF
+BQcwAYYnaHR0cDovL29jc3AucGNhLmRmbi5kZS9PQ1NQLVNlcnZlci9PQ1NQMEkG
+CCsGAQUFBzAChj1odHRwOi8vY2RwMS5wY2EuZGZuLmRlL3R1LWRyZXNkZW4tZzIt
+Y2EvcHViL2NhY2VydC9jYWNlcnQuY3J0MEkGCCsGAQUFBzAChj1odHRwOi8vY2Rw
+Mi5wY2EuZGZuLmRlL3R1LWRyZXNkZW4tZzItY2EvcHViL2NhY2VydC9jYWNlcnQu
+Y3J0MFcGA1UdIARQME4wCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQB
+ga0hgiwBAQQwEAYOKwYBBAGBrSGCLAEBBAQwEAYOKwYBBAGBrSGCLAIBBAQwggH5
+BgorBgEEAdZ5AgQCBIIB6QSCAeUB4wB3ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1Lo
+GpCWZDaOHtGFAAABbL3BCMsAAAQDAEgwRgIhAISTbKvHDJoSWoeiO0y29NYi6w8G
+qSAfSo41IzSMUw9wAiEA34/P+PLYDrhvIOlphgyzgaVsIOt7e4y5j78iXOmohlEA
+dwCkuQmQtBhYFIe7E6LMZ3AKPDWYBPkb37jjd80OyA3cEAAAAWy9wQjMAAAEAwBI
+MEYCIQDLbsWTcLdd/G+GF5apQ4c5VMMlvCaQ2wKGLBO6ZwegRQIhALPpFd8doH++
++yur0Kj+0uFpfayzcPuvZNs83sGmcb0zAHcAb1N2rDHwMRnYmQCkURX/dxUcEdkC
+wQApBo2yCJo32RMAAAFsvcEIYwAABAMASDBGAiEA1SbqVYvXryBBPCxNMtke0UHR
+ktU017ptDwECaX9Uk48CIQDok8zvdU1KPpFwKZuTyOR6dzQkEHZK82T8PYPiGkGK
+8AB2AFWB1MIWkDYBSuoLm1c8U/DA5Dh4cCUIFy+jqh0HE9MMAAABbL3BCVoAAAQD
+AEcwRQIhAIfbannCQtpktwwJSTgJlYH2FBmQIEFnBNTzsn2RXlfIAiAZ5rixOTkX
+4CMgUnc/JJIpwV7BgCE+wUE5E+RRwZIZgTANBgkqhkiG9w0BAQsFAAOCAQEAT71S
+cG6v1n5jHLIxIxjzrXq/ShG22EI6UcooYY/dxaLIEGLkEB6dcwuOUfs8bnweO8ae
+Td4M1u61v790E5hM7nzCkKETorxsUBuso1wkpXAgLiPToY59ftfByoqF/pr9ydPN
+IqJJzz/Jzlg606QQJSstiYtYKvjAk5fo/o7uI0gCfe7a37KtHgqMaOWjNJDWK6+B
+wXU8pbJtQdHFH1baJbI4svalBXtkF5k2Nk8J7awpQQwbyhloOgTHm2NgmNfNsew1
+8mdVjnxIg2fWpmFzdqxI7uR910MJtHJb+2YMc28hEZbh1lnu9R2TCrQk/rgkM88X
+OtAVadMwTXoorVZnyg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/Artifact/SOAP" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SLO/Artifact"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SAML2/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SAML2/POST-SimpleSign" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SAML2/POST-SimpleSign" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SAML2/Artifact" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SAML2/Artifact" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://redcap.zih.tu-dresden.de/Shibboleth.sso/SAML2/ECP" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sfb205.zih.tu-dresden.de/Shibboleth.sso/SAML2/ECP" index="8"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">REDCap SFB/TRR 205</md:ServiceName>
+		<md:ServiceName xml:lang="en">REDCap SFB/TRR 205</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">Forschungsdatenverwaltung des SFB/TRR 205 mit REDCap</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">CRC/TRR 205 data management using REDCap</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e300</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e300</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Technische Universität Dresden</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Technische Universität Dresden</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.tu-dresden.de</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.tu-dresden.de</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Manuel</md:GivenName>
+	<md:SurName>Schulze</md:SurName>
+	<md:EmailAddress>mailto:manuel.schulze@tu-dresden.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alvaro</md:GivenName>
+	<md:SurName>Aguilera</md:SurName>
+	<md:EmailAddress>mailto:alvaro.aguilera@tu-dresden.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Service</md:GivenName>
+	<md:SurName>Desk</md:SurName>
+	<md:EmailAddress>mailto:servicedesk@tu-dresden.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Sachgebiet</md:GivenName>
+	<md:SurName>Informationssicherheit</md:SurName>
+	<md:EmailAddress>mailto:informationssicherheit@tu-dresden.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

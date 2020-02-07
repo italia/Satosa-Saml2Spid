@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login2.supsi.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2006-10-04T11:50:27Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">supsi.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SUPSI - Scuola Universitaria Professionale della Svizzera Italiana</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="it">SUPSI - Scuola Universitaria Professionale della Svizzera Italiana</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Scuola universitaria professionale della Svizzera italiana</mdui:Description>
+		<mdui:Description xml:lang="it">Scuola universitaria professionale della Svizzera italiana</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAENJREFUeJxi+P//PwMlGEzY2bn/x4UZui/gxMPZAJwBNngNiFit9h8Z4zRAe9V/ZDyIDUDG6JqGqwGUYAAAAAD//wMAu7xivxBhj5gAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAv3SURBVHic7Fk5bBtXGn6ShtRFWdRl3RbF+xiSw3MOcsjhIZGiFcfOJsbuIthwsS4MJIYBJ7suUrBIsQtsYWANJMUWKhLAhYstVGyRQoUDJM0iWLhI4UJFFnCRQoWBNbAq3v7/DGc4lGSLcXYzGMDFb9Kcee9973v/8f1PhFJKXturm+UA7G6WA7C7WQ7A7mY5ALub5QDsbpYDsLtZDsDuZjkAu5vlAOxulgOwu1kOwO5mOQC7m+UA7G6WA7C7WQ7A7mY5ALub5QDsbpYDsLup/8zEHWBOMhEjhESJOyqFb6Rl7rPStnxQqEkH1Z3Kfl7J3U+XubYnszZP4D0XGI5xswzYCIkXYp10ieukwDg5eXspOUemWULcceaU4Xo43p/f5DLlVCclJ2FsqpMsxssuHANzTsFnRAi+qc4Jz19k2XIa1kvcDuS9TZjXRSJExYNruFkwdW/4fRj3RtbTy65UKdnOKdnP5K3il7hHXsnvc8XE/SDvby8kL6zhHLg3bZyGOVFgOR0LYl5PLZdNBDrVyYO8732lUT6SyzKNxqJ0c3OTblzaoN5NLw0EAjSVTlGhwB8X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</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.5.152.0/22</mdui:IPHint>
+		<mdui:IPHint>193.246.121.0/24</mdui:IPHint>
+		<mdui:DomainHint>supsi.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.031239,8.922925</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.035918,8.966040</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.167570,8.791564</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.006058,8.939917</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.314244,7.986699</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:46.186206,8.732071</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUS1wK3b90FwQurql/Qgbt7+HXgl4wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPbG9naW4yLnN1cHNpLmNoMB4XDTE4MDExMjEzNDc1OVoX
+DTIxMDExMjEzNDc1OVowGjEYMBYGA1UEAwwPbG9naW4yLnN1cHNpLmNoMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdBzlQpH/coIR5xCcVvQzJlokHK8
+P0bG8lEz2Wu0otIKxrzIj8/7F0K/3doRajZWJuTV5OqHZ/EsXQI+QcG8WSICbhm2
+OmJqVU4z6wWIUfzwjnY0hvrSQwab18JVfJviG6R2mhSHJKnFsyb4rUs/ZsHGuM3f
+44yczqjW8AP9x/P88yDeoupFmcxmh4VMUQ3YmyL1tH42UvZ8wnclMEIORbd3NObI
+QTMyvGXlNtJWI/g4agVHYN+2HQqDSHNVgHAxXad2vyc7W4bW9OLK6scZY1UEPtt/
+ZfZLy3Ksy9tYiMgXyAkr2H9Ez3UfkdYeuyX2iyvcwpLnuvNhClJygry+AwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUPIuTxE2MPpnTRi0rqMVqIh1vjo8wQgYDVR0RBDswOYIP
+bG9naW4yLnN1cHNpLmNohiZodHRwczovL2xvZ2luMi5zdXBzaS5jaC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEASjUaAcP01+rImDjlfXmNe9cp/69r
+sq6iTsbFEs49zFgyjpwedLQVQsoIxfR0u41ixgZr3bJzEeGRcXe7D8ZcX8rfdpK4
+R5no/zDewmtl6rsr/jQqMmNcLxYupPLSL72ABSoG8CFS7/voIkhGGH3waug9E0h1
+ATS8AMTTXbsmHJEwxXHN9qvUpHk8LXeRiDx5YJ4a7+7CYDS7049XHTU66xWAFN7q
+or8dIcoIgLmNarkiAz+SXWF6Y9GIsQwiLm4T4SFWamzL/IQz5lB5WxzsKa3iI5gV
+6FcB9dFFKAHBul3jYvSJaRCV+G0UwycaEB6gJzCxjaPJBeD7IovvrVTsBw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login2.supsi.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login2.supsi.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login2.supsi.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login2.supsi.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login2.supsi.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login2.supsi.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">supsi.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUS1wK3b90FwQurql/Qgbt7+HXgl4wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPbG9naW4yLnN1cHNpLmNoMB4XDTE4MDExMjEzNDc1OVoX
+DTIxMDExMjEzNDc1OVowGjEYMBYGA1UEAwwPbG9naW4yLnN1cHNpLmNoMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdBzlQpH/coIR5xCcVvQzJlokHK8
+P0bG8lEz2Wu0otIKxrzIj8/7F0K/3doRajZWJuTV5OqHZ/EsXQI+QcG8WSICbhm2
+OmJqVU4z6wWIUfzwjnY0hvrSQwab18JVfJviG6R2mhSHJKnFsyb4rUs/ZsHGuM3f
+44yczqjW8AP9x/P88yDeoupFmcxmh4VMUQ3YmyL1tH42UvZ8wnclMEIORbd3NObI
+QTMyvGXlNtJWI/g4agVHYN+2HQqDSHNVgHAxXad2vyc7W4bW9OLK6scZY1UEPtt/
+ZfZLy3Ksy9tYiMgXyAkr2H9Ez3UfkdYeuyX2iyvcwpLnuvNhClJygry+AwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUPIuTxE2MPpnTRi0rqMVqIh1vjo8wQgYDVR0RBDswOYIP
+bG9naW4yLnN1cHNpLmNohiZodHRwczovL2xvZ2luMi5zdXBzaS5jaC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEASjUaAcP01+rImDjlfXmNe9cp/69r
+sq6iTsbFEs49zFgyjpwedLQVQsoIxfR0u41ixgZr3bJzEeGRcXe7D8ZcX8rfdpK4
+R5no/zDewmtl6rsr/jQqMmNcLxYupPLSL72ABSoG8CFS7/voIkhGGH3waug9E0h1
+ATS8AMTTXbsmHJEwxXHN9qvUpHk8LXeRiDx5YJ4a7+7CYDS7049XHTU66xWAFN7q
+or8dIcoIgLmNarkiAz+SXWF6Y9GIsQwiLm4T4SFWamzL/IQz5lB5WxzsKa3iI5gV
+6FcB9dFFKAHBul3jYvSJaRCV+G0UwycaEB6gJzCxjaPJBeD7IovvrVTsBw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login2.supsi.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login2.supsi.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">supsi.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">SUPSI - Scuola Universitaria Professionale della Svizzera Italiana</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="it">SUPSI - Scuola Universitaria Professionale della Svizzera Italiana</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.supsi.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="it">http://www.supsi.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:SurName>AAI</md:SurName>
+	<md:EmailAddress>mailto:help-aai@ti-edu.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Damiano</md:GivenName>
+	<md:SurName>Bianchi</md:SurName>
+	<md:EmailAddress>mailto:dbianchi@ti-edu.ch</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Mario</md:GivenName>
+	<md:SurName>Gay</md:SurName>
+	<md:EmailAddress>mailto:mgay@ti-edu.ch</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

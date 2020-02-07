@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://registry.eduteams.org/aa">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.surfconext.nl/" registrationInstant="2017-08-22T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://wiki.surfnet.nl/display/eduGAIN/EduGAIN</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC+DCCAeACCQCU351OsswYwDANBgkqhkiG9w0BAQsFADA+MRwwGgYDVQQLDBNB
+dHRyaWJ1dGUgQXV0aG9yaXR5MR4wHAYDVQQDDBVyZWdpc3RyeS5lZHV0ZWFtcy5v
+cmcwHhcNMTcwODE1MTM0MDI3WhcNMjcwODEzMTM0MDI3WjA+MRwwGgYDVQQLDBNB
+dHRyaWJ1dGUgQXV0aG9yaXR5MR4wHAYDVQQDDBVyZWdpc3RyeS5lZHV0ZWFtcy5v
+cmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDTmgXwsyVcZjtPqeCE
+hwYLayXWpadnwxIX0oihpGv0g2qTm958TLxrPQvB49/z4MqjcL9Xvp2/nSNViSS8
+EAn2vI8EeNH5KaBl3RiJxF7AopAV6e2Fz5kFHry9UHAfPWHLE/Y2oIhH8axV/sBn
+fsC0j3ByS96kYMaiAIkOPRpJK1BBWBC++zc0ypRoEz0WwC9oWsYNAAxu0rcXDaiB
+95Jv70AwAainkxQJdP3OKp+FL2zvJ3g4OhNhAno9nHm4g51UORJtO06vZLAfAfZp
+u4Ukagl5oIBNXdBkK1LbwfJJfRAn+v7t0SCqMU/NvgIbCXClm0z+YxqnR3J9nMpE
+lRinAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAMxQ+eaSEmzWX1A+IcO4ECuGYpXn
+v6r5DqYWZRtCLylRgZC8wNFve32cVEjwO6OC/HxRDLEIwGyj/uyt905kCcDYuUHs
+c8YWqEKG8PvF/qeSUE7QIvaHxD3RNrq9GlV1XSSAbFx+CRvL0HXlagkMYlBpjJ4b
+Uhwez1RWLYIFlkbyv2+hlnJWwERXJDWZqdnBWZZaza/EgRqoky4vBgH9LuTEIq/6
+psDXh7G4ppXFzNMqnYOPfXQSI+NMJRPvfxXX79EYEGjzIhOC7wnchpusa0EUI6ZI
+Sq3mitVCxPu3i4IemGokXpd0BtLR5Jmjj/Gd7chc6Tudb5m1HmibbRT6dUw=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://registry.eduteams.org:8443/simplesamlphp/module.php/aa/attributeserver.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GÉANT Association</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">GÉANT</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.geant.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:SurName>eduTEAMS Admin</md:SurName>
+	<md:EmailAddress>mailto:admin@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>eduTEAMS Tech</md:SurName>
+	<md:EmailAddress>mailto:tech@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>eduTEAMS Support</md:SurName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

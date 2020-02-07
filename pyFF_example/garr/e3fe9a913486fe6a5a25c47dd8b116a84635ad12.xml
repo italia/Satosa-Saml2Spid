@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.aub.edu.lb/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">aub.edu.lb</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">American University of Beirut</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.aub.edu.lb/pnp/Pages/A-to-Z.aspx</mdui:PrivacyStatementURL>
+		<mdui:Logo height="229" width="346" xml:lang="en">https://website.aub.edu.lb/communications/logo/new-logo/PublishingImages/AUB-new-logo-CMYK.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIULYKLvS4tqdodA2Tpx8fCYWx2u9AwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmF1Yi5lZHUubGIwHhcNMTQwNzIyMDkxMTM4WhcN
+MzQwNzIyMDkxMTM4WjAZMRcwFQYDVQQDEw5pZHAuYXViLmVkdS5sYjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKZmVQ3esrju64+cm06CzqI3ibvg3E3I
+Fnox2okzwxJMAl4SJTunO4NVX1quiXbURRk7aY8XOY7aZYJ6ruatsh0Ng/q/PyoI
+l3EWI3MmE7h55DsIi+NRd/oQZG57ENr2UKkZQca5esRtfWx/mqkTEcf48hOMmmwd
+IpnGnxpTu9bsWCf+RiRTySZnWcXpllvHSrkAET7Kl3Aeexs8WYAlJ8WYg8blx5QS
+QHIM2wIbRbhVWOaTO905J6lLF3LhrWdZ7637RMDivVTNwdA8nuk0QJm0dZN5Z+hE
+2MbUnOvB5SYFLLo3mrU4a7b0Bl1J/pxMJZrlaoVn8OhJrDqkf77jxFECAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLmF1Yi5lZHUubGKGJWh0dHBzOi8vaWRwLmF1Yi5l
+ZHUubGIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOdoJG41Ncg47yzvfG0DH3HZ
+oaT+MA0GCSqGSIb3DQEBBQUAA4IBAQBs+g6B7jh5AFf6bXX+TzFJalywRYNfTBfU
+YDF64/TFX8OziVUb5d+up9B+EFDudMASU5BqTr8pGfoQackmI0TEvl9n/BZBEhrr
+lel95gK/Y614xMJkoFFZle3u3Kp415r56M7PDRkDJ+a4QTn5ILEjLVoZvwrboHWb
+JfTFVPALyF2oZex7bbHZ2i6CyE0qLetqWmZGgLEl2SscK2Ue1w/pqW6yoo2YMsOC
+X4Ic+GreOjVGJN1TRDjBY6sei0ef+aAulVL1K1aWSjFWjJUazdq4TlZsOF0Z/WGG
+Zderlj8oMgziT8XJHB+2YcRnJm63bJ4PpmitJEcGpgcszR+U1OoQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.aub.edu.lb:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.aub.edu.lb:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.aub.edu.lb/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.aub.edu.lb/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.aub.edu.lb/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.aub.edu.lb/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.aub.edu.lb/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.aub.edu.lb/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">aub.edu.lb</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIzCCAgugAwIBAgIULYKLvS4tqdodA2Tpx8fCYWx2u9AwDQYJKoZIhvcNAQEF
+BQAwGTEXMBUGA1UEAxMOaWRwLmF1Yi5lZHUubGIwHhcNMTQwNzIyMDkxMTM4WhcN
+MzQwNzIyMDkxMTM4WjAZMRcwFQYDVQQDEw5pZHAuYXViLmVkdS5sYjCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAKZmVQ3esrju64+cm06CzqI3ibvg3E3I
+Fnox2okzwxJMAl4SJTunO4NVX1quiXbURRk7aY8XOY7aZYJ6ruatsh0Ng/q/PyoI
+l3EWI3MmE7h55DsIi+NRd/oQZG57ENr2UKkZQca5esRtfWx/mqkTEcf48hOMmmwd
+IpnGnxpTu9bsWCf+RiRTySZnWcXpllvHSrkAET7Kl3Aeexs8WYAlJ8WYg8blx5QS
+QHIM2wIbRbhVWOaTO905J6lLF3LhrWdZ7637RMDivVTNwdA8nuk0QJm0dZN5Z+hE
+2MbUnOvB5SYFLLo3mrU4a7b0Bl1J/pxMJZrlaoVn8OhJrDqkf77jxFECAwEAAaNj
+MGEwQAYDVR0RBDkwN4IOaWRwLmF1Yi5lZHUubGKGJWh0dHBzOi8vaWRwLmF1Yi5l
+ZHUubGIvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFOdoJG41Ncg47yzvfG0DH3HZ
+oaT+MA0GCSqGSIb3DQEBBQUAA4IBAQBs+g6B7jh5AFf6bXX+TzFJalywRYNfTBfU
+YDF64/TFX8OziVUb5d+up9B+EFDudMASU5BqTr8pGfoQackmI0TEvl9n/BZBEhrr
+lel95gK/Y614xMJkoFFZle3u3Kp415r56M7PDRkDJ+a4QTn5ILEjLVoZvwrboHWb
+JfTFVPALyF2oZex7bbHZ2i6CyE0qLetqWmZGgLEl2SscK2Ue1w/pqW6yoo2YMsOC
+X4Ic+GreOjVGJN1TRDjBY6sei0ef+aAulVL1K1aWSjFWjJUazdq4TlZsOF0Z/WGG
+Zderlj8oMgziT8XJHB+2YcRnJm63bJ4PpmitJEcGpgcszR+U1OoQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.aub.edu.lb:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">American University of Beirut</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">American University of Beirut</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.aub.edu.lb/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shibboleth Support Team</md:GivenName>
+	<md:EmailAddress>Shibboleth@aub.edu.lb</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Maher Kassab</md:GivenName>
+	<md:EmailAddress>maherk@aub.edu.lb</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Shibboleth Technical Team</md:GivenName>
+	<md:EmailAddress>Shibboleth@aub.edu.lb</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:EmailAddress>it.security@aub.edu.lb</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://identity.lbl.gov/prod/tokenmanagement">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://identity.lbl.gov/otptokens/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LBL MFA Token Management Application</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Users of LBL's systems that require multifactor authentication use this application to manage their MFA tokens.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://commons.lbl.gov/x/8ARmBQ</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.lbl.gov/disclaimers/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="111" width="130" xml:lang="en">https://commons.lbl.gov/download/attachments/58393603/lbl-logo-scaled.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC+jCCAeKgAwIBAgIJAKAg4/SISobvMA0GCSqGSIb3DQEBBQUAMBwxGjAYBgNV
+BAMTEWlkZW50aXR5MS5sYmwuZ292MB4XDTA5MDUxMjEyMTgzNVoXDTE5MDUxMDEy
+MTgzNVowHDEaMBgGA1UEAxMRaWRlbnRpdHkxLmxibC5nb3YwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCmytTUYbpY3uCRj19Wyl8blMSSKqqlGepG6e2z
+WodbJDQYTlCNbEF2Snl11i60rnJhMq0cac8LKoC59lz8YvAq0cywrdBBUmNM/YCH
+uktVXnDHxOcdBWRTXecLR2MN9HTSNfnAJ7cgB1fiTqEovFDn9XFX1fVtXc73hW3j
+Rd2nnRhqD44aalU+sOjd+rHx/+BN8omgq61AsW3v6fkfoCfxfvkLYQ02R4NvCnaa
+TguIFxPmx70MTzOGbqkpllCTlQflHdR3zEV7TKntvX4om1I9MCDXPWWXiyqiwAr9
+G+tSHroPnv6J7m/EpRlaJG3vGScmg7eYnUn+KVcZkffOexSxAgMBAAGjPzA9MBwG
+A1UdEQQVMBOCEWlkZW50aXR5MS5sYmwuZ292MB0GA1UdDgQWBBSIBGf+Ko1TQzgC
+t71prMRVkLWHUDANBgkqhkiG9w0BAQUFAAOCAQEAnkLU7yylUZmm2GuxF4CyUotg
+SD2l9m42qZoAVflu1bk4ED4+qTVDIlyAYh1FAKjjU22ewoXIMDgHxV5KpqrIIMCC
+cAy9AYJ0D4V7IHBvFMES41F+WmYqBaP/TR/dtGT/FNnYfGwdOCg2b6mPDhFBNJe2
+xMqHf7MMh0kLtrR+c9QmkXOReA7fAbIoph/VXOxJS5pMaNsTPU4GNVrRaoU7qPnJ
+2YvTYchSZd/s9jOu6pO2JQq+IAvIP3TJgRWrOtcnVcwOjQTgLL/UM4AjvuJjHO/J
+9ev0oCCxihWi4Dz5kwN+A/A9VZ1rYlx2hEwOG6LwCnJip6sDCV2KW4N6GSFPsw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identity.lbl.gov/otptokens/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://identity.lbl.gov/otptokens-staging/Shibboleth.sso/SAML2/POST" index="2"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">LBL MFA Token Management Application</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Users of LBL's systems that require multifactor authentication use this application to manage their MFA tokens.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lawrence Berkeley National Laboratory</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lawrence Berkeley National Laboratory</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lbl.gov/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>LBL Identity Management Team</md:GivenName>
+	<md:EmailAddress>idm@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LBL IT Help Desk</md:GivenName>
+	<md:EmailAddress>help@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LBL Cybersecurity Group</md:GivenName>
+	<md:EmailAddress>security@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>LBL Identity Management Team</md:GivenName>
+	<md:EmailAddress>idm@lbl.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

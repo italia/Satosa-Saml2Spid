@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://bcadfs.bridgewater.edu/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bridgewater.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bridgewater College</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.bridgewater.edu/legal/computer-use-and-file-sharing-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="58" width="365" xml:lang="en">https://www.bridgewater.edu/wp-content/themes/bc-template/img/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFLzCCBBegAwIBAgIJAJvvIyl6OZORMA0GCSqGSIb3DQEBCwUAMIG0MQswCQYD
+VQQGEwJVUzEQMA4GA1UECBMHQXJpem9uYTETMBEGA1UEBxMKU2NvdHRzZGFsZTEa
+MBgGA1UEChMRR29EYWRkeS5jb20sIEluYy4xLTArBgNVBAsTJGh0dHA6Ly9jZXJ0
+cy5nb2RhZGR5LmNvbS9yZXBvc2l0b3J5LzEzMDEGA1UEAxMqR28gRGFkZHkgU2Vj
+dXJlIENlcnRpZmljYXRlIEF1dGhvcml0eSAtIEcyMB4XDTE2MDEyOTE5MjQzOFoX
+DTE5MDIxMjE5MzQ1MFowPzEhMB8GA1UECxMYRG9tYWluIENvbnRyb2wgVmFsaWRh
+dGVkMRowGAYDVQQDDBEqLmJyaWRnZXdhdGVyLmVkdTCCASIwDQYJKoZIhvcNAQEB
+BQADggEPADCCAQoCggEBAN02RE3gzQnkkE10PyrpYjgOuo/a63fiG03RLMPkTRKE
+ISwiqjYolIiI9oVEj36eOC1KaE7mzXjOHRjtMyZP67g8LtJfL4UWWzIL5iX8Qb/D
+e9GFH3BqbDvlZV+ELtMab+od94KjhSW+WOvFFwxPGlRz4NkfcKZ2Ibc0GB2FAcwB
+vwNBw0Za2LjJf4KTw3Y475LmSTsds957otkoPb/qtlMyyu69V5j/4/qHh29FKeGN
+W/e33spwndeRydKACdGyS0yceUfXY7Mu+LVf6l0/XinDsBjbowXTzJYnQXbyti+L
+poD5I7GgD1IqnCsnCCguffGqKrDaJ1N/XO2rjanN+7UCAwEAAaOCAbYwggGyMAwG
+A1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMA4GA1Ud
+DwEB/wQEAwIFoDA3BgNVHR8EMDAuMCygKqAohiZodHRwOi8vY3JsLmdvZGFkZHku
+Y29tL2dkaWcyczEtMTg3LmNybDBTBgNVHSAETDBKMEgGC2CGSAGG/W0BBxcBMDkw
+NwYIKwYBBQUHAgEWK2h0dHA6Ly9jZXJ0aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVw
+b3NpdG9yeS8wdgYIKwYBBQUHAQEEajBoMCQGCCsGAQUFBzABhhhodHRwOi8vb2Nz
+cC5nb2RhZGR5LmNvbS8wQAYIKwYBBQUHMAKGNGh0dHA6Ly9jZXJ0aWZpY2F0ZXMu
+Z29kYWRkeS5jb20vcmVwb3NpdG9yeS9nZGlnMi5jcnQwHwYDVR0jBBgwFoAUQMK9
+J47MNIMwojPX+2yz8LQsgM4wLQYDVR0RBCYwJIIRKi5icmlkZ2V3YXRlci5lZHWC
+D2JyaWRnZXdhdGVyLmVkdTAdBgNVHQ4EFgQU+KmoGReJYb9RkV1YVfMaVYNdGJ0w
+DQYJKoZIhvcNAQELBQADggEBAGuEe+XB9LMZT9fIGuN8XtI9DpRBvrU3e3XlDTvA
+x5ZnVFxwDmyEHq+QZMIcUEvJYirYu45YFzmlJYtedq9/R0UvkX/1TzAxt8CXodac
+NcGSDUdQs6qnP0KXUf5bPy2q3Ajw/j0YkFxnc4v9TtHZQWt+6IVhnYaih3P626L4
+41KEHQxLxFmA4aCcbAFBZoAxxj9AMNegTKKoEikHiuWLOIdfsi6bbifTQEtZg5YH
+a/KHytQSz7ycSll48YbVPo2W9Iq5TFe8yrpwH2Faiu2ILTph41f/RWXFO1nrX9fV
+LO+hso9IlDRcuLTINcC9BR3IDB1P9CeLzNrZG7/SFvX+fbA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIGvDCCBaSgAwIBAgIIJcBZxVowDUYwDQYJKoZIhvcNAQELBQAwgbQxCzAJBgNV
+BAYTAlVTMRAwDgYDVQQIEwdBcml6b25hMRMwEQYDVQQHEwpTY290dHNkYWxlMRow
+GAYDVQQKExFHb0RhZGR5LmNvbSwgSW5jLjEtMCsGA1UECxMkaHR0cDovL2NlcnRz
+LmdvZGFkZHkuY29tL3JlcG9zaXRvcnkvMTMwMQYDVQQDEypHbyBEYWRkeSBTZWN1
+cmUgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IC0gRzIwHhcNMTkwMTE2MTQzMjE3WhcN
+MjEwMjEyMTkzNDUwWjA/MSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0
+ZWQxGjAYBgNVBAMMESouYnJpZGdld2F0ZXIuZWR1MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEA3TZETeDNCeSQTXQ/KuliOA66j9rrd+IbTdEsw+RNEoQh
+LCKqNiiUiIj2hUSPfp44LUpoTubNeM4dGO0zJk/ruDwu0l8vhRZbMgvmJfxBv8N7
+0YUfcGpsO+VlX4Qu0xpv6h33gqOFJb5Y68UXDE8aVHPg2R9wpnYhtzQYHYUBzAG/
+A0HDRlrYuMl/gpPDdjjvkuZJOx2z3nui2Sg9v+q2UzLK7r1XmP/j+oeHb0Up4Y1b
+97feynCd15HJ0oAJ0bJLTJx5R9djsy74tV/qXT9eKcOwGNujBdPMlidBdvK2L4um
+gPkjsaAPUiqcKycIKC598aoqsNonU39c7auNqc37tQIDAQABo4IDRDCCA0AwDAYD
+VR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDgYDVR0P
+AQH/BAQDAgWgMDcGA1UdHwQwMC4wLKAqoCiGJmh0dHA6Ly9jcmwuZ29kYWRkeS5j
+b20vZ2RpZzJzMS05MDcuY3JsMF0GA1UdIARWMFQwSAYLYIZIAYb9bQEHFwEwOTA3
+BggrBgEFBQcCARYraHR0cDovL2NlcnRpZmljYXRlcy5nb2RhZGR5LmNvbS9yZXBv
+c2l0b3J5LzAIBgZngQwBAgEwdgYIKwYBBQUHAQEEajBoMCQGCCsGAQUFBzABhhho
+dHRwOi8vb2NzcC5nb2RhZGR5LmNvbS8wQAYIKwYBBQUHMAKGNGh0dHA6Ly9jZXJ0
+aWZpY2F0ZXMuZ29kYWRkeS5jb20vcmVwb3NpdG9yeS9nZGlnMi5jcnQwHwYDVR0j
+BBgwFoAUQMK9J47MNIMwojPX+2yz8LQsgM4wLQYDVR0RBCYwJIIRKi5icmlkZ2V3
+YXRlci5lZHWCD2JyaWRnZXdhdGVyLmVkdTAdBgNVHQ4EFgQU+KmoGReJYb9RkV1Y
+VfMaVYNdGJ0wggGABgorBgEEAdZ5AgQCBIIBcASCAWwBagB3AKS5CZC0GFgUh7sT
+osxncAo8NZgE+RvfuON3zQ7IDdwQAAABaFcTv+MAAAQDAEgwRgIhAPPrZr64/aEn
+Hq6ZXpsIMEIvgYC4QhFk3hme5nFREcZsAiEArV/F8eDbO08ej871Y9JNbWwSeGBC
+cWM8jkHCq0vAlFIAdgDuS723dc5guuFCaR+r4Z5mow9+X7By2IMAxHuJeqj9ywAA
+AWhXE8JEAAAEAwBHMEUCIQDdEroqvUB1K+Hi6izoYaVnIM30Yoj1F4uDrB7wx1s5
+6AIgPovZAsHN6HSbhaiRpQbdutxSUcbF4YD/obwWChu6dGAAdwBElGUusO7Or8RA
+B9io/ijA2uaCvtjLMbU/0zOWtbaBqAAAAWhXE8giAAAEAwBIMEYCIQDaK3MwcnHK
+PTUqgaXi0NpnsQHOn/roq5R2XPcEtEJkvwIhALrXY6x7E/G27PL42k4cMUpoVIE3
++RxKnpFLMg9Tqk+dMA0GCSqGSIb3DQEBCwUAA4IBAQBaVoLPlrxQWUXhfxBqa+E0
+/zIz5WQbjcde2djgv3le2+AKjBt+V6fQwyVSxuNp1ye9P5rKoXY3m05ZSbzVovsu
+LFC+NpwmJ1E6csS5T0W2Ahk987KdrJGo8ujnSK8Oa7tV1QoeGdr2ID48zrZaOS06
+NqeX9xQ3tlfV0H+fhEcZH20Gq84u6UJq919s0iZaJQzxalyH5xeCA97TvQKGsLMt
+m4q5r9fu07B8BbRJIvmKnBk7Zj+QtjHGDiASxV6vhA4uc9neXaG4g6C/qFVHfjZv
+0kx1nUEu2dkFag3d5yDNzoCOt8o5kvR2MIFXyG87sJZulfKKpYvO93rQsXq74kSQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://bcadfs.bridgewater.edu/adfs/services/trust/artifactresolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://bcadfs.bridgewater.edu/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bcadfs.bridgewater.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://bcadfs.bridgewater.edu/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://bcadfs.bridgewater.edu/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bridgewater College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bridgewater College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bridgewater.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IT Helpdesk</md:GivenName>
+	<md:EmailAddress>help@bridgewater.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tyler S. Weisman</md:GivenName>
+	<md:EmailAddress>tweisman@bridgewater.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Joseph A. Meslovich, Jr.</md:GivenName>
+	<md:EmailAddress>joe@bridgewater.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.marshall.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.marshall.edu/error.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">marshall.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Marshall University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://idp.marshall.edu/idpinfo.html</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://idp.marshall.edu/idp_privacy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="200" width="800" xml:lang="en">https://idp.marshall.edu/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANz4Ck9rR6LwFTAo+ze8Y1IRzLaiMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC5tYXJzaGFsbC5lZHUwHhcNMTYwNzMxMTEzNTM2
+WhcNMzYwNzMxMTEzNTM2WjAbMRkwFwYDVQQDDBBpZHAubWFyc2hhbGwuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAprNV0qALBvRUalyt3SNMp3y/
+rUDJMDoC35v0p/AGw+WHylLdLukCEesWILqgN8M8+++MuOdC6vTSSlEKGEGlsEpY
+g2surT0GZNlphpsURxBikv/mYW+ZLgnz+r9ahaQnIYbNV/1ggnc7M4c3bgLIq9Ly
+o3FnrjGFYLZtGEnotJwHPnoC403qF8sZsSovlzdc7GdN1mXq4NeimIDiVfvB4HuK
+R/SmubqGAGcKaNXoiZzcQqrwB0FzLsO6QjmTiyzSMcGcrghfHkvB+ftJNYBfcHmC
+3TExmQs9NPfH0vu2ymTAR7IvQrdK9YryMK5sC5T14hgMaOsBMshyVGdyVrTIzwID
+AQABo2cwZTAdBgNVHQ4EFgQU8AM/qt0E2uo9ofFMKWUmLuO+NTcwRAYDVR0RBD0w
+O4IQaWRwLm1hcnNoYWxsLmVkdYYnaHR0cHM6Ly9pZHAubWFyc2hhbGwuZWR1L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBMylxH3URXY3lu2TETVQqy
+koBprDHoMJklKCCnQ/gUsKYiaoz17hxJZ8UImLwoBIn7ToAxA5jWbFOE1g2tt2Ul
+q71lxHiYGKwwprnv8dSYiPXur0rBi5dxr6641Rnl+qXFlRcbRyNMj6Ydm6dPWZdO
+INA+5hwAqKUDF/2sTyIkfvFRWYvqsQVqzH1vyVpXzRp8T1eT/gA+cnNcM0M38sN7
+LcJ5JdkOF8C9AK0DwvyWH+jI3rYkeKQwui2/x75rpa7EDhqPQpIgCVgBlhhE1rX3
+bSnCn3hQzUDVGYqear8DvG/LhrTZvYoAW16/CVvIuX7Ha+AvgyNlCpf1TLwF8N0G
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.marshall.edu/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.marshall.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.marshall.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.marshall.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.marshall.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">marshall.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANz4Ck9rR6LwFTAo+ze8Y1IRzLaiMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC5tYXJzaGFsbC5lZHUwHhcNMTYwNzMxMTEzNTM2
+WhcNMzYwNzMxMTEzNTM2WjAbMRkwFwYDVQQDDBBpZHAubWFyc2hhbGwuZWR1MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAprNV0qALBvRUalyt3SNMp3y/
+rUDJMDoC35v0p/AGw+WHylLdLukCEesWILqgN8M8+++MuOdC6vTSSlEKGEGlsEpY
+g2surT0GZNlphpsURxBikv/mYW+ZLgnz+r9ahaQnIYbNV/1ggnc7M4c3bgLIq9Ly
+o3FnrjGFYLZtGEnotJwHPnoC403qF8sZsSovlzdc7GdN1mXq4NeimIDiVfvB4HuK
+R/SmubqGAGcKaNXoiZzcQqrwB0FzLsO6QjmTiyzSMcGcrghfHkvB+ftJNYBfcHmC
+3TExmQs9NPfH0vu2ymTAR7IvQrdK9YryMK5sC5T14hgMaOsBMshyVGdyVrTIzwID
+AQABo2cwZTAdBgNVHQ4EFgQU8AM/qt0E2uo9ofFMKWUmLuO+NTcwRAYDVR0RBD0w
+O4IQaWRwLm1hcnNoYWxsLmVkdYYnaHR0cHM6Ly9pZHAubWFyc2hhbGwuZWR1L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBMylxH3URXY3lu2TETVQqy
+koBprDHoMJklKCCnQ/gUsKYiaoz17hxJZ8UImLwoBIn7ToAxA5jWbFOE1g2tt2Ul
+q71lxHiYGKwwprnv8dSYiPXur0rBi5dxr6641Rnl+qXFlRcbRyNMj6Ydm6dPWZdO
+INA+5hwAqKUDF/2sTyIkfvFRWYvqsQVqzH1vyVpXzRp8T1eT/gA+cnNcM0M38sN7
+LcJ5JdkOF8C9AK0DwvyWH+jI3rYkeKQwui2/x75rpa7EDhqPQpIgCVgBlhhE1rX3
+bSnCn3hQzUDVGYqear8DvG/LhrTZvYoAW16/CVvIuX7Ha+AvgyNlCpf1TLwF8N0G
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.marshall.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Marshall University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Marshall University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.marshall.edu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Edward Aractingi</md:GivenName>
+	<md:EmailAddress>aractingi1@marshall.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Systems Team</md:GivenName>
+	<md:EmailAddress>systems@marshall.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IT Incident Response Team</md:GivenName>
+	<md:EmailAddress>systems@marshall.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

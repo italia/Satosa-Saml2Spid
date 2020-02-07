@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.rush.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">rush.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Rush University Medical Center</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.rush.edu/website-privacy-statement</mdui:PrivacyStatementURL>
+		<mdui:Logo height="45" width="194" xml:lang="en">https://www.rush.edu/sites/all/themes/rush/assets/images/rush-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIQXGnbMT/u8bFAbt3lLq/7yTANBgkqhkiG9w0BAQsFADAV
+MRMwEQYDVQQDDApTaGlBcHBQcm9kMB4XDTE5MDkxNjE5MjU0NloXDTIwMDkxNjE5
+NDU0NlowFTETMBEGA1UEAwwKU2hpQXBwUHJvZDCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBAJ7+xoYgwJScQcL+q/hfZoeFRMhmKLcR2WyFJtB+Op4+EH15
+udTJ1Zr6TygOlfweXczqBq0rcCTD1NCQJgZDKWkulen9o9RxMR8GM0YdoU3fnaGN
+tqleJsnrew0At7jYBN8WVJyI20SzvqnTBgUQ6KumD+o0ew8OYXMw1Nw7+ivU9jiO
+GoSyzh/9fqZGtdKlKVzCUwfewl8VeYSELH03+LNJeBLE+hertN5bBpXImdh1vpMV
+Tr2J8XJEUxRmSn3oV2EyS+smWUOncMlpBxydohBVJkZn0/nCLMYP0uZNfBD2yfZV
+ihIVwZP0oDlxtxb8Rsa3NTGa1c2KlA1/IepKQK8CAwEAAaNnMGUwDgYDVR0PAQH/
+BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAVBgNVHREEDjAM
+ggpTaGlBcHBQcm9kMB0GA1UdDgQWBBTjf+BUxZczgrK5zHckZocJK1Tz/jANBgkq
+hkiG9w0BAQsFAAOCAQEAcnpeLQHcO31cNr60bhhQQ+ZDmT2Cx1VzNS6t4/+HodH7
+tSGDcaHA7mUl69kglBDKdg570laWJRFyBoC1ZFYuLhcivLBqmqjQYT0sr6bv39pv
+yFMg3P95sBW+64jQ4IfOnhudy/2wruUIMG2eGkvCpNpr7nsRnCdz8fnabBzRb9t2
+6xcGDGyF7YGvmhZwYtLLKl5Uu0Fw9fVs2Cha2Zwn2SGa6gbFR0ra7+lU97L5XX2p
+82mSQMhqhOH0t/MRbqIZFnnQlyZztR+Tk/eTdPf9WiwHf1/6ARehyPf0pEz4qn3p
+/qjQhI3pLNM0jm/mj5NTuGmQXG+vT2dh0xGg3CMxog==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.rush.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.rush.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Rush University Medical Center</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Rush University Medical Center</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.rush.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Karl Oder</md:GivenName>
+	<md:EmailAddress>help@rush.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Frank Magana</md:GivenName>
+	<md:EmailAddress>help@rush.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>RIchard Rodriquez</md:GivenName>
+	<md:EmailAddress>help@rush.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

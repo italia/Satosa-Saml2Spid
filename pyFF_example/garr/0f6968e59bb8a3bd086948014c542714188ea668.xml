@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://iam.vpa.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-06-12T10:29:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vpa.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of the Visual and Performing Arts</mdui:DisplayName>
+		<mdui:Description xml:lang="en">UVPA IdP</mdui:Description>
+		<mdui:Keywords xml:lang="en">UVPA</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">http://vpa.ac.lk</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://vpa.ac.lk/Privacy-Policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80">https://iam.vpa.ac.lk/logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://iam.vpa.ac.lk/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUMCPr7zpWj55F5QZqDkibUCJ2wv4wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDlaFw0z
+OTA2MTEwODM1NDlaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzqWMjz/YPsWqzAcoEdEsdWWThxvA+KpTE
+Me6cZx940qsD+Wjb7cvceVY7nXPcddPWOZxwEKM8nKC+HLsLUQ8R5WtxfKdykTw6
+mwx0Rz6nagjXstCW3PUO5xPAJPZ+JHEf9libFKAmzzW3Ndl2mQJmvPFWK2uEs8ab
+HnR1dXG40ivkJFMldTCfk/oi5umYjICeS41D6r9p9avKPT8uuiMeQNVf9BcfTgKp
+a2Ck0f1U5essdGkPSPFSHXD3bXIaATxwxTJTAOLoGbAmZSi/MpG2sqE8cj272I1Q
+HvAJlt9TW+CGbytCL2DzLnggO7o9QIsTBDptXy3z+20RznFsbKUBAgMBAAGjYTBf
+MB0GA1UdDgQWBBSw5JNW4sl55UdXOyUHrDF46T3iWjA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAH8aiMOABI+eLdXGqPGo0ef/+ZTZ3/KDqzVovFMn
+RrIvHihHgFFPwie9m9j243YNzCfehgs8sEAKcLtRhs4HK1GsSFwe1BLlj3JSIB9w
+qPOVvsuhj6T4PkYDFYy0TJ1c42mjQkXpEITXW4fDXMKAxDR03OcIU2POR+EEOFS4
+jQ4gqCt8yqBWQhzg2qTayX2osZK40085UKrg0lQoJhzyG0gjJqgW/PdKSrmtUu8R
+5RZ8jHfzd79layylmL32U4GQyOav2vPR3VGLKmt6qLg/InMB6UB9AY8Dab78WP84
+5TuEvWuI3OO2+G8H1MvgyofSO6ss3AbHdPZkRxHx47PtEAY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUa6DKdn1P/H77keYBrQfYgVihR+UwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDhaFw0z
+OTA2MTEwODM1NDhaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCliUiQ5+K6qUhE3aTQSVy6g1HHqoLHLXXD
+RCEg53t411zFQK+mWs6kSqO+RG4Qi6/zVZAKiHj3pHr7zOhaPjvQdIZHbXEvCi0q
+llEkaZbZQJ1R6dp9Q4Lz1ZgFY3/i0+LIDrrIcdglx4xhhLdnN91PXPrKlYrrxDKC
+bgbRYfxlSJuWvSNVeh+Iq0Y3/hGPtrrISYUeunt3OMw86SHwjudlMtnzMFYh+dHN
+couZQs7jaoQIVtTugzByZDrQGr9zSmq0Z0NXebTeC1mzeQpUieguCQ/my0zbIddx
+0L4uY6qkf+FYoRbZ/qxdsRLVDOljY3acymE5QHQWBPwa2BFJPYrbAgMBAAGjYTBf
+MB0GA1UdDgQWBBQ1WY8beolY1Za1oj09cWFRx1VU+TA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAKCDmPCrRH6kop97p7duhVCLOeejBHsiZkvcOnsU
+j1yVc2ppah2Z/XQu43q/4viFNs1GHWDKtF+sHxEWUIQwXunxCBznjppjMB5kHt2A
+R9rOJl2XZud53ksKB4/2uECNpVNaB6tYPvOlx94UMENl+VQPkQGLYktrvxZK42n8
+3nTNsk0mELDbk5F/s+tb2Ym4mgi9Ri/hIXs0MPuxoDlRD4TS3794oM2FAWL4okTm
+YfcFzh2zp2+oN9nknGwyRhMlYxpIrYu4GeB7qp6qcNA3lbQdZ1A2RIcogyFxERTj
+TFdsLBuvFHjKWCrgxaoTT6f/FBZ0sESMXJ1caiTb/6xSXws=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUMojW46X79JW3oV9721toXqU90CEwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDlaFw0z
+OTA2MTEwODM1NDlaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCGXTPuuD49ClOrObclTklKuYBSpMDetPLp
+jHJpymDXa3h2HVIcWA8G0NOlZaNb4JkPG4Gy8eJhZr2MEGOYqu2LQeP4L5nQlRVt
+4yObijvxqfmh/SQJ6hyzALxl40IXEsX9681yfiidtjtiGNGf0kRG3ST4FfQPeoAG
+JnfYU31F5epD5qLNj041Y3/lO3YqVNADOYJp8vliPqsdUBGhMVn5dzwJP4LeTVpp
+oluPbdEt9k9RyeuWmsoCNkXLZl2EmTDmKCghQNEQCx8e02dCCLRdZDqVT0CRTNka
+PrJ+oOKt5JPyQwRqveuKzaw76bQ1s7ZVu0HELFGfpM3ZLILCH/kRAgMBAAGjYTBf
+MB0GA1UdDgQWBBRpBlZXjx7loQMETaKtqURsUVAzzDA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAALmELQYMtq/rCKzb6F0CAlCLr6xUHGUKmNvA7wd
+xxuah6VbtOq5aoLaSas4MszO1eCERfqLk8gkk8Mk/ZPIlbX6eiC0Ak6o76gRXKLQ
+7BH8mnQKO4EasSmzTCIOenc26GFP/RgQvyChWvH95Zf09AQjUV1aDMPxYYLoiNKR
+92B9MHFpWAbshTy9YZOHqT1bnkBRVNTrsS9zBTu5YSrN8ZWEHMqSCAmAozJsgKkv
+FOvVaATwY/NjWDOg041v3UyzRwAYPfQoG1Js8bfYS7g0jQzA/qslIkVTkOr4g9uI
+QmNfh5kcbjmpc7rYO+nRigFZUh8FPeun1E9uNwC7rdYbEoY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">vpa.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUMCPr7zpWj55F5QZqDkibUCJ2wv4wDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDlaFw0z
+OTA2MTEwODM1NDlaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCzqWMjz/YPsWqzAcoEdEsdWWThxvA+KpTE
+Me6cZx940qsD+Wjb7cvceVY7nXPcddPWOZxwEKM8nKC+HLsLUQ8R5WtxfKdykTw6
+mwx0Rz6nagjXstCW3PUO5xPAJPZ+JHEf9libFKAmzzW3Ndl2mQJmvPFWK2uEs8ab
+HnR1dXG40ivkJFMldTCfk/oi5umYjICeS41D6r9p9avKPT8uuiMeQNVf9BcfTgKp
+a2Ck0f1U5essdGkPSPFSHXD3bXIaATxwxTJTAOLoGbAmZSi/MpG2sqE8cj272I1Q
+HvAJlt9TW+CGbytCL2DzLnggO7o9QIsTBDptXy3z+20RznFsbKUBAgMBAAGjYTBf
+MB0GA1UdDgQWBBSw5JNW4sl55UdXOyUHrDF46T3iWjA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAH8aiMOABI+eLdXGqPGo0ef/+ZTZ3/KDqzVovFMn
+RrIvHihHgFFPwie9m9j243YNzCfehgs8sEAKcLtRhs4HK1GsSFwe1BLlj3JSIB9w
+qPOVvsuhj6T4PkYDFYy0TJ1c42mjQkXpEITXW4fDXMKAxDR03OcIU2POR+EEOFS4
+jQ4gqCt8yqBWQhzg2qTayX2osZK40085UKrg0lQoJhzyG0gjJqgW/PdKSrmtUu8R
+5RZ8jHfzd79layylmL32U4GQyOav2vPR3VGLKmt6qLg/InMB6UB9AY8Dab78WP84
+5TuEvWuI3OO2+G8H1MvgyofSO6ss3AbHdPZkRxHx47PtEAY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUa6DKdn1P/H77keYBrQfYgVihR+UwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDhaFw0z
+OTA2MTEwODM1NDhaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCliUiQ5+K6qUhE3aTQSVy6g1HHqoLHLXXD
+RCEg53t411zFQK+mWs6kSqO+RG4Qi6/zVZAKiHj3pHr7zOhaPjvQdIZHbXEvCi0q
+llEkaZbZQJ1R6dp9Q4Lz1ZgFY3/i0+LIDrrIcdglx4xhhLdnN91PXPrKlYrrxDKC
+bgbRYfxlSJuWvSNVeh+Iq0Y3/hGPtrrISYUeunt3OMw86SHwjudlMtnzMFYh+dHN
+couZQs7jaoQIVtTugzByZDrQGr9zSmq0Z0NXebTeC1mzeQpUieguCQ/my0zbIddx
+0L4uY6qkf+FYoRbZ/qxdsRLVDOljY3acymE5QHQWBPwa2BFJPYrbAgMBAAGjYTBf
+MB0GA1UdDgQWBBQ1WY8beolY1Za1oj09cWFRx1VU+TA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAKCDmPCrRH6kop97p7duhVCLOeejBHsiZkvcOnsU
+j1yVc2ppah2Z/XQu43q/4viFNs1GHWDKtF+sHxEWUIQwXunxCBznjppjMB5kHt2A
+R9rOJl2XZud53ksKB4/2uECNpVNaB6tYPvOlx94UMENl+VQPkQGLYktrvxZK42n8
+3nTNsk0mELDbk5F/s+tb2Ym4mgi9Ri/hIXs0MPuxoDlRD4TS3794oM2FAWL4okTm
+YfcFzh2zp2+oN9nknGwyRhMlYxpIrYu4GeB7qp6qcNA3lbQdZ1A2RIcogyFxERTj
+TFdsLBuvFHjKWCrgxaoTT6f/FBZ0sESMXJ1caiTb/6xSXws=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUMojW46X79JW3oV9721toXqU90CEwDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWFtLnZwYS5hYy5sazAeFw0xOTA2MTEwODM1NDlaFw0z
+OTA2MTEwODM1NDlaMBgxFjAUBgNVBAMMDWlhbS52cGEuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCGXTPuuD49ClOrObclTklKuYBSpMDetPLp
+jHJpymDXa3h2HVIcWA8G0NOlZaNb4JkPG4Gy8eJhZr2MEGOYqu2LQeP4L5nQlRVt
+4yObijvxqfmh/SQJ6hyzALxl40IXEsX9681yfiidtjtiGNGf0kRG3ST4FfQPeoAG
+JnfYU31F5epD5qLNj041Y3/lO3YqVNADOYJp8vliPqsdUBGhMVn5dzwJP4LeTVpp
+oluPbdEt9k9RyeuWmsoCNkXLZl2EmTDmKCghQNEQCx8e02dCCLRdZDqVT0CRTNka
+PrJ+oOKt5JPyQwRqveuKzaw76bQ1s7ZVu0HELFGfpM3ZLILCH/kRAgMBAAGjYTBf
+MB0GA1UdDgQWBBRpBlZXjx7loQMETaKtqURsUVAzzDA+BgNVHREENzA1gg1pYW0u
+dnBhLmFjLmxrhiRodHRwczovL2lhbS52cGEuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAALmELQYMtq/rCKzb6F0CAlCLr6xUHGUKmNvA7wd
+xxuah6VbtOq5aoLaSas4MszO1eCERfqLk8gkk8Mk/ZPIlbX6eiC0Ak6o76gRXKLQ
+7BH8mnQKO4EasSmzTCIOenc26GFP/RgQvyChWvH95Zf09AQjUV1aDMPxYYLoiNKR
+92B9MHFpWAbshTy9YZOHqT1bnkBRVNTrsS9zBTu5YSrN8ZWEHMqSCAmAozJsgKkv
+FOvVaATwY/NjWDOg041v3UyzRwAYPfQoG1Js8bfYS7g0jQzA/qslIkVTkOr4g9uI
+QmNfh5kcbjmpc7rYO+nRigFZUh8FPeun1E9uNwC7rdYbEoY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://iam.vpa.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of the Visual and Performing Arts</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of the Visual and Performing Arts</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://vpa.ac.lk</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Shamli</md:GivenName>
+	<md:SurName>Rajapakshe</md:SurName>
+	<md:EmailAddress>mailto:shamli@vpa.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dharshana</md:GivenName>
+	<md:SurName>Hewage</md:SurName>
+	<md:EmailAddress>mailto:dharshana.h@vpa.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

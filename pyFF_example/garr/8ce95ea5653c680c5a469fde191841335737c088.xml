@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-stellamaris.irccs.garr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2013-10-29T16:00:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">irccs-stellamaris.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">IRCCS Fondazione Stella Maris</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">IRCCS Fondazione Stella Maris</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity provider for IRCCS Fondazione Stella Maris users</mdui:Description>
+<mdui:Description xml:lang="it">Identity provider per gli utenti di IRCCS Fondazione Stella Maris</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idp-stellamaris.irccs.garr.it/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idp-stellamaris.irccs.garr.it/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idp-stellamaris.irccs.garr.it/en/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp-stellamaris.irccs.garr.it/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idp-stellamaris.irccs.garr.it/en/logo.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idp-stellamaris.irccs.garr.it/it/logo.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idp-stellamaris.irccs.garr.it/en/favicon.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idp-stellamaris.irccs.garr.it/it/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/POST/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">irccs-stellamaris.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDYDCCAkigAwIBAgIUFMkZfuL5qKNNf1/kspMp2S6XOIMwDQYJKoZIhvcNAQEF
+BQAwKDEmMCQGA1UEAxMdaWRwLXN0ZWxsYW1hcmlzLmlyY2NzLmdhcnIuaXQwHhcN
+MTMwOTAzMDkxNTAwWhcNMzMwOTAzMDkxNTAwWjAoMSYwJAYDVQQDEx1pZHAtc3Rl
+bGxhbWFyaXMuaXJjY3MuZ2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAInbhmdOnasbq+dw01M5N2VHMh3OrBIaHsmgVGOcn8dmWUL2j1WzSYZZ
+Ozgav7kY2dC5rCfFPabqpdfDoaM7OI56R6JTjg6KIHHj+gpVz+nWvBrlgiE0d1IL
+Hk2Xt6yP+0SYv8IjV7OoehHTTT/uvkX0nAKaJb+JjHLwiAE1JJmNrvI5JeURBgw2
+jbG+V4gF5EmN9xaWRyRumCCEYuzAnlB58kdMY6bV2A6n8BMB5MVS5i04dbwuckNQ
+LaibNzSSVyTJ5pyZZEVkRF57drR2FKENxW5bkZ7ipGnLEKoXC5mmADYmXcu0t96b
+TUiIkYIUWXDkS8XJML8y7X0qogM9A28CAwEAAaOBgTB/MF4GA1UdEQRXMFWCHWlk
+cC1zdGVsbGFtYXJpcy5pcmNjcy5nYXJyLml0hjRodHRwczovL2lkcC1zdGVsbGFt
+YXJpcy5pcmNjcy5nYXJyLml0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQ5DrW
+VFYfupI80cbtPn5VpSFKOTANBgkqhkiG9w0BAQUFAAOCAQEADCkGyy6JL919kwGU
+72HLcSUCQ5dd00/B73MQwCRvSikVg5QtE+UiI5TFF6wvLLvGYItGJMTsoh4sWGRK
+XK6uukR2v5/vHcPLCmT34M4kGiSrSSjr/YETB7Ygb5av91u+CwzDJNr4en/rBgVc
+eZEro1ZfDubMkAy/ZjUYe50BzBikWjGbLNVz/yIinTAwaMbpDBfGkl5WYOIYJijy
+PeUvqINSd3PLIyJv5TUyi2Xmr6m1bDLcuE8gt0ocR/sJFkEQGgEVufvLAzBsdmP5
+tJheicSWcYTDZZfsp20xfHPiEyuQPvYatp+5aUfmlfhdWFsifQ5P0N1mdISV6crR
+lKnM7w==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-stellamaris.irccs.garr.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">IRCCS Fondazione Stella Maris</md:OrganizationName>
+<md:OrganizationName xml:lang="en">IRCCS Fondazione Stella Maris</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">IRCCS Fondazione Stella Maris</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">IRCCS Fondazione Stella Maris</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.irccs-stellamaris.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.irccs-stellamaris.it</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>IdP-in-the-Cloud</md:GivenName>
+<md:SurName>Service</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>IRCCS Fondazione Stella Maris</md:GivenName>
+<md:SurName>User Support</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

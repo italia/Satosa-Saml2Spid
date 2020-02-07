@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.gsu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.gsu.edu/identity/feedback.htm" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gsu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Georgia State University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Georgia State University is located in the heart of downtown Atlanta. Georgia State is one of the country's leading urban research universities.</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://idp.gsu.edu/idp/shibboleth</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.gsu.edu/privacy-notices/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="56" width="400" xml:lang="en">https://idp.gsu.edu/oxauth/img/login-form-image.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDiDCCAnACCQCrY2VVpigyOTANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMC
+VVMxEDAOBgNVBAgMB0dlb3JnaWExEDAOBgNVBAcMB0F0bGFudGExDDAKBgNVBAoM
+A0dTVTENMAsGA1UECwwESVMmVDEUMBIGA1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkq
+hkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5lZHUwHhcNMTMwODEyMTYzMzEyWhcNMjMw
+ODEyMTYzMzEyWjCBhTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0dlb3JnaWExEDAO
+BgNVBAcMB0F0bGFudGExDDAKBgNVBAoMA0dTVTENMAsGA1UECwwESVMmVDEUMBIG
+A1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkqhkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5l
+ZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCi46F3cO420nIJduG7
+bz9n2uBJQyyulhsMQ1NkV1AyZgjXhPWOf1eH8UgP1Z1w4qZiCEJZ2ESkmpGLOvCv
+XZOoF7Re+IZ+RcfNvTIkrsYmUi7QJMUdsmHojnFbgrygc/liFen50x3lB7YWz2hg
+Oh82QJ1LGeNLDy2UWXjBOsNQgZ0kLXBIoqRaGFoj7+DxsrPheaXnFGLEIQo0NHRt
+ZMJWOkDoLwadWBEprMcTiEgBQhyTDjinA1c9smZ8xHxhyUY/b8X6uLlPfQSTR2H3
+/bP3DdvUtjawOBD0fTGyaHHyVgKh9VHoprjpFzghPn2oS3/FNO1S8japHQYcQ4Yw
+Z2IJAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAEx2wJjdE2IR2j4ak4iHKvnEFBwP
+BERQgwVN3Hg652gZBEo0rjRWE2gojCf1Aw8cgi1qGH5mRys3I837WwBuQBRd9Q+E
+aoV966qWrbAkWUPpE0XXquXcCheSJIN3OzlHZesynoeFeFLRGLp4xYfSwAqQuIHt
+bjfhewGhe4cfwJlWByoS9RDQUVrHGl6MgMvk/l2wXIFn4I+6DqJYsHAWl/e1m9Zh
+tN0DE2kMdJnP9uo3P2zbnx1OjnhEKq8USicqfJ0WURaAf3pvB2CQlfHJpLyTk4su
+MaNh4Mq+DwonONJ2IrxNOVDGr1OizMya+fiAPFA2l+XvfveCYE4qgQrBubA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDiDCCAnACCQDgmtUnSYaEQzANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMC
+VVMxEDAOBgNVBAgMB0dlb3JnaWExEDAOBgNVBAcMB0F0bGFudGExDDAKBgNVBAoM
+A0dTVTENMAsGA1UECwwESVMmVDEUMBIGA1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkq
+hkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5lZHUwHhcNMTIwODIzMTgyNjQxWhcNMTMw
+ODIzMTgyNjQxWjCBhTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0dlb3JnaWExEDAO
+BgNVBAcMB0F0bGFudGExDDAKBgNVBAoMA0dTVTENMAsGA1UECwwESVMmVDEUMBIG
+A1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkqhkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5l
+ZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+iygvUXA1CzRqsw7P
+N9cFg/9h/Gw8TNlj/XR9Sv2RlEUdnuSNTMgF6lF7lbU5eqfjEG4aKyP2aI6Krdl7
+lqqYrXCY3WOrnHo8SfNUsdbdT8tmm46ye4n2S0dDVII0RuJ5POKdtSjhKF2TZWlo
+lk6DyltMAq6803bdWStsZN0L/sQyaqmLkWLIH7S0FCsus7ypS2EA4IjcZVbuWoy0
+ughOCRqmJCzLEkFaTysMzrVgSrAjT4WHrFFfBV9gBdalrJ9Kmqhr1BlUWOJmFLah
+TOW8Q81034cAApmY6DkiWVO69+IzUWxhsjrXk9Lt0tem4ovr/yMPdtxYJgsDJgAA
+TtDtAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAENAbC841AsHB1tQ1VjltsH4uWct
+woTLcdkuX4owoYLlddpG1IUk0iCr9ugjk2WIAK+kFbJzxB9IvXPYuWn9GQlWjlug
+LnLL6XizmhPUuHpAAkjM48RgJkxZkBlKdy+JyUK9Wz9syXx5SisfDBXadL4QsKx2
+Xz3sw2sFRwZfMd1Ir2BFufxHwyR1wDMISkLW4KIh2Y/A4T5PJnyr1gvqCuGFBmVa
+bnsCGHbhR1ukH8bdVEe3cfowAMDJEJHVZGEJYruqe0hjIa/ZDKXFWaDuyaknM5OD
+BCoW3mMYc0Wvo936Rx/CEhxnkL8hh/p+qdyWRZOJy3H1eHEP91+c5Uy+T7U=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.gsu.edu:9443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.gsu.edu:9443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.gsu.edu/identity/logout"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.gsu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.gsu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.gsu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.gsu.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">gsu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDiDCCAnACCQCrY2VVpigyOTANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMC
+VVMxEDAOBgNVBAgMB0dlb3JnaWExEDAOBgNVBAcMB0F0bGFudGExDDAKBgNVBAoM
+A0dTVTENMAsGA1UECwwESVMmVDEUMBIGA1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkq
+hkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5lZHUwHhcNMTMwODEyMTYzMzEyWhcNMjMw
+ODEyMTYzMzEyWjCBhTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0dlb3JnaWExEDAO
+BgNVBAcMB0F0bGFudGExDDAKBgNVBAoMA0dTVTENMAsGA1UECwwESVMmVDEUMBIG
+A1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkqhkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5l
+ZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCi46F3cO420nIJduG7
+bz9n2uBJQyyulhsMQ1NkV1AyZgjXhPWOf1eH8UgP1Z1w4qZiCEJZ2ESkmpGLOvCv
+XZOoF7Re+IZ+RcfNvTIkrsYmUi7QJMUdsmHojnFbgrygc/liFen50x3lB7YWz2hg
+Oh82QJ1LGeNLDy2UWXjBOsNQgZ0kLXBIoqRaGFoj7+DxsrPheaXnFGLEIQo0NHRt
+ZMJWOkDoLwadWBEprMcTiEgBQhyTDjinA1c9smZ8xHxhyUY/b8X6uLlPfQSTR2H3
+/bP3DdvUtjawOBD0fTGyaHHyVgKh9VHoprjpFzghPn2oS3/FNO1S8japHQYcQ4Yw
+Z2IJAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAEx2wJjdE2IR2j4ak4iHKvnEFBwP
+BERQgwVN3Hg652gZBEo0rjRWE2gojCf1Aw8cgi1qGH5mRys3I837WwBuQBRd9Q+E
+aoV966qWrbAkWUPpE0XXquXcCheSJIN3OzlHZesynoeFeFLRGLp4xYfSwAqQuIHt
+bjfhewGhe4cfwJlWByoS9RDQUVrHGl6MgMvk/l2wXIFn4I+6DqJYsHAWl/e1m9Zh
+tN0DE2kMdJnP9uo3P2zbnx1OjnhEKq8USicqfJ0WURaAf3pvB2CQlfHJpLyTk4su
+MaNh4Mq+DwonONJ2IrxNOVDGr1OizMya+fiAPFA2l+XvfveCYE4qgQrBubA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDiDCCAnACCQDgmtUnSYaEQzANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMC
+VVMxEDAOBgNVBAgMB0dlb3JnaWExEDAOBgNVBAcMB0F0bGFudGExDDAKBgNVBAoM
+A0dTVTENMAsGA1UECwwESVMmVDEUMBIGA1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkq
+hkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5lZHUwHhcNMTIwODIzMTgyNjQxWhcNMTMw
+ODIzMTgyNjQxWjCBhTELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0dlb3JnaWExEDAO
+BgNVBAcMB0F0bGFudGExDDAKBgNVBAoMA0dTVTENMAsGA1UECwwESVMmVDEUMBIG
+A1UEAwwLaWRwLmdzdS5lZHUxHzAdBgkqhkiG9w0BCQEWEHJyZWRkaXNoQGdzdS5l
+ZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+iygvUXA1CzRqsw7P
+N9cFg/9h/Gw8TNlj/XR9Sv2RlEUdnuSNTMgF6lF7lbU5eqfjEG4aKyP2aI6Krdl7
+lqqYrXCY3WOrnHo8SfNUsdbdT8tmm46ye4n2S0dDVII0RuJ5POKdtSjhKF2TZWlo
+lk6DyltMAq6803bdWStsZN0L/sQyaqmLkWLIH7S0FCsus7ypS2EA4IjcZVbuWoy0
+ughOCRqmJCzLEkFaTysMzrVgSrAjT4WHrFFfBV9gBdalrJ9Kmqhr1BlUWOJmFLah
+TOW8Q81034cAApmY6DkiWVO69+IzUWxhsjrXk9Lt0tem4ovr/yMPdtxYJgsDJgAA
+TtDtAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAENAbC841AsHB1tQ1VjltsH4uWct
+woTLcdkuX4owoYLlddpG1IUk0iCr9ugjk2WIAK+kFbJzxB9IvXPYuWn9GQlWjlug
+LnLL6XizmhPUuHpAAkjM48RgJkxZkBlKdy+JyUK9Wz9syXx5SisfDBXadL4QsKx2
+Xz3sw2sFRwZfMd1Ir2BFufxHwyR1wDMISkLW4KIh2Y/A4T5PJnyr1gvqCuGFBmVa
+bnsCGHbhR1ukH8bdVEe3cfowAMDJEJHVZGEJYruqe0hjIa/ZDKXFWaDuyaknM5OD
+BCoW3mMYc0Wvo936Rx/CEhxnkL8hh/p+qdyWRZOJy3H1eHEP91+c5Uy+T7U=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.gsu.edu:9443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.gsu.edu:9443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Georgia State University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Georgia State University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.gsu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ron Reddish</md:GivenName>
+	<md:EmailAddress>rreddish@gsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeremy Mullins</md:GivenName>
+	<md:EmailAddress>mullins@gsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Mick Chambers</md:GivenName>
+	<md:EmailAddress>mick@gsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Whitfield Samuel, Jr.</md:GivenName>
+	<md:EmailAddress>wsamuel@gsu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.icermali.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://login.icermali.org/federation/error" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">icermali.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ICER - Mali</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://login.icermali.org/federation/info</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://login.icermali.org/federation/privacy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://login.icermali.org/federation/ui/logo/icermalilogo80x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC/TCCAeWgAwIBAgIJAIEHUdC/eXeBMA0GCSqGSIb3DQEBCwUAMB0xGzAZBgNV
+BAMMEmxvZ2luLmljZXJtYWxpLm9yZzAeFw0xNTA1MDcyMDI2MzBaFw0yNTA1MDQy
+MDI2MzBaMB0xGzAZBgNVBAMMEmxvZ2luLmljZXJtYWxpLm9yZzCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAORvgT83hFUOb+C8kxgd3f5R3Q26QODxysFY
+85D8/feOde9hoyZ5nV6gOy4EIybFGCJhpI9XWsLDSNULYrzqK3PjH118zCoHc7Qz
+bskZTOWp+O/i3EZfYnY4EJSMeyGSHLjEQsxDXV1AZupk9zVqwFJFFDKBgNQzqMN9
+5tC0kCIyv8UTuogInzx1FYp2QptEai1a3HRrB3vF8n+uD6oFUWw1oPVpx3mNOnBJ
+e4FmEkQg8iq3PnbFYmljEeEzxK+1Wh+BbiX+2IoTmbDqvBc2KtSoS0xoMC3wL8uR
+1u12QnXQ9g6gOiebZ6b189HgNvtwQClzevYA8qc7yHc3oVKe9p8CAwEAAaNAMD4w
+HQYDVR0OBBYEFKo1xcaGTEzrtnFzsA/5sWSDcPx0MB0GA1UdEQQWMBSCEmxvZ2lu
+LmljZXJtYWxpLm9yZzANBgkqhkiG9w0BAQsFAAOCAQEAqybun7p6dZqscYKiuphs
+x8BNZlSrBBDvH4sooDsmd+lVseuvTRrea1Jqw9pE+qmJuhaV5xBUyGrk3Bq+T5qz
+h4cUbdUWNdUmGpf90Pzl2YmaaYWny81zNh/UtvnyR/kMJaGmAuInhA3jkoOQ5W1i
+qC8+CU4C7E3PNpBU8tx3U3ZKwojStWpiiz82uoxewYxy1xla3hfVV7d0isR8YJhD
++jdOFJW2BEwPt1YKpmEp3OCkiXBJJ++p2/ptoYWDwm3or+TLCQi8FGjr4MTUBkDO
+O1GdrLusEqTXS0x86NfP8+J63P3Gd3iwpmHnFvuYu2OVDVeLas+nHQVkThNbnqN8
+cQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.icermali.org:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.icermali.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.icermali.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.icermali.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.icermali.org/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">icermali.org</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIG9zCCBd+gAwIBAgIQTKZkNukxqpAJx+ddgmk5QDANBgkqhkiG9w0BAQsFADB4
+MQswCQYDVQQGEwJJTDEWMBQGA1UEChMNU3RhcnRDb20gTHRkLjEpMCcGA1UECxMg
+U3RhcnRDb20gQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkxJjAkBgNVBAMTHVN0YXJ0
+Q29tIENsYXNzIDEgRFYgU2VydmVyIENBMB4XDTE2MDUxNDE0MjY1OFoXDTE3MDUx
+NDE0MjY1OFowHTEbMBkGA1UEAwwSbG9naW4uaWNlcm1hbGkub3JnMIICIjANBgkq
+hkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA80Uu+EkGun4QzEinvlV8Gsr5+cswsra2
+Itr3yf9foBH7yENUSAwGFgQCOUrKQUiZJif1Gei2cmBFJ4UEFnrWf5/xX1yP6Wii
+dNYXsf9ip9jc0myQjbLodUvnOt/nr95Vk1pn65/g9zccvIj4UB9diEhy1jC5MaAx
+gBzGVF6h9vLgnQZssevNPmQ5S3PA1v2LMJMxKI9j+O/Tcd9/1rEhYcg13ftHChVM
+vlNqxQ9A8+7fD9xT6DmM4+NvJjK9rgBR9Yh8WFsz6cOogWGjv7yCFxGfPS357HUA
+v1P3q6GXQPlmAjhcbtZCz0kibtK8bhQy7c0FXsKWdsQ2Zo5BBYQi2yDxrbHTNswo
+sOC0LTko3XLRl1mciKVb001WCZAZLovQR/e13a7rKYZrR1RqvKuCvCElvKx3Js3b
+vyMI/vvcDK9MTKahYYWRHuVOTyKxz59d+mnliz4HqcU8EpfOchRaPv8D1NPYNB9F
+zm9XeomZIxrRWwqiCno/Ny8d4iaGumuXeafdgU0X0Ro2ZpH48+fpN01Pk+Eb6Hqi
+pYXLpWfv/1MYlbdMVkEiYjuwFJytjd7Tba/ZnARLtL08gfACsBD7VPnq4Jo+xP8T
+nFf/Wdhmn/3oWmmvwfP25KtbSccbFiLcyVHeJ9es6WWOWNIpP4MIErwcfofuvvci
+iWyNY8u8/osCAwEAAaOCAtYwggLSMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAU
+BggrBgEFBQcDAgYIKwYBBQUHAwEwCQYDVR0TBAIwADAdBgNVHQ4EFgQUISwvSbXQ
+lGDBR+Q6rO6YzB2nbBMwHwYDVR0jBBgwFoAU15FOAcSwv/jIZ5NEnOcz+q2TDK8w
+bwYIKwYBBQUHAQEEYzBhMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5zdGFydHNz
+bC5jb20wOQYIKwYBBQUHMAKGLWh0dHA6Ly9haWEuc3RhcnRzc2wuY29tL2NlcnRz
+L3NjYS5zZXJ2ZXIxLmNydDA4BgNVHR8EMTAvMC2gK6AphidodHRwOi8vY3JsLnN0
+YXJ0c3NsLmNvbS9zY2Etc2VydmVyMS5jcmwwKwYDVR0RBCQwIoISbG9naW4uaWNl
+cm1hbGkub3JnggxpY2VybWFsaS5vcmcwIwYDVR0SBBwwGoYYaHR0cDovL3d3dy5z
+dGFydHNzbC5jb20vMFEGA1UdIARKMEgwCAYGZ4EMAQIBMDwGCysGAQQBgbU3AQIF
+MC0wKwYIKwYBBQUHAgEWH2h0dHBzOi8vd3d3LnN0YXJ0c3NsLmNvbS9wb2xpY3kw
+ggEEBgorBgEEAdZ5AgQCBIH1BIHyAPAAdQBo9pj4H2SCvjqM7rkoHUz8cVFdZ5PU
+RNEKZ6y7T0/7xAAAAVSvx7WAAAAEAwBGMEQCIAmy0+qHT97DR8Xc+O0ZcMrmUtVd
+q0mZ4LT2HY4d0n60AiBb3PKo+9UIy+JR0LmGXn6ahogwYPQMe59hCmdOtzVp5wB3
+AO5Lvbd1zmC64UJpH6vhnmajD35fsHLYgwDEe4l6qP3LAAABVK/HuGsAAAQDAEgw
+RgIhAI2XfKFk2fh8j4KNREzVcSHdhd+fddw+qF7hev20iLf4AiEA5MtvOEnmv7OV
+G00KYPQ42oyA64wQQCqTGtKfjsZ0CNowDQYJKoZIhvcNAQELBQADggEBAFd8aS2f
+Sv93jhaR3YGlmx5PKIyU15+YrRwTH8Wuvpoz8yxlzwKex+8gdu9XjnOdryDALpPH
+dfsuHfJ9r7wB5egSzR5eisZwK+Qe6aV/Vp9x+3OYVRyE0a68gmi+aghn3pG3ddrt
+pRsvRGv66u9tmkOLOUblMy9yPlpPOGzirmr4IfkK6kMtKskCFIhIS8dsJ1iziOvT
+P7mNkJWfRKptqjwe4fmYsYf0AjEiVg2udl9jI+3vOGAGiD+oBnXNdXXqy115tupC
+2SAUeQ+9xBjq+MMIjcVFMudUiNyzsdjngcqssukaWs3YlusUgNfqdJ1rLBFWh0Gp
+eLBgYfihx4dUWlA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.icermali.org:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">National Institutes of Health</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">ICER - Mali</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nih.gov/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>NIAID ICER VRO Technical Support</md:GivenName>
+	<md:EmailAddress>icer-vro-support@list.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>NIAID ICER VRO Technical Support</md:GivenName>
+	<md:EmailAddress>icer-vro-support@list.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>NIAID ICER VRO Technical Support</md:GivenName>
+	<md:EmailAddress>icer-vro-support@list.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>NIAID ICER VRO Administrative Support</md:GivenName>
+	<md:EmailAddress>icer-vro-admin@list.nih.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

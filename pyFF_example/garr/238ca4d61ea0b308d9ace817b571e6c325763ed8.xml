@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:cru.fr:federation:unice.fr">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2009-08-07T17:06:18Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unice.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Université Nice Sophia Antipolis - Université Côte d'Azur</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAACcUlEQVQ4y3WSXUiTURjHf+fd2bst55wfmyxBGxXmTSliEQV9QEEGQaQEQRhBJdRlBCEEEfQFQRfdeJNEhIF11UUahWVXgUP70CQSXGQ2t7RMt7l373u6mL5uYufinMN5zvmd5/n/HwG4OX17gMXUNpSlAFC5pWAIewKhCVyeYe5f2iNouTiI6Wwkk4ToNCgLqgJgKZibp6G6knQmy+foTzCtHKA6CK4icBgRweHzBuiSmTm6O9rImCY3u55xpH4jTulkZCpGUNdpbNpKZSjAVGKW9ntPodgDKpOVKEw0JE7J2JcoVx/08uTaCd4MRPCGNrG9rgRdd3Ln8XNK/S6O7d0BugQFKExp15jN4va4CQb9TMRTfIkt0Pf2Jbh0mI7xousKB0/doKOtBRJ/oKoCFMh8nSwFtRU+Prwfo++XAcGS3E++MI96XhEKBxn6OA5et/1Gs3cKEBpFuoOMoYFQubOlYDKZpmF9GdLlBFOtARCgsHAIgULZjtkXhcCBQiEAaw3AkssO7f9tYClAiLzMCgACoSCLQK0mKLAQGKZCrAqtAKRGNmMQmZzB6/OAyqvBVJR7JfOLmcKOLAD8TdFUv4XYRJwzrfth6jv8nof4LCfDZezeVctQbAFhWaCtAKTd+5VlvPs0wvHmOo5e7uRueyuTaQvNMEhGv2JZDlKJBMlkMieUDRAIhIBkis011dSFN3BgZ5rR4VFM08BdXILp9XP9YT/dty7g1iX0vF4W0iFoPjuIO9CIkYJvMdA0EBAIlOLTJeOxGSj357L8Ec+5UBMC6YJ0PCKAdRw6148m67E1Vite5tsmlmtXAjM7TG/nvn9ZBuyGK8PBkwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNy0yMFQxMDo0OTo0NyswMjowMJXV8kIAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDctMjBUMTA6NDk6NDcrMDI6MDDkiEr+AAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.unice.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Staff and students</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université Nice Sophia Antipolis - Université Côte d'Azur</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Personnels et étudiants</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgICCQDEc1geh13qYjANBgkqhkiG9w0BAQUFADBPMQswCQYDVQQGEwJG
+UjEpMCcGA1UEChMgVW5pdmVyc2l0ZSBOaWNlIFNvcGhpYSBBbnRpcG9saXMxFTAT
+BgNVBAMTDGlkcC51bmljZS5mcjAeFw0xNTAzMzAxNDA2MzRaFw0yNTAzMzAxNDA2
+MzRaME8xCzAJBgNVBAYTAkZSMSkwJwYDVQQKEyBVbml2ZXJzaXRlIE5pY2UgU29w
+aGlhIEFudGlwb2xpczEVMBMGA1UEAxMMaWRwLnVuaWNlLmZyMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwumrRwZ1MgiLeMdx/swZ6vKgjeaUlAH/SCuc
+V2wiInFt02DOUhJfpXeB2jPkh6UJKgKSOvp6Nf+vkmiHA9YyJMp84c0NR2NVOEDk
+yhMSp0grvoSz/zn9njWbOAS4mM85v1OyB7+ZdkQULzjS9U73JbA2ZZkYqGr0CPoD
+4Dkh8OLjhJaT0gflc9Mb2Hsd4+c9UQZ9IARQVOpGg0xwcThjBoawAZYytvAr1gi9
+QiZw2Oqsi3D2DQ3RqP5EN3pnBxq8J3Lg3xiziZclgWoLKxIz9mpZhJEg6bhdfGc6
+8tE5iW9cVv58baBY0v+j2reSrqjbzsIJhVkav6q210T9ZvWWBQIDAQABMA0GCSqG
+SIb3DQEBBQUAA4IBAQBHE870+VQEJsa1MLTQNOdbd0jbCAuF0Y95ZtHgczjhOKoE
+ED9ZBuKmlhgYffU313dwmMw+1wd5oJxsPVRqoe6KTskhTEzL00ZcJz+fZTmsDHd3
+UYynPT8DUvSg2/8HPxsUo8jqRTHBDjJsrUwdDwAPmNi+ao2JVGnfqaiACM1NMvqs
+XjLrB1uWCc0DIq8UadXJrQCK34zYwpx+V13pch1/GfiNibgXipIdL5pLnjf1HXwQ
+qmTeKX7MGcrmSXwqoRkufJvN96w5RsZwq+c82x8w3DA9o7S9BfCj7RqFUywuaS+G
+ocmAdFFE3FlU7n+j9x4StI4bTezYKVTQPa4Pcw18
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQfx/AsWyTjGxfLF7+a+MU3DANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMjAeFw0xNTAzMjYwMDAwMDBaFw0xODAzMjcyMzU5NTlaMDoxITAfBgNVBAsT
+GERvbWFpbiBDb250cm9sIFZhbGlkYXRlZDEVMBMGA1UEAxMMaWRwLnVuaWNlLmZy
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxIQ1GJUzszvZgeA5nbEO
+f03rKTvkLmCKRZSVFDwsycZkpkJSY4t5RT6E8JqFVMgh6M1RuhATiridAK+KCklK
+4GsLrlRDwcQpzla5E9FPjvxclIIm1p6VtmBnOFT3mJT/OnSI9ODqSbkGlWoiCtO1
+clHBzY6Lukbf9h+mSkxcyWTqsswsAcA8qdChnH0gBUnWst5dmb4TLI+zV2qhlTVd
+ncjICgvoFF73SFQc8eb6LQ5rhsMedldAxjkRjP/7EfRY0x1mD0UVmwKEXZmeYbzl
+LTgoIe9BDdRX1Admq6gIyoErXh6jK8qwZvVZlevGYR2dnj5nv1jJdkbkdVLV+u9e
+CQIDAQABo4IBaDCCAWQwHwYDVR0jBBgwFoAUW9CKHJoyW+C13ZZUG+GGKLD9tr0w
+HQYDVR0OBBYEFB/ELteTIN9PlhnJuKtHbij0AfYxMA4GA1UdDwEB/wQEAwIFoDAM
+BgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAiBgNV
+HSAEGzAZMA0GCysGAQQBsjEBAgIdMAgGBmeBDAECATA6BgNVHR8EMzAxMC+gLaAr
+hilodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vVEVSRU5BU1NMQ0EyLmNybDBsBggr
+BgEFBQcBAQRgMF4wNQYIKwYBBQUHMAKGKWh0dHA6Ly9jcnQudXNlcnRydXN0LmNv
+bS9URVJFTkFTU0xDQTIuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2Vy
+dHJ1c3QuY29tMBcGA1UdEQQQMA6CDGlkcC51bmljZS5mcjANBgkqhkiG9w0BAQsF
+AAOCAQEAZBO8x0QGYb5cHxcNyoI7fdjNGAoZzttbomVT/q9clVtzW7EgEKtaKQNo
+GPCUb5pbOQQhGkOUz/oV75TI0gSHBUzFxPXbNgA4TGeqdwmLxMHJfRtAF5uaPh8w
+pr68ZZphOAZjNmv04z+KGXk4m1t/Ui1YANJbCgAItqOSRTy+bRmN4KtMWlds/7MT
+Y7hQVSNM+vGWd2dx0Ax7qlF9I00YAzKXSw94tvrL8XeXJ1W7nZ6K/DqSuWwpFE9L
+T41tULnrHJS9hPhwtG33O35uW3WpQLwsWJZDCXaQNf31PNsjaPhrV6qBsEz0/vwL
+XAU685+5ngtQMo1C+QYwfpEV9fZZVw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unice.fr/renater/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unice.fr/renater/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.unice.fr/renater/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">unice.fr</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgICCQDEc1geh13qYjANBgkqhkiG9w0BAQUFADBPMQswCQYDVQQGEwJG
+UjEpMCcGA1UEChMgVW5pdmVyc2l0ZSBOaWNlIFNvcGhpYSBBbnRpcG9saXMxFTAT
+BgNVBAMTDGlkcC51bmljZS5mcjAeFw0xNTAzMzAxNDA2MzRaFw0yNTAzMzAxNDA2
+MzRaME8xCzAJBgNVBAYTAkZSMSkwJwYDVQQKEyBVbml2ZXJzaXRlIE5pY2UgU29w
+aGlhIEFudGlwb2xpczEVMBMGA1UEAxMMaWRwLnVuaWNlLmZyMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwumrRwZ1MgiLeMdx/swZ6vKgjeaUlAH/SCuc
+V2wiInFt02DOUhJfpXeB2jPkh6UJKgKSOvp6Nf+vkmiHA9YyJMp84c0NR2NVOEDk
+yhMSp0grvoSz/zn9njWbOAS4mM85v1OyB7+ZdkQULzjS9U73JbA2ZZkYqGr0CPoD
+4Dkh8OLjhJaT0gflc9Mb2Hsd4+c9UQZ9IARQVOpGg0xwcThjBoawAZYytvAr1gi9
+QiZw2Oqsi3D2DQ3RqP5EN3pnBxq8J3Lg3xiziZclgWoLKxIz9mpZhJEg6bhdfGc6
+8tE5iW9cVv58baBY0v+j2reSrqjbzsIJhVkav6q210T9ZvWWBQIDAQABMA0GCSqG
+SIb3DQEBBQUAA4IBAQBHE870+VQEJsa1MLTQNOdbd0jbCAuF0Y95ZtHgczjhOKoE
+ED9ZBuKmlhgYffU313dwmMw+1wd5oJxsPVRqoe6KTskhTEzL00ZcJz+fZTmsDHd3
+UYynPT8DUvSg2/8HPxsUo8jqRTHBDjJsrUwdDwAPmNi+ao2JVGnfqaiACM1NMvqs
+XjLrB1uWCc0DIq8UadXJrQCK34zYwpx+V13pch1/GfiNibgXipIdL5pLnjf1HXwQ
+qmTeKX7MGcrmSXwqoRkufJvN96w5RsZwq+c82x8w3DA9o7S9BfCj7RqFUywuaS+G
+ocmAdFFE3FlU7n+j9x4StI4bTezYKVTQPa4Pcw18
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEkjCCA3qgAwIBAgIQfx/AsWyTjGxfLF7+a+MU3DANBgkqhkiG9w0BAQsFADBk
+MQswCQYDVQQGEwJOTDEWMBQGA1UECBMNTm9vcmQtSG9sbGFuZDESMBAGA1UEBxMJ
+QW1zdGVyZGFtMQ8wDQYDVQQKEwZURVJFTkExGDAWBgNVBAMTD1RFUkVOQSBTU0wg
+Q0EgMjAeFw0xNTAzMjYwMDAwMDBaFw0xODAzMjcyMzU5NTlaMDoxITAfBgNVBAsT
+GERvbWFpbiBDb250cm9sIFZhbGlkYXRlZDEVMBMGA1UEAxMMaWRwLnVuaWNlLmZy
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxIQ1GJUzszvZgeA5nbEO
+f03rKTvkLmCKRZSVFDwsycZkpkJSY4t5RT6E8JqFVMgh6M1RuhATiridAK+KCklK
+4GsLrlRDwcQpzla5E9FPjvxclIIm1p6VtmBnOFT3mJT/OnSI9ODqSbkGlWoiCtO1
+clHBzY6Lukbf9h+mSkxcyWTqsswsAcA8qdChnH0gBUnWst5dmb4TLI+zV2qhlTVd
+ncjICgvoFF73SFQc8eb6LQ5rhsMedldAxjkRjP/7EfRY0x1mD0UVmwKEXZmeYbzl
+LTgoIe9BDdRX1Admq6gIyoErXh6jK8qwZvVZlevGYR2dnj5nv1jJdkbkdVLV+u9e
+CQIDAQABo4IBaDCCAWQwHwYDVR0jBBgwFoAUW9CKHJoyW+C13ZZUG+GGKLD9tr0w
+HQYDVR0OBBYEFB/ELteTIN9PlhnJuKtHbij0AfYxMA4GA1UdDwEB/wQEAwIFoDAM
+BgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAiBgNV
+HSAEGzAZMA0GCysGAQQBsjEBAgIdMAgGBmeBDAECATA6BgNVHR8EMzAxMC+gLaAr
+hilodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vVEVSRU5BU1NMQ0EyLmNybDBsBggr
+BgEFBQcBAQRgMF4wNQYIKwYBBQUHMAKGKWh0dHA6Ly9jcnQudXNlcnRydXN0LmNv
+bS9URVJFTkFTU0xDQTIuY3J0MCUGCCsGAQUFBzABhhlodHRwOi8vb2NzcC51c2Vy
+dHJ1c3QuY29tMBcGA1UdEQQQMA6CDGlkcC51bmljZS5mcjANBgkqhkiG9w0BAQsF
+AAOCAQEAZBO8x0QGYb5cHxcNyoI7fdjNGAoZzttbomVT/q9clVtzW7EgEKtaKQNo
+GPCUb5pbOQQhGkOUz/oV75TI0gSHBUzFxPXbNgA4TGeqdwmLxMHJfRtAF5uaPh8w
+pr68ZZphOAZjNmv04z+KGXk4m1t/Ui1YANJbCgAItqOSRTy+bRmN4KtMWlds/7MT
+Y7hQVSNM+vGWd2dx0Ax7qlF9I00YAzKXSw94tvrL8XeXJ1W7nZ6K/DqSuWwpFE9L
+T41tULnrHJS9hPhwtG33O35uW3WpQLwsWJZDCXaQNf31PNsjaPhrV6qBsEz0/vwL
+XAU685+5ngtQMo1C+QYwfpEV9fZZVw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.unice.fr:8443/renater/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de Nice Sophia</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de Nice Sophia</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.unice.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Jean-Charles GODIEN</md:SurName>
+	<md:EmailAddress>mailto:Jean-Charles.Godien@univ-cotedazur.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>Cédric BONNIN</md:SurName>
+	<md:EmailAddress>mailto:Cedric.Bonnin@univ-cotedazur.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

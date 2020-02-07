@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://demo.dataverse.org/sp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Harvard Dataverse Demo</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Open for all researchers worldwide from all disciplines to deposit data</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://dataverse.harvard.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://best-practices.dataverse.org/harvard-policies/harvard-privacy-policy.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="191" width="500" xml:lang="en">https://dataverse.org/files/dataverseorg/files/dataverse_r_project.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIJAJhqdEqQAd0/MA0GCSqGSIb3DQEBBQUAMCoxKDAmBgNV
+BAMTH2RhdGF2ZXJzZS1kZW1vLmhtZGMuaGFydmFyZC5lZHUwHhcNMTQwOTI5MTg1
+NDM4WhcNMjQwOTI2MTg1NDM4WjAqMSgwJgYDVQQDEx9kYXRhdmVyc2UtZGVtby5o
+bWRjLmhhcnZhcmQuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+rQkxPOPT71zjFCpdyjaw9cnOWgzJn0QWswjgKiA4A67tlmEA/5YOwbv/4/xfV2Bb
+wHJP9z+0ik44VOwfHIotnUh1Ihie5+3+f3c1Zxr40eL0gAwcRcLvxGS+D6D44dN9
+5fmt/BkkgLIBP9WG1RhtOYJzbYAG8iwxmT/3b3HSo6sEEHUPJHpcvInKfacB6NqB
+XnISn8dFGaLiJTzpmS63SLrtPnRAw8Ra7qNHltmxDiSkOWbmPlj9lpP/zmdA3YNy
+Ns5FGuy8qwevp9duKhgSkamY4p/YF14EyM6v5Uu8psykdnC3YYPITMubeyZ9LFpX
+DGTVHUMVgJ8WloECTx4TVQIDAQABo00wSzAqBgNVHREEIzAhgh9kYXRhdmVyc2Ut
+ZGVtby5obWRjLmhhcnZhcmQuZWR1MB0GA1UdDgQWBBTudJa+Kgg2TWXFVK+Qecmh
+LkB3ZTANBgkqhkiG9w0BAQUFAAOCAQEACbGbfZvBEY1kVElaeafZxN8bNGLndQXo
+kbwmzQjfyirRMOjv2EeFgAlhabQGd7w5ILpWaT1v9i4NXOr3K5aJvVmc9JdkakxK
+SgXkrmgI4HP5GAjq6F0Q3XPNOAbCK8ImN0eqatNeYvs9FL4yZjqv3i1FgLxH6bCx
+bVW9tVYi9eAn+Fx0eS1zRDF0EF4QlT2gK72j09gMcI8CTRBZFhPc0W0Ags3d/Yu4
+6aepZOL4z7Hok3d+PvGuGku24o8IqDSeugkZpypqtNQ5GAmG29lfYEXeLCAkA0KH
+Cr9/dP65JFWFEALmGt12ntbULZFPQc3+19NyK9gFFYnhTG9YFRwWHA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://demo.dataverse.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://demo.dataverse.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://demo.dataverse.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://demo.dataverse.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Harvard Dataverse Demo</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Open for all researchers worldwide from all disciplines to deposit data</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="sn" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Harvard College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Harvard University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.harvard.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dataverse Support Team</md:GivenName>
+	<md:EmailAddress>support@dataverse.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Dataverse Support Team</md:GivenName>
+	<md:EmailAddress>support@dataverse.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Dataverse Support Team</md:GivenName>
+	<md:EmailAddress>support@dataverse.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Dataverse Support Team</md:GivenName>
+	<md:EmailAddress>support@dataverse.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

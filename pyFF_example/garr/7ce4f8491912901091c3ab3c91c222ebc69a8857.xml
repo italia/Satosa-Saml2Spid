@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.lcmsplus.com/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://sso.lcmsplus.com/identity/feedback.htm" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lcmsplus.com</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">LCMS Plus Inc.</mdui:DisplayName>
+		<mdui:Description xml:lang="en">LCMS Plus Single Sign-On</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://solutions.lcmsplus.com</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://solutions.lcmsplus.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="126" width="127" xml:lang="en">https://solutions.lcmsplus.com/wp-content/uploads/2017/05/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDhjCCAm4CCQCcFJ3yk84hKDANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDESMBAGA1UECgwJ
+TENNUyBQbHVzMRkwFwYDVQQDDBBzc28ubGNtc3BsdXMuY29tMSMwIQYJKoZIhvcN
+AQkBFhRzeXN0ZW1zQGxjbXNwbHVzLmNvbTAeFw0xODA1MDcyMDQ1NThaFw0xOTA1
+MDcyMDQ1NThaMIGEMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcM
+C0NoYXBlbCBIaWxsMRIwEAYDVQQKDAlMQ01TIFBsdXMxGTAXBgNVBAMMEHNzby5s
+Y21zcGx1cy5jb20xIzAhBgkqhkiG9w0BCQEWFHN5c3RlbXNAbGNtc3BsdXMuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQTYkfvgnl1lmf5wdyVw
+uzCTJ0D1s3zF+sgNi+01AzKiLAJN57JwX1bgWoa7TS7JXJdy7d7OgS+i01G0EVCt
+nXU9NCtHA+KlYB5TwelDxidHtPo2O0QqvEwfIRLKxKM81BrSW14H0Kf0uvNR7hKx
+VTRraqqslg9d1ZmEVZPGc/P7Kpb//IYm53d+Tk/ios4TZyE6PynU/Ga8iald9Q5A
+jl2/rgHYYX4ldiWY/jQaH/w2QgThmOXXlT9+GxSUC618fgBHB5RNKVX+9Xqcc3NP
+wSwyM1PLoQ68JqNxS9HE6lU7RNnwk8ciVfl9im0utql9McXDn3aG4OFMDPO7w/2A
+EQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBb0Qz6s6rFMsa87gGjg5Az7LfgNh+N
+SJQubKK0+t8z3/nbvjWaURd22H4e/2w9ajVwjvEE7m3+zSViTR3s6MVKLG/X+fFy
+gLnIzyohltocj2QlEAvr1aSyzr3Qph18YfvpX9idvGT4Sk1CZcJ74LslhtzqK7dX
+qiHd5q+XCnDgc0cSP9FADa81rYs7BynQgfVTMPQK++KbdBFl9XANdaeulZyf43aJ
+eObf2lDptWNivd5mkR7n9YWjR4wlbO6lEOJ6fPPxkwY7Lz+lAUUJ2rknxSsPV/vd
+40bpqgKyf7XkDuBAJBlPbd7IqQR/KN1a248xW8lzFeyT5lbWUEyIzlZn
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDhjCCAm4CCQD0tJ1m0KU0IzANBgkqhkiG9w0BAQsFADCBhDELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAk5DMRQwEgYDVQQHDAtDaGFwZWwgSGlsbDESMBAGA1UECgwJ
+TENNUyBQbHVzMRkwFwYDVQQDDBBzc28ubGNtc3BsdXMuY29tMSMwIQYJKoZIhvcN
+AQkBFhRzeXN0ZW1zQGxjbXNwbHVzLmNvbTAeFw0xODA1MTQxOTUwMDlaFw0xOTA1
+MTQxOTUwMDlaMIGEMQswCQYDVQQGEwJVUzELMAkGA1UECAwCTkMxFDASBgNVBAcM
+C0NoYXBlbCBIaWxsMRIwEAYDVQQKDAlMQ01TIFBsdXMxGTAXBgNVBAMMEHNzby5s
+Y21zcGx1cy5jb20xIzAhBgkqhkiG9w0BCQEWFHN5c3RlbXNAbGNtc3BsdXMuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz2B2Mt9xQLaiD37A5DMN
+fPwVfWLPaIat1kA/f1vklvUCeYbf4cPSKOvl3A+6y5bxvtd1ci0CDFZ5kGSulR6z
+XuUslpZxrIg1JiHhp1MT9ut0KkmBHKleLL/2iRUAbzhpqZSY5Avpa8PAZtXZ2JGU
+ckTo+pB89r52krJDgZZE2hbyQEEPAq/2mRtM1dv0ydy552ICS5Wlyr88HWvB0/hu
+iVuncYIbzeexQxJm4BZ3M1mPr71LDtJqMRZ/8FUMjJ/7YsBVvQGFUoM27sw+zdL/
+RYibivJU+kgvSG+2rF6EV5OEF3RK4JsufhAaMDkpvl1hgXd91VOvoLtpmSKX1WYf
+uwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAEm56YIRkp1lKWSlggCuNpiv5EpaJm
+mFkq4kiOH6aU2lnFG82m/hTkbAcDxaQzwpeLVw88Sy7WFfeYULL14t324Yv1/8bv
+rVhbuAf2g5SCeFuvbAKKecuzbBogRwdzz/EKCEf+aH3AHkizfdUgSIPHPBV3KVTz
++iMWF5gg6loyW/QOgTztvypnt23m1IYwvRtvc0CLpHJNqzbI2qQJsiHEYK11p/JR
+j5rLP40p0D9suYsufa0yMydsm3gC6FQI/QZcgN7M0vMDT1vYDxw/TrZGMkaZCRJV
+qXodOin+pmFRu52ymsdAGP7g9Z+k2el5yr2k1kuSPibsuSm5yZmFen+P
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.lcmsplus.com/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.lcmsplus.com/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.lcmsplus.com/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.lcmsplus.com/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.lcmsplus.com/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">LCMS Plus Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">LCMS Plus Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lcmsplus.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>LCMS Systems</md:GivenName>
+	<md:EmailAddress>systems@lcmsplus.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>LCMS Systems</md:GivenName>
+	<md:EmailAddress>systems@lcmsplus.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>LCMS Support</md:GivenName>
+	<md:EmailAddress>support@lcmsplus.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LCMS Systems</md:GivenName>
+	<md:EmailAddress>systems@lcmsplus.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

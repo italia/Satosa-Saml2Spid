@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp-demo.idem.garr.it/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2019-01-03T09:23:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/idem-metadata-registration-practice-statement</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+</md:Extensions>
+<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions><init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/Login"/><idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/Login" index="1"/><mdui:UIInfo><mdui:DisplayName xml:lang="en">SP Demo provided by GARR</mdui:DisplayName><mdui:DisplayName xml:lang="it">SP Demo erogato da GARR</mdui:DisplayName><mdui:Description xml:lang="en">SP Demo for attributes release monitoring</mdui:Description><mdui:Description xml:lang="it">SP Demo per visualizzare il rilascio degli attributi</mdui:Description><mdui:InformationURL xml:lang="en">https://www.idem.garr.it/en/technical-information/176-servizio-sp-test</mdui:InformationURL><mdui:InformationURL xml:lang="it">https://www.idem.garr.it/index.php/it/informazioni-tecniche/176-servizio-sp-test</mdui:InformationURL><mdui:PrivacyStatementURL xml:lang="en">https://www.idem.garr.it/index.php/it/informazioni-tecniche/262</mdui:PrivacyStatementURL><mdui:PrivacyStatementURL xml:lang="it">https://www.idem.garr.it/index.php/it/informazioni-tecniche/262</mdui:PrivacyStatementURL></mdui:UIInfo></md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEAzCCAmugAwIBAgIJAI5kkW8nSyrwMA0GCSqGSIb3DQEBCwUAMB8xHTAbBgNV
+BAMTFHNwLWRlbW8uaWRlbS5nYXJyLml0MB4XDTE4MDkyNDEzNTk1OVoXDTI4MDky
+MTEzNTk1OVowHzEdMBsGA1UEAxMUc3AtZGVtby5pZGVtLmdhcnIuaXQwggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQDRC9te9N03Rrk7Wd2GXajOPWLsXnDE
+cdaSdp8GkEdTJKpaBnPVKCIrUnxh87BBAc0bArj5gKzfRblm3pN5ZFoTTXE7R9FX
+zkgLVGozmQDxW2WywAgyqENbacAgXDrFeh/ilPtzV7GmvsR/xBokaU7MosXjdLXz
+N0F9tu/sUp30y03yPKJNxhEOi8d2xpwEbGZsa63wzthnjRpYYs35UfBxJUDD1Na8
+STUiC9Ct/khXQVdzyHVDqMbfizl7FsJlC9GfRu8Bg2t2LaWJ6/PfWcB/FG+ItOPf
+ORtwF/N/fhqTKYzB2vV6JUwkH1x1VR08UicI8s95/gr1NVguTi/N25iFZHXN97SM
+dpjaEYmZTqoc3Mert73WEgVV3gwnDBdI/7wSLwVIL34v4Oobk7auS+sRmlQVlyd3
+RXYJz99+yVTeYdvOnLXXt0/eiLba3YOdfGXz/r+acaeYf8OV5iSWzE7WZLnhKLTr
+nf0ZxdHl5Ctu0L/dTyBks5p0WUwY74pM5rUCAwEAAaNCMEAwHwYDVR0RBBgwFoIU
+c3AtZGVtby5pZGVtLmdhcnIuaXQwHQYDVR0OBBYEFJryEZT6zY0MyHMBItKwFKDh
+rcJnMA0GCSqGSIb3DQEBCwUAA4IBgQCSRogeOwemJf2h+Z+nQbZs5a/uR4/DNaHM
+NP5sTilAko8T/Su/tZQiRefvVRvyZZzL+AkqMfDJM3L/Veb+vxlp1V0Nk23E/0UW
+byat5cwtE7sLO0mlc3N8PKR6WYobJ1YPioAT5Zc169t2sVsWCYW31QvOAKSdeNvy
+EoKUFaNuPA77cVS8MKtSDUO6AYVlzLuEKbMr91t15S9G+QkGfE/M8jfRdOxGMXFn
+GYplAjM9vfePmsVNPvDA8cyLj0+C290TT5bDf/4TuaqVnLoCXlvZgKk4CnaS99+q
+Ydn+V2sKzjbxLkEKMJ1xnQ8jPDttXgWTtieMMT+pYpt5o0hXz8rPMTfRY9xd/c1Y
+d3dCjdAQSfj4hgCtfnqLYAIS7/I0mNbz0Wui5HeldDkyt7LpHz+zUBntiX8jaitl
+Io1sZ7R+u/6uIbCPyaWuoY6GjM1fkTWo9MWUD8glS1BJ5YogpvNIJoNtoy80MZw8
+XdRmrDzE3Nqo6B1hyQTn/VEnILLhYps=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIEAzCCAmugAwIBAgIJALBrQTMpdIGlMA0GCSqGSIb3DQEBCwUAMB8xHTAbBgNV
+BAMTFHNwLWRlbW8uaWRlbS5nYXJyLml0MB4XDTE4MDkyNDE0MDAxN1oXDTI4MDky
+MTE0MDAxN1owHzEdMBsGA1UEAxMUc3AtZGVtby5pZGVtLmdhcnIuaXQwggGiMA0G
+CSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQC7ifevTbWL2Kz6GIUnjCBoRcU35QZS
+Wa6i32jLGjCozyXZJecGc6SFzEsUAE2fleSR6kVTahMIkfC2cvAJvUAmK5d6+cie
+PcNWnfMjOZ4RKi8UhP6gM8eps453cC/f3xxKUxd//KiRNuB0QV/rrjVOqPnlQKtv
+AkmrhriXKAtQekNHaivFIOCMm5rG/CK9A08vUPcgbNU21KqBPDHBlVkdNDulIKPq
+3eO6oxiWO1iFhK2tZv+pbgQGpuYnTuZQOMjCzQQlJo/aZOPsqd41BPh/olHhq+Bd
+0N46Vyfknp62y4yasunZSbwlGYMx0cd0ek5csyqNECc0Wc4pJfscGrsHDiebapma
+JcAbK0nyG11aVjil5Vi1DtStj2ZZtbZ7csMPwmqPwzFaA80vdPB/jrAs6AyiSPII
+hI8GiVk8QbY1Xc9hnAykKbN3LsC+LioHhH7nsss/D+PmN/vyZnAcKbOTOLWu1Q9h
+rwuKi/rr91OaQHY7brI3D+vaQeRC4YmhrakCAwEAAaNCMEAwHwYDVR0RBBgwFoIU
+c3AtZGVtby5pZGVtLmdhcnIuaXQwHQYDVR0OBBYEFME3PMKItnwHKLnGknqnWbmY
+kSmYMA0GCSqGSIb3DQEBCwUAA4IBgQByyJHzRCRwOO80A9U9ZViPnxaSqiAj6xEZ
+5g1BPDRU2AwGz14ARVwNzUgugRRntlwZuML4RX/u2azNJIyQEzaq3TXLUB+QWLfU
+T7O/N34cnjKnaIC1TLXDnIRW5rwmwyXjUX4k03nDuyqK7F7zzY0CkGQ0wKJlYN5k
+2uJwO/1AmteZCvw/mHeal7o5cNSvWv9YzqSFDi/ytJ7d4Y/W2XEpxMqpWoLKj748
+PMAO0/fRcY7JVmL72wVSugsJ+vihXGv5t6FvPMA5vFTdtk+BzMxBG3C97THHVtY/
+YIfoml2FSS02r/GbImJuFy73UOHzfN98BTl7sKQXOoXUhXFQDQpguoHTFtgqn4Ne
++0VOriYjHXHBVomhgk98hZe/tNJ/n2+JlIeVO01C/Eb4ClzuKgxye/LMf3PNeIBo
+PERx6NtCY5yuCLrKqlxK3UOI24CERp73xvEQpBu6Xj8JpEEzYxFgPHNVE1sNEQ1a
+czHW0vHkVuOa4r7E+2TP0v9E4bOUiu4=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/Artifact/SOAP" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SLO/SOAP"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SLO/Redirect"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SLO/POST"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SLO/Artifact"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SAML2/POST" index="1"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SAML2/Artifact" index="3"/>
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp-demo.idem.garr.it/Shibboleth.sso/SAML2/ECP" index="4"/>
+<md:AttributeConsumingService index="0">
+	<md:ServiceName xml:lang="en">SP Demo provided by GARR</md:ServiceName>
+	<md:ServiceName xml:lang="it">SP Demo erogato da GARR</md:ServiceName>
+	<md:ServiceDescription xml:lang="en">SP Demo for attributes release monitoring</md:ServiceDescription>
+	<md:ServiceDescription xml:lang="it">SP Demo per visualizzare il rilascio degli attributi</md:ServiceDescription>
+	<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="eduPersonEntitlement" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.7" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="schacHomeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+</md:AttributeConsumingService>
+</md:SPSSODescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Consortium GARR</md:OrganizationName>
+<md:OrganizationName xml:lang="en">Consortium GARR</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">SP Demo erogato da GARR</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">SP Demo provided by GARR</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.garr.it</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.garr.it/en</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:EmailAddress>mailto:idem-help@garr.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="other">
+<md:GivenName>GARR-CERT</md:GivenName>
+<md:EmailAddress>mailto:cert@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

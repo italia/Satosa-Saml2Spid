@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cmccd.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cmccd.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Copper Mountain Community College District</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Access to online services made available by Copper Mountain Community College District</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.boarddocs.com/ca/cmccd/Board.nsf/goto?open&amp;id=AUQV2B792DB9</mdui:PrivacyStatementURL>
+		<mdui:Logo height="81" width="200" xml:lang="en">https://idp.cmccd.edu/idp/images/cmc-idp.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAKI9EfYj8jPt8HPgquZTPEO/HRR9MA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5jbWNjZC5lZHUwHhcNMTMwMzE1MTcxNzE2WhcN
+MzMwMzE1MTcxNzE2WjAYMRYwFAYDVQQDEw1pZHAuY21jY2QuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkHCOWadFkax9+/1rr8WBDebSrX/SmJTo
+VRqmP+WQKe56dT56PqLWqoqBVrdGhYsJHOdUUCmzrwFKyu58JPMuLH2681J5qm7R
+WYUb4MvBhvvBGrU359b8t/Y3Ckf8IQRQKVMmi0rr774Ht3RGFXJB58EAcx36QxKS
+6sxvbOTPAjhgBK5wLkdf5g2cmKX56rZB2C4WaFgV7sdaR2WPi/AI80IubcgIJBT7
+Anx7YE0jQxij/oirqodjVL/v88D6+jO26OTtF+Ch53dhVhBm4DbjMMt24tl0jLpo
+JUv3qwufrRc+Xkl9H7qcQEUgLB8pWpg3/61f0ovIT+sp/1gq3MWFsQIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAuY21jY2QuZWR1hiRodHRwczovL2lkcC5jbWNjZC5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFKwNfEayOLybb1G/wrfOMLHztVUg
+MA0GCSqGSIb3DQEBBQUAA4IBAQBWu511tCtW3uUaxspJPYy//JrubkJsLr1dBThQ
+LudpaGKJ0GKpEZWz1rak56iJKIGlNgNdEKTM1dq1B9jxFNSrmrq0auW8GkTkX3EP
+rTK2Lw7mTNej9iWazYOeRMUkIpZ6DWphYt7Mrn7/wA2YFUKyzKqtrm8L3RYPg25I
+yF/EGIitLeFXuY7P2M49Us0mdcbIZSzfTebqxqTgG207UaR2arAVQZuDSNaLvVyo
+Jrfe6UJDjGHingawgA01CW2UsPZ7h3qejWgJXYJt5eLtK9QOEq4t1t3zZxLxE1iW
+i3j/3rFKbIJybkgGLc7rklZ3y5Y1gmyT37kvrULuELsN+GGM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cmccd.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cmccd.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cmccd.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cmccd.edu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Copper Mountain Community College District</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Copper Mountain Community College District</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cmccd.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jeremy S. Jones</md:GivenName>
+	<md:EmailAddress>jjones@cmccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk</md:GivenName>
+	<md:EmailAddress>help@cmccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Admin Contact</md:GivenName>
+	<md:EmailAddress>IdPsupport@cmccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Tech Contact</md:GivenName>
+	<md:EmailAddress>IdPsupport@cmccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Contact</md:GivenName>
+	<md:EmailAddress>IdPsupport@cmccd.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

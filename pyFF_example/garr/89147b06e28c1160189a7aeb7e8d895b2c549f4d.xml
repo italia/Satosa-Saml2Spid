@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-test.londonmet.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">London Metropolitan University - Test</mdui:DisplayName>
+		<mdui:Description xml:lang="en">London Metropolitan University - Test</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">londonmet.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTDCCAjSgAwIBAgIVAPy27MCB6aTiLx0QJJIVl19/Nlg5MA0GCSqGSIb3DQEB
+BQUAMCMxITAfBgNVBAMTGGlkcC10ZXN0LmxvbmRvbm1ldC5hYy51azAeFw0xNDA2
+MjQwNzIwNDdaFw0zNDA2MjQwNzIwNDdaMCMxITAfBgNVBAMTGGlkcC10ZXN0Lmxv
+bmRvbm1ldC5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAID+
+dg8AkTAgBe05Q3qR5tGRDPl53Ziss6MIUTthVI/tUDI9zwh6OxcoulGNKjbYQah8
+NqbbRbMsBiaL8tYeJxI84nZlAlQQtWUhlO4fCwy9U2PpqGUVZqJtJ2tGrHqbUIJG
+fywNBtA6OOOMhiusyJOkY9R85mCSUlsuZ/XDSZ+fFAEYlVn7gE/ypKzR9MZatElO
+xYUxKwfQUzONUlT4me1Cq/RyjkB6xDjpM59ByuS91t/xYoAgd0Vwha8YcgBpuDaH
+VsIxlEEVY5Sx1Tr3Z+2KWd+N9ApWyQrGZiLOp0wcDtAZduWXi3z20w9FB3b2Hxxz
+S3Y88pjGSh+s3xyUve8CAwEAAaN3MHUwVAYDVR0RBE0wS4IYaWRwLXRlc3QubG9u
+ZG9ubWV0LmFjLnVrhi9odHRwczovL2lkcC10ZXN0LmxvbmRvbm1ldC5hYy51ay9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUhxXd7trX1bTg9l2tEg61AIXkPXwwDQYJ
+KoZIhvcNAQEFBQADggEBADVh39wUjao0ZwNiMy3/P/V4ls1/pyT8wZgBwEr+XDqM
+vg2AD5eP+Ys/W9FY22/Zetu2AEWqxOq07sAQ6EKTbqHcSjF849tO7KrwvJRzldKh
+7uVuFnLB5KltBJHh6c9osJhuNyR3WhLmMaWlrWo+WSNqWQCmTroE7WJnopZ0J3TR
+FLMQIOXLLWqe+oOFFl2bJ5vNaIljMfM/0mkFt4+NRRdmpCjLv4vQq8PsCr37Bq2o
+whQdva1gQF2TXgJSIQN4n8gBVQ25HrITKlbnbQl2JKiFn/4RdNGi3CkWsFdpaYnP
+MdvSvmbXG0Pvff01bGQ5w+2NV847gBm2lLigGenD5aI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp-test.londonmet.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-test.londonmet.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp-test.londonmet.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-test.londonmet.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-test.londonmet.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-test.londonmet.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">londonmet.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDTDCCAjSgAwIBAgIVAPy27MCB6aTiLx0QJJIVl19/Nlg5MA0GCSqGSIb3DQEB
+BQUAMCMxITAfBgNVBAMTGGlkcC10ZXN0LmxvbmRvbm1ldC5hYy51azAeFw0xNDA2
+MjQwNzIwNDdaFw0zNDA2MjQwNzIwNDdaMCMxITAfBgNVBAMTGGlkcC10ZXN0Lmxv
+bmRvbm1ldC5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAID+
+dg8AkTAgBe05Q3qR5tGRDPl53Ziss6MIUTthVI/tUDI9zwh6OxcoulGNKjbYQah8
+NqbbRbMsBiaL8tYeJxI84nZlAlQQtWUhlO4fCwy9U2PpqGUVZqJtJ2tGrHqbUIJG
+fywNBtA6OOOMhiusyJOkY9R85mCSUlsuZ/XDSZ+fFAEYlVn7gE/ypKzR9MZatElO
+xYUxKwfQUzONUlT4me1Cq/RyjkB6xDjpM59ByuS91t/xYoAgd0Vwha8YcgBpuDaH
+VsIxlEEVY5Sx1Tr3Z+2KWd+N9ApWyQrGZiLOp0wcDtAZduWXi3z20w9FB3b2Hxxz
+S3Y88pjGSh+s3xyUve8CAwEAAaN3MHUwVAYDVR0RBE0wS4IYaWRwLXRlc3QubG9u
+ZG9ubWV0LmFjLnVrhi9odHRwczovL2lkcC10ZXN0LmxvbmRvbm1ldC5hYy51ay9p
+ZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUhxXd7trX1bTg9l2tEg61AIXkPXwwDQYJ
+KoZIhvcNAQEFBQADggEBADVh39wUjao0ZwNiMy3/P/V4ls1/pyT8wZgBwEr+XDqM
+vg2AD5eP+Ys/W9FY22/Zetu2AEWqxOq07sAQ6EKTbqHcSjF849tO7KrwvJRzldKh
+7uVuFnLB5KltBJHh6c9osJhuNyR3WhLmMaWlrWo+WSNqWQCmTroE7WJnopZ0J3TR
+FLMQIOXLLWqe+oOFFl2bJ5vNaIljMfM/0mkFt4+NRRdmpCjLv4vQq8PsCr37Bq2o
+whQdva1gQF2TXgJSIQN4n8gBVQ25HrITKlbnbQl2JKiFn/4RdNGi3CkWsFdpaYnP
+MdvSvmbXG0Pvff01bGQ5w+2NV847gBm2lLigGenD5aI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp-test.londonmet.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-test.londonmet.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">London Metropolitan University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">London Metropolitan University - Test</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.londonmet.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Rui</md:GivenName>
+	<md:SurName>Zong</md:SurName>
+	<md:EmailAddress>mailto:r.zong@londonmet.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Rui</md:GivenName>
+	<md:SurName>Zong</md:SurName>
+	<md:EmailAddress>mailto:r.zong@londonmet.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

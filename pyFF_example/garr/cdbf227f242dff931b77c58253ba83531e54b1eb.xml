@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.blackburn.ac.uk/entity">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-07-03T16:57:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Blackburn College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Blackburn College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">blackburn.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDXDCCAkQCCQCDh5l0tXKOTzANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQGEwJH
+QjETMBEGA1UECBMKTGFuY2FzaGlyZTESMBAGA1UEBxMJQmxhY2tidXJuMRowGAYD
+VQQKExFCbGFja2J1cm4gQ29sbGVnZTEcMBoGA1UEAxMTaWRwLmJsYWNrYnVybi5h
+Yy51azAeFw0xNDA0MDkwNzU2MzNaFw0zNDA0MDQwNzU2MzNaMHAxCzAJBgNVBAYT
+AkdCMRMwEQYDVQQIEwpMYW5jYXNoaXJlMRIwEAYDVQQHEwlCbGFja2J1cm4xGjAY
+BgNVBAoTEUJsYWNrYnVybiBDb2xsZWdlMRwwGgYDVQQDExNpZHAuYmxhY2tidXJu
+LmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwBW5mNKzK19M
+0cPz3xt5l5rckUonhNxfbzrEYqrRomyBRMPwv9rDcepIvl/ATrRqkhqppibRnAk9
+s7RsDCoLboLTHLi/1bb3I8+Pm1Hy+ay0+BgSvMnBHeLqCAwLiE5V+oexN4ha3JJH
+PVpwN7+HFdGtHO2ZO9K2VrpvwuaUZfhOEAnfuNFnTHA7doKwQWWyvlTfqrY2XNuE
+ZkUD6RdvxeDB555Nzl7BvMWL+nr41WuWW5r7jZyl5EEOgr7AiwbyRrpaKdZ4ditW
+ozyRSSo/gQDbXF0fhlomrPQzegnOwRmmD96lKAcd1xk61PE3AkrC8oA0pj+PWe90
+vUxeeftg2QIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQBjnFevePhXMt3YQOIs3l2p
+35bLcLUc1yLy+2+7ynCH2Vsy8UpB1puQQE3wug7/zYhxp6RV2OKpTXPugW9Mx8TB
+8eM/ZCoqVbc4H6VH29G8XhwI+XYBnsnT6wS9KU3v5fEUIErP2dLnSBDpqBKyuAwP
+yzpDwmqPTzifuv5QB2MaFMM5t/qBUFAXbSuueRgA1gICtdb7kVUv0n/7BE6IsncC
+oaR0/Gdlwm+88m394nirzjEkGX3YHIPMh5Sd6DOyiyG+apm59uv5lzl4WNZbCBhl
+iJ5xfqTVtk2Ic+IW+u3PQ8sqH9v+UnIxr1o51pAQL4ambSFHaE7mr4tMUHv5mlFC
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.blackburn.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.blackburn.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.blackburn.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.blackburn.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.blackburn.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.blackburn.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">blackburn.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDXDCCAkQCCQCDh5l0tXKOTzANBgkqhkiG9w0BAQUFADBwMQswCQYDVQQGEwJH
+QjETMBEGA1UECBMKTGFuY2FzaGlyZTESMBAGA1UEBxMJQmxhY2tidXJuMRowGAYD
+VQQKExFCbGFja2J1cm4gQ29sbGVnZTEcMBoGA1UEAxMTaWRwLmJsYWNrYnVybi5h
+Yy51azAeFw0xNDA0MDkwNzU2MzNaFw0zNDA0MDQwNzU2MzNaMHAxCzAJBgNVBAYT
+AkdCMRMwEQYDVQQIEwpMYW5jYXNoaXJlMRIwEAYDVQQHEwlCbGFja2J1cm4xGjAY
+BgNVBAoTEUJsYWNrYnVybiBDb2xsZWdlMRwwGgYDVQQDExNpZHAuYmxhY2tidXJu
+LmFjLnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwBW5mNKzK19M
+0cPz3xt5l5rckUonhNxfbzrEYqrRomyBRMPwv9rDcepIvl/ATrRqkhqppibRnAk9
+s7RsDCoLboLTHLi/1bb3I8+Pm1Hy+ay0+BgSvMnBHeLqCAwLiE5V+oexN4ha3JJH
+PVpwN7+HFdGtHO2ZO9K2VrpvwuaUZfhOEAnfuNFnTHA7doKwQWWyvlTfqrY2XNuE
+ZkUD6RdvxeDB555Nzl7BvMWL+nr41WuWW5r7jZyl5EEOgr7AiwbyRrpaKdZ4ditW
+ozyRSSo/gQDbXF0fhlomrPQzegnOwRmmD96lKAcd1xk61PE3AkrC8oA0pj+PWe90
+vUxeeftg2QIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQBjnFevePhXMt3YQOIs3l2p
+35bLcLUc1yLy+2+7ynCH2Vsy8UpB1puQQE3wug7/zYhxp6RV2OKpTXPugW9Mx8TB
+8eM/ZCoqVbc4H6VH29G8XhwI+XYBnsnT6wS9KU3v5fEUIErP2dLnSBDpqBKyuAwP
+yzpDwmqPTzifuv5QB2MaFMM5t/qBUFAXbSuueRgA1gICtdb7kVUv0n/7BE6IsncC
+oaR0/Gdlwm+88m394nirzjEkGX3YHIPMh5Sd6DOyiyG+apm59uv5lzl4WNZbCBhl
+iJ5xfqTVtk2Ic+IW+u3PQ8sqH9v+UnIxr1o51pAQL4ambSFHaE7mr4tMUHv5mlFC
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.blackburn.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.blackburn.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Blackburn College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Blackburn College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.blackburn.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Hussein</md:GivenName>
+	<md:SurName>Lorgat</md:SurName>
+	<md:EmailAddress>mailto:h.lorgat@blackburn.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Hussein</md:GivenName>
+	<md:SurName>Lorgat</md:SurName>
+	<md:EmailAddress>mailto:h.lorgat@blackburn.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://iam.auckland.ac.nz/idp">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://tuakiri.ac.nz/" registrationInstant="2012-02-13T22:59:53Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://tuakiri.ac.nz/documents/tuakiri-mrps-1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">The University of Auckland</mdui:DisplayName>
+		<mdui:Description xml:lang="en">The University of Auckland Identity provider backed by the EPR system</mdui:Description>
+		<mdui:Logo height="132" width="320">https://iam.auckland.ac.nz/logo/the-university-of-auckland-logo-tiny.png</mdui:Logo>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">auckland.ac.nz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEBDCCAuwCCQD6zmtI9Tju0TANBgkqhkiG9w0BAQUFADCBwzELMAkGA1UEBhMC
+TloxETAPBgNVBAgTCEF1Y2tsYW5kMREwDwYDVQQHEwhBdWNrbGFuZDEjMCEGA1UE
+ChMaVGhlIFVuaXZlcnNpdHkgb2YgQXVja2xhbmQxDDAKBgNVBAsTA0lUUzEbMBkG
+A1UEAxMSaWFtLmF1Y2tsYW5kLmFjLm56MT4wPAYJKoZIhvcNAQkBFi9pdHMtYXBw
+bGljYXRpb24tZW5naW5lZXJpbmdAbGlzdC5hdWNrbGFuZC5hYy5uejAeFw0xMjAx
+MTQwOTMzNTZaFw0zMjAxMTQwOTMzNTZaMIHDMQswCQYDVQQGEwJOWjERMA8GA1UE
+CBMIQXVja2xhbmQxETAPBgNVBAcTCEF1Y2tsYW5kMSMwIQYDVQQKExpUaGUgVW5p
+dmVyc2l0eSBvZiBBdWNrbGFuZDEMMAoGA1UECxMDSVRTMRswGQYDVQQDExJpYW0u
+YXVja2xhbmQuYWMubnoxPjA8BgkqhkiG9w0BCQEWL2l0cy1hcHBsaWNhdGlvbi1l
+bmdpbmVlcmluZ0BsaXN0LmF1Y2tsYW5kLmFjLm56MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAxwNzZAjsfYhUna1EQkhKTYngoTd3OSZAAP5inqMJgkFm
+oktqZAjNrhyiytzY+alYArNGEIZf9x5gzMRC3dvsjfFXWJEoMVXHXfzh+uFJWp1w
+utpfRKCEeBGZhIiCkSH8nDiIaREWniWzIRr/SiOCOynD7NL6+kkye14CPHWsRrn1
+vOfNs4jXDMeaaYsnxhICj9mbrX7hiYuSccTS1Gd1lla2uQdvq2JAIaLMxELBsld4
+Nahi3D3VdPTPrgsKUTiYVYSdN8UC8GG7Bo2fkvdPopFrXHtEUctvx4bbIRJ+Lj5S
+9xuHwZwkB3FdInxeRWcmaiAr2M0leTeE3EmfP5t9BQIDAQABMA0GCSqGSIb3DQEB
+BQUAA4IBAQCU6uunG/JAXYVHk7YpEW/NhnWIFKBbGB/DTNV5LAJpV8i7ebGMAPdy
+VayCzzsLWsSRFsBS2Iftx/6rHjhbAxIG7geaSkkmrexR95VaHVXi/hD7mRPtrvBH
+hp+GwzG/OeDQDpKwNt9HPtgFhHu3dqhUNZWCmh28omWIfN+vZ+9Nln9nDXXtNMPz
+Q/KZkwjyA7NTcg7byuk8NU1OsRAkOBnn1s2mI7Brvy9aM4gvtPC3mxwQFF7KP0EC
+oANCCMxJAe/WyMBVIqnGdpXX43a1/QFfLWB4BdN+8+yvAqUQwvayBCpt3c086epH
+2rWtTBiZNFziZpttT+xVupCYQu2EvT6d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFOTCCBCGgAwIBAgIJALWAESNtBD3HMA0GCSqGSIb3DQEBCwUAMIHDMQswCQYD
+VQQGEwJOWjERMA8GA1UECBMIQXVja2xhbmQxETAPBgNVBAcTCEF1Y2tsYW5kMSMw
+IQYDVQQKExpUaGUgVW5pdmVyc2l0eSBvZiBBdWNrbGFuZDEMMAoGA1UECxMDSVRT
+MRswGQYDVQQDExJpYW0uYXVja2xhbmQuYWMubnoxPjA8BgkqhkiG9w0BCQEWL2l0
+cy1hcHBsaWNhdGlvbi1lbmdpbmVlcmluZ0BsaXN0LmF1Y2tsYW5kLmFjLm56MB4X
+DTE5MTIxODIxNDQyMloXDTM5MTIxMzIxNDQyMlowgcMxCzAJBgNVBAYTAk5aMREw
+DwYDVQQIEwhBdWNrbGFuZDERMA8GA1UEBxMIQXVja2xhbmQxIzAhBgNVBAoTGlRo
+ZSBVbml2ZXJzaXR5IG9mIEF1Y2tsYW5kMQwwCgYDVQQLEwNJVFMxGzAZBgNVBAMT
+EmlhbS5hdWNrbGFuZC5hYy5uejE+MDwGCSqGSIb3DQEJARYvaXRzLWFwcGxpY2F0
+aW9uLWVuZ2luZWVyaW5nQGxpc3QuYXVja2xhbmQuYWMubnowggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDHA3NkCOx9iFSdrURCSEpNieChN3c5JkAA/mKe
+owmCQWaiS2pkCM2uHKLK3Nj5qVgCs0YQhl/3HmDMxELd2+yN8VdYkSgxVcdd/OH6
+4UlanXC62l9EoIR4EZmEiIKRIfycOIhpERaeJbMhGv9KI4I7KcPs0vr6STJ7XgI8
+daxGufW8582ziNcMx5ppiyfGEgKP2ZutfuGJi5JxxNLUZ3WWVra5B2+rYkAhoszE
+QsGyV3g1qGLcPdV09M+uCwpROJhVhJ03xQLwYbsGjZ+S90+ikWtce0RRy2/Hhtsh
+En4uPlL3G4fBnCQHcV0ifF5FZyZqICvYzSV5N4TcSZ8/m30FAgMBAAGjggEsMIIB
+KDAdBgNVHQ4EFgQUHp++c28at/Lh1OB2Kd1GN2ayeCwwgfgGA1UdIwSB8DCB7YAU
+Hp++c28at/Lh1OB2Kd1GN2ayeCyhgcmkgcYwgcMxCzAJBgNVBAYTAk5aMREwDwYD
+VQQIEwhBdWNrbGFuZDERMA8GA1UEBxMIQXVja2xhbmQxIzAhBgNVBAoTGlRoZSBV
+bml2ZXJzaXR5IG9mIEF1Y2tsYW5kMQwwCgYDVQQLEwNJVFMxGzAZBgNVBAMTEmlh
+bS5hdWNrbGFuZC5hYy5uejE+MDwGCSqGSIb3DQEJARYvaXRzLWFwcGxpY2F0aW9u
+LWVuZ2luZWVyaW5nQGxpc3QuYXVja2xhbmQuYWMubnqCCQC1gBEjbQQ9xzAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCwniNbP8nH/nAbyaJAVJhMCqVk
+ktora+KTnHa8Et/8smFGkENaiR70XXj3gLO+pXuI9CRzvvH+GYAta+W8COvjFsl5
+cutXnuiIE+/mjrOwJY9iQVIMhQIEwa/MO4x4SNAn5BpeL7daMtHY0VeM4jAIVvSc
+6N7VkHorW4aOymwZULrnMYdyY+TAYLVVr3czhxljK0qJewBXS9sP/elzJVcsajcM
+hjC99gqPx/0uOw7PvZWzFp9eMrZc7hQYMpBIm5ij2KD0/AWx88tKttENqP5LakO9
+rFlgb2MHZj/t5oG/Ss3wDFoNH4h1eLyV8p3RYPe7kLlYuBKQkLhuvUocNp+j
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://iam.auckland.ac.nz/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://iam.auckland.ac.nz/profile/SAML2/Redirect/SSO"/>
+	<saml:Attribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="homeOrganizationType" Name="urn:oid:1.3.6.1.4.1.25178.1.2.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="homeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="auEduPersonSharedToken" Name="urn:oid:1.3.6.1.4.1.27856.1.2.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="organizationName" Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">auckland.ac.nz</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEBDCCAuwCCQD6zmtI9Tju0TANBgkqhkiG9w0BAQUFADCBwzELMAkGA1UEBhMC
+TloxETAPBgNVBAgTCEF1Y2tsYW5kMREwDwYDVQQHEwhBdWNrbGFuZDEjMCEGA1UE
+ChMaVGhlIFVuaXZlcnNpdHkgb2YgQXVja2xhbmQxDDAKBgNVBAsTA0lUUzEbMBkG
+A1UEAxMSaWFtLmF1Y2tsYW5kLmFjLm56MT4wPAYJKoZIhvcNAQkBFi9pdHMtYXBw
+bGljYXRpb24tZW5naW5lZXJpbmdAbGlzdC5hdWNrbGFuZC5hYy5uejAeFw0xMjAx
+MTQwOTMzNTZaFw0zMjAxMTQwOTMzNTZaMIHDMQswCQYDVQQGEwJOWjERMA8GA1UE
+CBMIQXVja2xhbmQxETAPBgNVBAcTCEF1Y2tsYW5kMSMwIQYDVQQKExpUaGUgVW5p
+dmVyc2l0eSBvZiBBdWNrbGFuZDEMMAoGA1UECxMDSVRTMRswGQYDVQQDExJpYW0u
+YXVja2xhbmQuYWMubnoxPjA8BgkqhkiG9w0BCQEWL2l0cy1hcHBsaWNhdGlvbi1l
+bmdpbmVlcmluZ0BsaXN0LmF1Y2tsYW5kLmFjLm56MIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAxwNzZAjsfYhUna1EQkhKTYngoTd3OSZAAP5inqMJgkFm
+oktqZAjNrhyiytzY+alYArNGEIZf9x5gzMRC3dvsjfFXWJEoMVXHXfzh+uFJWp1w
+utpfRKCEeBGZhIiCkSH8nDiIaREWniWzIRr/SiOCOynD7NL6+kkye14CPHWsRrn1
+vOfNs4jXDMeaaYsnxhICj9mbrX7hiYuSccTS1Gd1lla2uQdvq2JAIaLMxELBsld4
+Nahi3D3VdPTPrgsKUTiYVYSdN8UC8GG7Bo2fkvdPopFrXHtEUctvx4bbIRJ+Lj5S
+9xuHwZwkB3FdInxeRWcmaiAr2M0leTeE3EmfP5t9BQIDAQABMA0GCSqGSIb3DQEB
+BQUAA4IBAQCU6uunG/JAXYVHk7YpEW/NhnWIFKBbGB/DTNV5LAJpV8i7ebGMAPdy
+VayCzzsLWsSRFsBS2Iftx/6rHjhbAxIG7geaSkkmrexR95VaHVXi/hD7mRPtrvBH
+hp+GwzG/OeDQDpKwNt9HPtgFhHu3dqhUNZWCmh28omWIfN+vZ+9Nln9nDXXtNMPz
+Q/KZkwjyA7NTcg7byuk8NU1OsRAkOBnn1s2mI7Brvy9aM4gvtPC3mxwQFF7KP0EC
+oANCCMxJAe/WyMBVIqnGdpXX43a1/QFfLWB4BdN+8+yvAqUQwvayBCpt3c086epH
+2rWtTBiZNFziZpttT+xVupCYQu2EvT6d
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFOTCCBCGgAwIBAgIJALWAESNtBD3HMA0GCSqGSIb3DQEBCwUAMIHDMQswCQYD
+VQQGEwJOWjERMA8GA1UECBMIQXVja2xhbmQxETAPBgNVBAcTCEF1Y2tsYW5kMSMw
+IQYDVQQKExpUaGUgVW5pdmVyc2l0eSBvZiBBdWNrbGFuZDEMMAoGA1UECxMDSVRT
+MRswGQYDVQQDExJpYW0uYXVja2xhbmQuYWMubnoxPjA8BgkqhkiG9w0BCQEWL2l0
+cy1hcHBsaWNhdGlvbi1lbmdpbmVlcmluZ0BsaXN0LmF1Y2tsYW5kLmFjLm56MB4X
+DTE5MTIxODIxNDQyMloXDTM5MTIxMzIxNDQyMlowgcMxCzAJBgNVBAYTAk5aMREw
+DwYDVQQIEwhBdWNrbGFuZDERMA8GA1UEBxMIQXVja2xhbmQxIzAhBgNVBAoTGlRo
+ZSBVbml2ZXJzaXR5IG9mIEF1Y2tsYW5kMQwwCgYDVQQLEwNJVFMxGzAZBgNVBAMT
+EmlhbS5hdWNrbGFuZC5hYy5uejE+MDwGCSqGSIb3DQEJARYvaXRzLWFwcGxpY2F0
+aW9uLWVuZ2luZWVyaW5nQGxpc3QuYXVja2xhbmQuYWMubnowggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDHA3NkCOx9iFSdrURCSEpNieChN3c5JkAA/mKe
+owmCQWaiS2pkCM2uHKLK3Nj5qVgCs0YQhl/3HmDMxELd2+yN8VdYkSgxVcdd/OH6
+4UlanXC62l9EoIR4EZmEiIKRIfycOIhpERaeJbMhGv9KI4I7KcPs0vr6STJ7XgI8
+daxGufW8582ziNcMx5ppiyfGEgKP2ZutfuGJi5JxxNLUZ3WWVra5B2+rYkAhoszE
+QsGyV3g1qGLcPdV09M+uCwpROJhVhJ03xQLwYbsGjZ+S90+ikWtce0RRy2/Hhtsh
+En4uPlL3G4fBnCQHcV0ifF5FZyZqICvYzSV5N4TcSZ8/m30FAgMBAAGjggEsMIIB
+KDAdBgNVHQ4EFgQUHp++c28at/Lh1OB2Kd1GN2ayeCwwgfgGA1UdIwSB8DCB7YAU
+Hp++c28at/Lh1OB2Kd1GN2ayeCyhgcmkgcYwgcMxCzAJBgNVBAYTAk5aMREwDwYD
+VQQIEwhBdWNrbGFuZDERMA8GA1UEBxMIQXVja2xhbmQxIzAhBgNVBAoTGlRoZSBV
+bml2ZXJzaXR5IG9mIEF1Y2tsYW5kMQwwCgYDVQQLEwNJVFMxGzAZBgNVBAMTEmlh
+bS5hdWNrbGFuZC5hYy5uejE+MDwGCSqGSIb3DQEJARYvaXRzLWFwcGxpY2F0aW9u
+LWVuZ2luZWVyaW5nQGxpc3QuYXVja2xhbmQuYWMubnqCCQC1gBEjbQQ9xzAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCwniNbP8nH/nAbyaJAVJhMCqVk
+ktora+KTnHa8Et/8smFGkENaiR70XXj3gLO+pXuI9CRzvvH+GYAta+W8COvjFsl5
+cutXnuiIE+/mjrOwJY9iQVIMhQIEwa/MO4x4SNAn5BpeL7daMtHY0VeM4jAIVvSc
+6N7VkHorW4aOymwZULrnMYdyY+TAYLVVr3czhxljK0qJewBXS9sP/elzJVcsajcM
+hjC99gqPx/0uOw7PvZWzFp9eMrZc7hQYMpBIm5ij2KD0/AWx88tKttENqP5LakO9
+rFlgb2MHZj/t5oG/Ss3wDFoNH4h1eLyV8p3RYPe7kLlYuBKQkLhuvUocNp+j
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://iam.auckland.ac.nz/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<saml:Attribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="homeOrganizationType" Name="urn:oid:1.3.6.1.4.1.25178.1.2.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="homeOrganization" Name="urn:oid:1.3.6.1.4.1.25178.1.2.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="auEduPersonSharedToken" Name="urn:oid:1.3.6.1.4.1.27856.1.2.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="organizationName" Name="urn:oid:2.5.4.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	<saml:Attribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">auckland.ac.nz</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">The University of Auckland</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.auckland.ac.nz</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:Company>The University of Auckland</md:Company>
+	<md:GivenName>Reid</md:GivenName>
+	<md:SurName>Watson</md:SurName>
+	<md:EmailAddress>mailto:reid.watson@auckland.ac.nz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>The University of Auckland</md:Company>
+	<md:GivenName>Reid</md:GivenName>
+	<md:SurName>Watson</md:SurName>
+	<md:EmailAddress>mailto:reid.watson@auckland.ac.nz</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:Company>The University of Auckland</md:Company>
+	<md:GivenName>Security Response Team</md:GivenName>
+	<md:SurName>The University of Auckland</md:SurName>
+	<md:EmailAddress>mailto:security@auckland.ac.nz</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

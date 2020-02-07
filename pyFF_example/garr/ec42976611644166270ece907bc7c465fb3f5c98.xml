@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.portal.ted.is.ed.ac.uk/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2012-03-08T10:00:17Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/Login"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDADCCAeigAwIBAgIJAMszihLucz6hMA0GCSqGSIb3DQEBBQUAMB4xHDAaBgNV
+BAMTE3NhdC1lcC1rYjEuZWQuYWMudWswHhcNMTIwMzA1MTY1NjMyWhcNMjIwMzAz
+MTY1NjMyWjAeMRwwGgYDVQQDExNzYXQtZXAta2IxLmVkLmFjLnVrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQOJ96cEk18YvMHn0Dg71j6V1PUt2gNr
+932yD1ZmnFawDcB8bIvvVadllB0L0Ww2VnKh6x2dsn03366QGvT8jjEBqz/2Djni
+6ym0g5H1Ql6ttdmihP7fV1TUE0gS3bMKw+s/axerzqYCD7Q6m1gY8p0eAPNN4oP+
+T5u88GsOYmNa13w9NqXceCmGvA9SJFD/dQQWC9G5pQs3umqpKFjLvclZcKy9Gj2Q
+b3LdGY/QMjSEJ24aH6xA8X6VKDc7ByzDk2IC2b4UEgVBBC3Y+50J4b3UdcS1ZU3P
+b61GuEZ4FT5ber4zAfPjdPM1Q+6j+lbex76Lp03FU+RTJRUztSSoSwIDAQABo0Ew
+PzAeBgNVHREEFzAVghNzYXQtZXAta2IxLmVkLmFjLnVrMB0GA1UdDgQWBBR/ayuV
+LIFWwzUssHpUcvMr/ZS4QjANBgkqhkiG9w0BAQUFAAOCAQEAgdp151G2iRytTqdG
+9BavSjFEcL23m8sW8RN/RvR/yZKuuLGVYIePgl2VMT9FrGy1GX4OxsApkhm2E5a6
+jMelTpnm3qUwjryEWVVLSGMLP9mi49xzSOrU7pK7FseyxJP+loRJ5hO1laJIVS/u
+WpNzjYn7QG+jHk5Eh3A3K6KlxZJmZTCBLXhOHzYXY8BBhEhtdDsFY+tPfiw+twVO
+MonDchFnqWwDwsypFdPb5PcjtnLig1XXQCyVDkzGmqtNLMmu6d56Waox71G/KaMO
+nkS4wUZn15n5mdKZrScA2RbVMiQ5oqO5GHbC0Hnx1zmz/qnM0Eek7TeQGIi02dBv
+hv3Y4Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/Artifact/SOAP" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML2/POST" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML2/Artifact" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML2/ECP" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.portal.ted.is.ed.ac.uk/Shibboleth.sso/SAML/Artifact" index="5"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Edinburgh</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Edinburgh: Scientia Syllabus Plus Enterprise - Live Environment</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ed.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>IS Helpline</md:GivenName>
+	<md:EmailAddress>mailto:is.helpline@ed.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IS Application Technology Management</md:GivenName>
+	<md:EmailAddress>mailto:apps-certs@mlist.is.ed.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

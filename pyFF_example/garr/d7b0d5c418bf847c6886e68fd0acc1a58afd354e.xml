@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://proxy.eduteams.org/proxy">
+	<md:Extensions>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#ripemd160"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2019-08-29T16:32:16Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">eduteams.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">eduTEAMS</mdui:DisplayName>
+		<mdui:Description xml:lang="en">eduTEAMS</mdui:Description>
+		<mdui:Logo height="60" width="80">https://proxy.eduteams.org/logos/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIJALy+nUHZr7a9MA0GCSqGSIb3DQEBCwUAMC4xLDAqBgNV
+BAMMI1Byb3h5IFNBTUwgZnJvbnRlbmQgKGVkdXRlYW1zLXByb2QpMB4XDTE4MTAx
+ODE3MTQ1N1oXDTI4MTAxNTE3MTQ1N1owLjEsMCoGA1UEAwwjUHJveHkgU0FNTCBm
+cm9udGVuZCAoZWR1dGVhbXMtcHJvZCkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDIUZwqQP4F1bgtf5AiowKq6PHiZajDe0qJe/r6UL0224X9Y8wyBO5c
+etTxhdtyQ+6rOfB7R+Go1/1vVO3pf0bC0tn9j9tRgb49EXg6DRRXQ4w8M+dGZa0V
+eRuKS/6tWkdc8OpPM9rSRh/Z9Q0xTED3pXwtjmcw/FBO1SsKl8FJ/19NFTEIM3fV
+ty4RIUJhsoxJ9nD22F71xsfzoGWXjN2hGJurNxdo/BMOuseVM/f+43NdwpbviD2F
+oJXCD1ziC9CbQHq51RTxZJmQ+ClhqY2QGzKKe+uIr9+iD2CJm49uhiNO6gL3Of5i
+4SZHuUV2wKIgR8megrlzmKsy24yVkJvLAgMBAAGjUDBOMB0GA1UdDgQWBBRbzD7M
+vPTbRTF+nU/YuUv9iCrsUzAfBgNVHSMEGDAWgBRbzD7MvPTbRTF+nU/YuUv9iCrs
+UzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCDLh8hjnu6V8nuNrwR
+hdGurrZ3w7q5q/fE1kyf29XR8YdC4ybaCu4pjsECTvEfifozQfEmdGccrZl2ezSd
+ZUVXlHTN8em49kCoYxSRqdbGMpAprJnG0bbgeHrEpqIMNsF/3TZgbizpRxJr87Y5
+1ZWMy2AYdaJhzkUGMwBy1kHwPzklNzIgAP4E+eE6BXKsmNXiJAn0m2+gYhvblvc8
+Ya6kl7rllOAE+LkG7yejOdtnMuk/yOAM7gXj+jpCaOtZbYMxLDvkaphI18hY87iV
+p6a99YyDmMzKQQkkoKwmdEwveymjDaQEsKcDW5g4RmCiN9QKv7QZ9grX5D02iI3s
+zRer
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://proxy.eduteams.org/saml2sp/sso/post"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://proxy.eduteams.org/saml2sp/sso/redirect"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GÉANT Vereniging</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">eduTEAMS</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.eduteams.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>eduteams Operations Team</md:GivenName>
+	<md:EmailAddress>mailto:eduteams-ot@lists.geant.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>eduTEAMS Service</md:GivenName>
+	<md:EmailAddress>mailto:security@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

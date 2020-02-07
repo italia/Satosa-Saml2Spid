@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.opensciencedatacloud.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Open Science Data Cloud Console</mdui:DisplayName>
+		<mdui:Description xml:lang="en">We provide and support cloud computing and storage services for the scientific research community. The OSDC is run by the Open Commons Consortium, a non-profit organization whose primary goal is to support scientific advances by working with researchers in a variety of disciplines. </mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.opensciencedatacloud.org</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.opensciencedatacloud.org/misc/privacy.txt</mdui:PrivacyStatementURL>
+		<mdui:Logo height="32" width="96" xml:lang="en">https://www.opensciencedatacloud.org/static/logo_sm.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIF7zCCA9cCCQCicdy6qcU4ZDANBgkqhkiG9w0BAQUFADCBoTELMAkGA1UEBhMC
+VVMxCzAJBgNVBAgMAklMMRAwDgYDVQQHDAdDaGljYWdvMSAwHgYDVQQKDBdPcGVu
+IFNjaWVuY2UgRGF0YSBDbG91ZDEqMCgGA1UECwwhTGFib3JhdG9yeSBmb3IgQWR2
+YW5jZWQgQ29tcHV0aW5nMSUwIwYDVQQDDBxjYS5vcGVuc2NpZW5jZWRhdGFjbG91
+ZC5vcmcgMB4XDTE1MDkyMTIxMDgyM1oXDTIzMTIwODIxMDgyM1owgdAxCzAJBgNV
+BAYTAlVTMQswCQYDVQQIDAJJTDEQMA4GA1UEBwwHQ2hpY2FnbzEqMCgGA1UECgwh
+Q2VudGVyIGZvciBEYXRhIEludGVuc2l2ZSBTY2llbmNlMSAwHgYDVQQLDBdPcGVu
+IFNjaWVuY2UgRGF0YSBDbG91ZDElMCMGA1UEAwwcd3d3Lm9wZW5zY2llbmNlZGF0
+YWNsb3VkLm9yZzEtMCsGCSqGSIb3DQEJARYeYWRtaW5Ab3BlbnNjaWVuY2VkYXRh
+Y2xvdWQub3JnMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0tTPUHme
+OLd4lMcKVeE212pW4ZS6zUpmnSUuGQx1cFilVUIAa7mvHwxQP3WeIwRHjy69AWRR
+thNPHQf0So00uFYRqUSN1OXgi9MNi/NJF5GLiKhpOmYzRI8wyF7WFmlhV4KYISvX
+ALDLdduuDCQ31Fc9MZAL0iJ9oWqSmv+ZBYuClIPdyccAfoKX+vWQf1naSfU7xfgz
+w2h5/GEVnMQcKWVEGzLNAYnnLMcZMfGjH324OAq4cMoZCQ1MZVg9p3y3URfWfWmU
+MUgB2UC8lK84Hb+FzIDD0EM/gZHa0eJhNipNHun/59ZlzqMHXf4ygF/P4s2xCDId
+6/6Irv5rtpr1dv+RA0evv+7FXDaPwDvx1Vn1DpE2PjEh3o8mO16zwIir7St9Xyh6
+PRdcBFlxaNuHPRv7zG3n9V5Fdj3aH2WgKdesZ1qTQ68L18xR9qrtJeTIrxZjuiTr
+bgR0YPFRA5lNACwYE14KNCeXbRqiMWOOPygQaY2Jgn6WFbLvyzguYTJmWkGR3RzY
+N15cFGgwc9uH5EYl+amtb5M5z+3Vk0HynBMzY5JAzuN7LX6D8dLJHk5cHuOK+9Sy
+k56LSa6+2jXI59XMXxcMad5zx9RAZEeKii+LfPyZkd0RH+voZx5IG11sxHhoNEBf
+fNJRtnM7LhGuFjzm2Epw7nwa+wgjbspUUnkCAwEAATANBgkqhkiG9w0BAQUFAAOC
+AgEAZP/VuAyNTjAF1o5fKGwuUy90WHB0WXlp0SiTfrrK66C0fc2koZjzY089a7GF
+SZAqPM/pTQThTsAHpietOnTcetigoUDja+Jw5247iXfEUrRCwK04urIudpU9bCnF
+BS7QSPz4ZRNjQv9LwkGvOU9TkOw9/hfnIIx4aDXGUH7I9wJ9aX7fnuTz94fRLV6u
+zsFRSC/zNC842bHcAs9sZDXldF+nbwJQNdRXKB/uRI4FcBQLGV8k5u+i6c7/MSd3
+kAfdTghk9GMMD1ck9eOX7EYbTnLVWNmiFGOFM6JPCIrLcraQo7b2qhw/uSEAuPAA
+79IoyWuYLSichK/fGWtUCjzinosculG/jteXsA+CEmcqYNyC4WXayIocFPjBQV+/
+p7nJMRNbDB0XiAMGCaGGH/sFmuuwgz21pP6rwwV++XdPthLijx0IJRa13pnt3HEo
+PZtme1tQD9F12h71hYcqyft6Yx2z/WjRL4eC+Pi5TsoKfmzeVoryhIw48+5tmTea
+2DXQ0kYoJCDg5MQ96rv9Pq0OZe9j94oWe91PDuGt9VB4eTlbBt2WiMe+7XDXpOJ2
+8FqqDNY7Ln1LMtV3f5mKjt+lEUkjOr9rcRbFnPx7eLTRRI3C58jBFUxQYcG6zbSo
+iYBbqea72Trn3z2jrytiIM2RYNoL7aS2eqfyIwEr9Q6cuDA=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.opensciencedatacloud.org/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Open Science Data Cloud Console</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">We provide and support cloud computing and storage services for the scientific research community. The OSDC is run by the Open Commons Consortium, a non-profit organization whose primary goal is to support scientific advances by working with researchers in a variety of disciplines. </md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Open Commons Consortium (OCC)</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Open Commons Consortium (OCC)</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://occ-data.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Raymond Powell</md:GivenName>
+	<md:EmailAddress>support@opensciencedatacloud.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lily Ko</md:GivenName>
+	<md:EmailAddress>support@opensciencedatacloud.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Ray Powell</md:GivenName>
+	<md:EmailAddress>support@opensciencedatacloud.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

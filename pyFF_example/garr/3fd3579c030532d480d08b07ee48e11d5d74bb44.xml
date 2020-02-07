@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth.uic.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://shibboleth.uic.edu/idp/error.jsp" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uic.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Illinois at Chicago</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.vpaa.uillinois.edu/policies/web_privacy.cfm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="300" width="250" xml:lang="en">https://logos.uic.edu/Images/UICLOGO.PNG</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIJAMnh1KsacvUeMA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMTEnNoaWJib2xldGgudWljLmVkdTAeFw0xMTA3MTgxNjQzNDdaFw0yMTA3MTUx
+NjQzNDdaMB0xGzAZBgNVBAMTEnNoaWJib2xldGgudWljLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAK/LA9eioSPqX+ipdmNMyZerjyPhPWBiem4f
+piOGnBiua76pGvvujhlaPnWT3YfwFWLpKKuPt0nBgk8SC9PTlP2oubVqF9FIFA5O
+UHtAj3nrkXNCu67HLzaW8ClGwCwdImCcTnXXhp1c8iVcRjp2r+DcxjYHpXLyT3o8
+8BmWnGJX8fCo8gtnVukc6Xv+J+gSOFRmCnvbkBkeiALNn3lkJgdvdJhAHE+OcRg1
+4kEmt3/mxOENVouRMi505ez4hMH4iR3fvD3w+1rGKtrNYCBrvagqUSZ2fBF3k6tG
+TQfzNswoGiSrLAkrMZ+N8qjkC/hdQNj4t48uKzEUYvcka7x5q2sCAwEAAaN+MHww
+HQYDVR0OBBYEFPCmz0jymFskc2beyFTMGZ8F7ERVME0GA1UdIwRGMESAFPCmz0jy
+mFskc2beyFTMGZ8F7ERVoSGkHzAdMRswGQYDVQQDExJzaGliYm9sZXRoLnVpYy5l
+ZHWCCQDJ4dSrGnL1HjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQBY
+WrbjYC+bfwb1gPCchi0vil5x92avIJjQv/AOIT5xp9vmg6km429KXD5BoI32tf7i
+SgmwOllxtLGLE8j7EKZwcVcm3JYo5PIVzWX8yI2q2UpUZKFryoS/KFUoolDN1bNQ
+RnrLeO1Pwy7i93H8mnLGBa/S0+pcjEitKdC+VGEw+i+ZVVBCZMsyggzLK8KIrJPr
+I7vNFfld6a9DYkGUK59mwUwfVU1syUk0Eht25bNa4wKkWGf4OYV83x36xWMyN2Yy
+9fvlUHzM13HdEFvfPytJ2z1wpDUVZaGJ5LWb13cSpTZ2yEyllrRW8we9Paoac8js
+Ej+l4a6PybN1ttx/R08j
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uic.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.uic.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uic.edu/idp/cgi-bin/shib-logout.cgi?return=https://shibboleth.uic.edu/shibboleth-logout.html"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.uic.edu/shibboleth-idp/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.uic.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.uic.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.uic.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uic.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIJAMnh1KsacvUeMA0GCSqGSIb3DQEBBQUAMB0xGzAZBgNV
+BAMTEnNoaWJib2xldGgudWljLmVkdTAeFw0xMTA3MTgxNjQzNDdaFw0yMTA3MTUx
+NjQzNDdaMB0xGzAZBgNVBAMTEnNoaWJib2xldGgudWljLmVkdTCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAK/LA9eioSPqX+ipdmNMyZerjyPhPWBiem4f
+piOGnBiua76pGvvujhlaPnWT3YfwFWLpKKuPt0nBgk8SC9PTlP2oubVqF9FIFA5O
+UHtAj3nrkXNCu67HLzaW8ClGwCwdImCcTnXXhp1c8iVcRjp2r+DcxjYHpXLyT3o8
+8BmWnGJX8fCo8gtnVukc6Xv+J+gSOFRmCnvbkBkeiALNn3lkJgdvdJhAHE+OcRg1
+4kEmt3/mxOENVouRMi505ez4hMH4iR3fvD3w+1rGKtrNYCBrvagqUSZ2fBF3k6tG
+TQfzNswoGiSrLAkrMZ+N8qjkC/hdQNj4t48uKzEUYvcka7x5q2sCAwEAAaN+MHww
+HQYDVR0OBBYEFPCmz0jymFskc2beyFTMGZ8F7ERVME0GA1UdIwRGMESAFPCmz0jy
+mFskc2beyFTMGZ8F7ERVoSGkHzAdMRswGQYDVQQDExJzaGliYm9sZXRoLnVpYy5l
+ZHWCCQDJ4dSrGnL1HjAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQBY
+WrbjYC+bfwb1gPCchi0vil5x92avIJjQv/AOIT5xp9vmg6km429KXD5BoI32tf7i
+SgmwOllxtLGLE8j7EKZwcVcm3JYo5PIVzWX8yI2q2UpUZKFryoS/KFUoolDN1bNQ
+RnrLeO1Pwy7i93H8mnLGBa/S0+pcjEitKdC+VGEw+i+ZVVBCZMsyggzLK8KIrJPr
+I7vNFfld6a9DYkGUK59mwUwfVU1syUk0Eht25bNa4wKkWGf4OYV83x36xWMyN2Yy
+9fvlUHzM13HdEFvfPytJ2z1wpDUVZaGJ5LWb13cSpTZ2yEyllrRW8we9Paoac8js
+Ej+l4a6PybN1ttx/R08j
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.uic.edu:8443/shibboleth-idp/AA"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.uic.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Illinois at Chicago</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Illinois at Chicago</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uic.edu/index.html/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ACCC Single Sign On</md:GivenName>
+	<md:EmailAddress>singlesignon@uic.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ACCC Helpdesk Services</md:GivenName>
+	<md:EmailAddress>consult@uic.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>ACCC Administration</md:GivenName>
+	<md:EmailAddress>officeadmin@uic.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>ACCC Security</md:GivenName>
+	<md:EmailAddress>security@uic.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

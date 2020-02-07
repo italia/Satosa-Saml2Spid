@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.srecarilionclinic.org/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">srecarilionclinic.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">SRE Carilion Clinic</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Secure Research Environment for Carilion Clinic</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://www.carilionclinic.org</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.carilionclinic.org/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="89" width="223" xml:lang="en">https://idp.srecarilionclinic.org/idp/images/carilionclinic.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEUDCCArigAwIBAgIVAMhRHJE6kxJEIteR1l2drsSD0LtjMA0GCSqGSIb3DQEB
+CwUAMCQxIjAgBgNVBAMMGWlkcC5zcmVjYXJpbGlvbmNsaW5pYy5vcmcwHhcNMjAw
+MTIwMTYyNjAxWhcNNDAwMTIwMTYyNjAxWjAkMSIwIAYDVQQDDBlpZHAuc3JlY2Fy
+aWxpb25jbGluaWMub3JnMIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA
+5FoYlD9rzeKDQaOhBjKmzfGQzBvoExaSZpm2kfM0SPbOeMGVk/6mN/SxehWut1sn
+qTh9f/BRokiPlvx+88T/+R40AuY9WrLsy5Cp2s5dfTDsxis+tNZnf3DeysfPunjt
+Em3L1jnPprsgKQv92vEatA4fLEVsXn7vQEsC/kKA5VFxAy5uMi1t40zHoogbZcqU
+8mgWDm6hUzQXcB4gn5a1mIkU26/4562hhUiPbaiadad8LG3l25cUugo0OFdwzqkP
+l3Wb4IDsawpzZ5jWKFGoHwJqn9Siz7UAYmokGFOIzXQYJEBEwPVrQqydPFZrthTC
+jHTnOrzl2ibMByozwP4lVavUDikirfHdZWSp9P6cmKek7WwDSTFkcLEC4m4svlwo
+V572nJXk+Fhxrz5b/eCwInroVYjXlunLsk+Oang54PHTvnoI/AbUj8lH7SLTYYex
+8ehX6ZEop7v5/27LeBWXhJX04vKx/ryXpuB2+dR77GmojzfD9bQBLHhHCTCAliyX
+AgMBAAGjeTB3MB0GA1UdDgQWBBSTkHIt7uEuRTKfo/Imaqq5W6nS4DBWBgNVHREE
+TzBNghlpZHAuc3JlY2FyaWxpb25jbGluaWMub3JnhjBodHRwczovL2lkcC5zcmVj
+YXJpbGlvbmNsaW5pYy5vcmcvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggGBAAGW6942Z7tvSJ4mJaC5cGtMSzdPiwrm35ToqnQZ/8Cm6r7HSCwBBb2yS0Fs
+QAXK8OnKkVBVC0dJ2VeuZWwXU+qgcVwIAyTHZdTkecHY7GuCpv2O7yAdUfJcoo/Y
+89SCy2OWL5VvmGccJXu7sb/NmwQkPL/qTfzOTfoExW+5SO9p4t0MYIYnncSIAmxW
+WkWcwFfTTnecsfs3RUxh8YGb3gGZQhjxKwqP6XmztN2dbEY2W6roJ0ww/7stkq/B
+Lwc+YpHKW1EnVXsROsMZGj/1h1vOkkdeTIRJj5QWb3ACxHa4ZtVSppW9t6P+S5kY
+RVlHmAyd89649fmeYnkId50vEwrvTJKrveFxAHV6OA0KAG76iwnotYkYs57tTkCj
++UE3OJt81WbdBj25DH3H1uY+2Tn6zeUJiI7sGPH2EaI+KorwPPPU9WP1agob4kUm
+2htW1FSVzg8N/bKbrzM1si8Yi2c1HzcF55OBFQtBZRPmViESg50PDZaaF736mUQm
+8gAqcw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.srecarilionclinic.org/idp/profile/SAML2/SOAP/ECP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.srecarilionclinic.org/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.srecarilionclinic.org/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.srecarilionclinic.org/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.srecarilionclinic.org/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Carilion Clinic</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Carilion Clinic</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://carilionclinic.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Rob Perry</md:GivenName>
+	<md:EmailAddress>rmperry@carilionclinic.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technology Services</md:GivenName>
+	<md:EmailAddress>servicecenterstg@carilionclinic.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Rob Perry</md:GivenName>
+	<md:EmailAddress>rmperry@carilionclinic.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Daniel R Graft</md:GivenName>
+	<md:EmailAddress>drgraft@carilionclinic.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>John Digiovanni</md:GivenName>
+	<md:EmailAddress>jdigiovanni@carilionclinic.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

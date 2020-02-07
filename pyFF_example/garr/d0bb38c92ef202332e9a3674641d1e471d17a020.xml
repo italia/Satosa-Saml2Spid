@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai.idiap.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2009-03-30T09:08:42Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://secure.idiap.ch/intranet/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">idiap.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Idiap Research Institute</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Idiap Research Institute - Martigny (VS) - Switzerland</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAXdJREFUeJzc0ssrRHEUB/BfeSSbq/kDZuEfsPEPYDbkUWYmz5ViLCRKppRHNlKjSGOh3GahvMqNWBjpl2yEuiOTMhc318xgHq7Hve6YuXO/xoJSSlKUxXdzTn3O6XQIAOYnIf8QmDsxxEqPgqqRKJpHL/AtQEmCK1pKg7SHkV++h4HxwPeA18Q0g3Mtx9Dp/nr6p8CTpnNOt4SKsRDYXUWmQoI/FlX+OWUwZ9EU3TxSRa/vURSCCfoBuFXSnE9Q+IXVS9wrOvda09Ng1KTBDa7LKJ2Ko3Y2AceMBsfkA2p7L9EzHQQJyKCtG0nUsCqaMo2G4TAmVyLv6wt3oDYvYGZ1mIZkmLqvkNd2Bqb+CMV2HqRxC8iZ0JDddYOsFgG59kNYOvzvwEEENHcmc1inDNIkgVT7Qcp2wFi2Mb8WBnH7IZqH4yioC6DQug/HwCFC1xp9A4xMFk8N0crKKOmXYOs7gctzDimk0k+P+Pef+OvACwAAAP//AwAp8AGWLhfGfAAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAlOSURBVHic7FkJUNNXGn8hBEE5lUOsBLkMEKCKcp+CgnLJGQ4JISEkIVwBsVYG3VFURsdx2NG2W2qtrVe1OlKPsuu2a7WtO626jueuruuybafandluu3amu6vut9/7k8QQQir2+M+b8c38gHd9+b3f+9573xcIAJCneHLwToB18E6AdfBOgHXwToB18E6AdfBOgHXwToB18E6AdfBOgHXwToB18E6AdfBOgHXwToB18E6AdfBOgHXwToB18E6AdfBOgHWM/GCg1NTIXzN0roCCwqW9fHMxlacC/sDCnIAdTAkocCBC0SSbXY5OLhP+MAcHB5t1gUDwWPMrZZUv6LXaTwryC9fY6n9cO+ONt+Znr5jGjiugAAeIJnEiuQTEZzcXtPcNNq7d9UFly9aXxTGLfI2DJkSYlqlTpwXMmPFM5DRvb29aF4lE5j4nJydfv+nTI/z9Z0Raws9v+mzav1Tdlvfc9t0HE3MKomjdzc3NydgfiXY4MpMmTSI+Pj6hPr6+Eh8fKxjbXF1dxThUSMc7OjpyQlrwEAQHh8RIpdFl0qjoKmvMni0pd3Z2mUvH2RXQWDxy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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">http://www.idiap.ch</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>192.33.221.0/24</mdui:IPHint>
+		<mdui:IPHint>153.109.180.0/24</mdui:IPHint>
+		<mdui:IPHint>153.109.178.0/24</mdui:IPHint>
+		<mdui:DomainHint>idiap.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.109363,7.084763</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAI86o2Ll9oyUc7g09p8278cpM8ZvMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGFhaS5pZGlhcC5jaDAeFw0xODAxMTIxMDM1MzBaFw0y
+MTAxMTIxMDM1MzBaMBcxFTATBgNVBAMMDGFhaS5pZGlhcC5jaDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAPaGHCxsleVDOSGF847643dv8DLQf3rgmEsJ
+ju9C1zdyMM4N3tWb5Iu774QTymzAvrNqAzbLXKTD0awGtiIc6kF6QdUz9AlcS/bI
+oyeJJVIpvI74w5o3Q1Rw9MumKr2cq8mNLnfJahklBEysmlSHjIwuwMS1G3HMdiru
++QWQJLSTX/jzN17MX2FbNSlMhyzBP4qNYhIRLCvTBdykARzKuJwT1L7Ay9h3zoWx
+cifcsufuLdKVGRCL1Hwtgg00OjYQm95c0F//v5KY4Wfd6QrbwhikSXkqNuUHSrh3
+CCImLn8TKOrz4xuqfXBkvCUyGgdMU0XClANsYW9+zO85MlVAgUECAwEAAaNfMF0w
+HQYDVR0OBBYEFJ8lacbhm/Lz0ppTH2oawaIUulIqMDwGA1UdEQQ1MDOCDGFhaS5p
+ZGlhcC5jaIYjaHR0cHM6Ly9hYWkuaWRpYXAuY2gvaWRwL3NoaWJib2xldGgwDQYJ
+KoZIhvcNAQELBQADggEBAL3lB5Kc5pU9l2w8xvfXuO3av1W+rKdr0NLxA6ugFjXE
+dvdHURX0Vnq7ZZDWB3btSel2EWa+hoQQ8PqSzavhMMJHtizu/ERatZfIxivWiQWe
+RU1+btFLx7+bbkRaIRJZSNGE9BGWZk/xF6hgVzOH2Q169w/zPejreY855NhnM2H9
+nBCNcjPSV2D4pUA614hah8ay80QAV2TwUhO5gfqhA6aWy/owkLkW8nQW+HfdJVZr
+aIu1RmEuNzylINfFR1NO9Yl73wnNC4fHmg7EnqOD0MIk7u49LEaj2om3QEuToM83
+0WE6wncoeJ8iOkx2Byw/MY1/OJQgzPSpfaSnbPLgRzU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai.idiap.ch/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai.idiap.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://aai.idiap.ch/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai.idiap.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai.idiap.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://aai.idiap.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">idiap.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHDCCAgSgAwIBAgIVAI86o2Ll9oyUc7g09p8278cpM8ZvMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDGFhaS5pZGlhcC5jaDAeFw0xODAxMTIxMDM1MzBaFw0y
+MTAxMTIxMDM1MzBaMBcxFTATBgNVBAMMDGFhaS5pZGlhcC5jaDCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAPaGHCxsleVDOSGF847643dv8DLQf3rgmEsJ
+ju9C1zdyMM4N3tWb5Iu774QTymzAvrNqAzbLXKTD0awGtiIc6kF6QdUz9AlcS/bI
+oyeJJVIpvI74w5o3Q1Rw9MumKr2cq8mNLnfJahklBEysmlSHjIwuwMS1G3HMdiru
++QWQJLSTX/jzN17MX2FbNSlMhyzBP4qNYhIRLCvTBdykARzKuJwT1L7Ay9h3zoWx
+cifcsufuLdKVGRCL1Hwtgg00OjYQm95c0F//v5KY4Wfd6QrbwhikSXkqNuUHSrh3
+CCImLn8TKOrz4xuqfXBkvCUyGgdMU0XClANsYW9+zO85MlVAgUECAwEAAaNfMF0w
+HQYDVR0OBBYEFJ8lacbhm/Lz0ppTH2oawaIUulIqMDwGA1UdEQQ1MDOCDGFhaS5p
+ZGlhcC5jaIYjaHR0cHM6Ly9hYWkuaWRpYXAuY2gvaWRwL3NoaWJib2xldGgwDQYJ
+KoZIhvcNAQELBQADggEBAL3lB5Kc5pU9l2w8xvfXuO3av1W+rKdr0NLxA6ugFjXE
+dvdHURX0Vnq7ZZDWB3btSel2EWa+hoQQ8PqSzavhMMJHtizu/ERatZfIxivWiQWe
+RU1+btFLx7+bbkRaIRJZSNGE9BGWZk/xF6hgVzOH2Q169w/zPejreY855NhnM2H9
+nBCNcjPSV2D4pUA614hah8ay80QAV2TwUhO5gfqhA6aWy/owkLkW8nQW+HfdJVZr
+aIu1RmEuNzylINfFR1NO9Yl73wnNC4fHmg7EnqOD0MIk7u49LEaj2om3QEuToM83
+0WE6wncoeJ8iOkx2Byw/MY1/OJQgzPSpfaSnbPLgRzU=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://aai.idiap.ch/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai.idiap.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">idiap.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Idiap Research Institute</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.idiap.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Idiap</md:GivenName>
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:help@idiap.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 27 721 7777</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Idiap</md:GivenName>
+	<md:SurName>System Group</md:SurName>
+	<md:EmailAddress>mailto:aai@idiap.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 27 721 7777</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Idiap</md:GivenName>
+	<md:SurName>Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:help@idiap.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 27 721 7711</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

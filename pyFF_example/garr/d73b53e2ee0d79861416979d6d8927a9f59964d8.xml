@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cluster-prod.apps.upenn.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cluster-prod.apps.upenn.edu/Shibboleth.sso/Login" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://securespace.apps.upenn.edu/Shibboleth.sso/Login" index="2"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://grouper.apps.upenn.edu/Shibboleth.sso/Login" index="3"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-01.apps.upenn.edu/Shibboleth.sso/Login" index="4"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-02.apps.upenn.edu/Shibboleth.sso/Login" index="5"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-03.apps.upenn.edu/Shibboleth.sso/Login" index="6"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-01.apps.upenn.edu/Shibboleth.sso/Login" index="7"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-02.apps.upenn.edu/Shibboleth.sso/Login" index="8"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-03.apps.upenn.edu/Shibboleth.sso/Login" index="9"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-04.apps.upenn.edu/Shibboleth.sso/Login" index="10"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-05.apps.upenn.edu/Shibboleth.sso/Login" index="11"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://securespace.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/Login" index="12"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-01.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/Login" index="13"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-02.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/Login" index="14"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-small-b-03.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/Login" index="15"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://grouper.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="16"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-01.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="17"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-02.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="18"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-03.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="19"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-04.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="20"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-medium-a-05.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/Login" index="21"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastunit.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/Login" index="22"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastunit.apps.upenn.edu/Shibboleth.sso/Login" index="23"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastunit.apps.upenn.edu/fastUnit/jsp/echo.do/Shibboleth.sso/Login" index="24"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-tiny-b-01.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/Login" index="26"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-tiny-b-01.apps.upenn.edu/Shibboleth.sso/Login" index="27"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-tiny-b-02.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/Login" index="28"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://fastprod-tiny-b-02.apps.upenn.edu/Shibboleth.sso/Login" index="29"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Penn ISC application cluster LCF</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.upenn.edu/about/privacy_policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="466" xml:lang="en">https://idp.pennkey.upenn.edu/UPenn_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDSDCCAjCgAwIBAgIJAPs25kuhufCJMA0GCSqGSIb3DQEBBQUAMCYxJDAiBgNV
+BAMTG2NsdXN0ZXItcHJvZC5hcHBzLnVwZW5uLmVkdTAeFw0xMzEyMTQxNDI0MDla
+Fw0yMzEyMTIxNDI0MDlaMCYxJDAiBgNVBAMTG2NsdXN0ZXItcHJvZC5hcHBzLnVw
+ZW5uLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMwD6HDSpAQE
+iU+kfrhRIF7lI76OpQTmlyNHaj02dAG3arkI+pgwV7IBdHuP7YVK0lF6PEY39O5p
+qQBGQ7iHE7rOf3jOV6A4aLfi5UAlDsBfK/za6n04OiCTTAyyEqwm0KlrfJUecefN
+bxHTVqjUIcB58Xw+jUkA73SITx8RIoHYr22OLx4WQljuQK+FnALq3Lm1e/eOwqv0
+sikLlfsgrIMjpYOcPaZ3vOuZhCbpLiOBaLJYsv85wBCvnwBHpKbmgTcBHqA0+uZC
+kw9L0x53/BL2t+QfbAbynp8aPOWa3hMafLlzVqqcv3phwDY5eTDWz+olt0lKzJKx
+sRbWnAEJbmECAwEAAaN5MHcwVgYDVR0RBE8wTYIbY2x1c3Rlci1wcm9kLmFwcHMu
+dXBlbm4uZWR1hi5odHRwczovL2NsdXN0ZXItcHJvZC5hcHBzLnVwZW5uLmVkdS9z
+aGliYm9sZXRoMB0GA1UdDgQWBBR2HCZEFyIHyyRYauzTKOURaE3u1zANBgkqhkiG
+9w0BAQUFAAOCAQEAvntmSZevUKEQPpOms9/a0a16a5Qg1Hv3TZINhRVACjAWcZ+h
+qBYOJalxGjwl/7t7bhpYDKr7Y9TJzNlHHGi9Zq91JCZL8/pQvavwiuYbms71S0cU
+S6LUflznCQ3RgT+qqWoJtQJ+6YYy+3Ic5qKX1INDcckxLSTYIHPomR6/nSS9S8tg
+rU3RHDVe5mL6S1ZWlcvOscuZ7deKmMjV8mRz9lPickkr/xMKcu4lC0lm8aVoBWnd
+2IH90ofF8VPgjpoRXoUXXNGbL4ytpPWsqKd1gEoB7OqLPrxj8+5HyOzjGYglWNda
+2Q+5RgO0+4qVSDRvKQhErmZhx1boTCp/If/Aiw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cluster-prod.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://cluster-prod.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://fastprod-small-b-01.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://fastprod-small-b-02.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://fastprod-small-b-03.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://securespace.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://securespace.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="7"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://grouper.apps.upenn.edu/Shibboleth.sso/SAML/POST" index="8"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://grouper.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="9"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-01.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="10"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-02.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="11"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-03.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="12"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://securespace.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-01.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-02.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="15"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-small-b-03.apps.upenn.edu/secureSpace/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="16"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://grouper.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="17"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-01.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="18"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-01.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="19"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-02.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="20"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-02.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="21"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-03.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="22"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-03.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="23"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-04.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="24"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-04.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="25"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-05.apps.upenn.edu/grouper/grouperExternal/Shibboleth.sso/SAML2/POST" index="26"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-medium-a-05.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="27"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastunit.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="28"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastunit.apps.upenn.edu/fastUnit/jsp/echo.do/Shibboleth.sso/SAML2/POST" index="29"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastunit.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="30"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-tiny-b-01.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="31"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-tiny-b-02.apps.upenn.edu/fastUnit/jsp/fast2.do/Shibboleth.sso/SAML2/POST" index="32"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-tiny-b-01.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="33"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://fastprod-tiny-b-02.apps.upenn.edu/Shibboleth.sso/SAML2/POST" index="34"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Penn ISC application cluster LCF</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Pennsylvania</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.upenn.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>ISC ASTT</md:GivenName>
+	<md:EmailAddress>astt_idm@lists.upenn.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>UPenn Information Security</md:GivenName>
+	<md:EmailAddress>security@isc.upenn.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>ISC ASTT</md:GivenName>
+	<md:EmailAddress>astt_idm@lists.upenn.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ISC ASTT</md:GivenName>
+	<md:EmailAddress>astt_idm@lists.upenn.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

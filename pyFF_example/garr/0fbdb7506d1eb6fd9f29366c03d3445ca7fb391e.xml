@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://portal.uwsuper.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uwsuper.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Wisconsin-Superior Login Portal</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Login portal for the University of Wisconsin - Superior</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uwsuper.edu/technology/resources/policies/privacy-statement.cfm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="88" width="200" xml:lang="en">https://www.uwsuper.edu/uws/customcf/incommon/uwslogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDwDCCAqgCCQDPedeWdzXREzANBgkqhkiG9w0BAQUFADCBoTErMCkGA1UEChMi
+VW5pdmVyc2l0eSBvZiBXaXNjb25zaW4gLSBTdXBlcmlvcjEcMBoGA1UECxMTVGVj
+aG5vbG9neSBTZXJ2aWNlczERMA8GA1UEBxMIU3VwZXJpb3IxEjAQBgNVBAgTCVdp
+c2NvbnNpbjELMAkGA1UEBhMCVVMxIDAeBgNVBAMTF3BvcnRhbGd1YXJkLnV3c3Vw
+ZXIuZWR1MB4XDTE4MDMxOTE5NDAyM1oXDTI4MDMxNjE5NDAyM1owgaExKzApBgNV
+BAoTIlVuaXZlcnNpdHkgb2YgV2lzY29uc2luIC0gU3VwZXJpb3IxHDAaBgNVBAsT
+E1RlY2hub2xvZ3kgU2VydmljZXMxETAPBgNVBAcTCFN1cGVyaW9yMRIwEAYDVQQI
+EwlXaXNjb25zaW4xCzAJBgNVBAYTAlVTMSAwHgYDVQQDExdwb3J0YWxndWFyZC51
+d3N1cGVyLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJr0MZyG
+eyXo3PYXlGpVidZr0W8GlfwsrcB4/nPy+dfqrfkYIE88iyaZFEWDdJqfTbhzSu9D
+bkPyDigeYtV5p1sinQcsHlu50UyxWHoYanL/j52BaoQN9NocOukzhIRB5EvViYND
+DUCkdRaU0yI4jUyyUVqEzWAySsH+F9SF1V6UyAWtsEYlxY1pcFS6X2D/yK2wTYZC
+ZGqfstZTsemIZWN2q32U7SnF4CmUzfYz5jYxC+RxVuCMuzWaYO0xlWnrmB3BFj56
+1xPmrNFy5DJ86Dbcws5mar3duvBXwODIHDFXsqjeU3NXe5iryoyfXZtn4HswUMNR
+DY9i5unjXCWQjm0CAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAhdvODF+Hzb6Z0a4W
+TBDbLLGK0i5B2vC2yV2sCIX+505RcRfMhsiV2RgJlxCOyBJN6Y/eQ2Tsm4AMXHJa
+YL/GbZmq8w+o/ejj3/qYkjp6VNY5ThUQretpisVjvUXGrDfYfmvLyqlfaYalOLQm
+5v9wAAuyOn605PusZIi6WgCuTlSpE4IoQnlRdiEbzrJ+y8WBtKV3IztQwZyjcjcP
+Wd4UhvUxC8LGRZxeMDDq3OfPXHLA8LaNNoZ3SyI7N5GHPfDYBTZLGQhct/16VMsi
+8EYB+OEGasvg0kPueoREJ1YReW/txjvm5zk+bWIqGjFvXWR7UvKrcKkYL+veVc4X
+GChctQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://portal.uwsuper.edu/sso/go.ashx"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://portal.uwsuper.edu/sso/go.ashx"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Wisconsin-Superior</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Wisconsin-Superior</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uwsuper.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Ross J  Eaton</md:GivenName>
+	<md:EmailAddress>reaton2@uwsuper.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Ross J  Eaton</md:GivenName>
+	<md:EmailAddress>reaton2@uwsuper.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Ross J  Eaton</md:GivenName>
+	<md:EmailAddress>reaton2@uwsuper.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

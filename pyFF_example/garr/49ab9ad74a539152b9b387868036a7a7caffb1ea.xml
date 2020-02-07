@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://connect.paris-belleville.archi.fr/saml/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-07-10T11:31:34Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">paris-belleville.archi.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ecole Nationale Supérieure d'Architecture de Paris-Belleville</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAZZJREFUOBFl0rlOVVEUgOGLihPiEEPExEAo7AmdCRYWvjoPgI0FDYUxiqIyyaDg/x3OsWEn/113r7Pmtedms9lanMeduBtfxv/zycdxK37FZbB5FN9iPwbFevJHMHgaz0PA5ZicV/sv4HE8i73YiksGop3FXJyO98OkbBfh0KtC9r8hu4SD0+2k6D5QCno1ysSgE5yedNgJfiXLQvyJe3F/xP1nCPQgfsdJ3DgCbITsD8PQGLobqNmYxafQs6MKgYcjAIXBKEnvBqQSmcmv8T2cqYXr26hgtBg2sBtmokeSg8Du2rpxGFnRUuyEYEomVacibalGEPNSvhaHI8O70PeT8NEb0L+h2s5RWLMKXsXH2A6+wxY4uHD4TBn2Pa1K/yrQovkI6AwB/PjAWMlKk1VG7U1vwjeJfGf7f6WM9GhQXpoyPVc6zgLZkMreBjtbeRObsauC9yEDRx84ehMHoeS10B5bsDPcF3HKGMry3l/G69Cnvs1CldYsu0Tu9AY9L6K1KXUlBPgQghrmfpgRR3eJpjlY9cU/BOJzLqUI1e0AAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.paris-belleville.archi.fr/</mdui:InformationURL>
+		<mdui:Description xml:lang="en">TEST</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Ecole Nationale Supérieure d'Architecture de Paris-Belleville</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">TEST</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFYjCCA0oCCQDN5bFsqB2kOTANBgkqhkiG9w0BAQsFADBzMQswCQYDVQQGEwJG
+UjEWMBQGA1UECAwNSWxlIERlIEZyYW5jZTEOMAwGA1UEBwwFUGFyaXMxEDAOBgNV
+BAoMB0VOU0EgUEIxKjAoBgNVBAMMIWNvbm5lY3QucGFyaXMtYmVsbGV2aWxsZS5h
+cmNoaS5mcjAeFw0xOTA3MTAwOTI1NDBaFw0yOTA3MDcwOTI1NDBaMHMxCzAJBgNV
+BAYTAkZSMRYwFAYDVQQIDA1JbGUgRGUgRnJhbmNlMQ4wDAYDVQQHDAVQYXJpczEQ
+MA4GA1UECgwHRU5TQSBQQjEqMCgGA1UEAwwhY29ubmVjdC5wYXJpcy1iZWxsZXZp
+bGxlLmFyY2hpLmZyMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAqn0v
+sMq7R0EfMF6sgr4myY1Q+eJxfhRq4x3orkY860O80TLk6M+kl+X70kzEepYLnDyN
+L0ZKbRqQl4tkG06m6EmV+LUdPOEB+L2gnzYeoG5R/H3ccNXET+8FNpbmXEYsfeBi
+FVXZ+VdNs1YzYccBUu4wCXKhm6tlzCZu2hnmqp3gezN3+G925UDJ7Rq0Ajm/DJUT
+3zd+bjUW8r67kIr8qfXU4O4pJZDGTCTtSw4A6+AqEgvaIE5yapYGasgZBnK/U3yN
+Ywbb4JavmarsebJC/hnUkmS2iOy4zf3gGdTwlp9hYWiz82N2ZSa7zXoUDJtFtwjT
++m9IJdCTCxT3hJqw6OJY4eHz7ancGg6PSH6psH75H6O3H5CyQac+U4Hk9Xr1UTnt
+LoRGkdHNaPykD6lxrtHE+OdnjlO92Su1/WlQYIYfZUPnkKscauKXhhuJC8oH+u62
+LOs6md6pkk9AhoOdXK0tKtf0HddFQikaghKfv42t5aNRP/TGRjyDT4nTbwl/DkvZ
+Ug5gyLIscc4iL8/NlOHvzJrzYe1U/77+IERrejuDhS9n0KELuCSPpJ8arYRnrUzz
+h8ij37Nm0MLAdGJTq66vKFdVWllKJznn7TY5C0DBaUMjTIGzH9DerDH1UrbF2oQO
+2Mv4VgHBMHaLqrU9XL7VFfONkbqliNZvWwbalbcCAwEAATANBgkqhkiG9w0BAQsF
+AAOCAgEAKYThDyaLo8bH8quLLT2ro/5G1y13vG5y5+HVl1tFMwZO9Sjg/SFfViCo
+K4O8Oh4Us75jKSGzkbrj5veagtXCGqi1A8T8InAnXVWb+1XzVrQsGIhGmZFj8e7A
+j1P6/DQyYx57+c823GK4fWjuAbYKq2qATszYdmDRlJrsvJiUmbj9USQg5VDmfvJh
+LddvygY87dEmSdBdGDOajOMCdVJJ7kBJKykg13TlT4nq3tvi/WSreU5kQfGZMlXs
+cAN/c0bbQvM6w3ISWy+E0VwitijVjzHU0Qh/rHqGtN9gtwHDPaoqVXB/MeSpoEWh
+RBygSsB8BYqtyUHxn1y4sChod3tS1B3rdXuWXySGII7D1B6T86UMol66Bg3xTgnA
+26ABaHq5/TX8l9FgUyQunlIyLBgj6nDBOUpj4/pyEU8MsVLoPCbZxHXH4QWkM3M7
+oC3WZByeL75LEoCCWpocA4rLpHFfnWoceNqi7fiWqG6gOrN5QQL/4pZnbVVwRh/l
+gZc/H4U8APEaibjJDHL6wfEbZKcmcp0QkxPBY0OfLHlnK6y9L9U/23GlQzOLiQZf
+LsI3xJ71prTBbmaE8aeveFWsvF7wHP8rZQGb3iT6vw9rUtwWYymWHOxZhrXT2m7l
+qFTJMZr/VKKXpsR3WNPNrt8RlClt6F2mpmGR/BHIraL8b+2qBB4=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://connect.paris-belleville.archi.fr/saml/singleSignOn"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://connect.paris-belleville.archi.fr/saml/singleSignOn"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ecole d'Architecture de Paris - Belleville</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ecole d'Architecture de Paris - Belleville</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.paris-belleville.archi.fr/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:support@starxpert.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

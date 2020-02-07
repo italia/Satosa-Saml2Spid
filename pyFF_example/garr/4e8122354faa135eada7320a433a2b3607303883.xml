@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-cro.irccs.garr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2016-06-14T09:34:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">cro.sanita.fvg.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">IRCCS CRO di Aviano</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">IRCCS CRO di Aviano</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity provider for IRCCS CRO di Aviano users</mdui:Description>
+<mdui:Description xml:lang="it">Identity provider per gli utenti di IRCCS CRO di Aviano</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idp-cro.irccs.garr.it/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idp-cro.irccs.garr.it/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idp-cro.irccs.garr.it/en/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp-cro.irccs.garr.it/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idp-cro.irccs.garr.it/en/logo.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idp-cro.irccs.garr.it/it/logo.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idp-cro.irccs.garr.it/en/favicon.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idp-cro.irccs.garr.it/it/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUMsQCPNtm4uFA/1e5tJb9QpDWoM0wDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5nYXJyLml0MB4XDTE2MDIxNjE0
+MjgzMFoXDTM2MDIxNjE0MjgzMFowIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidO/kh0io+tm
+BTu+itZanRq4l9sykrDX5Z3hhYk/eJD1qkDkshCJ02FqC06zERckCISYNgr1JWcn
+t7TMSIaSP5ZKFGyx+c9I90rw584rVYFlB5V9xpOGEPqad/RdaCfbM644rZZ2BC6D
+ENNTOenWM49S0fHkuE94IxKsV1ohSQ4OOnYuksfQEBSFBkCHxBGiMtmtAiI01aU/
+s52K0ke83DtgMS+TKSdoCtuM9EMehhga4SriH4lh98QWyJlo7z/RokusumPtp/ON
+Sgv8bJG61Va53nW4beXPRDqAwsWOL6v4tX/rYm4sSbVIxI4LC+stXgzDDCwpkOH8
+Alrikjq4nwIDAQABo3EwbzAdBgNVHQ4EFgQUVTZd+dDEuLcPsdkZ8vOjHLNohw4w
+TgYDVR0RBEcwRYIVaWRwLWNyby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1j
+cm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAhE2/279NaBjryQ/vF4m9uQ3UenLnI2i/oku9FK9IvY16fzqd6zsF4OtfRZ7R
+IkiwFCzYalaXmNurTFJRVvTTw+ngBjdqJoiLzSqMlJaIzJVv08e0zLiLMvsM4tY6
+ISNAcPwcevai8iSmH7LSAPZGxsO7IvUehgn/a8YeQA0LMh4mygNRMtObwt1lrEVj
+tEsDx0b+pbXImhr2wmoUU8j/xMIjlaKIr3GtzSNXEtNJCQO2PLW22Zte2WQAU+Ua
+9qI0klC3shHsqQOgRBGlh4QQYl9VQux37LrPxvk9cQziMUcl1jbTc6UCSaISAGDx
+k16FAOkXjNK2ZaE6HPDmFG5snw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVANq4P+uB4QF7jw6alxcyRa6IIYyGMA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1jcm8uaXJjY3MuZ2Fyci5pdDAeFw0xNjAyMTYx
+NDI4MjlaFw0zNjAyMTYxNDI4MjlaMCAxHjAcBgNVBAMMFWlkcC1jcm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIQEqHN2s0oZ
+33u3B5fdiLfh1FNi7ySLtHMIJ8HVuI4SmZGMSB7jwHKbSwWDKqAHjV4MpWpixQhF
+azvUCLAcXYl9hVKJ2s6YAhxxqoJlwpp3RNMndrTCooncWECd4OcFWwTlRnkVbnQC
+xphAhqUXt4OkzIbflyleXmdMgBLAGH6723CWyd8/615OppLstcI6Bw3rK1oraqZ/
+36MmAgiZfPDp1kbJMrXBDuIywrEiCz25QDrjut6UjfW+kSplLDXYFIUsAWxhzn4T
+WMwLuKY3G2Rl1ae9HWvRoeZtYKq1R/DU0bxNuAJAWUIEAWZsdu/5/rUbKuJRqVZN
+eOzmGdDRC60CAwEAAaNxMG8wHQYDVR0OBBYEFMfNEFWt8NFOv5efbrb0+qk0hQxp
+ME4GA1UdEQRHMEWCFWlkcC1jcm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+Y3JvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAEoGkBDkix7EK1CNrGoosJbO6ziZfTT3SWlsb6wMhhZ2g6sF5omlN42STg//
+MAfwvif2qcUmoaiF+8GInhl0d7dDjFdA+Ri6ibAK+XjP7YmGiqBdj5mmEXGH8T02
+g5meZsk10RE4x+kJ8E3axa2xi/ziTdhCPwzcpvSqwFZm/DCntQaneh8mguyLAG+s
+U9NoZIq0rAcFEJ3+fZmgPjn4RD4FPTVfgSv/5DvKcOW9Otw/BVbz86Iy9SJEmeJW
+znXRf7BkWiA+o7d997mZdhWrsqwp52HQ2aY32P5f4k1FwmeE4t/A+lWrwapfMph9
+qc8tiq3QO3qT8D/ICUwP7+aHZXs=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUdX2xPl5i5aJBPwA6kEtvXjSF8cIwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5nYXJyLml0MB4XDTE2MDIxNjE0
+MjgyOVoXDTM2MDIxNjE0MjgyOVowIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9qtyOO6KMRK
+lqq34qSQS6lgbF50gy2IHd7yA9QNq6r+rMHQaAC8u6d3o2S4pG+K8i7Ia8rmNVNx
+mIZkLvoZ2gGv5Szm9qfwveO1cxSoPvwnEb/hA2GiKGosYqkpcSPzkC0NL82oZ3Z2
+VM3H3HfPG4AHks/ip7O4d2wHBebg7yYxxdXDoczY/FujFUzFjCGn8LuK8s9/jrJl
+o86a+j4Y3QKVsh5MA9zu0fEKTw7iJVIBnDYSDrSJoa7iKCGfiQW6R04FDZYuWceq
+WfrKIBMG0jL3OaZ37F9zz2cxUMgE6hOj0oWeHxM7sDPmev3pmo1QLZ07twBSEwhS
+1h8tPRlF3wIDAQABo3EwbzAdBgNVHQ4EFgQURx5327HT7ZWBJQQ+E8obqEdESKsw
+TgYDVR0RBEcwRYIVaWRwLWNyby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1j
+cm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAMqxKa1Ha4ainW4V1zENyhjjveooRaq4UDOCoNzTpaYSTmfiRX5dODRHhJHg7
+PTsPk33lOO4RbcElJywaDHUYWUsIoeys9jRIc3ifjRjPcz2m1h7DXu4iu2+Q3G2L
+HF96dODAvlMSxJoZtoFrX/HEvRmo+dln+zluMEURxy768IE24TuUinQ6L70sb9XD
++8PWVXDIFvGp505+S0BLETGAyNW403IWqmt/NgINV+wh8fFnCtkzi0W43xeNWjz8
+FDNKR7KaUZVAjKWs8OZhMi/vQXrdHPjPTg/XehlSFJAt2LK7ZujJkL1esWSMwP+C
+zFSBgwF+JydLoi/Ub6jtipSUFg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/POST/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">cro.sanita.fvg.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUMsQCPNtm4uFA/1e5tJb9QpDWoM0wDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5nYXJyLml0MB4XDTE2MDIxNjE0
+MjgzMFoXDTM2MDIxNjE0MjgzMFowIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidO/kh0io+tm
+BTu+itZanRq4l9sykrDX5Z3hhYk/eJD1qkDkshCJ02FqC06zERckCISYNgr1JWcn
+t7TMSIaSP5ZKFGyx+c9I90rw584rVYFlB5V9xpOGEPqad/RdaCfbM644rZZ2BC6D
+ENNTOenWM49S0fHkuE94IxKsV1ohSQ4OOnYuksfQEBSFBkCHxBGiMtmtAiI01aU/
+s52K0ke83DtgMS+TKSdoCtuM9EMehhga4SriH4lh98QWyJlo7z/RokusumPtp/ON
+Sgv8bJG61Va53nW4beXPRDqAwsWOL6v4tX/rYm4sSbVIxI4LC+stXgzDDCwpkOH8
+Alrikjq4nwIDAQABo3EwbzAdBgNVHQ4EFgQUVTZd+dDEuLcPsdkZ8vOjHLNohw4w
+TgYDVR0RBEcwRYIVaWRwLWNyby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1j
+cm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAhE2/279NaBjryQ/vF4m9uQ3UenLnI2i/oku9FK9IvY16fzqd6zsF4OtfRZ7R
+IkiwFCzYalaXmNurTFJRVvTTw+ngBjdqJoiLzSqMlJaIzJVv08e0zLiLMvsM4tY6
+ISNAcPwcevai8iSmH7LSAPZGxsO7IvUehgn/a8YeQA0LMh4mygNRMtObwt1lrEVj
+tEsDx0b+pbXImhr2wmoUU8j/xMIjlaKIr3GtzSNXEtNJCQO2PLW22Zte2WQAU+Ua
+9qI0klC3shHsqQOgRBGlh4QQYl9VQux37LrPxvk9cQziMUcl1jbTc6UCSaISAGDx
+k16FAOkXjNK2ZaE6HPDmFG5snw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIVANq4P+uB4QF7jw6alxcyRa6IIYyGMA0GCSqGSIb3DQEB
+CwUAMCAxHjAcBgNVBAMMFWlkcC1jcm8uaXJjY3MuZ2Fyci5pdDAeFw0xNjAyMTYx
+NDI4MjlaFw0zNjAyMTYxNDI4MjlaMCAxHjAcBgNVBAMMFWlkcC1jcm8uaXJjY3Mu
+Z2Fyci5pdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIQEqHN2s0oZ
+33u3B5fdiLfh1FNi7ySLtHMIJ8HVuI4SmZGMSB7jwHKbSwWDKqAHjV4MpWpixQhF
+azvUCLAcXYl9hVKJ2s6YAhxxqoJlwpp3RNMndrTCooncWECd4OcFWwTlRnkVbnQC
+xphAhqUXt4OkzIbflyleXmdMgBLAGH6723CWyd8/615OppLstcI6Bw3rK1oraqZ/
+36MmAgiZfPDp1kbJMrXBDuIywrEiCz25QDrjut6UjfW+kSplLDXYFIUsAWxhzn4T
+WMwLuKY3G2Rl1ae9HWvRoeZtYKq1R/DU0bxNuAJAWUIEAWZsdu/5/rUbKuJRqVZN
+eOzmGdDRC60CAwEAAaNxMG8wHQYDVR0OBBYEFMfNEFWt8NFOv5efbrb0+qk0hQxp
+ME4GA1UdEQRHMEWCFWlkcC1jcm8uaXJjY3MuZ2Fyci5pdIYsaHR0cHM6Ly9pZHAt
+Y3JvLmlyY2NzLmdhcnIuaXQvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQAD
+ggEBAEoGkBDkix7EK1CNrGoosJbO6ziZfTT3SWlsb6wMhhZ2g6sF5omlN42STg//
+MAfwvif2qcUmoaiF+8GInhl0d7dDjFdA+Ri6ibAK+XjP7YmGiqBdj5mmEXGH8T02
+g5meZsk10RE4x+kJ8E3axa2xi/ziTdhCPwzcpvSqwFZm/DCntQaneh8mguyLAG+s
+U9NoZIq0rAcFEJ3+fZmgPjn4RD4FPTVfgSv/5DvKcOW9Otw/BVbz86Iy9SJEmeJW
+znXRf7BkWiA+o7d997mZdhWrsqwp52HQ2aY32P5f4k1FwmeE4t/A+lWrwapfMph9
+qc8tiq3QO3qT8D/ICUwP7+aHZXs=
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDPzCCAiegAwIBAgIUdX2xPl5i5aJBPwA6kEtvXjSF8cIwDQYJKoZIhvcNAQEL
+BQAwIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5nYXJyLml0MB4XDTE2MDIxNjE0
+MjgyOVoXDTM2MDIxNjE0MjgyOVowIDEeMBwGA1UEAwwVaWRwLWNyby5pcmNjcy5n
+YXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9qtyOO6KMRK
+lqq34qSQS6lgbF50gy2IHd7yA9QNq6r+rMHQaAC8u6d3o2S4pG+K8i7Ia8rmNVNx
+mIZkLvoZ2gGv5Szm9qfwveO1cxSoPvwnEb/hA2GiKGosYqkpcSPzkC0NL82oZ3Z2
+VM3H3HfPG4AHks/ip7O4d2wHBebg7yYxxdXDoczY/FujFUzFjCGn8LuK8s9/jrJl
+o86a+j4Y3QKVsh5MA9zu0fEKTw7iJVIBnDYSDrSJoa7iKCGfiQW6R04FDZYuWceq
+WfrKIBMG0jL3OaZ37F9zz2cxUMgE6hOj0oWeHxM7sDPmev3pmo1QLZ07twBSEwhS
+1h8tPRlF3wIDAQABo3EwbzAdBgNVHQ4EFgQURx5327HT7ZWBJQQ+E8obqEdESKsw
+TgYDVR0RBEcwRYIVaWRwLWNyby5pcmNjcy5nYXJyLml0hixodHRwczovL2lkcC1j
+cm8uaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOC
+AQEAMqxKa1Ha4ainW4V1zENyhjjveooRaq4UDOCoNzTpaYSTmfiRX5dODRHhJHg7
+PTsPk33lOO4RbcElJywaDHUYWUsIoeys9jRIc3ifjRjPcz2m1h7DXu4iu2+Q3G2L
+HF96dODAvlMSxJoZtoFrX/HEvRmo+dln+zluMEURxy768IE24TuUinQ6L70sb9XD
++8PWVXDIFvGp505+S0BLETGAyNW403IWqmt/NgINV+wh8fFnCtkzi0W43xeNWjz8
+FDNKR7KaUZVAjKWs8OZhMi/vQXrdHPjPTg/XehlSFJAt2LK7ZujJkL1esWSMwP+C
+zFSBgwF+JydLoi/Ub6jtipSUFg==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-cro.irccs.garr.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">IRCCS CRO di Aviano</md:OrganizationName>
+<md:OrganizationName xml:lang="en">IRCCS CRO di Aviano</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">IRCCS CRO di Aviano</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">IRCCS CRO di Aviano</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.cro.sanita.fvg.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.cro.sanita.fvg.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>IdP-in-the-Cloud</md:GivenName>
+<md:SurName>Service</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>IRCCS CRO di Aviano</md:GivenName>
+<md:SurName>User Support</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

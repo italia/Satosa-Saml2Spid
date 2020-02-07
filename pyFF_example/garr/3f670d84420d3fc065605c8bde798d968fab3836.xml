@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib2.unc.nc/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2019-05-27T02:36:49Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cresica.nc</shibmd:Scope>
+		<shibmd:Scope regexp="false">unc.nc</shibmd:Scope>
+		<shibmd:Scope regexp="false">univ-nc.nc</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of New-Caledonia (UNC)</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4yMIYnWQMAAAKESURBVDhPnVLPaxNBGN3aVtSqLWqpAZvdTWvFgPUQ1KjQoq2709RaRaON2c0mRDwUrCS7m8QfEER7aaW9aHYiiuBNwYN/QQU9Fm8igifx5F0q2s74ZmxQxIL4wcf3zTfvvXkzu8r/BW9SgyVNtpE6b9cpexC9xzfLAedNXU9Ym+wRYh4J2FE9YJMaZQPRKl+/5yHbEqrzTRLQV+c7NMoXwwGLCmI3ZT1qwFIgzKi1b/FYnbdKIE6FUEoN+M+TGxGmLKQF7AMIN7rpUs/qWInVF1u7Zn85WTOEgE45F07EWqUsB6s35ea/xJ8CIN/BmzyFq/PI93B2W6nydZjNon+H+nZwgbdIsoiGQO8j1inWIE0D9AJCn1DHkG/QV5GvkUaEsiHx0JIsQn3MN2h05at4OKEMgVfI53rAX4p9nJrHOoCQJQl/CwDmAVzGCZ9Rv6g1NgLCgthDvYXZDPY+ajU2h3q3keEaj0iBwSpv0elyEWAK8EG46lDpck7s4VGP6fdZPwiGENLpyqzISO37nBQ4YblthuPGSNo9QHJudDjr707Ypb2GVTxCMt4Z0/YOE6cUNzP+KcMq7wf+EHH8IdNxp4x8YZuScLydJOMXMLwM0DyIp0H0iOWOoVqoecwvEdufFGlYhd5Exh0gtjctDleSyWQzQBOmU9aEAwx1uIkO2ZXtIKZG7GKfmBmOR0aypX3DyXK7mb4ewvosyV3rhMCzZpIu7ZICqImLrmpki93jTrUD9odHnQqud2XraK4SEUIn7XK4gYufK2xUjk9MdcFaUlq2/UGpjDsblkdwhX7TLpqm5WWFbdnb3jiumzZs/8K4c7VDfoXVED/HWomQP89va1EV5QfqFD3kr9wlGgAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.univ-nc.nc</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Users in the University of New-Caledonia</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Université de la Nouvelle-Calédonie (UNC)</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Utilisateurs à l'Université de la Nouvelle-Calédonie</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHDCCAoSgAwIBAgIVAKoNLbwuF4JJS89p3iruossuxDXjMA0GCSqGSIb3DQEB
+CwUAMBcxFTATBgNVBAMMDHNoaWIyLnVuYy5uYzAeFw0xOTA3MjMwMzE5MjNaFw0z
+OTA3MjMwMzE5MjNaMBcxFTATBgNVBAMMDHNoaWIyLnVuYy5uYzCCAaIwDQYJKoZI
+hvcNAQEBBQADggGPADCCAYoCggGBALtw3RRrs96mgJGWSd41RTJyBHfUZVuTEh+y
+pNzX4TdRojutAQYZvMxw50Et29JfgBOmI6ZrsL40iMfHf37t2XHvw7+sSDGkF/AI
+dfc98xd+pf2P0ZYiffKId21u0dpG9y2r4/lFAAJzeu90hJPblZGXO7xcS/6kw+MW
+dBLAGuQfDYUZ8u/8erk2XylI5DZd4kKAgnvfwPNMoE+P+qLuvl/UW7X5jKY9vs9I
+h5IMx1CA4s/hbBk8c+cSDm4zI6+xkiNPsuqcl7anEtaX/SVKJAD51kxEz+y6SE7b
+PH2vr6rTIy8dsFiLwHDhfj7k/gjyOGe+LTYcBXCAlu638+83pjIr72WcXy0gY52U
+1UP86D2TFvd34uvWoc+Zm+QAcFRx7KIl5CBefpgGWREMep7wcUAx5on9Helvm/MZ
+2u3gY9MnOA1vo38JOlj0B3+syLk46Kwslo60c/sUtQarLLp5uJaZG0V/KKVN/JyW
+bOM30C8YaM8DeUQU3EHqDgEsSgcn8wIDAQABo18wXTAdBgNVHQ4EFgQUnv7GaOjx
+JHRXgdFKJcm7Qw91dvAwPAYDVR0RBDUwM4IMc2hpYjIudW5jLm5jhiNodHRwczov
+L3NoaWIyLnVuYy5uYy9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEA
+IyZpi9XWa6MDqAZL2asA2v0SF9IcYzeUEy/6P+pyc0eF6w20643uPSk7pIqypvnq
+oL+ZLyA3n/wl1Zb5gR6hqlDiAhunN9eGSpFVcweAfY7ZITwoNR8zqc60V0zCjGq+
+69+szGtKRMqmolTpBWf8vOrLI2JVB0kdX9mYzblkv4ccWm66L85hGJfwJqX+ThsZ
+54MlnzXFETmhFFSn5hRS5Dr8WBflFVqKbzgzBb7GXddBuiJZ9mPicRkUKu5pquQm
+7GWPUdiQ6UAfXTEgXPcuFxzkpFRgInwlqP71K2KMyMxWaPQ2NifKgVHSjjTOX8G3
+zspIMa0yjol7rWJqs1JRCTV92zFrCdY5hiyWgwApGg9Wdx7oOqPd0P0H9ogi3Xgx
+5JS3wdQ7u0a68ST7S6ZZKFFxM4jO75WEf1J03Yk8QcN+TW9JnIDdAiKl7e+kCpWB
+HH1qE3NefwoiOroahwSX8xLmT5WK8cKRPaqT0d9sKKTmiUn1bPHcFlAAhh2U0rsI
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib2.unc.nc/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib2.unc.nc/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shib2.unc.nc/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Université de la Nouvelle-Calédonie</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Université de la Nouvelle-Calédonie</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.univ-nc.nc</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:dsi-srs@unc.nc</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

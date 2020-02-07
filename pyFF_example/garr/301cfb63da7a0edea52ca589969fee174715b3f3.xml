@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://etransfer.ucop.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://etransfer.ucop.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">eTransfer Production</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ucop.edu/ethics-compliance-audit-services/_files/compliance/privacy/statement-of-privacy-for-web-based-applications.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.ucop.edu/_common/_images/sso/uc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDAzCCAeugAwIBAgIJAMAQxv4ei9d4MA0GCSqGSIb3DQEBBQUAMB8xHTAbBgNV
+BAMTFGFjYS13ZWItcDAyLnVjb3AuZWR1MB4XDTE1MDkxNzIzMjUwMFoXDTI1MDkx
+NDIzMjUwMFowHzEdMBsGA1UEAxMUYWNhLXdlYi1wMDIudWNvcC5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBKdgiovkPxq7xM1kkhNZiuUei1kgr
+bkgTO6lEpTH1zanDdtbYTvpwQe/dT7sSDkTdYfOmaVFtbhin6exxTzJl7mBdSDwZ
+je0phIken36w6iVh+b+wZy023eibxSpvkk3PMj+/nzORoG0fh4xNtAuX1EF1UVQn
+YNUJwxG4FwT71HGUmhsy1gKrtYAjiX3Gow4pnimZ2cIBIRar1mPLvdp3lHDWDU4s
+/PepqXpWkEu+T/Fc9QwGGyXAjZBtTJKIoj1zMqKZSP0j9zP5NJIJdcfCRTQcsuU9
+OkxUCkqZcVpk5CVaQLfiWB/uqkEgHsiUv8/SiElO/0hsit+dhM/a6NWDAgMBAAGj
+QjBAMB8GA1UdEQQYMBaCFGFjYS13ZWItcDAyLnVjb3AuZWR1MB0GA1UdDgQWBBQG
+GL9PT9Njlu6FMzgwcKrdXelWXTANBgkqhkiG9w0BAQUFAAOCAQEAJ9Pv0Xqb1TqG
+K+SGcVLVTJOx2CG+HII6BMFUsv39pY7U13zwChOFmxgH3vphka1NKI4qPwawx8TG
+mpkwwyEF1ZyibNzKKWgX+79G62LjvyYY6CGHkUJ8n+C7Ge9MMVpU62dFYf+PjaZ5
+P+gXz+RM8q2MdUuYJnS3p2bDrCO++co9J53rXaf0ykwf46NCJdn1wjr1VK6RG1W0
+mv+wfJ9xrRYnYCAZxb5dZLuDhWiwi3AXUFPU8SvE/XH1yt1Z10Pw8GqlOmkYv6D4
+aIbU3NLbZ4LkYimWrgmplqzTksxetbxkiDl8WAHkfkOWaK1GJ0wF2sr5ZIYrRlV0
+4tYg7hiS5g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://etransfer.ucop.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://etransfer.ucop.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://etransfer.ucop.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://etransfer.ucop.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">eTransfer Production</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California - Office of the President</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California - Office of the President</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucop.edu/welcome.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Christopher Scott</md:GivenName>
+	<md:EmailAddress>Christopher.Scott@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael MacDonald</md:GivenName>
+	<md:EmailAddress>Michael.MacDonald@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Operations</md:GivenName>
+	<md:EmailAddress>soc@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

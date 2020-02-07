@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.fau.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://wordpress.fau.edu/irm" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fau.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Florida Atlantic University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Florida Atlantic Test IDP</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.fau.edu/oit/accounts/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.fau.edu/oit/accounts/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://www.fau.edu/images/shibboleth.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAPXvW42xKsbM/hd7Kz3NbFQcB2eYMA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC3Nzby5mYXUuZWR1MB4XDTEyMDYwMjIwMDUxNFoXDTMy
+MDYwMjIwMDUxNFowFjEUMBIGA1UEAxMLc3NvLmZhdS5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDKSEyeGUqxBlVwKg3HMQSX+CSEngA3t10bE4Ks
++dNLQuBT8dG/2BW0ByoLuY26OUjE/pD/8AfpP96NXninzQl0x6pVm5BPpQC4Ds2m
+VrXjGqOpPddaL/DCxp/MOOuOhsfr4oeIh1wlypMnTey3Q1Ew0Qrn253IUn8VufDW
+MIb0CHGfGOajen0muPHcumuDjqVJm/06ID1h0dygTeTizxY5LfvpmEZYxtuVP4ns
+VTt9qZxRUK92AWGiRPW95ezzNIhNzGSgFk/y0ctdK87Q69Og+kE9Cf8PJVcDjRKB
+kHwWhEVpR/9wXD9VnIOKdXHR2wNb0MNrxxKUWGuhZ0iJINl1AgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC3Nzby5mYXUuZWR1hiJodHRwczovL3Nzby5mYXUuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQpo7vIce0XZ8XgsfkQMH6fElF7gzANBgkqhkiG
+9w0BAQUFAAOCAQEArw1nkMaS7/56SOkCmSf9dha9iyCXTrLOYi8Mrlc12Q479+sI
+eddtX47ShJhlUqXlIvZi/HLPMUHoyG5zIwTzD9a+o9nc4+dC9TTL64lcCiDkAPyB
+jC8zkXMjZogLu2qiSBUdaaAYr1RswiNpUgJEdnl7FxeFUFD1TZ7yFsjOzgLC6W4W
+NVUVQWYfRbQOFizPJBtA+QdWDB/tHnMgOm+jjgwVXupex20rdV6vVq/sKTzE1tCn
+Sy7y61N6qVJjnmbH4IdFnrQib4jc16mOWBob8JUD/nSozArIjurFPIBCZWtfkqhb
+8RgOqewQBP/7Gw84rIidKEycldMKMkP7EtKyeQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.fau.edu:443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.fau.edu:443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.fau.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso.fau.edu:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.fau.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.fau.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.fau.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.fau.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fau.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVAPXvW42xKsbM/hd7Kz3NbFQcB2eYMA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC3Nzby5mYXUuZWR1MB4XDTEyMDYwMjIwMDUxNFoXDTMy
+MDYwMjIwMDUxNFowFjEUMBIGA1UEAxMLc3NvLmZhdS5lZHUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQDKSEyeGUqxBlVwKg3HMQSX+CSEngA3t10bE4Ks
++dNLQuBT8dG/2BW0ByoLuY26OUjE/pD/8AfpP96NXninzQl0x6pVm5BPpQC4Ds2m
+VrXjGqOpPddaL/DCxp/MOOuOhsfr4oeIh1wlypMnTey3Q1Ew0Qrn253IUn8VufDW
+MIb0CHGfGOajen0muPHcumuDjqVJm/06ID1h0dygTeTizxY5LfvpmEZYxtuVP4ns
+VTt9qZxRUK92AWGiRPW95ezzNIhNzGSgFk/y0ctdK87Q69Og+kE9Cf8PJVcDjRKB
+kHwWhEVpR/9wXD9VnIOKdXHR2wNb0MNrxxKUWGuhZ0iJINl1AgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC3Nzby5mYXUuZWR1hiJodHRwczovL3Nzby5mYXUuZWR1L2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBQpo7vIce0XZ8XgsfkQMH6fElF7gzANBgkqhkiG
+9w0BAQUFAAOCAQEArw1nkMaS7/56SOkCmSf9dha9iyCXTrLOYi8Mrlc12Q479+sI
+eddtX47ShJhlUqXlIvZi/HLPMUHoyG5zIwTzD9a+o9nc4+dC9TTL64lcCiDkAPyB
+jC8zkXMjZogLu2qiSBUdaaAYr1RswiNpUgJEdnl7FxeFUFD1TZ7yFsjOzgLC6W4W
+NVUVQWYfRbQOFizPJBtA+QdWDB/tHnMgOm+jjgwVXupex20rdV6vVq/sKTzE1tCn
+Sy7y61N6qVJjnmbH4IdFnrQib4jc16mOWBob8JUD/nSozArIjurFPIBCZWtfkqhb
+8RgOqewQBP/7Gw84rIidKEycldMKMkP7EtKyeQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://sso.fau.edu/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Florida Atlantic University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Florida Atlantic University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.fau.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Rhian Resnick</md:GivenName>
+	<md:EmailAddress>rresnick@fau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Research Computing</md:GivenName>
+	<md:EmailAddress>hpc@fau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Please call 561 297-3999 for assistance.</md:GivenName>
+	<md:EmailAddress>helpdesk@fau.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Information Security</md:GivenName>
+	<md:EmailAddress>security@fau.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.phsz.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2013-03-15T08:18:13Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://ict.phsz.ch/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phsz.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PHSZ - Pädagogische Hochschule Schwyz</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">PHSZ - Pädagogische Hochschule Schwyz</mdui:DisplayName>
+		<mdui:Description xml:lang="de">PHSZ - Pädagogische Hochschule Schwyz</mdui:Description>
+		<mdui:Description xml:lang="en">PHSZ - Pädagogische Hochschule Schwyz</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAAQNJREFUeJzskSGqhWAQhV2HmMSmxWgwmMXgFsTiAgSLwSC4BYtgcQGC1SCYtAhWg0UsBoPF4LnMwO338l56vIFB/n/OfOf8KOCHJfxBQNu2KMvyc8BxHLjvG8uy4HkeDMMAXddxnie2bWMR3dP8ui7W0g41aQRVVWEYBlzX5d73HZIkwbZtKIqCvu/heR436ehMOjJxHAdCFEUoioJdNE3DPM+QZZmd4jjmWZqmsCwLdV1zonVdYZommzEgCAKM48iONCQ6VZIkDGiaBl3XQRRFXqIkbzADKJ7v+yyid2VZxgBapMj0pXme55imCWEYclNCBlRV9Xu/8R/wfb0AAAD//wMASomZ9yXpUJoAAAAASUVORK5CYII=</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAQAAABbLvUHAAAFLklEQVR4nOyXa2wUVRTHZ3e73W2n00LRAvI04JsiRkSDGJH4CBKMESWGhBgjJpooCwTru9FEUl9RMRi0CaghxscXBYOoaGJMP9RHDI1gUWkMlQgqAm1BlEr//u+ZO9N5LWv7ZSdxcnZndu8999zf3HvOuWcMGPGWsgMkgAlguQESwASw3AAJYAI4FOU/cRduxq2UxXgIvyJ2gEcwlreUiIE74gfYg8moQI1IGlfED7AXF6CKYgNeGT/Ak/gZ36IR2bgC2rKAHlh2wAEcRDd6IhHCgH34AZ3Yj5OR+v3Yx97vGfUDw3gkflrQTHmU381iohvP4BqMRwOmMJ28hsMBs37AL7Ec52AEZQzmYxP+8ml30O4cWhqBkTgD16EFP7r976OA+4vKCnwFDVjvsfgBPpVUkkaeUiltjWhHFOBVbF0jOlkJnbwkn1tw3NV+mm0GMtKr+tP8V4c3df+KEou3wQGcoBNHDSe6mngqBPLIoVq3plCPNgQBM1yvJ/hXxbQT2UoMPKh1W6XXginghiQoi9fR2CsaTbyYAanx2NnkAJ5GA3kOrRGwagJmuB1TUa+nV4jnoxd+wGo+Si2vGa5LHSWtbVRiIn6j7iE6SFb0qrEErXgJ86jhnXqVrO6gKAt1omGx51LtWvx8hPdwEQ07CXg6tnCKo/iJHlPrGn08AKimruLfG6jdySDZSGBH923qtnGtTHm4F/TIAVymTWyUlj34BJ95pJ0xMElsVPC+G26QKLmdF3uTp+oNcLbJhqlginbc3wFUD9PkicwWbcPAk2zbrrVS2peUvMKzvMBve5FoX8R1tHfxY1fDB2hyyjcCgxfqDTXREQBM4Xqf7jeipwCb2d7JjaqS6RrwIpNWiYigFDSDgZc92j7AHCbgQMDUq+66tPoA1QZ/7tM9xNE5FxDGbTLSkkiezMTRhr9PgblOQkaNXu7T8gFmMDuUTL/gBPbAJh9gJc5F3ykB92MWb3YuyEElo0vwVhHIrbRXJcGxECeKA6ZwbWj4LkaWvXEFH2CGCdivGQSEcRh3EsuBNDnG4BJ8F5qjA6cT0KKDzQg5Q2AFwyXU15Io1LT3+QDTmFsS0N6BxdLmZAmD585e38iDmEmLFjUasDM0vw8whzNDT/CODolB1y1WLEQDKtmNp3Ae7KyqtnGZp/8EbuLNkqNhW8T2+wBNppPNAaWl0qOieMeQAX/3lA+9eB6jBDHrSVkwVmv7Bp7Vbf1cxx3MGTsRAlT57mJfcfAuzZnS3ui6938F7MQ099y1ZZnep0nuHOthH3dZPOBqHsA4CZiJUYAqUOaTXcXyUebEsdp3DKwJnCSlAPsZj8rzVmKP1jvOkz4jDztdP+x2rlxeMsKF2MpCZQvlQ548liTrcVGApsRaLRPCXJzFX+p8VV4zA8eGCLjW3bqRLN4ew8Pcg0rtg3fLyC56fEYvSy2x067YRcP4MKBJL8kLvVLPuXE3RtdmQwHswuX8lZdaJy0KWW3tbBawqkFVM5anfglKxApW0Oh65j1D0qZT4c12Dzlb5ukfswKAf8CpLG1/6qNbjJL/OU91OcdNJaXqwUVRgDPpfR24hyVDHZd9NP3o9cB5oQqIlTy4VmFdoP0YK57V7Cl40kUX1vJVfwozXAPz31IGzaC1bTybmovII/TEfdGA/dJ8hOXOLvwyrLeIsPTw/aabBdxwxhYBjI8kgP8XwCUwJFtNiyvgc3ypvhELcC/+iSdgfKXsAAlgAlhugAQwASw3QAKYAJYboJT8CwAA//8DACuWxpyDM9WgAAAAAElFTkSuQmCC</mdui:Logo>
+		<mdui:InformationURL xml:lang="de">http://www.phsz.ch/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.phsz.ch/</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>phsz.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:47.04552,8.55343</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUMVzxzC6x5K48CZT8f7arbXxTLckwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLnBoc3ouY2gwHhcNMTkwMjI1MTAzMDAxWhcNMjIw
+MjI1MTAzMDAxWjAWMRQwEgYDVQQDDAtpZHAucGhzei5jaDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAIi7e3tbV1iS7oWrh7Uo+QyaAjpV7aDauFzmot5R
+RnHLAccT0hvpag6WUB0qOlJtL5ZHZjGrI8IEjuIHKnUZXTqR2X0ITUEaOLMOoy5x
+wNXp1v/dknVAKcl/gaoIHcnngm1iEtAnmQdMKgiATmfUVIqsQWrMeJ+DEJ72+tXj
+jbM/YDa+N7sAdB94hWcHoJg59D+nQCHi5s1atZgI+O5rRl0tI/pgZa3Z4H1CwvfG
+jyCH73fEkYwrnTQB3QPZMqiACl030Xg0onOMK8NfAToJn2b0R5+A04rE1VnFJl5u
+YJr5D8OEAVP03VPGlVY4L88F33viRvr3nIowtEEKBSAcrb8CAwEAAaNdMFswHQYD
+VR0OBBYEFKGLuCsytoAYhJcDh6ht2nCkhpXzMDoGA1UdEQQzMDGCC2lkcC5waHN6
+LmNohiJodHRwczovL2lkcC5waHN6LmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBtfDbn99Cu0OffY9EVloBfTuiXrokJuVdGr5HSlH8bHhz3ZkWB
+Vyrdu5ZlOdncMOOJtshMY+VSc2vOg0HBXhhAgxiv6PZctCoz0RNTC0mn/vm2HgMj
+fKXp7hOlKgXsZM9jry3pu9kmaD7PVMBGwyIqkg5JrwPGu1ad4APS+ib+kVzcNUfZ
+PHDW9FjVGjLIfgO60rf0yd9pA2TcWDlsZY2xEF9o4RFiIlu1EIpPsdZdd7vdwD4x
+ACF8ocpTc6nMr7XAb2LdLxqyX2kpL/00feAawh1zWsOIoCcZcf0BpgklbLCZ9Nc6
+p7qBgNdNgtWODM1APGH8rsxQQ4MLyabQkYGi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.phsz.ch/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.phsz.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.phsz.ch/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.phsz.ch/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">phsz.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUMVzxzC6x5K48CZT8f7arbXxTLckwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLaWRwLnBoc3ouY2gwHhcNMTkwMjI1MTAzMDAxWhcNMjIw
+MjI1MTAzMDAxWjAWMRQwEgYDVQQDDAtpZHAucGhzei5jaDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAIi7e3tbV1iS7oWrh7Uo+QyaAjpV7aDauFzmot5R
+RnHLAccT0hvpag6WUB0qOlJtL5ZHZjGrI8IEjuIHKnUZXTqR2X0ITUEaOLMOoy5x
+wNXp1v/dknVAKcl/gaoIHcnngm1iEtAnmQdMKgiATmfUVIqsQWrMeJ+DEJ72+tXj
+jbM/YDa+N7sAdB94hWcHoJg59D+nQCHi5s1atZgI+O5rRl0tI/pgZa3Z4H1CwvfG
+jyCH73fEkYwrnTQB3QPZMqiACl030Xg0onOMK8NfAToJn2b0R5+A04rE1VnFJl5u
+YJr5D8OEAVP03VPGlVY4L88F33viRvr3nIowtEEKBSAcrb8CAwEAAaNdMFswHQYD
+VR0OBBYEFKGLuCsytoAYhJcDh6ht2nCkhpXzMDoGA1UdEQQzMDGCC2lkcC5waHN6
+LmNohiJodHRwczovL2lkcC5waHN6LmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBtfDbn99Cu0OffY9EVloBfTuiXrokJuVdGr5HSlH8bHhz3ZkWB
+Vyrdu5ZlOdncMOOJtshMY+VSc2vOg0HBXhhAgxiv6PZctCoz0RNTC0mn/vm2HgMj
+fKXp7hOlKgXsZM9jry3pu9kmaD7PVMBGwyIqkg5JrwPGu1ad4APS+ib+kVzcNUfZ
+PHDW9FjVGjLIfgO60rf0yd9pA2TcWDlsZY2xEF9o4RFiIlu1EIpPsdZdd7vdwD4x
+ACF8ocpTc6nMr7XAb2LdLxqyX2kpL/00feAawh1zWsOIoCcZcf0BpgklbLCZ9Nc6
+p7qBgNdNgtWODM1APGH8rsxQQ4MLyabQkYGi
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.phsz.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">phsz.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PHSZ - Pädagogische Hochschule Schwyz</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">PHSZ - Pädagogische Hochschule Schwyz</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.phsz.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.phsz.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Lothar</md:GivenName>
+	<md:SurName>Gwerder</md:SurName>
+	<md:EmailAddress>mailto:informatik@phsz.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 41 859 0593</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Lothar</md:GivenName>
+	<md:SurName>Gwerder</md:SurName>
+	<md:EmailAddress>mailto:informatik@phsz.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 41 859 0593</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

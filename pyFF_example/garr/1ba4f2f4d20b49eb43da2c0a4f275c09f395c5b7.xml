@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth3.obspm.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2017-04-06T17:23:44Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">obspm.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Observatoire de Paris</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///+/////3////9/9//3f/P/93/Xy8t/o2tvf2sHE39rBxN/o2tvf9PDx3/z//d/9//3f////3////9////+/////3//////+//7/9/T0/9O2uv+pa2//jTk+/38iJf9/IiX/jTk9/6dnbP/Rs7j/9vLz//7//v//////////3////9/+//7/8+3u/7eEh/+CJiv/cgsM/3IKC/9yCgv/cgoL/3IKC/9yCwz/gSQp/7aChv/z7e7//v/+/////9/////f+ff4/7qJjf95Fxr/cgoL/3IKC/9yCgv/cgoL/3IKC/9yCgv/cgoL/3IKC/95Fxr/uIaK//n29//////f/f/939nAw/+GLTL/cgoL/3IKC/9yCgv/cgoL/3IKC/9yCgv/cgoL/3IKC/9yCgv/cgoL/4UrL//YvsH//f/93/j29t++kJP/hCor/3oZGv9yCgv/cgoL/3YRE/94FRf/cgoL/3sbHP9yCgv/ehka/3YRE/9zCw3/rXF3//bz9N/08fHfuYeK/6hpav+nZ2n/jjw+/4EkKf+eVlz/pGJl/5RHR/+hXWD/nlda/5hOT/+KMzj/jz0//5pRV//s4uPf6Nrb34ozOf9yCgv/hSwt/6JgYP+ZTlP/qGls/6ptbv+cVlb/rHFx/8CUlf+iXmH/lEVK/6ptbv+YTFH/5NPU3+ja29+KMzn/cgoL/3IKC/+lZWX/ol1i/7J8ff+naGn/tYGB/7WBgf+gW1z/p2dq/6ZlZ/+/kpL/wJKT//Do5t/u5ubflUdM/3IKC/9yCgv/pWVl/6JdYv/Empz/l0xP/5RHSP+cVVX/ijU1/6JgYP+UR0f/izc4/7iFiP/08vLf+Pb237B3fP9zCw3/gygp/6VlZv+TREf/n1pb/3IKC/9yCgv/cgoL/3IKC/9yCgv/cgoL/3MLDf+tcXf/9vP03/3//d/hz9H/r3d5/6RjY/+SQ0T/cgoL/3oZGv9yCgv/cgoL/3IKC/9yCgv/cgoL/3IKC/+FKzD/17zA//3//d/////f+vn5/8unqv+EKSz/cgoL/3IKC/9yCgv/cgoL/3IKC/9yCgv/cgoL/3IKC/95Fxr/uIeL//j19f/////f////3/7//v/07u//uoeL/4QoLf9zCw3/cgoL/3IKC/9yCgv/cgoL/3MLDf+DJyz/t4SH//Pt7v/+//7/////3////9///////v/+//f09P/Vub3/q21y/446QP+BJSj/giYp/446QP+rbXL/1bm9//f09P/+//7//////////9////+/////3////9/9//3f/P/93/Xy8t/o2tvf3MXJ393Iyt/p29zf9fLy3/z//d/9//3f////3////9////+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.obspm.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Shibboleth V3 Identity Provider for Observatoire de Paris staff members</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Observatoire de Paris</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Fournisseur d'identité Shibboleth V3 pour le personnel de l'Observatoire de Paris</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAIthUlCqnxojijLyGnuqVLfhcowRMA0GCSqGSIb3DQEB
+CwUAMB8xHTAbBgNVBAMMFHNoaWJib2xldGgzLm9ic3BtLmZyMB4XDTE3MDMzMTE2
+MzcwOFoXDTM3MDMzMTE2MzcwOFowHzEdMBsGA1UEAwwUc2hpYmJvbGV0aDMub2Jz
+cG0uZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDPF1OVNnQPZPnq
+zPNAlUnEk04St8vkyh18xUXdu8tZpYLIHbIj2YInbxBexYbvQz0BHMQn4hww0tZd
+GPnxXSBd2oDmQsF0bxMjS2/Oo45qRatWqLelnVSKyOBqCbr98pJdWJfGh4Yffk1s
+8NrxKKcavFShHef9iX0FK75xpAun2G2SnwjqoQgch5EXSaYcS/FJA6x7hvCGHILN
+15xNwPgVtxaRlB6mVgQogbkEKMbbK9q8fY5UZskPAUdKsRBgWc5mOfcAVm+t5Na7
+8k0nI17PC/L822XN7iy5563OSG8AY2U90DZkCbd3Qbv3C5PicUDGp5oNE0nwL/lt
+WEalLEjhAgMBAAGjbzBtMB0GA1UdDgQWBBSrr9eBwdpfdZwxB9R813QDDbW+AjBM
+BgNVHREERTBDghRzaGliYm9sZXRoMy5vYnNwbS5mcoYraHR0cHM6Ly9zaGliYm9s
+ZXRoMy5vYnNwbS5mci9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA
+zA/vZeU3Ja/GFKYHcKnV2RXnIeJ0wfqhlN6/Z514Ck5QiL066pg6pEp9mAZL55xW
+hZo+Vbw2b9Or035huKE5hCuRS6IioYxMBhTYukrRd7wzJtJy2p5yHIPFT4e9pCcw
+56MhdGVGmJrGwh6Wp91paS+u74TK3kJBSTtSMfhBEhqxt7LpnDt6/kSMInSNFp57
+EBaPzLKiiA1JlHzku0YMv2UufSac9ZSq38JktI5dR1TQFuVSyqll/kh879G9XxYL
+4OO/85qqu7ckHNIQvjkQOZ/7i7OcCML/P2V+bITe87GeOJeDCR4TtVaqX4ItBRFQ
+GcXvJ/owVYAEMMrno0G6xw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth3.obspm.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth3.obspm.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth3.obspm.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth3.obspm.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth3.obspm.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth3.obspm.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Observatoire de Paris</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Observatoire de Paris</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.obspm.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:interne.admin.dio@obspm.fr</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>RSSI, Direction Informatique de l'Observatoire de Paris</md:GivenName>
+	<md:EmailAddress>mailto:rssi.dio@obspm.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

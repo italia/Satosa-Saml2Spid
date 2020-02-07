@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.wu.ac.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2009-05-14T15:00:10Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">wu.ac.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Wirtschaftsuniversität Wien</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Vienna University of Economics and Business</mdui:DisplayName>
+		<mdui:Keywords xml:lang="de">WU+Wien</mdui:Keywords>
+		<mdui:Logo height="109" width="199">https://www.wu.ac.at/wu_logo_aconet.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.wu.ac.at/favicon-16x16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>wu-wien.ac.at</mdui:DomainHint>
+		<mdui:DomainHint>wu.ac.at</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMDCCAhigAwIBAgIVALWoYkEuug5JgjIZkUr7JsXhHXtuMA0GCSqGSIb3DQEB
+BQUAMBwxGjAYBgNVBAMTEWlkcC53dS13aWVuLmFjLmF0MB4XDTA4MTAyMTE1MDgy
+NFoXDTI4MTAyMTE1MDgyNFowHDEaMBgGA1UEAxMRaWRwLnd1LXdpZW4uYWMuYXQw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQD2hXLSyDTDWlYyKvSlwvj0
+0lIaIIOmHQErj5ym+1DvGlFLJli1jkpD0fVX0PlV6eZHn5vUjiCjaA0uMGbwMDTH
+B9v9GdJz/xM0g+n/xdw324McpQxyj9I4KfBhcyLubfNvusxuujXb6cYTE5KqhINP
+CKtz+Kwst6x+d2ELnSzbruOOXRQ0RIfD98g3tL4WX8MXLa1Hf68Eu3cr6B7mtzJt
+OnTwoNrR1DgQFYxDXIbxBY/tJuuof/q8CMo9Xr4hHuNhFDp60MMcG9A/EViJLKks
+TuFNOqZ7LYptEIdLEirpP59F98neOZ//qF6MqwheO5Bo2sw3Tqwhpn/aAT/FMji1
+AgMBAAGjaTBnMEYGA1UdEQQ/MD2CEWlkcC53dS13aWVuLmFjLmF0hihodHRwczov
+L2lkcC53dS13aWVuLmFjLmF0L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSBgQgr
+0be1M9i2d0ChhT+P3AU8gTANBgkqhkiG9w0BAQUFAAOCAQEAbJQ+Ndk1ZUGrqLUC
+jy5u40Mpb5tAuIP8xMo+tjpvHhwgMdJBgDTLSBPuGFtTunL0cBDfK/Igti8ftVHU
+rJkeAUQlC2gQOPFMUgZGq7ZDfXo032O5Ga3cw5nBJjFjkREg7Q0JfKwIchxTwoYw
+MwAMy1O7RGA7hBrgV3m3fglcw6fzPQGhuClQztvStDgN8q1Ru6dAJJ2jp1MCmqN7
+4miHQ00G/h6kiIZFSYsZJYs8TfgznesjL9wQXat6tAs/1iRHyCpGgRQCvZZPEIJl
+vcLZFtfkt3enc5S4KDgwdhilEwxgNs4lxmwCveRvOwM/d01bYBEiG5icm8lXKcBJ
+1ozy0g==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.wu.ac.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.wu.ac.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.wu.ac.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.wu.ac.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Wirtschaftsuniversität Wien</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Vienna University of Economics and Business</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Wirtschaftsuniversität Wien</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Vienna University of Economics and Business</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.wu.ac.at/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.wu.ac.at/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT-Services</md:GivenName>
+	<md:SurName>Postmaster</md:SurName>
+	<md:EmailAddress>mailto:postmaster@wu.ac.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

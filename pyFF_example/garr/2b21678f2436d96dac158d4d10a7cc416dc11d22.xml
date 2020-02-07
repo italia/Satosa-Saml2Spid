@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idhub.test.eduteams.org/proxy/aHR0cHM6Ly9vcmNpZC5vcmcvb2F1dGgvYXV0aG9yaXpl">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#ripemd160"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-ripemd160"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2017-10-27T10:34:45Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">eduteams.org</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Orcid via eduTEAMS Identity Hub TEST</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Login to a service using Orcid via eduTEAMS Identity Hub</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDZTCCAk2gAwIBAgIJAIqGVFrU/1IZMA0GCSqGSIb3DQEBCwUAMEkxKjAoBgNV
+BAMMIXZvcGFhc3RlaXAucHQtMjcudXRyLnN1cmZjbG91ZC5ubDEOMAwGA1UECgwF
+R0VBTlQxCzAJBgNVBAYTAkVVMB4XDTE2MDgxODE0MjY1OFoXDTI2MDgxNjE0MjY1
+OFowSTEqMCgGA1UEAwwhdm9wYWFzdGVpcC5wdC0yNy51dHIuc3VyZmNsb3VkLm5s
+MQ4wDAYDVQQKDAVHRUFOVDELMAkGA1UEBhMCRVUwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDmyNow22hpSFEsIiwCdpBKajVSoV3wecVcZ60QnMkMqfuM
+xRX+cgAio+cGXy0zA89tOhY6mjdXASlHw5+AfYWWugSCuBOq5yhl3wwRR6WGHXUS
+58l62xnmP3ZyqsPw1ijjUiDyCQtJJPU3jQoeT1gOXAtAYOdCWFx17zbz/xbod05G
+Tbnreo477O6DFJBnVxsn0G/pJ2KkIeI+ZOYKoriJvSXb9d1uNhPOYfq1WVSa9Wn7
+8l68P6RuHwKH94vL0R3RNhMMehQYLSkmCZ/2OiU79W6Pvb+n2ZgG5QMwKPWraDM8
+wNF97WZNBM7Cp+sqfBaP7vk0xPiwzh6JBS+ehd7VAgMBAAGjUDBOMB0GA1UdDgQW
+BBQPDuPWgGxI1frYMl+mS5qkUSmQrTAfBgNVHSMEGDAWgBQPDuPWgGxI1frYMl+m
+S5qkUSmQrTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAIhF9QSUXI
+D33N6CSRi2HTpI0SMq1R2oCiYAV0vuuRMlQFUVtUQnCv6SC3X521zHER25onUueZ
+D0AnTs2NoPWIbD+1BwS1B8M6Gi74bEs7TzrvfnDklRmqMNo2NdnIuoZ38w9VIX88
+qsgE8E2KRJ0F2DYYhgrWU2sRqtfd+T1PkF0NucOnARhE4voW1eco1H0qu4mI9eGw
+hKEMwf7pujRQP1QpUAdKWR7lFyACOJ0Tkh7Lb++ANQWHFEHYV/NfyhJC1fsFCLhY
+S71lHOMM4Mxjw3Hw+hcRjj+VfJPCgoRVHsSnHp1IAxLLU1Hp8nveIHnnOQhEXzgg
+RbBrFu9Tez+9
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idhub.test.eduteams.org/orcid/aHR0cHM6Ly9vcmNpZC5vcmcvb2F1dGgvYXV0aG9yaXpl/sso/post"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idhub.test.eduteams.org/orcid/aHR0cHM6Ly9vcmNpZC5vcmcvb2F1dGgvYXV0aG9yaXpl/sso/redirect"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">GÉANT Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Orcid via eduTEAMS Identity Hub TEST</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.geant.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>mailto:support@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Technical</md:GivenName>
+	<md:EmailAddress>mailto:tech@eduteams.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

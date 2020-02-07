@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://incommon.coloradomesa.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">coloradomesa.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Colorado Mesa University</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">https://www.coloradomesa.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.coloradomesa.edu/information-technology/policies.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="46" width="158" xml:lang="en">https://www.coloradomesa.edu/_files/images/mavzone/form-brand.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEGTCCAwGgAwIBAgIJAPjcm0KKTjIvMA0GCSqGSIb3DQEBCwUAMIGiMQswCQYD
+VQQGEwJVUzELMAkGA1UECAwCQ08xFzAVBgNVBAcMDkdyYW5kIEp1bmN0aW9uMQww
+CgYDVQQKDANDTVUxETAPBgNVBAsMCEluQ29tbW9uMSIwIAYDVQQDDBlpbmNvbW1v
+bi5jb2xvcmFkb21lc2EuZWR1MSgwJgYJKoZIhvcNAQkBFhloZWxwZGVza0Bjb2xv
+cmFkb21lc2EuZWR1MB4XDTE5MDkwMzIxMDYxMVoXDTI5MDkwMjIxMDYxMVowgaIx
+CzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDTzEXMBUGA1UEBwwOR3JhbmQgSnVuY3Rp
+b24xDDAKBgNVBAoMA0NNVTERMA8GA1UECwwISW5Db21tb24xIjAgBgNVBAMMGWlu
+Y29tbW9uLmNvbG9yYWRvbWVzYS5lZHUxKDAmBgkqhkiG9w0BCQEWGWhlbHBkZXNr
+QGNvbG9yYWRvbWVzYS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCtfm8sKrtaFaj1CMDkJ+isuIzii4p2huW84GUBsmrm31e/f0zs8MORQ4NjEwtO
+7b6zv3dzNXmF+UdQA4okpCwQWDV8du2NsdNHMgiLzg6YPCW4tRaHnM/xu0i8mRdf
+YWIzBEai+tr81mjv6nKh/ZatInQ2v9NXgWooFuv/jesk8SGnc4NRcLE/hPhTBdgq
+Hsvo9imWmFy1l7Jx84VA/4vmZBGQj+7imSHBUswbzldJmCM1o26zQ1WvoQwfATtO
+U9S+/NCfzLn3LOklhvTUNK2Ad5EgJqCZVOzUT5zFqQZQ4NzNKVZt4EpJYIvkRujf
+1EFz5Q8t87ay6mC/Lb3zDdFJAgMBAAGjUDBOMB0GA1UdDgQWBBTqsTuDLIntrGU4
+Izpq08BM8BRX/DAfBgNVHSMEGDAWgBTqsTuDLIntrGU4Izpq08BM8BRX/DAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAqFJneZ9Fl2BKurt3sLzXRLOAB
+3Q1YjXuHC/PZR//Ogk07+TfSlQ7tyJSGx1uaj9QFR427L+LLl3q1GwQ53fcQcE9H
+Qo7TFEYMjy0+0cnrmDfJK3Mh2EEWU80fwyROhX1S0T0YCFuIRGghjYI5l5+1cM8P
+xrJVA3DRxqf+se7R/vV4BClAbMTFbKcyAUxCAyxVAypM+BPa6NtB1twQFtwjJ+T2
+RwlPvM8bbiYTHQi7429D1TiYOZraGfVZ0pHcFDfx8Ji/oczUuugMaFG57NjswVnz
+2p25fzsoHGsKUy5BHVMARNerygHneCoFT+vBq1Uc2GxDzNkBHOPHH4dhPjp5
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://incommon.coloradomesa.edu/simplesaml/saml2/idp/SSOService.php"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://incommon.coloradomesa.edu/simplesaml/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Colorado Mesa University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Colorado Mesa University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.coloradomesa.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Michael Kansgen</md:GivenName>
+	<md:EmailAddress>mkansgen@coloradomesa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Michael Meens</md:GivenName>
+	<md:EmailAddress>mmeens@colorardomesa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Michael Kansgen</md:GivenName>
+	<md:EmailAddress>mkansgen@coloradomesa.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>SSO Support</md:GivenName>
+	<md:EmailAddress>sso-support@coloradomesa.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

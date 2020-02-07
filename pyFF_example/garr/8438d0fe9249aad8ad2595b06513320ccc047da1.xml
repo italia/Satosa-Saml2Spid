@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.bournville.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-01-14T16:14:23Z"/>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bournville.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bournville College - Do not use</mdui:DisplayName>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAMVOqQ1Map32HnZJGhKs8Wp1jYykMA0GCSqGSIb3DQEB
+BQUAMB8xHTAbBgNVBAMTFGlkcC5ib3VybnZpbGxlLmFjLnVrMB4XDTEzMDExNDA5
+MTAxOFoXDTMzMDExNDA5MTAxOFowHzEdMBsGA1UEAxMUaWRwLmJvdXJudmlsbGUu
+YWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYoem7DBPG4jdk
+EVlcLTjO/LIKz3gGO7e9grN1421mzM3A1kZSyeuxafhpOoAFJyJjyCjnl4zMaj/l
+Y0OZER+9uRxRRoXjDPL669HNq8cpxDIxS7NOW+kAEm57hd6ep4HCqXbnlfWt8WGe
+Hb4SN7VPkv77cHXa6dgd3KAhyZ6WPxYiLvat0ek9I/FgePw7+4OGqal94HgNLFE9
+BUKBk5LXHM4mu60jgdquizkFNf0nLpgoyFYRmN8khbWF9qa9wlLgv5PkqhBrKmlO
+8k4+3udGbA1OjwDTqtwyMVHtvAb+F0iiud6g6Q2tQ7SroqG0znygy1rwIxKgq5Ox
+3aN+OVYTAgMBAAGjbzBtMEwGA1UdEQRFMEOCFGlkcC5ib3VybnZpbGxlLmFjLnVr
+hitodHRwczovL2lkcC5ib3VybnZpbGxlLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBT4YMqKmVMZslHbFSfAyWXTnYAJ4jANBgkqhkiG9w0BAQUFAAOCAQEA
+fHiWcumz6a+MOT0mhfrS8aSmW50uxoJcKcao/DiNRFvQGBLb/WaDVV4OkvE2sPuH
+o/36kgbsZPOBsefMQLvvztijWO/mKtKztRyq7T3wIOx931Yt3v8DNGyIBG7nx5l1
+HjYILU50oZ3l/UEZrLirbbdjNTQ9xmVL0s/0/SnZDHwesiyqrQJDz5FGdOe1Y0dd
+eYqNqQ5BLnDstFFIEBsh5PKdJed7yFYlZPWnin3jjYmvOFPClS8irmcImEONqoBq
+KI23lp0qS3GeWPrif5C8EMO0nh/9yJ3UUTrHCsMZVT5Zb/9uPPKWC6dMS0Ywanu+
+t9/SkewVV1FPgkkbJ2LVTQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bournville.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bournville.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.bournville.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.bournville.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.bournville.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.bournville.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bournville.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDPDCCAiSgAwIBAgIVAMVOqQ1Map32HnZJGhKs8Wp1jYykMA0GCSqGSIb3DQEB
+BQUAMB8xHTAbBgNVBAMTFGlkcC5ib3VybnZpbGxlLmFjLnVrMB4XDTEzMDExNDA5
+MTAxOFoXDTMzMDExNDA5MTAxOFowHzEdMBsGA1UEAxMUaWRwLmJvdXJudmlsbGUu
+YWMudWswggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCYoem7DBPG4jdk
+EVlcLTjO/LIKz3gGO7e9grN1421mzM3A1kZSyeuxafhpOoAFJyJjyCjnl4zMaj/l
+Y0OZER+9uRxRRoXjDPL669HNq8cpxDIxS7NOW+kAEm57hd6ep4HCqXbnlfWt8WGe
+Hb4SN7VPkv77cHXa6dgd3KAhyZ6WPxYiLvat0ek9I/FgePw7+4OGqal94HgNLFE9
+BUKBk5LXHM4mu60jgdquizkFNf0nLpgoyFYRmN8khbWF9qa9wlLgv5PkqhBrKmlO
+8k4+3udGbA1OjwDTqtwyMVHtvAb+F0iiud6g6Q2tQ7SroqG0znygy1rwIxKgq5Ox
+3aN+OVYTAgMBAAGjbzBtMEwGA1UdEQRFMEOCFGlkcC5ib3VybnZpbGxlLmFjLnVr
+hitodHRwczovL2lkcC5ib3VybnZpbGxlLmFjLnVrL2lkcC9zaGliYm9sZXRoMB0G
+A1UdDgQWBBT4YMqKmVMZslHbFSfAyWXTnYAJ4jANBgkqhkiG9w0BAQUFAAOCAQEA
+fHiWcumz6a+MOT0mhfrS8aSmW50uxoJcKcao/DiNRFvQGBLb/WaDVV4OkvE2sPuH
+o/36kgbsZPOBsefMQLvvztijWO/mKtKztRyq7T3wIOx931Yt3v8DNGyIBG7nx5l1
+HjYILU50oZ3l/UEZrLirbbdjNTQ9xmVL0s/0/SnZDHwesiyqrQJDz5FGdOe1Y0dd
+eYqNqQ5BLnDstFFIEBsh5PKdJed7yFYlZPWnin3jjYmvOFPClS8irmcImEONqoBq
+KI23lp0qS3GeWPrif5C8EMO0nh/9yJ3UUTrHCsMZVT5Zb/9uPPKWC6dMS0Ywanu+
+t9/SkewVV1FPgkkbJ2LVTQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bournville.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bournville.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bournville College of Further Education</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bournville College - Do not use</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bournville.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Jacob</md:GivenName>
+	<md:SurName>Smith</md:SurName>
+	<md:EmailAddress>mailto:jacob.smith@bournville.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>James</md:GivenName>
+	<md:SurName>Sumner</md:SurName>
+	<md:EmailAddress>mailto:james.sumner@bournville.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

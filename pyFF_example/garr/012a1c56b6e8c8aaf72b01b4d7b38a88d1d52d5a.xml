@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://www.british-history.ac.uk/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2008-09-10T16:11:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://www.british-history.ac.uk/Shibboleth.sso/DS" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">British History Online</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Additional premium content including The Parliament Rolls of Medieval
+					England (Edward I to Henry VII), all the volumes of the Calendar of
+					State Papers, Domestic 1537-1714, the Calendars of State Papers for
+					Scotland and Ireland, plus the Calendar of Close Rolls</mdui:Description>
+		<mdui:Logo height="33" width="487">https://www.british-history.ac.uk/images/logo.gif</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEjCCAfqgAwIBAgIJALh/eAye3WYvMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMTGXd3dy5icml0aXNoLWhpc3RvcnkuYWMudWswHhcNMTAwOTAyMDczODE4WhcN
+MjAwODMwMDczODE4WjAkMSIwIAYDVQQDExl3d3cuYnJpdGlzaC1oaXN0b3J5LmFj
+LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv5Fo2rXmIk7rzSrS
+r2l8ComzSzAubn2P+3aH0kXln8uijcbKjqp16eSnaRO3hjPVGqxiUpERX/vkSRYf
+YQi1BXJSTc965iQi6YbQLtUESCMHaGnhMQTA94n3R0dF1lRjn19SoLvKq16nInxc
+V8mdKZtP0fsLVxflrjemmnl7i56HZFXPjfBcTHzlUnIT2VOhC/hOqTyeSAEOuTKO
+ePTH0udgPVTOLKzU6xxrR2QgDx/v7XH/KDraqlBThM/5yvS15IpdTmxWGyGlJx+Q
+i8s1+KuRf20JTi9s41o3csrCs/iRuTcccDFI4J5Bu96CmT+hLh+zioQF/UfNsI/H
+b5TUbQIDAQABo0cwRTAkBgNVHREEHTAbghl3d3cuYnJpdGlzaC1oaXN0b3J5LmFj
+LnVrMB0GA1UdDgQWBBRB18xhmEjac8eJrYMgCbrBrF3oJjANBgkqhkiG9w0BAQUF
+AAOCAQEAeKbONxHaEPx/1HTc/jfFLRagds7HYz3Ce4QKxrvge/TK4oObe8ZiICYM
+4sTaeRkT3ioBt1Gm3ZCGtiUM5pg7QtUwG3HXBfqv/8Z1swfOxUDebab6m04aMk2i
+2rb7aArAHATlV5a72H5CAWeEaif6WclWWo7rgTl8f7akYNt7qkZKttoHj0aWfNum
+ecepIeAKuyBkUex3UCvzQlEr67A0wlxPSqUm9UNtYMB5KgTJjzSWVennzzRcqUFT
+JyLIrCA/d3S+4FGrnDNNVr0KWD/h2M53lhk5ohh147oP6qwVOwqalnMIqzHDjFrm
+Vh9RR1SnWTuXhAGE8kZHTZLj7wi3sg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDEjCCAfqgAwIBAgIJALh/eAye3WYvMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMTGXd3dy5icml0aXNoLWhpc3RvcnkuYWMudWswHhcNMTAwOTAyMDczODE4WhcN
+MjAwODMwMDczODE4WjAkMSIwIAYDVQQDExl3d3cuYnJpdGlzaC1oaXN0b3J5LmFj
+LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv5Fo2rXmIk7rzSrS
+r2l8ComzSzAubn2P+3aH0kXln8uijcbKjqp16eSnaRO3hjPVGqxiUpERX/vkSRYf
+YQi1BXJSTc965iQi6YbQLtUESCMHaGnhMQTA94n3R0dF1lRjn19SoLvKq16nInxc
+V8mdKZtP0fsLVxflrjemmnl7i56HZFXPjfBcTHzlUnIT2VOhC/hOqTyeSAEOuTKO
+ePTH0udgPVTOLKzU6xxrR2QgDx/v7XH/KDraqlBThM/5yvS15IpdTmxWGyGlJx+Q
+i8s1+KuRf20JTi9s41o3csrCs/iRuTcccDFI4J5Bu96CmT+hLh+zioQF/UfNsI/H
+b5TUbQIDAQABo0cwRTAkBgNVHREEHTAbghl3d3cuYnJpdGlzaC1oaXN0b3J5LmFj
+LnVrMB0GA1UdDgQWBBRB18xhmEjac8eJrYMgCbrBrF3oJjANBgkqhkiG9w0BAQUF
+AAOCAQEAeKbONxHaEPx/1HTc/jfFLRagds7HYz3Ce4QKxrvge/TK4oObe8ZiICYM
+4sTaeRkT3ioBt1Gm3ZCGtiUM5pg7QtUwG3HXBfqv/8Z1swfOxUDebab6m04aMk2i
+2rb7aArAHATlV5a72H5CAWeEaif6WclWWo7rgTl8f7akYNt7qkZKttoHj0aWfNum
+ecepIeAKuyBkUex3UCvzQlEr67A0wlxPSqUm9UNtYMB5KgTJjzSWVennzzRcqUFT
+JyLIrCA/d3S+4FGrnDNNVr0KWD/h2M53lhk5ohh147oP6qwVOwqalnMIqzHDjFrm
+Vh9RR1SnWTuXhAGE8kZHTZLj7wi3sg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.british-history.ac.uk/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.british-history.ac.uk/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.british-history.ac.uk/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.british-history.ac.uk/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://www.british-history.ac.uk/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://www.british-history.ac.uk/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.british-history.ac.uk/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.british-history.ac.uk/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://www.british-history.ac.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of London</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">British History Online</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.british-history.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Jonathan</md:GivenName>
+	<md:SurName>Blaney</md:SurName>
+	<md:EmailAddress>mailto:Jonathan.Blaney@sas.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Martin</md:GivenName>
+	<md:SurName>Steer</md:SurName>
+	<md:EmailAddress>mailto:Martin.Steer@sas.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

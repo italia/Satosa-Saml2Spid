@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idpv3.crous-reims.fr/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2016-11-21T12:02:03Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">crous-reims.fr</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">CROUS Reims</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/x-icon;base64,Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAA/f7+/P7+/v7+/v7+oaTyR0znLjTkLDLkLTPkLDLkLjTkR03noqXy/v7+/v7+/P7+/f7+/v7+9vb9ZmvsGB/iJCrjLTPkLjTlLjTlLjTlLTPkJCrjGB/iZ2zs9vf9/v7+/v7+/v7+Z2zsFx7iLjTlLjTlLjTlLjTlLjTlLjTlLjTlLjTlLjPlFx7iaW7s/v7+/v7+pKfzFx3hLTPkLTPkLTPkLTPkLDLkIyrjIynjJCrjJCrjLDLkLTPkFx3hpanz8fL9RkvoJSvjLjTlLjTlLjTlLDLlMTflaW7sbHLtZGrsZmvsNTvmLDLkJCrjR03ok5fxLjTlLTPlLjTlLjTlLjTlLTPlKzHkXmPrUFbpUlfpSE7oKzHkJSvjJizkKjDkQkjmLDLkLTPkLTPkLTPkLTPkJizjVFnphYnvY2jqT1ToZWrre3/tcHXsiY3vaG3rKS/kLjTlLjTlLjTlLjTlLjTlIinjk5fxWl/qY2nrj5PxkZXxnaHzio/wiY7wnqLzQkjmLDLkLTPkLTPkLTPkLTPkJizjUVboj5PwUFXoMznkPUPmPUPmLzXkMznkOT/lkpbxLjTlLTPlLjTlLjTlLjTlLzXlJy3kJy3kKC7kKzHkKjDkKS/kLDLkKzHkKzHk8PH9RUvoJSvjLjTlLjTlLjTlLjTlLjTlLTPlLjTlLjTlLjTlLjTlLjTlJCrjR03o/v7+o6bzFx3hLTPkLTPkLTPkLTPkLTPkLTPkLTPkLTPkLTPkLTPkLTPkFx3hpKjz/v7+/v7+ZmvsFx7iLjTlLjTlLjTlLjTlLjTlLjTlLjTlLjTlLjTlFx7iaG3s/v7+/f7+/v7+9fb9ZWrsGB/iJSvjLTPkLjTlLjTlLjTlLTPkJCvjGB/iZmvs9vf9/v7+/f7+/P7+/v7+/v7+n6PyRUvnLTPkLDLkLTPkLDLkLTPkRkvnoKTy/v7+/v7+/P7+/f7+/f7+/f7+/v7+/v7+8/T9j5PxQkjnKS/kQkjnj5Px8/T9/v7+/v7+/f7+/f7+</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.crous-reims.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">Serveur  Shibboleth fournisseur d'identitée V3</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">CROUS Reims</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">Serveur  Shibboleth fournisseur d'identitée V3</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUWRxUkYID+H+mYHM3v+rRnLngYpYwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUaWRwdjMuY3JvdXMtcmVpbXMuZnIwHhcNMTYxMTIzMDk1
+NDA1WhcNMzYxMTIzMDk1NDA1WjAfMR0wGwYDVQQDDBRpZHB2My5jcm91cy1yZWlt
+cy5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIMQqEqT761+SQTq
+UXL7o89vgCV9hweHs05i5gnV6b/R3NNG42jZoCNNWmHGi28oXTlwA4ZzKuAguZ8m
+NlAsBtslWtpmueh64yM5//0nsovpGW06zufXeIcrxIw7rVXommbhLAbHtc8Q3xwp
+ZV6p5YO+jj+rAgDPfnena2ExE659XWC3CDUAkHpV9VkQYnmPtiiyIWaadq0dO9fS
+qrAPyeOmVJE/JKsZk8tYLnRRs5gvFu9/VByEGnIGgT+CvoQDvM4NuayYZWK97vB8
+VV+0f4z6oXb4kNL2JBUi3xvQgz4FrYmCwHPxrQMWeAaylzHb3Ec4NMCicbkhTe1j
+d7pk7EcCAwEAAaNvMG0wHQYDVR0OBBYEFAMda2cLN4GSKxRfXP+0iPSUUtvDMEwG
+A1UdEQRFMEOCFGlkcHYzLmNyb3VzLXJlaW1zLmZyhitodHRwczovL2lkcHYzLmNy
+b3VzLXJlaW1zLmZyL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAx
+XqTriUI8D6D6njway+7w8MRG+avgzhlYuHQ3wejVW5PSToICT7lCoDsxwmQYttle
+DE3BsRiEp9ou6SYkSrOooXQfoHIsflNYzC07lNHkQAAXH6JQDIdV6UsEUHskYK5I
+BxxSgkar2WqrStaSGbdxjm1BUPaRJi5qatRZ1zuBOcpmpdFSuO3IO/Qko3vuQTdw
+cs9KU6bQMo+V1eBZvCY8fEp6YfH44IptTVtykzBoED8TjFjEF6NOcgMKI1r/TfxB
+GLKBgzZ8KEbnXWmmuyVQz23YK61YASf6QybRvW56DgjWkUrP3UP4bf/v9DHCYQ0S
+/74niLD3dfGWkDmCaW1/
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpv3.crous-reims.fr/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpv3.crous-reims.fr/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idpv3.crous-reims.fr/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idpv3.crous-reims.fr/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idpv3.crous-reims.fr/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idpv3.crous-reims.fr/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">CROUS de Reims</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">CROUS de Reims</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.crous-reims.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:informatique@crous-reims.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

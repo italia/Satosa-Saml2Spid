@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:usf.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">usf.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of South Florida</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This is the Shibboleth Identity Provider for the University of South Florida</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.usf.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.usf.edu/about-usf/about-this-site.aspx</mdui:PrivacyStatementURL>
+		<mdui:Logo height="47" width="316" xml:lang="en">https://cdn.usf.edu/themes/sun-globe/global/1.0.0/images/header/banner/banner-logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFLTCCBBWgAwIBAgIJANCZEr8p39EUMA0GCSqGSIb3DQEBBQUAMIG/MQswCQYD
+VQQGEwJVUzEQMA4GA1UECBMHRmxvcmlkYTEOMAwGA1UEBxMFVGFtcGExJDAiBgNV
+BAoTG1VuaXZlcnNpdHkgb2YgU291dGggRmxvcmlkYTEfMB0GA1UECxMWSW5mb3Jt
+YXRpb24gVGVjaG5vbG9neTEbMBkGA1UEAxMSc2hpYmJvbGV0aC51c2YuZWR1MSow
+KAYJKoZIhvcNAQkBFhtjaW1zLXRlY2gtY29yZUBtYWlsLnVzZi5lZHUwHhcNMTEw
+NzI2MTQ0MTExWhcNMjEwNzIzMTQ0MTExWjCBvzELMAkGA1UEBhMCVVMxEDAOBgNV
+BAgTB0Zsb3JpZGExDjAMBgNVBAcTBVRhbXBhMSQwIgYDVQQKExtVbml2ZXJzaXR5
+IG9mIFNvdXRoIEZsb3JpZGExHzAdBgNVBAsTFkluZm9ybWF0aW9uIFRlY2hub2xv
+Z3kxGzAZBgNVBAMTEnNoaWJib2xldGgudXNmLmVkdTEqMCgGCSqGSIb3DQEJARYb
+Y2ltcy10ZWNoLWNvcmVAbWFpbC51c2YuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAvzI2REpueqDJpnzHBKBiTzJjmotztSUBLnj3nQP1FIO2puJB
+Tpg2KbWU8xgmgp0Mpn5TaAiUSG6QbAdKoNzqrGh6iXemYePA1nT+PZWgUG4x/GC+
+H7SBpw3B0h4iKrHZuS2bQfsK1WPf4QLyNVVxcFcl3GXVvZ7dGAMDCoesK94D9bPq
+hLe3vZflU0xTZrRWYIQAQX2OEjsWdZTgwNXfb2LXVn6j3mNHDsUf57qKTdFxMAzb
+778aoF2mcYedYR6WZBbBOrFctlXyEwfkTYctYN+rsGzndFrnQdfU11xLOT/pGLd9
+0ddARSUZde+IF1lff4IVk6tKIcwaTjkltIVmyQIDAQABo4IBKDCCASQwHQYDVR0O
+BBYEFO0Ld280QBsZ1lZjPWkBu9SfKVVLMIH0BgNVHSMEgewwgemAFO0Ld280QBsZ
+1lZjPWkBu9SfKVVLoYHFpIHCMIG/MQswCQYDVQQGEwJVUzEQMA4GA1UECBMHRmxv
+cmlkYTEOMAwGA1UEBxMFVGFtcGExJDAiBgNVBAoTG1VuaXZlcnNpdHkgb2YgU291
+dGggRmxvcmlkYTEfMB0GA1UECxMWSW5mb3JtYXRpb24gVGVjaG5vbG9neTEbMBkG
+A1UEAxMSc2hpYmJvbGV0aC51c2YuZWR1MSowKAYJKoZIhvcNAQkBFhtjaW1zLXRl
+Y2gtY29yZUBtYWlsLnVzZi5lZHWCCQDQmRK/Kd/RFDAMBgNVHRMEBTADAQH/MA0G
+CSqGSIb3DQEBBQUAA4IBAQBTBRwLvzb+Fij+VKbA6Erof/eIHeHEdYZSpY0I1Ah7
+4HVc0MkF3ILdvId6FnIYBqMEtpGX7O6t73CFBCZ2xcICX5ceYXb6c07Pg5EJ66dM
+LN7JaWKEX1hOuzDaSabspKshnPdjU06jyMkF0DvZ8+hmD8U9VCFbs/VpRP33J/bE
+aynShAHxIbud5Uy/4h6MNDtc56sScEqBUb4D7Xm14Kg15keCBxUvumoUxdD/ykrg
+ccGf3bUq48WwGSuikV1OjN+buvlSmWlZYDKzuU2Azdvezk5BK/mEEHxZJIdTWbpd
+wHRSBfdWykar3yfWl3v3l4C3ARmBsVmmqD2lXRtpfZtO
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.usf.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.usf.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.usf.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of South Florida</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of South Florida</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.usf.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Chance Gray</md:GivenName>
+	<md:EmailAddress>chance@usf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Stoney Gan</md:GivenName>
+	<md:EmailAddress>sgan@usf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>USF IT HelpDesk</md:GivenName>
+	<md:EmailAddress>help@usf.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Office of Information Security</md:GivenName>
+	<md:EmailAddress>security@usf.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

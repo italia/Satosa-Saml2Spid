@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.uwu.ac.lk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://liaf.ac.lk" registrationInstant="2019-07-04T20:04:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://liaf.ac.lk/docs/IdentityFederationPolicy-LIAFv1.1.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uwu.ac.lk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Uva Wellassa University</mdui:DisplayName>
+		<mdui:Description xml:lang="en">IdP provider Uva Wellsaa University Sri Lanka</mdui:Description>
+		<mdui:Keywords xml:lang="en">uwu</mdui:Keywords>
+		<mdui:InformationURL xml:lang="en">https://www.uwu.ac.lk/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.uwu.ac.lk/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80">https://idp.uwu.ac.lk/Logo.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://idp.idp.uwu.ac.lk/logo16.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:6.981977,81.076226</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANSNLeVtKHBi5ctBOs4Z+lDkw+J2MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswHhcNMTkwNjEwMDYyNjAwWhcN
+MzkwNjEwMDYyNjAwWjAYMRYwFAYDVQQDDA1pZHAudXd1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlBz2eCPIzcn0/BMv6cJXeew/0NBN/Gak
+m3ujX/KN3XA/ipSaennA722mvZJKAJckaz6SxLD4N9qZno6PyB//gjw+zDAXTInu
++AibEi4EigI47RlmHfncKhPAkC4uKWYDo/2K9ywtSTHhDspSMVkfIsQ8QPSzhOoh
+fvcrRG3wjrJEBXkIcZGnhBEgCT7UCnt1iRot66aRRcgv1Cz1hFLdxn0gDIcQ+XjR
+p9CqIdzu/uJG18lPFDAfKWWKZX6B6fhn63LyOuAr/H7StITm3flfN1yqINoWvfp+
+dgjYWWOtF7eiMgexqQXamXZYclbDMTWyNurU0DJ9sw0uNv+rLHYcWwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUMknTLUsDL/FJuw3UuSgrz5adr94wPgYDVR0RBDcwNYINaWRw
+LnV3dS5hYy5sa4YkaHR0cHM6Ly9pZHAudXd1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBtv3CW/kkPrmxnlNHdv4ec/Zuh2oR0RrHboLx7
+5Z0/bBGETXRsIbAz723ZNGXKJkBPp2qW2VJ4o94bBf9yTECOfr5C8NV00VBC4Cel
+IwAOCrQgzW2/s9BDFC6IbfFcl5xetibs+D7WQqEIapgw2W9Hq01DxpHEWPUboU6n
+1ks62zYB9AYkfak+hlp2PXQSeE3B4jD5qX8Uf22mTtJCW8RLEulcQdE4gFi/0Jp0
+dO9BAMSEyT6qsfKkcPbS4HJQoW23kq0u7N/SSLYOqVxIrZ9PO9STT9kcPgRVhCUu
+wUA0qzUc1YXUtsuYuzxbn0PGqQQJ89GeKi8JvieD+QyEKnhM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMMMfloosnWK0qPOe6C9WPpHxjodMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswHhcNMTkwNjEwMDYyNTU5WhcN
+MzkwNjEwMDYyNTU5WjAYMRYwFAYDVQQDDA1pZHAudXd1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkjeHB58OxcIRCQm7Z1W2nl4TY92It9H1
+hya+l8RmoHi6/SQJ8TsLpNbj7EqEyzOnqCFW1oUmqU2hmwgAV7S80KxAEOYog89J
+mFg+cWEjD2+QPHzlaXb2lqWeVIL/5b/feJdlRmEkANeb4IJ5IpWREF+zS3P18rOT
+BC+3ZkCed8B7pHghB5YJjEqCDEwiDPHMTHHM4v6PE7Q4Ym/4ooPTmDU7Lz0a+Cgn
+NlpiULZoVLPBllKcIFiJjG+yHnOoemMUuPpvkPfIpCXG05kpeFLDphkLm2ZEgU/m
+QviflrjGrtWG+7j9zAVXxs8v6RfTWfnwIsL8GkTSQUrAk+v4g772zwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUpdeJzIP6DC/JS4fYCQQIMdaFjZ0wPgYDVR0RBDcwNYINaWRw
+LnV3dS5hYy5sa4YkaHR0cHM6Ly9pZHAudXd1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQAeRmowa2Utz82seLOJj9IPHeJ9Jk891wtoTZV7
+40iOU0Yi0YfXkvDpDuQjC5tCUEBz49J7EMZazalv45A7Zg8tIod82KFBPO0fxB8s
+kxg8LMuCP3LyvOb8L7ZcsGINnM+6buNG9N/nPkIqtYcokweSLKQImD1+mMn+Y697
+/EGFpJuRN72xnOIcc4xURdgv1MvniXNkDRo3mGmGGd2UgnGfSFNAgnJItiF+i2xY
+A6R4qylYchoUPeI7mexHSOUNQyLU3aw4OINX+HQWhWmCqnY34nsaulsvi+N9CIaJ
+j167abAdxpH97smO0Z7vWu0cykDOjQqoGmFPU8LSMJGrsJli
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUQKZq6pOraNa7B/fODx3imMyrK2swDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnV3dS5hYy5sazAeFw0xOTA2MTAwNjI2MDBaFw0z
+OTA2MTAwNjI2MDBaMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7ZvhIdHyouRJ4TmJ8IzZ51wE9x909CrKn
+G+KKkEVxKysqkiTbcjO7AsZsKuV3cWqlBphTbzQtT+XhriGRTC7EU8dlZrrExJrb
+NaNHFvD5X4dzhgNXBiPTnPmQem3rNg4eSOAyXqOh94G6qrKWhsdTUPRfi/gKGzcN
+wYFg5Hpya3zbnvewaQU6260iEzyKVwtRo+CEopY3hyen7RdAGNqIvDSexVpKXalt
+r97b+P6ApkNuifKUjJF3Xc8/kocaXBch+mBtC10gqP/ZTYc6ndDZR4v7suh3iLjz
+xn0Nuu4570sW4q0KBe5Z9Q5gQeakj7Bn7S2IOxb9qs34/JozKA8pAgMBAAGjYTBf
+MB0GA1UdDgQWBBQRKfiWNUQJhNTg0O3qLZw4zlOFejA+BgNVHREENzA1gg1pZHAu
+dXd1LmFjLmxrhiRodHRwczovL2lkcC51d3UuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAGG4+hrzP/2ikeSQa0JOI26cZUhMSwGvdsSWSC/A
+El2rMlogTEJqtaqq/BEhmMJGS+HiwW+98NNcEBb/hNED40x9/sKcO24kD3GtY/nn
+L+1qhUqra6umlwhiEqgYk1SoZ2LraKKVtqAM41aEOwnfm9hVWPVkrwP2JkZ4K/mw
+O8uaz7o3rfKXwiBw5LlTui5wGIBp6OJKMJJySyB65aQJRWES7+LoSjZbiRA3UZsM
+f95YO7gIUcMDhlBoioP+fzGW6zZgxkWCKcQt27UrHVRV2hM7KhUnznunDr5Iaf8l
+LStc2mPSUaEvccQsRHH1hhCfxEbcW5J9HiUFHj1St0SVaZ8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/SOAP/SLO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">uwu.ac.lk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVANSNLeVtKHBi5ctBOs4Z+lDkw+J2MA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswHhcNMTkwNjEwMDYyNjAwWhcN
+MzkwNjEwMDYyNjAwWjAYMRYwFAYDVQQDDA1pZHAudXd1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlBz2eCPIzcn0/BMv6cJXeew/0NBN/Gak
+m3ujX/KN3XA/ipSaennA722mvZJKAJckaz6SxLD4N9qZno6PyB//gjw+zDAXTInu
++AibEi4EigI47RlmHfncKhPAkC4uKWYDo/2K9ywtSTHhDspSMVkfIsQ8QPSzhOoh
+fvcrRG3wjrJEBXkIcZGnhBEgCT7UCnt1iRot66aRRcgv1Cz1hFLdxn0gDIcQ+XjR
+p9CqIdzu/uJG18lPFDAfKWWKZX6B6fhn63LyOuAr/H7StITm3flfN1yqINoWvfp+
+dgjYWWOtF7eiMgexqQXamXZYclbDMTWyNurU0DJ9sw0uNv+rLHYcWwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUMknTLUsDL/FJuw3UuSgrz5adr94wPgYDVR0RBDcwNYINaWRw
+LnV3dS5hYy5sa4YkaHR0cHM6Ly9pZHAudXd1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQBtv3CW/kkPrmxnlNHdv4ec/Zuh2oR0RrHboLx7
+5Z0/bBGETXRsIbAz723ZNGXKJkBPp2qW2VJ4o94bBf9yTECOfr5C8NV00VBC4Cel
+IwAOCrQgzW2/s9BDFC6IbfFcl5xetibs+D7WQqEIapgw2W9Hq01DxpHEWPUboU6n
+1ks62zYB9AYkfak+hlp2PXQSeE3B4jD5qX8Uf22mTtJCW8RLEulcQdE4gFi/0Jp0
+dO9BAMSEyT6qsfKkcPbS4HJQoW23kq0u7N/SSLYOqVxIrZ9PO9STT9kcPgRVhCUu
+wUA0qzUc1YXUtsuYuzxbn0PGqQQJ89GeKi8JvieD+QyEKnhM
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAMMMfloosnWK0qPOe6C9WPpHxjodMA0GCSqGSIb3DQEB
+CwUAMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswHhcNMTkwNjEwMDYyNTU5WhcN
+MzkwNjEwMDYyNTU5WjAYMRYwFAYDVQQDDA1pZHAudXd1LmFjLmxrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkjeHB58OxcIRCQm7Z1W2nl4TY92It9H1
+hya+l8RmoHi6/SQJ8TsLpNbj7EqEyzOnqCFW1oUmqU2hmwgAV7S80KxAEOYog89J
+mFg+cWEjD2+QPHzlaXb2lqWeVIL/5b/feJdlRmEkANeb4IJ5IpWREF+zS3P18rOT
+BC+3ZkCed8B7pHghB5YJjEqCDEwiDPHMTHHM4v6PE7Q4Ym/4ooPTmDU7Lz0a+Cgn
+NlpiULZoVLPBllKcIFiJjG+yHnOoemMUuPpvkPfIpCXG05kpeFLDphkLm2ZEgU/m
+QviflrjGrtWG+7j9zAVXxs8v6RfTWfnwIsL8GkTSQUrAk+v4g772zwIDAQABo2Ew
+XzAdBgNVHQ4EFgQUpdeJzIP6DC/JS4fYCQQIMdaFjZ0wPgYDVR0RBDcwNYINaWRw
+LnV3dS5hYy5sa4YkaHR0cHM6Ly9pZHAudXd1LmFjLmxrL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBAQAeRmowa2Utz82seLOJj9IPHeJ9Jk891wtoTZV7
+40iOU0Yi0YfXkvDpDuQjC5tCUEBz49J7EMZazalv45A7Zg8tIod82KFBPO0fxB8s
+kxg8LMuCP3LyvOb8L7ZcsGINnM+6buNG9N/nPkIqtYcokweSLKQImD1+mMn+Y697
+/EGFpJuRN72xnOIcc4xURdgv1MvniXNkDRo3mGmGGd2UgnGfSFNAgnJItiF+i2xY
+A6R4qylYchoUPeI7mexHSOUNQyLU3aw4OINX+HQWhWmCqnY34nsaulsvi+N9CIaJ
+j167abAdxpH97smO0Z7vWu0cykDOjQqoGmFPU8LSMJGrsJli
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUQKZq6pOraNa7B/fODx3imMyrK2swDQYJKoZIhvcNAQEL
+BQAwGDEWMBQGA1UEAwwNaWRwLnV3dS5hYy5sazAeFw0xOTA2MTAwNjI2MDBaFw0z
+OTA2MTAwNjI2MDBaMBgxFjAUBgNVBAMMDWlkcC51d3UuYWMubGswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7ZvhIdHyouRJ4TmJ8IzZ51wE9x909CrKn
+G+KKkEVxKysqkiTbcjO7AsZsKuV3cWqlBphTbzQtT+XhriGRTC7EU8dlZrrExJrb
+NaNHFvD5X4dzhgNXBiPTnPmQem3rNg4eSOAyXqOh94G6qrKWhsdTUPRfi/gKGzcN
+wYFg5Hpya3zbnvewaQU6260iEzyKVwtRo+CEopY3hyen7RdAGNqIvDSexVpKXalt
+r97b+P6ApkNuifKUjJF3Xc8/kocaXBch+mBtC10gqP/ZTYc6ndDZR4v7suh3iLjz
+xn0Nuu4570sW4q0KBe5Z9Q5gQeakj7Bn7S2IOxb9qs34/JozKA8pAgMBAAGjYTBf
+MB0GA1UdDgQWBBQRKfiWNUQJhNTg0O3qLZw4zlOFejA+BgNVHREENzA1gg1pZHAu
+dXd1LmFjLmxrhiRodHRwczovL2lkcC51d3UuYWMubGsvaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggEBAGG4+hrzP/2ikeSQa0JOI26cZUhMSwGvdsSWSC/A
+El2rMlogTEJqtaqq/BEhmMJGS+HiwW+98NNcEBb/hNED40x9/sKcO24kD3GtY/nn
+L+1qhUqra6umlwhiEqgYk1SoZ2LraKKVtqAM41aEOwnfm9hVWPVkrwP2JkZ4K/mw
+O8uaz7o3rfKXwiBw5LlTui5wGIBp6OJKMJJySyB65aQJRWES7+LoSjZbiRA3UZsM
+f95YO7gIUcMDhlBoioP+fzGW6zZgxkWCKcQt27UrHVRV2hM7KhUnznunDr5Iaf8l
+LStc2mPSUaEvccQsRHH1hhCfxEbcW5J9HiUFHj1St0SVaZ8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.uwu.ac.lk/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Uva Wellassa University Sri Lanka</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Uva Wellassa University Sri Lanka</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.uwu.ac.lk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Thisara</md:GivenName>
+	<md:SurName>Perera</md:SurName>
+	<md:EmailAddress>mailto:thisara@uwu.ac.lk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Sameera</md:GivenName>
+	<md:SurName>Epitawatta</md:SurName>
+	<md:EmailAddress>mailto:sameera.epit@gmail.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

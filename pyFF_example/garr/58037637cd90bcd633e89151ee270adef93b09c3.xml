@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:stevens.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stevens.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Stevens Institute of Technology</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.stevens.edu/privacypolicy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="213" width="500" xml:lang="en">https://web.stevens.edu/ews/persistent-logo/Stevens-Official-PMSColor-R_50percent.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIE0DCCA7igAwIBAgIJAKUJTVvF9jMzMA0GCSqGSIb3DQEBBQUAMIGgMQswCQYD
+VQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEQMA4GA1UEBxMHSG9ib2tlbjEo
+MCYGA1UEChMfU3RldmVucyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neTEfMB0GA1UE
+CxMWSW5mb3JtYXRpb24gVGVjaG5vbG9neTEfMB0GA1UEAxMWc2hpYmJvbGV0aC5z
+dGV2ZW5zLmVkdTAeFw0xMzA0MjUyMTAxMDlaFw0zMzA0MjAyMTAxMDlaMIGgMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEQMA4GA1UEBxMHSG9ib2tl
+bjEoMCYGA1UEChMfU3RldmVucyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neTEfMB0G
+A1UECxMWSW5mb3JtYXRpb24gVGVjaG5vbG9neTEfMB0GA1UEAxMWc2hpYmJvbGV0
+aC5zdGV2ZW5zLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO2c
+JBTo094f/BcRDAAT0tIgiJL4gUz4zNspGsgxP32Q4/mEiihco8hPFgMQr1mAc7JF
+S6X0WUvs6WZiDvOVScS22R4ivr09B1ZRnpOqEJ0L/ets7OK3UScE2V5VW5Kbeot/
+IOo6Yahljo2DkxfkfCzSSTMMxVrZBTwxtoAi5Ri1bShU9Vw4BL/A0MfV+RlgjXrT
+cGcWoCTRNBtXEeADqydq3IG/5tJBZJXMalj37hnhM5zqMkF5yunEFSqtXMafVq4f
+qik1Hu9QP4nR5lWxONG24V2MuNuNkFhKLfJ/QMMJVqpfA96p8Of5njwk4qTj5Hw9
+hnXKPbqvasgj4kw6Uz0CAwEAAaOCAQkwggEFMB0GA1UdDgQWBBSLYDJRDVrnnP7z
+dVbceo1m8LOw4TCB1QYDVR0jBIHNMIHKgBSLYDJRDVrnnP7zdVbceo1m8LOw4aGB
+pqSBozCBoDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxEDAOBgNV
+BAcTB0hvYm9rZW4xKDAmBgNVBAoTH1N0ZXZlbnMgSW5zdGl0dXRlIG9mIFRlY2hu
+b2xvZ3kxHzAdBgNVBAsTFkluZm9ybWF0aW9uIFRlY2hub2xvZ3kxHzAdBgNVBAMT
+FnNoaWJib2xldGguc3RldmVucy5lZHWCCQClCU1bxfYzMzAMBgNVHRMEBTADAQH/
+MA0GCSqGSIb3DQEBBQUAA4IBAQBdt86UgJOoIvSSwvh1ySB2S/zqEfRQl4U4uVLs
+zVhlaZjhTLJkg65q39mH7RWLtkRjmL5Ow3DhF3jkwFurn37wYj1aDF0I/EuxZNIn
+ScmbRlIqJFfRqzrg3BlgFh1MC/wKjNPa7zP2u3dHcEjbA+3j4AMUMEpQraIRDTeJ
+sP2lUMDInk7ed7EtMwAZ3yzzZeErQlCTzcp2FEDqELvFaWs+72fQLLUAhaOyvQX/
+eFcCdQ1M6aBTDHy7CrsFeIr+U90g9lwRLVfenOpRH9Hwhp3ADlPIFQWZCggwzPty
+vNxpYC0Zha2JoUI0lWpc6TWmQprKU5HaC/LZj6UdCQ11HM04
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.stevens.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.stevens.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.stevens.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.stevens.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.stevens.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shibboleth.stevens.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">stevens.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIE0DCCA7igAwIBAgIJAKUJTVvF9jMzMA0GCSqGSIb3DQEBBQUAMIGgMQswCQYD
+VQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEQMA4GA1UEBxMHSG9ib2tlbjEo
+MCYGA1UEChMfU3RldmVucyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neTEfMB0GA1UE
+CxMWSW5mb3JtYXRpb24gVGVjaG5vbG9neTEfMB0GA1UEAxMWc2hpYmJvbGV0aC5z
+dGV2ZW5zLmVkdTAeFw0xMzA0MjUyMTAxMDlaFw0zMzA0MjAyMTAxMDlaMIGgMQsw
+CQYDVQQGEwJVUzETMBEGA1UECBMKTmV3IEplcnNleTEQMA4GA1UEBxMHSG9ib2tl
+bjEoMCYGA1UEChMfU3RldmVucyBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neTEfMB0G
+A1UECxMWSW5mb3JtYXRpb24gVGVjaG5vbG9neTEfMB0GA1UEAxMWc2hpYmJvbGV0
+aC5zdGV2ZW5zLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO2c
+JBTo094f/BcRDAAT0tIgiJL4gUz4zNspGsgxP32Q4/mEiihco8hPFgMQr1mAc7JF
+S6X0WUvs6WZiDvOVScS22R4ivr09B1ZRnpOqEJ0L/ets7OK3UScE2V5VW5Kbeot/
+IOo6Yahljo2DkxfkfCzSSTMMxVrZBTwxtoAi5Ri1bShU9Vw4BL/A0MfV+RlgjXrT
+cGcWoCTRNBtXEeADqydq3IG/5tJBZJXMalj37hnhM5zqMkF5yunEFSqtXMafVq4f
+qik1Hu9QP4nR5lWxONG24V2MuNuNkFhKLfJ/QMMJVqpfA96p8Of5njwk4qTj5Hw9
+hnXKPbqvasgj4kw6Uz0CAwEAAaOCAQkwggEFMB0GA1UdDgQWBBSLYDJRDVrnnP7z
+dVbceo1m8LOw4TCB1QYDVR0jBIHNMIHKgBSLYDJRDVrnnP7zdVbceo1m8LOw4aGB
+pqSBozCBoDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxEDAOBgNV
+BAcTB0hvYm9rZW4xKDAmBgNVBAoTH1N0ZXZlbnMgSW5zdGl0dXRlIG9mIFRlY2hu
+b2xvZ3kxHzAdBgNVBAsTFkluZm9ybWF0aW9uIFRlY2hub2xvZ3kxHzAdBgNVBAMT
+FnNoaWJib2xldGguc3RldmVucy5lZHWCCQClCU1bxfYzMzAMBgNVHRMEBTADAQH/
+MA0GCSqGSIb3DQEBBQUAA4IBAQBdt86UgJOoIvSSwvh1ySB2S/zqEfRQl4U4uVLs
+zVhlaZjhTLJkg65q39mH7RWLtkRjmL5Ow3DhF3jkwFurn37wYj1aDF0I/EuxZNIn
+ScmbRlIqJFfRqzrg3BlgFh1MC/wKjNPa7zP2u3dHcEjbA+3j4AMUMEpQraIRDTeJ
+sP2lUMDInk7ed7EtMwAZ3yzzZeErQlCTzcp2FEDqELvFaWs+72fQLLUAhaOyvQX/
+eFcCdQ1M6aBTDHy7CrsFeIr+U90g9lwRLVfenOpRH9Hwhp3ADlPIFQWZCggwzPty
+vNxpYC0Zha2JoUI0lWpc6TWmQprKU5HaC/LZj6UdCQ11HM04
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibboleth.stevens.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth.stevens.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Stevens Institute of Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Stevens Institute of Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.stevens.edu/sit/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Stevens InCommon Admin</md:GivenName>
+	<md:EmailAddress>incommonadmin@stevens.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Stevens InCommon Tech</md:GivenName>
+	<md:EmailAddress>incommontech@stevens.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Stevens InCommon Security</md:GivenName>
+	<md:EmailAddress>incommonsecurity@stevens.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

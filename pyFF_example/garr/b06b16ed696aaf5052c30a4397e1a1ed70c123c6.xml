@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.cwc.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2013-09-26T10:27:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">City of Westminster College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">City of Westminster College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">cwc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUGMUEvqcH0AW3uF4F0/urAdo29hQwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLmN3Yy5hYy51azAeFw0xMzA5MTgxMTIwNDJaFw0z
+MzA5MTgxMTIwNDJaMBgxFjAUBgNVBAMTDWlkcC5jd2MuYWMudWswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsO608HeIDdoDe9MLtR9Q6F9ZfWR0u90jc
+Zp6DwseLlwwNHbysoJQocFh5rxY5IYPxz3W1S1WbN3apcYJ9eNO7ze3QLWycl2J8
+4KS6Y76ViCpcBut3JhJHa/w9p4pfev27yfEIpc/wd9GsTHnz0hvUFKeFhAi/et9e
+nsDwJivp2Nj3MvK7K+j0HGwdwwmww6K0/YneMnTb6/piCOBrLc04/picXISI64H/
+oU7FwCXLQLTQY4MWhZccPhuSlI+KhnhFF+mJHsbfjpp5ClNYtK1UmQJghp/UoroM
+13O2DyjGbC6vKS+9M6XWinhhp743/m/Aykiakb853/HOsjM0bAx1AgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC5jd2MuYWMudWuGJGh0dHBzOi8vaWRwLmN3Yy5hYy51
+ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU/CWbrA4a96ioSsOcKUzzmWC2sSAw
+DQYJKoZIhvcNAQEFBQADggEBAE7Mk9gNMgKIfx8J9blqvCakuxkHoNMJCH+74kre
+1ZBFXl3dlr8LINw8EDiAXUigQgSb3FSpGlsEzi9UUreJ45y+E0sbrzFRRcsIi2GP
+8fuXkweKi7mZVFPjVv9dC771tMij7vioKljDxPYsFTXVORnnrdWcAse2BxnGbydf
+M1xHoXl+agxTld1R3L4aP1guxomfOK48a1UCz0VlNNius0IVgw7fMCXjSrNDM3nL
+mqhLbqrMAQbaSkLiOHbN8ZZ+c/2q2Yv5HEdgvrsxXCpgINSA9zcMIEl9rAADbOOG
+K3oBkLQYth/QakEkMIiItL8GzAU0TNWO+72vhyYn7qm5W+M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cwc.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cwc.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cwc.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cwc.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cwc.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.cwc.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.cwc.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.cwc.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.cwc.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">cwc.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUGMUEvqcH0AW3uF4F0/urAdo29hQwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNaWRwLmN3Yy5hYy51azAeFw0xMzA5MTgxMTIwNDJaFw0z
+MzA5MTgxMTIwNDJaMBgxFjAUBgNVBAMTDWlkcC5jd2MuYWMudWswggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsO608HeIDdoDe9MLtR9Q6F9ZfWR0u90jc
+Zp6DwseLlwwNHbysoJQocFh5rxY5IYPxz3W1S1WbN3apcYJ9eNO7ze3QLWycl2J8
+4KS6Y76ViCpcBut3JhJHa/w9p4pfev27yfEIpc/wd9GsTHnz0hvUFKeFhAi/et9e
+nsDwJivp2Nj3MvK7K+j0HGwdwwmww6K0/YneMnTb6/piCOBrLc04/picXISI64H/
+oU7FwCXLQLTQY4MWhZccPhuSlI+KhnhFF+mJHsbfjpp5ClNYtK1UmQJghp/UoroM
+13O2DyjGbC6vKS+9M6XWinhhp743/m/Aykiakb853/HOsjM0bAx1AgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDWlkcC5jd2MuYWMudWuGJGh0dHBzOi8vaWRwLmN3Yy5hYy51
+ay9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQU/CWbrA4a96ioSsOcKUzzmWC2sSAw
+DQYJKoZIhvcNAQEFBQADggEBAE7Mk9gNMgKIfx8J9blqvCakuxkHoNMJCH+74kre
+1ZBFXl3dlr8LINw8EDiAXUigQgSb3FSpGlsEzi9UUreJ45y+E0sbrzFRRcsIi2GP
+8fuXkweKi7mZVFPjVv9dC771tMij7vioKljDxPYsFTXVORnnrdWcAse2BxnGbydf
+M1xHoXl+agxTld1R3L4aP1guxomfOK48a1UCz0VlNNius0IVgw7fMCXjSrNDM3nL
+mqhLbqrMAQbaSkLiOHbN8ZZ+c/2q2Yv5HEdgvrsxXCpgINSA9zcMIEl9rAADbOOG
+K3oBkLQYth/QakEkMIiItL8GzAU0TNWO+72vhyYn7qm5W+M=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.cwc.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.cwc.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">United Colleges Group</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">City of Westminster College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cwc.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Yves</md:GivenName>
+	<md:SurName>Bozzo-Rey</md:SurName>
+	<md:EmailAddress>mailto:yves_bozzo-rey@cwc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Yves</md:GivenName>
+	<md:SurName>Bozzo-Rey</md:SurName>
+	<md:EmailAddress>mailto:yves_bozzo-rey@cwc.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

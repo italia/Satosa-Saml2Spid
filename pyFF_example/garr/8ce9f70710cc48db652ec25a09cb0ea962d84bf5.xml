@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.bshp.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://idp.bshp.edu/error.html" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bshp.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Baptist School of Health Professions</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Baptist School of Health Professions</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.bshp.edu/wp-content/uploads/sites/6250/2018/06/InCommon_POP.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="90" width="320" xml:lang="en">https://idp.bshp.edu/idpLogo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGzCCAgOgAwIBAgIUfsWjYjXtvs84WauA2zsr95sAIEswDQYJKoZIhvcNAQEF
+BQAwFzEVMBMGA1UEAxMMaWRwLmJzaHAuZWR1MB4XDTEzMDYxODE0NDEzOFoXDTMz
+MDYxODE0NDEzOFowFzEVMBMGA1UEAxMMaWRwLmJzaHAuZWR1MIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg//GBbX4/7jGELSTo860kunToCEB3B2GmiCk
+ZQC1r0GD818YMre0bLEeIdV/PWv0Dn6OOMIXLu8zJR48ftsFq8XmNmqoGWQVcpcz
+LSebStaiYqhiyRvBPEQpMdgmaYrG5zYIAlzKiZJQBrDqYFNInEBN80WBVb+ojbqX
+GJeFZMUoQA/gUWEdiGUWKNXJ7nFh3D3SJGCfqDY2NgCJjwGsUN/gmZCXsYTiZ6ab
+dnpsBr5uWIfUlh0NoSTAWhIE5ThefnKexfSCZ4IPIk5CNurG41LcIsnauFc2hNqM
+9ylbyNucaHeViUEj/mTfgumy/CcQ+NSDsfbU4ISTgS4ZeRIbOQIDAQABo18wXTA8
+BgNVHREENTAzggxpZHAuYnNocC5lZHWGI2h0dHBzOi8vaWRwLmJzaHAuZWR1L2lk
+cC9zaGliYm9sZXRoMB0GA1UdDgQWBBS6w+lhtpT6QfroE0EuQ1Zv6nI04zANBgkq
+hkiG9w0BAQUFAAOCAQEAYOWNlaWhMSAsBIlZOwRRe5ElHMPOTLLhtdUKfUaAcwdR
+Aq5hppVvMM7abTYImTwD0ff3XthpdN+y60RTSatPJiW48oXwAUG0gKA8ve40P4QR
+SUMis28SNY0n23JQcgwX+Fn1b0UaFMfLv8q87gjIZGkhxeduJ/vzmvfvVb7MaBcJ
+53DQKKYkg6TtuNtC7XfD1L+NabuBttxux9oXDe2oYpSWwCQM7s9f7BdxiGztv/C/
+jLAEHB+3L+tlj+H7XVQ9gy+uUg25iwgFeBl9wi4F0iFgaZAI2GTV3d21nm9f3BXo
+92v2uPG7guMkjr4WAnhxSksl4bpJYNgYSdw5610CXQ==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.bshp.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.bshp.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.bshp.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Baptist Health System School of Health Professions</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Baptist Health System School of Health Professions</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://www.bshp.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>System Administrator</md:GivenName>
+	<md:EmailAddress>admin@bshp.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Tech Support</md:GivenName>
+	<md:EmailAddress>support@bshp.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Jason Everling</md:GivenName>
+	<md:EmailAddress>jeverling@bshp.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Jason Everling</md:GivenName>
+	<md:EmailAddress>jeverling@bshp.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

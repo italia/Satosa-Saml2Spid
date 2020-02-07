@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.iadt.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2011-10-18T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">iadt.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Dún Laoghaire Institute of Art Design and Technology</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.iadt.ie</mdui:InformationURL>
+		<mdui:Logo height="101" width="151">https://edugate.heanet.ie/rr3/logos/iadt.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.2802499,-6.1539366</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGDCCAgCgAwIBAgIVALmq0aeEnY2koINV+tGCDu0kV09pMA0GCSqGSIb3DQEB
+BQUAMBYxFDASBgNVBAMTC2lkcC5pYWR0LmllMB4XDTA5MDQwODE0NDAyMFoXDTI5
+MDQwODE0NDAyMFowFjEUMBIGA1UEAxMLaWRwLmlhZHQuaWUwggEiMA0GCSqGSIb3
+DQEBAQUAA4IBDwAwggEKAoIBAQCPkswyC6jeXgUJzMGhx7QlixYHq4Rqh4KBPlxH
+Ipv4bd3/GfkoZs2avpxD75ksEzNsAbTlq7QyiqVaPB4MXo85NqV5e2xt2NexCmxn
+lEYjtqTkgU83lOPSmu4dQDKhXfoK5ZSoSd9d8BgfmRKQNgr3UdIs0pcVTcRbG+Yz
+JPLyTgewKNdRD1BvimaxbDvjBXxTpGo3KEtv4tEWuVqlo+yqQkFawF11xnNtmLzH
+hub9/GxMdLEySuJIsvfLmawpsoV7Kp6mr9onMPSl/k9x+7dG2b2FSc8blPN6NiPO
+IMs5Dig4OXW6O9N5WsOXNVa7MtpK02t69FlKOm1BjZo6ytIvAgMBAAGjXTBbMDoG
+A1UdEQQzMDGCC2lkcC5pYWR0LmllhiJodHRwczovL2lkcC5pYWR0LmllL2lkcC9z
+aGliYm9sZXRoMB0GA1UdDgQWBBS1GPf9ZZNOFL9/cO4deMgQC/hoXTANBgkqhkiG
+9w0BAQUFAAOCAQEAZEfSyT4N9goj8oSV8NL0B8pXIKyVBZBoE6id+B47VVv7u1vC
+aDHKArulvZPR43lzFx2q6lHclHj2PeNzUgx10ZUrrsXxOd+2FUG8ExaKiMv/F3/w
+ApcMs8kQehlArgcwqVTzGqqZ1+FtMfVDyGS5AX/tZHo4frzFJlcqyKYgnrKTueEi
+2Ytjlo3VTd3RMwTBG2D2PmhoO/Q461J3WYD5IuFZ8a83HZOIXE5mXYx3vBJCxD5s
+6IJk9cDYR07yL/pz7pOLDYcKoo1/lNVMA4IXVzCnXOOrE29pL249ewOlHBX3meoy
+Qrq4WvN81X5uUTN6qJPlL6wd+mT+LsrZPH+zyw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iadt.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iadt.ie/idp/profile/SAML2/POST/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.iadt.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.iadt.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.iadt.ie/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Dun Laoghaire Institute of Art Design and Technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Dun Laoghaire Institute of Art Design and Technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.iadt.ie</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Arif</md:GivenName>
+	<md:SurName>Syed</md:SurName>
+	<md:EmailAddress>mailto:arif.syed@iadt.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Colm</md:GivenName>
+	<md:SurName>Hennessy</md:SurName>
+	<md:EmailAddress>mailto:colm.hennessy@iadt.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Maurice</md:GivenName>
+	<md:SurName>Coen</md:SurName>
+	<md:EmailAddress>mailto:maurice.coen@iadt.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

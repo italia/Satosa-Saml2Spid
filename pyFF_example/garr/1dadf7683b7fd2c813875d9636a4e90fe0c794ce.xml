@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idem-idp.uniud.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2018-05-31T08:07:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">uniud.it</shibmd:Scope>
+<shibmd:Scope regexp="false">aulecsit.uniud.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="it">Università degli Studi di Udine</mdui:DisplayName>
+<mdui:DisplayName xml:lang="en">University of Udine</mdui:DisplayName>
+<mdui:Description xml:lang="it">Identity Provider per gli utenti dell'Università degli Studi di Udine</mdui:Description>
+<mdui:Description xml:lang="en">Identity Provider for users of University of Udine</mdui:Description>
+<mdui:InformationURL xml:lang="it">https://servizi-informatici.uniud.it/risorse-e-servizi/accesso-alla-federazione-idem</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">https://servizi-informatici.uniud.it/risorse-e-servizi/access-to-the-idem-federation</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://servizi-informatici.uniud.it/risorse-e-servizi/accesso-alla-federazione-idem</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://servizi-informatici.uniud.it/risorse-e-servizi/access-to-the-idem-federation</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80">https://idem-idp.uniud.it/idp/images/logouniudshort.png</mdui:Logo>
+<mdui:Logo height="16" width="16">https://idem-idp.uniud.it/idp/images/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:GeolocationHint>geo:46.065992,13.232513</mdui:GeolocationHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUfFU+GpJkYhbNTZF4hgaKoW1SUWAwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALchw6+ayG9zazlqeh07thlP
+WgJvBIcFA+6PZFwetYRbFRWF0YxC09sLxtKZDoUvygWLRVu7dW4rzlTWiaCE60af
+1hzDLsSY/7WEF+UQMDIX6sSNCNr2DsC+DWCWe8gIbekKEVNEdIXrxYTsb5ILVfiM
+0ZTnQrnXFuoQj5XY/JVm1v5q9gZ5hZeNoTrLEu/2ad7OfGsUZsdiTbGSpK6+MObv
+WVhBc6xiFJVpM3kkjxPqgAn53DGtCYu9lEHn5ak4ch6vJyW0LfPvccZYPXoxV5Mp
+ltirRN0edIu72Ad0Jis1TV6EZlkpehQTGeYsOuttRs+uusisfrsf13GaSOA1B10C
+AwEAAaNpMGcwHQYDVR0OBBYEFN43dMK2/i2T/qW8udOdbAjyXGdSMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAg/75QWWF2j6VsotW+
+5QdTfK8d09vPMUd9h2FgcJFvu1fbVpqf4jsbdoxd3IsOgnuoJRubDwfy/NRlP9Kb
+OZdOnco9RSP9uEUgeN2PTtiVUFnsMeUwrXpi9uNQ33Bav6wvV0W71Q2m731o5+H5
+DzN02kDOAKvp4y5HxJAbeU1OvsRtA2okZLMB0h2k3PpZ3cuaBAc0lbeamkuP9XS3
+nqxt7bL0/T+9sTj4Y58Cy0yz93knvv1BGaGLQYEGBdx1Tyl0Joa5aufBl5cm6iYh
+04ks6E5ZjPogGTly+0sNjDOVDdLL0BvEJ4jnJb8zIAtIZCxcgf0ZywVG1Q5mSRP+
+PAgl
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUD+khx7BunoG/2Yj7al6WoOADNrQwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIJOj5cw4Pb10kXYmqKJf2Ml
+wIYwzwTzmVojvfZvYdWwfIYUzi5F5kCSJJdAb4HuTtTUTzuzS27vFQMQ8GbuBAbn
+7OGuSpB2ngZ/jAC994so7zcdCZUJZUesyCNjJ7e/0p39CHp0ZS4jcBKRtxTOCA7k
+G9uBjr5DXAOqfDmUWr1l33mT8M+nRSvGvVCtVGDFJmWxpfxF36xk5cWa5LlEiu45
+rABQosUVL+Emxv/Vbe4sZY8p8gnR4HnxcwY7ToK6hqycOUSArPjGGKCGY21bBSCs
+1uVf+14aP6kPn0POURRbR1okzK9xJgbk7RnqV1cfsfBb3sngiSeXOKc6HNGlYh0C
+AwEAAaNpMGcwHQYDVR0OBBYEFPT9bZpaH+H1tXH+p3IKrZgLi9RQMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAs+DzcMnBFi/Ox1PKL
+jokMeJGWnctbdlOxWdaoLdb05vU03GhZlilqJY8qwRwi1KqhBbrtfGvcxzElAquN
++ZQBX4gi1szfZFOmJ6Blgk+iiPvQ9inhXIzYpTb+pROeijTc+C16gf55gnC7aOfx
+u7tvqab4WJadcY31QH4KozX1D1Vh1Ayh5dovkzOeytHD4PsdMSHz2cgOBoMsMXTU
+IusdUFodNrnsan3jFHDfF6yPj9o0gMYdwXsSV4Wk1HexhrYmxSrXSMNyVGuQ41hg
+FjFIqKtRr+vpucz0RQx3UbauoOYP3icVtEIZQt1kRA03ddmvA6dsDB6UwirYZqym
+BcXC
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUb0GCTH5mLgQGeNskON0ei/vVAaswDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI6eCxq4tDLGVQuvHLRhavl4
+dO3jlQzYx+ZjPg8aaee5jR6A1NQwAskSKO/fGl5mMTNW9irSDLMKSXGaQZMbAxu9
+UD08ONiOtkEnBv5XWC6aFI7ESPWob2Lk/6Gz4fFp8JRbMJiO6+0r6VfGOJUTw1Mh
+xZRs5vFXgNlPKUOrfNc78kuYaz2oZIsDzRfSAZfWThD8FhhBJR3Z0AV5I3uOEZwe
++4rB/1pWKAF9QGGliH071yXr2y0YDt29C0e0X7YE5v91UeecHz+m3ZKRDgZrKcTW
+X67PFiL0+c8w8KosY8V2jBhWcLWm1OtAzgVh58XuD3vRq69gRZXz7jBjxs/xSb0C
+AwEAAaNpMGcwHQYDVR0OBBYEFPk+9fZdD3NcYZSMhJDMWptK3JjQMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCGkbmUawEVDlcKtaIF
+5/Og9qxCBmRraGf3PlMkkZ1krO9ZkV4YYzIvkHvg4c75QiHjwbMF7JDkK/QWHtyr
+RAjikBT/j5SHOc0X6YS73Isia0gz5CoqAEFLlrDHvRjEaGKRAgKHRGWF+lUqxJ3P
+v6NXUxYCVs0/XRPXobrCQ+yv/nQHCzZ+DJecWxIRwTBRQt+B8+CMs3R+yUapjeg/
+DBjICxmcPimTcgaM7XCXt1NA8Wtb7KgWSwhgnQzUMvEfycRF6Qiozkd6NdJzexLU
+9a+Npe1iWxMOHf6LTExGAHVdjN4DvuNaXcolbdFoDXCNvH5dqiQat0MXGTeJlujZ
+FLBj
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem-idp.uniud.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idem-idp.uniud.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idem-idp.uniud.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idem-idp.uniud.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">uniud.it</shibmd:Scope>
+	<shibmd:Scope regexp="false">aulecsit.uniud.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUfFU+GpJkYhbNTZF4hgaKoW1SUWAwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALchw6+ayG9zazlqeh07thlP
+WgJvBIcFA+6PZFwetYRbFRWF0YxC09sLxtKZDoUvygWLRVu7dW4rzlTWiaCE60af
+1hzDLsSY/7WEF+UQMDIX6sSNCNr2DsC+DWCWe8gIbekKEVNEdIXrxYTsb5ILVfiM
+0ZTnQrnXFuoQj5XY/JVm1v5q9gZ5hZeNoTrLEu/2ad7OfGsUZsdiTbGSpK6+MObv
+WVhBc6xiFJVpM3kkjxPqgAn53DGtCYu9lEHn5ak4ch6vJyW0LfPvccZYPXoxV5Mp
+ltirRN0edIu72Ad0Jis1TV6EZlkpehQTGeYsOuttRs+uusisfrsf13GaSOA1B10C
+AwEAAaNpMGcwHQYDVR0OBBYEFN43dMK2/i2T/qW8udOdbAjyXGdSMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAg/75QWWF2j6VsotW+
+5QdTfK8d09vPMUd9h2FgcJFvu1fbVpqf4jsbdoxd3IsOgnuoJRubDwfy/NRlP9Kb
+OZdOnco9RSP9uEUgeN2PTtiVUFnsMeUwrXpi9uNQ33Bav6wvV0W71Q2m731o5+H5
+DzN02kDOAKvp4y5HxJAbeU1OvsRtA2okZLMB0h2k3PpZ3cuaBAc0lbeamkuP9XS3
+nqxt7bL0/T+9sTj4Y58Cy0yz93knvv1BGaGLQYEGBdx1Tyl0Joa5aufBl5cm6iYh
+04ks6E5ZjPogGTly+0sNjDOVDdLL0BvEJ4jnJb8zIAtIZCxcgf0ZywVG1Q5mSRP+
+PAgl
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUD+khx7BunoG/2Yj7al6WoOADNrQwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIJOj5cw4Pb10kXYmqKJf2Ml
+wIYwzwTzmVojvfZvYdWwfIYUzi5F5kCSJJdAb4HuTtTUTzuzS27vFQMQ8GbuBAbn
+7OGuSpB2ngZ/jAC994so7zcdCZUJZUesyCNjJ7e/0p39CHp0ZS4jcBKRtxTOCA7k
+G9uBjr5DXAOqfDmUWr1l33mT8M+nRSvGvVCtVGDFJmWxpfxF36xk5cWa5LlEiu45
+rABQosUVL+Emxv/Vbe4sZY8p8gnR4HnxcwY7ToK6hqycOUSArPjGGKCGY21bBSCs
+1uVf+14aP6kPn0POURRbR1okzK9xJgbk7RnqV1cfsfBb3sngiSeXOKc6HNGlYh0C
+AwEAAaNpMGcwHQYDVR0OBBYEFPT9bZpaH+H1tXH+p3IKrZgLi9RQMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQAs+DzcMnBFi/Ox1PKL
+jokMeJGWnctbdlOxWdaoLdb05vU03GhZlilqJY8qwRwi1KqhBbrtfGvcxzElAquN
++ZQBX4gi1szfZFOmJ6Blgk+iiPvQ9inhXIzYpTb+pROeijTc+C16gf55gnC7aOfx
+u7tvqab4WJadcY31QH4KozX1D1Vh1Ayh5dovkzOeytHD4PsdMSHz2cgOBoMsMXTU
+IusdUFodNrnsan3jFHDfF6yPj9o0gMYdwXsSV4Wk1HexhrYmxSrXSMNyVGuQ41hg
+FjFIqKtRr+vpucz0RQx3UbauoOYP3icVtEIZQt1kRA03ddmvA6dsDB6UwirYZqym
+BcXC
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUb0GCTH5mLgQGeNskON0ei/vVAaswDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRlbS1pZHAudW5pdWQuaXQwHhcNMTgwNTE4MDkwODEy
+WhcNMzgwNTE4MDkwODEyWjAcMRowGAYDVQQDDBFpZGVtLWlkcC51bml1ZC5pdDCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI6eCxq4tDLGVQuvHLRhavl4
+dO3jlQzYx+ZjPg8aaee5jR6A1NQwAskSKO/fGl5mMTNW9irSDLMKSXGaQZMbAxu9
+UD08ONiOtkEnBv5XWC6aFI7ESPWob2Lk/6Gz4fFp8JRbMJiO6+0r6VfGOJUTw1Mh
+xZRs5vFXgNlPKUOrfNc78kuYaz2oZIsDzRfSAZfWThD8FhhBJR3Z0AV5I3uOEZwe
++4rB/1pWKAF9QGGliH071yXr2y0YDt29C0e0X7YE5v91UeecHz+m3ZKRDgZrKcTW
+X67PFiL0+c8w8KosY8V2jBhWcLWm1OtAzgVh58XuD3vRq69gRZXz7jBjxs/xSb0C
+AwEAAaNpMGcwHQYDVR0OBBYEFPk+9fZdD3NcYZSMhJDMWptK3JjQMEYGA1UdEQQ/
+MD2CEWlkZW0taWRwLnVuaXVkLml0hihodHRwczovL2lkZW0taWRwLnVuaXVkLml0
+L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCGkbmUawEVDlcKtaIF
+5/Og9qxCBmRraGf3PlMkkZ1krO9ZkV4YYzIvkHvg4c75QiHjwbMF7JDkK/QWHtyr
+RAjikBT/j5SHOc0X6YS73Isia0gz5CoqAEFLlrDHvRjEaGKRAgKHRGWF+lUqxJ3P
+v6NXUxYCVs0/XRPXobrCQ+yv/nQHCzZ+DJecWxIRwTBRQt+B8+CMs3R+yUapjeg/
+DBjICxmcPimTcgaM7XCXt1NA8Wtb7KgWSwhgnQzUMvEfycRF6Qiozkd6NdJzexLU
+9a+Npe1iWxMOHf6LTExGAHVdjN4DvuNaXcolbdFoDXCNvH5dqiQat0MXGTeJlujZ
+FLBj
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idem-idp.uniud.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università degli Studi di Udine</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Udine</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università degli Studi di Udine</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Udine</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.uniud.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.uniud.it/en/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Idem Technical contact</md:GivenName>
+<md:EmailAddress>mailto:idem@uniud.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

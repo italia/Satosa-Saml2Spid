@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibidp.bates.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.bates.edu/ils/login-service" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bates.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Bates College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Bates College Identity Provider</mdui:Description>
+		<mdui:InformationURL xml:lang="en">http://www.bates.edu/ils/login-service</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.bates.edu/ils/policies</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="515" xml:lang="en">https://abacus.bates.edu/1855/wordmarks/bates-wordmark-201-515x150.jpg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUL/x4yeKXw8Qo1fj6nOo++CaAWnEwDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRc2hpYmlkcC5iYXRlcy5lZHUwHhcNMTMwODMwMTQwOTMx
+WhcNMzMwODMwMTQwOTMxWjAcMRowGAYDVQQDExFzaGliaWRwLmJhdGVzLmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL8gHC7Wjjzyp5xNqVGvh+YZ
+/Yc0j4Srp/vh6iNoDKgyxm8ttcUoBWmtauchw0EXs6uCihZpTlms+kVp+C8sVZC+
+6CBrfnwXb3cL251AIhsOex3eA94+1ugxs0ot8g9jSjFXpLu3FUcAyiIxYlODaVcy
+3wdfsMPVr0tx9eGN9jwuvJHE3wFn2IfmJb6cb7m4QlpDO+9jpjYJyya3a8NKrQwQ
+75EBq07muPbHPIJWDF+STOnQWdyxj5ly4XIg+S11P77saEz9vQbVB/Z5FX/lD7/J
+ihxbKld7OurrXF/NjBwLXWkOnC3Np0lzAvYtU4JUqgxLpOpLyCwmbuMJRJNlzaMC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRc2hpYmlkcC5iYXRlcy5lZHWGKGh0dHBzOi8v
+c2hpYmlkcC5iYXRlcy5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFF6udEhN
+MEepB0wrvrtfT8Nkm4ytMA0GCSqGSIb3DQEBBQUAA4IBAQA2KfxSHhsyuzK62mna
+qnG7ctE70OZRBQiia9QE2aadgolB+CEr43dZb2YC4+EpbfBCODW5QNixLod3dYlx
+sG3R9y7ilVz+0dKFje+O31JHP+HKTbVhurvb/A+ksuUTyngczT/TxkwEz3WLXUK6
+wNtnuj7nHea0zQFF4RWcJ2UrN0I+RT6czQwSoTnrDlpGUPhYbd7fDUgj4XTC85Tk
+NMGcNLnWPXMs/8cJh+BhVcMR+ATeUYIT6ZZR5XVsjxtSVj/dYlugatENLwu4Zxye
+P9qcR8MfjVr4G5DgNUhpRXkHN5Oj8WhYwa2rgzTR+QqGnIKHZNVyna7BTHVIDsgV
+Iq67
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibidp.bates.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibidp.bates.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibidp.bates.edu/idp/profile/Logout"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibidp.bates.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibidp.bates.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibidp.bates.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bates.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDLzCCAhegAwIBAgIUL/x4yeKXw8Qo1fj6nOo++CaAWnEwDQYJKoZIhvcNAQEF
+BQAwHDEaMBgGA1UEAxMRc2hpYmlkcC5iYXRlcy5lZHUwHhcNMTMwODMwMTQwOTMx
+WhcNMzMwODMwMTQwOTMxWjAcMRowGAYDVQQDExFzaGliaWRwLmJhdGVzLmVkdTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL8gHC7Wjjzyp5xNqVGvh+YZ
+/Yc0j4Srp/vh6iNoDKgyxm8ttcUoBWmtauchw0EXs6uCihZpTlms+kVp+C8sVZC+
+6CBrfnwXb3cL251AIhsOex3eA94+1ugxs0ot8g9jSjFXpLu3FUcAyiIxYlODaVcy
+3wdfsMPVr0tx9eGN9jwuvJHE3wFn2IfmJb6cb7m4QlpDO+9jpjYJyya3a8NKrQwQ
+75EBq07muPbHPIJWDF+STOnQWdyxj5ly4XIg+S11P77saEz9vQbVB/Z5FX/lD7/J
+ihxbKld7OurrXF/NjBwLXWkOnC3Np0lzAvYtU4JUqgxLpOpLyCwmbuMJRJNlzaMC
+AwEAAaNpMGcwRgYDVR0RBD8wPYIRc2hpYmlkcC5iYXRlcy5lZHWGKGh0dHBzOi8v
+c2hpYmlkcC5iYXRlcy5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFF6udEhN
+MEepB0wrvrtfT8Nkm4ytMA0GCSqGSIb3DQEBBQUAA4IBAQA2KfxSHhsyuzK62mna
+qnG7ctE70OZRBQiia9QE2aadgolB+CEr43dZb2YC4+EpbfBCODW5QNixLod3dYlx
+sG3R9y7ilVz+0dKFje+O31JHP+HKTbVhurvb/A+ksuUTyngczT/TxkwEz3WLXUK6
+wNtnuj7nHea0zQFF4RWcJ2UrN0I+RT6czQwSoTnrDlpGUPhYbd7fDUgj4XTC85Tk
+NMGcNLnWPXMs/8cJh+BhVcMR+ATeUYIT6ZZR5XVsjxtSVj/dYlugatENLwu4Zxye
+P9qcR8MfjVr4G5DgNUhpRXkHN5Oj8WhYwa2rgzTR+QqGnIKHZNVyna7BTHVIDsgV
+Iq67
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://shibidp.bates.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Bates College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Bates College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.bates.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Bates NetAdmin</md:GivenName>
+	<md:EmailAddress>netadmin@bates.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Bates NetAdmin</md:GivenName>
+	<md:EmailAddress>netadmin@bates.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Bates NetAdmin</md:GivenName>
+	<md:EmailAddress>netadmin@bates.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Help Desk Services</md:GivenName>
+	<md:EmailAddress>helpdesk@bates.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

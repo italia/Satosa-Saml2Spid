@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cloud.ktu.edu/simplesaml-sp-edugain">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://fedi.litnet.lt" registrationInstant="2017-11-22T21:12:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://fedi.litnet.lt/en/information/policy</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="lt">https://fedi.litnet.lt/lt/informacija/tvarka</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor AuthnRequestsSigned="true" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="lt">KTU Debesijos paslauga (Edugain)</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">KTU Cloud storage service (Edugain)</mdui:DisplayName>
+		<mdui:Description xml:lang="lt">KTU Debesijos paslauga (Edugain)</mdui:Description>
+		<mdui:Description xml:lang="en">KTU Cloud storage service (Edugain)</mdui:Description>
+		<mdui:InformationURL xml:lang="lt">https://cloud.ktu.edu/privacy/info_lt.htm</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">https://cloud.ktu.edu/privacy/info_en.htm</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="lt">https://cloud.ktu.edu/privacy/statement_lt.htm</mdui:PrivacyStatementURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://cloud.ktu.edu/privacy/statement_en.htm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="256" width="256">https://cloud.ktu.edu/static/nextcloud_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDuTCCAqGgAwIBAgIJAMPoNtesgfYTMA0GCSqGSIb3DQEBCwUAMHMxCzAJBgNV
+BAYTAkxUMQ8wDQYDVQQIDAZLYXVuYXMxDzANBgNVBAcMBkthdW5hczEqMCgGA1UE
+CgwhS2F1bm8gdGVjaG5vbG9naWpvcyB1bml2ZXJzaXRldGFzMRYwFAYDVQQDDA1j
+bG91ZC5rdHUuZWR1MB4XDTE2MTEyMjEwMzMyMloXDTI2MTEyMjEwMzMyMlowczEL
+MAkGA1UEBhMCTFQxDzANBgNVBAgMBkthdW5hczEPMA0GA1UEBwwGS2F1bmFzMSow
+KAYDVQQKDCFLYXVubyB0ZWNobm9sb2dpam9zIHVuaXZlcnNpdGV0YXMxFjAUBgNV
+BAMMDWNsb3VkLmt0dS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCo7/6stqYOG8J7tpaBaD4qEQX6osVVGAuv25WrmwJNotnlP5jOnqKac5dWrO/4
+kOTOaDMzsGJ/PPts6VwvQbvSAgPpKT0xoyFHhqAP7dDCbLEciprpFMxEspGrjhGy
+fTNJAUfRn4wF+fs8lumSX7V1hKYvo68KiqsmomTxSWNAssApfRYyiv/R3LKEbERZ
+dR0EYQtiAuhbM96DXbyA5f12jGaM2Oa9pdckNEaOJgRbK185wnhSMywPNrOT76QD
+YO1Il3A5fT0c34h0Pq7Qj8xZXtKxO6AjIXwCw5hhKdAk5n+S5mfFLqkHxJO3iHgA
+r7KuCWmS5uLoCuDl7DgGXFjbAgMBAAGjUDBOMB0GA1UdDgQWBBTuJomlf5UZxvbC
+vKnfjpqerqghJjAfBgNVHSMEGDAWgBTuJomlf5UZxvbCvKnfjpqerqghJjAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBymkwdh3QO1/CPuFRu5EcTwzYm
+gdaSWJRZ32ltVuNnGE3fjtz3HvWnxIRT+0JKVLUxmDTvD23olmTYxeANoal2WP+D
+IRIBu5X7A7zNjCzNLsJZQd7HA2dYDbMj+Vs2bSRFUIm3Wci07HRRWR4+LoA+i9DZ
+tINB7ajKzXlmpSmcN5JTYv+yciT3OgEu1GbrWiIgtgz7gnKHECBBuUV+s1mQ5YL+
+u1LEAncofk6U/hU3YCBSBA5l2FHC10M9crpc/k/ArhrZL3pYKyQnwuEkMCAR6gDL
+RjZWjI5xIuSVtk5hyTEs3yB7TPdTP8eiLaSi8kp5WjDCdk9va3YcVrLC/OEl
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDuTCCAqGgAwIBAgIJAMPoNtesgfYTMA0GCSqGSIb3DQEBCwUAMHMxCzAJBgNV
+BAYTAkxUMQ8wDQYDVQQIDAZLYXVuYXMxDzANBgNVBAcMBkthdW5hczEqMCgGA1UE
+CgwhS2F1bm8gdGVjaG5vbG9naWpvcyB1bml2ZXJzaXRldGFzMRYwFAYDVQQDDA1j
+bG91ZC5rdHUuZWR1MB4XDTE2MTEyMjEwMzMyMloXDTI2MTEyMjEwMzMyMlowczEL
+MAkGA1UEBhMCTFQxDzANBgNVBAgMBkthdW5hczEPMA0GA1UEBwwGS2F1bmFzMSow
+KAYDVQQKDCFLYXVubyB0ZWNobm9sb2dpam9zIHVuaXZlcnNpdGV0YXMxFjAUBgNV
+BAMMDWNsb3VkLmt0dS5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB
+AQCo7/6stqYOG8J7tpaBaD4qEQX6osVVGAuv25WrmwJNotnlP5jOnqKac5dWrO/4
+kOTOaDMzsGJ/PPts6VwvQbvSAgPpKT0xoyFHhqAP7dDCbLEciprpFMxEspGrjhGy
+fTNJAUfRn4wF+fs8lumSX7V1hKYvo68KiqsmomTxSWNAssApfRYyiv/R3LKEbERZ
+dR0EYQtiAuhbM96DXbyA5f12jGaM2Oa9pdckNEaOJgRbK185wnhSMywPNrOT76QD
+YO1Il3A5fT0c34h0Pq7Qj8xZXtKxO6AjIXwCw5hhKdAk5n+S5mfFLqkHxJO3iHgA
+r7KuCWmS5uLoCuDl7DgGXFjbAgMBAAGjUDBOMB0GA1UdDgQWBBTuJomlf5UZxvbC
+vKnfjpqerqghJjAfBgNVHSMEGDAWgBTuJomlf5UZxvbCvKnfjpqerqghJjAMBgNV
+HRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBymkwdh3QO1/CPuFRu5EcTwzYm
+gdaSWJRZ32ltVuNnGE3fjtz3HvWnxIRT+0JKVLUxmDTvD23olmTYxeANoal2WP+D
+IRIBu5X7A7zNjCzNLsJZQd7HA2dYDbMj+Vs2bSRFUIm3Wci07HRRWR4+LoA+i9DZ
+tINB7ajKzXlmpSmcN5JTYv+yciT3OgEu1GbrWiIgtgz7gnKHECBBuUV+s1mQ5YL+
+u1LEAncofk6U/hU3YCBSBA5l2FHC10M9crpc/k/ArhrZL3pYKyQnwuEkMCAR6gDL
+RjZWjI5xIuSVtk5hyTEs3yB7TPdTP8eiLaSi8kp5WjDCdk9va3YcVrLC/OEl
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://cloud.ktu.edu/simplesaml/module.php/saml/sp/saml2-logout.php/cloud-edugain"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cloud.ktu.edu/simplesaml/module.php/saml/sp/saml2-acs.php/cloud-edugain" index="0"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://cloud.ktu.edu/simplesaml/module.php/saml/sp/saml1-acs.php/cloud-edugain" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://cloud.ktu.edu/simplesaml/module.php/saml/sp/saml2-acs.php/cloud-edugain" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://cloud.ktu.edu/simplesaml/module.php/saml/sp/saml1-acs.php/cloud-edugain/artifact" index="3"/>
+	<md:AttributeConsumingService index="0">
+		<md:ServiceName xml:lang="lt">KTU Debesijos paslauga (Edugain)</md:ServiceName>
+		<md:ServiceName xml:lang="en">KTU Cloud storage service (Edugain)</md:ServiceName>
+		<md:ServiceDescription xml:lang="lt">KTU Debesijos paslauga (Edugain)</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">KTU Cloud storage service (Edugain)</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="lt">Kauno technologijos universitetas</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Kaunas university of technology</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="lt">Kauno technologijos universitetas</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Kaunas university of technology</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="lt">https://ktu.edu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://ktu.edu/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:sso@ktu.lt</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

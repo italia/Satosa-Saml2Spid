@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shib.calu.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/hide-from-discovery</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="https://shib.calu.edu/idp/profile/saml2/post/sso" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">calu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">California University of Pennsylvania</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.calu.edu</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.calu.edu/faculty-staff/it-services/policies-guides/index.htm</mdui:PrivacyStatementURL>
+		<mdui:Logo height="80" width="80" xml:lang="en">https://shib.calu.edu/idp/images/calu_top_site_logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUNTBoyq7vKsfRV+tm+aeq+fVualkwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNc2hpYi5jYWx1LmVkdTAeFw0xMzAzMjcyMDMwMzlaFw0z
+MzAzMjcyMDMwMzlaMBgxFjAUBgNVBAMTDXNoaWIuY2FsdS5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCl5TuZ5k1KKCJ6vBK5BCej7zKP0NvbLBvX
+evabOdTtm6D0WprBXOR2qotdykV0I0PBontu/bQabTPzdDgwK1vObx+VXmZClno2
+xZph3zLkd38l5D1L3G+r06QiFyaWCknvqDUFJ0N9ALOCPiuhcDmJTEnk8uz4zyw9
+kGjr0srfuLRAbPoaDW6T+0NAE0OSeWsRMPYJ+1/E3+/bMtmkNtMntvoHjCUqNgeY
+6w18TnRT+1OkVJl9HSmTszRg424an6MFoas5yljtUp2TAoO22ynXCnHyZZJxfmZ9
+EJFJstW8m7z2fnnqTL8ykseTLuhhbjnSGlzJev7zW/ZWqyWt411lAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDXNoaWIuY2FsdS5lZHWGJGh0dHBzOi8vc2hpYi5jYWx1LmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUg4dHB8uyMBk3FIB4pRG0DYFmbj8w
+DQYJKoZIhvcNAQEFBQADggEBAHYqP1brpyvprXEg8+XatQ1rKH2iwKbUvlGvdciV
+uWjgWRlcOsms7Kk9Y9/MeJd/6Nrb+1ifj3IVHbZzZ3i7FAjQY6UeHgY08FcRIebm
+Vfr3pD31o/35fYNiJKmHAX3qrykm05e2f6kfB1DX08J4iBNK0r3sLcvDAocEDaRl
+XVQ1sD4SrD1zvkgHGNmJdwcAADWt1HV80FZK2ruiaum0vskTIJxQ6BBQKnWPl0xD
+g1Yiin78qAMDA92LfN/ctvj8sFivFbL4FJeH035tl/y7k/rJJVpsDjQIHJDPROCG
+3Jz8+VUS/n8RsCWiCcjLEM+SzCbGXM1Rp9ndtD2CSwKn2dc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.calu.edu/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shib.calu.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shib.calu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">calu.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDHzCCAgegAwIBAgIUNTBoyq7vKsfRV+tm+aeq+fVualkwDQYJKoZIhvcNAQEF
+BQAwGDEWMBQGA1UEAxMNc2hpYi5jYWx1LmVkdTAeFw0xMzAzMjcyMDMwMzlaFw0z
+MzAzMjcyMDMwMzlaMBgxFjAUBgNVBAMTDXNoaWIuY2FsdS5lZHUwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCl5TuZ5k1KKCJ6vBK5BCej7zKP0NvbLBvX
+evabOdTtm6D0WprBXOR2qotdykV0I0PBontu/bQabTPzdDgwK1vObx+VXmZClno2
+xZph3zLkd38l5D1L3G+r06QiFyaWCknvqDUFJ0N9ALOCPiuhcDmJTEnk8uz4zyw9
+kGjr0srfuLRAbPoaDW6T+0NAE0OSeWsRMPYJ+1/E3+/bMtmkNtMntvoHjCUqNgeY
+6w18TnRT+1OkVJl9HSmTszRg424an6MFoas5yljtUp2TAoO22ynXCnHyZZJxfmZ9
+EJFJstW8m7z2fnnqTL8ykseTLuhhbjnSGlzJev7zW/ZWqyWt411lAgMBAAGjYTBf
+MD4GA1UdEQQ3MDWCDXNoaWIuY2FsdS5lZHWGJGh0dHBzOi8vc2hpYi5jYWx1LmVk
+dS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUg4dHB8uyMBk3FIB4pRG0DYFmbj8w
+DQYJKoZIhvcNAQEFBQADggEBAHYqP1brpyvprXEg8+XatQ1rKH2iwKbUvlGvdciV
+uWjgWRlcOsms7Kk9Y9/MeJd/6Nrb+1ifj3IVHbZzZ3i7FAjQY6UeHgY08FcRIebm
+Vfr3pD31o/35fYNiJKmHAX3qrykm05e2f6kfB1DX08J4iBNK0r3sLcvDAocEDaRl
+XVQ1sD4SrD1zvkgHGNmJdwcAADWt1HV80FZK2ruiaum0vskTIJxQ6BBQKnWPl0xD
+g1Yiin78qAMDA92LfN/ctvj8sFivFbL4FJeH035tl/y7k/rJJVpsDjQIHJDPROCG
+3Jz8+VUS/n8RsCWiCcjLEM+SzCbGXM1Rp9ndtD2CSwKn2dc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shib.calu.edu/idp/profile/SAML2/SOAP/AtributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">California University of Pennsylvania</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">California University of Pennsylvania</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.calu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>William A. Staffen</md:GivenName>
+	<md:EmailAddress>staffen@calu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lisa Mattish</md:GivenName>
+	<md:EmailAddress>mattish@calu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Brian Kraus</md:GivenName>
+	<md:EmailAddress>kraus@calu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

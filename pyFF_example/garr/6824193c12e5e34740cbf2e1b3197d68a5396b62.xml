@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.bridgeport.edu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bridgeport.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Bridgeport</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">http://www.bridgeport.edu/about/general-information/policies/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://e6e101a2fa590f9443c3-938dfcbad6f00d623627348cbc74f4be.ssl.cf5.rackcdn.com/Images/Logos/ub-seal-purple-80x60.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVAJBfTu+adrdocAWNWMrxwsQDwbgMMA0GCSqGSIb3DQEB
+CwUAMB0xGzAZBgNVBAMMEmlkcC5icmlkZ2Vwb3J0LmVkdTAeFw0xNTAyMTcxNzAy
+MDhaFw0zNTAyMTcxNzAyMDhaMB0xGzAZBgNVBAMMEmlkcC5icmlkZ2Vwb3J0LmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAISnvHsXiLtSfOwZmxMk
+ZWpmFniFsXRUG5G5NJY2SSScW0lVGdiPHQWL8Zr9YmFiAdSyI4oCt3R5I7U+IG1l
+FYhUkPFSr8glxU41G6iFhPBdpW3DNM0dYZeIE4/3ZX4JSaYEEUDtYtL4v2V7+gho
+FXWTu0gKieH4AME2MPBhK9KKeCbK0Lb1GmotenJbytjLQ3g6iTvbxoVxdTEFQgqZ
+eG63w9yxCuc7VikYO9xRSboI9cv4JikOeX0D2WmjwydJnb4qpFg06oImMqt+PdHW
+RyYlrrPj3hPHF1HZpbGtMh+yIC+L9rUDyWtRJbExSbNQpE/y17sQ4PCDHyn0H93o
+4vECAwEAAaNrMGkwHQYDVR0OBBYEFKPBWfXIDrPwfVJvMxMrrwkygF+GMEgGA1Ud
+EQRBMD+CEmlkcC5icmlkZ2Vwb3J0LmVkdYYpaHR0cHM6Ly9pZHAuYnJpZGdlcG9y
+dC5lZHUvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFuGe9J4DqlY
+9jdvpul5xzjlGqDJYh5ieLmDQKd/6El74jknxzBe68Mk2e1kqHtzvtFVWFPn2EES
+nD5P3xQ6Pxgy2TIZtiBRbbajkyVUF7keKjVDP9iUFbW8189wCjgLVtfOhAEnh7eX
+OU6Gs/5IQM4ji4XL9OH9GMTX2JWWPNBgmFgEhSOtQUAglVvVcfBZPNTwuVeF5y/q
+rYyOmoL9mXRqzHMl05ZcI8fUZlT+E/yVPIvs973WwsG5ucJhtRJo1MCDTJvjWw2e
+4b4d7MXdduNZ9DTkP+xKvxcR0/7njMmhDx+2Ziy6RAXD2NPOPoK7qZU0b2RFkGj2
+Je/ZCyY6zCI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bridgeport.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bridgeport.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.bridgeport.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.bridgeport.edu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.bridgeport.edu/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bridgeport.edu</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVAJBfTu+adrdocAWNWMrxwsQDwbgMMA0GCSqGSIb3DQEB
+CwUAMB0xGzAZBgNVBAMMEmlkcC5icmlkZ2Vwb3J0LmVkdTAeFw0xNTAyMTcxNzAy
+MDhaFw0zNTAyMTcxNzAyMDhaMB0xGzAZBgNVBAMMEmlkcC5icmlkZ2Vwb3J0LmVk
+dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAISnvHsXiLtSfOwZmxMk
+ZWpmFniFsXRUG5G5NJY2SSScW0lVGdiPHQWL8Zr9YmFiAdSyI4oCt3R5I7U+IG1l
+FYhUkPFSr8glxU41G6iFhPBdpW3DNM0dYZeIE4/3ZX4JSaYEEUDtYtL4v2V7+gho
+FXWTu0gKieH4AME2MPBhK9KKeCbK0Lb1GmotenJbytjLQ3g6iTvbxoVxdTEFQgqZ
+eG63w9yxCuc7VikYO9xRSboI9cv4JikOeX0D2WmjwydJnb4qpFg06oImMqt+PdHW
+RyYlrrPj3hPHF1HZpbGtMh+yIC+L9rUDyWtRJbExSbNQpE/y17sQ4PCDHyn0H93o
+4vECAwEAAaNrMGkwHQYDVR0OBBYEFKPBWfXIDrPwfVJvMxMrrwkygF+GMEgGA1Ud
+EQRBMD+CEmlkcC5icmlkZ2Vwb3J0LmVkdYYpaHR0cHM6Ly9pZHAuYnJpZGdlcG9y
+dC5lZHUvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAFuGe9J4DqlY
+9jdvpul5xzjlGqDJYh5ieLmDQKd/6El74jknxzBe68Mk2e1kqHtzvtFVWFPn2EES
+nD5P3xQ6Pxgy2TIZtiBRbbajkyVUF7keKjVDP9iUFbW8189wCjgLVtfOhAEnh7eX
+OU6Gs/5IQM4ji4XL9OH9GMTX2JWWPNBgmFgEhSOtQUAglVvVcfBZPNTwuVeF5y/q
+rYyOmoL9mXRqzHMl05ZcI8fUZlT+E/yVPIvs973WwsG5ucJhtRJo1MCDTJvjWw2e
+4b4d7MXdduNZ9DTkP+xKvxcR0/7njMmhDx+2Ziy6RAXD2NPOPoK7qZU0b2RFkGj2
+Je/ZCyY6zCI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bridgeport.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Bridgeport</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Bridgeport</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://bridgeport.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>UB SysAdmin Group</md:GivenName>
+	<md:EmailAddress>sysadmin@bridgeport.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IDP Administrator</md:GivenName>
+	<md:EmailAddress>idp-admin@bridgeport.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>IDP Administrator</md:GivenName>
+	<md:EmailAddress>idp-admin@bridgeport.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

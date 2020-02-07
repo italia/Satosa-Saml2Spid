@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://aai-login.pmodwrc.ch/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2015-09-07T14:44:05Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor errorURL="http://www.pmodwrc.ch/helpdesk/" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pmodwrc.ch</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">PMOD/WRC - Observatorium Davos</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">PMOD/WRC - Observatory Davos</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Physikalisch-Meteorologisches Observatorium Davos / World Radiation Center</mdui:Description>
+		<mdui:Description xml:lang="en">Physikalisch-Meteorologisches Observatorium Davos / World Radiation Center</mdui:Description>
+		<mdui:Keywords xml:lang="de">pmod wrc davos observatory world+radiation+center</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">pmod wrc davos observatory world+radiation+center</mdui:Keywords>
+		<mdui:Logo height="16" width="16">data:image/png;base64,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</mdui:Logo>
+		<mdui:Logo height="23" width="80">data:image/png;base64,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</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://www.pmodwrc.ch/</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="de">https://www.pmodwrc.ch/</mdui:InformationURL>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>193.5.60.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:620:1b0::/48</mdui:IPHint>
+		<mdui:DomainHint>pmodwrc.ch</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:46.813268333,9.844476667</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUH/kCnOvM9ZFhiDPdzCpmTty+QV0wDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUYWFpLWxvZ2luLnBtb2R3cmMuY2gwHhcNMTgwODI5MDcw
+MTA4WhcNMjEwODI5MDcwMTA4WjAfMR0wGwYDVQQDDBRhYWktbG9naW4ucG1vZHdy
+Yy5jaDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMamz1++2/8YB/0/
+UDSLbozV2RmIQnOF11Hc1cKldKtjWIukH81sJLg61o77tTvd1nvjQZ1sPZNSJAXF
+g5ZFSliaA/b5kE306WWMvi7Mz329TmOiiaKvQP9iJ48uhX5IuNs+jChFFkMstjqL
+dGR/N+gLHskXdwNxjvgY7MASt/sX4zR9unmhmkPDdzzPY5TccrEEpGfc06qvCg7n
+l4FXv/BZafObJsdgABjveFloCBw3jeaBplSbFlGC+Guj36AI3H7/0vWv4YIrSri1
+S8iu5yud19+z/+ceAtjT/33dBRXtpjx6Jct8j4TahoYYKQ0CeYk5xBR5qrzGIdH9
+recssnkCAwEAAaNvMG0wHQYDVR0OBBYEFCXPuVof2ffTms/aGO99hwEsO7k/MEwG
+A1UdEQRFMEOCFGFhaS1sb2dpbi5wbW9kd3JjLmNohitodHRwczovL2FhaS1sb2dp
+bi5wbW9kd3JjLmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBz
+2M+gM52+eAct8+GhrUyq5ESgSyMC7ys/ovm54CWHD0yFAyt/jq0qUyNicn3caPzs
+vXbqm4u6YdQLkw943ShJ4JoezvXZrYo4xWIDG6DG9GH3LrgZ8kxng8g7HyvwyTjI
+0sQI6JcnHjWoKKkPT3GLiauQEmLD71i+ZsOKfbCGrcQTNgbvneem67y7Je/CAfEg
+pnHAkCwGDS9nQR7ScZen2yLnZzEArb37XOLAHX90QlmItcSGrwPIDQmdOIbQ8XW1
+nIDXwTbr3TIBMyEgG8g2GaLUkX6+dR8NbAyD1K5KD/m3FX4gJVs6WDiwDUf1VNEd
+Q+dMLQH/M38+IfilNySQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://aai-login.pmodwrc.ch/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://aai-login.pmodwrc.ch/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">pmodwrc.ch</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUH/kCnOvM9ZFhiDPdzCpmTty+QV0wDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUYWFpLWxvZ2luLnBtb2R3cmMuY2gwHhcNMTgwODI5MDcw
+MTA4WhcNMjEwODI5MDcwMTA4WjAfMR0wGwYDVQQDDBRhYWktbG9naW4ucG1vZHdy
+Yy5jaDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMamz1++2/8YB/0/
+UDSLbozV2RmIQnOF11Hc1cKldKtjWIukH81sJLg61o77tTvd1nvjQZ1sPZNSJAXF
+g5ZFSliaA/b5kE306WWMvi7Mz329TmOiiaKvQP9iJ48uhX5IuNs+jChFFkMstjqL
+dGR/N+gLHskXdwNxjvgY7MASt/sX4zR9unmhmkPDdzzPY5TccrEEpGfc06qvCg7n
+l4FXv/BZafObJsdgABjveFloCBw3jeaBplSbFlGC+Guj36AI3H7/0vWv4YIrSri1
+S8iu5yud19+z/+ceAtjT/33dBRXtpjx6Jct8j4TahoYYKQ0CeYk5xBR5qrzGIdH9
+recssnkCAwEAAaNvMG0wHQYDVR0OBBYEFCXPuVof2ffTms/aGO99hwEsO7k/MEwG
+A1UdEQRFMEOCFGFhaS1sb2dpbi5wbW9kd3JjLmNohitodHRwczovL2FhaS1sb2dp
+bi5wbW9kd3JjLmNoL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBz
+2M+gM52+eAct8+GhrUyq5ESgSyMC7ys/ovm54CWHD0yFAyt/jq0qUyNicn3caPzs
+vXbqm4u6YdQLkw943ShJ4JoezvXZrYo4xWIDG6DG9GH3LrgZ8kxng8g7HyvwyTjI
+0sQI6JcnHjWoKKkPT3GLiauQEmLD71i+ZsOKfbCGrcQTNgbvneem67y7Je/CAfEg
+pnHAkCwGDS9nQR7ScZen2yLnZzEArb37XOLAHX90QlmItcSGrwPIDQmdOIbQ8XW1
+nIDXwTbr3TIBMyEgG8g2GaLUkX6+dR8NbAyD1K5KD/m3FX4gJVs6WDiwDUf1VNEd
+Q+dMLQH/M38+IfilNySQ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://aai-login.pmodwrc.ch/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">pmodwrc.ch</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">PMOD/WRC - Observatorium Davos</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">PMOD/WRC - Observatory Davos</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.pmodwrc.ch/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.pmodwrc.ch/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Marco</md:GivenName>
+	<md:SurName>Senft</md:SurName>
+	<md:EmailAddress>mailto:marco.senft@pmodwrc.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 81 417 5149</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Marco</md:GivenName>
+	<md:SurName>Senft</md:SurName>
+	<md:EmailAddress>mailto:marco.senft@pmodwrc.ch</md:EmailAddress>
+	<md:TelephoneNumber>+41 81 417 5149</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

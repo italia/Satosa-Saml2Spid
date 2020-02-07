@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://eidp.llnl.gov">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">llnl.gov</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lawrence Livermore National Laboratory</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Lawrence Livermore National Laboratory Identity Provider for individuals with LLNL issued credentials</mdui:Description>
+		<mdui:InformationURL xml:lang="en">https://partnergateway.llnl.gov/pg</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.llnl.gov/disclaimer</mdui:PrivacyStatementURL>
+		<mdui:Logo height="50" width="150" xml:lang="en">https://eams.llnl.gov/pg-hub/img/logos/llnl.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIFnjCCA4agAwIBAgIGAV+ToVITMA0GCSqGSIb3DQEBDQUAMIGPMQswCQYDVQQG
+EwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTESMBAGA1UEBxMJTGl2ZXJtb3JlMS8w
+LQYDVQQKEyZMYXdyZW5jZSBMaXZlcm1vcmUgTmF0aW9uYWwgTGFib3JhdG9yeTEO
+MAwGA1UECxMFTGl2SVQxFjAUBgNVBAMTDWVpZHAubGxubC5nb3YwHhcNMTcxMTA2
+MjMxOTAzWhcNMjAxMTA1MjMxOTAzWjCBjzELMAkGA1UEBhMCVVMxEzARBgNVBAgT
+CkNhbGlmb3JuaWExEjAQBgNVBAcTCUxpdmVybW9yZTEvMC0GA1UEChMmTGF3cmVu
+Y2UgTGl2ZXJtb3JlIE5hdGlvbmFsIExhYm9yYXRvcnkxDjAMBgNVBAsTBUxpdklU
+MRYwFAYDVQQDEw1laWRwLmxsbmwuZ292MIICIjANBgkqhkiG9w0BAQEFAAOCAg8A
+MIICCgKCAgEAivQOiiZLBc9orCJ4UTIbBuwBfHk+zn0xH3coQmHW1TpXJLmNXEeC
+uEHBhppZAfQJWOEoEu+QVsLf7DHWKoOY6v1HqK9G5Sd6I0lnvO8SIRGkgows7kY9
+W7HVZFgIYTJNQRpIjwMju+FA5XKXI3alDZlsKEEAsspCDbXdxeSZsaEiZ1jgfjd4
+k8Xz8v+5OnxtBXovXG/KhLPMu5utrNWSC6zlXtK1LHQ5wgTikUIgG6dlj1sp5wVi
+DfIyr64r7HmdLJQEnTzSvg133SESUr3v+dImWf3r0K13eJ36zE5+hUb8G/hMg7Ki
+Yu11zzTPpAJ/+zFzbGX/Mw4abnYhE+uLeC0QEkfHH0KdM5UYkgYsAcmqbVTZjAJV
+cz8rYBaFKY+qwt2/9SrRZXWhYr1mrknlE5AxBK+ErGP1sJawHYLZv/VDob+SJxt9
+VH89bzO52jAs2WnSSbldx9XbO6yqkOUvIprlLWSexse5rv1gXhVOYOJmJ5hSYuGp
+//JAtqiOH4Wi8PHiGyyrM9jUwg17Gade2yZUF9JXiOCy2Mu0/D+DWwpocIte07QD
+/5+HG/TrSpFopUXnyFBa5ucstiVeX9wdin6N8FM43/kcrxS3PYnktdOmQCG0K5oU
+MtPGp4aVllxUpCOuy1TF8qbPpwUlFk1UL1yWyuSY2GKLgJJt0PjOSJkCAwEAATAN
+BgkqhkiG9w0BAQ0FAAOCAgEAMsiIy7WLGeFbLsItBF8M/05WEEdoaEKXrN6ymfiM
+FMLweF9nXQnCeSnfKhRJxfoYqK+JU0bCLXnADAtzMAJXy7Kg0DzNFhZnmjDm6VDJ
+IJ5pswGaC+pbjZnv09q9FYJ1tKHqbwSM9Kp7uKORhY88ZGcNUG+jjhQ/CUcExDW7
+PpTOKSQiRz5VwvGqQfbDptkWGTYIFEkBL0VQIw2aFnzU9buggK/Nku4RxCp3s/3e
+PuVrK3ISpBpmNCmqW8MBDMtQThcjl5FN8DpphvtL+xMXdjY+m8pGtwqy8m5uiPRb
+csjecs5XzXfi2MW6VKKPU7bcn5fJOj+PyEvxlF80vTBT4eM+75Ot5s8XrVGmOA6p
+1Wy08TzXUgG5dkDKYIfkI2/MlJHbV+bMLavRprz/tCXZ3/vlTobKvbPHbPk6rmOs
+QJfbnzFt7eA5CyFXYbS9n3d1vjEwjiaUBBrSFnOCimYHBSQnts1lV6lZTqHQb0ho
+4z7Jfa+ZRrUjnzlxJ2q411JjveBU1xB/z8TDm/fQKrW6V62hp5G//nn6H1/EPygp
+R8wS69zLYIjRIUd3YEksCyoO2ZMKhICap2gAWcMd/gk8NTpsg2hnBkocbkllRkzB
+dwsmDO6Lr4JkMAhu9VmG2Kan2vAe1WV3xF1cXylM8mfPktHp83/OaWn6cEu6pJqL
+3zI=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://eidp.llnl.gov/idp/ARS.ssaml2" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eidp.llnl.gov/idp/SLO.saml2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://eidp.llnl.gov/idp/SLO.saml2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://eidp.llnl.gov/idp/SSO.saml2"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://eidp.llnl.gov/idp/SSO.saml2"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Lawrence Livermore National Security, LLC</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lawrence Livermore National Laboratory</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://llnl.gov</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Partner Gateway Support</md:GivenName>
+	<md:EmailAddress>pg-support@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>LLNL IdP Administrator</md:GivenName>
+	<md:EmailAddress>ping-admins@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>LLNL IdP Administrators</md:GivenName>
+	<md:EmailAddress>ping-admins@llnl.gov</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

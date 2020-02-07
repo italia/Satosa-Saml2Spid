@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="urn:mace:incommon:nyu.edu">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://id.incommon.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">nyu.edu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">New York University</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://shibboleth.nyu.edu/InCommon/digital-privacy-statement.html</mdui:PrivacyStatementURL>
+		<mdui:Logo height="162" width="113" xml:lang="en">https://shibboleth.nyu.edu/InCommon/nyu_stacked_color.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIE6DCCA9CgAwIBAgIJAI2V7DmlgLQ1MA0GCSqGSIb3DQEBBQUAMIGoMQswCQYD
+VQQGEwJVUzERMA8GA1UECBMITmV3IFlvcmsxETAPBgNVBAcTCE5ldyBZb3JrMRww
+GgYDVQQKExNOZXcgWW9yayBVbml2ZXJzaXR5MQwwCgYDVQQLEwNJVFMxIjAgBgNV
+BAMTGXVybjptYWNlOmluY29tbW9uOm55dS5lZHUxIzAhBgkqhkiG9w0BCQEWFGlk
+bS5zZXJ2aWNlc0BueXUuZWR1MB4XDTEyMDgxMDIxMzUxNloXDTIyMDgwODIxMzUx
+NlowgagxCzAJBgNVBAYTAlVTMREwDwYDVQQIEwhOZXcgWW9yazERMA8GA1UEBxMI
+TmV3IFlvcmsxHDAaBgNVBAoTE05ldyBZb3JrIFVuaXZlcnNpdHkxDDAKBgNVBAsT
+A0lUUzEiMCAGA1UEAxMZdXJuOm1hY2U6aW5jb21tb246bnl1LmVkdTEjMCEGCSqG
+SIb3DQEJARYUaWRtLnNlcnZpY2VzQG55dS5lZHUwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQDfb4botPJTcMPCLDenzHqWAOJFenUGEAL33ROzA687b73F
+g72Fnlh2Pp7HNhbB3+cQjsQODitjFdUVQgX8EAP3xMZAGKU2M/0ZGfnGokj5oiU0
+80ii6zOzEDUCkulR5CW6p+mgdoCYXs3b9riwm1X5pqi/4ZbCKP+K6TiSBOGWxtCs
+Bp7mWFdJlWUT6a3VRdoYmUUQEOJfrTyT8CW0dk0DGToWe2j3taxGT89E3VA6w5Gk
+tQK5sxllEAVQ23fiMdouDAtr4gDNvOSwtYUuDwh/Ppl/lAMwjU+dv08pNuJR9drF
+jYM0jKoiPsG9AdEwkFSGQb0IB1wt8+wAeTCXIKMrAgMBAAGjggERMIIBDTAdBgNV
+HQ4EFgQUleQurEqBxsOHqhL90hCiWMKIvx0wgd0GA1UdIwSB1TCB0oAUleQurEqB
+xsOHqhL90hCiWMKIvx2hga6kgaswgagxCzAJBgNVBAYTAlVTMREwDwYDVQQIEwhO
+ZXcgWW9yazERMA8GA1UEBxMITmV3IFlvcmsxHDAaBgNVBAoTE05ldyBZb3JrIFVu
+aXZlcnNpdHkxDDAKBgNVBAsTA0lUUzEiMCAGA1UEAxMZdXJuOm1hY2U6aW5jb21t
+b246bnl1LmVkdTEjMCEGCSqGSIb3DQEJARYUaWRtLnNlcnZpY2VzQG55dS5lZHWC
+CQCNlew5pYC0NTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4IBAQDC7w4Z
+zk/qgpNhmee03UxGOixlFn+UaY6QEdjBIO3O3m20hEWLp4Pa+TBvsSlsFWQh1Wlf
+ngZfgK/MjZykdg0+bGwRT9JMcZbg9xeuznOCEenuTMJtDriquzTlN6ms2emelgBe
+fiQOpDC/hsX3Hr0miTgVq6xb3mRxUpMSRFAQqgkmV403fQ+kd8FcsSy1jjS5XLwX
+iB30XNuA1VE0HlWs4l4DV1G/24Jc1Hr7iUyiZMfZlZkEuju7POrmxtU0RZ00Dyis
+tzuHg2kl7HlTBftOs8FDxM3sqityZScutQmvMe6NCy/3nSFyHCQFPfu66bycssYG
+R+4YvtjCZRUas5kS
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.nyu.edu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.nyu.edu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth.nyu.edu/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth.nyu.edu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth.nyu.edu/idp/profile/SAML2/POST/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">New York University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">New York University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.nyu.edu/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Yavor Yanakiev</md:GivenName>
+	<md:EmailAddress>yy27@nyu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Anthony Cetera</md:GivenName>
+	<md:EmailAddress>tony.cetera@nyu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Lec Maj</md:GivenName>
+	<md:EmailAddress>lec.maj@nyu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David Basson</md:GivenName>
+	<md:EmailAddress>david.basson@nyu.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Yavor Yanakiev</md:GivenName>
+	<md:EmailAddress>yy27@nyu.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

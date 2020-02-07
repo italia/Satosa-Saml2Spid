@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lancs.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-04-16T16:54:28Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lancaster.ac.uk</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Lancaster University</mdui:DisplayName>
+		<mdui:Logo height="54" width="157">https://idp.lancs.ac.uk/logo-small.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgITE/T96ytOqT8HI/CQq7WILI+KmjANBgkqhkiG9w0BAQUF
+ADAaMRgwFgYDVQQDEw9pZHAubGFuY3MuYWMudWswHhcNMTMwMjE4MTUwNzQyWhcN
+MzMwMjE4MTUwNzQyWjAaMRgwFgYDVQQDEw9pZHAubGFuY3MuYWMudWswggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsu+5TFlPyDOccJHktBu8NSnY+Vdwq
+TzwPkSdCGlLzGrqQB0m5vDDIMxBC30i05tknFZP6KBvgPJj5pk0MSmOCXIGU0IG3
+kWUgpOF4Y7fd9NRuD53EF12pZfj88m3w/pVtPTrQOvi/agKgjZGbTDsEfRe0bIkf
+c3z4lzohXGIX+YcOGz0IC6b+XEiioAPMRodtTW8O53p3ttnLJ7Zv5Qs4zul8NQKY
+YmN2/sn2zkJEsE5gz61hY39FFlzAoJ8lGpeF5JgSeJ//2nyFAZ2ik8L8JnvqTwml
+r1UU7cd7tRxG+xy31gKxzqlNaI1PaafjPVdlXcyHROz7ACfznlrZxntZAgMBAAGj
+ZTBjMEIGA1UdEQQ7MDmCD2lkcC5sYW5jcy5hYy51a4YmaHR0cHM6Ly9pZHAubGFu
+Y3MuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFLuSKcwtlxU2Ivaq/A7T
+5g8LjqVRMA0GCSqGSIb3DQEBBQUAA4IBAQCjrOUZv0J2s8E7MWlO0qAlBeRwRI9/
+/UjuEM1uqgdKqTtFkKkug6BayVXIKErwYVnvhFFkwRqkewPjEeQxIZrnvPYWfqCl
+KV6zaykfU9VCYmP6/yK89A5nTY93IZQ4Rm63mF20LxqZeRxDNLGAd7Fm6y1pdoq7
+DuhJoqENTcQ2ludpmptKESInGhn4r/Pzk6x/SQvRF5/jZLLMy8flrB8KPKUJ3sN0
+6VanTXJSl+jZvaa69WfW+/vlKHnCPEGEuBZFw3b7BJA6wnYuH25Fzrg7zf23nLsB
+74wrr0WZQi7ryvmVcpxoclU/i5jee6m0IHMOtadvVoA625KVX/JBH4Kf
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lancs.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lancs.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.lancs.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lancs.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.lancs.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lancs.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lancaster.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgITE/T96ytOqT8HI/CQq7WILI+KmjANBgkqhkiG9w0BAQUF
+ADAaMRgwFgYDVQQDEw9pZHAubGFuY3MuYWMudWswHhcNMTMwMjE4MTUwNzQyWhcN
+MzMwMjE4MTUwNzQyWjAaMRgwFgYDVQQDEw9pZHAubGFuY3MuYWMudWswggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCsu+5TFlPyDOccJHktBu8NSnY+Vdwq
+TzwPkSdCGlLzGrqQB0m5vDDIMxBC30i05tknFZP6KBvgPJj5pk0MSmOCXIGU0IG3
+kWUgpOF4Y7fd9NRuD53EF12pZfj88m3w/pVtPTrQOvi/agKgjZGbTDsEfRe0bIkf
+c3z4lzohXGIX+YcOGz0IC6b+XEiioAPMRodtTW8O53p3ttnLJ7Zv5Qs4zul8NQKY
+YmN2/sn2zkJEsE5gz61hY39FFlzAoJ8lGpeF5JgSeJ//2nyFAZ2ik8L8JnvqTwml
+r1UU7cd7tRxG+xy31gKxzqlNaI1PaafjPVdlXcyHROz7ACfznlrZxntZAgMBAAGj
+ZTBjMEIGA1UdEQQ7MDmCD2lkcC5sYW5jcy5hYy51a4YmaHR0cHM6Ly9pZHAubGFu
+Y3MuYWMudWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFLuSKcwtlxU2Ivaq/A7T
+5g8LjqVRMA0GCSqGSIb3DQEBBQUAA4IBAQCjrOUZv0J2s8E7MWlO0qAlBeRwRI9/
+/UjuEM1uqgdKqTtFkKkug6BayVXIKErwYVnvhFFkwRqkewPjEeQxIZrnvPYWfqCl
+KV6zaykfU9VCYmP6/yK89A5nTY93IZQ4Rm63mF20LxqZeRxDNLGAd7Fm6y1pdoq7
+DuhJoqENTcQ2ludpmptKESInGhn4r/Pzk6x/SQvRF5/jZLLMy8flrB8KPKUJ3sN0
+6VanTXJSl+jZvaa69WfW+/vlKHnCPEGEuBZFw3b7BJA6wnYuH25Fzrg7zf23nLsB
+74wrr0WZQi7ryvmVcpxoclU/i5jee6m0IHMOtadvVoA625KVX/JBH4Kf
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lancs.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lancs.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Lancaster</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Lancaster University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lancaster.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>ISS Service Desk</md:GivenName>
+	<md:EmailAddress>mailto:iss-service-desk@lancaster.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steve</md:GivenName>
+	<md:SurName>Bennett</md:SurName>
+	<md:EmailAddress>mailto:S.Bennett@lancaster.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

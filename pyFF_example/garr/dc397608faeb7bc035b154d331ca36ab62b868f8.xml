@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://obu-shib.hosted.exlibrisgroup.com/shib">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-07-22T11:25:14Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Oxford Brookes University - Primo</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This is an Ex Libris Primo Hosted SP on behalf of the Oxford Brookes University</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3DCCAcSgAwIBAgIJAPFOgb8PLs1hMA0GCSqGSIb3DQEBBQUAMBIxEDAOBgNV
+BAMTB2FpbzAwMDYwHhcNMTQwNzE4MDk0MTQ2WhcNMjQwNzE1MDk0MTQ2WjASMRAw
+DgYDVQQDEwdhaW8wMDA2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+w5jThjFg2+mq3htgoZ/7sbvVBxxVAGqdT5NtVXSIUskbq4alYYsgryo70x+8DxN/
+rS8D9mTTGXq+bLnY33u47D3KIuGpfLdkCZkzFMk6YfM4kSrSXbrrpbNSlcaFF1dv
+3Vbz771m5M3+xUZNZIi0jZxUN8FvRefdjw0rqJTpOK4X6+JjkUNlFAYv70kCyLuB
+l0vwRhA1S+Jbp0C2+gmNA8F2T5mLHAGnB4jFij7KMLufdpkRAO5h4yD5vu8s11yZ
+9dwd60Cy3D+kRtT06xv57n9VpSl0GTCC0OHpYOfZ4Woy/z4A6HUD+yFNeASQXyDt
+w190QC5KOwHl/3eQnPl0CwIDAQABozUwMzASBgNVHREECzAJggdhaW8wMDA2MB0G
+A1UdDgQWBBReo4WgGu2sffn17A9SeJ4Q1DObDjANBgkqhkiG9w0BAQUFAAOCAQEA
+wegTw3Rlw+xt3urRqa2SyUNVf2F4jwDxajd/c0ww3yE/nK4hyMWXIXe7BlU4HTfz
+EIi6Qhx8lU//bIgVqUP813TS9NbKfCdzRbibmq8QyL06JqGAI7Cs1tMqKCvnPTYo
+U9vu+nqQ6gg1u2TJbjYTHm+gGNNFd42yGzLyEUMZk/2+bXmCWPxhnF7xo3rGmycH
+bLxo3ecAAi972stBzrMH22htpDBOqkUlYW+SoEmjOV+w/LCF8my2hECuV77/yBOJ
+IdXPA4yyw+Wx0924IrrLTUoa5TT/emmXyNZVo+3KMwWaJcNI1sxHEPVKqE3VFJ7h
+zyozG62Vmd+kHrx8S35yvg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://obu-shib.hosted.exlibrisgroup.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ex Libris (UK) Limited</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Oxford Brookes University - Primo</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.exlibrisgroup.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Frank</md:GivenName>
+	<md:SurName>Bieber</md:SurName>
+	<md:EmailAddress>mailto:frank.bieber@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Frank</md:GivenName>
+	<md:SurName>Bieber</md:SurName>
+	<md:EmailAddress>mailto:frank.bieber@exlibrisgroup.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

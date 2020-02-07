@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://rochestertest.hosts.atlas-sys.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://rochestertest.hosts.atlas-sys.com/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University of Rochester Test - ILLiad</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.atlas-sys.com/privacy-policy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="217" width="1251" xml:lang="en">https://static1.squarespace.com/static/586d3c61725e2524685ac5b9/t/586fabe33e00be70aef56668/1528205345335/?format=1500w</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJjCCAg6gAwIBAgIJAIRkKx2epDcFMA0GCSqGSIb3DQEBCwUAMCgxJjAkBgNV
+BAMMHXJvY2hlc3Rlci5ob3N0cy5hdGxhcy1zeXMuY29tMB4XDTE2MTEwMTE4MDEy
+MFoXDTI2MTAzMDE4MDEyMFowKDEmMCQGA1UEAwwdcm9jaGVzdGVyLmhvc3RzLmF0
+bGFzLXN5cy5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCwTG9b
+WlHQWPbVX/WEODBn9yXJq4mUwwXuSh70YcGhIbMS5Ff3Z9KVindF1k8OVk84YBJ2
+gt8Rp42KX74V+x3rESdpyzpbfHcY43AjLu1VdPLWGdelO5CLqdSW2Mmpv/FjOefO
+reFSvMWRvRz/+hpDKL5/9jKTzSx/6RhLEOWhtA04i4r4SdbwCNvTUcEmDie0SPSk
+X6/YUd/NpsA+4XczyxCOJ/c2LjC8Z2MUvkP2lEdg1N/EEAgmnic3cjiiF2ZZczCD
+81MBAWGD9YCP+19hl62ZaW103XE2Dwp6T+B33oZRPYi90w3V3aMsYj6FUL8OilX1
+WQOF0NARtzXag3JJAgMBAAGjUzBRMB0GA1UdDgQWBBT9jXi0aGtUuetbbX7oMmVE
+HHFMsTAfBgNVHSMEGDAWgBT9jXi0aGtUuetbbX7oMmVEHHFMsTAPBgNVHRMBAf8E
+BTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCQ4TBOTJLP1EIDQhMUEtuNeqodEI0R
+hmJ4AR27sDW3Vs9o4hdPO2r6QNXJ++ylM2nMNSIGWgLUUGDOEIpUF/ZfNxuSjq8d
+hiq+2sjGPMpGiPRA9RarbU15EWNmXATTH4W3jXr4lGzQwqPegJ7T4bcxPr3um9MT
+sswZDg0l+U6vpljUg1T4ZytKaEL/32/EQampB6ytk4tUXO4jlC4esYDZa3yQAq3M
+VSJhgU9NqWLwskdUMWP9NvKigDmUu9WSo/Z5nov4STuWP6K+jXZm5rxA4f/q3/a3
+Yg6VdB5EMMrghz014Y/mFA4grSH2cxIEOXwQWwdc6qah7/UD4iVMLC8E
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://rochestertest.hosts.atlas-sys.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://rochestertest.hosts.atlas-sys.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://rochestertest.hosts.atlas-sys.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://rochestertest.hosts.atlas-sys.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Atlas Systems, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Atlas Systems, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.atlas-sys.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Curtis Poston</md:GivenName>
+	<md:EmailAddress>cposton@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Kathy Poston</md:GivenName>
+	<md:EmailAddress>kposton@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Nathan Tefft</md:GivenName>
+	<md:EmailAddress>ntefft@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Dan Schneider</md:GivenName>
+	<md:EmailAddress>dschneider@atlas-sys.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

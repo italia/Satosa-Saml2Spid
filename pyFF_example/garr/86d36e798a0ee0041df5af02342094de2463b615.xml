@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://cognos-training.ucop.edu/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://cognos-training.ucop.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cognos Training</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Shibboleth Service Provider for Cognos Training Environment</mdui:Description>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.ucop.edu/ethics-compliance-audit-services/_files/compliance/privacy/statement-of-privacy-for-web-based-applications.pdf</mdui:PrivacyStatementURL>
+		<mdui:Logo height="60" width="80" xml:lang="en">https://www.ucop.edu/_common/_images/sso/uc.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIESDCCArCgAwIBAgIJAKVjTT8DwPBKMA0GCSqGSIb3DQEBCwUAMDYxNDAyBgNV
+BAMTK2lwLTE3Mi0zMS00Ni0xNjMudXMtd2VzdC0yLmNvbXB1dGUuaW50ZXJuYWww
+HhcNMTgxMjEzMDAxMjM1WhcNMjgxMjEwMDAxMjM1WjA2MTQwMgYDVQQDEytpcC0x
+NzItMzEtNDYtMTYzLnVzLXdlc3QtMi5jb21wdXRlLmludGVybmFsMIIBojANBgkq
+hkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAtzIxlsQNRFc0jGHNXJshuHIrvZplRXCW
+iO24uBOEvb5xh9I0K4D1utAC7PttLS5ckr0lt1mRs2j6JsAiksmgvNeKgPjtXj7e
+H2bIOKQokdb+cgArJlwdjc7KNr10vHqlOWfRE4K+cNsmOHz9LnpxIOFMvAronO88
+jnihPW84XgvWvpFYKLpf7J57WQ+OiQKWXLN6ZzvywYCpcgPCrDXJqt1O+M3tsnnJ
+2005EF2mJ/AhzCC1F5aFpw0ye0JbodR28ZHuh7/1jyAxdd7S8d6tzf6Ci2XCJ1o2
+WXUIxyW0zYs2qay9kVAroeTQCS/9mYvPbMBMSgOi2yO5gr++lii+WVGVRwtmYkRj
+Gk1g6bQdJxaMltLK/y5ISuwZ04GsL+qo4pXizHIxla2IbcxRBQOFY+9aNEK+s3M8
+vqaNiN9dVvhBPj3DrMBKELXIC9KezIHzuV3S3Uyi2rKUu0FnzKCaz6zjhnnmDW7I
+XvTlZp1/o86dzXYVMbHMbR6Dj74bj3M1AgMBAAGjWTBXMDYGA1UdEQQvMC2CK2lw
+LTE3Mi0zMS00Ni0xNjMudXMtd2VzdC0yLmNvbXB1dGUuaW50ZXJuYWwwHQYDVR0O
+BBYEFO1sAdgFITJ3W3I9LzqOtzF2aN8jMA0GCSqGSIb3DQEBCwUAA4IBgQATH+Sb
+72SDjhGU5uQ9Tf85MDKwKLH1uPJLgwFBpf1Ib2meyvkMMRjSCaKP/zN6qhy9EkfZ
+WR+BCm+sV4VU7ssKuqKf6W1j+VFLcOHfETsSh5vsmV8EcbZLQ9vI6ZvB5v7BbITF
+YFsXlb21FtYQlrlcQN3w3YsIcjoH3fGdV1DgjCcPLw8pXH7bQpYAZSdyA7zqrkz7
+ycQcfCTKsgwBtMx+cbsu8DXvOHP50O1LWJHR7poVU2HP9xCylmC+8wGYEAtIEfhd
+i1cRtt/izD7J9YvhB39BXC93EI0nTmINZy1IkIgL3XbHFhPR3muO9WlyxzzlrlmA
+Wdj8QzAGYLaNvkRC9GvZ9COUIjB/UYrKYkxcNuyFXvDsyeca62URE8i9GDDx3Opw
+zkr3mRDXvf/Uhn7DNYpuwqrGz+HxNqqXwEnas07+RmdPjdNVtGaM14mzfer18G2L
+cJj2fwRmebH7TXHfWJVn2KtNzrkGsFUB1NbwOqNrFVwEirl7RR9kzRweaCc=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cognos-training.ucop.edu/Shibboleth.sso/SLO/POST"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://cognos-training.ucop.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://cognos-training.ucop.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of California - Office of the President</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of California - Office of the President</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucop.edu/welcome.html</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>IAM Group</md:GivenName>
+	<md:EmailAddress>IAMGrp@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>IT Service Desk</md:GivenName>
+	<md:EmailAddress>servicedesk@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security Operations</md:GivenName>
+	<md:EmailAddress>soc@ucop.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

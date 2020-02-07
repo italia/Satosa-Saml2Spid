@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.task.gda.pl/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://aai.pionier.net.pl" registrationInstant="2015-06-22T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://aai.pionier.net.pl/en/index.php?page=rps</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">task.gda.pl</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">TASK Gdansk</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="pl">TASK Gdańsk</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Academic Computer Center TASK Identity Provider</mdui:Description>
+		<mdui:Description xml:lang="pl">Dostawca Tożsamości Centrum Informatycznego TASK</mdui:Description>
+		<mdui:Logo height="45" width="109" xml:lang="en">https://idp.task.gda.pl/idp/images/logo_citask.png</mdui:Logo>
+		<mdui:Logo height="45" width="109" xml:lang="pl">https://idp.task.gda.pl/idp/images/logo_citask.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:IPHint>153.19.0.0/16</mdui:IPHint>
+		<mdui:DomainHint>task.gda.pl</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:54.371860,18.612700</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIURF5LPwZ/QXjVB9iJ7Kz0mzeHll0wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMB4XDTE1MDQwMzA4Mzk1OFoX
+DTM1MDQwMzA4Mzk1OFowGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoDhbNawOVOWO4A/VWUKiNnP6CmGj
+DW6Q3eJH35bIM15MOUm4bsPgZlv2GJ83TV4MPU+m9lvZs7PwawaaJtIslzIiq1TF
+fcolHmrjzw+EqPnv/2/HH9yUJKSusXFNadqC/yPayv0UNMUgkGl1/Rz7EFZRuClM
+3rE4a7CgrhcGue5D8LnW0lPo8gYdrPY0YntT/lVLS3JSooeuEAZCbdfj6mJ0anUR
+Agl8Iy5gTrZ6p1mf6Wc2SqKW60aNWqBUpMAI7LwzkwJPtDAPZ4jITN/gc30iEzfS
+8yw0aoQJ1VuB1AecpQj/d1Jy54q76UV2IC4ELo0heaFDPX0Zkn6klvCqzwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUcUVjQ8rdgeB+mQz7Xa54TmYYkRYwQgYDVR0RBDswOYIP
+aWRwLnRhc2suZ2RhLnBshiZodHRwczovL2lkcC50YXNrLmdkYS5wbC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAlPyHV9yROpDobbr+AtdQPRPnEiDl
+/AVORvbh1kizmapzK5DS8ROmi/tEKWoGv1S85dg5MREosL4BbfQDzZIpmbWNPCBi
+4LfRWsAXmzxExEslW5NpVfYvz5/+hv/V7sML86m7eVpWULSsTH0JC4QYfN+m33Ba
+XbsFGH7eCthi2IwQls+B93v4EUkWtTM6P/nZlqZi8Y3asX9i5EHrMsdcl2nwzdol
+EY/syGwYwfajAEI1c7RcNujuQty1fraXpRDF/kzhy6oiBCecqpSowKy/QEBlV9wh
+Bp0cQldS1u/LcLeFWQq32HbT9OpVBMoqx7VsL8PEkE+592rLCCTvwDXFng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVANy+gCUM8Wyxo9utTnW0xq8dzG5ZMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC50YXNrLmdkYS5wbDAeFw0xNTA0MDMwODM5NTZa
+Fw0zNTA0MDMwODM5NTZaMBoxGDAWBgNVBAMMD2lkcC50YXNrLmdkYS5wbDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAISQv8+20Dt+F22y+/0LwXlrH5Ld
+3ZU0E5L8nY1W3nkdnRJkc8VRAj+EgeGnEHHQeb/xhpYiSFWYwjDbM9nkE6a2OLpU
+1tsSax3clNpYGXlRsbqg/XdVZg38j19C45JQOXAdDskLMyWhzhKqPFniUGHsd0Wn
+yq32uC8uohlgAD69fgSs9KxEl6kyDlZBg8fv5w28HianLp0EiTv6gwZ2ZQThIkqi
+nIYK3yZccjzauhGW6yRtvEoRIY3HZuiSGcgVcoBcqKSepSjCA3PYzCWX1MrZyLYw
+wq1utQb3PAcXiHyFd6mm3bkoKCLYByyPgV1GXzRsyHp33FCAJpGuix78bRECAwEA
+AaNlMGMwHQYDVR0OBBYEFHwRZRLbErBc55nrd4dcRSwKY4x6MEIGA1UdEQQ7MDmC
+D2lkcC50YXNrLmdkYS5wbIYmaHR0cHM6Ly9pZHAudGFzay5nZGEucGwvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAE5rcoiYYQN8cSqmRXD6q301rqnB
+PPmwTS9auHQkqTGMezpPV+UK5PLR8MxGKOs5XHxo+klixekYti0VgqBKpO+c9Jsh
+5TM62+mePv9SJL0YapvgzQcXSdfTuR0QTDKLoS/aUSwO5yR8PDf5JOdTspygfrzx
+R5rWGWSCMoq/sl687jlylzovRLzQn6opFKoeXlBIBwWdZCG/CNwq3DQeMCWrkgt9
+rUkBt8hYMPOjHcJx2nl+2Ue6vcevZkudqxBpV5tpioX6Q2F/XsQCiCYpGue9aWcQ
+g12oVQa4JuIHhKSmvZfVZIu1QfcMadj27vchQXWqttvarQO7NWRRimE9OII=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUH/PXFUwlqT8+OMaMthWJ3kkOYJ0wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMB4XDTE1MDQwMzA4Mzk1N1oX
+DTM1MDQwMzA4Mzk1N1owGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxLDEWcL+qc///wbesB7tizhsqMi
+Ub8s8+dbJkFvWl4htkzfiHi76L+M7L4eXfv1gsgdNXk0mm1kZWa/6XafDPy80zkL
+4ro4UH46LXOu8wMeoy6eLeJDlurX+CzFbPiGdx1FqQF1QIU8jf1bBS7OhpYJ7Ex6
+q7iM/VU2j5i8momKTk4Ktsc+GaVXeO9CWjOb2+U2QNoVxXYX+8NJNcQXyIIxir00
+3e4pl8W7WPxPBz0Ex/+xJPzb75qrSjx9YfadzfE3uoyGomOzODRodOszSSUXnd4J
+cdRZKdA+R8xUZnctuUncLaMUopg3SoBE3VIyl99mvQkmk/Skue4o0PJqoQIDAQAB
+o2UwYzAdBgNVHQ4EFgQUeUfa/bgMdBy0o6JP0hLwgNSuXNowQgYDVR0RBDswOYIP
+aWRwLnRhc2suZ2RhLnBshiZodHRwczovL2lkcC50YXNrLmdkYS5wbC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAaXFnZPlBAehUrHnfb3TU61b2J+y3
+8ng8l1tzFa/3g7aDTlYxVV9RHrz48mLt23n1LPz90wAixCQKgSqt3jaCqeH59Uaj
+xNUZwqDJJqRZB5a/7z6OEBSeQiKnc3H1PjgdrtgWPgEdvoC+ggGYsbitLdZ+455t
+Dg/6nZ/C6vt40XtJyBMXB8HA4na6IXAFRzr++6QmG4ib8umoPS20cCT2sSUtpz7S
+h1QrFPZQWQRe67fPZlX2aOyu8h5OrEhGoyS95BW/2Hw+nWJFvkn5H12/YYW65qTJ
+/TMpaKEsJ2bRiqVKhW5kntRDcca3KqqIiZ+g4102DKmk44R/y8Yjk9BIxg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.task.gda.pl:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.task.gda.pl:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.task.gda.pl/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.task.gda.pl/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.task.gda.pl/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.task.gda.pl/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">task.gda.pl</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIURF5LPwZ/QXjVB9iJ7Kz0mzeHll0wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMB4XDTE1MDQwMzA4Mzk1OFoX
+DTM1MDQwMzA4Mzk1OFowGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoDhbNawOVOWO4A/VWUKiNnP6CmGj
+DW6Q3eJH35bIM15MOUm4bsPgZlv2GJ83TV4MPU+m9lvZs7PwawaaJtIslzIiq1TF
+fcolHmrjzw+EqPnv/2/HH9yUJKSusXFNadqC/yPayv0UNMUgkGl1/Rz7EFZRuClM
+3rE4a7CgrhcGue5D8LnW0lPo8gYdrPY0YntT/lVLS3JSooeuEAZCbdfj6mJ0anUR
+Agl8Iy5gTrZ6p1mf6Wc2SqKW60aNWqBUpMAI7LwzkwJPtDAPZ4jITN/gc30iEzfS
+8yw0aoQJ1VuB1AecpQj/d1Jy54q76UV2IC4ELo0heaFDPX0Zkn6klvCqzwIDAQAB
+o2UwYzAdBgNVHQ4EFgQUcUVjQ8rdgeB+mQz7Xa54TmYYkRYwQgYDVR0RBDswOYIP
+aWRwLnRhc2suZ2RhLnBshiZodHRwczovL2lkcC50YXNrLmdkYS5wbC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAlPyHV9yROpDobbr+AtdQPRPnEiDl
+/AVORvbh1kizmapzK5DS8ROmi/tEKWoGv1S85dg5MREosL4BbfQDzZIpmbWNPCBi
+4LfRWsAXmzxExEslW5NpVfYvz5/+hv/V7sML86m7eVpWULSsTH0JC4QYfN+m33Ba
+XbsFGH7eCthi2IwQls+B93v4EUkWtTM6P/nZlqZi8Y3asX9i5EHrMsdcl2nwzdol
+EY/syGwYwfajAEI1c7RcNujuQty1fraXpRDF/kzhy6oiBCecqpSowKy/QEBlV9wh
+Bp0cQldS1u/LcLeFWQq32HbT9OpVBMoqx7VsL8PEkE+592rLCCTvwDXFng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDKDCCAhCgAwIBAgIVANy+gCUM8Wyxo9utTnW0xq8dzG5ZMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC50YXNrLmdkYS5wbDAeFw0xNTA0MDMwODM5NTZa
+Fw0zNTA0MDMwODM5NTZaMBoxGDAWBgNVBAMMD2lkcC50YXNrLmdkYS5wbDCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAISQv8+20Dt+F22y+/0LwXlrH5Ld
+3ZU0E5L8nY1W3nkdnRJkc8VRAj+EgeGnEHHQeb/xhpYiSFWYwjDbM9nkE6a2OLpU
+1tsSax3clNpYGXlRsbqg/XdVZg38j19C45JQOXAdDskLMyWhzhKqPFniUGHsd0Wn
+yq32uC8uohlgAD69fgSs9KxEl6kyDlZBg8fv5w28HianLp0EiTv6gwZ2ZQThIkqi
+nIYK3yZccjzauhGW6yRtvEoRIY3HZuiSGcgVcoBcqKSepSjCA3PYzCWX1MrZyLYw
+wq1utQb3PAcXiHyFd6mm3bkoKCLYByyPgV1GXzRsyHp33FCAJpGuix78bRECAwEA
+AaNlMGMwHQYDVR0OBBYEFHwRZRLbErBc55nrd4dcRSwKY4x6MEIGA1UdEQQ7MDmC
+D2lkcC50YXNrLmdkYS5wbIYmaHR0cHM6Ly9pZHAudGFzay5nZGEucGwvaWRwL3No
+aWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAE5rcoiYYQN8cSqmRXD6q301rqnB
+PPmwTS9auHQkqTGMezpPV+UK5PLR8MxGKOs5XHxo+klixekYti0VgqBKpO+c9Jsh
+5TM62+mePv9SJL0YapvgzQcXSdfTuR0QTDKLoS/aUSwO5yR8PDf5JOdTspygfrzx
+R5rWGWSCMoq/sl687jlylzovRLzQn6opFKoeXlBIBwWdZCG/CNwq3DQeMCWrkgt9
+rUkBt8hYMPOjHcJx2nl+2Ue6vcevZkudqxBpV5tpioX6Q2F/XsQCiCYpGue9aWcQ
+g12oVQa4JuIHhKSmvZfVZIu1QfcMadj27vchQXWqttvarQO7NWRRimE9OII=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJzCCAg+gAwIBAgIUH/PXFUwlqT8+OMaMthWJ3kkOYJ0wDQYJKoZIhvcNAQEL
+BQAwGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMB4XDTE1MDQwMzA4Mzk1N1oX
+DTM1MDQwMzA4Mzk1N1owGjEYMBYGA1UEAwwPaWRwLnRhc2suZ2RhLnBsMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnxLDEWcL+qc///wbesB7tizhsqMi
+Ub8s8+dbJkFvWl4htkzfiHi76L+M7L4eXfv1gsgdNXk0mm1kZWa/6XafDPy80zkL
+4ro4UH46LXOu8wMeoy6eLeJDlurX+CzFbPiGdx1FqQF1QIU8jf1bBS7OhpYJ7Ex6
+q7iM/VU2j5i8momKTk4Ktsc+GaVXeO9CWjOb2+U2QNoVxXYX+8NJNcQXyIIxir00
+3e4pl8W7WPxPBz0Ex/+xJPzb75qrSjx9YfadzfE3uoyGomOzODRodOszSSUXnd4J
+cdRZKdA+R8xUZnctuUncLaMUopg3SoBE3VIyl99mvQkmk/Skue4o0PJqoQIDAQAB
+o2UwYzAdBgNVHQ4EFgQUeUfa/bgMdBy0o6JP0hLwgNSuXNowQgYDVR0RBDswOYIP
+aWRwLnRhc2suZ2RhLnBshiZodHRwczovL2lkcC50YXNrLmdkYS5wbC9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAaXFnZPlBAehUrHnfb3TU61b2J+y3
+8ng8l1tzFa/3g7aDTlYxVV9RHrz48mLt23n1LPz90wAixCQKgSqt3jaCqeH59Uaj
+xNUZwqDJJqRZB5a/7z6OEBSeQiKnc3H1PjgdrtgWPgEdvoC+ggGYsbitLdZ+455t
+Dg/6nZ/C6vt40XtJyBMXB8HA4na6IXAFRzr++6QmG4ib8umoPS20cCT2sSUtpz7S
+h1QrFPZQWQRe67fPZlX2aOyu8h5OrEhGoyS95BW/2Hw+nWJFvkn5H12/YYW65qTJ
+/TMpaKEsJ2bRiqVKhW5kntRDcca3KqqIiZ+g4102DKmk44R/y8Yjk9BIxg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.task.gda.pl:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Gdańsk University of Technology</md:OrganizationName>
+	<md:OrganizationName xml:lang="pl">Politechnika Gdańska</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Academic Computer Center TASK in Gdansk</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="pl">Centrum Informatyczne TASK w Gdańsku</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.task.gda.pl</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>AAI</md:GivenName>
+	<md:SurName>TASK</md:SurName>
+	<md:EmailAddress>mailto:aai@task.gda.pl</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

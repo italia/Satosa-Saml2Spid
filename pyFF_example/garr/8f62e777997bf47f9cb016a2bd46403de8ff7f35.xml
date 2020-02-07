@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.lec.ac.uk/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2014-08-19T09:21:36Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Leicester College</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Leicester College</mdui:Description>
+		</mdui:UIInfo>
+		<shibmd:Scope regexp="false">lec.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAOhCOyKOXTcMdnvggD4B9+FnzBWtMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5sZWMuYWMudWswHhcNMTQwNjE5MTUyODQxWhcN
+MzQwNjE5MTUyODQxWjAYMRYwFAYDVQQDEw1pZHAubGVjLmFjLnVrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnnerdYQQxQIZU5eVNTKYtAKY3LaWLGFJ
+h20xeYu8DYnc79EbitOROhHYrg/ORw9Ns63bvaLsXPwj6MC+zo31AF67SvmvKI7C
+5QqlXBaZVYPvgNEGIPYtqfMdEYBfnCea3Wfrc+R06IcLbC+NLJetv1M1BpzkfmSa
+xwUA//pZ6iEYkta1StPwX7JwILQHXqNVDYH9QUldvOxyMsM+DpqY0pCnrBxoAvVO
+15e6aLkLIs3OHzhkREomiu3N3K8Wt4ePkBy8PruVpODWf2Yl1qAbXHczo2jeR9S+
+jgY8TRdblPn2WcKoZ6Xs0hQldlGzTcoPYREB3J671iI/0Qd4bBky9QIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAubGVjLmFjLnVrhiRodHRwczovL2lkcC5sZWMuYWMu
+dWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFNq8a16FuYh4F4H642sLTgWlIr5o
+MA0GCSqGSIb3DQEBBQUAA4IBAQAgoPBw1rcnYM2LrNO4GjATEBUt9mX/OGXCR6ar
+HrY/tEYn3kDIOukO3mjpVJXuxuRJEZZuG5+iCqb9/icgh7UPRZZ1pQS92JdtSvZk
+CLZfaEih3jP3khZEzxPSnscMkMYyMxdMxcFIzrq/vt36gzCU5X2F5gO89jn++z2t
+Ei8LRmUPKJ/czStcMTf8uS6Xy1jrIPoEUcqv8z9TFir+SWynz2NqLlRq8f/q3qNb
+4c/B50roEAWi6UjG1BoWsAHpAU6vNpAwX5rpPF2jfW3diOaSlOeId7C679ccWmQJ
+Gp39POQVUg52O0GAfPJgGgmUrlThA5+DQ5KdGTlmOsObK3LV
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lec.ac.uk:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lec.ac.uk:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lec.ac.uk/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lec.ac.uk/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lec.ac.uk:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.lec.ac.uk/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.lec.ac.uk/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.lec.ac.uk/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.lec.ac.uk/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">lec.ac.uk</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDIDCCAgigAwIBAgIVAOhCOyKOXTcMdnvggD4B9+FnzBWtMA0GCSqGSIb3DQEB
+BQUAMBgxFjAUBgNVBAMTDWlkcC5sZWMuYWMudWswHhcNMTQwNjE5MTUyODQxWhcN
+MzQwNjE5MTUyODQxWjAYMRYwFAYDVQQDEw1pZHAubGVjLmFjLnVrMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnnerdYQQxQIZU5eVNTKYtAKY3LaWLGFJ
+h20xeYu8DYnc79EbitOROhHYrg/ORw9Ns63bvaLsXPwj6MC+zo31AF67SvmvKI7C
+5QqlXBaZVYPvgNEGIPYtqfMdEYBfnCea3Wfrc+R06IcLbC+NLJetv1M1BpzkfmSa
+xwUA//pZ6iEYkta1StPwX7JwILQHXqNVDYH9QUldvOxyMsM+DpqY0pCnrBxoAvVO
+15e6aLkLIs3OHzhkREomiu3N3K8Wt4ePkBy8PruVpODWf2Yl1qAbXHczo2jeR9S+
+jgY8TRdblPn2WcKoZ6Xs0hQldlGzTcoPYREB3J671iI/0Qd4bBky9QIDAQABo2Ew
+XzA+BgNVHREENzA1gg1pZHAubGVjLmFjLnVrhiRodHRwczovL2lkcC5sZWMuYWMu
+dWsvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFNq8a16FuYh4F4H642sLTgWlIr5o
+MA0GCSqGSIb3DQEBBQUAA4IBAQAgoPBw1rcnYM2LrNO4GjATEBUt9mX/OGXCR6ar
+HrY/tEYn3kDIOukO3mjpVJXuxuRJEZZuG5+iCqb9/icgh7UPRZZ1pQS92JdtSvZk
+CLZfaEih3jP3khZEzxPSnscMkMYyMxdMxcFIzrq/vt36gzCU5X2F5gO89jn++z2t
+Ei8LRmUPKJ/czStcMTf8uS6Xy1jrIPoEUcqv8z9TFir+SWynz2NqLlRq8f/q3qNb
+4c/B50roEAWi6UjG1BoWsAHpAU6vNpAwX5rpPF2jfW3diOaSlOeId7C679ccWmQJ
+Gp39POQVUg52O0GAfPJgGgmUrlThA5+DQ5KdGTlmOsObK3LV
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.lec.ac.uk:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.lec.ac.uk:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Leicester College</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Leicester College</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.lec.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Lisa</md:GivenName>
+	<md:SurName>McDonald</md:SurName>
+	<md:EmailAddress>mailto:lmcdonald@lec.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Sherwin</md:GivenName>
+	<md:SurName>D'Souza</md:SurName>
+	<md:EmailAddress>mailto:sdsouza@lec.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

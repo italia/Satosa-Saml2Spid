@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://api.training.apps.cayuse.com/sso/saml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Cayuse Platform SAML Service Provider (Training)</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://cayuse.com/privacy/</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="150" xml:lang="en">https://cayuse.com/app/uploads/2017/11/logo-cayuse.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+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
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://api.training.apps.cayuse.com/session/sp/assert" index="1"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Cayuse, Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Cayuse, Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.cayuse.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Cayuse Technical Operations</md:GivenName>
+	<md:EmailAddress>tekops@cayuse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Cayuse Technical Operations</md:GivenName>
+	<md:EmailAddress>tekops@cayuse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Cayuse Technical Operations</md:GivenName>
+	<md:EmailAddress>tekops@cayuse.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Cayuse Technical Operations</md:GivenName>
+	<md:EmailAddress>tekops@cayuse.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://connect.mecenat.com/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2017-03-17T12:44:37Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Mecenat</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="se">Mecenat</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="es">Mecenat</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Mecenat makes student life easier by providing discounts and benefits that are relevant to their studies.</mdui:Description>
+		<mdui:Description xml:lang="se">Mecenat underlättar för de studerande genom att förmedla rabatter och förmåner som är relevanta under studietiden.</mdui:Description>
+		<mdui:Description xml:lang="es">Mecenat hace la vida estudiantil más fácil proporcionando descuentos y beneficios que son relevantes para sus estudios.</mdui:Description>
+		<mdui:Logo height="140" width="250">https://mecenat.com/img/federation-logo-2.png</mdui:Logo>
+		</mdui:UIInfo>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://connect.mecenat.com/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://connect.mecenat.com/Shibboleth.sso/Login" index="1"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEHTCCAoWgAwIBAgIJAM/9jJIh4dZMMA0GCSqGSIb3DQEBCwUAMB4xHDAaBgNV
+BAMTE2Nvbm5lY3QubWVjZW5hdC5jb20wHhcNMTcwMzE0MjI1NzAzWhcNMzcwMzA5
+MjI1NzAzWjAeMRwwGgYDVQQDExNjb25uZWN0Lm1lY2VuYXQuY29tMIIBojANBgkq
+hkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAyMrnPtnax9cmG9TBqZ1/wGABiV5XfNxv
+8ZNUE/ROyaeh8ntl9px8vMy7o72Er0XlBUs4NSe9C/V4owtT4lzCojv5JdbzWu5r
+bV2LLM9kCzz9bcIcdeDpvc+vW1NUuQod3C+wMFgULb4rhptoffXaukCuFjqqME2T
+wVuzvxx19SvBcYMTQKooRdUd1OgLkSYcgwWH7ZhCq284WjQus/sU9VQQrDyH93Y5
+0bIEcwtt7bxySPA5Gwo86gJyJ6WFbb0K/OrCndvhyueHyYJkzXXDHvfTY1FbcpbD
+z+3TBo1JPGj9vofa9HbiBoubjHj6AamPu/sPuI5VX0+bOMUJDL32Q4DbpuOB1odV
+cTDX8LGKYIBHLJk3INDMHGBNqgbyQk9WQBjM+Yh+lc/GT7w3DNMkC5rn8BL1ax47
+ZZl2YPMuYbK1FZDiPMv5khZHliMDcyF1qte8iYFeX55i0+UCFgm8rGkmR+o5/UnP
+B/M+6rJWI8v6uaFcEi/iQvyxgcKezdOVAgMBAAGjXjBcMDsGA1UdEQQ0MDKCE2Nv
+bm5lY3QubWVjZW5hdC5jb22GG2h0dHBzOi8vY29ubmVjdC5tZWNlbmF0LmNvbTAd
+BgNVHQ4EFgQUDdUgrWcbn088hqHGb4BbCl/7358wDQYJKoZIhvcNAQELBQADggGB
+AF0vgfwQrCalpuAxbTiShD6yPMcbLDbONnyXyrDat/t7sstNaiZB+vpN7TtwnICy
++iBNIECITqgAH57dZrHYC/I6Ppx14vrdq675hnJnHfV3sewLsBR1m7wyuISb5e8O
+s5P8sxB/DGVA10y9UbeabyXLVxw1dYNVV4QP30oR8yX2B+Xydr1st9B8aYkpJ6Oc
+b6zHoLLR+Ca/huzu1FNEznCZefzkkjaiDdSef3GUiMQCUcFUS6xZwpNloHF3Np2B
+Ujj5vUSGFMQVQhFCLqJr1buNDFEGMUHZKXldKtITrk6+R85UMHKaRYuILbfVO7ts
+TNevV6FXfUyrnUhy9ddxooNXRy1Ds/+2nfISVq7sdGdLOnxDWtGosMv29bTopJK2
+SUfYr0INML36dO2nf54RTV2uw4D3h3oyU7a3JEayo/FCHPalsuoLGns0MDBTo7kE
+8bCQO9OoEZVu6uw1eI397a/TJVxqIbU+uzfXIUiRlcaucmm5s+oXUgXWAO/h2Uvo
+tw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://connect.mecenat.com/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://connect.mecenat.com/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://connect.mecenat.com/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://connect.mecenat.com/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://connect.mecenat.com/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://connect.mecenat.com/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AttributeConsumingService index="0" isDefault="true">
+		<md:ServiceName xml:lang="en">Mecenat</md:ServiceName>
+		<md:ServiceName xml:lang="se">Mecenat</md:ServiceName>
+		<md:ServiceName xml:lang="es">Mecenat</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Mecenat makes student life easier by providing discounts and benefits that are relevant to their studies.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="se">Mecenat underlättar för de studerande genom att förmedla rabatter och förmåner som är relevanta under studietiden.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="es">Mecenat hace la vida estudiantil más fácil proporcionando descuentos y beneficios que son relevantes para sus estudios.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrimaryAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+		<md:RequestedAttribute FriendlyName="schacPersonalUniqueCode" Name="urn:oid:1.3.6.1.4.1.25178.1.2.14" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Mecenat AB</md:OrganizationName>
+	<md:OrganizationName xml:lang="se">Mecenat AB</md:OrganizationName>
+	<md:OrganizationName xml:lang="es">Mecenat AB</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Mecenat</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="se">Mecenat</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="es">Mecenat</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://mecenat.com</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="se">https://mecenat.com/se</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="es">https://mecenat.com/es</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Customer Service</md:GivenName>
+	<md:EmailAddress>mailto:customerservice@mecenat.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Mecenat Administrator</md:Company>
+	<md:EmailAddress>mailto:it@mecenat.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

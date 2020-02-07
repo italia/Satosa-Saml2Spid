@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://global.hgncloud.com/uhd/saml/metadata">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Saba Talentspace for University of Houston-Downtown</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://www.saba.com/privacy-policy</mdui:PrivacyStatementURL>
+		<mdui:Logo height="150" width="150" xml:lang="en">https://images.saba.com/img/logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDGjCCAgKgAwIBAgIEeM6v8TANBgkqhkiG9w0BAQsFADBPMRkwFwYDVQQDDBBI
+YWxvZ2VuIFNvZnR3YXJlMQ0wCwYDVQQLDAROb25lMRQwEgYDVQQKDAtOb25lIEw9
+Tm9uZTENMAsGA1UEBhMETm9uZTAeFw0xNTA5MjAxNTQxMjlaFw0zNTA5MjAxNTQx
+MjlaME8xGTAXBgNVBAMMEEhhbG9nZW4gU29mdHdhcmUxDTALBgNVBAsMBE5vbmUx
+FDASBgNVBAoMC05vbmUgTD1Ob25lMQ0wCwYDVQQGEwROb25lMIIBIjANBgkqhkiG
+9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwK7FA9KLUivt8KYY4CaqjaapKiYubQy4HkL8
+sjy3ZJzI5Q2yo1CMfs9aNNmdJ2dYMclK7uYM3WxWXrZPxK4yUHtvzEMJZxDcEUEO
+FzCUCnZLEnD6r+jk1mV+dLP1tu/2KKX3OgeqS8p8C/gFl3fD0KpvVX+sQQwdouRX
+OxWnMIOspRwf7aaMkRM8Vqm8I8849M6TJtMkJnnCRRsgyz7F3slHfgjtEqxn1FY6
+X9NLB7LqKpJA9C15MyMzEwsBWSxAbte7lpQ/oKBKIEs14r9fvsgsapL/NqpJUiWs
+PLrZd2UZQYpQZlZFP9SwFjDjwUa6vWJisPKYkp+rmjbw77k+uQIDAQABMA0GCSqG
+SIb3DQEBCwUAA4IBAQBj8wjwipaWAGDoZfWJcg7lNQHhEa7ir7QmJ5Co2EYY2mep
+Y8QjnrzjbVbjhzwXXJWWKU/8yNS4Y4w7ABisBQ8VTEeUEfpYw9R+/HAs6FdabFkB
+kzdfAqD7ERtnsYIp8mGZ1M9T7zxmMm/jn/0/pu6eH4WxqPdEdXrNF4qzkJNaE6hQ
+QZo+aeAIz/vfyi8YcgnzTyar4gwqwE/CXmn8A5GP44mMANSaVoAAvhMe1A/1exNI
+hERIUS1G5O+yYHPR4Poh1FGzVZdR8vLSZuOPeYHr2wp8kszBYAwKdZ1DlEg90Y31
+WTDXU1i+TypflMJljJXAMbraAMBEqFXGXkQ3oAyY
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://global.hgncloud.com/uhd/saml/SSO" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">Saba Talentspace for University of Houston-Downtown</md:ServiceName>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Halogen Software Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Halogen Software Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.halogensoftware.com/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>support@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Support</md:GivenName>
+	<md:EmailAddress>support@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Security</md:GivenName>
+	<md:EmailAddress>security@saba.com</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

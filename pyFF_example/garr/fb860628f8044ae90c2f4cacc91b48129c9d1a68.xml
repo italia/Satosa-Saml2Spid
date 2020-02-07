@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.ki.se/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ki.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Karolinska Institutet</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Karolinska Institutet</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för Karolinska Institutet.</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for Karolinska Institutet.</mdui:Description>
+		<mdui:Logo height="146" width="292">https://login.ki.se/images/ki_logo_292x146.png</mdui:Logo>
+		<mdui:Keywords xml:lang="sv">ki karolinska+institutet</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">ki karolinska+institutet</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>ki.se</mdui:DomainHint>
+		<mdui:IPHint>130.229.0.0/18</mdui:IPHint>
+		<mdui:IPHint>130.237.96.0/19</mdui:IPHint>
+		<mdui:IPHint>130.237.128.0/20</mdui:IPHint>
+		<mdui:IPHint>130.237.204.0/24</mdui:IPHint>
+		<mdui:IPHint>130.237.207.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.16.0/21</mdui:IPHint>
+		<mdui:IPHint>193.10.140.0/22</mdui:IPHint>
+		<mdui:IPHint>194.14.96.0/24</mdui:IPHint>
+		<mdui:IPHint>2001:06B0:0022::/48</mdui:IPHint>
+		<mdui:IPHint>136.155.0.0/16</mdui:IPHint>
+		<mdui:IPHint>159.38.0.0/16</mdui:IPHint>
+		<mdui:IPHint>193.10.63.0/24</mdui:IPHint>
+		<mdui:IPHint>193.10.76.0/24</mdui:IPHint>
+		<mdui:GeolocationHint>geo:59.3475753,18.0279382</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:59.219589,17.940939</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUSr91KhOWgx1LLaoQAw69hE2zxN8wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJ+xNQGjVs6rbJym13yai5iPGLhcXcDFhs2dcckk
+9SnhS0oEhHEPdwn9iwtkXbDaQCdlPzKw1lAQ4PFeqeynh3bM/GNz5RLQp3Fiac1b
+n2MiUEK6Xj2T+5XZklJHwsXnAP5FrPfsXLJ8kbDU7cS7aQ9b+8xqs+YNjIzZzEAx
+OGQp7/zwHTFejWc0GfxrARc+L5xwlXyQGRFjGQAs8Ka+WlV5MhyZFnHV81+/O4Xu
+gztzKuC2i0QKt46S1hep2Za8KxmWfN1pzWG8hnJHFWYOtRuKmTs4tF6ln03c72zF
+0wZ0zv5VKsplRd7ZGozJ275i0gntt233X9RoBM9rGYVBkaMCAwEAAaNdMFswHQYD
+VR0OBBYEFBqgkKxTUPlSShbr1NxOyLvrWkljMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQAB7enC9iTTTfKZXUFtdXPEEJte/x3VembkSftwr+sK1EtDezIB
+R8LUsMqovpC771JmJbhkEVNtErfG9cwyKC3g0oWRY5U02jGxuxcq7yEh6/bTIZ0R
+nx88SX0+V9jMDfQKBFhljKCuozq70dGtApXm8bmuvBPe5gQ9+NaSKWkniOPv+zOS
+wOUUvi/8r6AE7PtCXn6uydqUcEo/oh8OMZOVx0siApLrG6NwZpGUz6l8mqH00zd5
+Lslkb6jUsVBP2o/ORnwRlgY0I4491wMALYaplSMa1LUZPyB7Iv5IuHkybBEYy+mY
+GzAYjGQSD2+4EUgB8f7vuxJSjRnfmVUmh6cB
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUQnJmXS4G/tbR42ca8QG480l3MMEwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJA5FGj3sWcneuNuMoqgT9nQ07FAXKdSnDtfASMq
+0ZyaxyLJbOlKyRRzy8okbWTAhuI98JvuvGsSjg2dXCvRFKI/fF5pXn70enux0Svk
+NUvZdnr38noCyEVpTUpSMjDrHF9V1FDAloJ65zbRepdHU4Sv9di5Vy9ppAo4VrLw
+iR2AXS7EFQ39aIm37xPIQz2M0HXBERVCQHOg51LrwNnMCVE1I70s28qYzI3wo/0p
+HfD9qWqnqIz8Fr1UHCDGArJN1YhQJZbWlN2KBndl3Ike4obeDxQFnS707l8B1Hnh
+ceV8ohgtK82bASKSVCJ1Z7w+CAGAhABqc8DCJ599mTDzm78CAwEAAaNdMFswHQYD
+VR0OBBYEFDrrD9A+XOKI8btkdBaO8hvc/vyMMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBhpdosfvuPTuvAoK0jokVl7gqDW53KrRTD+BrJRoOGPBQ2DXVF
+TvQdmS/zymbrFghQr0XOzYLRa+fP6lfoNusBWKfL0Fyto8skicSNswYDG1zgF6HI
+03eHqhB5ma6u4rh3gAMwVcpyYCcrrJ2hbTI8BWXzZFaxXM9JaK7u2J8k5tGAccK1
+247NSR8LEai46HkZpovuKPjD9zwunV6mQeOXQeo3WtoPW0twB9h01sfqV0iMvaXg
+Tu4iUPkcwpIeauNAjJ4KXpl5OxehsBnz9rrb6smtz2bfWBBNiPHaHhT6XIqon5X1
+kEJEO2P16fM/dhzKIPEqH52zd3J8O6Hs1Cil
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUEEr81svYHmizs6DjzN0FCQ1IlLkwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMIJsWHFr/fc/26Dfv0WOBhspXfyRVGSHMu5IeRs
+reQGRKbrdW4KOOrKQkqZnyQVe8eZt/GZKSzy+9VnAJo3ypaUt2y0LsTqibcg7oNO
+RcC2yDKlEN8CCSX3OQrQ1kWRxHpMSaHx1TeWAPI9kB0CykeG6FmVYXG9arY9u9pn
+ZvdPCXg7SkFbTCa1zJdbxBCumq/nAKGiEct6GQHMeYOb9YBI+WYYByfseLdf5dNC
+i1fXuRYbxK9dcFIVlGuZRea99TklSZZR3BxFLHgcECjp1ZtoT0Byl2yxmm0nGJE2
+HKh+LsxAUz3ouG3qItUJPYzBS1RHQVWYz8N4T8z+w+1jEY0CAwEAAaNdMFswHQYD
+VR0OBBYEFKf0zzGixtPS531/l3z2Vc04g1seMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQA4PPWZd96F0l40muNxqPzVNzTq/D+ndRhEcPOxk8SraEXaFlkm
+xqELKuLnuj7MAx+y/SJssIs9acDm8CBxp60z9hSTkokVjVAfyWiTU+KuTGvwWWnP
+T25PheKwMPl+W45PhXfbK0F1nDXvNf2L59gxuBIJEcqojx6BHlLfz1tbQUCsezV4
+fv98gre6OoWeN5TSiWgtl7Gsb1cjFRcfiYNwDo9pWqNnLOioncMs4SOyEKrTxrU7
+rmABcIrDyPLSecdGrJBUBiYy1tTm72SEGK9npcZ8QPuXkkSf7zskTenf4tFszUnq
+BazoaLKp7SoAtN5cqOcYTgOJY89fkO6T8gqd
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.ki.se:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.ki.se:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.ki.se/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.ki.se/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.ki.se/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ki.se</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUSr91KhOWgx1LLaoQAw69hE2zxN8wDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJ+xNQGjVs6rbJym13yai5iPGLhcXcDFhs2dcckk
+9SnhS0oEhHEPdwn9iwtkXbDaQCdlPzKw1lAQ4PFeqeynh3bM/GNz5RLQp3Fiac1b
+n2MiUEK6Xj2T+5XZklJHwsXnAP5FrPfsXLJ8kbDU7cS7aQ9b+8xqs+YNjIzZzEAx
+OGQp7/zwHTFejWc0GfxrARc+L5xwlXyQGRFjGQAs8Ka+WlV5MhyZFnHV81+/O4Xu
+gztzKuC2i0QKt46S1hep2Za8KxmWfN1pzWG8hnJHFWYOtRuKmTs4tF6ln03c72zF
+0wZ0zv5VKsplRd7ZGozJ275i0gntt233X9RoBM9rGYVBkaMCAwEAAaNdMFswHQYD
+VR0OBBYEFBqgkKxTUPlSShbr1NxOyLvrWkljMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQAB7enC9iTTTfKZXUFtdXPEEJte/x3VembkSftwr+sK1EtDezIB
+R8LUsMqovpC771JmJbhkEVNtErfG9cwyKC3g0oWRY5U02jGxuxcq7yEh6/bTIZ0R
+nx88SX0+V9jMDfQKBFhljKCuozq70dGtApXm8bmuvBPe5gQ9+NaSKWkniOPv+zOS
+wOUUvi/8r6AE7PtCXn6uydqUcEo/oh8OMZOVx0siApLrG6NwZpGUz6l8mqH00zd5
+Lslkb6jUsVBP2o/ORnwRlgY0I4491wMALYaplSMa1LUZPyB7Iv5IuHkybBEYy+mY
+GzAYjGQSD2+4EUgB8f7vuxJSjRnfmVUmh6cB
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUQnJmXS4G/tbR42ca8QG480l3MMEwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAJA5FGj3sWcneuNuMoqgT9nQ07FAXKdSnDtfASMq
+0ZyaxyLJbOlKyRRzy8okbWTAhuI98JvuvGsSjg2dXCvRFKI/fF5pXn70enux0Svk
+NUvZdnr38noCyEVpTUpSMjDrHF9V1FDAloJ65zbRepdHU4Sv9di5Vy9ppAo4VrLw
+iR2AXS7EFQ39aIm37xPIQz2M0HXBERVCQHOg51LrwNnMCVE1I70s28qYzI3wo/0p
+HfD9qWqnqIz8Fr1UHCDGArJN1YhQJZbWlN2KBndl3Ike4obeDxQFnS707l8B1Hnh
+ceV8ohgtK82bASKSVCJ1Z7w+CAGAhABqc8DCJ599mTDzm78CAwEAAaNdMFswHQYD
+VR0OBBYEFDrrD9A+XOKI8btkdBaO8hvc/vyMMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQBhpdosfvuPTuvAoK0jokVl7gqDW53KrRTD+BrJRoOGPBQ2DXVF
+TvQdmS/zymbrFghQr0XOzYLRa+fP6lfoNusBWKfL0Fyto8skicSNswYDG1zgF6HI
+03eHqhB5ma6u4rh3gAMwVcpyYCcrrJ2hbTI8BWXzZFaxXM9JaK7u2J8k5tGAccK1
+247NSR8LEai46HkZpovuKPjD9zwunV6mQeOXQeo3WtoPW0twB9h01sfqV0iMvaXg
+Tu4iUPkcwpIeauNAjJ4KXpl5OxehsBnz9rrb6smtz2bfWBBNiPHaHhT6XIqon5X1
+kEJEO2P16fM/dhzKIPEqH52zd3J8O6Hs1Cil
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDFzCCAf+gAwIBAgIUEEr81svYHmizs6DjzN0FCQ1IlLkwDQYJKoZIhvcNAQEL
+BQAwFjEUMBIGA1UEAwwLbG9naW4ua2kuc2UwHhcNMTUxMTEwMTMyNjU0WhcNMzUx
+MTEwMTMyNjU0WjAWMRQwEgYDVQQDDAtsb2dpbi5raS5zZTCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAMIJsWHFr/fc/26Dfv0WOBhspXfyRVGSHMu5IeRs
+reQGRKbrdW4KOOrKQkqZnyQVe8eZt/GZKSzy+9VnAJo3ypaUt2y0LsTqibcg7oNO
+RcC2yDKlEN8CCSX3OQrQ1kWRxHpMSaHx1TeWAPI9kB0CykeG6FmVYXG9arY9u9pn
+ZvdPCXg7SkFbTCa1zJdbxBCumq/nAKGiEct6GQHMeYOb9YBI+WYYByfseLdf5dNC
+i1fXuRYbxK9dcFIVlGuZRea99TklSZZR3BxFLHgcECjp1ZtoT0Byl2yxmm0nGJE2
+HKh+LsxAUz3ouG3qItUJPYzBS1RHQVWYz8N4T8z+w+1jEY0CAwEAAaNdMFswHQYD
+VR0OBBYEFKf0zzGixtPS531/l3z2Vc04g1seMDoGA1UdEQQzMDGCC2xvZ2luLmtp
+LnNlhiJodHRwczovL2xvZ2luLmtpLnNlL2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3
+DQEBCwUAA4IBAQA4PPWZd96F0l40muNxqPzVNzTq/D+ndRhEcPOxk8SraEXaFlkm
+xqELKuLnuj7MAx+y/SJssIs9acDm8CBxp60z9hSTkokVjVAfyWiTU+KuTGvwWWnP
+T25PheKwMPl+W45PhXfbK0F1nDXvNf2L59gxuBIJEcqojx6BHlLfz1tbQUCsezV4
+fv98gre6OoWeN5TSiWgtl7Gsb1cjFRcfiYNwDo9pWqNnLOioncMs4SOyEKrTxrU7
+rmABcIrDyPLSecdGrJBUBiYy1tTm72SEGK9npcZ8QPuXkkSf7zskTenf4tFszUnq
+BazoaLKp7SoAtN5cqOcYTgOJY89fkO6T8gqd
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.ki.se:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.ki.se:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">KI</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Karolinska Institutet</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Karolinska Institutet</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ki.se</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Karolinska Institutet</md:Company>
+	<md:SurName>Parisa Farzbod</md:SurName>
+	<md:EmailAddress>mailto:parisa.farzbod@ki.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 524 86488</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Karolinska Institutet</md:Company>
+	<md:SurName>Eric Johansson</md:SurName>
+	<md:EmailAddress>mailto:eric.johansson@ki.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 524 86382</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Karolinska Institutet</md:Company>
+	<md:SurName>IT-support</md:SurName>
+	<md:EmailAddress>mailto:it-support@ki.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 524 82222</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

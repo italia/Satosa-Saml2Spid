@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://oregonstatetest.innosoftfusion.com/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://incommon.org"/>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://id.incommon.org/category/registered-by-incommon</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://shoptest.recsports.oregonstate.edu/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Fusion Test Oregon State U Portal</mdui:DisplayName>
+		<mdui:PrivacyStatementURL xml:lang="en">https://shoptest.recsports.oregonstate.edu/Home/Terms</mdui:PrivacyStatementURL>
+		<mdui:Logo height="100" width="180" xml:lang="en">https://shoptest.recsports.oregonstate.edu/Content/Images/oregonstate-logo.svg</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIECTCCAnGgAwIBAgIJAJKA8KKAQe4CMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMTFnVhdC1mdXNpb24tb3JlZ29uc3RhdGUwHhcNMTgxMDIzMTgxMTQ5WhcNMjgx
+MDIwMTgxMTQ5WjAhMR8wHQYDVQQDExZ1YXQtZnVzaW9uLW9yZWdvbnN0YXRlMIIB
+ojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA3tf2g0dIJm723kptoXWHc3cq
+hsm7edqIQ6DtX4ZSxblRzfDz/x9EsGXylgUL390nFIfS9uyUS4K7PW61EwMeMSUV
+lqXlpkjlyI/WDK4gnLiMlDWb+gBhRVef4ziWjY+D7bNef8YQQrk0a/siINWL9ssy
+I9HXACHCwFD4aVVzdDBbDTQrgPhHoPdA4nvtWLw8M/aDeuyPDOcXUrZiitX+gXUQ
+vOH7ViEUMidOv8m5Is/2zfFT8ltNrFGZmWmLalyz/uo+y+fBDWKvriIwk0Yfn8d2
+ZJ1+pPFNUYa1BN7zTDZcwKFNSvRymYHFiUrP5Ew/XxDyBTf6DRVkJrSPvZitDsyS
+bKpE30ZQM0XLDcFFg6HuLGcM0wE3YcZGDJZyJticR1jMX++71+vQDc0wLf6tMVXh
+iRC+yYpv5UP3+93VwsLcxPII0rMJ+FaME23YwgDCzR21g2Cb60tB1PVAZ9EuIJXH
+ltu/2olSVwS8UPjrnLGve5khGOtoGCR5r9LbxPtlAgMBAAGjRDBCMCEGA1UdEQQa
+MBiCFnVhdC1mdXNpb24tb3JlZ29uc3RhdGUwHQYDVR0OBBYEFErMQYib/vNxFA5O
+2if9vqnhOdAXMA0GCSqGSIb3DQEBCwUAA4IBgQCkO2BXVSwIaFRHor1/F6IWZRul
+BZ77c/apie9IkRmxFeAmvA4M6LGZqwl5hCrzQO0HZT8Py1F7ok50F/VSUklNQ2UP
+/1WFY1ChkSXFQGHZrvtVAc/omVrFExUxe1LotpfspbZH1sjF+gPBo8y22Obgi9Kb
+rwkViTssz1WELxQ3c2O9saKDl+ni9ms4RsXp7wPmK5/X/TcMV4nBICtFQoOyvluM
+kH/XOTx9kz//Sc3m8yYnYujnSmsX1xoeAk1zb9ClJOMGzwQLFXPT4/R5laCVifdM
+416BZ1e5ZpgXFQ2YYcU/OkA4UgvgXdTrZYscLdmt+i7WsAo6WDvPrwg3yiqGKyUI
+ndQ8f2kItL4opVBKa8HI82oQTAw5FH1wSN7bKt4O6g2NziTj6Uff2WTGm1dnlwcd
+fMJ7Ws1Ipq6192cPPsV8u0maaUiyWMBnsRZrW0Ldn8TNhCbp0wX+t67pCFuRlcRv
+7AEivnzb250sPs6xLWvl8Hr09+LpakAk+EnYKXo=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIECTCCAnGgAwIBAgIJAIE62N5bCQDdMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMTFnVhdC1mdXNpb24tb3JlZ29uc3RhdGUwHhcNMTgxMDIzMTgxMTQ1WhcNMjgx
+MDIwMTgxMTQ1WjAhMR8wHQYDVQQDExZ1YXQtZnVzaW9uLW9yZWdvbnN0YXRlMIIB
+ojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAtu1lzGMrVTlBnwJRjRNlL6lh
+BK5JX0VuDvyEI30UpK9+iwEaJQMjYrbC0q0NaTEL/SQn1NCRrjbW0N4YtG9tGt6X
+9KZqrRPB1vQkHaEC88sypDXRqb4fJD4TgjWy6ycziQ8tt4sB/Ugc/x+7xaXLPsBY
+fDHqouEy/YQAZxtE+jugxvyWsR1lTezA8mVCEsl0JcG4LizBTkU4q9Gr4wE1fZqm
+GPKBxuohKZFEfxfgf2Mmej9kcwRs9qNVzvanK5M93H/mM8+WWtBlXj6TDv45k0hp
+tf2eLXlek31h9CLUC0MhPITIsFpmR8u2Afhe5xS7YhrkoivlLPI0lxPt8gpFu55q
+Ptfbw9FOBdoK4YZGc8rEGm4o8BkXnuzQhRdDrhEmBWrQ4us14b2Faw/wpsMo3P1S
+IwKOPwtSViL7ozYC6fYO+6uKg2nFNM3YO2vjPAhUmPFmupUBh7tnA3oP8JPvXjyA
+QkweBqrW7hUxuxbtHGNUxpb+FR+GM/pI4tKVFJrJAgMBAAGjRDBCMCEGA1UdEQQa
+MBiCFnVhdC1mdXNpb24tb3JlZ29uc3RhdGUwHQYDVR0OBBYEFJaS+aU/pdI7pJPY
+YeZweSCk9Q/vMA0GCSqGSIb3DQEBCwUAA4IBgQCOOQv4K66GKnM7lYJ4YkXqwMyw
+CSNiH76HbuUpH8Fe/igUyLUp2UzR3hW0raWkgFPGYys2AeBGYbRGST296qlKjfW1
+1AqAo2XvZZ0jb7Yc7zE10xnryM6cUoVEW8F7FHoQzoXRuwOAQmiQdPea65fbO1YL
+hi15YDl9wqqV2jNmKT4zegbY61Rscaym3vSpDonLJLj1O+5hly4j5IBgXj3jErdR
+7DADHAevHG47P70yrTOlMsA78v6WyPZTONxgWDIRsR2UNWO1xEYq6brQpLLQeg2S
+ZtH1j6E33+8N657jTgG8dncZYv79cUwJGWAbxaLqaILxv18zwm0eWF+NlNMPu4d0
+zVk3c+q4mtG7e5d6TmfY9tIoyGSDFU/L9nIt1r2lII/svT1siSOCaYydU1F17d4k
+hUsdH87ln6wDeEu6u73opyiG6ybc8y1OQxg7uUrUnTd+B5AJ0gBGJ1BOi30uvZhd
+eFuIrejQLpH6y3kq8+ZiaKydZuT7JZTePavgXoE=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shoptest.recsports.oregonstate.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://shoptest.recsports.oregonstate.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://shoptest.recsports.oregonstate.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://shoptest.recsports.oregonstate.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">InnoSoft Canada Inc.</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">InnoSoft Canada Inc.</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://innosoft.ca/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>Oregon State IAM Team</md:GivenName>
+	<md:EmailAddress>IAMteam@oregonstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Oregon State IAM Team</md:GivenName>
+	<md:EmailAddress>IAMteam@oregonstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Oregon State IAM Team</md:GivenName>
+	<md:EmailAddress>IAMteam@oregonstate.edu</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

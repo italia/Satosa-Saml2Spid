@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://repository.clarin.is/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2020-02-03T08:28:12Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/fileadmin/documents/mrps_dfn-aai_1.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://clarin.eu/category/clarin-member</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://repository.clarin.is/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">CLARIN-IS Repository</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">CLARIN-IS Repository</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Digital repository and services of the CLARIN Centre at the Arni Magnusson Institute.</mdui:Description>
+		<mdui:Description xml:lang="en">Digital repository and services of the CLARIN Centre at the Arni Magnusson Institute.</mdui:Description>
+		<mdui:Logo height="209" width="300">https://repository.clarin.is/repository/xmlui/themes/UFAL/images/clarin-logo-is.png</mdui:Logo>
+		<mdui:InformationURL xml:lang="en">https://clarin.is/en/about/</mdui:InformationURL>
+		<mdui:PrivacyStatementURL xml:lang="en">https://repository.clarin.is/repository/xmlui/page/privacypolicy</mdui:PrivacyStatementURL>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDJTCCAg2gAwIBAgIUeZOL1vyPAI8Qf/HL1JN7TL65mFQwDQYJKoZIhvcNAQEL
+BQAwIjEgMB4GA1UEAwwXcmVwb3NpdG9yeS1zcC5jbGFyaW4uaXMwHhcNMTkwOTEw
+MTUxNzA5WhcNMjkwOTA3MTUxNzA5WjAiMSAwHgYDVQQDDBdyZXBvc2l0b3J5LXNw
+LmNsYXJpbi5pczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL49lNvk
+7zV8vK48NAnzI57NzDEeTTbt3V9rcpKv6BDXBk4R7nlLWNoYygMvLv/Y1qFeqx3f
+kJWOqz75NxoMo46o0vTTHpqjYKGakMGF1IOAv94qbsoAuakpd/8B+D7N4cAGYipZ
+uubde3tAwHMU3MjIWgWobALeq/KuieV3OrFVvjxPwDE5Rueik4hkaTtlRiFDC1E5
+dC9sfogeq0uOKKbS9RhhF8gjmEc/aSkN243HHnewYBMz61FGZ8UtXTZRNuk9ntJt
+58uRp8yoL0UvK7vShRrdfXzVjAx75fTsae8NQuZcGCdbFerzdrvSVwFdElvsmQib
+0Pjwe+dAYoCUzTECAwEAAaNTMFEwHQYDVR0OBBYEFK8E04DnMtMVparyquS+wX45
+aAtrMB8GA1UdIwQYMBaAFK8E04DnMtMVparyquS+wX45aAtrMA8GA1UdEwEB/wQF
+MAMBAf8wDQYJKoZIhvcNAQELBQADggEBAHUTQK6fzobBs48HA4Lk3AZgSA22GlIg
+NuK2HqqDiR4mVuB2sh/XRQN5lBhpjPqTO9Ho716D+qqQbtsYnBbR3qvgzTcHriAF
+A6Ul4YYjv4b78IDSp4xjRbAmGo6qGTjH1yGBcpKPcJs5OaWjeWAK/Llk8SyA1teo
+OH03+VAGHmqMl09br1t/AHG/YD0gYcmZBtRLV94pEGY/o830QoWz/R2wwuCAchoQ
+CaGfvZLFDgNz4/P6OAOEZzWZnOsMQ9lADf1iRBq3/jMaJeLQHmhK6mtd8EU04hQY
+b7H/6vVt047Fs9QuwAr0aAUy+kJ7mK3pu9Ktjx7+4MUDNIV89EfhJek=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://repository.clarin.is/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://repository.clarin.is/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://repository.clarin.is/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://repository.clarin.is/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://repository.clarin.is/Shibboleth.sso/SLO/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://repository.clarin.is/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://repository.clarin.is/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://repository.clarin.is/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://repository.clarin.is/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="de">CLARIN-IS Repository</md:ServiceName>
+		<md:ServiceName xml:lang="en">CLARIN-IS Repository</md:ServiceName>
+		<md:ServiceDescription xml:lang="de">Digital repository and services of the CLARIN Centre at the Arni Magnusson Institute.</md:ServiceDescription>
+		<md:ServiceDescription xml:lang="en">Digital repository and services of the CLARIN Centre at the Arni Magnusson Institute.</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="mail" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="cn" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="false"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e459</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e459</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">CLARIN ERIC</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://clarin.eu</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://clarin.eu</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>CLARIN-IS</md:GivenName>
+	<md:SurName>Administrators</md:SurName>
+	<md:EmailAddress>mailto:dspace.administrator@arnastofnun.is</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>CLARIN-IS</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:dspace-help@arnastofnun.is</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Samuel</md:GivenName>
+	<md:SurName>Thorisson</md:SurName>
+	<md:EmailAddress>mailto:dspace-help@arnastofnun.is</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

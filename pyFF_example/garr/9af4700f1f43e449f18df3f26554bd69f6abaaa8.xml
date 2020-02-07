@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp-burlog.irccs.garr.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2018-09-13T09:11:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">burlo.trieste.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">IRCCS Burlo Garofolo - Trieste</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">IRCCS Burlo Garofolo - Trieste</mdui:DisplayName>
+<mdui:Description xml:lang="en">Identity provider for IRCCS Burlo Garofolo - Trieste users</mdui:Description>
+<mdui:Description xml:lang="it">Identity provider per gli utenti di IRCCS Burlo Garofolo - Trieste</mdui:Description>
+<mdui:InformationURL xml:lang="en">https://idp-burlog.irccs.garr.it/en/info.html</mdui:InformationURL>
+<mdui:InformationURL xml:lang="it">https://idp-burlog.irccs.garr.it/it/info.html</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="en">https://idp-burlog.irccs.garr.it/en/privacy.html</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="it">https://idp-burlog.irccs.garr.it/it/privacy.html</mdui:PrivacyStatementURL>
+<mdui:Logo height="60" width="80" xml:lang="en">https://idp-burlog.irccs.garr.it/en/logo.png</mdui:Logo>
+<mdui:Logo height="60" width="80" xml:lang="it">https://idp-burlog.irccs.garr.it/it/logo.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="en">https://idp-burlog.irccs.garr.it/en/favicon.png</mdui:Logo>
+<mdui:Logo height="16" width="16" xml:lang="it">https://idp-burlog.irccs.garr.it/it/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUa3RafNmu+VGWwDPAW+ZAh9ksi54wDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY0NFoXDTQ4MDYyNjE2MDY0NFowIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9ua
+ejU4Hll58xAM6TxAqKTXYCwAzpGIl+FNCGhgNYu63D5fA04iX9xMKCyZvRLKgt6B
+IPTvXskNaoBYXEcQxxvVQj9o+64y4S6RrfY4PPm0gxKY1AY1uUAMFnxipmc7DTiL
+jATx6PmJRDh/Ejzb84eMoDn3UD+QvCrtex1JcqaDnm4QwUh5Y8KM04KYgM5bbhFM
+xJxqnsxdvPjDb2o+A7QxrRN4uUhMXaHS/SPYm4AinbmG9WXL0xb5BnKPHe9jufq8
+AK6nmNCrTWtW6uTrvqHgVP2NdsiTp0VWlw1wZIpupZCvBEBqKvTVWJytJDsqCXIO
+ljtG3WzO13huxwb0hwIDAQABo3cwdTAdBgNVHQ4EFgQUAoobBLHGckMyjgapcOE2
+t5U8eSYwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAeDFrJo9vOh1FDJ62BLawt5tH0I9ha2hm9Wjjhmc+sEZY
+s0hEqjTEN4UC4lOG0c5mfre5zgwBjsPuSVvgDd5/H0rZaSdTDeC4AlzoH5ZywrEv
+SMrgJ1YxwWLSEN0P1gutJQ87lCIV34p5n6m57HH+LGj+7ReCpOJjEF7IN5D5bXiw
+U+BIohMNoyBo6u3QHXNPlt2HdqtR9lBZ2xQMuS0DfVIXkZJEMjN1gvZFP+Ka8s15
+nmMDqvB+QFzP2u2R/unCjtDo5ywTYfACGmNqvU0s8uDqkf5BfmORSRelz762cEEM
+abvImNJyRWtLRNa1ifzEBekM73k/Nzb0yQKNDRWIQw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUM382swGw38s55hskticrfS6ZSYwwDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY0N1oXDTQ4MDYyNjE2MDY0N1owIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgCGs
+46xus0L/wgRfyGvQK1ZrtHR3WmjG7sV6rJ6OQDaAPb5Zon7JPEVaCXBa+6OVo3uB
+bXD2VmA9ks5Y8XVeW7zDhR5J9DS31WS5wRcjqHftxT1FaEKpnpXb6+j9Cbxj+pDB
+7b1628Eu4cLULWk6thIoH6UdCIpZR+gAMxWNc+Lueu4tGS0kQw58XKPPNlM+HDDw
+BZdBdnGLTrjogTZLhqLuJIdGIbew8HHpHEYt+23SzAGfSt9cnReAdtWUC3x60uEc
+StHRDE0UPRj4ISTvYUDOny0/6kf7zX/qr0ImNoeOdqXihZfWq+4DtwYqnPCkgpuK
+gle7fUfkJ8d+MspIXwIDAQABo3cwdTAdBgNVHQ4EFgQU/ieI2TBcG0YNMplPCzLD
+xnUhszkwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAIXDovIYTS0G/St96Tj5un/hiRQVnwQDsz8CavZFOBTfw
+QlAmTdONbUBDiB5IPNLtBij9gMWa6kn/WZ1C8OV10DHmJuEYk5UL85ATERIogZVf
+AGPbFTo3kcQ/lvQKKBpxho9I4wkMKsQxPLQQXW825F+3xdkysDooM4JGN/Us5trv
+aksxcudQQfGlc4Ba3RgMc1DfoKI6Bel1wgh+cgTgwafH6Ili794eq6oMHT6IIOmq
+Yh8SyKvd8yJmFGyOikGxZLu9H0EuXLBOaPN+U34gI4kvrSIJUImh/R/ne0cr9oGW
+u6WVh3N1pdmZKUx3GoxenrGvYya9dwRhI44xm3crFA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUHAArn/IJ+JMzxBksfqw59UGiuA0wDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY1MVoXDTQ4MDYyNjE2MDY1MVowIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjHqy
+LN4v+xzvTZQKeUb5QyKzBzJqayUlcpi4WoY1kCuMVLazYGfcjRsVJkxku0cbd4I0
+zIqmr1G7vQwB9Kzmgm0rXCspHmFzhfsrUv0Gw54HO3r53flOUBpsHXitjX3lJJT8
+3wK8+z/xVRIJk/7vf4EYO9aYcfdI8o2P4SjMVpkR+Eoq2XE6wdyPoWhhhux2ZyVk
+MjyVDAVd1T3yDH0fGEOnU9KGhKjrONrxOHSdHp/qkhd5cTX/AusEiZGbFQfnNZ+p
+7VB/48rF8o+lREeC3iFHuGE7ln49YGt+AromDW3W3zoGqYxjTdUgViVewLjxCAr5
+457qNW0k9Wxc5ZwzYwIDAQABo3cwdTAdBgNVHQ4EFgQUGKigtvcOKRsl0pFo+MgZ
+3Mhi1NwwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAYpgJEwYDcYNgr+CAMIByan7Ydbw0HJbW9cn40vri/RRR
+SRQR5as5mxKxQXKVlL8Vqgg3V7pP0vW4HSCBFQdKG7+h+Vb7O0e9Yg1FRqL7zUcY
+MNX0u/6JVNSkQm5LDv5LVGZ0RCNMI69kVf63yodydLSGywywcbhFOFL9O3+ck0xK
+8V5eIrJLm4hSStsM8Zc4g7bOIqwdFFFnxXOgWMVgrCHGfnl/4mre62u3ZMoT+rhl
+lt5TRR3yixMfTtkvljgxG+1ruRzeRxKxN4qU633NNfnjC7mw2tvEYbX5Ie6fgByk
+Jw4LB3Xin0dNGDNaF5DjnlnxmAXO4CTY1wDlzvsCeA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/Redirect/SLO"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/POST/SLO"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">burlo.trieste.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUa3RafNmu+VGWwDPAW+ZAh9ksi54wDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY0NFoXDTQ4MDYyNjE2MDY0NFowIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn9ua
+ejU4Hll58xAM6TxAqKTXYCwAzpGIl+FNCGhgNYu63D5fA04iX9xMKCyZvRLKgt6B
+IPTvXskNaoBYXEcQxxvVQj9o+64y4S6RrfY4PPm0gxKY1AY1uUAMFnxipmc7DTiL
+jATx6PmJRDh/Ejzb84eMoDn3UD+QvCrtex1JcqaDnm4QwUh5Y8KM04KYgM5bbhFM
+xJxqnsxdvPjDb2o+A7QxrRN4uUhMXaHS/SPYm4AinbmG9WXL0xb5BnKPHe9jufq8
+AK6nmNCrTWtW6uTrvqHgVP2NdsiTp0VWlw1wZIpupZCvBEBqKvTVWJytJDsqCXIO
+ljtG3WzO13huxwb0hwIDAQABo3cwdTAdBgNVHQ4EFgQUAoobBLHGckMyjgapcOE2
+t5U8eSYwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAeDFrJo9vOh1FDJ62BLawt5tH0I9ha2hm9Wjjhmc+sEZY
+s0hEqjTEN4UC4lOG0c5mfre5zgwBjsPuSVvgDd5/H0rZaSdTDeC4AlzoH5ZywrEv
+SMrgJ1YxwWLSEN0P1gutJQ87lCIV34p5n6m57HH+LGj+7ReCpOJjEF7IN5D5bXiw
+U+BIohMNoyBo6u3QHXNPlt2HdqtR9lBZ2xQMuS0DfVIXkZJEMjN1gvZFP+Ka8s15
+nmMDqvB+QFzP2u2R/unCjtDo5ywTYfACGmNqvU0s8uDqkf5BfmORSRelz762cEEM
+abvImNJyRWtLRNa1ifzEBekM73k/Nzb0yQKNDRWIQw==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUM382swGw38s55hskticrfS6ZSYwwDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY0N1oXDTQ4MDYyNjE2MDY0N1owIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgCGs
+46xus0L/wgRfyGvQK1ZrtHR3WmjG7sV6rJ6OQDaAPb5Zon7JPEVaCXBa+6OVo3uB
+bXD2VmA9ks5Y8XVeW7zDhR5J9DS31WS5wRcjqHftxT1FaEKpnpXb6+j9Cbxj+pDB
+7b1628Eu4cLULWk6thIoH6UdCIpZR+gAMxWNc+Lueu4tGS0kQw58XKPPNlM+HDDw
+BZdBdnGLTrjogTZLhqLuJIdGIbew8HHpHEYt+23SzAGfSt9cnReAdtWUC3x60uEc
+StHRDE0UPRj4ISTvYUDOny0/6kf7zX/qr0ImNoeOdqXihZfWq+4DtwYqnPCkgpuK
+gle7fUfkJ8d+MspIXwIDAQABo3cwdTAdBgNVHQ4EFgQU/ieI2TBcG0YNMplPCzLD
+xnUhszkwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAIXDovIYTS0G/St96Tj5un/hiRQVnwQDsz8CavZFOBTfw
+QlAmTdONbUBDiB5IPNLtBij9gMWa6kn/WZ1C8OV10DHmJuEYk5UL85ATERIogZVf
+AGPbFTo3kcQ/lvQKKBpxho9I4wkMKsQxPLQQXW825F+3xdkysDooM4JGN/Us5trv
+aksxcudQQfGlc4Ba3RgMc1DfoKI6Bel1wgh+cgTgwafH6Ili794eq6oMHT6IIOmq
+Yh8SyKvd8yJmFGyOikGxZLu9H0EuXLBOaPN+U34gI4kvrSIJUImh/R/ne0cr9oGW
+u6WVh3N1pdmZKUx3GoxenrGvYya9dwRhI44xm3crFA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDSzCCAjOgAwIBAgIUHAArn/IJ+JMzxBksfqw59UGiuA0wDQYJKoZIhvcNAQEL
+BQAwIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0MB4XDTE4MDYy
+NjE2MDY1MVoXDTQ4MDYyNjE2MDY1MVowIzEhMB8GA1UEAwwYaWRwLWJ1cmxvZy5p
+cmNjcy5nYXJyLml0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjHqy
+LN4v+xzvTZQKeUb5QyKzBzJqayUlcpi4WoY1kCuMVLazYGfcjRsVJkxku0cbd4I0
+zIqmr1G7vQwB9Kzmgm0rXCspHmFzhfsrUv0Gw54HO3r53flOUBpsHXitjX3lJJT8
+3wK8+z/xVRIJk/7vf4EYO9aYcfdI8o2P4SjMVpkR+Eoq2XE6wdyPoWhhhux2ZyVk
+MjyVDAVd1T3yDH0fGEOnU9KGhKjrONrxOHSdHp/qkhd5cTX/AusEiZGbFQfnNZ+p
+7VB/48rF8o+lREeC3iFHuGE7ln49YGt+AromDW3W3zoGqYxjTdUgViVewLjxCAr5
+457qNW0k9Wxc5ZwzYwIDAQABo3cwdTAdBgNVHQ4EFgQUGKigtvcOKRsl0pFo+MgZ
+3Mhi1NwwVAYDVR0RBE0wS4IYaWRwLWJ1cmxvZy5pcmNjcy5nYXJyLml0hi9odHRw
+czovL2lkcC1idXJsb2cuaXJjY3MuZ2Fyci5pdC9pZHAvc2hpYmJvbGV0aDANBgkq
+hkiG9w0BAQsFAAOCAQEAYpgJEwYDcYNgr+CAMIByan7Ydbw0HJbW9cn40vri/RRR
+SRQR5as5mxKxQXKVlL8Vqgg3V7pP0vW4HSCBFQdKG7+h+Vb7O0e9Yg1FRqL7zUcY
+MNX0u/6JVNSkQm5LDv5LVGZ0RCNMI69kVf63yodydLSGywywcbhFOFL9O3+ck0xK
+8V5eIrJLm4hSStsM8Zc4g7bOIqwdFFFnxXOgWMVgrCHGfnl/4mre62u3ZMoT+rhl
+lt5TRR3yixMfTtkvljgxG+1ruRzeRxKxN4qU633NNfnjC7mw2tvEYbX5Ie6fgByk
+Jw4LB3Xin0dNGDNaF5DjnlnxmAXO4CTY1wDlzvsCeA==
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp-burlog.irccs.garr.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">IRCCS Burlo Garofolo - Trieste</md:OrganizationName>
+<md:OrganizationName xml:lang="en">IRCCS Burlo Garofolo - Trieste</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">IRCCS Burlo Garofolo - Trieste</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">IRCCS Burlo Garofolo - Trieste</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">https://www.burlo.trieste.it/</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">https://www.burlo.trieste.it/</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>IdP-in-the-Cloud</md:GivenName>
+<md:SurName>Service</md:SurName>
+<md:EmailAddress>mailto:idpcloud-service@garr.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="support">
+<md:GivenName>IRCCS Burlo Garofolo - Trieste</md:GivenName>
+<md:SurName>User Support</md:SurName>
+<md:EmailAddress>mailto:servizio.informativo@burlo.trieste.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+

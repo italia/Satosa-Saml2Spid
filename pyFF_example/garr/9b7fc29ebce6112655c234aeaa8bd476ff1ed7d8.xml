@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sso.ucd.ie/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.heanet.ie" registrationInstant="2010-09-30T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://edugate.heanet.ie/EDUGATE_RULES.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">ucd.ie</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">University College Dublin</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ga">An Coláiste Ollscoile, Baile Átha Cliath</mdui:DisplayName>
+		<mdui:InformationURL xml:lang="en">http://www.ucd.ie/itservices/itsupport</mdui:InformationURL>
+		<mdui:Logo height="104" width="147">https://edugate.heanet.ie/rr3/logos/ucd.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:GeolocationHint>geo:53.306364866424765,-6.222467422485352</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:53.29502908341082,-6.182220992006933</mdui:GeolocationHint>
+		<mdui:GeolocationHint>geo:53.310875,-6.235905</mdui:GeolocationHint>
+		<mdui:DomainHint>ucd.ie</mdui:DomainHint>
+		<mdui:IPHint>137.43.0.0/16</mdui:IPHint>
+		<mdui:IPHint>193.1.128.0/19</mdui:IPHint>
+		<mdui:IPHint>193.1.160.0/20</mdui:IPHint>
+		<mdui:IPHint>2001:0770:0098::/48</mdui:IPHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC+DCCAeACCQD+AjICuJh2gzANBgkqhkiG9w0BAQsFADA+MQswCQYDVQQGEwJJ
+RTEQMA4GA1UECAwHSXJlbGFuZDEPMA0GA1UEBwwGRHVibGluMQwwCgYDVQQKDANV
+Q0QwHhcNMTYwMjE1MTExMjE3WhcNMjYwMjEyMTExMjE3WjA+MQswCQYDVQQGEwJJ
+RTEQMA4GA1UECAwHSXJlbGFuZDEPMA0GA1UEBwwGRHVibGluMQwwCgYDVQQKDANV
+Q0QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC08OBOrkYylci5gHmL
+fW192Tkgkx5lXQU0QOy/gKXTphOhOc9FRX1DYGJZkXOG00Bqy5uE26H2Ghdm0wJu
+C1XCl8orOZzOLL6b0HMS80KLlXDKqBhUuLRw+h0fvdOeEW42DeVzo1RKLvCx4EK8
+XLQXAruuY9nH4HecgRpXcoLXyTo2Yqql2QtGJb0dsT1Ci2/TZhcvsAC5j694HPEF
+r6O5N+dMDDpYsQ30xirq9Y9ouDrNJ+cUo3KZ6j/9X/1x0byQFxlLdeBHqmJZgSev
+SWb6XvXn34WQA8FWfkU8L3ke5hGYtUjT89/aF27yvK+Wm9QETsVnk+tAAAjjbnr0
+qKaTAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAGh7JsqYfySxkxZ4iSscg4mAq/Wj
+MF9dYkNZ2So1/YuUtrPM1vgm8nNkmtoJBGI6/GxCD9Oqjrdh08UST6fnQatfcLe+
+PEjHQYQ1teVBBO8Sez2rVVe1tdcdAwDngxGj5uSJNDlkjkztypYesk3UJabw9GT5
+TNXg6MfYFVyDcyGOR9p9biTLUd0q2/eVgSCmGf0F1PBNvjYj4qKCM4U5iMbIHxP4
+dZLQjBeaUZu/K6BgFtApplISVVRdF53Cw2Z0Sf5UoG0IzQg6bCVzOH1Oz2j0PKMT
+Nu9boPs/fyjVT6B3qX0Od2Nk+/FEk2dWrZXlsMarvhoNxzFb5NNpVKsgKzY=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.ucd.ie/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ucd.ie/idp/profile/SAML2/POST/SLO"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso.ucd.ie/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso.ucd.ie/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sso.ucd.ie/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://sso.ucd.ie/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University College Dublin</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University College Dublin</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.ucd.ie/itservices/itsupport</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>UCD</md:GivenName>
+	<md:SurName>Support</md:SurName>
+	<md:EmailAddress>mailto:ucdssoalert@ucd.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>HEAnet</md:GivenName>
+	<md:SurName>Middleware Team</md:SurName>
+	<md:EmailAddress>mailto:noc@heanet.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="administrative">
+	<md:GivenName>David</md:GivenName>
+	<md:SurName>Coughlan</md:SurName>
+	<md:EmailAddress>mailto:david.coughlan@ucd.ie</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>HEAnet</md:GivenName>
+	<md:SurName>Middleware Team</md:SurName>
+	<md:EmailAddress>mailto:noc@heanet.ie</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

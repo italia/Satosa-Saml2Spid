@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.e-uvt.ro/aai/saml2/idp/metadata.php">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.roedu.net" registrationInstant="2019-03-08T15:30:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.roedu.net/wp-content/uploads/2019/03/RoEduNet-Metadata_Registration-v0.7.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">e-uvt.ro</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">West University of Timișoara IdP</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="ro">IdP al Universității de Vest din Timișoara</mdui:DisplayName>
+		<mdui:Description xml:lang="en">This Identity Provider (IdP) serves West University of Timișoara</mdui:Description>
+		<mdui:Description xml:lang="ro">Acest IdP deservește Universitatea de Vest din Timișoara</mdui:Description>
+		<mdui:Logo height="16" width="50" xml:lang="ro">https://www.uvt.ro/res/img/logo/Logo%20UVT-75-lung.png</mdui:Logo>
+		<mdui:Logo height="16" width="50" xml:lang="en">https://www.uvt.ro/res/img/logo/Logo%20UVT-75-lung.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEazCCA1OgAwIBAgIJAI5foWADgailMA0GCSqGSIb3DQEBBQUAMIHLMQswCQYD
+VQQGEwJSTzEOMAwGA1UECAwFVGltaXMxEjAQBgNVBAcMCVRpbWlzb2FyYTEsMCoG
+A1UECgwjVW5pdmVyc2l0YXRlYSBkZSBWZXN0IGRpbiBUaW1pc29hcmExMDAuBgNV
+BAsMJ0ZhY3VsdGF0ZWEgZGUgTWF0ZW1hdGljYSBzaSBJbmZvcm1hdGljYTEXMBUG
+A1UEAwwObG9naW4uZS11dnQucm8xHzAdBgkqhkiG9w0BCQEWEHN1cHBvcnRAZS11
+dnQucm8wHhcNMTQwODA1MTQxNDIxWhcNMjQwODA0MTQxNDIxWjCByzELMAkGA1UE
+BhMCUk8xDjAMBgNVBAgMBVRpbWlzMRIwEAYDVQQHDAlUaW1pc29hcmExLDAqBgNV
+BAoMI1VuaXZlcnNpdGF0ZWEgZGUgVmVzdCBkaW4gVGltaXNvYXJhMTAwLgYDVQQL
+DCdGYWN1bHRhdGVhIGRlIE1hdGVtYXRpY2Egc2kgSW5mb3JtYXRpY2ExFzAVBgNV
+BAMMDmxvZ2luLmUtdXZ0LnJvMR8wHQYJKoZIhvcNAQkBFhBzdXBwb3J0QGUtdXZ0
+LnJvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwii+QKU6DJ6Zluhf
+eRoajsn694AxeG82ivYgGzhMDgwYJfsF6I/opnyVQqfq+FX9997oQS9QLeljLHcS
+/rrKiyqRvxi+AID6F0aDulVMC3LYAi4enF/4skVVARwPWlv32+cmkNxEredIY8ZL
+Ok7eRNRjTtl3WPlTjeYnB5jvJUxQ9H5c8DxZ9wAU8A0GuJchtBTyymZ0qwAyCBnM
+HsgpcrBp2gOk1qoF+RdmYIiQrg2bFwuUNzLsqOui8OrMRdLX/bvQsmnz5y37985f
+RsVIsZlu51RXuMzXjnYzP9oXVVO6TQgoxxm4R96A+RASsaDxvS5ORAwNHx66uPt2
+VDBX0QIDAQABo1AwTjAdBgNVHQ4EFgQUtgXk4Ku7HTBx6cHa9Bn4+vP7WBYwHwYD
+VR0jBBgwFoAUtgXk4Ku7HTBx6cHa9Bn4+vP7WBYwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQUFAAOCAQEAoEOwy7YHOjPxAR7/ywYEaWFU69OrDzg1qrbfX0msJoi5
+h3LCviCsQJJxLtQmKzs67DpYC4wC0vQqtSXoS5nN9aovhtsYxOWmLTSS+ByMJFab
+8jkO5wrWCRmbvy3gCvmcdXZLJiLGLUJ06alaI5qI+tlHkdvAYHOMj8VAvm9jYS25
+j7z5J2JOet0e7G0ICaFRiCYjof2Fm2FamqPUUiOA8ViNK4EndYI+PARLu+g8Fv7C
+TaXlE4upbYzcBuHhFAbmVpjfwWTxxk1DZxUl0CEpeSuFdqvF9Pjkuu7fzMXvnEVk
+eMdCdhkUaHXEiVUj1eVgiH8zYP3POIs/D5IkiYuang==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEazCCA1OgAwIBAgIJAI5foWADgailMA0GCSqGSIb3DQEBBQUAMIHLMQswCQYD
+VQQGEwJSTzEOMAwGA1UECAwFVGltaXMxEjAQBgNVBAcMCVRpbWlzb2FyYTEsMCoG
+A1UECgwjVW5pdmVyc2l0YXRlYSBkZSBWZXN0IGRpbiBUaW1pc29hcmExMDAuBgNV
+BAsMJ0ZhY3VsdGF0ZWEgZGUgTWF0ZW1hdGljYSBzaSBJbmZvcm1hdGljYTEXMBUG
+A1UEAwwObG9naW4uZS11dnQucm8xHzAdBgkqhkiG9w0BCQEWEHN1cHBvcnRAZS11
+dnQucm8wHhcNMTQwODA1MTQxNDIxWhcNMjQwODA0MTQxNDIxWjCByzELMAkGA1UE
+BhMCUk8xDjAMBgNVBAgMBVRpbWlzMRIwEAYDVQQHDAlUaW1pc29hcmExLDAqBgNV
+BAoMI1VuaXZlcnNpdGF0ZWEgZGUgVmVzdCBkaW4gVGltaXNvYXJhMTAwLgYDVQQL
+DCdGYWN1bHRhdGVhIGRlIE1hdGVtYXRpY2Egc2kgSW5mb3JtYXRpY2ExFzAVBgNV
+BAMMDmxvZ2luLmUtdXZ0LnJvMR8wHQYJKoZIhvcNAQkBFhBzdXBwb3J0QGUtdXZ0
+LnJvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwii+QKU6DJ6Zluhf
+eRoajsn694AxeG82ivYgGzhMDgwYJfsF6I/opnyVQqfq+FX9997oQS9QLeljLHcS
+/rrKiyqRvxi+AID6F0aDulVMC3LYAi4enF/4skVVARwPWlv32+cmkNxEredIY8ZL
+Ok7eRNRjTtl3WPlTjeYnB5jvJUxQ9H5c8DxZ9wAU8A0GuJchtBTyymZ0qwAyCBnM
+HsgpcrBp2gOk1qoF+RdmYIiQrg2bFwuUNzLsqOui8OrMRdLX/bvQsmnz5y37985f
+RsVIsZlu51RXuMzXjnYzP9oXVVO6TQgoxxm4R96A+RASsaDxvS5ORAwNHx66uPt2
+VDBX0QIDAQABo1AwTjAdBgNVHQ4EFgQUtgXk4Ku7HTBx6cHa9Bn4+vP7WBYwHwYD
+VR0jBBgwFoAUtgXk4Ku7HTBx6cHa9Bn4+vP7WBYwDAYDVR0TBAUwAwEB/zANBgkq
+hkiG9w0BAQUFAAOCAQEAoEOwy7YHOjPxAR7/ywYEaWFU69OrDzg1qrbfX0msJoi5
+h3LCviCsQJJxLtQmKzs67DpYC4wC0vQqtSXoS5nN9aovhtsYxOWmLTSS+ByMJFab
+8jkO5wrWCRmbvy3gCvmcdXZLJiLGLUJ06alaI5qI+tlHkdvAYHOMj8VAvm9jYS25
+j7z5J2JOet0e7G0ICaFRiCYjof2Fm2FamqPUUiOA8ViNK4EndYI+PARLu+g8Fv7C
+TaXlE4upbYzcBuHhFAbmVpjfwWTxxk1DZxUl0CEpeSuFdqvF9Pjkuu7fzMXvnEVk
+eMdCdhkUaHXEiVUj1eVgiH8zYP3POIs/D5IkiYuang==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.e-uvt.ro/aai/saml2/idp/SingleLogoutService.php"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.e-uvt.ro/aai/saml2/idp/SSOService.php"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">WestUniversity of Timisoara</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">West University of Timisoara</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.e-uvt.ro</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Administrator</md:GivenName>
+	<md:EmailAddress>mailto:support@info.uvt.ro</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

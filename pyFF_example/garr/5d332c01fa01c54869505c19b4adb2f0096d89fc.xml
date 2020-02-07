@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.tu.kielce.pl/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://aai.pionier.net.pl" registrationInstant="2015-06-03T00:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://aai.pionier.net.pl/en/index.php?page=rps</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tu.kielce.pl</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.tu.kielce.pl</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Kielce University of Technology</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="pl">Politechnika Świętokrzyska w Kielcach</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Kielce University of Technology</mdui:Description>
+		<mdui:Description xml:lang="pl">Politechnika Świętokrzyska w Kielcach</mdui:Description>
+		<mdui:Logo height="78" width="240" xml:lang="pl">https://login.tu.kielce.pl/images/logo_psk.png</mdui:Logo>
+		<mdui:Logo height="78" width="240" xml:lang="en">https://login.tu.kielce.pl/images/logo_psk_en.png</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>tu.kielce.pl</mdui:DomainHint>
+		<mdui:GeolocationHint>geo:50.87977018,20.64002469</mdui:GeolocationHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUTnhw903+0k++Hg8EackOlKEfAxwwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBsMB4XDTE1MDMxODA3NTUy
+MVoXDTM1MDMxODA3NTUyMVowHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBs
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9CoO3S5JSqXC+ySnfGSH
+4zr4TYxgIeYIgpGc5t6YCLoZGjcCEfn/75vXqyVSST2XsRBa8dzLdustWbqxJ9Nh
+KJ8SeeLGtDX+gs4Oism/WmkHWYsbFnVd1Pfbs7tO5lJvDiC6RiW8MotD9vfgDjSr
+RCou8oAedn/ToQmvT0mGzsHlv2LphqhQZyuigjgbPjj383PmvHd/v1Id5rk60NXM
+BQhYXZ+DHBUtBPhNmnuN4A7OXdWK5OS5vZhBGB8I3+GvEhtkHtSGruS27m8+KxsV
+cTylhoiohSsX8XYKO87NHi/K+GCEbGmssgGnVD1wLKjW68P86b2M59Px5jvPu8w9
+cQIDAQABo2swaTAdBgNVHQ4EFgQUiuiExnIh4xZwyCw3be3mOVERCy8wSAYDVR0R
+BEEwP4ISbG9naW4udHUua2llbGNlLnBshilodHRwczovL2xvZ2luLnR1LmtpZWxj
+ZS5wbC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA5MsG6EcdgMtH
+y0rdqBRDQ3xJTCPGHh+yljf8xGKFcgxys8D0tN3Rw7SBUPtqURmOrFLCADcqiZch
+/Ih6bHKcOtPfDCGdEF58RnhoL+L7DH8AwZJjvG1PASL93HtpmIxQaZezAAaP9FVP
+MGtjLCekKVpJEg83NCX4bkvw0//We1gzds2PC5XebUkWy5WKBtxxfSMGcW9cT/Yf
+AGSEf4Xdi84EO2e0FiQisCNrlUoLiL0oiVPjgkj+hwIsbTALPJep1rDw2BlrPM4d
+VlxKUGvRiA1AWI+DU1F+gFIJRydswFRpiyCmOT/oNwoLP9Riyc80Yl2HQQzDUFGQ
+QPpRH2L9Ng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUQI1UT8yWaPEUeqnPogykaWscIWAwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBsMB4XDTE1MDMxODA3NTUx
+OVoXDTM1MDMxODA3NTUxOVowHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBs
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg93OTsM9XSavx1b5qwjl
+warEf4+I6899r941THKZdnnZBEmR+qIQBcNJHjyqcSxsrddQ6BU3hibfW1cgu2vY
+x03A6GJQCIbz7Nb5gIBWluxfYnxrMNkpN+z91LgsTSzlW/eMklJ4HdCSzgRo4Grj
+LGqcf64cxNh7xAPSedlwrM3xcMLJj5Hm6QLlwzVZzWrrmebjMz24hD0suQz6p0lm
+7mL8RqJPv/rAZ1DQLw61FyD3cZGfjU4X4RI28rqlp0oPa/Y7qTPV0N2EpaNLL4BI
+6Bi/z8p/nZXGYtEpygHG9a9uZIOb0BBCwTrS0ELrPXhylWjvfSvpFkD+Tl6TJNe1
+cwIDAQABo2swaTAdBgNVHQ4EFgQUZoOr/TFbGOA6BZjg/hGB3BnVViswSAYDVR0R
+BEEwP4ISbG9naW4udHUua2llbGNlLnBshilodHRwczovL2xvZ2luLnR1LmtpZWxj
+ZS5wbC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEARH8fG46G8tTl
+TFSryzXGpsl+1CGfqTONx2OWXlyvho7WxDh2ZfoJmqdkKiARLMVFsCwI+TgKy6uH
+wNYmwYGUQ87kFMda1qP5NiGw2YqheB3HSJcBIiXb2HVEdZlrCDHToqJUV9jwjSFt
+MNDZ5JnLP9fGxuzaCuku9sTzz8lTmT6M9icE2tj1khFYDhUfRdMiI9MxNEvMdE06
+fieSwxhrohauXd2lBBeqsRMSKZ3P7g/cE3ysfjh2OXDwR6XaWtfs38nTJ9oHqLAl
+wqFLNr25soXe5wmt6fmNTO8dLdmYZc5+XSZ6Krj41W4HQcC/Hdt0WG121cbnFjA/
+TgC1gDMXgA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVANLQD1ad89CG5sAEr5cGVT+qRS/PMA0GCSqGSIb3DQEB
+CwUAMB0xGzAZBgNVBAMMEmxvZ2luLnR1LmtpZWxjZS5wbDAeFw0xNTAzMTgwNzU1
+MjBaFw0zNTAzMTgwNzU1MjBaMB0xGzAZBgNVBAMMEmxvZ2luLnR1LmtpZWxjZS5w
+bDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKoLZIifcEzlw0MlgYga
+sJbFTJPuq4NdhQkRyWZqeu2ZedRLoGMLJDmyqVzJiHWRtG5W9q/F4Euesayp7XV0
+ZliOpPNhtA60PrufPcELquB8QwXvKrs6aoDiROwtQM8P5ZMrdacpRu2UCubYtMtS
+pUDhR0Y3xPvNJwz4iTBVuBnHVk2ElO9au7OLN8TIeQYl2Run/UMzR+hdZf+RKLIt
+V6BSzYpu3k4xMPhRclEnpd0EZlAq1XOLLDODh+8OxgoHrCemC5qhwWN7t3HVaPRr
+UU7f2umFNXu/YwyI1r/AhciXVNoWj63hTO3CZNs7mWp9ZOK1T4E+Vc740XJduDkR
+OTECAwEAAaNrMGkwHQYDVR0OBBYEFNdzcY10k1Ct1xLIgGfjW85peBe2MEgGA1Ud
+EQRBMD+CEmxvZ2luLnR1LmtpZWxjZS5wbIYpaHR0cHM6Ly9sb2dpbi50dS5raWVs
+Y2UucGwvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAKl3AIoHpqBx
+UchgMac11QdliBETWgMfXhZf9EasbD4geWpQLBEIdjx2MOOYzcOWnVEV5vSwA8Z5
+QbgWsM7zAi8z1L3F3VmrDvkWblGBObuWMnvleyMV5000adqN5VEtr9chNVOZ7Bfd
+KKpB7avxX4099VYNysVBbmDFulswxHRqSpFNPMHuY5rIHvIVfzGABgsvRW2GfSRh
+tjXHqCHmep+cu4P3hW1iH8ZniMgkEIERXgK02wkhtUqWlGjbN95wt0Ne4OIWcvDA
+y9oVPwWqhUruhW3E4EveGvDcY6qgm8h2B4X4LPWh3ZD9JqEqcYP9SEnbZqLPGkjM
+uquJMZZ4oj8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.tu.kielce.pl:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.tu.kielce.pl:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.tu.kielce.pl/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.tu.kielce.pl/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.tu.kielce.pl/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.tu.kielce.pl/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">tu.kielce.pl</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUTnhw903+0k++Hg8EackOlKEfAxwwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBsMB4XDTE1MDMxODA3NTUy
+MVoXDTM1MDMxODA3NTUyMVowHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBs
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9CoO3S5JSqXC+ySnfGSH
+4zr4TYxgIeYIgpGc5t6YCLoZGjcCEfn/75vXqyVSST2XsRBa8dzLdustWbqxJ9Nh
+KJ8SeeLGtDX+gs4Oism/WmkHWYsbFnVd1Pfbs7tO5lJvDiC6RiW8MotD9vfgDjSr
+RCou8oAedn/ToQmvT0mGzsHlv2LphqhQZyuigjgbPjj383PmvHd/v1Id5rk60NXM
+BQhYXZ+DHBUtBPhNmnuN4A7OXdWK5OS5vZhBGB8I3+GvEhtkHtSGruS27m8+KxsV
+cTylhoiohSsX8XYKO87NHi/K+GCEbGmssgGnVD1wLKjW68P86b2M59Px5jvPu8w9
+cQIDAQABo2swaTAdBgNVHQ4EFgQUiuiExnIh4xZwyCw3be3mOVERCy8wSAYDVR0R
+BEEwP4ISbG9naW4udHUua2llbGNlLnBshilodHRwczovL2xvZ2luLnR1LmtpZWxj
+ZS5wbC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEA5MsG6EcdgMtH
+y0rdqBRDQ3xJTCPGHh+yljf8xGKFcgxys8D0tN3Rw7SBUPtqURmOrFLCADcqiZch
+/Ih6bHKcOtPfDCGdEF58RnhoL+L7DH8AwZJjvG1PASL93HtpmIxQaZezAAaP9FVP
+MGtjLCekKVpJEg83NCX4bkvw0//We1gzds2PC5XebUkWy5WKBtxxfSMGcW9cT/Yf
+AGSEf4Xdi84EO2e0FiQisCNrlUoLiL0oiVPjgkj+hwIsbTALPJep1rDw2BlrPM4d
+VlxKUGvRiA1AWI+DU1F+gFIJRydswFRpiyCmOT/oNwoLP9Riyc80Yl2HQQzDUFGQ
+QPpRH2L9Ng==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDMzCCAhugAwIBAgIUQI1UT8yWaPEUeqnPogykaWscIWAwDQYJKoZIhvcNAQEL
+BQAwHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBsMB4XDTE1MDMxODA3NTUx
+OVoXDTM1MDMxODA3NTUxOVowHTEbMBkGA1UEAwwSbG9naW4udHUua2llbGNlLnBs
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg93OTsM9XSavx1b5qwjl
+warEf4+I6899r941THKZdnnZBEmR+qIQBcNJHjyqcSxsrddQ6BU3hibfW1cgu2vY
+x03A6GJQCIbz7Nb5gIBWluxfYnxrMNkpN+z91LgsTSzlW/eMklJ4HdCSzgRo4Grj
+LGqcf64cxNh7xAPSedlwrM3xcMLJj5Hm6QLlwzVZzWrrmebjMz24hD0suQz6p0lm
+7mL8RqJPv/rAZ1DQLw61FyD3cZGfjU4X4RI28rqlp0oPa/Y7qTPV0N2EpaNLL4BI
+6Bi/z8p/nZXGYtEpygHG9a9uZIOb0BBCwTrS0ELrPXhylWjvfSvpFkD+Tl6TJNe1
+cwIDAQABo2swaTAdBgNVHQ4EFgQUZoOr/TFbGOA6BZjg/hGB3BnVViswSAYDVR0R
+BEEwP4ISbG9naW4udHUua2llbGNlLnBshilodHRwczovL2xvZ2luLnR1LmtpZWxj
+ZS5wbC9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEARH8fG46G8tTl
+TFSryzXGpsl+1CGfqTONx2OWXlyvho7WxDh2ZfoJmqdkKiARLMVFsCwI+TgKy6uH
+wNYmwYGUQ87kFMda1qP5NiGw2YqheB3HSJcBIiXb2HVEdZlrCDHToqJUV9jwjSFt
+MNDZ5JnLP9fGxuzaCuku9sTzz8lTmT6M9icE2tj1khFYDhUfRdMiI9MxNEvMdE06
+fieSwxhrohauXd2lBBeqsRMSKZ3P7g/cE3ysfjh2OXDwR6XaWtfs38nTJ9oHqLAl
+wqFLNr25soXe5wmt6fmNTO8dLdmYZc5+XSZ6Krj41W4HQcC/Hdt0WG121cbnFjA/
+TgC1gDMXgA==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDNDCCAhygAwIBAgIVANLQD1ad89CG5sAEr5cGVT+qRS/PMA0GCSqGSIb3DQEB
+CwUAMB0xGzAZBgNVBAMMEmxvZ2luLnR1LmtpZWxjZS5wbDAeFw0xNTAzMTgwNzU1
+MjBaFw0zNTAzMTgwNzU1MjBaMB0xGzAZBgNVBAMMEmxvZ2luLnR1LmtpZWxjZS5w
+bDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKoLZIifcEzlw0MlgYga
+sJbFTJPuq4NdhQkRyWZqeu2ZedRLoGMLJDmyqVzJiHWRtG5W9q/F4Euesayp7XV0
+ZliOpPNhtA60PrufPcELquB8QwXvKrs6aoDiROwtQM8P5ZMrdacpRu2UCubYtMtS
+pUDhR0Y3xPvNJwz4iTBVuBnHVk2ElO9au7OLN8TIeQYl2Run/UMzR+hdZf+RKLIt
+V6BSzYpu3k4xMPhRclEnpd0EZlAq1XOLLDODh+8OxgoHrCemC5qhwWN7t3HVaPRr
+UU7f2umFNXu/YwyI1r/AhciXVNoWj63hTO3CZNs7mWp9ZOK1T4E+Vc740XJduDkR
+OTECAwEAAaNrMGkwHQYDVR0OBBYEFNdzcY10k1Ct1xLIgGfjW85peBe2MEgGA1Ud
+EQRBMD+CEmxvZ2luLnR1LmtpZWxjZS5wbIYpaHR0cHM6Ly9sb2dpbi50dS5raWVs
+Y2UucGwvaWRwL3NoaWJib2xldGgwDQYJKoZIhvcNAQELBQADggEBAKl3AIoHpqBx
+UchgMac11QdliBETWgMfXhZf9EasbD4geWpQLBEIdjx2MOOYzcOWnVEV5vSwA8Z5
+QbgWsM7zAi8z1L3F3VmrDvkWblGBObuWMnvleyMV5000adqN5VEtr9chNVOZ7Bfd
+KKpB7avxX4099VYNysVBbmDFulswxHRqSpFNPMHuY5rIHvIVfzGABgsvRW2GfSRh
+tjXHqCHmep+cu4P3hW1iH8ZniMgkEIERXgK02wkhtUqWlGjbN95wt0Ne4OIWcvDA
+y9oVPwWqhUruhW3E4EveGvDcY6qgm8h2B4X4LPWh3ZD9JqEqcYP9SEnbZqLPGkjM
+uquJMZZ4oj8=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://login.tu.kielce.pl:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Kielce University of Technology</md:OrganizationName>
+	<md:OrganizationName xml:lang="pl">Politechnika Świętokrzyska w Kielcach</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Kielce University of Technology</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="pl">Politechnika Świętokrzyska w Kielcach</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.tu.kielce.pl</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>PSK IdP</md:GivenName>
+	<md:SurName>Team</md:SurName>
+	<md:EmailAddress>mailto:administrator@tu.kielce.pl</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

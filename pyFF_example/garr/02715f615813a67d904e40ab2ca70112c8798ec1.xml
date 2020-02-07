@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.hs-heilbronn.de/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://www.aai.dfn.de" registrationInstant="2015-12-08T15:36:10Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.aai.dfn.de/en/join/</mdrpi:RegistrationPolicy>
+		<mdrpi:RegistrationPolicy xml:lang="de">https://www.aai.dfn.de/teilnahme/</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://aai.dfn.de/category/bwidm-member</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute Name="http://aai.dfn.de/loa/degree-of-reliance" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>advanced</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-heilbronn.de</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Hochschule Heilbronn</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Heilbronn University</mdui:DisplayName>
+		<mdui:Description xml:lang="de">Identity Provider der Hochschule Heilbronn für deren Studenten/Professoren/Mitarbeiter</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider Heilbronn University user base: members of heilbronn University</mdui:Description>
+		<mdui:Logo height="16" width="16">https://idp.hs-heilbronn.de/favicon.ico</mdui:Logo>
+		<mdui:Logo height="112" width="239">https://idp.hs-heilbronn.de/idp/images/logo.png</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIILAjCCCeqgAwIBAgIMH6XPP94yzTKdW+W0MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgyOTA3NTYzNVoXDTIwMTEzMDA3NTYzNVowgbUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUhlaWxicm9ubjE/MD0G
+A1UECgw2SG9jaHNjaHVsZSBIZWlsYnJvbm4gLSBUZWNobmlrLCBXaXJ0c2NoYWZ0
+LCBJbmZvcm1hdGlrMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRwwGgYDVQQDDBNp
+ZHAuaHMtaGVpbGJyb25uLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC
+AgEA21WBa4GwClzSxCqdX9BQ93qziOYuvyoQO5WjCo7MuuKN5WnT8kH8JFoDQkCp
+m5Lq4ijEX7J+g5nT+yspP1006i24YxKlIHcyDqm5Tsoi9bg/Qwl85GrSUw1/0R11
+5VcJPegkXcYJg7+vMn7KkpkIJ1OD4AxIsd4Lb4H6KHbHUwOWRg+6eiurC7ubeslz
+5SjDJcGUOb0sFG7f91K0KvdAxGc61sbhmcKwcwFeqqmkpaDcqqx6gRmeDkzJHSVX
+Kbivgml4c/QQG2DnwuuI7OA5YxmqurtmU4NUFuwo3N4jbs8cuc3XjC/58VEKbzwo
+ven9f4PVTV0Mz7CKpq9dlIzwkAV+aFiJLUX4rDQyYvs5DbWhRgu2d+E1I67gQSfl
+hWmrQfYoJkSO9NqbGhtbrxuGz3+11ZgFyqjMs4gqMkBKHeH9VjVUC4mHThyqbF+V
+yrRk+V3HtrULqa0HdR98xyZ7FQ+4yIY9xndA+rVA0R5WJCy4xio/mf/+m3jSfgXq
+gGstykhwhF91KQAAh7Lfsa3co+1ySDhT02Yc4hL3LM8HlBZu5iXBjHm6Ng3xDVZm
+7zSdgzPmVvi9SZ4RjZ6AF0VsPHkOW4BceMUU8kzzmsNzR8GvWw3OO1aa4GUJvbNj
+ETD+hPPfMar6F+ZkxJ0llLhimz+3bPl2+Hyms7k6lOj+pGcCAwEAAaOCBjYwggYy
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAdBgNV
+HQ4EFgQUoZUNmBieq8uxBuZwSpq1cyowxOowHwYDVR0jBBgwFoAUazqYi/nyU4na
+4K2yMh4JH+iqO3QwHgYDVR0RBBcwFYITaWRwLmhzLWhlaWxicm9ubi5kZTCBjQYD
+VR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1n
+bG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYI
+KwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4u
+ZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJ
+BggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFs
+LWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA9UGCisGAQQB1nkCBAIEggPFBIID
+wQO/AHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFlhK9JaQAA
+BAMARzBFAiEAltGH8BWeMurTZrBF4/ve39cSv50z4h7YZCw6gOLMaHgCICoN1dnE
+EKVFXEKaQ2G7cXjxWUzR53hNVQYA7/9Klu/6AHUAVYHUwhaQNgFK6gubVzxT8MDk
+OHhwJQgXL6OqHQcT0wwAAAFlhK9KTQAABAMARjBEAiAsgD45/3SxQfyaIheaNrDn
+0Cvk/5N8exMCVyXcjKDsywIgWSS1wDN+dyi15GMqzg9OzR8+0VY5NR8oDSCWSOf1
+d+kAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWWEr0psAAAE
+AwBHMEUCIQDje0kdGKYDH070QWy60qH3KpdMGv1Yq0YvqFCUCUhSWQIgRmBtjBeF
+buDSybndsyE7KevkCzAsfR7QSiY0bCQBA5AAdQCq5wt/PLjVZshsLxaXnJ9EX2mr
+DrRTVYmy93oDAQTzzQAAAWWEr0lNAAAEAwBGMEQCIEE8px9gmbnRelx/8LXRob7r
+tVtZBnRXKXw4Z81v6/ZnAiAZBdJqla+xviVqlXC+59n54wbuzJsSWfGqSCXD+fgu
+ywB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZYSvS5kAAAQD
+AEcwRQIhAPxlqG/9EkVKmLQkgqhj+/bPLC0BvTivMWtol2jWp6bIAiBjHf0kvu4h
+cCvcX0H6I7ndYvB5l9zz/DlgJs05DlOcbwB2AKS5CZC0GFgUh7sTosxncAo8NZgE
++RvfuON3zQ7IDdwQAAABZYSvS8gAAAQDAEcwRQIgAnCvtcBVvl8c7FGqyQxU9cKB
+ENrAJkASRb4FZpUPyrUCIQC0DI3VVhpP27ZMfPWkkta4wGtRAY5UokST7nINKHB9
+9wB2AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVYAAABZYSvTs0AAAQD
+AEcwRQIgX8rqcj+SDXjwYlLAXeekbJhMWRH6qGw4TpK3irEvxRUCIQCkXjlNMamw
+bZLVesI5U1sn381FIYMPy+8VGlc68qWwkAB3ALIeBcyLos2KIE6HZvkruYolIGdr
+2vpw57JJUy3vi5BeAAABZYSvS0MAAAQDAEgwRgIhAIb17O12C8GkU9C647OByVHZ
+t9V5gGhR2CUkpqy0U3jBAiEAkY08zERM956BRXRI8Cgmb57phYaOwRZJ2Z8t0uWR
+F44wDQYJKoZIhvcNAQELBQADggEBAACZS1f4Y1z7BlZqeohFhWiXeWUXzBeXjdLD
+X58kt5zcbZUoO4KfR3pC+WkA+yLwlHHlanxP85Hh2FMKUgiKXrG+A+5wvzYCkV3f
+1e2Tel2u4QOTv9mXtSdL6FsWNxIQ2CCKfwMS32ElTzGmOV4NKqVV39l4pvszxdEi
+KASlM0NKGUi8gm6X2PVcbUYhVUTrOdIM033dtFv9MJ22qPL1oH11tEwhiV1p8Hnh
+8LENOdG9B7rL5nGmJTBlYgld2+Ode0KRbjScZnGTVKCOCFt8FiyTCGlJDl0VVdRa
+Lrwdv8CKbcQHCGK0LyQYSbvjv9oSX8gqDYZwiST6A4v4Rnp/Sik=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-heilbronn.de:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-heilbronn.de:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-heilbronn.de:8443/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.hs-heilbronn.de/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-heilbronn.de/idp/profile/SAML2/SOAP/ECP"/>
+	</md:IDPSSODescriptor>
+	<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">hs-heilbronn.de</shibmd:Scope>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIILAjCCCeqgAwIBAgIMH6XPP94yzTKdW+W0MA0GCSqGSIb3DQEBCwUAMIGNMQsw
+CQYDVQQGEwJERTFFMEMGA1UECgw8VmVyZWluIHp1ciBGb2VyZGVydW5nIGVpbmVz
+IERldXRzY2hlbiBGb3JzY2h1bmdzbmV0emVzIGUuIFYuMRAwDgYDVQQLDAdERk4t
+UEtJMSUwIwYDVQQDDBxERk4tVmVyZWluIEdsb2JhbCBJc3N1aW5nIENBMB4XDTE4
+MDgyOTA3NTYzNVoXDTIwMTEzMDA3NTYzNVowgbUxCzAJBgNVBAYTAkRFMRswGQYD
+VQQIDBJCYWRlbi1XdWVydHRlbWJlcmcxEjAQBgNVBAcMCUhlaWxicm9ubjE/MD0G
+A1UECgw2SG9jaHNjaHVsZSBIZWlsYnJvbm4gLSBUZWNobmlrLCBXaXJ0c2NoYWZ0
+LCBJbmZvcm1hdGlrMRYwFAYDVQQLDA1SZWNoZW56ZW50cnVtMRwwGgYDVQQDDBNp
+ZHAuaHMtaGVpbGJyb25uLmRlMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC
+AgEA21WBa4GwClzSxCqdX9BQ93qziOYuvyoQO5WjCo7MuuKN5WnT8kH8JFoDQkCp
+m5Lq4ijEX7J+g5nT+yspP1006i24YxKlIHcyDqm5Tsoi9bg/Qwl85GrSUw1/0R11
+5VcJPegkXcYJg7+vMn7KkpkIJ1OD4AxIsd4Lb4H6KHbHUwOWRg+6eiurC7ubeslz
+5SjDJcGUOb0sFG7f91K0KvdAxGc61sbhmcKwcwFeqqmkpaDcqqx6gRmeDkzJHSVX
+Kbivgml4c/QQG2DnwuuI7OA5YxmqurtmU4NUFuwo3N4jbs8cuc3XjC/58VEKbzwo
+ven9f4PVTV0Mz7CKpq9dlIzwkAV+aFiJLUX4rDQyYvs5DbWhRgu2d+E1I67gQSfl
+hWmrQfYoJkSO9NqbGhtbrxuGz3+11ZgFyqjMs4gqMkBKHeH9VjVUC4mHThyqbF+V
+yrRk+V3HtrULqa0HdR98xyZ7FQ+4yIY9xndA+rVA0R5WJCy4xio/mf/+m3jSfgXq
+gGstykhwhF91KQAAh7Lfsa3co+1ySDhT02Yc4hL3LM8HlBZu5iXBjHm6Ng3xDVZm
+7zSdgzPmVvi9SZ4RjZ6AF0VsPHkOW4BceMUU8kzzmsNzR8GvWw3OO1aa4GUJvbNj
+ETD+hPPfMar6F+ZkxJ0llLhimz+3bPl2+Hyms7k6lOj+pGcCAwEAAaOCBjYwggYy
+MFkGA1UdIARSMFAwCAYGZ4EMAQICMA0GCysGAQQBga0hgiweMA8GDSsGAQQBga0h
+giwBAQQwEQYPKwYBBAGBrSGCLAEBBAMIMBEGDysGAQQBga0hgiwCAQQDCDAJBgNV
+HRMEAjAAMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAdBgNV
+HQ4EFgQUoZUNmBieq8uxBuZwSpq1cyowxOowHwYDVR0jBBgwFoAUazqYi/nyU4na
+4K2yMh4JH+iqO3QwHgYDVR0RBBcwFYITaWRwLmhzLWhlaWxicm9ubi5kZTCBjQYD
+VR0fBIGFMIGCMD+gPaA7hjlodHRwOi8vY2RwMS5wY2EuZGZuLmRlL2Rmbi1jYS1n
+bG9iYWwtZzIvcHViL2NybC9jYWNybC5jcmwwP6A9oDuGOWh0dHA6Ly9jZHAyLnBj
+YS5kZm4uZGUvZGZuLWNhLWdsb2JhbC1nMi9wdWIvY3JsL2NhY3JsLmNybDCB2wYI
+KwYBBQUHAQEEgc4wgcswMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLnBjYS5kZm4u
+ZGUvT0NTUC1TZXJ2ZXIvT0NTUDBJBggrBgEFBQcwAoY9aHR0cDovL2NkcDEucGNh
+LmRmbi5kZS9kZm4tY2EtZ2xvYmFsLWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDBJ
+BggrBgEFBQcwAoY9aHR0cDovL2NkcDIucGNhLmRmbi5kZS9kZm4tY2EtZ2xvYmFs
+LWcyL3B1Yi9jYWNlcnQvY2FjZXJ0LmNydDCCA9UGCisGAQQB1nkCBAIEggPFBIID
+wQO/AHYA7ku9t3XOYLrhQmkfq+GeZqMPfl+wctiDAMR7iXqo/csAAAFlhK9JaQAA
+BAMARzBFAiEAltGH8BWeMurTZrBF4/ve39cSv50z4h7YZCw6gOLMaHgCICoN1dnE
+EKVFXEKaQ2G7cXjxWUzR53hNVQYA7/9Klu/6AHUAVYHUwhaQNgFK6gubVzxT8MDk
+OHhwJQgXL6OqHQcT0wwAAAFlhK9KTQAABAMARjBEAiAsgD45/3SxQfyaIheaNrDn
+0Cvk/5N8exMCVyXcjKDsywIgWSS1wDN+dyi15GMqzg9OzR8+0VY5NR8oDSCWSOf1
+d+kAdgBvU3asMfAxGdiZAKRRFf93FRwR2QLBACkGjbIImjfZEwAAAWWEr0psAAAE
+AwBHMEUCIQDje0kdGKYDH070QWy60qH3KpdMGv1Yq0YvqFCUCUhSWQIgRmBtjBeF
+buDSybndsyE7KevkCzAsfR7QSiY0bCQBA5AAdQCq5wt/PLjVZshsLxaXnJ9EX2mr
+DrRTVYmy93oDAQTzzQAAAWWEr0lNAAAEAwBGMEQCIEE8px9gmbnRelx/8LXRob7r
+tVtZBnRXKXw4Z81v6/ZnAiAZBdJqla+xviVqlXC+59n54wbuzJsSWfGqSCXD+fgu
+ywB2ALvZ37wfinG1k5Qjl6qSe0c4V5UKq1LoGpCWZDaOHtGFAAABZYSvS5kAAAQD
+AEcwRQIhAPxlqG/9EkVKmLQkgqhj+/bPLC0BvTivMWtol2jWp6bIAiBjHf0kvu4h
+cCvcX0H6I7ndYvB5l9zz/DlgJs05DlOcbwB2AKS5CZC0GFgUh7sTosxncAo8NZgE
++RvfuON3zQ7IDdwQAAABZYSvS8gAAAQDAEcwRQIgAnCvtcBVvl8c7FGqyQxU9cKB
+ENrAJkASRb4FZpUPyrUCIQC0DI3VVhpP27ZMfPWkkta4wGtRAY5UokST7nINKHB9
+9wB2AF6nc/nfVsDntTZIfdBJ4DJ6kZoMhKESEoQYdZaBcUVYAAABZYSvTs0AAAQD
+AEcwRQIgX8rqcj+SDXjwYlLAXeekbJhMWRH6qGw4TpK3irEvxRUCIQCkXjlNMamw
+bZLVesI5U1sn381FIYMPy+8VGlc68qWwkAB3ALIeBcyLos2KIE6HZvkruYolIGdr
+2vpw57JJUy3vi5BeAAABZYSvS0MAAAQDAEgwRgIhAIb17O12C8GkU9C647OByVHZ
+t9V5gGhR2CUkpqy0U3jBAiEAkY08zERM956BRXRI8Cgmb57phYaOwRZJ2Z8t0uWR
+F44wDQYJKoZIhvcNAQELBQADggEBAACZS1f4Y1z7BlZqeohFhWiXeWUXzBeXjdLD
+X58kt5zcbZUoO4KfR3pC+WkA+yLwlHHlanxP85Hh2FMKUgiKXrG+A+5wvzYCkV3f
+1e2Tel2u4QOTv9mXtSdL6FsWNxIQ2CCKfwMS32ElTzGmOV4NKqVV39l4pvszxdEi
+KASlM0NKGUi8gm6X2PVcbUYhVUTrOdIM033dtFv9MJ22qPL1oH11tEwhiV1p8Hnh
+8LENOdG9B7rL5nGmJTBlYgld2+Ode0KRbjScZnGTVKCOCFt8FiyTCGlJDl0VVdRa
+Lrwdv8CKbcQHCGK0LyQYSbvjv9oSX8gqDYZwiST6A4v4Rnp/Sik=
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.hs-heilbronn.de:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+	<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.hs-heilbronn.de:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	</md:AttributeAuthorityDescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">e475</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">e475</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Hochschule Heilbronn</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Heilbronn University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.hs-heilbronn.de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.hs-heilbronn.de/heilbronn-university</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Florian</md:GivenName>
+	<md:SurName>Kronberger</md:SurName>
+	<md:EmailAddress>mailto:florian.kronberger@hs-heilbronn.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Florian</md:GivenName>
+	<md:SurName>Kronberger</md:SurName>
+	<md:EmailAddress>mailto:florian.kronberger@hs-heilbronn.de</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Florian</md:GivenName>
+	<md:SurName>Kronberger</md:SurName>
+	<md:EmailAddress>mailto:florian.kronberger@hs-heilbronn.de</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

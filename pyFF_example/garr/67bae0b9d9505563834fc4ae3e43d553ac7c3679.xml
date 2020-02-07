@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://login.bruckneruni.at/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://eduid.at" registrationInstant="2017-01-23T17:00:00Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://eduid.at/policy/mdrps/20140606</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+		<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">bruckneruni.at</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="de">Anton Bruckner Privatuniversität</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Anton Bruckner Private University</mdui:DisplayName>
+		<mdui:Logo height="174" width="324">https://login.bruckneruni.at/idp/images/ABPU-Logo-IdP.png</mdui:Logo>
+		<mdui:Logo height="16" width="16">https://www.bruckneruni.at/fileadmin/bruckneruni/Resources/Public/Images/favicon.ico</mdui:Logo>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>bruckneruni.at</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUYAKI2IpCOaAjc3qmA8+X4NPFQ/gwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUbG9naW4uYnJ1Y2tuZXJ1bmkuYXQwHhcNMTYxMjAxMTEx
+MTA3WhcNMzYxMjAxMTExMTA3WjAfMR0wGwYDVQQDDBRsb2dpbi5icnVja25lcnVu
+aS5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMzCfZ4wiYyZaOjc
+wHQ/lXXQs8EVLiip3VdRLlYtsBNmaMzGdC5h9EY1r7QSBbWF/eVAZSKppncBpJh0
+74HkCjboDIaC62Sx6uxdkvPdVjv7bA+ZE3rZTbnMjWp9FkTCH6sB12vOcRQRkXh8
+oR1ey2b/EIwYEnC2NUK0MukbSffeMf4Jmn8vuK2tyeIyDDfhFIYQ9gJ3YPd8cpKQ
+A2Pmsosh7qWU9ZqPQTsrjct8lucxSfrG0Ne0zRMKANiHxENGKYx+SSWAyqCVwCzh
+MkmlPweykwX0JmS2ZrJtiv1jI/soOQQJH/AP+grivaCJT1D7k1X8pOTx/ytyNiU9
+o78lOB0CAwEAAaNvMG0wHQYDVR0OBBYEFDHBVQKSOUn3TsksUsiaR1XtLdv/MEwG
+A1UdEQRFMEOCFGxvZ2luLmJydWNrbmVydW5pLmF0hitodHRwczovL2xvZ2luLmJy
+dWNrbmVydW5pLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQA5
+qynQh5bQ0QhsreWNjL2F7IJyD0OB/zPC7NdASdIdawIDMhPIYY/cJEEibzERUDk9
+n70p9J5kVyIu8DiZG6KGPpoi+0tTadJx9Bt3rI1iWJh1HuUlAWgASBEFnxe6Xvjq
+ZDgOzq3+vp3ZxxmxRN00uGQ+bANUGNcKGOZeWi6cj+ZMeLDfc1GCl3j2svbKMNiw
+bAG1dShs2KjYrykigKj0ZNk67weNw7cAlLopZ2CTa5z/Uzu5eX8pdMAnxx1+5Cpy
+0ElXxmvyDIfdMWqICazjrz85e5Fa7Ea12sD9R+X95vwa7BJmwr7BflOi3u6sH3TJ
+bvt1oCer9lniryR/faq6
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUa+MOEMIzQjVWinGOfbEx4UQs+RkwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUbG9naW4uYnJ1Y2tuZXJ1bmkuYXQwHhcNMTYxMjAxMTEx
+MTA2WhcNMzYxMjAxMTExMTA2WjAfMR0wGwYDVQQDDBRsb2dpbi5icnVja25lcnVu
+aS5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIInICrFMhGJMcWW
+Bibs/uQAmS/lgJzlYsB1xuv7+QFkHOsQPrV6lTd1ejYfauRBeRubyPfkjbDRPd71
+H4Icxa+Io9WhFLyRS0U3Rk82q8ye7UALn3Ry0C8BYnYY4PM48yohWP3doFBJCKlN
+DspV7yO87WxSnLvInbyk9245S6Hevg6Ubkwvh4L004Umyg5X0EYLXaV48CNKmMSr
+omuiSg4LaLH6hIAsYJhM2y8pBygQaX1SS9F9zvIzHDj/HB89T/aey719iLEM8Ddo
+Lj5f86H+M53EE+OOHdsPMvymwt7ftUN0FGR0ZYG5LwGV3l6vO6NIqPrn09WJ7XPo
+aCmEdKkCAwEAAaNvMG0wHQYDVR0OBBYEFHLPJeCsK2DMObMujJyWqNhUNu/hMEwG
+A1UdEQRFMEOCFGxvZ2luLmJydWNrbmVydW5pLmF0hitodHRwczovL2xvZ2luLmJy
+dWNrbmVydW5pLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQA/
+SJyrSYNhSe2Ip4RfE6GrPtmmOpXvql3Xq4TRptpG8Tz1U+fIiSKVHotpXzLoi5Th
+5ZJOQLoK+RyQj2EP1lqgrop2LQuTs4dnaImVr+BSsNMPTQS0/Flp7t7mFpu5+zcO
+MJ21T2zmKw/1EjPvMjYfNAbz5A5Pq9zWWaYpPZ1DY9+NjDOYfGyPVEK7RRZwAAeY
+8bC0gKI9LphK2gIh6Zl/G0YOOlFK8bf9LnrWlzTvIbLYk+5gi0yciSHBxMels/LD
+xDINx7p9VGZWNakhava5fozON1LVpjmGpnsbVw5khgtZ0DFs9nvtY5Te/U+OMGK0
+KdPmG3bV4LDI83dYeCjx
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDOzCCAiOgAwIBAgIUX9J4qzGe8E+b3GG8C830xMMRTdAwDQYJKoZIhvcNAQEL
+BQAwHzEdMBsGA1UEAwwUbG9naW4uYnJ1Y2tuZXJ1bmkuYXQwHhcNMTYxMjAxMTEx
+MTA3WhcNMzYxMjAxMTExMTA3WjAfMR0wGwYDVQQDDBRsb2dpbi5icnVja25lcnVu
+aS5hdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKwv2s9hcR6TEzdb
+tPgwGGdjwd53Xgs+C+sxGo+8Vvs6OZ0Ulq2EcfdVuF1JA/BRCYPCABtAkOIZ3ED9
+cTjMZkph0Oy3uZS8NGUfIwZ33gMgPgmZp6j6eaQUMVF2FDZGrsXAQgaQOvqtd0ZJ
+pnSz6BhdBXsvGWGAZktSTuUQY3JsVTUbMSSISHVvkHnXqk2vKgDKGumzbEqib0NA
+NJ6ldOrWbOUpyadhMnHU+sXg84XbF9MyGycSIOGdg06PkDeMykJJXHZ1U1CrktAC
+kSm+HCf/JJjEvFkuI0C8L5VjdGKi7osQ9nO2Kkc+I9oXRKWvwz640hBlftIxKYOv
+uqzTEcMCAwEAAaNvMG0wHQYDVR0OBBYEFCoMKKiYE/uu6zLZ7GNNRWAhu3xaMEwG
+A1UdEQRFMEOCFGxvZ2luLmJydWNrbmVydW5pLmF0hitodHRwczovL2xvZ2luLmJy
+dWNrbmVydW5pLmF0L2lkcC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCr
+4IrjZ2XEVHJY50CAXalljLSypZuUPHWrFQJLLm4p/FkPoPsn739T95J3gaSvQCOt
++J3Fa7QBRI0TzLeu9G/hZhY6txp8jFLTDbC+vQZi3W3IDdCw2g75ttsuppD/Vr8y
+SqOHyI0Da0pWUZ2HTvS0I8WVERzOYOEVv3Yjuovb6V1Fi5GFhkT5ogaT+XnLNAvB
+chjgTuZBqnciq3txsBuXf36W6ZJvCxSzMjJDqYrzFniz8isUY1Zbtjy/BSefIPvM
+JJ7eL58w1tRhqQXsWmlxMxQ+c5MEwfKztk2my6ipqYWT5b5b8jPIapg7S+qKliCn
+GaHQcrnfOT1UFUXkn79h
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://login.bruckneruni.at/idp/profile/Shibboleth/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.bruckneruni.at/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.bruckneruni.at/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.bruckneruni.at/idp/profile/SAML2/Redirect/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="de">Anton Bruckner Privatuniversität</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Anton Bruckner Private University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Anton Bruckner Privatuniversität</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Anton Bruckner Private University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">https://www.bruckneruni.at/de/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">https://www.bruckneruni.at/en/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:SurName>ZID</md:SurName>
+	<md:EmailAddress>mailto:zid@bruckneruni.at</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:SurName>ZID</md:SurName>
+	<md:EmailAddress>mailto:zid@bruckneruni.at</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

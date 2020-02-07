@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://shibboleth03.chartes.psl.eu/idp/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="https://federation.renater.fr/" registrationInstant="2018-07-06T10:07:52Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://services.renater.fr/federation/en/metadata_registration_practice_statement</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>https://refeds.org/sirtfi</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">chartes.psl.eu</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">Ecole Nationale des Chartes</mdui:DisplayName>
+		<mdui:Logo height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAtBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQMtBb3/LQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb3/LQW9+f///wD///8A////AP///wAtBb0ALQW9AC0FvQAtBb0DLQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb3/LQW9/y0Fvf////8A////AP///wD///8ALQW9AC0FvQAtBb0ALQW9BC0Fvf8tBb2lLQW9cy0FvYUtBb2GLQW9lS0FvZktBb3/////AP///wD///8A////AC0FvQAtBb0ALQW9AC0FvQstBb1NLQW9Li0FvegtBb3/LQW98y0FvVctBb0wLQW9/////wD///8A////AP///wD///8A////AP///wD///8ALQW9AC0Fva8tBb3/LQW9/y0Fvf8tBb3qLQW9Vy0Fvf////8A////AP///wD///8A////AP///wD///8A////AC0FvQAtBb0xLQW9Oy0FvUEtBb1CLQW9RS0FvSItBb1FLQW9Fv///wD///8ALQW9/y0Fvf8tBb3/LQW9/y0FvRotBb0CLQW9pS0Fva8tBb0V////AP///wD///8A////AP///wD///8A////AC0Fvf8tBb3/LQW9/y0Fvf8tBb1ILQW9AC0Fvd4tBb3+LQW9GC0FvTctBb1eLQW9NS0FvWYtBb1mLQW9P////wAtBb3/LQW9/y0Fvf8tBb3/LQW9qC0FvQAtBb2gLQW9/y0FvQ4tBb2eLQW91y0FvXctBb3/LQW9/y0Fvf////8ALQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb1ZLQW9Ji0FvektBb0TLQW9lS0FvVQtBb1rLQW9/y0Fvf8tBb3/////AC0Fvf8tBb3/LQW9/y0Fvf8tBb3/LQW9/S0FvZEtBb1lLQW9CS0FvUctBb1pLQW9oi0Fvf8tBb3/LQW9/////wAtBb3/LQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb3mLQW9yC0FvQQtBb2YLQW9/y0Fvf8tBb3/LQW9/y0Fvf////8ALQW9BS0FvQUtBb0FLQW9BS0FvQUtBb0FLQW9BS0FvQYtBb0ALQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb3/////AP///wAtBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQAtBb0ALQW9AC0Fvf8tBb3/LQW9/y0Fvf8tBb3/LQW9/y0FvQAtBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQAtBb3/LQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQAtBb0ALQW9AC0FvQAtBb0ALQW9/y0Fvf8tBb3/LQW9/y0Fvf8tBb3/+AMAAPgDAAD4AwAA+AMAAP4DAAD+AQAAgD8AAIIAAACCAAAAgAAAAIAAAACAAAAAgEAAAP/AAAD/wAAA/8AAAA==</mdui:Logo>
+		<mdui:InformationURL xml:lang="fr">http://www.enc.sorbonne.fr</mdui:InformationURL>
+		<mdui:Description xml:lang="en">IDP Prod - test</mdui:Description>
+		<mdui:DisplayName xml:lang="fr">Ecole Nationale des Chartes</mdui:DisplayName>
+		<mdui:Description xml:lang="fr">IDP Prod - test</mdui:Description>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDVzCCAj+gAwIBAgIUIcUT8zLZPkHOHtkajn8oWcXEZ2cwDQYJKoZIhvcNAQEL
+BQAwJjEkMCIGA1UEAwwbc2hpYmJvbGV0aDAzLmNoYXJ0ZXMucHNsLmV1MB4XDTE4
+MDcxMjE0MTkyNVoXDTM4MDcxMjE0MTkyNVowJjEkMCIGA1UEAwwbc2hpYmJvbGV0
+aDAzLmNoYXJ0ZXMucHNsLmV1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAmD122uThKKNNReATvkb5GggxN1leDx6Y58JYdZDVUCfjFu9TLHOeg3I5hdmD
+XksQ74kUik0Xu+aFjI8B9HVJr09Dw1jmh9iB+XHCPxnSd0iXm+FR/T+ubzYK0kJc
+iBhMi88w60nJaVun8i2UkUC+iwjxZbDcw0XKWHqbxvZVrc2Du66zBpMB0KMjkhl1
+0jWNNnmgJnRwmq2KWdz9TS3Z/ydKYAWJipHmYZdGIJtq8EbPOqEgy7IRH1rCIJxh
+KGNNfnlef09DGg6jEcIJ9wevHwXXgrdTJ9OAh8kLcD1FFTH4X1Nu24a/kdU7YytH
+yO8bgBd2rCmt5j7VbsYIn7t68QIDAQABo30wezAdBgNVHQ4EFgQUoHWNlBX3FVVs
+w+ePkbMQEDo9gHUwWgYDVR0RBFMwUYIbc2hpYmJvbGV0aDAzLmNoYXJ0ZXMucHNs
+LmV1hjJodHRwczovL3NoaWJib2xldGgwMy5jaGFydGVzLnBzbC5ldS9pZHAvc2hp
+YmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAQEAGkFT8CvOp9P8GCwbmi7SQkqiSW3F
+57tK1aCXfAt2XAYIpmvktapSmrP80DKN8YEH/oUxlf0PEC7ALyjSLV7voOVIjPYY
+aCkXCIPickCqtNe1j6q7N6tLR0WTWolF4qnLenrJ/V768A+wGCIP/gL6qJTVcbjG
+XvyAnbfo93p+Byr1q4kYTuv0IJ6UomK+sQXaT1Q3lrjucGPkFsBhWgiNiBWM559c
+CXU5g1e8SjDPRM3Gui/R7UkTrpXVhFXpPwctGCa/BTuDKwFR3m1iFpZSyWXXG2Um
+0oNyaeiplnlC6kGW/rDJjyUMS8qaMDbATI8VL4LhOtid2mrzM/WPna0l/Q==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth03.chartes.psl.eu/idp/profile/SAML2/Redirect/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth03.chartes.psl.eu/idp/profile/SAML2/POST/SLO"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://shibboleth03.chartes.psl.eu/idp/profile/SAML2/SOAP/SLO"/>
+	<md:NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://shibboleth03.chartes.psl.eu/idp/profile/SAML2/POST/SSO"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://shibboleth03.chartes.psl.eu/idp/profile/SAML2/Redirect/SSO"/>
+	<md:SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://shibboleth03.chartes.psl.eu/idp/profile/Shibboleth/SSO"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">Ecole Nationale des Chartes</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">Ecole Nationale des Chartes</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.enc.sorbonne.fr</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="technical">
+	<md:EmailAddress>mailto:informatique@chartes.psl.eu</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson xmlns:remd="http://refeds.org/metadata" contactType="other" remd:contactType="http://refeds.org/metadata/contactType/security">
+	<md:GivenName>Renater-Equipe Federation</md:GivenName>
+	<md:EmailAddress>mailto:fed-sirtfi@support.renater.fr</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

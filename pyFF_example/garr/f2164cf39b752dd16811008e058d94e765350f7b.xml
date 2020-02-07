@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://reshare-staging.ukdataservice.ac.uk/shibboleth">
+	<md:Extensions>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+	<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+	<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk" registrationInstant="2019-07-15T13:46:54Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">http://ukfederation.org.uk/doc/mdrps-20130902</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<init:RequestInitiator Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/Login"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/Login" index="1"/>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">ReShare Test SP</mdui:DisplayName>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEajCCAtKgAwIBAgIJAPdQlHFMBcm9MA0GCSqGSIb3DQEBCwUAMC4xLDAqBgNV
+BAMTI3Jlc2hhcmUtc3RhZ2luZy51a2RhdGFzZXJ2aWNlLmFjLnVrMB4XDTE5MDcx
+MDE1MzMyMloXDTIyMDcwOTE1MzMyMlowLjEsMCoGA1UEAxMjcmVzaGFyZS1zdGFn
+aW5nLnVrZGF0YXNlcnZpY2UuYWMudWswggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAw
+ggGKAoIBgQCheaRY9/ZoTOMtLZcNoeK/y6HcL5g7ZIUdjWouiYQHgi760bBOhCSH
+PGA4gLfIS4Sf17lps1nGw/fKPQwCbdbBhxDOyoY8RZaBcPcj32kt5cvoESciUDWv
+pq8Uj/aje2L8cANtd4SHlxmL0/VirexZ1uHHCp8YVx0r/s/pmRpwRWi4wEfiGbxJ
+N4Kt6VQqlryTx1/ucW57T/zWFn57kbz2UONa8jRay6UFW7Y6PafV9lrEgefbLgPv
+U6heAnsZZGrTgkpK4X2ZkdbhVxMIKPdSOXU+XCubS1SzyAt2NdcAnSrB5dFRqiIn
+JXJT0WV51b3HhNNqsfJ1P5ylq7+a6MqhFmd2V9VI7NK6P+CwMFcikmZvzlOMTmyW
+BOtC8cEbzcMraivuNulw2hnPBWWSa+eqOtfbGsLiAQurazeDhHR3xq72KUtJPxNO
+IGBcSF2UcXUkcMpaC3MXAflgZv7zCRIlpw5MB2Jg+dhnmP57+sKdB4IKTDyl3YZP
+YLjFSpMCJ28CAwEAAaOBijCBhzBmBgNVHREEXzBdgiNyZXNoYXJlLXN0YWdpbmcu
+dWtkYXRhc2VydmljZS5hYy51a4Y2aHR0cHM6Ly9yZXNoYXJlLXN0YWdpbmcudWtk
+YXRhc2VydmljZS5hYy51ay9zaGliYm9sZXRoMB0GA1UdDgQWBBSFIPU6bLIO3Pvg
+1gmSQwF23z/VtzANBgkqhkiG9w0BAQsFAAOCAYEAQs5ym2E834G8paLyxErl2VWU
+VR2JBPIrewHAAuEyH45sYmnDv620t5n82xG4eaUxTJhbPIfN73hE9jsrR0fVzj7h
+k0iM1IdmBa6J/TiB+QuSc0nrJf7MypgDdiyMpD796THKdUaz0qCNHqxN7YpLIEcq
+zA0zjjfrjJNO09HZmcfIXFRKDgge/ZTWjl41TRJGjXyWFoKztMAwNHJCHhp8KL6Z
+jvdRlXTuTYmW9No9VMHdyBDhCtc4yPKNmvQ3+qrP9ocdfB4xbv8s3H473i/b5gqS
+ZRI2Xk9wzMX8l1BVyD/YDiOjXHTAhq85ye5ZPlZCM8+XJJkZAd/wQvs7by6sH4Pp
+bo7RWGH0QrSFJ8kAqw8aO0J6ybxORL75w+Ra4iFw0tqNEGixDjvmYJTRu61zpv00
+q7XnYSH38L/sgBe+py566dnsgZHfGoczOsbyr5Sa5+m6BsJ9AolA1UoyPoXD127L
+A6G+fYCn/Rs4w8M5OOQrRJCZeV7G24TUQt21zFN6
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+		<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/Artifact/SOAP" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://reshare-staging.ukdataservice.ac.uk/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">University of Essex</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">University of Essex</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">https://ukdataservice.ac.uk/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Helpdesk</md:GivenName>
+	<md:EmailAddress>mailto:helpdesk@ukdataservice.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Steve</md:GivenName>
+	<md:SurName>Hassan</md:SurName>
+	<md:EmailAddress>mailto:steveh@essex.ac.uk</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

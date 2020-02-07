@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sprovtest.e2bn.org/shibboleth">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://ukfederation.org.uk"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+	<md:Extensions>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://sprovtest.e2bn.org/Shibboleth.sso/DS" index="1"/>
+		<idpdisc:DiscoveryResponse Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://passport.e2bn.org/Shibboleth.sso/DS" index="2"/>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIDCTCCAfGgAwIBAgIJAME6p5J6275MMA0GCSqGSIb3DQEBBQUAMBQxEjAQBgNV
+BAMTCXNwcm92dGVzdDAeFw0xNTExMjMxMTE0NTZaFw0yNTExMjAxMTE0NTZaMBQx
+EjAQBgNVBAMTCXNwcm92dGVzdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMrP3s/YWGdpfZ8vpuUJ84u01pPdN5TPCsMbNdvCTg02ICxUcCxVhCvEu6XO
+j1XMxmShOfsK7yjQwkGW78aq3N4mu174ge693YA+cr5aQ/bRyD3ivQL6pdZ0JZjJ
+b8WQlymZD1DDFQzYTsGbUO4Ehle/xcg4VsfGnsL9+oMdBu1do2hT5YlCX/i6t46J
+yGs7hwNdMa3lzykQgvjBwqtXNgh5YE7vuPq71kwLS92tdwBT5McOvBU0SvcRSvdf
+xDFk+VdtEXtqwRpQfSnHC3bs70x+o7S0Di1aiBtxsP8cHXNBv5fWvYPMQ+qvhHVD
+JBffRvOjPpEJlFqVgz9mv4UuSsUCAwEAAaNeMFwwOwYDVR0RBDQwMoIJc3Byb3Z0
+ZXN0hiVodHRwczovL3Nwcm92dGVzdC5lMmJuLm9yZy9zaGliYm9sZXRoMB0GA1Ud
+DgQWBBRtUHrPUHw7pov+Xhic3y7uDHQ96jANBgkqhkiG9w0BAQUFAAOCAQEAPKSS
+mAPt6VhYv6yRE2kPEHJQvsXsBLH8tHrhF904HNgXghMoFGYQGPsLY7hAKXijh469
+V5R7baZoSau5jrVM5P2GlZZvnNedPMzYSZzYuIYdfDBVRJcfGAzSvMgs+J2Xy0p1
+DSzEBbWkV90tD+9rrW8cwrFL0WI9DZdbTNt+o2f0EtS2BSBP47UibVmftEs+6tN0
+BgWhJ7OiNUofH0OasFSwFCoPNnKR0DfPSIA2qDVozOAqx/jrv96p+ukWNoK3g49B
+lnJgP9/GxoLuoFpcJ0el9dqriqw9dcFw7IhWG/SZmZKD6XslLE6YcvKhduBUgBNX
+Tx92z7ahaw1BOYPfpw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SLO/SOAP"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SLO/Redirect"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SLO/POST"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SLO/Artifact"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sprovtest.e2bn.org/Shibboleth.sso/NIM/SOAP"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sprovtest.e2bn.org/Shibboleth.sso/NIM/Redirect"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sprovtest.e2bn.org/Shibboleth.sso/NIM/POST"/>
+	<md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sprovtest.e2bn.org/Shibboleth.sso/NIM/Artifact"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML2/POST" index="1"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML2/Artifact" index="3"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML2/ECP" index="4"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML/POST" index="5"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sprovtest.e2bn.org/Shibboleth.sso/SAML/Artifact" index="6"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://passport.e2bn.org/Shibboleth.sso/SAML2/POST" index="13"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://passport.e2bn.org/Shibboleth.sso/SAML2/POST-SimpleSign" index="14"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://passport.e2bn.org/Shibboleth.sso/SAML2/Artifact" index="15"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://passport.e2bn.org/Shibboleth.sso/SAML2/ECP" index="16"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://passport.e2bn.org/Shibboleth.sso/SAML/POST" index="17"/>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://passport.e2bn.org/Shibboleth.sso/SAML/Artifact" index="18"/>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">East of England Broadband Network</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="en">E2BN Services</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="en">http://www.e2bn.org/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Simon</md:GivenName>
+	<md:SurName>Bright</md:SurName>
+	<md:EmailAddress>mailto:service@e2bn.org</md:EmailAddress>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Simon</md:GivenName>
+	<md:SurName>Bright</md:SurName>
+	<md:EmailAddress>mailto:service@e2bn.org</md:EmailAddress>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

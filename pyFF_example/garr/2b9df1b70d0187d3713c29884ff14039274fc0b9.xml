@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="http://login1.fhs.se/adfs/services/trust">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://www.swamid.se/">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.sunet.se/wp-content/uploads/2016/08/SWAMID-Metadata-Registration-Practice-Statement-v2.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:attribute:assurance-certification" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al1</saml:AttributeValue>
+		<saml:AttributeValue>http://www.swamid.se/policy/assurance/al2</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<shibmd:Scope regexp="false">fhs.se</shibmd:Scope>
+		<shibmd:Scope regexp="false">student.fhs.se</shibmd:Scope>
+		<shibmd:Scope regexp="false">op.fhs.se</shibmd:Scope>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="sv">Försvarshögskolan</mdui:DisplayName>
+		<mdui:DisplayName xml:lang="en">Swedish Defence University</mdui:DisplayName>
+		<mdui:Description xml:lang="sv">Identity Provider för Försvarshögskolan</mdui:Description>
+		<mdui:Description xml:lang="en">Identity Provider for Swedish Defence University</mdui:Description>
+		<mdui:InformationURL xml:lang="sv">http://www.fhs.se</mdui:InformationURL>
+		<mdui:InformationURL xml:lang="en">http://www.fhs.se/en/</mdui:InformationURL>
+		<mdui:Logo height="671" width="2494" xml:lang="sv">https://login1.fhs.se/adfs/portal/logo/logo.jpg</mdui:Logo>
+		<mdui:Logo height="671" width="2494" xml:lang="en">https://login1.fhs.se/adfs/portal/logo/logo.jpg</mdui:Logo>
+		<mdui:Keywords xml:lang="sv">fhs</mdui:Keywords>
+		<mdui:Keywords xml:lang="en">fhs</mdui:Keywords>
+		</mdui:UIInfo>
+		<mdui:DiscoHints>
+		<mdui:DomainHint>fhs.se</mdui:DomainHint>
+		</mdui:DiscoHints>
+	</md:Extensions>
+	<md:KeyDescriptor use="encryption">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC3DCCAcSgAwIBAgIQN1QM8QQFP6ZNW99UMSdlijANBgkqhkiG9w0BAQsFADAq
+MSgwJgYDVQQDEx9BREZTIEVuY3J5cHRpb24gLSBsb2dpbjEuZmhzLnNlMB4XDTE5
+MDMwOTEwNDMzNloXDTIwMDMwODEwNDMzNlowKjEoMCYGA1UEAxMfQURGUyBFbmNy
+eXB0aW9uIC0gbG9naW4xLmZocy5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBAJHe/dPn/7TKSrggy6m5nj2Ng2OBatAAYkC4PlnHpuxKSnfL6s1iBb6w
+PVcid5UW/CYJbEF6wx+DuAOLBumgnM3XPwRUcfpj2H3IDjzRQrzEtcuD2MyOd0B0
+5Qu6/DLvYWHodyDS9hlHzo9D0ynCEJ8X2UZADOVmf6ynKF2Z7WbyuY/I/SxZmSXl
+BbyiGdbep1iPQ23qPjKlkNjbFvvbIYrvRo62aVJJAaN1LhtpBopiUoS2IkyoqOsX
+Q93DEIy4RRUWaAsCqzxn5A44YsD3dJtfo19q3bnYQqQaOBvUeYFbhL1WjCuAUHym
+i1UnjITSwuLa2Y7eLVm4ilXSAmzCZV8CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEA
+gvzRfEYR7xMVJrgOZyFra/7/ntgThAsLfp+EyT0wFmyNAVhTUO++hkAXBsboOTKi
+PxGRFhcZVsbnWO6XIzlQtB4ozaYfAlwOkizzCcjEyTUTqkcmxLyiXoxx+oQ+EJLf
+gXEToY/MWXB+g5A7P2sF+bpmAEw8u9RTW5GCsOTO+9JRSbW2yCWiGf5BN8q92w8Z
+ZKIesJsC9CEDba0Jud6rSskkwhKqcgMhcW+80mmvkF1MqTfJPgmNTOdI/4csMxPN
+gLsYMrs32U88yJjEeZKYozf2GpQz6D4QaISLWjGDkODiOA0dRnEJsCKbOgaQJnED
+aV/terraKvbOmUdXfqtDuw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC1jCCAb6gAwIBAgIQQFxK+48DP6JHunIm7oDFRDANBgkqhkiG9w0BAQsFADAn
+MSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBsb2dpbjEuZmhzLnNlMB4XDTE4MDMy
+OTA4NDgyMloXDTE5MDMyOTA4NDgyMlowJzElMCMGA1UEAxMcQURGUyBTaWduaW5n
+IC0gbG9naW4xLmZocy5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AOU4TbE5Q9vYKOIeo4LAdYb156uXz8MfGNddJ0LV5MaVACDzDvX2I+7yXXFfHB/Y
+39HeJlWzYaR8Nae8vyeCiC2pnt9WXe+kvsdfGwCgCCmbv2DuCcgnprquqUCO6uU9
+fqMi1hgMMHpGcE+33SyZoXdrIRJ+b4DV2mfmaW0LKNxsz2KU9NYpe41tybMYL1FD
+w0sGYTyHsdTORvGueO7ccInPCAh8yeVRLu9qIya3yvNxb41/dSmk3Gw/K3VFCaV5
+wXG4npLmcLWYw+8d+xN8SDRaxys0nojEFtzFM/0Bp4WjdiY74sHwG8UeVL4NmmOS
+kII2BDsYaKgzzoAmMREx9i0CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAt3KSlG7b
+58D4w9jqz29ZgUuJYCBxQbc+64w0/9mFu2NWwV1F0+4SdnGJGKhyGC8hbegTC+CW
+464xoRpQJQZfT1hwwt/oRfy3VR+1mZffMvq6bHXZFhWqTasQNZOqgEzTj+bmpUQZ
+nK1UJhM5wR0aM2nPkvkNfMh+Ee1EOlITJs8Gv7hnO6f9I+gp1YixBe9LZs5yTnPr
+OUYxOcDfn8RE8+H+NwJ9NotK192T5ek7Lqy6TTt09uWYFuGhVW2aJdmI0IaoLhcc
+JyuTHLG5vR+67QCkJ3Qkg7qymh4wLi4pYdjdq+qBKIRmPRNswQhGx0GpamGwDdzb
+oBWJT2cgQbVESg==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:KeyDescriptor use="signing">
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIC1jCCAb6gAwIBAgIQK0qEaX+opLRN4C74lMlLFDANBgkqhkiG9w0BAQsFADAn
+MSUwIwYDVQQDExxBREZTIFNpZ25pbmcgLSBsb2dpbjEuZmhzLnNlMB4XDTE5MDMw
+OTEwNDMzN1oXDTIwMDMwODEwNDMzN1owJzElMCMGA1UEAxMcQURGUyBTaWduaW5n
+IC0gbG9naW4xLmZocy5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AK9UCzDk4ssmEmWBFJzlBI3/dBOhsV6OVYbJlWZL3MrcOsleDTlKPTdU721uWlig
+s0UhaZCfumGE03DCRcNK5sLBtp79ZxgIxdmenTQiunUhdt4c5cC0JlnzuBWdiiL0
+MbSNt5ZQ+LTDyJgXVIEaQt6y5bUYxzfHwXjvsm625nMzV9/niAWprlBkpj+2PUZm
+Ih2jzQBCmjv5zEHxIc794Ks1qkx8qJO8JIU5ybUe1odp0Xnfsk4VWBmv1Vc/zexb
+v5RK1URiRbJk+uR0KN7s4xlm7Pm3ndA6e8evSSMbLqWnNsQb2PUN4zS/MWffOS/v
+vsKTWe9XBJDmUDKkaLrlZJECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAB6PMVhpG
+pp5Kyzcbn0zWO5v8DkwOczZcnIBt3DRdkcWO6w4TpfQm11oG8Gwz6+4Al11eo08q
+Xy71YyLLi3nmNWg+c56dAHJFTiUg3kaA5igMrBfK0Tl0gFK6LCZ5BaKsnEHH0zu/
+Yxrf9yfv05rBafIZpVhwlcGVcNLumK2WXrfA0VhQLJ4elQ6Bf6hKDiK9erY3Px2C
+YAdvuNJQ0yrQlFlnFoIGpNG0DWe11tsUzodyThrs++fJl571U/V96EL6BimhuUBw
+omMQpQKd5FJ4OjaVsJ6Ib9K3c5YRdrf0gxK/LGK5Bmj0etyYU8hSO+KxykQLpXqN
+tk8V++0UwYqcLw==
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login1.fhs.se/adfs/services/trust/artifactresolution" index="0"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login1.fhs.se/adfs/ls/"/>
+	<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login1.fhs.se/adfs/ls/"/>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login1.fhs.se/adfs/ls/"/>
+	<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login1.fhs.se/adfs/ls/"/>
+	</md:IDPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="sv">Försvarshögskolan</md:OrganizationName>
+	<md:OrganizationName xml:lang="en">Swedish Defence University</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="sv">Försvarshögskolan</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Swedish Defence University</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="sv">http://www.fhs.se/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.fhs.se/en</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="administrative">
+	<md:Company>Swedish Defence University</md:Company>
+	<md:SurName>FHS IT Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@fhs.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 55342545</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:Company>Swedish Defence University</md:Company>
+	<md:SurName>FHS IT Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@fhs.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 55342545</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="support">
+	<md:Company>Swedish Defence University</md:Company>
+	<md:SurName>FHS IT Helpdesk</md:SurName>
+	<md:EmailAddress>mailto:helpdesk@fhs.se</md:EmailAddress>
+	<md:TelephoneNumber>+46 8 55342545</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

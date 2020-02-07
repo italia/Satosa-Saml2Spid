@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://test-courseware.uni.li/auth/saml/metadata.xml">
+	<md:Extensions>
+	<mdrpi:RegistrationInfo registrationAuthority="http://rr.aai.switch.ch/" registrationInstant="2019-07-05T08:52:42Z">
+		<mdrpi:RegistrationPolicy xml:lang="en">https://www.switch.ch/aai/switchaai-mrps-v2.0.pdf</mdrpi:RegistrationPolicy>
+	</mdrpi:RegistrationInfo>
+	<mdattr:EntityAttributes>
+		<saml:Attribute Name="http://macedir.org/entity-category" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+				</saml:Attribute>
+		<saml:Attribute Name="urn:oasis:names:tc:SAML:profiles:subject-id:req" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>none</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute FriendlyName="swissEduPersonHomeOrganization" Name="urn:oid:2.16.756.1.2.5.1.1.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>uni.li</saml:AttributeValue>
+		</saml:Attribute>
+		<saml:Attribute FriendlyName="swissEduPersonHomeOrganizationType" Name="urn:oid:2.16.756.1.2.5.1.1.5" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+		<saml:AttributeValue>university</saml:AttributeValue>
+		</saml:Attribute>
+	</mdattr:EntityAttributes>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+	<md:Extensions>
+		<mdui:UIInfo>
+		<mdui:DisplayName xml:lang="en">test-courseware.uni.li</mdui:DisplayName>
+		<mdui:Description xml:lang="en">Login for Developement website of courseware.uni.li</mdui:Description>
+		<mdui:Logo height="16" width="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAACF0RVh0U29mdHdhcmUAR3JhcGhpY0NvbnZlcnRlciAoSW50ZWwpd4f6GQAAACRJREFUeJxiYBgFlINdalL/icG41I4aQKIBo4BGAAAAAP//AwAhn6eucY32zQAAAABJRU5ErkJggg==</mdui:Logo>
+		<mdui:Logo height="60" width="80">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAA8CAYAAADxJz2MAAAC0GlDQ1BJQ0NQcm9maWxlAAB4nI2Uz0sUYRjHv7ONGChBYGZ7iKFDSKhMFmVE5a6/2LRtWX+UEsTs7Lu7k7Oz08zsmiIRXjpm0T0qDx76Azx46JSXwsAsAuluUUSCl5LteWfG3RHtxwsz83mfH9/ned/hfYEaWTFNPSQBecOxkn1R6fromFT7ESEcQR3CqFNU24wkEgOgwWOxa2y+h8C/K617+/866tK2mgeE/UDoR5rZKrDvF9kLWWoEELlew4RjOsT3OFue/THnlMfzrn0o2UW8SHxANS0e/5q4Q80paaBGJG7JBmJSAc7rRdXv5yA99cwYHqTvcerpLrN7fBZm0kp3P3Eb8ec06+7hmsTzGa03RtxMz1rG6h32WDihObEhj0Mjhh4f8LnJSMWv+pqi6UST2/p2abBn235LuZwgDhMnxwv9PKaRcjunckPXPBb0qVxX3Od3VjHJ6x6jmDlTd/8X9RZ6hVHoYNBg0NuAhCT6EEUrTFgoIEMejSI0sjI3xiK2Mb5npI5EgCXyr1POuptzG0XK5lkjiMYx01JRkOQP8ld5VX4qz8lfZsPF5qpnxrqpqcsPvpMur7yt63v9njx9lepGyKsjS9Z8ZU12oNNAdxljNlxV4jXY/fhmYJUsUKkVKVdp3K1Ucn02vSOBan/aPYpdml5sqtZaFRdurNQvTe/Yq8KuVbHKqnbOq3HBfCYeFU+KMbFDPAdJvCR2ihfFbpqdFwcqGcOkomHCVbKhUJaBSfKaO/6ZFwvvrLmjoY8ZzNJUiZ//hFXIaDoLHNF/uP9z8HvFo7Ei8MIGDp+u2jaS7h0iNC5Xbc4V4MI3ug/eVm3NdB4OPQEWzqhFq+RLC8IbimZ3HD7pKpiTlpbNOVK7LJ+VInQlMSlmqG0tkqLrkuuyJYvZzCqxdBvszKl2T6WedqXmU7m8Qeev9hGw9bBc/vmsXN56Tj2sAS/138C8/UXN/ALEAAAJI2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNC40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Pqfd9JIAAAAhdEVYdFNvZnR3YXJlAEdyYXBoaWNDb252ZXJ0ZXIgKEludGVsKXeH+hkAAAPLSURBVHic7JjbS1RRFMZXzjjOkDRqOmlY3siI0qDLg1Gm0cUoTI3RsgyjHiywi11U0lA00zK7QC/1UIEvDURvvfUQBZHUS9Hfc1qLvY5nexzRYpjVgtnw42zPXvucb39n7YsDjuNAhn9HXIB2xAVoR1yAdsQFaEdcgHbEBWhHXIB2xAVoR1yAdsQFaEdcgHbEBWhHXIB2xAVoR1yAdsQFaEdcgHbEBWhHXIB2xAVoR1yAdsQFaEdcgHa8SqbsRfYh4ZUELzKwOT+cSBWtBeFESShr/mV1uaFES8HSsVXhYJ2lbcSqX0VKkFlrkAeRC8gmpIvv08tuI/eYk0gcmUamkKDVHkF6kRPIG+Ql0oSs5zqVG8gHZAKpWpGB32uKnFTxa3vMaYyG5l/2vDzP+VkbSxr7G2PPFEbilrZpqz6EVCIzPMgG5Cgbu5oHCHxvNxvklvNIEXIZ2Yjcstru8LUZqec6tXfyh6Eymcy4JQ38vLXQSRVzaEz9Gs/Ax2VR59u2oqSxZGLH2mUN7GCzDvgMvMjm3OX4GTaH4rqRR5bJZNQYmGz0G7gKTIaGLKPVGjjKAwE2xjWQMuMFmEx0DcxF+pDrHD9hPYcysNj3PFrjWpMYeAh5iIyDmdYBzQbSWkSZQ9OxESlFDnMbZccOMFMtYpkW43o/MoycYnNoCm9BjrNpFBsFk7nAz9+FXLLeXwtmqejTaqCKknYD59DAL9jm58diA89Z9bNg1ieaojfBZAxN3SGmyYrPRtrBZBftppStm5FnXK8BL9MakA1ID5iMreMY6ncFaQGzJtL714HZ+fcjp7l/W1oNnEEDv6KBn7DND8W2LzRwxKrT4OiIMuBrz7P+djeQbPA2AHctzAezC1Ohqf8aKQMzxWlqT8HC4vbr4+cBx3dxH9rgaAm4llYDi7MD8cqcYLwiJ7AIPAPGo4Gs0mUMfAomA2m9GvcN+hW3DYC3bt3nKxn9no3dAyaTxtiMauQYmE0m19ePNqlBpM0ysJM/wkDaDfzLkszAQeveA1/8MF+D4GWga4SdgTvBTF3ahSnTqvl+HniZ5/ajD+EOwDaQTgS0DIz/zwZSNtGO2c2GkIGTfI8yho4zT3iQtNP2cz96YS/Xx/hK0+0t9z0C3qH5HVIOZh2lDGzk+6N87eE29xBOayv9d1MBZk3+mPkxIdU/JmTIGJgxUCPiArQjLkA74gK0Iy5AO+ICtCMuQDviArQjLkA74gK0Iy5AO+ICtCMuQDviArQjLkA74gK0Iy5AO+ICtCMuQDviArQjLkA7fwAAAP//AwCc7vsetROpDQAAAABJRU5ErkJggg==</mdui:Logo>
+		</mdui:UIInfo>
+	</md:Extensions>
+	<md:KeyDescriptor>
+		<ds:KeyInfo>
+		<ds:X509Data>
+			<ds:X509Certificate>
+MIIEQDCCAqigAwIBAgIJAKYuLLr9ZoJ4MA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMTFnRlc3QtY291cnNld2FyZS51bmkubGkwHhcNMTgxMTA5MDkxNDAxWhcNMjEx
+MTA5MDkxNDAxWjAhMR8wHQYDVQQDExZ0ZXN0LWNvdXJzZXdhcmUudW5pLmxpMIIB
+ojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA5zZS8qdECSabyti5JR/E1VpA
+f8KTYXS/R/oqLaxqNsgBV436hZfuWqJjGQDc4iypt8drdOgacuJ6GDOTY+mD531s
+thm5jlBPR7UnySHoxmg7J85ImapmmrQ+kmwZkCsdtrDxuFl6Nk4Il0+Y8JDyGSSX
+DCcA3tklI5hPJG1WUwpqI13h8bHrvuAipxcB2HH5NwhWACkJ0RRKPkNE4BNW/GfX
+s6fJJ1HyW35zaARn4I6TOCaRHp7ZCm+A5JOJvsNKN9jOhWitjz/KLWwgjsFDWhO8
++Q4GEC1JbhWSRQpeNy06KabhZItIf6Ii+hfuONO1AlDEnlzFbi/GXadiHNLmpza5
+8rbF1Eq8cF6ha6ttjwJ4gvzRZB+hi63+pcS2b8TWCItx4qfm2Rhrlfupnjl3Fc7q
+OvNex20Abbr6upyifSUthm7bmafnHsOAFUscdQ1cl+NelHIIiSe56tkGwA+0phqF
+RfUTPrPqQQ14JnNzxyH7fpdRQj9spcOkRqv5D3nLAgMBAAGjezB5MFgGA1UdEQRR
+ME+CFnRlc3QtY291cnNld2FyZS51bmkubGmGNWh0dHBzOi8vdGVzdC1jb3Vyc2V3
+YXJlLnVuaS5saS9hdXRoL3NhbWwvbWV0YWRhdGEueG1sMB0GA1UdDgQWBBSPUbx9
+5IimRS17Peor0k6/uyl2qzANBgkqhkiG9w0BAQsFAAOCAYEATo1bc3I4ql4c/vtz
+6CxlX7q+eZPEwAbTisWxmU8zOfHFfhkMB/jycJF2tc7XAwwMEbunDCjH39IlKZOv
+RQXC27S9sR9SLtrSSNMLFKaWuIS+wTdBbGTwE40FWVweV9pjQKn6R7aKaLyDAYkW
+2IAHOR0MH+ibVnOyjD/W+QusdSOkoEUak2/wJsEUOXU72s1jyCuzJkh5qF8Hs2yz
+ixOOX5Kid2oR2KZyDIzWnsVCNt5Y28DYXqtcVglOqUxLC89F4QNa4/MTZWAQCCJV
+HQSNoCnilp2BM9ZoeZf6ufDMCzR10KipBK4VVmWv8ogYZHg7/rYaczjeqlGY+Osy
+Z5+YJWAh4+l3vyMW4e34LLw1EsCgHvDTDgEV4TfgSp2jht+R3MiOGK2FgEeOmPq9
+VdOP9dzxo6YZhIUzUbaZIEw200/vkbTuXqhzhBPGntqEJEAgAl59P/1gELZDdwI4
+9wNn+RtntBaO9DWPlHBJryza/7/rALakSQovwgJ+gg8k8hwZ
+</ds:X509Certificate>
+		</ds:X509Data>
+		</ds:KeyInfo>
+	</md:KeyDescriptor>
+	<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+	<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://test-courseware.uni.li/auth/complete/tpa-saml/" index="1"/>
+	<md:AttributeConsumingService index="1">
+		<md:ServiceName xml:lang="en">test-courseware.uni.li</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">Login for Developement website of courseware.uni.li</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="email" Name="urn:oid:0.9.2342.19200300.100.1.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="givenName" Name="urn:oid:2.5.4.42" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonScopedAffiliation" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.9" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="surname" Name="urn:oid:2.5.4.4" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="eduPersonTargetedID" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.10" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="commonName" Name="urn:oid:2.5.4.3" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="displayName" Name="urn:oid:2.16.840.1.113730.3.1.241" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+		<md:RequestedAttribute FriendlyName="uid" Name="urn:oid:0.9.2342.19200300.100.1.1" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri" isRequired="true"/>
+	</md:AttributeConsumingService>
+	</md:SPSSODescriptor>
+	<md:Organization>
+	<md:OrganizationName xml:lang="en">uni.li</md:OrganizationName>
+	<md:OrganizationDisplayName xml:lang="de">Universität Liechtenstein</md:OrganizationDisplayName>
+	<md:OrganizationDisplayName xml:lang="en">Universität Liechtenstein</md:OrganizationDisplayName>
+	<md:OrganizationURL xml:lang="de">http://www.uni.li/</md:OrganizationURL>
+	<md:OrganizationURL xml:lang="en">http://www.uni.li/</md:OrganizationURL>
+	</md:Organization>
+	<md:ContactPerson contactType="support">
+	<md:GivenName>Alexander</md:GivenName>
+	<md:SurName>Hasler</md:SurName>
+	<md:EmailAddress>mailto:alexander.hasler@uni.li</md:EmailAddress>
+	<md:TelephoneNumber>00423 265 1214</md:TelephoneNumber>
+	</md:ContactPerson>
+	<md:ContactPerson contactType="technical">
+	<md:GivenName>Alexander</md:GivenName>
+	<md:SurName>Hasler</md:SurName>
+	<md:EmailAddress>mailto:alexander.hasler@uni.li</md:EmailAddress>
+	<md:TelephoneNumber>00423 265 1214</md:TelephoneNumber>
+	</md:ContactPerson>
+</md:EntityDescriptor>
+

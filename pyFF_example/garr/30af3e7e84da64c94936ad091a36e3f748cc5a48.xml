@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:eidas="http://eidas.europa.eu/saml-extensions" xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" xmlns:mdattr="urn:oasis:names:tc:SAML:metadata:attribute" xmlns:mdrpi="urn:oasis:names:tc:SAML:metadata:rpi" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:pyff="http://pyff.io/NS" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ser="http://eidas.europa.eu/metadata/servicelist" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:xrd="http://docs.oasis-open.org/ns/xri/xrd-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://idp.unisannio.it/idp/shibboleth">
+<md:Extensions>
+<mdrpi:RegistrationInfo registrationAuthority="http://www.idem.garr.it/" registrationInstant="2018-06-12T08:12:00Z">
+	<mdrpi:RegistrationPolicy xml:lang="en">https://www.idem.garr.it/raw/idem-mrps-1.0.md</mdrpi:RegistrationPolicy>
+</mdrpi:RegistrationInfo>
+<mdattr:EntityAttributes>
+	<saml:Attribute Name="http://macedir.org/entity-category-support" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri">
+	<saml:AttributeValue>http://refeds.org/category/research-and-scholarship</saml:AttributeValue>
+	<saml:AttributeValue>http://www.geant.net/uri/dataprotection-code-of-conduct/v1</saml:AttributeValue>
+	</saml:Attribute>
+</mdattr:EntityAttributes>
+</md:Extensions>
+<md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+<shibmd:Scope regexp="false">unisannio.it</shibmd:Scope>
+<mdui:UIInfo>
+<mdui:DisplayName xml:lang="en">University of Sannio</mdui:DisplayName>
+<mdui:DisplayName xml:lang="it">Università degli Studi del Sannio</mdui:DisplayName>
+<mdui:Description xml:lang="en">IdP University of Sannio - Benevento</mdui:Description>
+<mdui:Description xml:lang="it">IdP Università degli Studi del Sannio - Benevento</mdui:Description>
+<mdui:InformationURL xml:lang="it">http://www.unisannio.it/it/idp</mdui:InformationURL>
+<mdui:InformationURL xml:lang="en">http://www.unisannio.it/en/idp</mdui:InformationURL>
+<mdui:PrivacyStatementURL xml:lang="it">http://www.unisannio.it/it/idp</mdui:PrivacyStatementURL>
+<mdui:PrivacyStatementURL xml:lang="en">http://www.unisannio.it/en/idp</mdui:PrivacyStatementURL>
+<mdui:Logo height="80" width="60">https://www.sistemi-it.unisannio.it/idp/logosannio.png</mdui:Logo>
+<mdui:Logo height="16" width="16">https://www.sistemi-it.unisannio.it/idp/favicon.png</mdui:Logo>
+</mdui:UIInfo>
+<mdui:DiscoHints>
+<mdui:IPHint>193.206.108.0/23</mdui:IPHint>
+<mdui:IPHint>212.189.146.0/23</mdui:IPHint>
+<mdui:IPHint>90.147.178.0/23</mdui:IPHint>
+<mdui:DomainHint>unisannio.it</mdui:DomainHint>
+</mdui:DiscoHints>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANif0DU/ZLE2A4VCi5UeoDQOShmZMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjQw
+WhcNMzgwNTE2MTQ1NjQwWjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3zX55ZNG4F3hZRn/L+sxql58
+/wqFc70ilcDN+l5GnEeNjfvO6Df2/UnChaTC0bubYEhH5ePhVJBEAMS3HcCLuRxX
+V4TsZk0Nc/H9nBfoTgjCT1XgLygVBMTfngFONh0KrhHdmbcGnjju8O118tWE6ZZh
+eiYE6cktNS4GQ+3OQlnJrVJVPwAE/defDsLryRA4r5DtKPSoa+kcyP5kLdVdN4vu
+vkedSsQV2MVVrSmFpyJe8Q7jNv535P6THAEKVhv0uhjB1Slvaba2MJ2eO26GFnb8
+RBMeblNNNq4GpVIi1YKX0U/ga/yFPMKMZxRfi0d7W+Cd0wJavT6q8+nhRLd4DQID
+AQABo2cwZTAdBgNVHQ4EFgQUQ611k6+8cPb+jhjXfEFsmFrWkOEwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBvahCGt8QgOBVai5wU9Wif
+MZaTAS1TFkpWo+zlG1q28jF/Fm5ZM9hhg7G8NZnf0963bjRf7P3Eg3jy36oX5ysn
+vU0mUELJWHsvpESMjVc6/pqBBkJCY/cAZHmSdHBogL/R/9lhbsdH71KoMyRtZFch
+mlJlN4BYooohU/OGiVB3DPXkg6rd7qmtZ1wDiDK2kc0Vp/HAyGLjW+/i1D5XD3WY
+TugP5otslE0ZtF9VW6UQMQHnKd+kEVKcWoK1mNdeW5e9D74CTu6TyhnI5lMQBRbs
+xqDzrUUTkDHB2pODaLRi0JTX2SruO/KKD5nWfS/aRsFqEucPCzFimP5eoUNOCIHA
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANQ3mP7E8ZW+jWZhG6pFSE3o64PxMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjM5
+WhcNMzgwNTE2MTQ1NjM5WjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1RZtPlhMZNgNn1OW0JyyMxrq
+5PVpnEH2HKKl57+SbpG+he66qYSd6C+egVBvCcjDYAQwit+F6N1XwjO/m/rwQfE4
+W+esTj+up+92uGKAm++UhraAGPAjS6LUKXrxLXSTd+mwnhsN383Q7OYLOjcfsJj9
+xlylmsjUqv8BxSZsrmvuzo74IK8vwaTx0Xi8ohQykys0IsRpAz5SFE5WIs4h02Hj
+/+bfEypZkAJhbqVCeto0KBwrVMCC0ker2ExIVnOzpYCyZqNGyVR6yXVD+7/8Uv0j
+J9c8B+TXJSjlVy6p9uJ+qgrxejIYS/Me/naQVY28gBkyhAAB3XC14UZMjipu5QID
+AQABo2cwZTAdBgNVHQ4EFgQUyRJtZV0IeQRVKIz5pTICKW/bbtIwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCvlNZXnibFyJeOjc83Q4Ou
+hZvCrN/6gKR/ZbDrB34SBrybDyaIQ0+12abkCRPoegs7DMdXe7JYFc6XQGKTgkRc
+iPCeIo1fCuar53qym/8eytX5x7EnWjG6aaGLzieWTtn/jf9unYSyShTDq/F/thAH
+wGSV2nq5NxGvp4xaRAf7OpEDbrNuqkJ6L82izodIxJxo4b7BK5UyFuB+Jllym34x
+WpusQUTNXmbnv7gj1j8ixitiGBCDIQTMI0rXFJwNs1w9HO2JQXdxQwWtCc1DwaVV
++BQThCXPWfYvig64Vig4ULlmoleq2Yjfil+Z1fHdkMBi7i7wIfDChy2HRST/kW7w
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAM7EiSxfzKuTA6yiEe6TEoB2g76AMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjQw
+WhcNMzgwNTE2MTQ1NjQwWjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj0kP1TafhuVhrxlxEeqy9nvG
+zU9mftLrWmf+/u+VofijQrrMN9+EgeQcquBWoSvxw11rtteg3cPhA8g2UT9HpTl2
+l8d8Rrp3wosQRGMGdh9eiKXO8kgzrA/hww+1kiZyTx1wA+x+bYM2jJMVJ+oPxwFW
+AuLvH2wtsX67upHXCt2ND3jY4rcKHGqe3dV3mRcRnl6P8nwcffQEu5B/7avxXSgm
+W9zGtv5aO7kKrPuEuFvi0L2D+kWAolqwxb2+hCS3T/utPmRTRCgYcZbLyAYHbAGo
+jSx+qozT4PyY3e5VQB6Io/IUdG3fIIyX1uFKCLNeCBvQRFoK08/+b5DZWanQLQID
+AQABo2cwZTAdBgNVHQ4EFgQUPicOyeAaZuVFC/P7ruZVGKeNw1IwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBe4Cgpt/Uo1CUShsYGcCO3
+Pg/IPBiBqbYzAjNCe67xfVK5ojZ/eKmf4haR4kwwFXMJmT0oHk/2sR5Hzy77mmmI
+5RLpTQkgxvvAyhm8UXWdmHp6a60YS037gJbvBAIw/3F1Aee36sh1CidXujFV7OCP
+p1d6SDjMe65+RjfTibFmsRF2qnQ5cS0EVthd/Rw+13NUWQqg3O3TftaKJq7/lpXV
+VYUXRSTMA2nfhjXrbK0Bz9BJAHaagts27RPasSx5biptGTPv7t0UMb7qUfSTpUez
+MTZVucBiSe2YDHGF6/ZemnBLP3JyCGyAL68jlx71Gv+WCczKQn49qeKcxVXOCLCz
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unisannio.it/idp/profile/SAML2/SOAP/ArtifactResolution" index="1"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.unisannio.it/idp/profile/SAML2/POST/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.unisannio.it/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.unisannio.it/idp/profile/SAML2/Redirect/SSO"/>
+</md:IDPSSODescriptor>
+<md:AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:Extensions>
+	<shibmd:Scope regexp="false">unisannio.it</shibmd:Scope>
+</md:Extensions>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANif0DU/ZLE2A4VCi5UeoDQOShmZMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjQw
+WhcNMzgwNTE2MTQ1NjQwWjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3zX55ZNG4F3hZRn/L+sxql58
+/wqFc70ilcDN+l5GnEeNjfvO6Df2/UnChaTC0bubYEhH5ePhVJBEAMS3HcCLuRxX
+V4TsZk0Nc/H9nBfoTgjCT1XgLygVBMTfngFONh0KrhHdmbcGnjju8O118tWE6ZZh
+eiYE6cktNS4GQ+3OQlnJrVJVPwAE/defDsLryRA4r5DtKPSoa+kcyP5kLdVdN4vu
+vkedSsQV2MVVrSmFpyJe8Q7jNv535P6THAEKVhv0uhjB1Slvaba2MJ2eO26GFnb8
+RBMeblNNNq4GpVIi1YKX0U/ga/yFPMKMZxRfi0d7W+Cd0wJavT6q8+nhRLd4DQID
+AQABo2cwZTAdBgNVHQ4EFgQUQ611k6+8cPb+jhjXfEFsmFrWkOEwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBvahCGt8QgOBVai5wU9Wif
+MZaTAS1TFkpWo+zlG1q28jF/Fm5ZM9hhg7G8NZnf0963bjRf7P3Eg3jy36oX5ysn
+vU0mUELJWHsvpESMjVc6/pqBBkJCY/cAZHmSdHBogL/R/9lhbsdH71KoMyRtZFch
+mlJlN4BYooohU/OGiVB3DPXkg6rd7qmtZ1wDiDK2kc0Vp/HAyGLjW+/i1D5XD3WY
+TugP5otslE0ZtF9VW6UQMQHnKd+kEVKcWoK1mNdeW5e9D74CTu6TyhnI5lMQBRbs
+xqDzrUUTkDHB2pODaLRi0JTX2SruO/KKD5nWfS/aRsFqEucPCzFimP5eoUNOCIHA
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="signing">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVANQ3mP7E8ZW+jWZhG6pFSE3o64PxMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjM5
+WhcNMzgwNTE2MTQ1NjM5WjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1RZtPlhMZNgNn1OW0JyyMxrq
+5PVpnEH2HKKl57+SbpG+he66qYSd6C+egVBvCcjDYAQwit+F6N1XwjO/m/rwQfE4
+W+esTj+up+92uGKAm++UhraAGPAjS6LUKXrxLXSTd+mwnhsN383Q7OYLOjcfsJj9
+xlylmsjUqv8BxSZsrmvuzo74IK8vwaTx0Xi8ohQykys0IsRpAz5SFE5WIs4h02Hj
+/+bfEypZkAJhbqVCeto0KBwrVMCC0ker2ExIVnOzpYCyZqNGyVR6yXVD+7/8Uv0j
+J9c8B+TXJSjlVy6p9uJ+qgrxejIYS/Me/naQVY28gBkyhAAB3XC14UZMjipu5QID
+AQABo2cwZTAdBgNVHQ4EFgQUyRJtZV0IeQRVKIz5pTICKW/bbtIwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQCvlNZXnibFyJeOjc83Q4Ou
+hZvCrN/6gKR/ZbDrB34SBrybDyaIQ0+12abkCRPoegs7DMdXe7JYFc6XQGKTgkRc
+iPCeIo1fCuar53qym/8eytX5x7EnWjG6aaGLzieWTtn/jf9unYSyShTDq/F/thAH
+wGSV2nq5NxGvp4xaRAf7OpEDbrNuqkJ6L82izodIxJxo4b7BK5UyFuB+Jllym34x
+WpusQUTNXmbnv7gj1j8ixitiGBCDIQTMI0rXFJwNs1w9HO2JQXdxQwWtCc1DwaVV
++BQThCXPWfYvig64Vig4ULlmoleq2Yjfil+Z1fHdkMBi7i7wIfDChy2HRST/kW7w
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:KeyDescriptor use="encryption">
+	<ds:KeyInfo>
+	<ds:X509Data>
+	<ds:X509Certificate>
+MIIDLDCCAhSgAwIBAgIVAM7EiSxfzKuTA6yiEe6TEoB2g76AMA0GCSqGSIb3DQEB
+CwUAMBsxGTAXBgNVBAMMEGlkcC51bmlzYW5uaW8uaXQwHhcNMTgwNTE2MTQ1NjQw
+WhcNMzgwNTE2MTQ1NjQwWjAbMRkwFwYDVQQDDBBpZHAudW5pc2FubmlvLml0MIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAj0kP1TafhuVhrxlxEeqy9nvG
+zU9mftLrWmf+/u+VofijQrrMN9+EgeQcquBWoSvxw11rtteg3cPhA8g2UT9HpTl2
+l8d8Rrp3wosQRGMGdh9eiKXO8kgzrA/hww+1kiZyTx1wA+x+bYM2jJMVJ+oPxwFW
+AuLvH2wtsX67upHXCt2ND3jY4rcKHGqe3dV3mRcRnl6P8nwcffQEu5B/7avxXSgm
+W9zGtv5aO7kKrPuEuFvi0L2D+kWAolqwxb2+hCS3T/utPmRTRCgYcZbLyAYHbAGo
+jSx+qozT4PyY3e5VQB6Io/IUdG3fIIyX1uFKCLNeCBvQRFoK08/+b5DZWanQLQID
+AQABo2cwZTAdBgNVHQ4EFgQUPicOyeAaZuVFC/P7ruZVGKeNw1IwRAYDVR0RBD0w
+O4IQaWRwLnVuaXNhbm5pby5pdIYnaHR0cHM6Ly9pZHAudW5pc2FubmlvLml0L2lk
+cC9zaGliYm9sZXRoMA0GCSqGSIb3DQEBCwUAA4IBAQBe4Cgpt/Uo1CUShsYGcCO3
+Pg/IPBiBqbYzAjNCe67xfVK5ojZ/eKmf4haR4kwwFXMJmT0oHk/2sR5Hzy77mmmI
+5RLpTQkgxvvAyhm8UXWdmHp6a60YS037gJbvBAIw/3F1Aee36sh1CidXujFV7OCP
+p1d6SDjMe65+RjfTibFmsRF2qnQ5cS0EVthd/Rw+13NUWQqg3O3TftaKJq7/lpXV
+VYUXRSTMA2nfhjXrbK0Bz9BJAHaagts27RPasSx5biptGTPv7t0UMb7qUfSTpUez
+MTZVucBiSe2YDHGF6/ZemnBLP3JyCGyAL68jlx71Gv+WCczKQn49qeKcxVXOCLCz
+</ds:X509Certificate>
+	</ds:X509Data>
+	</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.unisannio.it/idp/profile/SAML2/SOAP/AttributeQuery"/>
+</md:AttributeAuthorityDescriptor>
+<md:Organization>
+<md:OrganizationName xml:lang="it">Università degli Studi del Sannio</md:OrganizationName>
+<md:OrganizationName xml:lang="en">University of Sannio</md:OrganizationName>
+<md:OrganizationDisplayName xml:lang="it">Università degli Studi del Sannio</md:OrganizationDisplayName>
+<md:OrganizationDisplayName xml:lang="en">University of Sannio</md:OrganizationDisplayName>
+<md:OrganizationURL xml:lang="it">http://www.unisannio.it/it/idp</md:OrganizationURL>
+<md:OrganizationURL xml:lang="en">http://www.unisannio.it/en/idp</md:OrganizationURL>
+</md:Organization>
+<md:ContactPerson contactType="technical">
+<md:GivenName>Sabato</md:GivenName>
+<md:SurName>Melillo</md:SurName>
+<md:EmailAddress>mailto:sabato.melillo@unisannio.it</md:EmailAddress>
+</md:ContactPerson>
+<md:ContactPerson contactType="administrative">
+<md:GivenName>Rosario</md:GivenName>
+<md:SurName>Altieri</md:SurName>
+<md:EmailAddress>mailto:rosario.altieri@unisannio.it</md:EmailAddress>
+</md:ContactPerson>
+</md:EntityDescriptor>
+
