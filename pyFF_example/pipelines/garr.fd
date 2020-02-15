@@ -7,14 +7,11 @@
     - publish:
          output: ./garr/garr-loaded.xml
     - stats
-    - break
 # MDX server
 - when request:
     - select
     - pipe:
         - when accept application/xml:
-            - xslt:
-                stylesheet: tidy.xsl
             - first
             - finalize:
                cacheDuration: PT5H
@@ -25,7 +22,5 @@
             - emit application/xml
             - break
         - when accept application/json:
-            - xslt:
-                stylesheet: discojson.xsl
-            - emit application/json:
+            - emit application/json
             - break
