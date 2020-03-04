@@ -1,4 +1,5 @@
-apt install python3-pip
+````
+apt install python3-pip xmlsec1
 
 cd /opt
 mkdir apps
@@ -17,4 +18,9 @@ rm -R saml2/
 rm -R satosa
 ln -s /opt/apps/satosa/src/satosa .
 ln -s /opt/apps/pysaml2/src/saml2 .
+popd
 
+pip install -r apps/satosa/tests/test_requirements.txt 
+pip install -r apps/pysaml2/tests/test-requirements.txt 
+
+````
