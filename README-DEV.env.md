@@ -18,7 +18,7 @@ git clone https://peppelinux_unical@bitbucket.org/unical-ict-dev/proxy.auth.unic
 mv tmp/* .
 
 pip install git+https://github.com/peppelinux/pysaml2@pplnx-v5
-pip install git+https://github.com/peppelinux/satosa@pplnx-v6
+pip install git+https://github.com/peppelinux/satosa@pplnx-v6.1.0
 
 pushd django-pysaml2.env/lib/python3.7/site-packages/
 rm -R saml2/
