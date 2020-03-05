@@ -46,7 +46,9 @@ pytest /opt/apps/satosa/tests/ -x
 sudo mkdir -p /var/log/uwsgi/
 sudo chown -R wert /var/log/uwsgi/
 
-# run satosa in debug mode
-uwsgi --ini uwsgi_setup/uwsgi.ini
+# server tuning
+cat /opt/satosa-saml2/uwsgi_setup/server-tuning.sh > /etc/sysctl.d/server-tuning.conf
 
+# run satosa in debug mode
+uwsgi --init /opt/satosa-saml2/uwsgi_setup/uwsgi.ini.debug
 ````
