@@ -33,23 +33,15 @@ These patches/feature will be always available [here](https://github.com/peppeli
 
 #### Installing requirements
 ````
-pip install git+https://github.com/peppelinux/pysaml2.git@pplnx-dev
-pip install git+https://github.com/peppelinux/SATOSA.git@pplnx-dev
+apt install -y libffi-dev libssl-dev xmlsec1
+pip install -r requirements.txt
 ````
 
 
 ## Prepare environment
 ```
-apt install -y libffi-dev libssl-dev xmlsec1
 virtualenv -ppython3 satosa.env
 source satosa.env/bin/activate
-
-pip install git+https://github.com/peppelinux/pysaml2/tree/pplnx-dev
-pip install git+https://github.com/peppelinux/SATOSA/tree/pplnx-dev
-
-cd SATOSA
-python3 ./setup.py install
-cd ..
 ```
 
 ## Copy required files
@@ -72,13 +64,6 @@ cp SATOSA/example/plugins/backends/saml2_backend.yaml.example $DESTDIR/plugins/
 FQDN="satosa.testunical.it"
 openssl req -nodes -new -x509 -days 3650 -keyout frontend.key -out frontend.cert -subj '/CN=$FQDN'
 openssl req -nodes -new -x509 -days 3650 -keyout backend.key -out backend.cert -subj '/CN=$FQDN'
-````
-
-## Get SPs and IDPs metadata
-for example
-````
-wget http://sp1.testunical.it:8000/saml2/metadata -O metadata/sp1.xml
-wget http://idp1.testunical.it:9000/idp/metadata -O metadata/idp1.xml
 ````
 
 ## Configure the proxy
@@ -140,6 +125,13 @@ backend.xml to target IDP, frontend.xml to SP... It would be better if they use 
 ````
 cat frontend.xml > ../djangosaml2_sp/saml2_sp/saml2_config/satosa_frontend.xml
 cat backend.xml > ../unicalauth/idp/saml2_config/metadata/satosa_backend.xml
+````
+
+## Get SPs and IDPs metadata
+for example
+````
+wget http://sp1.testunical.it:8000/saml2/metadata -O metadata/sp1.xml
+wget http://idp1.testunical.it:9000/idp/metadata -O metadata/idp1.xml
 ````
 
 ## Todo:
