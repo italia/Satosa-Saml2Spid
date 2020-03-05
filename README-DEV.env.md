@@ -1,6 +1,6 @@
 ````
 # as root
-apt install python3-pip xmlsec1 sudo 
+apt install -y python3-pip xmlsec1 sudo procps
 
 USER_OP=wert
 adduser $USER_OP
@@ -41,6 +41,12 @@ sudo service mongod start
 
 pytest /opt/apps/pysaml2/tests/ -x
 pytest /opt/apps/satosa/tests/ -x
+# end tests
 
+sudo mkdir -p /var/log/uwsgi/
+sudo chown -R wert /var/log/uwsgi/
+
+# run satosa in debug mode
+uwsgi --ini uwsgi_setup/uwsgi.ini
 
 ````
