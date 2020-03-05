@@ -29,13 +29,18 @@ popd
 
 pip install -r apps/satosa/tests/test_requirements.txt 
 pip install -r apps/pysaml2/tests/test-requirements.txt 
+pip install cookies_samesite_compat
+pip install uwsgi
 
 # runs test to be sure to do the right thing 
 sudo apt install -y wget gnupg
 sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
 sudo echo "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 sudo apt install -y mongodb-org
+sudo service mongod start
 
 pytest /opt/apps/pysaml2/tests/ -x
 pytest /opt/apps/satosa/tests/ -x
+
+
 ````
