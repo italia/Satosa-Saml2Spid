@@ -63,7 +63,13 @@ uwsgi --init /opt/satosa-saml2/uwsgi_setup/uwsgi.ini.debug
 
 # run unicalDS
 
-# schedule pyff
+# run pyff
+sudo apt install build-essential python3-dev libxml2-dev libxslt1-dev libyaml-dev python3-pip
+pushd pyff
+pip install git+https://github.com/IdentityPython/pyFF.git
+pyff --loglevel=DEBUG pipelines/md.fd
+popd
+
 
 # run Django-MDQ
 
