@@ -20,6 +20,14 @@ mv tmp/* .
 pip install git+https://github.com/peppelinux/pysaml2@pplnx-v5
 pip install git+https://github.com/peppelinux/satosa@pplnx-v6.1.0
 
+git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2 apps/pysaml2
+git clone -b pplnx-v6.1.0 https://github.com/peppelinux/satosa apps/satosa
+git clone https://github.com/UniversitaDellaCalabria/info-manager.git apps/info-manager
+git clone https://github.com/UniversitaDellaCalabria/unicalDiscoveryService.git apps/unicalDiscoveryService
+
+sudo apt install python3-pillow # gets dependencies
+pip install pillow
+
 pushd django-pysaml2.env/lib/python3.7/site-packages/
 rm -R saml2/
 rm -R satosa
@@ -52,4 +60,11 @@ cat /opt/satosa-saml2/uwsgi_setup/server-tuning.sh > /etc/sysctl.d/server-tuning
 
 # run satosa in debug mode
 uwsgi --init /opt/satosa-saml2/uwsgi_setup/uwsgi.ini.debug
+
+# run unicalDS
+
+# schedule pyff
+
+# run Django-MDQ
+
 ````
