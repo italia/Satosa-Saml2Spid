@@ -59,7 +59,7 @@ sudo chown -R wert /var/log/uwsgi/
 cat /opt/satosa-saml2/uwsgi_setup/server-tuning.sh > /etc/sysctl.d/server-tuning.conf
 
 # run satosa in debug mode
-uwsgi --init /opt/satosa-saml2/uwsgi_setup/uwsgi.ini.debug
+uwsgi --ini /opt/satosa-saml2/uwsgi_setup/uwsgi.ini.debug
 
 # run unicalDS
 
