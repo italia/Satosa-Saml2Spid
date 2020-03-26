@@ -72,5 +72,36 @@ popd
 
 
 # run Django-MDQ
+sudo apt install libxmlsec1-dev
+pip install -r django_mdq/requirements.txt
+
+# UnicalDS here...
+pip install -r unicalDS/requirements.txt  
+
+# these as root ...
+# rsync -prozE --progress wert@proxy.fqdn:/etc/ssl/* /etc/ssl
+# rsync -prozE --progress wert@proxy.fqdn:/etc/nginx/* /etc/nginx
+
+cat /opt/satosa-saml2/uwsgi_setup/satosa_init > /etc/init.d/satosa_saml2
+chmod 744 /etc/init.d/satosa_saml2
+update-rc.d satosa_saml2 defaults
+update-rc.d satosa_saml2 enable
+
+cat /opt/unicalDS/uwsgi_setup/django_init     > /etc/init.d/unicalDS
+chmod 744 /etc/init.d/unicalDS
+update-rc.d unicalDS defaults
+update-rc.d unicalDS enable
+
+cat /opt/django_mdq/uwsgi_setup/django_init   > /etc/init.d/django_mdq 
+chmod 744 /etc/init.d/django_mdq
+update-rc.d django_mdq defaults
+update-rc.d django_mdq enable
+
+mkdir /var/log/uwsgi
+chown -R wert /var/log/uwsgi
+
+sysctl -w net.core.somaxconn=10000
+echo "net.core.somaxconn=10000" >> /etc/sysctl.conf
+
 
 ````
