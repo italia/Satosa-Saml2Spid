@@ -35,7 +35,7 @@ ln -s /opt/apps/satosa/src/satosa .
 ln -s /opt/apps/pysaml2/src/saml2 .
 popd
 
-pip install -r satosa_saml2/requirements.txt 
+pip install -r satosa-saml2/requirements.txt 
 pip install -r apps/satosa/tests/test_requirements.txt 
 pip install -r apps/pysaml2/tests/test-requirements.txt 
 pip install cookies_samesite_compat
