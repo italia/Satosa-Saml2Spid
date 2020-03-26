@@ -71,7 +71,7 @@ pyff --loglevel=DEBUG pipelines/md.fd
 popd
 
 # run Django-MDQ
-sudo apt -y install libxmlsec1-dev
+sudo apt -y install libxmlsec1-dev pkg-config
 pip install -r django_mdq/requirements.txt
 
 # UnicalDS here...
