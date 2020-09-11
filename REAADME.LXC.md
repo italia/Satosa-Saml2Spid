@@ -4,14 +4,13 @@ CNT=proxyauth
 lxc-create  -t download -n $CNT -- -d debian -r buster -a amd64
 
 echo '
-# lxc Network configuration example
-# lxc.network.type = veth
-# lxc.network.flags = up
-# lxc.network.link = lxc-br0
-# lxc.network.hwaddr = 00:FF:A1:01:03:09
-lxc.network.name = eth0
-lxc.network.ipv4 = 10.0.3.93/24 10.0.3.255
-lxc.network.ipv4.gateway = 10.0.3.1
+# Network configuration
+lxc.net.0.type = veth
+lxc.net.0.link = lxcbr0
+lxc.net.0.flags = up
+lxc.net.0.hwaddr = 00:16:3e:80:e4:7b
+lxc.net.0.ipv4.address = 10.0.3.93/24
+lxc.net.0.ipv4.gateway = 10.0.3.1
 ' >> /var/lib/lxc/$CNT/config
 
 # sysctl -w net.ipv4.ip_forward=1
@@ -29,32 +28,30 @@ apt clean
 
 pip3 install virtualenv uwsgi pillow cookies_samesite_compat
 
-adduser --disabled-password --gecos "" wert
-mkdir /home/wert
-chown wert /home/wert/
+VENV=idpy
 
-cd /opt
-chown -R wert .
-
-virtualenv -ppython3 django-pysaml2.env
-source django-pysaml2.env/bin/activate
+virtualenv -ppython3 $VENV.env
+source idpy.env/bin/activate
 pip install git+https://github.com/peppelinux/pysaml2@pplnx-v5
 pip install git+https://github.com/peppelinux/satosa@pplnx-v6.1.0
+pip install git+https://github.com/peppelinux/pyMultiLDAP
+pip install https://github.com/UniversitaDellaCalabria/SATOSA-uniExt.git
 
 git clone https://peppelinux_unical@bitbucket.org/unical-ict-dev/proxy.auth.unical.it.git tmp
 mv tmp/* .
 
-git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2 apps/pysaml2
-git clone -b pplnx-v6.1.0 https://github.com/peppelinux/satosa apps/satosa
-git clone https://github.com/UniversitaDellaCalabria/info-manager.git apps/info-manager
-git clone https://github.com/UniversitaDellaCalabria/unicalDiscoveryService.git apps/unicalDiscoveryService
-
-pushd django-pysaml2.env/lib/python3.7/site-packages/
-rm -R saml2/
-rm -R satosa
-ln -s /opt/apps/satosa/src/satosa .
-ln -s /opt/apps/pysaml2/src/saml2 .
-popd
+# just for development
+# mkdir apps
+# git clone https://github.com/UniversitaDellaCalabria/info-manager.git apps/info-manager
+# git clone https://github.com/UniversitaDellaCalabria/unicalDiscoveryService.git apps/unicalDiscoveryService
+# git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2 apps/pysaml2
+# git clone -b pplnx-v6.1.0 https://github.com/peppelinux/satosa apps/SATOSA
+# pushd django-pysaml2.env/lib/python3.7/site-packages/
+# rm -R saml2/
+# rm -R satosa
+# ln -s /opt/apps/satosa/src/satosa .
+# ln -s /opt/apps/pysaml2/src/saml2 .
+# popd
 
 pip install -r satosa-saml2/requirements.txt 
 pip install -r unicalDS/requirements.txt 
@@ -68,6 +65,13 @@ pip install -r django_mdq/requirements.txt
 #pushd /etc
 #tar xzvfp /opt/*tar.gz
 #popd
+
+USER=wert
+adduser --disabled-password --gecos "" $USER
+mkdir /home/$USER
+chown wert /home/$USER/
+cd /opt
+chown -R $USER /opt
 
 cat /opt/satosa-saml2/uwsgi_setup/satosa_init > /etc/init.d/satosa_saml2
 chmod 744 /etc/init.d/satosa_saml2
