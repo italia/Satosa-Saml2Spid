@@ -1,7 +1,6 @@
-#########
 # PySAML2
-#########
 
+````
 git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2
 cd pysaml2/
 
@@ -35,12 +34,11 @@ git pull origin  authn_3tuple_acs
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
 git pull origin ns_prefixes  
+````
 
-
-####################
 # SATOSA
-####################
 
+````
 git clone https://github.com/peppelinux/satosa
 cd SATOSA
 git remote add idpy https://github.com/IdentityPython/SATOSA.git
@@ -70,3 +68,4 @@ git pull origin context_state_error_msg
 
 # https://github.com/IdentityPython/SATOSA/pull/325
 git pull origin error_redirect_page
+````
