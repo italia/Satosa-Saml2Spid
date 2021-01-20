@@ -27,7 +27,7 @@ config:
         # - url:https://kalmar2.org/simplesaml/module.php/aggregator/?id=kalmarcentral2&set=saml2
           # cert:null
       mdq:
-        - url: "http://mdq.auth.unical.it"
+        - url: "http://mdq.auth.unical.it/static/sha1"
       # using pyFF or other MDX server
       # mdq:
         # - url: "http://127.0.0.1:8001"
@@ -74,8 +74,8 @@ config:
             height: "100"
         name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:persistent', 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
 
-        want_authn_requests_signed: true
-        want_authn_requests_only_with_valid_cert: true
+        # want_authn_requests_signed: true
+        want_authn_requests_only_with_valid_cert: false
 
         policy:
           default:
@@ -88,10 +88,8 @@ config:
             sign_assertion: true
 
             # they works both with ppln-dev branch
-            # sign_alg: 'SIG_RSA_SHA384'
-            # digest_alg: 'DIGEST_SHA384'
-            sign_alg: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
-            digest_alg: "http://www.w3.org/2001/04/xmlenc#sha256"
+            signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+            digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
 
             encrypt_assertion: false
             encrypted_advice_attributes: false

@@ -33,8 +33,8 @@ config:
       # probably some data is lost in metadata catalogue
       # local: [./metadata/idpspid1.xml]
       # using pyFF or other MDX server
-      # mdq:
-        # - url: "http://mdq.auth.unical.it"
+      mdq:
+        - url: "http://mdq.auth.unical.it/static/sha1"
       # mdq:
         # - url: "http://sp1.testunical.it:8001/"
           # cert: ukfederation-mdq.pem
@@ -75,11 +75,8 @@ config:
         want_response_signed: true
         want_assertions_signed: true
 
-        # they works both with ppln-dev branch
-        # sign_alg: 'SIG_RSA_SHA384'
-        # digest_alg: 'DIGEST_SHA384'
-        sign_alg: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
-        digest_alg: "http://www.w3.org/2001/04/xmlenc#sha256"
+        signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+        digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
 
         # security
         only_use_keys_in_metadata: true

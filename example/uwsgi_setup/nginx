@@ -16,7 +16,7 @@ server {
     server_name proxy.auth.unical.it;
     listen 443 ssl;
 
-    ssl_certificate /etc/ssl/certs/proxy.auth.unical.it/auth_unical_it.crt;
+    ssl_certificate /etc/ssl/certs/proxy.auth.unical.it/proxy_auth_unical_it.crt;
     ssl_certificate_key /etc/ssl/certs/proxy.auth.unical.it/server.key;
 
     access_log /var/log/nginx/satosa-saml2.log;
@@ -24,6 +24,9 @@ server {
 
     # max upload size
     client_max_body_size 8M;
+    
+    # very long url for delega ticket
+    large_client_header_buffers 4 16k;
 
     # gestione timeout in tutte le salse
     # more time for 502 gateway timeout
@@ -71,8 +74,24 @@ server {
     location / {
         uwsgi_pass  satosa-saml2;
         uwsgi_param HTTP_X_FORWARDED_PROTOCOL https;
-        uwsgi_read_timeout 724;
+	
+        # fix: Cookie SameSite: https://github.com/IdentityPython/SATOSA/issues/245
+        proxy_cookie_path ~(/*) "$1; SameSite=None; Secure";
+
+        # Enable HTTP Strict Transport Security with a 2 year duration
+        add_header Strict-Transport-Security "max-age=63072000; ";
+        
+        # deny iFrame
+        add_header X-Frame-Options "DENY";
+
+        uwsgi_read_timeout 40;
         include     /opt/satosa-saml2/uwsgi_setup/uwsgi_params; # the uwsgi_params file you installed
-    }
+
+        # fix long url upstream buffer size
+        uwsgi_buffer_size          128k;
+        uwsgi_buffers              4 256k;
+        uwsgi_busy_buffers_size    256k;
+    
+}
 
 }

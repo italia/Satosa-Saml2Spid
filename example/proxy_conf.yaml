@@ -3,14 +3,24 @@
 BASE: "https://satosa.testunical.it"
 INTERNAL_ATTRIBUTES: "internal_attributes.yaml"
 COOKIE_STATE_NAME: "SAML2_PROXY_STATE"
-STATE_ENCRYPTION_KEY: "CHANGE_ME_!"
+CONTEXT_STATE_DELETE: yes
+
+# TODO: PR to add this in config!
+#STATE_COOKIE_MAX_AGE = 1200
+
+STATE_ENCRYPTION_KEY: "CHANGE_ME!"
+
+cookies_samesite_compat:
+  - ["SATOSA_STATE", "SATOSA_STATE_LEGACY"]
 
 # The proxy can hash any attribute value (e.g., for obfuscation) before passing it on to the client
 # DEPRECATED, use hasher microservice instead
-USER_ID_HASH_SALT: "!£$£$HIhsjfhsASDFU$%TGSDF"
+USER_ID_HASH_SALT: "CHANGE_ME!"
+
+UNKNOW_ERROR_REDIRECT_PAGE: "https://ds.auth.unical.it/info_page/authproxy-error-page/"
 
 CUSTOM_PLUGIN_MODULE_PATHS:
-  - "plugins/ping"
+  #- "plugins/ping"
   - "plugins/backends"
   - "plugins/frontends"
   - "plugins/micro_services"
@@ -20,10 +30,8 @@ BACKEND_MODULES:
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
 MICRO_SERVICES:
-  - "plugins/microservices/multi_ldap_attribute_store.yaml"
-  #- "plugins/microservices/static_attributes.yaml"
-  # - "plugins/microservices/hasher.yaml"
-  - "plugins/microservices/spid_unical_account_linking.yaml"
+  # - "plugins/microservices/spid_unical_account_linking.yaml"
+  # - "plugins/microservices/multiple_ldap_attribute_store.yaml"
   # - "plugins/microservices/ldap_attribute_store.yaml"
   # re-process again after new attributes beign pushed (or not) from ldap store
   # - "plugins/microservices/spid_unical_account_linking.yaml"
@@ -36,21 +44,32 @@ LOGGING:
   handlers:
     console:
       class: logging.StreamHandler
-      level: DEBUG
+      level: INFO
       formatter: simple
       stream: ext://sys.stdout
-    # info_file_handler:
-      # class: logging.handlers.RotatingFileHandler
-      # level: INFO
-      # formatter: simple
-      # filename: info.log
-      # maxBytes: 10485760 # 10MB
-      # backupCount: 20
-      # encoding: utf8
+    debug_file:
+      class: logging.handlers.RotatingFileHandler
+      level: DEBUG
+      formatter: simple
+      filename: /var/log/uwsgi/satosa_debug.log
+      maxBytes: 104857600 # 100MB
+      backupCount: 20
+      encoding: utf8
   loggers:
     satosa:
-      level: DEBUG
+      level: INFO
+      formatter: simple
       handlers: [console]
+      propagate: no
+    saml2:
+      level: ERROR
+      formatter: simple
+      handlers: [console]
+      propagate: no
+    satosa.frontends.saml2:
+      level: DEBUG
+      formatter: simple
+      handlers: [debug_file]
       propagate: no
   # root:
     # level: INFO

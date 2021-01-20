@@ -10,8 +10,7 @@ from saml2.sigver import security_context
 from saml2.validate import valid_instance
 from satosa.backends.saml2 import SAMLBackend
 from satosa.context import Context
-from satosa.exception import SATOSAAuthenticationError
-from satosa.logging_util import satosa_logging
+from satosa.exception import SATOSAAuthenticationError, SATOSAStateError
 from satosa.response import SeeOther, Response
 from satosa.saml_util import make_saml_response
 from six import text_type
@@ -36,7 +35,7 @@ class SpidSAMLBackend(SAMLBackend):
         :param context: The current context
         :return: response with metadata
         """
-        satosa_logging(logger, logging.DEBUG, "Sending metadata response", context.state)
+        logger.debug("Sending metadata response")
         conf = self.sp.config
         metadata = entity_descriptor(conf)
         # creare gli attribute_consuming_service
@@ -78,11 +77,12 @@ class SpidSAMLBackend(SAMLBackend):
     def get_kwargs_sign_dig_algs(self):
         kwargs = {}
         # backend support for selectable sign/digest algs
-        for alg in ('sign_alg', 'digest_alg'):
+        alg_dict = dict(signing_algorithm = 'sign_alg',
+						digest_algorithm = 'digest_alg')
+        for alg in alg_dict:
             selected_alg = self.config['sp_config']['service']['sp'].get(alg)
             if not selected_alg: continue
-            kwargs[alg] = getattr(saml2.xmldsig,
-                                  util.xmldsig_validate_w3c_format(selected_alg))
+            kwargs[alg_dict[alg]] = selected_alg
         return kwargs
 
 
@@ -93,7 +93,7 @@ class SpidSAMLBackend(SAMLBackend):
             with open(self.idp_blacklist_file) as blacklist_file:
                 blacklist_array = json.load(blacklist_file)['blacklist']
                 if entity_id in blacklist_array:
-                    satosa_logging(logger, logging.DEBUG, "IdP with EntityID {} is blacklisted".format(entity_id), context.state, exc_info=False)
+                    logger.debug("IdP with EntityID {} is blacklisted".format(entity_id))
                     raise SATOSAAuthenticationError(context.state, "Selected IdP is blacklisted for this backend")
 
 
@@ -132,8 +132,7 @@ class SpidSAMLBackend(SAMLBackend):
             #client = saml2.client.Saml2Client(conf)
             client = self.sp
 
-            satosa_logging(logger, logging.DEBUG, "binding: %s, destination: %s" % (binding, destination),
-                           context.state)
+            logger.debug("binding: %s, destination: %s" % (binding, destination))
 
             # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
             # req_id, req = self.sp.create_authn_request(
@@ -206,18 +205,17 @@ class SpidSAMLBackend(SAMLBackend):
             if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
                 if authn_req.id in self.outstanding_queries:
                     errmsg = "Request with duplicate id {}".format(req_id)
-                    satosa_logging(logger, logging.DEBUG, errmsg, context.state)
+                    logger.debug(errmsg)
                     raise SATOSAAuthenticationError(context.state, errmsg)
                 self.outstanding_queries[authn_req.id] = authn_req_signed
 
             context.state[self.name] = {"relay_state": relay_state}
 
-            satosa_logging(logger, logging.DEBUG, "ht_args: %s" % ht_args, context.state)
+            logger.debug("ht_args: %s" % ht_args)
             return make_saml_response(binding, ht_args)
 
         except Exception as exc:
-            satosa_logging(logger, logging.DEBUG, "Failed to construct the AuthnRequest for state", context.state,
-                           exc_info=True)
+            logger.debug("Failed to construct the AuthnRequest for state")
             raise SATOSAAuthenticationError(context.state, "Failed to construct the AuthnRequest") from exc
 
     def authn_response(self, context, binding):
@@ -232,7 +230,7 @@ class SpidSAMLBackend(SAMLBackend):
         :return: response
         """
         if not context.request["SAMLResponse"]:
-            satosa_logging(logger, logging.DEBUG, "Missing Response for state", context.state)
+            logger.debug("Missing Response for state")
             raise SATOSAAuthenticationError(context.state, "Missing Response")
 
         try:
@@ -240,22 +238,30 @@ class SpidSAMLBackend(SAMLBackend):
                 context.request["SAMLResponse"],
                 binding, outstanding=self.outstanding_queries)
         except Exception as err:
-            satosa_logging(logger, logging.DEBUG, "Failed to parse authn request for state", context.state,
-                           exc_info=True)
+            logger.debug("Failed to parse authn request for state")
             raise SATOSAAuthenticationError(context.state, "Failed to parse authn request") from err
 
         if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
             req_id = authn_response.in_response_to
             if req_id not in self.outstanding_queries:
                 errmsg = "No request with id: {}".format(req_id),
-                satosa_logging(logger, logging.DEBUG, errmsg, context.state)
+                logger.debug(errmsg)
                 raise SATOSAAuthenticationError(context.state, errmsg)
             del self.outstanding_queries[req_id]
+        
+        # Context validation
+        if not context.state.get(self.name):
+            _msg = "context.state[self.name] KeyError: where self.name is {}".format(self.name)
+            logger.error(_msg)
+            raise SATOSAStateError(context.state, _msg)
+        if not context.state.get('Saml2IDP'):
+            _msg = "context.state['Saml2IDP'] KeyError"
+            logger.error(_msg)
+            raise SATOSAStateError(context.state, "State without Saml2IDP")
 
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
-            satosa_logging(logger, logging.DEBUG,
-                           "State did not match relay state for state", context.state)
+            logger.debug("State did not match relay state for state")
             raise SATOSAAuthenticationError(context.state, "State did not match relay state")
 
         # Spid and SAML2 additional tests
