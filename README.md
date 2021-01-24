@@ -1,5 +1,5 @@
 # Satosa-saml2saml
-An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy.
+An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy with an Additional SAML2 backed for SPID (Italian Digital Identity System).
 
 Official docs:
 - [SaToSa Saml2Saml Documentation](https://github.com/peppelinux/SATOSA/blob/master/doc/one-to-many.md)
@@ -11,24 +11,17 @@ Official docs:
 The SaToSa example contained in this project works if the following patchs/version will be used:
 
 
-#### Regarding SaToSa
+#### Regarding SPID (not mandatory for other use cases)
 
-- [Selectable SIGN and DIGEST algs in saml2_backend](https://github.com/IdentityPython/SATOSA/pull/214)
-- [sign_alg/digest_alg policy config patched](https://github.com/IdentityPython/SATOSA/pull/216)
 - [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
-- [Optional multiple user_id_from_attrs](https://github.com/IdentityPython/SATOSA/pull/222)
-- [Load plugins from PWD](https://github.com/IdentityPython/SATOSA/pull/223)
-- [Encrypted assertion in frontend's authnresponse](https://github.com/IdentityPython/SATOSA/pull/226)
+  This is a work in progress but it just works as it is!
+- [date_xsd_type] https://github.com/IdentityPython/pysaml2/pull/602/files
+- [disabled_weak_algs] https://github.com/IdentityPython/pysaml2/pull/628
+- [ns_prefixes] https://github.com/IdentityPython/pysaml2/pull/625
 
-We can also get all those patches and features merged in this single and quite tested [repository here](https://github.com/peppelinux/SATOSA/tree/pplnx-dev)
-
-
-#### Regarding pySAML2
-
-- [Added configurable signing and digest algorithm to SP and IDP](https://github.com/IdentityPython/pysaml2/pull/597), not mandatory.
-- [[xsd type] Added date](https://github.com/IdentityPython/pysaml2/pull/602)
-
-These patches/feature will be always available [here](https://github.com/peppelinux/pysaml2/tree/pplnx-dev) as merged.
+We can also get all those patches and features merged in this single and quite tested branches:
+- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
+- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
 
 
 #### Installing requirements
