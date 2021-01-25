@@ -1,6 +1,6 @@
 #--- SATOSA Proxy_conf.yaml Config ---#
 # BASE: "https://satosa.testunical.it:10000"
-BASE: "https://satosa.testunical.it"
+BASE: "https://spid.proxy.example.org"
 INTERNAL_ATTRIBUTES: "internal_attributes.yaml"
 COOKIE_STATE_NAME: "SAML2_PROXY_STATE"
 CONTEXT_STATE_DELETE: yes
@@ -51,7 +51,7 @@ LOGGING:
       class: logging.handlers.RotatingFileHandler
       level: DEBUG
       formatter: simple
-      filename: /var/log/uwsgi/satosa_debug.log
+      filename: logs/satosa_debug.log
       maxBytes: 104857600 # 100MB
       backupCount: 20
       encoding: utf8
