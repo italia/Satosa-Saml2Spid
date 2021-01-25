@@ -17,11 +17,11 @@ source django-pysaml2.env/bin/activate
 git clone https://peppelinux_unical@bitbucket.org/unical-ict-dev/proxy.auth.unical.it.git tmp
 mv tmp/* .
 
-pip install git+https://github.com/peppelinux/pysaml2@pplnx-v5
-pip install git+https://github.com/peppelinux/satosa@pplnx-v6.1.0
+pip install git+https://github.com/peppelinux/pysaml2@pplnx-v6.5.0
+pip install git+https://github.com/peppelinux/satosa@pplnx-v7.0.1
 
-git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2 apps/pysaml2
-git clone -b pplnx-v6.1.0 https://github.com/peppelinux/satosa apps/satosa
+git clone -b pplnx-v6.5.0 https://github.com/peppelinux/pysaml2 apps/pysaml2
+git clone -b pplnx-v7.0.1 https://github.com/peppelinux/satosa apps/satosa
 git clone https://github.com/UniversitaDellaCalabria/info-manager.git apps/info-manager
 git clone https://github.com/UniversitaDellaCalabria/unicalDiscoveryService.git apps/unicalDiscoveryService
 
@@ -32,6 +32,7 @@ pushd django-pysaml2.env/lib/python3.7/site-packages/
 rm -R saml2/
 rm -R satosa
 ln -s /opt/apps/satosa/src/satosa .
+ln -s /opt/apps/satosa/src/SATOSA
 ln -s /opt/apps/pysaml2/src/saml2 .
 popd
 

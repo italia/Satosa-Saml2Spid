@@ -1,70 +1,62 @@
 module: backends.spidsaml2.SpidSAMLBackend
-# module: backends.spidsaml2.SAMLBackend
 
 name: spidSaml2
 config:
-  #idp_blacklist_file: /path/to/blacklist.json
+  # idp_blacklist_file: /path/to/blacklist.json
+  
   # make metadata downloadable from entityid url
   entityid_endpoint: true
 
   acr_mapping:
     "": 'https://www.spid.gov.it/SpidL2'
+    # specify AuthnContext per IdP
     # "https://identity.sieltecloud.it": 'https://www.spid.gov.it/SpidL1'
     # "https://idp.namirialtsp.com/idp": 'https://www.spid.gov.it/SpidL1'
     # "https://identity.infocert.it": 'https://www.spid.gov.it/SpidL1'
 
   sp_config:
-    key_file: ./pki/backend.key
-    cert_file: ./pki/backend.cert
+    key_file: ./pki/privkey.pem
+    cert_file: ./pki/cert.pem
     encryption_keypairs:
-    - {'key_file': ./pki/backend.key, 'cert_file': ./pki/backend.cert}
+    - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
 
     attribute_map_dir: 'attributes-map'
 
-    organization: { display_name: [['Università della Calabria', 'it']], name: [['Unical', 'it']],  url: [['https://www.unical.it', 'it']]}
+    organization: {display_name: 'Saml2 Authentication Proxy', name: 'proxy.auth', url: 'https://spid.proxy.example.org'}
     contact_person:
-    - {contact_type: technical, email_address: "mailto:spid-technicians@unical.it", given_name: Technical}
-    - {contact_type: support, email_address: "mailto:spid-support@unical.it", given_name: Support}
+    - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
+    - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
 
     metadata:
-      local: [/opt/satosa-saml2/metadata/]
-      #local: [/opt/pyff/md/]
-      # if mdq I get in djangosaml2 "SignatureError at /saml2/acs/: Signature missing for response"
-      # probably some data is lost in metadata catalogue
-      # local: [./metadata/idpspid1.xml]
+      local: [./metadata/]
       # using pyFF or other MDX server
-      mdq:
-        - url: "http://mdq.auth.unical.it/static/sha1"
       # mdq:
-        # - url: "http://sp1.testunical.it:8001/"
-          # cert: ukfederation-mdq.pem
+      #  - url: "http://mdq.auth.unical.it/static/sha1"
+          # cert: mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 10
-
-    #10 days
-    #valid_for: 1200
 
     service:
       sp:
         ui_info:
           display_name:
-            - lang: it
-              text: "Aggregatore SPID - Università della Calabria"
+            - lang: en
+              text: "SPID Authentication Proxy"
           description:
-            - lang: it
-              text: "Aggregatore SPID - Università della Calabria"
+            - lang: en
+              text: "SPID Authentication Proxy"
           # information_url:
             # - lang: en
               # text: "http://sp.information.url/"
-          privacy_statement_url:
-            - lang: it
-              text: "https://www.unical.it/portale/ateneo/privacy/"
+          #privacy_statement_url:
+            #- lang: en
+              #text: "https://www.example.org/privacy/"
           keywords:
             - lang: it
-              text: ["Unical SPID Authentication Proxy", "SP-IT"]
-            #- lang: en
-            #  text: ["Unical SPID Authentication Proxy", "SP-EN"]
+              text: ["SPID Authentication Proxy", "SPID Service Provider IT"]
+            - lang: en
+              text: ["SPID Authentication Proxy", "SPID Service Provider EN"]
           logo:
             text: "https://www.spid.gov.it/assets/img/spid-ico-circle-bb.svg"
             width: "100"
@@ -82,7 +74,7 @@ config:
         only_use_keys_in_metadata: true
 
         # it depends by acr level, see spidsaml2.authn_request
-        #force_authn: false
+        # force_authn: false
 
         name_id_format_allow_create: false
         name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
@@ -100,16 +92,16 @@ config:
                               'email']
 
         #optional_attributes: ['gender',
-         #                     'companyName',
-          #                    'registeredOffice',
-       #                       'ivaCode',
+        #                      'companyName',
+        #                      'registeredOffice',
+        #                      'ivaCode',
         #                      'idCard',
-         #                     'digitalAddress',
-          #                    'placeOfBirth',
-           #                   'countyOfBirth',
-            #                  'dateOfBirth',
-             #                 'address',
-       #                       'mobilePhone',
+        #                      'digitalAddress',
+        #                      'placeOfBirth',
+        #                      'countyOfBirth',
+        #                      'dateOfBirth',
+        #                      'address',
+        #                      'mobilePhone',
         #                      'expirationDate']
 
         endpoints:
@@ -121,6 +113,4 @@ config:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  # it uses pyFF
-  #disco_srv: "http://ds.testunical.it:8001/role/idp.ds"
   disco_srv: "https://ds.auth.unical.it/role/idp.ds"

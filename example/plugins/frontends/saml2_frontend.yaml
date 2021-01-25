@@ -8,31 +8,24 @@ config:
   entityid_endpoint: true
 
   idp_config:
-    organization: {display_name: 'Unical Authentication Proxy', name: 'Unical Authentication Proxy', url: 'https://proxy.auth.unical.it'}
+    organization: {display_name: 'Saml2 Authentication Proxy', name: 'proxy.auth', url: 'https://spid.proxy.example.org'}
     contact_person:
-    - {contact_type: technical, email_address: "mailto:supporto.tecnico@unical.it", given_name: Technical}
-    - {contact_type: support, email_address: "mailto:supporto.tecnico@unical.it", given_name: Support}
+    - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
+    - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
 
     attribute_map_dir: 'attributes-map'
 
-    key_file: ./pki/frontend.key
-    cert_file: ./pki/frontend.cert
+    key_file: ./pki/privkey.pem
+    cert_file: ./pki/cert.pem
     encryption_keypairs:
-    - {'key_file': ./pki/frontend.key, 'cert_file': ./pki/frontend.cert}
+    - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
 
     metadata:
-      local: [/opt/satosa-saml2/metadata]
-      #local: [/opt/pyff/md/, /opt/satosa-saml2/metadata]
-      # remote:
-        # - url:https://kalmar2.org/simplesaml/module.php/aggregator/?id=kalmarcentral2&set=saml2
-          # cert:null
-      mdq:
-        - url: "http://mdq.auth.unical.it/static/sha1"
+      local: [./metadata/]
       # using pyFF or other MDX server
-      # mdq:
-        # - url: "http://127.0.0.1:8001"
-        # - url: "https://ds.testunical.it"
-          # cert: ukfederation-mdq.pem
+      #mdq:
+      #  - url: "http://mdq.auth.unical.it/static/sha1"
+          # cert: mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 300
@@ -49,30 +42,30 @@ config:
       idp:
         endpoints:
           single_sign_on_service: []
-        name: Unical Authentication Proxy
+        name: Authentication Proxy
         ui_info:
           display_name:
             - lang: en
-              text: "Unical Authentication Proxy"
+              text: "Authentication Proxy"
           description:
             - lang: en
-              text: "Unical Authentication Proxy"
+              text: "Authentication Proxy"
           # information_url:
             # - lang: en
               # text: "http://sp.information.url/"
           privacy_statement_url:
             - lang: en
-              text: "https://www.unical.it/portale/ateneo/privacy/"
+              text: "https://www.example.org/privacy/"
           keywords:
             - lang: it
-              text: ["Unical Authentication Proxy", "IdP IT"]
+              text: ["Authentication Proxy", "IdP IT"]
             - lang: en
-              text: ["Unical Authentication Proxy", "IdP EN"]
+              text: ["Authentication Proxy", "IdP EN"]
           logo:
             text: "https://www.spid.gov.it/assets/img/spid-ico-circle-bb.svg"
             width: "100"
             height: "100"
-        name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:persistent', 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
+        name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
 
         # want_authn_requests_signed: true
         want_authn_requests_only_with_valid_cert: false
