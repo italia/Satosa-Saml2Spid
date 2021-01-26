@@ -95,14 +95,19 @@ wget http://localhost:8080/metadata.xml -O metadata/spid-saml-check.xml
 ````
 pip install uwsgi
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app --honour-stdin
+uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app --honour-stdin
+````
+
+With ssl (see official uwsgi doc)
+````
+uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,/path/to/cert.pem,/path/to/privkey.pem --callable app --honour-stdin
 ````
 
 ## Get Proxy Metadata for your SP
 
 The Proxy metadata must be configured in your SP:
 ````
-wget https://localhost:10000/Saml2/metadata -O /path/to/your/SP/metadata/folder/
+wget https://localhost:10000/Saml2IDP/metadata -O /path/to/your/SP/metadata/folder/
 ````
 Then start an authentication from your SP
 
