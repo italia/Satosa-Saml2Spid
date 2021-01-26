@@ -95,10 +95,12 @@ wget http://localhost:8080/metadata.xml -O metadata/spid-saml-check.xml
 ````
 pip install uwsgi
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app --honour-stdin
 
-# or with https ... (see uwsgi_setup/ for any further examples)
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app --honour-stdin
+# additional static serve for the demo Discovery Service with Spid button
+uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app
+
+# discovery service demo
+uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./disco/ --static-index index.html
 ````
 
 With ssl (see official uwsgi doc)
