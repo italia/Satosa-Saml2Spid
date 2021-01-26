@@ -192,6 +192,7 @@ _MAP = {
         "spidCode": "spidCode",
         "name": "name",
         "familyName": "familyName",
+        "FamilyName": "FamilyName",
         "placeOfBirth": "placeOfBirth",
         "countyOfBirth": "countyOfBirth",
         "dateOfBirth": "dateOfBirth",

@@ -22,13 +22,13 @@ config:
 
     attribute_map_dir: 'attributes-map'
 
-    organization: {display_name: 'Saml2 Authentication Proxy', name: 'proxy.auth', url: 'https://spid.proxy.example.org'}
+    organization: { display_name: [['Saml2 Authentication Proxy', 'it']], name: [['Spid Authentication Proxy', 'it']],  url: [['https://spid.proxy.example.org', 'it']]}
     contact_person:
-    - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
-    - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
+      - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
+      - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
 
     metadata:
-      local: [./metadata/]
+      local: [./metadata/idp/]
       # using pyFF or other MDX server
       # mdq:
       #  - url: "http://mdq.auth.unical.it/static/sha1"
@@ -113,4 +113,4 @@ config:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: "http://localhost:9999/static/disco.html"
+  disco_srv: "http://172.17.0.1:9999/static/disco.html"

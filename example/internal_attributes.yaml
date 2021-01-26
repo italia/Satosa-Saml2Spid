@@ -41,13 +41,13 @@ attributes:
     orcid: [emails.str]
     github: [email]
     openid: [email]
-    saml: [mail, email]
+    saml: [mail]
   name:
     facebook: [name]
     orcid: [name.credit-name]
     github: [name]
     openid: [name]
-    saml: [name]
+    saml: [name, Name]
   surname:
     facebook: [last_name]
     linkedin: [lastName]
@@ -69,17 +69,13 @@ attributes:
     orcid: [emails.str]
     github: [email]
     openid: [email]
-    saml: [email]
-  familyName:
-    saml: [familyName, familyname]
+    saml: [email, mail]
   familyname:
-    saml: [familyName, familyname]
-  fiscalNumber:
-    saml: [fiscalNumber, fiscalnumber]
+    saml: [familyName, familyname, FamilyName]
   fiscalnumber:
-    saml: [fiscalNumber, fiscalnumber]
+    saml: [fiscalNumber, fiscalnumber, FiscalNumber]
   gender:
-    saml: [gender]
+    saml: [gender, Gender]
   companyName:
     saml: [companyName]
   registeredOffice:
@@ -103,5 +99,5 @@ attributes:
   expirationDate:
     saml: [expirationDate]
 # user identification mapping
-user_id_from_attrs: [edupersontargetedid]
-user_id_to_attr: edupersontargetedid
+user_id_from_attrs: [spidcode, edupersontargetedid]
+user_id_to_attr: spidcode

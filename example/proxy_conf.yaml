@@ -1,7 +1,7 @@
 #--- SATOSA Proxy_conf.yaml Config ---#
-BASE: "http://localhost:10000"
+BASE: "https://172.17.0.1:10000"
 INTERNAL_ATTRIBUTES: "internal_attributes.yaml"
-COOKIE_STATE_NAME: "SAML2_PROXY_STATE"
+COOKIE_STATE_NAME: "SATOSA_STATE"
 CONTEXT_STATE_DELETE: yes
 
 # TODO: PR to add this in config!
@@ -66,6 +66,11 @@ LOGGING:
       handlers: [console]
       propagate: no
     satosa.frontends.saml2:
+      level: DEBUG
+      formatter: simple
+      handlers: [debug_file]
+      propagate: no
+    satosa.backends.saml2:
       level: DEBUG
       formatter: simple
       handlers: [debug_file]

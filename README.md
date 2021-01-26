@@ -92,14 +92,16 @@ wget http://localhost:8080/metadata.xml -O metadata/spid-saml-check.xml
 
 ## Start Proxy
 
+**Warning**: these examples must be intended only for test purpose. The explained example aren't intended for a production environment! 
+
 ````
 pip install uwsgi
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
 
-# additional static serve for the demo Discovery Service with Spid button
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app
+# only https with satosa, because its Cookie only if "secure" would be sent
+uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app
 
-# discovery service demo
+# additional static serve for the demo Discovery Service with Spid button
 uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
@@ -108,17 +110,36 @@ With ssl (see official uwsgi doc)
 uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,/path/to/cert.pem,/path/to/privkey.pem --callable app --honour-stdin
 ````
 
-## Get Proxy Metadata for your SP
+#### get Spid metadata into your proxy
 
-The Proxy metadata must be configured in your SP:
 ````
-wget https://localhost:10000/Saml2IDP/metadata -O /path/to/your/SP/metadata/folder/
+wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
+
+# example test idps (spid-saml-check)
+wget https://localhost:8080/metadata.xml -O metadata/idp/spid-entities-idps.xml
 ````
-Then start an authentication from your SP
 
-## Todo:
+#### Get Proxy Metadata for your SP
 
-- [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211)
+The Proxy metadata must be configured in your SP. your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
+````
+wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
+````
+
+#### get SP metadata to your Proxy
+````
+wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
+````
+
+
+Then start an authentication from your SP.
+
+
+## Warnings
+Here something that you should know before start.
+
+- You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to enable Discovery Service automatically.
+- Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authforce -> True and also the Saml2 Frontend. For any further informations see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
 
 
 ## References

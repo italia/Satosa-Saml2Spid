@@ -129,7 +129,7 @@ class SpidSAMLBackend(SAMLBackend):
             binding = saml2.BINDING_HTTP_POST
             destination = context.request['entityID']
             # SPID CUSTOMIZATION
-            #client = saml2.client.Saml2Client(conf)
+            # client = saml2.client.Saml2Client(conf)
             client = self.sp
 
             logger.debug("binding: %s, destination: %s" % (binding, destination))

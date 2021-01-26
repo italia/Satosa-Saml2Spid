@@ -21,7 +21,7 @@ config:
     - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
 
     metadata:
-      local: [./metadata/]
+      local: [./metadata/sp/]
       # using pyFF or other MDX server
       # mdq:
       #  - url: "http://mdq.auth.unical.it/static/sha1"
@@ -70,6 +70,9 @@ config:
         # want_authn_requests_signed: true
         want_authn_requests_only_with_valid_cert: false
 
+        signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+        digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
+
         policy:
           default:
             attribute_restrictions: null
@@ -79,10 +82,6 @@ config:
 
             sign_response: true
             sign_assertion: true
-
-            # they works both with ppln-dev branch
-            signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
-            digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
 
             encrypt_assertion: false
             encrypted_advice_attributes: false
