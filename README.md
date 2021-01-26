@@ -100,7 +100,7 @@ export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.v
 uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app
 
 # discovery service demo
-uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./disco/ --static-index index.html
+uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
 With ssl (see official uwsgi doc)
