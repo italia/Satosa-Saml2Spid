@@ -1,10 +1,10 @@
 # Satosa-Saml2Spid
 
-It's a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
-This is an example project to deploy a **SATOSA SAML-to-SAML** with an additional 
-SAML2 backed for **SPID - the Italian Digital Identity System**.
+This is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
+Satosa-Saml2Spid is an example project to deploy a **SAML-to-SAML Proxy** loaded with an additional 
+SAML2 backed for **SPID - the Italian Digital Identity System** and some optional patches for [PySAML2](https://github.com/IdentityPython/pysaml2) and [SATOSA](https://github.com/IdentityPython/SATOSA).
 
-SATOSA Official Documentation is available at:
+SATOSA Official Documentation is available at the following links, make sure you've taken a look to these to understand the the potential of this platform:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
@@ -13,7 +13,7 @@ SATOSA Official Documentation is available at:
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
 3. [Setup](#setup)
-4. [Start Proxy](#start-proxy)
+4. [Start the Proxy](#start-the-proxy)
 5. [Additional technical informations](#additional-technical-informations)
 6. [Author](#author)
 7. [Credits](#credits)
@@ -22,12 +22,12 @@ SATOSA Official Documentation is available at:
 ## Goal
 
 Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers. 
-Specifically, in the case of Spid, Satosa-Saml2Spid allows traditional Saml2 Service Providers to communicate with 
-**Spid Identity Providers**, adapting Metadata and AuthnRequest operations to the Spid technical requirements.
+Specifically it allows traditional Saml2 Service Providers to communicate with 
+**Spid Identity Providers** adapting Metadata and AuthnRequest operations to the Spid technical requirements.
 
 ![big picture](gallery/spid_proxy.png)
 
-**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) being proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
+**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) that's proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
 More generally this solution allows us to adopt multiple proxy frontends and backends 
 to adapt and communicate systems that, due to protocol or specific 
@@ -56,7 +56,7 @@ with the help of an additional webserver dedicated for static contents:
 
 
 You can find them in `example/static` and edit at your taste.
-To configure redirection to these pages, or to third-party services, consider the following configuration files:
+To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
 
 - `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"`
 - `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "http://172.17.0.1:9999/static/disco.html"`
@@ -75,7 +75,7 @@ source satosa.env/bin/activate
 ````
 sudo apt install -y libffi-dev libssl-dev xmlsec1 python3-pip xmlsec1 procps
 
-git clone https://github.com/peppelinux/Satosa-saml2saml.git repository
+git clone https://github.com/peppelinux/Satosa-Saml2Spid.git repository
 pip install -r repository/requirements.txt
 ````
 
@@ -107,11 +107,13 @@ bash build_spid_certs.sh
 cd ..
 ````
 
-Copy `repository/example/` folder (`cp -R repository/example/* .`) and **edit the following files** with your configurations
+Copy `repository/example/` folder (`cp -R repository/example/* .`) and **edit the following files** with your configurations.
+These are the configuration of the core system and its capabilities in terms of SP and IdP embedded interfaces:
 
 - example/proxy_conf.yaml
 - example/plugins/backends/spidsaml2_backend.yaml
 - example/plugins/backends/saml2_backend.yaml
+- example/plugins/frontend/saml2_frontend.yaml
 
 
 ## Handling Metadata
@@ -134,9 +136,9 @@ See `example/plugins/{backends,frontends}/$filename` as example and consider to 
 for any further informations.
 
 
-## Start Proxy
+## Start the Proxy
 
-**Warning**: these examples must be intended only for test purpose. The explained example aren't intended for a production environment! 
+**Warning**: these examples must be intended only for test purpose, for a demo run. The following examples aren't intended for a real production environment! 
 
 ````
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
@@ -193,12 +195,12 @@ Here something that you should know before start.
 - SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviours
   and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format** 
   to **urn:oasis:names:tc:SAML:2.0:attrname-format:uri**, due to my needs to handle many service providers for which it could be painfull do a static definition each time.
-  An additional "hack" have been made in the **attributes-maps/** definitions, where I adopted a hybrid mapping that works for 
-  both *URI* and *BASIC* format, feel free to customized or decouple these format in different files and per SP.
+  An additional "hack" have been made in `example/attributes-maps/satosa_spid_uri_hybrid.py`, where I adopted a hybrid mapping that works for 
+  both *URI* and *BASIC* formats. Feel free to customized or decouple these format in different files and per SP.
 
 
 ## References
-- https://github.com/IdentityPython/SATOSA
+
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
 - https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 - [saml2.0 IdP and SP for tests](https://samltest.id/)
