@@ -9,7 +9,7 @@ Official docs:
 
 ![big picture](gallery/spid_proxy.png)
 
-**Figure1** : _A quite common scenario, many pure SAML2 SP being proxied through SATOSA SPID Backend to have compliances on AuthnRequest and Metadata operations_
+**Figure1** : _Common scenario, many pure SAML2 Service Providers (SP) being proxied through the SATOSA SPID Backend, having compliances on AuthnRequest and Metadata operations_
 
 
 ## Requirements
@@ -84,11 +84,18 @@ Copy `repository/example/` folder (`cp -R repository/example/* .`) and **edit th
 - example/plugins/backends/spidsaml2_backend.yaml
 - example/plugins/backends/saml2_backend.yaml
 
-Create `metadata/` folder and  then copy IdP metadata in it:
+Create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
-wget http://localhost:8080/metadata.xml -O metadata/spid-saml-check.xml
+wget http://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
+wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ````
+
+Copy your SP metadata to your Proxy
+````
+wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
+````
+
 
 ## Start Proxy
 
@@ -105,30 +112,11 @@ uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pk
 uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
-With ssl (see official uwsgi doc)
-````
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,/path/to/cert.pem,/path/to/privkey.pem --callable app --honour-stdin
-````
-
-#### get Spid metadata into your proxy
-
-````
-wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
-
-# example test idps (spid-saml-check)
-wget https://localhost:8080/metadata.xml -O metadata/idp/spid-entities-idps.xml
-````
-
 #### Get Proxy Metadata for your SP
 
 The Proxy metadata must be configured in your SP. your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
 ````
 wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
-````
-
-#### get SP metadata to your Proxy
-````
-wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
 ````
 
 
