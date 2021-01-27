@@ -14,7 +14,7 @@ Official docs:
 
 ## Requirements
 
-The SaToSa example contained in this project works if the following patches will be used, 
+The SaToSa SPID example contained in this project works if the following patches will be used, 
 read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by yourself.
 
 
@@ -111,6 +111,10 @@ uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pk
 # additional static serve for the demo Discovery Service with Spid button
 uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
+
+![result](gallery/screen.gif)
+**Figure 2**: The result using spid-saml-check.
+
 
 #### Get Proxy Metadata for your SP
 
