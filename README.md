@@ -9,7 +9,17 @@ SATOSA Official Documentation is available at:
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
 
-# Goal
+# Table of Contents
+1. [Goal](#goal)
+2. [Demo components](#demo-components)
+3. [Setup](#setup)
+4. [Start Proxy](#start-proxy)
+5. [Additional technical informations](#additional-technical-informations)
+6. [Author](#author)
+7. [Credits](#credits)
+
+
+## Goal
 
 Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers. 
 Specifically, in the case of Spid, Satosa-Saml2Spid allows traditional Saml2 Service Providers to communicate with 
@@ -31,28 +41,28 @@ Short glossary:
 - **Discovery Service**, interface that allows the user to select their authentication endpoint.
 
 
-## Spid Requirements
+## Demo components
 
-The SaToSa **SPID** backend contained in this project works if the following patches will be used, 
-read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
-
-You can get all those patches and features merged in the following forks:
-- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
-- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
+The example project comes with the following demo pages, served
+with the help of an additional webserver dedicated for static contents:
 
 
-#### Pending contributions to idpy
-
-These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
-
-- [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
-  This is a work in progress that works as it is!
-- [date_xsd_type] https://github.com/IdentityPython/pysaml2/pull/602/files
-- [disabled_weak_algs] https://github.com/IdentityPython/pysaml2/pull/628
-- [ns_prefixes] https://github.com/IdentityPython/pysaml2/pull/625
+#### Discovery Service page
+![disco](gallery/disco.png)
 
 
-## Installation requirements
+#### Error page
+![disco](gallery/error_page.png)
+
+
+You can find them in `example/static` and edit at your taste.
+To configure redirection to these pages, or to third-party services, consider the following configuration files:
+
+- `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"`
+- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "http://172.17.0.1:9999/static/disco.html"`
+
+
+## Setup
 
 ###### Prepare environment
 ````
@@ -103,7 +113,11 @@ Copy `repository/example/` folder (`cp -R repository/example/* .`) and **edit th
 - example/plugins/backends/spidsaml2_backend.yaml
 - example/plugins/backends/saml2_backend.yaml
 
-Create `metadata/idp` and `metadata/sp` folders, then copy metadata:
+
+## Handling Metadata
+
+If you want to handle metadata file manually, as this example purpose as demostration, 
+create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
 wget http://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
@@ -115,13 +129,16 @@ Copy your SP metadata to your Proxy
 wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
 ````
 
+Otherwise the best method would be enabling a MDQ server in each frontend and backends configuration.
+See `example/plugins/{backends,frontends}/$filename` as example and consider to read SATOSA's official documentation
+for any further informations.
+
 
 ## Start Proxy
 
 **Warning**: these examples must be intended only for test purpose. The explained example aren't intended for a production environment! 
 
 ````
-pip install uwsgi
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
 
 # only https with satosa, because its Cookie only if "secure" would be sent
@@ -142,11 +159,33 @@ The Proxy metadata must be configured in your SP. your SP is an entity that's ex
 wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
 ````
 
-
 Then start an authentication from your SP.
 
 
-## Warnings
+## Additional technical informations
+
+#### Spid Requirements
+
+The SaToSa **SPID** backend contained in this project works if the following patches will be used, 
+read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
+
+You can get all those patches and features merged in the following forks:
+- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
+- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
+
+
+#### Pending contributions to idpy
+
+These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
+
+- [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
+  This is a work in progress that works as it is!
+- [date_xsd_type] https://github.com/IdentityPython/pysaml2/pull/602/files
+- [disabled_weak_algs] https://github.com/IdentityPython/pysaml2/pull/628
+- [ns_prefixes] https://github.com/IdentityPython/pysaml2/pull/625
+
+
+#### Warnings
 Here something that you should know before start.
 
 - You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to get *Discovery Service* working.
@@ -163,3 +202,13 @@ Here something that you should know before start.
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
 - https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 - [saml2.0 IdP and SP for tests](https://samltest.id/)
+
+
+## Author
+
+Giuseppe De Marco
+
+
+## Credits
+
+[WiP]
