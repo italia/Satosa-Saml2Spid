@@ -1,26 +1,49 @@
-# Satosa-saml2saml
-An example configuration to deploy SATOSA SAML-to-SAML one-to-many proxy with an Additional SAML2 backed for SPID (Italian Digital Identity System).
+# Satosa-Saml2Spid
 
-Official docs:
+Satosa-Saml2Spid is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
+This is an example project to deploy a **SATOSA SAML-to-SAML proxy** (one-to-many) with an additional 
+SAML2 backed for **SPID - the Italian Digital Identity System**.
+
+SATOSA Official Documentation is available at:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
---------------------------------------
+
+# Goal
+
+Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and as many SAML2 Identity Providers. 
+Specifically, in the case of Spid, Satosa-Saml2Spid allows traditional Saml2 Service Providers to communicate with 
+**Spid Identity Providers**, adapting Metadata and AuthnRequest operations to the Spid technical requirements.
 
 ![big picture](gallery/spid_proxy.png)
 
-**Figure1** : _Common scenario, many pure SAML2 Service Providers (SP) being proxied through the SATOSA SPID Backend, having compliances on AuthnRequest and Metadata operations_
+**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) being proxied through the SATOSA SPID Backend, gets compliances on AuthnRequest and Metadata operations_.
+
+More generally this solution allows us to adopt multiple proxy frontends and backends 
+to adapt and communicate systems that, due to protocol or specific 
+limitations, traditionally could not interact each other.
+
+Short glossary:
+
+- **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
+- **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
+- **TargetRouting**, mode for selecting the output backend to reach the endpoint (IdP) selected by the user.
+- **Discovery Service**, interface that allows the user to select their authentication endpoint.
 
 
-## Requirements
+## Spid Requirements
 
-The SaToSa SPID example contained in this project works if the following patches will be used, 
-read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by yourself.
+The SaToSa **SPID** backend contained in this project works if the following patches will be used, 
+read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
+
+You can get all those patches and features merged in the following forks:
+- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
+- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
 
 
-#### SPID
+#### Pending contributions to idpy
 
-These are mandatory only for getting SPID SAML2 working:
+These are mandatory only for getting Spid SAML2 working:
 
 - [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
   This is a work in progress that works as it is!
@@ -28,12 +51,8 @@ These are mandatory only for getting SPID SAML2 working:
 - [disabled_weak_algs] https://github.com/IdentityPython/pysaml2/pull/628
 - [ns_prefixes] https://github.com/IdentityPython/pysaml2/pull/625
 
-We can also get all those patches and features merged in the following forks:
-- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
-- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
 
-
-## Installing requirements
+## Installation requirements
 
 ###### Prepare environment
 ````
@@ -50,7 +69,7 @@ git clone https://github.com/peppelinux/Satosa-saml2saml.git repository
 pip install -r repository/requirements.txt
 ````
 
-## First Run
+## Configure the Proxy
 
 Create certificates for SAML2 operations, thanks to [psmiraglia](https://github.com/psmiraglia/spid-compliant-certificates).
 ````
@@ -132,6 +151,9 @@ Here something that you should know before start.
 
 - You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to enable Discovery Service automatically.
 - Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authforce -> True and also the Saml2 Frontend. For any further informations see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
+- SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviour 
+  and configuration for each SP (by entityid). In this example the **name_format** of the returning attributes is **urn:oasis:names:tc:SAML:2.0:attrname-format:uri** for special needs due to the kind of service providers I used in my environment.
+  An additional "hack" have been made in the **attributes-maps/** definitions, where I adopted an hybrid mapping that works for both URI and BASIC format, feel free to customized or decouple these format in different files and per SP.
 
 
 ## References
