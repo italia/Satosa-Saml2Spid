@@ -1,7 +1,7 @@
 # Satosa-Saml2Spid
 
-Satosa-Saml2Spid is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
-This is an example project to deploy a **SATOSA SAML-to-SAML proxy** (one-to-many) with an additional 
+It's a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
+This is an example project to deploy a **SATOSA SAML-to-SAML** with an additional 
 SAML2 backed for **SPID - the Italian Digital Identity System**.
 
 SATOSA Official Documentation is available at:
@@ -11,13 +11,13 @@ SATOSA Official Documentation is available at:
 
 # Goal
 
-Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and as many SAML2 Identity Providers. 
+Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers. 
 Specifically, in the case of Spid, Satosa-Saml2Spid allows traditional Saml2 Service Providers to communicate with 
 **Spid Identity Providers**, adapting Metadata and AuthnRequest operations to the Spid technical requirements.
 
 ![big picture](gallery/spid_proxy.png)
 
-**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) being proxied through the SATOSA SPID Backend, gets compliances on AuthnRequest and Metadata operations_.
+**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) being proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
 More generally this solution allows us to adopt multiple proxy frontends and backends 
 to adapt and communicate systems that, due to protocol or specific 
@@ -27,7 +27,7 @@ Short glossary:
 
 - **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
 - **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
-- **TargetRouting**, mode for selecting the output backend to reach the endpoint (IdP) selected by the user.
+- **TargetRouting**, a SATOSA microservice for selecting the output backend to reach the endpoint (IdP) selected by the user.
 - **Discovery Service**, interface that allows the user to select their authentication endpoint.
 
 
@@ -43,7 +43,7 @@ You can get all those patches and features merged in the following forks:
 
 #### Pending contributions to idpy
 
-These are mandatory only for getting Spid SAML2 working:
+These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
 
 - [[Micro Service] Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
   This is a work in progress that works as it is!
@@ -149,11 +149,13 @@ Then start an authentication from your SP.
 ## Warnings
 Here something that you should know before start.
 
-- You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to enable Discovery Service automatically.
-- Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authforce -> True and also the Saml2 Frontend. For any further informations see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
-- SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviour 
-  and configuration for each SP (by entityid). In this example the **name_format** of the returning attributes is **urn:oasis:names:tc:SAML:2.0:attrname-format:uri** for special needs due to the kind of service providers I used in my environment.
-  An additional "hack" have been made in the **attributes-maps/** definitions, where I adopted an hybrid mapping that works for both URI and BASIC format, feel free to customized or decouple these format in different files and per SP.
+- You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to get *Discovery Service* working.
+- Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authforce -> True. For any further information see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
+- SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviours
+  and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format** 
+  to **urn:oasis:names:tc:SAML:2.0:attrname-format:uri**, due to my needs to handle many service providers for which it could be painfull do a static definition each time.
+  An additional "hack" have been made in the **attributes-maps/** definitions, where I adopted a hybrid mapping that works for 
+  both *URI* and *BASIC* format, feel free to customized or decouple these format in different files and per SP.
 
 
 ## References
