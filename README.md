@@ -14,11 +14,12 @@ look to these to understand the the potential of this platform:
 # Table of Contents
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
-3. [Setup](#setup)
-4. [Start the Proxy](#start-the-proxy)
-5. [Additional technical informations](#additional-technical-informations)
-6. [Author](#author)
-7. [Credits](#credits)
+3. [Docker image](#docker-image)
+4. [Setup](#setup)
+5. [Start the Proxy](#start-the-proxy)
+6. [Additional technical informations](#additional-technical-informations)
+7. [Author](#author)
+8. [Credits](#credits)
 
 
 ## Goal
@@ -62,6 +63,34 @@ To get redirection to these pages, or redirection to third-party services, consi
 
 - `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"`
 - `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "http://172.17.0.1:9999/static/disco.html"`
+
+
+## Docker image
+
+You should customize the configuration before creating a Docker image but if you want to 
+run a demo as-is you can use the example project as well with some compromise. Run your demo SP and your 
+demo IdP (eg: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)).
+Use their **metadata URLs** in the build command, as follow:
+
+````
+docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://172.17.0.1:8000/saml2/metadata" --build-arg IDP_METADATA_URL="http://172.17.0.1:8080/metadata.xml"
+docker run -t -i -p 10000:10000 -p 9999:9999 saml2spid
+````
+
+Copy proxy frontend metadata to your SP: 
+````
+wget https://localhost:10000/Saml2IDP/metadata -O saml2_sp/saml2_config/satosa-spid.xml --no-check-certificate
+````
+Copy proxy backend metadata to your IdPs:
+````
+https://localhost:10000/spidSaml2/metadata
+https://localhost:10000/Saml2/metadata
+````
+
+Enter in the container for inspection ... it could be usefull
+````
+docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'}) /bin/sh
+````
 
 
 ## Setup
