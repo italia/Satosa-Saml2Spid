@@ -67,10 +67,10 @@ To get redirection to these pages, or redirection to third-party services, consi
 
 ## Docker image
 
-You should customize the configuration before creating a Docker image but if you want to 
-run a demo as-is you can use the example project as well with some compromise. Run your demo SP and your 
-demo IdP (eg: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)).
-Use their **metadata URLs** in the build command, as follow:
+You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image but if you want to 
+run a demo anyway, you can use the example project as well with some compromise. Run your demo SP and your 
+demo IdP (eg: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)) then
+use their **metadata URLs** in the build command, as follow:
 
 ````
 docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://172.17.0.1:8000/saml2/metadata" --build-arg IDP_METADATA_URL="http://172.17.0.1:8080/metadata.xml"
@@ -87,7 +87,7 @@ https://localhost:10000/spidSaml2/metadata
 https://localhost:10000/Saml2/metadata
 ````
 
-Enter in the container for inspection ... it could be usefull
+Enter in the container for inspection ... it could be useful
 ````
 docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'}) /bin/sh
 ````
@@ -245,4 +245,4 @@ Giuseppe De Marco
 ## Credits
 
 - Paolo Smiraglia (SPID certs)
-- idpy Community (pySAML2 and SATOSA)
+- idpy Community  (pySAML2 and SATOSA)
