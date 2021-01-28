@@ -2,9 +2,11 @@
 
 This is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
 Satosa-Saml2Spid is an example project to deploy a **SAML-to-SAML Proxy** loaded with an additional 
-SAML2 backed for **SPID - the Italian Digital Identity System** and some optional patches for [PySAML2](https://github.com/IdentityPython/pysaml2) and [SATOSA](https://github.com/IdentityPython/SATOSA).
+SAML2 backed for **SPID - the Italian Digital Identity System** and some optional patches 
+for [PySAML2](https://github.com/IdentityPython/pysaml2) and [SATOSA](https://github.com/IdentityPython/SATOSA).
 
-SATOSA Official Documentation is available at the following links, make sure you've taken a look to these to understand the the potential of this platform:
+SATOSA Official Documentation is available at the following links, make sure you've taken a 
+look to these to understand the the potential of this platform:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
@@ -29,7 +31,7 @@ Specifically it allows traditional Saml2 Service Providers to communicate with
 
 **Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) that's proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
-More generally this solution allows us to adopt multiple proxy frontends and backends 
+More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_ 
 to adapt and communicate systems that, due to protocol or specific 
 limitations, traditionally could not interact each other.
 
@@ -37,8 +39,8 @@ Short glossary:
 
 - **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
 - **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
-- **TargetRouting**, a SATOSA microservice for selecting the output backend to reach the endpoint (IdP) selected by the user.
-- **Discovery Service**, interface that allows the user to select their authentication endpoint.
+- **TargetRouting**, a SATOSA microservice for selecting the output backend to reach the endpoint (IdP) selected by the user
+- **Discovery Service**, interface that allows users to select the authentication endpoint
 
 
 ## Demo components
@@ -107,8 +109,8 @@ bash build_spid_certs.sh
 cd ..
 ````
 
-Copy `repository/example/` folder (`cp -R repository/example/* .`) and **edit the following files** with your configurations.
-These are the configuration of the core system and its capabilities in terms of SP and IdP embedded interfaces:
+Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
+These are the configuration files:
 
 - example/proxy_conf.yaml
 - example/plugins/backends/spidsaml2_backend.yaml
@@ -131,14 +133,13 @@ Copy your SP metadata to your Proxy
 wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
 ````
 
-Otherwise the best method would be enabling a MDQ server in each frontend and backends configuration.
-See `example/plugins/{backends,frontends}/$filename` as example and consider to read SATOSA's official documentation
-for any further informations.
+Otherwise the best method would be enabling a MDQ server in each frontend and backend configuration file.
+See `example/plugins/{backends,frontends}/$filename` as example.
 
 
 ## Start the Proxy
 
-**Warning**: these examples must be intended only for test purpose, for a demo run. The following examples aren't intended for a real production environment! 
+**Warning**: these examples must be intended only for test purpose, for a demo run. The following examples wouldn't be intended for a real production environment! 
 
 ````
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
@@ -150,18 +151,17 @@ uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pk
 uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
-![result](gallery/screen.gif)
-**Figure 2**: The result using spid-saml-check.
-
-
 #### Get Proxy Metadata for your SP
 
-The Proxy metadata must be configured in your SP. your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
+The Proxy metadata must be configured in your SP. Your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
 ````
 wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
 ````
 
 Then start an authentication from your SP.
+
+![result](gallery/screen.gif)
+**Figure 2**: The result using spid-saml-check.
 
 
 ## Additional technical informations
