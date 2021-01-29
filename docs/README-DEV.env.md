@@ -16,8 +16,9 @@ mkdir apps
 
 virtualenv -ppython3 django-pysaml2.env
 source django-pysaml2.env/bin/activate
-
+# may i clone it? TODO
 git clone https://peppelinux_unical@bitbucket.org/unical-ict-dev/proxy.auth.unical.it.git tmp
+
 mv tmp/* .
 
 pip install git+https://github.com/peppelinux/pysaml2@pplnx-v6.5.0
