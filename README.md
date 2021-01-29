@@ -1,17 +1,9 @@
 # Satosa-Saml2Spid
 
-This is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
-Satosa-Saml2Spid is an example project to deploy a **SAML-to-SAML Proxy** loaded with an additional 
-SAML2 backed for **SPID - the Italian Digital Identity System** and some additional patches 
-for [PySAML2](https://github.com/IdentityPython/pysaml2) and [SATOSA](https://github.com/IdentityPython/SATOSA).
+This is a SAML2  configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
+that aims to setup a **SAML-to-SAML Proxy** compatible with the  **SPID - the Italian Digital Identity System**.
 
-SATOSA Official Documentation is available at the following links, make sure you've taken a 
-look to these to understand the potential of this platform:
-- [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
-- [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
-
-
-# Table of Contents
+## Table of Contents
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
 3. [Docker image](#docker-image)
@@ -36,7 +28,7 @@ More generally this solution allows us to adopt multiple proxy _frontends_ and _
 to adapt and allows to communicate systems that, due to protocol or specific 
 limitations, traditionally could not interact each other.
 
-Short glossary:
+**Short glossary**
 
 - **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
 - **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
@@ -233,6 +225,14 @@ Here something that you should know before start.
 
 ## References
 
+SATOSA Official Documentation is available at the following links, make sure you've taken a 
+look to these to understand the potential of this platform:
+- [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
+- [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
+
+Additional resources:
+
+- [SaToSa training aarc project](https://aarc-project.eu/wp-content/uploads/2019/03/SaToSa_Training.pdf)
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
 - https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 - [saml2.0 IdP and SP for tests](https://samltest.id/)
