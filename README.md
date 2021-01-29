@@ -236,7 +236,7 @@ Here something that you should know before start.
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
 - https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
 - [saml2.0 IdP and SP for tests](https://samltest.id/)
-
+- https://www.spid.gov.it/assets/download/SPID_QAD.pdf
 
 ## Author
 
