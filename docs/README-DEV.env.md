@@ -7,9 +7,12 @@ adduser $USER_OP
 echo "$USER_OP ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 cd /opt
-chown -R $USER_OP
+chown -R $USER_OP .
 su $$USER_OP
 mkdir apps
+
+#remember to install virtualenv  TODO 
+# pip3 install virtualenv or apt-get install virtualenv
 
 virtualenv -ppython3 django-pysaml2.env
 source django-pysaml2.env/bin/activate
