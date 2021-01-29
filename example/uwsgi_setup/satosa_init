@@ -24,8 +24,7 @@ APPNAME="satosa-saml2"
 APPDIR="$BASEDIR/$APPNAME"
 #DEBUG=""
 PID_PATH="/var/log/uwsgi"
-USER=wert
-COMMAND="uwsgi --ini $APPDIR/uwsgi_setup/uwsgi.ini &"
+COMMAND="uwsgi --uid 1000 --ini $APPDIR/uwsgi_setup/uwsgi.ini &"
 STOP_CMD="source $ENVDIR/bin/activate && uwsgi --stop $PID_PATH/$APPNAME.pid"
 RELOAD_CMD="source $ENVDIR/bin/activate && uwsgi --reload $PID_PATH/$APPNAME.pid"
 
@@ -35,14 +34,14 @@ chown -R $USER $PID_PATH
 
 case "$1" in
   start)
-    su -l $USER -c "source $ENVDIR/bin/activate && $COMMAND"
+    source $ENVDIR/bin/activate && $COMMAND
     ;;
   stop)
     #kill -KILL  $(ps ax | grep $APPNAME | awk -F' ' {'print $1'} | xargs echo)
-    su -l $USER -c "$STOP_CMD"
+    $STOP_CMD
     ;;
   restart)
-    su -l $USER -c "$RELOAD_CMD"
+    $RELOAD_CMD
     ;;
   force-stop)
     sudo ps ax | grep satosa-saml2 | awk -F' ' {'print $1'} | xargs echo | xargs kill -KILL

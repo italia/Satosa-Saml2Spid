@@ -2,11 +2,11 @@
 
 This is a SAML2 Proxy configuration developed on top of [SATOSA Proxy](https://github.com/IdentityPython/SATOSA).
 Satosa-Saml2Spid is an example project to deploy a **SAML-to-SAML Proxy** loaded with an additional 
-SAML2 backed for **SPID - the Italian Digital Identity System** and some optional patches 
+SAML2 backed for **SPID - the Italian Digital Identity System** and some additional patches 
 for [PySAML2](https://github.com/IdentityPython/pysaml2) and [SATOSA](https://github.com/IdentityPython/SATOSA).
 
 SATOSA Official Documentation is available at the following links, make sure you've taken a 
-look to these to understand the the potential of this platform:
+look to these to understand the potential of this platform:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
@@ -33,7 +33,7 @@ Specifically it allows traditional Saml2 Service Providers to communicate with
 **Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) that's proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
 More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_ 
-to adapt and communicate systems that, due to protocol or specific 
+to adapt and allows to communicate systems that, due to protocol or specific 
 limitations, traditionally could not interact each other.
 
 Short glossary:
@@ -58,7 +58,7 @@ with the help of an additional webserver dedicated for static contents:
 ![disco](gallery/error_page.png)
 
 
-You can find them in `example/static` and edit at your taste.
+You can find these demo pages in `example/static` and edit at your taste.
 To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
 
 - `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"`
@@ -67,9 +67,9 @@ To get redirection to these pages, or redirection to third-party services, consi
 
 ## Docker image
 
-You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image but if you want to 
-run a demo anyway, you can use the example project as well with some compromise. Run your demo SP and your 
-demo IdP (eg: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)) then
+You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image, if you want to 
+run a demo anyway, you can use the example project as well with some compromise. Start your demo SP and your 
+demo IdP (Example IdPs: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)) then
 use their **metadata URLs** in the build command, as follow:
 
 ````
@@ -81,6 +81,7 @@ Copy proxy frontend metadata to your SP:
 ````
 wget https://localhost:10000/Saml2IDP/metadata -O saml2_sp/saml2_config/satosa-spid.xml --no-check-certificate
 ````
+
 Copy proxy backend metadata to your IdPs:
 ````
 https://localhost:10000/spidSaml2/metadata
@@ -141,10 +142,10 @@ cd ..
 Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
 These are the configuration files:
 
-- example/proxy_conf.yaml
-- example/plugins/backends/spidsaml2_backend.yaml
-- example/plugins/backends/saml2_backend.yaml
-- example/plugins/frontend/saml2_frontend.yaml
+- `example/proxy_conf.yaml`
+- `example/plugins/backends/spidsaml2_backend.yaml`
+- `example/plugins/backends/saml2_backend.yaml`
+- `example/plugins/frontend/saml2_frontend.yaml`
 
 
 ## Handling Metadata
@@ -168,7 +169,7 @@ See `example/plugins/{backends,frontends}/$filename` as example.
 
 ## Start the Proxy
 
-**Warning**: these examples must be intended only for test purpose, for a demo run. The following examples wouldn't be intended for a real production environment! 
+**Warning**: these examples must be intended only for test purpose, for a demo run. Please remember that the following examples wouldn't be intended for a real production environment! If you need some example for a production environment please take a look at `example/uwsgi_setup/` folder.
 
 ````
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
@@ -222,7 +223,7 @@ These are mandatory only for getting Spid SAML2 working, these are not needed fo
 Here something that you should know before start.
 
 - You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to get *Discovery Service* working.
-- Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authforce -> True. For any further information see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
+- Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authnforce -> True. For any further information see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
 - SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviours
   and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format** 
   to **urn:oasis:names:tc:SAML:2.0:attrname-format:uri**, due to my needs to handle many service providers for which it could be painfull do a static definition each time.
