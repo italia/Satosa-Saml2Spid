@@ -5,13 +5,13 @@ git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2
 cd pysaml2/
 
 # create current idpy master 
-git checkout --orphan idpy-v6.4.1
+git checkout --orphan idpy-v6.5.1
 git remote add idpy https://github.com/IdentityPython/pysaml2.git
 git reset --hard
 git pull idpy master
 
 # create current pplnx branch to be updated and tested
-git checkout --orphan pplnx-v6.4.1
+git checkout --orphan pplnx-v6.5.1
 git reset --hard
 git pull idpy master
 
@@ -19,7 +19,6 @@ git pull idpy master
 # https://github.com/IdentityPython/pysaml2/pull/602/files
 # SPID requirements
 git pull origin date_xsd_type
-# remember to replace _str to str in nano saml2/saml.py
 
 # https://github.com/IdentityPython/pysaml2/pull/628
 # SPID required
@@ -30,6 +29,15 @@ git pull origin shibsp_enc
 
 # https://github.com/IdentityPython/pysaml2/pull/757
 git pull origin  authn_3tuple_acs
+
+# https://github.com/IdentityPython/pysaml2/pull/763
+git pull origin invalid_destination_url
+
+# https://github.com/IdentityPython/pysaml2/pull/766
+git pull origin invalid_assertion
+
+# https://github.com/IdentityPython/pysaml2/pull/772
+git pull origin unhandled_audience_restr
 
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests

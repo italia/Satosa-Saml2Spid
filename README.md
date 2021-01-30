@@ -230,6 +230,13 @@ look to these to understand the potential of this platform:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
+
+Account Linking
+
+- [pyMultiLDAP SaToSa MS](https://github.com/peppelinux/pyMultiLDAP/tree/master/multildap/satosa)
+- Attributes Processing with [SATOSA-uniext](https://github.com/UniversitaDellaCalabria/SATOSA-uniExt/blob/master/satosa_uniext/processors/unical_attribute_processor.py) 
+
+
 Additional resources:
 
 - [SaToSa training aarc project](https://aarc-project.eu/wp-content/uploads/2019/03/SaToSa_Training.pdf)
