@@ -34,12 +34,12 @@ class Saml2ResponseValidator(object):
         self.requester = requester
         self.return_addrs = return_addrs
     
-    # this would be a internal pysaml2 validation SP side ...
-    # def validate_in_response_to(self):
-        # """ spid test 18
-        # """
-        # if self.in_response_to != self.response.in_response_to:
-            # raise Exception(f'In response To not valid: {self.in_response_to} != {self.response.in_response_to}')
+    # handled adding authn req arguments in the session state (cookie)
+    def validate_in_response_to(self):
+        """ spid test 18
+        """
+        if self.in_response_to != self.response.in_response_to:
+            raise Exception(f'In response To not valid: {self.in_response_to} != {self.response.in_response_to}')
     
     def validate_destination(self):
         """ spid test 19 e 20

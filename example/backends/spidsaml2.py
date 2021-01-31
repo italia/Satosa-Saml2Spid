@@ -315,7 +315,9 @@ class SpidSAMLBackend(SAMLBackend):
                 self.outstanding_queries[authn_req.id] = authn_req_signed
 
             context.state[self.name] = {"relay_state": relay_state}
-
+            # these will give the way to check compliances between the req and resp
+            context.state['req_args'] = {'id': authn_req.id}
+            
             logger.debug("ht_args: %s" % ht_args)
             return make_saml_response(binding, ht_args)
 
@@ -383,10 +385,9 @@ class SpidSAMLBackend(SAMLBackend):
             # _msg = "context.state['Saml2IDP'] KeyError"
             # logger.error(_msg)
             # raise SATOSAStateError(context.state, "State without Saml2IDP")
-        in_response_to = authn_response.in_response_to # context.state[destination_frontend]['resp_args']['in_response_to']
+        in_response_to = context.state['req_args']['id']
         requester = context.state['SATOSA_BASE']['requester']
-        
-        
+
         # some debug
         if authn_response.ava:
             logging.debug(f'Attributes to {authn_response.return_addrs} '
