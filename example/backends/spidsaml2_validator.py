@@ -22,7 +22,8 @@ class Saml2ResponseValidator(object):
                  accepted_time_diff=1,
                  in_response_to='',
                  requester='',
-                 authn_context_class_ref='https://www.spid.gov.it/SpidL2'):
+                 authn_context_class_ref='https://www.spid.gov.it/SpidL2',
+                 return_addrs = []):
 
         self.response = samlp.response_from_string(authn_response)
         self.nameid_formats = nameid_formats
@@ -31,23 +32,32 @@ class Saml2ResponseValidator(object):
         self.authn_context_class_ref = authn_context_class_ref
         self.in_response_to = in_response_to
         self.requester = requester
-
+        self.return_addrs = return_addrs
+    
+    # this would be a internal pysaml2 validation SP side ...
     # def validate_in_response_to(self):
         # """ spid test 18
-            # inutile se disabiliti gli unsolicited
         # """
         # if self.in_response_to != self.response.in_response_to:
-            # raise Exception('In response To not valid: {}'.format(self.response.in_response_to))
-
+            # raise Exception(f'In response To not valid: {self.in_response_to} != {self.response.in_response_to}')
+    
+    def validate_destination(self):
+        """ spid test 19 e 20
+            inutile se disabiliti gli unsolicited
+        """
+        if not self.response.destination or self.response.destination not in self.return_addrs:
+            _msg = f'Destination is not valid: {self.response.destination} not in {self.return_addrs}'
+            raise Exception(_msg)
+    
     def validate_issuer(self):
         """spid saml check 30, 70, 71, 72
         <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">http://localhost:8080</saml:Issuer>
         """
+        
         # 30
         # check that this issuer is in the metadata...
-        # oppure passare context.state['Saml2IDP']['resp_args']['sp_entity_id']
-        # if self.requester != self.response.issuer.text:
-            # raise Exception('Issuer different {}'.format(self.response.issuer.text))
+        if self.requester != self.response.issuer.text:
+            raise Exception('Issuer different {}'.format(self.response.issuer.text))
 
         msg = 'Issuer format is not valid: {}'
         # 70, 71
@@ -217,7 +227,8 @@ class Saml2ResponseValidator(object):
         """ run all tests/methods
         """
         if not tests:
-            tests = [i[0] for i in inspect.getmembers(self, predicate=inspect.ismethod) if not i[0].startswith('_')]
+            tests = [i[0] for i in inspect.getmembers(self, predicate=inspect.ismethod) 
+                     if not i[0].startswith('_')]
             tests.remove('run')
 
             # poste italiane risponde con issuer format -> None

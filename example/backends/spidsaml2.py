@@ -337,7 +337,7 @@ class SpidSAMLBackend(SAMLBackend):
         if not context.request["SAMLResponse"]:
             logger.debug("Missing Response for state")
             raise SATOSAAuthenticationError(context.state, "Missing Response")
-
+        
         try:
             authn_response = self.sp.parse_authn_request_response(
                 context.request["SAMLResponse"],
@@ -359,30 +359,49 @@ class SpidSAMLBackend(SAMLBackend):
             _msg = "context.state[self.name] KeyError: where self.name is {}".format(self.name)
             logger.error(_msg)
             raise SATOSAStateError(context.state, _msg)
-        if not context.state.get('Saml2IDP'):
-            _msg = "context.state['Saml2IDP'] KeyError"
-            logger.error(_msg)
-            raise SATOSAStateError(context.state, "State without Saml2IDP")
-
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
             logger.debug("State did not match relay state for state")
             raise SATOSAAuthenticationError(context.state, "State did not match relay state")
 
         # Spid and SAML2 additional tests
-        issuer = context.state['Saml2IDP']['resp_args']['sp_entity_id']
         accepted_time_diff = self.config['sp_config']['accepted_time_diff']
         recipient = self.config['sp_config']['service']['sp']['endpoints']['assertion_consumer_service'][0][0]
         authn_context_classref = self.config['acr_mapping']['']
-        in_response_to = context.state['Saml2IDP']['resp_args']['in_response_to']
 
+        issuer = authn_response.response.issuer
+    
+        # this will get the entity name in state
+        if len(context.state.keys()) < 2:
+            _msg = "Inconsistent context.state"
+            logger.error(_msg)
+            raise SATOSAStateError(context.state, _msg)
+        
+        destination_frontend = list(context.state.keys())[1]
+        # deprecated
+        # if not context.state.get('Saml2IDP'):
+            # _msg = "context.state['Saml2IDP'] KeyError"
+            # logger.error(_msg)
+            # raise SATOSAStateError(context.state, "State without Saml2IDP")
+        in_response_to = authn_response.in_response_to # context.state[destination_frontend]['resp_args']['in_response_to']
+        requester = context.state['SATOSA_BASE']['requester']
+        
+        
+        # some debug
+        if authn_response.ava:
+            logging.debug(f'Attributes to {authn_response.return_addrs} '
+                          f'in_response_to {authn_response.in_response_to}: '
+                          f'{",".join(authn_response.ava.keys())}')
+        
         validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr,
                                            recipient = recipient,
                                            in_response_to=in_response_to,
+                                           requester = requester,
                                            accepted_time_diff = accepted_time_diff,
-                                           authn_context_class_ref=authn_context_classref)
+                                           authn_context_class_ref=authn_context_classref,
+                                           return_addrs=authn_response.return_addrs)
         validator.run()
-
+        
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
             issuer = authn_response.response.issuer.text.strip()
