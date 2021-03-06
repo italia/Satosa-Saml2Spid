@@ -39,6 +39,9 @@ git pull origin invalid_assertion
 # https://github.com/IdentityPython/pysaml2/pull/772
 git pull origin unhandled_audience_restr
 
+#
+git pull origin metadata_exp_handler
+
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
 git pull origin ns_prefixes  
