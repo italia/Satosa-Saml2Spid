@@ -39,7 +39,7 @@ git pull origin invalid_assertion
 # https://github.com/IdentityPython/pysaml2/pull/772
 git pull origin unhandled_audience_restr
 
-#
+# https://github.com/IdentityPython/pysaml2/pull/779
 git pull origin metadata_exp_handler
 
 # https://github.com/IdentityPython/pysaml2/pull/625
