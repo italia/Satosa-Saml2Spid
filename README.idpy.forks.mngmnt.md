@@ -4,7 +4,7 @@
 git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2
 cd pysaml2/
 
-# create current idpy master 
+# create current idpy master
 git checkout --orphan idpy-v6.5.1
 git remote add idpy https://github.com/IdentityPython/pysaml2.git
 git reset --hard
@@ -24,27 +24,18 @@ git pull origin date_xsd_type
 # SPID required
 git pull origin disabled_weak_algs
 
-# https://github.com/IdentityPython/pysaml2/pull/754
+# https://github.com/IdentityPython/pysaml2/pull/778
 git pull origin shibsp_enc
 
-# https://github.com/IdentityPython/pysaml2/pull/757
-git pull origin  authn_3tuple_acs
+# https://github.com/IdentityPython/pysaml2/pull/782
+git pull origin destination
 
-# https://github.com/IdentityPython/pysaml2/pull/763
-git pull origin invalid_destination_url
-
-# https://github.com/IdentityPython/pysaml2/pull/766
-git pull origin invalid_assertion
-
-# https://github.com/IdentityPython/pysaml2/pull/772
-git pull origin unhandled_audience_restr
-
-# https://github.com/IdentityPython/pysaml2/pull/779
-git pull origin metadata_exp_handler
+# https://github.com/IdentityPython/pysaml2/pull/783
+git pull origin issue_instant
 
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
-git pull origin ns_prefixes  
+git pull origin ns_prefixes
 ````
 
 # SATOSA
@@ -57,7 +48,7 @@ git checkout --orphan idpy-v7.0.1
 git reset --hard
 git pull idpy master
 
-pip install -r tests/test_requirements.txt 
+pip install -r tests/test_requirements.txt
 
 # install mongodb first!
 apt install -y gnupg wget

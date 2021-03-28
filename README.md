@@ -16,16 +16,16 @@ that aims to setup a **SAML-to-SAML Proxy** compatible with the  **SPID - the It
 
 ## Goal
 
-Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers. 
-Specifically it allows traditional Saml2 Service Providers to communicate with 
+Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers.
+Specifically it allows traditional Saml2 Service Providers to communicate with
 **Spid Identity Providers** adapting Metadata and AuthnRequest operations to the Spid technical requirements.
 
 ![big picture](gallery/spid_proxy.png)
 
 **Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) that's proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
-More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_ 
-to adapt and allows to communicate systems that, due to protocol or specific 
+More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_
+to adapt and allows to communicate systems that, due to protocol or specific
 limitations, traditionally could not interact each other.
 
 **Short glossary**
@@ -59,8 +59,8 @@ To get redirection to these pages, or redirection to third-party services, consi
 
 ## Docker image
 
-You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image, if you want to 
-run a demo anyway, you can use the example project as well with some compromise. Start your demo SP and your 
+You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image, if you want to
+run a demo anyway, you can use the example project as well with some compromise. Start your demo SP and your
 demo IdP (Example IdPs: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)) then
 use their **metadata URLs** in the build command, as follow:
 
@@ -69,7 +69,7 @@ docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://172.17.
 docker run -t -i -p 10000:10000 -p 9999:9999 saml2spid
 ````
 
-Copy proxy frontend metadata to your SP: 
+Copy proxy frontend metadata to your SP:
 ````
 wget https://localhost:10000/Saml2IDP/metadata -O saml2_sp/saml2_config/satosa-spid.xml --no-check-certificate
 ````
@@ -113,7 +113,7 @@ mkdir $WD && cd $WD
 cp ../repository/oids.conf .
 cp ../repository/build_spid_certs.sh .
 
-# create your values inline 
+# create your values inline
 cat > my.env <<EOF
 export COMMON_NAME="SPID example proxy"
 export LOCALITY_NAME="Roma"
@@ -142,7 +142,7 @@ These are the configuration files:
 
 ## Handling Metadata
 
-If you want to handle metadata file manually, as this example purpose as demostration, 
+If you want to handle metadata file manually, as this example purpose as demostration,
 create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
@@ -186,14 +186,14 @@ Then start an authentication from your SP.
 **Figure 2**: The result using spid-saml-check.
 
 
-## Additional technical informations
+## Additional technical informations for Developers
 
-#### Spid Requirements
+#### SPID technical Requirements
 
-The SaToSa **SPID** backend contained in this project works if the following patches will be used, 
+The SaToSa **SPID** backend contained in this project adopt specialized forks of pySAML2 and SATOSA, that implements the following patches,
 read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
 
-You can get all those patches and features merged in the following forks:
+All the patches and features are currently merged and available with the following releases:
 - [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
 - [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
 
@@ -217,15 +217,15 @@ Here something that you should know before start.
 - You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to get *Discovery Service* working.
 - Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authnforce -> True. For any further information see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
 - SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviours
-  and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format** 
+  and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format**
   to **urn:oasis:names:tc:SAML:2.0:attrname-format:uri**, due to my needs to handle many service providers for which it could be painfull do a static definition each time.
-  An additional "hack" have been made in `example/attributes-maps/satosa_spid_uri_hybrid.py`, where I adopted a hybrid mapping that works for 
+  An additional "hack" have been made in `example/attributes-maps/satosa_spid_uri_hybrid.py`, where I adopted a hybrid mapping that works for
   both *URI* and *BASIC* formats. Feel free to customized or decouple these format in different files and per SP.
 
 
 ## References
 
-SATOSA Official Documentation is available at the following links, make sure you've taken a 
+SATOSA Official Documentation is available at the following links, make sure you've taken a
 look to these to understand the potential of this platform:
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
@@ -234,7 +234,7 @@ look to these to understand the potential of this platform:
 Account Linking
 
 - [pyMultiLDAP SaToSa MS](https://github.com/peppelinux/pyMultiLDAP/tree/master/multildap/satosa)
-- Attributes Processing with [SATOSA-uniext](https://github.com/UniversitaDellaCalabria/SATOSA-uniExt/blob/master/satosa_uniext/processors/unical_attribute_processor.py) 
+- Attributes Processing with [SATOSA-uniext](https://github.com/UniversitaDellaCalabria/SATOSA-uniExt/blob/master/satosa_uniext/processors/unical_attribute_processor.py)
 
 
 Additional resources:
