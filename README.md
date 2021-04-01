@@ -85,6 +85,8 @@ Enter in the container for inspection ... it could be useful
 docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'}) /bin/sh
 ````
 
+Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
+
 
 ## Setup
 
@@ -167,7 +169,7 @@ See `example/plugins/{backends,frontends}/$filename` as example.
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
 
 # only https with satosa, because its Cookie only if "secure" would be sent
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app
+uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768
 
 # additional static serve for the demo Discovery Service with Spid button
 uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
@@ -184,6 +186,48 @@ Then start an authentication from your SP.
 
 ![result](gallery/screen.gif)
 **Figure 2**: The result using spid-saml-check.
+
+
+## Trouble shooting
+
+That's the stdout log of a working instance of SATOSA in uwsgi
+
+````
+*** Starting uWSGI 2.0.19.1 (64bit) on [Tue Mar 30 17:08:49 2021] ***
+compiled with version: 9.3.0 on 11 September 2020 23:11:42
+os: Linux-5.4.0-70-generic #78-Ubuntu SMP Fri Mar 19 13:29:52 UTC 2021
+nodename: wert-desktop
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /path/to/IdentityPython/satosa_proxy
+detected binary path: /path/to/IdentityPython/satosa_proxy/satosa.env/bin/uwsgi
+your processes number limit is 62315
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+uWSGI http bound on 0.0.0.0:10000 fd 4
+spawned uWSGI http 1 (pid: 28676)
+uwsgi socket 0 bound to TCP address 127.0.0.1:39553 (port auto-assigned) fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+Python main interpreter initialized at 0x55f744576790
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72920 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+[2021-03-30 17:08:50] [INFO ]: Running SATOSA version 7.0.1 [satosa.proxy_server.make_app:165]
+[2021-03-30 17:08:50] [INFO ]: Loading backend modules... [satosa.base.__init__:42]
+[2021-03-30 17:08:51] [INFO ]: Setup backends: ['Saml2', 'spidSaml2'] [satosa.plugin_loader.load_backends:49]
+[2021-03-30 17:08:51] [INFO ]: Loading frontend modules... [satosa.base.__init__:45]
+[2021-03-30 17:08:51] [INFO ]: Setup frontends: ['Saml2IDP'] [satosa.plugin_loader.load_frontends:70]
+[2021-03-30 17:08:51] [INFO ]: Loading micro services... [satosa.base.__init__:51]
+[2021-03-30 17:08:51] [INFO ]: Loaded request micro services: ['DecideBackendByTarget'] [satosa.plugin_loader.load_request_microservices:260]
+[2021-03-30 17:08:51] [INFO ]: Loaded response micro services:[] [satosa.plugin_loader.load_response_microservices:281]
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55f744576790 pid: 28675 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 28675, cores: 8)
+````
 
 
 ## Additional technical informations for Developers
@@ -239,6 +283,9 @@ Account Linking
 
 Additional resources:
 
+- [satosa-eidas-ansible](https://github.com/grnet/satosa-eidas-ansible)
+- [aws-saml-proxy](https://github.com/senorkrabs/aws-saml-proxy)
+- [satosa-oidc-to-sam](https://github.com/daserzw/satosa-oidc-to-saml)
 - [SaToSa training aarc project](https://aarc-project.eu/wp-content/uploads/2019/03/SaToSa_Training.pdf)
 - [IDP/SP Discovery service](https://medium.com/@sagarag/reloading-saml-idp-discovery-693b6bff45f0)
 - https://github.com/IdentityPython/SATOSA/blob/master/doc/README.md#frontend
