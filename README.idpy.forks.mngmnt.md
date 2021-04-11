@@ -70,4 +70,11 @@ git pull origin context_state_error_msg
 
 # https://github.com/IdentityPython/SATOSA/pull/325
 git pull origin error_redirect_page
+
+# https://github.com/IdentityPython/SATOSA/pull/365
+git pull origin context_http_headers
+
+# https://github.com/IdentityPython/SATOSA/pull/366
+git pull origin idphint_ms
+
 ````
