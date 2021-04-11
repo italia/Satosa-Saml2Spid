@@ -37,7 +37,7 @@ class SpidSAMLBackend(SAMLBackend):
         """
         logger.debug("Sending metadata response")
         conf = self.sp.config
-              
+
         metadata = entity_descriptor(conf)
         # creare gli attribute_consuming_service
         cnt = 0
@@ -89,51 +89,51 @@ class SpidSAMLBackend(SAMLBackend):
                 spid_contact.loadd(contact_kwargs)
                 contact_kwargs['contact_type'] = contact['contact_type']
                 spid_extensions = saml2.ExtensionElement(
-                    'Extensions', 
+                    'Extensions',
                     namespace='urn:oasis:names:tc:SAML:2.0:metadata'
                 )
                 for k,v in contact.items():
                     if k in contact_kwargs: continue
                     ext = saml2.ExtensionElement(
-                            k, 
+                            k,
                             namespace=SPID_PREFIXES['spid'],
                             text=v
                     )
                     spid_extensions.children.append(ext)
-            
+
             elif contact['contact_type'] == 'billing':
                 contact_kwargs['company'] = contact['company']
                 spid_contact.loadd(contact_kwargs)
                 spid_extensions = saml2.ExtensionElement(
-                    'Extensions', 
+                    'Extensions',
                     namespace='urn:oasis:names:tc:SAML:2.0:metadata'
                 )
-                
+
                 elements = {}
                 for k,v in contact.items():
                     if k in contact_kwargs: continue
                     ext = saml2.ExtensionElement(
-                            k, 
+                            k,
                             namespace=SPID_PREFIXES['fpa'],
                             text=v
                     )
                     elements[k] = ext
-                
+
                 # DatiAnagrafici
                 IdFiscaleIVA = saml2.ExtensionElement(
-                    'IdFiscaleIVA', 
+                    'IdFiscaleIVA',
                     namespace=SPID_PREFIXES['fpa'],
                 )
                 Anagrafica = saml2.ExtensionElement(
-                    'Anagrafica', 
+                    'Anagrafica',
                     namespace=SPID_PREFIXES['fpa'],
                 )
                 Anagrafica.children.append(elements['Denominazione'])
-                
+
                 IdFiscaleIVA.children.append(elements['IdPaese'])
                 IdFiscaleIVA.children.append(elements['IdCodice'])
                 DatiAnagrafici = saml2.ExtensionElement(
-                    'DatiAnagrafici', 
+                    'DatiAnagrafici',
                     namespace=SPID_PREFIXES['fpa'],
                 )
                 if elements.get('CodiceFiscale'):
@@ -141,14 +141,14 @@ class SpidSAMLBackend(SAMLBackend):
                 DatiAnagrafici.children.append(IdFiscaleIVA)
                 DatiAnagrafici.children.append(Anagrafica)
                 CessionarioCommittente = saml2.ExtensionElement(
-                    'CessionarioCommittente', 
+                    'CessionarioCommittente',
                     namespace=SPID_PREFIXES['fpa'],
                 )
                 CessionarioCommittente.children.append(DatiAnagrafici)
-                
+
                 # Sede
                 Sede = saml2.ExtensionElement(
-                    'Sede', 
+                    'Sede',
                     namespace=SPID_PREFIXES['fpa'],
                 )
                 Sede.children.append(elements['Indirizzo'])
@@ -158,9 +158,9 @@ class SpidSAMLBackend(SAMLBackend):
                 Sede.children.append(elements['Provincia'])
                 Sede.children.append(elements['Nazione'])
                 CessionarioCommittente.children.append(Sede)
-                
+
                 spid_extensions.children.append(CessionarioCommittente)
-    
+
             spid_contact.extensions = spid_extensions
             metadata.contact_person.append(spid_contact)
             cnt += 1
@@ -232,7 +232,7 @@ class SpidSAMLBackend(SAMLBackend):
 
         try:
             binding = saml2.BINDING_HTTP_POST
-            destination = context.request['entityID']
+            destination = context.internal_data['target_entity_id']
             # SPID CUSTOMIZATION
             # client = saml2.client.Saml2Client(conf)
             client = self.sp
@@ -317,7 +317,7 @@ class SpidSAMLBackend(SAMLBackend):
             context.state[self.name] = {"relay_state": relay_state}
             # these will give the way to check compliances between the req and resp
             context.state['req_args'] = {'id': authn_req.id}
-            
+
             logger.debug("ht_args: %s" % ht_args)
             return make_saml_response(binding, ht_args)
 
@@ -339,7 +339,7 @@ class SpidSAMLBackend(SAMLBackend):
         if not context.request["SAMLResponse"]:
             logger.debug("Missing Response for state")
             raise SATOSAAuthenticationError(context.state, "Missing Response")
-        
+
         try:
             authn_response = self.sp.parse_authn_request_response(
                 context.request["SAMLResponse"],
@@ -355,7 +355,7 @@ class SpidSAMLBackend(SAMLBackend):
                 logger.debug(errmsg)
                 raise SATOSAAuthenticationError(context.state, errmsg)
             del self.outstanding_queries[req_id]
-        
+
         # Context validation
         if not context.state.get(self.name):
             _msg = "context.state[self.name] KeyError: where self.name is {}".format(self.name)
@@ -372,13 +372,13 @@ class SpidSAMLBackend(SAMLBackend):
         authn_context_classref = self.config['acr_mapping']['']
 
         issuer = authn_response.response.issuer
-    
+
         # this will get the entity name in state
         if len(context.state.keys()) < 2:
             _msg = "Inconsistent context.state"
             logger.error(_msg)
             raise SATOSAStateError(context.state, _msg)
-        
+
         destination_frontend = list(context.state.keys())[1]
         # deprecated
         # if not context.state.get('Saml2IDP'):
@@ -393,7 +393,7 @@ class SpidSAMLBackend(SAMLBackend):
             logging.debug(f'Attributes to {authn_response.return_addrs} '
                           f'in_response_to {authn_response.in_response_to}: '
                           f'{",".join(authn_response.ava.keys())}')
-        
+
         validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr,
                                            recipient = recipient,
                                            in_response_to=in_response_to,
@@ -402,7 +402,7 @@ class SpidSAMLBackend(SAMLBackend):
                                            authn_context_class_ref=authn_context_classref,
                                            return_addrs=authn_response.return_addrs)
         validator.run()
-        
+
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
             issuer = authn_response.response.issuer.text.strip()
