@@ -99,7 +99,7 @@ source satosa.env/bin/activate
 
 ###### Dependencies
 ````
-sudo apt install -y libffi-dev libssl-dev xmlsec1 python3-pip xmlsec1 procps
+sudo apt install -y libffi-dev libssl-dev xmlsec1 python3-pip xmlsec1 procps libpcre3 libpcre3-dev
 
 git clone https://github.com/peppelinux/Satosa-Saml2Spid.git repository
 pip install -r repository/requirements.txt
