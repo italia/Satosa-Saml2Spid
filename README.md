@@ -148,6 +148,7 @@ If you want to handle metadata file manually, as this example purpose as demostr
 create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
+mkdir -p metadata/idp metadata/sp
 wget http://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
 wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ````
