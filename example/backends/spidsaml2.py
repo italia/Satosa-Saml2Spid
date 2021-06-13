@@ -401,7 +401,12 @@ class SpidSAMLBackend(SAMLBackend):
                                            accepted_time_diff = accepted_time_diff,
                                            authn_context_class_ref=authn_context_classref,
                                            return_addrs=authn_response.return_addrs)
-        validator.run()
+        try:
+            validator.run()
+        except Exception as e:
+            logger.error(e)
+            return Response(text_type(f'<b>{e}</b>').encode('utf-8'),
+                            content="text/html; charset=utf8")
 
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
