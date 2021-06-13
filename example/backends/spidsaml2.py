@@ -1,8 +1,10 @@
 import logging
+import re
 import saml2
 import satosa.util as util
 
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
+from saml2.response import StatusAuthnFailed
 from saml2.authn_context import requested_authn_context
 from saml2.metadata import entity_descriptor, sign_entity_descriptor
 from saml2.saml import NAMEID_FORMAT_TRANSIENT
@@ -18,6 +20,51 @@ from six import text_type
 from . spidsaml2_validator import Saml2ResponseValidator
 
 logger = logging.getLogger(__name__)
+
+
+#
+# Messaggi di Errore SPID
+#
+# Ref: https://docs.italia.it/italia/spid/spid-regole-tecniche/it/stabile/messaggi-errore.html
+#
+SPID_ANOMALIES = {
+    19: {
+        'message': 'Autenticazione fallita per ripetuta sottomissione di credenziali errate',
+        'troubleshoot': 'Inserire credenziali corrette'
+    },
+    20: {
+        'message': 'Utente privo di credenziali compatibili con '
+                   'il livello di autenticazione richiesto',
+        'troubleshoot': "Acquisire credenziali di livello idoneo all'accesso al servizio",
+    },
+    21: {
+        'message': "Timeout durante l'autenticazione utente",
+        'troubleshoot': "Si ricorda che l'operazione di autenticazione deve "
+                        "essere completata entro un determinato periodo di tempo",
+    },
+    22: {
+        'message': "L'utente nega il consenso all'invio di dati al fornitore del servizio",
+        'troubleshoot': 'È necessario dare il consenso per poter accedere al servizio',
+    },
+    23: {
+        'message': 'Utente con identità sospesa/revocata o con credenziali bloccate'
+    },
+    25: {
+        'message': "Processo di autenticazione annullato dall'utente"
+    },
+    30: {
+        'message': "L'identità digitale utilizzata non è un'identità digitale del tipo atteso",
+        'troubleshoot': "È necessario eseguire l'autenticazione con le credenziali del corretto tipo di identità digitale richiesto"
+    }
+}
+
+
+def render_error(msg):
+    """
+        Todo: Jinja2 tempalte loader and rendering :)
+    """
+    return Response(text_type(f'<b>{msg}</b>').encode('utf-8'),
+                    content="text/html; charset=utf8")
 
 
 class SpidSAMLBackend(SAMLBackend):
@@ -199,7 +246,9 @@ class SpidSAMLBackend(SAMLBackend):
                 blacklist_array = json.load(blacklist_file)['blacklist']
                 if entity_id in blacklist_array:
                     logger.debug("IdP with EntityID {} is blacklisted".format(entity_id))
-                    raise SATOSAAuthenticationError(context.state, "Selected IdP is blacklisted for this backend")
+                    raise SATOSAAuthenticationError(
+                        context.state, "Selected IdP is blacklisted for this backend"
+                    )
 
 
     def authn_request(self, context, entity_id):
@@ -237,13 +286,15 @@ class SpidSAMLBackend(SAMLBackend):
             # client = saml2.client.Saml2Client(conf)
             client = self.sp
 
-            logger.debug("binding: %s, destination: %s" % (binding, destination))
+            logger.debug(
+                f"binding: {binding}, destination: {destination}"
+            )
 
             # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
             # req_id, req = self.sp.create_authn_request(
                 # destination, binding=response_binding, **kwargs)
 
-            logger.debug('Redirecting user to the IdP via %s binding.', binding)
+            logger.debug(f'Redirecting user to the IdP via {binding} binding.')
             # use the html provided by pysaml2 if no template was specified or it didn't exist
 
 
@@ -251,9 +302,9 @@ class SpidSAMLBackend(SAMLBackend):
             # 'http://idpspid.testunical.it:8088'
             # dovrebbe essere destination ma nel caso di spid-testenv2 è entityid...
             # binding, destination = self.sp.pick_binding("single_sign_on_service", None, "idpsso", entity_id=entity_id)
-            # location = client.sso_location(destination, binding)
+            location = client.sso_location(destination, binding)
             location = client.sso_location(entity_id, binding)
-            location_fixed = entity_id
+            location_fixed = destination # entity_id
             # ...hope to see the SSO endpoint soon in spid-testenv2
             # returns 'http://idpspid.testunical.it:8088/sso'
             # fixed: https://github.com/italia/spid-testenv2/commit/6041b986ec87ab8515dd0d43fed3619ab4eebbe9
@@ -267,7 +318,6 @@ class SpidSAMLBackend(SAMLBackend):
             # spid-testenv2 preleva l'attribute consumer service dalla authnRequest (anche se questo sta già nei metadati...)
             authn_req.attribute_consuming_service_index = "0"
 
-            # import pdb; pdb.set_trace()
             issuer = saml2.saml.Issuer()
             issuer.name_qualifier = client.config.entityid
             issuer.text = client.config.entityid
@@ -323,7 +373,9 @@ class SpidSAMLBackend(SAMLBackend):
 
         except Exception as exc:
             logger.debug("Failed to construct the AuthnRequest for state")
-            raise SATOSAAuthenticationError(context.state, "Failed to construct the AuthnRequest") from exc
+            raise SATOSAAuthenticationError(
+                context.state, "Failed to construct the AuthnRequest"
+            ) from exc
 
     def authn_response(self, context, binding):
         """
@@ -344,9 +396,15 @@ class SpidSAMLBackend(SAMLBackend):
             authn_response = self.sp.parse_authn_request_response(
                 context.request["SAMLResponse"],
                 binding, outstanding=self.outstanding_queries)
+        except StatusAuthnFailed as err:
+            logger.error(f"Failed to parse authn request for state: {err}")
+            erdict = re.search(
+                r'ErrorCode nr(?P<err_code>\d+)', str(err)).groupdict()
+            return render_error(SPID_ANOMALIES[int(erdict['err_code'])])
         except Exception as err:
             logger.debug("Failed to parse authn request for state")
-            raise SATOSAAuthenticationError(context.state, "Failed to parse authn request") from err
+            raise SATOSAAuthenticationError(
+                context.state, "Failed to parse authn request")
 
         if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
             req_id = authn_response.in_response_to
@@ -358,13 +416,14 @@ class SpidSAMLBackend(SAMLBackend):
 
         # Context validation
         if not context.state.get(self.name):
-            _msg = "context.state[self.name] KeyError: where self.name is {}".format(self.name)
+            _msg = f"context.state[self.name] KeyError: where self.name is {self.name}"
             logger.error(_msg)
             raise SATOSAStateError(context.state, _msg)
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
             logger.debug("State did not match relay state for state")
-            raise SATOSAAuthenticationError(context.state, "State did not match relay state")
+            raise SATOSAAuthenticationError(
+                context.state, "State did not match relay state")
 
         # Spid and SAML2 additional tests
         accepted_time_diff = self.config['sp_config']['accepted_time_diff']
@@ -394,19 +453,20 @@ class SpidSAMLBackend(SAMLBackend):
                           f'in_response_to {authn_response.in_response_to}: '
                           f'{",".join(authn_response.ava.keys())}')
 
-        validator = Saml2ResponseValidator(authn_response=authn_response.xmlstr,
-                                           recipient = recipient,
-                                           in_response_to=in_response_to,
-                                           requester = requester,
-                                           accepted_time_diff = accepted_time_diff,
-                                           authn_context_class_ref=authn_context_classref,
-                                           return_addrs=authn_response.return_addrs)
+        validator = Saml2ResponseValidator(
+                            authn_response=authn_response.xmlstr,
+                            recipient = recipient,
+                            in_response_to=in_response_to,
+                            requester = requester,
+                            accepted_time_diff = accepted_time_diff,
+                            authn_context_class_ref=authn_context_classref,
+                            return_addrs=authn_response.return_addrs
+        )
         try:
             validator.run()
         except Exception as e:
             logger.error(e)
-            return Response(text_type(f'<b>{e}</b>').encode('utf-8'),
-                            content="text/html; charset=utf8")
+            return render_error(e)
 
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
@@ -414,4 +474,7 @@ class SpidSAMLBackend(SAMLBackend):
             context.state[Context.KEY_MEMORIZED_IDP] = issuer
         context.state.pop(self.name, None)
         context.state.pop(Context.KEY_FORCE_AUTHN, None)
-        return self.auth_callback_func(context, self._translate_response(authn_response, context.state))
+
+        return self.auth_callback_func(
+            context, self._translate_response(authn_response, context.state)
+        )
