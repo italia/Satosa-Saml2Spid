@@ -4,7 +4,7 @@ INTERNAL_ATTRIBUTES: "internal_attributes.yaml"
 COOKIE_STATE_NAME: "SATOSA_STATE"
 CONTEXT_STATE_DELETE: yes
 
-#COOKIE_MAX_AGE: 600 # 10 minutes
+COOKIE_MAX_AGE: 600 # 10 minutes
 #COOKIE_SECURE: no
 #COOKIE_HTTPONLY: no
 
@@ -36,6 +36,7 @@ MICRO_SERVICES:
   # - "plugins/microservices/ldap_attribute_store.yaml"
   # re-process again after new attributes beign pushed (or not) from ldap store
   # - "plugins/microservices/spid_unical_account_linking.yaml"
+  - "plugins/microservices/idp_hinting.yaml"
   - "plugins/microservices/target_based_routing.yaml"
 LOGGING:
   version: 1
