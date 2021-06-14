@@ -3,6 +3,11 @@ import re
 import saml2
 import satosa.util as util
 
+from jinja2 import (Environment,
+                    Markup,
+                    FileSystemLoader,
+                    Template,
+                    select_autoescape)
 from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
 from saml2.response import StatusAuthnFailed
 from saml2.authn_context import requested_authn_context
@@ -62,22 +67,6 @@ _TROUBLESHOOT_MSG = ("È stato riscontrato un problema di validazione "
                      "della risposta proveniente dal "
                      "Provider di Identità. "
                      " Contattare il supporto tecnico per eventuali chiarimenti")
-
-def handle_error(message:str, troubleshoot:str='', err=''):
-    """
-        Todo: Jinja2 tempalte loader and rendering :)
-    """
-    logger.error(f"Failed to parse authn request: {message} {err}")
-    msg = (
-        f'<b>{message}</b><br>'
-        f'{troubleshoot}'
-    )
-    return Response(text_type(msg).encode('utf-8'),
-                    content="text/html; charset=utf8")
-
-
-def handle_spid_anomaly(err_number, err):
-    return handle_error(**SPID_ANOMALIES[int(err_number)])
 
 
 class SpidSAMLBackend(SAMLBackend):
@@ -390,6 +379,39 @@ class SpidSAMLBackend(SAMLBackend):
                 context.state, "Failed to construct the AuthnRequest"
             ) from exc
 
+
+    def handle_error(self, message:str, troubleshoot:str='',
+                     err='', template_path='templates',
+                     template_name='spid_login_error.html'):
+        """
+            Todo: Jinja2 tempalte loader and rendering :)
+        """
+        logger.error(f"Failed to parse authn request: {message} {err}")
+        loader = Environment(
+                        loader=FileSystemLoader(searchpath=template_path),
+                        autoescape=select_autoescape(['html'])
+        )
+        loader.globals.update({
+            'static': self.config['static_storage_url'],
+        })
+        template = loader.get_template(template_name)
+        result = template.render({
+            'message': message,
+            'troubleshoot': troubleshoot
+
+        })
+        # msg = (
+            # f'<b>{message}</b><br>'
+            # f'{troubleshoot}'
+        # )
+        # text_type(msg).encode('utf-8')
+        return Response(result, content="text/html; charset=utf8")
+
+
+    def handle_spid_anomaly(self, err_number, err):
+        return self.handle_error(**SPID_ANOMALIES[int(err_number)])
+
+
     def authn_response(self, context, binding):
         """
         Endpoint for the idp response
@@ -411,10 +433,20 @@ class SpidSAMLBackend(SAMLBackend):
                 binding, outstanding=self.outstanding_queries)
         except StatusAuthnFailed as err:
             erdict = re.search(
-                r'ErrorCode nr(?P<err_code>\d+)', str(err)).groupdict()
-            return handle_spid_anomaly(erdict['err_code'], err)
+                r'ErrorCode nr(?P<err_code>\d+)', str(err))
+            if erdict:
+                return self.handle_spid_anomaly(erdict.groupdict()['err_code'], err)
+            else:
+                return self.handle_error(
+                    **{
+                       'err': err,
+                       'message': 'Autenticazione fallita',
+                       'troubleshoot': "Anomalia riscontrata durante la fase di Autenticazione."
+                                       " Contattare il supporto tecnico per eventuali chiarimenti"
+                    }
+                )
         except SignatureError as err:
-            return handle_error(
+            return self.handle_error(
                 **{
                    'err': err,
                    'message': 'Autenticazione fallita',
@@ -423,7 +455,7 @@ class SpidSAMLBackend(SAMLBackend):
                 }
             )
         except Exception as err:
-            return handle_error(
+            return self.handle_error(
                 **{
                    'err': err,
                    'message': 'Anomalia riscontrata nel processo di Autenticazione',
@@ -436,7 +468,7 @@ class SpidSAMLBackend(SAMLBackend):
             if req_id not in self.outstanding_queries:
                 errmsg = "No request with id: {}".format(req_id),
                 logger.debug(errmsg)
-                return handle_error(
+                return self.handle_error(
                     **{
                        'message': errmsg,
                        'troubleshoot': _TROUBLESHOOT_MSG
@@ -448,7 +480,7 @@ class SpidSAMLBackend(SAMLBackend):
         if not context.state.get(self.name):
             _msg = f"context.state[self.name] KeyError: where self.name is {self.name}"
             logger.error(_msg)
-            return handle_error(
+            return self.handle_error(
                     **{
                        'message': _msg,
                        'troubleshoot': _TROUBLESHOOT_MSG
@@ -457,7 +489,7 @@ class SpidSAMLBackend(SAMLBackend):
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
             _msg = "State did not match relay state for state"
-            return handle_error(
+            return self.handle_error(
                     **{
                        'message': _msg,
                        'troubleshoot': _TROUBLESHOOT_MSG
@@ -475,7 +507,7 @@ class SpidSAMLBackend(SAMLBackend):
         # this will get the entity name in state
         if len(context.state.keys()) < 2:
             _msg = "Inconsistent context.state"
-            return handle_error(
+            return self.handle_error(
                     **{
                        'message': _msg,
                        'troubleshoot': _TROUBLESHOOT_MSG
@@ -512,7 +544,7 @@ class SpidSAMLBackend(SAMLBackend):
 
         except Exception as e:
             logger.error(e)
-            return handle_error(e)
+            return self.handle_error(e)
 
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):

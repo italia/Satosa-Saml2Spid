@@ -53,8 +53,8 @@ with the help of an additional webserver dedicated for static contents:
 You can find these demo pages in `example/static` and edit at your taste.
 To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
 
-- `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "http://localhost:9999/error_page.html"`
-- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "http://172.17.0.1:9999/static/disco.html"`
+- `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "https://localhost:9999/error_page.html"`
+- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://172.17.0.1:9999/static/disco.html"`
 
 
 ## Docker image
@@ -173,7 +173,7 @@ export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.v
 uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768
 
 # additional static serve for the demo Discovery Service with Spid button
-uwsgi --http 0.0.0.0:9999 --check-static-docroot --check-static ./static/ --static-index disco.html
+uwsgi --https 0.0.0.0:9999,./pki/cert.pem,./pki/privkey.pem --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
 #### Get Proxy Metadata for your SP

@@ -14,7 +14,7 @@ from saml2 import samlp
 # sb._load_state(context)
 
 logger = logging.getLogger(__name__)
-
+_ERROR_TROUBLESHOOT = " Contattare il supporto tecnico per eventuali chiarimenti"
 
 class SPIDValidatorException(Exception):
     def __init__(self, message, errors = ''):
@@ -54,7 +54,8 @@ class Saml2ResponseValidator(object):
         if self.in_response_to != self.response.in_response_to:
             raise SPIDValidatorException(
                 'In response To not valid: '
-                f'{self.in_response_to} != {self.response.in_response_to}'
+                f'{self.in_response_to} != {self.response.in_response_to}.'
+                f'{_ERROR_TROUBLESHOOT}'
             )
 
     def validate_destination(self):
@@ -62,7 +63,9 @@ class Saml2ResponseValidator(object):
             inutile se disabiliti gli unsolicited
         """
         if not self.response.destination or self.response.destination not in self.return_addrs:
-            _msg = f'Destination is not valid: {self.response.destination} not in {self.return_addrs}'
+            _msg = (f'Destination is not valid: {self.response.destination or ""} not in {self.return_addrs}.'
+                    f'{_ERROR_TROUBLESHOOT}'
+            )
             raise SPIDValidatorException(_msg)
 
     def validate_issuer(self):
@@ -72,23 +75,26 @@ class Saml2ResponseValidator(object):
 
         # 30
         # check that this issuer is in the metadata...
-        if self.response.issuer.text != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+        if self.response.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
             raise SPIDValidatorException(
-                f'Issuer NameFormat is invalid: {self.requester} != {self.response.issuer.text}'
+                f'Issuer NameFormat is invalid: {self.response.issuer.format} '
+                '!= "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"'
             )
 
-        msg = 'Issuer format is not valid: {}'
+        msg = 'Issuer format is not valid: {}. {}'
         # 70, 71
         if not hasattr(self.response.issuer, 'format') or \
            not getattr(self.response.issuer, 'format', None):
-            raise SPIDValidatorException(msg.format(self.response.issuer.format))
+            raise SPIDValidatorException(
+                msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
+            )
 
         # 72
         for i in self.response.assertion:
             if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
-               raise SPIDValidatorException(
-                msg.format(self.response.issuer.format)
-               )
+                raise SPIDValidatorException(
+                    msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
+                )
 
 
     def validate_assertion_version(self):
@@ -96,15 +102,16 @@ class Saml2ResponseValidator(object):
         """
         for i in self.response.assertion:
             if i.version != '2.0':
-                msg = 'validate_assertion_version failed on: "{}"'
-                raise SPIDValidatorException(msg.format(i.version))
+                msg = (f'validate_assertion_version failed on: "{i.version}".'
+                       f'{_ERROR_TROUBLESHOOT}'
+                )
+                raise SPIDValidatorException(msg)
 
     def validate_issueinstant(self):
         """ spid saml check 39, 40
         """
         # Spid dt standard format
         for i in self.response.assertion:
-
             try:
                 issueinstant_naive = datetime.datetime.strptime(
                     i.issue_instant, '%Y-%m-%dT%H:%M:%SZ'
@@ -123,10 +130,10 @@ class Saml2ResponseValidator(object):
                 seconds = (now - issuerinstant_aware).seconds
 
             if seconds > self.accepted_time_diff:
-                msg = "Not a valid issue_instant: {}"
-                raise SPIDValidatorException(
-                    msg.format(self.response.issue_instant)
+                msg = (f"Not a valid issue_instant: {issueinstant_naive}"
+                       f'{_ERROR_TROUBLESHOOT}'
                 )
+                raise SPIDValidatorException(msg)
 
     def validate_name_qualifier(self):
         """ spid saml check 43, 45, 46, 47, 48, 49
@@ -136,14 +143,18 @@ class Saml2ResponseValidator(object):
                not i.subject.name_id.name_qualifier:
                 raise SPIDValidatorException(
                     'Not a valid subject.name_id.name_qualifier'
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
             if not i.subject.name_id.format:
-                raise SPIDValidatorException('Not a valid subject.name_id.format')
-            if i.subject.name_id.format not in self.nameid_formats:
-                msg = 'Not a valid subject.name_id.format: {}'
                 raise SPIDValidatorException(
-                    msg.format(i.subject.name_id.format)
+                    'Not a valid subject.name_id.format'
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
+            if i.subject.name_id.format not in self.nameid_formats:
+                msg = (f'Not a valid subject.name_id.format: {i.subject.name_id.format}'
+                       f'{_ERROR_TROUBLESHOOT}'
+                )
+                raise SPIDValidatorException(msg)
 
     def validate_subject_confirmation_data(self):
         """ spid saml check 59, 61, 62, 63, 64
@@ -156,11 +167,14 @@ class Saml2ResponseValidator(object):
                 if not hasattr(subject_confirmation, 'subject_confirmation_data') or \
                      not getattr(subject_confirmation, 'subject_confirmation_data', None):
                     msg = 'subject_confirmation_data not present'
-                    raise SPIDValidatorException(msg)
+                    raise SPIDValidatorException(f'{msg}. {_ERROR_TROUBLESHOOT}')
 
                 # 60
                 if not subject_confirmation.subject_confirmation_data.in_response_to:
-                    raise SPIDValidatorException('subject.subject_confirmation_data in response -> null data')
+                    raise SPIDValidatorException(
+                        'subject.subject_confirmation_data in response -> null data.'
+                        f'{_ERROR_TROUBLESHOOT}'
+                    )
 
                 # 62 avoided with allow_unsolicited set to false (XML parse error: Unsolicited response: id-OsoMQGYzX4HGLsfL7)
                 # if subject.subject_confirmation_data.in_response_to != self.in_response_to:
@@ -168,17 +182,23 @@ class Saml2ResponseValidator(object):
 
                 # 50
                 if self.recipient != subject_confirmation.subject_confirmation_data.recipient:
-                    msg = 'subject_confirmation_data.recipient not valid: {}'
-                    raise SPIDValidatorException(msg.format(subject_confirmation_data.recipient))
+                    msg = f'subject_confirmation_data.recipient not valid: {subject_confirmation_data.recipient}. '
+                    raise SPIDValidatorException(f'{msg}{_ERROR_TROUBLESHOOT}')
 
                 # 63 ,64
                 if not hasattr(subject_confirmation.subject_confirmation_data, 'not_on_or_after') or \
                      not getattr(subject_confirmation.subject_confirmation_data, 'not_on_or_after', None):
-                    raise SPIDValidatorException('subject.subject_confirmation_data not_on_or_after not valid')
+                    raise SPIDValidatorException(
+                        'subject.subject_confirmation_data not_on_or_after not valid. '
+                        f'{_ERROR_TROUBLESHOOT}'
+                    )
 
                 if not hasattr(subject_confirmation.subject_confirmation_data, 'in_response_to') or \
                      not getattr(subject_confirmation.subject_confirmation_data, 'in_response_to', None):
-                    raise SPIDValidatorException('subject.subject_confirmation_data in response to not valid')
+                    raise SPIDValidatorException(
+                        'subject.subject_confirmation_data in response to not valid. '
+                        f'{_ERROR_TROUBLESHOOT}'
+                    )
 
 
     def validate_assertion_conditions(self):
@@ -192,7 +212,8 @@ class Saml2ResponseValidator(object):
                not getattr(i, 'conditions', None):
                # or not i.conditions.text.strip(' ').strip('\n'):
                 raise SPIDValidatorException(
-                    'Assertion conditions not present'
+                    'Assertion conditions not present. '
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
 
             # 75, 76
@@ -200,23 +221,25 @@ class Saml2ResponseValidator(object):
                not getattr(i.conditions, 'not_before', None):
                # or not i.conditions.text.strip(' ').strip('\n'):
                 raise SPIDValidatorException(
-                    'Assertion conditions not_before not valid'
+                    'Assertion conditions not_before not valid. '
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
-
 
             # 79, 80
             if not hasattr(i.conditions, 'not_on_or_after') or \
                not getattr(i.conditions, 'not_on_or_after', None):
                # or not i.conditions.text.strip(' ').strip('\n'):
                 raise SPIDValidatorException(
-                    'Assertion conditions not_on_or_after not valid'
+                    'Assertion conditions not_on_or_after not valid. '
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
 
             # 84
             if not hasattr(i.conditions, 'audience_restriction') or \
                not getattr(i.conditions, 'audience_restriction', None):
                 raise SPIDValidatorException(
-                    'Assertion conditions without audience_restriction'
+                    'Assertion conditions without audience_restriction. '
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
 
             # 85
@@ -224,11 +247,13 @@ class Saml2ResponseValidator(object):
             for aud in i.conditions.audience_restriction:
                 if not getattr(aud, 'audience', None):
                     raise SPIDValidatorException(
-                        'Assertion conditions audience_restriction without audience'
+                        'Assertion conditions audience_restriction without audience.'
+                        f'{_ERROR_TROUBLESHOOT}'
                     )
                 if not aud.audience[0].text:
                     raise SPIDValidatorException(
-                        'Assertion conditions audience_restriction without audience'
+                        'Assertion conditions audience_restriction without audience. '
+                        f'{_ERROR_TROUBLESHOOT}'
                     )
 
     def validate_assertion_authn_statement(self):
@@ -238,7 +263,8 @@ class Saml2ResponseValidator(object):
             if not hasattr(i, 'authn_statement') or \
                not getattr(i, 'authn_statement', None):
                 raise SPIDValidatorException(
-                    'Assertion authn_statement is missing/invalid'
+                    'Assertion authn_statement is missing/invalid. '
+                    f'{_ERROR_TROUBLESHOOT}'
                 )
 
             # 90, 92, 93
@@ -248,25 +274,29 @@ class Saml2ResponseValidator(object):
                    not hasattr(authns.authn_context, 'authn_context_class_ref') or \
                    not getattr(authns.authn_context, 'authn_context_class_ref', None):
                     raise SPIDValidatorException(
-                        'Assertion authn_statement.authn_context_class_ref is missing/invalid'
+                        'Assertion authn_statement.authn_context_class_ref is missing/invalid. '
+                        f'{_ERROR_TROUBLESHOOT}'
                     )
 
                 # 97
                 if authns.authn_context.authn_context_class_ref.text != self.authn_context_class_ref:
                     raise SPIDValidatorException(
-                        'Assertion authn_statement.authn_context.authn_context_class_ref is missing/invalid'
+                        'Assertion authn_statement.authn_context.authn_context_class_ref is missing/invalid. '
+                        f'{_ERROR_TROUBLESHOOT}'
                     )
                 # 98
                 if not hasattr(i, 'attribute_statement') or \
                    not getattr(i, 'attribute_statement', None):
                     raise SPIDValidatorException(
-                        'Assertion attribute_statement is missing/invalid'
+                        'Assertion attribute_statement is missing/invalid. '
+                        f'{_ERROR_TROUBLESHOOT}'
                     )
 
                 for attri in i.attribute_statement:
                     if not attri.attribute:
                         raise SPIDValidatorException(
-                            'Assertion attribute_statement.attribute is missing/invalid'
+                            'Assertion attribute_statement.attribute is missing/invalid. '
+                            f'{_ERROR_TROUBLESHOOT}'
                         )
 
     def run(self, tests=[]):
