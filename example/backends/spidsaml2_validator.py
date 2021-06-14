@@ -44,6 +44,8 @@ class Saml2ResponseValidator(object):
         self.in_response_to = in_response_to
         self.requester = requester
         self.return_addrs = return_addrs
+        self.issuer = issuer
+
 
     # handled adding authn req arguments in the session state (cookie)
     def validate_in_response_to(self):
@@ -70,10 +72,10 @@ class Saml2ResponseValidator(object):
 
         # 30
         # check that this issuer is in the metadata...
-        # if self.requester != self.response.issuer.text:
-            # raise SPIDValidatorException(
-                # f'Issuer different {self.requester} != {self.response.issuer.text}'
-            # )
+        if self.response.issuer.text != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+            raise SPIDValidatorException(
+                f'Issuer NameFormat is invalid: {self.requester} != {self.response.issuer.text}'
+            )
 
         msg = 'Issuer format is not valid: {}'
         # 70, 71

@@ -8,7 +8,7 @@ from saml2.response import StatusAuthnFailed
 from saml2.authn_context import requested_authn_context
 from saml2.metadata import entity_descriptor, sign_entity_descriptor
 from saml2.saml import NAMEID_FORMAT_TRANSIENT
-from saml2.sigver import security_context
+from saml2.sigver import security_context, SignatureError
 from saml2.validate import valid_instance
 from satosa.backends.saml2 import SAMLBackend
 from satosa.context import Context
@@ -58,13 +58,26 @@ SPID_ANOMALIES = {
     }
 }
 
+_TROUBLESHOOT_MSG = ("È stato riscontrato un problema di validazione "
+                     "della risposta proveniente dal "
+                     "Provider di Identità. "
+                     " Contattare il supporto tecnico per eventuali chiarimenti")
 
-def render_error(msg):
+def handle_error(message:str, troubleshoot:str='', err=''):
     """
         Todo: Jinja2 tempalte loader and rendering :)
     """
-    return Response(text_type(f'<b>{msg}</b>').encode('utf-8'),
+    logger.error(f"Failed to parse authn request: {message} {err}")
+    msg = (
+        f'<b>{message}</b><br>'
+        f'{troubleshoot}'
+    )
+    return Response(text_type(msg).encode('utf-8'),
                     content="text/html; charset=utf8")
+
+
+def handle_spid_anomaly(err_number, err):
+    return handle_error(**SPID_ANOMALIES[int(err_number)])
 
 
 class SpidSAMLBackend(SAMLBackend):
@@ -397,37 +410,64 @@ class SpidSAMLBackend(SAMLBackend):
                 context.request["SAMLResponse"],
                 binding, outstanding=self.outstanding_queries)
         except StatusAuthnFailed as err:
-            logger.error(f"Failed to parse authn request for state: {err}")
             erdict = re.search(
                 r'ErrorCode nr(?P<err_code>\d+)', str(err)).groupdict()
-            return render_error(SPID_ANOMALIES[int(erdict['err_code'])])
+            return handle_spid_anomaly(erdict['err_code'], err)
+        except SignatureError as err:
+            return handle_error(
+                **{
+                   'err': err,
+                   'message': 'Autenticazione fallita',
+                   'troubleshoot': "La firma digitale della risposta ottenuta non risulta essere corretta."
+                                   " Contattare il supporto tecnico per eventuali chiarimenti"
+                }
+            )
         except Exception as err:
-            logger.debug("Failed to parse authn request for state")
-            raise SATOSAAuthenticationError(
-                context.state, "Failed to parse authn request")
+            return handle_error(
+                **{
+                   'err': err,
+                   'message': 'Anomalia riscontrata nel processo di Autenticazione',
+                   'troubleshoot': _TROUBLESHOOT_MSG
+                }
+            )
 
         if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
             req_id = authn_response.in_response_to
             if req_id not in self.outstanding_queries:
                 errmsg = "No request with id: {}".format(req_id),
                 logger.debug(errmsg)
-                raise SATOSAAuthenticationError(context.state, errmsg)
+                return handle_error(
+                    **{
+                       'message': errmsg,
+                       'troubleshoot': _TROUBLESHOOT_MSG
+                    }
+                )
             del self.outstanding_queries[req_id]
 
         # Context validation
         if not context.state.get(self.name):
             _msg = f"context.state[self.name] KeyError: where self.name is {self.name}"
             logger.error(_msg)
-            raise SATOSAStateError(context.state, _msg)
+            return handle_error(
+                    **{
+                       'message': _msg,
+                       'troubleshoot': _TROUBLESHOOT_MSG
+                    }
+            )
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
-            logger.debug("State did not match relay state for state")
-            raise SATOSAAuthenticationError(
-                context.state, "State did not match relay state")
+            _msg = "State did not match relay state for state"
+            return handle_error(
+                    **{
+                       'message': _msg,
+                       'troubleshoot': _TROUBLESHOOT_MSG
+                    }
+            )
 
         # Spid and SAML2 additional tests
-        accepted_time_diff = self.config['sp_config']['accepted_time_diff']
-        recipient = self.config['sp_config']['service']['sp']['endpoints']['assertion_consumer_service'][0][0]
+        _sp_config = self.config['sp_config']
+        accepted_time_diff = _sp_config['accepted_time_diff']
+        recipient = _sp_config['service']['sp']['endpoints']['assertion_consumer_service'][0][0]
         authn_context_classref = self.config['acr_mapping']['']
 
         issuer = authn_response.response.issuer
@@ -435,8 +475,12 @@ class SpidSAMLBackend(SAMLBackend):
         # this will get the entity name in state
         if len(context.state.keys()) < 2:
             _msg = "Inconsistent context.state"
-            logger.error(_msg)
-            raise SATOSAStateError(context.state, _msg)
+            return handle_error(
+                    **{
+                       'message': _msg,
+                       'troubleshoot': _TROUBLESHOOT_MSG
+                    }
+            )
 
         destination_frontend = list(context.state.keys())[1]
         # deprecated
@@ -464,9 +508,11 @@ class SpidSAMLBackend(SAMLBackend):
         )
         try:
             validator.run()
+
+
         except Exception as e:
             logger.error(e)
-            return render_error(e)
+            return handle_error(e)
 
         context.decorate(Context.KEY_BACKEND_METADATA_STORE, self.sp.metadata)
         if self.config.get(SAMLBackend.KEY_MEMORIZE_IDP):
