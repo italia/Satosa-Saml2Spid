@@ -391,8 +391,13 @@ class SpidSAMLBackend(SAMLBackend):
                         loader=FileSystemLoader(searchpath=template_path),
                         autoescape=select_autoescape(['html'])
         )
+        _static_url = (
+            self.config['static_storage_url']
+            if self.config['static_storage_url'][-1] == '/' else
+            self.config['static_storage_url'] + '/'
+        )
         loader.globals.update({
-            'static': self.config['static_storage_url'],
+            'static': _static_url,
         })
         template = loader.get_template(template_name)
         result = template.render({
@@ -441,8 +446,7 @@ class SpidSAMLBackend(SAMLBackend):
                     **{
                        'err': err,
                        'message': 'Autenticazione fallita',
-                       'troubleshoot': "Anomalia riscontrata durante la fase di Autenticazione."
-                                       " Contattare il supporto tecnico per eventuali chiarimenti"
+                       'troubleshoot': f"Anomalia riscontrata durante la fase di Autenticazione. {_TROUBLESHOOT_MSG}"
                     }
                 )
         except SignatureError as err:
@@ -450,8 +454,8 @@ class SpidSAMLBackend(SAMLBackend):
                 **{
                    'err': err,
                    'message': 'Autenticazione fallita',
-                   'troubleshoot': "La firma digitale della risposta ottenuta non risulta essere corretta."
-                                   " Contattare il supporto tecnico per eventuali chiarimenti"
+                   'troubleshoot': f"La firma digitale della risposta ottenuta non risulta essere corretta. {_TROUBLESHOOT_MSG}"
+
                 }
             )
         except Exception as err:
@@ -540,8 +544,6 @@ class SpidSAMLBackend(SAMLBackend):
         )
         try:
             validator.run()
-
-
         except Exception as e:
             logger.error(e)
             return self.handle_error(e)
