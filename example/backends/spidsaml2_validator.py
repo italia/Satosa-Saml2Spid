@@ -75,16 +75,18 @@ class Saml2ResponseValidator(object):
 
         # 30
         # check that this issuer is in the metadata...
-        if self.response.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
-            raise SPIDValidatorException(
-                f'Issuer NameFormat is invalid: {self.response.issuer.format} '
-                '!= "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"'
-            )
+        if self.response.issuer.format:
+            if self.response.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+                raise SPIDValidatorException(
+                    f'Issuer NameFormat is invalid: {self.response.issuer.format} '
+                    '!= "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"'
+                )
 
         msg = 'Issuer format is not valid: {}. {}'
         # 70, 71
-        if not hasattr(self.response.issuer, 'format') or \
-           not getattr(self.response.issuer, 'format', None):
+        assiss = self.response.assertion[0].issuer
+        if not hasattr(assiss, 'format') or \
+           not getattr(assiss, 'format', None):
             raise SPIDValidatorException(
                 msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
             )
