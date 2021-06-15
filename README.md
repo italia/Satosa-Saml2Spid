@@ -45,10 +45,15 @@ with the help of an additional webserver dedicated for static contents:
 #### Discovery Service page
 ![disco](gallery/disco.png)
 
-
 #### Error page
-![disco](gallery/error_page.png)
+![err_gen](gallery/error_page.png)
+###### Generic error page
 
+![err1](gallery/error1.png)
+###### Saml2 Signature Error page
+
+![err2](gallery/error2.png)
+###### AgID SPID test #104
 
 You can find these demo pages in `example/static` and edit at your taste.
 To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
@@ -107,7 +112,7 @@ pip install -r repository/requirements.txt
 
 ## Configure the Proxy
 
-Create certificates for SAML2 operations, thanks to [psmiraglia](https://github.com/psmiraglia/spid-compliant-certificates).
+Create certificates for SAML2 operations, see [psmiraglia](https://github.com/italia/spid-compliant-certificates).
 ````
 export WD="pki/"
 
@@ -142,7 +147,7 @@ These are the configuration files:
 - `example/plugins/frontend/saml2_frontend.yaml`
 
 
-## Handling Metadata
+## Saml2 Metadata
 
 If you want to handle metadata file manually, as this example purpose as demostration,
 create `metadata/idp` and `metadata/sp` folders, then copy metadata:
@@ -246,8 +251,8 @@ The SaToSa **SPID** backend contained in this project adopt specialized forks of
 read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
 
 All the patches and features are currently merged and available with the following releases:
-- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v6.5.0)
-- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.1)
+- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v7.0.1)
+- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.3)
 
 
 #### Pending contributions to idpy
