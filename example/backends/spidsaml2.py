@@ -75,6 +75,28 @@ class SpidSAMLBackend(SAMLBackend):
     """
     _authn_context = 'https://www.spid.gov.it/SpidL1'
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        # error pages handler
+        self.template_loader = Environment(
+                        loader=FileSystemLoader(
+                            searchpath=self.config['template_folder']
+                        ),
+                        autoescape=select_autoescape(['html'])
+        )
+        _static_url = (
+            self.config['static_storage_url']
+            if self.config['static_storage_url'][-1] == '/' else
+            self.config['static_storage_url'] + '/'
+        )
+        self.template_loader.globals.update({
+            'static': _static_url,
+        })
+        self.error_page = self.template_loader.get_template(
+                                            self.config['error_template']
+        )
+
     def _metadata_endpoint(self, context):
         """
         Endpoint for retrieving the backend metadata
@@ -148,6 +170,10 @@ class SpidSAMLBackend(SAMLBackend):
                             namespace=SPID_PREFIXES['spid'],
                             text=v
                     )
+                    # Avviso SPID n. 19 v.4 per enti AGGREGATORI il tag ContactPerson deve avere l’attributo spid:entityType valorizzato come spid:aggregator
+                    if k == "PublicServicesFullOperator":
+                        spid_contact.extension_attributes= {"spid:entityType": "spid:aggregator"}
+
                     spid_extensions.children.append(ext)
 
             elif contact['contact_type'] == 'billing':
@@ -299,7 +325,6 @@ class SpidSAMLBackend(SAMLBackend):
             logger.debug(f'Redirecting user to the IdP via {binding} binding.')
             # use the html provided by pysaml2 if no template was specified or it didn't exist
 
-
             # SPID want the fqdn of the IDP as entityID, not the SSO endpoint
             # 'http://idpspid.testunical.it:8088'
             # dovrebbe essere destination ma nel caso di spid-testenv2 è entityid...
@@ -349,7 +374,7 @@ class SpidSAMLBackend(SAMLBackend):
             session_id = authn_req.id
 
             _req_str = authn_req_signed
-            logger.debug('AuthRequest to {}: {}'.format(destination, (_req_str)))
+            logger.debug(f'AuthRequest to {destination}: {_req_str}')
 
             relay_state = util.rndstr()
             ht_args = client.apply_binding(binding,
@@ -370,7 +395,7 @@ class SpidSAMLBackend(SAMLBackend):
             # these will give the way to check compliances between the req and resp
             context.state['req_args'] = {'id': authn_req.id}
 
-            logger.debug("ht_args: %s" % ht_args)
+            logger.debug(f"ht_args: {ht_args}")
             return make_saml_response(binding, ht_args)
 
         except Exception as exc:
@@ -382,34 +407,22 @@ class SpidSAMLBackend(SAMLBackend):
 
     def handle_error(self, message:str, troubleshoot:str='',
                      err='', template_path='templates',
-                     template_name='spid_login_error.html'):
+                     error_template='spid_login_error.html'):
         """
             Todo: Jinja2 tempalte loader and rendering :)
         """
         logger.error(f"Failed to parse authn request: {message} {err}")
-        loader = Environment(
-                        loader=FileSystemLoader(searchpath=template_path),
-                        autoescape=select_autoescape(['html'])
-        )
-        _static_url = (
-            self.config['static_storage_url']
-            if self.config['static_storage_url'][-1] == '/' else
-            self.config['static_storage_url'] + '/'
-        )
-        loader.globals.update({
-            'static': _static_url,
-        })
-        template = loader.get_template(template_name)
-        result = template.render({
+        result = self.error_page.render({
             'message': message,
             'troubleshoot': troubleshoot
 
         })
+        # the raw way :)
         # msg = (
             # f'<b>{message}</b><br>'
             # f'{troubleshoot}'
         # )
-        # text_type(msg).encode('utf-8')
+        # result = text_type(msg).encode('utf-8')
         return Response(result, content="text/html; charset=utf8")
 
 

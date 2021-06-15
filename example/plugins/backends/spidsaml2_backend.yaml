@@ -3,7 +3,11 @@ module: backends.spidsaml2.SpidSAMLBackend
 name: spidSaml2
 config:
   # idp_blacklist_file: /path/to/blacklist.json
-  static_storage_url: "https://localhost:9999/"
+
+  # error templates
+  static_storage_url: "https://localhost:9999"
+  error_template: "spid_login_error.html"
+  template_folder: "templates" # project root
 
   # make metadata downloadable from entityid url
   entityid_endpoint: true
