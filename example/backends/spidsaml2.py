@@ -97,44 +97,7 @@ class SpidSAMLBackend(SAMLBackend):
                                             self.config['error_template']
         )
 
-    def _metadata_endpoint(self, context):
-        """
-        Endpoint for retrieving the backend metadata
-        :type context: satosa.context.Context
-        :rtype: satosa.response.Response
-
-        :param context: The current context
-        :return: response with metadata
-        """
-        logger.debug("Sending metadata response")
-        conf = self.sp.config
-
-        metadata = entity_descriptor(conf)
-        # creare gli attribute_consuming_service
-        cnt = 0
-        for attribute_consuming_service in metadata.spsso_descriptor.attribute_consuming_service:
-            attribute_consuming_service.index = str(cnt)
-            cnt += 1
-
-        cnt = 0
-        for assertion_consumer_service in metadata.spsso_descriptor.assertion_consumer_service:
-            assertion_consumer_service.is_default = 'true' if not cnt else ''
-            assertion_consumer_service.index = str(cnt)
-            cnt += 1
-
-        # nameformat patch... tutto questo non rispecchia gli standard OASIS
-        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[0].requested_attribute:
-            reqattr.name_format = None
-            reqattr.friendly_name = None
-
-        # attribute consuming service service name patch
-        service_name = metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0]
-        service_name.lang = 'it'
-        service_name.text = metadata.entity_id
-
-        # remove extension disco and uuinfo (spid-testenv2)
-        #metadata.spsso_descriptor.extensions = []
-
+    def _metadata_contact_person(self, metadata, conf):
         ##############
         # avviso 29 v3
         #
@@ -147,7 +110,6 @@ class SpidSAMLBackend(SAMLBackend):
         saml2.md.SamlBase.register_prefix(SPID_PREFIXES)
         metadata.contact_person = []
         contact_map = conf.contact_person
-        cnt = 0
         metadata.contact_person = []
         for contact in contact_map:
             spid_contact = saml2.md.ContactPerson()
@@ -156,15 +118,17 @@ class SpidSAMLBackend(SAMLBackend):
                 'email_address' : [contact['email_address']],
                 'telephone_number' : [contact['telephone_number']]
             }
+            spid_extensions = saml2.ExtensionElement(
+                'Extensions',
+                namespace='urn:oasis:names:tc:SAML:2.0:metadata'
+            )
+
             if contact['contact_type'] == 'other':
                 spid_contact.loadd(contact_kwargs)
                 contact_kwargs['contact_type'] = contact['contact_type']
-                spid_extensions = saml2.ExtensionElement(
-                    'Extensions',
-                    namespace='urn:oasis:names:tc:SAML:2.0:metadata'
-                )
                 for k,v in contact.items():
-                    if k in contact_kwargs: continue
+                    if k in contact_kwargs:
+                        continue
                     ext = saml2.ExtensionElement(
                             k,
                             namespace=SPID_PREFIXES['spid'],
@@ -176,17 +140,16 @@ class SpidSAMLBackend(SAMLBackend):
 
                     spid_extensions.children.append(ext)
 
+                spid_contact.extensions = spid_extensions
+
             elif contact['contact_type'] == 'billing':
                 contact_kwargs['company'] = contact['company']
                 spid_contact.loadd(contact_kwargs)
-                spid_extensions = saml2.ExtensionElement(
-                    'Extensions',
-                    namespace='urn:oasis:names:tc:SAML:2.0:metadata'
-                )
 
                 elements = {}
                 for k,v in contact.items():
-                    if k in contact_kwargs: continue
+                    if k in contact_kwargs:
+                        continue
                     ext = saml2.ExtensionElement(
                             k,
                             namespace=SPID_PREFIXES['fpa'],
@@ -238,10 +201,50 @@ class SpidSAMLBackend(SAMLBackend):
 
             spid_contact.extensions = spid_extensions
             metadata.contact_person.append(spid_contact)
-            cnt += 1
         #
         # fine avviso 29v3
         ###################
+
+    def _metadata_endpoint(self, context):
+        """
+        Endpoint for retrieving the backend metadata
+        :type context: satosa.context.Context
+        :rtype: satosa.response.Response
+
+        :param context: The current context
+        :return: response with metadata
+        """
+        logger.debug("Sending metadata response")
+        conf = self.sp.config
+
+        metadata = entity_descriptor(conf)
+        # creare gli attribute_consuming_service
+        cnt = 0
+        for attribute_consuming_service in metadata.spsso_descriptor.attribute_consuming_service:
+            attribute_consuming_service.index = str(cnt)
+            cnt += 1
+
+        cnt = 0
+        for assertion_consumer_service in metadata.spsso_descriptor.assertion_consumer_service:
+            assertion_consumer_service.is_default = 'true' if not cnt else ''
+            assertion_consumer_service.index = str(cnt)
+            cnt += 1
+
+        # nameformat patch... tutto questo non rispecchia gli standard OASIS
+        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[0].requested_attribute:
+            reqattr.name_format = None
+            reqattr.friendly_name = None
+
+        # attribute consuming service service name patch
+        service_name = metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0]
+        service_name.lang = 'it'
+        service_name.text = metadata.entity_id
+
+        # remove extension disco and uuinfo (spid-testenv2)
+        # metadata.spsso_descriptor.extensions = []
+
+        # load ContactPerson Extensions
+        self._metadata_contact_person(metadata, conf)
 
         # metadata signature
         secc = security_context(conf)
