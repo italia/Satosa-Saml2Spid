@@ -280,6 +280,13 @@ class Saml2ResponseValidator(object):
                         f'{_ERROR_TROUBLESHOOT}'
                     )
 
+                # 94, 95, 96
+                if authns.authn_context.authn_context_class_ref.text != self.authn_context_class_ref:
+                    raise SpidError(
+                        'Invalid Spid authn_context_class_ref, requested: '
+                        f"{self.authn_context_class_ref}, got {authns.authn_context.authn_context_class_ref.text}"
+                    )
+
                 # 97
                 if authns.authn_context.authn_context_class_ref.text != self.authn_context_class_ref:
                     raise SPIDValidatorException(
