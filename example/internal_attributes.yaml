@@ -2,12 +2,12 @@ attributes:
   address:
     openid: [address.street_address]
     orcid: [addresses.str]
-    saml: [postaladdress]
+    saml: [postaladdress, address]
   displayname:
     openid: [nickname]
     orcid: [name.credit-name]
     github: [login]
-    saml: [displayName]
+    saml: [displayName, familyname, FamilyName, familyName]
   edupersontargetedid:
     facebook: [id]
     linkedin: [id]
@@ -22,7 +22,7 @@ attributes:
   edupersonentilement:
     saml: [eduPersonEntitlement]
   schacpersonaluniqueid:
-    saml: [schacPersonalUniqueID]
+    saml: [schacPersonalUniqueID, fiscalNumber]
   schacpersonaluniquecode:
     saml: [schacPersonalUniqueCode]
   schachomeorganizationtype:
@@ -34,14 +34,14 @@ attributes:
     linkedin: [email-address]
     orcid: [name.given-names.value]
     openid: [given_name]
-    saml: [givenName]
+    saml: [givenName, name, Name]
   mail:
     facebook: [email]
     linkedin: [email-address]
     orcid: [emails.str]
     github: [email]
     openid: [email]
-    saml: [mail]
+    saml: [mail, email]
   name:
     facebook: [name]
     orcid: [name.credit-name]
@@ -53,7 +53,7 @@ attributes:
     linkedin: [lastName]
     orcid: [name.family-name.value]
     openid: [family_name]
-    saml: [sn, surname, familyName]
+    saml: [sn, surname, familyName, FamilyName]
   # spid related
   spidCode:
     openid: [spidCode, spidcode]
@@ -69,7 +69,7 @@ attributes:
     orcid: [emails.str]
     github: [email]
     openid: [email]
-    saml: [email, mail]
+    saml: [mail]
   familyname:
     saml: [familyName, familyname, FamilyName]
   fiscalnumber:
