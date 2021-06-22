@@ -34,7 +34,8 @@ class Saml2ResponseValidator(object):
                  in_response_to='',
                  requester='',
                  authn_context_class_ref='https://www.spid.gov.it/SpidL2',
-                 return_addrs = []):
+                 return_addrs = [],
+                 allowed_acrs = []):
 
         self.response = samlp.response_from_string(authn_response)
         self.nameid_formats = nameid_formats
@@ -45,7 +46,7 @@ class Saml2ResponseValidator(object):
         self.requester = requester
         self.return_addrs = return_addrs
         self.issuer = issuer
-
+        self.allowed_acrs = allowed_acrs
 
     # handled adding authn req arguments in the session state (cookie)
     def validate_in_response_to(self):
@@ -269,8 +270,9 @@ class Saml2ResponseValidator(object):
                     f'{_ERROR_TROUBLESHOOT}'
                 )
 
-            # 90, 92, 93
+
             for authns in i.authn_statement:
+                # 90, 92, 93
                 if not hasattr(authns, 'authn_context') or \
                    not getattr(authns, 'authn_context', None) or \
                    not hasattr(authns.authn_context, 'authn_context_class_ref') or \
@@ -290,12 +292,12 @@ class Saml2ResponseValidator(object):
                         level_sp = int(self.authn_context_class_ref[-1])
                         level_idp = int(authns.authn_context.authn_context_class_ref.text.strip().replace('\n', '')[-1])
                         if level_idp < level_sp:
-                            raise SpidError(_msg)
+                            raise SPIDValidatorException(_msg)
                     except Exception as e:
-                        raise SpidError(_msg)
+                        raise SPIDValidatorException(_msg)
 
                 # 97
-                if authns.authn_context.authn_context_class_ref.text != self.authn_context_class_ref:
+                if authns.authn_context.authn_context_class_ref.text not in self.allowed_acrs:
                     raise SPIDValidatorException(
                         'Assertion authn_statement.authn_context.authn_context_class_ref is missing/invalid. '
                         f'{_ERROR_TROUBLESHOOT}'

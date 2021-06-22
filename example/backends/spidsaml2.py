@@ -556,7 +556,8 @@ class SpidSAMLBackend(SAMLBackend):
                             requester = requester,
                             accepted_time_diff = accepted_time_diff,
                             authn_context_class_ref=authn_context_classref,
-                            return_addrs=authn_response.return_addrs
+                            return_addrs=authn_response.return_addrs,
+                            allowed_acrs = self.config['spid_allowed_acrs']
         )
         try:
             validator.run()
