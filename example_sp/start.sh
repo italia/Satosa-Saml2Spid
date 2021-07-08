@@ -58,10 +58,7 @@ function gen_cert () {
   if [ -f ${CPATH}/pki/mykey.pem -a -f ${CPATH}/pki/mycert.pem ]; then
     echo "Founded certificate"
   else
-    ${BIN}/openssl genrsa -out ${CPATH}/pki/mykey.pem 2048
-    chmod 600 ${CPATH}/pki/mykey.pem
-    ${BIN}/openssl req -new -key ${CPATH}/pki/mykey.pem -out ${CPATH}/pki/myreq.csr -subj "/C=IT/ST=Rome/L=Rome/O=test/OU=test/CN=localhost"
-    ${BIN}/openssl x509 -req -days 365 -in ${CPATH}/pki/myreq.csr -signkey ${CPATH}/pki/mykey.pem -out ${CPATH}/pki/mycert.pem
+    openssl req -nodes -new -x509 -newkey rsa:2048 -days 3650 -keyout pki/mykey.pem -out pki/mycert.pem -subj "/C=IT/ST=Rome/L=Rome/O=test/OU=test/CN=localhost"
   fi
 }
 
