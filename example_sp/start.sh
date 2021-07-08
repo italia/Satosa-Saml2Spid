@@ -10,6 +10,7 @@ function help () {
   echo ""
   echo "-u URL is the idp metadata url, is mandatory the presence of an url or the metadata/idp.xml file "
   echo "-p PATH if present, copy the sp metadata on path"
+  echo "-c clean log, certificates and metadata at end of script"
   echo ""
   echo ## Example ##
   echo "$ ./start.sh -u https://idp.example.org/metadata -p /opt/satosa/metadata/sp" 
@@ -31,7 +32,9 @@ function help () {
 
 function abort () {
   echo 'operation aborted'
-  cd ${CPATH}
+  if [ "CLEAN" ]; then
+    rm -rf ${CPATH}/pki ${CPATH}/metadata ${CPATH}/spx.log
+  fi
   kill -9 $PID
 }
 
@@ -72,13 +75,16 @@ function copy_sp_metadata () {
   fi
 }
 
-while getopts ":u:p:h:" opt; do
+while getopts ":u:p:c:h:" opt; do
   case ${opt} in
     u )
        wget $OPTARG -O ${CPATH}/metadata/idp.xml
       ;;
     p )
       DEST_PATH=$OPTARG
+      ;;
+    c )
+      CLEAN='true'
       ;;
     \? )
       help
