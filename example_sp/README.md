@@ -1,4 +1,4 @@
-## Start Serice Provider ##
+## Start Service Provider ##
 
 Syntax: ./start.sh -u URL -p PATH -c
 
