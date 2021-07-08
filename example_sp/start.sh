@@ -12,7 +12,7 @@ function help () {
   echo "-p PATH if present, copy the sp metadata on path"
   echo "-c clean log, certificates and metadata at end of script"
   echo ""
-  echo ## Example ##
+  echo "## Example ##"
   echo "$ ./start.sh -u https://idp.example.org/metadata -p /opt/satosa/metadata/sp" 
   echo "make new certificates, build a conf with idp metadata from idp.example.org and copy the sp metadata on satosa path"
   echo ""
@@ -27,14 +27,15 @@ function help () {
   echo "server is run on localhost:9998"
   echo "for change it edit sp-wsgi/sp_conf.py"
   echo "log file is spx.log"
-  kill 9 $PID
+  abort
 }
 
 function abort () {
   echo 'operation aborted'
-  if [ "CLEAN" ]; then
+  if [ $CLEAN_DATA ]; then
     rm -rf ${CPATH}/pki ${CPATH}/metadata ${CPATH}/spx.log
   fi
+  unset CPATH BIN DEST_PATH CLEAN_DATA
   kill -9 $PID
 }
 
@@ -50,8 +51,7 @@ function prepare () {
   source sp.env/bin/activate
   pip install --upgrade pip
   pip install -r requirements.txt
-  mkdir ${CPATH}/pki
-  mkdir ${CPATH}/metadata
+  mkdir -p ${CPATH}/pki ${CPATH}/metadata
 }
 
 function gen_cert () {
@@ -75,27 +75,19 @@ function copy_sp_metadata () {
   fi
 }
 
-while getopts ":u:p:c:h:" opt; do
+trap abort EXIT
+prepare
+
+while getopts ":u:p:c" opt; do
   case ${opt} in
-    u )
-       wget $OPTARG -O ${CPATH}/metadata/idp.xml
-      ;;
-    p )
-      DEST_PATH=$OPTARG
-      ;;
-    c )
-      CLEAN='true'
-      ;;
-    \? )
-      help
-      ;;
+    u) wget $OPTARG -O ${CPATH}/metadata/idp.xml ;;
+    p) DEST_PATH=$OPTARG;;
+    c) CLEAN_DATA='true' ;;
+    *) help ;;
   esac
 done
 
-
-trap abort EXIT
 check_idp
-prepare
 gen_cert
 gen_metadata
 copy_sp_metadata
