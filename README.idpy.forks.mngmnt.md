@@ -64,6 +64,9 @@ py.test tests/ -x
 # https://github.com/IdentityPython/SATOSA/pull/220
 git pull origin DecideBackendByTarget
 
+# https://github.com/IdentityPython/SATOSA/pull/363
+git pull origin cookie_conf_2
+
 # https://github.com/IdentityPython/SATOSA/pull/324
 git pull origin context_state_error_msg
 
