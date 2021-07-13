@@ -157,7 +157,7 @@ create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
 mkdir -p metadata/idp metadata/sp
-wget http://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
+wget https://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
 wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ````
 
@@ -201,7 +201,7 @@ Then start an authentication from your SP.
 If you're doing tests and you don't want to pass by Discovery page each time you can use idphinting but only if your SP support it!
 Here an example using djangosaml2 as SP:
 
-`http://localhost:8000/saml2/login/?idp=https://172.17.0.1:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=http%253A%252F%252Flocalhost%253A8080`
+`http://localhost:8000/saml2/login/?idp=https://172.17.0.1:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080`
 
 
 ## Trouble shooting
