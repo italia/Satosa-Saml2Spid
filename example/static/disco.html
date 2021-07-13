@@ -18,16 +18,16 @@
     </script>
     <script type="text/python">
       import browser
-      
+
       debug = 0
       # inspection ...
       # browser.console.log(browser.__dict__)
-      
+
       # too slow ...
       # import urllib.parse
       # args = urllib.parse.parse_qsl(browser.window.location.search.replace('?', ''))
       # browser.console.log(args)
-      
+
       def get_args(search_string=browser.window.location.search):
           """parse GET arguments from browser.window.location.search
           """
@@ -41,7 +41,7 @@
               k, v = element.split('=')
               d[k] = v.replace('%3A', ':').replace('%2F', '/')
           return d
-      
+
       def disco(ev):
           if debug: browser.console.log(ev.__dict__)
           if not hasattr(ev.currentTarget.dataset, 'entityid'):
@@ -51,20 +51,20 @@
           if debug: browser.console.log(entity_id)
           browser.console.log(args)
           browser.window.location = args['return']+ '?entityID={}'.format(entity_id)
-      
+
       # something like:
       # {entityID: "https://satosa.testunical.it/Saml2/metadata",
       #  return: "https://satosa.testunical.it/Saml2/disco"}
       args = get_args()
       if debug: browser.console.log(args)
-      
+
       # other_idp_ID button event on click
       # browser.document["custon_idp_id"].bind("click", disco)
-      
+
       # spid buttons event on click
       for ele in browser.document.select("li.spid-idp-button-link"):
           ele.bind("click", disco)
-      
+
     </script>
   </head>
   <body>
@@ -213,11 +213,11 @@
                     </a>
                     <div id="spid-idp-button-xlarge-post" class="spid-idp-button spid-idp-button-tip spid-idp-button-relative">
                       <ul id="spid-idp-list-medium-root-get" class="spid-idp-button-menu" aria-labelledby="spid-idp">
-                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spid-saml-check" data-entityid="http://localhost:8080">
+                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spid-saml-check" data-entityid="https://localhost:8080">
                           <a href="#"><span class="spid-sr-only">SPID-saml-check</span><img src="" onerror="this.src=''; this.onerror=null;" alt="Spid Saml Check"></a>
                         </li>
-                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spidtestenv" data-entityid="http://localhost:8088">
-                          <a href="#"><span class="spid-sr-only">SPID-testenv2</span><img src="" onerror="this.src=''; this.onerror=null;" alt="Spid test env2"></a>
+                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spidtestenv" data-entityid="https://localhost:8080/demo">
+                          <a href="#"><span class="spid-sr-only">SPID-saml-check-demo</span><img src="" onerror="this.src=''; this.onerror=null;" alt="SPID-saml-check-demo"></a>
                         </li>
                         <li class="spid-idp-button-link" id="spiditalia" data-idp="spiditalia" data-entityid="https://spid.register.it">
                           <a href="#"><span class="spid-sr-only">SPIDItalia Register.it</span><img src="spid/spid-idp-spiditalia.svg" onerror="this.src='spid/spid-idp-spiditalia.svg'; this.onerror=null;" alt="SPIDItalia Register.it"></a>
@@ -415,4 +415,3 @@
     <script src="spid/spid_button.js"></script>
   </body>
 </html>
-
