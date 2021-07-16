@@ -60,10 +60,6 @@ systemctl start mongod
 # check that tests are ok
 py.test tests/ -x
 
-# pplnx's patches
-# https://github.com/IdentityPython/SATOSA/pull/220
-git pull origin DecideBackendByTarget
-
 # https://github.com/IdentityPython/SATOSA/pull/363
 git pull origin cookie_conf_2
 
