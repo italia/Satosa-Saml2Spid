@@ -24,9 +24,6 @@ git pull origin date_xsd_type
 # SPID required
 git pull origin disabled_weak_algs
 
-# https://github.com/IdentityPython/pysaml2/pull/782
-git pull origin destination
-
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
 git pull origin ns_prefixes
