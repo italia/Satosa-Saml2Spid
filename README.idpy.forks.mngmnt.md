@@ -40,7 +40,7 @@ TMPL = "<?xml version='1.0' encoding='UTF-8'?>\n%s" % TMPL_NO_HEADER
 git clone https://github.com/peppelinux/satosa
 cd SATOSA
 git remote add idpy https://github.com/IdentityPython/SATOSA.git
-git checkout --orphan idpy-v7.0.1
+git checkout --orphan pplnx-v7.0.4-pre
 git reset --hard
 git pull idpy master
 
