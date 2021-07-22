@@ -180,8 +180,9 @@ class Saml2ResponseValidator(object):
                     )
 
                 # 62 avoided with allow_unsolicited set to false (XML parse error: Unsolicited response: id-OsoMQGYzX4HGLsfL7)
-                # if subject.subject_confirmation_data.in_response_to != self.in_response_to:
-                    # raise Exception('subject.subject_confirmation_data in response to not valid')
+                if self.in_response_to:
+                    if subject_confirmation.subject_confirmation_data.in_response_to != self.in_response_to:
+                        raise Exception('subject.subject_confirmation_data in response to not valid')
 
                 # 50
                 if self.recipient != subject_confirmation.subject_confirmation_data.recipient:
