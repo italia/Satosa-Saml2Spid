@@ -2,7 +2,8 @@ ATTRS = [
     "spidCode",
     "name",
     "familyName",
-    "FamilyName",
+    # Collides with eIDAS ...
+    #"FamilyName",
     "placeOfBirth",
     "countyOfBirth",
     "dateOfBirth",

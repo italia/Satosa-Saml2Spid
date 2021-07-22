@@ -1,18 +1,13 @@
-module: satosa.micro_services.custom_routing.DecideBackendByTarget
+module: satosa.micro_services.custom_routing.DecideBackendByTargetIssuer
 name: TargetRouter
 config:
-
   default_backend: Saml2
-
-  # regex that will intercept http requests to be handled with this microservice
-  endpoint_paths:
-    - ".*/disco"
 
   target_mapping:
     # test platforms
     "http://idpspid.testunical.it:8088": "spidSaml2"
     "https://validator.spid.gov.it": "spidSaml2"
-    "http://localhost:8080": "spidSaml2"
+    "https://localhost:8080": "spidSaml2"
     # put here all the others
     "https://loginspid.aruba.it": "spidSaml2"
     "https://identity.infocert.it": "spidSaml2"

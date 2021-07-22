@@ -24,9 +24,6 @@ git pull origin date_xsd_type
 # SPID required
 git pull origin disabled_weak_algs
 
-# https://github.com/IdentityPython/pysaml2/pull/782
-git pull origin destination
-
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
 git pull origin ns_prefixes
@@ -43,7 +40,7 @@ TMPL = "<?xml version='1.0' encoding='UTF-8'?>\n%s" % TMPL_NO_HEADER
 git clone https://github.com/peppelinux/satosa
 cd SATOSA
 git remote add idpy https://github.com/IdentityPython/SATOSA.git
-git checkout --orphan idpy-v7.0.1
+git checkout --orphan pplnx-v7.0.4-pre
 git reset --hard
 git pull idpy master
 
@@ -60,20 +57,12 @@ systemctl start mongod
 # check that tests are ok
 py.test tests/ -x
 
-# pplnx's patches
-# https://github.com/IdentityPython/SATOSA/pull/220
-git pull origin DecideBackendByTarget
+# https://github.com/IdentityPython/SATOSA/pull/363
+git pull origin cookie_conf_2
 
 # https://github.com/IdentityPython/SATOSA/pull/324
 git pull origin context_state_error_msg
 
 # https://github.com/IdentityPython/SATOSA/pull/325
 git pull origin error_redirect_page
-
-# https://github.com/IdentityPython/SATOSA/pull/365
-git pull origin context_http_headers
-
-# https://github.com/IdentityPython/SATOSA/pull/366
-git pull origin idphint_ms
-
 ````

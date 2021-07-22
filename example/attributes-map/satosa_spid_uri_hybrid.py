@@ -193,7 +193,8 @@ _MAP = {
         "name": "name",
         "Name": "Name",
         "familyName": "familyName",
-        "FamilyName": "FamilyName",
+        # collides with eIDAS ...
+        # "FamilyName": "FamilyName",
         "placeOfBirth": "placeOfBirth",
         "countyOfBirth": "countyOfBirth",
         "dateOfBirth": "dateOfBirth",

@@ -62,7 +62,7 @@ You can find these demo pages in `example/static` and edit at your taste.
 To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
 
 - `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "https://localhost:9999/error_page.html"`
-- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://172.17.0.1:9999/static/disco.html"`
+- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://localhost:9999/static/disco.html"`
 
 
 ## Docker image
@@ -73,7 +73,7 @@ demo IdP (Example IdPs: [spid-saml-check](https://github.com/italia/spid-saml-ch
 use their **metadata URLs** in the build command, as follow:
 
 ````
-docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://172.17.0.1:8000/saml2/metadata" --build-arg IDP_METADATA_URL="http://172.17.0.1:8080/metadata.xml"
+docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://localhost:8000/saml2/metadata" --build-arg IDP_METADATA_URL="http://localhost:8080/metadata.xml"
 docker run -t -i -p 10000:10000 -p 9999:9999 saml2spid
 ````
 
@@ -157,7 +157,7 @@ create `metadata/idp` and `metadata/sp` folders, then copy metadata:
 
 ````
 mkdir -p metadata/idp metadata/sp
-wget http://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
+wget https://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
 wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ````
 
@@ -201,7 +201,7 @@ Then start an authentication from your SP.
 If you're doing tests and you don't want to pass by Discovery page each time you can use idphinting but only if your SP support it!
 Here an example using djangosaml2 as SP:
 
-`http://localhost:8000/saml2/login/?idp=https://172.17.0.1:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=http%253A%252F%252Flocalhost%253A8080`
+`http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080`
 
 
 ## Trouble shooting
@@ -315,5 +315,7 @@ Giuseppe De Marco
 
 ## Credits
 
+- Andrea Ranaldi and his Team in ISPRA Ambiente
+- Fulvio Scorza and his Team in Università del Piemonte Orientale
 - Paolo Smiraglia (SPID certs)
 - idpy Community  (pySAML2 and SATOSA)
