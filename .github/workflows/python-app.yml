@@ -50,9 +50,9 @@ jobs:
         cd example_sp/djangosaml2_sp/
         bash run.sh &
         sleep 5
-        cd ../../example/
     - name: run satosa-saml2spid
       run: |
+        cd example
         mkdir -p metadata/idp
         mkdir -p metadata/sp
         export SATOSA_APP=/usr/local/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
