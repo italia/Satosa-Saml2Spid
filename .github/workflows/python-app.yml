@@ -56,8 +56,9 @@ jobs:
         cd example
         mkdir -p metadata/idp
         mkdir -p metadata/sp
-        export SATOSA_APP=/usr/local/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
-        uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768 &
+        #export SATOSA_APP=/usr/local/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
+        export SATOSA_APP=`python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'`
+        uwsgi --wsgi-file $SATOSA_APP/satosa/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768 &
         sleep 5
     - name: spid-sp-test
       run: |
