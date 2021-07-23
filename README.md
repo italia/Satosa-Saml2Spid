@@ -262,8 +262,6 @@ All the patches and features are currently merged and available with the followi
 
 These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
 
-- [Micro Service - Decide backend by target entity ID](https://github.com/IdentityPython/SATOSA/pull/220)
-  This is a work in progress that works as it is!
 - [date_xsd_type](https://github.com/IdentityPython/pysaml2/pull/602/files)
 - [disabled_weak_algs](https://github.com/IdentityPython/pysaml2/pull/628)
 - [ns_prefixes](https://github.com/IdentityPython/pysaml2/pull/625)
