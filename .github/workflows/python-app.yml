@@ -18,9 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         python-version:
-          #- '3.7'
+          - '3.7'
           - '3.8'
-          #- '3.9'
+          - '3.9'
 
     steps:
     - uses: actions/checkout@v2
@@ -56,7 +56,6 @@ jobs:
         cd example
         mkdir -p metadata/idp
         mkdir -p metadata/sp
-        #export SATOSA_APP=/usr/local/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
         export SATOSA_APP=`python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'`
         uwsgi --wsgi-file $SATOSA_APP/satosa/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768 &
         sleep 5
