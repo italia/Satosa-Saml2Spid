@@ -261,7 +261,7 @@ class SpidSAMLBackend(SAMLBackend):
         kwargs = {}
         # backend support for selectable sign/digest algs
         alg_dict = dict(signing_algorithm = 'sign_alg',
-						digest_algorithm = 'digest_alg')
+                        digest_algorithm = 'digest_alg')
         for alg in alg_dict:
             selected_alg = self.config['sp_config']['service']['sp'].get(alg)
             if not selected_alg: continue
@@ -426,7 +426,10 @@ class SpidSAMLBackend(SAMLBackend):
             # f'{troubleshoot}'
         # )
         # result = text_type(msg).encode('utf-8')
-        return Response(result, content="text/html; charset=utf8")
+        return Response(result,
+                        content="text/html; charset=utf8",
+                        status="403"
+        )
 
 
     def handle_spid_anomaly(self, err_number, err):
