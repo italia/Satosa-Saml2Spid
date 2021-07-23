@@ -1,3 +1,4 @@
+import json
 import logging
 import re
 import saml2
@@ -269,7 +270,7 @@ class SpidSAMLBackend(SAMLBackend):
         return kwargs
 
 
-    def check_blacklist(self):
+    def check_blacklist(self, context, entity_id):
         # If IDP blacklisting is enabled and the selected IDP is blacklisted,
         # stop here
         if self.idp_blacklist_file:
@@ -295,14 +296,17 @@ class SpidSAMLBackend(SAMLBackend):
         :param entity_id: Target IDP entity id
         :return: response to the user agent
         """
-        self.check_blacklist()
+        self.check_blacklist(context, entity_id)
 
         kwargs = {}
         # fetch additional kwargs
         kwargs.update(self.get_kwargs_sign_dig_algs())
 
         authn_context = self.construct_requested_authn_context(entity_id)
-        requested_authn_context = authn_context or requested_authn_context(class_ref=self._authn_context)
+        req_authn_context = (
+            authn_context
+            or requested_authn_context(class_ref=self._authn_context)
+        )
 
         # force_auth = true only if SpidL >= 2
         if 'SpidL1' in authn_context.authn_context_class_ref[0].text:
@@ -365,7 +369,7 @@ class SpidSAMLBackend(SAMLBackend):
             authn_req.name_id_policy  = name_id_policy
 
             # TODO: use a parameter instead
-            authn_req.requested_authn_context = requested_authn_context
+            authn_req.requested_authn_context = req_authn_context
             authn_req.protocol_binding = binding
 
             assertion_consumer_service_url = client.config._sp_endpoints['assertion_consumer_service'][0][0]
@@ -389,7 +393,7 @@ class SpidSAMLBackend(SAMLBackend):
 
             if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
                 if authn_req.id in self.outstanding_queries:
-                    errmsg = "Request with duplicate id {}".format(req_id)
+                    errmsg = "Request with duplicate id {}".format(authn_req.id)
                     logger.debug(errmsg)
                     raise SATOSAAuthenticationError(context.state, errmsg)
                 self.outstanding_queries[authn_req.id] = authn_req_signed

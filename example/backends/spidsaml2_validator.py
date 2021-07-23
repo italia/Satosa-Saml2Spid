@@ -186,7 +186,10 @@ class Saml2ResponseValidator(object):
 
                 # 50
                 if self.recipient != subject_confirmation.subject_confirmation_data.recipient:
-                    msg = f'subject_confirmation_data.recipient not valid: {subject_confirmation_data.recipient}. '
+                    msg = (
+                        "subject_confirmation.subject_confirmation_data.recipient not valid:"
+                        f" {subject_confirmation.subject_confirmation_data.recipient}."
+                    )
                     raise SPIDValidatorException(f'{msg}{_ERROR_TROUBLESHOOT}')
 
                 # 63 ,64

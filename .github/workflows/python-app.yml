@@ -39,13 +39,13 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         pip install -r example_sp/djangosaml2_sp/requirements.txt
         pip install spid-sp-test>=0.9.2
-        pip list -v
-    #- name: Lint with flake8
-      #run: |
+        pip install flake8
+    - name: Lint with flake8
+      run: |
         ## stop the build if there are Python syntax errors or undefined names
-        #flake8 oidc_provider --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 --count --select=E9,F63,F7,F82 --show-source --statistics example
         ## exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        #flake8 oidc_provider  --max-line-length 120 --count --exit-zero --statistics
+        flake8 --max-line-length 120 --count --exit-zero --statistics example
     - name: run djangosaml2 sp
       run: |
         cd example_sp/djangosaml2_sp/
