@@ -41,17 +41,20 @@ jobs:
         #flake8 oidc_provider --count --select=E9,F63,F7,F82 --show-source --statistics
         ## exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         #flake8 oidc_provider  --max-line-length 120 --count --exit-zero --statistics
-    - name: Test with django
-      working-directory: ./oidc_provider/tests/example
+    - name: run djangosaml2 sp
       run: |
         cd example_sp/djangosaml2_sp/
         bash run.sh &
         sleep 5
         cd ../../example/
+    - name: run satosa-saml2spid
+      run: |
         mkdir -p metadata/idp
         mkdir -p metadata/sp
         export SATOSA_APP=/usr/local/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
         uwsgi --wsgi-file ../wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768 &
         sleep 5
+    - name: spid-sp-test
+      run: |
         spid_sp_test --idp-metadata > metadata/idp/spid-sp-test.xml
         spid_sp_test --metadata-url https://localhost:10000/spidSaml2/metadata --authn-url "http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080" -ap spid_sp_test.plugins.authn_request.SatosaSaml2Spid --extra --debug ERROR -tr
