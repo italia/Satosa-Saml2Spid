@@ -16,7 +16,12 @@ pip install git+https://github.com/IdentityPython/pyFF.git
 ## First run
 
 The following command will print in stdout all the pyFF's execution log, if you want to put it in a file just add `--log=pyff.log` after `--loglevel`.
-It seems that pyff is sensible to arguments order, unfortunately it doesn't use arparse...
+
+Run as batch (recommended!)
+
+````
+pyff  pipelines/spid_idp.fd
+````
 
 This command will run a MDX server instance, see `main()` in `pyff.mdx`
 ````
@@ -28,7 +33,8 @@ When it complete the downloads of all the metadata then exposes all the SAML ent
 Useful things that we need to know
 1. pyFF uses by default a local sqllite db, it's automatically created in the working directory on run.
 
-## how does it works
+
+## how does it work
 You need also to read:
 - https://pythonhosted.org/pyFF/
 - https://github.com/IdentityPython/pyFF
@@ -125,15 +131,14 @@ These for example will let us understand how the things works, easily.
 /role/idp.xml
 ````
 
-## Advanced Topics
-I think that pyFF would a be a real _stop-application_ for the followings:
+## Production
 
-1. Downloader, validatore avanzato per federare entità saml2
-2. Store su RDBMS interrogabile da remoto
-3. Metadata Query Resolver per entità interne alla home organization, in questo caso i nostri IDP non dovrebbero scaricare i metadatati degli SP ma interrogarli da remoto
-4. DiscoveryService Integrato
+The best implementation would be a pure httpd static serve, see `production_setup/` examples.
+Otherwise you can use a real MDQ/X server like the followings
 
-Italian isn't so difficult to be read, isn't it?
+- pyffd (discouraged)
+- [Django-MDQ](https://developers.italia.it/it/software/unical-universitadellacalabria-django-mdq.html)
+- [mdq-server](https://github.com/iay/mdq-server)
 
 
 ## Playing MDX service
@@ -196,6 +201,7 @@ When it start the only content available on its embedded webserver is a loading 
 
 Additional resources
 --------------------
+
 - [pyFF Roadmap](https://github.com/IdentityPython/pyFF/wiki/Roadmap)
 - Using MDX with pySAML2, [read source](https://github.com/IdentityPython/pysaml2/blob/master/src/saml2/mdstore.py#L781)
 - [Metadata Query Protocol](https://github.com/iay/md-query)
