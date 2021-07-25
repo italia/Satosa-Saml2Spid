@@ -3,7 +3,7 @@ ATTRS = [
     "name",
     "familyName",
     # Collides with eIDAS ...
-    #"FamilyName",
+    # "FamilyName",
     "placeOfBirth",
     "countyOfBirth",
     "dateOfBirth",
@@ -17,12 +17,12 @@ ATTRS = [
     "email",
     "address",
     "expirationDate",
-    "digitalAddress"
+    "digitalAddress",
 ]
 
 
 MAP = {
-    "identifier":  'urn:oasis:names:tc:SAML:2.0:attrname-format:basic',
-    "fro": {k:k for k in ATTRS},
-    "to": {k:k for k in ATTRS}
+    "identifier": "urn:oasis:names:tc:SAML:2.0:attrname-format:basic",
+    "fro": {k: k for k in ATTRS},
+    "to": {k: k for k in ATTRS},
 }
