@@ -201,7 +201,12 @@ Then start an authentication from your SP.
 If you're doing tests and you don't want to pass by Discovery page each time you can use idphinting but only if your SP support it!
 Here an example using djangosaml2 as SP:
 
-`http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080`
+```
+http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
+```
+
+IF you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
+its CI, [here](.github/workflows/python-app.yml),
 
 
 ## Trouble shooting

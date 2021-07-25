@@ -4,12 +4,7 @@ import re
 import saml2
 import satosa.util as util
 
-from jinja2 import (Environment,
-                    Markup,
-                    FileSystemLoader,
-                    Template,
-                    select_autoescape)
-from saml2 import BINDING_HTTP_REDIRECT, BINDING_HTTP_POST
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from saml2.response import StatusAuthnFailed
 from saml2.authn_context import requested_authn_context
 from saml2.metadata import entity_descriptor, sign_entity_descriptor
@@ -18,12 +13,12 @@ from saml2.sigver import security_context, SignatureError
 from saml2.validate import valid_instance
 from satosa.backends.saml2 import SAMLBackend
 from satosa.context import Context
-from satosa.exception import SATOSAAuthenticationError, SATOSAStateError
-from satosa.response import SeeOther, Response
+from satosa.exception import SATOSAAuthenticationError
+from satosa.response import Response
 from satosa.saml_util import make_saml_response
 from six import text_type
 
-from . spidsaml2_validator import Saml2ResponseValidator
+from .spidsaml2_validator import Saml2ResponseValidator
 
 logger = logging.getLogger(__name__)
 
@@ -35,67 +30,73 @@ logger = logging.getLogger(__name__)
 #
 SPID_ANOMALIES = {
     19: {
-        'message': 'Autenticazione fallita per ripetuta sottomissione di credenziali errate',
-        'troubleshoot': 'Inserire credenziali corrette'
+        "message": "Autenticazione fallita per ripetuta sottomissione di credenziali errate",
+        "troubleshoot": "Inserire credenziali corrette",
     },
     20: {
-        'message': 'Utente privo di credenziali compatibili con '
-                   'il livello di autenticazione richiesto',
-        'troubleshoot': "Acquisire credenziali di livello idoneo all'accesso al servizio",
+        "message": (
+            "Utente privo di credenziali compatibili con "
+            "il livello di autenticazione richiesto"
+        ),
+        "troubleshoot": "Acquisire credenziali di livello idoneo all'accesso al servizio",
     },
     21: {
-        'message': "Timeout durante l'autenticazione utente",
-        'troubleshoot': "Si ricorda che l'operazione di autenticazione deve "
-                        "essere completata entro un determinato periodo di tempo",
+        "message": "Timeout durante l'autenticazione utente",
+        "troubleshoot": (
+            "Si ricorda che l'operazione di autenticazione deve "
+            "essere completata entro un determinato periodo di tempo"
+        ),
     },
     22: {
-        'message': "L'utente nega il consenso all'invio di dati al fornitore del servizio",
-        'troubleshoot': 'È necessario dare il consenso per poter accedere al servizio',
+        "message": "L'utente nega il consenso all'invio di dati al fornitore del servizio",
+        "troubleshoot": "È necessario dare il consenso per poter accedere al servizio",
     },
-    23: {
-        'message': 'Utente con identità sospesa/revocata o con credenziali bloccate'
-    },
-    25: {
-        'message': "Processo di autenticazione annullato dall'utente"
-    },
+    23: {"message": "Utente con identità sospesa/revocata o con credenziali bloccate"},
+    25: {"message": "Processo di autenticazione annullato dall'utente"},
     30: {
-        'message': "L'identità digitale utilizzata non è un'identità digitale del tipo atteso",
-        'troubleshoot': "È necessario eseguire l'autenticazione con le credenziali del corretto tipo di identità digitale richiesto"
-    }
+        "message": "L'identità digitale utilizzata non è un'identità digitale del tipo atteso",
+        "troubleshoot": (
+            "È necessario eseguire l'autenticazione con le credenziali "
+            "del corretto tipo di identità digitale richiesto"
+        ),
+    },
 }
 
-_TROUBLESHOOT_MSG = ("È stato riscontrato un problema di validazione "
-                     "della risposta proveniente dal "
-                     "Provider di Identità. "
-                     " Contattare il supporto tecnico per eventuali chiarimenti")
+_TROUBLESHOOT_MSG = (
+    "È stato riscontrato un problema di validazione "
+    "della risposta proveniente dal "
+    "Provider di Identità. "
+    " Contattare il supporto tecnico per eventuali chiarimenti"
+)
 
 
 class SpidSAMLBackend(SAMLBackend):
     """
     A saml2 backend module (acting as a SPID SP).
     """
-    _authn_context = 'https://www.spid.gov.it/SpidL1'
+
+    _authn_context = "https://www.spid.gov.it/SpidL1"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         # error pages handler
         self.template_loader = Environment(
-                        loader=FileSystemLoader(
-                            searchpath=self.config['template_folder']
-                        ),
-                        autoescape=select_autoescape(['html'])
+            loader=FileSystemLoader(searchpath=self.config["template_folder"]),
+            autoescape=select_autoescape(["html"]),
         )
         _static_url = (
-            self.config['static_storage_url']
-            if self.config['static_storage_url'][-1] == '/' else
-            self.config['static_storage_url'] + '/'
+            self.config["static_storage_url"]
+            if self.config["static_storage_url"][-1] == "/"
+            else self.config["static_storage_url"] + "/"
         )
-        self.template_loader.globals.update({
-            'static': _static_url,
-        })
+        self.template_loader.globals.update(
+            {
+                "static": _static_url,
+            }
+        )
         self.error_page = self.template_loader.get_template(
-                                            self.config['error_template']
+            self.config["error_template"]
         )
 
     def _metadata_contact_person(self, metadata, conf):
@@ -105,8 +106,8 @@ class SpidSAMLBackend(SAMLBackend):
         # https://www.agid.gov.it/sites/default/files/repository_files/spid-avviso-n29v3-specifiche_sp_pubblici_e_privati_0.pdf
         # Avviso 29v3
         SPID_PREFIXES = dict(
-            spid = "https://spid.gov.it/saml-extensions",
-            fpa = "https://spid.gov.it/invoicing-extensions"
+            spid="https://spid.gov.it/saml-extensions",
+            fpa="https://spid.gov.it/invoicing-extensions",
         )
         saml2.md.SamlBase.register_prefix(SPID_PREFIXES)
         metadata.contact_person = []
@@ -114,88 +115,86 @@ class SpidSAMLBackend(SAMLBackend):
         metadata.contact_person = []
         for contact in contact_map:
             spid_contact = saml2.md.ContactPerson()
-            spid_contact.contact_type = contact['contact_type']
+            spid_contact.contact_type = contact["contact_type"]
             contact_kwargs = {
-                'email_address' : [contact['email_address']],
-                'telephone_number' : [contact['telephone_number']]
+                "email_address": [contact["email_address"]],
+                "telephone_number": [contact["telephone_number"]],
             }
             spid_extensions = saml2.ExtensionElement(
-                'Extensions',
-                namespace='urn:oasis:names:tc:SAML:2.0:metadata'
+                "Extensions", namespace="urn:oasis:names:tc:SAML:2.0:metadata"
             )
 
-            if contact['contact_type'] == 'other':
+            if contact["contact_type"] == "other":
                 spid_contact.loadd(contact_kwargs)
-                contact_kwargs['contact_type'] = contact['contact_type']
-                for k,v in contact.items():
+                contact_kwargs["contact_type"] = contact["contact_type"]
+                for k, v in contact.items():
                     if k in contact_kwargs:
                         continue
                     ext = saml2.ExtensionElement(
-                            k,
-                            namespace=SPID_PREFIXES['spid'],
-                            text=v
+                        k, namespace=SPID_PREFIXES["spid"], text=v
                     )
-                    # Avviso SPID n. 19 v.4 per enti AGGREGATORI il tag ContactPerson deve avere l’attributo spid:entityType valorizzato come spid:aggregator
+                    # Avviso SPID n. 19 v.4 per enti AGGREGATORI il tag ContactPerson
+                    # deve avere l’attributo spid:entityType valorizzato come spid:aggregator
                     if k == "PublicServicesFullOperator":
-                        spid_contact.extension_attributes= {"spid:entityType": "spid:aggregator"}
+                        spid_contact.extension_attributes = {
+                            "spid:entityType": "spid:aggregator"
+                        }
 
                     spid_extensions.children.append(ext)
 
                 spid_contact.extensions = spid_extensions
 
-            elif contact['contact_type'] == 'billing':
-                contact_kwargs['company'] = contact['company']
+            elif contact["contact_type"] == "billing":
+                contact_kwargs["company"] = contact["company"]
                 spid_contact.loadd(contact_kwargs)
 
                 elements = {}
-                for k,v in contact.items():
+                for k, v in contact.items():
                     if k in contact_kwargs:
                         continue
                     ext = saml2.ExtensionElement(
-                            k,
-                            namespace=SPID_PREFIXES['fpa'],
-                            text=v
+                        k, namespace=SPID_PREFIXES["fpa"], text=v
                     )
                     elements[k] = ext
 
                 # DatiAnagrafici
                 IdFiscaleIVA = saml2.ExtensionElement(
-                    'IdFiscaleIVA',
-                    namespace=SPID_PREFIXES['fpa'],
+                    "IdFiscaleIVA",
+                    namespace=SPID_PREFIXES["fpa"],
                 )
                 Anagrafica = saml2.ExtensionElement(
-                    'Anagrafica',
-                    namespace=SPID_PREFIXES['fpa'],
+                    "Anagrafica",
+                    namespace=SPID_PREFIXES["fpa"],
                 )
-                Anagrafica.children.append(elements['Denominazione'])
+                Anagrafica.children.append(elements["Denominazione"])
 
-                IdFiscaleIVA.children.append(elements['IdPaese'])
-                IdFiscaleIVA.children.append(elements['IdCodice'])
+                IdFiscaleIVA.children.append(elements["IdPaese"])
+                IdFiscaleIVA.children.append(elements["IdCodice"])
                 DatiAnagrafici = saml2.ExtensionElement(
-                    'DatiAnagrafici',
-                    namespace=SPID_PREFIXES['fpa'],
+                    "DatiAnagrafici",
+                    namespace=SPID_PREFIXES["fpa"],
                 )
-                if elements.get('CodiceFiscale'):
-                    DatiAnagrafici.children.append(elements['CodiceFiscale'])
+                if elements.get("CodiceFiscale"):
+                    DatiAnagrafici.children.append(elements["CodiceFiscale"])
                 DatiAnagrafici.children.append(IdFiscaleIVA)
                 DatiAnagrafici.children.append(Anagrafica)
                 CessionarioCommittente = saml2.ExtensionElement(
-                    'CessionarioCommittente',
-                    namespace=SPID_PREFIXES['fpa'],
+                    "CessionarioCommittente",
+                    namespace=SPID_PREFIXES["fpa"],
                 )
                 CessionarioCommittente.children.append(DatiAnagrafici)
 
                 # Sede
                 Sede = saml2.ExtensionElement(
-                    'Sede',
-                    namespace=SPID_PREFIXES['fpa'],
+                    "Sede",
+                    namespace=SPID_PREFIXES["fpa"],
                 )
-                Sede.children.append(elements['Indirizzo'])
-                Sede.children.append(elements['NumeroCivico'])
-                Sede.children.append(elements['CAP'])
-                Sede.children.append(elements['Comune'])
-                Sede.children.append(elements['Provincia'])
-                Sede.children.append(elements['Nazione'])
+                Sede.children.append(elements["Indirizzo"])
+                Sede.children.append(elements["NumeroCivico"])
+                Sede.children.append(elements["CAP"])
+                Sede.children.append(elements["Comune"])
+                Sede.children.append(elements["Provincia"])
+                Sede.children.append(elements["Nazione"])
                 CessionarioCommittente.children.append(Sede)
 
                 spid_extensions.children.append(CessionarioCommittente)
@@ -221,24 +220,32 @@ class SpidSAMLBackend(SAMLBackend):
         metadata = entity_descriptor(conf)
         # creare gli attribute_consuming_service
         cnt = 0
-        for attribute_consuming_service in metadata.spsso_descriptor.attribute_consuming_service:
+        for (
+            attribute_consuming_service
+        ) in metadata.spsso_descriptor.attribute_consuming_service:
             attribute_consuming_service.index = str(cnt)
             cnt += 1
 
         cnt = 0
-        for assertion_consumer_service in metadata.spsso_descriptor.assertion_consumer_service:
-            assertion_consumer_service.is_default = 'true' if not cnt else ''
+        for (
+            assertion_consumer_service
+        ) in metadata.spsso_descriptor.assertion_consumer_service:
+            assertion_consumer_service.is_default = "true" if not cnt else ""
             assertion_consumer_service.index = str(cnt)
             cnt += 1
 
         # nameformat patch... tutto questo non rispecchia gli standard OASIS
-        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[0].requested_attribute:
+        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[
+            0
+        ].requested_attribute:
             reqattr.name_format = None
             reqattr.friendly_name = None
 
         # attribute consuming service service name patch
-        service_name = metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0]
-        service_name.lang = 'it'
+        service_name = metadata.spsso_descriptor.attribute_consuming_service[
+            0
+        ].service_name[0]
+        service_name.lang = "it"
         service_name.text = metadata.entity_id
 
         # remove extension disco and uuinfo (spid-testenv2)
@@ -251,37 +258,39 @@ class SpidSAMLBackend(SAMLBackend):
         secc = security_context(conf)
         #
         sign_dig_algs = self.get_kwargs_sign_dig_algs()
-        eid, xmldoc = sign_entity_descriptor(metadata, None, secc, **sign_dig_algs)
+        eid, xmldoc = sign_entity_descriptor(
+            metadata, None, secc, **sign_dig_algs)
 
         valid_instance(eid)
-        return Response(text_type(xmldoc).encode('utf-8'),
-                        content="text/xml; charset=utf8")
-
+        return Response(
+            text_type(xmldoc).encode("utf-8"), content="text/xml; charset=utf8"
+        )
 
     def get_kwargs_sign_dig_algs(self):
         kwargs = {}
         # backend support for selectable sign/digest algs
-        alg_dict = dict(signing_algorithm = 'sign_alg',
-                        digest_algorithm = 'digest_alg')
+        alg_dict = dict(signing_algorithm="sign_alg",
+                        digest_algorithm="digest_alg")
         for alg in alg_dict:
-            selected_alg = self.config['sp_config']['service']['sp'].get(alg)
-            if not selected_alg: continue
+            selected_alg = self.config["sp_config"]["service"]["sp"].get(alg)
+            if not selected_alg:
+                continue
             kwargs[alg_dict[alg]] = selected_alg
         return kwargs
-
 
     def check_blacklist(self, context, entity_id):
         # If IDP blacklisting is enabled and the selected IDP is blacklisted,
         # stop here
         if self.idp_blacklist_file:
             with open(self.idp_blacklist_file) as blacklist_file:
-                blacklist_array = json.load(blacklist_file)['blacklist']
+                blacklist_array = json.load(blacklist_file)["blacklist"]
                 if entity_id in blacklist_array:
-                    logger.debug("IdP with EntityID {} is blacklisted".format(entity_id))
+                    logger.debug(
+                        "IdP with EntityID {} is blacklisted".format(entity_id)
+                    )
                     raise SATOSAAuthenticationError(
                         context.state, "Selected IdP is blacklisted for this backend"
                     )
-
 
     def authn_request(self, context, entity_id):
         """
@@ -303,33 +312,30 @@ class SpidSAMLBackend(SAMLBackend):
         kwargs.update(self.get_kwargs_sign_dig_algs())
 
         authn_context = self.construct_requested_authn_context(entity_id)
-        req_authn_context = (
-            authn_context
-            or requested_authn_context(class_ref=self._authn_context)
+        req_authn_context = authn_context or requested_authn_context(
+            class_ref=self._authn_context
         )
 
         # force_auth = true only if SpidL >= 2
-        if 'SpidL1' in authn_context.authn_context_class_ref[0].text:
-            force_authn = 'false'
+        if "SpidL1" in authn_context.authn_context_class_ref[0].text:
+            force_authn = "false"
         else:
-            force_authn = 'true'
+            force_authn = "true"
 
         try:
             binding = saml2.BINDING_HTTP_POST
-            destination = context.internal_data['target_entity_id']
+            destination = context.internal_data["target_entity_id"]
             # SPID CUSTOMIZATION
             # client = saml2.client.Saml2Client(conf)
             client = self.sp
 
-            logger.debug(
-                f"binding: {binding}, destination: {destination}"
-            )
+            logger.debug(f"binding: {binding}, destination: {destination}")
 
             # acs_endp, response_binding = self.sp.config.getattr("endpoints", "sp")["assertion_consumer_service"][0]
             # req_id, req = self.sp.create_authn_request(
-                # destination, binding=response_binding, **kwargs)
+            # destination, binding=response_binding, **kwargs)
 
-            logger.debug(f'Redirecting user to the IdP via {binding} binding.')
+            logger.debug(f"Redirecting user to the IdP via {binding} binding.")
             # use the html provided by pysaml2 if no template was specified or it didn't exist
 
             # SPID want the fqdn of the IDP as entityID, not the SSO endpoint
@@ -337,8 +343,10 @@ class SpidSAMLBackend(SAMLBackend):
             # dovrebbe essere destination ma nel caso di spid-testenv2 è entityid...
             # binding, destination = self.sp.pick_binding("single_sign_on_service", None, "idpsso", entity_id=entity_id)
             location = client.sso_location(destination, binding)
-            location = client.sso_location(entity_id, binding)
-            location_fixed = destination # entity_id
+            # location = client.sso_location(entity_id, binding)
+
+            # not used anymore thanks to avviso 11
+            # location_fixed = destination  # entity_id
             # ...hope to see the SSO endpoint soon in spid-testenv2
             # returns 'http://idpspid.testunical.it:8088/sso'
             # fixed: https://github.com/italia/spid-testenv2/commit/6041b986ec87ab8515dd0d43fed3619ab4eebbe9
@@ -349,7 +357,8 @@ class SpidSAMLBackend(SAMLBackend):
             authn_req = saml2.samlp.AuthnRequest()
             authn_req.force_authn = force_authn
             authn_req.destination = location
-            # spid-testenv2 preleva l'attribute consumer service dalla authnRequest (anche se questo sta già nei metadati...)
+            # spid-testenv2 preleva l'attribute consumer service dalla authnRequest
+            # (anche se questo sta già nei metadati...)
             authn_req.attribute_consuming_service_index = "0"
 
             issuer = saml2.saml.Issuer()
@@ -360,47 +369,57 @@ class SpidSAMLBackend(SAMLBackend):
 
             # message id
             authn_req.id = saml2.s_utils.sid()
-            authn_req.version = saml2.VERSION # "2.0"
+            authn_req.version = saml2.VERSION  # "2.0"
             authn_req.issue_instant = saml2.time_util.instant()
 
             name_id_policy = saml2.samlp.NameIDPolicy()
             # del(name_id_policy.allow_create)
             name_id_policy.format = NAMEID_FORMAT_TRANSIENT
-            authn_req.name_id_policy  = name_id_policy
+            authn_req.name_id_policy = name_id_policy
 
             # TODO: use a parameter instead
             authn_req.requested_authn_context = req_authn_context
             authn_req.protocol_binding = binding
 
-            assertion_consumer_service_url = client.config._sp_endpoints['assertion_consumer_service'][0][0]
-            authn_req.assertion_consumer_service_url = assertion_consumer_service_url #'http://sp-fqdn/saml2/acs/'
+            assertion_consumer_service_url = client.config._sp_endpoints[
+                "assertion_consumer_service"
+            ][0][0]
+            authn_req.assertion_consumer_service_url = (
+                assertion_consumer_service_url  # 'http://sp-fqdn/saml2/acs/'
+            )
 
-            authn_req_signed = client.sign(authn_req, sign_prepare=False,
-                                           sign_alg=kwargs['sign_alg'],
-                                           digest_alg=kwargs['digest_alg'])
-            session_id = authn_req.id
+            authn_req_signed = client.sign(
+                authn_req,
+                sign_prepare=False,
+                sign_alg=kwargs["sign_alg"],
+                digest_alg=kwargs["digest_alg"],
+            )
+            authn_req.id
 
             _req_str = authn_req_signed
-            logger.debug(f'AuthRequest to {destination}: {_req_str}')
+            logger.debug(f"AuthRequest to {destination}: {_req_str}")
 
             relay_state = util.rndstr()
-            ht_args = client.apply_binding(binding,
-                                           _req_str, location,
-                                           sign=True,
-                                           sigalg=kwargs['sign_alg'],
-                                           relay_state=relay_state)
+            ht_args = client.apply_binding(
+                binding,
+                _req_str,
+                location,
+                sign=True,
+                sigalg=kwargs["sign_alg"],
+                relay_state=relay_state,
+            )
 
-
-            if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
+            if self.sp.config.getattr("allow_unsolicited", "sp") is False:
                 if authn_req.id in self.outstanding_queries:
-                    errmsg = "Request with duplicate id {}".format(authn_req.id)
+                    errmsg = "Request with duplicate id {}".format(
+                        authn_req.id)
                     logger.debug(errmsg)
                     raise SATOSAAuthenticationError(context.state, errmsg)
                 self.outstanding_queries[authn_req.id] = authn_req_signed
 
             context.state[self.name] = {"relay_state": relay_state}
             # these will give the way to check compliances between the req and resp
-            context.state['req_args'] = {'id': authn_req.id}
+            context.state["req_args"] = {"id": authn_req.id}
 
             logger.debug(f"ht_args: {ht_args}")
             return make_saml_response(binding, ht_args)
@@ -411,34 +430,31 @@ class SpidSAMLBackend(SAMLBackend):
                 context.state, "Failed to construct the AuthnRequest"
             ) from exc
 
-
-    def handle_error(self, message:str, troubleshoot:str='',
-                     err='', template_path='templates',
-                     error_template='spid_login_error.html'):
+    def handle_error(
+        self,
+        message: str,
+        troubleshoot: str = "",
+        err="",
+        template_path="templates",
+        error_template="spid_login_error.html",
+    ):
         """
-            Todo: Jinja2 tempalte loader and rendering :)
+        Todo: Jinja2 tempalte loader and rendering :)
         """
         logger.error(f"Failed to parse authn request: {message} {err}")
-        result = self.error_page.render({
-            'message': message,
-            'troubleshoot': troubleshoot
-
-        })
+        result = self.error_page.render(
+            {"message": message, "troubleshoot": troubleshoot}
+        )
         # the raw way :)
         # msg = (
-            # f'<b>{message}</b><br>'
-            # f'{troubleshoot}'
+        # f'<b>{message}</b><br>'
+        # f'{troubleshoot}'
         # )
         # result = text_type(msg).encode('utf-8')
-        return Response(result,
-                        content="text/html; charset=utf8",
-                        status="403"
-        )
-
+        return Response(result, content="text/html; charset=utf8", status="403")
 
     def handle_spid_anomaly(self, err_number, err):
         return self.handle_error(**SPID_ANOMALIES[int(err_number)])
-
 
     def authn_response(self, context, binding):
         """
@@ -458,48 +474,51 @@ class SpidSAMLBackend(SAMLBackend):
         try:
             authn_response = self.sp.parse_authn_request_response(
                 context.request["SAMLResponse"],
-                binding, outstanding=self.outstanding_queries)
+                binding,
+                outstanding=self.outstanding_queries,
+            )
         except StatusAuthnFailed as err:
-            erdict = re.search(
-                r'ErrorCode nr(?P<err_code>\d+)', str(err))
+            erdict = re.search(r"ErrorCode nr(?P<err_code>\d+)", str(err))
             if erdict:
-                return self.handle_spid_anomaly(erdict.groupdict()['err_code'], err)
+                return self.handle_spid_anomaly(erdict.groupdict()["err_code"], err)
             else:
                 return self.handle_error(
                     **{
-                       'err': err,
-                       'message': 'Autenticazione fallita',
-                       'troubleshoot': f"Anomalia riscontrata durante la fase di Autenticazione. {_TROUBLESHOOT_MSG}"
+                        "err": err,
+                        "message": "Autenticazione fallita",
+                        "troubleshoot": (
+                            "Anomalia riscontrata durante la fase di Autenticazione. "
+                            f"{_TROUBLESHOOT_MSG}"
+                        ),
                     }
                 )
         except SignatureError as err:
             return self.handle_error(
                 **{
-                   'err': err,
-                   'message': 'Autenticazione fallita',
-                   'troubleshoot': f"La firma digitale della risposta ottenuta non risulta essere corretta. {_TROUBLESHOOT_MSG}"
-
+                    "err": err,
+                    "message": "Autenticazione fallita",
+                    "troubleshoot": (
+                        "La firma digitale della risposta ottenuta "
+                        f"non risulta essere corretta. {_TROUBLESHOOT_MSG}"
+                    ),
                 }
             )
         except Exception as err:
             return self.handle_error(
                 **{
-                   'err': err,
-                   'message': 'Anomalia riscontrata nel processo di Autenticazione',
-                   'troubleshoot': _TROUBLESHOOT_MSG
+                    "err": err,
+                    "message": "Anomalia riscontrata nel processo di Autenticazione",
+                    "troubleshoot": _TROUBLESHOOT_MSG,
                 }
             )
 
-        if self.sp.config.getattr('allow_unsolicited', 'sp') is False:
+        if self.sp.config.getattr("allow_unsolicited", "sp") is False:
             req_id = authn_response.in_response_to
             if req_id not in self.outstanding_queries:
-                errmsg = "No request with id: {}".format(req_id),
+                errmsg = ("No request with id: {}".format(req_id),)
                 logger.debug(errmsg)
                 return self.handle_error(
-                    **{
-                       'message': errmsg,
-                       'troubleshoot': _TROUBLESHOOT_MSG
-                    }
+                    **{"message": errmsg, "troubleshoot": _TROUBLESHOOT_MSG}
                 )
             del self.outstanding_queries[req_id]
 
@@ -508,26 +527,22 @@ class SpidSAMLBackend(SAMLBackend):
             _msg = f"context.state[self.name] KeyError: where self.name is {self.name}"
             logger.error(_msg)
             return self.handle_error(
-                    **{
-                       'message': _msg,
-                       'troubleshoot': _TROUBLESHOOT_MSG
-                    }
+                **{"message": _msg, "troubleshoot": _TROUBLESHOOT_MSG}
             )
         # check if the relay_state matches the cookie state
         if context.state[self.name]["relay_state"] != context.request["RelayState"]:
             _msg = "State did not match relay state for state"
             return self.handle_error(
-                    **{
-                       'message': _msg,
-                       'troubleshoot': _TROUBLESHOOT_MSG
-                    }
+                **{"message": _msg, "troubleshoot": _TROUBLESHOOT_MSG}
             )
 
         # Spid and SAML2 additional tests
-        _sp_config = self.config['sp_config']
-        accepted_time_diff = _sp_config['accepted_time_diff']
-        recipient = _sp_config['service']['sp']['endpoints']['assertion_consumer_service'][0][0]
-        authn_context_classref = self.config['acr_mapping']['']
+        _sp_config = self.config["sp_config"]
+        accepted_time_diff = _sp_config["accepted_time_diff"]
+        recipient = _sp_config["service"]["sp"]["endpoints"][
+            "assertion_consumer_service"
+        ][0][0]
+        authn_context_classref = self.config["acr_mapping"][""]
 
         issuer = authn_response.response.issuer
 
@@ -535,36 +550,35 @@ class SpidSAMLBackend(SAMLBackend):
         if len(context.state.keys()) < 2:
             _msg = "Inconsistent context.state"
             return self.handle_error(
-                    **{
-                       'message': _msg,
-                       'troubleshoot': _TROUBLESHOOT_MSG
-                    }
+                **{"message": _msg, "troubleshoot": _TROUBLESHOOT_MSG}
             )
 
-        destination_frontend = list(context.state.keys())[1]
+        list(context.state.keys())[1]
         # deprecated
         # if not context.state.get('Saml2IDP'):
-            # _msg = "context.state['Saml2IDP'] KeyError"
-            # logger.error(_msg)
-            # raise SATOSAStateError(context.state, "State without Saml2IDP")
-        in_response_to = context.state['req_args']['id']
-        requester = context.state['SATOSA_BASE']['requester']
+        # _msg = "context.state['Saml2IDP'] KeyError"
+        # logger.error(_msg)
+        # raise SATOSAStateError(context.state, "State without Saml2IDP")
+        in_response_to = context.state["req_args"]["id"]
+        requester = context.state["SATOSA_BASE"]["requester"]
 
         # some debug
         if authn_response.ava:
-            logging.debug(f'Attributes to {authn_response.return_addrs} '
-                          f'in_response_to {authn_response.in_response_to}: '
-                          f'{",".join(authn_response.ava.keys())}')
+            logging.debug(
+                f"Attributes to {authn_response.return_addrs} "
+                f"in_response_to {authn_response.in_response_to}: "
+                f'{",".join(authn_response.ava.keys())}'
+            )
 
         validator = Saml2ResponseValidator(
-                            authn_response=authn_response.xmlstr,
-                            recipient = recipient,
-                            in_response_to=in_response_to,
-                            requester = requester,
-                            accepted_time_diff = accepted_time_diff,
-                            authn_context_class_ref=authn_context_classref,
-                            return_addrs=authn_response.return_addrs,
-                            allowed_acrs = self.config['spid_allowed_acrs']
+            authn_response=authn_response.xmlstr,
+            recipient=recipient,
+            in_response_to=in_response_to,
+            requester=requester,
+            accepted_time_diff=accepted_time_diff,
+            authn_context_class_ref=authn_context_classref,
+            return_addrs=authn_response.return_addrs,
+            allowed_acrs=self.config["spid_allowed_acrs"],
         )
         try:
             validator.run()
