@@ -144,10 +144,10 @@ cd ..
 Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
 These are the configuration files:
 
-- `example/proxy_conf.yaml`
-- `example/plugins/backends/spidsaml2_backend.yaml`
-- `example/plugins/backends/saml2_backend.yaml`
-- `example/plugins/frontend/saml2_frontend.yaml`
+- `proxy_conf.yaml`
+- `plugins/backends/spidsaml2_backend.yaml`
+- `plugins/backends/saml2_backend.yaml`
+- `plugins/frontend/saml2_frontend.yaml`
 
 
 ## Saml2 Metadata
