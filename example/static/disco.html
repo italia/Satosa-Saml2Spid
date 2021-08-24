@@ -2,70 +2,13 @@
 <html lang="it">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Accedi Con SPID</title>
     <meta name="description" content="Accedi con SPID">
     <link rel="stylesheet" href="spid/bootstrap-italia.css">
     <link rel="shortcut icon" href="spid/favicon-32x32.png">
     <link type="text/css" rel="stylesheet" href="spid/spid-sp-access-button.css">
-    <script type="text/javascript" src="spid/brython.js"></script>
-    <script type="text/javascript">
-      // brython init
-      document.addEventListener('DOMContentLoaded', function() {
-        brython({debug: 1});
-      }, false);
-    </script>
-    <script type="text/python">
-      import browser
-
-      debug = 0
-      # inspection ...
-      # browser.console.log(browser.__dict__)
-
-      # too slow ...
-      # import urllib.parse
-      # args = urllib.parse.parse_qsl(browser.window.location.search.replace('?', ''))
-      # browser.console.log(args)
-
-      def get_args(search_string=browser.window.location.search):
-          """parse GET arguments from browser.window.location.search
-          """
-          d = dict()
-          if not search_string:
-              browser.alert(('To use a Discovery Service '
-                             'you must come from a '
-                             'Service Provider'))
-              return
-          for element in search_string.replace('?', '').split('&'):
-              k, v = element.split('=')
-              d[k] = v.replace('%3A', ':').replace('%2F', '/')
-          return d
-
-      def disco(ev):
-          if debug: browser.console.log(ev.__dict__)
-          if not hasattr(ev.currentTarget.dataset, 'entityid'):
-              browser.alert('dataset not found:\n please add \"data-entityid="$variable"\" to element ')
-              return
-          entity_id = ev.currentTarget.dataset.entityid
-          if debug: browser.console.log(entity_id)
-          browser.console.log(args)
-          browser.window.location = args['return']+ '?entityID={}'.format(entity_id)
-
-      # something like:
-      # {entityID: "https://satosa.testunical.it/Saml2/metadata",
-      #  return: "https://satosa.testunical.it/Saml2/disco"}
-      args = get_args()
-      if debug: browser.console.log(args)
-
-      # other_idp_ID button event on click
-      # browser.document["custon_idp_id"].bind("click", disco)
-
-      # spid buttons event on click
-      for ele in browser.document.select("li.spid-idp-button-link"):
-          ele.bind("click", disco)
-
-    </script>
+    <script src="spid/spid-idps.js"></script>
   </head>
   <body>
     <div class="it-header-wrapper">
@@ -100,17 +43,11 @@
                 <div class="it-header-center-content-wrapper">
                   <!-- Logo -->
                   <div class="it-brand-wrapper">
-                    <a href="/">
-                      <div class="col-10 col-md-12 offset-1 offset-md-0">
-                        <img src="spid/logo.jpg" style="width: 10%;">
-                      </div>
-                      <div class="it-brand-text">
-                        <h2 class="no_toc">
-                        </h2>
-                        <h3 class="no_toc d-none d-md-block">
-                        </h3>
-                      </div>
-                    </a>
+		    <a href="/"><img src="spid/logo.jpg" alt="logo" style="width: 10%;"></a>
+                  </div>
+		  <div class="it-right-zone d-none d-lg-block">
+		    <h2 class="no_toc">Nome</h2>
+                    <h3 class="no_toc d-none d-md-block">Descrizione</h3>
                   </div>
                   <!-- Social and Search -->
                   <div class="it-right-zone">
@@ -137,7 +74,7 @@
                       <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
                     </div>
                     <div class="menu-wrapper">
-                      <ul class="navbar-nav">
+		      <ul class="navbar-nav" id="menu-principale">
                         <li class="nav-item active"><a class="nav-link active" href="#">
                           <span>Pagina principale</span>
                           <span class="sr-only">current</span></a>
@@ -153,12 +90,12 @@
                             <div class="link-list-wrapper">
                               <ul class="link-list">
                                 <li>
-                                  <h3 class="no_toc" id="heading">Questo servizio</h3>
+                                  <h3 class="no_toc">Questo servizio</h3>
                                 </li>
                                 <li><a class="list-item" href=""><span>Assistenza</span></a></li>
                                 <li><span class="divider"></span></li>
                                 <li>
-                                  <h3 class="no_toc" id="heading">Entra con SPID</h3>
+                                  <h3 class="no_toc">Entra con SPID</h3>
                                 </li>
                                 <li class="spid-idp-support-link">
                                   <a class="list-item" href="https://www.spid.gov.it/">Maggiori informazioni</a>
@@ -206,7 +143,7 @@
                     <div class="col-sm text-center">
                         <a href="#" id="unicalid" data-idp="unicalid" data-entityid="https://example.org/idp/metadata/" class="button-spid button-unical italia-it-button italia-it-button-size-xl spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
                             <span class="italia-it-button-icon">
-                                <img src="spid/logo_white.png" alt="">
+                                <img src="spid/logo_white.png" alt="logo">
                             </span>
                             <span class="italia-it-button-text">Altro</span>
                         </a>
@@ -214,63 +151,24 @@
                     -->
                   <div class="col-sm text-center">
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
-                    <a href="#" class="italia-it-button italia-it-button-size-xl button-spid" spid-idp-button="#spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
-                    <span class="italia-it-button-icon"><img src="spid/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt=""></span>
-                    <span class="italia-it-button-text">Entra con SPID</span>
+		    <a href="#" class="italia-it-button italia-it-button-size-xl button-spid" spid-idp-button="#spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
+		      <span class="italia-it-button-icon"><img src="spid/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt=""></span>
+		      <span class="italia-it-button-text">Entra con SPID</span>
                     </a>
-                    <div id="spid-idp-button-xlarge-post" class="spid-idp-button spid-idp-button-tip spid-idp-button-relative">
-                      <ul id="spid-idp-list-medium-root-get" class="spid-idp-button-menu" aria-labelledby="spid-idp">
-                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spid-saml-check" data-entityid="https://localhost:8080">
-                          <a href="#"><span class="spid-sr-only">SPID-saml-check</span><img src="" onerror="this.src=''; this.onerror=null;" alt="Spid Saml Check"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spidtestenv" data-entityid="https://localhost:8080/demo">
-                          <a href="#"><span class="spid-sr-only">SPID-saml-check-demo</span><img src="" onerror="this.src=''; this.onerror=null;" alt="SPID-saml-check-demo"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="spiditalia" data-idp="spiditalia" data-entityid="https://spid.register.it">
-                          <a href="#"><span class="spid-sr-only">SPIDItalia Register.it</span><img src="spid/spid-idp-spiditalia.svg" onerror="this.src='spid/spid-idp-spiditalia.svg'; this.onerror=null;" alt="SPIDItalia Register.it"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="timid" data-idp="timid" data-entityid="https://login.id.tim.it/affwebservices/public/saml2sso">
-                          <a href="#"><span class="spid-sr-only">Tim ID</span><img src="spid/spid-idp-timid.svg" onerror="this.src='spid/spid-idp-timid.svg'; this.onerror=null;" alt="Tim ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="intesaid" data-idp="intesaid" data-entityid="https://spid.intesa.it">
-                          <a href="#"><span class="spid-sr-only">Intesa ID</span><img src="spid/spid-idp-intesaid.svg" onerror="this.src='spid/spid-idp-intesaid.svg'; this.onerror=null;" alt="Intesa ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="posteid" data-idp="posteid" data-entityid="https://posteid.poste.it">
-                          <a href="#"><span class="spid-sr-only">Poste ID</span><img src="spid/spid-idp-posteid.svg" onerror="this.src='spid/spid-idp-posteid.svg'; this.onerror=null;" alt="Poste ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="arubaid" data-idp="arubaid" data-entityid="https://loginspid.aruba.it">
-                          <a href="#"><span class="spid-sr-only">Aruba ID</span><img src="spid/spid-idp-arubaid.svg" onerror="this.src='spid/spid-idp-arubaid.svg'; this.onerror=null;" alt="Aruba ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="lepidaid" data-idp="lepidaid" data-entityid="https://id.lepida.it/idp/shibboleth">
-                          <a href="#"><span class="spid-sr-only">Lepida ID</span><img src="spid/spid-idp-lepidaid.svg" onerror="this.src='spid/spid-idp-lepidaid.svg'; this.onerror=null;" alt="Lepida ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="infocertid" data-idp="infocertid" data-entityid="https://identity.infocert.it">
-                          <a href="#"><span class="spid-sr-only">Infocert ID</span><img src="spid/spid-idp-infocertid.svg" onerror="this.src='spid/spid-idp-infocertid.svg'; this.onerror=null;" alt="Infocert ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="namirialid" data-idp="namirialid" data-entityid="https://idp.namirialtsp.com/idp">
-                          <a href="#"><span class="spid-sr-only">Namirial ID</span><img src="spid/spid-idp-namirialid.svg" onerror="this.src='spid/spid-idp-namirialid.svg'; this.onerror=null;" alt="Namirial ID"></a>
-                        </li>
-                        <li class="spid-idp-button-link" id="sielteid" data-idp="sielteid" data-entityid="https://identity.sieltecloud.it">
-                          <a href="#"><span class="spid-sr-only">Sielte ID</span><img src="spid/spid-idp-sielteid.svg" onerror="this.src='spid/spid-idp-sielteid.svg'; this.onerror=null;" alt="Sielte ID"></a>
-                        </li>
-                        <li class="spid-idp-support-link">
-                          <a href="https://www.spid.gov.it/">Maggiori informazioni</a>
-                        </li>
-                        <li class="spid-idp-support-link">
-                          <a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a>
-                        </li>
-                        <li class="spid-idp-support-link">
-                          <a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a>
-                        </li>
-                      </ul>
-                    </div>
+		    <div id="spid-idp-button-xlarge-post" class="spid-idp-button spid-idp-button-tip spid-idp-button-relative">
+		      <ul id="spid-idp-list-medium-root-get" class="spid-idp-button-menu" aria-label="spid idp list">
+			<li class="spid-idp-support-link"><a href="https://www.spid.gov.it/">Maggiori informazioni</a></li>
+			<li class="spid-idp-support-link"><a href="https://www.spid.gov.it/richiedi-spid">Non hai SPID?</a></li>
+			<li class="spid-idp-support-link"><a href="https://www.spid.gov.it/serve-aiuto">Serve aiuto?</a></li>
+		      </ul>
+		    </div>
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * end * -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
-	  <p class="text-center"><img src="spid/spid-agid-logo-lb.png", alt="logo SPID e AGID"></p>
+	  <p class="text-center"><img src="spid/spid-agid-logo-lb.png" alt="logo SPID e AGID"></p>
         </div>
       </div>
     </div>
@@ -283,7 +181,7 @@
               <div class="col-sm-12">
                 <div class="it-brand-wrapper">
                   <a href="#">
-                    <img class="icon" src="spid/logo.jpg">
+                    <img class="icon" src="spid/logo.jpg" alt="SPID logo">
                     <div class="it-brand-text">
                       <h2 class="no_toc">
                         Nome Organizzazione
@@ -420,6 +318,5 @@
     <script>window.__PUBLIC_PATH__ = "spid/fonts"</script>
     <script src="spid/bootstrap-italia.js"></script>
     <script src="spid/spid-sp-access-button.js"></script>
-    <script src="spid/spid_button.js"></script>
   </body>
 </html>
