@@ -1,0 +1,120 @@
+version: "3"
+
+services:
+  # if needed
+  #spid-certs:
+    #image: psmiraglia/spid-compliant-certificates
+    #volumes:
+        #- ./project/pki:/tmp/certs:rw
+    #entrypoint: |
+        #spid-compliant-certificates generator
+        #--key-size 3072
+        #--common-name "A.C.M.E"
+        #--days 365
+        #--entity-id https://spid.acme.it
+        #--locality-name Roma
+        #--org-id "PA:IT-c_h501"
+        #--org-name "A Company Making Everything"
+        #--sector public
+        #--key-out /tmp/certs/privkey.pem
+        #--crt-out /tmp/certs/cert.pem
+
+  satosa-mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: satosa
+      MONGO_INITDB_ROOT_PASSWORD: thatpassword
+    ports:
+      - 27017:27017
+    volumes:
+        - mongodbdata:/data/db
+    networks:
+      - satosa
+
+  satosa-mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8082:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: satosa
+      ME_CONFIG_BASICAUTH_PASSWORD: thatpassword
+      ME_CONFIG_MONGODB_ADMINUSERNAME: satosa
+      ME_CONFIG_MONGODB_ADMINPASSWORD: thatpassword
+      ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
+    networks:
+      - satosa
+
+  # remove if use a nginx frontend
+  satosa-static-serve:
+    build:
+      context: .
+      dockerfile: ./docker/satosa-static-serve/Dockerfile
+    expose:
+      - 9999
+    ports:
+      - "9999:9999"
+    #volumes:
+      #- satosa-cert:/satosa_proxy/pki
+      #- satosa-statics:/satosa_proxy/static
+    networks:
+      - satosa
+
+  satosa-saml2spid:
+    build:
+      context: .
+      dockerfile: ./docker/satosa-saml2spid/Dockerfile
+    depends_on:
+      - satosa-mongo
+    environment:
+      - THAT=thing
+    expose:
+      - 10000
+    ports:
+      - "10000:10000"
+    networks:
+      - satosa
+    volumes:
+      #- ./satosa-conf:/satosa_proxy
+      - satosa-logs:/satosa_proxy/logs:rw
+
+  # TODO
+  #satosa-nginx:
+    #image: nginx:1.19-alpine
+    #ports:
+      #- "80:80"
+      #- "443:443"
+    #volumes:
+      #- ./docker/gateway/satosa.conf:/etc/nginx/conf.d/default.conf
+      #- satosa-static-data:/satosa/static
+      #- satosa-media-data:/satosa/media
+      #- ./docker/gateway/example.key:/etc/nginx/certs/certificate.key
+      #- ./docker/gateway/example.crt:/etc/nginx/certs/certificate.crt
+    #depends_on:
+      #- satosa-front
+      #- satosa-back
+    #networks:
+      #- satosa
+
+  # uncomment if needed
+  #spid-saml-check:
+    #image: italia/spid-saml-check
+    #ports:
+      #- "8080:8080"
+    #networks:
+      #- satosa
+    #volumes:
+      #- "./docker/spid-saml-check-config/idp.json:/spid-saml-check/spid-validator/config/idp.json:ro"
+      #- "./docker/spid-saml-check-config/idp_demo.json:/spid-saml-check/spid-validator/config/idp_demo.json:ro"
+      #- "./docker/spid-saml-check-config/server.json:/spid-saml-check/spid-validator/config/server.json:ro"
+
+volumes:
+  mongodbdata:
+  satosa-statics:
+  satosa-conf:
+  satosa-cert:
+  satosa-logs:
+
+networks:
+  satosa:

@@ -1,7 +1,7 @@
 # Satosa-Saml2Spid
 
-This is a SAML2  configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
-that aims to setup a **SAML-to-SAML Proxy** compatible with the  **SPID - the Italian Digital Identity System**.
+This is a SAML2/OIDC configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
+that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with the  **SPID - the Italian Digital Identity System**.
 
 ## Table of Contents
 1. [Goal](#goal)
@@ -16,7 +16,7 @@ that aims to setup a **SAML-to-SAML Proxy** compatible with the  **SPID - the It
 
 ## Goal
 
-Satosa-Saml2 Spid is an intermediary between many SAML2 Service Providers and many SAML2 Identity Providers.
+Satosa-Saml2 Spid is an intermediary between many SAML2/OIDC Service Providers (RP) and many SAML2 Identity Providers.
 Specifically it allows traditional Saml2 Service Providers to communicate with
 **Spid Identity Providers** adapting Metadata and AuthnRequest operations to the Spid technical requirements.
 
@@ -95,6 +95,23 @@ docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'})
 
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
+## Docker compose
+
+````
+pip install docker-compose
+
+cp -R example project
+# do your customizations in project/
+
+# then build the stack
+docker-compose up
+
+# get where the data are
+docker volume ls
+````
+
+See [mongo readme](./mongo) to have some example of demo data.
+
 
 ## Setup
 
@@ -148,7 +165,7 @@ These are the configuration files:
 - `plugins/backends/spidsaml2_backend.yaml`
 - `plugins/backends/saml2_backend.yaml`
 - `plugins/frontend/saml2_frontend.yaml`
-
+- `plugins/frontend/oidc_op_frontend.yaml` (experimental)
 
 ## Saml2 Metadata
 
@@ -259,8 +276,8 @@ The SaToSa **SPID** backend contained in this project adopt specialized forks of
 read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
 
 All the patches and features are currently merged and available with the following releases:
-- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v7.0.1)
-- [SATOSA](https://github.com/peppelinux/SATOSA/tree/pplnx-v7.0.3)
+- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v7.0.1-1)
+- [SATOSA](https://github.com/peppelinux/SATOSA/tree/oidcop-v8.0.0)
 
 
 #### Pending contributions to idpy
