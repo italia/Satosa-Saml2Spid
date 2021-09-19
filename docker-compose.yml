@@ -47,17 +47,17 @@ services:
       - satosa
 
   # remove if use a nginx frontend
-  satosa-static-serve:
+  satosa-statics:
     build:
       context: .
-      dockerfile: ./docker/satosa-static-serve/Dockerfile
+      dockerfile: ./docker/satosa-statics/Dockerfile
     expose:
       - 9999
     ports:
       - "9999:9999"
-    #volumes:
-      #- satosa-cert:/satosa_proxy/pki
-      #- satosa-statics:/satosa_proxy/static
+    volumes:
+      - satosa-saml2saml_certs:/satosa_pki
+      - satosa-saml2saml_statics:/satosa_statics
     networks:
       - satosa
 
@@ -76,8 +76,9 @@ services:
     networks:
       - satosa
     volumes:
-      #- ./satosa-conf:/satosa_proxy
-      - satosa-logs:/satosa_proxy/logs:rw
+      - satosa-saml2saml_certs:/satosa_pki
+      - satosa-saml2saml_conf:/satosa_proxy
+      - satosa-saml2saml_logs:/satosa_logs
 
   # TODO
   #satosa-nginx:
@@ -87,8 +88,7 @@ services:
       #- "443:443"
     #volumes:
       #- ./docker/gateway/satosa.conf:/etc/nginx/conf.d/default.conf
-      #- satosa-static-data:/satosa/static
-      #- satosa-media-data:/satosa/media
+      #- satosa-saml2saml_statics:/satosa/static
       #- ./docker/gateway/example.key:/etc/nginx/certs/certificate.key
       #- ./docker/gateway/example.crt:/etc/nginx/certs/certificate.crt
     #depends_on:
@@ -98,12 +98,12 @@ services:
       #- satosa
 
   # uncomment if needed
-  #spid-saml-check:
-    #image: italia/spid-saml-check
-    #ports:
-      #- "8080:8080"
-    #networks:
-      #- satosa
+  spid-saml-check:
+    image: italia/spid-saml-check
+    ports:
+      - "8080:8080"
+    networks:
+      - satosa
     #volumes:
       #- "./docker/spid-saml-check-config/idp.json:/spid-saml-check/spid-validator/config/idp.json:ro"
       #- "./docker/spid-saml-check-config/idp_demo.json:/spid-saml-check/spid-validator/config/idp_demo.json:ro"
@@ -111,10 +111,14 @@ services:
 
 volumes:
   mongodbdata:
-  satosa-statics:
-  satosa-conf:
-  satosa-cert:
-  satosa-logs:
+  satosa-saml2saml_certs:
+    external: true
+  satosa-saml2saml_statics:
+    external: true
+  satosa-saml2saml_conf:
+    external: true
+  satosa-saml2saml_logs:
+    external: true
 
 networks:
   satosa:

@@ -98,16 +98,37 @@ Remember to edit and customize all the values like `"CHANGE_ME!"` in the configu
 ## Docker compose
 
 ````
+apt install jq
 pip install docker-compose
+````
 
+Create your project folder, starting from our example project
+````
 cp -R example project
 # do your customizations in project/
+````
 
-# then build the stack
+Create volumes
+````
+docker volume create --name=satosa-saml2saml_certs
+docker volume create --name=satosa-saml2saml_conf
+docker volume create --name=satosa-saml2saml_statics
+docker volume create --name=satosa-saml2saml_logs
+````
+
+Where the data are
+`docker volume ls`
+
+Copy files in destination volumes
+````
+cp project/pki/*pem `docker volume inspect satosa-saml2saml_certs | jq .[0].Mountpoint | sed 's/"//g'`
+cp -R project/* `docker volume inspect satosa-saml2saml_conf | jq .[0].Mountpoint | sed 's/"//g'`
+cp -R project/static/* `docker volume inspect satosa-saml2saml_statics | jq .[0].Mountpoint | sed 's/"//g'`
+````
+
+Run the stack
+````
 docker-compose up
-
-# get where the data are
-docker volume ls
 ````
 
 See [mongo readme](./mongo) to have some example of demo data.
