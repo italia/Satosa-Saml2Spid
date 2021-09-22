@@ -315,6 +315,7 @@ class SpidSAMLBackend(SAMLBackend):
         req_authn_context = authn_context or requested_authn_context(
             class_ref=self._authn_context
         )
+        req_authn_context.comparison = self.config.get("spid_acr_comparison", "minimum")
 
         # force_auth = true only if SpidL >= 2
         if "SpidL1" in authn_context.authn_context_class_ref[0].text:
