@@ -7,7 +7,7 @@
 // - entityID - string with IDP entityID
 // - logo - url of IDP logo image
 const idps = [
-  {"entityName": "SPID Test", "entityID": "http://127.0.0.1:8080", "logo": ""},
+  {"entityName": "SPID Test", "entityID": "http://localhost:8080", "logo": ""},
   {"entityName": "Aruba ID", "entityID": "https://loginspid.aruba.it", "logo": "spid/spid-idp-arubaid.svg"},
   {"entityName": "Infocert ID", "entityID": "https://identity.infocert.it", "logo": "spid/spid-idp-infocertid.svg"},
   {"entityName": "Intesa ID", "entityID": "https://spid.intesa.it", "logo": "spid/spid-idp-intesaid.svg"},
