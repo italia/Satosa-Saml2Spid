@@ -1,5 +1,5 @@
 // * spid-idps.js *
-// This script populate the SPID button with the SPID IDPS 
+// This script populate the SPID button with the SPID IDPS
 //
 // ** Configuration ***
 // const idps define list of SPID IDPs
@@ -7,7 +7,7 @@
 // - entityID - string with IDP entityID
 // - logo - url of IDP logo image
 const idps = [
-  {"entityName": "SPID Test", "entityID": "http://localhost:8080", "logo": ""},
+  {"entityName": "SPID Test", "entityID": "https://localhost:8080", "logo": ""},
   {"entityName": "Aruba ID", "entityID": "https://loginspid.aruba.it", "logo": "spid/spid-idp-arubaid.svg"},
   {"entityName": "Infocert ID", "entityID": "https://identity.infocert.it", "logo": "spid/spid-idp-infocertid.svg"},
   {"entityName": "Intesa ID", "entityID": "https://spid.intesa.it", "logo": "spid/spid-idp-intesaid.svg"},
@@ -19,13 +19,10 @@ const idps = [
   {"entityName": "Tim ID", "entityIDD": "https://login.id.tim.it/affwebservices/public/saml2sso", "logo": "spid/spid-idp-timid.svg"}
 ].sort(() => Math.random() - 0.5)
 
-// const servicePath define url of satosa discovery service
-const servicePath = 'https://spid.isprambiente.it/Spid2/disco'
-
-// ** Script **
+// ** Values **
 const urlParams = new URLSearchParams(window.location.search);
+const servicePath = urlParams.get("return");
 const entityID = urlParams.get('entityID');
-
 
 // function addIdpEntry make a "li" element with the ipd link and prepend this in a element
 //
@@ -39,7 +36,7 @@ function addIdpEntry(data, element) {
   element.prepend(li)
 }
 
-// when page is ready add each idps entry in the ul element 
+// when page is ready add each idps entry in the ul element
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     // user alert if the page is loaded without entityID param
