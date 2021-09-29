@@ -33,7 +33,7 @@
     }
   },
   "port": 8090,
-  "domain": "127.0.0.1",
+  "domain": "localhost",
   "base_url": "https://example.org",
   "httpc_params": {
     "verify": false
@@ -204,8 +204,8 @@
       "application_type": "web",
       "contacts": ["ops@example.com"],
       "token_endpoint_auth_method": "client_secret_basic",
-      "jwks_uri": "https://127.0.0.1:8090/static/jwks.json",
-      "redirect_uris": ["https://127.0.0.1:8090/authz_cb/satosa"],
+      "jwks_uri": "https://localhost:8090/static/jwks.json",
+      "redirect_uris": ["https://localhost:8090/authz_cb/satosa"],
       "response_types": ["code"],
       "grant_types": ["authorization_code"],
       "allowed_scopes": ["openid", "profile", "email", "offline_access"],
@@ -249,7 +249,7 @@
   },
   "webserver": {
     "port": 8090,
-    "domain": "127.0.0.1",
+    "domain": "localhost",
     "server_cert": "certs/cert.pem",
     "server_key": "certs/key.pem",
     "debug": true
