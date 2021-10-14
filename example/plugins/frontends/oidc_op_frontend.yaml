@@ -29,18 +29,6 @@ config:
     op:
       server_info:
         add_on:
-          claims:
-            function: oidcop.oidc.add_on.custom_scopes.add_custom_scopes
-            kwargs:
-              research_and_scholarship:
-              - name
-              - given_name
-              - family_name
-              - email
-              - email_verified
-              - sub
-              - iss
-              - eduperson_scoped_affiliation
           pkce:
             function: oidcop.oidc.add_on.pkce.add_pkce_support
             kwargs:
@@ -75,6 +63,15 @@ config:
           subject_types_supported:
           - public
           - pairwise
+          scopes_supported:
+          - openid
+          - profile
+          - offline_access
+          claims_supported:
+          - sub
+          - given_name
+          - birthdate
+          - email
         endpoint:
           provider_info:
             class: oidcop.oidc.provider_config.ProviderConfiguration
