@@ -29,6 +29,7 @@ BACKEND_MODULES:
   - "plugins/backends/spidsaml2_backend.yaml"
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
+  - "plugins/frontends/oidc_op_frontend.yaml"
 MICRO_SERVICES:
   # - "plugins/microservices/spid_unical_account_linking.yaml"
   # - "plugins/microservices/multiple_ldap_attribute_store.yaml"
@@ -49,11 +50,19 @@ LOGGING:
       level: INFO
       formatter: simple
       stream: ext://sys.stdout
-    debug_file:
+    saml2_debug_file:
       class: logging.handlers.RotatingFileHandler
       level: DEBUG
       formatter: simple
-      filename: logs/satosa_debug.log
+      filename: logs/saml2_debug.log
+      maxBytes: 104857600 # 100MB
+      backupCount: 20
+      encoding: utf8
+    oidcop_debug_file:
+      class: logging.handlers.RotatingFileHandler
+      level: DEBUG
+      formatter: simple
+      filename: logs/oidcop_debug.log
       maxBytes: 104857600 # 100MB
       backupCount: 20
       encoding: utf8
@@ -71,12 +80,17 @@ LOGGING:
     satosa.frontends.saml2:
       level: DEBUG
       formatter: simple
-      handlers: [debug_file]
+      handlers: [saml2_debug_file]
       propagate: no
     satosa.backends.saml2:
       level: DEBUG
       formatter: simple
-      handlers: [debug_file]
+      handlers: [saml2_debug_file]
+      propagate: no
+    satosa.frontends.idpy_oidcop:
+      level: DEBUG
+      formatter: simple
+      handlers: [console]
       propagate: no
   # root:
     # level: INFO

@@ -325,7 +325,7 @@ class SpidSAMLBackend(SAMLBackend):
 
         try:
             binding = saml2.BINDING_HTTP_POST
-            destination = context.internal_data["target_entity_id"]
+            destination = context.internal_data.get("target_entity_id", entity_id)
             # SPID CUSTOMIZATION
             # client = saml2.client.Saml2Client(conf)
             client = self.sp
@@ -561,7 +561,6 @@ class SpidSAMLBackend(SAMLBackend):
         # logger.error(_msg)
         # raise SATOSAStateError(context.state, "State without Saml2IDP")
         in_response_to = context.state["req_args"]["id"]
-        requester = context.state["SATOSA_BASE"]["requester"]
 
         # some debug
         if authn_response.ava:
@@ -575,7 +574,6 @@ class SpidSAMLBackend(SAMLBackend):
             authn_response=authn_response.xmlstr,
             recipient=recipient,
             in_response_to=in_response_to,
-            requester=requester,
             accepted_time_diff=accepted_time_diff,
             authn_context_class_ref=authn_context_classref,
             return_addrs=authn_response.return_addrs,

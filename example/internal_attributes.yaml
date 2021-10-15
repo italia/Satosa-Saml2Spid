@@ -14,7 +14,7 @@ attributes:
     orcid: [orcid]
     github: [id]
     openid: [sub]
-    saml: [eduPersonTargetedID, eduPersonTargetedId, edupersontargetedid, spidCode]
+    saml: [eduPersonTargetedID, eduPersonTargetedId, spidCode]
   edupersonprincipalname:
     saml: [eduPersonPrincipalName]
   edupersonscopedaffiliation:
@@ -55,12 +55,9 @@ attributes:
     openid: [family_name]
     saml: [sn, surname, familyName, FamilyName]
   # spid related
-  spidCode:
-    openid: [spidCode, spidcode]
-    saml: [spidCode, spidcode]
   spidcode:
-    openid: [spidCode, spidcode]
-    saml: [spidCode, spidcode]
+    openid: [spidcode]
+    saml: [spidCode]
 # decommentando questo la email rilasciata anche in caso di account linking sarà quella di spid
 # commentando: email sarà rilasciato in formato URI
   email:
@@ -99,5 +96,5 @@ attributes:
   expirationDate:
     saml: [expirationDate]
 # user identification mapping
-user_id_from_attrs: [spidcode, edupersontargetedid]
+user_id_from_attrs: [edupersontargetedid]
 user_id_to_attr: spidcode
