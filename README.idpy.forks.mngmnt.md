@@ -1,32 +1,27 @@
 # PySAML2
 
 ````
-git clone -b pplnx-v5 https://github.com/peppelinux/pysaml2
+git clone https://github.com/identitypython/pysaml2
 cd pysaml2/
 
-# create current idpy master
-git checkout --orphan idpy-v6.5.1
-git remote add idpy https://github.com/IdentityPython/pysaml2.git
+# create current pplnx branch
+git checkout --orphan pplnx-v7.0.1+
+git remote add pplnx https://github.com/peppelinux/pysaml2.git
 git reset --hard
-git pull idpy master
-
-# create current pplnx branch to be updated and tested
-git checkout --orphan pplnx-v6.5.1
-git reset --hard
-git pull idpy master
+git pull origin master
 
 # pplnx's patches
 # https://github.com/IdentityPython/pysaml2/pull/602/files
 # SPID requirements
-git pull origin date_xsd_type
+git pull pplnx date_xsd_type
 
 # https://github.com/IdentityPython/pysaml2/pull/628
 # SPID required
-git pull origin disabled_weak_algs
+git pull pplnx disabled_weak_algs
 
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
-git pull origin ns_prefixes
+git pull pplnx ns_prefixes
 ````
 
 If `ns_prefixes` still conflicts, mind these two lines (#15 #16):
@@ -37,12 +32,12 @@ TMPL = "<?xml version='1.0' encoding='UTF-8'?>\n%s" % TMPL_NO_HEADER
 # SATOSA
 
 ````
-git clone https://github.com/peppelinux/satosa
+git clone https://github.com/identitypython/satosa
 cd SATOSA
-git remote add idpy https://github.com/IdentityPython/SATOSA.git
-git checkout --orphan pplnx-v7.0.4-pre
+git remote add pplnx https://github.com/peppelinux/SATOSA.git
+git checkout --orphan pplnx-v8.0.0
 git reset --hard
-git pull idpy master
+git pull origin master
 
 pip install -r tests/test_requirements.txt
 
@@ -58,11 +53,11 @@ systemctl start mongod
 py.test tests/ -x
 
 # https://github.com/IdentityPython/SATOSA/pull/363
-git pull origin cookie_conf_2
+git pull pplnx cookie_conf_2
 
 # https://github.com/IdentityPython/SATOSA/pull/324
-git pull origin context_state_error_msg
+git pull pplnx context_state_error_msg
 
 # https://github.com/IdentityPython/SATOSA/pull/325
-git pull origin error_redirect_page
+git pull pplnx error_redirect_page
 ````

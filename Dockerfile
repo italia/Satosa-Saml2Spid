@@ -33,17 +33,15 @@ RUN pip3 install -r requirements.txt --ignore-installed
 RUN mkdir -p metadata/idp
 RUN mkdir -p metadata/sp
 
-# COPY Metadata 
+# COPY Metadata
 ARG SP_METADATA_URL
 ARG IDP_METADATA_URL
 RUN wget $SP_METADATA_URL -O metadata/sp/my-sp.xml --no-check-certificate
 RUN wget $IDP_METADATA_URL -O metadata/idp/my-idp.xml --no-check-certificate
 RUN wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 
-RUN adduser --disabled-password wert 
+RUN adduser --disabled-password wert
 RUN chown -R  wert .
 
 COPY demo-run.sh .
 CMD bash demo-run.sh
-
-

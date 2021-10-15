@@ -31,7 +31,6 @@ class Saml2ResponseValidator(object):
         recipient="spidSaml2/acs/post",
         accepted_time_diff=1,
         in_response_to="",
-        requester="",
         authn_context_class_ref="https://www.spid.gov.it/SpidL2",
         return_addrs=[],
         allowed_acrs=[],
@@ -43,7 +42,6 @@ class Saml2ResponseValidator(object):
         self.accepted_time_diff = accepted_time_diff
         self.authn_context_class_ref = authn_context_class_ref
         self.in_response_to = in_response_to
-        self.requester = requester
         self.return_addrs = return_addrs
         self.issuer = issuer
         self.allowed_acrs = allowed_acrs

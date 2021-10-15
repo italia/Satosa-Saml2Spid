@@ -1,0 +1,62 @@
+## Setup
+
+````
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+sudo apt update
+sudo apt install -y mongodb-org
+sudo apt install mongosh
+````
+
+#### using docker compose
+````
+mongosh mongodb://root:example@172.21.0.3:27017
+````
+
+#### create satosa user grants
+````
+use oidcop
+db.createUser(
+  {
+    user: "satosa",
+    pwd:  "thatpassword",
+    roles: [
+        { role: "readWrite", db: "oidcop" }
+    ]
+  }
+)
+
+exit
+````
+
+#### make client_id unique
+
+````
+db.client.createIndex( { "client_id": 1 }, { unique: true } )
+db.client.createIndex( { "registration_access_token": 1 }, { unique: true } )
+````
+
+#### make access_token and sid unique
+
+````
+db.session.createIndex( { "sid": 1 }, { unique: true } )
+````
+
+#### create expired session deletion
+
+Prune all the expired sessions automatically, keeping only the last two entries.
+
+````
+db.session.createIndex(
+  { created_at: 1 },
+  { expireAfterSeconds: 0, partialFilterExpression: { count: { $lt: 2 } } }
+);
+````
+
+### insert a test client like this
+
+````
+db.client.insertOne(
+    {"client_id": "jbxedfmfyc", "client_name": "ciro", "client_salt": "6flfsj0Z", "registration_access_token": "z3PCMmC1HZ1QmXeXGOQMJpWQNQynM4xY", "registration_client_uri": "https://localhost:10000/registration_api?client_id=jbxedfmfyc", "client_id_issued_at": 1630952311.410208, "client_secret": "19cc69b70d0108f630e52f72f7a3bd37ba4e11678ad1a7434e9818e1", "client_secret_expires_at": 1662488311.410214, "application_type": "web", "contacts": ["ops@example.com"], "token_endpoint_auth_method": "client_secret_basic", "redirect_uris": [["https://localhost:8090/authz_cb/satosa", {}]], "post_logout_redirect_uris": [["https://localhost:8090/session_logout/satosa", null]], "response_types": ["code"], "grant_types": ["authorization_code"], "allowed_scopes": ["openid", "profile", "email", "offline_access"]}
+)
+````
