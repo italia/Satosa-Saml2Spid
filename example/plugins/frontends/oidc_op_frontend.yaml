@@ -1,4 +1,4 @@
-module: satosa.frontends.idpy_oidcop.OidcOpFrontend
+module: satosa_oidcop.idpy_oidcop.OidcOpFrontend
 name: OIDC
 
 config:
@@ -7,7 +7,7 @@ config:
     base_url: &base_url <base_url>
 
     storage:
-        class: "satosa.frontends.oidcop.storage.mongo.Mongodb"
+        class: "satosa_oidcop.core.storage.mongo.Mongodb"
         kwargs:
             url: mongodb://satosa-mongo:27017/oidcop
             connection_params:
@@ -37,7 +37,7 @@ config:
         authentication:
           user:
             acr: urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocolPassword
-            class: satosa.frontends.oidcop.user_authn.SatosaAuthnMethod
+            class: satosa_oidcop.core.user_authn.SatosaAuthnMethod
         authz:
           class: oidcop.authz.AuthzHandling
           kwargs:
@@ -225,7 +225,8 @@ config:
             kwargs:
               lifetime: 3600
         userinfo:
-          class: satosa.frontends.oidcop.user_info.SatosaOidcUserInfo
+          class: satosa_oidcop.core.user_info.SatosaOidcUserInfo
+          class: satosa_oidcop.core.user_info.SatosaOidcUserInfo
           #kwargs:
             #whatever:
               #key: value
