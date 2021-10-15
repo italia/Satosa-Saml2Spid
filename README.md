@@ -6,7 +6,6 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 ## Table of Contents
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
-3. [Docker image](#docker-image)
 3. [Docker stack](#docker-compose)
 4. [Setup](#setup)
 5. [Start the Proxy](#start-the-proxy)
@@ -66,34 +65,6 @@ To get redirection to these pages, or redirection to third-party services, consi
 - `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://localhost:9999/static/disco.html"`
 
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
-
-## Docker image
-
-You should [customize the configuration](https://github.com/peppelinux/Satosa-Saml2Spid#configure-the-proxy) before creating a Docker image, if you want to
-run a demo anyway, you can use the example project as well with some compromise. Start your demo SP and your
-demo IdP (Example IdPs: [spid-saml-check](https://github.com/italia/spid-saml-check) or [spid-test-env2](https://github.com/italia/spid-testenv2)) then
-use their **metadata URLs** in the build command, as follow:
-
-````
-docker image build --tag saml2spid . --build-arg SP_METADATA_URL="http://localhost:8000/saml2/metadata" --build-arg IDP_METADATA_URL="http://localhost:8080/metadata.xml"
-docker run -t -i -p 10000:10000 -p 9999:9999 saml2spid
-````
-
-Copy proxy frontend metadata to your SP:
-````
-wget https://localhost:10000/Saml2IDP/metadata -O saml2_sp/saml2_config/satosa-spid.xml --no-check-certificate
-````
-
-Copy proxy backend metadata to your IdPs:
-````
-https://localhost:10000/spidSaml2/metadata
-https://localhost:10000/Saml2/metadata
-````
-
-Enter in the container for inspection ... it could be useful
-````
-docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'}) /bin/sh
-````
 
 #### Docker compose
 ````
