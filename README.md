@@ -66,7 +66,7 @@ To get redirection to these pages, or redirection to third-party services, consi
 
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
-#### Docker compose
+## Docker compose
 ````
 apt install jq
 pip install docker-compose
