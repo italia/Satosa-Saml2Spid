@@ -96,7 +96,14 @@ docker exec -it $(docker container ls | grep saml2spid | awk -F' ' {'print $1'})
 
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
-## Docker compose
+## OIDC
+
+this project uses [SATOSA_oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop) as OAuth2/OIDC frontend module.
+This feature is not enabled by default, uncomment the following statement in the proxy_configuration to enable it.
+
+https://github.com/italia/Satosa-Saml2Spid/blob/oidcop/example/proxy_conf.yaml#L32
+
+#### Docker compose for OIDC
 
 ````
 apt install jq
