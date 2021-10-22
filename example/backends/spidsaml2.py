@@ -422,7 +422,7 @@ class SpidSAMLBackend(SAMLBackend):
             # these will give the way to check compliances between the req and resp
             context.state["req_args"] = {"id": authn_req.id}
 
-            logger.debug(f"ht_args: {ht_args}")
+            logger.info(f"SAMLRequest: {ht_args}")
             return make_saml_response(binding, ht_args)
 
         except Exception as exc:
@@ -592,6 +592,7 @@ class SpidSAMLBackend(SAMLBackend):
         context.state.pop(self.name, None)
         context.state.pop(Context.KEY_FORCE_AUTHN, None)
 
+        logger.info(f"SAMLResponse{authn_response.xmlstr}")
         return self.auth_callback_func(
             context, self._translate_response(authn_response, context.state)
         )

@@ -45,6 +45,14 @@ LOGGING:
     simple:
       format: "[%(asctime)-19.19s] [%(levelname)-5.5s]: %(message)s [%(name)s.%(funcName)s:%(lineno)s]"
   handlers:
+    spid_daily:
+      class: logging.handlers.TimedRotatingFileHandler
+      level: INFO
+      formatter: simple
+      filename: logs/spid.log
+      when: D
+      interval: 1
+      backupCount: 860
     console:
       class: logging.StreamHandler
       level: INFO
@@ -92,6 +100,12 @@ LOGGING:
       formatter: simple
       handlers: [console]
       propagate: no
+    backends.spidsaml2:
+      level: INFO
+      formatter: simple
+      handlers: [spid_daily]
+      propagate: no
+
   # root:
     # level: INFO
     # handlers: [info_file_handler]
