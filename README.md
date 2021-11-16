@@ -130,33 +130,9 @@ pip install -r repository/requirements.txt
 
 ## Configure the Proxy
 
-Create certificates for SAML2 operations, see [psmiraglia](https://github.com/italia/spid-compliant-certificates).
-````
-export WD="pki/"
+- Create certificates for SPID see [psmiraglia](https://github.com/italia/spid-compliant-certificates).
+- Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
 
-mkdir $WD && cd $WD
-cp ../repository/oids.conf .
-cp ../repository/build_spid_certs.sh .
-
-# create your values inline
-cat > my.env <<EOF
-export COMMON_NAME="SPID example proxy"
-export LOCALITY_NAME="Roma"
-export ORGANIZATION_IDENTIFIER="PA:IT-c_h501"
-export ORGANIZATION_NAME="SPID example proxy"
-export SERIAL_NUMBER="1234567890"
-export SPID_SECTOR="public"
-export URI="https://spid.proxy.example.org"
-export DAYS="7300"
-EOF
-
-. my.env
-
-bash build_spid_certs.sh
-cd ..
-````
-
-Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
 These are the configuration files:
 
 - `proxy_conf.yaml`
@@ -164,6 +140,7 @@ These are the configuration files:
 - `plugins/backends/saml2_backend.yaml`
 - `plugins/frontend/saml2_frontend.yaml`
 - `plugins/frontend/oidc_op_frontend.yaml` (experimental)
+
 
 ## Saml2 Metadata
 
