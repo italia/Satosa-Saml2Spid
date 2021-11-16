@@ -49,7 +49,7 @@ Prune all the expired sessions automatically, keeping only the last two entries.
 ````
 db.session.createIndex(
   { expires_at: 1 },
-  { expireAfterSeconds: 0, partialFilterExpression: { count: { $lt: 2 } } }
+  { expireAfterSeconds: 0, partialFilterExpression: { count: { $gt: 2 } } }
 );
 ````
 
