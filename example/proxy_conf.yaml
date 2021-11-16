@@ -44,6 +44,8 @@ LOGGING:
   formatters:
     simple:
       format: "[%(asctime)-19.19s] [%(levelname)-5.5s]: %(message)s [%(name)s.%(funcName)s:%(lineno)s]"
+    syslog:
+      format: "[SATOSA] [%(name)s] [%(levelname)s]: %(message)s"
   handlers:
     spid_daily:
       class: logging.handlers.TimedRotatingFileHandler
@@ -53,6 +55,10 @@ LOGGING:
       when: D
       interval: 1
       backupCount: 860
+    syslog:
+      class: logging.handlers.SysLogHandler
+      level: INFO
+      formatter: syslog
     console:
       class: logging.StreamHandler
       level: INFO
