@@ -71,7 +71,7 @@ class FicepSAMLBackend(SpidSAMLBackend):
             0
         ].service_name[0]
         service_name.lang = "it"
-        service_name.text = metadata.entity_id
+        service_name.text = "eIDAS Natural Person Minimum Attribute Set"
 
         # remove extension disco and uuinfo (spid-testenv2)
         # metadata.spsso_descriptor.extensions = []
