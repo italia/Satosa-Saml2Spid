@@ -3,8 +3,8 @@ import logging
 import re
 import saml2
 import satosa.util as util
-import spidsaml2
 
+from backends.spidsaml2 import *
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from saml2.response import StatusAuthnFailed
 from saml2.authn_context import requested_authn_context
