@@ -55,7 +55,8 @@ class FicepSAMLBackend(SpidSAMLBackend):
         for (
             assertion_consumer_service
         ) in metadata.spsso_descriptor.assertion_consumer_service:
-            assertion_consumer_service.is_default = "true" if not cnt else ""
+            if cnt == 99
+              assertion_consumer_service.is_default = "true"
             assertion_consumer_service.index = str(cnt)
             cnt += 1
 
