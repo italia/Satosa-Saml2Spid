@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="spid/bootstrap-italia.css">
     <link rel="shortcut icon" href="spid/favicon-32x32.png">
     <link type="text/css" rel="stylesheet" href="spid/spid-sp-access-button.css">
+    <link type="text/css" rel="stylesheet" href="eidas/css/eidas-sp-access-button.min.css">
     <script src="spid/spid-idps.js"></script>
   </head>
   <body>
@@ -125,11 +126,14 @@
       <div class="container">
         <div class="col-12 py-md-5 bd-content">
           <h4 class="">Benvenuto in Nome Organizzazione Spid Discovery Service</h4>
-          <p class="mb-lg-5 mb-2">
-            SPID è il sistema di accesso che consente di utilizzare, con un'identità digitale unica, i servizi online della Pubblica Amministrazione e dei privati accreditati.
+          <p>
+	    <b>SPID</b> è il sistema di accesso che consente di utilizzare, con un'identità digitale unica, i servizi online della Pubblica Amministrazione e dei privati accreditati.
             Se sei già in possesso di un'identità digitale, accedi con le credenziali del tuo gestore.
             Se non hai ancora una identità SPID richiedila ad uno dei gestori.
           </p>
+	  <p class="mb-lg-5">
+	  <b>eIDAS</b> è il sistema di interoperabilità delle identità digitale europeo. Tramite eIDAS puoi accedere utilizzando il sistema di identità digitale degli altri paesi europei.
+	  </p>
 
           <p>
             Seleziona il Provider di Identità presso il quale desideri autenticarti
@@ -149,7 +153,7 @@
                         </a>
                     </div>
                     -->
-                  <div class="col-sm text-center">
+                  <div class="col-lg-6 pb-2 text-center">
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
 		    <a href="#" class="italia-it-button italia-it-button-size-xl button-spid" spid-idp-button="#spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
 		      <span class="italia-it-button-icon"><img src="spid/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt=""></span>
@@ -163,7 +167,17 @@
 		      </ul>
 		    </div>
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * end * -->
+		    <br/>
                   </div>
+                  <div class="col-lg-6 text-center">
+      		    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
+                    <a href="/Saml2/disco?entityID=https://sp-proxy.eid.gov.it/spproxy/idpit&return=https://sso.isprambiente.it/Saml2/disco" class="italia-it-button italia-it-button-size-xl button-eidas" eidas-idp-button="#eidas-idp-button-xlarge-post" aria-haspopup="false" aria-expanded="false">
+                      <span class="italia-it-button-icon"><img src="eidas/img/ficep-it-eidas-ybw.svg" onerror="this.src='eidas/img/ficep-it-eidas-ybw.png'; this.onerror=null;" alt="" /></span>
+                      <span class="italia-it-button-text">Login with eIDAS</span>
+                    </a>
+                    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON eIDAS" * end * -->
+                  </div>
+
                 </div>
               </div>
             </div>
