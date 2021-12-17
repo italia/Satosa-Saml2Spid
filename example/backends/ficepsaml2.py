@@ -42,23 +42,16 @@ class FicepSAMLBackend(SpidSAMLBackend):
         logger.debug("Sending metadata response")
         conf = self.sp.config
 
+
         metadata = entity_descriptor(conf)
         # creare gli attribute_consuming_service
-        cnt = 99
-        for (
-            attribute_consuming_service
-        ) in metadata.spsso_descriptor.attribute_consuming_service:
-            attribute_consuming_service.index = str(cnt)
-            cnt += 1
+        metadata.spsso_descriptor.attribute_consuming_service[0].index = 99
+        metadata.spsso_descriptor.attribute_consumer_service[0].is_default = "true"
+        metadata.spsso_descriptor.attribute_consuming_service[0].requested_attribute = []
+        breakpoint()
+        metadata.spsso_descriptor.attribute_consuming_service[1].index = 100
 
-        cnt = 99
-        for (
-            assertion_consumer_service
-        ) in metadata.spsso_descriptor.assertion_consumer_service:
-            if cnt == 99:
-              assertion_consumer_service.is_default = "true"
-            assertion_consumer_service.index = str(cnt)
-            cnt += 1
+ 
 
         # nameformat patch... tutto questo non rispecchia gli standard OASIS
         for reqattr in metadata.spsso_descriptor.attribute_consuming_service[
