@@ -231,7 +231,7 @@ class SpidSAMLBackend(SAMLBackend):
         metadata.spsso_descriptor.assertion_consumer_service[0].index = '0'
         metadata.spsso_descriptor.assertion_consumer_service[0].is_default = 'true'
 
-        if self.config["sp_config"]["enable_cie"] is True:
+        if self.config["sp_config"]["enable_ficep"] is True:
             # Aggiungere CIE 99
             metadata.spsso_descriptor.attribute_consuming_service.append(saml2.md.AttributeConsumingService())
             metadata.spsso_descriptor.attribute_consuming_service[1].index = '99'
