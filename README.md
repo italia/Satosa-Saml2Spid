@@ -176,6 +176,14 @@ uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pk
 uwsgi --https 0.0.0.0:9999,./pki/cert.pem,./pki/privkey.pem --check-static-docroot --check-static ./static/ --static-index disco.html
 ````
 
+### Get SPID backend metadata
+
+The proxy backend exposes its SPID metadata at the following url (customizable):
+````
+https://localhost:10000/spidSaml2/metadata
+````
+
+
 #### Get Proxy Metadata for your SP
 
 The Proxy metadata must be configured in your SP. Your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
