@@ -1,4 +1,3 @@
-import copy
 import json
 import logging
 import re
@@ -245,7 +244,6 @@ class SpidSAMLBackend(SAMLBackend):
                     saml2.md.RequestedAttribute('true', None, 'dateOfBirth'),
                     ]
 
-            metadata.spsso_descriptor.assertion_consumer_service.append(copy.deepcopy(metadata.spsso_descriptor.assertion_consumer_service[0]))
             metadata.spsso_descriptor.assertion_consumer_service[1].index = '99'
             metadata.spsso_descriptor.assertion_consumer_service[1].is_default = None
 
@@ -265,7 +263,6 @@ class SpidSAMLBackend(SAMLBackend):
                     saml2.md.RequestedAttribute('true', None, 'gender'),
                     ]
 
-            metadata.spsso_descriptor.assertion_consumer_service.append(copy.deepcopy(metadata.spsso_descriptor.assertion_consumer_service[0]))
             metadata.spsso_descriptor.assertion_consumer_service[2].index = '100'
             metadata.spsso_descriptor.assertion_consumer_service[2].is_default = None
 
