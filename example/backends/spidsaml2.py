@@ -230,7 +230,7 @@ class SpidSAMLBackend(SAMLBackend):
         metadata.spsso_descriptor.assertion_consumer_service[0].index = '0'
         metadata.spsso_descriptor.assertion_consumer_service[0].is_default = 'true'
 
-        if self.config["sp_config"]["enable_ficep"] is True:
+        if self.config["sp_config"]["ficep_enable"] is True:
             # Aggiungere CIE 99
             metadata.spsso_descriptor.attribute_consuming_service.append(saml2.md.AttributeConsumingService())
             metadata.spsso_descriptor.attribute_consuming_service[1].index = '99'
@@ -375,7 +375,11 @@ class SpidSAMLBackend(SAMLBackend):
             authn_req.destination = location
             # spid-testenv2 preleva l'attribute consumer service dalla authnRequest
             # (anche se questo sta già nei metadati...)
-            authn_req.attribute_consuming_service_index = "0"
+            # Imposta il consuming_service_index in base al default di ficep per le richieste ficep, oppure a '0' per le richieste spid
+            if entity_id == self.config["sp_config"]["ficep_entity_id"]:
+                authn_req.attribute_consuming_service_index = str(self.config["sp_config"]["ficep_default_acs_index"])
+            else:
+                authn_req.attribute_consuming_service_index = "0"
 
             issuer = saml2.saml.Issuer()
             issuer.name_qualifier = client.config.entityid
