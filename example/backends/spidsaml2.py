@@ -218,38 +218,53 @@ class SpidSAMLBackend(SAMLBackend):
         conf = self.sp.config
 
         metadata = entity_descriptor(conf)
+ 
         # creare gli attribute_consuming_service
-        cnt = 0
-        for (
-            attribute_consuming_service
-        ) in metadata.spsso_descriptor.attribute_consuming_service:
-            attribute_consuming_service.index = str(cnt)
-            cnt += 1
-
-        cnt = 0
-        for (
-            assertion_consumer_service
-        ) in metadata.spsso_descriptor.assertion_consumer_service:
-            assertion_consumer_service.is_default = "true" if not cnt else ""
-            assertion_consumer_service.index = str(cnt)
-            cnt += 1
-
-        # nameformat patch... tutto questo non rispecchia gli standard OASIS
-        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[
-            0
-        ].requested_attribute:
+        metadata.spsso_descriptor.attribute_consuming_service[0].index = '0'
+        metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0].lang = "it"
+        metadata.spsso_descriptor.attribute_consuming_service[0].service_name[0].text = metadata.entity_id
+        for reqattr in metadata.spsso_descriptor.attribute_consuming_service[0].requested_attribute:
             reqattr.name_format = None
             reqattr.friendly_name = None
 
-        # attribute consuming service service name patch
-        service_name = metadata.spsso_descriptor.attribute_consuming_service[
-            0
-        ].service_name[0]
-        service_name.lang = "it"
-        service_name.text = metadata.entity_id
+        metadata.spsso_descriptor.assertion_consumer_service[0].index = '0'
+        metadata.spsso_descriptor.assertion_consumer_service[0].is_default = 'true'
 
-        # remove extension disco and uuinfo (spid-testenv2)
-        # metadata.spsso_descriptor.extensions = []
+        if self.config["sp_config"]["ficep_enable"] is True:
+            # Aggiungere CIE 99
+            metadata.spsso_descriptor.attribute_consuming_service.append(saml2.md.AttributeConsumingService())
+            metadata.spsso_descriptor.attribute_consuming_service[1].index = '99'
+            metadata.spsso_descriptor.attribute_consuming_service[1].service_name.append(saml2.md.ServiceName())
+            metadata.spsso_descriptor.attribute_consuming_service[1].service_name[0].lang = "it"
+            metadata.spsso_descriptor.attribute_consuming_service[1].service_name[0].text = "eIDAS Natural Person Minimum Attribute Set"
+            metadata.spsso_descriptor.attribute_consuming_service[1].requested_attribute = [
+                    saml2.md.RequestedAttribute('true', None, 'spidCode'),
+                    saml2.md.RequestedAttribute('true', None, 'name'),
+                    saml2.md.RequestedAttribute('true', None, 'familyName'),
+                    saml2.md.RequestedAttribute('true', None, 'dateOfBirth'),
+                    ]
+
+            metadata.spsso_descriptor.assertion_consumer_service[1].index = '99'
+            metadata.spsso_descriptor.assertion_consumer_service[1].is_default = None
+
+            # Aggiungere CIE 100
+            metadata.spsso_descriptor.attribute_consuming_service.append(saml2.md.AttributeConsumingService())
+            metadata.spsso_descriptor.attribute_consuming_service[2].index = '100'
+            metadata.spsso_descriptor.attribute_consuming_service[2].service_name.append(saml2.md.ServiceName())
+            metadata.spsso_descriptor.attribute_consuming_service[2].service_name[0].lang = "it"
+            metadata.spsso_descriptor.attribute_consuming_service[2].service_name[0].text = "eIDAS Natural Person Full Attribute Set"
+            metadata.spsso_descriptor.attribute_consuming_service[2].requested_attribute = [
+                    saml2.md.RequestedAttribute('true', None, 'spidCode'),
+                    saml2.md.RequestedAttribute('true', None, 'name'),
+                    saml2.md.RequestedAttribute('true', None, 'familyName'),
+                    saml2.md.RequestedAttribute('true', None, 'dateOfBirth'),
+                    saml2.md.RequestedAttribute('true', None, 'placeOfBirth'),
+                    saml2.md.RequestedAttribute('true', None, 'address'),
+                    saml2.md.RequestedAttribute('true', None, 'gender'),
+                    ]
+
+            metadata.spsso_descriptor.assertion_consumer_service[2].index = '100'
+            metadata.spsso_descriptor.assertion_consumer_service[2].is_default = None
 
         # load ContactPerson Extensions
         self._metadata_contact_person(metadata, conf)
@@ -360,7 +375,11 @@ class SpidSAMLBackend(SAMLBackend):
             authn_req.destination = location
             # spid-testenv2 preleva l'attribute consumer service dalla authnRequest
             # (anche se questo sta già nei metadati...)
-            authn_req.attribute_consuming_service_index = "0"
+            # Imposta il consuming_service_index in base al default di ficep per le richieste ficep, oppure a '0' per le richieste spid
+            if entity_id == self.config["sp_config"]["ficep_entity_id"]:
+                authn_req.attribute_consuming_service_index = str(self.config["sp_config"]["ficep_default_acs_index"])
+            else:
+                authn_req.attribute_consuming_service_index = "0"
 
             issuer = saml2.saml.Issuer()
             issuer.name_qualifier = client.config.entityid
