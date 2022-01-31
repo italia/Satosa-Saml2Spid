@@ -13,6 +13,12 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 7. [Author](#author)
 8. [Credits](#credits)
 
+## General features
+
+- SPID SP
+- eIDAS FICEP SP (see [ficep support PR here](https://github.com/italia/Satosa-Saml2Spid/pull/47))
+- SAML2 IDP
+- OIDC OP (see [satosa-oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop))
 
 ## Goal
 
