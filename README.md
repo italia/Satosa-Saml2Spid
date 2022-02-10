@@ -112,7 +112,7 @@ See [mongo readme](./mongo) to have some example of demo data.
 ## OIDC
 
 this project uses [SATOSA_oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop) as OAuth2/OIDC frontend module.
-This feature is not enabled by default, uncomment the following statement in the proxy_configuration to enable it.
+Comment/uncomment the following statement in the proxy_configuration to enable it.
 
 https://github.com/italia/Satosa-Saml2Spid/blob/oidcop/example/proxy_conf.yaml#L32
 
@@ -145,7 +145,7 @@ These are the configuration files:
 - `plugins/backends/spidsaml2_backend.yaml`
 - `plugins/backends/saml2_backend.yaml`
 - `plugins/frontend/saml2_frontend.yaml`
-- `plugins/frontend/oidc_op_frontend.yaml` (experimental)
+- `plugins/frontend/oidc_op_frontend.yaml` (optional to enable OIDC Provider)
 
 
 ## Saml2 Metadata
