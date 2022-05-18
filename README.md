@@ -126,9 +126,21 @@ virtualenv -ppython3 satosa.env
 source satosa.env/bin/activate
 ````
 
-###### Dependencies
+###### Dependencies Ubuntu
 ````
 sudo apt install -y libffi-dev libssl-dev python3-pip xmlsec1 procps libpcre3 libpcre3-dev
+
+git clone https://github.com/italia/Satosa-Saml2Spid.git repository
+pip install -r repository/requirements.txt
+````
+
+###### Dependencies Centos/RHEL
+````
+sudo yum install -y libffi-devel openssl-devel python3-pip xmlsec1 procps pcre pcre-devel
+pip install --upgrade pip
+sudo yum groupinstall "Development Tools"
+sudo yum install -y python3-wheel python3-devel
+
 
 git clone https://github.com/italia/Satosa-Saml2Spid.git repository
 pip install -r repository/requirements.txt
