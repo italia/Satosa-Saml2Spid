@@ -1,0 +1,10 @@
+[Unit]
+Description=Socket for satosa
+
+[Socket]
+# Change this to your uwsgi application port or unix socket location
+ListenStream=/home/satosa/production/current/tmp/sockets/satosa.sock
+SocketMode=0770
+
+[Install]
+WantedBy=sockets.target

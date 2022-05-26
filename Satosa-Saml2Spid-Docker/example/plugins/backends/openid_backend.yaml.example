@@ -1,0 +1,39 @@
+module: satosa.backends.openid_connect.OpenIDConnectBackend
+name: openid_connect
+config:
+  provider_metadata:
+    issuer: https://op.example.com
+  client:
+    verify_ssl: yes
+    auth_req_params:
+      response_type: code
+      scope: [openid, profile, email, address, phone]
+    client_metadata:
+      application_name: SATOSA
+      application_type: web
+      contacts: [ops@example.com]
+      redirect_uris: [<base_url>/<name>]
+      subject_type: public
+  entity_info:
+    contact_person:
+      - contact_type: "technical"
+        email_address: ["technical_test@example.com", "support_test@example.com"]
+        given_name: "Test"
+        sur_name: "OP"
+      - contact_type: "support"
+        email_address: ["support_test@example.com"]
+        given_name: "Support_test"
+    organization:
+      display_name:
+      - ["OP Identities", "en"]
+      name:
+      - ["En test-OP", "se"]
+      - ["A test OP", "en"]
+      url:
+      - ["http://www.example.com", "en"]
+      - ["http://www.example.se", "se"]
+    ui_info:
+      description:
+      - ["This is a test OP", "en"]
+      display_name:
+      - ["OP - TEST", "en"]

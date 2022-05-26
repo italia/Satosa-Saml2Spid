@@ -1,0 +1,96 @@
+module: satosa.backends.saml2.SAMLBackend
+name: Saml2
+config:
+  #idp_blacklist_file: /path/to/blacklist.json
+
+  # make metadata downloadable from entityid url
+  entityid_endpoint: true
+
+  sp_config:
+    key_file: ./pki/privkey.pem
+    cert_file: ./pki/cert.pem
+    encryption_keypairs:
+    - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
+
+    organization: 
+      display_name:
+      - [ !ENV ORGANIZATION_DISPLAY_NAME_EN , 'en']
+      - [ !ENV ORGANIZATION_DISPLAY_NAME_IT , 'it']
+      name: 
+      - [ !ENV ORGANIZATION_NAME_EN , 'en']
+      - [ !ENV ORGANIZATION_NAME_IT , 'it']
+      url:
+      - [ !ENV ORGANIZATION_URL_EN , 'en']
+      - [ !ENV ORGANIZATION_URL_IT , 'it']
+    contact_person:
+    - contact_type: !ENV CONTACT_PERSON_TYPE
+      email_address: !ENV CONTACT_PERSON_EMAIL_ADDRESS
+      given_name: !ENV CONTACT_PERSON_GIVEN_NAME
+
+    metadata:
+      local: [./metadata/idp/]
+      # using pyFF or other MDX server
+      # mdq:
+      #  - url: "http://mdq.auth.unical.it/static/sha1"
+          # cert: mdq.pem
+
+    entityid: '<base_url>/<name>/metadata'
+    accepted_time_diff: 300
+
+    service:
+      sp:
+        ui_info:
+          display_name:
+            - lang: en
+              text: !ENV UI_DISPLAY_NAME_EN
+            - lang: it
+              text: !ENV UI_DISPLAY_NAME_IT
+          description:
+            - lang: en
+              text: !ENV UI_DESCRIPTION_EN
+            - lang: it
+              text: !ENV UI_DESCRIPTION_IT
+          information_url:
+            - lang: en
+              text: !ENV UI_INFORMATION_URL_EN
+            - lang: it 
+              text: !ENV UI_INFORMATION_URL_IT
+          privacy_statement_url:
+            - lang: en
+              text: !ENV UI_PRIVACY_URL_EN
+            - lang: it
+              text: !ENV UI_PRIVACY_URL_IT
+          logo:
+            text: !ENV UI_LOGO_URL
+            width: !ENV UI_LOGO_WIDTH
+            height: !ENV UI_LOGO_HEIGHT
+
+        only_use_keys_in_metadata: true
+        force_authn: true
+
+        # sign dig and enc
+        authn_requests_signed: true
+        want_response_signed: true
+
+        # this must be unsolicited because in production different workers do not share the same storage (outstanding queries)!
+        allow_unsolicited: true
+
+        # they works both with ppln-dev branch
+        signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+        digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
+
+        required_attributes: [name, surname]
+
+        endpoints:
+          assertion_consumer_service:
+          - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
+          # single_logout_service:
+          # - [<base_url>/<name>ls/post/, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
+          discovery_response:
+          - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
+
+        name_id_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
+        name_id_format_allow_create: false
+
+  # disco_srv must be defined if there is more than one IdP in the metadata specified above
+  disco_srv: !ENV DISCO_URL

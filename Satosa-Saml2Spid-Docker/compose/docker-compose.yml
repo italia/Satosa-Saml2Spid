@@ -1,0 +1,115 @@
+version: '3'
+services:
+
+  satosa-mongo:
+    image: mongo
+    container_name: satosa-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: oidcop
+      MONGO_INITDB_ROOT_USERNAME: satosa
+      MONGO_INITDB_ROOT_PASSWORD: thatpassword
+    volumes:
+      - mongodata:/data/db
+      - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro  
+    ports:
+      - '27017-27019:27017-27019'
+
+  satosa-mongo-express:
+    image: mongo-express
+    container_name: satosa-mongo-express
+    restart: always
+    ports:
+      - 8082:8081
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: satosauser
+      ME_CONFIG_BASICAUTH_PASSWORD: satosapw            
+      ME_CONFIG_MONGODB_ADMINUSERNAME: satosa
+      ME_CONFIG_MONGODB_ADMINPASSWORD: thatpassword
+      ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
+
+  satosa-saml2spid:
+    image: satosa-saml2spid-test 
+    container_name: satosa-saml2spid
+    depends_on:
+      - satosa-mongo
+    environment:
+       - VIRTUAL_HOST=$HOSTNAME
+       - VIRTUAL_PORT=10000
+       - VIRTUAL_PROTO=https
+#      - THAT=thing
+#      - SATOSA_USER_ID_HASH_SALT=cambiala  
+    expose:
+      - 10000
+      - 9999  
+    ports:
+      - "10000:10000"
+    volumes:
+       - ./proxy_conf.yaml:/satosa_proxy/proxy_conf.yaml
+       - ./demo-run.sh:/satosa_proxy/demo-run.sh
+       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml  
+#      - satosa_certs:/satosa_pki
+#      - satosa_conf:/satosa_proxy
+#      - satosa_logs:/satosa_logs
+
+
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - "80:80"
+#      - "443:443"  
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - nginx_html:/usr/share/nginx/html:ro
+#      - nginx_vhost:/etc/nginx/vhost.d:ro  
+#      - nginx_certs:/etc/nginx/certs:ro
+        
+#  nginx-proxy-acme:
+#    image: nginxproxy/acme-companion
+#    environment:
+#      - DEFAULT_EMAIL=mail@localhost.localdomain      
+#    volumes:
+#      - /var/run/docker.sock:/tmp/docker.sock:ro
+#      - nginx_html:/usr/share/nginx/html
+#      - nginx_vhost:/etc/nginx/vhost.d  
+#      - nginx_certs:/etc/nginx/certs
+#      - acme:/etc/acme.sh
+
+volumes:
+  
+  satosa_certs:
+    driver_opts:
+      type: none
+      device: $PWD/satosa/certs/
+      o: bind
+
+  satosa_conf:
+    driver_opts:
+      type: none
+      device: $PWD/satosa/conf/
+      o: bind
+
+  satosa_logs:
+    driver_opts:
+      type: none
+      device: $PWD/satosa/logs/
+      o: bind
+
+  mongodata:
+    driver_opts:
+      type: none
+      device: $PWD/mongodata/
+      o: bind
+
+  nginx_html:
+    driver_opts:
+      type: none
+      device: $PWD/nginx/satosa_static/
+      o: bind      
+
+  nginx_certs:
+    driver_opts:
+      type: none
+      device: $PWD/nginx/certs/
+      o: bind      
