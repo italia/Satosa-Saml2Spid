@@ -1,0 +1,56 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          satosa-saml2
+# Required-Start:    nginx
+# Required-Stop:
+# Should-Start:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Create dynamic part of /etc/motd
+# Description:       /etc/motd is user-editable and static.  This script
+#                    creates the initial dynamic part, by default the
+#                    output of uname, and stores it in /var/run/motd.dynamic.
+#                    Both parts are output by pam_motd.
+### END INIT INFO
+
+# and then
+# update-rc.d satosa-saml2 defaults
+# update-rc.d satosa-saml2 enable
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+BASEDIR="/opt"
+ENVDIR="$BASEDIR/django-pysaml2.env"
+APPNAME="satosa-saml2"
+APPDIR="$BASEDIR/$APPNAME"
+#DEBUG=""
+PID_PATH="/var/log/uwsgi"
+COMMAND="uwsgi --uid 1000 --ini $APPDIR/uwsgi_setup/uwsgi.ini &"
+STOP_CMD="source $ENVDIR/bin/activate && uwsgi --stop $PID_PATH/$APPNAME.pid"
+RELOAD_CMD="source $ENVDIR/bin/activate && uwsgi --reload $PID_PATH/$APPNAME.pid"
+
+
+mkdir -p $PID_PATH
+chown -R $USER $PID_PATH
+
+case "$1" in
+  start)
+    source $ENVDIR/bin/activate && $COMMAND
+    ;;
+  stop)
+    #kill -KILL  $(ps ax | grep $APPNAME | awk -F' ' {'print $1'} | xargs echo)
+    $STOP_CMD
+    ;;
+  restart)
+    $RELOAD_CMD
+    ;;
+  force-stop)
+    sudo ps ax | grep satosa-saml2 | awk -F' ' {'print $1'} | xargs echo | xargs kill -KILL
+    ;;
+  *)
+    echo "Usage: motd [start|stop|restart]" >&2
+    exit 1
+    ;;
+esac
+
+exit 0
+

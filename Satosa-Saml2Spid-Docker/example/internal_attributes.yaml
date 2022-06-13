@@ -1,0 +1,100 @@
+attributes:
+  address:
+    openid: [address.street_address]
+    orcid: [addresses.str]
+    saml: [postaladdress, address]
+  displayname:
+    openid: [nickname]
+    orcid: [name.credit-name]
+    github: [login]
+    saml: [displayName, familyname, FamilyName, familyName]
+  edupersontargetedid:
+    facebook: [id]
+    linkedin: [id]
+    orcid: [orcid]
+    github: [id]
+    openid: [sub]
+    saml: [eduPersonTargetedID, eduPersonTargetedId, spidCode]
+  edupersonprincipalname:
+    saml: [eduPersonPrincipalName]
+  edupersonscopedaffiliation:
+    saml: [eduPersonScopedAffiliation]
+  edupersonentilement:
+    saml: [eduPersonEntitlement]
+  schacpersonaluniqueid:
+    saml: [schacPersonalUniqueID, fiscalNumber]
+  schacpersonaluniquecode:
+    saml: [schacPersonalUniqueCode]
+  schachomeorganizationtype:
+    saml: [schacHomeOrganizationType]
+  schachomeorganization:
+    saml: [schacHomeOrganization]
+  givenname:
+    facebook: [first_name]
+    linkedin: [email-address]
+    orcid: [name.given-names.value]
+    openid: [given_name]
+    saml: [givenName, name, Name]
+  mail:
+    facebook: [email]
+    linkedin: [email-address]
+    orcid: [emails.str]
+    github: [email]
+    openid: [email]
+    saml: [mail, email]
+  name:
+    facebook: [name]
+    orcid: [name.credit-name]
+    github: [name]
+    openid: [name]
+    saml: [name, Name]
+  surname:
+    facebook: [last_name]
+    linkedin: [lastName]
+    orcid: [name.family-name.value]
+    openid: [family_name]
+    saml: [sn, surname, familyName, FamilyName]
+  # spid related
+  spidcode:
+    openid: [spidcode]
+    saml: [spidCode]
+# decommentando questo la email rilasciata anche in caso di account linking sarà quella di spid
+# commentando: email sarà rilasciato in formato URI
+  email:
+    facebook: [email]
+    linkedin: [email-address]
+    orcid: [emails.str]
+    github: [email]
+    openid: [email]
+    saml: [mail]
+  familyname:
+    saml: [familyName, familyname, FamilyName]
+  fiscalnumber:
+    saml: [fiscalNumber, fiscalnumber, FiscalNumber]
+  gender:
+    saml: [gender, Gender]
+  companyName:
+    saml: [companyName]
+  registeredOffice:
+    saml: [registeredOffice]
+  ivaCode:
+    saml: [ivaCode]
+  idCard:
+    saml: [idCard]
+  digitalAddress:
+    saml: [digitalAddress]
+  placeOfBirth:
+    saml: [placeOfBirth]
+  countyOfBirth:
+    saml: [countyOfBirth]
+  dateOfBirth:
+    saml: [dateOfBirth]
+  address:
+    saml: [address]
+  mobilePhone:
+    saml: [mobilePhone]
+  expirationDate:
+    saml: [expirationDate]
+# user identification mapping
+user_id_from_attrs: [edupersontargetedid]
+user_id_to_attr: spidcode
