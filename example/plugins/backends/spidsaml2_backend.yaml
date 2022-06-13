@@ -36,21 +36,21 @@ config:
 
     organization:
       display_name: 
-      - [ !ENV ORGANIZATION_DISPLAY_NAME_EN , 'en']
-      - [ !ENV ORGANIZATION_DISPLAY_NAME_IT , 'it']
+      - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN', 'en']
+      - [ 'change with $SAOSA_ORGANIZATION_DISPLAY_NAME_IT', 'it']
       name: 
-      - [ !ENV ORGANIZATION_NAME_EN , 'en']
-      - [ !ENV ORGANIZATION_NAME_IT , 'it']
+      - [ 'change with $SATOSA_ORGANIZATION_NAME_EN', 'en']
+      - [ 'change with $SATOSA_ORGANIZATION_NAME_IT', 'it']
       url:
-      - [ !ENV ORGANIZATION_URL_EN , 'en']
-      - [ !ENV ORGANIZATION_URL_IT , 'it']
+      - [ 'change with $SATOSA_ORGANIZATION_URL_EN', 'en']
+      - [ 'change with $SATOSA_ORGANIZATION_URL_IT', 'it']
 
     contact_person:
         - contact_type: 'other'
-          given_name: !ENV CONTACT_PERSON_GIVEN_NAME
-          telephone_number: !ENV CONTACT_TELEPHONE_NUMBER
-          email_address: !ENV CONTACT_PERSON_EMAIL_ADDRESS
-          FiscalCode: !ENV CONTACT_FISCALCODE
+          given_name: change with $SATOSA_CONTACT_PERSON_GIVEN_NAME
+          email_address: change with $SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
+          telephone_number: change with $SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER
+          FiscalCode: change with $SATOSA_CONTACT_PERSON_FISCALCODE
           Public': ''
         # - {'contact_type': 'other', 'telephone_number': '+3984756344785', 'email_address': 'info@example.org', 'VATNumber': 'IT12345678901', 'FiscalCode': 'XYasdasdadasdGGJ000W', 'Private': '' }
         # - {'contact_type': 'billing', 'telephone_number': '+3984756344785', 'email_address': 'info@example.org', 'company': 'example s.p.a.', 'CodiceFiscale': 'NGLMRA80A01D086T', 'IdCodice': '983745349857', 'IdPaese': 'IT', 'Denominazione': 'Destinatario Fatturazione', 'Indirizzo': 'via tante cose', 'NumeroCivico': '12', 'CAP': '87100', 'Comune': 'Cosenza', 'Provincia': 'CS', 'Nazione': 'IT' }
@@ -72,25 +72,33 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: "SPID Authentication Proxy"
+              text: change with $SATOSA_UI_DISPLAY_NAME_EN
+            - lang: it
+              text: change with $SATOSA_UI_DISPLAY_NAME_IT
           description:
             - lang: en
-              text: "SPID Authentication Proxy"
-          # information_url:
-            # - lang: en
-              # text: "http://sp.information.url/"
-          #privacy_statement_url:
-            #- lang: en
-              #text: "https://www.example.org/privacy/"
+              text: change with $SATOSA_UI_DESCRIPTION_EN
+            - lang: it
+              text: change with $SATOSA_UI_DESCRIPTION_IT
+          information_url:
+            - lang: en
+              text: change with $SATOSA_UI_INFORMATION_URL_EN
+            - lang: it 
+              text: change with $SATOSA_UI_INFORMATION_URL_IT
+          privacy_statement_url:
+            - lang: en
+              text: change with $SATOSA_UI_PRIVACY_URL_EN
+            - lang: it
+              text: change with $SATOSA_UI_PRIVACY_URL_IT
           keywords:
             - lang: it
               text: ["SPID Authentication Proxy", "SPID Service Provider IT"]
             - lang: en
               text: ["SPID Authentication Proxy", "SPID Service Provider EN"]
           logo:
-            text: "https://www.spid.gov.it/assets/img/spid-ico-circle-bb.svg"
-            width: "100"
-            height: "100"
+            text: change with $SATOSA_UI_LOGO_URL
+            width: change with $SATOSA_UI_LOGO_WIDTH
+            height: change with $SATOSA_UI_LOGO_HEIGHT
 
         # sign dig and enc
         authn_requests_signed: true
@@ -115,11 +123,7 @@ config:
         allow_unsolicited: true
 
         # this instantiate the attribute_consuming_service
-        required_attributes: ['spidCode',
-                              'name',
-                              'familyName',
-                              'fiscalNumber',
-                              'email']
+        required_attributes: ['spidCode', 'name', 'familyName', 'fiscalNumber', 'email']
 
         #optional_attributes: ['gender',
         #                      'companyName',
@@ -145,4 +149,4 @@ config:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: !ENV DISCO_URL
+  disco_srv: "https://localhost:9999/disco.html"
