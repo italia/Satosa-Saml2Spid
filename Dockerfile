@@ -27,7 +27,7 @@ ENV DAYS="7300"
 RUN $BASEDIR/pki/build_spid_certs.sh
 
 WORKDIR $BASEDIR/
-RUN pip3 install -r requirements.txt --ignore-installed
+RUN pip3 install -r requirements.txt --ignore-installed ; pip install yq
 
 # Metadata
 RUN mkdir -p metadata/idp
