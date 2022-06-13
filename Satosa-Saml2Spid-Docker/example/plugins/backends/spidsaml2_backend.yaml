@@ -34,10 +34,24 @@ config:
 
     attribute_map_dir: 'attributes-map'
 
-    organization: { display_name: [['Saml2 Authentication Proxy', 'it']], name: [['Spid Authentication Proxy', 'it']],  url: [['https://spid.proxy.example.org', 'it']]}
+    organization:
+      display_name: 
+      - [ !ENV ORGANIZATION_DISPLAY_NAME_EN , 'en']
+      - [ !ENV ORGANIZATION_DISPLAY_NAME_IT , 'it']
+      name: 
+      - [ !ENV ORGANIZATION_NAME_EN , 'en']
+      - [ !ENV ORGANIZATION_NAME_IT , 'it']
+      url:
+      - [ !ENV ORGANIZATION_URL_EN , 'en']
+      - [ !ENV ORGANIZATION_URL_IT , 'it']
 
     contact_person:
-        - {'contact_type': 'other', 'telephone_number': '+398475634785', 'email_address': 'tech-info@example.org', 'VATNumber': 'IT12345678901', 'FiscalCode': 'XYZABCAAMGGJ000W', 'Public': ''}
+        - contact_type: 'other'
+          given_name: !ENV CONTACT_PERSON_GIVEN_NAME
+          telephone_number: !ENV CONTACT_TELEPHONE_NUMBER
+          email_address: !ENV CONTACT_PERSON_EMAIL_ADDRESS
+          FiscalCode: !ENV CONTACT_FISCALCODE
+          Public': ''
         # - {'contact_type': 'other', 'telephone_number': '+3984756344785', 'email_address': 'info@example.org', 'VATNumber': 'IT12345678901', 'FiscalCode': 'XYasdasdadasdGGJ000W', 'Private': '' }
         # - {'contact_type': 'billing', 'telephone_number': '+3984756344785', 'email_address': 'info@example.org', 'company': 'example s.p.a.', 'CodiceFiscale': 'NGLMRA80A01D086T', 'IdCodice': '983745349857', 'IdPaese': 'IT', 'Denominazione': 'Destinatario Fatturazione', 'Indirizzo': 'via tante cose', 'NumeroCivico': '12', 'CAP': '87100', 'Comune': 'Cosenza', 'Provincia': 'CS', 'Nazione': 'IT' }
 
@@ -45,7 +59,6 @@ config:
       local: [./metadata/idp/]
       # using pyFF or other MDX server
       # mdq:
-      #  - url: "http://mdq.auth.unical.it/static/sha1"
           # cert: mdq.pem
     ficep_enable: True
     ficep_entity_id: https://sp-proxy.eid.gov.it/spproxy/idpit
@@ -132,4 +145,4 @@ config:
           - [<base_url>/<name>/disco, 'urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol']
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: "https://localhost:9999/disco.html"
+  disco_srv: !ENV DISCO_URL
