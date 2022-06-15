@@ -67,8 +67,6 @@ services:
       dockerfile: ./docker/satosa-saml2spid/Dockerfile
     depends_on:
       - satosa-mongo
-    environment:
-      - THAT=thing
     expose:
       - 10000
     ports:
@@ -79,6 +77,38 @@ services:
       - satosa-saml2saml_certs:/satosa_pki
       - satosa-saml2saml_conf:/satosa_proxy
       - satosa-saml2saml_logs:/satosa_logs
+    environment:
+      - THAT=thing
+      # - SATOSA_ORGANIZATION_DISPLAY_DISPLAY_NAME_EN=
+      # - SATOSA_APP=
+      # - SATOSA_BASE=
+      # - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=
+      # - SATOSA_CONTACT_PERSON_FISCALCODE=
+      # - SATOSA_CONTACT_PERSON_GIVEN_NAME=
+      # - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=
+      # - SATOSA_DISCO_SRV=
+      # - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=
+      # - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=
+      # - SATOSA_ORGANIZATION_NAME_EN=
+      # - SATOSA_ORGANIZATION_NAME_IT=
+      # - SATOSA_ORGANIZATION_URL_EN=
+      # - SATOSA_PRIVATE_KEY=
+      # - SATOSA_PRIVATE_KEYS=
+      # - SATOSA_PUBLIC_KEY=
+      # - SATOSA_STATE_ENCRYPTION_KEY=
+      # - SATOSA_UI_DESCRIPTION_EN=
+      # - SATOSA_UI_DESCRIPTION_IT=
+      # - SATOSA_UI_DISPLAY_NAME_EN=
+      # - SATOSA_UI_DISPLAY_NAME_IT=
+      # - SATOSA_UI_INFORMATION_URL_EN=
+      # - SATOSA_UI_INFORMATION_URL_IT=
+      # - SATOSA_UI_LOGO_HEIGHT=
+      # - SATOSA_UI_LOGO_URL=
+      # - SATOSA_UI_LOGO_WIDTH=
+      # - SATOSA_UI_PRIVACY_URL_EN=
+      # - SATOSA_UI_PRIVACY_URL_IT=
+      # - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=
+      # - SATOSA_USER_ID_HASH_SALT=
 
   # TODO
   #satosa-nginx:
