@@ -12,7 +12,7 @@ services:
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro  
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
     ports:
       - '27017-27019:27017-27019'
 
@@ -24,60 +24,91 @@ services:
       - 8082:8081
     environment:
       ME_CONFIG_BASICAUTH_USERNAME: satosauser
-      ME_CONFIG_BASICAUTH_PASSWORD: satosapw            
+      ME_CONFIG_BASICAUTH_PASSWORD: satosapw
       ME_CONFIG_MONGODB_ADMINUSERNAME: satosa
       ME_CONFIG_MONGODB_ADMINPASSWORD: thatpassword
       ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
 
   satosa-saml2spid:
-    image: satosa-saml2spid-test 
+    image: satosa-saml2spid-test
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
     environment:
-       - VIRTUAL_HOST=$HOSTNAME
-       - VIRTUAL_PORT=10000
-       - VIRTUAL_PROTO=https
-#      - THAT=thing
-#      - SATOSA_USER_ID_HASH_SALT=cambiala  
+      # - VIRTUAL_HOST=$HOSTNAME
+      # - VIRTUAL_PORT=10000
+      # - VIRTUAL_PROTO=https
+       - THAT=thing
+      # - SATOSA_ORGANIZATION_DISPLAY_DISPLAY_NAME_EN=
+      # - SATOSA_APP=
+      # - SATOSA_BASE=https://localhost:10000
+       - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
+       - SATOSA_CONTACT_PERSON_FISCALCODE=01234567890
+       - SATOSA_CONTACT_PERSON_GIVEN_NAME=Name
+       - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=06123456789
+      # - SATOSA_DISCO_SRV=
+       - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
+       - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=Resource provided by Example Organization
+       - SATOSA_ORGANIZATION_NAME_EN=Example Organization
+       - SATOSA_ORGANIZATION_NAME_IT=Example Organization
+       - SATOSA_ORGANIZATION_URL_EN=https://example_organization.org
+       - SATOSA_ORGANIZATION_URL_IT=https://example_organization.org
+      # - SATOSA_PRIVATE_KEY=
+      # - SATOSA_PRIVATE_KEYS=
+      # - SATOSA_PUBLIC_KEY=
+       - SATOSA_STATE_ENCRYPTION_KEY=CHANGE_ME
+       - SATOSA_UI_DESCRIPTION_EN=Resource description
+       - SATOSA_UI_DESCRIPTION_IT=Risorsa descrizione
+       - SATOSA_UI_DISPLAY_NAME_EN=Resource Display name
+       - SATOSA_UI_DISPLAY_NAME_IT=Risorsa display name
+       - SATOSA_UI_INFORMATION_URL_EN=https://example_organization.org/information_url_en
+       - SATOSA_UI_INFORMATION_URL_IT=https://example_organization.org/information_url_it
+       - SATOSA_UI_LOGO_HEIGHT=60
+       - SATOSA_UI_LOGO_URL=https://example_organization.org/logo.png
+       - SATOSA_UI_LOGO_WIDTH=80
+       - SATOSA_UI_PRIVACY_URL_EN=https://example_organization.org/privacy_en
+       - SATOSA_UI_PRIVACY_URL_IT=https://example_organization.org/privacy_it
+       - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://localhost:9999/error_page.html
+       - SATOSA_USER_ID_HASH_SALT=CHANGE_ME
     expose:
       - 10000
-      - 9999  
+      - 9999
     ports:
       - "10000:10000"
+      - "9999:9999"
     volumes:
        - ./proxy_conf.yaml:/satosa_proxy/proxy_conf.yaml
        - ./demo-run.sh:/satosa_proxy/demo-run.sh
-       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml  
+       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
 #      - satosa_certs:/satosa_pki
 #      - satosa_conf:/satosa_proxy
 #      - satosa_logs:/satosa_logs
 
 
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    ports:
-      - "80:80"
-#      - "443:443"  
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-      - nginx_html:/usr/share/nginx/html:ro
-#      - nginx_vhost:/etc/nginx/vhost.d:ro  
-#      - nginx_certs:/etc/nginx/certs:ro
-        
-#  nginx-proxy-acme:
-#    image: nginxproxy/acme-companion
-#    environment:
-#      - DEFAULT_EMAIL=mail@localhost.localdomain      
+#  nginx-proxy:
+#    image: nginxproxy/nginx-proxy
+#    ports:
+#      - "80:80"
+##      - "443:443"
 #    volumes:
 #      - /var/run/docker.sock:/tmp/docker.sock:ro
-#      - nginx_html:/usr/share/nginx/html
-#      - nginx_vhost:/etc/nginx/vhost.d  
-#      - nginx_certs:/etc/nginx/certs
-#      - acme:/etc/acme.sh
+#      - nginx_html:/usr/share/nginx/html:ro
+##      - nginx_vhost:/etc/nginx/vhost.d:ro
+##      - nginx_certs:/etc/nginx/certs:ro
+
+##  nginx-proxy-acme:
+##    image: nginxproxy/acme-companion
+##    environment:
+##      - DEFAULT_EMAIL=mail@localhost.localdomain
+##    volumes:
+##      - /var/run/docker.sock:/tmp/docker.sock:ro
+##      - nginx_html:/usr/share/nginx/html
+##      - nginx_vhost:/etc/nginx/vhost.d
+##      - nginx_certs:/etc/nginx/certs
+##      - acme:/etc/acme.sh
 
 volumes:
-  
+
   satosa_certs:
     driver_opts:
       type: none
@@ -106,10 +137,10 @@ volumes:
     driver_opts:
       type: none
       device: $PWD/nginx/satosa_static/
-      o: bind      
+      o: bind
 
   nginx_certs:
     driver_opts:
       type: none
       device: $PWD/nginx/certs/
-      o: bind      
+      o: bind
