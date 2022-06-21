@@ -109,6 +109,10 @@ update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.service.id
 update_yaml plugins/backends/saml2_backend.yaml ".config.disco_srv" "$SATOSA_DISCO_SRV"
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.disco_srv" "$SATOSA_DISCO_SRV"
 
+# Set username and password for mongodb in oidc_op_frontend with $SATOSA_MONGODB_USERNAME and $SATOSA_MONGODB_PASSWORD
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.username" "$SATOSA_MONGODB_USERNAME"
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.password" "$SATOSA_MONGODB_PASSWORD"
+
 # Update saml2_backend.yaml requested_attributes
 if [[ -v SATOSA_SAML2_REQUESTED_ATTRIBUTES ]]; then
   yq -yi --argjson a "${SATOSA_SAML2_REQUESTED_ATTRIBUTES}" '.config.sp_config.service.sp.requested_attributes |= $a' plugins/backends/saml2_backend.yaml
