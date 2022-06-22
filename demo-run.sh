@@ -12,10 +12,10 @@ update_yaml () {
 
 # Update proxy_conf.yaml .BASE with SATOSA_BASE env
 update_yaml proxy_conf.yaml ".BASE" "$SATOSA_BASE"
-# Update proxy_conf.yaml .STATE_ENCRYPTION_KEY with $SATOSA_STATE_ENCRYPTION_KEY
+# Update proxy_conf.yaml .STATE_ENCRYPTION_KEY with $SATOSA_ENCRYPTION_KEY
 update_yaml proxy_conf.yaml ".STATE_ENCRYPTION_KEY" "$SATOSA_STATE_ENCRYPTION_KEY"
 # Update proxy_conf.yaml .USER_ID_HASH_SALT with $SATOSA_USER_ID_HASH_SALT
-update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_USER_ID_HASH_SALT"
+update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
 # Update proxy_conf.yaml .UNKNOW_ERROR_REDIRECT_PAGE with $SATOSA_UNKNOW_ERROR_REDIRECT_PAGE env
 update_yaml proxy_conf.yaml ".UNKNOW_ERROR_REDIRECT_PAGE" "$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE"
 
@@ -112,6 +112,12 @@ update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.disco_srv" "$SATOS
 # Set username and password for mongodb in oidc_op_frontend with $SATOSA_MONGODB_USERNAME and $SATOSA_MONGODB_PASSWORD
 update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.username" "$SATOSA_MONGODB_USERNAME"
 update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.password" "$SATOSA_MONGODB_PASSWORD"
+
+# Set encrypt password and salt for oidc_op_frontend with $SATOSA_SALT and $
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.op.server_info.session_params.password" "$SATOSA_ENCRYPTION_KEY"
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.op.server_info.session_params.salt" "$SATOSA_SALT"
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.op.server_info.session_params.sub_func.pairwise.kwargs.salt" "$SATOSA_SALT"
+update_yaml plugin/frontends/oidc_op_frontend.yaml ".config.op.server_info.session_params.sub_func.pairwise.kwargs.salt" "$SATOSA_SALT"
 
 # Update saml2_backend.yaml requested_attributes
 if [[ -v SATOSA_SAML2_REQUESTED_ATTRIBUTES ]]; then
