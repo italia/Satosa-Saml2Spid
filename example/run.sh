@@ -1,7 +1,7 @@
 #!/bin/bash
 
 update_yaml () {
-  if [[ -v 3 ]]; then
+  if [[ -n "${3}" ]]; then
     UPDATE="${2} |= \"${3}\""
     yq -yi "$UPDATE" $1
     echo "yaml_update $1 (${2}) updated"
