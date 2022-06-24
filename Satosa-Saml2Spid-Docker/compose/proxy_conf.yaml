@@ -1,14 +1,14 @@
-BASE: ''
+BASE: https://c8test.si.cnr.it:10000
 INTERNAL_ATTRIBUTES: internal_attributes.yaml
 COOKIE_STATE_NAME: SATOSA_STATE
 CONTEXT_STATE_DELETE: true
 COOKIE_MAX_AGE: 600
-STATE_ENCRYPTION_KEY: ''
+STATE_ENCRYPTION_KEY: CHANGE_ME
 cookies_samesite_compat:
   - - SATOSA_STATE
     - SATOSA_STATE_LEGACY
-USER_ID_HASH_SALT: ''
-UNKNOW_ERROR_REDIRECT_PAGE: ''
+USER_ID_HASH_SALT: ${SATOSA_USER_ID_HASH_SALT:'Change me!!!!!'}
+UNKNOW_ERROR_REDIRECT_PAGE: https://localhost:9999/error_page.html
 CUSTOM_PLUGIN_MODULE_PATHS:
   - plugins/backends
   - plugins/frontends
@@ -81,13 +81,13 @@ LOGGING:
       level: DEBUG
       formatter: simple
       handlers:
-        - saml2_debug_file
+        - console
       propagate: false
     satosa.backends.saml2:
       level: DEBUG
       formatter: simple
       handlers:
-        - saml2_debug_file
+        - console
       propagate: false
     satosa.frontends.idpy_oidcop:
       level: DEBUG
@@ -99,5 +99,5 @@ LOGGING:
       level: INFO
       formatter: simple
       handlers:
-        - spid_daily
+        - console
       propagate: false

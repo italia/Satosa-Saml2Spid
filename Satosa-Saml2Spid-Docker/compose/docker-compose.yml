@@ -38,10 +38,10 @@ services:
       # - VIRTUAL_HOST=$HOSTNAME
       # - VIRTUAL_PORT=10000
       # - VIRTUAL_PROTO=https
-       - THAT=thing
+       - SATOSA_BY_DOCKER=1
       # - SATOSA_ORGANIZATION_DISPLAY_DISPLAY_NAME_EN=
       # - SATOSA_APP=
-      # - SATOSA_BASE=https://localhost:10000
+       - SATOSA_BASE=https://$HOSTNAME:10000
        - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
        - SATOSA_CONTACT_PERSON_FISCALCODE=01234567890
        - SATOSA_CONTACT_PERSON_GIVEN_NAME=Name
@@ -78,8 +78,8 @@ services:
       - "9999:9999"
     volumes:
        - ./proxy_conf.yaml:/satosa_proxy/proxy_conf.yaml
-       - ./demo-run.sh:/satosa_proxy/demo-run.sh
-       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
+       - ./run.sh:/satosa_proxy/run.sh
+#       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
 #      - satosa_certs:/satosa_pki
 #      - satosa_conf:/satosa_proxy
 #      - satosa_logs:/satosa_logs

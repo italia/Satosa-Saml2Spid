@@ -18,7 +18,6 @@ RUN apk add --update xmlsec libffi-dev libressl-dev python3 py3-pip python3-dev 
 && mv /root/requirements.txt $BASEDIR/ \
 && mv /root/oids.conf $BASEDIR/pki/ \
 && mv /root/build_spid_certs.sh $BASEDIR/pki/ \
-&& mv /root/demo-run.sh $BASEDIR/ \
 && cd $BASEDIR/pki/ \
 && chmod 755 $BASEDIR/pki/build_spid_certs.sh \
 && $BASEDIR/pki/build_spid_certs.sh \
@@ -29,7 +28,7 @@ RUN apk add --update xmlsec libffi-dev libressl-dev python3 py3-pip python3-dev 
 && wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml \
 && adduser --disabled-password wert \
 && chown -R  wert . \
-&& chmod +x demo-run.sh
+&& chmod +x run.sh
 
 USER wert
 
@@ -37,4 +36,4 @@ WORKDIR $BASEDIR/
 
 #RUN source bash_env
 
-CMD bash demo-run.sh
+CMD bash run.sh
