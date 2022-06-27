@@ -59,8 +59,8 @@ services:
        - SATOSA_STATE_ENCRYPTION_KEY=CHANGE_ME
        - SATOSA_UI_DESCRIPTION_EN=Resource description
        - SATOSA_UI_DESCRIPTION_IT=Risorsa descrizione
-       - SATOSA_UI_DISPLAY_NAME_EN=Resource Display name
-       - SATOSA_UI_DISPLAY_NAME_IT=Risorsa display name
+       - SATOSA_UI_DISPLAY_NAME_EN=Resource Display Name
+       - SATOSA_UI_DISPLAY_NAME_IT=Risorsa Display Name
        - SATOSA_UI_INFORMATION_URL_EN=https://example_organization.org/information_url_en
        - SATOSA_UI_INFORMATION_URL_IT=https://example_organization.org/information_url_it
        - SATOSA_UI_LOGO_HEIGHT=60
@@ -77,6 +77,7 @@ services:
       - "10000:10000"
       - "9999:9999"
     volumes:
+       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
        - ./proxy_conf.yaml:/satosa_proxy/proxy_conf.yaml
        - ./run.sh:/satosa_proxy/run.sh
 #       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
