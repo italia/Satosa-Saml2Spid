@@ -1,0 +1,89 @@
+user nginx;
+worker_processes  auto;
+pid /run/nginx.pid;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    keepalive_timeout  240s;
+    send_timeout 240s;
+    client_max_body_size 3300m;
+
+    log_format main '$http_x_forwarded_for - $remote_user [$time_local] '
+                    '"$request" $status $body_bytes_sent "$http_referer" '
+                    '"$http_user_agent"' ;
+
+# the upstream component nginx needs to connect to
+#upstream satosa-saml2 {
+#    server satosa-saml2spid:10000;
+#}
+
+# configuration of the server
+server {
+  listen      80;
+  server_name proxy.local;
+  access_log /var/log/nginx/access.log;
+  error_log  /var/log/nginx/error.log error;
+  return 301 https://$host$request_uri;
+}
+
+server {
+    server_name proxy.local;
+    listen 443 ssl;
+
+    ssl_certificate /etc/nginx/certs/proxy_local.pem;
+    ssl_certificate_key /etc/nginx/certs/proxy_local.key;
+
+    access_log /var/log/nginx/access.log;
+    error_log  /var/log/nginx/error.log error;
+
+    # max upload size
+    client_max_body_size 8M;
+
+    # very long url for delega ticket
+    large_client_header_buffers 4 16k;
+
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Robots-Tag none;
+
+    location /static  {
+        alias /var/www/html;
+        autoindex off;
+    }
+
+    location / {
+
+        proxy_set_header   Host                 satosa.satosa.docker;
+        proxy_set_header   X-Real-IP            $remote_addr;
+        proxy_set_header   X-Forwarded-For      $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto    $scheme;
+        proxy_redirect     off;
+
+        proxy_pass         http://satosa-saml2spid:10000;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    error_page  404              /404.html;
+    location = /404.html {
+        root   /usr/share/nginx/html;
+    }
+
+    error_page  403              /403.html;
+    location = /403.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+}

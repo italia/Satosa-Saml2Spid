@@ -144,13 +144,13 @@ else
   echo "satosa has loaded default keys"
 fi
 
-SATOSA_APP=/usr/lib/python3.8/site-packages/satosa
-uwsgi --uid 1000 --http 0.0.0.0:9999 --check-static-docroot --check-static $BASEDIR/static/ --static-index disco.html &
-P1=$!
-
 if [[ -v SATOSA_BY_DOCKER ]]; then
   SATOSA_APP=/usr/lib/python3.8/site-packages/satosa
-  uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app -b 32768
+# in questo modo parla uwsgi, dal browser sulla porta 10000 si ha un errore e in nginx va utilizzato uwsgi_pass
+  uwsgi --wsgi-file $SATOSA_APP/wsgi.py --socket 0.0.0.0:10000 --callable app -b 32768 --processes 4 --threads 2
+
+# in questo modo parla in http, può essere raggiunto anche dal browser direttamente e in nginx occorre utilizzare il proxy http
+#  uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app -b 32768 --processes 4 --threads 2 
 else
   export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
   uwsgi --uid 1000 --https 0.0.0.0:9999,$BASEDIR/pki/cert.pem,$BASEDIR/pki/privkey.pem --check-static-docroot --check-static $BASEDIR/static/ --static-index disco.html &
