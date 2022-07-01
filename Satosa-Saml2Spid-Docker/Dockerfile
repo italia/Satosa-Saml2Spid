@@ -11,6 +11,8 @@ ENV SPID_SECTOR="public"
 ENV URI="https://spid.proxy.example.org"
 ENV DAYS="7300"
 
+ENV SATOSA_DISCO_SRV="https://localhost:9999/disco.html"
+
 RUN apk add --update --no-cache tzdata \
  && cp /usr/share/zoneinfo/Europe/Rome /etc/localtime \
  && echo "Europe/Rome" > /etc/timezone \
