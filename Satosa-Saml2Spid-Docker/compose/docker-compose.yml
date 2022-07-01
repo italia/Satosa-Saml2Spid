@@ -64,7 +64,7 @@ services:
        - SATOSA_UI_LOGO_WIDTH=80
        - SATOSA_UI_PRIVACY_URL_EN=https://example_organization.org/privacy_en
        - SATOSA_UI_PRIVACY_URL_IT=https://example_organization.org/privacy_it
-       - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://localhost:9999/error_page.html
+       - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://$HOSTNAME/static/error_page.html
        - SATOSA_USER_ID_HASH_SALT=CHANGE_ME
     expose:
       - 10000
@@ -74,7 +74,6 @@ services:
       - "9999:9999"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ./proxy_conf.yaml:/satosa_proxy/proxy_conf.yaml
        - ./run.sh:/satosa_proxy/run.sh
        - satosa_base_static:/satosa_proxy/static/:ro
 #       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml

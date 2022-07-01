@@ -15,7 +15,8 @@ update_yaml proxy_conf.yaml ".BASE" "$SATOSA_BASE"
 # Update proxy_conf.yaml .STATE_ENCRYPTION_KEY with $SATOSA_ENCRYPTION_KEY
 update_yaml proxy_conf.yaml ".STATE_ENCRYPTION_KEY" "$SATOSA_STATE_ENCRYPTION_KEY"
 # Update proxy_conf.yaml .USER_ID_HASH_SALT with $SATOSA_USER_ID_HASH_SALT
-update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
+#update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
+update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_USER_ID_HASH_SALT"
 # Update proxy_conf.yaml .UNKNOW_ERROR_REDIRECT_PAGE with $SATOSA_UNKNOW_ERROR_REDIRECT_PAGE env
 update_yaml proxy_conf.yaml ".UNKNOW_ERROR_REDIRECT_PAGE" "$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE"
 
