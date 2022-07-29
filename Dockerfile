@@ -19,15 +19,11 @@ RUN apk add --update --no-cache tzdata \
  && apk del tzdata
 
 COPY example/ $BASEDIR/
-#COPY files/* /root/
 COPY requirements.txt $BASEDIR/
 COPY oids.conf $BASEDIR/pki/
 COPY build_spid_certs.sh $BASEDIR/pki/
 
 RUN apk add --update xmlsec libffi-dev libressl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq \
-#&& mv /root/requirements.txt $BASEDIR/ \
-#&& mv /root/oids.conf $BASEDIR/pki/ \
-#&& mv /root/build_spid_certs.sh $BASEDIR/pki/ \
 && cd $BASEDIR/pki/ \
 && chmod 755 $BASEDIR/pki/build_spid_certs.sh \
 && $BASEDIR/pki/build_spid_certs.sh \
@@ -45,3 +41,17 @@ USER wert
 WORKDIR $BASEDIR/
 
 CMD bash run.sh
+
+# Metadata params
+ARG BUILD_DATE
+ARG VERSION
+ARG VCS_URL="https://github.com/IDEM-GARR-AAI/Satosa-Saml2Spid.git"
+ARG VCS_REF
+
+# Metadata
+LABEL   org.label-schema.name="Satosa-Saml2Spid" \
+        org.label-schema.build-date=$BUILD_DATE \
+        org.label-schema.version=$VERSION \
+        org.label-schema.vcs-url=$VCS_URL \
+        org.label-schema.vcs-ref=$VCS_REF \
+        org.label-schema.description="Docker Image di Satosa-Saml2Spid."

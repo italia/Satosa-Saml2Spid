@@ -30,7 +30,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
 
   satosa-saml2spid:
-    image: satosa-saml2spid-test
+    image: scolagreco/satosa-saml2spid
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
@@ -78,7 +78,7 @@ services:
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
        - ./run.sh:/satosa_proxy/run.sh
-       - satosa_base_static:/satosa_proxy/static/:ro
+#       - satosa_base_static:/satosa_proxy/static/:ro    # Togliere il commento a questo volume se nel container satosa-nginx si vuole utilizzare la directory interna con i file statici. 
 #       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
 #      - satosa_certs:/satosa_pki
 #      - satosa_conf:/satosa_proxy
@@ -98,8 +98,8 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - ./nginx/certs/:/etc/nginx/certs/:ro
-      - satosa_base_static:/var/www/html/:ro    # Monta la directory static del volume interno al container satosa-saml2spid.
-#      - satosa_static:/var/www/html/:ro        # Monta la directory static locale, esterna ai container, può essere customizzata.        
+      - satosa_static:/var/www/html/:ro        # Monta la directory static locale, esterna ai container, può essere customizzata.
+#      - satosa_base_static:/var/www/html/:ro    # Monta la directory static del volume interno al container satosa-saml2spid.
 #    environment:
 #      - NGINX_HOST=foobar.com
 #      - NGINX_PORT=80
