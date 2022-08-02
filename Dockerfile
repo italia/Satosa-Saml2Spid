@@ -47,11 +47,15 @@ ARG BUILD_DATE
 ARG VERSION
 ARG VCS_URL="https://github.com/IDEM-GARR-AAI/Satosa-Saml2Spid.git"
 ARG VCS_REF
+ARG AUTHORS
+ARG VENDOR
 
-# Metadata
-LABEL   org.label-schema.name="Satosa-Saml2Spid" \
-        org.label-schema.build-date=$BUILD_DATE \
-        org.label-schema.version=$VERSION \
-        org.label-schema.vcs-url=$VCS_URL \
-        org.label-schema.vcs-ref=$VCS_REF \
-        org.label-schema.description="Docker Image di Satosa-Saml2Spid."
+# Metadata : https://github.com/opencontainers/image-spec/blob/main/annotations.md
+LABEL org.opencontainers.image.authors=$AUTHORS \
+      org.opencontainers.image.vendor=$VENDOR \
+      org.opencontainers.image.title="Satosa-Saml2Spid" \
+      org.opencontainers.image.created=$BUILD_DATE \
+      org.opencontainers.image.version=$VERSION \
+      org.opencontainers.image.source=$VCS_URL \
+      org.opencontainers.image.revision=$VCS_REF \
+      org.opencontainers.image.description="Docker Image di Satosa-Saml2Spid."
