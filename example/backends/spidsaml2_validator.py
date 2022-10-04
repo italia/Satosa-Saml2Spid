@@ -363,6 +363,13 @@ class Saml2ResponseValidator(object):
                             "Assertion attribute_statement.attribute is missing/invalid. "
                             f"{_ERROR_TROUBLESHOOT}"
                         )
+                    # 99
+                    for attro in attri.attribute:
+                        if not attro.attribute_value:
+                            raise SPIDValidatorException(
+                                "Assertion attribute_value is missing/invalid. "
+                                f"{_ERROR_TROUBLESHOOT}"
+                            )
 
     def run(self, tests=[]):
         """run all tests/methods"""
