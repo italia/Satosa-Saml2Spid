@@ -5,10 +5,12 @@ services:
     image: mongo
     container_name: satosa-mongo
     restart: always
+    env_file:
+      - mongodb.env
     environment:
       MONGO_INITDB_DATABASE: oidcop
-      MONGO_INITDB_ROOT_USERNAME: satosa
-      MONGO_INITDB_ROOT_PASSWORD: thatpassword
+      MONGO_INITDB_ROOT_USERNAME: ${DBUSER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DBPASSWORD}
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
@@ -22,11 +24,13 @@ services:
     restart: always
     ports:
       - 8082:8081
+    env_file:
+      - mongodb.env
     environment:
       ME_CONFIG_BASICAUTH_USERNAME: satosauser
       ME_CONFIG_BASICAUTH_PASSWORD: satosapw
-      ME_CONFIG_MONGODB_ADMINUSERNAME: satosa
-      ME_CONFIG_MONGODB_ADMINPASSWORD: thatpassword
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DBUSER}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DBPASSWORD}
       ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
 
   satosa-saml2spid:
@@ -34,6 +38,8 @@ services:
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
+    env_file:
+      - mongodb.env
     environment:
       - SATOSA_BY_DOCKER=1
 
@@ -44,8 +50,8 @@ services:
       # - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=06123456789
       - SATOSA_DISCO_SRV=https://$HOSTNAME/static/disco.html
       # - SATOSA_ENCRYPTION_KEY=
-      # - SATOSA_MONGODB_PASSWORD=
-      # - SATOSA_MONGODB_USERNAME
+      - SATOSA_MONGODB_PASSWORD=${DBPASSWORD}
+      - SATOSA_MONGODB_USERNAME=${DBUSER}
       # - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
       # - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=Resource provided by Example Organization
       # - SATOSA_ORGANIZATION_NAME_EN=Resource provided by Example Organization
@@ -78,7 +84,7 @@ services:
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
        - ./run.sh:/satosa_proxy/run.sh
-#       - satosa_base_static:/satosa_proxy/static/:ro    # Togliere il commento a questo volume se nel container satosa-nginx si vuole utilizzare la directory interna con i file statici. 
+#       - satosa_base_static:/satosa_proxy/static/:ro    # Togliere il commento a questo volume se nel container satosa-nginx si vuole utilizzare la directory interna con i file statici.
 #       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
 #      - satosa_certs:/satosa_pki
 #      - satosa_conf:/satosa_proxy
