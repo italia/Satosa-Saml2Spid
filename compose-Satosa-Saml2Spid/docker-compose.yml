@@ -5,12 +5,10 @@ services:
     image: mongo
     container_name: satosa-mongo
     restart: always
-    env_file:
-      - mongodb.env
     environment:
       MONGO_INITDB_DATABASE: oidcop
-      MONGO_INITDB_ROOT_USERNAME: ${DBUSER}
-      MONGO_INITDB_ROOT_PASSWORD: ${DBPASSWORD}
+      MONGO_INITDB_ROOT_USERNAME: "${DBUSER}"
+      MONGO_INITDB_ROOT_PASSWORD: "${DBPASSWORD}"
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
@@ -24,22 +22,18 @@ services:
     restart: always
     ports:
       - 8082:8081
-    env_file:
-      - mongodb.env
     environment:
       ME_CONFIG_BASICAUTH_USERNAME: satosauser
       ME_CONFIG_BASICAUTH_PASSWORD: satosapw
-      ME_CONFIG_MONGODB_ADMINUSERNAME: ${DBUSER}
-      ME_CONFIG_MONGODB_ADMINPASSWORD: ${DBPASSWORD}
+      ME_CONFIG_MONGODB_ADMINUSERNAME: "${DBUSER}"
+      ME_CONFIG_MONGODB_ADMINPASSWORD: "${DBPASSWORD}"
       ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
 
   satosa-saml2spid:
     image: scolagreco/satosa-saml2spid
-    container_name: satosa-saml2spid
+    container_name: satosa-saml2spid  
     depends_on:
       - satosa-mongo
-    env_file:
-      - mongodb.env
     environment:
       - SATOSA_BY_DOCKER=1
 
