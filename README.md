@@ -74,19 +74,19 @@ To get redirection to these pages, or redirection to third-party services, consi
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
 ## Docker image
-This image
+the immage is available from hub.docker.com 
 
-### Configuration enviroments
-* *$SATOSA_BASE* base url of satosa server, default: "https://localhost:10000"
+### Configuration environments
+* *$SATOSA_BASE* base url of satosa server, default: "httos://$HOSTNAME"
 * *$SATOSA_ENCRYPTION_KEY* encription key for state, default: "CHANGE_ME!"
 * *$SATOSA_SALT* encription salt, default: "CHANGE_ME!"
-* *$SATOSA_DISCO_SRV* Descovery page URL for all backends
+* *$SATOSA_DISCO_SRV* Descovery page URL for all backends, default: "https://$HOSTNAME/static/disco.html"
 * *$SATOSA_PRIVATE_KEYS* private key for SAML2 / SPID backends
 * *$SATOSA_PUBLIC_KEYS* public key for SAML2 / SPID backends
-* *$MONGODB_USERNAME* MongoDB username for oidc_op frontend
-* *$MONGODB_PASSWORD* MongoDB password for oidc_op frontend
+* *$MONGODB_USERNAME* MongoDB username for oidc_op frontend, default from mongodb.env file
+* *$MONGODB_PASSWORD* MongoDB password for oidc_op frontend, default from mongodb.env
 
-* *SATOSA_UNKNOW_ERROR_REDIRECT_PAGE* redirect page for unknow erros, default: "https://localhost:9999/error_page.html"
+* *SATOSA_UNKNOW_ERROR_REDIRECT_PAGE* redirect page for unknow erros, default: "https://$HOSTNAME/static/error_page.html"
 * *$SATOSA_ORGANIZATION_DISPLAY_NAME_EN* Metadata English organization display name
 * *$SATOSA_ORGANIZATION_NAME_EN* Metadata English full organization name
 * *$SATOSA_ORGANIZATION_URL_EN* Metadata English organization url
