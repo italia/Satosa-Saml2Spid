@@ -6,12 +6,13 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 ## Table of Contents
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
-3. [Docker stack](#docker-compose)
-4. [Setup](#setup)
-5. [Start the Proxy](#start-the-proxy)
-6. [Additional technical informations](#additional-technical-informations)
-7. [Author](#author)
-8. [Credits](#credits)
+3. [Docker image](#docker-image)
+4. [Docker stack](#docker-compose)
+5. [Setup](#setup)
+6. [Start the Proxy](#start-the-proxy)
+7. [Additional technical informations](#additional-technical-informations)
+8. [Author](#author)
+9. [Credits](#credits)
 
 ## General features
 
@@ -71,6 +72,46 @@ To get redirection to these pages, or redirection to third-party services, consi
 - `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://localhost:9999/static/disco.html"`
 
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
+
+## Docker image
+This image
+
+### Configuration enviroments
+* *$SATOSA_BASE* base url of satosa server, default: "https://localhost:10000"
+* *$SATOSA_ENCRYPTION_KEY* encription key for state, default: "CHANGE_ME!"
+* *$SATOSA_SALT* encription salt, default: "CHANGE_ME!"
+* *$SATOSA_DISCO_SRV* Descovery page URL for all backends
+* *$SATOSA_PRIVATE_KEYS* private key for SAML2 / SPID backends
+* *$SATOSA_PUBLIC_KEYS* public key for SAML2 / SPID backends
+* *$MONGODB_USERNAME* MongoDB username for oidc_op frontend
+* *$MONGODB_PASSWORD* MongoDB password for oidc_op frontend
+
+* *SATOSA_UNKNOW_ERROR_REDIRECT_PAGE* redirect page for unknow erros, default: "https://localhost:9999/error_page.html"
+* *$SATOSA_ORGANIZATION_DISPLAY_NAME_EN* Metadata English organization display name
+* *$SATOSA_ORGANIZATION_NAME_EN* Metadata English full organization name
+* *$SATOSA_ORGANIZATION_URL_EN* Metadata English organization url
+* *$SATOSA_ORGANIZATION_DISPLAY_NAME_IT* Metadata Italian Organization display name
+* *$SATOSA_ORGANIZATION_NAME_IT* Metadata Italian full organization
+* *$SATOSA_ORGANIZATION_URL_IT* Metadata Italian organization url
+* *$SATOSA_CONTACT_PERSON_GIVEN_NAME* Metadata Contact person name
+* *$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS* Metadata Contact person email
+* *$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER* Metadata Contact person telephone number for SPID / CIE Backend
+* *$SATOSA_CONTACT_PERSON_FISCALCODE* Metadata Contact person fiscal code for SPID / CIE Backend
+* *$SATOSA_UI_DISPLAY_NAME_EN* Metadata English ui display name
+* *$SATOSA_UI_DISPLAY_NAME_IT* Metadata Italian ui display name
+* *SATOSA_UI_DESCRIPTION_EN* Metadata English ui description
+* *SATOSA_UI_DESCRIPTION_IT* Metadata Italian ui description
+* *$SATOSA_UI_INFORMATION_URL_EN* Metadata English ui information URL
+* *$SATOSA_UI_INFORMATION_URL_IT* Metadata Italian ui information URL
+* *$SATOSA_UI_PRIVACY_URL_EN* Metadata English ui privacy URL
+* *$SATOSA_UI_PRIVACY_URL_IT* Metadata Italian ui privacy URL
+* *$SATOSA_UI_LOGO_URL* Metadata Logo url for
+* *$SATOSA_UI_LOGO_WIDTH* Metadata Logo width 
+* *$SATOSA_UI_LOGO_HEIGHT* Metadata logo height
+
+* *$SATOSA_SAML2_REQUESTED_ATTRIBUTES* SAML2 required attributes, default: name, surname
+* *$SATOSA_SPID_REQUESTED_ATTRIBUTES* SPID required attributes, default: spidCode, name, familyName, fiscalNumber, email 
+
 
 ## Docker compose
 ````

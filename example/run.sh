@@ -15,8 +15,7 @@ update_yaml proxy_conf.yaml ".BASE" "$SATOSA_BASE"
 # Update proxy_conf.yaml .STATE_ENCRYPTION_KEY with $SATOSA_ENCRYPTION_KEY
 update_yaml proxy_conf.yaml ".STATE_ENCRYPTION_KEY" "$SATOSA_STATE_ENCRYPTION_KEY"
 # Update proxy_conf.yaml .USER_ID_HASH_SALT with $SATOSA_USER_ID_HASH_SALT
-#update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
-update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_USER_ID_HASH_SALT"
+update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
 # Update proxy_conf.yaml .UNKNOW_ERROR_REDIRECT_PAGE with $SATOSA_UNKNOW_ERROR_REDIRECT_PAGE env
 update_yaml proxy_conf.yaml ".UNKNOW_ERROR_REDIRECT_PAGE" "$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE"
 
@@ -59,12 +58,8 @@ update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_
 # Update spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_FISCALCODE
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_person[0].FiscalCode" "$SATOSA_CONTACT_PERSON_FISCALCODE"
 
-# Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_GIVEN_NAME
-update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.contact_person[0].given_name" "$SATOSA_CONTACT_PERSON_GIVEN_NAME"
-update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_person[0].given_name" "$SATOSA_CONTACT_PERSON_GIVEN_NAME"
-
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_DISPLAY_NAME_EN / IT
-update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"         
+update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN" 
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"          
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[1]["text"]' "$SATOSA_UI_DISPLAY_NAME_IT"         
@@ -111,8 +106,8 @@ update_yaml plugins/backends/saml2_backend.yaml ".config.disco_srv" "$SATOSA_DIS
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.disco_srv" "$SATOSA_DISCO_SRV"
 
 # Set username and password for mongodb in oidc_op_frontend with $SATOSA_MONGODB_USERNAME and $SATOSA_MONGODB_PASSWORD
-update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.username" "$SATOSA_MONGODB_USERNAME"
-update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.password" "$SATOSA_MONGODB_PASSWORD"
+update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.username" "$MONGODB_USERNAME"
+update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.password" "$MONGODB_PASSWORD"
 
 # Set encrypt password and salt for oidc_op_frontend with $SATOSA_SALT and $
 update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.op.server_info.session_params.password" "$SATOSA_ENCRYPTION_KEY"
