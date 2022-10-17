@@ -80,8 +80,21 @@ the official Satosa-Saml2SPID docker immage is available at [scolagreco/satosa-s
 
 To install the docker image from docker hub: `docker pull scolagreco/satosa-saml2spid`
 
+### Configuration for production
+Satosa-Saml2SPID image is builded with production ready logic, but some configurations are needed:
+
+#### NGINX
+A valid ssl certificate is needed, to add your certificate you shoud override the /etc/nginx/certs directory with your valid certificates.
+
+#### Satosa
+* You should set the $HOSTNAME environment with the production DNS name
+* You should set all key and salt with your secret key ($SATOSA_ENCRYPTION_KEY, $SATOSA_SALT)
+* You should set a new mongodb password ($MONGODB_USERNAME, $MONGODB_PASSWORD)
+* You should set a new certificate for SAML / SPID ($SATOSA_PUBLIC_KEYS, $SATOSA_PRIVATE_KEYS)
+* You should add valid data for  metadata, read [Configurations by environments](configuration-by-environments)
+
 ### Configuration by environments
-* *$SATOSA_BASE* base url of satosa server, default: "httos://$HOSTNAME"
+* *$SATOSA_BASE* base url of satosa server, default: "https://$HOSTNAME"
 * *$SATOSA_ENCRYPTION_KEY* encription key for state, default: "CHANGE_ME!"
 * *$SATOSA_SALT* encription salt, default: "CHANGE_ME!"
 * *$SATOSA_DISCO_SRV* Descovery page URL for all backends, default: "https://$HOSTNAME/static/disco.html"
