@@ -7,8 +7,8 @@ services:
     restart: always
     environment:
       MONGO_INITDB_DATABASE: oidcop
-      MONGO_INITDB_ROOT_USERNAME: "${DBUSER}"
-      MONGO_INITDB_ROOT_PASSWORD: "${DBPASSWORD}"
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD}"
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
@@ -25,8 +25,8 @@ services:
     environment:
       ME_CONFIG_BASICAUTH_USERNAME: satosauser
       ME_CONFIG_BASICAUTH_PASSWORD: satosapw
-      ME_CONFIG_MONGODB_ADMINUSERNAME: "${DBUSER}"
-      ME_CONFIG_MONGODB_ADMINPASSWORD: "${DBPASSWORD}"
+      ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER}"
+      ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD}"
       ME_CONFIG_MONGODB_URL: mongodb://satosa:thatpassword@satosa-mongo:27017/
 
   satosa-saml2spid:
@@ -44,8 +44,8 @@ services:
       # - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=06123456789
       - SATOSA_DISCO_SRV=https://$HOSTNAME/static/disco.html
       # - SATOSA_ENCRYPTION_KEY=
-      - MONGODB_PASSWORD=${DBPASSWORD}
-      - MONGODB_USERNAME=${DBUSER}
+      - MONGODB_PASSWORD=${MONGO_DBPASSWORD}
+      - MONGODB_USERNAME=${MONGO_DBUSER}
       # - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
       # - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=Resource provided by Example Organization
       # - SATOSA_ORGANIZATION_NAME_EN=Resource provided by Example Organization
