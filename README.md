@@ -74,9 +74,13 @@ To get redirection to these pages, or redirection to third-party services, consi
 Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
 ## Docker image
-the immage is available from hub.docker.com 
+![Docker image design](gallery/docker-design.svg)
 
-### Configuration environments
+the official Satosa-Saml2SPID docker immage is available at [scolagreco/satosa-saml2spid](https://hub.docker.com/r/scolagreco/satosa-saml2spid)
+
+To install the docker image from docker hub: `docker pull scolagreco/satosa-saml2spid`
+
+### Configuration by environments
 * *$SATOSA_BASE* base url of satosa server, default: "httos://$HOSTNAME"
 * *$SATOSA_ENCRYPTION_KEY* encription key for state, default: "CHANGE_ME!"
 * *$SATOSA_SALT* encription salt, default: "CHANGE_ME!"
