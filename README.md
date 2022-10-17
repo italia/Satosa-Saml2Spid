@@ -148,7 +148,7 @@ Run the stack
 docker-compose up
 ````
 
-See [mongo readme](./mongo) to have some example of demo data.
+See [mongo readme](./README.mongo.md) to have some example of demo data.
 
 ## OIDC
 
