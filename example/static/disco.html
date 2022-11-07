@@ -131,8 +131,11 @@
             Se sei già in possesso di un'identità digitale, accedi con le credenziali del tuo gestore.
             Se non hai ancora una identità SPID richiedila ad uno dei gestori.
           </p>
-	  <p class="mb-lg-5">
+	  <p>
 	  <b>eIDAS</b> è il sistema di interoperabilità delle identità digitale europeo. Tramite eIDAS puoi accedere utilizzando il sistema di identità digitale degli altri paesi europei.
+	  </p>
+	  <p class="mb-lg-5">
+	  <b>CIE</b> è il sistema di accesso che consente di utilizzare la propria carta di identità elettronica come identità digitale.
 	  </p>
 
           <p>
@@ -142,17 +145,7 @@
           <div class="card-wrapper card-space">
             <div class="card card-bg no-after">
               <div class="card-body">
-                <div class="row">
-                  <!--
-                    <div class="col-sm text-center">
-                        <a href="#" id="unicalid" data-idp="unicalid" data-entityid="https://example.org/idp/metadata/" class="button-spid button-unical italia-it-button italia-it-button-size-xl spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
-                            <span class="italia-it-button-icon">
-                                <img src="spid/logo_white.png" alt="logo">
-                            </span>
-                            <span class="italia-it-button-text">Altro</span>
-                        </a>
-                    </div>
-                    -->
+                <div class="row mb-lg-5">
                   <div class="col-lg-6 pb-2 text-center">
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
 		    <a href="#" class="italia-it-button italia-it-button-size-xl button-spid" spid-idp-button="#spid-idp-button-xlarge-post" aria-haspopup="true" aria-expanded="false">
@@ -167,22 +160,35 @@
 		      </ul>
 		    </div>
                     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * end * -->
-		    <br/>
                   </div>
                   <div class="col-lg-6 text-center">
-      		    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
+      		    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON EIDAS" * begin * -->
                     <a href="/Saml2/disco?entityID=https://sp-proxy.eid.gov.it/spproxy/idpit&return=https://sso.isprambiente.it/Saml2/disco" class="italia-it-button italia-it-button-size-xl button-eidas" eidas-idp-button="#eidas-idp-button-xlarge-post" aria-haspopup="false" aria-expanded="false">
                       <span class="italia-it-button-icon"><img src="eidas/img/ficep-it-eidas-ybw.svg" onerror="this.src='eidas/img/ficep-it-eidas-ybw.png'; this.onerror=null;" alt="" /></span>
                       <span class="italia-it-button-text">Login with eIDAS</span>
                     </a>
                     <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON eIDAS" * end * -->
                   </div>
+		</div>
+		<div class='row'>
+                  <div class="col-lg-6 text-center">
+      		    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON CIE" * begin * -->
+                    <a href="/Saml2/disco?entityID=https://idserver.servizicie.interno.gov.it/idp/profile/SAML2/POST/SSO&return=https://sso.isprambiente.it/Saml2/disco" class="italia-it-button italia-it-button-size-xl button-eidas" eidas-idp-button="#eidas-idp-button-xlarge-post" aria-haspopup="false" aria-expanded="false">
+		      <span class="italia-it-button-icon"><img src="cie/cie_white.svg" alt="Logo CIE" /></span>
+                      <span class="italia-it-button-text">Entra con CIE</span>
+                    </a>
+                    <!-- AGID - eIDAS IDP BUTTON SMALL "ENTRA CON CIE" * end * -->
+                  </div>
 
                 </div>
               </div>
             </div>
           </div>
-	  <p class="text-center"><img src="spid/spid-agid-logo-lb.png" alt="logo SPID e AGID"></p>
+	  <p id="logo-row" class="text-center">
+	    <img src="cie/cie_black.svg" alt="CIE" style="height:32px">
+	    <img src="eidas/img/ficep-it-eidas-bn.svg" alt="IDAS" style="height:32px">
+	    <img src="spid/spid-agid-logo-lb.png" alt="logo SPID e AGID">
+	  </p>
         </div>
       </div>
     </div>
