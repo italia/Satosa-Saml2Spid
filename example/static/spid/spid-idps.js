@@ -16,7 +16,8 @@ const idps = [
   {"entityName": "Poste ID", "entityID": "https://posteid.poste.it", "logo": "spid/spid-idp-posteid.svg"},
   {"entityName": "Sielte ID", "entityID": "https://identity.sieltecloud.it", "logo": "spid/spid-idp-sielteid.svg"},
   {"entityName": "SPIDItalia Register.it", "entityID": "https://spid.register.it", "logo": "spid/spid-idp-spiditalia.svg"},
-  {"entityName": "Tim ID", "entityID": "https://login.id.tim.it/affwebservices/public/saml2sso", "logo": "spid/spid-idp-timid.svg"}
+  {"entityName": "Tim ID", "entityID": "https://login.id.tim.it/affwebservices/public/saml2sso", "logo": "spid/spid-idp-timid.svg"},
+  {"entityName": "TeamSystem ID", "entityID": "https://spid.teamsystem.com/idp", "logo": "spid/spid-idp-teamsystemid.svg"}
 ].sort(() => Math.random() - 0.5)
 
 // ** Values **
