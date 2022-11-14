@@ -78,11 +78,10 @@ services:
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
        - ./run.sh:/satosa_proxy/run.sh
-#       - satosa_base_static:/satosa_proxy/static/:ro    # Togliere il commento a questo volume se nel container satosa-nginx si vuole utilizzare la directory interna con i file statici.
-#       - ./oidc_op_frontend.yaml:/satosa_proxy/plugins/frontends/oidc_op_frontend.yaml
-#      - satosa_certs:/satosa_pki
-#      - satosa_conf:/satosa_proxy
-#      - satosa_logs:/satosa_logs
+       - satosa_metadata:/satosa_proxy/metadata/
+       - satosa_static:/satosa_proxy/static/
+#      - satosa_certs:/satosa_proxy/pki/
+#      - satosa_logs:/satosa_proxy/logs/
 
   satosa-nginx:
     image: nginx:alpine
@@ -98,8 +97,7 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - ./nginx/certs/:/etc/nginx/certs/:ro
-      - satosa_static:/var/www/html/:ro        # Monta la directory static locale, esterna ai container, può essere customizzata.
-#      - satosa_base_static:/var/www/html/:ro    # Monta la directory static del volume interno al container satosa-saml2spid.
+      - satosa_static:/var/www/html/
 #    environment:
 #      - NGINX_HOST=foobar.com
 #      - NGINX_PORT=80
@@ -126,6 +124,12 @@ volumes:
       device: $PWD/nginx/certs/
       o: bind
 
+  satosa_metadata:
+    driver_opts:
+      type: none
+      device: $PWD/satosa/metadata/
+      o: bind
+     
 #  satosa_certs:
 #    driver_opts:
 #      type: none
