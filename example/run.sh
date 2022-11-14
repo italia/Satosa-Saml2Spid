@@ -19,28 +19,38 @@ update_yaml proxy_conf.yaml ".USER_ID_HASH_SALT" "$SATOSA_SALT"
 # Update proxy_conf.yaml .UNKNOW_ERROR_REDIRECT_PAGE with $SATOSA_UNKNOW_ERROR_REDIRECT_PAGE env
 update_yaml proxy_conf.yaml ".UNKNOW_ERROR_REDIRECT_PAGE" "$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE"
 
+# Update spidsaml2_backend.yaml and cieSaml2_backend.saml with $SATOSA_BASE env
+update_yaml plugins/backends/spidsaml2_backend.yaml ".config.static_storage_url" "$SATOSA_BASE"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.static_storage_url" "$SATOSA_BASE"
+
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.display_name[0][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.display_name[0][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.organization.display_name[0][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.display_name[0][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_EN"
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.display_name[1][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.display_name[1][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.organization.display_name[1][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.display_name[1][0]" "$SATOSA_ORGANIZATION_DISPLAY_NAME_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_ORGANIZATION_NAME_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.name[0][0]" "$SATOSA_ORGANIZATION_NAME_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.name[0][0]" "$SATOSA_ORGANIZATION_NAME_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.organization.name[0][0]" "$SATOSA_ORGANIZATION_NAME_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.name[0][0]" "$SATOSA_ORGANIZATION_NAME_EN"
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.name[1][0]" "$SATOSA_ORGANIZATION_NAME_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.name[1][0]" "$SATOSA_ORGANIZATION_NAME_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.contact_person[0].company" "$SATOSA_ORGANIZATION_NAME_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.name[1][0]" "$SATOSA_ORGANIZATION_NAME_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_ORGANIZATION_URL_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.url[0][0]" "$SATOSA_ORGANIZATION_URL_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.url[0][0]" "$SATOSA_ORGANIZATION_URL_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.organization.url[0][0]" "$SATOSA_ORGANIZATION_URL_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.url[0][0]" "$SATOSA_ORGANIZATION_URL_EN"
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.organization.url[1][0]" "$SATOSA_ORGANIZATION_URL_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.organization.url[1][0]" "$SATOSA_ORGANIZATION_URL_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.organization.url[1][0]" "$SATOSA_ORGANIZATION_URL_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.organization.url[1][0]" "$SATOSA_ORGANIZATION_URL_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_GIVEN_NAME
@@ -51,59 +61,80 @@ update_yaml plugins/frontends/saml2_frontend.yaml  ".config.idp_config.contact_p
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.contact_person[0].email_address" "$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS"
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_person[0].email_address" "$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS"
+update_yaml plugins/backends/ciesaml2_backend.yaml  ".config.sp_config.contact_person[0].email_address" "$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS"
 update_yaml plugins/frontends/saml2_frontend.yaml  ".config.idp_config.contact_person[0].email_address" "$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS"
 
 # Update spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_person[0].telephone_number" "$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER"
+update_yaml plugins/backends/ciesaml2_backend.yaml  ".config.sp_config.contact_person[0].telephone_number" "$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER"
+
 # Update spidsaml2_backend.yaml with $SATOSA_CONTACT_PERSON_FISCALCODE
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.sp_config.contact_person[0].FiscalCode" "$SATOSA_CONTACT_PERSON_FISCALCODE"
+
+# Update ciesaml2_backend with $SATOSA_CONTACT_PERSON_IPA_CODE
+update_yaml plugins/backends/ciesaml2_backend.yaml  ".config.sp_config.contact_person[0].cie_info.IPACode" "$SATOSA_CONTACT_PERSON_IPA_CODE"
+
+# Update ciesaml2_backend with $SATOSA_CONTACT_PERSON_MUNICIPALITY
+update_yaml plugins/backends/ciesaml2_backend.yaml  ".config.sp_config.contact_person[0].cie_info.Municipality" "$SATOSA_CONTACT_PERSON_MUNICIPALITY"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_DISPLAY_NAME_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN" 
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.display_name[0]["text"]' "$SATOSA_UI_DISPLAY_NAME_EN"          
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[1]["text"]' "$SATOSA_UI_DISPLAY_NAME_IT"         
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[1]["text"]' "$SATOSA_UI_DISPLAY_NAME_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.display_name[1]["text"]' "$SATOSA_UI_DISPLAY_NAME_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.display_name[1]["text"]' "$SATOSA_UI_DISPLAY_NAME_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_DESCRIPTION_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[0]["text"]' "$SATOSA_UI_DESCRIPTION_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[0]["text"]' "$SATOSA_UI_DESCRIPTION_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[0]["text"]' "$SATOSA_UI_DESCRIPTION_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.description[0]["text"]' "$SATOSA_UI_DESCRIPTION_EN"
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[1]["text"]' "$SATOSA_UI_DESCRIPTION_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[1]["text"]' "$SATOSA_UI_DESCRIPTION_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.description[1]["text"]' "$SATOSA_UI_DESCRIPTION_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.description[1]["text"]' "$SATOSA_UI_DESCRIPTION_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_INFORMATION_URL_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[0]["text"]' "$SATOSA_UI_INFORMATION_URL_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[0]["text"]' "$SATOSA_UI_INFORMATION_URL_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[0]["text"]' "$SATOSA_UI_INFORMATION_URL_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.information_url[0]["text"]' "$SATOSA_UI_INFORMATION_URL_EN"
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[1]["text"]' "$SATOSA_UI_INFORMATION_URL_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[1]["text"]' "$SATOSA_UI_INFORMATION_URL_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.information_url[1]["text"]' "$SATOSA_UI_INFORMATION_URL_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.information_url[1]["text"]' "$SATOSA_UI_INFORMATION_URL_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_PRIVACY_URL_EN / IT
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[0]["text"]' "$SATOSA_UI_PRIVACY_URL_EN"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[0]["text"]' "$SATOSA_UI_PRIVACY_URL_EN"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[0]["text"]' "$SATOSA_UI_PRIVACY_URL_EN"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.privacy_statement_url[0]["text"]' "$SATOSA_UI_PRIVACY_URL_EN"
 update_yaml plugins/backends/saml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[1]["text"]' "$SATOSA_UI_PRIVACY_URL_IT"
 update_yaml plugins/backends/spidsaml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[1]["text"]' "$SATOSA_UI_PRIVACY_URL_IT"
+update_yaml plugins/backends/ciesaml2_backend.yaml '.config.sp_config.service.sp.ui_info.privacy_statement_url[1]["text"]' "$SATOSA_UI_PRIVACY_URL_IT"
 update_yaml plugins/frontends/saml2_frontend.yaml '.config.idp_config.service.idp.ui_info.privacy_statement_url[1]["text"]' "$SATOSA_UI_PRIVACY_URL_IT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_UI_LOGO_URL / WIDTH / HEIGHT
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.text" "$SATOSA_UI_LOGO_URL"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.text" "$SATOSA_UI_LOGO_URL"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.text" "$SATOSA_UI_LOGO_URL"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.service.idp.ui_info.logo.text" "$SATOSA_UI_LOGO_URL"
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.width" "$SATOSA_UI_LOGO_WIDTH"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.width" "$SATOSA_UI_LOGO_WIDTH"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.width" "$SATOSA_UI_LOGO_WIDTH"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.service.idp.ui_info.logo.width" "$SATOSA_UI_LOGO_WIDTH"
 update_yaml plugins/backends/saml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.height" "$SATOSA_UI_LOGO_HEIGHT"
 update_yaml plugins/backends/spidsaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.height" "$SATOSA_UI_LOGO_HEIGHT"
+update_yaml plugins/backends/ciesaml2_backend.yaml ".config.sp_config.service.sp.ui_info.logo.height" "$SATOSA_UI_LOGO_HEIGHT"
 update_yaml plugins/frontends/saml2_frontend.yaml ".config.idp_config.service.idp.ui_info.logo.height" "$SATOSA_UI_LOGO_HEIGHT"
 
 # Update saml2_backend.yaml and spidsaml2_backend.yaml with $SATOSA_DISCO_SRV
 update_yaml plugins/backends/saml2_backend.yaml ".config.disco_srv" "$SATOSA_DISCO_SRV"
 update_yaml plugins/backends/spidsaml2_backend.yaml  ".config.disco_srv" "$SATOSA_DISCO_SRV"
+update_yaml plugins/backends/ciesaml2_backend.yaml  ".config.disco_srv" "$SATOSA_DISCO_SRV"
 
 # Set username and password for mongodb in oidc_op_frontend with $SATOSA_MONGODB_USERNAME and $SATOSA_MONGODB_PASSWORD
 update_yaml plugins/frontends/oidc_op_frontend.yaml ".config.storage.kwargs.connection_params.username" "$MONGODB_USERNAME"
@@ -139,6 +170,9 @@ if [[ -v SATOSA_PRIVATE_KEY && -v SATOSA_PUBLIC_KEY ]]; then
 else
   echo "satosa has loaded default keys"
 fi
+
+# get IDEM MDQ key
+wget https://mdx.idem.garr.it/idem-mdx-service-crt.pem -O pki/idem-mdx-service-crt.pem
 
 if [[ -v SATOSA_BY_DOCKER ]]; then
   SATOSA_APP=/usr/lib/python3.8/site-packages/satosa
