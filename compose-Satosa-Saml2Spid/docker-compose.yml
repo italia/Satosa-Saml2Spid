@@ -78,8 +78,8 @@ services:
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
        - ./run.sh:/satosa_proxy/run.sh
-       - satosa_metadata:/satosa_proxy/metadata/
-       - satosa_static:/satosa_proxy/static/
+       - satosa_metadata:/satosa_proxy/metadata
+       - satosa_static:/satosa_proxy/static
 #      - satosa_certs:/satosa_proxy/pki/
 #      - satosa_logs:/satosa_proxy/logs/
 
@@ -97,14 +97,12 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - ./nginx/certs/:/etc/nginx/certs/:ro
-      - satosa_static:/var/www/html/
+      - satosa_static:/var/www/html
 #    environment:
 #      - NGINX_HOST=foobar.com
 #      - NGINX_PORT=80
 
 volumes:
-
-  satosa_base_static:
 
   satosa_static:
     driver_opts:
