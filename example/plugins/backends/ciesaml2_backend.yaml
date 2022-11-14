@@ -35,17 +35,26 @@ config:
 
     attribute_map_dir: 'attributes-map'
 
-    organization: { display_name: [['Saml2 Authentication Proxy', 'it']], name: [['Spid Authentication Proxy', 'it']],  url: [['https://spid.proxy.example.org', 'it']]}
+    organization:
+      display_name: 
+        - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN', 'en']
+        - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_IT', 'it']
+      name: 
+        - [ 'change with $SATOSA_ORGANIZATION_NAME_EN', 'en']
+        - [ 'change with $SATOSA_ORGANIZATION_NAME_IT', 'it']
+      url:
+        - [ 'https://change_with_SATOSA_ORGANIZATION_URL_EN', 'en']
+        - [ 'https://change_with_SATOSA_ORGANIZATION_URL_IT', 'it']
+
     contact_person:
-      - 
-        contact_type: 'administrative'
-        company: Istituto Superiore per la Protezione e la Ricerca Ambientale
-        email_address: urp@isprambiente.it
-        telephone_number: +390650071
+      - contact_type: 'administrative'
+        company: change_with_SATOSA_ORGANIZATION_NAME_IT
+        email_address: change_with@$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS.it
+        telephone_number: change_with_SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER
         cie_info: 
           Public: ''
-          IPACode: ispra_rm
-          Municipality: H501
+          IPACode: change_with_SATOSA_CONTACT_PERSON_IPA_CODE
+          Municipality: change_with_SATOSA_CONTACT_PERSON_MUNICIPALITY
 
 
     metadata:
