@@ -326,6 +326,10 @@ WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55f744576790 pid:
 spawned uWSGI worker 1 (and the only) (pid: 28675, cores: 8)
 ````
 
+## Additional resources for newcomers
+
+- [Satosa-Saml2Spid installation tutorial](https://github.com/aslbat/Satosa-SPID-Proxy).
+
 
 ## Additional technical informations for Developers
 
