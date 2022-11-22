@@ -12,7 +12,7 @@ services:
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+      - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
     ports:
       - '27017-27019:27017-27019'
 
@@ -77,11 +77,9 @@ services:
       - "9999:9999"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ./run.sh:/satosa_proxy/run.sh
        - satosa_metadata:/satosa_proxy/metadata
        - satosa_static:/satosa_proxy/static
-#      - satosa_certs:/satosa_proxy/pki/
-#      - satosa_logs:/satosa_proxy/logs/
+       - satosa_certs:/satosa_proxy/pki
 
   satosa-nginx:
     image: nginx:alpine
@@ -98,53 +96,28 @@ services:
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - ./nginx/certs/:/etc/nginx/certs/:ro
       - satosa_static:/var/www/html
-#    environment:
-#      - NGINX_HOST=foobar.com
-#      - NGINX_PORT=80
 
 volumes:
 
-  satosa_static:
-    driver_opts:
-      type: none
-      device: $PWD/nginx/satosa_static/
-      o: bind
-
   mongodata:
-    driver_opts:
-      type: none
-      device: $PWD/mongodata/
-      o: bind
+    external:
+      name: satosa-saml2spid_mongodata
 
   nginx_certs:
-    driver_opts:
-      type: none
-      device: $PWD/nginx/certs/
-      o: bind
+    external:
+      name: satosa-saml2spid_nginx_certs
+
+  satosa_static:
+    external:
+      name: satosa-saml2spid_static        
 
   satosa_metadata:
-    driver_opts:
-      type: none
-      device: $PWD/satosa/metadata/
-      o: bind
-     
-#  satosa_certs:
-#    driver_opts:
-#      type: none
-#      device: $PWD/satosa/certs/
-#      o: bind
+    external:
+      name: satosa-saml2spid_metadata
 
-#  satosa_conf:
-#    driver_opts:
-#      type: none
-#      device: $PWD/satosa/conf/
-#      o: bind
-
-#  satosa_logs:
-#    driver_opts:
-#      type: none
-#      device: $PWD/satosa/logs/
-#      o: bind
+  satosa_certs:
+    external:
+      name: satosa-saml2spid_certs
 
 #  nginx_conf:
 #    driver_opts:
