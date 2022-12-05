@@ -94,7 +94,7 @@ services:
       - ./nginx/50x.html:/usr/share/nginx/html/50x.html:ro
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
-      - ./nginx/certs/:/etc/nginx/certs/:ro
+      - nginx_certs:/etc/nginx/certs:ro
       - satosa_static:/var/www/html
 
 volumes:
