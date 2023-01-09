@@ -136,7 +136,7 @@ HOSTNAME=localhost
 See [mongo readme](../README.mongo.md) for explanation of environment variables of MongoDB.
 
 ## docker-compose.yml
-
+In the [project readme](../README.md#configuration-by-environments) is present a detailed list with each environment and his function
 ```
     environment:
       - SATOSA_BY_DOCKER=1
