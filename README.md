@@ -8,7 +8,7 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 1. [Goal](#goal)
 2. [Demo components](#demo-components)
 3. [Docker image](#docker-image)
-4. #docker-compose
+4. [docker-compose](#doker-compose)
 5. [MongoDB](./README.mongo.md)
 6. [Setup](#setup)
 7. [Start the Proxy](#start-the-proxy)
@@ -162,6 +162,11 @@ A valid ssl certificate is needed, to add your certificate you shoud override th
 * *$SATOSA_SAML2_REQUESTED_ATTRIBUTES* SAML2 required attributes, default: name, surname
 
 * *$SATOSA_SPID_REQUESTED_ATTRIBUTES* SPID required attributes, default: spidCode, name, familyName, fiscalNumber, email 
+
+## Docker compose
+A detailed istruction for make your docker-compose image is in [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) directory.
+
+The docker compose share same [enviromets](#configuration-by-environments) with the official docker image
 
 ## OIDC
 
