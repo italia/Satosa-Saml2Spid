@@ -83,7 +83,7 @@ To install the docker image from docker hub: `docker pull scolagreco/satosa-saml
 
 ### Configuration for production
 
-Satosa-Saml2SPID image is builded with production ready logic, but some configurations are needed:
+Satosa-Saml2SPID image is built with production ready logic, but some configurations are needed:
 
 #### NGINX
 
@@ -164,9 +164,9 @@ A valid ssl certificate is needed, to add your certificate you shoud override th
 * *$SATOSA_SPID_REQUESTED_ATTRIBUTES* SPID required attributes, default: spidCode, name, familyName, fiscalNumber, email 
 
 ## Docker compose
-A detailed istruction for make your docker-compose image is in [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) directory.
+A detailed instruction for make your docker-compose image is in [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) directory.
 
-The docker compose share same [enviromets](#configuration-by-environments) with the official docker image
+The docker compose uses same [enviromets](#configuration-by-environments) with the official docker image
 
 ## OIDC
 
