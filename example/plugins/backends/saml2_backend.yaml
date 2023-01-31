@@ -12,17 +12,31 @@ config:
     encryption_keypairs:
     - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
 
-    organization: {display_name: 'Saml2 Authentication Proxy', name: 'proxy.auth', url: 'https://spid.proxy.example.org'}
+    organization: 
+      display_name:
+      - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN', 'en']
+      - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_IT', 'it']
+      name: 
+      - [ 'change with $SATOSA_ORGANIZATION_NAME_EN', 'en']
+      - [ 'change with $SATOSA_ORGANIZATION_NAME_IT', 'it']
+      url:
+      - [ 'change with $SATOSA_ORGANIZATION_URL_EN', 'en']
+      - [ 'change with $SATOSA_ORGANIZATION_URL_IT', 'it']
     contact_person:
-    - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
-    - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
+    - contact_type: technical
+      given_name: change with $SATOSA_CONTACT_PERSON_GIVEN_NAME
+      email_address: change with $SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
 
     metadata:
       local: [./metadata/idp/]
+      mdq:
+        - url: "https://mdx.idem.garr.it/edugain/"
+          cert: ./pki/dem-mdx-service-crt.pem
+          freshness_period: P0Y0M0DT1H0M0S
       # using pyFF or other MDX server
       # mdq:
       #  - url: "http://mdq.auth.unical.it/static/sha1"
-          # cert: mdq.pem
+      #    cert: mdq.pem
 
     entityid: '<base_url>/<name>/metadata'
     accepted_time_diff: 300
@@ -32,25 +46,28 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: "Saml2 Authentication Proxy"
+              text: change with  $SATOSA_UI_DISPLAY_NAME_EN
+            - lang: it
+              text: change with $SATOSA_UI_DISPLAY_NAME_IT
           description:
             - lang: en
-              text: "Saml2 Authentication Proxy"
-          # information_url:
-            # - lang: en
-              # text: "http://sp.information.url/"
-          #privacy_statement_url:
-            #- lang: en
-              #text: "https://www.example.org/privacy/"
-          keywords:
+              text: change with $SATOSA_UI_DESCRIPTION_EN
             - lang: it
-              text: ["Saml2 Authentication Proxy", "Service Provider IT"]
+              text: change with $SATOSA_UI_DESCRIPTION_IT
+          information_url:
             - lang: en
-              text: ["Saml2 Authentication Proxy", "Service Provider EN"]
+              text: change with $SATOSA_UI_INFORMATION_URL_EN
+            - lang: it 
+              text: change with $SATOSA_UI_INFORMATION_URL_IT
+          privacy_statement_url:
+            - lang: en
+              text: change with $SATOSA_UI_PRIVACY_URL_EN
+            - lang: it
+              text: change with $SATOSA_UI_PRIVACY_URL_IT
           logo:
-            text: "https://www.example.org/static/img/logo.svg"
-            width: "100"
-            height: "50"
+            text: change with $SATOSA_UI_LOGO_URL
+            width: change with $SATOSA_UI_LOGO_WIDTH
+            height: change with $SATOSA_UI_LOGO_HEIGHT
 
         only_use_keys_in_metadata: true
         force_authn: true
@@ -66,6 +83,8 @@ config:
         signing_algorithm: "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
         digest_algorithm: "http://www.w3.org/2001/04/xmlenc#sha256"
 
+        required_attributes: [name, surname]
+
         endpoints:
           assertion_consumer_service:
           - [<base_url>/<name>/acs/post, 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST']
@@ -78,4 +97,5 @@ config:
         name_id_format_allow_create: false
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: "https://localhost:9999/disco.html"
+  # disco_srv: "https://localhost:9999/disco.html"
+  disco_srv: change with $SATOSA_DISCO_SRV
