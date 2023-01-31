@@ -8,8 +8,10 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 2. [Demo components](#demo-components)
 3. [Docker stack](#docker-compose)
 4. [Setup](#setup)
-5. [Start the Proxy](#start-the-proxy)
-6. [Additional technical informations](#additional-technical-informations)
+5. [OIDC Frontend](#oidc)
+6. [Configure the Proxy](#configure-the-proxy)
+7. [Start the Proxy](#start-the-proxy)
+6. [Additional technical informations](#additional-technical-informations-for-developers)
 7. [Author](#author)
 8. [Credits](#credits)
 
