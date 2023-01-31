@@ -18,25 +18,28 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 ## General features
 
 - SPID SP
-- eIDAS FICEP SP (see [ficep support PR here](https://github.com/italia/Satosa-Saml2Spid/pull/47))
+- eIDAS FICEP SP
 - SAML2 IDP
 - OIDC OP (see [satosa-oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop))
+
+This project is tested in Continuous Integration with [spid-sp-test](https://github.com/italia/spid-sp-test) 
+and passes all the tests regarding Metadata, Authn Requests and Responses.
 
 ## Goal
 
 Satosa-Saml2 Spid is an intermediary between many SAML2/OIDC Service Providers (RP) and many SAML2 Identity Providers.
 Specifically it allows traditional Saml2 Service Providers to communicate with
-**Spid Identity Providers** adapting Metadata and AuthnRequest operations to the Spid technical requirements.
+**Spid** and **CIE** Identity Providers adapting Metadata and AuthnRequest operations.
 
 ![big picture](gallery/spid_proxy.png)
 
-**Figure1** : _Common scenario, a traditional SAML2 Service Provider (SP) that's proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
+**Figure1** : _Traditional SAML2 Service Providers (SPs) proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
 More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_
-to adapt and allows to communicate systems that, due to protocol or specific
+to get communicating systems that, due to protocol or specific
 limitations, traditionally could not interact each other.
 
-**Short glossary**
+## Glossary
 
 - **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
 - **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
@@ -72,11 +75,11 @@ To get redirection to these pages, or redirection to third-party services, consi
 - `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "https://localhost:9999/error_page.html"`
 - `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://localhost:9999/static/disco.html"`
 
-Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in plugins configurations.
 
 ## Docker compose
 ````
-apt install jq
+sudo apt install jq
+pip install --upgrade pip
 pip install docker-compose
 ````
 
@@ -106,6 +109,7 @@ cp -R project/static/* `docker volume inspect satosa-saml2saml_statics | jq .[0]
 
 Run the stack
 ````
+cd compose-Satosa-Saml2Spid
 docker-compose up
 ````
 
@@ -161,6 +165,7 @@ These are the configuration files:
 - `plugins/frontend/saml2_frontend.yaml`
 - `plugins/frontend/oidc_op_frontend.yaml` (optional to enable OIDC Provider)
 
+Remember to edit and customize all the values like `"CHANGE_ME!"` in the configuration files, in `proxy_conf.yaml` and in the configurations of the plugins.
 
 ## Saml2 Metadata
 
