@@ -45,7 +45,7 @@ CMD bash run.sh
 # Metadata params
 ARG BUILD_DATE
 ARG VERSION
-ARG VCS_URL="https://github.com/IDEM-GARR-AAI/Satosa-Saml2Spid.git"
+ARG VCS_URL="https://github.com/italia/Satosa-Saml2Spid.git"
 ARG VCS_REF
 ARG AUTHORS
 ARG VENDOR

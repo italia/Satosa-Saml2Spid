@@ -77,9 +77,9 @@ Remember to edit and customize all the values like `"CHANGE_ME!"` in the configu
 
 ![Docker image design](gallery/docker-design.svg)
 
-the official Satosa-Saml2SPID docker immage is available at [scolagreco/satosa-saml2spid](https://hub.docker.com/r/scolagreco/satosa-saml2spid)
+the official Satosa-Saml2SPID docker immage is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
 
-To install the docker image from docker hub: `docker pull scolagreco/satosa-saml2spid`
+To install the docker image from docker hub: `docker pull ghcr.io/italia/satosa-saml2spid:latest`
 
 ### Configuration for production
 
