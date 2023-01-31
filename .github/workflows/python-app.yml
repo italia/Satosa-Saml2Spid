@@ -72,11 +72,10 @@ jobs:
         cd example
         spid_sp_test --idp-metadata > metadata/idp/spid-sp-test.xml
         spid_sp_test --metadata-url https://localhost:10000/spidSaml2/metadata --authn-url "http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080" -ap spid_sp_test.plugins.authn_request.SatosaSaml2Spid --extra --debug ERROR -tr
-    # TODO - PR WiP for CIE id integration
-    # - name: spid-sp-test CIE id metadata
-      # run: |
-        # cd example
-        # spid_sp_test --profile cie-sp-public --metadata-url https://localhost:10000/cieSaml2/metadata
+    - name: spid-sp-test CIE id metadata
+      run: |
+        cd example
+        spid_sp_test --profile cie-sp-public --metadata-url https://localhost:10000/cieSaml2/metadata
     - name: spid-sp-test eIDAS FiCEP metadata
       run: |
         cd example

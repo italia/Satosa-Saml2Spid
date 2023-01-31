@@ -8,10 +8,20 @@ config:
   entityid_endpoint: true
 
   idp_config:
-    organization: {display_name: 'Saml2 Authentication Proxy', name: 'proxy.auth', url: 'https://spid.proxy.example.org'}
+    organization:
+      display_name: 
+        - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN', 'en']
+        - [ 'change with $SAOSA_ORGANIZATION_DISPLAY_NAME_IT', 'it']
+      name: 
+        - [ 'change with $SATOSA_ORGANIZATION_NAME_EN', 'en']
+        - [ 'change with $SATOSA_ORGANIZATION_NAME_IT', 'it']
+      url:
+        - [ 'change with $SATOSA_ORGANIZATION_URL_EN', 'en']
+        - [ 'change with $SATOSA_ORGANIZATION_URL_IT', 'it']
     contact_person:
-    - {contact_type: technical, email_address: "mailto:supporto.tecnico@example.org", given_name: Technical}
-    - {contact_type: support, email_address: "mailto:richieste.ict@example.org", given_name: Support}
+      - contact_type: technical
+        given_name: change with $SATOSA_CONTACT_PERSON_GIVEN_NAME
+        email_address: change with $SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
 
     attribute_map_dir: 'attributes-map'
 
@@ -46,25 +56,28 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: "Authentication Proxy"
+              text: change with  $SATOSA_UI_DISPLAY_NAME_EN
+            - lang: it
+              text: change with $SATOSA_UI_DISPLAY_NAME_IT
           description:
             - lang: en
-              text: "Authentication Proxy"
-          # information_url:
-            # - lang: en
-              # text: "http://sp.information.url/"
+              text: change with $SATOSA_UI_DESCRIPTION_EN
+            - lang: it
+              text: change with $SATOSA_UI_DESCRIPTION_IT
+          information_url:
+            - lang: en
+              text: change with $SATOSA_UI_INFORMATION_URL_EN
+            - lang: it 
+              text: change with $SATOSA_UI_INFORMATION_URL_IT
           privacy_statement_url:
             - lang: en
-              text: "https://www.example.org/privacy/"
-          keywords:
+              text: change with $SATOSA_UI_PRIVACY_URL_EN
             - lang: it
-              text: ["Authentication Proxy", "IdP IT"]
-            - lang: en
-              text: ["Authentication Proxy", "IdP EN"]
+              text: change with $SATOSA_UI_PRIVACY_URL_IT
           logo:
-            text: "https://www.spid.gov.it/assets/img/spid-ico-circle-bb.svg"
-            width: "100"
-            height: "100"
+            text: change with $SATOSA_UI_LOGO_URL
+            width: change with $SATOSA_UI_LOGO_WIDTH
+            height: change with $SATOSA_UI_LOGO_HEIGHT
         name_id_format: ['urn:oasis:names:tc:SAML:2.0:nameid-format:transient']
 
         # want_authn_requests_signed: true

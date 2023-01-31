@@ -27,6 +27,7 @@ CUSTOM_PLUGIN_MODULE_PATHS:
 BACKEND_MODULES:
   - "plugins/backends/saml2_backend.yaml"
   - "plugins/backends/spidsaml2_backend.yaml"
+  - "plugins/backends/ciesaml2_backend.yaml"
 FRONTEND_MODULES:
   - "plugins/frontends/saml2_frontend.yaml"
   - "plugins/frontends/oidc_op_frontend.yaml"
@@ -94,12 +95,12 @@ LOGGING:
     satosa.frontends.saml2:
       level: DEBUG
       formatter: simple
-      handlers: [saml2_debug_file]
+      handlers: [console]
       propagate: no
     satosa.backends.saml2:
       level: DEBUG
       formatter: simple
-      handlers: [saml2_debug_file]
+      handlers: [console]
       propagate: no
     satosa.frontends.idpy_oidcop:
       level: DEBUG
@@ -109,7 +110,7 @@ LOGGING:
     backends.spidsaml2:
       level: INFO
       formatter: simple
-      handlers: [spid_daily]
+      handlers: [console]
       propagate: no
 
   # root:
