@@ -87,42 +87,38 @@ To install the docker image from docker hub: `docker pull ghcr.io/italia/satosa-
 
 A detailed instruction for make your docker-compose image is in [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) directory.
 
-The docker compose uses same [enviromets](#configuration-by-environments) with the official docker image
+Satosa-Saml2SPID image is built with production ready logic, anyway some configurations are required!
+The docker compose may use the [enviroment variables](#configuration-by-environment-variables) of satosa-saml2spid.
 
-## OIDC
+### NGINX setup
 
-this project uses [SATOSA_oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop) as OAuth2/OIDC frontend module.
-Comment/uncomment the following statement in the proxy_configuration to enable it.
-
-https://github.com/italia/Satosa-Saml2Spid/blob/oidcop/example/proxy_conf.yaml#L32
+A valid ssl certificate is needed, to add your certificate you shoud override the /etc/nginx/certs directory with your valid certificates.
 
 ## Setup
-
-###### Prepare environment
-
-```
-mkdir satosa_proxy && cd satosa_proxy
-virtualenv -ppython3 satosa.env
-source satosa.env/bin/activate
-```
 
 ###### Dependencies Ubuntu
 
 ```
 sudo apt install -y libffi-dev libssl-dev python3-pip xmlsec1 procps libpcre3 libpcre3-dev
-
-git clone https://github.com/italia/Satosa-Saml2Spid.git repository
-pip install -r repository/requirements.txt
 ```
 
 ###### Dependencies Centos/RHEL
 
 ```
 sudo yum install -y libffi-devel openssl-devel python3-pip xmlsec1 procps pcre pcre-devel
-pip install --upgrade pip
 sudo yum groupinstall "Development Tools"
 sudo yum install -y python3-wheel python3-devel
+```
 
+###### Prepare environment
+
+```
+pip install --upgrade pip
+pip install virtualenv
+
+mkdir satosa_proxy && cd satosa_proxy
+virtualenv -ppython3 satosa.env
+source satosa.env/bin/activate
 
 git clone https://github.com/italia/Satosa-Saml2Spid.git repository
 pip install -r repository/requirements.txt
@@ -131,15 +127,13 @@ pip install -r repository/requirements.txt
 ## Configure the Proxy
 
 - Create certificates for SPID see [psmiraglia](https://github.com/italia/spid-compliant-certificates).
-- Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the following files** with your preferred configuration.
+- Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the files below** 
 
-These are the configuration files:
-
-- `proxy_conf.yaml`
-- `plugins/backends/spidsaml2_backend.yaml`
-- `plugins/backends/saml2_backend.yaml`
-- `plugins/frontend/saml2_frontend.yaml`
-- `plugins/frontend/oidc_op_frontend.yaml` (optional to enable OIDC Provider)
+  - `proxy_conf.yaml`
+  - `plugins/backends/spidsaml2_backend.yaml`
+  - `plugins/backends/saml2_backend.yaml`
+  - `plugins/frontend/saml2_frontend.yaml`
+  - `plugins/frontend/oidc_op_frontend.yaml` (optional to enable OIDC Provider)
 
 Remember to:
 
@@ -148,7 +142,14 @@ Remember to:
 * set all key and salt with your secret key ($SATOSA_ENCRYPTION_KEY, $SATOSA_SALT)
 * set a new mongodb password ($MONGODB_USERNAME, $MONGODB_PASSWORD)
 * set a new certificate for SAML / SPID ($SATOSA_PUBLIC_KEYS, $SATOSA_PRIVATE_KEYS)
-* add valid data for  metadata, read [Configurations by environments](#configuration-by-environments)
+* add valid data for  metadata, read [Configurations by environments](#configuration-by-environment-variables)
+
+## OIDC
+
+This project uses [SATOSA_oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop) as OAuth2/OIDC frontend module.
+Comment/uncomment the following statement in the proxy_configuration to enable it.
+
+https://github.com/italia/Satosa-Saml2Spid/blob/oidcop/example/proxy_conf.yaml#L32
 
 ### Configuration by environment variables
 
@@ -241,7 +242,7 @@ See `example/plugins/{backends,frontends}/$filename` as example.
 
 ## Start the Proxy
 
-**Warning**: these examples must be intended only for test purpose, for a demo run. Please remember that the following examples wouldn't be intended for a real production environment! If you need some example for a production environment please take a look at `example/uwsgi_setup/` folder.
+**Warning**: these examples must be intended only for test purpose, for a demo run. Please remember that the following examples wouldn't be intended for a real production environment! If you need some example for a production environment please take a look at `example/uwsgi_setup/` folder or use the docker-compose.
 
 ```
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
@@ -273,14 +274,6 @@ Then start an authentication from your SP.
 
 ![result](gallery/screen.gif)
 **Figure 2**: The result using spid-saml-check.
-
-### Configuration for production
-
-Satosa-Saml2SPID image is built with production ready logic, but some configurations are needed:
-
-#### NGINX
-
-A valid ssl certificate is needed, to add your certificate you shoud override the /etc/nginx/certs directory with your valid certificates.
 
 
 ## Hints
@@ -405,6 +398,8 @@ Giuseppe De Marco
 ## Credits
 
 - Andrea Ranaldi and his Team in ISPRA Ambiente
+- Stefano Colagreco @ CNR
 - Fulvio Scorza and his Team in Università del Piemonte Orientale
 - Paolo Smiraglia (SPID certs)
 - idpy Community  (pySAML2 and SATOSA)
+- GARR IDEM Community
