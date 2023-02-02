@@ -335,11 +335,11 @@ All the patches and features are currently merged and available with the followi
 
 These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
 
-- [date_xsd_type](https://github.com/IdentityPython/pysaml2/pull/602/files)
 - [disabled_weak_algs](https://github.com/IdentityPython/pysaml2/pull/628)
 - [ns_prefixes](https://github.com/IdentityPython/pysaml2/pull/625)
 - [SATOSA unknow error handling](https://github.com/IdentityPython/SATOSA/pull/324)
 - [SATOSA redirect page on error](https://github.com/IdentityPython/SATOSA/pull/325)
+- [SATOSA cookie configuration](https://github.com/IdentityPython/SATOSA/pull/363)
 
 #### Warnings
 
