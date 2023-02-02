@@ -383,9 +383,9 @@ Giuseppe De Marco
 
 ## Credits
 
-- Andrea Ranaldi and his Team in ISPRA Ambiente
+- Andrea Ranaldi and his Team @ ISPRA Ambiente
 - Stefano Colagreco @ CNR
-- Fulvio Scorza and his Team in Università del Piemonte Orientale
+- Fulvio Scorza and his Team @ Università del Piemonte Orientale
 - Paolo Smiraglia (SPID certs)
-- idpy Community  (pySAML2 and SATOSA)
+- Identity Python Community (pySAML2 and SATOSA)
 - GARR IDEM Community
