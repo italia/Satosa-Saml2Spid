@@ -65,19 +65,19 @@ with the help of an additional webserver dedicated for static contents:
 
 ###### Discovery Service page
 
-<img src="gallery/disco.png" width="256">
+<img src="gallery/disco.png" width="512">
 
 ###### Generic error page
 
-<img src="gallery/error_page.png" width="256">
+<img src="gallery/error_page.png" width="512">
 
 ###### Saml2 Signature Error page
 
-<img src="gallery/error1.png" width="256">
+<img src="gallery/error1.png" width="512">
 
 ###### AgID SPID test #104
 
-<img src="gallery/error2.png" width="256">
+<img src="gallery/error2.png" width="512">
 
 These demo pages are static files, available in `example/static`.
 To get redirection to these pages, or redirection to third-party services, it is required to configure the parameters below:
