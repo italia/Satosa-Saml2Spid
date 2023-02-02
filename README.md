@@ -88,7 +88,7 @@ To get redirection to these pages, or redirection to third-party services, it is
 
 ## Docker image
 
-<img src="gallery/docker-design.svg" width="256">
+<img src="gallery/docker-design.svg" width="512">
 
 the official Satosa-Saml2SPID docker image is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
 
