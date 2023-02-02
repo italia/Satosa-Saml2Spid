@@ -1,7 +1,8 @@
 # Satosa-Saml2Spid
 
-This is a SAML2/OIDC configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
-that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with the  **SPID - the Italian Digital Identity System**.
+A SAML2/OIDC configuration for [SATOSA](https://github.com/IdentityPython/SATOSA)
+that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** 
+compatible with the  **Italian Digital Identity Systems**.
 
 ## Table of Contents
 
@@ -16,10 +17,26 @@ that aims to setup a **SAML-to-SAML Proxy** and **OIDC-to-SAML** compatible with
 9. [Author](#author)
 10. [Credits](#credits)
 
+
+## Glossary
+
+- **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
+- **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
+- **TargetRouting**, a SATOSA microservice for selecting the output backend to reach the endpoint (IdP) selected by the user
+- **Discovery Service**, interface that allows users to select the authentication endpoint
+
+
 ## General features
 
+Backends:
+
 - SPID SP
+- CIE SP
 - eIDAS FICEP SP
+- SAML2 SP
+
+Frontends:
+
 - SAML2 IDP
 - OIDC OP (see [satosa-oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop))
 
@@ -28,24 +45,18 @@ and passes all the tests regarding Metadata, Authn Requests and Responses.
 
 ## Goal
 
-Satosa-Saml2 Spid is an intermediary between many SAML2/OIDC Service Providers (RP) and many SAML2 Identity Providers.
-Specifically it allows traditional Saml2 Service Providers to communicate with
+Satosa-Saml2 Spid is an intermediary between many SAML2/OIDC 
+Service Providers and many SAML2 Identity Providers.
+It allows traditional Saml2 Service Providers to communicate with
 **Spid** and **CIE** Identity Providers adapting Metadata and AuthnRequest operations.
 
-![big picture](gallery/spid_proxy.png)
+![big picture](gallery/spid_proxy.png | width=256)
 
 **Figure1** : _Traditional SAML2 Service Providers (SPs) proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
-More generally this solution allows us to adopt multiple proxy _frontends_ and _backends_
+This solution configures multiple proxy _frontends_ and _backends_
 to get communicating systems that, due to protocol or specific
 limitations, traditionally could not interact each other.
-
-## Glossary
-
-- **Frontend**, interface of the proxy that is configured as a SAML2 Identity Provider
-- **Backend**, interface of the proxy that is configured as a SAML2 Service Provider
-- **TargetRouting**, a SATOSA microservice for selecting the output backend to reach the endpoint (IdP) selected by the user
-- **Discovery Service**, interface that allows users to select the authentication endpoint
 
 ## Demo components
 
@@ -68,31 +79,31 @@ with the help of an additional webserver dedicated for static contents:
 
 ![err2](gallery/error2.png)
 
-You can find these demo pages in `example/static` and edit at your taste.
-To get redirection to these pages, or redirection to third-party services, consider the following configuration files:
+These demo pages are static files, available in `example/static`.
+To get redirection to these pages, or redirection to third-party services, it is required to configure the parameters below:
 
-- `example/proxy_conf.yml`, example: `UNKNOW_ERROR_REDIRECT_PAGE: "https://localhost:9999/error_page.html"`
-- `example/plugins/{backends,frontends}/$filename`, example: `disco_srv: "https://localhost:9999/static/disco.html"`
+- file: `example/proxy_conf.yml`, example value: `UNKNOW_ERROR_REDIRECT_PAGE: "https://localhost:9999/error_page.html"`
+- file: `example/plugins/{backends,frontends}/$filename`, example value: `disco_srv: "https://localhost:9999/static/disco.html"`
 
 
 ## Docker image
 
-![Docker image design](gallery/docker-design.svg)
+![Docker image design](gallery/docker-design.svg | width=256)
 
-the official Satosa-Saml2SPID docker immage is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
+the official Satosa-Saml2SPID docker image is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
 
-To install the docker image from docker hub: `docker pull ghcr.io/italia/satosa-saml2spid:latest`
+To install the official docker image, simply type: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`
 
 ## Docker compose
-
-A detailed instruction for make your docker-compose image is in [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) directory.
 
 Satosa-Saml2SPID image is built with production ready logic, anyway some configurations are required!
 The docker compose may use the [enviroment variables](#configuration-by-environment-variables) of satosa-saml2spid.
 
+See [compose-Satosa-Saml2Spid](compose-Satosa-Saml2Spid) for details.
+
 ### NGINX setup
 
-A valid ssl certificate is needed, to add your certificate you shoud override the /etc/nginx/certs directory with your valid certificates.
+A valid ssl certificate is needed, to add your certificate you have to override the `/etc/nginx/certs` directory with your docker volume, containing your certificates.
 
 ## Setup
 
@@ -121,7 +132,8 @@ virtualenv -ppython3 satosa.env
 source satosa.env/bin/activate
 
 git clone https://github.com/italia/Satosa-Saml2Spid.git repository
-pip install -r repository/requirements.txt
+cd repository
+pip install -r requirements.txt
 ```
 
 ## Configure the Proxy
@@ -155,75 +167,45 @@ https://github.com/italia/Satosa-Saml2Spid/blob/oidcop/example/proxy_conf.yaml#L
 
 You can override the configuration of the proxy by settings one or more of the following environment variables:
 
-* *$SATOSA_BASE* base url of satosa server, default: "https://$HOSTNAME"
-
-* *$SATOSA_ENCRYPTION_KEY* encription key for state, default: "CHANGE_ME!"
-
-* *$SATOSA_SALT* encription salt, default: "CHANGE_ME!"
-
-* *$SATOSA_DISCO_SRV* Descovery page URL for all backends, default: "https://$HOSTNAME/static/disco.html"
-
-* *$SATOSA_PRIVATE_KEYS* private key for SAML2 / SPID backends
-
-* *$SATOSA_PUBLIC_KEYS* public key for SAML2 / SPID backends
-
-* *$MONGODB_USERNAME* MongoDB username for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid
-
-* *$MONGODB_PASSWORD* MongoDB password for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid
-
-* *$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE* redirect page for unknow erros, default: "https://$HOSTNAME/static/error_page.html"
-
-* *$SATOSA_ORGANIZATION_DISPLAY_NAME_EN* Metadata English organization display name
-
-* *$SATOSA_ORGANIZATION_NAME_EN* Metadata English full organization name
-
-* *$SATOSA_ORGANIZATION_URL_EN* Metadata English organization url
-
-* *$SATOSA_ORGANIZATION_DISPLAY_NAME_IT* Metadata Italian Organization display name
-
-* *$SATOSA_ORGANIZATION_NAME_IT* Metadata Italian full organization
-
-* *$SATOSA_ORGANIZATION_URL_IT* Metadata Italian organization url
-
-* *$SATOSA_CONTACT_PERSON_GIVEN_NAME* Metadata Contact person name
-
-* *$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS* Metadata Contact person email
-
-* *$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER* Metadata Contact person telephone number for SPID / CIE Backend
-
-* *$SATOSA_CONTACT_PERSON_FISCALCODE* Metadata Contact person fiscal code for SPID / CIE Backend
-
-* *$SATOSA_UI_DISPLAY_NAME_EN* Metadata English ui display name
-
-* *$SATOSA_UI_DISPLAY_NAME_IT* Metadata Italian ui display name
-
-* *$SATOSA_UI_DESCRIPTION_EN* Metadata English ui description
-
-* *$SATOSA_UI_DESCRIPTION_IT* Metadata Italian ui description
-
-* *$SATOSA_UI_INFORMATION_URL_EN* Metadata English ui information URL
-
-* *$SATOSA_UI_INFORMATION_URL_IT* Metadata Italian ui information URL
-
-* *$SATOSA_UI_PRIVACY_URL_EN* Metadata English ui privacy URL
-
-* *$SATOSA_UI_PRIVACY_URL_IT* Metadata Italian ui privacy URL
-
-* *$SATOSA_UI_LOGO_URL* Metadata Logo url for
-
-* *$SATOSA_UI_LOGO_WIDTH* Metadata Logo width 
-
-* *$SATOSA_UI_LOGO_HEIGHT* Metadata logo height
-
-* *$SATOSA_SAML2_REQUESTED_ATTRIBUTES* SAML2 required attributes, default: name, surname
-
-* *$SATOSA_SPID_REQUESTED_ATTRIBUTES* SPID required attributes, default: spidCode, name, familyName, fiscalNumber, email
+| Environment var | description | default |
+|:---|:---|:---|
+|**$SATOSA_BASE**|base url of satosa server|"https://$HOSTNAME"|
+|**$SATOSA_ENCRYPTION_KEY**|encription key for state|"CHANGE_ME!"|
+|**$SATOSA_SALT**|encription salt|"CHANGE_ME!"|
+|**$SATOSA_DISCO_SRV**|Descovery page URL for all backends|"https://$HOSTNAME/static/disco.html"|
+|**$SATOSA_PRIVATE_KEYS**|private key for SAML2 / SPID backends||
+|**$SATOSA_PUBLIC_KEYS**|public key for SAML2 / SPID backends||
+|**$MONGODB_USERNAME**|MongoDB username for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
+|**$MONGODB_PASSWORD**|MongoDB password for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
+|**$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE**|redirect page for unknow erros|"https://$HOSTNAME/static/error_page.html"|
+|**$SATOSA_ORGANIZATION_DISPLAY_NAME_EN**|Metadata English organization display name||
+|**$SATOSA_ORGANIZATION_NAME_EN**|Metadata English full organization name||
+|**$SATOSA_ORGANIZATION_URL_EN**|Metadata English organization url||
+|**$SATOSA_ORGANIZATION_DISPLAY_NAME_IT**|Metadata Italian Organization display name||
+|**$SATOSA_ORGANIZATION_NAME_IT**|Metadata Italian full organization||
+|**$SATOSA_ORGANIZATION_URL_IT**|Metadata Italian organization url||
+|**$SATOSA_CONTACT_PERSON_GIVEN_NAME**|Metadata Contact person name||
+|**$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS**|Metadata Contact person email||
+|**$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER**|Metadata Contact person telephone number for SPID / CIE Backend||
+|**$SATOSA_CONTACT_PERSON_FISCALCODE**|Metadata Contact person fiscal code for SPID / CIE Backend||
+|**$SATOSA_UI_DISPLAY_NAME_EN**|Metadata English ui display name||
+|**$SATOSA_UI_DISPLAY_NAME_IT**|Metadata Italian ui display name||
+|**$SATOSA_UI_DESCRIPTION_EN**|Metadata English ui description||
+|**$SATOSA_UI_DESCRIPTION_IT**|Metadata Italian ui description||
+|**$SATOSA_UI_INFORMATION_URL_EN**|Metadata English ui information URL||
+|**$SATOSA_UI_INFORMATION_URL_IT**|Metadata Italian ui information URL||
+|**$SATOSA_UI_PRIVACY_URL_EN**|Metadata English ui privacy URL||
+|**$SATOSA_UI_PRIVACY_URL_IT**|Metadata Italian ui privacy URL||
+|**$SATOSA_UI_LOGO_URL**|Metadata Logo url for||
+|**$SATOSA_UI_LOGO_WIDTH**|Metadata Logo width||
+|**$SATOSA_UI_LOGO_HEIGHT**|Metadata logo height||
+|**$SATOSA_SAML2_REQUESTED_ATTRIBUTES**|SAML2 required attributes|name, surname|
+|**$SATOSA_SPID_REQUESTED_ATTRIBUTES**|SPID required attributes|spidCode, name, familyName, fiscalNumber, email|
 
 
 ## Saml2 Metadata
 
-If you want to handle metadata file manually, as this example purpose as demostration,
-create `metadata/idp` and `metadata/sp` folders, then copy metadata:
+If you want to handle metadata file manually create the `metadata/idp` and `metadata/sp` directories, then copy the required metadata:
 
 ```
 mkdir -p metadata/idp metadata/sp
@@ -242,7 +224,11 @@ See `example/plugins/{backends,frontends}/$filename` as example.
 
 ## Start the Proxy
 
-**Warning**: these examples must be intended only for test purpose, for a demo run. Please remember that the following examples wouldn't be intended for a real production environment! If you need some example for a production environment please take a look at `example/uwsgi_setup/` folder or use the docker-compose.
+**Warning**: these examples must be intended only for test purpose, for a demo run. 
+Please remember that the following examples wouldn't be intended for a real production environment.
+
+If you need some example for a production environment please take a look at 
+[example/uwsgi_setup/](example/uwsgi_setup/) directory or use the docker-compose.
 
 ```
 export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
