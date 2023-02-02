@@ -50,7 +50,7 @@ Service Providers and many SAML2 Identity Providers.
 It allows traditional Saml2 Service Providers to communicate with
 **Spid** and **CIE** Identity Providers adapting Metadata and AuthnRequest operations.
 
-![big picture](gallery/spid_proxy.png | width=256)
+<img src="gallery/spid_proxy.png" width="256">
 
 **Figure1** : _Traditional SAML2 Service Providers (SPs) proxied through the SATOSA SPID Backend gets compliances on AuthnRequest and Metadata operations_.
 
@@ -88,7 +88,7 @@ To get redirection to these pages, or redirection to third-party services, it is
 
 ## Docker image
 
-![Docker image design](gallery/docker-design.svg | width=256)
+<img src="gallery/docker-design.svg" width="256">
 
 the official Satosa-Saml2SPID docker image is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
 
