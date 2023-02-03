@@ -13,7 +13,7 @@ compatible with the  **Italian Digital Identity Systems**.
 5. [MongoDB](./README.mongo.md)
 6. [Setup](#setup)
 7. [Start the Proxy](#start-the-proxy)
-8. [Additional technical informations](#additional-technical-informations)
+8. [Additional technical informations](#additional-technical-informations-for-developers)
 9. [Author](#author)
 10. [Credits](#credits)
 
@@ -156,7 +156,7 @@ Remember to:
 * set a new certificate for SAML / SPID ($SATOSA_PUBLIC_KEYS, $SATOSA_PRIVATE_KEYS)
 * add valid data for  metadata, read [Configurations by environments](#configuration-by-environment-variables)
 
-## OIDC
+### OIDC
 
 This project uses [SATOSA_oidcop](https://github.com/UniversitaDellaCalabria/SATOSA-oidcop) as OAuth2/OIDC frontend module.
 Comment/uncomment the following statement in the proxy_configuration to enable it.
@@ -203,7 +203,7 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_SPID_REQUESTED_ATTRIBUTES**|SPID required attributes|spidCode, name, familyName, fiscalNumber, email|
 
 
-## Saml2 Metadata
+### Saml2 Metadata
 
 If you want to handle metadata file manually create the `metadata/idp` and `metadata/sp` directories, then copy the required metadata:
 
@@ -248,7 +248,7 @@ The proxy backend exposes its SPID metadata at the following url (customizable):
 https://localhost:10000/spidSaml2/metadata
 ```
 
-#### Get Proxy Metadata for your SP
+### Get Proxy Fronted Metadata for your SP
 
 The Proxy metadata must be configured in your SP. Your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
 
@@ -315,10 +315,6 @@ WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55f744576790 pid:
 spawned uWSGI worker 1 (and the only) (pid: 28675, cores: 8)
 ```
 
-## Additional resources for newcomers
-
-- [Satosa-Saml2Spid installation tutorial](https://github.com/aslbat/Satosa-SPID-Proxy).
-
 ## Additional technical informations for Developers
 
 #### SPID technical Requirements
@@ -347,21 +343,24 @@ Here something that you should know before start.
 
 - You must enable more than a single IdP (multiple metadata or single metadata with multiple entities) to get *Discovery Service* working.
 - Proxy doesn't handle SAML2 SLO, so the spidSaml2 backend is configured with Authnforce -> True. For any further information see [Single Logout in Satosa](https://github.com/IdentityPython/SATOSA/issues/211).
-- SATOSA Saml2 backend configuration have a **policy** section that will let us to define specialized behaviours
+- SATOSA Saml2 backend configuration has a **policy** section that will let us to define specialized behaviours
   and configuration for each SP (each by entityid). In this example I defined a single "default" behaviour with attributes **name_format**
   to **urn:oasis:names:tc:SAML:2.0:attrname-format:uri**, due to my needs to handle many service providers for which it could be painfull do a static definition each time.
   An additional "hack" have been made in `example/attributes-maps/satosa_spid_uri_hybrid.py`, where I adopted a hybrid mapping that works for
   both *URI* and *BASIC* formats. Feel free to customized or decouple these format in different files and per SP.
 
-## References
+## External references
 
-SATOSA Official Documentation is available at the following links, make sure you've taken a
-look to these to understand the potential of this platform:
+### Satosa-Saml2Spid tutorials
+
+- [Satosa-Saml2Spid installation tutorial](https://github.com/aslbat/Satosa-SPID-Proxy).
+
+### SATOSA Official Documentation
 
 - [SaToSa Saml2Saml Documentation](https://github.com/IdentityPython/SATOSA/blob/master/doc/one-to-many.md)
 - [Use cases](https://github.com/IdentityPython/SATOSA/wiki#use-cases)
 
-Account Linking
+### Account Linking
 
 - [pyMultiLDAP SaToSa MS](https://github.com/peppelinux/pyMultiLDAP/tree/master/multildap/satosa)
 - Attributes Processing with [SATOSA-uniext](https://github.com/UniversitaDellaCalabria/SATOSA-uniExt/blob/master/satosa_uniext/processors/unical_attribute_processor.py)
@@ -377,9 +376,9 @@ Additional resources:
 - [saml2.0 IdP and SP for tests](https://samltest.id/)
 - https://www.spid.gov.it/assets/download/SPID_QAD.pdf
 
-## Author
+## Authors
 
-Giuseppe De Marco
+- Giuseppe De Marco
 
 ## Credits
 
