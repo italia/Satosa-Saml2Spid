@@ -365,7 +365,7 @@ Here something that you should know before start.
 - [pyMultiLDAP SaToSa MS](https://github.com/peppelinux/pyMultiLDAP/tree/master/multildap/satosa)
 - Attributes Processing with [SATOSA-uniext](https://github.com/UniversitaDellaCalabria/SATOSA-uniExt/blob/master/satosa_uniext/processors/unical_attribute_processor.py)
 
-Additional resources:
+### Additional resources
 
 - [satosa-eidas-ansible](https://github.com/grnet/satosa-eidas-ansible)
 - [aws-saml-proxy](https://github.com/senorkrabs/aws-saml-proxy)
