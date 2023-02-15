@@ -85,7 +85,7 @@ SAML_CONFIG = {
             # When set to true, the SP will consume unsolicited SAML
             # Responses, i.e. SAML Responses for which it has not sent
             # a respective SAML Authentication Request.
-            'allow_unsolicited': False,
+            'allow_unsolicited': True,
 
             # Permits to have attributes not configured in attribute-mappings
             # otherwise...without OID will be rejected
