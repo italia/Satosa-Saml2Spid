@@ -38,3 +38,33 @@ You should see an output like this
 ````
 
 then go to `https://127.0.0.1:8090`
+
+## Configure webserver with satosa.json
+Most important webserver configurations are:
+* `webserver`: contain a collection of all webserver configuration
+* `webserver.port`: webserver port, preconfigured 8090
+* `webserver.domain`: webserver domain, preconfigured 'localhost'
+* `webserver.server_cert`: webserver public certificate, preconfigured 'certs/cert.pem'
+* `webserver.server_key`: webserver private key, preconfigured 'certs/key.pen'
+* `webserver.debug`: debug webserver request, preconfigured true
+
+## Configure rp with satosa.json
+The RP is fully configurable with a simple json. Most important client config are:
+* `port`: rp port, preconfigured 8090
+* `domain`: rp domain, preconfigured 'localhost'
+* `base_url`: rp base url, preconfigured 'https://example.org'
+* `httpc_params.verify`: check certificate, preconfigured false
+* `client.services`: contain a collection of configured OP, each key is an op with his configuration as value
+
+## Configure an OP with satosa.json
+Each key in `client.services` is a OP, in this example the OP is named `satosa`. most important OP configs are:
+* `client.services.satosa.issuer`: OP issuer url, preconfigured 'https://localhost:10000'
+* `client.services.satosa.client_id`: Unique identifier for RP, preconfigured 'jbxedfmfyc'
+* `client.services.satosa.client_salt`: Salt for secret
+* `client.services.satosa.client_secret`: Secret
+* `client.services.satosa.application_type`: type of application, preconfigured 'web'
+* `client.services.satosa.token_endpoint_auth_method`: authentication method, preconfigured 'client_secret_basic'
+* `client.services.satosa.jwks_uri`: url of jwks config, preconfigured 'https://localhost:8090/static/jwks.json'
+* `client.services.satosa.redirect_uris`: Array of redirect url,  preconfigured ["https://localhost:8090/authz_cb/satosa"]
+* `client.services.satosa.grant_types`: Array of permitted grant type, preconfigured ["authorization_code"]
+* `client.services.satosa.allowed_scopes`: array of allowed scope, preconfigured ["openid", "profile", "email", "offline_access"]
