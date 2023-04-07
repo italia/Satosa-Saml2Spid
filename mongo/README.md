@@ -33,7 +33,7 @@ exit
 
 ````
 db.client.createIndex( { "client_id": 1 }, { unique: true } )
-db.client.createIndex( { "registration_access_token": 1 }, { unique: true } )
+db.client.createIndex( { "registration_access_token": 1 }, { unique: true, sparse: true } )
 ````
 
 #### make access_token and sid unique
