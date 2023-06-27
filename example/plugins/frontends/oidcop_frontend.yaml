@@ -29,7 +29,7 @@ config:
       server_info:
         add_on:
           pkce:
-            function: oidcop.oidc.add_on.pkce.add_pkce_support
+            function: idpyoidc.server.oidc.add_on.pkce.add_pkce_support
             kwargs:
               code_challenge_method: S256 S384 S512
               essential: false
@@ -38,7 +38,7 @@ config:
             acr: urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocolPassword
             class: satosa_oidcop.core.user_authn.SatosaAuthnMethod
         authz:
-          class: oidcop.authz.AuthzHandling
+          class: idpyoidc.server.authz.AuthzHandling
           kwargs:
             grant_config:
               expires_in: 43200
@@ -73,24 +73,18 @@ config:
           - email
         endpoint:
           provider_info:
-            class: oidcop.oidc.provider_config.ProviderConfiguration
+            class: idpyoidc.server.oidc.provider_config.ProviderConfiguration
             kwargs:
               client_authn_method: null
             path: .well-known/openid-configuration
           authorization:
-            class: oidcop.oidc.authorization.Authorization
+            class: idpyoidc.server.oidc.authorization.Authorization
             kwargs:
               claims_parameter_supported: true
               client_authn_method: null
               request_object_encryption_alg_values_supported: &id001
               - RSA-OAEP
               - RSA-OAEP-256
-              - A192KW
-              - A256KW
-              - ECDH-ES
-              - ECDH-ES+A128KW
-              - ECDH-ES+A192KW
-              - ECDH-ES+A256KW
               request_parameter_supported: true
               request_uri_parameter_supported: true
               response_modes_supported:
@@ -101,7 +95,7 @@ config:
               - code
             path: OIDC/authorization
           token:
-            class: oidcop.oidc.token.Token
+            class: idpyoidc.server.oidc.token.Token
             kwargs:
               client_authn_method:
               - client_secret_post
@@ -110,7 +104,7 @@ config:
               - private_key_jwt
             path: OIDC/token
           userinfo:
-            class: oidcop.oidc.userinfo.UserInfo
+            class: idpyoidc.server.oidc.userinfo.UserInfo
             kwargs:
               claim_types_supported:
               - normal
@@ -122,11 +116,9 @@ config:
               - RS512
               - ES256
               - ES512
-              - PS256
-              - PS512
             path: OIDC/userinfo
           introspection:
-            class: oidcop.oauth2.introspection.Introspection
+            class: idpyoidc.server.oauth2.introspection.Introspection
             kwargs:
               client_authn_method:
               - client_secret_post
@@ -138,23 +130,23 @@ config:
             path: OIDC/introspection
           # uncomment this for dynamic client registration
           #registration:
-            #class: oidcop.oidc.registration.Registration
+            #class: idpyoidc.server.oidc.registration.Registration
             #kwargs:
               #client_authn_method: null
               #client_id_generator:
-                #class: oidcop.oidc.registration.random_client_id
+                #class: idpyoidc.server.oidc.registration.random_client_id
                 #kwargs: {}
               #client_secret_expiration_time: 432000
             #path: OIDC/registration
           registration_read:
-            class: oidcop.oidc.read_registration.RegistrationRead
+            class: idpyoidc.server.oidc.read_registration.RegistrationRead
             kwargs:
               client_authn_method:
               - bearer_header
             path: OIDC/registration_read
           # TODO - Logout in SATOSA haven't been implemented
           #end_session:
-            #class: oidcop.oidc.session.Session
+            #class: idpyoidc.server.oidc.session.Session
             #kwargs:
               #backchannel_logout_session_supported: true
               #backchannel_logout_supported: true
@@ -181,7 +173,7 @@ config:
           read_only: false
           uri_path: OIDC/jwks.json
         login_hint2acrs:
-          class: oidcop.login_hint.LoginHint2Acrs
+          class: idpyoidc.server.login_hint.LoginHint2Acrs
           kwargs:
             scheme_map:
               email:
@@ -191,11 +183,11 @@ config:
           salt: 'CHANGE_ME salt involved in session sub hash'
           sub_func:
             pairwise:
-              class: oidcop.session.manager.PairWiseID
+              class: idpyoidc.server.session.manager.PairWiseID
               kwargs:
                 salt: CHANGE_ME_OR_LET_IT_BE_RANDOMIC
             public:
-              class: oidcop.session.manager.PublicID
+              class: idpyoidc.server.session.manager.PublicID
               kwargs:
                 salt: CHANGE_ME_OR_LET_IT_BE_RANDOMIC
         template_dir: templates
@@ -204,7 +196,7 @@ config:
             kwargs:
               lifetime: 600
           id_token:
-            class: oidcop.token.id_token.IDToken
+            class: idpyoidc.server.token.id_token.IDToken
             kwargs:
               id_token_encryption_alg_values_supported: *id001
               id_token_encryption_enc_values_supported:
@@ -215,12 +207,31 @@ config:
               - A192GCM
               - A256GCM
               id_token_signing_alg_values_supported: *id002
-          jwks_file: data/oidc_op/private/token_jwks.json
+          #jwks_file: data/oidc_op/private/token_jwks.json
+          # jwks_def:
+            # private_path: data/oidc_op/private/token_jwks.json
+            # read_only: False
+            # key_defs:
+              # - type: oct
+                # bytes: 24
+                # use:
+                  # - enc
+                # kid: code
+              # - type: oct
+                # bytes: 24
+                # use:
+                  # - enc
+                # kid: token
+              # - type: oct
+                # bytes: 24
+                # use:
+                  # - enc
+                # kid: refresh
           refresh:
             kwargs:
               lifetime: 86400
           token:
-            class: oidcop.token.jwt_token.JWTToken
+            class: idpyoidc.server.token.jwt_token.JWTToken
             kwargs:
               lifetime: 3600
         userinfo:
@@ -230,7 +241,7 @@ config:
               #key: value
         # until SATOSA won't support logout the oidcop cookies are quite useless
         #cookie_handler:
-          #class: oidcop.cookie_handler.CookieHandler
+          #class: idpyoidc.server.cookie_handler.CookieHandler
           #kwargs:
             #flags:
               #httponly: true
