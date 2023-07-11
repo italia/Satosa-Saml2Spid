@@ -117,10 +117,10 @@ SAML_CONFIG = {
              # "url": "https://auth.unical.it/idp/metadata/",
              #"disable_ssl_certificate_validation": True,
              # },
-            #  {
-             #  "url": "https://idp.testunical.it/idp/shibboleth",
-             #  "disable_ssl_certificate_validation": True,
-             #  },
+            #{
+            #   "url": "https://localhost:10000/Saml2IDP/metadata",
+            #   "disable_ssl_certificate_validation": True,
+            #},
              #  {
               #  "url": "http://idp1.testunical.it:9000/idp/metadata/",
               #  },
