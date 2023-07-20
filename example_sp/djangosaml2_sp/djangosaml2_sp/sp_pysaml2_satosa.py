@@ -78,7 +78,7 @@ SAML_CONFIG = {
             # Indicates that Authentication Responses to this SP must
             # be signed. If set to True, the SP will not consume
             # any SAML Responses that are not signed.
-            'want_assertions_signed': True,
+            'want_assertions_signed': False,
 
             'only_use_keys_in_metadata': True,
 

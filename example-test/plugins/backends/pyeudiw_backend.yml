@@ -1,0 +1,146 @@
+module: pyeudiw.satosa.backend.OpenID4VPBackend
+name: OpenIDVP4
+
+config:
+  #Those are the endpoints listed on eudi wallet backend
+  pre_request_endpoint: '/<name>/show_qrcode'
+  redirect_endpoint: '/<name>/redirect_uri'
+  request_endpoint: '/<name>/request_uri'
+  entity_configuration_endpoint: '/<name>/entity_configuration'
+
+  error_url: "https://localhost:9999/error_page.html"
+
+  qr_code_settings:
+    size: 100
+    color: '#2B4375'
+    logo_path: 
+    use_zlib: true
+
+  #This is the configuration for the relaying party metadata
+  wallet_relying_party:
+    application_type: web
+
+    #The following section contains all the algorithms supported for the encryption of response
+    authorization_encrypted_response_alg:
+      - RSA-OAEP
+      - RSA-OAEP-256
+    authorization_encrypted_response_enc:
+      - A128CBC-HS256
+      - A192CBC-HS384
+      - A256CBC-HS512
+      - A128GCM
+      - A192GCM
+      - A256GCM
+    authorization_signed_response_alg:
+      - RS256
+      - ES256
+
+    #Various informations of the client
+    client_id: <base>/<name>
+    client_name: Name of an example organization
+    contacts:
+      - ops@verifier.example.org
+    default_acr_values:
+      - https://www.spid.gov.it/SpidL2
+      - https://www.spid.gov.it/SpidL3
+    default_max_age: 1111
+
+    #The following section contains all the algorithms supported for the encryption of id token response
+    id_token_encrypted_response_alg:
+      - RSA-OAEP
+      - RSA-OAEP-256
+    id_token_encrypted_response_enc:
+      - A128CBC-HS256
+      - A192CBC-HS384
+      - A256CBC-HS512
+      - A128GCM
+      - A192GCM
+      - A256GCM
+    id_token_signed_response_alg:
+      - RS256
+      - ES256
+
+    jwks:
+      keys:
+        - e: AQAB
+          kid: YhNFS3YnC9tjiCaivhWLVUJ3AxwGGz_98uRFaqMEEs
+          kty: RSA
+          n: "1Ta-sE \u2026"
+          use: sig
+          x5c:
+          - '...'
+
+    #This section contains the details for presentation request
+    presentation_definitions:
+      - id: pid-sd-jwt:unique_id+given_name+family_name
+        input_descriptors:
+        - format:
+            constraints:
+              fields:
+              - filter:
+                  const: PersonIdentificationData
+                  type: string
+                path:
+                - $.sd-jwt.type
+              - filter:
+                  type: object
+                path:
+                - $.sd-jwt.cnf
+              - intent_to_retain: 'true'
+                path:
+                - $.sd-jwt.family_name
+              - intent_to_retain: 'true'
+                path:
+                - $.sd-jwt.given_name
+              - intent_to_retain: 'true'
+                path:
+                - $.sd-jwt.unique_id
+              limit_disclosure: required
+            jwt:
+              alg:
+              - EdDSA
+              - ES256
+          id: sd-jwt
+      - id: mDL-sample-req
+        input_descriptors:
+        - format:
+            constraints:
+              fields:
+              - filter:
+                  const: org.iso.18013.5.1.mDL
+                  type: string
+                path:
+                - $.mdoc.doctype
+              - filter:
+                  const: org.iso.18013.5.1
+                  type: string
+                path:
+                - $.mdoc.namespace
+              - intent_to_retain: 'false'
+                path:
+                - $.mdoc.family_name
+              - intent_to_retain: 'false'
+                path:
+                - $.mdoc.portrait
+              - intent_to_retain: 'false'
+                path:
+                - $.mdoc.driving_privileges
+              limit_disclosure: required
+            mso_mdoc:
+              alg:
+              - EdDSA
+              - ES256
+          id: mDL
+
+    redirect_uris:
+      - <base>/<name>/redirect_uri
+    request_uris:
+      - <base>/<name>/request_uri
+    require_auth_time: true
+    subject_type: pairwise
+
+    vp_formats:
+      jwt_vp_json:
+        alg:
+          - EdDSA
+          - ES256K
