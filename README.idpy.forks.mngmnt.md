@@ -5,31 +5,37 @@ git clone https://github.com/identitypython/pysaml2
 cd pysaml2/
 
 # create current pplnx branch
-git checkout --orphan pplnx-v7.2.1
-git remote add pplnx https://github.com/peppelinux/pysaml2.git
-git reset --hard
-git pull origin master
+git remote add ppl nx https://github.com/peppelinux/pysaml2.git
+# git checkout --orphan pplnx-v7.4.2
+# git reset --hard
+# git pull origin master
+
+git checkout -b pplnx-v7.4.2
 
 # pplnx's patches
 
 # https://github.com/IdentityPython/pysaml2/pull/628
 # SPID required
-git pull pplnx disabled_weak_algs
+git pull pplnx disabled_weak_algs --ff
 
 # https://github.com/IdentityPython/pysaml2/pull/625
 # this must be merged at the end, otherwise break the unit tests
-git pull pplnx ns_prefixes
+git pull pplnx ns_prefixes --ff
+
+# check that tests are ok
+python3 -m pytest tests/ -x
 ````
 
 # SATOSA
 
 ````
-git clone https://github.com/identitypython/satosa
-cd SATOSA
+git clone https://github.com/identitypython/satosa -o satosa
+cd satosa
 git remote add pplnx https://github.com/peppelinux/SATOSA.git
-git checkout --orphan pplnx-v8.2.0
-git reset --hard
-git pull origin master
+# git checkout --orphan pplnx-v8.4.0
+# git reset --hard
+# git pull origin master
+git checkout -b pplnx-v8.4.0
 
 pip install -r tests/test_requirements.txt
 pip install pymongo
@@ -47,15 +53,13 @@ sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 sudo apt install -y mongodb-org
 sudo systemctl start mongod
 
+# https://github.com/IdentityPython/SATOSA/pull/324
+git pull pplnx context_state_error_msg -ff
+
+# staging ... need more checks if the latests satosa releases can live without it
+# https://github.com/IdentityPython/SATOSA/pull/325
+# git pull pplnx error_redirect_page --ff
+
 # check that tests are ok
 python3 -m pytest tests/ -x
-
-# https://github.com/IdentityPython/SATOSA/pull/363
-git pull pplnx cookie_conf_2
-
-# https://github.com/IdentityPython/SATOSA/pull/324
-git pull pplnx context_state_error_msg
-
-# https://github.com/IdentityPython/SATOSA/pull/325
-git pull pplnx error_redirect_page
 ````
