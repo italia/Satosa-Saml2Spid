@@ -2,8 +2,13 @@ module: pyeudiw.satosa.backend.OpenID4VPBackend
 name: OpenID4VP
 
 config:
-
-  error_url: "https://localhost:9999/error_page.html"
+  
+  ui:
+    static_storage_url: "https://localhost:9999"
+    template_folder: "templates" # project root
+    qrcode_template: "qrcode.html"
+    error_template: "error.html"
+    error_url: "https://localhost:9999/error_page.html"
   
   endpoints:
       pre_request: '/<name>/pre-request'
@@ -15,11 +20,11 @@ config:
     size: 100
     color: '#2B4375'
     logo_path: 
-    use_zlib: true
+    use_zlib: false
 
   jwt_settings:
     default_sig_alg: "ES256" # or RS256
-    default_exp: 6 # minutes
+    default_exp: 6           # minutes
   
   authorization_url_scheme: "eudiw" # eudiw://
 
@@ -41,7 +46,7 @@ config:
     
     trust_marks: # todo
     - ...
-  
+
   # private jwk
   metadata_jwks: 
   - crv: P-256
@@ -50,7 +55,7 @@ config:
     kty: EC
     x: TSO-KOqdnUj5SUuasdlRB2VVFSqtJOxuR5GftUTuBdk
     y: ByWgQt1wGBSnF56jQqLdoO1xKUynMY-BHIDB3eXlR7
- 
+
   #This is the configuration for the relaying party metadata
   metadata:
     application_type: web
@@ -78,7 +83,7 @@ config:
     default_acr_values:
       - https://www.spid.gov.it/SpidL2
       - https://www.spid.gov.it/SpidL3
-    
+
     default_max_age: 1111
 
     #The following section contains all the algorithms supported for the encryption of id token response
@@ -95,7 +100,7 @@ config:
     id_token_signed_response_alg:
       - RS256
       - ES256
-    
+
     # loaded in the __init__
     # jwks:
 
@@ -165,6 +170,7 @@ config:
       - <base_url>/<name>/redirect_uri
     request_uris:
       - <base_url>/<name>/request_uri
+
     require_auth_time: true
     subject_type: pairwise
 
