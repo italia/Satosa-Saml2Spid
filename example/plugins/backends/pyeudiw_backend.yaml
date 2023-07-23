@@ -23,11 +23,14 @@ config:
     use_zlib: false
 
   jwt_settings:
-    default_sig_alg: "ES256" # or RS256
-    default_exp: 6           # minutes
+    default_sig_alg: ES256 # or RS256
+    default_exp: 6         # minutes
   
-  authorization_url_scheme: "eudiw" # eudiw://
-
+  authorization:
+    url_scheme: "eudiw" # eudiw://
+    scopes: 
+    - pid-sd-jwt:unique_id+given_name+family_name
+    
   federation:
     metadata_type: "wallet_relying_party"
     federation_authorities:
@@ -108,7 +111,8 @@ config:
     presentation_definitions:
       - id: pid-sd-jwt:unique_id+given_name+family_name
         input_descriptors:
-        - format:
+        - id: pid-sd-jwt:unique_id+given_name+family_name
+          format:
             constraints:
               fields:
               - filter:
@@ -134,7 +138,6 @@ config:
               alg:
               - EdDSA
               - ES256
-          id: sd-jwt
       - id: mDL-sample-req
         input_descriptors:
         - format:
