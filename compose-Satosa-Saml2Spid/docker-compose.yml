@@ -77,9 +77,11 @@ services:
       - "9999:9999"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - satosa_metadata:/satosa_proxy/metadata
+       - ../my_docker_volumes/metadata:/satosa_proxy/metadata
        - satosa_static:/satosa_proxy/static
        - satosa_certs:/satosa_proxy/pki
+       - ../my_custom_configurations/target_based_routing.yaml:/satosa_proxy/plugins/microservices/target_based_routing.yaml
+       - ../my_custom_configurations/spid-idps.js:/satosa_proxy/static/spid/spid-idps.js
 
   satosa-nginx:
     image: nginx:alpine
@@ -94,7 +96,7 @@ services:
       - ./nginx/50x.html:/usr/share/nginx/html/50x.html:ro
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
-      - nginx_certs:/etc/nginx/certs:ro
+      - ../my_docker_volumes/nginx/certs:/etc/nginx/certs:ro
       - satosa_static:/var/www/html
 
 volumes:
