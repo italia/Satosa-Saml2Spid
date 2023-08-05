@@ -24,8 +24,31 @@ config:
 
   jwt:
     default_sig_alg: ES256 # or RS256
+    default_enc_alg: RSA-OAEP
+    default_enc_enc: A256CBC-HS512
     default_exp: 6         # minutes
-
+    enc_alg_supported:
+        - RSA-OAEP
+        - RSA-OAEP-256
+        - ECDH-ES
+        - ECDH-ES+A128KW
+        - ECDH-ES+A192KW
+        - ECDH-ES+A256KW
+    enc_enc_supported:
+        - A128CBC-HS256
+        - A192CBC-HS384
+        - A256CBC-HS512
+        - A128GCM
+        - A192GCM
+        - A256GCM
+    sig_alg_supported:
+        - RS256
+        - RS384
+        - RS512
+        - ES256
+        - ES384
+        - ES512
+    
   authorization:
     url_scheme: "eudiw" # eudiw://
     scopes: 
@@ -73,12 +96,17 @@ config:
   storage:
       mongo_db:
         cache:
-          url: mongodb://localhost:27017/
-          conf:
-            db_name: eudiw
+          module: pyeudiw.storage.mongo_cache
+          class: MongoCache
+          config:
+            url: mongodb://localhost:27017/
+            conf:
+              db_name: eudiw
         storage:
-          url: mongodb://localhost:27017/
-          conf:
+          module: pyeudiw.storage.mongo_storage
+          class: MongoStorage
+          config:
+            url: mongodb://localhost:27017/
             db_name: eudiw
             db_collection: sessions
 
@@ -87,19 +115,9 @@ config:
     application_type: web
 
     #The following section contains all the algorithms supported for the encryption of response
-    authorization_encrypted_response_alg:
-      - RSA-OAEP
-      - RSA-OAEP-256
-    authorization_encrypted_response_enc:
-      - A128CBC-HS256
-      - A192CBC-HS384
-      - A256CBC-HS512
-      - A128GCM
-      - A192GCM
-      - A256GCM
-    authorization_signed_response_alg:
-      - RS256
-      - ES256
+    authorization_encrypted_response_alg: <jwt.enc_alg_supported>
+    authorization_encrypted_response_enc: <jwt.enc_enc_supported>
+    authorization_signed_response_alg: <jwt.sig_alg_supported>
 
     #Various informations of the client
     client_id: "<base_url>/<name>"
@@ -113,19 +131,9 @@ config:
     default_max_age: 1111
 
     #The following section contains all the algorithms supported for the encryption of id token response
-    id_token_encrypted_response_alg:
-      - RSA-OAEP
-      - RSA-OAEP-256
-    id_token_encrypted_response_enc:
-      - A128CBC-HS256
-      - A192CBC-HS384
-      - A256CBC-HS512
-      - A128GCM
-      - A192GCM
-      - A256GCM
-    id_token_signed_response_alg:
-      - RS256
-      - ES256
+    id_token_encrypted_response_alg: <jwt.enc_alg_supported>
+    id_token_encrypted_response_enc: <jwt.enc_enc_supported>
+    id_token_signed_response_alg: <jwt.sig_alg_supported>
 
     # loaded in the __init__
     # jwks:
