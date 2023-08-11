@@ -56,7 +56,9 @@ config:
     
   federation:
     metadata_type: "wallet_relying_party"
-    federation_authorities:
+    authority_hints:
+        - http://127.0.0.1:8000
+    trust_anchors:
         - http://127.0.0.1:8000
     default_sig_alg: "RS256"
     
@@ -94,21 +96,21 @@ config:
 
   # Mongodb database configuration
   storage:
-      mongo_db:
-        cache:
-          module: pyeudiw.storage.mongo_cache
-          class: MongoCache
-          config:
-            url: mongodb://localhost:27017/
-            conf:
-              db_name: eudiw
-        storage:
-          module: pyeudiw.storage.mongo_storage
-          class: MongoStorage
-          config:
-            url: mongodb://localhost:27017/
+    mongo_db:
+      cache:
+        module: pyeudiw.storage.mongo_cache
+        class: MongoCache
+        config:
+          url: mongodb://localhost:27017/
+          conf:
             db_name: eudiw
-            db_collection: sessions
+      storage:
+        module: pyeudiw.storage.mongo_storage
+        class: MongoStorage
+        config:
+          url: mongodb://localhost:27017/
+          db_name: eudiw
+          db_collection: sessions
 
   #This is the configuration for the relaying party metadata
   metadata:
