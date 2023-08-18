@@ -2,7 +2,8 @@ attributes:
   address:
     openid: [address.street_address]
     orcid: [addresses.str]
-    saml: [postaladdress, address]
+    saml: [postaladdress, addressS]
+    openid4vp: [address]
   displayname:
     openid: [nickname]
     orcid: [name.credit-name]
@@ -14,7 +15,8 @@ attributes:
     orcid: [orcid]
     github: [id]
     openid: [sub]
-    saml: [eduPersonTargetedID, eduPersonTargetedId, spidCode]
+    saml: [eduPersonTargetedID, eduPersonTargetedId, spidCode, sub, id]
+    openid4vp: [sub]
   edupersonprincipalname:
     saml: [eduPersonPrincipalName]
   edupersonscopedaffiliation:
@@ -34,6 +36,7 @@ attributes:
     linkedin: [email-address]
     orcid: [name.given-names.value]
     openid: [given_name]
+    openid4vp: [given_name]
     saml: [givenName, name, Name]
   mail:
     facebook: [email]
@@ -42,21 +45,25 @@ attributes:
     github: [email]
     openid: [email]
     saml: [mail, email]
+    openid4vp: [mail, email]
   name:
     facebook: [name]
     orcid: [name.credit-name]
     github: [name]
     openid: [name]
     saml: [name, Name]
+    openid4vp: [given_name]
   surname:
     facebook: [last_name]
     linkedin: [lastName]
     orcid: [name.family-name.value]
     openid: [family_name]
     saml: [sn, surname, familyName, FamilyName]
+    openid4vp: [family_name]
   # spid related
   spidcode:
     openid: [spidcode]
+    openid4vp: [sub]
     saml: [spidCode]
 # decommentando questo la email rilasciata anche in caso di account linking sarà quella di spid
 # commentando: email sarà rilasciato in formato URI
@@ -66,6 +73,7 @@ attributes:
     orcid: [emails.str]
     github: [email]
     openid: [email]
+    openid4vp: [mail, email]
     saml: [mail]
   familyname:
     saml: [familyName, familyname, FamilyName]

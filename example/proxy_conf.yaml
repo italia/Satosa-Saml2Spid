@@ -63,7 +63,7 @@ LOGGING:
       formatter: syslog
     console:
       class: logging.StreamHandler
-      level: INFO
+      level: DEBUG
       formatter: simple
       stream: ext://sys.stdout
     saml2_debug_file:
@@ -113,7 +113,12 @@ LOGGING:
       formatter: simple
       handlers: [console]
       propagate: no
-
+    pyeudiw.satosa.backend:
+      level: DEBUG
+      formatter: simple
+      handlers: [console]
+      propagate: no
+      
   # root:
     # level: INFO
     # handlers: [info_file_handler]

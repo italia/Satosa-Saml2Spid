@@ -11,10 +11,12 @@ config:
     error_url: "https://localhost:9999/error_page.html"
   
   endpoints:
-      pre_request: '/<name>/pre-request'
-      redirect: '/<name>/redirect_uri'
-      request: '/<name>/request_uri'
-      entity_configuration: '/<name>/.well-known/openid-federation'
+      pre_request: '/pre-request'
+      redirect: '/redirect-uri'
+      request: '/request-uri'
+      entity_configuration: '/.well-known/openid-federation'
+      status: '/status'
+      get_response: '/get-response'
 
   qrcode:
     size: 100
@@ -50,10 +52,24 @@ config:
         - ES512
     
   authorization:
-    url_scheme: "eudiw" # eudiw://
+    url_scheme: eudiw # eudiw://
     scopes: 
     - pid-sd-jwt:unique_id+given_name+family_name
-    
+    default_acr_value: https://www.spid.gov.it/SpidL2
+
+  user_attributes:
+    unique_identifiers:
+    - tax_id_code
+    - unique_id
+    subject_id_salt: CHANGEME!
+  
+  network:
+    httpc_params:
+      connection:
+        ssl: true
+      session:
+        timeout: 6
+
   federation:
     metadata_type: "wallet_relying_party"
     authority_hints:
@@ -72,8 +88,8 @@ config:
         p: 2zmGXIMCEHPphw778YjVTar1eycih6fFSJ4I4bl1iq167GqO0PjlOx6CZ1-OdBTVU7HfrYRiUK_BnGRdPDn-DQghwwkB79ZdHWL14wXnpB5y-boHz_LxvjsEqXtuQYcIkidOGaMG68XNT1nM4F9a8UKFr5hHYT5_UIQSwsxlRQ0
         q: 2jMFt2iFrdaYabdXuB4QMboVjPvbLA-IVb6_0hSG_-EueGBvgcBxdFGIZaG6kqHqlB7qMsSzdptU0vn6IgmCZnX-Hlt6c5X7JB_q91PZMLTO01pbZ2Bk58GloalCHnw_mjPh0YPviH5jGoWM5RHyl_HDDMI-UeLkzP7ImxGizrM
     
-    trust_marks: # todo
-    - ...
+    # trust_marks: # todo
+    # - ...
 
   # private jwk
   metadata_jwks: 
@@ -100,17 +116,22 @@ config:
       cache:
         module: pyeudiw.storage.mongo_cache
         class: MongoCache
-        config:
-          url: mongodb://localhost:27017/
+        init_params:
+          url: mongodb://localhost:27017
           conf:
             db_name: eudiw
+          # connection_params:
       storage:
         module: pyeudiw.storage.mongo_storage
         class: MongoStorage
-        config:
-          url: mongodb://localhost:27017/
-          db_name: eudiw
-          db_collection: sessions
+        init_params:
+          url: mongodb://localhost:27017
+          conf:
+            db_name: eudiw
+            db_sessions_collection: sessions
+            db_trust_attestations_collection: trust_attestations
+            db_trust_anchors_collection: trust_anchors
+          # - connection_params:
 
   #This is the configuration for the relaying party metadata
   metadata:
@@ -203,9 +224,9 @@ config:
           id: mDL
 
     redirect_uris:
-      - <base_url>/<name>/redirect_uri
+      - <base_url>/<name>/redirect-uri
     request_uris:
-      - <base_url>/<name>/request_uri
+      - <base_url>/<name>/request-uri
 
     require_auth_time: true
     subject_type: pairwise
