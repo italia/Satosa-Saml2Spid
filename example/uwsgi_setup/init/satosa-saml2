@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 ### BEGIN INIT INFO
 # Provides:          satosa-saml2
-# Required-Start:    nginx
+# Required-Start:    nginx mongod
 # Required-Stop:
 # Should-Start:
 # Default-Start:     2 3 4 5
@@ -19,12 +19,12 @@
 
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 BASEDIR="/opt"
-ENVDIR="$BASEDIR/django-pysaml2.env"
-APPNAME="satosa-saml2"
-APPDIR="$BASEDIR/$APPNAME"
+ENVDIR="$BASEDIR/satosa-saml2spid/env"
+APPNAME="satosa-saml2spid"
+APPDIR="$BASEDIR/$APPNAME/example-openid4vp"
 #DEBUG=""
-PID_PATH="/var/log/uwsgi"
-COMMAND="uwsgi --uid 1000 --ini $APPDIR/uwsgi_setup/uwsgi.ini &"
+PID_PATH="/var/log/uwsgi/$APPDIR"
+COMMAND="uwsgi --uid 1000 --ini $APPDIR/uwsgi_setup/uwsgi/uwsgi.ini"
 STOP_CMD="source $ENVDIR/bin/activate && uwsgi --stop $PID_PATH/$APPNAME.pid"
 RELOAD_CMD="source $ENVDIR/bin/activate && uwsgi --reload $PID_PATH/$APPNAME.pid"
 
@@ -34,7 +34,7 @@ chown -R $USER $PID_PATH
 
 case "$1" in
   start)
-    source $ENVDIR/bin/activate && $COMMAND
+    . $ENVDIR/bin/activate && $COMMAND &
     ;;
   stop)
     #kill -KILL  $(ps ax | grep $APPNAME | awk -F' ' {'print $1'} | xargs echo)
