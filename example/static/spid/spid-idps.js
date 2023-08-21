@@ -8,16 +8,16 @@
 // - logo - url of IDP logo image
 const idps = [
   {"entityName": "SPID Test", "entityID": "https://localhost:8080", "logo": ""},
-  {"entityName": "Aruba ID", "entityID": "https://loginspid.aruba.it", "logo": "spid/spid-idp-arubaid.svg"},
-  {"entityName": "Infocert ID", "entityID": "https://identity.infocert.it", "logo": "spid/spid-idp-infocertid.svg"},
-  {"entityName": "Intesa ID", "entityID": "https://spid.intesa.it", "logo": "spid/spid-idp-intesaid.svg"},
-  {"entityName": "Lepida ID", "entityID": "https://id.lepida.it/idp/shibboleth", "logo": "spid/spid-idp-lepidaid.svg"},
-  {"entityName": "Namirial ID", "entityID": "https://idp.namirialtsp.com/idp", "logo": "spid/spid-idp-namirialid.svg"},
-  {"entityName": "Poste ID", "entityID": "https://posteid.poste.it", "logo": "spid/spid-idp-posteid.svg"},
-  {"entityName": "Sielte ID", "entityID": "https://identity.sieltecloud.it", "logo": "spid/spid-idp-sielteid.svg"},
-  {"entityName": "SPIDItalia Register.it", "entityID": "https://spid.register.it", "logo": "spid/spid-idp-spiditalia.svg"},
-  {"entityName": "Tim ID", "entityID": "https://login.id.tim.it/affwebservices/public/saml2sso", "logo": "spid/spid-idp-timid.svg"},
-  {"entityName": "TeamSystem ID", "entityID": "https://spid.teamsystem.com/idp", "logo": "spid/spid-idp-teamsystemid.svg"}
+  {"entityName": "Aruba ID", "entityID": "https://loginspid.aruba.it", "logo": "/static/spid/spid-idp-arubaid.svg"},
+  {"entityName": "Infocert ID", "entityID": "https://identity.infocert.it", "logo": "/static/spid/spid-idp-infocertid.svg"},
+  {"entityName": "Intesa ID", "entityID": "https://spid.intesa.it", "logo": "/static/spid/spid-idp-intesaid.svg"},
+  {"entityName": "Lepida ID", "entityID": "https://id.lepida.it/idp/shibboleth", "logo": "/static/spid/spid-idp-lepidaid.svg"},
+  {"entityName": "Namirial ID", "entityID": "https://idp.namirialtsp.com/idp", "logo": "/static/spid/spid-idp-namirialid.svg"},
+  {"entityName": "Poste ID", "entityID": "https://posteid.poste.it", "logo": "/static/spid/spid-idp-posteid.svg"},
+  {"entityName": "Sielte ID", "entityID": "https://identity.sieltecloud.it", "logo": "/static/spid/spid-idp-sielteid.svg"},
+  {"entityName": "SPIDItalia Register.it", "entityID": "https://spid.register.it", "logo": "/static/spid/spid-idp-spiditalia.svg"},
+  {"entityName": "Tim ID", "entityID": "https://login.id.tim.it/affwebservices/public/saml2sso", "logo": "/static/spid/spid-idp-timid.svg"},
+  {"entityName": "TeamSystem ID", "entityID": "https://spid.teamsystem.com/idp", "logo": "/static/spid/spid-idp-teamsystemid.svg"}
 ].sort(() => Math.random() - 0.5)
 
 // ** Values **
