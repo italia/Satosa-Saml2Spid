@@ -52,7 +52,7 @@ config:
         - ES512
     
   authorization:
-    url_scheme: eudiw # eudiw://
+    url_scheme: eudiw
     scopes: 
     - pid-sd-jwt:unique_id+given_name+family_name
     default_acr_value: https://www.spid.gov.it/SpidL2
@@ -143,7 +143,7 @@ config:
     authorization_signed_response_alg: <jwt.sig_alg_supported>
 
     #Various informations of the client
-    client_id: "<base_url>/<name>"
+    client_id: <base_url>/<name>
     client_name: Name of an example organization
     contacts:
       - ops@verifier.example.org
@@ -163,7 +163,7 @@ config:
 
     #This section contains the details for presentation request
     presentation_definitions:
-      - id: pid-sd-jwt:unique_id+given_name+family_name
+      - id: pid
         input_descriptors:
         - id: pid-sd-jwt:unique_id+given_name+family_name
           format:
