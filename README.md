@@ -188,6 +188,8 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS**|Metadata Contact person email||
 |**$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER**|Metadata Contact person telephone number for SPID / CIE Backend||
 |**$SATOSA_CONTACT_PERSON_FISCALCODE**|Metadata Contact person fiscal code for SPID / CIE Backend||
+|**$SATOSA_CONTACT_PERSON_IPA_CODE**|Metadata Contact person ipa code for SPID / CIE Backend||
+|**$SATOSA_CONTACT_PERSON_MUNICIPALITY**|Metadata Contact person municipality code for CIE Backend||
 |**$SATOSA_UI_DISPLAY_NAME_EN**|Metadata English ui display name||
 |**$SATOSA_UI_DISPLAY_NAME_IT**|Metadata Italian ui display name||
 |**$SATOSA_UI_DESCRIPTION_EN**|Metadata English ui description||
