@@ -173,8 +173,8 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_ENCRYPTION_KEY**|encription key for state|"CHANGE_ME!"|
 |**$SATOSA_SALT**|encription salt|"CHANGE_ME!"|
 |**$SATOSA_DISCO_SRV**|Descovery page URL for all backends|"https://$HOSTNAME/static/disco.html"|
-|**$SATOSA_PRIVATE_KEYS**|private key for SAML2 / SPID backends||
-|**$SATOSA_PUBLIC_KEYS**|public key for SAML2 / SPID backends||
+|**$SATOSA_PRIVATE_KEY**|private key for SAML2 / SPID backends||
+|**$SATOSA_PUBLIC_KEY**|public key for SAML2 / SPID backends||
 |**$MONGODB_USERNAME**|MongoDB username for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
 |**$MONGODB_PASSWORD**|MongoDB password for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
 |**$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE**|redirect page for unknow erros|"https://$HOSTNAME/static/error_page.html"|
