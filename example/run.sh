@@ -164,8 +164,8 @@ fi
 
 # import satosa keys with $SATOSA_PUBLIC_KEY and $SATOSA_PRIVATE_KEY, both must be present
 if [[ -v SATOSA_PRIVATE_KEY && -v SATOSA_PUBLIC_KEY ]]; then
-  echo $SATOSA_PRIVATE_KEYS > pki/privkey.pem
-  echo $SATOSA_PUBLIC_KEY > pki/cert.pem
+  echo "$SATOSA_PRIVATE_KEY" > pki/privkey.pem
+  echo "$SATOSA_PUBLIC_KEY" > pki/cert.pem
   echo "Satosa keys imported"
 else
   echo "satosa has loaded default keys"
