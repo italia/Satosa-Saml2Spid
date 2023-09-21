@@ -6,7 +6,7 @@ config:
   ui:
     static_storage_url: "https://localhost:9999"
     template_folder: "templates" # project root
-    qrcode_template: "qrcode.html"
+    qrcode_template: "qr_code.html"
     error_template: "error.html"
     error_url: "https://localhost:9999/error_page.html"
   
@@ -52,7 +52,7 @@ config:
         - ES512
     
   authorization:
-    url_scheme: eudiw # eudiw://
+    url_scheme: eudiw
     scopes: 
     - pid-sd-jwt:unique_id+given_name+family_name
     default_acr_value: https://www.spid.gov.it/SpidL2
@@ -77,7 +77,13 @@ config:
     trust_anchors:
         - http://127.0.0.1:8000
     default_sig_alg: "RS256"
-    
+    federation_entity_metadata:
+      - organization_name: Developers Italia SATOSA OpenID4VP backend
+      - homepage_uri: https://developers.italia.it
+      - policy_uri: https://developers.italia.it
+      - tos_uri: https://developers.italia.it
+      - logo_uri: https://developers.italia.it/assets/icons/logo-it.svg
+
     # private jwk
     federation_jwks:
       - kty: RSA

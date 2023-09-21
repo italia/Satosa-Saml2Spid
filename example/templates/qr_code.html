@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+<div class="col-12 py-md-5 bd-content">
+  <div class="card-wrapper card-space">
+    <div class="card card-bg no-after">
+      <div class="card-body">
+                  
+<div class="qr-code-box">
+    <div class="card-body">
+        <div class="row border-md-bottom-title">
+            <p id="content-title" class="qr-code-title text-center">Inquadra il QR code</p>
+        </div>
+        <div id="content" class="col-lg-12 text-center">
+            <div class="row">
+                <div id="content-text" class="qr-code-text">Usa la funzionalità "inquadra" disponibile in AppIO.</div>
+                </div>
+            <br>
+            <div id="content-qrcode" class="row">
+                <span id="content-qrcode-payload"><img width="45%" src='data:image/svg+xml;base64,{{ qrcode_base64 }}'></span>
+                <div id="content-qrcode-info">
+                    <p id="content-qrcode-info-text" class="text-helper text-info">
+                        Il codice è valido per <b id="timer"></b> secondi
+                    </p>
+                    <p id="content-qrcode-subtitle" class="qr-code-text" hidden>
+                        Puoi trovarla direttamente all'interno dell'app IO. 
+                        Se hai più dispositivi mobili,
+                        scegli su quale dispositivo preferisci ricevere le notifiche.
+                    </p>
+                </div>
+            </div>
+<!--
+            <div class="row">
+                <div id="content-function" class="col-lg-2 text-center button-container">
+                    <button class="btn btn-outline-primary">
+                        <span>Annulla</span>
+                    </button>
+                </div>
+            </div>
+-->
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    let failureTitle = "Autenticazione fallita";
+    let failureText = "Qualcosa non ha funzionato. Genera un nuovo QR code per riprovare oppure segui le istruzioni visibili sull'app IO.";
+
+    let startingConnectionTitle = "Continua sul tuo smartphone";
+    let startingConnectionText = "Per proseguire, segui le istruzioni sull'app IO e autorizza l'accesso";
+    let startingConnectionQRInfo = "<b>Non hai ricevuto la notifica?</b>";
+    let clickAccessLabel = "Clicca qui per accedere al servizio";
+    let connectedTitle = "Autenticazione effettuata";
+    let qrCodeExpiredInfo = "Il QR code non è più valido.";
+
+    let expirationTime = 126;
+    let pollingInterval;
+
+    function StartQRcodeScanCheck(){
+        $('#timer').text(expirationTime);        
+        let timeout = 5000;
+        // setTimeout(timeout);
+        pollingInterval = setTimeout(QRcodeScanCheck, timeout);
+    }
+
+    function Forbidden(data, textStatus, jqXHR){
+        console.log('403: Forbidden');
+        clearInterval(countdown);
+        changeTitle(failureTitle);
+        changeText(failureText);
+        blankQRcode();
+        changeQrCodeInfo(null)
+    }
+
+    function connectionCompleted(data, textStatus, jqXHR) {
+        console.log('authenticated');
+
+        clearInterval(countdown);
+        changeTitle(connectedTitle);
+        //changeText(connectedText);
+        // changeQrCodeInfo(null)
+        $('#content-text').html("");
+        $('#content-qrcode-payload').html("");
+        $('#content-qrcode-info').html(`
+            <div class="row">
+              <div class="col-lg-12 text-center button-container column-buttons">
+                  <a href="${data.response_url}" 
+                     class="btn btn-primary w-100" 
+                     aria-haspopup="false" 
+                     aria-expanded="false" 
+                     data-focus-mouse="false"
+                   >
+                    <span>"${clickAccessLabel}"</span>
+                  </a>
+              </div>
+            </div>`
+        )
+}
+
+    function QRcodeExpired(){
+        console.log('session expired');
+        changeQrCodeInfo(qrCodeExpiredInfo);
+    }
+
+    function serverError(data, textStatus, jqXHR){
+        console.log('500: Server Error');
+        clearInterval(countdown);
+        changeTitle(failureTitle);
+        changeText(failureText);
+        blankQRcode();
+        changeQrCodeInfo(null)
+    }
+
+    function changeTitle(str){
+        $('#content-title').html(str);
+    }
+
+    function changeText(str){
+        $('#content-text').html(str);
+    }
+
+    function changeQrCodeInfo(str){
+        $('#content-qrcode-info-text').html(str);
+    }
+
+    function blankQRcode(){
+        $('#content img').replaceWith('<div style="width: 12em; height: 12em; background-color: gray; margin: 0 auto;"></div>');
+    }
+
+    var countdown = setInterval(function() {
+        $('#timer').text(expirationTime);
+        expirationTime--;
+        if (expirationTime < 0) {
+            clearInterval(countdown);
+            clearTimeout(pollingInterval);
+            QRcodeExpired();
+        }
+    }, 1000);
+
+    function QRcodeScanCheck() {
+      let endpointSatosa = "{{ status_endpoint }}";
+      let data = {
+        "id": "{{ state }}", 
+      };
+
+      let ajaxRequest = $.ajax({
+        type: 'GET',
+        url: endpointSatosa,
+        data,
+        statusCode: {
+          201: StartQRcodeScanCheck,
+          200: connectionCompleted,
+          400: Forbidden,
+          401: Forbidden,
+          403: Forbidden,
+          500: serverError,
+        }
+      });
+
+      return ajaxRequest;
+    }
+
+    StartQRcodeScanCheck();
+
+
+</script>
+
+{% endblock body %}
