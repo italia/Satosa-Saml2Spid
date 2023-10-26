@@ -23,7 +23,7 @@ COPY requirements.txt $BASEDIR/
 COPY oids.conf $BASEDIR/pki/
 COPY build_spid_certs.sh $BASEDIR/pki/
 
-RUN apk add --update xmlsec libffi-dev libressl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq \
+RUN apk add --update xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq \
 && cd $BASEDIR/pki/ \
 && chmod 755 $BASEDIR/pki/build_spid_certs.sh \
 && $BASEDIR/pki/build_spid_certs.sh \
