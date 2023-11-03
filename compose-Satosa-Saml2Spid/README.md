@@ -158,7 +158,7 @@ In the [project readme](../README.md#configuration-by-environments) is present a
       # - SATOSA_ORGANIZATION_NAME_IT=Resource provided by Example Organization
       # - SATOSA_ORGANIZATION_URL_EN=https://example_organization.org
       # - SATOSA_ORGANIZATION_URL_IT=https://example_organization.org
-      # - SATOSA_PRIVATE_KEYS=
+      # - SATOSA_PRIVATE_KEY=
       # - SATOSA_PUBLIC_KEY=
       # - SATOSA_SALT=
       # - SATOSA_STATE_ENCRYPTION_KEY
