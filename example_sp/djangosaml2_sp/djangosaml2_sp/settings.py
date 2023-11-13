@@ -109,6 +109,7 @@ SESSION_COOKIE_AGE = 60 * 60  # an hour
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+DJANGO_BOOTSTRAP_ITALIA_USE_CDN = False
 
 if 'saml2_sp' in INSTALLED_APPS or \
    'djangosaml2_spid' in INSTALLED_APPS:
