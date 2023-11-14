@@ -23,19 +23,19 @@ echo -e "\n"
 
 echo -e "Provo a scaricare le nuove versioni. \n"
 
-docker-compose -f docker-compose.yml pull
+docker compose -f docker-compose.yml pull
 
 echo -e "\n"
 
 echo -e "Provo a fare il down della composizione. \n"
 
-docker-compose -f docker-compose.yml down -v
+docker compose -f docker-compose.yml down -v
 
 echo -e "\n"
 
 echo -e "Tiro su la composizione, in caso, con le nuove versioni delle immagini. \n"
 
-docker-compose -f docker-compose.yml up -d
+docker compose -f docker-compose.yml up -d
 
 echo -e "\n"
 

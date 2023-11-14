@@ -173,6 +173,7 @@ fi
 
 # get IDEM MDQ key
 wget https://mdx.idem.garr.it/idem-mdx-service-crt.pem -O pki/idem-mdx-service-crt.pem
+wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 
 if [[ -v SATOSA_BY_DOCKER ]]; then
   SATOSA_APP=/usr/lib/$(python3 -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa

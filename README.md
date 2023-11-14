@@ -89,7 +89,12 @@ To get redirection to these pages, or redirection to third-party services, it is
 
 the official Satosa-Saml2SPID docker image is available at [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid)
 
-To install the official docker image, simply type: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`
+To install the official docker image, execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
+
+To build locally the image, execute the following command: `docker build -t satosa-saml2spid .`.
+
+To inspect image content: `docker run -it --entrypoint sh satosa-saml2spid`
+
 
 ### Docker compose
 

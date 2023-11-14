@@ -30,8 +30,9 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER}:${MONGO_DBPASSWORD}@satosa-mongo:27017/
 
   satosa-saml2spid:
-    image: ghcr.io/italia/satosa-saml2spid:latest
-    container_name: satosa-saml2spid  
+    #image: ghcr.io/italia/satosa-saml2spid:latest
+    image: satosa-saml2spid:latest
+    container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
     environment:
@@ -75,7 +76,9 @@ services:
       - "10000:10000"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../example-docker:/satosa_proxy
+       - ../docker-example:/satosa_proxy
+    working_dir: /satosa_proxy
+    entrypoint: "sh"
 
   satosa-nginx:
     image: nginx:alpine
@@ -96,9 +99,9 @@ services:
 volumes:
 
   mongodata:
-    external:
-      name: satosa-saml2spid_mongodata
+    name: satosa-saml2spid_mongodata
+    external: true
 
   nginx_certs:
-    external:
-      name: satosa-saml2spid_nginx_certs
+    name: satosa-saml2spid_nginx_certs
+    external: true
