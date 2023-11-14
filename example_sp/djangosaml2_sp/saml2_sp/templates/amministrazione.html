@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-
-{%block tab_active%} active{%endblock%}
+{% load static %}
+{% block tab_active %} active{% endblock %}
 {% block centered_container %}
 <section id="head-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-1 order-lg-2">
-          <img src="https://picsum.photos/800/600" title="titolo immagine" alt="descrizione immagine" class="img-fluid">
+          <img src="{% static 'djangosaml2_sp/img.jpg' %}"title="titolo immagine" alt="descrizione immagine" class="img-fluid">
         </div>
         <div class="col-lg-5 order-lg-1">
           <div class="card">
             <div class="card-body pb-5">
               <div class="category-top">
                 <svg class="icon">
-                  <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-calendar"></use>
+                  <use xlink:href="{% static '/bootstrap-italia/dist/svg/sprites.svg#it-calendar' %}"></use>
                 </svg>
                 <a class="category" href="#">Notizie</a>
                 <span class="data">18 mag 2023</span>
@@ -25,10 +25,10 @@
               <div class="chip chip-simple chip-primary">
                 <a href="#" class="chip-label">Estate in città</a>
               </div>
-              <a class="read-more pb-3" href="/bootstrap-italia/docs/esempi/comuni/template-novita/">
+              <a class="read-more pb-3" href="#">
                 <span class="text">Tutte le novità</span>
                 <svg class="icon">
-                  <use xlink:href="/bootstrap-italia/dist/svg/sprites.svg##it-arrow-right"></use>
+                  <use xlink:href="{% static '/bootstrap-italia/dist/svg/sprites.svg##it-arrow-right' %}"></use>
                 </svg>
               </a>
             </div>
@@ -37,4 +37,4 @@
       </div>
     </div>
   </section>
-{%endblock%}
+{% endblock %}
