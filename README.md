@@ -55,26 +55,18 @@ This solution configures multiple proxy _frontends_ and _backends_
 to get communicating systems that, due to protocol or specific
 limitations, traditionally could not interact each other.
 
+
 ## Demo components
 
 The example project comes with the following demo pages, served
 with the help of an additional webserver dedicated for static contents:
 
+
 ###### Discovery Service page
 
 <img src="gallery/disco.png" width="512">
 
-###### Generic error page
-
-<img src="gallery/error_page.png" width="512">
-
-###### Saml2 Signature Error page
-
-<img src="gallery/error1.png" width="512">
-
-###### AgID SPID test #104
-
-<img src="gallery/error2.png" width="512">
+See other page screenshot [here](README-GALLERY.md).
 
 These demo pages are static files, available in `example/static`.
 To get redirection to these pages, or redirection to third-party services, it is required to configure the parameters below:
@@ -93,7 +85,7 @@ To install the official docker image, execute the following command: `sudo docke
 
 To build locally the image, execute the following command: `docker build -t satosa-saml2spid .`.
 
-To inspect image content: `docker run -it --entrypoint sh satosa-saml2spid`
+To inspect image content: `docker run -it --entrypoint sh satosa-saml2spid `
 
 
 ### Docker compose
@@ -120,25 +112,7 @@ http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata
 IF you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
 its CI, [here](.github/workflows/python-app.yml).
 
-### SPID technical Requirements
-
-The SaToSa **SPID** backend contained in this project adopt specialized forks of pySAML2 and SATOSA, that implements the following patches,
-read [this](README.idpy.forks.mngmnt.md) for any further explaination about how to patch by hands.
-
-All the patches and features are currently merged and available with the following releases:
-
-- [pysaml2](https://github.com/peppelinux/pysaml2/tree/pplnx-v7.0.1-1)
-- [SATOSA](https://github.com/peppelinux/SATOSA/tree/oidcop-v8.0.0)
-
-### Pending contributions to idpy
-
-These are mandatory only for getting Spid SAML2 working, these are not needed for any other traditional SAML2 deployment:
-
-- [disabled_weak_algs](https://github.com/IdentityPython/pysaml2/pull/628)
-- [ns_prefixes](https://github.com/IdentityPython/pysaml2/pull/625)
-- [SATOSA unknow error handling](https://github.com/IdentityPython/SATOSA/pull/324)
-- [SATOSA redirect page on error](https://github.com/IdentityPython/SATOSA/pull/325)
-- [SATOSA cookie configuration](https://github.com/IdentityPython/SATOSA/pull/363)
+Additional information can be found [here](README-DEV.md).
 
 ### Warnings
 
