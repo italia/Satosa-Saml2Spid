@@ -151,6 +151,7 @@ Here something that you should know before start.
 
 ### Satosa-Saml2Spid tutorials
 
+- [Corso-OIDC-in-IDEM-via-Proxy](https://github.com/IDEM-GARR-AAI/Corso-OIDC-in-IDEM-via-Proxy/)
 - [Satosa-Saml2Spid installation tutorial](https://github.com/aslbat/Satosa-SPID-Proxy).
 
 ### SATOSA Official Documentation
