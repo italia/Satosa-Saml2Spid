@@ -35,15 +35,10 @@ context = {
 def index(request):
     """ Barebone 'diagnostics' view, print user attributes if logged in + login/logout links.
     """
-    context["user"] = request.user
     return render(request,"base.html",context)
 def amministrazione(request):
-    context["user"] = request.user
     return render(request,"amministrazione.html",context)
 def echo_attributes(request):
-    context["out"] = "".join(['%s: %s</br>' % (field.name, getattr(request.user, field.name))
-                for field in request.user._meta.get_fields()
-                if field.concrete])
     return render(request,"echo_attributes.html",context)
 
 # TODO fix this in IdP side?
