@@ -1,4 +1,4 @@
-# compose-Satosa-Saml2Spid
+# Docker Compose
 
 ## Table of Contents
 
