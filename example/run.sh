@@ -164,8 +164,8 @@ fi
 
 # import satosa keys with $SATOSA_PUBLIC_KEY and $SATOSA_PRIVATE_KEY, both must be present
 if [[ -v SATOSA_PRIVATE_KEY && -v SATOSA_PUBLIC_KEY ]]; then
-  echo $SATOSA_PRIVATE_KEYS > pki/privkey.pem
-  echo $SATOSA_PUBLIC_KEY > pki/cert.pem
+  echo "$SATOSA_PRIVATE_KEY" > pki/privkey.pem
+  echo "$SATOSA_PUBLIC_KEY" > pki/cert.pem
   echo "Satosa keys imported"
 else
   echo "satosa has loaded default keys"
@@ -175,7 +175,7 @@ fi
 wget https://mdx.idem.garr.it/idem-mdx-service-crt.pem -O pki/idem-mdx-service-crt.pem
 
 if [[ -v SATOSA_BY_DOCKER ]]; then
-  SATOSA_APP=/usr/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
+  SATOSA_APP=/usr/lib/$(python3 -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
 # in questo modo parla uwsgi, dal browser sulla porta 10000 si ha un errore e in nginx va utilizzato uwsgi_pass
   uwsgi --wsgi-file $SATOSA_APP/wsgi.py --socket 0.0.0.0:10000 --callable app -b 32768 --processes 4 --threads 2
 

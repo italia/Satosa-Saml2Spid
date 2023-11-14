@@ -173,8 +173,8 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_ENCRYPTION_KEY**|encription key for state|"CHANGE_ME!"|
 |**$SATOSA_SALT**|encription salt|"CHANGE_ME!"|
 |**$SATOSA_DISCO_SRV**|Descovery page URL for all backends|"https://$HOSTNAME/static/disco.html"|
-|**$SATOSA_PRIVATE_KEYS**|private key for SAML2 / SPID backends||
-|**$SATOSA_PUBLIC_KEYS**|public key for SAML2 / SPID backends||
+|**$SATOSA_PRIVATE_KEY**|private key for SAML2 / SPID backends||
+|**$SATOSA_PUBLIC_KEY**|public key for SAML2 / SPID backends||
 |**$MONGODB_USERNAME**|MongoDB username for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
 |**$MONGODB_PASSWORD**|MongoDB password for oidc_op frontend, default from .env file in compose-Satosa-Saml2Spid||
 |**$SATOSA_UNKNOW_ERROR_REDIRECT_PAGE**|redirect page for unknow erros|"https://$HOSTNAME/static/error_page.html"|
@@ -188,6 +188,8 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_CONTACT_PERSON_EMAIL_ADDRESS**|Metadata Contact person email||
 |**$SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER**|Metadata Contact person telephone number for SPID / CIE Backend||
 |**$SATOSA_CONTACT_PERSON_FISCALCODE**|Metadata Contact person fiscal code for SPID / CIE Backend||
+|**$SATOSA_CONTACT_PERSON_IPA_CODE**|Metadata Contact person ipa code for SPID / CIE Backend||
+|**$SATOSA_CONTACT_PERSON_MUNICIPALITY**|Metadata Contact person municipality code for CIE Backend||
 |**$SATOSA_UI_DISPLAY_NAME_EN**|Metadata English ui display name||
 |**$SATOSA_UI_DISPLAY_NAME_IT**|Metadata Italian ui display name||
 |**$SATOSA_UI_DESCRIPTION_EN**|Metadata English ui description||
