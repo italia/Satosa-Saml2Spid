@@ -27,7 +27,9 @@ For docker-compose you can also [see here](https://docs.docker.com/compose/insta
 
 ## Run the composition
 
-### Required at least on first run!
+Copy the folder `example` to `docker-example` and do your configuration.
+
+### Start the Compose
 
 Execute the run script for the first time:
 
@@ -37,17 +39,11 @@ Execute the run script for the first time:
 
 The following docker volumes are created, if they do not exist:
 
-* satosa-saml2spid_metadata
-* satosa-saml2spid_certs
-* satosa-saml2spid_static
 * satosa-saml2spid_nginx_certs
 * satosa-saml2spid_mongodata 
 
 The first four are populated with sample data, respectively:
 
-* satosa-saml2spid_metadata with data from ../example/metadata/
-* satosa-saml2spid_certs with data from ../example/pki/
-* satosa-saml2spid_static with data from ../example/static/
 * satosa-saml2spid_nginx_certs with data from nginx/certs/
 
 While the last one (*satosa-saml2spid_mongodata*) is populated by the MongoDB container on its first run.
@@ -72,22 +68,16 @@ Output:
 
 ```
 DRIVER    VOLUME NAME
-local     satosa-saml2spid_certs
-local     satosa-saml2spid_metadata
 local     satosa-saml2spid_mongodata
 local     satosa-saml2spid_nginx_certs
-local     satosa-saml2spid_static
 ```
 
 In RedHat and Ubuntu based OS the Docker volumes directory is at:
 
 ```
 # ls -1 /var/lib/docker/volumes/
-satosa-saml2spid_certs
-satosa-saml2spid_metadata
 satosa-saml2spid_mongodata
 satosa-saml2spid_nginx_certs
-satosa-saml2spid_static
 ```
 
 ### NOT at first run or after volumes deletion!
@@ -134,45 +124,3 @@ HOSTNAME=localhost
 ```
 
 See [mongo readme](../README.mongo.md) for explanation of environment variables of MongoDB.
-
-## docker-compose.yml
-In the [project readme](../README.md#configuration-by-environments) is present a detailed list with each environment and his function
-```
-    environment:
-      - SATOSA_BY_DOCKER=1
-
-      - SATOSA_BASE=https://$HOSTNAME
-      # - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
-      # - SATOSA_CONTACT_PERSON_FISCALCODE=01234567890
-      # - SATOSA_CONTACT_PERSON_GIVEN_NAME=Name
-      # - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=06123456789
-      # - SATOSA_CONTACT_PERSON_IPA_CODE=
-      # - SATOSA_CONTACT_PERSON_MUNICIPALITY=H501
-      - SATOSA_DISCO_SRV=https://$HOSTNAME/static/disco.html
-      # - SATOSA_ENCRYPTION_KEY=
-      - MONGODB_PASSWORD=${MONGO_DBPASSWORD}
-      - MONGODB_USERNAME=${MONGO_DBUSER}
-      # - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
-      # - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=Resource provided by Example Organization
-      # - SATOSA_ORGANIZATION_NAME_EN=Resource provided by Example Organization
-      # - SATOSA_ORGANIZATION_NAME_IT=Resource provided by Example Organization
-      # - SATOSA_ORGANIZATION_URL_EN=https://example_organization.org
-      # - SATOSA_ORGANIZATION_URL_IT=https://example_organization.org
-      # - SATOSA_PRIVATE_KEY=
-      # - SATOSA_PUBLIC_KEY=
-      # - SATOSA_SALT=
-      # - SATOSA_STATE_ENCRYPTION_KEY
-      # - SATOSA_UI_DESCRIPTION_EN=Resource description
-      # - SATOSA_UI_DESCRIPTION_IT=Resource description
-      # - SATOSA_UI_DISPLAY_NAME_EN=Resource Display Name
-      # - SATOSA_UI_DISPLAY_NAME_IT=Resource Display Name
-      # - SATOSA_UI_INFORMATION_URL_EN=https://example_organization.org/information_url_en
-      # - SATOSA_UI_INFORMATION_URL_IT=https://example_organization.org/information_url_en
-      # - SATOSA_UI_LOGO_HEIGHT=60
-      # - SATOSA_UI_LOGO_URL=https://example_organization.org/logo.png
-      # - SATOSA_UI_LOGO_WIDTH=80
-      # - SATOSA_UI_PRIVACY_URL_EN=https://example_organization.org/privacy_en
-      # - SATOSA_UI_PRIVACY_URL_IT=https://example_organization.org/privacy_en
-      - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://$HOSTNAME/static/error_page.html
-      # - SATOSA_USER_ID_HASH_SALT
-```

@@ -16,9 +16,6 @@ function create-volume {
 	fi
 }
 
-create-volume satosa-saml2spid_metadata ../example/metadata/
-create-volume satosa-saml2spid_certs ../example/pki/
-create-volume satosa-saml2spid_static ../example/static/
 create-volume satosa-saml2spid_nginx_certs nginx/certs/
 create-volume satosa-saml2spid_mongodata 
 

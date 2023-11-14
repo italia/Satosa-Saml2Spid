@@ -41,9 +41,6 @@ echo -e "Procedo ... \n"
 
 echo -e "\n"
 
-delete-volume satosa-saml2spid_metadata
-delete-volume satosa-saml2spid_certs
-delete-volume satosa-saml2spid_static
 delete-volume satosa-saml2spid_nginx_certs
 delete-volume satosa-saml2spid_mongodata
 

@@ -71,15 +71,11 @@ services:
       # - SATOSA_USER_ID_HASH_SALT
     expose:
       - 10000
-      - 9999
     ports:
       - "10000:10000"
-      - "9999:9999"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - satosa_metadata:/satosa_proxy/metadata
-       - satosa_static:/satosa_proxy/static
-       - satosa_certs:/satosa_proxy/pki
+       - ../example-docker:/satosa_proxy
 
   satosa-nginx:
     image: nginx:alpine
@@ -95,7 +91,7 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - nginx_certs:/etc/nginx/certs:ro
-      - satosa_static:/var/www/html
+      - ../example-docker/static:/var/www/html
 
 volumes:
 
@@ -106,21 +102,3 @@ volumes:
   nginx_certs:
     external:
       name: satosa-saml2spid_nginx_certs
-
-  satosa_static:
-    external:
-      name: satosa-saml2spid_static        
-
-  satosa_metadata:
-    external:
-      name: satosa-saml2spid_metadata
-
-  satosa_certs:
-    external:
-      name: satosa-saml2spid_certs
-
-#  nginx_conf:
-#    driver_opts:
-#      type: none
-#      device: $PWD/nginx/
-#      o: bind
