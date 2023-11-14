@@ -21,7 +21,7 @@ class CustomUserAdmin(UserAdmin):
         (_('Angrafica'), {'fields': (( 'first_name', 'last_name'),
                                      ( 'matricola', 'email'),
                                      ('codice_fiscale',),
-                                     ('gender', 'location', 'birth_date'),
+                                     ('gender', 'birth_date'),
                                     )
                          }
         ),
