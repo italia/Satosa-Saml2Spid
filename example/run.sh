@@ -178,7 +178,7 @@ wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadat
 if [[ -v SATOSA_BY_DOCKER ]]; then
   SATOSA_APP=/usr/lib/$(python3 -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
 # in questo modo parla uwsgi, dal browser sulla porta 10000 si ha un errore e in nginx va utilizzato uwsgi_pass
-  uwsgi --wsgi-file $SATOSA_APP/wsgi.py --socket 0.0.0.0:10000 --callable app -b 32768 --processes 4 --threads 2
+  uwsgi --ini $BASEDIR/uwsgi_setup/uwsgi.ini.docker
 
 # in questo modo parla in http, può essere raggiunto anche dal browser direttamente e in nginx occorre utilizzare il proxy http
 #  uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --http 0.0.0.0:10000 --callable app -b 32768 --processes 4 --threads 2 

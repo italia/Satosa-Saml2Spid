@@ -15,21 +15,16 @@ processes   = 8
 # sets max connections to
 listen = 2048
 
-wsgi-file   = %(base)/%(project)/env/lib/python3.10/site-packages/satosa/wsgi.py
+wsgi-file   = /usr/lib/python3.11/site-packages/satosa/wsgi.py
 callable = app
 # se installato con pip non serve il plugin perchè embedded
 # plugins    = python
 
-# con virtualenv non serve
-# pythonpath     = %(base)/%(project)/%(project)
-virtualenv  = %(base)/%(project)/env
-
-logto = /var/log/uwsgi/%(project).log
-log-maxsize = 100000000
-log-backupname = /var/log/uwsgi/%(project).old.log
+# logto = /satosa_proxy/logs/%(project).log
+# log-maxsize = 10000000
+# log-backupname = /var/log/uwsgi/%(project).old.log
 
 log-master-bufsize = 128000
-
 vacuum      = True
 
 # respawn processes after serving ... requests
@@ -41,5 +36,5 @@ harakiri    = 20
 # avoid: invalid request block size: 4420 (max 4096)...skip
 buffer-size=32768
 
-pidfile     = /var/log/uwsgi/%(project).pid
-touch-reload    = %(base)/%(project)/example-openid4vp/proxy_conf.yaml
+pidfile     = /satosa_proxy/%(project).pid
+touch-reload    = /satosa_proxy/proxy_conf.yaml

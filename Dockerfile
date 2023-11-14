@@ -15,11 +15,11 @@ RUN apk add --update xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev p
 && pip3 install --upgrade pip --root-user-action=ignore \
 && pip3 install yq --root-user-action=ignore \
 && pip3 install -r requirements.txt --ignore-installed --root-user-action=ignore \
-&& adduser --disabled-password wert \
-&& chown -R  wert . \
+&& adduser --disabled-password satosa \
+&& chown -R  satosa . \
 && chmod +x run.sh
 
-USER wert
+USER satosa
 WORKDIR $BASEDIR/
 # CMD bash run.sh
 
