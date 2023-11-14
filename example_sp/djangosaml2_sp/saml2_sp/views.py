@@ -36,6 +36,7 @@ def index(request):
     """ Barebone 'diagnostics' view, print user attributes if logged in + login/logout links.
     """
     return render(request,"base.html",context)
+
 def amministrazione(request):
     return render(request,"amministrazione.html",context)
 def echo_attributes(request):
