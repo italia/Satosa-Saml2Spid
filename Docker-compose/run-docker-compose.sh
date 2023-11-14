@@ -39,7 +39,6 @@ docker compose -f docker-compose.yml up -d
 
 echo -e "\n"
 
-echo -e "Ho Completato! \n"
-echo -e "Se volete vedere il log live potete lanciare il comando: 'docker-compose -f docker-compose.yml logs -f' \n"
+echo -e "Completato. Per visionare i logs: 'docker-compose -f docker-compose.yml logs -f'"
 
 exit 0

@@ -2,7 +2,7 @@
 project     = satosa-saml2spid
 base        = /opt
 
-chdir       = %(base)/%(project)/example-openid4vp
+chdir       = /satosa_proxy
 
 uid         = satosa
 gid         = satosa
@@ -10,19 +10,12 @@ gid         = satosa
 socket      = 127.0.0.1:3002
 master      = true
 processes   = 8
-# threads     = 2
 
 # sets max connections to
 listen = 2048
 
 wsgi-file   = /usr/lib/python3.11/site-packages/satosa/wsgi.py
 callable = app
-# se installato con pip non serve il plugin perchè embedded
-# plugins    = python
-
-# logto = /satosa_proxy/logs/%(project).log
-# log-maxsize = 10000000
-# log-backupname = /var/log/uwsgi/%(project).old.log
 
 log-master-bufsize = 128000
 vacuum      = True
