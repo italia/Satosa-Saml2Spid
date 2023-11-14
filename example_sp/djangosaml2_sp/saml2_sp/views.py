@@ -39,6 +39,7 @@ def index(request):
 
 def amministrazione(request):
     return render(request,"amministrazione.html",context)
+
 def echo_attributes(request):
     return render(request,"echo_attributes.html",context)
 
