@@ -10,7 +10,7 @@
 6. [Env file](#env-file)
 7. [docker-compose.yml](#docker-compose.yml)
 
-## What do you need?
+## Requirements
 
 In order to execute the run script you need:
 
@@ -37,23 +37,23 @@ Execute the run script for the first time:
 ./run-docker-compose.sh
 ```
 
-The following docker volumes are created, if they do not exist:
+The following docker volumes are created, if they doesn't exist yet:
 
 * satosa-saml2spid_nginx_certs
 * satosa-saml2spid_mongodata 
 
-The first four are populated with sample data, respectively:
+The *satosa-saml2spid_nginx_certs* is populated with data from [nginx/certs/](nginx/certs)`,
+*satosa-saml2spid_mongodata* is populated by MongoDB container with its storage.
 
-* satosa-saml2spid_nginx_certs with data from nginx/certs/
-
-While the last one (*satosa-saml2spid_mongodata*) is populated by the MongoDB container on its first run.
-
-After these steps, the images of the containers are downloaded and then the containers of the composition are started.
-
-Finally you are warned you can run the following command to check composition start and status:
-
+After having executed the docker compose you can see the logs of the running containers:
 ```
 docker-compose -f docker-compose.yml logs -f
+```
+
+After the first run, you can start the docker compose with the run script or by this commands:
+
+```
+docker-compose pull; docker-compose down -v; docker-compose up -d; docker-compose logs -f
 ```
 
 ### Where is your data?
@@ -80,14 +80,6 @@ satosa-saml2spid_mongodata
 satosa-saml2spid_nginx_certs
 ```
 
-### NOT at first run or after volumes deletion!
-
-After first run you can start the composition with the run script or by this commands:
-
-```
-docker-compose pull; docker-compose down -v; docker-compose up -d;docker-compose logs -f
-```
-
 ## Stop the composition
 
 ```
@@ -106,7 +98,7 @@ If you want to start from scratch, or just clear all persistent data, just run t
 
 First, the containers of the composition are stopped and the volumes are detached.
 
-Then you are asked if you want to delete the volumes and if you answer yes, you have to confirm volume by volume whether it should be deleted or not.
+Then you are asked if you want to delete the volumes and if you answer yes, you have to confirm volume by volume.
 
 ## Demo data
 
