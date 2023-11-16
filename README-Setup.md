@@ -112,7 +112,7 @@ If you want to handle metadata file manually create the `metadata/idp` and `meta
 
 ```
 mkdir -p metadata/idp metadata/sp
-wget https://localhost:8080/metadata.xml -O metadata/idp/spid-saml-check.xml
+wget https://localhost:8443/metadata.xml -O metadata/idp/spid-saml-check.xml --no-check-certificate
 wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ```
 

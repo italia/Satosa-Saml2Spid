@@ -15,6 +15,8 @@ services:
       - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
     ports:
       - '27017-27019:27017-27019'
+    networks:
+      - satosa-saml2spid
 
   satosa-mongo-express:
     image: mongo-express
@@ -28,13 +30,12 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER}"
       ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD}"
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER}:${MONGO_DBPASSWORD}@satosa-mongo:27017/
+    networks:
+      - satosa-saml2spid
 
   satosa-saml2spid:
     #image: ghcr.io/italia/satosa-saml2spid:latest
-    #image: satosa-saml2spid:latest
-    build: ../
-    #stdin_open: true # docker run -i
-    #tty: true        # docker run -t
+    image: satosa-saml2spid:latest
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
@@ -49,10 +50,10 @@ services:
       - MONGODB_PASSWORD=${MONGO_DBPASSWORD}
       - MONGODB_USERNAME=${MONGO_DBUSER}
 
-      # - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
+      - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
+      - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=+3906123456789
       # - SATOSA_CONTACT_PERSON_FISCALCODE=01234567890
       # - SATOSA_CONTACT_PERSON_GIVEN_NAME=Name
-      # - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=06123456789
       # - SATOSA_ENCRYPTION_KEY=
 
       # - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
@@ -87,7 +88,7 @@ services:
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
     networks:
-      - satosa_saml2spid
+      - satosa-saml2spid
 
   satosa-nginx:
     image: nginx:alpine
@@ -105,16 +106,15 @@ services:
       - nginx_certs:/etc/nginx/certs:ro
       - ../docker-example/static:/var/www/html
     networks:
-      - satosa_saml2spid
+      - satosa-saml2spid
 
   spid-samlcheck:
     image: italia/spid-saml-check
     container_name: spid-samlcheck
     ports:
-      - "8080:8443"
+      - "8443:8443"
     networks:
-      - satosa_saml2spid
-    
+      - satosa-saml2spid
 
 volumes:
 
@@ -127,5 +127,5 @@ volumes:
     external: true
 
 networks:
-  satosa_saml2spid:
-    name: satosa_saml2spid
+  satosa-saml2spid:
+    name: satosa-saml2spid
