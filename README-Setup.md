@@ -112,7 +112,6 @@ If you want to handle metadata file manually create the `metadata/idp` and `meta
 
 ```
 mkdir -p metadata/idp metadata/sp
-wget https://localhost:8443/metadata.xml -O metadata/idp/spid-saml-check.xml --no-check-certificate
 wget https://registry.spid.gov.it/metadata/idp/spid-entities-idps.xml -O metadata/idp/spid-entities-idps.xml
 ```
 
@@ -159,7 +158,17 @@ The Proxy metadata must be configured in your SP. Your SP is an entity that's ex
 wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
 ```
 
-Then start an authentication from your SP.
+### spid-saml-check
+
+Load spid-saml-check metadata:
+
+````
+wget https://localhost:8443/metadata.xml -O metadata/idp/spid-saml-check.xml --no-check-certificate
+````
+
+Start an authentication from your SP.
+
+Load metadata from `https://satosa-nginx/spidSaml2/metadata`.
 
 ![result](gallery/screen.gif)
 **Figure 2**: The result using spid-saml-check.
