@@ -31,7 +31,10 @@ services:
 
   satosa-saml2spid:
     #image: ghcr.io/italia/satosa-saml2spid:latest
-    image: satosa-saml2spid:latest
+    #image: satosa-saml2spid:latest
+    build: ../
+    #stdin_open: true # docker run -i
+    #tty: true        # docker run -t
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
@@ -83,6 +86,8 @@ services:
        - ../docker-example:/satosa_proxy:rw
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
+    networks:
+      - satosa_saml2spid
 
   satosa-nginx:
     image: nginx:alpine
@@ -98,7 +103,18 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - nginx_certs:/etc/nginx/certs:ro
-      - ../example-docker/static:/var/www/html
+      - ../docker-example/static:/var/www/html
+    networks:
+      - satosa_saml2spid
+
+  spid-samlcheck:
+    image: italia/spid-saml-check
+    container_name: spid-samlcheck
+    ports:
+      - "8080:8443"
+    networks:
+      - satosa_saml2spid
+    
 
 volumes:
 
@@ -109,3 +125,7 @@ volumes:
   nginx_certs:
     name: satosa-saml2spid_nginx_certs
     external: true
+
+networks:
+  satosa_saml2spid:
+    name: satosa_saml2spid

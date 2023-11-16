@@ -55,7 +55,6 @@ After the first run, you can start the docker compose with the run script or by 
 ```
 docker-compose pull; docker-compose down -v; docker-compose up -d; docker-compose logs -f
 ```
-
 ### Where is your data?
 
 Command:
