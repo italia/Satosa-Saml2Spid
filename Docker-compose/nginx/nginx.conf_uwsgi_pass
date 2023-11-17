@@ -73,9 +73,15 @@ server {
         autoindex off;
     }
 
+    location /bootstrap-italia/dist  {
+        alias /satosa_proxy/static/bootstrap-italia;
+        autoindex off;
+    }
+
     location / {
       include /etc/nginx/uwsgi_params;
-
+      
+      
       uwsgi_pass satosa-saml2;
       uwsgi_param Host $host;
       uwsgi_param X-Real-IP $remote_addr;

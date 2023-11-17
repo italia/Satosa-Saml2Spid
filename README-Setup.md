@@ -124,30 +124,12 @@ wget https://sp.fqdn.org/saml2/metadata -O metadata/sp/my-sp.xml
 Otherwise the best method would be enabling a MDQ server in each frontend and backend configuration file.
 See `example/plugins/{backends,frontends}/$filename` as example.
 
-## Start the Proxy
-
-**Warning**: these examples must be intended only for test purpose, for a demo run. 
-Please remember that the following examples wouldn't be intended for a real production environment.
-
-If you need some example for a production environment please take a look at 
-[example/uwsgi_setup/](example/uwsgi_setup/) directory or use the docker-compose.
-
-```
-export SATOSA_APP=$VIRTUAL_ENV/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa
-
-# only https with satosa, because its Cookie only if "secure" would be sent
-uwsgi --wsgi-file $SATOSA_APP/wsgi.py  --https 0.0.0.0:10000,./pki/cert.pem,./pki/privkey.pem --callable app -b 32768
-
-# additional static serve for the demo Discovery Service with Spid button
-uwsgi --https 0.0.0.0:9999,./pki/cert.pem,./pki/privkey.pem --check-static-docroot --check-static ./static/ --static-index disco.html
-```
-
 ### Get SPID backend metadata
 
 The proxy backend exposes its SPID metadata at the following url (customizable):
 
 ```
-https://localhost:10000/spidSaml2/metadata
+https://localhost/spidSaml2/metadata
 ```
 
 ### Get Proxy Fronted Metadata for your SP
@@ -155,7 +137,7 @@ https://localhost:10000/spidSaml2/metadata
 The Proxy metadata must be configured in your SP. Your SP is an entity that's external from this Proxy, eg: shibboleth sp, djangosaml2, another ...
 
 ```
-wget https://localhost:10000/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
+wget https://localhost/Saml2IDP/metadata -O path/to/your/sp/metadata/satosa-spid.xml --no-check-certificate
 ```
 
 ### spid-saml-check

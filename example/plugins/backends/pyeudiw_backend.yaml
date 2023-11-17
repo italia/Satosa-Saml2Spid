@@ -123,17 +123,21 @@ config:
         module: pyeudiw.storage.mongo_cache
         class: MongoCache
         init_params:
-          url: mongodb://localhost:27017
+          url: mongodb://satosa-mongo:27017
           conf:
             db_name: eudiw
+            username: satosa
+            password: thatpassword
           # connection_params:
       storage:
         module: pyeudiw.storage.mongo_storage
         class: MongoStorage
         init_params:
-          url: mongodb://localhost:27017
+          url: mongodb://satosa-mongo:27017
           conf:
             db_name: eudiw
+            username: satosa
+            password: thatpassword
             db_sessions_collection: sessions
             db_trust_attestations_collection: trust_attestations
             db_trust_anchors_collection: trust_anchors
