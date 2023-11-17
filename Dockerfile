@@ -34,9 +34,7 @@ ENV BASEDIR="/satosa_proxy"
 RUN apk add --update xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq yq \
  && pip3 install --upgrade pip setuptools --root-user-action=ignore \
  && pip3 install -r requirements.txt --ignore-installed --root-user-action=ignore \
- && mkdir /satosa_proxy \
- && adduser --disabled-password satosa \
- && chown -R satosa $BASEDIR
+ && mkdir /satosa_proxy
 
 RUN pip list
 
