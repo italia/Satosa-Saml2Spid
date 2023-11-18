@@ -72,7 +72,7 @@ class Saml2ResponseValidator(object):
 
     def validate_issuer(self):
         """spid saml check 30, 70, 71, 72
-        <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">http://localhost:8080</saml:Issuer>
+        <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">http://localhost:8443</saml:Issuer>
         """
 
         # 30

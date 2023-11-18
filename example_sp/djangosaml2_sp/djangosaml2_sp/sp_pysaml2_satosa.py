@@ -15,7 +15,7 @@ BASE_URL = '{}/saml2'.format(BASE)
 
 LOGIN_URL = '/saml2/login/'
 LOGOUT_URL = '/saml2/logout/'
-LOGIN_REDIRECT_URL = '/saml2/echo_attributes'
+LOGIN_REDIRECT_URL = '/echo_attributes'
 
 SAML2_DEFAULT_BINDING = saml2.BINDING_HTTP_POST
 SAML_CONFIG = {
