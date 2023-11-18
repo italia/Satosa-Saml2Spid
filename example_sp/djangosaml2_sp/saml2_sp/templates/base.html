@@ -27,19 +27,37 @@ Sottotitolo del Comune
     {% if not user.is_authenticated %}
     <a class="btn btn-primary btn-icon btn-full" href="{{LOGIN_URL}}" title="Accedi all'area personale" aria-label="Accedi all'area personale" data-focus-mouse="false">
     {% else %}
-    <a class="btn btn-primary btn-icon btn-full" href="{{LOGIN_REDIRECT_URL}}" title="{{user.first_name}}" aria-label="{{user.first_name}}" data-focus-mouse="false">
-    {% endif %}  
+    <div class="dropdown text-center">
+      <!--<button class="btn btn-primary btn-icon btn-full" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <a class="btn btn-primary btn-icon btn-full" data-bs-toggle="dropdown" data-focus-mouse="false">
+        <span class="rounded-icon">
+          <svg class="icon icon-primary">
+            <use xlink:href="{% static 'svg/sprites.svg#it-user' %}"></use>
+          </svg>
+        </span>
+        <span class="d-none d-lg-block">{{user.first_name}}</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="link-list-wrapper">
+          <ul class="link-list">
+            <li><a class="dropdown-item list-item" href="{{LOGIN_REDIRECT_URL}}"><span>Profilo Utente</span></a></li>
+            <li><a class="dropdown-item list-item" href="{{LOGOUT_URL}}"><span>Logout</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--<a class="btn btn-primary btn-icon btn-full" href="{{LOGIN_REDIRECT_URL}}" title="{{user.first_name}}" aria-label="{{user.first_name}}" data-focus-mouse="false">
+    -->{% endif %}  
+
+    {% if not user.is_authenticated %}
     <span class="rounded-icon">
       <svg class="icon icon-primary">
         <use xlink:href="{% static 'svg/sprites.svg#it-user' %}"></use>
       </svg>
     </span>
-    {% if not user.is_authenticated %}
     <span class="d-none d-lg-block">Accedi all'area personale</span>
-    {% else %}
-    <span class="d-none d-lg-block">{{user.first_name}}</span>
+    </a>
     {% endif %}  
-  </a>
 </div>
 {% endblock header_slim_buttons %}
 
@@ -52,7 +70,7 @@ Sottotitolo del Comune
 
 {% endblock menu_links %}
 
-{% block centered_container %}
+{% block container %}
     <section id="head-section">
       <div class="container">
         <div class="row">
