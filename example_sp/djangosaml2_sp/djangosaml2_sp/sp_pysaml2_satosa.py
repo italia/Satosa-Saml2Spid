@@ -14,7 +14,7 @@ BASE = 'http://localhost:8000'
 BASE_URL = '{}/saml2'.format(BASE)
 
 LOGIN_URL = '/saml2/login/'
-LOGOUT_URL = '/saml2/logout/'
+LOGOUT_URL = '/logout/'
 LOGIN_REDIRECT_URL = '/echo_attributes'
 
 SAML2_DEFAULT_BINDING = saml2.BINDING_HTTP_POST

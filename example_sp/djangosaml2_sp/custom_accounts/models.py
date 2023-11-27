@@ -36,6 +36,10 @@ class User(AbstractUser):
         ordering = ['username']
         verbose_name_plural = _("Accounts")
 
+    def attrs(self):
+     for attr, value in self.__dict__.items():
+        yield attr, value
+
     def __str__(self):
         return '{} - {} {}'.format(self.matricola,
                                    self.first_name, self.last_name)

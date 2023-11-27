@@ -26,6 +26,18 @@ from .utils import repr_saml
 
 
 logger = logging.getLogger('djangosaml2')
+attribute_display_names = {
+        'last_login': 'Last Login',
+        'username': 'Username',
+        'email': 'Email',
+        'matricola': 'Matricola',
+        'first_name': 'First Name',
+        'last_name': 'Last Name',
+        'codice_fiscale': 'Codice Fiscale',
+        'gender': 'Gender',
+        'place_of_birth': 'Place of Birth',
+        'birth_date': 'Birth Date',
+    }
 context = {
         "LOGOUT_URL" : settings.LOGOUT_URL,
         "LOGIN_URL" : settings.LOGIN_URL,
@@ -41,6 +53,7 @@ def amministrazione(request):
     return render(request,"amministrazione.html",context)
 
 def echo_attributes(request):
+    context['attribute_display_names']=attribute_display_names
     return render(request,"echo_attributes.html",context)
 
 # TODO fix this in IdP side?
