@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load static %}
-{% block container %}
 
+{% block container %}
 <section id="area-riservata">
   <div class="container">
     <div class="row">
@@ -11,20 +11,20 @@
             <div id="profile" class="tab-pane fade show active">
                 <h5 class="mb-4">Profilo Utente</h5>
                 <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Valore</th>
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                {% for name, value in user.attrs %}
-                      <tr>
-                        <td>{{ name }}</td>
-                        <td>{{ value }}</td>
-                      </tr>
-                {% endfor %}
-                </tbody>
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Valore</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                    {% for name, value in user.attrs %}
+                        <tr>
+                          <td>{{ name }}</td>
+                          <td>{{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                  </tbody>
                 </table>
               </div>
             </div>
