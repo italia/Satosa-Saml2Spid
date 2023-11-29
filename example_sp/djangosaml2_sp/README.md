@@ -1,7 +1,7 @@
 ### Pre-requirements
 
 Before starting, make sure that the following Docker containers are up and running 
-<img src="../../gallery/docker_container.png" width="800">
+<img src="../../gallery/docker_container.png">
 
 
 
@@ -41,7 +41,7 @@ and you will be able to view the project's demo page (see below)
 
 
 
-<img src="../../gallery/djangosaml2_sp.png" width="800">
+<img src="../../gallery/djangosaml2_sp.png">
 
 
 
@@ -53,12 +53,16 @@ and you will be able to view the project's demo page (see below)
 
 
 
-> :bulb: **Note:** 
-1 Use "Entra con SPID" and select "Spid_Test" Method 
-2 Use the following credential -> user: validator psw: validator
-3 Use the following link to Load Metadata `https://satosa-nginx/spidSaml2/metadata`
-4 have fun!!
-<hr>
+> #### NOTE:
+>
+> - Use "Entra con SPID" and select "Spid_Test" Method 
+> - Use the following credential -> user: validator psw: validator
+> - Use the following link to Load Metadata `https://satosa-nginx/spidSaml2/metadata`
+> - Have fun!!
+>
+
+
+
 
 
 ### Add SP metadata to Satosa server
