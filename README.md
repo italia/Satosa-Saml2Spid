@@ -85,11 +85,15 @@ To get redirection to these pages, or redirection to third-party services, it is
 The average time to set up the environment is about 1 hour. This time may vary depending on the machine's resources and the type of network connection.
 
 
-> :bulb: **Tip:** 
-Make sure that in your environment is correcly installed:
-1 a version of Python 3.9 or higher
-2 Git
-3 Docker
+
+
+
+> Make sure that in your environment is correcly installed:
+> - a version of Python 3.9 or higher
+> - Git
+> - Docker
+
+
 
 
 #### STEP 1 - Setup
