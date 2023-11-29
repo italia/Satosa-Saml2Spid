@@ -6,13 +6,14 @@ with the  **Italian Digital Identity Systems**.
 
 ## Table of Contents
 
-1. [Goal](#goal)
-2. [Demo components](#demo-components)
-3. [Docker](#docker)
-6. [Setup](README-Setup.md)
-8. [For Developers](#for-developers)
-9. [Author](#authors)
-10. [Credits](#credits)
+1. [Glossary](#Glossary)
+2. [General features](#general-features)
+3. [Introduction](#introduction)
+4. [Demo components](#demo-components)
+5. [How to start the environment](#how-to-start-the-environment)
+6. [For Developers](#for-developers)
+7. [Author](#authors)
+8. [Credits](#credits)
 
 
 ## Glossary
@@ -75,8 +76,43 @@ To get redirection to these pages, or redirection to third-party services, it is
 - file: `example/proxy_conf.yml`, example value: `UNKNOW_ERROR_REDIRECT_PAGE: "https://static-contents.example.org/error_page.html"`
 - file: `example/plugins/{backends,frontends}/$filename`, example value: `disco_srv: "https://static-contents.example.org/static/disco.html"`
 
+<hr>
 
-## Docker
+## How to start the environment
+
+
+
+The average time to set up the environment is about 1 hour. This time may vary depending on the machine's resources and the type of network connection.
+
+
+> :bulb: **Tip:** 
+Make sure that in your environment is correcly installed:
+1 a version of Python 3.9 or higher
+2 Git
+3 Docker
+
+
+#### STEP 1 - Setup
+please review the following documentation in order to install, configure and run Satosa-Saml2spid
+ [README-SETUP.md](README-Setup.md)
+
+
+
+#### STEP 2 - Docker Compose
+
+
+please review the following documentation [Docker-compose](Docker-compose/README.md) in order to create the volumes:
+- satosa-saml2spid_mongodata
+- satosa-saml2spid_nginx_certs
+
+
+
+Satosa-Saml2Spid image is built with production ready logic.
+The docker compose may use the [enviroment variables](#configuration-by-environment-variables) 
+to configure Satosa-Saml2Spid.
+
+
+
 
 <img src="gallery/docker-design.svg" width="512">
 
@@ -90,19 +126,13 @@ Below some quick commands:
 - Inspect the image content: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
 
-### Docker compose
 
-Satosa-Saml2Spid image is built with production ready logic.
-The docker compose may use the [enviroment variables](#configuration-by-environment-variables) 
-to configure Satosa-Saml2Spid.
+#### STEP 3 - Install and Run Djangosaml2
 
-See [Docker-compose](Docker-compose) for details.
+please review the following documentation [Djangosaml2](example_sp/djangosaml2_sp/README.md)
 
 
-## Setup
-
-See [README-SETUP.md](README-Setup.md).
-
+<hr>
 
 ## For Developers
 

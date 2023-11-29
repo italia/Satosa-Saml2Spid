@@ -24,6 +24,8 @@ sudo yum install -y python3-wheel python3-devel
 
 ###### Prepare environment
 
+move to the directory `/{your path}/Satosa-Saml2Spid` and execute the following commands
+
 ```
 pip install --upgrade pip
 pip install virtualenv
@@ -39,7 +41,9 @@ pip install -r requirements.txt
 
 ## Configure the Proxy
 
-- Create certificates for SPID see [psmiraglia](https://github.com/italia/spid-compliant-certificates).
+- Create certificates for SPID see [psmiraglia](https://github.com/italia/spid-compliant-certificates) 
+(For more details please see also the [Python native solution](https://github.com/italia/spid-compliant-certificates-python))
+
 - Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the files below** 
 
   - `proxy_conf.yaml`
