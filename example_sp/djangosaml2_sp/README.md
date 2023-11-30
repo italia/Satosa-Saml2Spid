@@ -1,3 +1,5 @@
+# Demo Setup
+
 ### Pre-requirements
 
 Before starting, make sure that the following Docker containers are up and running 
@@ -11,7 +13,7 @@ Before starting, make sure that the following Docker containers are up and runni
 
 
 
-if everithings is ok, go to the path `/{your path}/Satosa-Saml2Spid/example_sp` and execute the following commands
+if everythings is ok, go to the path `/{your path}/Satosa-Saml2Spid/example_sp` and execute the following commands
 
 
 ### djangosaml2-sp (SP server)

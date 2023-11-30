@@ -41,8 +41,13 @@ pip install -r requirements.txt
 
 ## Configure the Proxy
 
-- Create certificates for SPID see [psmiraglia](https://github.com/italia/spid-compliant-certificates) 
-(For more details please see also the [Python native solution](https://github.com/italia/spid-compliant-certificates-python))
+- Create certificates for SPID.
+
+To do that, you can use one of the following solution to create X.509 certificates:
+> [psmiraglia](https://github.com/italia/spid-compliant-certificates) 
+
+>  [Python native solution](https://github.com/italia/spid-compliant-certificates-python)
+
 
 - Copy `repository/example/*` contents (`cp -R repository/example/* .`) and **edit the files below** 
 
