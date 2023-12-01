@@ -1,20 +1,7 @@
-# Demo Setup
-
-### Pre-requirements
-
-Before starting, make sure that the following Docker containers are up and running 
-<img src="../../gallery/docker_container.png">
+# How to run the Demo Django template
 
 
-
-> **NOTE**
-> - use the following command to check if everythings is correctly running ``docker ps -a``
-> - use the following command to start a stopped container ``docker start <NAME>``
-
-
-
-if everythings is ok, go to the path `/{your path}/Satosa-Saml2Spid/example_sp` and execute the following commands
-
+ Within the directory `/{your path}/Satosa-Saml2Spid/example_sp` execute the following commands
 
 ### djangosaml2-sp (SP server)
 ````
@@ -48,20 +35,8 @@ and you will be able to view the project's demo page (see below)
 
 
 
-### Now you will be able to make your first login, follow these simple steps:
-
-![result](../../gallery/screen.gif)
-
-
-
-
-> #### NOTE:
->
-> - Use "Entra con SPID" and select "Spid_Test" Method 
-> - Use the following credential -> user: validator psw: validator
-> - Use the following link to Load Metadata `https://satosa-nginx/spidSaml2/metadata`
-> - Have fun!!
->
+Now click on "Accedi all'area personale" (at the top right of the page header). 
+You will be redirect to the Saml2 Service Provider page [Service Provider page](../../example/README.md)
 
 
 
