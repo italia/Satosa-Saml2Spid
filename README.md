@@ -99,7 +99,7 @@ please review the following documentation [Docker-compose](Docker-compose/README
 
 
 Satosa-Saml2Spid image is built with production ready logic.
-The docker compose may use the [enviroment variables](#configuration-by-environment-variables) 
+The docker compose may use the [enviroment variables](README-Setup.md#configuration-by-environment-variables) 
 to configure Satosa-Saml2Spid.
 
 <img src="gallery/docker-design.svg" width="512">
@@ -113,7 +113,7 @@ Below some quick commands:
 - Build locally the image, execute the following command: `docker build -t satosa-saml2spid .`.
 - Inspect the image content: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
-#### STEP 3 - Install and Run Djangosaml2
+#### STEP 3 - Install and Run Djangosaml2 demo
 
 please review the following documentation [Djangosaml2](example_sp/djangosaml2_sp/README.md)
 

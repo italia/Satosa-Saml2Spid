@@ -24,7 +24,7 @@ sudo yum install -y python3-wheel python3-devel
 
 ###### Prepare environment
 
-move to the directory `/{your path}/Satosa-Saml2Spid` and execute the following commands
+Within the directory `/{your path}/Satosa-Saml2Spid` execute the following commands
 
 ```
 pip install --upgrade pip
