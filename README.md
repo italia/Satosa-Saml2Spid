@@ -106,12 +106,11 @@ to configure Satosa-Saml2Spid.
 
 The official Satosa-Saml2SPID docker image is available at 
 [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid).
+To install it, you can execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
 
-Below some quick commands:
+Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
 
-- Install it, execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
-- Build locally the image, execute the following command: `docker build -t satosa-saml2spid .`.
-- Inspect the image content: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
+Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
 #### STEP 3 - Install and Run Djangosaml2 demo
 
