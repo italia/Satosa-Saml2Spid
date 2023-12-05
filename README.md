@@ -78,27 +78,27 @@ To get redirection to these pages, or redirection to third-party services, it is
 
 <hr>
 
-## How to start the environment
+## Usage
 
-The average time to set up the environment is about 1 hour. This time may vary depending on the machine's resources and the type of network connection.
+The average time to set up this project for your needs takes roughly 1 hour. 
+This time may vary depending on your configuration, how many backend and 
+frontend you configure, the machine's resources and the type of network 
+connection for the download of the docker images.
 
-> Make sure that in your environment is correcly installed:
-> - a version of Python 3.10 or higher
-> - Git
-> - Docker
+For the setup of this project, the following dependency must be installed in your machine:
+  
+  - Python 3.10 or higher
+  - Git
+  - Docker
 
-#### STEP 1 - Setup
-please review the following documentation in order to install, configure and run Satosa-Saml2spid
- [README-SETUP.md](README-Setup.md)
+### Setup
 
-#### STEP 2 - Docker Compose
+All the setup instructions for your Satosa-Saml2spid configuration are available in [README-SETUP.md](README-Setup.md).
 
-please review the following documentation [Docker-compose](Docker-compose/README.md) in order to create the volumes:
-- satosa-saml2spid_mongodata
-- satosa-saml2spid_nginx_certs
+### Docker Compose
 
+This project uses Docker, all the instructions to configure this project using the official docker images are available in [Docker-compose](Docker-compose/README.md).
 
-Satosa-Saml2Spid image is built with production ready logic.
 The docker compose may use the [enviroment variables](README-Setup.md#configuration-by-environment-variables) 
 to configure Satosa-Saml2Spid.
 
@@ -106,25 +106,32 @@ to configure Satosa-Saml2Spid.
 
 The official Satosa-Saml2SPID docker image is available at 
 [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid).
+
 To install it, you can execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
 
 Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
 
 Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
-#### STEP 3 - Install and Run Djangosaml2 demo
+### Setup a Djangosaml2 example Service Provider
 
-please review the following documentation [Djangosaml2](example_sp/djangosaml2_sp/README.md)
+This project provides an example SAML2 Service Provider for demo purposes, 
+this Service Provider is executed by default in the Docker Compose.
 
-<hr>
+For any further detail about its configuration, see [example_sp/djangosaml2_sp/README.md](example_sp/djangosaml2_sp/README.md).
+
+Below the demo using the djangosaml2 Service Provider with the Wallet authentication [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+
+<img src="gallery/wallet-demo.gif" width="256">
+
 
 ## For Developers
 
-If you're doing tests and you don't want to pass through the Discovery page each time you can use `idphinting` if your SP support it.
+If you're running tests and you don't want to pass through the Discovery page each time you can use `idphinting` if your SP support it.
 Below an example using a djangosaml2 Service Provider:
 
 ```
-http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
+http://localhost:8000/saml2/login/?idp=https://localhost/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
 ```
 
 If you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
