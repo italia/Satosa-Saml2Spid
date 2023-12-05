@@ -207,6 +207,8 @@ SAML_ATTRIBUTE_MAPPING = {
     'eduPersonEntitlement': ('eduPersonEntitlement',),
     'schacPersonalUniqueCode': ('schacPersonalUniqueCode',),
 
+    "givenName": ('first_name', ),
+
     # spid related
     'name': ('first_name', ),
     'familyName': ('last_name', ),
