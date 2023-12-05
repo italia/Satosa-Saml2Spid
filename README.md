@@ -10,7 +10,7 @@ with the  **Italian Digital Identity Systems**.
 2. [General features](#general-features)
 3. [Introduction](#introduction)
 4. [Demo components](#demo-components)
-5. [How to start the environment](#how-to-start-the-environment)
+5. [Setup](#setup)
 6. [For Developers](#for-developers)
 7. [Author](#authors)
 8. [Credits](#credits)
