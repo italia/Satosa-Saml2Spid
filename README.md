@@ -118,7 +118,7 @@ For any further detail about its configuration, see [example_sp/djangosaml2_sp/R
 
 Below the demo using the djangosaml2 Service Provider with the Wallet authentication [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
 
-<img src="gallery/wallet-demo.gif" width="512">
+<img src="gallery/wallet-demo.gif" width="768">
 
 
 ## For Developers
