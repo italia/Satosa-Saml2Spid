@@ -66,7 +66,7 @@ with the help of an additional webserver dedicated for static contents:
 
 ###### Discovery Service page
 
-<img src="gallery/disco.png" width="512">
+<img src="gallery/disco_page.png" width="512">
 
 See other page screenshot [here](README-GALLERY.md).
 
