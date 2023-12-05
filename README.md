@@ -60,15 +60,11 @@ limitations, traditionally could not interact each other.
 
 ## Demo components
 
-The example project comes with the following demo pages, served
-with the help of an additional webserver dedicated for static contents:
-
-
-###### Discovery Service page
+The example project comes with some preconfigured static pages.
 
 <img src="gallery/disco_page.png" width="512">
 
-See other page screenshot [here](README-GALLERY.md).
+for other page screenshots, see [here](README-GALLERY.md).
 
 These demo pages are static files, available in `example/static`.
 To get redirection to these pages, or redirection to third-party services, it is required to configure the files below:
@@ -76,7 +72,6 @@ To get redirection to these pages, or redirection to third-party services, it is
 - file: `example/proxy_conf.yml`, example value: `UNKNOW_ERROR_REDIRECT_PAGE: "https://static-contents.example.org/error_page.html"`
 - file: `example/plugins/{backends,frontends}/$filename`, example value: `disco_srv: "https://static-contents.example.org/static/disco.html"`
 
-<hr>
 
 ## Usage
 
@@ -112,6 +107,7 @@ To install it, you can execute the following command: `sudo docker pull ghcr.io/
 Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
 
 Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
+
 
 ### Setup a Djangosaml2 example Service Provider
 
