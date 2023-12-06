@@ -47,16 +47,18 @@ context = {
 def index(request):
     """ Barebone 'diagnostics' view, print user attributes if logged in + login/logout links.
     """
-    return render(request,"base.html",context)
+    return render(request, "base.html", context)
+
 
 def amministrazione(request):
-    return render(request,"amministrazione.html",context)
+    return render(request, "amministrazione.html", context)
+
 
 def echo_attributes(request):
-    context['attribute_display_names']=attribute_display_names
-    return render(request,"echo_attributes.html",context)
+    context['attribute_display_names'] = attribute_display_names
+    return render(request, "echo_attributes.html", context)
 
-# TODO fix this in IdP side?
+
 @receiver(pre_user_save, sender=User)
 def custom_update_user(sender, instance, attributes, user_modified, **kargs):
     """ Default behaviour does not play nice with booleans encoded in SAML as u'true'/u'false'.
@@ -66,4 +68,4 @@ def custom_update_user(sender, instance, attributes, user_modified, **kargs):
         u = set.intersection(set(v), set([u'true', u'false']))
         if u:
             setattr(instance, k, u.pop() == u'true')
-    return True  # I modified the user object
+    return True

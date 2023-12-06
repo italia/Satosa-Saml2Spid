@@ -6,13 +6,14 @@ with the  **Italian Digital Identity Systems**.
 
 ## Table of Contents
 
-1. [Goal](#goal)
-2. [Demo components](#demo-components)
-3. [Docker](#docker)
-6. [Setup](README-Setup.md)
-8. [For Developers](#for-developers)
-9. [Author](#authors)
-10. [Credits](#credits)
+1. [Glossary](#Glossary)
+2. [General features](#general-features)
+3. [Introduction](#introduction)
+4. [Demo components](#demo-components)
+5. [Setup](#setup)
+6. [For Developers](#for-developers)
+7. [Author](#authors)
+8. [Credits](#credits)
 
 
 ## Glossary
@@ -59,15 +60,11 @@ limitations, traditionally could not interact each other.
 
 ## Demo components
 
-The example project comes with the following demo pages, served
-with the help of an additional webserver dedicated for static contents:
+The example project comes with some preconfigured static pages.
 
+<img src="gallery/disco_page.png" width="512">
 
-###### Discovery Service page
-
-<img src="gallery/disco.png" width="512">
-
-See other page screenshot [here](README-GALLERY.md).
+for other page screenshots, see [here](README-GALLERY.md).
 
 These demo pages are static files, available in `example/static`.
 To get redirection to these pages, or redirection to third-party services, it is required to configure the files below:
@@ -76,41 +73,61 @@ To get redirection to these pages, or redirection to third-party services, it is
 - file: `example/plugins/{backends,frontends}/$filename`, example value: `disco_srv: "https://static-contents.example.org/static/disco.html"`
 
 
-## Docker
+## Usage
+
+The average time to set up this project for your needs takes roughly 1 hour. 
+This time may vary depending on your configuration, how many backend and 
+frontend you configure, the machine's resources and the type of network 
+connection for the download of the docker images.
+
+For the setup of this project, the following dependency must be installed in your machine:
+  
+  - Python 3.10 or higher
+  - Git
+  - Docker
+
+### Setup
+
+All the setup instructions for your Satosa-Saml2spid configuration are available in [README-SETUP.md](README-Setup.md).
+
+### Docker Compose
+
+This project uses Docker, all the instructions to configure this project using the official docker images are available in [Docker-compose](Docker-compose/README.md).
+
+The docker compose may use the [enviroment variables](README-Setup.md#configuration-by-environment-variables) 
+to configure Satosa-Saml2Spid.
 
 <img src="gallery/docker-design.svg" width="512">
 
 The official Satosa-Saml2SPID docker image is available at 
 [italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid).
 
-Below some quick commands:
+To install it, you can execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
 
-- Install it, execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
-- Build locally the image, execute the following command: `docker build -t satosa-saml2spid .`.
-- Inspect the image content: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
+Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
 
-
-### Docker compose
-
-Satosa-Saml2Spid image is built with production ready logic.
-The docker compose may use the [enviroment variables](#configuration-by-environment-variables) 
-to configure Satosa-Saml2Spid.
-
-See [Docker-compose](Docker-compose) for details.
+Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
 
-## Setup
+### Setup a Djangosaml2 example Service Provider
 
-See [README-SETUP.md](README-Setup.md).
+This project provides an example SAML2 Service Provider for demo purposes, 
+this Service Provider is executed by default in the Docker Compose.
+
+For any further detail about its configuration, see [example_sp/djangosaml2_sp/README.md](example_sp/djangosaml2_sp/README.md).
+
+Below the demo using the djangosaml2 Service Provider with the Wallet authentication [OpenID4VP ](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html).
+
+<img src="gallery/wallet-demo.gif" width="768">
 
 
 ## For Developers
 
-If you're doing tests and you don't want to pass through the Discovery page each time you can use `idphinting` if your SP support it.
+If you're running tests and you don't want to pass through the Discovery page each time you can use `idphinting` if your SP support it.
 Below an example using a djangosaml2 Service Provider:
 
 ```
-http://localhost:8000/saml2/login/?idp=https://localhost:10000/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
+http://localhost:8000/saml2/login/?idp=https://localhost/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
 ```
 
 If you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
