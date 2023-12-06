@@ -61,12 +61,10 @@ jobs:
         cd docker-example
         mkdir -p metadata/idp
         mkdir -p metadata/sp
-        export SATOSA_APP=`python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'`
     - name: docker compose
       run: |       
         cd Docker-compose
         docker compose -f docker-compose.yml up -d
-        sleep 5    
     - name: Metadata proxy to djangosaml2 SP
       run: |
         wget --no-check-certificate https://localhost/Saml2IDP/metadata -O example_sp/djangosaml2_sp/saml2_sp/saml2_config/satosa-saml2spid.xml
