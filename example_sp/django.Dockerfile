@@ -16,6 +16,4 @@ RUN apk add --update xmlsec-dev libffi-dev openssl-dev python3 py3-pip python3-d
 RUN pip list
 WORKDIR $BASEDIR/
  
-RUN virtualenv -ppython3 env \
-&& source env/bin/activate \
-&& pip3 install -r ../requirements.txt --ignore-installed --root-user-action=ignore
+RUN pip3 install -r ../requirements.txt --ignore-installed --root-user-action=ignore
