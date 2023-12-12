@@ -26,29 +26,16 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install system dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y libffi-dev libssl-dev python3-pip xmlsec1 procps libpcre3 libpcre3-dev
     - name: Install dependencies
       run: |
-        if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        pip install -r example_sp/djangosaml2_sp/requirements.txt
         pip install spid-sp-test>=1.2.8
         pip install flake8
-        pip install satosa_oidcop>=1.0
     - name: Lint with flake8
       run: |
         ## stop the build if there are Python syntax errors or undefined names
         flake8 --count --select=E9,F63,F7,F82 --show-source --statistics example
         ## exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 --max-line-length 120 --count --exit-zero --statistics example
-    - name: run djangosaml2 SP
-      run: |
-        cd example_sp/djangosaml2_sp/
-        bash run.sh &
-        sleep 5
     - name: djangosaml2 SP metadata to Proxy
       run: |
         wget http://localhost:8000/saml2/metadata -O example/metadata/sp/djangosaml2_sp.xml

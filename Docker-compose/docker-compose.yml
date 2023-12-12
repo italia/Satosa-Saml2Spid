@@ -35,8 +35,12 @@ services:
 
   satosa-saml2spid:
     #image: ghcr.io/italia/satosa-saml2spid:latest
-    image: satosa-saml2spid:latest
-    build: ../
+    #image: satosa-saml2spid:latest
+    build: 
+        context: ../      
+        args: 
+            - NODE_ENV=local        
+        dockerfile: satosa.Dockerfile
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
@@ -108,6 +112,26 @@ services:
       - ../docker-example/static:/var/www/html
     networks:
       - satosa-saml2spid
+
+
+  django_sp:
+    build: 
+        context: ../      
+        args: 
+            - NODE_ENV=local        
+        dockerfile: django.Dockerfile
+    container_name: django_sp
+    #restart: always
+    working_dir: /django_sp
+    entrypoint: "sh ./entrypoint.sh"
+    volumes:
+       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
+       - ../example_sp:/django_sp:rw
+    ports:
+      - "8000:8000"
+    networks:
+      - satosa-saml2spid    
+
 
   spid-samlcheck:
     image: italia/spid-saml-check
