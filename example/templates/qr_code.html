@@ -18,7 +18,12 @@
                 </div>
             <br>
             <div id="content-qrcode" class="row">
-                <span id="content-qrcode-payload"><img width="45%" src='data:image/svg+xml;base64,{{ qrcode_base64 }}'></span>
+                <span id="content-qrcode-payload" style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                  "><img width="25%" src='data:image/svg+xml;base64,{{ qrcode_base64 }}'></span>
                 <div id="content-qrcode-info">
                     <p id="content-qrcode-info-text" class="text-helper text-info">
                         Il codice è valido per <b id="timer"></b> secondi
@@ -47,7 +52,15 @@
     </div>
 </div>
 </div>
-
+<script>
+    let qrcode = document.getElementById("content-qrcode-payload")
+    qrcode.innerHTML = ''
+    new QRCode(qrcode, {
+        text: "{{ qrcode_base64 }}",    
+        colorDark : "#264373",
+        colorLight : "#ffffff"
+    });
+</script>
 <script>
     let failureTitle = "Autenticazione fallita";
     let failureText = "Qualcosa non ha funzionato. Genera un nuovo QR code per riprovare oppure segui le istruzioni visibili sull'app IO.";
@@ -59,12 +72,12 @@
     let connectedTitle = "Autenticazione effettuata";
     let qrCodeExpiredInfo = "Il QR code non è più valido.";
 
-    let expirationTime = 126;
+    let expirationTime = 120;
     let pollingInterval;
 
     function StartQRcodeScanCheck(){
         $('#timer').text(expirationTime);        
-        let timeout = 5000;
+        let timeout = expirationTime*1000;
         // setTimeout(timeout);
         pollingInterval = setTimeout(QRcodeScanCheck, timeout);
     }
@@ -130,7 +143,9 @@
     }
 
     function blankQRcode(){
-        $('#content img').replaceWith('<div style="width: 12em; height: 12em; background-color: gray; margin: 0 auto;"></div>');
+        $('#content img').css({
+            'opacity': '0.2'
+        });
     }
 
     var countdown = setInterval(function() {
