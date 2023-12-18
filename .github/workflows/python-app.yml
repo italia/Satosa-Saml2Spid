@@ -36,6 +36,10 @@ jobs:
         flake8 --count --select=E9,F63,F7,F82 --show-source --statistics example
         ## exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 --max-line-length 120 --count --exit-zero --statistics example
+    - name: Create docker-example folder
+      run: |
+          mkdir -p docker-example
+          cp -r example/. docker-example
     - name: docker compose
       run: |       
         cd Docker-compose
@@ -43,10 +47,6 @@ jobs:
     - name: djangosaml2 SP metadata to Proxy
       run: |
         wget http://localhost:8000/saml2/metadata -O example/metadata/sp/djangosaml2_sp.xml
-    - name: Create docker-example folder
-      run: |
-        mkdir -p docker-example
-        cp -r example/. docker-example
     - name: run satosa-saml2spid
       run: |
         cd docker-example
