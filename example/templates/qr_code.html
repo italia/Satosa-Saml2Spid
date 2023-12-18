@@ -23,7 +23,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                  "><img width="25%" src='data:image/svg+xml;base64,{{ qrcode_base64 }}'></span>
+                  "></span>
                 <div id="content-qrcode-info">
                     <p id="content-qrcode-info-text" class="text-helper text-info">
                         Il codice è valido per <b id="timer"></b> secondi
@@ -56,8 +56,8 @@
     let qrcode = document.getElementById("content-qrcode-payload")
     qrcode.innerHTML = ''
     new QRCode(qrcode, {
-        text: "{{ qrcode_base64 }}",    
-        colorDark : "#264373",
+        text: "{{ qrcode_text }}",    
+        colorDark : "{{ qrcode_color }}",
         colorLight : "#ffffff"
     });
 </script>
