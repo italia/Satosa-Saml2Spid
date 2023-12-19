@@ -17,7 +17,7 @@ LABEL org.opencontainers.image.authors=$AUTHORS \
       org.opencontainers.image.source=$VCS_URL \
       org.opencontainers.image.revision=$VCS_REF \
       org.opencontainers.image.description="Docker Image di Satosa-Saml2Spid."
-
+      
 RUN apk update
 RUN apk add --update --no-cache tzdata
 RUN cp /usr/share/zoneinfo/Europe/Rome /etc/localtime
@@ -28,6 +28,7 @@ RUN apk del tzdata
 RUN apk add mailcap
 
 COPY requirements.txt /
+
 
 ENV BASEDIR="/satosa_proxy"
 
