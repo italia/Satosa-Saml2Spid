@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   satosa-mongo:
     image: mongo
     container_name: satosa-mongo
@@ -32,11 +31,33 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER}:${MONGO_DBPASSWORD}@satosa-mongo:27017/
     networks:
       - satosa-saml2spid
-
+  ## START: PARTE NUOVA
+  django_sp:
+    build: 
+        context: ../      
+        args: 
+            - NODE_ENV=local        
+        dockerfile: example_sp/django.Dockerfile
+    container_name: django_sp
+    #restart: always
+    working_dir: /django_sp
+    entrypoint: "sh ../entrypoint.sh"
+    volumes:
+       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
+       - ../example_sp/djangosaml2_sp:/django_sp:rw
+    ports:
+      - "8000:8000"
+    networks:
+      - satosa-saml2spid
+## END: PARTE NUOVA
   satosa-saml2spid:
     #image: ghcr.io/italia/satosa-saml2spid:latest
-    image: satosa-saml2spid:latest
-    build: ../
+    #image: satosa-saml2spid:latest
+    build: 
+        context: ../      
+        args: 
+            - NODE_ENV=local        
+        dockerfile: satosa.Dockerfile
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
