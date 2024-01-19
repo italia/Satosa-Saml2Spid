@@ -4,15 +4,15 @@ name: OpenID4VP
 config:
   
   ui:
-    static_storage_url: "https://localhost/static"
+    static_storage_url: !ENV SATOSA_BASE
     template_folder: "templates" # project root
     qrcode_template: "qr_code.html"
     error_template: "error.html"
     error_url: "https://localhost/static/error_page.html"
-  
+
   endpoints:
       pre_request: '/pre-request'
-      redirect: '/redirect-uri'
+      redirect-uri: '/redirect-uri'
       request: '/request-uri'
       entity_configuration: '/.well-known/openid-federation'
       status: '/status'
@@ -21,7 +21,8 @@ config:
   qrcode:
     size: 100
     color: '#2B4375'
-    logo_path: 
+    expiration_time: 120 # seconds
+    logo_path:
     use_zlib: false
 
   jwt:
@@ -50,10 +51,10 @@ config:
         - ES256
         - ES384
         - ES512
-    
+
   authorization:
     url_scheme: eudiw
-    scopes: 
+    scopes:
     - pid-sd-jwt:unique_id+given_name+family_name
     default_acr_value: https://www.spid.gov.it/SpidL2
 
@@ -61,8 +62,8 @@ config:
     unique_identifiers:
     - tax_id_code
     - unique_id
-    subject_id_salt: CHANGEME!
-  
+    subject_id_random_value: CHANGEME!
+
   network:
     httpc_params:
       connection:
@@ -78,11 +79,11 @@ config:
         - http://127.0.0.1:8000
     default_sig_alg: "RS256"
     federation_entity_metadata:
-      - organization_name: Developers Italia SATOSA OpenID4VP backend
-      - homepage_uri: https://developers.italia.it
-      - policy_uri: https://developers.italia.it
-      - tos_uri: https://developers.italia.it
-      - logo_uri: https://developers.italia.it/assets/icons/logo-it.svg
+        organization_name: Developers Italia SATOSA OpenID4VP backend
+        homepage_uri: https://developers.italia.it
+        policy_uri: https://developers.italia.it
+        tos_uri: https://developers.italia.it
+        logo_uri: https://developers.italia.it/assets/icons/logo-it.svg
 
     # private jwk
     federation_jwks:
@@ -93,12 +94,12 @@ config:
         n: utqtxbs-jnK0cPsV7aRkkZKA9t4S-WSZa3nCZtYIKDpgLnR_qcpeF0diJZvKOqXmj2cXaKFUE-8uHKAHo7BL7T-Rj2x3vGESh7SG1pE0thDGlXj4yNsg0qNvCXtk703L2H3i1UXwx6nq1uFxD2EcOE4a6qDYBI16Zl71TUZktJwmOejoHl16CPWqDLGo9GUSk_MmHOV20m4wXWkB4qbvpWVY8H6b2a0rB1B1YPOs5ZLYarSYZgjDEg6DMtZ4NgiwZ-4N1aaLwyO-GLwt9Vf-NBKwoxeRyD3zWE2FXRFBbhKGksMrCGnFDsNl5JTlPjaM3kYyImE941ggcuc495m-Fw
         p: 2zmGXIMCEHPphw778YjVTar1eycih6fFSJ4I4bl1iq167GqO0PjlOx6CZ1-OdBTVU7HfrYRiUK_BnGRdPDn-DQghwwkB79ZdHWL14wXnpB5y-boHz_LxvjsEqXtuQYcIkidOGaMG68XNT1nM4F9a8UKFr5hHYT5_UIQSwsxlRQ0
         q: 2jMFt2iFrdaYabdXuB4QMboVjPvbLA-IVb6_0hSG_-EueGBvgcBxdFGIZaG6kqHqlB7qMsSzdptU0vn6IgmCZnX-Hlt6c5X7JB_q91PZMLTO01pbZ2Bk58GloalCHnw_mjPh0YPviH5jGoWM5RHyl_HDDMI-UeLkzP7ImxGizrM
-    
+
     # trust_marks: # todo
     # - ...
 
   # private jwk
-  metadata_jwks: 
+  metadata_jwks:
     - crv: P-256
       d: KzQBowMMoPmSZe7G8QsdEWc1IvR2nsgE8qTOYmMcLtc
       kid: dDwPWXz5sCtczj7CJbqgPGJ2qQ83gZ9Sfs-tJyULi6s
@@ -126,9 +127,9 @@ config:
           url: mongodb://satosa-mongo:27017
           conf:
             db_name: eudiw
-            username: satosa
-            password: thatpassword
-          # connection_params:
+          connection_params:
+            username: !ENV MONGODB_USERNAME
+            password: !ENV MONGODB_PASSWORD
       storage:
         module: pyeudiw.storage.mongo_storage
         class: MongoStorage
@@ -136,12 +137,13 @@ config:
           url: mongodb://satosa-mongo:27017
           conf:
             db_name: eudiw
-            username: satosa
-            password: thatpassword
             db_sessions_collection: sessions
             db_trust_attestations_collection: trust_attestations
             db_trust_anchors_collection: trust_anchors
-          # - connection_params:
+            data_ttl: 63072000 # 2 years
+          connection_params:
+            username: !ENV MONGODB_USERNAME
+            password: !ENV MONGODB_PASSWORD
 
   #This is the configuration for the relaying party metadata
   metadata:
@@ -172,66 +174,25 @@ config:
     # jwks:
 
     #This section contains the details for presentation request
-    presentation_definitions:
-      - id: pid-sd-jwt:unique_id+given_name+family_name
-        input_descriptors:
-        - id: pid-sd-jwt:unique_id+given_name+family_name
+    presentation_definition:
+      id: d76c51b7-ea90-49bb-8368-6b3d194fc131
+      input_descriptors:
+        - id: IdentityCredential
           format:
-            constraints:
-              fields:
-              - filter:
-                  const: PersonIdentificationData
+            vc+sd-jwt: { }
+          constraints:
+            limit_disclosure: required
+            fields:
+              - path:
+                  - "$.vct"
+                filter:
                   type: string
-                path:
-                - $.sd-jwt.type
-              - filter:
-                  type: object
-                path:
-                - $.sd-jwt.cnf
-              - intent_to_retain: 'true'
-                path:
-                - $.sd-jwt.family_name
-              - intent_to_retain: 'true'
-                path:
-                - $.sd-jwt.given_name
-              - intent_to_retain: 'true'
-                path:
-                - $.sd-jwt.unique_id
-              limit_disclosure: required
-            jwt:
-              alg:
-              - EdDSA
-              - ES256
-      - id: mDL-sample-req
-        input_descriptors:
-        - format:
-            constraints:
-              fields:
-              - filter:
-                  const: org.iso.18013.5.1.mDL
-                  type: string
-                path:
-                - $.mdoc.doctype
-              - filter:
-                  const: org.iso.18013.5.1
-                  type: string
-                path:
-                - $.mdoc.namespace
-              - intent_to_retain: 'false'
-                path:
-                - $.mdoc.family_name
-              - intent_to_retain: 'false'
-                path:
-                - $.mdoc.portrait
-              - intent_to_retain: 'false'
-                path:
-                - $.mdoc.driving_privileges
-              limit_disclosure: required
-            mso_mdoc:
-              alg:
-              - EdDSA
-              - ES256
-          id: mDL
+                  const: IdentityCredential
+              - path:
+                  - "$.family_name"
+              - path:
+                  - "$.given_name"
+
 
     redirect_uris:
       - <base_url>/<name>/redirect-uri
@@ -242,7 +203,10 @@ config:
     subject_type: pairwise
 
     vp_formats:
-      jwt_vp_json:
-        alg:
-          - EdDSA
-          - ES256K
+      vc+sd-jwt:
+        sd-jwt_alg_values:
+          - ES256
+          - ES384
+        kb-jwt_alg_values:
+          - ES256
+          - ES384

@@ -7,25 +7,25 @@ config:
   entityid_endpoint: true
 
   sp_config:
-    key_file: ./pki/privkey.pem
-    cert_file: ./pki/cert.pem
+    key_file: !ENV SATOSA_PRIVATE_KEY
+    cert_file: !ENV SATOSA_PUBLIC_KEY
     encryption_keypairs:
-    - {'key_file': ./pki/privkey.pem, 'cert_file': ./pki/cert.pem}
+    - {'key_file': !ENV SATOSA_PRIVATE_KEY, 'cert_file': !ENV SATOSA_PUBLIC_KEY}
 
     organization: 
       display_name:
-      - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_EN', 'en']
-      - [ 'change with $SATOSA_ORGANIZATION_DISPLAY_NAME_IT', 'it']
+      - [ !ENV SATOSA_ORGANIZATION_DISPLAY_NAME_EN, 'en']
+      - [ !ENV SATOSA_ORGANIZATION_DISPLAY_NAME_IT, 'it']
       name: 
-      - [ 'change with $SATOSA_ORGANIZATION_NAME_EN', 'en']
-      - [ 'change with $SATOSA_ORGANIZATION_NAME_IT', 'it']
+      - [ !ENV SATOSA_ORGANIZATION_NAME_EN, 'en']
+      - [ !ENV SATOSA_ORGANIZATION_NAME_IT, 'it']
       url:
-      - [ 'change with $SATOSA_ORGANIZATION_URL_EN', 'en']
-      - [ 'change with $SATOSA_ORGANIZATION_URL_IT', 'it']
+      - [ !ENV SATOSA_ORGANIZATION_URL_EN, 'en']
+      - [ !ENV SATOSA_ORGANIZATION_URL_IT, 'it']
     contact_person:
     - contact_type: technical
-      given_name: change with $SATOSA_CONTACT_PERSON_GIVEN_NAME
-      email_address: change with $SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
+      given_name: !ENV SATOSA_CONTACT_PERSON_GIVEN_NAME
+      email_address: !ENV SATOSA_CONTACT_PERSON_EMAIL_ADDRESS
 
     metadata:
       local: [./metadata/idp/]
@@ -46,28 +46,28 @@ config:
         ui_info:
           display_name:
             - lang: en
-              text: change with  $SATOSA_UI_DISPLAY_NAME_EN
+              text: !ENV SATOSA_UI_DISPLAY_NAME_EN
             - lang: it
-              text: change with $SATOSA_UI_DISPLAY_NAME_IT
+              text: !ENV SATOSA_UI_DISPLAY_NAME_IT
           description:
             - lang: en
-              text: change with $SATOSA_UI_DESCRIPTION_EN
+              text: !ENV SATOSA_UI_DESCRIPTION_EN
             - lang: it
-              text: change with $SATOSA_UI_DESCRIPTION_IT
+              text: !ENV SATOSA_UI_DESCRIPTION_IT
           information_url:
             - lang: en
-              text: change with $SATOSA_UI_INFORMATION_URL_EN
+              text: !ENV SATOSA_UI_INFORMATION_URL_EN
             - lang: it 
-              text: change with $SATOSA_UI_INFORMATION_URL_IT
+              text: !ENV SATOSA_UI_INFORMATION_URL_IT
           privacy_statement_url:
             - lang: en
-              text: change with $SATOSA_UI_PRIVACY_URL_EN
+              text: !ENV SATOSA_UI_PRIVACY_URL_EN
             - lang: it
-              text: change with $SATOSA_UI_PRIVACY_URL_IT
+              text: !ENV SATOSA_UI_PRIVACY_URL_IT
           logo:
-            text: change with $SATOSA_UI_LOGO_URL
-            width: change with $SATOSA_UI_LOGO_WIDTH
-            height: change with $SATOSA_UI_LOGO_HEIGHT
+            text: !ENV SATOSA_UI_LOGO_URL
+            width: !ENV SATOSA_UI_LOGO_WIDTH
+            height: !ENV SATOSA_UI_LOGO_HEIGHT
 
         only_use_keys_in_metadata: true
         force_authn: true
@@ -97,4 +97,4 @@ config:
         name_id_format_allow_create: false
 
   # disco_srv must be defined if there is more than one IdP in the metadata specified above
-  disco_srv: "https://localhost/static/disco.html"
+  disco_srv: !ENV SATOSA_DISCO_SRV
