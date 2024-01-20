@@ -13,7 +13,7 @@
     <!-- ita-buyyon CSS -->
     <link href="css/ita.min.css" rel="stylesheet">
     <link href="css/ita-font.min.css" rel="stylesheet">
-  </head>
+      </head>
   <body>
     <!-- Container - Body of page-->
     <div class="main-body">
@@ -37,18 +37,17 @@
                     <br>
                     <div class="row">
                       <div class="col-lg-12 text-center button-container column-buttons">
-                          <!-- IT Wallet IDP BUTTON SMALL "ENTRA CON WALLET ID" * begin * -->
-                          <a href="https://localhost/Saml2/disco?entityID=wallet" 
+                          <!--IT Wallet IDP BUTTON SMALL "ENTRA CON WALLET ID" * begin *-->
+                          <a href="https://localhost/Saml2/disco?entityID=wallet"
                             class="btn btn-primary btn-lg btn-me w-100" 
                             eidas-idp-button="#eidas-idp-button-xlarge-post" 
                             aria-haspopup="false" 
                             aria-expanded="false" 
-                            style="font-size: 21px;"
-                            onclick="loadIframe(this.href); return false;">
+                            style="font-size: 21px;"    >
                             <span><img class="icon buttonicon" src="/static/wallet-it/wallet_icon.svg" alt="Logo IT Wallet" /></span>
                             <span>Accedi con IT Wallet</span>
                           </a>
-                          <!-- IT Wallet IDP BUTTON SMALL "ENTRA CON WALLET ID" * end * -->
+                          <!--IT Wallet IDP BUTTON SMALL "ENTRA CON WALLET ID" * end *-->
                       </div>
                     </div>
                     <div class="row">
@@ -126,33 +125,12 @@
         </div>
       </div>
     </div>
-
-    <div id="iframeContainer">
-      <div id="innerBox">
-          <button id="closeButton">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"></path>
-            </svg>
-          </button>
-          <div id="inneriframeContainer"></div>
-          <!-- iframe goes here -->
+    <div id="theModal" class="modal fade text-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
       </div>
     </div>
-
-    <script>
-      function loadIframe(url) {
-          var iframe = document.createElement('iframe');
-          iframe.src = url;
-          document.getElementById('inneriframeContainer').appendChild(iframe);
-          document.getElementById('iframeContainer').style.display = 'block';
-      }
-
-      document.getElementById('closeButton').addEventListener('click', function() {
-          var inneriframeContainer = document.getElementById('inneriframeContainer');
-          inneriframeContainer.innerHTML = '';
-          iframeContainer.style.display = 'none';
-      });
-    </script>
     <!-- Footer -->
     <!-- <footer class="it-footer">
       <div class="it-footer-main">
@@ -299,6 +277,9 @@
     <script src="js/ita.min.js"></script>
     <script src="js/bootstrap-italia.bundle.min.js"></script>
 
-    <script>var spid_idps = new Ita;</script>
+    <script>
+    var spid_idps = new Ita;
+    </script>
+    
   </body>
 </html>
