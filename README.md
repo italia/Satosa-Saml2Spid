@@ -150,10 +150,6 @@ Here something that you should know before start.
 ## External references
 
 
-> :bulb: **Pyeudiw documentation**    
-> * For information on Relying Party authentication wallet, please visit the following [documentation](https://github.com/italia/eudi-wallet-it-python/blob/dev/README.md)
-
-
 ### Satosa-Saml2Spid tutorials
 
 - [Corso-OIDC-in-IDEM-via-Proxy](https://github.com/IDEM-GARR-AAI/Corso-OIDC-in-IDEM-via-Proxy/)
