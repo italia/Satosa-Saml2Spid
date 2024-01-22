@@ -107,14 +107,13 @@ You can override the configuration of the proxy by settings one or more of the f
 |**$SATOSA_SAML2_REQUESTED_ATTRIBUTES**|SAML2 required attributes|name, surname|
 |**$SATOSA_SPID_REQUESTED_ATTRIBUTES**|SPID required attributes|spidCode, name, familyName, fiscalNumber, email|
 
-### PYEUDIW
+### EUDI Wallet
 
-it is a component designed to implement the EUDI Wallet that aims to create a single secure digital identity and carrying out Relying Party functionalities.
-Pyeudiw is based on the OpenID4VP authentication protocol that allows users to access their digital wallets using a federated identity.
-For more information about EUDI Wallet please visit:
-* the "Italian implementation profile" [page](https://italia.github.io/eudi-wallet-it-docs/versione-corrente/en/)
-* the Relying Party authentication documentation [eudi-wallet-it-python](https://github.com/italia/eudi-wallet-it-python)
+**Satosa-Saml2Spid** uses the EUDI Wallet backend based on [eudi-wallet-it-python](https://github.com/italia/eudi-wallet-it-python) also known as pyeudiw.
 
+**Pyeudiw** is based on OpenID4VP and specifically implements an EUDI Wallet Relying Party to provide a Wallet Authentication mechanims within SATOSA.
+
+For more information about **EUDI Wallet** please visit the "Italian implementation profile" [page](https://italia.github.io/eudi-wallet-it-docs/versione-corrente/en/).
 
 
 ### Saml2 Metadata
