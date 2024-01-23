@@ -12,18 +12,17 @@ config:
 
   endpoints:
       pre_request: '/pre-request'
-      redirect: '/redirect-uri'
+      response: '/response-uri'
       request: '/request-uri'
       entity_configuration: '/.well-known/openid-federation'
       status: '/status'
       get_response: '/get-response'
 
   qrcode:
-    size: 100
-    color: '#2B4375'
+    size: 250 # px
+    color: '#000000'  # hex
     expiration_time: 120 # seconds
-    logo_path:
-    use_zlib: false
+    logo_path: 'wallet-it/wallet-icon-blue.svg' # relative to static_storage_url
 
   jwt:
     default_sig_alg: ES256 # or RS256
