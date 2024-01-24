@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Install xmlsec1
+        run: sudo apt-get install -y xmlsec1
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with:
@@ -38,8 +40,8 @@ jobs:
         flake8 --max-line-length 120 --count --exit-zero --statistics example
     - name: Create docker-example folder
       run: |
-          mkdir -p docker-example
-          cp -r example/. docker-example
+        mkdir -p docker-example
+        cp -r example/. docker-example
     - name: docker compose
       run: |       
         cd Docker-compose
