@@ -32,7 +32,7 @@ Backends:
 - CIE SP
 - FICEP SP (eIDAS 1.0)
 - SAML2 SP
-- EUDI Wallet (eIDAS 2.0)
+- EUDI Wallet (eIDAS 2.0, experimental and not intended for production use)
 
 Frontends:
 
