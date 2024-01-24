@@ -117,6 +117,12 @@ services:
     entrypoint: "sh entrypoint.sh"
     networks:
       - satosa-saml2spid
+    healthcheck:
+      test: curl --fail http://localhost/SAML2IDP/metadata || exit 1
+      interval: 2s
+      retries: 10
+      start_period: 10s
+      timeout: 10s
 
   satosa-nginx:
     image: nginx:alpine
