@@ -46,6 +46,7 @@ jobs:
       run: |       
         cd Docker-compose
         ./run-docker-compose.sh
+        docker ps -a
     - name: djangosaml2 SP metadata to Proxy
       run: |
         wget http://localhost:8000/saml2/metadata -O example/metadata/sp/djangosaml2_sp.xml
