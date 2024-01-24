@@ -35,6 +35,8 @@ echo -e "\n"
 
 echo -e "Tiro su la composizione, in caso, con le nuove versioni delle immagini. \n"
 
+docker compose -f docker-compose.yml build django_sp
+
 docker compose -f docker-compose.yml up -d --wait --wait-timeout 60
 
 echo -e "\n"
