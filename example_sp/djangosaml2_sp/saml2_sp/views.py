@@ -26,22 +26,39 @@ from .utils import repr_saml
 
 
 logger = logging.getLogger('djangosaml2')
-
+attribute_display_names = {
+        'last_login': 'Last Login',
+        'username': 'Username',
+        'email': 'Email',
+        'matricola': 'Matricola',
+        'first_name': 'First Name',
+        'last_name': 'Last Name',
+        'codice_fiscale': 'Codice Fiscale',
+        'gender': 'Gender',
+        'place_of_birth': 'Place of Birth',
+        'birth_date': 'Birth Date',
+    }
+context = {
+        "LOGOUT_URL" : settings.LOGOUT_URL,
+        "LOGIN_URL" : settings.LOGIN_URL,
+        "LOGIN_REDIRECT_URL" : settings.LOGIN_REDIRECT_URL
+    }
 
 def index(request):
     """ Barebone 'diagnostics' view, print user attributes if logged in + login/logout links.
     """
-    if request.user.is_authenticated:
-        out = "LOGGED IN: <a href={0}>LOGOUT</a><br>".format(settings.LOGOUT_URL)
-        out += "".join(['%s: %s</br>' % (field.name, getattr(request.user, field.name))
-                    for field in request.user._meta.get_fields()
-                    if field.concrete])
-        return HttpResponse(out)
-    else:
-        return HttpResponse("LOGGED OUT: <a href={0}>LOGIN</a>".format(settings.LOGIN_URL))
+    return render(request, "base.html", context)
 
 
-# TODO fix this in IdP side?
+def amministrazione(request):
+    return render(request, "amministrazione.html", context)
+
+
+def echo_attributes(request):
+    context['attribute_display_names'] = attribute_display_names
+    return render(request, "echo_attributes.html", context)
+
+
 @receiver(pre_user_save, sender=User)
 def custom_update_user(sender, instance, attributes, user_modified, **kargs):
     """ Default behaviour does not play nice with booleans encoded in SAML as u'true'/u'false'.
@@ -51,4 +68,4 @@ def custom_update_user(sender, instance, attributes, user_modified, **kargs):
         u = set.intersection(set(v), set([u'true', u'false']))
         if u:
             setattr(instance, k, u.pop() == u'true')
-    return True  # I modified the user object
+    return True

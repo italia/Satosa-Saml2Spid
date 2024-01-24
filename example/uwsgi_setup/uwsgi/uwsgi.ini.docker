@@ -1,0 +1,33 @@
+[uwsgi]
+project     = satosa-saml2spid
+base        = /opt
+
+chdir       = /satosa_proxy
+
+uid         = root
+gid         = root
+
+socket      = 0.0.0.0:10000
+master      = true
+processes   = 8
+
+# sets max connections to
+listen = 2048
+
+wsgi-file   = /usr/lib/python3.11/site-packages/satosa/wsgi.py
+callable = app
+
+log-master-bufsize = 128000
+vacuum      = True
+
+# respawn processes after serving ... requests
+max-requests    = 512
+
+# respawn processes taking more than takes more then ... seconds
+harakiri    = 20
+
+# avoid: invalid request block size: 4420 (max 4096)...skip
+buffer-size=32768
+
+pidfile     = /satosa_proxy/%(project).pid
+touch-reload    = /satosa_proxy/proxy_conf.yaml

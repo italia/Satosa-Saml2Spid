@@ -14,8 +14,8 @@ BASE = 'http://localhost:8000'
 BASE_URL = '{}/saml2'.format(BASE)
 
 LOGIN_URL = '/saml2/login/'
-LOGOUT_URL = '/saml2/logout/'
-LOGIN_REDIRECT_URL = '/saml2/echo_attributes'
+LOGOUT_URL = '/logout/'
+LOGIN_REDIRECT_URL = '/echo_attributes'
 
 SAML2_DEFAULT_BINDING = saml2.BINDING_HTTP_POST
 SAML_CONFIG = {
@@ -206,6 +206,8 @@ SAML_ATTRIBUTE_MAPPING = {
     'eduPersonPrincipalName': ('eduPersonPrincipalName',),
     'eduPersonEntitlement': ('eduPersonEntitlement',),
     'schacPersonalUniqueCode': ('schacPersonalUniqueCode',),
+
+    "givenName": ('first_name', ),
 
     # spid related
     'name': ('first_name', ),
