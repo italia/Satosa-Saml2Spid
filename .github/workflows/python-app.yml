@@ -38,12 +38,13 @@ jobs:
         flake8 --max-line-length 120 --count --exit-zero --statistics example
     - name: Create docker-example folder
       run: |
-          mkdir -p docker-example
-          cp -r example/. docker-example
+        mkdir -p docker-example
+        cp -r example/. docker-example
     - name: docker compose
       run: |       
         cd Docker-compose
         ./run-docker-compose.sh
+        docker ps -a
     - name: djangosaml2 SP metadata to Proxy
       run: |
         wget http://localhost:8000/saml2/metadata -O example/metadata/sp/djangosaml2_sp.xml
