@@ -27,8 +27,6 @@ For docker-compose you can also [see here](https://docs.docker.com/compose/insta
 
 ## Run the composition
 
-Copy the folder `example` to `docker-example` and do your configuration.
-
 ### Start the Compose
 
 Execute the run script for the first time:

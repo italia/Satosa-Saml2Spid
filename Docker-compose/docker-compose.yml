@@ -112,7 +112,7 @@ services:
       - "10000:10000"
     volumes:
        - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../docker-example:/satosa_proxy:rw
+       - ../example:/satosa_proxy:rw
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
     networks:
@@ -138,7 +138,7 @@ services:
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
       - nginx_certs:/etc/nginx/certs:ro
-      - ../docker-example/static:/var/www/html
+      - ../example/static:/var/www/html
     networks:
       - satosa-saml2spid
 
