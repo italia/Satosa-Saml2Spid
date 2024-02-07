@@ -1,4 +1,5 @@
 #!/bin/bash
+. /.venv/bin/activate
 
 # get IDEM MDQ key
 if [[ $GET_IDEM_MDQ_KEY == true ]]; then
@@ -7,4 +8,5 @@ if [[ $GET_IDEM_MDQ_KEY == true ]]; then
   echo "Downloaded IDEM MDQ key"
 fi
 
-uwsgi --ini /satosa_proxy/uwsgi_setup/uwsgi/uwsgi.ini.docker
+wsgi_file=/.venv/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa/wsgi.py
+uwsgi --ini /satosa_proxy/uwsgi_setup/uwsgi/uwsgi.ini.docker --wsgi-file $wsgi_file

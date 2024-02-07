@@ -118,11 +118,11 @@ services:
     networks:
       - satosa-saml2spid
     healthcheck:
-      test: curl --fail http://localhost/SAML2IDP/metadata || exit 1
-      interval: 2s
+      test: wget -O - https://satosa-nginx/Saml2IDP/metadata --no-check-certificate || exit 1
+      interval: 30s
       retries: 10
-      start_period: 10s
-      timeout: 10s
+      start_period: 30s
+      timeout: 30s
 
   satosa-nginx:
     image: nginx:alpine
