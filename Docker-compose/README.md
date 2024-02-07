@@ -29,6 +29,8 @@ For docker-compose you can also [see here](https://docs.docker.com/compose/insta
 
 Copy the folder `example` to `docker-example` and do your configuration.
 
+> :warning: **DO NOT USE the `example` folder _as is_ in production**: the `example` folder provides secrets that **MUST** be not used in a production environment. It sole purpose is to provide a user friendly starting point.
+
 ### Start the Compose
 
 Execute the run script for the first time:
