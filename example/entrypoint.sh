@@ -1,4 +1,5 @@
 #!/bin/bash
+. /.venv/bin/activate
 
 # get IDEM MDQ key
 if [[ $GET_IDEM_MDQ_KEY == true ]]; then
