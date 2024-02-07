@@ -84,7 +84,7 @@ You can override the configuration of the proxy by settings one or more of the f
 | **SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER**      | Metadata Contact person telephone number for SPID / CIE Backend | +3906123456789                                        |
 | **SATOSA_CONTACT_PERSON_FISCALCODE**            | Metadata Contact person fiscal code for SPID / CIE Backend | 01234567890                                               |
 | **SATOSA_CONTACT_PERSON_GIVEN_NAME**            | Metadata Contact person name                               | Name                                                       |
-| **SATOSA_CONTACT_PERSON_IPA_CODE**              | Metadata Contact person IPA code for SPID / CIE Backend    | ispra_rm                                                   |
+| **SATOSA_CONTACT_PERSON_IPA_CODE**              | Metadata Contact person IPA code for SPID / CIE Backend    | ipa00c                                                   |
 | **SATOSA_CONTACT_PERSON_MUNICIPALITY**          | Metadata Contact person municipality code for CIE Backend  | H501                                                       |
 | **SATOSA_ENCRYPTION_KEY**                        | Encryption key for state                                   | CHANGE_ME!                                                 |
 | **SATOSA_ORGANIZATION_DISPLAY_NAME_EN**         | Metadata English organization display name                | Resource provided by Example Organization                 |
