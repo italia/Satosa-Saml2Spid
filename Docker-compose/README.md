@@ -109,11 +109,10 @@ See [mongo readme](../README.mongo.md) to have some example of demo data.
 
 ## Env file
 
-```
-# cat .env
-MONGO_DBUSER=satosa
-MONGO_DBPASSWORD=thatpassword
-HOSTNAME=localhost
-```
+Customize the environment variables using the [.env](.env) file.
+The file [.env.example](.env.example) provides an example with all the environment variables you can set.
+The variables not set in the `.env` file will fallback on a default value defined in the [docker-compose.yml](docker-compose.yml).
+
+> :warning: Be careful when deploying your solution since some environment variables are **security-related**.
 
 See [mongo readme](../README.mongo.md) for explanation of environment variables of MongoDB.
