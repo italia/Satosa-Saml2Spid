@@ -6,8 +6,8 @@ services:
     restart: always
     environment:
       MONGO_INITDB_DATABASE: oidcop
-      MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER}"
-      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD}"
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER:-satosa}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
     volumes:
       - mongodata:/data/db
       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
@@ -26,9 +26,9 @@ services:
     environment:
       ME_CONFIG_BASICAUTH_USERNAME: satosauser
       ME_CONFIG_BASICAUTH_PASSWORD: satosapw
-      ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER}"
-      ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD}"
-      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER}:${MONGO_DBPASSWORD}@satosa-mongo:27017/
+      ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER:-satosa}"
+      ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
+      ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER:-satosa}:${MONGO_DBPASSWORD:-thatpassword}@satosa-mongo:27017/
     networks:
       - satosa-saml2spid
   ## START: PARTE NUOVA
@@ -65,47 +65,47 @@ services:
       - BASE_DIR=/satosa_proxy
       - SATOSA_BY_DOCKER=1
 
-      - SATOSA_BASE=https://$HOSTNAME
-      - SATOSA_BASE_STATIC=https://$HOSTNAME/static
-      - SATOSA_DISCO_SRV=https://$HOSTNAME/static/disco.html
-      - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://$HOSTNAME/static/error_page.html
+      - SATOSA_BASE=https://${HOSTNAME:-localhost}
+      - SATOSA_BASE_STATIC=https://${HOSTNAME:-localhost}/static
+      - SATOSA_DISCO_SRV=https://${HOSTNAME:-localhost}/static/disco.html
+      - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://${HOSTNAME:-localhost}/static/error_page.html
       
-      - MONGODB_PASSWORD=${MONGO_DBPASSWORD}
-      - MONGODB_USERNAME=${MONGO_DBUSER}
+      - MONGODB_USERNAME=${MONGO_DBUSER:-satosa}
+      - MONGODB_PASSWORD=${MONGO_DBPASSWORD:-thatpassword}
 
-      - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=support.example@organization.org
-      - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=+3906123456789
-      - SATOSA_CONTACT_PERSON_FISCALCODE=01234567890
-      - SATOSA_CONTACT_PERSON_GIVEN_NAME=Name
-      - SATOSA_CONTACT_PERSON_IPA_CODE=ipa00c
-      - SATOSA_CONTACT_PERSON_MUNICIPALITY=H501
-      - SATOSA_ENCRYPTION_KEY=CHANGE_ME!
+      - SATOSA_CONTACT_PERSON_EMAIL_ADDRESS=${SATOSA_CONTACT_PERSON_EMAIL_ADDRESS:-support.example@organization.org}
+      - SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER=${SATOSA_CONTACT_PERSON_TELEPHONE_NUMBER:-+3906123456789}
+      - SATOSA_CONTACT_PERSON_FISCALCODE=${SATOSA_CONTACT_PERSON_FISCALCODE:-XXXXXX00X00X000Y}
+      - SATOSA_CONTACT_PERSON_GIVEN_NAME=${SATOSA_CONTACT_PERSON_GIVEN_NAME:-Contact Me}
+      - SATOSA_CONTACT_PERSON_IPA_CODE=${SATOSA_CONTACT_PERSON_IPA_CODE:-ipa00c}
+      - SATOSA_CONTACT_PERSON_MUNICIPALITY=${SATOSA_CONTACT_PERSON_MUNICIPALITY:-H501}
+      - SATOSA_ENCRYPTION_KEY=${SATOSA_ENCRYPTION_KEY:-CHANGE_ME!}
 
-      - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=Resource provided by Example Organization
-      - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=Resource provided by Example Organization
-      - SATOSA_ORGANIZATION_NAME_EN=Resource provided by Example Organization
-      - SATOSA_ORGANIZATION_NAME_IT=Resource provided by Example Organization
-      - SATOSA_ORGANIZATION_URL_EN=https://example_organization.org
-      - SATOSA_ORGANIZATION_URL_IT=https://example_organization.org
-      - SATOSA_PRIVATE_KEY=${KEYS_FOLDER}/privkey.pem
-      - SATOSA_PUBLIC_KEY=${KEYS_FOLDER}/cert.pem
-      - SATOSA_SALT=CHANGE_ME!
-      - SATOSA_STATE_ENCRYPTION_KEY=CHANGE_ME!
-      - SATOSA_UI_DESCRIPTION_EN=Resource description
-      - SATOSA_UI_DESCRIPTION_IT=Resource description
-      - SATOSA_UI_DISPLAY_NAME_EN=Resource Display Name
-      - SATOSA_UI_DISPLAY_NAME_IT=Resource Display Name
-      - SATOSA_UI_INFORMATION_URL_EN=https://example_organization.org/information_url_en
-      - SATOSA_UI_INFORMATION_URL_IT=https://example_organization.org/information_url_en
-      - SATOSA_UI_LOGO_HEIGHT=60
-      - SATOSA_UI_LOGO_URL=https://example_organization.org/logo.png
-      - SATOSA_UI_LOGO_WIDTH=80
-      - SATOSA_UI_PRIVACY_URL_EN=https://example_organization.org/privacy_en
-      - SATOSA_UI_PRIVACY_URL_IT=https://example_organization.org/privacy_en
-      - SATOSA_USER_ID_HASH_SALT=CHANGE_ME!
-      - SATOSA_REQUESTED_ATTRIBUTES=[]
+      - SATOSA_ORGANIZATION_DISPLAY_NAME_EN=${SATOSA_ORGANIZATION_DISPLAY_NAME_EN:-Example Organization}
+      - SATOSA_ORGANIZATION_DISPLAY_NAME_IT=${SATOSA_ORGANIZATION_DISPLAY_NAME_IT:-Example Organization}
+      - SATOSA_ORGANIZATION_NAME_EN=${SATOSA_ORGANIZATION_NAME_EN:-example_organization}
+      - SATOSA_ORGANIZATION_NAME_IT=${SATOSA_ORGANIZATION_NAME_IT:-example_organization}
+      - SATOSA_ORGANIZATION_URL_EN=${SATOSA_ORGANIZATION_URL_EN:-https://example_organization.org}
+      - SATOSA_ORGANIZATION_URL_IT=${SATOSA_ORGANIZATION_URL_IT:-https://example_organization.org/it}
+      - SATOSA_PRIVATE_KEY=${KEYS_FOLDER}/${SATOSA_PRIVATE_KEY_FILENAME:-privkey.pem}
+      - SATOSA_PUBLIC_KEY=${KEYS_FOLDER}/${SATOSA_CERT_FILENAME:-cert.pem}
+      - SATOSA_SALT=${SATOSA_SALT:-CHANGE_ME!}
+      - SATOSA_STATE_ENCRYPTION_KEY=${SATOSA_STATE_ENCRYPTION_KEY:-CHANGE_ME!}
+      - SATOSA_UI_DESCRIPTION_EN=${SATOSA_UI_DESCRIPTION_EN:-Resource description}
+      - SATOSA_UI_DESCRIPTION_IT=${SATOSA_UI_DESCRIPTION_IT:-Resource description}
+      - SATOSA_UI_DISPLAY_NAME_EN=${SATOSA_UI_DISPLAY_NAME_EN:-Resource Display Name}
+      - SATOSA_UI_DISPLAY_NAME_IT=${SATOSA_UI_DISPLAY_NAME_IT:-Resource Display Name}
+      - SATOSA_UI_INFORMATION_URL_EN=${SATOSA_UI_INFORMATION_URL_EN:-https://example_organization.org/information_url}
+      - SATOSA_UI_INFORMATION_URL_IT=${SATOSA_UI_INFORMATION_URL_IT:-https://example_organization.org/it/information_url}
+      - SATOSA_UI_LOGO_HEIGHT=${SATOSA_UI_LOGO_HEIGHT:-60}
+      - SATOSA_UI_LOGO_WIDTH=${SATOSA_UI_LOGO_WIDTH:-80}
+      - SATOSA_UI_LOGO_URL=${SATOSA_UI_LOGO_URL:-https://example_organization.org/logo.png}
+      - SATOSA_UI_PRIVACY_URL_EN=${SATOSA_UI_PRIVACY_URL_EN:-https://example_organization.org/privacy}
+      - SATOSA_UI_PRIVACY_URL_IT=${SATOSA_UI_PRIVACY_URL_IT:-https://example_organization.org/it/privacy}
+      - SATOSA_USER_ID_HASH_SALT=${SATOSA_USER_ID_HASH_SALT:-CHANGE_ME!}
+      - SATOSA_REQUESTED_ATTRIBUTES=${SATOSA_REQUESTED_ATTRIBUTES:-[]}
 
-      - GET_IDEM_MDQ_KEY=true
+      - GET_IDEM_MDQ_KEY=${GET_IDEM_MDQ_KEY:-true}
     expose:
       - 10000
     ports:
