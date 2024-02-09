@@ -141,6 +141,8 @@ services:
       - ../docker-example/static:/var/www/html
     networks:
       - satosa-saml2spid
+    environment:
+      - NGINX_HOST=${HOSTNAME:-localhost}
 
   spid-samlcheck:
     image: italia/spid-saml-check
