@@ -127,7 +127,7 @@ If you're running tests and you don't want to pass through the Discovery page ea
 Below an example using a djangosaml2 Service Provider:
 
 ```
-http://localhost:8000/saml2/login/?idp=https://localhost/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
+https://localhost/saml2/login/?idp=https://localhost/Saml2IDP/metadata&next=/saml2/echo_attributes&idphint=https%253A%252F%252Flocalhost%253A8080
 ```
 
 If you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
@@ -184,6 +184,7 @@ Here something that you should know before start.
 
 ## Acknowledgments
 
+- Salvatore Laiso
 - Fulvio Scorza and his Team @ Università del Piemonte Orientale
 - Paolo Smiraglia (SPID certs)
 - Identity Python Community (pySAML2 and SATOSA)
