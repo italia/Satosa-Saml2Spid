@@ -51,13 +51,13 @@ services:
       - satosa-saml2spid
 ## END: PARTE NUOVA
   satosa-saml2spid:
-    #image: ghcr.io/italia/satosa-saml2spid:latest
+    image: ghcr.io/italia/satosa-saml2spid:latest
     #image: satosa-saml2spid:latest
-    build: 
-        context: ../      
-        args: 
-            - NODE_ENV=local        
-        dockerfile: Dockerfile
+    #build: 
+    #    context: ../      
+    #    args: 
+    #        - NODE_ENV=local        
+    #    dockerfile: Dockerfile
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
