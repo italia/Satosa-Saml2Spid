@@ -34,6 +34,7 @@ class Saml2ResponseValidator(object):
         authn_context_class_ref="https://www.spid.gov.it/SpidL2",
         return_addrs=[],
         allowed_acrs=[],
+        cie_mode = False
     ):
 
         self.response = samlp.response_from_string(authn_response)
@@ -45,6 +46,7 @@ class Saml2ResponseValidator(object):
         self.return_addrs = return_addrs
         self.issuer = issuer
         self.allowed_acrs = allowed_acrs
+        self.cie_mode = cie_mode
 
     # handled adding authn req arguments in the session state (cookie)
     def validate_in_response_to(self):
@@ -77,7 +79,8 @@ class Saml2ResponseValidator(object):
 
         # 30
         # check that this issuer is in the metadata...
-        if self.response.issuer.format:
+        # L'attributo Format di Issuer della Response deve essere omesso o assumere valore urn:oasis:names:tc:SAML:2.0:nameid-format:entity. In questo test il valore è diverso. Risultato atteso: KO
+        if hasattr(self.response.issuer, "format") and self.response.issuer.format:
             if (
                 self.response.issuer.format
                 != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
@@ -87,21 +90,22 @@ class Saml2ResponseValidator(object):
                     '!= "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"'
                 )
 
-        msg = "Issuer format is not valid: {}. {}"
-        # 70, 71
-        assiss = self.response.assertion[0].issuer
-        if not hasattr(assiss, "format") or not getattr(assiss, "format", None):
-            raise SPIDValidatorException(
-                msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
-            )
-
-        # 72
-        for i in self.response.assertion:
-            if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+        if not self.cie_mode:
+            msg = "Issuer format is not valid: {}. {}"
+            # 70, 71
+            assiss = self.response.assertion[0].issuer
+            if not hasattr(assiss, "format") or not getattr(assiss, "format", None):
                 raise SPIDValidatorException(
-                    msg.format(self.response.issuer.format,
-                               _ERROR_TROUBLESHOOT)
+                    msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
                 )
+
+            # 72
+            for i in self.response.assertion:
+                if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+                    raise SPIDValidatorException(
+                        msg.format(self.response.issuer.format,
+                                   _ERROR_TROUBLESHOOT)
+                    )
 
     def validate_assertion_version(self):
         """spid saml check 35"""
