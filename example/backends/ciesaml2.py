@@ -472,7 +472,6 @@ class CieSAMLBackend(SAMLBackend):
                 **{"message": _msg, "troubleshoot": _TROUBLESHOOT_MSG}
             )
 
-        list(context.state.keys())[1]
         # deprecated
         # if not context.state.get('Saml2IDP'):
         # _msg = "context.state['Saml2IDP'] KeyError"
@@ -496,6 +495,7 @@ class CieSAMLBackend(SAMLBackend):
             authn_context_class_ref=authn_context_classref,
             return_addrs=authn_response.return_addrs,
             allowed_acrs=self.config["spid_allowed_acrs"],
+            cie_mode = True
         )
         try:
             validator.run()
