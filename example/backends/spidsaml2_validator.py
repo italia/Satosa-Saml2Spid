@@ -99,13 +99,13 @@ class Saml2ResponseValidator(object):
                     msg.format(self.response.issuer.format, _ERROR_TROUBLESHOOT)
                 )
 
-        # 72
-        for i in self.response.assertion:
-            if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
-                raise SPIDValidatorException(
-                    msg.format(self.response.issuer.format,
-                               _ERROR_TROUBLESHOOT)
-                )
+            # 72
+            for i in self.response.assertion:
+                if i.issuer.format != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity":
+                    raise SPIDValidatorException(
+                        msg.format(self.response.issuer.format,
+                                   _ERROR_TROUBLESHOOT)
+                    )
 
     def validate_assertion_version(self):
         """spid saml check 35"""
