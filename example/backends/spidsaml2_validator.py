@@ -78,7 +78,7 @@ class Saml2ResponseValidator(object):
         # 30
         # check that this issuer is in the metadata...
         # L'attributo Format di Issuer della Response deve essere omesso o assumere valore urn:oasis:names:tc:SAML:2.0:nameid-format:entity. In questo test il valore è diverso. Risultato atteso: KO
-        if hasattr(self.response.issuer, "format"):
+        if hasattr(self.response.issuer, "format") and self.response.issuer.format:
             if (
                 self.response.issuer.format
                 != "urn:oasis:names:tc:SAML:2.0:nameid-format:entity"
