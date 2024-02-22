@@ -65,10 +65,10 @@ services:
       - BASE_DIR=/satosa_proxy
       - SATOSA_BY_DOCKER=1
 
-      - SATOSA_BASE=https://${HOSTNAME:-localhost}
-      - SATOSA_BASE_STATIC=https://${HOSTNAME:-localhost}/static
-      - SATOSA_DISCO_SRV=https://${HOSTNAME:-localhost}/static/disco.html
-      - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://${HOSTNAME:-localhost}/static/error_page.html
+      - SATOSA_BASE=https://${SATOSA_HOSTNAME:-localhost}
+      - SATOSA_BASE_STATIC=https://${SATOSA_HOSTNAME:-localhost}/static
+      - SATOSA_DISCO_SRV=https://${SATOSA_HOSTNAME:-localhost}/static/disco.html
+      - SATOSA_UNKNOW_ERROR_REDIRECT_PAGE=https://${SATOSA_HOSTNAME:-localhost}/static/error_page.html
       
       - MONGODB_USERNAME=${MONGO_DBUSER:-satosa}
       - MONGODB_PASSWORD=${MONGO_DBPASSWORD:-thatpassword}
@@ -146,7 +146,7 @@ services:
     networks:
       - satosa-saml2spid
     environment:
-      - NGINX_HOST=${HOSTNAME:-localhost}
+      - NGINX_HOST=${SATOSA_HOSTNAME:-localhost}
 
   spid-samlcheck:
     image: italia/spid-saml-check
