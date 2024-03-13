@@ -562,9 +562,12 @@ class SpidSAMLBackend(SAMLBackend):
         recipient = _sp_config["service"]["sp"]["endpoints"][
             "assertion_consumer_service"
         ][0][0]
-        authn_context_classref = self.config["acr_mapping"][""]
 
+        # ACR
         issuer = authn_response.response.issuer
+        acr_map = self.config.get("acr_mapping", {})
+        acr_default = acr_map.get("", "https://www.spid.gov.it/SpidL2")
+        authn_context_classref = acr_map.get(issuer, acr_default)
 
         # this will get the entity name in state
         if len(context.state.keys()) < 2:
