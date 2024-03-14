@@ -564,7 +564,7 @@ class SpidSAMLBackend(SAMLBackend):
         ][0][0]
 
         # ACR
-        issuer = authn_response.response.issuer
+        issuer = authn_response.response.issuer.text.strip()
         acr_map :dict = {}
 
         try:
@@ -572,7 +572,10 @@ class SpidSAMLBackend(SAMLBackend):
         except Exception as e:
             logger.warning(
                 "acr_mapping not defined in the spid backend"
-        )
+            )
+            return self.handle_error(
+                **{"message": "acr_mapping not defined in the spid backend", "troubleshoot": "Please contact the administrators of the platform and tell them to configure properly the acr_mapping in the SPID/CIE backend"}
+            )
         acr_default = acr_map.get("", "https://www.spid.gov.it/SpidL2")
         authn_context_classref = acr_map.get(issuer, acr_default)
 
