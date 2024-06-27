@@ -1,4 +1,4 @@
-FROM alpine:3.19.1
+FROM alpine:3.20
 
 # Metadata params
 ARG BUILD_DATE
@@ -31,7 +31,7 @@ COPY requirements.txt /
 
 ENV BASEDIR="/satosa_proxy"
 
-RUN apk add --update xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq yq
+RUN apk add --update xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq yq-go pcre-dev
 
 RUN python3 -m venv .venv && . .venv/bin/activate && pip3 install --upgrade pip setuptools \ 
       && pip3 install -r requirements.txt --ignore-installed --root-user-action=ignore && mkdir $BASEDIR
