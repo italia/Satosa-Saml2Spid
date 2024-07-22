@@ -61,6 +61,8 @@ services:
     container_name: satosa-saml2spid
     depends_on:
       - satosa-mongo
+    stdin_open: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
+    tty: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     environment:
       - SATOSA_BY_DOCKER=1
       - GET_IDEM_MDQ_KEY=${GET_IDEM_MDQ_KEY:-true}
