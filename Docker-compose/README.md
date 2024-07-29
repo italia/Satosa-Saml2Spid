@@ -12,6 +12,8 @@
 
 ## Requirements
 
+The following instructions and provided scripts are intended to be used on a RedHat or Ubuntu based system. Success on Windows based system is currenlty not guaranteed.
+
 In order to execute the run script you need:
 
 * jq
