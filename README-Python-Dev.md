@@ -12,33 +12,33 @@ We will assume that the project eudi-wallet-it-python has been cloned in the fol
 
 ## Step 1: Set environment variable
 
-Set the environment variable `SATOSA_DEBUG=true`. This can be done either in the terminal with the command `export SATOSA_DEBUG=true`, by updating the file [.env](Docker-compose/.env) by appending the entry `SATOSA_DEBUG=true` or by setting the environment variable .
+Set the environment variable `SATOSA_DEBUG=true`. This can be done either in the terminal with the command `export SATOSA_DEBUG=true`, or by updating the file [.env](Docker-compose/.env) by appending the entry `SATOSA_DEBUG=true`.
 
 ## Step 2: Update the docker volume by binding the local development directory
 
-Among the volumes of the container `satosa-saml2spid`, add the entry
+In the file [docker-compose.yml](Docker-example/docker-compose.yml), among the volumes of the container `satosa-saml2spid`, add the entry
     
         volumes:
             - /home/username/my/development/folder/eudi-wallet-it-python/pyeudiw:/.venv/lib/python3.12/site-packages/pyeudiw:rw
 
 This will replace the installed dependency package with your own local code.
 
-**NOTE:** at the time of writing, the container packages are installed in `/.venv/lib/python3.12/site-packages`, but the actual location depends on the container python version. Check che actual python version before proceeding with this step.
+**NOTE:** at the time of writing, container volume is binded to the location `/.venv/lib/python3.12/site-packages`, but your location might be different as it always reference the Python version that is awailable in the container, which in this case is `Python3.12`. Check che actual python version of your container before completing with this step.
 
 ## Step 3: Run the container
 
-Launch the script [run-docker-compose.sh](Docker-compose/run-docker-compose.sh)
+Launch the script [run-docker-compose.sh](Docker-compose/run-docker-compose.sh). This will launch the docker composition that includes the container `satosa-saml2spid`.
 
 ## Step 4 (Optional): Install further dependencies in the container
 
 If your version of the library containes further dependency, or if you want to install development only dependency such as, say [pdbpp](https://github.com/pdbpp/pdbpp), you can create a new image that contains the required dependency.
-Two different options are presented, based on your preferences.
+Two different options are presented, based on your preferences or requirements.
 
 ### Option 4.1: Add the dependency to an existing container
 
 The following steps instructs on how to install a new pip dependency to an existing container. We will assume that the container has name `satosa-saml2spid`.
 
-1. Enter in the container environment with `docker exec -it satosa-saml2spid bash`.
+1. Enter in the container environment with `docker exec -it satosa-saml2spid bash`. Note that to perform the `docker exec` command, the container MUST be running.
 2. Execute the following commands to install you own dependencies; replace `new_package_name` with the new dependency
 
         source /.venv/bin/activate
@@ -46,7 +46,7 @@ The following steps instructs on how to install a new pip dependency to an exist
 
 3. Exit from the container area with Docker escape control sequence, that is, `Ctrl+P` followed by `Ctrl+Q`.
 4. Freeze the changes with the command `docker container commit satosa-saml2spid`.
-5. Re-run the container
+5. Stop and then restart the container.
 
 At the end of the procedure, you will have created a new updated image with the required dependency.
 
@@ -65,7 +65,7 @@ The following steps instruct on how to create a new image with the new required 
 5. Modify docker-compose.yml to replace the old image reference with `satosa-saml2spid`.
 6. Re-run `docker compose up`.
 
-**NOTE:** if the image is already built locally, you can simply uupdate the existing Dockerfile instead of creating a new one from scratch.
+**NOTE:** if the image is already built locally, you can simply update the existing Dockerfile instead of creating a new one from scratch.
 
 ## Step 5 (Optional): Insert a breakpoint to check that your setting is working as intended
 
