@@ -6,9 +6,9 @@ The instructions below are intended to be a suggestion or a guideline rather tha
 
 ## Step 0: Identify which Python dependency requires development
 
-We will assume that the developer want to develop a modified version of the library [eudi-wallet-it-python](https://github.com/italia/eudi-wallet-it-python) which is a dependency of the container `satosa-saml2spid`.
+We assume that the developer needs to develop a modified version of the library [eudi-wallet-it-python](https://github.com/italia/eudi-wallet-it-python) which is a dependency of the container `satosa-saml2spid`.
 A local copy of the library is required.
-We will assume that the project eudi-wallet-it-python has been cloned in the folder `/home/username/my/development/folder/eudi-wallet-it-python/pyeudiw`. The path prefix `/home/username/my/development/folder/` is an example and should be replaced here with the location of your own development package.
+We assume that the project eudi-wallet-it-python has been cloned in the folder `/home/username/my/development/folder/eudi-wallet-it-python/pyeudiw`. The path prefix `/home/username/my/development/folder/` is an example and should be replaced here with the location of your own development package.
 
 ## Step 1: Set environment variable
 
