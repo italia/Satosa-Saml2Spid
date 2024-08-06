@@ -31,7 +31,7 @@ Launch the script [run-docker-compose.sh](Docker-compose/run-docker-compose.sh).
 
 ## Step 4 (Optional): Install further dependencies in the container
 
-If your version of the library containes further dependency, or if you want to install development only dependency such as, say [pdbpp](https://github.com/pdbpp/pdbpp), you can create a new image that contains the required dependency.
+If your version of the library contains further dependencies, or if you want to install development only dependencies such as, say [pdbpp](https://github.com/pdbpp/pdbpp), you can create a new image that contains the required dependency or execute a terminal (such as a `bash`) within the container and install it manually, therefore commit the changes to the docker container, as shown in the next section.
 Two different options are presented, based on your preferences or requirements.
 
 ### Option 4.1: Add the dependency to an existing container
@@ -48,7 +48,7 @@ The following steps instructs on how to install a new pip dependency to an exist
 4. Freeze the changes with the command `docker container commit satosa-saml2spid`.
 5. Stop and then restart the container.
 
-At the end of the procedure, you will have created a new updated image with the required dependency.
+At the end of the procedure, you will find the required dependency as part of your container.
 
 ### Options 4.2: Create a new image Dockerfile
 
