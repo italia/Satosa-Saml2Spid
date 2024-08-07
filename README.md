@@ -133,6 +133,8 @@ https://localhost/saml2/login/?idp=https://localhost/Saml2IDP/metadata&next=/sam
 If you're going to test Satosa-Saml2Spid with spid-sp-test, take a look to
 [.github/workflows/python-app.yml](.github/workflows/python-app.yml).
 
+If you are using this project as a testing tool or playground for [eudi-wallet-it-python](https://github.com/italia/eudi-wallet-it-python) or any other of its Python dependencies, take a look [here](README-Python-Dev.md)
+
 Additional information can be found [here](README-DEV.md).
 
 ### Warnings
