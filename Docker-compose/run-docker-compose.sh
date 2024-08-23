@@ -24,7 +24,7 @@ function start {
   echo -e "\n"
   echo -e "Tiro su la composizione, in caso, con le nuove versioni delle immagini. \n"
   docker compose -f docker-compose.yml build django_sp
-  docker compose -f docker-compose.yml up -d --wait --wait-timeout 60
+  docker compose -f docker-compose.yml up --wait --wait-timeout 60
   echo -e "\n"
   echo -e "Completato. Per visionare i logs: 'docker-compose -f docker-compose.yml logs -f'"
   exit 0
@@ -58,8 +58,8 @@ while getopts ":fh" opt; do
      exit 1
      ;;
   esac
-  initialize_satosa
-  start
 done
+initialize_satosa
+start
 
 
