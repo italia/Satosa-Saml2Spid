@@ -9,8 +9,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER:-satosa}"
       MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
     volumes:
-      - mongodata:/data/db
-      - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
+      - ./mongo/db:/data/db
       - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
     ports:
       - '27017-27019:27017-27019'
@@ -34,17 +33,16 @@ services:
   ## START: PARTE NUOVA
   django_sp:
     build: 
-        context: ../      
+        context: ../
         args: 
-            - NODE_ENV=local        
+            - NODE_ENV=local
         dockerfile: example_sp/django.Dockerfile
     container_name: django_sp
     #restart: always
     working_dir: /django_sp
     entrypoint: "sh ../entrypoint.sh"
     volumes:
-       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../example_sp/djangosaml2_sp:/django_sp:rw
+       - ./djangosaml2_sp:/django_sp:rw
     ports:
       - "8000:8000"
     networks:
@@ -110,8 +108,7 @@ services:
     ports:
       - "10000:10000"
     volumes:
-       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../docker-example:/satosa_proxy:rw
+       - ./satosa:/satosa_proxy:rw
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
     networks:
@@ -136,7 +133,7 @@ services:
       - ./nginx/50x.html:/usr/share/nginx/html/50x.html:ro
       - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
       - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
-      - nginx_certs:/etc/nginx/certs:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
       - ../docker-example/static:/var/www/html
     networks:
       - satosa-saml2spid
@@ -150,17 +147,6 @@ services:
       - "8443:8443"
     networks:
       - satosa-saml2spid
-
-volumes:
-
-  mongodata:
-    name: satosa-saml2spid_mongodata
-    external: true
-
-  nginx_certs:
-    name: satosa-saml2spid_nginx_certs
-    external: true
-
 networks:
   satosa-saml2spid:
     name: satosa-saml2spid
