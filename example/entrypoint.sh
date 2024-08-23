@@ -26,9 +26,8 @@ if [[ $GET_IDEM_MDQ_KEY == true ]]; then
 fi
 
 wsgi_file=/.venv/lib/$(python -c 'import sys; print(f"python{sys.version_info.major}.{sys.version_info.minor}")')/site-packages/satosa/wsgi.py
-wgsi_args="--ini /satosa_proxy/uwsgi_setup/uwsgi/uwsgi.ini.docker --wsgi-file $wsgi_file"
 if [[ $SATOSA_DEBUG == true ]]; then
-  wgsi_args="${wsgi_args} --honour-stdin"
+  uwsgi --ini /satosa_proxy/uwsgi_setup/uwsgi/uwsgi.ini.docker --wsgi-file $wsgi_file --honour-stdin
+else
+  uwsgi --ini /satosa_proxy/uwsgi_setup/uwsgi/uwsgi.ini.docker --wsgi-file $wsgi_file
 fi
-
-uwsgi $wsgi_args
