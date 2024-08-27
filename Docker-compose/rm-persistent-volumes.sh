@@ -23,7 +23,7 @@ echo -e "\n"
 echo -e "Inizio le procedure per fare il down della composizione e poi CANCELLARE i volumi persistenti! \n"
 
 echo -e "Fermo la composizione! \n"
-docker-compose -f docker-compose.yml down -v;
+docker compose -f docker-compose.yml down -v;
 
 echo -e "\n"
 
