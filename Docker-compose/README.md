@@ -50,6 +50,7 @@ Then you can even inspect the image content, by running the following command: `
 Execute the run script for the first time:
 
 ```
+cd Docker-compose
 ./run-docker-compose.sh
 ```
 
