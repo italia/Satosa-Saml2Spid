@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [What do you need?](#what-do-you-need?)
+1. [Requirements](#requirements)
 2. [Run the composition](#run-the-composition)
 3. [Stop the composition](#stop-the-composition)
 4. [Remove/Delete volumes](#remove/delete-volumes)
