@@ -146,7 +146,7 @@ services:
     image: italia/spid-saml-check
     container_name: spid-samlcheck
     environment:
-      - NODE_TLS_REJECT_UNAUTHORIZED=0
+      - NODE_TLS_REJECT_UNAUTHORIZED=${NODE_TLS_REJECT_UNAUTHORIZED:-0}
     ports:
       - "8443:8443"
     networks:
