@@ -94,19 +94,10 @@ If you want to deploy Satosa-Saml2SPID without using Docker, all the setup instr
 
 This project uses Docker, all the instructions to configure this project using the official docker images are available [here](Docker-compose/README.md).
 
-The docker compose may use the [enviroment variables](README-Setup.md#configuration-by-environment-variables) 
+The docker compose uses the enviroment variables as documented [here](README-Setup.md#configuration-by-environment-variables) 
 to configure Satosa-Saml2Spid.
 
 <img src="gallery/docker-design.svg" width="512">
-
-The official Satosa-Saml2SPID docker image is available at 
-[italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid).
-
-To install it, you can execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
-
-Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
-
-Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
 
 
 ### Setup a Djangosaml2 example Service Provider
