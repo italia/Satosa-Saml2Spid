@@ -88,11 +88,11 @@ For the setup of this project, the following dependency must be installed in you
 
 ### Setup
 
-All the setup instructions for your Satosa-Saml2spid configuration are available in [README-SETUP.md](README-Setup.md).
+If you want to deploy Satosa-Saml2SPID without using Docker, all the setup instructions for your Satosa-Saml2spid configuration are available in [README-SETUP.md](README-Setup.md).
 
 ### Docker Compose
 
-This project uses Docker, all the instructions to configure this project using the official docker images are available in [Docker-compose](Docker-compose/README.md).
+This project uses Docker, all the instructions to configure this project using the official docker images are available [here](Docker-compose/README.md).
 
 The docker compose may use the [enviroment variables](README-Setup.md#configuration-by-environment-variables) 
 to configure Satosa-Saml2Spid.
