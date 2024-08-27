@@ -28,8 +28,8 @@ For docker-compose you can also [see here](https://docs.docker.com/compose/insta
 ## Run the composition
 
 1. Copy/pull Satosa-Saml2Spid project locally.
-2. Copy the folder `example` to a new folder named `docker-example`
-3. Inspect the `docker-example` folder content and do your configuration.
+2. Copy the folder `example` to a new folder named `docker-example`: `cp -R example docker-example`.
+3. Inspect the `docker-example` folder content and do your configuration by setting env variables and local folder contents.
 
 > :warning: **DO NOT USE the `example` folder _as is_ in production**: the `example` folder provides secrets that **MUST** be not used in a production environment. It sole purpose is to provide a user friendly starting point.
 
