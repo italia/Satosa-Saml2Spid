@@ -1,4 +1,3 @@
-version: '3'
 services:
   satosa-mongo:
     image: mongo
@@ -8,6 +7,7 @@ services:
       MONGO_INITDB_DATABASE: oidcop
       MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER:-satosa}"
       MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
+      TZ: "${TZ:-Europe/Rome}"
     volumes:
       - ./mongo/db:/data/db
       - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
@@ -28,6 +28,7 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER:-satosa}"
       ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER:-satosa}:${MONGO_DBPASSWORD:-thatpassword}@satosa-mongo:27017/
+      TZ: "${TZ:-Europe/Rome}"
     networks:
       - satosa-saml2spid
   ## START: PARTE NUOVA
@@ -62,6 +63,7 @@ services:
     stdin_open: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     tty: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     environment:
+      - TZ=${TZ:-Europe/Rome}
       - SATOSA_BY_DOCKER=1
       - GET_IDEM_MDQ_KEY=${GET_IDEM_MDQ_KEY:-true}
 
@@ -139,7 +141,6 @@ services:
       - satosa-saml2spid
     environment:
       - NGINX_HOST=${SATOSA_HOSTNAME:-localhost}
-
   spid-samlcheck:
     image: italia/spid-saml-check
     container_name: spid-samlcheck
