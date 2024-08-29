@@ -16,12 +16,12 @@ In order to execute the run script you need:
 
 * docker
 * jq
-* docker-compose
+* docker version 3
 
 Installation example in Ubuntu:
 
 ```
-sudo apt install jq docker-compose
+sudo apt install jq
 ```
 
 For docker-compose you can also [see here](https://docs.docker.com/compose/install/other/).
