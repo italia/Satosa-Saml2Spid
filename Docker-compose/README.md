@@ -12,6 +12,8 @@
 
 ## Requirements
 
+The following instructions and provided scripts are intended to be used on a GNU/Linux based system. Success on Windows based system is currently not guaranteed.
+
 In order to execute the run script you need:
 
 * docker
