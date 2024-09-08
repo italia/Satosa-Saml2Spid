@@ -5,15 +5,18 @@ function clean_data {
   rm -Rf ./mongo/db/*
   rm -Rf ./satosa/*
   rm -Rf ./djangosaml2_sp/*
+  rm -Rf ./nginx/html/static
 }
 
 function initialize_satosa {
   mkdir -p ./satosa
   mkdir -p ./djangosaml2_sp
   mkdir -p ./mongo/db
+  mkdir -p ./nginx/html/static
 
-  if [ ! -f ./satosa/proxy_conf.yaml ]; then cp -R ../example/* ./satosa/ ; else echo 'satosa directory is already initialized' ; fi
+  if [ ! -f ./satosa/proxy_conf.yaml ]; then cp -R ../example/* ./satosa/ ;  rm -R ./satosa/static/ ; else echo 'satosa directory is already initialized' ; fi
   if [ ! -f ./djangosaml2_sp/run.sh ]; then cp -R ../example_sp/djangosaml2_sp/* ./djangosaml2_sp ; else echo 'djangosaml2_sp directory is already initialided' ; fi
+  if [ ! -f ./nginx/html/static/disco.html ]; then cp -R ../example/static/* ./nginx/html/static ; else echo 'nginx directory is already initialized' ; fi
 }
 
 function update {

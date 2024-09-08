@@ -132,16 +132,12 @@ services:
     depends_on:
       - satosa-saml2spid
     ports:
-      - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/nginx.conf_uwsgi_pass:/etc/nginx/nginx.conf:ro
-      - ./nginx/50x.html:/usr/share/nginx/html/50x.html:ro
-      - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
-      - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
       - ./nginx/certs:/etc/nginx/certs:ro
-      - ./satosa/static:/var/www/html
-      # - static:/var/www/html # to be used for external volumes
+      # - static:/usr/share/nginx/html # to be used for external volumes
     networks:
       - satosa-saml2spid
     environment:
