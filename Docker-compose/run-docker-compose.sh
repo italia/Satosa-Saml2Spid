@@ -3,18 +3,18 @@ export COMPOSE_PROFILES=demo
 export SKIP_UPDATE=
 function clean_data {
   rm -Rf ./mongo/db/*
-  rm -Rf ./satosa/*
+  rm -Rf ./satosa-project/*
   rm -Rf ./djangosaml2_sp/*
   rm -Rf ./nginx/html/static
 }
 
 function initialize_satosa {
-  mkdir -p ./satosa
+  mkdir -p ./satosa-project
   mkdir -p ./djangosaml2_sp
   mkdir -p ./mongo/db
   mkdir -p ./nginx/html/static
 
-  if [ ! -f ./satosa/proxy_conf.yaml ]; then cp -R ../example/* ./satosa/ ;  rm -R ./satosa/static/ ; else echo 'satosa directory is already initialized' ; fi
+  if [ ! -f ./satosa-project/proxy_conf.yaml ]; then cp -R ../example/* ./satosa-project/ ;  rm -R ./satosa/static/ ; else echo 'satosa-project directory is already initialized' ; fi
   if [ ! -f ./djangosaml2_sp/run.sh ]; then cp -R ../example_sp/djangosaml2_sp/* ./djangosaml2_sp ; else echo 'djangosaml2_sp directory is already initialided' ; fi
   if [ ! -f ./nginx/html/static/disco.html ]; then cp -R ../example/static/* ./nginx/html/static ; else echo 'nginx directory is already initialized' ; fi
 }
@@ -28,7 +28,7 @@ function update {
     docker compose -f docker-compose.yml down -v
     echo -e "\n"
     echo -e "Tiro su la composizione, in caso, con le nuove versioni delle immagini. \n"
-    docker compose -f docker-compose.yml build django_sp
+docker compose -f docker-compose.yml build django_sp
   fi
 }
 
@@ -43,19 +43,21 @@ function help {
   echo ""
   echo "### run-docker-compose.sh ###"
   echo ""
-  echo "initialize check update and start Satosa-Saml2Spid"
+  echo "initialize check update and start Satosa-Saml2Spid compose structure"
   echo ""
-  echo "Option"
+  echo "Options"
   echo "-f Force clean and reinitialize data for Satosa, MongoDB and Djangosaml2_SP"
   echo "-h Print this help"
-  echo "-p Set production profile: start satosa, nginx, mongo"
   echo "-s Skip docker image update"
-  echo "-d Set data entry profile: start satosa, nginx, mongo, mongo-express"
-  echo "   if isn't set -d or -p defatult demo profile is started"
-  echo "   default demo profile start: satosa, nginx, mongo, mongo-express, django-sp, spid-saml-check"
+  echo "-p unset compose profile. Run: satosa and nginx. Usefull for production"
+  echo "-m Set 'mongo' compose profile. Run: satosa, nginx, mongo"
+  echo "-M Set 'mongoexpress' compose profile. Run: satosa, nginx, mongo, mongo-express"
+  echo "-d Set 'dev' compose profile. Run: satosa, nginx, django-sp, spid-saml-check"
+  echo "   if isn't set any of -p, -m, -M, -d, is used 'demo' compose profile"
+  echo "   demo compose profile start: satosa, nginx, mongo, mongo-express, django-sp, spid-saml-check"
 }
 
-while getopts ":fpdsh" opt; do
+while getopts ":fpimMdsh" opt; do
   case ${opt} in
    f)
      clean_data
@@ -63,8 +65,14 @@ while getopts ":fpdsh" opt; do
    p)
      unset COMPOSE_PROFILES
      ;;
+   m)
+     COMPOSE_PROFILES="mongo"
+     ;;
+   M)
+     COMPOSE_PROFILES="mongoexpress"
+     ;;
    d)
-     COMPOSE_PROFILES=dataentry
+     COMPOSE_PROFILES="dev"
      ;;
    s)
      SKIP_UPDATE=true
@@ -84,5 +92,3 @@ done
 initialize_satosa
 update
 start
-echo $SKIP_UPDATE
-

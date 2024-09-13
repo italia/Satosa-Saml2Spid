@@ -1,5 +1,9 @@
 services:
   satosa-mongo:
+    profiles:
+      - demo
+      - mongo
+      - mongoexpress
     image: mongo
     container_name: satosa-mongo
     environment:
@@ -19,7 +23,7 @@ services:
   satosa-mongo-express:
     profiles:
       - demo
-      - dataentry
+      - mongoexpress
     image: mongo-express
     container_name: satosa-mongo-express
     ports:
@@ -38,6 +42,7 @@ services:
   django_sp:
     profiles:
       - demo
+      - dev
     build: 
         context: ../
         args: 
@@ -61,8 +66,8 @@ services:
     #        - NODE_ENV=local        
     #    dockerfile: Dockerfile
     container_name: satosa-saml2spid
-    depends_on:
-      - satosa-mongo
+    # depends_on:
+    #  - satosa-mongo
     stdin_open: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     tty: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     environment:
@@ -113,7 +118,7 @@ services:
     ports:
       - "10000:10000"
     volumes:
-      - ./satosa:/satosa_proxy:rw
+      - ./satosa-project:/satosa_proxy:rw
       # - satosadata:/satosa_proxy # to be used for external volumes
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
@@ -142,9 +147,11 @@ services:
       - satosa-saml2spid
     environment:
       - NGINX_HOST=${SATOSA_HOSTNAME:-localhost}
+
   spid-samlcheck:
     profiles:
       - demo
+      - dev
     image: italia/spid-saml-check
     container_name: spid-samlcheck
     ports:
