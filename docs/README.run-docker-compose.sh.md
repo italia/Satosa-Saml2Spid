@@ -3,13 +3,13 @@
 This scritp is a simple uility to initialize, update and start the Satosa-saml2spid compose structure.
 
 ### Script Options
-* -f Force clean and reinitialize data for Satosa, MongoDB and Djangosaml2_SP
-* -h Print this help
-* -s Skip docker image update
-* -p unset compose profile. Run: satosa and nginx. Usefull for production
-* -m Set 'mongo' compose profile. Run: satosa, nginx, mongo
-* -M Set 'mongoexpress' compose profile. Run: satosa, nginx, mongo, mongo-express
-* -d Set 'dev' compose profile. Run: satosa, nginx, django-sp, spid-saml-check.
+* `-f` Force clean and reinitialize data for Satosa, MongoDB and Djangosaml2_SP
+* `-h` Print this help
+* `-s`Skip docker image update
+* `-p` unset compose profile. Run: satosa and nginx. Usefull for production
+* `-m` Set 'mongo' compose profile. Run: satosa, nginx, mongo
+* `-M` Set 'mongoexpress' compose profile. Run: satosa, nginx, mongo, mongo-express
+* `-d` Set 'dev' compose profile. Run: satosa, nginx, django-sp, spid-saml-check.
    If isn't set any of -p, -m, -M, -d, is used 'demo' compose profile.
    Demo compose profile start: satosa, nginx, mongo, mongo-express, django-sp, spid-saml-check
 
@@ -22,7 +22,7 @@ On startup the script check if the directories required from docker compose are 
 * ./nginx/html/static
 
 After the script test if the required directories are populated and if isn't copy the default files
-| Directories       | test presence of | default origin                 |
+| Directory         | test presence of | default origin                 |
 | ----------------- | ---------------- | ------------------------------ |
 | satosa-project    | proxy_conf.yaml  | ../example/*                   |
 | djangosaml2_sp    | run.sh           | ../example_sp/djangosaml2_sp/* |
