@@ -16,7 +16,7 @@ function create-volume {
 	fi
 }
 
-create-volume satosa-saml2spid_nginx_certs nginx/certs/
+create-volume satosa-saml2spid_nginx_certs ./nginx/certs/
 create-volume satosa-saml2spid_mongodata 
 
 echo -e "\n"
