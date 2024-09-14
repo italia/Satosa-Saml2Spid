@@ -26,6 +26,8 @@ You can specify one or more profiles with environments:
 COMPOSE_PROFILES=dev,mongo docker compose up
 ```
 
+The [run-docker-compose.sh](./run-docker-compose.sh.md) script can be start all profiles with his options
+
 ### summary tables
 #### Profile by service
 
@@ -60,4 +62,4 @@ COMPOSE_PROFILES=dev,mongo docker compose up
 
 ### Insights
 * For more details on Satosa-saml2spid docker compose read [docker-compose readme page](./docker-compose.md)
-* For more details on Satosa-saml2spid docker run-docker-compose.sh read [run-docker-compose.sh page](./run-docker-compose.sh)
+* For more details on Satosa-saml2spid docker run-docker-compose.sh read [run-docker-compose.sh page](./run-docker-compose.sh.md)
