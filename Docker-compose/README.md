@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Requirements](#requirements)
+1. [What do you need?](#what-do-you-need?)
 2. [Run the composition](#run-the-composition)
 3. [Stop the composition](#stop-the-composition)
 4. [Remove/Delete volumes](#remove/delete-volumes)
@@ -14,34 +14,20 @@
 
 In order to execute the run script you need:
 
-* docker
 * jq
-* docker version 3
+* docker-compose
 
 Installation example in Ubuntu:
 
 ```
-sudo apt install jq
+sudo apt install jq docker-compose
 ```
 
 For docker-compose you can also [see here](https://docs.docker.com/compose/install/other/).
 
-### Satosa-Saml2SPID Docker Image
-
-The official Satosa-Saml2SPID docker image is available at 
-[italia/satosa-saml2spid](https://ghcr.io/italia/satosa-saml2spid).
-
-To install it, you can execute the following command: `sudo docker pull ghcr.io/italia/satosa-saml2spid:latest`.
-
-Otherwise you can build the image executing the following command: `docker build -t satosa-saml2spid .`.
-
-Then you can even inspect the image content, by running the following command: `docker run -it -v $(pwd)/example:/satosa_proxy --entrypoint sh satosa-saml2spid`.
-
 ## Run the composition
 
-1. Copy/pull Satosa-Saml2Spid project locally.
-2. Copy the folder `example` to a new folder named `docker-example`: `cp -R example docker-example`.
-3. Inspect the `docker-example` folder content and do your configuration by setting env variables and local folder contents.
+Copy the folder `example` to `docker-example` and do your configuration.
 
 > :warning: **DO NOT USE the `example` folder _as is_ in production**: the `example` folder provides secrets that **MUST** be not used in a production environment. It sole purpose is to provide a user friendly starting point.
 
@@ -50,7 +36,6 @@ Then you can even inspect the image content, by running the following command: `
 Execute the run script for the first time:
 
 ```
-cd Docker-compose
 ./run-docker-compose.sh
 ```
 
