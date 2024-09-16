@@ -14,105 +14,72 @@
 
 In order to execute the run script you need:
 
-* jq
 * docker-compose
 
 Installation example in Ubuntu:
 
 ```
-sudo apt install jq docker-compose
+sudo apt install docker-compose
 ```
 
 For docker-compose you can also [see here](https://docs.docker.com/compose/install/other/).
 
-## Run the composition
+## Run the composition - MAGIC WAY
 
-Copy the folder `example` to `docker-example` and do your configuration.
-
-> :warning: **DO NOT USE the `example` folder _as is_ in production**: the `example` folder provides secrets that **MUST** be not used in a production environment. It sole purpose is to provide a user friendly starting point.
-
-### Start the Compose
-
-Execute the run script for the first time:
-
-```
+Enter in `Docker-compose` directory and run `run-docker-compose.sh`:
+```bash
+cd Docker-compose
 ./run-docker-compose.sh
 ```
+The script make the directories for local mounts, copy all required files in right directory and start a full demo with test and Service providers
 
-The following docker volumes are created, if they doesn't exist yet:
+* Satosa-saml2spid is published with nginx frontend on https://localhost
+* Mongo Espress is published on http://localhost:8081
+* DjangoSP is published on https://localhost:8000
+* Spid-samlcheck is publishe on https://localhost:8443
 
-* satosa-saml2spid_nginx_certs
-* satosa-saml2spid_mongodata 
+More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
-The *satosa-saml2spid_nginx_certs* is populated with data from [nginx/certs/](nginx/certs)`,
-*satosa-saml2spid_mongodata* is populated by MongoDB container with its storage.
+### Start the Compose - LONG WAY - I want to know what I do
 
-After having executed the docker compose you can see the logs of the running containers:
-```
-docker-compose -f docker-compose.yml logs -f
-```
-
-After the first run, you can start the docker compose with the run script or by this commands:
-
-```
-docker-compose pull; docker-compose down -v; docker-compose up -d; docker-compose logs -f
-```
-### Where is your data?
-
-Command:
-
-```
-docker volume ls
+Enter in `Docker-compose` directory and make required direcotries for local mounts:
+```bash
+mkdir -p ./mongo/db          # DB Data directory
+mkdir -p ./satosa-project    # Satosa-saml2spid data istance
+mkdir -p ./djangosaml2_sp    # Service provider directory
+mkdir -p ./nginx/html/static # static files for nginx
 ```
 
-Output:
-
-```
-DRIVER    VOLUME NAME
-local     satosa-saml2spid_mongodata
-local     satosa-saml2spid_nginx_certs
-```
-
-In RedHat and Ubuntu based OS the Docker volumes directory is at:
-
-```
-# ls -1 /var/lib/docker/volumes/
-satosa-saml2spid_mongodata
-satosa-saml2spid_nginx_certs
+Copy required files
+```bash
+cp -R ../example/* ./satosa-project
+cp -R ../example_sp/djangosaml2_sp/* ./djangosaml2_sp
+cp -E ../example/static/* ./nginx/html/static
 ```
 
-## Stop the composition
-
-```
-./stop-docker-compose.sh
-```
-
-This script stops all containers of the composition and detaches the volumes, but keeps the data on the persistent volumes.
-
-## Remove/Delete volumes
-
-If you want to start from scratch, or just clear all persistent data, just run the following script:
-
-```
-./rm-persistent-volumes.sh
+Clean static data from Satosa project
+```bash
+rm -R ./satosa-project/static
 ```
 
-First, the containers of the composition are stopped and the volumes are detached.
+Run the compose for a minimal system (nginx and satosa)
+```
+docker compose up
+```
 
-Then you are asked if you want to delete the volumes and if you answer yes, you have to confirm volume by volume.
+Run the full demo
+```bash
+docker compose --profile demo up
+```
 
-## Demo data
+Read the [profiles guide](../docs/docker_compose_profiles.md) for more informations 
 
-Demo data for a test client are inserted into the DB during the first run of the composition.
 
-See [mongo readme](../README.mongo.md) to have some example of demo data.
+### Configure your system
+Copy the example env file:
+```bash
+cp env.example .env
+```
 
-## Env file
-
-Customize the environment variables using the [.env](.env) file.
-The file [.env.example](.env.example) provides an example with all the environment variables you can set.
-The variables not set in the `.env` file will fallback on a default value defined in the [docker-compose.yml](docker-compose.yml).
-
-> :warning: Be careful when deploying your solution since some environment variables are **security-related**.
-
-See [mongo readme](../README.mongo.md) for explanation of environment variables of MongoDB.
+Edit and personalize the system from `.env` files. You can still edit all files in detail from their local volumes.
+**IMPORTANT all the default password must be changed!**
