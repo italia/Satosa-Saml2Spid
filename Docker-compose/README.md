@@ -37,10 +37,11 @@ The script make the directories for local mounts, copy all required files in rig
 
 More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
-### Start the Compose LONG WAY
+### Start the composition LONG WAY
 
 Enter in `Docker-compose` directory and make required direcotries for local mounts:
 ```bash
+cd Docker-compose
 mkdir -p ./mongo/db          # DB Data directory
 mkdir -p ./satosa-project    # Satosa-saml2spid data istance
 mkdir -p ./djangosaml2_sp    # Service provider directory
