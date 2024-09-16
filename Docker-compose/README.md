@@ -2,13 +2,10 @@
 
 ## Table of Contents
 
-1. [What do you need?](#what-do-you-need?)
-2. [Run the composition](#run-the-composition)
-3. [Stop the composition](#stop-the-composition)
-4. [Remove/Delete volumes](#remove/delete-volumes)
-5. [Demo data](#demo-data)
-6. [Env file](#env-file)
-7. [docker-compose.yml](#docker-compose.yml)
+1. [Requirements](#requirements)
+2. [Run the composition - MAGIC WAY](#run-the-composition-magic-way)
+2. [Run the composition - LONG WAY](#run-the-composition-long-way)
+6. [Configure your system](#configure-your-system)
 
 ## Requirements
 
@@ -24,7 +21,7 @@ sudo apt install docker-compose
 
 For docker-compose you can also [see here](https://docs.docker.com/compose/install/other/).
 
-## Run the composition - MAGIC WAY
+## Run the composition MAGIC WAY
 
 Enter in `Docker-compose` directory and run `run-docker-compose.sh`:
 ```bash
@@ -40,7 +37,7 @@ The script make the directories for local mounts, copy all required files in rig
 
 More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
-### Start the Compose - LONG WAY - I want to know what I do
+### Start the Compose LONG WAY
 
 Enter in `Docker-compose` directory and make required direcotries for local mounts:
 ```bash
