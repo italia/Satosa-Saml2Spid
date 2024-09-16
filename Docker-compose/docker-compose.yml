@@ -31,8 +31,8 @@ services:
     depends_on:
       - satosa-mongo
     environment:
-      ME_CONFIG_BASICAUTH_USERNAME: satosauser
-      ME_CONFIG_BASICAUTH_PASSWORD: satosapw
+      ME_CONFIG_BASICAUTH_USERNAME: "${EXPRESS_USER:-satosauser}"
+      ME_CONFIG_BASICAUTH_PASSWORD: "${EXPRESS_PASSWORD:-satosapw}"
       ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER:-satosa}"
       ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER:-satosa}:${MONGO_DBPASSWORD:-thatpassword}@satosa-mongo:27017/
