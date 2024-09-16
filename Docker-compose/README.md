@@ -4,8 +4,9 @@
 
 1. [Requirements](#requirements)
 2. [Run the composition - MAGIC WAY](#run-the-composition-magic-way)
-2. [Run the composition - LONG WAY](#run-the-composition-long-way)
-6. [Configure your system](#configure-your-system)
+3. [Run the composition - LONG WAY](#run-the-composition-long-way)
+4. [Configure your system](#configure-your-system)
+5. [Insights](#Insights)
 
 ## Requirements
 
@@ -37,7 +38,7 @@ The script make the directories for local mounts, copy all required files in rig
 
 More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
-### Start the composition LONG WAY
+### Run the composition LONG WAY
 
 Enter in `Docker-compose` directory and make required direcotries for local mounts:
 ```bash
@@ -81,3 +82,8 @@ cp env.example .env
 
 Edit and personalize the system from `.env` files. You can still edit all files in detail from their local volumes.
 **IMPORTANT all the default password must be changed!**
+
+### Insights
+
+* More details on prodiles read the [Docker Compose Profiles](../docs/docker_compose_profiles.md) page
+* More details on run-docker-compose,sh read the [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
