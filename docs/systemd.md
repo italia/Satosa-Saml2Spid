@@ -1,6 +1,6 @@
 ## Start a local Satosa-saml2spid istance with a SystemD Service
 
-In this example is provided with this assumption:
+This example is project with these assumptions:
 * Satosa-saml2spid is installed in `/opt/satosa`
 * Satosa-saml2spid is executed from a Python VirtualENV sited in `/opt/satosa/env`
 * Satosa-saml2spid is executed from `satosa` user
