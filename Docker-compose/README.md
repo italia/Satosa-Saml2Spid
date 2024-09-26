@@ -34,7 +34,7 @@ The script make the directories for local mounts, copy all required files in rig
 * Satosa-saml2spid is published with nginx frontend on https://localhost
 * Mongo Espress is published on http://localhost:8081
 * Django SAML2 SP is published on https://localhost:8000
-* Spid-samlcheck is publishe on https://localhost:8443
+* Spid-samlcheck is published on https://localhost:8443
 
 More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
