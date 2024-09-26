@@ -35,7 +35,7 @@ TLS certificates will be searched in:
 * `ssl_certificate_key /etc/nginx/certs/proxy_local.key` - private key
 
 On default the directory `Docker-compose/nginx/certs` is mounted on `/etc/nginx/certs`.
-An self signed certificate for server name `localhost` is persent in the certs directory. To public the host you must overwrite these file with a valid certificate for you serrver name.
+An self signed certificate for server name `localhost` is persent in the certs directory. To public the host you must overwrite these file with a valid certificate for you server name.
 
 The virtual host root is set on `/usr/share/nginx/html`, the `Docker-compose/nginx/html` path is mounted over this directory.
 To update the stati file you must edit the files in `Docker-compose/nginx/html` path.
