@@ -48,7 +48,7 @@ For security are added these header key
 
 `location @satosa` contain all information to send and get data from satosa-saml2spid uWSGI server.
 The default configuration set `satosa-saml2spid:1000` as reverse uWSGI proxy destination.
-This permit to balance the connection with multiple satosa-saml2spid istance.
+This permits to balance the connection with multiple satosa-saml2spid instance.
 
 Satosa Virtual Host use the `try_files` directive to send the request on the proxy.
 The proxy test if the request is sended to a existent file. If the file not exists send the request to @satosa location. On detail:
