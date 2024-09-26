@@ -19,7 +19,7 @@ This container work as [uWSGI](https://en.wikipedia.org/wiki/UWSGI) proxy to [sa
 *All `from path` are relative to Docker-compose directory*
 
 ### Virtual Hosts
-Default NGINX conf import the additional configurations from `/etc/nginx/conf.d/*.conf`. The Path `Docker-compose/nginx/conf.d` is mounted in `/etc/nginx/conf.d` of NGINX container. Each `*.conf` file present in theese directory is included in the NGINX congifuration.
+Default NGINX conf import the additional configurations from `/etc/nginx/conf.d/*.conf`. The Path `Docker-compose/nginx/conf.d` is mounted in `/etc/nginx/conf.d` of NGINX container. Each `*.conf` file present in these directory is included in the NGINX configuration.
 
 In `Docker-compose/nginx/conf.d` is preconfigured the file `default.conf` with [Satosa Virtual Host][#satosa-vitual-host]. You can add more `.conf` file and more virtual host, buth generally is not clever.
 
