@@ -38,7 +38,7 @@ On default the directory `Docker-compose/nginx/certs` is mounted on `/etc/nginx/
 An self signed certificate for server name `localhost` is persent in the certs directory. To public the host you must overwrite these file with a valid certificate for you server name.
 
 The virtual host root is set on `/usr/share/nginx/html`, the `Docker-compose/nginx/html` path is mounted over this directory.
-To update the stati file you must edit the files in `Docker-compose/nginx/html` path.
+To update the static file you must edit the files in `Docker-compose/nginx/html` path.
 
 For security are added these header key
 * `X-Frame-Options "DENY"` to block the IFRAME
