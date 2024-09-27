@@ -1,54 +1,62 @@
 services:
   satosa-mongo:
+    profiles:
+      - demo
+      - mongo
+      - mongoexpress
     image: mongo
     container_name: satosa-mongo
-    restart: always
     environment:
       MONGO_INITDB_DATABASE: oidcop
       MONGO_INITDB_ROOT_USERNAME: "${MONGO_DBUSER:-satosa}"
       MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
+      TZ: "${TZ:-Europe/Rome}"
     volumes:
-      - mongodata:/data/db
-      - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
+      - ./mongo/db:/data/db
       - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+      # - mongodata:/data/db # to be used for external volumes
     ports:
       - '27017-27019:27017-27019'
     networks:
       - satosa-saml2spid
 
   satosa-mongo-express:
+    profiles:
+      - demo
+      - mongoexpress
     image: mongo-express
     container_name: satosa-mongo-express
-    restart: always
     ports:
       - 8082:8081
+    depends_on:
+      - satosa-mongo
     environment:
-      ME_CONFIG_BASICAUTH_USERNAME: satosauser
-      ME_CONFIG_BASICAUTH_PASSWORD: satosapw
+      ME_CONFIG_BASICAUTH_USERNAME: "${EXPRESS_USER:-satosauser}"
+      ME_CONFIG_BASICAUTH_PASSWORD: "${EXPRESS_PASSWORD:-satosapw}"
       ME_CONFIG_MONGODB_ADMINUSERNAME: "${MONGO_DBUSER:-satosa}"
       ME_CONFIG_MONGODB_ADMINPASSWORD: "${MONGO_DBPASSWORD:-thatpassword}"
       ME_CONFIG_MONGODB_URL: mongodb://${MONGO_DBUSER:-satosa}:${MONGO_DBPASSWORD:-thatpassword}@satosa-mongo:27017/
+      TZ: "${TZ:-Europe/Rome}"
     networks:
       - satosa-saml2spid
-  ## START: PARTE NUOVA
   django_sp:
+    profiles:
+      - demo
+      - dev
     build: 
-        context: ../      
+        context: ../
         args: 
-            - NODE_ENV=local        
+            - NODE_ENV=local
         dockerfile: example_sp/django.Dockerfile
     container_name: django_sp
-    #restart: always
     working_dir: /django_sp
     entrypoint: "sh ../entrypoint.sh"
     volumes:
-       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../example_sp/djangosaml2_sp:/django_sp:rw
+       - ./djangosaml2_sp:/django_sp:rw
     ports:
       - "8000:8000"
     networks:
       - satosa-saml2spid
-## END: PARTE NUOVA
   satosa-saml2spid:
     image: ghcr.io/italia/satosa-saml2spid:latest
     #image: satosa-saml2spid:latest
@@ -58,17 +66,18 @@ services:
     #        - NODE_ENV=local        
     #    dockerfile: Dockerfile
     container_name: satosa-saml2spid
-    depends_on:
-      - satosa-mongo
+    # depends_on:
+    #  - satosa-mongo
     stdin_open: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     tty: ${SATOSA_DEBUG:-false}   # enables PDB when attach to the compose
     environment:
+      - TZ=${TZ:-Europe/Rome}
       - SATOSA_BY_DOCKER=1
       - GET_IDEM_MDQ_KEY=${GET_IDEM_MDQ_KEY:-true}
 
       - BASE_DIR=/satosa_proxy
       - SATOSA_PRIVATE_KEY=${SATOSA_KEYS_FOLDER:-./pki}/${SATOSA_PRIVATE_KEY_FILENAME:-privkey.pem}
-      - SATOSA_PUBLIC_KEY=${SATOSA_KEYS_FOLDER:-./pki}/${SATOSA_CERT_FILENAME:-cert.pem}
+      - SATOSA_PUBLIC_KEY=${SATOSA_KEYS_FOLDER:-./pki}/${SATOSA_PUBLIC_KEY_FILENAME:-cert.pem}
       - SATOSA_BASE=https://${SATOSA_HOSTNAME:-localhost}
       - SATOSA_BASE_STATIC=https://${SATOSA_HOSTNAME:-localhost}/static
       - SATOSA_DISCO_SRV=https://${SATOSA_HOSTNAME:-localhost}/static/disco.html
@@ -109,8 +118,8 @@ services:
     ports:
       - "10000:10000"
     volumes:
-       - /usr/share/zoneinfo/Europe/Rome:/etc/localtime:ro
-       - ../docker-example:/satosa_proxy:rw
+      - ./satosa-project:/satosa_proxy:rw
+      # - satosadata:/satosa_proxy # to be used for external volumes
     working_dir: /satosa_proxy
     entrypoint: "sh entrypoint.sh"
     networks:
@@ -128,40 +137,43 @@ services:
     depends_on:
       - satosa-saml2spid
     ports:
-      - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/nginx.conf_uwsgi_pass:/etc/nginx/nginx.conf:ro
-      - ./nginx/50x.html:/usr/share/nginx/html/50x.html:ro
-      - ./nginx/404.html:/usr/share/nginx/html/404.html:ro
-      - ./nginx/403.html:/usr/share/nginx/html/403.html:ro
-      - nginx_certs:/etc/nginx/certs:ro
-      - ../docker-example/static:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+      # - static:/usr/share/nginx/html # to be used for external volumes
     networks:
       - satosa-saml2spid
     environment:
       - NGINX_HOST=${SATOSA_HOSTNAME:-localhost}
+      - TZ=${TZ:-Europe/Rome}
 
   spid-samlcheck:
+    profiles:
+      - demo
+      - dev
     image: italia/spid-saml-check
     container_name: spid-samlcheck
-    environment:
-      - NODE_TLS_REJECT_UNAUTHORIZED=${NODE_TLS_REJECT_UNAUTHORIZED:-0}
     ports:
       - "8443:8443"
     networks:
       - satosa-saml2spid
-
-volumes:
-
-  mongodata:
-    name: satosa-saml2spid_mongodata
-    external: true
-
-  nginx_certs:
-    name: satosa-saml2spid_nginx_certs
-    external: true
-
 networks:
   satosa-saml2spid:
     name: satosa-saml2spid
+
+## External volumes 
+# volumes:
+#   mongodata:
+#     name: satosa-saml2spid_mongodata
+#     external: true
+#   nginx_certs:
+#     name: satosa-saml2spid_nginx_certs
+#     external: true
+#   satosadata:
+#     name: satosa-data
+#     external: true
+#   static:
+#     name: satosa-static
+#     external: true
