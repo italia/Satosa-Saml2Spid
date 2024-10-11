@@ -1,7 +1,7 @@
 # Satosa-Saml2Spid
 
 A SAML2/OIDC IAM Proxy based on [SATOSA](https://github.com/IdentityPython/SATOSA)
-for **SAML-to-SAML**, **OIDC-to-SAML** and **SAML-to-Wallet** interoperability
+for **SAML-to-SAML**, **OIDC-to-SAML**, **OIDC-to-Wallet** and **SAML-to-Wallet** interoperability
 with the  **Italian Digital Identity Systems**.
 
 ## Table of Contents
