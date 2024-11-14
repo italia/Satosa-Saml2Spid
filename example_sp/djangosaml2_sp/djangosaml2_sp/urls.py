@@ -26,7 +26,7 @@ if 'saml2_sp' in settings.INSTALLED_APPS:
         path(f'{SAML2_URL_PREFIX}/ls/', views.LogoutView.as_view(), name='saml2_ls'),
         path(f'{SAML2_URL_PREFIX}/ls/post/', views.LogoutView.as_view(), name='saml2_ls_post'),
         path(f'{SAML2_URL_PREFIX}/metadata/', views.MetadataView.as_view(), name='saml2_metadata'),
-        #  path(f'{SAML2_URL_PREFIX}/echo_attributes', views.EchoAttributesView.as_view(), name='saml2_echo_attributes'),
+        path(f'{SAML2_URL_PREFIX}/echo_attributes', views.EchoAttributesView.as_view(), name='saml2_echo_attributes'),
         path('logout/', LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout')
     ])
 

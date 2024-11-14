@@ -1,6 +1,7 @@
 #!/bin/bash
 export COMPOSE_PROFILES=demo
 export SKIP_UPDATE=
+
 function clean_data {
   rm -Rf ./mongo/db/*
   rm -Rf ./satosa-project/*
@@ -9,6 +10,8 @@ function clean_data {
 }
 
 function initialize_satosa {
+  cp env.example .env
+
   mkdir -p ./satosa-project
   mkdir -p ./djangosaml2_sp
   mkdir -p ./mongo/db

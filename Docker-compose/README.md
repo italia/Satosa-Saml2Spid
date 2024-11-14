@@ -22,14 +22,18 @@ sudo apt install docker-compose
 
 For docker-compose you can also [see here](https://docs.docker.com/compose/install/other/).
 
-## Run the composition MAGIC WAY
+## Run the Composition for Demo Purposes
 
 Enter in `Docker-compose` directory and run `run-docker-compose.sh`:
 ```bash
 cd Docker-compose
 ./run-docker-compose.sh
 ```
-The script make the directories for local mounts, copy all required files in right directory and start a full demo with test and Service providers
+The script creates the directories for local mounts and copies all required files to start a full demo with test and SAML2 Service Providers.
+
+> Warning: The script deletes any previous created directory if found.
+
+The result is represented by the following services:
 
 * Satosa-saml2spid is published with nginx frontend on https://localhost
 * Mongo Espress is published on http://localhost:8081
@@ -38,7 +42,7 @@ The script make the directories for local mounts, copy all required files in rig
 
 More details ad start option are avable on [run-docker-compose.sh](../docs/run-docker-compose.sh.md) page
 
-### Run the composition LONG WAY
+### Run the Composition for Production Use
 
 Enter in `Docker-compose` directory and make required direcotries for local mounts:
 ```bash
@@ -61,6 +65,14 @@ Clean static data from Satosa project
 rm -R ./satosa-project/static
 ```
 
+Copy the example env file and edit according to your configuration,
+therefore **all the default passwords MUST be changed**.
+
+```bash
+cp env.example .env
+```
+You can still edit all files in detail from their local volumes.
+
 Run the compose for a minimal system (nginx and satosa)
 ```
 docker compose up
@@ -72,16 +84,6 @@ docker compose --profile demo up
 ```
 
 Read the [profiles guide](../docs/docker_compose_profiles.md) for more informations 
-
-
-### Configure your system
-Copy the example env file:
-```bash
-cp env.example .env
-```
-
-Edit and personalize the system from `.env` files. You can still edit all files in detail from their local volumes.
-**IMPORTANT all the default password must be changed!**
 
 ### Insights
 

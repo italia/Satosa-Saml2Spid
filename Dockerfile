@@ -17,7 +17,6 @@ LABEL org.opencontainers.image.authors=$AUTHORS \
       org.opencontainers.image.source=$VCS_URL \
       org.opencontainers.image.revision=$VCS_REF \
       org.opencontainers.image.description="Docker Image di Satosa-Saml2Spid."
-      
 
 COPY requirements.txt /
 
@@ -27,7 +26,7 @@ ENV BASEDIR="/satosa_proxy"
 # "mailcap" package is required to add mimetype support
 RUN apk add --update --no-cache tzdata mailcap xmlsec libffi-dev openssl-dev python3 py3-pip python3-dev procps git openssl build-base gcc wget bash jq yq-go pcre-dev
 
-RUN python3 -m venv .venv && . .venv/bin/activate && pip3 install --upgrade pip setuptools \ 
+RUN python3 -m venv .venv && . .venv/bin/activate && pip3 install --upgrade pip setuptools \
       && pip3 install -r requirements.txt --ignore-installed --root-user-action=ignore && mkdir $BASEDIR \
       && addgroup -S satosa && adduser -S satosa -G satosa \
       && chown satosa:satosa $BASEDIR
