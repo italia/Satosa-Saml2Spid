@@ -14,10 +14,23 @@ function initialize_satosa {
 
   echo "WARNING: creating directories with read/write/execute permissions to anybody"
   
-  mkdir -p -m 777 ./satosa-project
-  mkdir -p -m 777 ./djangosaml2_sp
-  mkdir -p -m 777 ./mongo/db
-  mkdir -p -m 777 ./nginx/html/static
+  # Array of directories to create
+  directories=(
+    "./satosa-project"
+    "./djangosaml2_sp"
+    "./mongo/db"
+    "./nginx/html/static"
+  )
+
+  # Loop through each directory
+  for dir in "${directories[@]}"; do
+    # Create the directory and any necessary parent directories
+    mkdir -p "$dir"
+    # Set permissions recursively to 777
+    chmod -R 777 "$dir"
+  done
+
+  echo "Directories created and permissions set to 777."
 
   if [ ! -f ./satosa-project/proxy_conf.yaml ]; then cp -R ../example/* ./satosa-project/ ;  rm -R ./satosa/static/ ; else echo 'satosa-project directory is already initialized' ; fi
   if [ ! -f ./djangosaml2_sp/run.sh ]; then cp -R ../example_sp/djangosaml2_sp/* ./djangosaml2_sp ; else echo 'djangosaml2_sp directory is already initialided' ; fi
