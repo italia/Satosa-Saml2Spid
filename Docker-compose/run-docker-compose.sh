@@ -12,12 +12,12 @@ function clean_data {
 function initialize_satosa {
   cp env.example .env
 
-  echo "WARNING: creating directories with read/write permissions to anybody"
+  echo "WARNING: creating directories with read/write/execute permissions to anybody"
   
-  mkdir -p -m 766 ./satosa-project
-  mkdir -p -m 766 ./djangosaml2_sp
-  mkdir -p -m 766 ./mongo/db
-  mkdir -p -m 766 ./nginx/html/static
+  mkdir -p -m 777 ./satosa-project
+  mkdir -p -m 777 ./djangosaml2_sp
+  mkdir -p -m 777 ./mongo/db
+  mkdir -p -m 777 ./nginx/html/static
 
   if [ ! -f ./satosa-project/proxy_conf.yaml ]; then cp -R ../example/* ./satosa-project/ ;  rm -R ./satosa/static/ ; else echo 'satosa-project directory is already initialized' ; fi
   if [ ! -f ./djangosaml2_sp/run.sh ]; then cp -R ../example_sp/djangosaml2_sp/* ./djangosaml2_sp ; else echo 'djangosaml2_sp directory is already initialided' ; fi
